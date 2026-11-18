@@ -22,7 +22,7 @@ import {
 import { CLEAR_SPACE_ORDER, LAYOUT_ORDER, MARK_ALIGNMENT_ORDER } from '../logo/layouts.js'
 import { TRANSPARENT } from '../logo/logoColors.js'
 import { DEFAULTS } from './lockupDefaults.js'
-import { wordingFor } from './ministryLink.js'
+import { findMinistry } from '../current/ministries.js'
 
 // ── Validation ───────────────────────────────────────────────────────────────────────────────────
 //
@@ -101,10 +101,9 @@ export const toConfig = (state) => (state.era === 'crest'
   ? {
       era: 'current',
       ministryCode: state.currentMinistry,
-      // Only when it differs from what the ministry choice would have given anyway; a
-      // configuration should say what was chosen, not restate the obvious. Measured against the
-      // shared choice rather than the code, since a name of your own has no code.
-      ...(state.currentName !== wordingFor(state) ? { wording: state.currentName } : {}),
+      // A receiving page can recover only what this code and language specify.
+      ...(state.source === 'manual' || state.currentName !== findMinistry(state.currentMinistry)?.[state.language]
+        ? { wording: state.currentName } : {}),
       language: state.language,
       variant: state.currentVariant,
       background: state.currentBackground === TRANSPARENT ? 'transparent' : state.currentBackground,
@@ -138,19 +137,19 @@ export const fromConfig = (config) => {
   if ('ministryCode' in config) patch.currentMinistry = cleanText(config.ministryCode, DEFAULTS.currentMinistry).toUpperCase()
   if ('wording' in config) {
     patch.currentName = cleanText(config.wording, DEFAULTS.currentName)
-    // Stated wording is deliberate, so the ministry list must not overwrite it.
-    patch.currentNameTouched = true
+  } else if (config.ministryCode !== undefined) {
+    patch.currentNameTouched = false
   }
   if ('language' in config) patch.language = cleanOneOf(config.language, LANGUAGE_ORDER, DEFAULTS.language)
   if ('variant' in config) patch.currentVariant = cleanOneOf(config.variant, CURRENT_VARIANT_ORDER, DEFAULTS.currentVariant)
 
   if ('lockup' in config) patch.layout = cleanOneOf(config.lockup, LAYOUT_ORDER, DEFAULTS.layout)
   if ('showWordmark' in config) patch.wordmark = cleanBoolean(config.showWordmark, DEFAULTS.wordmark)
-  if ('secondLine' in config) patch.program = cleanText(config.secondLine, '')
   // Each era keeps its own ink, so a configuration's colours land on the era it declares.
   const era = config.era ?? DEFAULTS.era
   const forFlag = era === 'flag'
   const forCrest = era === 'crest'
+  if ('secondLine' in config) patch[forCrest ? 'crestExtra' : 'program'] = cleanText(config.secondLine, '')
   if ('markColor' in config) {
     const field = forFlag ? 'flagMarkColor' : forCrest ? 'crestMarkColor' : 'markColor'
     patch[field] = cleanColour(config.markColor, DEFAULTS[field])
@@ -237,6 +236,7 @@ export const readConfigParam = (search = globalThis.location?.search ?? '') => {
 /** This page's URL carrying a configuration as readable JSON. */
 export const buildConfigUrl = (state, href = globalThis.location?.href ?? '') => {
   const url = new URL(href)
+  url.searchParams.delete('s')
   url.searchParams.set(CONFIG_PARAM, JSON.stringify(toConfig(state)))
   return url.toString()
 }

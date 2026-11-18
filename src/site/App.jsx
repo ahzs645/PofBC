@@ -144,7 +144,7 @@ const initialView = () => {
  */
 const writeView = (view) => {
   const url = salaryPlaceUrl(globalThis.location.href, {})
-  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'area', 'chapter', 'story']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'logos', 'mark', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'family', 'plate', 'area', 'chapter', 'story']) url.searchParams.delete(key)
   if (view !== 'generator') url.searchParams.set('view', view)
   writeHistory(url)
 }
@@ -346,6 +346,8 @@ export const App = () => {
                 extra={state.crestExtra}
                 bold={state.crestBold}
                 align={state.crestAlign}
+                ministrySize={state.crestMinistrySize}
+                extraStep={state.crestExtraStep}
                 markColor={state.crestMarkColor}
                 textColor={state.linkColors ? state.crestMarkColor : state.crestTextColor}
                 background={state.crestBackground}

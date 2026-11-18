@@ -5,7 +5,10 @@
 // `?view=signs&sign=lookout`), so a link to a part of a piece opens it there, from anywhere on the
 // site.
 
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
+import { writeHistory } from '../site/browserHistory.js'
+import { useCatalogueIndex } from '../site/useCatalogueIndex.js'
+import { Modal } from './ui/Modal.jsx'
 import { NavigationContext, SiteLink, useNavigate } from '../site/navigation.jsx'
 import { PosterViewer } from './PosterViewer.jsx'
 import './posters.css'
@@ -33,14 +36,13 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
   const [module, setModule] = useState(null)
   const [failed, setFailed] = useState(false)
   const [attempt, setAttempt] = useState(0)
-  const cards = useRef({})
+  const { cards, openCard, closeCard } = useCatalogueIndex(view)
   const parentNavigate = useNavigate()
   const order = series.flatMap(itemsOf)
   const seriesOf = (id) => series.find((entry) => itemsOf(entry).includes(id)) ?? null
 
-  const go = useCallback(({ id, part }) => {
+  const go = useCallback(({ id, part }, entering = false) => {
     setPlace({ id, part })
-    if (!globalThis.history?.replaceState) return
     const url = new URL(globalThis.location.href)
     url.searchParams.set('view', view)
     if (id) url.searchParams.set(param, id)
@@ -48,8 +50,9 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
     if (id && part && part !== 'overview') url.searchParams.set('part', part)
     else url.searchParams.delete('part')
     if (!id) url.searchParams.delete('story')
-    globalThis.history.replaceState(null, '', url)
-  }, [view, param])
+    if (entering) openCard(url, id)
+    else writeHistory(url, { replace: true })
+  }, [openCard, view, param])
 
   // Load the open piece's drawing; keep it while only the part changes. Moving from one piece to
   // another keeps the last one on screen until the next is ready, so the switch doesn't flash a
@@ -73,16 +76,15 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
   // Links to this shelf land here without leaving it; links elsewhere go to the App.
   const navigate = useCallback((params) => {
     if (params.view === view) {
-      go({ id: items[params[param]] ? params[param] : null, part: params.part || 'overview' })
+      const id = items[params[param]] ? params[param] : null
+      go({ id, part: params.part || 'overview' }, Boolean(id && !place.id))
       if (!params[param]) globalThis.scrollTo?.({ top: 0 })
     } else parentNavigate?.(params)
-  }, [go, parentNavigate, view, param, items])
+  }, [go, parentNavigate, view, param, items, place.id])
 
   const exit = useCallback(() => {
-    const id = place.id
-    go({ id: null, part: 'overview' })
-    requestAnimationFrame(() => cards.current[id]?.focus())
-  }, [go, place.id])
+    closeCard(place.id, () => go({ id: null, part: 'overview' }))
+  }, [closeCard, go, place.id])
 
   const meta = place.id ? items[place.id] : null
   // What's on screen: the piece asked for once it has loaded, until then the one before it.
@@ -143,11 +145,11 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
         </div>
       )}
       {meta && (!module || (failed && switching)) && (
-        <div className="pv pv-loading" role="status">
+        <Modal className="pv pv-loading" aria-label={meta.title} onDismiss={exit}>
           {failed
             ? <p>Could not load {meta.title}. <button type="button" className="pv-ghost" onClick={() => setAttempt((n) => n + 1)}>Retry</button> <button type="button" className="pv-ghost" onClick={exit}>Back to the {title.toLowerCase()}</button></p>
-            : <p>Loading {meta.title}…</p>}
-        </div>
+            : <p role="status">Loading {meta.title}…</p>}
+        </Modal>
       )}
     </NavigationContext.Provider>
   )

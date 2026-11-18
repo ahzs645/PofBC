@@ -232,6 +232,26 @@ test('a source-only future year appears as pending coverage without adding recor
   } finally { rmSync(f.dir, { recursive: true, force: true }) }
 })
 
+test('unparsed and scope-review reports with no accepted records keep their hold reason', () => {
+  const f = fixture()
+  try {
+    const leads = [
+      { year: '2025/26', status: 'held-unparsed', nextAction: 'Reconcile the printed subtotal.' },
+      { year: '2026/27', status: 'scope-review-required', nextAction: 'Verify which remuneration categories this table covers.' }
+    ].map((lead) => ({ ...lead, employerSlug: 'bc-hydro', sourceUrl: 'https://example.test/report.pdf' }))
+    writeFileSync(join(f.research, 'source-backlog.json'), JSON.stringify({ sources: leads }))
+    const result = f.run()
+    assert.equal(result.status, 0, result.stderr)
+    const employers = JSON.parse(readFileSync(join(f.out, 'employers/index.json')))
+    for (const lead of leads) {
+      const entry = employers.employers[0].coverage[employers.years.indexOf(lead.year)]
+      assert.equal(entry.status, 'excluded')
+      assert.deepEqual(entry.notes, [lead.nextAction])
+      assert.equal(entry.rows, 0)
+    }
+  } finally { rmSync(f.dir, { recursive: true, force: true }) }
+})
+
 test('a held multi-employer report retains held coverage', () => {
   const f = fixture()
   try {
@@ -395,6 +415,16 @@ test('employee and elected cohorts in one report retain distinct source-catalog 
   assert.equal(catalog.length, 2)
   assert.deepEqual(catalog.map((entry) => entry.acceptedSourceId).sort(), ['council', 'staff'])
   assert.deepEqual(catalog.map((entry) => entry.scope).sort(), ['elected-officials', 'employee-remuneration'])
+})
+
+test('a second accepted schedule for the same employer, year, URL and scope keeps both source IDs', () => {
+  const sameReport = { employerSlug: 'city-of-terrace', year: '2024', sourceUrl: 'https://example.test/report.pdf', category: 'employee-remuneration' }
+  const sources = [
+    { ...sameReport, id: 'page-3', file: 'page3.gzip', rowCount: 63 },
+    { ...sameReport, id: 'page-4', file: 'page4.gzip', rowCount: 3 }
+  ]
+  const catalog = sourceCatalog({ sources: [{ ...sameReport, id: 'lead' }] }, [{ collection: 'municipal', manifest: { sources } }])
+  assert.deepEqual(catalog.map(({ acceptedSourceId, rows }) => [acceptedSourceId, rows]), [['page-3', 63], ['page-4', 3]])
 })
 
 test('incorrect expense totals reject an import before changing published data', () => {

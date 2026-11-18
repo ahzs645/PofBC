@@ -76,6 +76,13 @@ export const applyUpdate = (current, patch) => {
     patch.source !== undefined
   const markMoved = patch.currentMinistry !== undefined || patch.language !== undefined
 
+  if (patch.currentMinistry !== undefined) {
+    const named = findMinistry(next.currentMinistry)?.en
+    if (named) {
+      next.source = 'list'
+      next.ministry = named
+    }
+  }
   if (patch.currentNameTouched === false) {
     // Clearing the override puts the choice back on the list and lets the wording recompute,
     // rather than writing a value back — after a hand edit the "official" wording *was* the edit.
@@ -93,14 +100,6 @@ export const applyUpdate = (current, patch) => {
     if (nameMoved && next.source === 'list') {
       next.currentMinistry = codeForName(next.ministry) ?? next.currentMinistry
     }
-    // Its own list, if it is still on screen, moves the shared choice the same way.
-    if (patch.currentMinistry !== undefined) {
-      const named = findMinistry(next.currentMinistry)?.en
-      if (named) {
-        next.source = 'list'
-        next.ministry = named
-      }
-    }
     if (!next.currentNameTouched) next.currentName = wordingFor(next)
   }
 
@@ -115,30 +114,19 @@ export const applyUpdate = (current, patch) => {
  * no colour to move into the foreground, so the brand green stands in for it.
  */
 export const swapColours = (current) => {
-  const incoming = resolveColor(current.background, TRANSPARENT) === TRANSPARENT
-    ? BRAND_COLORS.green
-    : current.background
+  const [mark, background] = current.era === 'flag'
+    ? ['flagMarkColor', 'flagBackground']
+    : current.era === 'crest' ? ['crestMarkColor', 'crestBackground'] : ['markColor', 'background']
+  const incoming = resolveColor(current[background], TRANSPARENT) === TRANSPARENT
+    ? (current.era === 'historical' ? BRAND_COLORS.green : BRAND_COLORS.white)
+    : current[background]
 
-  return {
-    ...current,
-    markColor: incoming,
-    textColor: current.linkColors ? incoming : current.textColor,
-    background: current.markColor
-  }
+  return applyUpdate(current, { [mark]: incoming, [background]: current[mark] })
 }
 
 /** A restored share link states its fields deliberately, so they all count as chosen. */
 export const applyShare = (current, patch) => ({
-  ...current,
-  ...patch,
+  ...applyUpdate({ ...current, currentNameTouched: false }, patch),
   wordmarkTouched: true,
-  markAlignTouched: true,
-  // A share that carries wording carries it deliberately, so the ministry list must not overwrite
-  // it on arrival. One that does not should keep following the list.
-  currentNameTouched: patch.currentName !== undefined,
-  // And it is a name, not a current-era setting: a link restored into one identity has to put the
-  // same name on the other three, which is the whole point of holding one choice.
-  ...(patch.currentName !== undefined && patch.manualMinistry === undefined
-    ? { source: 'manual', manualMinistry: patch.currentName }
-    : {})
+  markAlignTouched: true
 })

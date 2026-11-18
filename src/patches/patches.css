@@ -93,8 +93,19 @@
 .patch__crumb { flex: 1; min-width: 0; font-size: 13px; color: var(--ink-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .patch__steps { display: flex; gap: 8px; margin-left: auto; }
 
+.patch__heading {
+  display: grid;
+  gap: 4px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--outline);
+}
+.patch__heading h2 { margin: 0; font-size: 19px; line-height: 1.3; overflow-wrap: anywhere; }
+.patch__preview-choice { justify-self: start; max-width: 100%; margin-top: 4px; }
+.patch__preview-choice .field { margin: 0; }
+.patch__preview-choice--mobile { display: none; }
 .patch__body { display: grid; grid-template-columns: minmax(0, 1fr) 340px; }
 .patch__stages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--outline); }
+.patch__stages--single { grid-template-columns: minmax(0, 1fr); }
 .patch__stage {
   position: relative;
   display: flex;
@@ -124,8 +135,7 @@
 .patch__status { color: var(--ink-muted); font-size: 14px; text-align: center; }
 
 .patch__panel { padding: 18px 20px 22px; border-left: 1px solid var(--outline); display: grid; align-content: start; gap: 12px; }
-.patch__panel h2 { margin: 0; font-size: 19px; line-height: 1.3; }
-.patch__meta { margin: -6px 0 2px; font-size: 13px; color: var(--ink-muted); }
+.patch__meta { margin: 0; font-size: 13px; color: var(--ink-muted); }
 .patch__panel .field--compact { justify-content: space-between; }
 .patch__variants .field { margin: 0; }
 .patch__variants .field__label { font-size: 12px; font-weight: 500; color: var(--ink-muted); }
@@ -155,8 +165,44 @@
 }
 @media (max-width: 600px) {
   .patch__stages { grid-template-columns: 1fr; }
-  .patch__stage { min-height: 300px; }
+  .patch__stage { min-height: clamp(175px, 33svh, 285px); padding: 36px 16px 14px; }
+  .patch__stage img, .patch__stage canvas { max-height: clamp(150px, 28svh, 250px); }
+  .patch__heading { padding: 12px 16px; }
+  .patch__preview-choice--mobile { display: block; }
+  .patch__stages[data-preview="vector"] .patch__stage--embroidered,
+  .patch__stages[data-preview="embroidered"] .patch__stage--vector { display: none; }
+  .patch__panel { min-width: 0; padding: 14px 16px; }
+  .patch__panel .field--compact { flex-wrap: wrap; }
+  .patch__variants .segmented button { min-height: 40px; white-space: normal; }
   .patch__bar { flex-wrap: nowrap; }
   .patch__step-label { display: none; }
   .patch__steps .button { min-width: 40px; justify-content: center; font-size: 18px; line-height: 1; }
+}
+
+.patch__stage--relief { flex-direction: column; gap: 12px; }
+.badge-relief__art { width: 100%; display: grid; place-items: center; }
+.badge-relief__art[data-ready="true"] { cursor: grab; touch-action: pan-y; }
+.badge-relief__art[data-ready="true"]:active { cursor: grabbing; }
+.badge-relief__art[data-ready="false"] canvas { display: none; }
+.badge-relief__art canvas { filter: drop-shadow(0 5px 7px rgba(0, 0, 0, .17)); }
+.badge-relief__turn { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.badge-relief__turn input { width: clamp(70px, 18vw, 150px); min-height: 32px; }
+.badge-relief__turn output { min-width: 4ch; font-variant-numeric: tabular-nums; }
+
+.patch__preview-choice .segmented { flex-wrap: wrap; }
+.patch__stage--overlay { flex-direction: column; gap: 12px; min-width: 0; }
+.patch__stage--overlay p { margin: 0; text-align: center; color: var(--ink-muted); font-size: 13px; }
+.source-overlay__frame {
+  position: relative; overflow: hidden;
+  width: min(100%, calc(var(--crop-aspect) * min(52vh, 480px)));
+  aspect-ratio: var(--crop-aspect);
+}
+.patch__stage .source-overlay__frame img {
+  position: absolute; inset: 0; width: 100%; height: 100%; max-height: none; object-fit: contain; filter: none;
+}
+.source-overlay__control { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; max-width: 100%; font-size: 13px; }
+.source-overlay__control select { max-width: 100%; }
+.source-overlay__control output { min-width: 4ch; font-variant-numeric: tabular-nums; }
+@media (max-width: 600px) {
+  .patch__preview-choice--desktop { display: none; }
 }

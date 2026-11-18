@@ -87,7 +87,7 @@ export const PlateViewer = ({ region, format, family, section, position, previou
 
   useEffect(() => {
     const onKey = (event) => {
-      if (event.target.closest?.('input, select, textarea') || event.metaKey || event.ctrlKey || event.altKey) return
+      if (event.defaultPrevented || event.target.closest?.('input, select, textarea') || event.metaKey || event.ctrlKey || event.altKey) return
       if (event.key === 'Escape') onClose()
       else if (event.key === 'ArrowLeft' && previous) onOpen(previous)
       else if (event.key === 'ArrowRight' && next) onOpen(next)

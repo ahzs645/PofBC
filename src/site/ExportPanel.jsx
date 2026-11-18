@@ -133,7 +133,7 @@ export const ExportPanel = ({ lockup, era = 'historical' }) => {
 
       {bundling ? (
         <>
-          {canOutline && (
+          {era === 'historical' && (
             <MultiToggle label="Lockups" options={LAYOUT_OPTIONS} value={layouts} onChange={setLayouts} />
           )}
           <MultiToggle label="Formats" options={formatOptions} value={formats} onChange={setFormats} />

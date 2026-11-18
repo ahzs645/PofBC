@@ -71,3 +71,12 @@ test('the bundle is named after the ministry, or the wordmark without one', () =
   assert.equal(bundleName({ ministry: '' }), 'bc-wordmark')
   assert.equal(bundleName({}), 'bc-wordmark')
 })
+
+test('flag, crest and current bundles export the selected arrangement once per format and width', () => {
+  for (const era of ['flag', 'crest', 'current']) {
+    const entries = planBundle({ ...FORESTS, era, formats: ['svg', 'png'], sizes: [512, 1024] })
+    assert.deepEqual(entries.map(({ layout, format, pixelWidth }) => [layout, format, pixelWidth]), [
+      [null, 'svg', undefined], [null, 'png', 512], [null, 'png', 1024]
+    ])
+  }
+})

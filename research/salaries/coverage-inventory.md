@@ -6,7 +6,7 @@ The dataset contains **1,440,498 disclosure rows**, including **1,212,134 rows f
 
 The three count columns are the original compiled edition labels. Official replacements use their verified reporting periods; retained compiled rows still have unverified reporting periods. A dash means no imported records. “Held” means a source was found but its records failed the stated validation gate. Blank cells and missing years do not establish that an employer had no employees. The earliest and latest years in the catalog do not establish an employer’s dates of existence.
 
-“Official years” lists accepted source coverage, with the source-specific thresholds and cohorts in [coverage.json](../../public/salaries/coverage.json). It does not promise all payments or employees. Gaps are assessed within the employer’s corresponding calendar or fiscal periods; an incompatible period type is not an additional annual gap. Historical periods before 2006/07 require separate source work.
+“Official years” lists periods with records from an accepted schedule. A period appears in both columns when it also contains retained compiled records. Aggregate-only reports appear under review flags. See [coverage.json](../../public/salaries/coverage.json) for source-specific thresholds and cohorts. Gaps are assessed within the employer’s corresponding calendar or fiscal periods; an incompatible period type is not an additional annual gap. Historical periods before 2006/07 require separate source work.
 
 | Employer | Sector | 2017/18 rows | 2020/21 rows | 2023/24 rows | Official years | Retained compiled years | Review flags |
 |---|---|---:|---:|---:|---|---|---|
@@ -17,14 +17,14 @@ The three count columns are the original compiled edition labels. Official repla
 | B.C. Council for International Education | Crown corporations | — | 6 | 7 | None | 2020/21, 2023/24 | — |
 | B.C. Energy Regulator | Crown corporations | — | — | 249 | 2023/24–2025/26 | None | — |
 | B.C. Ferries | Crown corporations | 1,524 | 1,541 | 2,111 | None | 2017/18, 2020/21, 2023/24 | — |
-| B.C. Financial Services Authority | Crown corporations | — | 224 | 514 | 2019/20, 2021/22–2022/23, 2024/25–2025/26 | 2020/21, 2023/24 | 2020/21: 112 duplicate-looking extras; 2023/24: 234 duplicate-looking extras |
+| B.C. Financial Services Authority | Crown corporations | — | 224 | 514 | 2019/20–2025/26 | 2020/21, 2023/24 | 2020/21: 112 duplicate-looking extras; 2023/24: 234 duplicate-looking extras |
 | B.C. Housing | Crown corporations | 203 | 408 | 490 | 2023/24 | 2017/18, 2020/21 | 2020/21: 17 duplicate-looking extras |
-| B.C. Infrastructure Benefits | Crown corporations | — | 56 | 1,610 | 2019/20, 2021/22–2022/23, 2024/25 | 2020/21, 2023/24 | 2020/21: 18 duplicate-looking extras; 2023/24: 186 duplicate-looking extras |
-| B.C. Investment Management Corporation (BCI) | Crown corporations | 363 | — | 5 | None | 2017/18, 2023/24 | 2023/24 executive only |
-| B.C. Lottery Corporation (BCLC) | Crown corporations | 962 | 657 | 970 | 2010/11–2016/17, 2018/19–2021/22, 2023/24–2025/26 | 2017/18 | — |
+| B.C. Infrastructure Benefits | Crown corporations | — | 56 | 1,610 | 2019/20–2024/25 | 2020/21, 2023/24 | 2020/21: 18 duplicate-looking extras; 2023/24: 186 duplicate-looking extras |
+| B.C. Investment Management Corporation (BCI) | Crown corporations | 363 | — | 5 | None | 2017/18, 2023/24 | 2023/24 executive only; 2025/26 held |
+| B.C. Lottery Corporation (BCLC) | Crown corporations | 962 | 657 | 970 | 2010/11–2021/22, 2023/24–2025/26 | 2017/18 | — |
 | B.C. Oil and Gas Commission | Crown corporations | 149 | 207 | — | None | 2017/18, 2020/21 | — |
 | B.C. Pavilion Corporation | Crown corporations | 66 | 42 | 137 | 2024/25 | 2017/18, 2020/21, 2023/24 | — |
-| B.C. Pension Corp. | Crown corporations | — | 182 | — | None | 2020/21 | — |
+| B.C. Pension Corp. | Crown corporations | — | 182 | — | None | 2020/21 | 2025/26 held |
 | B.C. Securities Commission | Crown corporations | 165 | 78 | 89 | None | 2017/18, 2020/21, 2023/24 | — |
 | B.C. Transit | Crown corporations | 279 | 385 | 909 | 2015/16–2016/17, 2019/20–2020/21, 2025/26 | 2017/18, 2023/24 | 2011/12 source found; extraction pending; 2012/13 source found; extraction pending; 2013/14 source found; extraction pending; 2014/15 source found; extraction pending; 2018/19 source found; extraction pending; 2021/22 source found; extraction pending; 2022/23 source found; extraction pending; 2024/25 source found; extraction pending |
 | B.C. Utilities Commission | Crown corporations | 28 | 11 | 7 | None | 2017/18, 2020/21, 2023/24 | — |
@@ -32,11 +32,11 @@ The three count columns are the original compiled edition labels. Official repla
 | BC Family Maintenance Agency | Crown corporations | — | — | 5 | 2022/23–2025/26 | None | — |
 | BC Hydro and Power Authority | Crown corporations | 4,841 | 5,374 | 6,405 | 2012/13–2023/24 | None | 2010/11 source found; extraction pending; 2011/12 source found; extraction pending; 2024/25 held |
 | BCIT | Universities and colleges | 970 | 1,246 | 1,435 | 2014/15, 2016/17–2018/19, 2020/21–2024/25 | None | 2013/14 source found; extraction pending |
-| Bowen Island | Municipalities | 17 | 16 | 7 | 2023–2025 | 2017/18, 2020/21, 2023/24 | 2002 held; 2003 held; 2004 held; 2005 held; 2006 held; 2007 held; 2008 held; 2009 held; 2010 held; 2011 held; 2012 held; 2013 held; 2014 held; 2015 held; 2016 held; 2017 held; 2018 held; 2019 held; 2020 held; 2021 held; 2023/24 mayor/council only |
+| Bowen Island | Municipalities | 17 | 16 | 7 | 2023–2025 | 2017/18, 2020/21, 2023/24 | 2002 held; 2003 held; 2004 held; 2005 held; 2006 held; 2007 held; 2008 held; 2009 held; 2010 held; 2011 held; 2012 held; 2013 held; 2014 held; 2015 held; 2016 held; 2017 held; 2018 held; 2019 held; 2020 held; 2021 held; 2022 held; 2023/24 mayor/council only |
 | British Columbia Railway Company | Crown corporations | 19 | 18 | — | 2017/18–2022/23, 2024/25–2025/26 | None | — |
 | British Columbia Rapid Transit Company Ltd. | Crown corporations | — | — | — | 2020–2025 | None | — |
 | Burnaby school district | School districts | 1,038 | 1,247 | 1,449 | 2024/25 | 2017/18, 2020/21, 2023/24 | — |
-| Camosun College | Universities and colleges | 858 | 1,012 | 515 | 2015/16–2016/17, 2018/19–2019/20, 2021/22–2022/23, 2024/25–2025/26 | 2017/18, 2020/21, 2023/24 | 2020/21: 292 duplicate-looking extras |
+| Camosun College | Universities and colleges | 858 | 1,012 | 515 | 2015/16–2022/23, 2024/25–2025/26 | 2017/18, 2020/21, 2023/24 | 2020/21: 292 duplicate-looking extras |
 | Capilano University | Universities and colleges | 250 | 370 | 436 | 2018/19–2024/25 | 2017/18 | — |
 | Central Saanich Police | Municipal police | — | — | 29 | None | 2023/24 | — |
 | Chilliwack school district | School districts | 538 | 656 | 910 | 2024/25 | 2017/18, 2020/21, 2023/24 | — |
@@ -56,7 +56,7 @@ The three count columns are the original compiled edition labels. Official repla
 | City of Kamloops | Municipalities | 340 | — | — | 2016–2023, 2025 | 2017/18 | 2024 held |
 | City of Kelowna | Municipalities | — | — | — | 2019, 2021–2025 | None | 2020 held |
 | City of Langford | Municipalities | — | — | — | 2010, 2021, 2025 | None | — |
-| City of Maple Ridge | Municipalities | 398 | 7 | 267 | 2016, 2019–2025 | 2017/18, 2020/21, 2023/24 | 2009 held; 2010 held; 2011 held; 2012 held; 2013 held; 2014 held; 2015 held; 2017/18: 197 duplicate-looking extras; 2020/21 mayor/council only |
+| City of Maple Ridge | Municipalities | 398 | 7 | 267 | 2016, 2019–2025 | 2017/18, 2020/21, 2023/24 | 2009 held; 2010 held; 2011 held; 2012 held; 2013 held; 2014 held; 2015 held; 2017 held; 2017/18: 197 duplicate-looking extras; 2018 held; 2020/21 mayor/council only |
 | City of Merritt | Municipalities | — | — | — | 2025 | None | — |
 | City of Nanaimo | Municipalities | — | — | — | 2019, 2021–2025 | None | 2020 held |
 | City of Nelson | Municipalities | 51 | — | — | 2025 | 2017/18 | 2011 source found; extraction pending; 2012 source found; extraction pending; 2013 source found; extraction pending; 2014 source found; extraction pending; 2015 source found; extraction pending; 2016 source found; extraction pending; 2017 source found; extraction pending; 2018 source found; extraction pending; 2019 source found; extraction pending; 2020 source found; extraction pending; 2021 source found; extraction pending; 2022 source found; extraction pending; 2023 source found; extraction pending; 2024 source found; extraction pending |
@@ -64,8 +64,8 @@ The three count columns are the original compiled edition labels. Official repla
 | City of North Vancouver | Municipalities | — | 267 | 337 | 2022–2025 | 2020/21, 2023/24 | 2016 held; 2017 held; 2018 held; 2019 held; 2020 held; 2021 held |
 | City of Parksville | Municipalities | — | — | — | 2025 | None | — |
 | City of Penticton | Municipalities | — | — | — | 2025 | None | 2021 source found; extraction pending; 2022 source found; extraction pending; 2023 source found; extraction pending; 2024 source found; extraction pending |
-| City of Pitt Meadows | Municipalities | 48 | 52 | 76 | 2013, 2019–2022 | 2017/18, 2020/21, 2023/24 | — |
-| City of Port Coquitlam | Municipalities | 177 | 184 | 226 | 2021, 2023–2025 | 2017/18, 2020/21, 2023/24 | 2020 held |
+| City of Pitt Meadows | Municipalities | 48 | 52 | 76 | 2013, 2019–2022 | 2017/18, 2020/21, 2023/24 | 2011 held; 2012 held; 2014 held; 2015 held; 2016 held; 2017 held; 2018 held; 2023 held; 2024 held; 2025 held |
+| City of Port Coquitlam | Municipalities | 177 | 184 | 226 | 2021, 2023–2025 | 2017/18, 2020/21, 2023/24 | 2020 held; 2022 held |
 | City of Port Moody | Municipalities | 89 | 158 | 165 | 2019–2025 | 2017/18, 2020/21, 2023/24 | — |
 | City of Prince George | Municipalities | — | — | — | 2019–2025 | None | — |
 | City of Prince Rupert | Municipalities | — | — | — | 2025 | None | 2016 source found; extraction pending; 2017 source found; extraction pending; 2018 source found; extraction pending; 2019 source found; extraction pending; 2020 source found; extraction pending; 2021 source found; extraction pending; 2022 source found; extraction pending; 2023 source found; extraction pending; 2024 source found; extraction pending |
@@ -80,16 +80,16 @@ The three count columns are the original compiled edition labels. Official repla
 | City of Vancouver | Municipalities | — | 11 | 11 | 2008–2025 | 2020/21, 2023/24 | 2020/21 mayor/council only; 2023/24 mayor/council only |
 | City of Vernon | Municipalities | — | — | — | 2025 | None | — |
 | City of Victoria | Municipalities | 364 | 468 | 471 | 2012–2014, 2016–2025 | 2017/18, 2020/21, 2023/24 | — |
-| City of White Rock | Municipalities | 79 | 89 | 82 | 2024–2025 | 2017/18, 2020/21, 2023/24 | 2021 held; 2022 held |
+| City of White Rock | Municipalities | 79 | 89 | 82 | 2024–2025 | 2017/18, 2020/21, 2023/24 | 2021 held; 2022 held; 2023 held |
 | City of Williams Lake | Municipalities | — | — | — | 2011–2025 | None | — |
 | Coast Mountain Bus Company Ltd. | Crown corporations | — | — | — | 2020–2023, 2025 | None | 2024 held |
 | Coast Mountain College | Universities and colleges | — | 89 | 124 | 2022/23–2024/25 | 2020/21 | — |
-| College of New Caledonia | Universities and colleges | 212 | 516 | 624 | 2018/19–2019/20, 2021/22–2022/23, 2024/25 | 2017/18, 2020/21, 2023/24 | 2020/21: 255 duplicate-looking extras; 2023/24: 178 duplicate-looking extras |
+| College of New Caledonia | Universities and colleges | 212 | 516 | 624 | 2018/19–2024/25 | 2017/18, 2020/21, 2023/24 | 2020/21: 255 duplicate-looking extras; 2023/24: 178 duplicate-looking extras |
 | College of the Rockies | Universities and colleges | 122 | 129 | 154 | None | 2017/18, 2020/21, 2023/24 | — |
 | Columbia Basin Trust | Crown corporations | 51 | 306 | 62 | None | 2017/18, 2020/21, 2023/24 | — |
-| Columbia Hydro Constructors Ltd. | Crown corporations | — | — | — | 2012/13–2016/17 | None | — |
+| Columbia Hydro Constructors Ltd. | Crown corporations | — | — | — | 2012/13–2016/17 | None | 2017/18 aggregate payroll only |
 | Columbia Power Corporation | Crown corporations | — | 8 | — | None | 2020/21 | — |
-| Community Living B.C. | Crown corporations | 289 | 612 | 906 | 2005/06–2016/17, 2018/19–2019/20, 2021/22–2022/23, 2024/25 | 2017/18, 2020/21, 2023/24 | 2020/21: 306 duplicate-looking extras; 2023/24: 331 duplicate-looking extras |
+| Community Living B.C. | Crown corporations | 289 | 612 | 906 | 2005/06–2024/25 | 2017/18, 2020/21, 2023/24 | 2020/21: 306 duplicate-looking extras; 2023/24: 331 duplicate-looking extras |
 | Coquitlam school district | School districts | 887 | 1,604 | 2,054 | 2024/25 | 2017/18, 2020/21, 2023/24 | — |
 | Delta police | Municipal police | 209 | 218 | 234 | None | 2017/18, 2020/21, 2023/24 | — |
 | Delta school district | School districts | 78 | 813 | 1,013 | 2024/25 | 2017/18, 2020/21, 2023/24 | — |
@@ -127,13 +127,13 @@ The three count columns are the original compiled edition labels. Official repla
 | District of Ucluelet | Municipalities | — | — | — | 2023–2025 | None | — |
 | District of Wells | Municipalities | — | — | — | 2020 | None | 2020 mayor/council only |
 | District of West Vancouver | Municipalities | 334 | 419 | 486 | 2019, 2022–2025 | 2017/18, 2020/21, 2023/24 | 2010 held; 2011 held; 2012 held; 2013 held; 2014 held; 2015 held; 2016 held; 2017 held; 2018 held; 2020 held; 2021 held |
-| Douglas College | Universities and colleges | 508 | 571 | 1,356 | 2021/22–2022/23, 2024/25–2025/26 | 2017/18, 2020/21, 2023/24 | 2023/24: 1 duplicate-looking extras |
-| EmilyCarr | Universities and colleges | 108 | 120 | 340 | 2024/25 | 2017/18, 2020/21, 2023/24 | — |
+| Douglas College | Universities and colleges | 508 | 571 | 1,356 | 2021/22–2025/26 | 2017/18, 2020/21, 2023/24 | 2023/24: 1 duplicate-looking extras |
+| EmilyCarr | Universities and colleges | 108 | 120 | 340 | 2023/24–2024/25 | 2017/18, 2020/21, 2023/24 | — |
 | First Peoples’ Heritage, Language and Culture Council | Crown corporations | — | 10 | 28 | None | 2020/21, 2023/24 | — |
 | Forest Enhancement Society of B.C. | Crown corporations | — | 4 | 5 | None | 2020/21, 2023/24 | — |
 | Forestry Innovation Investsment | Crown corporations | 30 | 29 | 28 | None | 2017/18, 2020/21, 2023/24 | — |
 | Fraser Health | Health authorities | 6,938 | 10,072 | 14,921 | 2004/05–2024/25 | None | — |
-| ICBC | Crown corporations | 3,405 | 2,427 | 3,133 | 2014–2015, 2016/17, 2018/19–2025/26 | 2017/18 | — |
+| ICBC | Crown corporations | 3,405 | 2,427 | 3,133 | 2014–2015, 2016/17–2025/26 | 2017/18 | — |
 | InBC Investment Corp. | Crown corporations | — | — | 15 | 2022/23–2024/25 | None | — |
 | Industry Training Authority of B.C. | Crown corporations | — | 60 | — | None | 2020/21 | — |
 | Infrastructure B.C. | Crown corporations | — | 31 | 42 | None | 2020/21, 2023/24 | — |
@@ -143,7 +143,7 @@ The three count columns are the original compiled edition labels. Official repla
 | Justice Institute of British Columbia | Universities and colleges | 113 | 127 | 152 | None | 2017/18, 2020/21, 2023/24 | — |
 | Knowledge Network | Crown corporations | — | 24 | 28 | None | 2020/21, 2023/24 | — |
 | Kwantlen Polytechnic University | Universities and colleges | 656 | 748 | 914 | None | 2017/18, 2020/21, 2023/24 | — |
-| Langara College | Universities and colleges | 476 | 630 | 1,782 | 2022/23, 2024/25 | 2017/18, 2020/21, 2023/24 | 2023/24: 677 duplicate-looking extras |
+| Langara College | Universities and colleges | 476 | 630 | 1,782 | 2022/23–2024/25 | 2017/18, 2020/21, 2023/24 | 2023/24: 677 duplicate-looking extras |
 | Langley City | Municipalities | 70 | 70 | 7 | 2023–2024 | 2017/18, 2020/21, 2023/24 | 2023/24 mayor/council only |
 | Langley school district | School districts | 723 | 936 | 1,439 | 2024/25 | 2017/18, 2020/21, 2023/24 | — |
 | Legal Services Society | Crown corporations | 49 | 63 | 68 | None | 2017/18, 2020/21, 2023/24 | — |
@@ -156,7 +156,7 @@ The three count columns are the original compiled edition labels. Official repla
 | New Westminster school district | School districts | 285 | 328 | 463 | 2024/25 | 2017/18, 2020/21, 2023/24 | — |
 | North Island College | Universities and colleges | 134 | 145 | 181 | 2018/19–2024/25 | 2017/18 | — |
 | North Vancouver school district | School districts | 610 | 719 | 929 | 2024/25 | 2017/18, 2020/21, 2023/24 | — |
-| Northern Health | Health authorities | 3,442 | 2,510 | 3,655 | 2003/04–2016/17, 2018/19–2025/26 | 2017/18 | — |
+| Northern Health | Health authorities | 3,442 | 2,510 | 3,655 | 2003/04–2025/26 | 2017/18 | — |
 | Northern Lights College | Universities and colleges | 103 | — | 126 | None | 2017/18, 2023/24 | — |
 | Northern Rockies Regional Municipality | Municipalities | — | — | — | 2015, 2017, 2019–2025 | None | — |
 | Oak Bay police | Municipal police | 23 | 23 | 23 | None | 2017/18, 2020/21, 2023/24 | — |
@@ -164,14 +164,14 @@ The three count columns are the original compiled edition labels. Official repla
 | Port Moody police | Municipal police | 60 | 58 | 59 | None | 2017/18, 2020/21, 2023/24 | — |
 | Powerex Corporation | Crown corporations | 127 | 157 | 184 | 2012/13–2023/24 | None | 2024/25 held |
 | Powertech Labs. Inc. | Crown corporations | 106 | 144 | 175 | 2012/13–2024/25 | None | — |
-| Providence Health Care | Health authorities | 1,722 | 4,793 | 3,299 | 2021/22–2024/25 | 2017/18, 2020/21 | — |
+| Providence Health Care | Health authorities | 1,722 | 4,793 | 3,299 | 2020/21–2024/25 | 2017/18, 2020/21 | — |
 | Provincial government | Government | 9,536 | 13,273 | 21,359 | 1999/00–2025/26 | None | — |
-| Provincial Health Services Authority (PHSA) | Health authorities | 10,158 | 15,896 | 23,830 | 2006/07–2016/17, 2018/19–2019/20, 2021/22–2022/23, 2024/25–2025/26 | 2017/18, 2020/21, 2023/24 | 2017/18: 164 duplicate-looking extras |
+| Provincial Health Services Authority (PHSA) | Health authorities | 10,158 | 15,896 | 23,830 | 2006/07–2025/26 | 2017/18, 2020/21, 2023/24 | 2017/18: 164 duplicate-looking extras |
 | Regional District of East Kootenay | Municipalities | — | — | — | 2023–2025 | None | — |
 | Resort Municipality of Whistler | Municipalities | — | — | — | 2021, 2023–2025 | None | 2018 held; 2019 held; 2020 held; 2022 held |
 | Richmond school district | School districts | 889 | 1,067 | 1,428 | 2024/25 | 2017/18, 2020/21, 2023/24 | — |
 | Ridge-Meadows school district | School districts | 635 | 763 | 1,037 | 2004/05–2005/06, 2009/10, 2013/14–2025/26 | None | — |
-| Royal B.C. Museum | Crown corporations | 39 | 33 | 88 | 2021/22–2022/23, 2024/25 | 2017/18, 2020/21, 2023/24 | — |
+| Royal B.C. Museum | Crown corporations | 39 | 33 | 88 | 2021/22–2024/25 | 2017/18, 2020/21, 2023/24 | — |
 | Royal Roads University | Universities and colleges | 138 | 223 | 307 | 2021/22–2025/26 | 2017/18, 2020/21 | — |
 | Saanich police | Municipal police | 178 | 176 | 194 | None | 2017/18, 2020/21, 2023/24 | 2023/24: 1 duplicate-looking extras |
 | School District No. 10 (Arrow Lakes) | School districts | — | — | — | 2024/25 | None | — |
@@ -247,16 +247,16 @@ The three count columns are the original compiled edition labels. Official repla
 | University of British Columbia (UBC) | Universities and colleges | 5,157 | 6,955 | 7,861 | 2025/26 | 2017/18, 2020/21, 2023/24 | — |
 | University of Northern British Columbia | Universities and colleges | 258 | 281 | 420 | 2024/25 | 2017/18, 2020/21, 2023/24 | 2021/22 source found; extraction pending; 2025/26 source found; extraction pending |
 | University of the Fraser Valley | Universities and colleges | 407 | 511 | 673 | 2019/20–2025/26 | 2017/18 | — |
-| University of Victoria | Universities and colleges | 1,265 | 1,537 | 4,144 | 2019/20, 2024/25 | 2017/18, 2020/21, 2023/24 | 2023/24: 1435 duplicate-looking extras |
-| Vancouver Coastal Health | Health authorities | 10,407 | 15,492 | 22,733 | 2005/06–2016/17, 2018/19–2019/20, 2021/22–2022/23, 2024/25 | 2017/18, 2020/21, 2023/24 | — |
+| University of Victoria | Universities and colleges | 1,265 | 1,537 | 4,144 | 2019/20, 2023/24–2024/25 | 2017/18, 2020/21, 2023/24 | 2023/24: 1435 duplicate-looking extras |
+| Vancouver Coastal Health | Health authorities | 10,407 | 15,492 | 22,733 | 2005/06–2024/25 | 2017/18, 2020/21, 2023/24 | — |
 | Vancouver Community College (VCC) | Universities and colleges | 364 | 449 | 540 | None | 2017/18, 2020/21, 2023/24 | — |
-| Vancouver Island Health | Health authorities | 4,428 | 7,334 | 21,293 | 2003/04–2022/23, 2024/25–2025/26 | 2023/24 | — |
+| Vancouver Island Health | Health authorities | 4,428 | 7,334 | 21,293 | 2003/04–2025/26 | 2023/24 | — |
 | Vancouver Island University | Universities and colleges | 501 | 627 | 667 | 2020/21–2021/22, 2024/25 | 2017/18, 2023/24 | — |
 | Vancouver police (VPD) | Municipal police | 1,532 | 1,604 | 1,672 | 2015–2024 | 2017/18, 2020/21, 2023/24 | 2015 executive only; 2016 executive only; 2017 executive only; 2017/18: 2 duplicate-looking extras; 2018 executive only; 2019 executive only; 2020 executive only; 2020/21: 2 duplicate-looking extras; 2021 executive only; 2022 executive only; 2023 executive only; 2023/24: 1 duplicate-looking extras; 2024 executive only |
 | Vancouver school district | School districts | 2,312 | 2,629 | 3,187 | 2024/25 | 2017/18, 2020/21, 2023/24 | — |
 | Victoria police | Municipal police | 294 | 270 | 232 | None | 2017/18, 2020/21, 2023/24 | — |
 | Village of Anmore | Municipalities | 12 | 20 | 8 | 2023 | 2017/18, 2020/21, 2023/24 | — |
-| Village of Belcarra | Municipalities | 13 | — | 12 | 2010, 2012–2014, 2017–2019, 2023, 2025 | 2017/18, 2023/24 | — |
+| Village of Belcarra | Municipalities | 13 | — | 12 | 2010, 2012–2014, 2017–2019, 2023, 2025 | 2017/18, 2023/24 | 2011 held; 2015 held; 2016 held; 2020 held; 2021 held; 2022 held; 2024 held |
 | Village of Burns Lake | Municipalities | — | — | — | 2022 | None | — |
 | Village of Cache Creek | Municipalities | — | — | — | 2025 | None | — |
 | Village of Clinton | Municipalities | — | — | — | 2024 | None | — |
@@ -267,13 +267,13 @@ The three count columns are the original compiled edition labels. Official repla
 | Village of Harrison Hot Springs | Municipalities | — | — | — | 2021–2022 | None | — |
 | Village of Hazelton | Municipalities | — | — | — | 2024 | None | — |
 | Village of Lions Bay | Municipalities | 14 | 14 | — | 2024 | 2017/18, 2020/21 | — |
-| Village of Lytton | Municipalities | — | — | — | 2021, 2023 | None | — |
+| Village of Lytton | Municipalities | — | — | — | 2021, 2023 | None | 2022 aggregate payroll only |
 | Village of McBride | Municipalities | — | — | — | 2022–2025 | None | — |
 | Village of Midway | Municipalities | — | — | — | 2023–2024 | None | — |
 | Village of Montrose | Municipalities | — | — | — | 2023 | None | — |
 | Village of Nakusp | Municipalities | — | — | — | 2024 | None | — |
 | Village of New Denver | Municipalities | — | — | — | 2025 | None | — |
-| Village of Pemberton | Municipalities | — | — | — | 2020–2023, 2025 | None | — |
+| Village of Pemberton | Municipalities | — | — | — | 2020–2023, 2025 | None | 2024 held |
 | Village of Port Clements | Municipalities | — | — | — | 2025 | None | — |
 | Village of Salmo | Municipalities | — | — | — | 2024 | None | — |
 | Village of Sayward | Municipalities | — | — | — | 2021–2022, 2024 | None | — |

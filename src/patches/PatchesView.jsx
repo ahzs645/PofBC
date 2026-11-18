@@ -1,12 +1,14 @@
 // Patches: the patch library from the Patcher submodule (vendor/patcher, see README), grouped by
 // sector and organization, each patch opening on a viewer that sews it as embroidery. The same view
-// shows the library's metal and leather badges as Badges (`?view=badges`).
+// shows the library's metal badges as Badges (`?view=badges`).
 //
 // The place is kept in the address bar (`?view=patches&org=bc-parks`, `?view=patches&patch=S25-O01`),
 // so a link to an organization or to one patch opens it there.
 
-import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useDeferredValue, useEffect, useMemo, useState } from 'react'
 import { cardLabel, cardOf, findPatch, isCard, orgsBySector, variantsOf } from 'patcher/library'
+import { writeHistory } from '../site/browserHistory.js'
+import { useCatalogueIndex } from '../site/useCatalogueIndex.js'
 import { searchFor } from '../site/navigation.jsx'
 import { PatchViewer, photosOf } from './PatchViewer.jsx'
 import './patches.css'
@@ -34,21 +36,21 @@ const read = (collection, sections) => {
   // findPatch follows an atlas id merged or absorbed into another patch (S27-O01, R22-O01) to it.
   const patch = findPatch(params.get('patch') ?? '')
   const orgs = sections.flatMap((s) => s.orgs)
-  return {
-    org: orgs.some((o) => o.id === params.get('org')) ? params.get('org') : null,
-    patch: patch?.collection === collection ? patch.id : null
-  }
+  const item = patch?.collection === collection ? patch : null
+  const requestedOrg = params.get('org')
+  // An older bookmark may name the organization the catalogue formerly assigned.
+  const org = requestedOrg && item ? item.orgId : requestedOrg
+  return { org: orgs.some((entry) => entry.id === org) ? org : null, patch: item?.id ?? null }
 }
 
-const write = (view, { org, patch }) => {
-  if (!globalThis.history?.replaceState) return
+const urlFor = (view, { org, patch }) => {
   const url = new URL(globalThis.location.href)
   url.searchParams.set('view', view)
   for (const [key, value] of Object.entries({ org, patch })) {
     if (value) url.searchParams.set(key, value)
     else url.searchParams.delete(key)
   }
-  globalThis.history.replaceState(null, '', url)
+  return url
 }
 
 /** Every word of the query somewhere in the patch's label, medium, organization or id. */
@@ -58,7 +60,10 @@ const matcher = (query) => {
   return (patch, org) => {
     // A card answers for all its variants.
     const designs = variantsOf(patch)?.members ?? [patch]
-    const text = `${cardLabel(patch)} ${designs.map((d) => `${d.label} ${d.variant ?? ''} ${d.id}`).join(' ')} ${patch.medium} ${org.name}`.toLowerCase()
+    const fields = designs.flatMap((design) => [
+      design.label, design.variant, design.id, ...design.merged, ...(design.absorbs ?? [])
+    ])
+    const text = [cardLabel(patch), ...fields, patch.medium, patch.finish, org.name].join(' ').toLowerCase()
     return words.every((word) => text.includes(word))
   }
 }
@@ -73,14 +78,15 @@ export const PatchesView = ({ collection = 'patches' }) => {
   const total = SECTIONS.reduce((n, s) => n + s.orgs.reduce((m, o) => m + o.patches.filter(isCard).length, 0), 0)
   const orgCount = SECTIONS.reduce((n, s) => n + s.orgs.length, 0)
   const [place, setPlace] = useState(() => read(collection, SECTIONS))
-  const [query, setQuery] = useState('')
+  const { query, setQuery, cards, openCard, closeCard } = useCatalogueIndex(copy.view)
   const deferredQuery = useDeferredValue(query)
-  const cards = useRef({})
 
-  const go = useCallback((next) => {
+  const go = useCallback((next, card) => {
     setPlace(next)
-    write(copy.view, next)
-  }, [copy.view])
+    const url = urlFor(copy.view, next)
+    if (card) openCard(url, card)
+    else writeHistory(url, { replace: true })
+  }, [copy.view, openCard])
 
   const sections = useMemo(() => {
     const matches = matcher(deferredQuery)
@@ -105,10 +111,8 @@ export const PatchesView = ({ collection = 'patches' }) => {
 
   // Back from a patch lands on its card.
   const close = useCallback(() => {
-    const id = place.patch
-    go({ org: place.org, patch: null })
-    requestAnimationFrame(() => cards.current[id]?.focus())
-  }, [go, place.org, place.patch])
+    closeCard(cardOf(open).id, () => go({ org: place.org, patch: null }))
+  }, [closeCard, open, go, place.org])
 
   useEffect(() => { if (!open) return; globalThis.scrollTo?.({ top: 0 }) }, [open])
 
@@ -138,7 +142,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
         <div className="patches__filters">
           <label className="patches__filter">
             <span>Organization</span>
-            <select value={place.org ?? ''} onChange={(event) => go({ org: event.target.value || null, patch: null })}>
+            <select aria-label="Organization" value={place.org ?? ''} onChange={(event) => go({ org: event.target.value || null, patch: null })}>
               <option value="">All {orgCount} organizations</option>
               {SECTIONS.map(({ sector, orgs }) => (
                 <optgroup key={sector.id} label={sector.name}>
@@ -186,7 +190,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
                     ref={(element) => { cards.current[patch.id] = element }}
                     className="patches__card"
                     href={searchFor({ view: copy.view, org: place.org, patch: patch.id })}
-                    onClick={(event) => { if (isPlainClick(event)) { event.preventDefault(); go({ org: place.org, patch: patch.id }) } }}
+                    onClick={(event) => { if (isPlainClick(event)) { event.preventDefault(); go({ org: place.org, patch: patch.id }, patch.id) } }}
                   >
                     <span className="patches__thumb">
                       <img src={patch.previewUrl} alt="" loading="lazy" decoding="async" />
@@ -194,7 +198,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
                     <span className="patches__card-text">
                       <span className="patches__title">{cardLabel(patch)}</span>
                       <span className="patches__medium">
-                        {patch.medium}
+                        {[patch.medium, patch.finish].filter(Boolean).join(' · ')}
                         {variantsOf(patch) && ` · ${variantsOf(patch).members.length} variants`}
                         {photosOf(patch).length > 1 && ` · seen in ${photosOf(patch).length} photos`}
                       </span>

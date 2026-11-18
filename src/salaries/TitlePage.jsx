@@ -8,6 +8,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { Segmented } from '../site/Segmented.jsx'
+import { titleMedians } from './titleScope.js'
 import { keyedTitles, relatedTitles, titleLabel, titleShard } from './positions.js'
 import { formatMoney as money } from './money.js'
 import { YearPicker, yearSpan } from './parts.jsx'
@@ -91,14 +92,7 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
   // The median of every record each year. Where several employers share a year it is the build's,
   // since employers' medians do not combine: for the chosen sector where the title spans several,
   // otherwise for all of them. Where one employer has the year, it is that employer's median.
-  const medians = useMemo(() => {
-    const byYear = years.map((_, at) => {
-      const there = inSector.filter((cell) => cell.year === at)
-      return there.length === 1 ? there[0].median : null
-    })
-    for (const [at, value] of detail?.medians?.[sector] ?? detail?.medians?.all ?? []) byYear[at] = value
-    return byYear
-  }, [detail, cells, sector, years]) // eslint-disable-line react-hooks/exhaustive-deps
+  const medians = useMemo(() => titleMedians(cells, detail?.medians, sector, years), [cells, detail, sector, years])
   // The sector a search was narrowed to stays offered even where this title has none in it, so it can
   // be cleared here.
   const sectors = [...new Set([...cells.map((cell) => cell.entry.sector), ...(sector !== 'all' ? [sector] : [])])].sort()

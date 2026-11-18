@@ -37,6 +37,9 @@ test('badges are their own collection, and what orgs.json leaves out stays out',
     const badge = /badge/i.test(design.medium)
     assert.equal(design.collection, badge ? 'badges' : 'patches', `${design.id} (${design.medium})`)
   }
+  const warden = designs.find((design) => design.id === 'S01-O01')
+  assert.equal(warden.medium, 'Metal badge')
+  assert.equal(warden.finish, 'Worn copper tone')
   const kept = new Set(designs.map((d) => d.id))
   for (const gone of manifest.excluded) assert.ok(!kept.has(gone.id), `${gone.id} is excluded but still in the library`)
   // Another photograph of a kept design is merged into it, not listed twice.
@@ -116,4 +119,40 @@ test('the BC Forest Service timeline dates the wording it names', async () => {
   assert.deepEqual(eras('BC / Forests, Lands and Natural Resource Operations — wildlife oval · Full colour'), [])
   assert.deepEqual(eras('British Columbia / Ministry of Forests — wildlife oval'), ['From 1976'])
   assert.equal(historyOf({ label: 'x', group: 'forests-oval' }).logo?.id, 'forests')
+})
+
+test('each available source crop belongs to its design and retains its own medium', { skip: !manifest }, () => {
+  const crops = JSON.parse(readFileSync(new URL('./sourceCrops.json', import.meta.url)))
+  const publicRoot = new URL('../../public/', import.meta.url)
+  for (const patch of manifest.orgs.flatMap((org) => org.patches)) {
+    const record = crops[patch.id]
+    const sources = record?.sources ?? []
+    const ids = [...sources.map((s) => s.id), ...(record?.unavailable ?? [])]
+    for (const sighting of patch.sightings) assert.ok(ids.includes(sighting.id), sighting.id)
+    if (record) assert.ok(sources.length, patch.id)
+    for (const source of sources) {
+      assert.ok(existsSync(new URL(source.crop, publicRoot)), source.crop)
+      assert.ok(source.size.every((n) => n > 0), source.id)
+    }
+  }
+  const cap = crops['S15-O01'].sources
+  assert.equal(cap.find((s) => s.id === 'S15-O01').medium, 'Metal badge')
+  assert.equal(cap.find((s) => s.id === 'S28-O07').medium, 'Printed depiction')
+  const predator = manifest.orgs.flatMap((org) => org.patches).find((patch) => patch.id === 'MC03-O01')
+  assert.equal(predator.medium, 'Printed depiction')
+})
+
+test('corrected uniform identities are filed with their source organizations', { skip: !manifest }, () => {
+  const expected = [
+    ['S56-O48', 'sfu', 'Simon Fraser University'],
+    ['S56-O59', 'uvic', 'University of Victoria'],
+    ['S56-O47', 'justice-institute', 'Police College'],
+    ['S56-O23', 'expo-86', 'Emergency'],
+    ['S56-O24', 'expo-86', 'Security']
+  ]
+  for (const [id, organization, wording] of expected) {
+    const patch = manifest.orgs.find((org) => org.id === organization)?.patches.find((p) => p.id === id)
+    assert.ok(patch?.label.includes(wording), id)
+    assert.equal(patch.medium, 'Cloth patch')
+  }
 })

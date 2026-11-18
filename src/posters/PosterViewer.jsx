@@ -8,6 +8,8 @@
 // `upgrade` that resolves to the real one, which replaces it when it arrives.
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import { writeHistory } from '../site/browserHistory.js'
+import { Modal } from './ui/Modal.jsx'
 import { Poster } from './stage/Poster.jsx'
 import { useMedia } from './hooks/useMedia.js'
 import { useKeyboardNav } from './hooks/useKeyboardNav.js'
@@ -34,7 +36,7 @@ const writeStory = (on) => {
   const url = new URL(globalThis.location.href)
   if (on) url.searchParams.set('story', '1')
   else url.searchParams.delete('story')
-  globalThis.history.replaceState(null, '', url)
+  writeHistory(url, { replace: true })
 }
 
 export function PosterViewer({ meta, series, module, part, onPart, onExit, previous, next, shelf, backLabel = 'Posters', noun = 'poster' }) {
@@ -95,8 +97,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
   const openExport = useCallback((target) => { setExportTarget(target); setExportOpen(true) }, [])
 
   useKeyboardNav({
-    // Escape steps out of the story before it steps out of the poster.
-    order, current, onSelect: select, onExit: telling ? () => tell(false) : onExit, enabled: !exportOpen,
+    order, current, onSelect: select, enabled: !exportOpen,
     keys: useMemo(() => ({
       e: () => { if (exportable) setExportOpen(true) },
       p: tour.toggle,
@@ -133,8 +134,14 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
     )
     : extras.content ?? <DataPanel partId={current} parts={parts} order={order} onSelect={select} tour={tour} story={canTell ? () => tell(true) : null} />
 
+  const dismiss = () => {
+    if (current !== 'overview') select('overview')
+    else if (telling) tell(false)
+    else onExit()
+  }
+
   return (
-    <div className="pv" role="region" aria-label={`${meta.title}, interactive ${noun}`}>
+    <Modal className="pv" onDismiss={dismiss} aria-label={`${meta.title}, interactive ${noun}`}>
       <div className="pv-app">
         <Poster
           svgRaw={drawing.raw}
@@ -166,7 +173,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
         <header className="pv-top">
           {/* The way back sits in the title itself: "← Posters │ REWARD: A Living Forest". */}
           <nav className="pv-top-start pv-crumb" aria-label={`${meta.title}, in ${backLabel.toLowerCase()}`}>
-            <button type="button" className="pv-back" onClick={onExit} title={`All ${backLabel.toLowerCase()} (Esc from the whole ${noun})`} aria-label={`Back to all ${backLabel.toLowerCase()}`}>
+            <button type="button" className="pv-back" data-initial-focus onClick={onExit} title={`All ${backLabel.toLowerCase()} (Esc from the whole ${noun})`} aria-label={`Back to all ${backLabel.toLowerCase()}`}>
               <span aria-hidden="true">←</span> <span className="pv-back-label">{backLabel}</span>
             </button>
             <button type="button" className="pv-brand" onClick={() => select('overview')} aria-label={`Back to the whole ${noun}`}>
@@ -203,6 +210,6 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
 
         <ExportDialog open={exportOpen} onClose={() => setExportOpen(false)} targets={targets} target={exportTarget} onTarget={setExportTarget} />
       </div>
-    </div>
+    </Modal>
   )
 }

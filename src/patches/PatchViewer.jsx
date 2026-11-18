@@ -1,9 +1,12 @@
 // One patch: its vector drawing beside the same drawing sewn by Patcher's digitizer, with the size,
 // edge and thread finish to sew it at, and the machine files to download.
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { createDigitizer, renderTextured, writeDst, writeExp } from 'patcher'
 import { LIBRARY, cardLabel, loadPatchSvg, variantsOf } from 'patcher/library'
+import sourceCrops from './sourceCrops.json'
+import { SourceOverlay } from './SourceOverlay.jsx'
+import { BadgeRelief } from './BadgeRelief.jsx'
 import { Segmented } from '../site/Segmented.jsx'
 import { SiteLink } from '../site/navigation.jsx'
 import { FOREST_SERVICE_TIMELINE, historyOf } from './patchHistory.js'
@@ -59,7 +62,7 @@ function PatchHistory({ patch }) {
       {notes.length > 0 && (
         <p className="patch__source">
           From the <a href={FOREST_SERVICE_TIMELINE.url} target="_blank" rel="noreferrer">BC Forest Service timeline</a>: the dates
-          bound the wording, not the patch itself.
+          describe when the wording was used.
         </p>
       )}
       {logo && (
@@ -103,44 +106,57 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   const [widthMm, setWidthMm] = useState('89')
   const [border, setBorder] = useState('merrow')
   const [finish, setFinish] = useState('matte')
-  const [result, setResult] = useState(null)
-  const [status, setStatus] = useState('sewing')
+  const badge = patch.collection === 'badges'
+  const textile = ['Cloth patch', 'Cloth rocker', 'Cloth embroidery'].includes(patch.medium)
+  const [choice, setPreview] = useState('vector')
+  const reference = sourceCrops[patch.id]
+  const preview = choice === 'source' && !reference ? 'vector' : choice
+  const overlay = preview === 'source'
+  const embroidery = !overlay && (textile || preview === 'embroidered')
   const [attempt, setAttempt] = useState(0)
-  // The whole drawing: library patches are stored with their shared crests and outlines apart, and
-  // loadPatchSvg joins them back into the atlas's file (checked against its SHA-256).
-  const [drawing, setDrawing] = useState(null)
-  const digitizer = useRef(null)
+  const [loaded, setLoaded] = useState(null)
+  const [sewn, setSewn] = useState(null)
   const canvas = useRef(null)
+  const back = useRef(null)
+  // Returning to an earlier variant starts a fresh fetch. Its previous blob URL has been revoked.
+  const request = useMemo(() => ({ patch, attempt }), [patch, attempt])
+  const drawing = loaded?.request === request ? loaded : null
+  const sameSettings = sewn?.drawing === drawing && sewn.widthMm === widthMm && sewn.border === border
+  const stitchJob = drawing?.url && sameSettings ? sewn : null
+  const result = embroidery ? stitchJob?.result : null
+
+  useEffect(() => { back.current?.focus({ preventScroll: true }) }, [])
 
   useEffect(() => {
-    const instance = createDigitizer()
-    digitizer.current = instance
-    return () => { instance.dispose(); if (digitizer.current === instance) digitizer.current = null }
-  }, [])
-
-  useEffect(() => {
-    let gone = false
-    let url = null
-    setStatus('sewing')
-    loadPatchSvg(patch)
+    let active = true
+    let url
+    loadPatchSvg(request.patch)
       .then((text) => {
-        if (gone) return
+        if (!active) return
         url = URL.createObjectURL(new Blob([text], { type: 'image/svg+xml' }))
-        setDrawing({ text, url })
+        setLoaded({ request, text, url })
       })
-      .catch((error) => { if (!gone) { console.error(error); setStatus('failed') } })
-    return () => { gone = true; if (url) URL.revokeObjectURL(url) }
-  }, [patch, attempt])
+      .catch((error) => {
+        if (!active) return
+        console.error(error)
+        setLoaded({ request, failed: true })
+      })
+    return () => { active = false; if (url) URL.revokeObjectURL(url) }
+  }, [request])
 
   useEffect(() => {
-    if (!drawing) return undefined
-    let gone = false
-    setStatus('sewing')
-    digitizer.current.digitize(drawing.text, { widthMm: Number(widthMm), border })
-      .then((sewn) => { if (!gone) { setResult(sewn); setStatus('ready') } })
-      .catch((error) => { if (!gone) { console.error(error); setStatus('failed') } })
-    return () => { gone = true }
-  }, [drawing, widthMm, border])
+    if (!embroidery || !drawing?.url) return
+    const digitizer = createDigitizer()
+    let active = true
+    digitizer.digitize(drawing.text, { widthMm: Number(widthMm), border })
+      .then((result) => { if (active) setSewn({ drawing, widthMm, border, result }) })
+      .catch((error) => {
+        if (!active) return
+        console.error(error)
+        setSewn({ drawing, widthMm, border, failed: true })
+      })
+    return () => { active = false; digitizer.dispose() }
+  }, [embroidery, drawing, widthMm, border])
 
   useEffect(() => {
     if (!result || !canvas.current) return
@@ -150,7 +166,9 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
   useEffect(() => {
     const onKey = (event) => {
-      if (event.target.closest?.('input, select, textarea') || event.metaKey || event.ctrlKey || event.altKey) return
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return
+      if (event.target.closest?.('input, select, textarea, [contenteditable="true"], [role="menu"]')) return
+      if (event.target !== document.body && !event.target.closest?.('.patch')) return
       if (event.key === 'Escape') onClose()
       else if (event.key === 'ArrowLeft' && previous) onOpen(previous)
       else if (event.key === 'ArrowRight' && next) onOpen(next)
@@ -160,10 +178,11 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   }, [onClose, onOpen, previous, next])
 
   const name = `${patch.id}-${org.id}`
-  // A variant is shown under its card's label, and named in full where it stands alone.
   const variants = variantsOf(patch)
   const title = patch.variant ? `${cardLabel(patch)} — ${patch.variant}` : patch.label
-  const ready = status === 'ready' && result
+  const photos = photosOf(patch)
+  const failed = drawing?.failed || stitchJob?.failed
+  const retry = <button type="button" className="button--inline" onClick={() => setAttempt((n) => n + 1)}>Try again</button>
   const exportPng = () => {
     const png = textured(result, finish, Math.min(24, 6000 / Math.max(result.widthMm, result.heightMm)))
     png.toBlob((blob) => blob && download(blob, `${name}-embroidered.png`), 'image/png')
@@ -172,7 +191,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   return (
     <section className="patch" aria-label={title}>
       <nav className="patch__bar" aria-label={noun === 'badges' ? 'Badges' : 'Patches'}>
-        <button type="button" className="button button--ghost" onClick={onClose}>← All {noun}</button>
+        <button type="button" className="button button--ghost" ref={back} onClick={onClose}>← All {noun}</button>
         <span className="patch__crumb">{org.name} · {position.index + 1} of {position.count}</span>
         {/* On a phone the steps shrink to arrows, so the bar stays one row. */}
         <span className="patch__steps">
@@ -185,28 +204,51 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
         </span>
       </nav>
 
+      <header className="patch__heading">
+        <h2>{title}</h2>
+        <p className="patch__meta">{[patch.medium, patch.finish, patch.quality].filter(Boolean).join(' · ')}</p>
+        <div className={!textile ? 'patch__preview-choice' : 'patch__preview-choice patch__preview-choice--mobile'}>
+          <Segmented
+            ariaLabel="Preview"
+            options={[
+              { value: 'vector', label: 'Vector' },
+              ...(reference ? [{ value: 'source', label: 'Source overlay' }] : []),
+              ...(badge ? [{ value: 'relief', label: '3D relief' }] : []),
+              { value: 'embroidered', label: textile ? 'Embroidered' : 'Embroidery adaptation' }
+            ]}
+            value={preview}
+            onChange={setPreview}
+          />
+        </div>
+        {textile && reference && <div className="patch__preview-choice patch__preview-choice--desktop">
+          <Segmented ariaLabel="Preview" value={overlay ? 'source' : 'vector'} onChange={setPreview}
+            options={[{ value: 'vector', label: 'Vector & embroidery' }, { value: 'source', label: 'Source overlay' }]} />
+        </div>}
+      </header>
       <div className="patch__body">
-        <div className="patch__stages">
-          <figure className="patch__stage">
-            <figcaption>Vector</figcaption>
-            <img src={drawing?.url ?? patch.previewUrl} alt={title} />
-          </figure>
-          <figure className="patch__stage" aria-busy={status === 'sewing'}>
-            <figcaption>Embroidered</figcaption>
-            <canvas ref={canvas} hidden={!ready} aria-label={`${title}, embroidered`} role="img" />
-            {status === 'sewing' && <p className="patch__status" role="status">Sewing…</p>}
-            {status === 'failed' && (
-              <p className="patch__status" role="alert">
-                This patch couldn’t be sewn. <button type="button" className="button--inline" onClick={() => setAttempt((n) => n + 1)}>Try again</button>
-              </p>
-            )}
-          </figure>
+        <div className={`patch__stages${!textile || overlay ? ' patch__stages--single' : ''}`} data-preview={preview}>
+          {overlay && <SourceOverlay key={patch.id} record={reference} drawing={drawing} title={title} />}
+          {badge && preview === 'relief' && <BadgeRelief key={patch.id} drawing={drawing} patch={patch} title={title} />}
+          {!overlay && (textile || preview === 'vector') && (
+            <figure className="patch__stage patch__stage--vector">
+              <figcaption>Vector</figcaption>
+              <img src={drawing?.url ?? patch.previewUrl} alt={title} />
+            </figure>
+          )}
+          {embroidery && (
+            <figure className="patch__stage patch__stage--embroidered" aria-busy={!failed && !result}>
+              <figcaption>{textile ? 'Embroidered' : 'Embroidery adaptation'}</figcaption>
+              {result
+                ? <canvas ref={canvas} aria-label={`${title}, embroidered`} role="img" />
+                : !failed && <p className="patch__status" role="status">Sewing…</p>}
+              {stitchJob?.failed && <p className="patch__status" role="alert">Embroidery preview failed. {retry}</p>}
+            </figure>
+          )}
         </div>
 
         <aside className="patch__panel">
-          <h2>{cardLabel(patch)}</h2>
-          <p className="patch__meta">{patch.medium} · {patch.quality}</p>
-
+          {badge && preview === 'relief' && <p className="patch__more">The front surface is modeled from the artwork and source photographs. Depth and finish are approximate.</p>}
+          {drawing?.failed && <p className="patch__status" role="alert">The vector drawing couldn’t load. {retry}</p>}
           {variants && (
             // Above the other controls and wrapping, since a design can have ten variants.
             <div className="patch__variants">
@@ -218,38 +260,46 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
               />
             </div>
           )}
-          <Segmented label="Width" options={SIZES} value={widthMm} onChange={setWidthMm} compact />
-          <Segmented label="Edge" options={BORDERS} value={border} onChange={setBorder} compact />
-          <Segmented label="Thread" options={FINISHES} value={finish} onChange={setFinish} compact />
-
-          {ready && (
+          {embroidery && (
             <>
-              <dl className="patch__facts">
-                <div><dt>Size</dt><dd>{Math.round(result.widthMm - 2 * result.padMm)} × {Math.round(result.heightMm - 2 * result.padMm)} mm</dd></div>
-                <div><dt>Stitches</dt><dd>{result.stitchCount.toLocaleString()}</dd></div>
-                <div><dt>Threads</dt><dd>{result.palette.length}</dd></div>
-              </dl>
-              <ul className="patch__threads" aria-label="Thread colours">
-                {result.palette.map((colour, index) => (
-                  <li key={colour} title={`${colour} · ${Math.round(result.coverage[index] * 100)}%`} style={{ background: colour }} />
-                ))}
-              </ul>
+              <Segmented label="Width" options={SIZES} value={widthMm} onChange={setWidthMm} compact />
+              <Segmented label="Edge" options={BORDERS} value={border} onChange={setBorder} compact />
+              <Segmented label="Thread" options={FINISHES} value={finish} onChange={setFinish} compact />
+
+              {result && (
+                <>
+                  <dl className="patch__facts">
+                    <div><dt>Size</dt><dd>{Math.round(result.widthMm - 2 * result.padMm)} × {Math.round(result.heightMm - 2 * result.padMm)} mm</dd></div>
+                    <div><dt>Stitches</dt><dd>{result.stitchCount.toLocaleString()}</dd></div>
+                    <div><dt>Threads</dt><dd>{result.palette.length}</dd></div>
+                  </dl>
+                  <ul className="patch__threads" aria-label="Thread colours">
+                    {result.palette.map((colour, index) => (
+                      <li key={colour} title={`${colour} · ${Math.round(result.coverage[index] * 100)}%`} style={{ background: colour }} />
+                    ))}
+                  </ul>
+                </>
+              )}
             </>
           )}
-
           <div className="patch__exports">
-            <button type="button" className="button button--primary" disabled={!ready} onClick={exportPng}>PNG</button>
-            <button type="button" className="button" disabled={!ready} onClick={() => download(new Blob([writeDst(result, name)]), `${name}.dst`)} title="Tajima machine file">DST</button>
-            <button type="button" className="button" disabled={!ready} onClick={() => download(new Blob([writeExp(result)]), `${name}.exp`)} title="Melco machine file">EXP</button>
-            {drawing
+            {embroidery && (
+              <>
+                <button type="button" className="button button--primary" disabled={!result} onClick={exportPng}>PNG</button>
+                <button type="button" className="button" disabled={!result} onClick={() => download(new Blob([writeDst(result, name)]), `${name}.dst`)} title="Tajima machine file">DST</button>
+                <button type="button" className="button" disabled={!result} onClick={() => download(new Blob([writeExp(result)]), `${name}.exp`)} title="Melco machine file">EXP</button>
+              </>
+            )}
+            {drawing?.url
               ? <a className="button" href={drawing.url} download={`${name}.svg`}>SVG</a>
               : <button type="button" className="button" disabled>SVG</button>}
           </div>
-          <p className="patch__more">
+          {embroidery && <p className="patch__more">
             <a href={`${PATCHER_URL}?patch=${encodeURIComponent(patch.id)}`} target="_blank" rel="noreferrer">Open in Patcher</a> for
             stitch density, thread charts and the sew-out.
-          </p>
+          </p>}
 
+          {!reference && <p className="patch__source">No individual source crop is available for this design.</p>}
           <PatchHistory patch={patch} />
           {patch.limitations && (
             <details className="patch__limits">
@@ -261,12 +311,12 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
             {patch.supplied
               ? <>{patch.id}, a supplied drawing rather than an atlas entry</>
               : <>{patch.id} in the atlas</>}
-            {photosOf(patch).length <= 1 && patch.sourceUrl && <> · <a href={patch.sourceUrl} target="_blank" rel="noreferrer">source photograph</a></>}
+            {photos.length <= 1 && patch.sourceUrl && <> · <a href={patch.sourceUrl} target="_blank" rel="noreferrer">source reference</a></>}
           </p>
-          {photosOf(patch).length > 1 && (
+          {photos.length > 1 && (
             <p className="patch__source">
-              Seen {patch.sightings.length} times in {photosOf(patch).length} photographs:{' '}
-              {photosOf(patch).map(({ photo, sourceUrl, ids }, index) => (
+              Seen {patch.sightings.length} times in {photos.length} sources:{' '}
+              {photos.map(({ photo, sourceUrl, ids }, index) => (
                 <span key={photo}>
                   {index > 0 && ', '}
                   {sourceUrl ? <a href={sourceUrl} target="_blank" rel="noreferrer">{photo}</a> : photo}

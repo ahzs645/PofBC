@@ -18,6 +18,7 @@ export const hasLocatedSource = (leads = []) => leads.some((lead) => lead.url &&
 
 export function sourceCatalog (backlog = {}, collections = []) {
   const byKey = new Map()
+  const imported = new Map()
   const add = (source, employer, extra = {}) => {
     if (!employer) return
     const entry = {
@@ -32,6 +33,8 @@ export function sourceCatalog (backlog = {}, collections = []) {
       notes: notes(source.notes), ...extra
     }
     const key = keyOf(entry)
+    // Multiple accepted schedules can cover different pages of the same document and cohort.
+    if (entry.status === 'imported') imported.set(JSON.stringify([key, entry.acceptedSourceId]), entry)
     const old = byKey.get(key)
     if (!old || precedence(entry.status) >= precedence(old.status)) byKey.set(key, entry)
   }
@@ -72,7 +75,7 @@ export function sourceCatalog (backlog = {}, collections = []) {
       add(source, source.employerSlug ?? source.slug, { collection, status: 'held-for-review', rows: 0 })
     }
   }
-  const entries = [...byKey.values()]
+  const entries = [...byKey.values()].filter((entry) => entry.status !== 'imported').concat([...imported.values()])
   // An unclassified document lead is satisfied by an accepted cohort from that
   // document. Explicitly different cohorts and held sources remain separate.
   return entries.filter((entry) => entry.scope || entry.status === 'imported' || entry.status === 'held-for-review' || !entries.some((accepted) =>
