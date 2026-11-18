@@ -114,6 +114,7 @@ const index = JSON.parse(await readFile(join(PUBLIC, 'salaries/people/index.json
 const employersIndex = JSON.parse(await readFile(join(PUBLIC, 'salaries/employers/index.json'), 'utf8'))
 const titlesIndex = JSON.parse(gunzipSync(await readFile(join(PUBLIC, 'salaries/positions/index.json.gzip'))))
 const titles = keyedTitles(titlesIndex)
+const titleScopes = JSON.parse(gunzipSync(await readFile(join(PUBLIC, 'salaries/position-scopes.json.gzip'))))
 const manifest = JSON.parse(await readFile(join(PUBLIC, 'salaries/search/index.json'), 'utf8'))
 const readRows = async shard => JSON.parse(gunzipSync(await readFile(join(PUBLIC, `salaries/people/${shard}.json.gzip`))))
 const targetKey = personKey('Fathi Baghbadorani, Milad')
@@ -238,9 +239,15 @@ async function readyEmployer(query, entry) {
   return employerCard(entry)
 }
 
-async function readyTitles(query) {
+async function readyTitles(query, { year, sector } = {}) {
   const match = titleMatcher(query)
-  const expected = titles.filter(title => match(title.key) !== null).length
+  const eligible = titles.filter(title => match(title.key) !== null && (
+    (year === undefined && sector === undefined) || titleScopes[title.key].some(([employer, period]) =>
+      (year === undefined || employersIndex.years[period] === year) &&
+      (sector === undefined || employersIndex.employers[employer].sector === sector))
+  ))
+  const labels = new Set(eligible.map(title => title.label))
+  const expected = eligible.length
   assert.ok(expected, `Position query ${query} has published matches`)
   await waitFor(() => {
     assert.equal(document.querySelector('.salaries__global-search input[type="search"]')?.value, query)
@@ -248,6 +255,7 @@ async function readyTitles(query) {
     assert.ok(section, `Position results appear for ${query}`)
     assert.equal(section.querySelector('.salaries__meta')?.textContent, `${expected.toLocaleString('en-CA')} ${expected === 1 ? 'title' : 'titles'} across employers`)
     assert.equal(cards(section).length, Math.min(9, expected))
+    assert.ok(cards(section).every(card => labels.has(card.querySelector('.salaries__name').textContent)))
   })
   return titleSection()
 }
@@ -452,7 +460,7 @@ try {
     })
     // A detail page's global field starts a new cross-employer search; browser Back restores it.
     search('teacher')
-    await readyTitles('teacher')
+    await readyTitles('teacher', { year: yearLabel })
     assert.equal(document.querySelector('#salaries-employer'), null)
     assert.equal(new URL(location.href).searchParams.has('employer'), false)
     React.act(() => history.back())
@@ -504,11 +512,10 @@ try {
     }
   })
 
-  await test('Title detail: explicit global-list scope, selected filters, employer table search, role/person links and Back', async () => {
+  await test('Title detail: filtered search results, selected filters, employer table search, role/person links and Back', async () => {
     await mount('senior policy analyst', { params: `&salary-year=${encodeURIComponent(policyYearLabel)}&salary-sector=${encodeURIComponent(policySector)}` })
-    const results = await readyTitles('senior policy analyst')
-    assert.match(results.textContent, /Titles are listed across all sectors and periods\./)
-    assert.match(results.textContent, /selected sector and period/)
+    const resultScope = { year: policyYearLabel, sector: policySector }
+    const results = await readyTitles('senior policy analyst', resultScope)
     const originalUrl = location.href
     fireEvent.click(namedCard(results, policySummary.label))
     const titleHeading = () => document.querySelector('section[aria-labelledby="salaries-title"]')
@@ -570,7 +577,7 @@ try {
     fireEvent.click(within(document.querySelector('section[aria-labelledby="salaries-role"]')).getByRole('button', { name: 'Back' }))
     await expectTitleEmployers('all')
     fireEvent.click(within(titleHeading()).getByRole('button', { name: 'Back' }))
-    await readyTitles('senior policy analyst')
+    await readyTitles('senior policy analyst', resultScope)
     assert.equal(location.href, originalUrl)
     selectedSector(document.querySelector('.salaries__desktop-filters [aria-label="Sector"]'), 'all')
     search('UVic')

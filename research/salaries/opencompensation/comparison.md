@@ -217,5 +217,5 @@ npm run check:opencompensation
 
 [Detailed comparison](comparison.json) · [Directory comparison CSV](comparison.csv) · [Observed input](observed-snapshot.json) · [Methods and source findings](README.md)
 
-Repository salary input SHA-256: `336543bd4986e044de2c894525b116c1051fe2e7987675c06c76e61f9e7807aa`.
+Repository salary input SHA-256: `ff681959d1e95ef4092b5337bb429ddd3d7ef8f5883720ccf8fd150c9620b67f`.
 Saved directory input SHA-256: `3c3a0fb9ef04e42aa58d4ea5f5d20084dc92fbdc6fe3162fc9eb336d6dec7f24`.
