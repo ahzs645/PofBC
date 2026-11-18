@@ -1,6 +1,6 @@
 {
   "schema": "instrument-decisions/1",
-  "reviewed_on": "2026-11-13",
+  "reviewed_on": "2026-11-17",
   "note": "Reviewed readings of citations the instrument catalogue's rules leave for review (research/audit/instruments-review.json). Each decision is read from the event's own title and locator, or the body's own record, as already held in the repository: no new research. `cite` must read as exactly one instrument; `relation` null keeps the instrument as a dated event citing it, without a stated relationship; an empty `instruments` list records that the citation names no instrument to catalogue. `body` overrides the event's subject where the relationship is with another body the event names.",
   "aliases": {
     "act-park-act": {
@@ -869,6 +869,51 @@
         }
       ],
       "reason": "The 1966 Act is cited for the 1965 event; the amalgamation itself was authorized by OIC 2386/1965 (a separate event)."
+    },
+    "atlas:bcdc-act-assented-1973": {
+      "instruments": [
+        {
+          "cite": "Development Corporation of British Columbia Act [SBC 1973] c. 27",
+          "relation": null
+        }
+      ],
+      "reason": "The assent heading gives 18 April. The retroactive date of establishment under sections 2 and 37 is recorded separately on the body."
+    },
+    "atlas:bcdc-transfer-to-bcec-1987": {
+      "instruments": [
+        {
+          "cite": "British Columbia Enterprise Corporation Financial Restructuring Act [SBC 1987] c. 39",
+          "relation": "reorganized_by",
+          "provisions": [
+            "s. 2(1)",
+            "s. 7(1)"
+          ],
+          "note": "BCDC’s property, assets and associated obligations passed to British Columbia Enterprise Corporation effective 31 March 1987. These provisions do not establish a dissolution date."
+        },
+        {
+          "cite": "B.C. Reg. 289/1987",
+          "relation": null
+        }
+      ],
+      "reason": "The cited consolidation of SBC 1987, c. 39, section 2, identifies the transfer. Section 7 and its editorial note distinguish the deemed effective date from assent and identify the commencement regulation."
+    },
+    "atlas:bctrade-act-assented-1989": {
+      "instruments": [
+        {
+          "cite": "Trade Development Corporation Act [SBC 1989] c. 17",
+          "relation": "established_by",
+          "provisions": [
+            "s. 2(1)",
+            "s. 16"
+          ],
+          "note": "The Act received assent on 1 June 1989. Its section 16 commencement regulation, B.C. Reg. 148/89, made it effective the same day."
+        },
+        {
+          "cite": "B.C. Reg. 148/1989",
+          "relation": null
+        }
+      ],
+      "reason": "The assent heading and sections 2 and 16 identify the enactment and its commencement mechanism. The editorial note to section 16 in the official 1994 consolidation identifies the regulation and effective date (https://www.bclaws.gov.bc.ca/civix/document/id/94consol18/94consol18/89017)."
     }
   },
   "bodies": {
@@ -1014,6 +1059,24 @@
         }
       ],
       "reason": "Designated by M432/1996."
+    },
+    "bc-development-corporation": {
+      "instruments": [
+        {
+          "cite": "Development Corporation of British Columbia Act [SBC 1973] c. 27",
+          "relation": "established_by",
+          "provisions": [
+            "s. 2",
+            "s. 37(1)(a)"
+          ],
+          "note": "Section 2 establishes the corporation. On proclamation, section 37(1)(a) gave the Act retroactive effect to 31 March 1973."
+        }
+      ],
+      "reason": "The date on the body is the retroactive date provided by the statute. Assent on 18 April and the subsequent start of operations are separate."
+    },
+    "bc-trade-development-corporation": {
+      "instruments": [],
+      "reason": "The existing assent event records section 2 and the section 16 commencement regulation. The launch advertisement corroborates the public launch date."
     }
   },
   "legalBasis": {

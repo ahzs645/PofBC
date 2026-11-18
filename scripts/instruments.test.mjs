@@ -51,6 +51,21 @@ test('policy events have a policy category and lead to their implementation, not
   assert.equal(byId('policy-better-teamwork-better-care-1996').type, 'policy')
 })
 
+test('the development corporations retain their different commencement histories and the transfer of assets', () => {
+  const development = byId('act-development-corporation-of-british-columbia-act')
+  assert.deepEqual(development.relations.map(({ relation, from }) => [relation, from]), [['established_by', '1973-03-31']])
+  assert.deepEqual(development.milestones.map(({ date }) => date.start), ['1973-04-18'])
+
+  const transfer = byId('act-british-columbia-enterprise-corporation-financial-restructuring-act')
+  assert.deepEqual(transfer.relations.map(({ body, relation, from }) => [body, relation, from]),
+    [['bc-development-corporation', 'reorganized_by', '1987-03-31']])
+  assert.equal(byId('bc-reg-1987-289').milestones[0].event, 'atlas:bcdc-transfer-to-bcec-1987')
+
+  const trade = byId('act-trade-development-corporation-act')
+  assert.deepEqual(trade.relations.map(({ body, from }) => [body, from]), [['bc-trade-development-corporation', '1989-06-01']])
+  assert.equal(byId('bc-reg-1989-148').milestones[0].event, 'atlas:bctrade-act-assented-1989')
+})
+
 test('every citation is read or decided: the review list stays empty unless a new citation arrives', async () => {
   const { readFileSync } = await import('node:fs')
   const review = JSON.parse(readFileSync('research/audit/instruments-review.json', 'utf8'))
