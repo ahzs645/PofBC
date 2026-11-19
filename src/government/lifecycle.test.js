@@ -82,3 +82,26 @@ test('every ministry of every year has a minister, the Treasury under both its s
   assert.ok(find(1905, 'treasury-department-1899').head.person)
   assert.ok(find(1920, 'treasury-department-1899').head.person)
 })
+
+test('Columbia Power and Columbia Basin Trust share four holdings without an accountability edge', () => {
+  const current = governmentIn(PRESENT_YEAR)
+  for (const [id, directHolder] of [
+    ['arrow-lakes-power-corporation', 'CBT Arrow Lakes Power Development Corp.'],
+    ['brilliant-power-corporation', 'CBT Power Corp.'],
+    ['brilliant-expansion-power-corporation', 'CBT Brilliant Expansion Power Corp.'],
+    ['waneta-expansion-power-corporation', 'CBT Waneta Expansion Power Corp.']
+  ]) {
+    const node = current.nodes.find((item) => item.id === `sub-${id}`)
+    assert.equal(node.parent, 'columbia-power', 'chart placement remains stable')
+    assert.deepEqual(current.edges.filter((edge) => edge.to === node.id).map(({ from, kind, percent }) => [from, kind, percent]), [
+      ['columbia-power', 'owned', 50], ['columbia-basin-trust', 'owned', 50]
+    ])
+    assert.ok(node.evidence.some((item) => item.claim.includes(directHolder)))
+    assert.deepEqual(pathToPeople(current, node.id), [])
+  }
+  assert.ok(!find(2018, 'sub-waneta-expansion-power-corporation', { includeUndated: true }))
+  const waneta = find(2019, 'sub-waneta-expansion-power-corporation')
+  assert.ok(waneta.evidence.some(({ claim }) => claim.includes('Fortis Inc. 51%; Columbia Power Corporation 32.5%; Columbia Basin Trust 16.5%')))
+  const arrow = find(2020, 'sub-arrow-lakes-power-corporation', { includeUndated: true })
+  assert.ok(!arrow?.jointOwnership, 'dated observation is not extrapolated to earlier years')
+})

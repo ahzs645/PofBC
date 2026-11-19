@@ -590,7 +590,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
                 <p className="salaries__meta">{count(employerMatches.length, 'employer', 'employers')}</p>
               </div>
               <Paged list={employerMatches} size={9} reset={`${query}|${place.year}|${sector}`}>
-                {(page) => <div className="salaries__grid">{page.map((entry) => <EmployerCard key={entry.slug} entry={entry} years={employersIndex.years} range={range} onOpen={openEmployer} />)}</div>}
+                {(page) => <div className="salaries__grid">{page.map((entry) => <EmployerCard key={entry.slug} entry={entry} sources={employersIndex.sources} years={employersIndex.years} range={range} onOpen={openEmployer} />)}</div>}
               </Paged>
             </section>
           )}
@@ -672,7 +672,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
 
       {!typed && (
         <section aria-label="Browse" className="salaries__records">
-          {browse === 'employers' && <EmployerBrowse employers={employersIndex.employers} years={employersIndex.years} sector={sector} range={range} layout={layout} onOpen={openEmployer} onSector={(name) => { setSector(name); showListStart() }} />}
+          {browse === 'employers' && <EmployerBrowse employers={employersIndex.employers} sources={employersIndex.sources} years={employersIndex.years} sector={sector} range={range} layout={layout} onOpen={openEmployer} onSector={(name) => { setSector(name); showListStart() }} />}
           {browse === 'people' && <PeopleBrowse index={index} sector={sector} range={range} layout={layout} onPerson={openPersonAt} onEmployer={openEmployer} />}
           {browse === 'positions' && !titleFailed && <PositionBrowse titles={availableTitles} years={years} scoped={scopedTitles} filterKey={`${place.year}|${sector}`} layout={layout} onTitle={openTitle} />}
         </section>

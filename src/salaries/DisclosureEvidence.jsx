@@ -1,4 +1,4 @@
-import { coverageStatus, disclosurePeriod, readerNotes, scopeLabel, sourceHref, thresholdLabel } from './coverage.js'
+import { coverageStatus, disclosurePeriod, materialSourceQualifications, readerNotes, scopeLabel, sourceHref, thresholdLabel } from './coverage.js'
 
 export const SourceLink = ({ sourceId, sources = {}, pdfPage, label, url }) => {
   const source = sources[sourceId] ?? (url ? { url, title: 'Reviewed source evidence' } : null)
@@ -28,6 +28,23 @@ export const SourceWarnings = ({ sourceIds, sources }) => {
   )
 }
 
+const QUALIFICATION_LABELS = {
+  'count-discrepancy': 'Count discrepancy',
+  'unreconciled-total': 'Unreconciled totals',
+  'incomplete-scope': 'Incomplete scope',
+  'unverified-period': 'Reporting period not verified'
+}
+
+const MaterialSourceNotes = ({ sourceIds, sources }) => {
+  const qualifications = materialSourceQualifications(sourceIds, sources)
+  if (!qualifications.length) return null
+  return <ul className="salaries__caveats" aria-label="Material source qualifications">
+    {qualifications.map(({ kind, text }) => <li key={`${kind}:${text}`} className="salaries__hint salaries__hint--small">
+      <strong>{QUALIFICATION_LABELS[kind] ?? 'Source qualification'}:</strong> {text}
+    </li>)}
+  </ul>
+}
+
 /**
  * A disclosure at a glance, on one line: what was disclosed, for when, above what threshold, and
  * where from. Material qualifications accompany the records; extraction details remain in research.
@@ -38,7 +55,7 @@ export const DisclosureSummary = ({ coverage, sources = {}, className = '' }) =>
   // One link a document: two disclosure categories (employees, mayor and council) can share a report.
   const linked = [...new Map(ids.map((id) => sources[id]).filter((source) => source?.url && /^https?:\/\//.test(source.url)).map((source) => [source.url, source])).values()]
   // Records still from the retained compilation have no report of their own to describe.
-  if (coverageStatus(coverage, sources).kind === 'compiled') return null
+  if (coverageStatus(coverage, sources).kind === 'compiled') return <MaterialSourceNotes sourceIds={ids} sources={sources} />
   return (
     <div className={`salaries-disclosure ${className}`}>
       <p className="salaries-disclosure__line">
@@ -50,6 +67,7 @@ export const DisclosureSummary = ({ coverage, sources = {}, className = '' }) =>
         ))}</>}
         {!ids.length && ' · no source document attached'}
       </p>
+      <MaterialSourceNotes sourceIds={ids} sources={sources} />
       <SourceWarnings sourceIds={ids} sources={sources} />
     </div>
   )

@@ -9,7 +9,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { displayName, groupHighestPaidRecords } from './people.js'
 import { linkLookup } from './nameLinks.js'
 import { shortTitle } from './positions.js'
-import { reportingYearLabel } from './coverage.js'
+import { employerDisclosureLabels, reportingYearLabel } from './coverage.js'
 import { formatMoney as money, formatSummaryMoney as summary } from './money.js'
 import { personAnnotation, personCurrency } from './recordAnnotations.js'
 import { rangeLabel, YearStrip } from './parts.jsx'
@@ -25,16 +25,18 @@ import { Select } from '../site/ui/Select.jsx'
 const within = (range) => (at) => !range || (at >= range[0] && at <= range[1])
 
 /** An employer as a card: its name, its records in the periods chosen, and the years it has any. */
-export const EmployerCard = ({ entry, years, range, onOpen, stats }) => {
+export const EmployerCard = ({ entry, years, range, onOpen, stats, sources }) => {
   const inRange = within(range)
   const latest = entry.counts.reduce((best, value, at) => (value && inRange(at) ? at : best), -1)
+  const { nouns, latestEmployee, includesOnlyEmployee } = employerDisclosureLabels(entry, range, sources)
   const records = range ? entry.counts.reduce((sum, value, at) => sum + (inRange(at) ? value : 0), 0) : entry.counts[latest] ?? 0
   return (
     <button type="button" className="salaries__card" onClick={() => onOpen(entry.slug, stats ? years[stats.year] : undefined)}>
       <span className="salaries__lead"><RoleIcon /></span>
       <span className="salaries__text">
         <span className="salaries__name">{entry.names.at(-1)}</span>
-        <span className="salaries__line">{count(records, 'record', 'records')} in {range ? rangeLabel(years, range) : years[latest]}</span>
+        <span className="salaries__line">{count(records, ...nouns)} in {range ? rangeLabel(years, range) : years[latest]}</span>
+        {latestEmployee != null && (latestEmployee !== latest || !includesOnlyEmployee) && <span className="salaries__line">Latest employee disclosure: {reportingYearLabel(years[latestEmployee])}</span>}
         {stats && <span className="employer-card__stats">
           <span className="salaries__line"><b>Median {summary(stats.median)}</b> · Average {summary(stats.mean)}</span>
           {/* The period and count are on the line above unless the statistics come from another one. */}
@@ -56,7 +58,7 @@ export const STANDARD_THRESHOLD = 75000
  * Every employer, by sector, as cards: with every sector shown, each lists its largest few and a way
  * to the rest; with one chosen, all of its employers, in pages. As a table, one row an employer.
  */
-export const EmployerBrowse = ({ employers, years, sector, range, layout, onOpen, onSector }) => {
+export const EmployerBrowse = ({ employers, years, sector, range, layout, onOpen, onSector, sources }) => {
   const [order, setOrder] = useState('sector')
   const { data: statistics, failed, retry } = useEmployerStatistics(years)
   const inRange = within(range)
@@ -96,7 +98,7 @@ export const EmployerBrowse = ({ employers, years, sector, range, layout, onOpen
   }
   if (order !== 'sector') return <>{header}{measured.length
     ? <Paged list={measured} size={24} reset={`${sector}|${range}|${order}`}>
-      {(page) => <div className="salaries__grid">{page.map(({ entry, stats }) => <EmployerCard key={entry.slug} entry={entry} stats={stats} years={years} range={range} onOpen={onOpen} />)}</div>}
+      {(page) => <div className="salaries__grid">{page.map(({ entry, stats }) => <EmployerCard key={entry.slug} entry={entry} stats={stats} years={years} range={range} sources={sources} onOpen={onOpen} />)}</div>}
     </Paged>
     : <p className="salaries__hint">{statistics ? 'No comparable employee statistics in this selection. Choose other periods or a different ranking.' : failed ? 'Choose By sector to browse while statistics are unavailable.' : 'Loading organization statistics…'}</p>}</>
   const statsBySlug = new Map(rows.map(({ entry, stats }) => [entry.slug, stats]))
@@ -112,7 +114,7 @@ export const EmployerBrowse = ({ employers, years, sector, range, layout, onOpen
     return (
       <>{header}
       <Paged list={[...visible].sort(largest)} size={24} reset={`${sector}|${range}`}>
-        {(page) => <div className="salaries__grid">{page.map((entry) => <EmployerCard key={entry.slug} entry={entry} stats={statsBySlug.get(entry.slug)} years={years} range={range} onOpen={onOpen} />)}</div>}
+        {(page) => <div className="salaries__grid">{page.map((entry) => <EmployerCard key={entry.slug} entry={entry} stats={statsBySlug.get(entry.slug)} years={years} range={range} sources={sources} onOpen={onOpen} />)}</div>}
       </Paged>
       </>
     )
@@ -121,7 +123,7 @@ export const EmployerBrowse = ({ employers, years, sector, range, layout, onOpen
     <div key={name} className="salaries__sector">
       <h3 className="salaries__sector-title">{name} <span className="salaries__meta">{list.length}</span></h3>
       <div className="salaries__grid">
-        {[...list].sort(largest).slice(0, PREVIEW).map((entry) => <EmployerCard key={entry.slug} entry={entry} stats={statsBySlug.get(entry.slug)} years={years} range={range} onOpen={onOpen} />)}
+        {[...list].sort(largest).slice(0, PREVIEW).map((entry) => <EmployerCard key={entry.slug} entry={entry} stats={statsBySlug.get(entry.slug)} years={years} range={range} sources={sources} onOpen={onOpen} />)}
       </div>
       {list.length > PREVIEW && <button type="button" className="salaries__more" onClick={() => onSector(name)}>All {list.length} {name.toLowerCase()} →</button>}
     </div>

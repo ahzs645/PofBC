@@ -201,18 +201,9 @@ const DATE_SENTENCES = {
   unknown: () => 'Unknown. That is not to say it was never in use.'
 }
 
-/**
- * Marks redrawn rather than taken from a file. The records say so (provenance, and `reconstruction`
- * on a collected file), but the page does not: it shows the mark, its dates and its sources.
- */
-export const REDRAWN = new Set(['third_party_reconstruction', 'reconstructed'])
-const isRedrawn = (identity) => REDRAWN.has(identity?.provenance)
-
 const sentencesOf = (identity) => ({
-  ...(isRedrawn(identity) ? {} : {
-    Provenance: PROVENANCE_SENTENCES[identity.provenance],
-    Fidelity: [FIDELITY_SENTENCES[identity.fidelity], identity.fidelityNote].filter(Boolean).join(' ')
-  }),
+  Provenance: PROVENANCE_SENTENCES[identity.provenance],
+  Fidelity: [FIDELITY_SENTENCES[identity.fidelity], identity.fidelityNote].filter(Boolean).join(' '),
   Dates: [DATE_SENTENCES[identity.applicability.kind](identity.applicability.years), identity.applicability.note]
     .filter(Boolean).join(' '),
   Rights: `${RIGHTS[identity.rights.status]}. ${identity.rights.note}`
@@ -224,7 +215,7 @@ const sentencesOf = (identity) => ({
  * card apart; the mark's own page still says so under "About this mark".
  */
 const chipsOf = (identity) => [
-  !isRedrawn(identity) && PROVENANCE[identity.provenance],
+  PROVENANCE[identity.provenance],
   APPLICABILITY[identity.applicability.kind],
   identity.rights.status !== 'unresolved' && RIGHTS[identity.rights.status]
 ].filter(Boolean)
@@ -331,8 +322,7 @@ const AboutCollection = ({ collection }) => {
  * here has its rights unresolved, so on every card that chip said nothing that told cards apart.
  */
 const collectionChips = (collection) => {
-  const shown = entriesOf(collection).filter((entry) => !isRedrawn(entry.identity))
-  const provenances = new Set(shown.map((entry) => PROVENANCE[entry.identity.provenance]))
+  const provenances = new Set(entriesOf(collection).map((entry) => PROVENANCE[entry.identity.provenance]))
   if (!provenances.size) return []
   return provenances.size === 1 ? [...provenances] : ['Mixed provenance']
 }
@@ -388,7 +378,7 @@ const Detail = ({ entry, onClose }) => {
               Download SVG
             </button>
           </div>
-          {entry.caveat && !isRedrawn(entry.identity) && <p className="gallery__caveat">{entry.caveat}</p>}
+          {entry.caveat && <p className="gallery__caveat">{entry.caveat}</p>}
         </div>
       </div>
     </section>
@@ -480,11 +470,11 @@ const CollectionCard = ({ collection, onOpen, theme }) => {
       <span className="gallery__collection-text">
         <span className="gallery__collection-title">{collection.label}</span>
         <span className="gallery__note">{collection.body}</span>
-        {/* Where the artwork came from is said on the collection's own page; here it is a tooltip. */}
-        <span className="gallery__years" title={collectionChips(collection).join(' · ') || undefined}>
+        <span className="gallery__years">
           {collection.years} · {count} {collection.fileCollection ? (count === 1 ? 'artwork file' : 'artwork files') : (count === 1 ? 'mark' : 'marks')}
           {collection.eras ? ` · ${collection.eras.length} eras` : ''}
         </span>
+        <Chips labels={collectionChips(collection)} />
       </span>
     </button>
   )

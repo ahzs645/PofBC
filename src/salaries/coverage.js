@@ -1,3 +1,5 @@
+import { reviewedSourceQualifications } from './qualificationData.js'
+
 // Missing imported records are a statement about coverage, not about someone's employment.
 
 export const coverageAt = (entry, year) => entry?.coverage?.[year] ?? {
@@ -90,6 +92,39 @@ export const readerNoteSentences = (warning = '') => String(warning)
 
 /** The reader notes of several sources, each sentence once. */
 export const readerNotes = (sourceIds = [], sources = {}) => [...new Set(sourceWarnings(sourceIds, sources).flatMap(readerNoteSentences))]
+
+/** Material issues are explicit, edition-specific evidence, never guessed from prose. */
+export const materialSourceQualifications = (sourceIds = [], sources = {}) =>
+  [...new Map(sourceIds.flatMap((id) => sources[id]
+    ? [...(reviewedSourceQualifications[id] ?? []), ...(sources[id].qualifications ?? [])]
+    : []).filter((item) => item?.kind && item?.text).map((item) => [`${item.kind}:${item.text}`, item])).values()]
+
+const employeeScopes = new Set(['employee-remuneration', 'named-employees-over-threshold'])
+const categoryNouns = {
+  'employee-remuneration': ['employee record', 'employee records'],
+  'named-employees-over-threshold': ['employee record', 'employee records'],
+  'board-remuneration': ['board payment', 'board payments'],
+  'elected-officials': ['council payment', 'council payments'],
+  'school-trustees': ['trustee payment', 'trustee payments']
+}
+
+/** Overall record counts only get a category when every included period has that one scope. */
+export const employerDisclosureLabels = (entry, range, sources = {}) => {
+  const seen = (entry.counts ?? []).flatMap((total, at) => total > 0 ? [at] : [])
+  const selected = range ? seen.filter((at) => at >= range[0] && at <= range[1]) : seen.slice(-1)
+  const scopes = selected.map((at) => entry.coverage?.[at]?.scope)
+  const scope = scopes.length && scopes.every((value) => value === scopes[0]) ? scopes[0] : 'mixed-disclosure'
+  const latestEmployee = seen.findLast((at) => {
+    const coverage = entry.coverage?.[at]
+    return employeeScopes.has(coverage?.scope) || coverage?.sourceIds?.some((id) => employeeScopes.has(sources[id]?.scope))
+  })
+  return {
+    nouns: categoryNouns[scope] ?? ['disclosure record', 'disclosure records'],
+    latestEmployee,
+    scope,
+    includesOnlyEmployee: employeeScopes.has(scope)
+  }
+}
 
 /** Do not change an inclusive threshold into a strict one, or infer an unstated comparison. */
 export const thresholdLabel = (coverage) => {
