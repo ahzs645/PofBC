@@ -86,3 +86,22 @@ test('all four studies have one squircle and independently editable islands', ()
   assert.doesNotMatch(svgs[3], /id="central-island-colour-study"/)
   assert.match(svgs[3], /id="ground"/)
 })
+
+test('the lettered evergreen variant rings the unchanged emblem with its outlined name', () => {
+  const logo = FOREST_LOGOS.find(({ id }) => id === 'forest-service-emblem')
+  const lettered = variantsFor(logo).colours.find(({ id }) => id === 'lettered')
+  assert.equal(lettered?.artwork, 'forest-service-emblem-lettered.svg')
+  const master = readFileSync(new URL('./forest-service-emblem.svg', import.meta.url), 'utf8')
+  const svg = readFileSync(new URL('./forest-service-emblem-lettered.svg', import.meta.url), 'utf8')
+  for (const id of ['badge', 'mainland', 'island-north', 'island-middle', 'island-south', 'tree-trunk', 'tree-crown']) {
+    const shape = new RegExp(`<(?:path|rect|polygon) id="${id}"[^>]*>`)
+    assert.equal(svg.match(shape)?.[0], master.match(shape)?.[0], `${id} is copied unchanged`)
+  }
+  const words = { forest: 6, british: 7, columbia: 8, service: 7 }
+  for (const [word, letters] of Object.entries(words)) {
+    const group = svg.match(new RegExp(`<g id="ring-${word}"[^>]*>([\\s\\S]*?)</g>`))?.[1]
+    assert.equal([...(group ?? '').matchAll(/<path\b/g)].length, letters, `${word} has one outlined path per letter`)
+  }
+  assert.doesNotMatch(svg, /<(?:text|image|font)\b/)
+  assert.doesNotMatch(svg, /—/)
+})

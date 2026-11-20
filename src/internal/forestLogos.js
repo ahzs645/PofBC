@@ -192,6 +192,7 @@ const DRAWING_VARIANTS = {
     { id: 'colour', name: 'Full colour', recolour: {}, note: 'The reconstruction’s flat colours, chosen from the supplied emblem image.' },
     { id: 'reward-lime', name: 'Lime, as on REWARD', recolour: { '#278F38': '#8CBE0C' }, note: 'The badge green sampled from the photograph of the REWARD poster. Approximate: print and photograph both shift colour.' },
     { id: 'sign-green', name: 'Bright green, as on the sign', recolour: { '#278F38': '#2DB43C' }, note: 'The badge green sampled from the photograph of Enjoy & Protect our Forests. Approximate, as above.' },
+    { id: 'lettered', name: 'With its name around it', artwork: 'forest-service-emblem-lettered.svg', recolour: {}, padding: '4%', background: '#EFEDE8', note: 'The name around the badge, as on a glass printed with the emblem. Letters placed from a photograph of it; its typeface is unidentified, so a Helvetica-like face stands in.' },
     { id: 'archival-one-ink', study: true, name: 'Archival print study · two detached islands', artwork: 'forest-service-emblem-one-ink.svg', recolour: {}, note: 'Updated manually constructed monochrome geometry: standardized squircle, fuller lower coast, corrected evergreen slope and trunk opening. Both supplied black-and-white prints show two separate island components. This reconstruction is not an official vector master.' },
     { id: 'three-islands-separated', study: true, name: 'Three detached islands · colour-master comparison', artwork: 'forest-service-emblem-three-islands-separated.svg', recolour: {}, note: 'Optional interpretation carrying forward the three separate island shapes in the earlier coloured PofBC master. The third central island is not discernible in the two monochrome reference prints. No island is connected to another.' },
     { id: 'three-islands-green', study: true, name: 'Three detached islands · forest-green study', artwork: 'forest-service-emblem-three-islands-green.svg', recolour: {}, note: 'Generated forest-green colouring of the three-detached-island geometry. Neither the additional middle island nor this green ink is documented by the supplied black-and-white prints.' },
@@ -208,7 +209,7 @@ const DRAWING_VARIANTS = {
   ]
 }
 const drawingVariants = (logo) => {
-  const variants = DRAWING_VARIANTS[logo.artwork].map((variant) => ({ ...variant, artwork: variant.artwork ?? logo.artwork, padding: logo.padding }))
+  const variants = DRAWING_VARIANTS[logo.artwork].map((variant) => ({ ...variant, artwork: variant.artwork ?? logo.artwork, padding: variant.padding ?? logo.padding }))
   return {
     colours: variants.filter((variant) => !variant.study),
     studies: variants.filter((variant) => variant.study),
