@@ -161,12 +161,13 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
         parts={parts}
         current={current}
         title={meta.title}
+        noun={noun}
         onChapter={select}
         onDetails={(id) => { tell(false); select(id) }}
         onLeave={() => tell(false)}
       />
     )
-    : extras.content ?? <DataPanel partId={current} parts={parts} order={order} onSelect={select} tour={tour} story={canTell ? () => tell(true) : null} poster={meta.id} variation={variationControl} compare={compareControl} pages={pagesControl} figures={figures} />
+    : extras.content ?? <DataPanel partId={current} parts={parts} order={order} onSelect={select} tour={tour} story={canTell ? () => tell(true) : null} poster={meta.id} variation={variationControl} compare={compareControl} pages={pagesControl} figures={figures} noun={noun} />
 
   const dismiss = () => {
     if (current !== 'overview') select('overview')

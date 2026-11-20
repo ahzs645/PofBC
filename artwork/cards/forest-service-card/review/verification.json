@@ -1,0 +1,171 @@
+{
+  "vector_files": {
+    "forest-service-card-white.svg": {
+      "elements": {
+        "svg": 1,
+        "title": 1,
+        "desc": 1,
+        "metadata": 1,
+        "g": 114,
+        "rect": 1,
+        "path": 6584,
+        "circle": 5049,
+        "ellipse": 1
+      },
+      "unique_ids": true,
+      "all_source_logo_paths_preserved": true,
+      "embedded_raster_images": 0,
+      "live_text_objects": 0,
+      "external_references": []
+    },
+    "forest-service-card.svg": {
+      "elements": {
+        "svg": 1,
+        "title": 1,
+        "desc": 1,
+        "metadata": 1,
+        "g": 114,
+        "rect": 1,
+        "path": 6584,
+        "circle": 5049,
+        "ellipse": 1
+      },
+      "unique_ids": true,
+      "all_source_logo_paths_preserved": true,
+      "embedded_raster_images": 0,
+      "live_text_objects": 0,
+      "external_references": []
+    },
+    "forest-service-card-original-logo-white.svg": {
+      "elements": {
+        "svg": 1,
+        "title": 1,
+        "desc": 1,
+        "metadata": 1,
+        "g": 93,
+        "rect": 1,
+        "path": 6584,
+        "circle": 5049,
+        "ellipse": 1
+      },
+      "unique_ids": true,
+      "all_source_logo_paths_preserved": true,
+      "embedded_raster_images": 0,
+      "live_text_objects": 0,
+      "external_references": []
+    },
+    "forest-service-card-original-logo.svg": {
+      "elements": {
+        "svg": 1,
+        "title": 1,
+        "desc": 1,
+        "metadata": 1,
+        "g": 93,
+        "rect": 1,
+        "path": 6584,
+        "circle": 5049,
+        "ellipse": 1
+      },
+      "unique_ids": true,
+      "all_source_logo_paths_preserved": true,
+      "embedded_raster_images": 0,
+      "live_text_objects": 0,
+      "external_references": []
+    }
+  },
+  "pdf_files": {
+    "forest-service-card-original-logo.pdf": {
+      "pages": 1,
+      "images": 0,
+      "fonts": 0,
+      "page_size_mm": [
+        210.0,
+        100.0
+      ]
+    },
+    "forest-service-card.pdf": {
+      "pages": 1,
+      "images": 0,
+      "fonts": 0,
+      "page_size_mm": [
+        210.0,
+        100.0
+      ]
+    }
+  },
+  "source_logo_sha256": "37094db397c7c3cddf0c87ebba5460220bc1ca90d7d0aab286b2655db31cb0be",
+  "diagnostic_overlap": {
+    "method": "Reference rectified from measured printed frame. Reference ink = relative dark contrast >0.16 against a paper field estimated by 31 px elliptical morphological closing. Vector ink = grayscale <190 at 1050x500. No per-region re-registration after assembly. Paper damage outside artwork excluded. These values are threshold-sensitive diagnostics, not authenticity or fidelity percentages.",
+    "regions": {
+      "logo": {
+        "roi": [
+          270,
+          22,
+          785,
+          285
+        ],
+        "intersection_over_union": 0.5678233966050673,
+        "reference_ink_pixels": 49090,
+        "vector_ink_pixels": 44658
+      },
+      "line_1": {
+        "roi": [
+          150,
+          303,
+          903,
+          353
+        ],
+        "intersection_over_union": 0.6655920281359906,
+        "reference_ink_pixels": 9018,
+        "vector_ink_pixels": 8031
+      },
+      "line_2": {
+        "roi": [
+          260,
+          363,
+          785,
+          406
+        ],
+        "intersection_over_union": 0.6424386381631038,
+        "reference_ink_pixels": 5327,
+        "vector_ink_pixels": 5045
+      },
+      "frame_and_ink": {
+        "roi": [
+          85,
+          24,
+          965,
+          460
+        ],
+        "intersection_over_union": 0.6030763832027137,
+        "reference_ink_pixels": 71993,
+        "vector_ink_pixels": 65054
+      }
+    },
+    "reference_threshold_sensitivity": {
+      "0.12": {
+        "logo": 0.5672604896724196,
+        "line_1": 0.59198074049477,
+        "line_2": 0.5966782006920415,
+        "frame_and_ink": 0.5764611187188359
+      },
+      "0.16": {
+        "logo": 0.5678233966050673,
+        "line_1": 0.6655920281359906,
+        "line_2": 0.6424386381631038,
+        "frame_and_ink": 0.6030763832027137
+      },
+      "0.2": {
+        "logo": 0.548436202601716,
+        "line_1": 0.6750311074243053,
+        "line_2": 0.6218570254724733,
+        "frame_and_ink": 0.589977498023475
+      }
+    },
+    "caveats": [
+      "Source emblem is a different reconstruction; its component geometry does not perfectly match the photograph.",
+      "Clean reconstructed text restores ink absent in the worn photograph.",
+      "Photography, thresholding, resampling and the approximate typeface affect the overlay."
+    ]
+  }
+}

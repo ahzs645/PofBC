@@ -4,7 +4,7 @@
 // rather than a choice between three things of equal standing. It is now the title's own last
 // word — "Province of British Columbia / Generator ▾" — opening a menu that says what each view is,
 // after the org-graph site the government view is modelled on. The menu follows the WAI-ARIA menu
-// button pattern: arrows move, Home and End jump, Escape closes and returns focus. With fourteen views it
+// button pattern: arrows move, Home and End jump, Escape closes and returns focus. With sixteen views it
 // is two columns on a wide screen and a scrolling sheet across a phone's, so none falls off the page.
 
 import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
@@ -16,6 +16,8 @@ export const VIEWS = [
   { id: 'internal', label: 'Internal Logos', description: 'Internal logo families and their history, starting with Forests' },
   { id: 'posters', label: 'Posters', description: 'Posters by series, every part clickable for its history' },
   { id: 'signs', label: 'Signs', description: 'Signs by series, every part clickable for its history' },
+  { id: 'cards', label: 'Cards', description: 'Printed cards by series, every part clickable for its history', badge: 'New' },
+  { id: 'pins', label: 'Pins', description: 'Pins and buttons by series, every part clickable for its history', badge: 'New' },
   { id: 'patches', label: 'Patches', description: 'Patches by organization, sewn as embroidery', badge: 'New' },
   { id: 'badges', label: 'Badges', description: 'Metal badges by organization', badge: 'New' },
   { id: 'plates', label: 'Licence Plates', description: 'B.C. licence plates since 1904, by family and era, from PlateForge', badge: 'New' },

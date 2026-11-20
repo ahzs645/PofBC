@@ -192,7 +192,7 @@ const DrawingLogo = ({ artwork, recolour, padding, name, decorative = false, bac
 const PosterLinks = ({ logo }) => (
   <ul className="internal-logos__posters">
     {logo.seenOn.map((entry) => (
-      <li key={entry.to.poster}>
+      <li key={entry.to.poster ?? entry.to.card ?? entry.title}>
         <SiteLink to={entry.to}><b>{entry.title} <span aria-hidden="true">→</span></b><span>{entry.note}</span></SiteLink>
       </li>
     ))}

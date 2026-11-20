@@ -13,6 +13,8 @@ export const VIEW_LOADERS = {
   // The posters carry their own drawings, photographs and stage.
   posters: () => import('../posters/PostersView.jsx'),
   signs: () => import('../signs/SignsView.jsx'),
+  cards: () => import('../cards/CardsView.jsx'),
+  pins: () => import('../pins/PinsView.jsx'),
   // The patch library and digitizer come from the Patcher submodule (vendor/patcher).
   patches: () => import('../patches/PatchesView.jsx'),
   badges: () => import('../patches/PatchesView.jsx'),

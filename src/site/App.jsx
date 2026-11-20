@@ -19,6 +19,8 @@ const GovernmentView = lazyView('government', 'GovernmentView')
 const InternalLogosView = lazyView('internal', 'InternalLogosView')
 const PostersView = lazyView('posters', 'PostersView')
 const SignsView = lazyView('signs', 'SignsView')
+const CardsView = lazyView('cards', 'CardsView')
+const PinsView = lazyView('pins', 'PinsView')
 const PatchesView = lazyView('patches', 'PatchesView')
 const PlatesView = lazyView('plates', 'PlatesView')
 const ArmsView = lazyView('arms', 'ArmsView')
@@ -161,7 +163,7 @@ const initialView = () => {
  */
 const writeView = (view) => {
   const url = salaryPlaceUrl(globalThis.location.href, {})
-  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', 'logos', 'mark', 'subject', 'coverage', 'identity-family', 'identity-state', 'identity-scope', 'identity-query', 'internal', 'internal-logo', 'poster', 'sign', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'plate', 'area', 'chapter', 'story', 'holder']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', 'logos', 'mark', 'subject', 'coverage', 'identity-family', 'identity-state', 'identity-scope', 'identity-query', 'internal', 'internal-logo', 'poster', 'sign', 'card', 'pin', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'plate', 'area', 'chapter', 'story', 'holder']) url.searchParams.delete(key)
   if (view !== 'generator') url.searchParams.set('view', view)
   writeHistory(url)
 }
@@ -323,6 +325,18 @@ export const App = () => {
       {view === 'signs' && (
         <Suspense fallback={<p className="gallery__intro" role="status">Loading the signs…</p>}>
           <SignsView key={visit} />
+        </Suspense>
+      )}
+
+      {view === 'cards' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the cards…</p>}>
+          <CardsView key={visit} />
+        </Suspense>
+      )}
+
+      {view === 'pins' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the pins…</p>}>
+          <PinsView key={visit} />
         </Suspense>
       )}
 

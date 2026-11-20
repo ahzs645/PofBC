@@ -4,7 +4,8 @@
 // arrow keys, a click on the drawing, the tour) and the column scrolls to its chapter.
 //
 // A poster opts in by giving its parts a `story`: a list of paragraphs. The chapters are those
-// parts, in the poster's order.
+// parts, in the poster's order. A part may add `storySources` ([{ label, href? }]): what that
+// chapter rests on, listed small under it; one named without a link is cited by its title.
 
 import { useEffect, useLayoutEffect, useRef } from 'react'
 
@@ -22,8 +23,9 @@ const SETTLE_MS = 1400
  * @param {Function} props.onDetails Called with a part id to open its full panel instead.
  * @param {Function} props.onLeave   Leaves story mode.
  * @param {string} props.title       The poster's title.
+ * @param {string} [props.noun]      What one piece is called (`poster`, `card`, `pin`).
  */
-export function StoryRail({ chapters, parts, current, onChapter, onDetails, onLeave, title }) {
+export function StoryRail({ chapters, parts, current, onChapter, onDetails, onLeave, title, noun = 'poster' }) {
   const root = useRef(null)
   const shown = useRef(null)
   const quietUntil = useRef(0)
@@ -101,16 +103,23 @@ export function StoryRail({ chapters, parts, current, onChapter, onDetails, onLe
   return (
     <div className="pv-story" ref={root}>
       <p className="pv-eyebrow">Story · {chapters.filter((id) => id !== 'overview').length} parts</p>
-      <p className="pv-story-hint">Scroll to read {title} from top to bottom; the poster follows.</p>
+      <p className="pv-story-hint">Scroll to read {title} from top to bottom; the {noun} follows.</p>
       <ol className="pv-story-chapters">
         {chapters.map((id, i) => {
-          const { panel, story, label } = parts[id]
+          const { panel, story, storySources, label } = parts[id]
           return (
             <li key={id} data-chapter={id} className={'pv-story-chapter' + (id === active ? ' pv-story-active' : '')} aria-current={id === active ? 'step' : undefined}>
               {/* Numbered as the dock numbers the parts: the whole poster comes first, uncounted. */}
-              <p className="pv-eyebrow">{id === 'overview' ? 'The poster' : `${String(i + (chapters[0] === 'overview' ? 0 : 1)).padStart(2, '0')} · ${label}`}</p>
+              <p className="pv-eyebrow">{id === 'overview' ? `The ${noun}` : `${String(i + (chapters[0] === 'overview' ? 0 : 1)).padStart(2, '0')} · ${label}`}</p>
               <h2>{panel.heading}{panel.em && <>, <em>{panel.em}</em></>}</h2>
               {story.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              {storySources?.length > 0 && (
+                <ul className="pv-story-sources" aria-label="Sources">
+                  {storySources.map((source) => (
+                    <li key={source.label}>{source.href ? <a href={source.href} target="_blank" rel="noopener noreferrer">{source.label}</a> : source.label}</li>
+                  ))}
+                </ul>
+              )}
               {id !== 'overview' && (
                 <button type="button" className="pv-story-more" onClick={() => onDetails(id)}>
                   About this part <span aria-hidden="true">→</span>

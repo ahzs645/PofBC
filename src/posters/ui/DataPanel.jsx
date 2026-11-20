@@ -37,7 +37,8 @@ const Palette = ({ colours }) => (
 const Sources = ({ sources }) => (
   <Item as="div" className="pv-sources">
     Sources:
-    <ul>{sources.map((s) => <li key={s.href}><a href={s.href} target="_blank" rel="noopener noreferrer">{s.label}</a></li>)}</ul>
+    {/* A source named without a link (a printed article, a catalogue entry) is cited by its title. */}
+    <ul>{sources.map((s) => <li key={s.href ?? s.label}>{s.href ? <a href={s.href} target="_blank" rel="noopener noreferrer">{s.label}</a> : s.label}</li>)}</ul>
   </Item>
 )
 
@@ -75,7 +76,7 @@ const keepFull = (on) => { full = on; try { localStorage.setItem(FULL_KEY, on ? 
  * tour and any named recolouring (`variation`), and ends with the piece's connections from the
  * registry (`poster` is its id there).
  */
-export function DataPanel({ partId, parts, order, onSelect, tour, story, poster, variation, compare, pages, figures }) {
+export function DataPanel({ partId, parts, order, onSelect, tour, story, poster, variation, compare, pages, figures, noun = 'poster' }) {
   const part = parts[partId]
   const { panel } = part
   const steps = order.filter((id) => id !== 'overview')
@@ -134,7 +135,7 @@ export function DataPanel({ partId, parts, order, onSelect, tour, story, poster,
           {story && (
             <Item as="div" className="pv-row">
               <button type="button" className="pv-ghost pv-solid" onClick={story}>Read it as a story</button>
-              <span className="pv-muted">Scroll, and the poster follows</span>
+              <span className="pv-muted">Scroll, and the {noun} follows</span>
             </Item>
           )}
           {tour && (
