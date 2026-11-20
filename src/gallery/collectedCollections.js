@@ -6,10 +6,11 @@ import { MUNICIPAL_IDENTITY_BODIES } from './municipalIdentityData.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
 import { RAILWAY_HISTORY } from './railwayHistoryData.js'
 import { COLLECTED_PALETTES } from './collectedPalettes.js'
+import { IUS_BODY } from './iusCollectionData.js'
 
 // The historical Crown/health importer remains reproducible. Explicit identity subjects extend
 // its output without teaching that importer to mistake services or regional bodies for Crowns.
-export const ALL_COLLECTED_BODIES = [...COLLECTED_BODIES, ...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES]
+export const ALL_COLLECTED_BODIES = [...COLLECTED_BODIES, ...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES, IUS_BODY]
 
 /** Municipal governments, shelved apart from the provincial bodies. */
 export const isMunicipalBody = (body) => body.kind?.startsWith('municipal-')
@@ -124,7 +125,7 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
     provenance: asset.reconstruction ? 'third_party_reconstruction' : asset.supplied ? 'original_supplied'
       : asset.isVector && ['native-pdf-vector-extraction', 'official-vector-master-conversion', 'official-inline-vector-extraction'].includes(asset.evidenceType)
         ? 'extracted_from_official_vector' : asset.isVector ? 'published_vector' : 'published_raster',
-    fidelity: 'source compared',
+    fidelity: asset.fidelity ?? 'source compared',
     fidelityNote: asset.fidelityNote,
     applicability: {
       kind: seenDates(versions) ? 'dated_specimen' : 'unknown',

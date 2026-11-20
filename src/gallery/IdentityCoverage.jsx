@@ -13,6 +13,7 @@ import { IDENTITY_KIND_LABELS, IDENTITY_RELATION_LABELS } from './identitySubjec
 import './identityCoverage.css'
 import { Select } from '../site/ui/Select.jsx'
 import { holdScroll } from '../site/holdScroll.js'
+import { UnbcOrigins, UnbcOriginsLink, hasUnbcOrigins } from './UnbcOrigins.jsx'
 
 const Status = ({ subject }) => (
   <span className="identity-status" data-held={subject.hasArtwork || undefined} title={COVERAGE_STATES[subject.state].description}>
@@ -238,6 +239,7 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
         <p className="identity-hero__note">{subject.note}</p>
         <div className="identity-actions">
           <Status subject={subject} />
+          {hasUnbcOrigins(subject.id) && <UnbcOriginsLink local />}
           {subject.graphNode && onOpenGovernment && <button type="button" className="identity-action" onClick={() => onOpenGovernment(subject.graphNode, subject.graphYear)}>Organization and salaries <span aria-hidden="true">→</span></button>}
           {municipal?.councilMunicipality && <SiteLink className="identity-action" to={{ view: 'salaries', browse: 'council', 'council-municipality': municipal.councilMunicipality }}>Council pay <span aria-hidden="true">→</span></SiteLink>}
           {municipal && subject.salaryEmployers.map((slug) => <SiteLink key={slug} className="identity-action" to={{ view: 'salaries', employer: slug }}>Staff salaries <span aria-hidden="true">→</span></SiteLink>)}
@@ -296,6 +298,7 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
           {(groups.length > 0 || familySubjects.length > 0) && <p className="identity-legend"><span className="identity-chip__dot" data-held aria-hidden="true" /> artwork held <span className="identity-chip__dot" aria-hidden="true" /> still wanted</p>}
         </aside>
       </div>
+      {hasUnbcOrigins(subject.id) && <UnbcOrigins contextId={subject.id} onOpenSubject={onOpenSubject} onChooseCollection={onChooseCollection} />}
     </article>
   )
 }

@@ -1,0 +1,7 @@
+# Northern: capital N audit
+
+The user is correct to question the capital N. The current v1.1 Bookman-based outline has a broad flat top-left mass, thick serifs, a heavy diagonal and a conspicuous rightward arm on the top-right serif. The photographed N has a thinner, tapered left foot and top caps; the top-right cap reads primarily leftward, ending close to the right stem outer edge. Its diagonal leaves more open space. These are specific outline differences, not a reason to relabel the entire word as an identified font.
+
+The current N measures 120.3731 ×127.2811 in the vector. Adjacent o measures 94.7254 ×97.1896. In the photograph, local threshold-bound diagnostics give N roughly 24–25 ×24 pixels and o 18–19 ×17. This supports increasing N cap height relative to o. Keeping the existing o, a useful working range is N 126–130 wide ×134–137 high, with a common baseline; those are fitting ranges, not recovered historic measurements. Avoid reproducing the apparent lean of the photographed left stem, since dome curvature and perspective can create that lean.
+
+Native source crop: N-source-native-26x26.png, unresampled from IMG_7955(1).jpeg at x702–728/y497–523. Enlargements are available with both Lanczos and nearest-neighbour interpolation. The main board is northern-capital-n-comparison.png. C059 Bold and Nimbus Roman Bold on that board are shape comparators, not font identifications. No production assets were edited.

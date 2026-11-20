@@ -44,6 +44,7 @@ export const IDENTITY_KIND_LABELS = {
   "court": "Court",
   "central-agency": "Central agency",
   "public-university": "Public university",
+  "advocacy-society": "Advocacy society",
   "public-institute": "Public institute",
   "charitable-institution": "Charitable institution"
 }
@@ -56,6 +57,7 @@ export const IDENTITY_RELATION_LABELS = {
   "operated-by": "Operated by",
   "used-by": "Used by",
   "predecessor-of": "Predecessor of",
+  "campaigned-for": "Campaigned for",
   "shares-identity-with": "Shares identity with"
 }
 
@@ -3014,6 +3016,47 @@ const CURATED_SUBJECTS = [
     "identityStatus": "distinct-unconfirmed"
   },
   {
+    "id": "interior-university-society",
+    "label": "Interior University Society",
+    "name": "Interior University Society",
+    "kind": "advocacy-society",
+    "family": "institutions",
+    "graphNode": null,
+    "aliases": [
+      "IUS",
+      "Interior University",
+      "Northern U"
+    ],
+    "collectionIds": [
+      "collected-interior-university-society"
+    ],
+    "salaryEmployers": [],
+    "priority": 2,
+    "scope": "institution",
+    "sources": [
+      {
+        "title": "UNBC — History: the 1987 origins and 1988 campaign",
+        "url": "https://www.unbc.ca/about-unbc/history",
+        "note": "Records the society’s incorporation on 1 December 1987 and its advocacy for a northern university."
+      },
+      {
+        "title": "Interior University Society vector brand kit, version 1.2",
+        "citation": "User-supplied historical identity reconstruction, IUS_Vector_Brand_Kit(1).zip; README, asset manifest and original-artifact photograph inventory.",
+        "note": "The supplied vectors are modern reconstructions. The invitation specimen is dated 8 June 1988; that observed use does not date the identity’s creation."
+      }
+    ],
+    "nextAction": "Locate original campaign artwork and dated adoption records; the reconstructed fonts, proportions and colours remain approximate.",
+    "note": "Incorporated on 1 December 1987, the Interior University Society organised the campaign for a university in northern BC. Its campaign helped establish UNBC; the society was a separate advocacy organisation, not an earlier operating university or a former legal name of UNBC.",
+    "relations": [
+      {
+        "type": "campaigned-for",
+        "subject": "university-of-northern-bc",
+        "label": "Regional campaign that helped establish UNBC",
+        "sourceUrl": "https://www.unbc.ca/about-unbc/history"
+      }
+    ]
+  },
+  {
     "id": "university-of-northern-bc",
     "label": "UNBC",
     "name": "University of Northern British Columbia",
@@ -3034,10 +3077,20 @@ const CURATED_SUBJECTS = [
         "title": "UNBC logos and graphic standards",
         "url": "https://www.unbc.ca/communications-and-marketing/logos-and-graphic-standards",
         "note": "Academic logo, athletics mark and heraldic symbols have different purposes."
+      },
+      {
+        "title": "UNBC — History",
+        "url": "https://www.unbc.ca/about-unbc/history",
+        "note": "Connects the Interior University Society campaign to UNBC’s establishment in 1990 and official opening in 1994."
+      },
+      {
+        "title": "University of Northern British Columbia Act, SBC 1990, c.28",
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/94consol18/94consol18/90028",
+        "note": "Section 2 establishes UNBC as a corporation. Assented to 6 July 1990; effective 20 July 1990."
       }
     ],
     "nextAction": "Date earlier academic identity variants; inspect additional approved arrangements and keep heraldic, athletics and uniform material as separate asset types.",
-    "note": "Existing security patches, where present, do not establish academic-logo coverage.",
+    "note": "UNBC grew from a regional campaign led by the Interior University Society. The university was established by statute in 1990 and officially opened in 1994. Its academic, heraldic and athletics identities are distinct from the society’s earlier campaign artwork.",
     "relations": []
   },
   {

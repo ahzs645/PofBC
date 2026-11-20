@@ -1,0 +1,126 @@
+{
+  "version": "1.2",
+  "purpose": "Exact font software used for rebuilding outlined historic-style artwork; not an identification of original historic fonts. Font binaries are not bundled.",
+  "production_fonts": [
+    {
+      "file": "NimbusSans-Regular.otf",
+      "family": "Nimbus Sans",
+      "subfamily": "Regular",
+      "postscript_name": "NimbusSans-Regular",
+      "sha256": "7c25be4d78155523080ab85b10277150657ff7dabbcad7037bdd536c9b6d0d08"
+    },
+    {
+      "file": "NimbusSans-Bold.otf",
+      "family": "Nimbus Sans",
+      "subfamily": "Bold",
+      "postscript_name": "NimbusSans-Bold",
+      "sha256": "7f33328e6b4d4cd21b45fa625791928c9407dc702db6780e56b09ca9a3ecaa67"
+    },
+    {
+      "file": "NimbusSansNarrow-Bold.otf",
+      "family": "Nimbus Sans Narrow",
+      "subfamily": "Bold",
+      "postscript_name": "NimbusSansNarrow-Bold",
+      "sha256": "6d7cec07f5a9035e208532dab35a51312aef4a7f26eb524dd614c9fcd97c3264"
+    },
+    {
+      "file": "NimbusRoman-Regular.otf",
+      "family": "Nimbus Roman",
+      "subfamily": "Regular",
+      "postscript_name": "NimbusRoman-Regular",
+      "sha256": "fd41669443616a7ae890c42e53a58f47fa24a940fd1e367acaff665cf5b6e9d8"
+    },
+    {
+      "file": "NimbusRoman-Bold.otf",
+      "family": "Nimbus Roman",
+      "subfamily": "Bold",
+      "postscript_name": "NimbusRoman-Bold",
+      "sha256": "e0ad81923bc6d85d5426f796217c87963ca1ae3c65e22c87a25b6c6353de299e"
+    },
+    {
+      "file": "NimbusRoman-BoldItalic.otf",
+      "family": "Nimbus Roman",
+      "subfamily": "Bold Italic",
+      "postscript_name": "NimbusRoman-BoldItalic",
+      "sha256": "c84bcb17ab4ee54f16dadad6a3b0b2df37a24f9fc812897c4a59eeca785a5dec"
+    },
+    {
+      "file": "NimbusMonoPS-Regular.otf",
+      "family": "Nimbus Mono PS",
+      "subfamily": "Regular",
+      "postscript_name": "NimbusMonoPS-Regular",
+      "sha256": "4f225ca8e13acb16f733ce741693105e527d5f7a5443901b9ecc190fca4e149b"
+    },
+    {
+      "file": "URWBookman-Demi.otf",
+      "family": "URW Bookman",
+      "subfamily": "Demi",
+      "postscript_name": "URWBookman-Demi",
+      "sha256": "ab8b2fe57cbea9783c6179188dc013c76cfc5717c22cf59bbf3016ef2d7d93ee"
+    }
+  ],
+  "documentation_font": "Open Sans Regular/Bold; not historical IUS typography",
+  "changes": [
+    "Separate +.020H optical black-edge expansion for pin lettering",
+    "URW Bookman Demi for toll-free display words and numerals",
+    "Custom Northern U glyph",
+    "More condensed SAY YES TO and rounded NORTHERN corners",
+    "Nimbus Roman Bold Italic for fundraising displays",
+    "CAMPAIGN cap132 versus SUPPORT160",
+    "Invitation spelling DAHLLOFF / Dahlloff as photographed",
+    "Corrected regular italic font-path mapping",
+    "Custom Northern capital N with thinner tapered serifs, a lighter diagonal and a mainly left-projecting top-right serif; fitted Bookman-derived “orthern” and the separate custom U retained"
+  ],
+  "evidence": "FONT_NOTES.md and reference/font-audit/",
+  "revision_history": [
+    {
+      "version": "1.1",
+      "changes": [
+        "Separate +.020H optical black-edge expansion for pin lettering",
+        "URW Bookman Demi for toll-free display words and numerals",
+        "Custom Northern U glyph",
+        "More condensed SAY YES TO and rounded NORTHERN corners",
+        "Nimbus Roman Bold Italic for fundraising displays",
+        "CAMPAIGN cap132 versus SUPPORT160",
+        "Invitation spelling DAHLLOFF / Dahlloff as photographed",
+        "Corrected regular italic font-path mapping"
+      ],
+      "northern_word_construction": "Fitted URW Bookman Demi word Northern; separately constructed large U"
+    },
+    {
+      "version": "1.2",
+      "changes": [
+        "Custom Northern capital N with thinner tapered serifs, a lighter diagonal and a mainly left-projecting top-right serif; fitted Bookman-derived “orthern” and the separate custom U retained"
+      ],
+      "scope": "Focused correction of the orange Northern U button’s initial capital N"
+    }
+  ],
+  "northern_u_construction": {
+    "word": "Custom vector N + fitted URW Bookman Demi-derived “orthern”",
+    "large_u": "Separate custom vector U; v1.1 treatment retained",
+    "custom_n_method": "Deliberately constructed editable vector geometry; no automatic bitmap tracing",
+    "observed_n_features": [
+      "Thinner tapered serifs than the previous Bookman-derived N",
+      "Lighter diagonal",
+      "Top-right serif projects mainly to the left"
+    ],
+    "source_photographs": [
+      "IMG_7955(1).jpeg",
+      "IMG_7947.jpeg"
+    ],
+    "exact_historical_typeface": "Unconfirmed",
+    "proof": "reference/font-audit/northern-n/Northern_N_Detail.png"
+  },
+  "comparison_history": [
+    {
+      "path": "reference/font-audit/campaign/06-campaign-before-after.png",
+      "versions": "v1.0 to v1.1",
+      "note": "Preserved historical campaign comparison; its Bookman-derived N is superseded in v1.2"
+    },
+    {
+      "path": "reference/font-audit/northern-n/Northern_N_Detail.png",
+      "versions": "v1.1 to v1.2",
+      "note": "Focused capital-N proof; other Northern U lettering treatments retained"
+    }
+  ]
+}

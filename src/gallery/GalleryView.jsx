@@ -30,6 +30,7 @@ import { BCTS_FOREST, BCTS_TEAL } from './oneOffs.js'
 import { SuppliedMarkView } from './SuppliedMarkView.jsx'
 import { CollectedMarkView } from './CollectedMarkView.jsx'
 import { RailwayHistory, RailwayHistoryLinks } from './RailwayHistory.jsx'
+import { UnbcOriginsTeaser } from './UnbcOrigins.jsx'
 import { generatorArt, onPage, tileArt } from './tileArt.js'
 import { isSearchShortcut, searchGallery } from './gallerySearch.js'
 import { identitySubjectById, searchIdentitySubjects } from './identityCoverage.js'
@@ -919,6 +920,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
       <div className="gallery">
         {crumbs}
         {timeline}
+        <UnbcOriginsTeaser owner={open.owner} />
         {open.kind === 'hydro'
           ? <HydroStudio initialPreset={open.preset} />
           : open.kind === 'hydro-mark'
@@ -1019,6 +1021,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         <GraphLink node={collection.graphNode} onOpenGovernment={onOpenGovernment} />
       </div>
       <p className="gallery__intro">{collection.intro}</p>
+      <UnbcOriginsTeaser owner={collection.entries?.[0]?.owner} />
       <IdentityCollectionLinks collectionId={collection.id} graphShown={collection.graphNode} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
       <RailwayHistoryLinks history={collection.railwayHistory} />
 

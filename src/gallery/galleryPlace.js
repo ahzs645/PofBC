@@ -21,5 +21,6 @@ export const galleryPlaceUrl = (href, { collection, mark, subject, coverage = fa
     if (mark) url.searchParams.set('mark', mark)
   }
   if (/^#railway-(history|connections|evidence)$/.test(url.hash)) url.hash = ''
+  if (/^#unbc-origins(?:-(campaign|timeline|sources))?$/.test(url.hash)) url.hash = ''
   return url
 }
