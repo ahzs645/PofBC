@@ -28,7 +28,7 @@ const within = (range) => (at) => !range || (at >= range[0] && at <= range[1])
 export const EmployerCard = ({ entry, years, range, onOpen, stats, sources }) => {
   const inRange = within(range)
   const latest = entry.counts.reduce((best, value, at) => (value && inRange(at) ? at : best), -1)
-  const { nouns, latestEmployee, includesOnlyEmployee } = employerDisclosureLabels(entry, range, sources)
+  const { nouns, latestEmployee } = employerDisclosureLabels(entry, range, sources)
   const records = range ? entry.counts.reduce((sum, value, at) => sum + (inRange(at) ? value : 0), 0) : entry.counts[latest] ?? 0
   return (
     <button type="button" className="salaries__card" onClick={() => onOpen(entry.slug, stats ? years[stats.year] : undefined)}>
@@ -36,7 +36,8 @@ export const EmployerCard = ({ entry, years, range, onOpen, stats, sources }) =>
       <span className="salaries__text">
         <span className="salaries__name">{entry.names.at(-1)}</span>
         <span className="salaries__line">{count(records, ...nouns)} in {range ? rangeLabel(years, range) : years[latest]}</span>
-        {latestEmployee != null && (latestEmployee !== latest || !includesOnlyEmployee) && <span className="salaries__line">Latest employee disclosure: {reportingYearLabel(years[latestEmployee])}</span>}
+        {/* Only when it is not the year on the line above. */}
+        {latestEmployee != null && latestEmployee !== latest && <span className="salaries__line">Latest employee disclosure: {reportingYearLabel(years[latestEmployee])}</span>}
         {stats && <span className="employer-card__stats">
           <span className="salaries__line"><b>Median {summary(stats.median)}</b> · Average {summary(stats.mean)}</span>
           {/* The period and count are on the line above unless the statistics come from another one. */}
@@ -196,12 +197,11 @@ export const PeopleBrowse = ({ index, sector, range, layout, onPerson, onEmploye
 
   if (failed) return <p className="salaries__hint" role="alert">The highest-paid records could not be loaded.</p>
   if (!top || !links) return <p className="salaries__hint" role="status">Loading the highest-paid records…</p>
-  const note = <p className="salaries__hint salaries__hint--small">Each name’s highest CAD payment at an employer, from each period’s top {top.perPeriod.toLocaleString('en-CA')}. Other currencies are unranked. The same name may be different people.</p>
+  // How the list is ranked, and that a name is not an identity, are on the About page.
   const otherCurrencies = <>{unranked.length > 0 && <section aria-label="Other currencies"><h3 className="salaries__title">Other currencies · unranked</h3><div className="salaries__grid">{unranked.map((group) => <TopRecordCard key={group.key} group={group} index={index} onPerson={onPerson} />)}</div></section>}</>
-  if (layout === 'table') return <>{note}<DataTable data={rows} columns={columns} sorting={[{ id: 'pay', desc: true }]} label="Highest CAD payments by name and employer" />{otherCurrencies}</>
+  if (layout === 'table') return <><DataTable data={rows} columns={columns} sorting={[{ id: 'pay', desc: true }]} label="Highest CAD payments by name and employer" />{otherCurrencies}</>
   return (
     <>
-      {note}
       <Paged list={rows} size={24} reset={`${sector}|${range}`}>
         {(page) => {
           const first = rows.indexOf(page[0])

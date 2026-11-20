@@ -1,0 +1,47 @@
+/* The visual guides in this site's clothes, over brandkit's manual library (vendor/brandkit,
+   src/manuals/manuals.css). Every rule is scoped to .guides, so it outranks the library's own. */
+
+/* The index opens on its families, as the posters open on their shelf: the site's header already
+   names the view, and the heading is kept only as the way back from a book. */
+.guides > .guides__intro:has(+ .guides__family) { display: none; }
+
+/* A book or a page is a card, framed as the posters', patches' and plates' are: a plain well for
+   the cover, its name below. */
+.guides .guides__book,
+.guides .guides__thumb {
+  gap: 2px;
+  padding-bottom: 12px;
+  border: 1px solid var(--outline);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  transition: border-color 150ms, transform 150ms, box-shadow 150ms;
+}
+.guides .guides__book:hover,
+.guides .guides__thumb:hover { border-color: var(--mid); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); }
+.guides .guides__book .guides__thumb-page,
+.guides .guides__thumb .guides__thumb-page { margin: 0 0 8px; border-radius: 0; padding: 14px; }
+.guides .guides__book:hover .guides__thumb-page,
+.guides .guides__thumb:hover .guides__thumb-page { transform: none; background: var(--hover); }
+.guides .guides__book > :not(.guides__thumb-page),
+.guides .guides__thumb > :not(.guides__thumb-page) { padding: 0 12px; }
+.guides .guides__book:focus-visible,
+.guides .guides__thumb:focus-visible { border-radius: var(--radius); }
+
+/* The way back: the same quiet button as on a patch, a badge or a plate. */
+.guides .guides__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: var(--control);
+  margin: 0 0 8px -14px;
+  padding: 6px 14px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+.guides .guides__back:hover { background: var(--hover); color: var(--ink); }
+@media (max-width: 600px) {
+  .guides .guides__back { margin-left: -10px; padding-inline: 10px; }
+}

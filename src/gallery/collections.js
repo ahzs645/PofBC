@@ -854,8 +854,8 @@ export const GALLERY_COLLECTIONS = [
     years: '1961–present',
     graphNode: 'bc-hydro',
     cover: 'bc-hydro-current-colour',
-    intro: 'BC Hydro’s three identities, oldest first. Each opens in the generator’s layout: the first ' +
-      'rebuilt from its manual’s rules, the other two drawn from BC Hydro’s own artwork.',
+    // How each era's artwork was made is on its chips and under "About these marks".
+    intro: 'BC Hydro’s three identities, oldest first.',
     eras: [
       era({
         id: 'bc-hydro-1961',

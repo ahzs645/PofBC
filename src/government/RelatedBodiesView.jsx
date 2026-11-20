@@ -149,7 +149,6 @@ export const RelatedBodiesView = ({ selectedId, onChangeView, themeName, onToggl
           <p className="gov-eyebrow">Current catalogue · checked {RELATED_BODIES_AS_OF}</p>
           <h1 className="gov-title">Related public bodies</h1>
           <p className="gov-description">Regional authorities, operating companies, public institutions and independent organizations connected to the identity collection. Each record describes its own role and governance.</p>
-          <p className="gov-muted">They are not placed within the provincial executive or treated as historical government snapshots. Open one to see its identity collection, relationships and any salary disclosures held here.</p>
           <p className="gov-links"><SiteLink to={{ view: 'government' }}>Open the provincial government timeline →</SiteLink></p>
         </header>}
       </main>

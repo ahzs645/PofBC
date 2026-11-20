@@ -252,11 +252,11 @@ const Facts = ({ rows }) => (
   </dl>
 )
 
-/** The fuller account, under a mark that is open. */
-const AboutMark = ({ identity }) => identity && (
+/** The fuller account, under a mark that is open, with how this page draws it where that is said. */
+const AboutMark = ({ identity, drawing }) => identity && (
   <section className="panel gallery__about" aria-labelledby="about-mark">
     <h2 id="about-mark">About this mark</h2>
-    <Facts rows={Object.entries(sentencesOf(identity))} />
+    <Facts rows={[...Object.entries(sentencesOf(identity)), ...(drawing ? [['Drawing', drawing]] : [])]} />
   </section>
 )
 
@@ -318,14 +318,13 @@ const AboutCollection = ({ collection }) => {
 }
 
 /**
- * A collection card's one chip: where its marks came from — the one provenance they share, or that
- * they do not share one. Their dates and rights are left to the collection's own page: every mark
- * here has its rights unresolved, so on every card that chip said nothing that told cards apart.
+ * Where a collection's marks came from — the one provenance they share, or that they do not share
+ * one — as the card's tooltip. The collection's own page says it in full.
  */
-const collectionChips = (collection) => {
+const collectionProvenance = (collection) => {
   const provenances = new Set(entriesOf(collection).map((entry) => PROVENANCE[entry.identity.provenance]))
-  if (!provenances.size) return []
-  return provenances.size === 1 ? [...provenances] : ['Mixed provenance']
+  if (!provenances.size) return undefined
+  return provenances.size === 1 ? [...provenances][0] : 'Mixed provenance'
 }
 
 /** One mark, opened: its colours editable, its arrangement not. */
@@ -379,7 +378,6 @@ const Detail = ({ entry, onClose }) => {
               Download SVG
             </button>
           </div>
-          {entry.caveat && <p className="gallery__caveat">{entry.caveat}</p>}
         </div>
       </div>
     </section>
@@ -419,7 +417,7 @@ const ThisMark = ({ entry, theme }) => (
  * A one-off: a card of its own, with what it is beside it. One remade in the current identity is
  * drawn by the generator's current era, and opens there rather than in the gallery.
  */
-const OneOffEntry = ({ entry, onOpen, theme, onOpenGovernment }) => (
+const OneOffEntry = ({ entry, onOpen, theme, onOpenGovernment, said = [] }) => (
   <section className="panel gallery__entry">
     <div className="gallery__head">
       <h2>{entry.label}</h2>
@@ -428,10 +426,12 @@ const OneOffEntry = ({ entry, onOpen, theme, onOpenGovernment }) => (
         {timelineOf(entry) && ` · ${timelineOf(entry).eras.length} eras`}
       </span>
     </div>
-    <p className="gallery__note">{entry.note}</p>
-    {/* A collected file's dates are the line above, so its card does not say them twice. */}
+    {/* Two lines here; the mark's own page has the rest. */}
+    <p className="gallery__note gallery__note--clamped" title={entry.note}>{entry.note}</p>
+    {/* A collected file's dates are the line above, so its card does not say them twice; nor does a
+        card repeat a chip every card in its collection carries. */}
     <Chips
-      labels={chipsOf(entry.identity).filter((label) => entry.kind !== 'collected' || label !== APPLICABILITY[entry.identity.applicability.kind])}
+      labels={chipsOf(entry.identity).filter((label) => !said.includes(label) && (entry.kind !== 'collected' || label !== APPLICABILITY[entry.identity.applicability.kind]))}
       title={FIDELITY[entry.identity.fidelity]}
     />
 
@@ -446,11 +446,8 @@ const OneOffEntry = ({ entry, onOpen, theme, onOpenGovernment }) => (
         data-ground="page"
         dangerouslySetInnerHTML={{ __html: tileArt(entry, theme) }}
       />
-      <span className="gallery__label">
-        {entry.kind === 'current' ? 'Open in the generator'
-          : entry.kind === 'collected' ? 'View and download'
-            : 'Open to recolour, or to see it as published'}
-      </span>
+      {/* Only a mark that opens somewhere else says so; every other card opens here. */}
+      {entry.kind === 'current' && <span className="gallery__label">Open in the generator</span>}
     </button>
     <GraphLink node={entry.graphNode} onOpenGovernment={onOpenGovernment} />
   </section>
@@ -461,7 +458,7 @@ const CollectionCard = ({ collection, onOpen, theme }) => {
   const cover = findGalleryEntry(collection.cover) ?? entriesOf(collection)[0]
   const count = entriesOf(collection).length
   return (
-    <button type="button" id={`collection-card-${collection.id}`} className="gallery__collection" onClick={onOpen} aria-label={`Open ${collection.label}`}>
+    <button type="button" id={`collection-card-${collection.id}`} className="gallery__collection" onClick={onOpen} aria-label={`Open ${collection.label}`} title={collectionProvenance(collection)}>
       <span
         className="gallery__art gallery__art--cover"
         data-ground="page"
@@ -475,7 +472,6 @@ const CollectionCard = ({ collection, onOpen, theme }) => {
           {collection.years} · {count} {collection.fileCollection ? (count === 1 ? 'artwork file' : 'artwork files') : (count === 1 ? 'mark' : 'marks')}
           {collection.eras ? ` · ${collection.eras.length} eras` : ''}
         </span>
-        <Chips labels={collectionChips(collection)} />
       </span>
     </button>
   )
@@ -617,9 +613,8 @@ const EraMore = ({ era }) => {
 
 /**
  * One era: its name and years, what changed, what all its marks share, where that comes from, and
- * its marks — or the slot that stands for them. An era of one mark, or none, sets it beside the
- * words on a wide screen rather than under them. On a mark's own timeline the open mark is marked
- * as the one being looked at rather than offered again.
+ * its marks — or the slot that stands for them — under the words, as every era has them. On a
+ * mark's own timeline the open mark is marked as the one being looked at rather than offered again.
  */
 const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator }) => {
   const said = eraChips(era.entries)
@@ -629,7 +624,6 @@ const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator }) => {
       className="gallery__era"
       aria-labelledby={`${era.id}-heading`}
       data-current={era.entries.some((entry) => entry.id === openId) || undefined}
-      data-single={era.entries.length < 2 || undefined}
     >
       <div className="gallery__era-text">
         <div className="gallery__head">
@@ -919,7 +913,8 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
     return (
       <div className="gallery">
         {crumbs}
-        {timeline}
+        {/* A mark with its own history below lists the same eras there; the rail would say them twice. */}
+        {!markTimeline && timeline}
         <UnbcOriginsTeaser owner={open.owner} />
         {open.kind === 'hydro'
           ? <HydroStudio initialPreset={open.preset} />
@@ -938,7 +933,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         )}
         <RailwayHistory history={collection?.railwayHistory} compact />
         <IdentityCollectionLinks collectionId={collection?.id} entryId={open.id} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
-        <AboutMark identity={open.identity} />
+        <AboutMark identity={open.identity} drawing={open.caveat} />
       </div>
     )
   }
@@ -1031,7 +1026,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         : (
           <div className="gallery__list">
             {collection.entries.map((entry) => (
-              <OneOffEntry key={entry.id} entry={entry} theme={theme} onOpen={() => openMark(entry.id)} onOpenGovernment={onOpenGovernment} />
+              <OneOffEntry key={entry.id} entry={entry} theme={theme} said={collection.entries.length > 1 ? eraChips(collection.entries) : []} onOpen={() => openMark(entry.id)} onOpenGovernment={onOpenGovernment} />
             ))}
           </div>
           )}

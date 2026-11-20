@@ -25,3 +25,6 @@ export const lanesOf = (formats) => {
 export const changeYears = (formats, [first, last]) => [...new Set(formats.flatMap((format) => [format.period[0], format.period[1] + 1]))]
   .filter((year) => year >= first && year <= last)
   .sort((a, b) => a - b)
+
+/** PlateForge's prose joins clauses with a spaced em dash; the site's displayed text does not. */
+export const undash = (text) => text?.replace(/\s+—\s+/g, '; ') ?? text

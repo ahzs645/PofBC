@@ -63,7 +63,7 @@ export const MinistryField = ({ source, ministry, manualMinistry, program, onCha
 
       {source === 'list' ? (
         <div className="field">
-          <label htmlFor={selectId}>Ministry or agency</label>
+          <label htmlFor={selectId} title={`Today’s list last reviewed ${MINISTRY_LIST_REVIEWED}; the dated ones are every ministry since 1976.`}>Ministry or agency</label>
           <Select
             keepPlace
             id={selectId}
@@ -79,9 +79,6 @@ export const MinistryField = ({ source, ministry, manualMinistry, program, onCha
             ))}
           </Select>
           <History name={ministry} />
-          <p className="field__note" title={`Today’s list last reviewed ${MINISTRY_LIST_REVIEWED}; the dated ones are every ministry since 1976.`}>
-            Not there? Switch to “Type it in”.
-          </p>
         </div>
       ) : (
         <div className="field">

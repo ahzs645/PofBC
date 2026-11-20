@@ -164,7 +164,8 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
         ))}
       </p>
       <p className="salaries__note">
-        {yearLabels.length} {hasUnverifiedPeriods ? (yearLabels.length === 1 ? 'reporting label' : 'reporting labels') : (yearLabels.length === 1 ? 'disclosure period' : 'disclosure periods')}, {yearSpan(yearLabels)} · {chosen.reviewedName ? 'reviewed name' : 'disclosed as'} “{nameOnly(chosen.name)}”
+        {/* How many periods is the Periods tile's; the span is said here. */}
+        {yearSpan(yearLabels)} · {chosen.reviewedName ? 'reviewed name' : 'disclosed as'} “{nameOnly(chosen.name)}”
       </p>
       {scope && (
         <p className="salaries__hint salaries__hint--small">

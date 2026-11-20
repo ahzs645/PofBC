@@ -6,10 +6,11 @@ import { TEMPLATE_FAMILIES, cardLabel, cardOf, findPatch, isCard, orgsBySector, 
 import { searchFor } from '../site/navigation.jsx'
 import { writeHistory } from '../site/browserHistory.js'
 import {
-  catalogueCards, filterCatalogue, groupCatalogueByTemplate, isGeneratedColourway,
-  patchPlaceParams, patchPlaceUrl, readPatchPlace, sourcePhotoCount, variantCount
+  catalogueCards, filterCatalogue, groupCatalogueByTemplate,
+  patchPlaceParams, patchPlaceUrl, plainLabel, readPatchPlace, sourcePhotoCount, splitLabel
 } from './patchCatalogue.js'
 import './patches.css'
+import '../posters/shelfTools.css'
 import { Select } from '../site/ui/Select.jsx'
 import { holdScroll } from '../site/holdScroll.js'
 
@@ -19,8 +20,8 @@ const PatchViewer = lazy(() => import('./PatchViewer.jsx').then((module) => ({ d
 const BadgeViewer = lazy(() => import('../badges/BadgeViewer.jsx').then((module) => ({ default: module.BadgeViewer })))
 
 const COLLECTIONS = {
-  patches: { view: 'patches', title: 'Patches', placeholder: 'Sheriff, rocker, Parks…', noun: 'patches' },
-  badges: { view: 'badges', title: 'Badges', placeholder: 'Park Ranger, cap badge…', noun: 'badges' }
+  patches: { view: 'patches', title: 'Patches', placeholder: 'Sheriff, rocker, Parks…', noun: 'patches', one: 'patch' },
+  badges: { view: 'badges', title: 'Badges', placeholder: 'Park Ranger, cap badge…', noun: 'badges', one: 'badge' }
 }
 
 const isPlainClick = (event) => event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey
@@ -44,6 +45,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
   const currentPlace = useRef(place)
   const deferredQuery = useDeferredValue(place.q)
   const cardElements = useRef({})
+  const tools = useRef(null)
 
   const go = useCallback((update, { replace = false } = {}) => {
     const next = { ...currentPlace.current, ...update }
@@ -67,8 +69,6 @@ export const PatchesView = ({ collection = 'patches' }) => {
   const templates = useMemo(() => groupCatalogueByTemplate(shown, TEMPLATE_FAMILIES), [shown])
   const open = place.patch ? findPatch(place.patch) : null
   const openOrg = open ? organizations.find((org) => org.id === open.orgId) : null
-  const totalVariants = variantCount(catalogue)
-  const matchingVariants = variantCount(shown)
   const filtering = Boolean(place.org || place.family || deferredQuery.trim())
 
   const close = useCallback(() => {
@@ -114,9 +114,17 @@ export const PatchesView = ({ collection = 'patches' }) => {
 
   const hrefFor = (update) => searchFor(patchPlaceParams(copy.view, { ...place, ...update }))
   const selectFilter = (update) => go({ ...update, patch: null }, { replace: true })
+  const regroup = (group) => {
+    if (group !== place.group) holdScroll(tools.current)
+    selectFilter({ group })
+  }
+  const clear = () => {
+    holdScroll(tools.current)
+    selectFilter({ org: null, family: null, q: '' })
+  }
   const renderCard = (entry) => {
     const { patch, selected, org, members, label, template } = entry
-    const generated = members.filter(isGeneratedColourway).length
+    const name = splitLabel(label)
     const sourceCount = sourcePhotoCount(selected)
     const selectedVariant = selected.id !== patch.id
     return (
@@ -135,13 +143,14 @@ export const PatchesView = ({ collection = 'patches' }) => {
         </span>
         <span className="patches__card-text">
           {place.group === 'template' && <span className="patches__owner">{org.name}</span>}
-          <span className="patches__title">{label}</span>
-          {selectedVariant && <span className="patches__matched">Showing {selected.variant || selected.label}</span>}
+          {/* The library's "Wording — what it is" as a title over a smaller line. */}
+          <span className="patches__title">{name.title}</span>
+          {name.detail && <span className="patches__detail">{name.detail}</span>}
+          {selectedVariant && <span className="patches__matched">Showing {selected.variant || plainLabel(selected.label)}</span>}
           <span className="patches__medium">
             {[selected.medium, selected.finish].filter(Boolean).join(' · ')}
             {members.length > 1 && ` · ${countLabel(members.length, 'variant')}`}
           </span>
-          {generated > 0 && <span className="patches__evidence">{isGeneratedColourway(selected) ? 'Generated colourway' : `Includes ${countLabel(generated, 'generated colourway')}`}</span>}
         </span>
       </a>
     )
@@ -149,45 +158,35 @@ export const PatchesView = ({ collection = 'patches' }) => {
 
   return (
     <section className="patches" aria-label={copy.title}>
-      <div className="patches__intro">
-        <h2>{copy.title}</h2>
-        <p>{countLabel(totalVariants, 'variant')} in {countLabel(catalogue.length, 'catalogue card')} · {countLabel(organizations.length, 'organization')}</p>
-        <div className="patches__filters">
-          <label className="patches__filter patches__filter--compact">
-            <span>Group by</span>
-            <Select keepPlace value={place.group} onChange={(value) => selectFilter({ group: value })}>
-              <option value="organization">Organization</option>
-              <option value="template">Template family</option>
-            </Select>
-          </label>
-          <label className="patches__filter">
-            <span>Organization</span>
-            <Select keepPlace value={place.org ?? ''} onChange={(value) => selectFilter({ org: value || null })}>
-              <option value="">All {organizations.length} organizations</option>
-              {sectors.map(({ sector, orgs }) => (
-                <optgroup key={sector.id} label={sector.name}>
-                  {orgs.map((org) => <option key={org.id} value={org.id}>{org.name} ({org.patches.length} variants)</option>)}
-                </optgroup>
-              ))}
-            </Select>
-          </label>
-          <label className="patches__filter">
-            <span>Template family</span>
-            <Select keepPlace value={place.family ?? ''} onChange={(value) => selectFilter({ family: value || null })}>
-              <option value="">All template families</option>
-              {familySections.map(({ family, cards }) => <option key={family.id} value={family.id}>{family.label} ({variantCount(cards)} variants)</option>)}
-            </Select>
-          </label>
-          <label className="patches__filter patches__filter--grow">
-            <span>Search</span>
-            <input type="search" value={place.q} placeholder={copy.placeholder} onChange={(event) => selectFilter({ q: event.target.value })} />
-          </label>
+      {/* The same toolbar as the posters' (shelfTools.css): grouping, filters, search, count. */}
+      <div className="shelf-tools" role="group" aria-label={`Browse the ${copy.noun}`} ref={tools}>
+        <div className="shelf-tools__toggle" role="group" aria-label="Group by">
+          <button type="button" aria-pressed={place.group !== 'template'} onClick={() => regroup('organization')}>By organization</button>
+          <button type="button" aria-pressed={place.group === 'template'} onClick={() => regroup('template')}>By template</button>
         </div>
-        {place.group === 'template' && <p className="patches__group-note">Template families bring related layouts together. Each edition keeps its wording, source evidence and variants.</p>}
-        {filtering && <div className="patches__results">
-          <span role="status">{countLabel(shown.length, 'card')} · {countLabel(matchingVariants, 'matching variant')}</span>
-          <button type="button" className="button button--ghost" onClick={(event) => { holdScroll(event.currentTarget.closest('.patches__intro')); selectFilter({ org: null, family: null, q: '' }) }}>Clear filters</button>
-        </div>}
+        <label className="shelf-tools__filter">
+          <span>Organization</span>
+          <Select keepPlace value={place.org ?? ''} onChange={(value) => selectFilter({ org: value || null })}>
+            <option value="">All</option>
+            {sectors.map(({ sector, orgs }) => (
+              <optgroup key={sector.id} label={sector.name}>
+                {orgs.map((org) => <option key={org.id} value={org.id}>{org.name}</option>)}
+              </optgroup>
+            ))}
+          </Select>
+        </label>
+        <label className="shelf-tools__filter">
+          <span>Template</span>
+          <Select keepPlace value={place.family ?? ''} onChange={(value) => selectFilter({ family: value || null })}>
+            <option value="">All</option>
+            {familySections.map(({ family }) => <option key={family.id} value={family.id}>{family.label}</option>)}
+          </Select>
+        </label>
+        <input type="search" className="shelf-tools__search" aria-label={`Search the ${copy.noun}`} value={place.q} placeholder={copy.placeholder} onChange={(event) => selectFilter({ q: event.target.value })} />
+        <p className="shelf-tools__count" role="status">
+          {filtering ? `${shown.length} of ${catalogue.length}` : catalogue.length} {shown.length === 1 && filtering ? copy.one : copy.noun}
+          {filtering && <> · <button type="button" className="shelf-tools__clear" onClick={clear}>Clear filters</button></>}
+        </p>
       </div>
 
       {shown.length === 0 && <p className="patches__empty" role="status">No {copy.noun} match these filters.</p>}
@@ -197,7 +196,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
           <section key={family.id} className="patches__sector" aria-labelledby={`template-${family.id}`}>
             <header className="patches__family-head">
               <h3 id={`template-${family.id}`}>{family.label}</h3>
-              <span className="patches__count">{countLabel(cards.length, 'card')} · {countLabel(variantCount(cards), 'variant')}</span>
+              <span className="patches__count">{cards.length}</span>
               {family.description && <p>{family.description}</p>}
             </header>
             <div className="patches__grid">{cards.map(renderCard)}</div>
@@ -217,8 +216,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
                           heading stays under the finger as far as the page allows (holdScroll.js). */}
                       <a href={hrefFor({ org: org.id, patch: null })} onClick={(event) => { if (isPlainClick(event)) { event.preventDefault(); holdScroll(event.currentTarget); selectFilter({ org: org.id }) } }}>{org.name}</a>
                     </h4>
-                    <span className="patches__count">{countLabel(cards.length, 'card')} · {countLabel(variantCount(cards), 'variant')}</span>
-                    {org.description && copy.view === 'patches' && <p>{org.description}</p>}
+                    <span className="patches__count">{cards.length}</span>
                   </header>
                   <div className="patches__grid">{cards.map(renderCard)}</div>
                 </section>

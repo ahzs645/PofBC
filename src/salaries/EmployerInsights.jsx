@@ -56,7 +56,6 @@ export const EmployerInsights = ({ rows, years, ready, failed, onRetry, onOpen, 
   return (
   <section className="employer-insights" aria-labelledby="employer-insights-heading">
     <h3 id="employer-insights-heading" className="salaries__title">Across organizations</h3>
-    <p className="salaries__meta">Latest official employee disclosure in the selected periods and sector.</p>
     {failed
       ? <p className="salaries__hint" role="alert">Organization statistics could not be loaded. <button type="button" className="salaries__link" onClick={onRetry}>Retry statistics</button></p>
       : !ready

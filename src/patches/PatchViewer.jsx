@@ -10,6 +10,7 @@ import { PatchHistory, photosOf } from './PatchDetails.jsx'
 import sourceCrops from './sourceCrops.json'
 import { SourceOverlay } from './SourceOverlay.jsx'
 import { PatchStage } from './PatchStage.jsx'
+import { plainLabel, splitLabel } from './patchCatalogue.js'
 import { VIEW_DEFAULTS, exportScale, exportSize, loadView, modeFor, saveView } from './patchView.js'
 import { Select } from '../site/ui/Select.jsx'
 import { Slider } from '../site/ui/Slider.jsx'
@@ -50,14 +51,15 @@ const GROUNDS = [
   { value: 'cloth', label: 'Twill', title: 'Sewn on a cloth ground: the largest colour is bare twill, as on most cloth patches' },
   { value: 'stitched', label: 'Stitched', title: 'Every colour is covered with thread' }
 ]
-const MODE_LABELS = { embroidery: 'Embroidery', vector: 'Vector', source: 'Source', compare: 'Compare', overlay: 'Source overlay' }
+// Short, so the row stays one line (it scrolls sideways on a phone).
+const MODE_LABELS = { embroidery: 'Embroidery', vector: 'Vector', source: 'Source', compare: 'Compare', overlay: 'Overlay' }
+const MODE_TITLES = { overlay: 'The drawing laid over its source', compare: 'The source beside the reconstruction' }
 /** Sewn results kept so that going back to a setting does not sew it again. */
 const SEWN_LIMIT = 8
 
 const storage = () => { try { return globalThis.localStorage } catch { return null } }
 
 const mergedLabels = new Map(LIBRARY.merged.map((m) => [m.id, m.label]))
-const absorbedLabels = new Map((LIBRARY.absorbed ?? []).map((m) => [m.id, m.label]))
 
 const download = (blob, name) => {
   const link = document.createElement('a')
@@ -140,7 +142,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   const sew = mode === 'embroidery' || mode === 'compare'
   const options = Object.entries(MODE_LABELS)
     .filter(([id]) => id === 'overlay' ? Boolean(reference) : showSourceReview || (id !== 'source' && id !== 'compare'))
-    .map(([value, label]) => ({ value, label: value === 'embroidery' && !textile ? 'Embroidery adaptation' : label }))
+    .map(([value, label]) => ({ value, label, title: value === 'embroidery' && !textile ? 'An embroidery adaptation of a design that was not sewn' : MODE_TITLES[value] }))
   const modeSwitch = <Segmented ariaLabel="View" options={options} value={mode} onChange={(value) => {
     if (!textile && value === 'embroidery') setAdaptation(patch.id)
     set({ mode: value })
@@ -218,7 +220,8 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   }, [result, profile, finish, lightDeg, mode])
 
   const back = useRef(null)
-  useEffect(() => { back.current?.focus({ preventScroll: true }) }, [])
+  // Focus starts on the way back, without a ring until the reader moves by keyboard.
+  useEffect(() => { back.current?.focus({ preventScroll: true, focusVisible: false }) }, [])
   useEffect(() => {
     const onKey = (event) => {
       if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return
@@ -235,7 +238,8 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   const name = `${patch.id}-${org.id}`
   // A variant is shown under its card's label, and named in full where it stands alone.
   const variants = variantsOf(patch)
-  const title = patch.variant ? `${cardLabel(patch)} · ${patch.variant}` : patch.label
+  const title = plainLabel(patch.variant ? `${cardLabel(patch)} · ${patch.variant}` : patch.label)
+  const heading = splitLabel(cardLabel(patch))
   const exportPng = () => {
     if (!ready) return
     const png = textured(result, profile, finish, view.lightDeg, exportScale(result))
@@ -306,7 +310,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
         </div>
 
         <aside className="patch__panel">
-          <h2>{cardLabel(patch)}</h2>
+          <h2>{heading.title}{heading.detail && <span className="patch__subtitle">{heading.detail}</span>}</h2>
           <p className="patch__meta">{[patch.medium, patch.finish, patch.quality].filter(Boolean).join(' · ')}</p>
 
           {variants && (
@@ -371,12 +375,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
               <p>{patch.limitations}</p>
             </details>
           )}
-          <p className="patch__source">
-            {patch.supplied
-              ? <>{patch.id}, a supplied drawing rather than an atlas entry</>
-              : <>{patch.id} in the atlas</>}
-            {photosOf(patch).length <= 1 && patch.sourceUrl && <> · <a href={patch.sourceUrl} target="_blank" rel="noreferrer">source image</a></>}
-          </p>
+          {photosOf(patch).length <= 1 && patch.sourceUrl && <p className="patch__source"><a href={patch.sourceUrl} target="_blank" rel="noreferrer">Source image</a></p>}
           {photosOf(patch).length > 1 && (
             <p className="patch__source">
               Seen {patch.sightings.length} times in {photosOf(patch).length} source images:{' '}
@@ -389,25 +388,18 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
               ))}
             </p>
           )}
-          {patch.absorbs?.length > 0 && (
-            <p className="patch__source">
-              It takes the place of the atlas’s {patch.absorbs.map((id) => `${id} “${absorbedLabels.get(id) ?? id}”`).join(', ')}.
-            </p>
-          )}
-          {patch.merged.length > 0 && (
-            <p className="patch__source">
-              The atlas also lists it as {patch.merged.map((id) => `${id} “${mergedLabels.get(id) ?? id}”`).join(', ')}: the same
-              drawing fitted to another source image.
-            </p>
-          )}
         </aside>
 
-        {showSourceReview && <section className="patch__review" aria-label="Source review">
-          <div className="patch__review-heading">
-            <h3>Source comparison</h3>
-            {review && <span className={`patch__review-status patch__review-status--${reviewIsCurrent ? review.status : 'unreviewed'}`}>{reviewIsCurrent ? REVIEW_LABELS[review.status] ?? 'Not yet reviewed' : 'Drawing changed since review'}</span>}
-            {review?.priority === 'high' && <span className="patch__review-priority">High priority</span>}
-          </div>
+        {/* The evidence behind the drawing, closed until asked for: findings, limitations, the
+            source occurrence and the record's date. */}
+        {showSourceReview && <details className="patch__review">
+          <summary><h3>Source comparison</h3></summary>
+          {review && (
+            <p className="patch__review-heading">
+              <span className={`patch__review-status patch__review-status--${reviewIsCurrent ? review.status : 'unreviewed'}`}>{reviewIsCurrent ? REVIEW_LABELS[review.status] ?? 'Not yet reviewed' : 'Drawing changed since review'}</span>
+              {review.priority === 'high' && <span className="patch__review-priority">High priority</span>}
+            </p>
+          )}
           {reviewIndex.status === 'loading' && <p role="status">Loading source review…</p>}
           {reviewIndex.status === 'failed' && (
             <p role="status">The source comparison could not be loaded. <button type="button" className="button--inline" onClick={() => setReviewAttempt((n) => n + 1)}>Try again</button></p>
@@ -436,8 +428,14 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
             {source?.note && <p>{source.note}</p>}
             {sourceUrl && <a href={sourceUrl} target="_blank" rel="noreferrer">Open full source</a>}
           </div>
+          {patch.merged.length > 0 && (
+            <p>
+              The atlas also lists it as {patch.merged.map((id) => `${id} “${plainLabel(mergedLabels.get(id) ?? id)}”`).join(', ')}: the same
+              drawing fitted to another source image.
+            </p>
+          )}
           {review && <p className="patch__review-date">Evidence record: {review.reviewedAt ?? reviewIndex.data.reviewedAt}. Source images keep their original proportions.</p>}
-        </section>}
+        </details>}
       </div>
     </section>
   )

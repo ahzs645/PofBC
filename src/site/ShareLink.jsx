@@ -87,9 +87,6 @@ export const ShareLink = ({ state, update }) => {
   return (
     <section className="panel">
       <h2>Share</h2>
-      <p className="panel__hint">
-        Everything travels in the URL: there is nothing to upload and nothing kept.
-      </p>
 
       <div className="row" style={{ flexWrap: 'wrap' }}>
         <button type="button" className="button" onClick={share} disabled={busy}>

@@ -11,30 +11,7 @@
 .patches__intro h2 { margin: 0 0 6px; font-size: 22px; }
 .patches__intro p { margin: 0; color: var(--ink-muted); max-width: 72ch; }
 
-.patches__filters { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-top: 16px; }
-.patches__filter { display: grid; gap: 6px; min-width: 0; flex: 0 1 320px; }
-.patches__filter--compact { flex-basis: 180px; }
-.patches__filter--grow { flex: 1 1 260px; }
-.patches__filter .ui-select { width: 100%; min-width: 0; max-width: 100%; }
-.patches__filter > span { font-size: 13px; font-weight: 600; color: var(--ink-2); }
-.patches__filter input {
-  width: 100%;
-  min-height: var(--control);
-  padding: 7px 12px;
-  border: 1px solid var(--outline);
-  border-radius: var(--radius);
-  background: var(--hover);
-  color: var(--ink);
-  font: inherit;
-  font-size: 16px;
-}
-.patches__filter input:hover { border-color: var(--mid); }
-@media (min-width: 900px) { .patches__filter input { font-size: 14px; } }
-
 .patches__empty { padding: 24px 4px; color: var(--ink-muted); }
-.patches__intro .patches__group-note { margin-top: 14px; font-size: 13px; line-height: 1.5; }
-.patches__results { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin-top: 12px; color: var(--ink-muted); font-size: 13px; }
-.patches__results .button { min-height: 32px; font-size: 13px; }
 .patches__family-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-bottom: 16px; }
 .patches__family-head h3 { margin: 0; font-size: 19px; }
 .patches__family-head p { flex-basis: 100%; margin: 2px 0 0; max-width: 90ch; color: var(--ink-muted); font-size: 13.5px; line-height: 1.5; }
@@ -54,9 +31,10 @@
 .patches__org-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; margin-bottom: 12px; }
 .patches__org-head h4 { margin: 0; font-size: 18px; }
 .patches__org-head h4 a { color: inherit; text-decoration: none; }
+/* The heading narrows the catalogue to its organization: a finger-sized target, laid out as text. */
+.patches__org-head h4 a { display: inline-block; padding: 8px 0; margin: -8px 0; }
 .patches__org-head h4 a:hover { text-decoration: underline; }
 .patches__count { font-size: 13px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
-.patches__org-head p { flex-basis: 100%; margin: 2px 0 0; font-size: 13.5px; color: var(--ink-muted); }
 
 .patches__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 10px; }
 .patches__card {
@@ -78,24 +56,20 @@
   justify-content: center;
   aspect-ratio: 1;
   padding: 14px;
-  background: repeating-conic-gradient(var(--checker-a) 0 25%, var(--checker-b) 0 50%) 0 0 / 14px 14px;
+  /* A plain well, as under the posters: the checkerboard stays on the viewer's stage. */
+  background: var(--hover);
 }
 .patches__thumb img { max-width: 100%; max-height: 100%; display: block; filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.16)); }
 .patches__card-text { display: grid; align-content: start; gap: 2px; padding: 10px 12px 12px; }
 .patches__title { font-weight: 600; font-size: 13.5px; line-height: 1.35; }
+.patches__detail { font-size: 12.5px; line-height: 1.35; color: var(--ink-2); }
 .patches__medium { font-size: 12px; color: var(--ink-faint); }
 .patches__owner, .patches__template-name { font-size: 11.5px; color: var(--ink-muted); line-height: 1.4; }
 .patches__owner { margin-bottom: 2px; }
 .patches__matched { font-size: 12px; color: var(--ink-2); line-height: 1.4; }
-.patches__evidence { margin-top: 5px; padding: 3px 6px; border: 1px dashed var(--mid); border-radius: 5px; font-size: 11px; line-height: 1.4; color: var(--ink-muted); width: fit-content; }
 
 @media (max-width: 600px) {
   .patches__intro, .patches__sector { padding: 16px; }
-  /* Two choices to a row, the search across: stacked singly, the four filters filled a phone's
-     first screen before any patch showed. */
-  .patches__filter { flex: 1 1 calc(50% - 7px); }
-  .patches__filter--grow { flex-basis: 100%; }
-  .patches__filters { margin-top: 12px; }
   .patches__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
@@ -114,10 +88,12 @@
 
 .patch__body { display: grid; grid-template-columns: minmax(0, 1fr) 340px; grid-template-areas: 'visuals panel' 'review panel'; grid-template-rows: auto 1fr; }
 .patch__visuals { grid-area: visuals; min-width: 0; }
-.patch__review { grid-area: review; display: grid; align-content: start; gap: 10px; padding: 18px 20px; border-top: 1px solid var(--outline); font-size: 13px; line-height: 1.5; color: var(--ink-muted); }
+.patch__review { grid-area: review; align-self: start; padding: 14px 20px; border-top: 1px solid var(--outline); font-size: 13px; line-height: 1.5; color: var(--ink-muted); }
+.patch__review > summary { width: fit-content; cursor: pointer; color: var(--ink-2); }
+.patch__review > summary h3 { display: inline; margin: 0; color: inherit; font-size: 13.5px; font-weight: 600; }
+.patch__review :where(p) { margin: 0; }
+.patch__review > * + * { margin-top: 10px; }
 .patch__review-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
-.patch__review h3 { margin: 0; color: var(--ink); font-size: 16px; }
-.patch__review p { margin: 0; }
 .patch__review ul { margin: 0; padding-left: 19px; display: grid; gap: 5px; }
 .patch__review-status { padding: 2px 8px; border: 1px solid var(--outline); border-radius: 6px; background: var(--track); color: var(--ink-2); font-size: 12px; font-weight: 600; }
 .patch__review-status--reconstruct, .patch__review-status--refine { border-style: dashed; }
@@ -182,12 +158,15 @@
 
 .patch__panel { grid-area: panel; padding: 18px 20px 22px; border-left: 1px solid var(--outline); display: grid; align-content: start; gap: 12px; }
 .patch__panel h2 { margin: 0; font-size: 19px; line-height: 1.3; }
+.patch__subtitle { display: block; margin-top: 2px; font-size: 15px; font-weight: 500; color: var(--ink-2); }
 .patch__meta { margin: -6px 0 2px; font-size: 13px; color: var(--ink-muted); }
 .patch__panel .field--compact { justify-content: space-between; }
 .patch__variants .field { margin: 0; }
 .patch__variants .field__label { font-size: 12px; font-weight: 500; color: var(--ink-muted); }
 .patch__variants .segmented { flex-wrap: wrap; }
 .patch__variants .segmented button { flex: 1 1 auto; min-height: 26px; padding: 3px 10px; font-size: 12px; white-space: nowrap; }
+/* A finger needs more than a 26px chip. */
+@media (pointer: coarse) { .patch__variants .segmented button { min-height: 36px; font-size: 13px; } }
 .patch__light { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 12px; font-weight: 500; color: var(--ink-muted); }
 .patch__light .ui-range { flex: 1; min-width: 0; max-width: 190px; margin-left: auto; }
 .patch__light output { min-width: 34px; text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); }
@@ -240,7 +219,14 @@
 .badge-relief__turn input { width: clamp(70px, 18vw, 150px); min-height: 32px; }
 .badge-relief__turn output { min-width: 4ch; font-variant-numeric: tabular-nums; }
 
-.patch-stage__tools .segmented { flex-wrap: wrap; }
+.patch-stage__tools .segmented button { white-space: nowrap; }
+@media (max-width: 600px) {
+  /* The views stay one row of tabs, scrolled sideways rather than wrapped into two. */
+  .patch-stage__tools { max-width: 100%; }
+  .patch-stage__tools .segmented { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .patch-stage__tools .segmented::-webkit-scrollbar { display: none; }
+  .patch-stage__tools .segmented button { flex: none; }
+}
 .patch__stage--overlay { flex-direction: column; gap: 12px; min-width: 0; }
 .patch__stage--overlay p { margin: 0; text-align: center; color: var(--ink-muted); font-size: 13px; }
 .source-overlay__frame {

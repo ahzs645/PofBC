@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { assetUrl } from './collectedCollections.js'
 import { IUS_ASSETS, IUS_COLLECTION_ID, IUS_HIGHLIGHTS, IUS_ID, UNBC_ID } from './iusCollectionData.js'
 import { UNBC_HISTORY } from './unbcHistoryData.js'
@@ -42,17 +42,27 @@ export const UnbcOriginsLink = ({ local = false, className = 'identity-action', 
   </a>
 )
 
+/** One line from a UNBC or IUS page to the origin story, which is to have a page of its own. */
 export const UnbcOriginsTeaser = ({ owner }) => !hasUnbcOrigins(owner) ? null : (
-  <aside className="unbc-origins-teaser" aria-label="UNBC origin story">
-    <img src={kitUrl('svg/ius-print-colour.svg')} alt="Reconstructed Interior University Society print mark" width="120" height="84" />
-    <div>
-      <p className="unbc-origins__eyebrow">Before UNBC · the public campaign</p>
-      <h3>{UNBC_HISTORY.title}</h3>
-      <p>Explore the society, campaign designs and public effort behind the university’s creation.</p>
-      <UnbcOriginsLink className="unbc-origins__text-link">Read the origin story</UnbcOriginsLink>
-    </div>
-  </aside>
+  <p className="unbc-origins-teaser">
+    <UnbcOriginsLink className="gallery__graph-link" />
+  </p>
 )
+
+/**
+ * Whether the address asks for the origin story. Until it has a page of its own, a subject page
+ * shows it only when its link is followed, rather than under every UNBC and IUS record.
+ */
+export const useUnbcOriginsRequested = () => {
+  const read = () => SECTIONS.includes(globalThis.location?.hash.slice(1) ?? '')
+  const [requested, setRequested] = useState(read)
+  useEffect(() => {
+    const onHash = () => setRequested(read())
+    globalThis.addEventListener?.('hashchange', onHash)
+    return () => globalThis.removeEventListener?.('hashchange', onHash)
+  }, [])
+  return requested
+}
 
 const Artifact = ({ asset }) => (
   <figure className="unbc-origins__artifact">

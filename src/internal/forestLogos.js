@@ -55,7 +55,7 @@ export const FOREST_LOGOS = [
       'It is believed to have been in use until about 1973. No source in this collection yet confirms that date, or when the emblem was introduced; it is recorded here as the working date, to be replaced when a dated document turns up.',
       'In the emblem’s last years the Forest Service sat within the Department of Lands, Forests and Water Resources (1962–1975). The Department of Forests was separated from it in 1976, and the Ministry of Forests Act came into force on 1 January 1979.',
       'The artwork is a vector reconstruction from a supplied image: seven shapes (the badge, the mainland, three islands, the crown and the trunk) with flat colours chosen from the image, not verified ink specifications. The same drawing is used on both Forest Service posters in the Posters view.',
-      'The black-and-white print reconstructions use one fourfold-symmetric superellipse frame (exponent 3.25, constant stroke), a province-and-tree silhouette with an unpainted evergreen cutout, and two detached coastal island marks. Both prints show only two identifiable detached island components; the earlier coloured reconstruction has three. A separately labelled three-island variation is offered for comparing these distinct renderings, not as proof of a missing historical detail. The revised two-island geometry gives about 92.4% and 90.8% full-image pixel intersection-over-union against the two prints after size registration; those scores remain sensitive to scans and are not evidence of official construction.',
+      'The black-and-white print reconstructions use one fourfold-symmetric superellipse frame (exponent 3.25, constant stroke), a province-and-tree silhouette with an unpainted evergreen cutout, and two detached coastal island marks. Both prints show only two identifiable detached island components; the earlier coloured reconstruction has three. A separately labelled three-island variation is offered for comparing these distinct renderings, not as proof of a missing historical detail.',
       'An undated newspaper clipping headed “Identity crisis for Socreds?” compares a Social Credit League provincial-profile emblem to the B.C. Forest Service symbol without its tree. This is historical evidence of a visual comparison, not proof of shared artwork, authorization, or the Forest Service logo’s introduction date.'
     ],
     article: {
@@ -65,6 +65,8 @@ export const FOREST_LOGOS = [
       citation: 'Undated newspaper clipping supplied for this collection. Publication, issue date, page, and byline not yet identified.',
       qualification: 'Evidence for a contemporary visual comparison only. The paper does not establish who designed either symbol, a transfer of artwork, or a Forest Service adoption date.'
     },
+    // How closely the print reconstructions match, said with the sources rather than in the history.
+    measurements: ['The revised two-island geometry gives about 92.4% and 90.8% full-image pixel intersection-over-union against the two prints after size registration; those scores remain sensitive to scans and are not evidence of official construction.'],
     sources: [forestServiceTimeline],
     seenOn: [
       onPoster('reward-living-forest', 'REWARD: A Living Forest', 'Campfire poster · bottom right, beside the service’s name'),

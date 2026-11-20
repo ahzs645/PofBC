@@ -239,9 +239,6 @@ export const TimelineBar = ({ year, onYear, playing, onPlay, life = null }) => {
             {life.name ?? 'The chosen body'}: {life.from ? 'when it stood' : life.firstSeen ? 'from its first sighting; start unknown' : 'start unknown'}
             {life.toKind === 'untraced' && ', as far as a source shows it; later status untraced'}
             {life.toKind === 'occurred_date_unknown' && ', as far as a source shows it; it ended later, on a day not found'}
-            {stepping
-              ? <>, and {stops.length} {stops.length === 1 ? 'year' : 'years'} with a dated event; the arrows step through them</>
-              : <>; no dated events yet</>}
           </li>
         )}
       </ul>

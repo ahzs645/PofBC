@@ -14,6 +14,7 @@ import { BadgeRelief } from '../patches/BadgeRelief.jsx'
 import sourceCrops from '../patches/sourceCrops.json'
 import { PatchStage } from '../patches/PatchStage.jsx'
 import { PatchHistory, photosOf } from '../patches/PatchDetails.jsx'
+import { plainLabel, splitLabel } from '../patches/patchCatalogue.js'
 import { METALS, NOMINAL_SIZE_MM } from './badgeParts.js'
 import { MEDAL_FORGE, buildBadge } from './medalBadge.js'
 import { BadgeScene } from './badgeScene.js'
@@ -28,7 +29,7 @@ const REVIEW_URL = `${import.meta.env.BASE_URL}badge-review/index.json`
 const REVIEW_LABELS = { refine: 'Needs refinement', reconstruct: 'Needs reconstruction', reviewed: 'Reviewed', unreviewed: 'Not yet reviewed' }
 const MODES = [
   { value: 'metal', label: '3D', title: 'The drawing built as a solid badge' },
-  { value: 'relief', label: 'Front relief' },
+  { value: 'relief', label: 'Relief', title: 'The front, drawn in relief' },
   { value: 'vector', label: 'Vector' }
 ]
 const REVIEW_MODES = [
@@ -247,7 +248,8 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
   useEffect(() => () => { exportRequest.current = null; exportCurrent.current = null }, [])
 
   const back = useRef(null)
-  useEffect(() => { back.current?.focus({ preventScroll: true }) }, [])
+  // Focus starts on the way back, without a ring until the reader moves by keyboard.
+  useEffect(() => { back.current?.focus({ preventScroll: true, focusVisible: false }) }, [])
   useEffect(() => {
     if (mode === 'embroidery') return undefined
     const onKey = (event) => {
@@ -264,7 +266,8 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
   const name = `${patch.id}-${org.id}`
   const variants = variantsOf(patch)
-  const title = patch.variant ? `${cardLabel(patch)} · ${patch.variant}` : patch.label
+  const title = plainLabel(patch.variant ? `${cardLabel(patch)} · ${patch.variant}` : patch.label)
+  const heading = splitLabel(cardLabel(patch))
   const metal = modelReady ? METALS[built.metal] : null
   const leather = modelReady ? built.metal === 'leather' : /leather/i.test(patch.medium ?? '')
   const curveLabel = CURVES.find((c) => c.value === applied?.mode)?.label ?? 'Flat'
@@ -312,8 +315,9 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
   // screen instead (holdScroll.js).
   const options = [...MODES]
   if (sources.length) options.push(...REVIEW_MODES)
-  if (reference) options.push({ value: 'overlay', label: 'Source overlay' })
-  options.push({ value: 'embroidery', label: 'Embroidery adaptation' })
+  // Short labels, so the tabs stay one row the height of the camera switch beside them.
+  if (reference) options.push({ value: 'overlay', label: 'Overlay', title: 'The drawing laid over its source' })
+  options.push({ value: 'embroidery', label: 'Embroidery', title: 'An embroidery adaptation of the badge' })
   const modeSwitch = <Segmented ariaLabel="View" options={options} value={mode} onChange={(value) => { holdScroll(visuals.current); set({ mode: value }) }} compact />
   const sourcePane = {
     key: 'source',
@@ -377,11 +381,8 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
         </div>
 
         <aside className="patch__panel">
-          <h2>{cardLabel(patch)}</h2>
+          <h2>{heading.title}{heading.detail && <span className="patch__subtitle">{heading.detail}</span>}</h2>
           <p className="patch__meta">{[patch.medium, patch.finish, patch.quality].filter(Boolean).join(' · ')}</p>
-          {mode === 'metal' && <p className="badge__preliminary">{leather
-            ? 'Shown as tooled leather from the catalogue attribution. Material, size, relief and curvature have not been measured from the specimen.'
-            : 'Illustrative 3D view: size, relief, finish and curvature are modelling choices, not measurements.'}</p>}
 
           {variants && (
             <div className="patch__variants">
@@ -443,6 +444,9 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
           <details className="patch__limits">
             <summary>How the badge is built</summary>
+            <p>{leather
+              ? 'Shown as tooled leather from the catalogue attribution. Material, size, relief and curvature have not been measured from the specimen.'
+              : 'An illustrative 3D view: size, relief, finish and curvature are modelling choices, not measurements.'}</p>
             <p>
               The drawing goes through the <a href={`${MEDAL_FORGE.repository}/tree/${MEDAL_FORGE.commit}`} target="_blank" rel="noreferrer">Medal Forge</a> geometry
               core: the silhouette, rim, lettering and emblems form layers of bevelled relief.
@@ -463,17 +467,13 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
               <p>{patch.limitations}</p>
             </details>
           )}
-          <p className="patch__source">
-            {patch.id} in the atlas
-            {photosOf(patch).length <= 1 && patch.sourceUrl && <> · <a href={patch.sourceUrl} target="_blank" rel="noreferrer">source image</a></>}
-          </p>
+          {photosOf(patch).length <= 1 && patch.sourceUrl && <p className="patch__source"><a href={patch.sourceUrl} target="_blank" rel="noreferrer">Source image</a></p>}
         </aside>
 
-        {(review || reviewIndex.status === 'failed') && <section className="patch__review" aria-label="Source review">
-          <div className="patch__review-heading">
-            <h3>Source comparison</h3>
-            {review && <span className={`patch__review-status patch__review-status--${reviewIsCurrent ? review.status : 'unreviewed'}`}>{reviewIsCurrent ? REVIEW_LABELS[review.status] ?? 'Not yet reviewed' : 'Drawing changed since review'}</span>}
-          </div>
+        {/* The evidence behind the drawing, closed until asked for. */}
+        {(review || reviewIndex.status === 'failed') && <details className="patch__review">
+          <summary><h3>Source comparison</h3></summary>
+          {review && <p className="patch__review-heading"><span className={`patch__review-status patch__review-status--${reviewIsCurrent ? review.status : 'unreviewed'}`}>{reviewIsCurrent ? REVIEW_LABELS[review.status] ?? 'Not yet reviewed' : 'Drawing changed since review'}</span></p>}
           {reviewIndex.status === 'failed' && <p role="status">The source comparison could not be loaded. <button type="button" className="button--inline" onClick={() => setReviewAttempt((n) => n + 1)}>Retry comparison</button></p>}
           {!reviewIsCurrent && <p>The findings below describe an earlier drawing. The current reconstruction needs another comparison.</p>}
           {review?.findings?.length > 0 && <ul>{review.findings.map((finding, index) => <li key={index}>{finding}</li>)}</ul>}
@@ -487,7 +487,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
             <a href={source.url} target="_blank" rel="noreferrer">Open full source</a>
           </div>}
           {review && <p className="patch__review-date">Evidence record: {review.reviewedAt ?? reviewIndex.data.reviewedAt}. Source images keep their original proportions.</p>}
-        </section>}
+        </details>}
       </div>
     </section>
   )

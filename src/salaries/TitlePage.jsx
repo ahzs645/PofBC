@@ -60,7 +60,7 @@ export const TitleCard = ({ title, years, onOpen, measure }) => (
           <span className="salaries__line">{measure === 'growth' ? `a year, ${years[title.growth.from]}–${years[title.growth.to]}` : `a year, ${count(title.raise.pairs, 'raise', 'raises')}`}</span>
         </span>
       )
-      : title.mean != null && <span className="salaries__aside">{summary(title.mean)}<span className="salaries__line">average {years[title.last]}</span></span>}
+      : title.mean != null && <span className="salaries__aside">{summary(title.mean)}<span className="salaries__line">average</span></span>}
   </button>
 )
 

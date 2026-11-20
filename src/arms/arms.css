@@ -137,6 +137,12 @@
   border-radius: var(--radius-sm);
 }
 .arms__specimen-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
+/* Dark ink on a transparent ground (ArmsView.jsx) sits in a soft light well in the dark theme. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .arms__specimen-art[data-ground='light'] { background: #eceae4; }
+}
+:root[data-theme='dark'] .arms__specimen-art[data-ground='light'] { background: #eceae4; }
+.arms__terms { margin: 0 0 12px; }
 .arms__specimen figcaption { display: grid; gap: 3px; font-size: 14px; }
 .arms__specimen figcaption p { margin: 4px 0 0; color: var(--ink-2); line-height: 1.45; }
 .arms__specimen-number { color: var(--ink-faint); font-size: 12px; font-variant-numeric: tabular-nums; }

@@ -17,7 +17,7 @@ export const GROUPS = [
   { id: 'crown', title: 'The Crown', description: 'The Lieutenant Governor’s flag of office. The Legislative Assembly, the Great Seal and the courts have no entry in the register.' },
   { id: 'post-secondary', title: 'Universities and colleges', description: 'Public post-secondary institutions with arms: those in the register, and Douglas College, whose arms the College documents itself.' },
   { id: 'public-body', title: 'Public bodies', description: 'Police, agencies, Crown corporations and other public bodies with registered arms.' },
-  { id: 'municipal', title: 'Municipalities', description: 'Local governments whose arms, flags or badges are in the public register. A district that became a city, or a place granted a flag later, keeps one page with every entry.' }
+  { id: 'municipal', title: 'Municipalities', description: 'Local governments whose arms, flags or badges are in the public register.' }
 ]
 
 const sourcesById = new Map(catalogue.sources.map((source) => [source.id, source]))

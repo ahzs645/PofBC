@@ -29,7 +29,7 @@ export function Dock({ steps, current, onSelect, onStart, hint, startLabel = 'St
       <div className="pv-dock-start">
         {open
           ? <span className="pv-dock-count"><b>{pad(i + 1)}</b> / {pad(steps.length)}</span>
-          : <span className="pv-dock-hint">{hint}</span>}
+          : hint && <span className="pv-dock-hint">{hint}</span>}
       </div>
 
       <div className="pv-steps" role="tablist" ref={row}>
@@ -46,11 +46,11 @@ export function Dock({ steps, current, onSelect, onStart, hint, startLabel = 'St
             onClick={() => onSelect(s.id)}
             transition={{ type: 'spring', stiffness: 500, damping: 40 }}
           >
-            {(s.id === current || coarse) && (
-              <motion.span layout="position" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                <em>{n + 1}</em> {s.label}
-              </motion.span>
-            )}
+            {/* Every step shows its number, so the row reads as numbered parts rather than blank
+                placeholders; the open one, or every one on a touch screen, its name as well. */}
+            <motion.span layout="position" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+              <em>{n + 1}</em>{(s.id === current || coarse) && <> {s.label}</>}
+            </motion.span>
           </motion.button>
         ))}
       </div>

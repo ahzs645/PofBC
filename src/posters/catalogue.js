@@ -77,8 +77,7 @@ export const POSTERS = {
     when: '1979–86 or 1988–91, from its wording',
     made: 'mixed',
     view: { x: 0, y: 0, w: 2400, h: 3600 },
-    page: { w: 24, h: 36 },
-    background: '#121411'
+    page: { w: 24, h: 36 }
   },
   'reward-living-forest': {
     id: 'reward-living-forest',
@@ -88,11 +87,10 @@ export const POSTERS = {
     blurb: 'Follow the campfire rules, and the reward is the forest itself.',
     series: 'forest-service',
     title: 'REWARD: A Living Forest',
-    when: 'Undated · evergreen-emblem design',
+    when: 'Undated',
     made: 'vector',
     view: { x: 80, y: 67, w: 930, h: 1308 },
-    page: { w: 11.69, h: 16.45 },
-    background: '#f4f1e8'
+    page: { w: 11.69, h: 16.45 }
   },
   'enjoy-protect-forests': {
     id: 'enjoy-protect-forests',
@@ -102,11 +100,10 @@ export const POSTERS = {
     blurb: 'An invitation first: enjoy the forest, and look after it.',
     series: 'forest-service',
     title: 'Enjoy & Protect our Forests',
-    when: 'Undated · evergreen-emblem design',
+    when: 'Undated',
     made: 'vector',
     view: { x: 0, y: 0, w: 1122, h: 1402 },
-    page: { w: 11.22, h: 14.02 },
-    background: '#f6efdf'
+    page: { w: 11.22, h: 14.02 }
   },
   'dont-drop-it': {
     id: 'dont-drop-it',
@@ -119,8 +116,7 @@ export const POSTERS = {
     when: 'Undated',
     made: 'vector',
     view: { x: 0, y: 0, w: 1254, h: 1254 },
-    page: { w: 12, h: 12 },
-    background: null
+    page: { w: 12, h: 12 }
   },
   'dont-gamble-with-fire': {
     id: 'dont-gamble-with-fire',
@@ -133,8 +129,7 @@ export const POSTERS = {
     when: 'Undated',
     made: 'vector',
     view: { x: 0, y: 0, w: 1233, h: 1233 },
-    page: { w: 12, h: 12 },
-    background: null
+    page: { w: 12, h: 12 }
   },
   'wildlife-trees': {
     id: 'wildlife-trees',
@@ -148,7 +143,6 @@ export const POSTERS = {
     made: 'vector',
     view: { x: 0, y: 0, w: 1000, h: 2997.159090909091 },
     page: { w: 11.44, h: 34.288 },
-    background: null,
     prefetch: false
   },
   'beware-these-alien-invaders': {
@@ -162,8 +156,7 @@ export const POSTERS = {
     when: 'Undated · PDF made March 1999',
     made: 'mixed',
     view: { x: 0, y: 0, w: 684, h: 2483 },
-    page: { w: 9.5, h: 34.486 },
-    background: null
+    page: { w: 9.5, h: 34.486 }
   },
   'shattering-the-environment': {
     id: 'shattering-the-environment',
@@ -176,8 +169,7 @@ export const POSTERS = {
     when: 'Undated · PDF made March 2000',
     made: 'mixed',
     view: { x: 0, y: 0, w: 2592, h: 1944 },
-    page: { w: 36, h: 27 },
-    background: null
+    page: { w: 36, h: 27 }
   },
   'explosion-in-slow-motion': {
     id: 'explosion-in-slow-motion',
@@ -190,8 +182,7 @@ export const POSTERS = {
     when: 'Undated · PDF made March 2000',
     made: 'mixed',
     view: { x: 0, y: 0, w: 1584, h: 2592 },
-    page: { w: 22, h: 36 },
-    background: null
+    page: { w: 22, h: 36 }
   },
   'go-bc-ferries': {
     id: 'go-bc-ferries',
@@ -204,8 +195,7 @@ export const POSTERS = {
     when: '1960–64, from its wording',
     made: 'vector',
     view: { x: 0, y: 0, w: 1354, h: 1161 },
-    page: { w: 5.4, h: 4.63 },
-    background: null
+    page: { w: 5.4, h: 4.63 }
   },
   'queen-of-sidney': {
     id: 'queen-of-sidney',
@@ -218,8 +208,7 @@ export const POSTERS = {
     when: 'Undated · the ship took this name in 1963',
     made: 'vector',
     view: { x: 0, y: 0, w: 1305, h: 1206 },
-    page: { w: 5.2, h: 4.81 },
-    background: null
+    page: { w: 5.2, h: 4.81 }
   },
   'expo-86-davidson': {
     id: 'expo-86-davidson',
@@ -232,8 +221,7 @@ export const POSTERS = {
     when: 'Artwork signed 1985; for the fair of 1986',
     made: 'vector',
     view: { x: 0, y: 0, w: 1200, h: 1600 },
-    page: { w: 23.62, h: 31.5 },
-    background: '#FBE5C1'
+    page: { w: 23.62, h: 31.5 }
   }
 }
 

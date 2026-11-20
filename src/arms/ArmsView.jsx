@@ -93,8 +93,7 @@ const Index = ({ onOpen }) => (
       <p>
         The Province’s arms and their dated drawings, and the registered arms of B.C.’s public
         bodies, each linked to its record in the Canadian Heraldic Authority’s register or another
-        primary source. Each page shows every rendering acquired for it: register paintings, flags,
-        badges, letters patent and later drawings, with the artist and terms of each.
+        primary source.
       </p>
     </div>
     <ul className="arms__grid arms__grid--feature">
@@ -149,13 +148,45 @@ const Stages = ({ stages }) => (
   </section>
 )
 
+/**
+ * Whether a picture is dark ink on a transparent ground, which the dark theme's tile would swallow.
+ * Such a picture is given a soft light well; one that draws its own opaque ground needs none, and
+ * nothing is recoloured. A picture that cannot be read (another origin) is left as it is.
+ */
+const needsLightGround = (image) => {
+  try {
+    const size = 48
+    const canvas = document.createElement('canvas')
+    canvas.width = size
+    canvas.height = size
+    const context = canvas.getContext('2d', { willReadFrequently: true })
+    context.drawImage(image, 0, 0, size, size)
+    const { data } = context.getImageData(0, 0, size, size)
+    let clear = 0
+    let inked = 0
+    let light = 0
+    for (let at = 0; at < data.length; at += 4) {
+      if (data[at + 3] < 16) { clear += 1; continue }
+      inked += 1
+      light += (0.2126 * data[at] + 0.7152 * data[at + 1] + 0.0722 * data[at + 2]) / 255
+    }
+    return clear > size * size * 0.05 && inked > 0 && light / inked < 0.35
+  } catch {
+    return false
+  }
+}
+const groundFor = (event) => {
+  const frame = event.currentTarget.parentElement
+  if (frame && needsLightGround(event.currentTarget)) frame.dataset.ground = 'light'
+}
+
 const Specimen = ({ item }) => {
   const url = specimenUrl(item.image)
   return (
     <li className="arms__specimen">
       <figure>
         <a className="arms__specimen-art" href={url ?? undefined} target="_blank" rel="noreferrer" aria-label={`${item.title}, full image`}>
-          {url && <img src={url} alt="" loading="lazy" decoding="async" />}
+          {url && <img src={url} alt="" loading="lazy" decoding="async" onLoad={groundFor} />}
         </a>
         <figcaption>
           <span className="arms__specimen-number">{item.number}</span>
@@ -175,10 +206,10 @@ const Specimens = () => (
   <section className="arms__section" aria-labelledby="arms-specimens">
     <h3 id="arms-specimens">Dated specimens</h3>
     <p className="arms__group-description">
-      Drawings, prints, objects and reproductions, numbered as in the{' '}
+      Numbered as in the{' '}
       <External href={`${REPOSITORY}/${PROVINCE.catalogue.readme}`}>arms catalogue</External>{' '}
-      (<External href={`${REPOSITORY}/${PROVINCE.catalogue.pdf}`}>PDF</External>). A specimen’s date shows when it
-      was in use, not when its drawing was made. Images are unretouched source scans and photographs.
+      (<External href={`${REPOSITORY}/${PROVINCE.catalogue.pdf}`}>PDF</External>); a specimen’s date shows when it
+      was in use, not when its drawing was made.
     </p>
     {provinceSections().map((section) => (
       <div key={section.title} className="arms__specimen-section">
@@ -203,13 +234,27 @@ const KINDS = {
   'letters-patent': 'Letters patent'
 }
 
-const ArtworkItem = ({ item }) => {
+/**
+ * Terms that several renderings on a page share are said once for the page: each rendering keeps the
+ * short name of its terms (before the first semicolon), and the page says what that name means.
+ */
+const sharedTerms = (items) => {
+  const counts = new Map()
+  for (const { licence } of items) if (licence?.includes('; ')) counts.set(licence, (counts.get(licence) ?? 0) + 1)
+  return [...counts].filter(([, count]) => count > 1).map(([licence]) => {
+    const at = licence.indexOf('; ')
+    return { licence, head: licence.slice(0, at), tail: licence.slice(at + 2) }
+  })
+}
+
+const ArtworkItem = ({ item, shared = [] }) => {
   const url = artworkImageUrl(item)
+  const short = shared.find(({ licence }) => licence === item.licence)?.head
   return (
     <li className="arms__specimen">
       <figure>
         <a className="arms__specimen-art" href={url ?? undefined} target="_blank" rel="noreferrer" aria-label={`${item.title}, full image`}>
-          {url && <img src={url} alt="" loading="lazy" decoding="async" />}
+          {url && <img src={url} alt="" loading="lazy" decoding="async" onLoad={groundFor} />}
         </a>
         <figcaption>
           <span className="arms__specimen-class">{[KINDS[item.kind] ?? item.kind, item.historical && 'historical', item.vector && 'vector'].filter(Boolean).join(' · ')}</span>
@@ -217,7 +262,7 @@ const ArtworkItem = ({ item }) => {
           {item.date && <span className="arms__specimen-date">{item.date}</span>}
           <p className="arms__credit">
             {item.author}
-            {item.licence && <> · {item.licenceUrl ? <External href={item.licenceUrl}>{item.licence}</External> : item.licence}</>}
+            {item.licence && <> · {item.licenceUrl ? <External href={item.licenceUrl}>{short ?? item.licence}</External> : short ?? item.licence}</>}
           </p>
           <ul className="arms__sources">
             {item.page && <li><External href={item.page}>Source</External></li>}
@@ -233,24 +278,26 @@ const ArtworkItem = ({ item }) => {
 const Artwork = ({ items }) => {
   const pictures = items.filter(({ kind }) => kind !== 'letters-patent')
   const letters = items.filter(({ kind }) => kind === 'letters-patent')
+  const shared = sharedTerms(items)
   return (
     <section className="arms__section" aria-labelledby="arms-artwork">
       <h3 id="arms-artwork">Artwork</h3>
       <p className="arms__group-description">
-        Every rendering acquired for this page, unretouched: the register’s paintings, and drawings
-        from the holder, Wikimedia Commons and other sources. A rendering’s date is not always the
-        design’s. Official artwork keeps its owner’s rights; open licences are linked.
+        Every rendering acquired for this page, unretouched; a rendering’s date is not always the design’s.
       </p>
+      {shared.map(({ licence, head, tail }) => (
+        <p key={licence} className="arms__credit arms__terms"><strong>{head}</strong>: {tail}</p>
+      ))}
       {pictures.length > 0 && (
         <ul className="arms__specimens">
-          {pictures.map((item) => <ArtworkItem key={item.id} item={item} />)}
+          {pictures.map((item) => <ArtworkItem key={item.id} item={item} shared={shared} />)}
         </ul>
       )}
       {letters.length > 0 && (
         <details className="arms__letters">
           <summary>Letters patent and register pages ({letters.length})</summary>
           <ul className="arms__specimens">
-            {letters.map((item) => <ArtworkItem key={item.id} item={item} />)}
+            {letters.map((item) => <ArtworkItem key={item.id} item={item} shared={shared} />)}
           </ul>
         </details>
       )}

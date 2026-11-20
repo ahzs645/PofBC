@@ -13,7 +13,7 @@ import { IDENTITY_KIND_LABELS, IDENTITY_RELATION_LABELS } from './identitySubjec
 import './identityCoverage.css'
 import { Select } from '../site/ui/Select.jsx'
 import { holdScroll } from '../site/holdScroll.js'
-import { UnbcOrigins, UnbcOriginsLink, hasUnbcOrigins } from './UnbcOrigins.jsx'
+import { UnbcOrigins, UnbcOriginsLink, hasUnbcOrigins, useUnbcOriginsRequested } from './UnbcOrigins.jsx'
 
 const Status = ({ subject }) => (
   <span className="identity-status" data-held={subject.hasArtwork || undefined} title={COVERAGE_STATES[subject.state].description}>
@@ -46,7 +46,6 @@ const SubjectButton = ({ subject, onOpen }) => (
 export const IdentitySearchResults = ({ subjects, onOpen }) => subjects.length > 0 && (
   <section className="gallery__shelf" aria-labelledby="search-identities">
     <h2 id="search-identities" className="gallery__shelf-title">{subjects.length} identity {subjects.length === 1 ? 'subject' : 'subjects'}</h2>
-    <p className="gallery__note">Organizations, services and historical names, including those whose artwork is still sought.</p>
     <div className="identity-subject-links">
       {subjects.map((subject) => <SubjectButton key={subject.id} subject={subject} onOpen={onOpen} />)}
     </div>
@@ -117,6 +116,8 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
     setFilters(next)
     if (globalThis.location) writeHistory(galleryPlaceUrl(globalThis.location.href, { coverage: true, filters: next }), { replace: true })
   }
+  const [filtersOpen, setFiltersOpen] = useState(false)
+  const chosenFilters = ['family', 'state', 'region', 'scope'].filter((key) => filters[key]).length
   const subjects = filterIdentityCoverage(IDENTITY_COVERAGE, filters)
   const summary = coverageSummary(subjects)
   const family = familyById(filters.family)
@@ -127,10 +128,13 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
       <header className="identity-register__head">
         <p className="identity-eyebrow">Coverage and acquisition</p>
         <h2>Collection register</h2>
-        <p>Each subject has its own evidence. A parent’s logo does not fill its services’ gaps, and a collected file does not establish a complete history.</p>
       </header>
-      <div className="identity-filters" role="search" aria-label="Filter identity subjects">
+      {/* On a phone the four choices fold behind one button, so the list starts on the first screen. */}
+      <div className="identity-filters" role="search" aria-label="Filter identity subjects" data-open={filtersOpen || undefined}>
         <label className="identity-filters__query">Name or alias<input type="search" value={filters.query} placeholder="TransLink, GVTA, SeaBus…" onChange={(event) => update({ query: event.target.value })} /></label>
+        <button type="button" className="identity-filters__toggle" aria-expanded={filtersOpen} onClick={() => setFiltersOpen((open) => !open)}>
+          Filters{chosenFilters ? ` (${chosenFilters})` : ''}
+        </button>
         <label>Family<Select keepPlace value={filters.family} onChange={(value) => update({ family: value })}><option value="">All families</option>{COVERAGE_FAMILIES.map((group) => <option key={group.id} value={group.id}>{group.label}</option>)}</Select></label>
         <label>Evidence<Select keepPlace value={filters.state} onChange={(value) => update({ state: value })}><option value="">All evidence states</option><option value="held">With artwork</option><option value="missing">Without artwork</option>{Object.entries(COVERAGE_STATES).map(([id, state]) => <option key={id} value={id}>{state.label}</option>)}</Select></label>
         <label>Region<Select keepPlace value={filters.region} onChange={(value) => update({ region: value })}><option value="">All regions</option>{MUNICIPAL_REGIONS.map((region) => <option key={region} value={region}>{region}</option>)}</Select></label>
@@ -153,6 +157,7 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
         </section>
       ))}
       <details className="identity-method"><summary>What the register measures</summary>
+        <p>Each subject has its own evidence. A parent’s logo does not fill its services’ gaps, and a collected file does not establish a complete history.</p>
         <p>This is a researched collection scope, not a census of every BC institution. It retains the earlier Crown corporation and health-authority queue and adds explicit agencies, regional bodies, officers and service identities. Named wider institutions can be filtered separately.</p>
         <p>Evidence states describe the files actually held. They do not imply permission to reuse a mark, an adoption date, or complete coverage of every historical era. Those questions remain attached to each specimen and its sources.</p>
         <dl>{Object.entries(COVERAGE_STATES).map(([id, state]) => <div key={id}><dt>{state.label}</dt><dd>{state.description}</dd></div>)}</dl>
@@ -223,6 +228,7 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
   const { municipal } = subject
   const kind = IDENTITY_KIND_LABELS[subject.kind] ?? subject.kind.replace(/-/g, ' ')
   const SHOWN = 16
+  const story = useUnbcOriginsRequested()
   return (
     <article className="identity-detail">
       <nav className="gallery__crumbs" aria-label="Gallery"><button type="button" className="gallery__back" onClick={() => onOpenRegister()}>← Collection register</button><span aria-hidden="true">/</span><span aria-current="page">{subject.label}</span></nav>
@@ -298,7 +304,7 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
           {(groups.length > 0 || familySubjects.length > 0) && <p className="identity-legend"><span className="identity-chip__dot" data-held aria-hidden="true" /> artwork held <span className="identity-chip__dot" aria-hidden="true" /> still wanted</p>}
         </aside>
       </div>
-      {hasUnbcOrigins(subject.id) && <UnbcOrigins contextId={subject.id} onOpenSubject={onOpenSubject} onChooseCollection={onChooseCollection} />}
+      {hasUnbcOrigins(subject.id) && story && <UnbcOrigins contextId={subject.id} onOpenSubject={onOpenSubject} onChooseCollection={onChooseCollection} />}
     </article>
   )
 }
@@ -313,15 +319,13 @@ export const IdentityCollectionLinks = ({ collectionId, entryId, graphShown, onO
   const all = subjectsForCollection(collectionId)
   const owners = entryId ? all.filter((subject) => subject.entries.some((entry) => entry.id === entryId)) : []
   const subjects = owners.length ? owners : all
-  if (!subjects.length) return false
-  if (subjects.length > 3) {
-    return <section className="identity-collection-links" aria-label="Identity context">
-      <p className="gallery__note">The marks here belong to {subjects.length} register subjects:</p>
-      <div>{subjects.map((subject) => <SubjectLink key={subject.id} id={subject.id} onOpen={onOpenSubject} className="gallery__graph-link">{subject.label} →</SubjectLink>)}</div>
-    </section>
-  }
+  // A collection of many owners (the Province's one-offs) links each card to its organization, and
+  // each mark's page to its owner; a row of every owner above the cards said all of that again.
+  // A collection whose own organization link is already in its header needs no second way out.
+  if (!subjects.length || subjects.length > 3) return false
+  if (graphShown && subjects.every((subject) => subject.graphNode === graphShown)) return false
   return <section className="identity-collection-links" aria-label="Identity context">{subjects.map((subject) => <div key={subject.id}>
-    <SubjectLink id={subject.id} onOpen={onOpenSubject} className="gallery__graph-link">{subject.label}: family, sources and collection gaps →</SubjectLink>
+    <SubjectLink id={subject.id} onOpen={onOpenSubject} className="gallery__graph-link">{subject.label} in the register →</SubjectLink>
     {subject.graphNode && subject.graphNode !== graphShown && onOpenGovernment && <button type="button" className="gallery__graph-link" onClick={() => onOpenGovernment(subject.graphNode, subject.graphYear)}>Organization and salary links →</button>}
   </div>)}</section>
 }

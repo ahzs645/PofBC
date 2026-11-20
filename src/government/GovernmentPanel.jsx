@@ -14,7 +14,7 @@ import { CROWN_CATEGORIES, CROWN_CATEGORY_SOURCES } from './crownCategories.js'
 import { Card, CardSection, KindIcon } from './PanelCards.jsx'
 import { LogoCard } from './LogoCard.jsx'
 import { StoryText } from './StoryText.jsx'
-import { lifespanOf, ministryAt, officeHoldersTo, pathToPeople, PEOPLE_ID, periodsOf, PRESENT_YEAR } from './snapshot.js'
+import { lifespanOf, ministryAt, officeHoldersTo, pathToPeople, periodsOf, PRESENT_YEAR } from './snapshot.js'
 import { ElectionStages, EventsCard, EvidenceCard, ParliamentCard, RelationsCard, StaffingCard } from './AtlasCards.jsx'
 import { LegislationCard } from './LegislationCards.jsx'
 import { ActsAdministeredCard } from './AmrCards.jsx'
@@ -632,11 +632,11 @@ const PathToPeople = ({ node, government, onSelect }) => {
       : node.kind === 'crown'
         ? 'The Crown acts on the advice of ministers who hold the Assembly’s confidence; it does not answer to the people through an election.'
         : node.local
-          ? `A local corporation under provincial statute, not a provincial body: it answers to its own board and electors, not to a ministry.${node.governance ? ` As its instrument of ${node.governance[0]} set it: ${node.governance[1]}` : ' Who chose its board, and who could vote for it, is recorded here only where an instrument gives it.'} The atlas does not yet draw local electorates, so no line to the people is drawn.`
+          ? `A local corporation under provincial statute: it answers to its own board and electors, not to a ministry.${node.governance ? ` As its instrument of ${node.governance[0]} set it: ${node.governance[1]}` : ''}`
         : government.edges.some((edge) => edge.kind === 'owned' && edge.to === node.id)
-          ? 'A source shows who owns it, and ownership is not a line of accountability: no source names a body or ministry that answers for it, so no line to the people is drawn.'
+          ? 'Its owners are known, but ownership is not accountability, and no source names a body or ministry that answers for it.'
           : node.unattached
-          ? `No source names a ministry that answered for it in ${government.year}, so no line to the people is drawn.`
+          ? `No source names a ministry that answered for it in ${government.year}.`
           : (government.edges.some((edge) => edge.kind === 'partner' && edge.to === node.id)
               ? 'It works with a ministry as a partner rather than answering to one; its own governance is its line of accountability.'
               : null)
@@ -922,12 +922,7 @@ export const OverviewCard = ({ government, onSelect }) => {
             : <>The Legislature was dissolved on {formatDate(PENDING_ELECTION.dissolved)}; British Columbians vote on {formatDate(PENDING_ELECTION.date)}. Ministers stay in office until a new cabinet is sworn in.</>}
         </p>
       )}
-      <p className="gov-description gov-muted">
-        {present
-          ? 'Pick any body, or move the timeline back to 1871.'
-          : `The government as ${year} ended, plus any ministry that came and went within the year.`}
-      </p>
-      <p><button type="button" className="gov-link-button" onClick={() => onSelect(PEOPLE_ID)}>Start with the people →</button></p>
+      {!present && <p className="gov-description gov-muted">The government as {year} ended, plus any ministry that came and went within the year.</p>}
     </section>
   )
 }
@@ -978,7 +973,7 @@ export const ChangesCard = ({ year, onSelect, onJump, limit = 5 }) => {
           {event.subject.startsWith('symbol:')
             ? <span>{event.title}</span>
             : <button type="button" className="gov-link-button" onClick={() => onSelect(event.subject)}>{event.title}</button>}
-          <span className="gov-muted"> · {formatEventDate(event.date)}</span>
+          <span className="gov-muted"> · <span className="gov-nowrap">{formatEventDate(event.date)}</span></span>
         </span>
       </li>
     ))

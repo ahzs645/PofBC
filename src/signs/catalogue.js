@@ -25,8 +25,7 @@ export const SIGNS = {
     title: 'LOOKOUT',
     when: 'Undated',
     view: { x: 21, y: 121, w: 1347, h: 766 },
-    page: { w: 13.47, h: 7.66 },
-    background: null
+    page: { w: 13.47, h: 7.66 }
   },
   'super-natural': {
     id: 'super-natural',
@@ -34,8 +33,7 @@ export const SIGNS = {
     title: 'Super, Natural British Columbia',
     when: 'Flag era, about 1983–2001',
     view: { x: 0, y: 0, w: 1200, h: 1150 },
-    page: { w: 12, h: 11.5 },
-    background: null
+    page: { w: 12, h: 11.5 }
   }
 }
 

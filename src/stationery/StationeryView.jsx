@@ -47,7 +47,6 @@ export const StationeryView = () => {
         <p>
           The Visual Identity Program’s General Use calling card, letterhead and envelope, rebuilt from the
           millimetre grid on the <SiteLink to={{ view: 'guides', guide: 'reproduction', page: 'R08' }}>Reproduction Manual’s specification sheet</SiteLink>.
-          Fill in the fields once; every piece uses them.
         </p>
       </div>
       <TemplateStudio
@@ -56,10 +55,10 @@ export const StationeryView = () => {
         values={values}
         onValuesChange={setValues}
         fileName={(template, fieldValues) => ['bc-1977', template.id, (fieldValues.name ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')].filter(Boolean).join('-')}
-        note="Helvetica Medium is set in the bold the site carries, and the italic is the regular slanted. Pantone 462 is shown as Pantone’s screen conversion; proof the ink with the printer."
       >
         <label className="field">
-          <span className="field__label">Ministry</span>
+          {/* Fills the Ministry field below from the list; the field itself stays editable. */}
+          <span className="field__label">Choose a ministry</span>
           <Select value={ministry} onChange={(value) => chooseMinistry(value)}>
             <option value="">Type it below</option>
             {ALL_GROUPS.map((group) => (
@@ -81,6 +80,13 @@ export const StationeryView = () => {
             ))}
           </div>
         </div>
+        <details className="stationery__about">
+          <summary>About the type and ink</summary>
+          <p>
+            Helvetica Medium is set in the bold the site carries, and the italic is the regular slanted. Pantone 462 is shown as
+            Pantone’s screen conversion; proof the ink with the printer.
+          </p>
+        </details>
       </TemplateStudio>
     </section>
   )

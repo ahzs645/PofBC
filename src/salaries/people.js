@@ -154,7 +154,12 @@ export const nameReadings = (text) => {
   })
 }
 
-const titleCase = (word) => word.replace(/[A-Za-z][A-Za-z']*/g, (part) => part[0].toUpperCase() + part.slice(1).toLowerCase())
+// A Scottish or Irish prefix keeps its capital after it: "McCormick", "O'Brien", "D'Arcy". Only Mc
+// is read this way, never Mac, since Macdonald and MacDonald are both real spellings.
+const prefixCapital = (part) => part
+  .replace(/^(Mc)([a-z])(?=[a-z])/, (_, prefix, next) => prefix + next.toUpperCase())
+  .replace(/^([OD]['’])([a-z])/, (_, prefix, next) => prefix + next.toUpperCase())
+const titleCase = (word) => word.replace(/[A-Za-z][A-Za-z'’]*/g, (part) => prefixCapital(part[0].toUpperCase() + part.slice(1).toLowerCase()))
 
 /**
  * A disclosed name as a person is called: "Moa, Belaid" as "Belaid Moa", "Hilde, C" as "C. Hilde",
@@ -172,7 +177,9 @@ export const displayName = (name, nameDisclosure) => {
     : disclosedGiven.split(/\s+/).filter(Boolean)
       .map((part) => (/^[A-Za-z]$/.test(part) ? `${part.toUpperCase()}.` : part))
   const shout = (text) => text === text.toUpperCase() && /[A-Z]{2}/.test(text)
-  const tidy = (text) => (shout(text) ? titleCase(text) : text)
+  // A name already in mixed case is kept as written, except a Mc an employer's own title-casing
+  // flattened ("Mccormick" → "McCormick").
+  const tidy = (text) => (shout(text) ? titleCase(text) : text.replace(/\bMc([a-z])(?=[a-z])/g, (_, next) => `Mc${next.toUpperCase()}`))
   return [...given.map(tidy), tidy(surname ?? '')].filter(Boolean).join(' ')
 }
 

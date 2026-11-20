@@ -7,10 +7,9 @@
 import { BC_BOOKS, BC_FAMILIES, BC_FOOTNOTE } from '../../vendor/brandkit/manuals/bc/index.js'
 
 const LINKS = {
+  // One link a family: the piece of this site most directly rebuilt from its manuals.
   'visual-identity-program': [
-    { label: 'The crest lockups, in the generator', to: { view: 'generator' } },
-    { label: 'The 1977 stationery: calling cards, letterhead, envelopes', to: { view: 'stationery' } },
-    { label: 'Coastal Forest, a poster signed in this identity', to: { view: 'posters', poster: 'coastal-forest', part: 'logo' } }
+    { label: 'The 1977 stationery, built from these manuals', to: { view: 'stationery' } }
   ],
   'bc-hydro': [
     { label: 'BC Hydro’s marks, in the Logos gallery', to: { view: 'gallery', logos: 'bc-hydro' } }

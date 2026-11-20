@@ -3,6 +3,7 @@
 .badge-stage__cameras { margin-left: auto; min-width: 0; }
 .badge-stage__cameras .field { margin: 0; }
 .badge-stage__cameras .segmented, .badge-stage__tools .segmented { flex-wrap: wrap; }
+.badge-stage__cameras .segmented button { white-space: nowrap; }
 .badge-stage__hint { margin: 0; padding: 7px 12px; border-top: 1px solid var(--outline); color: var(--ink-muted); font-size: 12px; line-height: 1.5; }
 .badge-stage__pane {
   position: relative;
@@ -16,4 +17,3 @@
 .badge-stage__pane canvas:focus-visible { outline: 2px solid var(--focus, #6aa6ff); outline-offset: -2px; }
 .badge-stage__pane > .patch__status { position: absolute; inset: auto 0 16px; margin: 0; color: #d6dde2; }
 .badge-stage__pane > .patch__status[role='alert'] { inset: 0; display: grid; place-items: center; padding: 24px; }
-.badge__preliminary { margin: 0; padding: 8px 10px; border: 1px dashed var(--outline); border-radius: 6px; font-size: 12px; line-height: 1.5; color: var(--ink-muted); }

@@ -51,10 +51,7 @@
 .unbc-origins__sources { margin-top: 42px; padding-top: 28px; border-top: 1px solid var(--mid); }
 .unbc-origins__sources ul { display: grid; gap: 18px 28px; margin: 20px 0; padding: 0; list-style: none; font-size: 13px; }
 .unbc-origins__sources p { margin: 6px 0 0; color: var(--ink-muted); font-size: 12px; line-height: 1.65; }
-.unbc-origins-teaser { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 24px; align-items: center; padding: 24px; margin: 24px 0; background: var(--surface); border-radius: var(--radius); }
-.unbc-origins-teaser > img { width: 120px; height: 84px; object-fit: contain; padding: 12px; box-sizing: border-box; background: #f7f4ec; border-radius: 5px; }
-.unbc-origins-teaser h3 { margin: 0 0 8px; font-size: 21px; font-weight: 600; }
-.unbc-origins-teaser p:not(.unbc-origins__eyebrow) { margin: 0 0 12px; font-size: 13px; color: var(--ink-muted); line-height: 1.6; }
+.unbc-origins-teaser { margin: 16px 0; }
 .unbc-origins__text-link { color: var(--ink); font-size: 13px; text-underline-offset: 3px; }
 @media (min-width: 800px) {
   .unbc-origins__hero { grid-template-columns: 1.4fr 1fr; }
@@ -69,5 +66,4 @@
   .unbc-origins__hero h2 { font-size: 34px; }
   .unbc-origins__hero-art img { max-height: 170px; }
   .unbc-origins__artifact-image { height: 220px; }
-  .unbc-origins-teaser { grid-template-columns: 1fr; gap: 18px; }
 }

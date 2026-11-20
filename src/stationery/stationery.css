@@ -7,3 +7,14 @@
 .stationery__inks { display: flex; gap: 6px; flex-wrap: wrap; }
 .stationery .studio .button--quiet[aria-pressed='true'] { background: var(--ink); color: var(--page); }
 .stationery__swatch { width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5); }
+
+.stationery__about { font-size: 12.5px; line-height: 1.5; color: var(--ink-muted); }
+.stationery__about summary { width: fit-content; cursor: pointer; font-weight: 600; color: var(--ink-2); }
+.stationery__about p { margin: 6px 0 0; }
+
+/* On a phone the PDF and "More formats" share one row at one height, rather than a tall PDF bar
+   over a shorter menu button. */
+@media (max-width: 760px) {
+  .stationery .studio__downloads > .studio__primary { order: 0; flex-basis: 0; }
+  .stationery .studio__downloads > *, .stationery .studio__downloads .ui-menu > .button { min-height: 40px; }
+}

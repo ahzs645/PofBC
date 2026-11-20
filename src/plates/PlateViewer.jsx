@@ -8,7 +8,7 @@ import {
   researchDiesEnabled, samplePlate, setResearchDiesEnabled, statusBadge, useResearchDiesVersion
 } from 'plateforge'
 import { FamilyStrip } from './PlatesTimeline.jsx'
-import { spanOf } from './timeline.js'
+import { spanOf, undash } from './timeline.js'
 import { Checkbox } from '../site/ui/Checkbox.jsx'
 import { Select } from '../site/ui/Select.jsx'
 import { Slider } from '../site/ui/Slider.jsx'
@@ -149,7 +149,9 @@ export const PlateViewer = ({ region, format, family, section, position, previou
           <h2>{format.label}</h2>
           <p className="plate__meta">
             {format.period && formatPeriod(format.period)}
-            {format.pattern && <> · <span className="plate__pattern">{format.pattern}</span></>}
+            {/* "1–4 digits · syntax only": the note on how far the serial is checked is with the
+                reconstruction's description, under About. */}
+            {format.pattern && <> · <span className="plate__pattern">{format.pattern.replace(/\s*·\s*syntax only$/, '')}</span></>}
             {badge && <span className="plates__status">{badge}</span>}
           </p>
 
@@ -167,13 +169,10 @@ export const PlateViewer = ({ region, format, family, section, position, previou
           </div>
           {status && <p className="plate__note" role="status">{status.text}</p>}
 
-          <label className="plate__toggle">
+          <label className="plate__toggle" title="Letters traced from source photographs where they were seen; the rest use PlateForge’s earlier dies">
             <Checkbox checked={researchDiesEnabled()} onChange={(checked) => setResearchDiesEnabled(checked)} />
             Research lettering
           </label>
-          <p className="plate__note">
-            Letters traced from source photographs where they were seen; the rest use PlateForge’s earlier dies. Unvalidated candidates.
-          </p>
 
           <p className="plate__more">
             <a href={plateforgeLink(region, format)} target="_blank" rel="noreferrer">Open in PlateForge</a> for lettering,
@@ -186,7 +185,6 @@ export const PlateViewer = ({ region, format, family, section, position, previou
               <p>{section.summary}</p>
             </div>
           )}
-          {format.description && <p className="plate__description">{format.description}</p>}
           {format.references?.length > 0 && (
             <div className="plate__sources">
               <h3>Sources</h3>
@@ -197,12 +195,17 @@ export const PlateViewer = ({ region, format, family, section, position, previou
               </ul>
             </div>
           )}
-          {region.notes && (
-            <details className="plate__limits">
-              <summary>About these reconstructions</summary>
-              <p>{region.notes}</p>
-            </details>
-          )}
+          {/* How this plate was rebuilt and what is not known, closed until asked for. */}
+          <details className="plate__limits">
+            <summary>About these reconstructions</summary>
+            {format.description && <p>{undash(format.description)}</p>}
+            <p>
+              Research lettering: letters traced from source photographs where they were seen; the rest use
+              PlateForge’s earlier dies. The traced letters are candidates, not yet validated.
+            </p>
+            {format.pattern?.endsWith('syntax only') && <p>The serial is checked for its form only, not against a verified range.</p>}
+            {region.notes && <p>{region.notes}</p>}
+          </details>
         </aside>
       </div>
     </section>

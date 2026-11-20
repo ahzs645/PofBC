@@ -168,7 +168,8 @@ const collectionOf = (body) => ({
   graphNode: Object.hasOwn(body, 'graphNode') ? body.graphNode : body.id,
   fileCollection: true,
   label: body.shortName || body.name,
-  body: `${body.current ? 'Current' : 'Former'} ${kindOf(body)}`,
+  // Its years already end in "present", so only a former body says what it was.
+  body: body.current ? kindOf(body).replace(/^./, (letter) => letter.toUpperCase()) : `Former ${kindOf(body)}`,
   years: body.from == null && body.to == null ? 'Dates unestablished' : `${body.from ?? '?'}–${body.current ? 'present' : body.to ?? '?'}`,
   // The body's own account where it has one; that its years are not its logos' is said on each card
   // (“Seen …”) and under About.
@@ -233,7 +234,7 @@ const lineCollection = (line) => {
     ...collectionOf(last),
     graphNodes: [last.id, ...earlier.map((body) => body.id)],
     aliases: earlier.map((body) => `collected-${body.id}`),
-    body: `${last.current ? 'Current' : 'Former'} ${kindOf(last)} · formerly ${earlier.map((body) => body.name).join(', then ')}`,
+    body: `${last.current ? kindOf(last).replace(/^./, (letter) => letter.toUpperCase()) : `Former ${kindOf(last)}`} · formerly ${earlier.map((body) => body.name).join(', then ')}`,
     years: `${bodies[0].from ?? '?'}–${last.current ? 'present' : last.to ?? '?'}`,
     intro: `One body under ${['', 'one', 'two', 'three', 'four'][bodies.length] ?? bodies.length} names: ${bodies.map((body) => body.name).join(', then ')}. ` +
       'Each name is an era below, with the artwork collected under it and its source recorded for each file. ' +

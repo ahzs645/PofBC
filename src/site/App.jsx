@@ -75,8 +75,10 @@ const MARK_ALIGNMENT_OPTIONS = MARK_ALIGNMENT_ORDER.map((value) => ({
   title: MARK_ALIGNMENTS[value].description
 }))
 
+// Short enough that the three share one row on a phone; the hint carries the full description.
+const CREST_ARRANGEMENT_SHORT = { 'vertical-arms': 'Large arms' }
 const CREST_ARRANGEMENT_OPTIONS = CREST_ARRANGEMENTS.map((value) => ({
-  value, label: CREST_ARRANGEMENT_LABELS[value], title: CREST_ARRANGEMENT_HINTS[value]
+  value, label: CREST_ARRANGEMENT_SHORT[value] ?? CREST_ARRANGEMENT_LABELS[value], title: CREST_ARRANGEMENT_HINTS[value]
 }))
 
 const CREST_PLACEMENT_OPTIONS = CREST_PLACEMENTS.map((value) => ({
@@ -139,7 +141,7 @@ const ERA_OPTIONS = [
 ]
 
 const BACKDROP_OPTIONS = [
-  { value: 'auto', label: 'Auto', title: 'Dark when the lockup would otherwise vanish' },
+  { value: 'auto', label: 'Auto', title: 'Follows the site theme, or goes dark when a light lockup on a transparent background would otherwise vanish' },
   { value: 'light', label: 'Light' },
   { value: 'dark', label: 'Dark' }
 ]
@@ -165,7 +167,8 @@ const writeView = (view) => {
 }
 
 export const App = () => {
-  const { state, update, reset, lockup, artwork, background, contrast, backdrop, isTransparent, swapColors } = useLockupState()
+  const theme = useSiteTheme()
+  const { state, update, reset, lockup, artwork, background, contrast, backdrop, isTransparent, swapColors } = useLockupState(theme.name)
   // Separate views, not modes of one: neither the gallery nor the government diagram has anything
   // to do with the generator's state. The diagram keeps its place in the address bar, so a link to
   // it opens it.
@@ -203,7 +206,6 @@ export const App = () => {
     const id = setTimeout(fetchCurrent, 1500)
     return () => clearTimeout(id)
   }, [view])
-  const theme = useSiteTheme()
   const showView = (next) => {
     writeView(next)
     setView(next)
@@ -476,7 +478,9 @@ export const App = () => {
                   ? 'The Province’s current marks, used exactly as published, with the wording set to match.'
                   : isFlag
                     ? 'BC beside the waving provincial flag. Any ministry, any colour.'
-                    : 'The crest identity, rebuilt from the supplied artwork. Any ministry, any colourway.'
+                    : isCrest
+                      ? 'The coat of arms with the BRITISH COLUMBIA wordmark. Any ministry, any colourway.'
+                      : 'The crest identity, rebuilt from the supplied artwork. Any ministry, any colourway.'
               }
             />
             <Segmented
@@ -666,6 +670,13 @@ export const App = () => {
           {!isCurrent && !isDocument && (
           <section className="panel">
             <h2>Wording</h2>
+            <MinistryField
+              source={state.source}
+              ministry={state.ministry}
+              manualMinistry={state.manualMinistry}
+              program={state.program}
+              onChange={update}
+            />
             {(isFlag || isCrest) && (
               <div className="field">
                 <label htmlFor="flag-extra">
@@ -684,13 +695,6 @@ export const App = () => {
                 />
               </div>
             )}
-            <MinistryField
-              source={state.source}
-              ministry={state.ministry}
-              manualMinistry={state.manualMinistry}
-              program={state.program}
-              onChange={update}
-            />
           </section>
 
           )}

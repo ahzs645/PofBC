@@ -193,6 +193,18 @@ test('a name is shown as a person is called, and a position however it was spell
   assert.equal(displayName('DELA CRUZ, K. T.', 'surname-and-initials'), 'K. T. Dela Cruz')
   assert.equal(displayName('MO, BELAID'), 'Belaid Mo')
   assert.equal(displayName('WONG, CHRISTINE ONPUI'), 'Christine Onpui Wong')
+  // Mc keeps its capital, shouted or flattened by an employer; Mac is left alone either way.
+  assert.equal(displayName('MCCORMICK, BASIL'), 'Basil McCormick')
+  assert.equal(displayName('Mccormick, Lori'), 'Lori McCormick')
+  assert.equal(displayName('Mcminn, Ann'), 'Ann McMinn')
+  assert.equal(displayName('McDonald, Ann'), 'Ann McDonald')
+  assert.equal(displayName('MACDONALD, ANN'), 'Ann Macdonald')
+  assert.equal(displayName('Macdonald, Ann'), 'Ann Macdonald')
+  assert.equal(displayName('MacDonald, Ann'), 'Ann MacDonald')
+  assert.equal(displayName("O'BRIEN, PAT"), "Pat O'Brien")
+  assert.equal(displayName('MCKAY-SMITH, JO'), 'Jo McKay-Smith')
+  assert.equal(displayName('Mace, Jo'), 'Jo Mace')
+  assert.equal(displayName('MCCA, JO'), 'Jo McCa')
   assert.equal(positionKey('Correction Serv 18 ADLT CUST'), positionKey('Correction Serv 18 Adlt Cust.'))
 })
 

@@ -32,13 +32,64 @@ export const SourceLink = ({ source }) => source?.url
  * was called, what it looked like, who led it. Each is its own kind of event, so a 1912 origin is
  * never mistaken for the date of today's name or logo.
  */
-export const EventsCard = ({ events, day, title = 'Origins and changes' }) => {
+// A locator as the reader needs it: page counts in this record are one-based throughout, so the
+// note saying so is left out of the line.
+export const plainLocator = (locator) => String(locator).replace(/\s*\((?:one|1)-based\)/g, '')
+
+/** What an event rests on: its note, each source and when it was reviewed, and its cross-references. */
+const EventDetail = ({ event }) => (
+  <>
+    {event.notes && <StoryText text={event.notes} label="Note" className="gov-events__note" />}
+    {(event.evidence ?? [{ sources: event.sources, locator: event.locator, reviewed: event.reviewed }]).map((entry, ordinal) => {
+      // A source's own note runs on in its line when it is short, and is read in steps
+      // under it when it is not.
+      const note = entry.notes && entry.notes !== event.notes ? entry.notes : null
+      const long = note && storySteps(note).length > 1
+      return (
+        <Fragment key={ordinal}>
+          <span className="gov-events__sources">
+            {entry.sources.map((index) => <SourceLink key={index} source={EVENT_SOURCES[index]} />)}
+            {entry.locator && <span className="gov-muted"> · {plainLocator(entry.locator)}</span>}
+            {entry.date && <span className="gov-muted"> · Source date precision: {formatEventDate(entry.date)}</span>}
+            <span className="gov-muted"> · {entry.reviewed ? `Reviewed ${entry.reviewed}` : 'Review date not supplied'}</span>
+            {entry.title && entry.title !== event.title && <span className="gov-muted"> · {entry.title}</span>}
+            {note && !long && <span className="gov-muted"> · {note}</span>}
+          </span>
+          {long && <StoryText text={note} label="Source note" className="gov-events__note" />}
+        </Fragment>
+      )
+    })}
+    {(event.decisions ?? []).map((decision) => <span key={decision.id} className="gov-events__note">Reviewed {decision.decided}: {decision.reason}</span>)}
+    {(event.competingEvents ?? []).map((id) => {
+      const rival = EVENTS.find((candidate) => candidate.id === id)
+      return rival && <span key={id} className="gov-events__note">Competing claim: <a href={`#event-${id}`}>{rival.title} ({formatEventDate(rival.date)})</a></span>
+    })}
+    {(event.relatedEvents ?? []).map((id) => {
+      const related = EVENTS.find((candidate) => candidate.id === id)
+      return related && <span key={id} className="gov-events__note">Related event: <a href={`#event-${id}`}>{related.title} ({formatEventDate(related.date)})</a></span>
+    })}
+    {(event.legalReferences ?? []).map((reference) => <span key={reference.source_url} className="gov-events__sources"><SourceLink source={{ url: reference.source_url, title: reference.title }} /> · {plainLocator(reference.locator)}</span>)}
+    {(event.unresolvedRelated ?? []).map((reference) => <span key={reference.supplied_id} className="gov-events__note">Related organization awaiting a matched record: {reference.label}. {reference.reason}</span>)}
+  </>
+)
+
+/**
+ * A body's dated events, oldest first: where its function began, when it was established, what it
+ * was called, what it looked like, who led it. Each is its own kind of event, so a 1912 origin is
+ * never mistaken for the date of today's name or logo.
+ *
+ * `limit` folds a long list to its first few, and `folded` puts each event's note and sources
+ * behind its own "Sources" disclosure, for a list of many bodies' events read at a glance.
+ */
+export const EventsCard = ({ events, day, title = 'Origins and changes', limit = Infinity, folded = false }) => {
+  const [expanded, setExpanded] = useState(false)
   if (!events?.length) return null
+  const shown = expanded ? events : events.slice(0, limit)
   return (
     <section className="gov-card">
       <h2 className="gov-card__heading">{title} <span className="gov-muted">{events.length}</span></h2>
-      <ol className="gov-events">
-        {events.map((event) => {
+      <ol className="gov-events" data-folded={folded || undefined}>
+        {shown.map((event) => {
           const type = typeOf(event)
           const ahead = isAhead(event, day)
           return (
@@ -51,47 +102,41 @@ export const EventsCard = ({ events, day, title = 'Origins and changes' }) => {
                   {isConflicting(event) && <span className="gov-chip" data-type="scheduled">Conflicting evidence</span>}
                 </span>
                 <span className="gov-events__title">{event.title}</span>
-                {event.notes && <StoryText text={event.notes} label="Note" className="gov-events__note" />}
-                {(event.evidence ?? [{ sources: event.sources, locator: event.locator, reviewed: event.reviewed }]).map((entry, ordinal) => {
-                  // A source's own note runs on in its line when it is short, and is read in steps
-                  // under it when it is not.
-                  const note = entry.notes && entry.notes !== event.notes ? entry.notes : null
-                  const long = note && storySteps(note).length > 1
-                  return (
-                    <Fragment key={ordinal}>
-                      <span className="gov-events__sources">
-                        {entry.sources.map((index) => <SourceLink key={index} source={EVENT_SOURCES[index]} />)}
-                        {entry.locator && <span className="gov-muted"> · {String(entry.locator)}</span>}
-                        {entry.date && <span className="gov-muted"> · Source date precision: {formatEventDate(entry.date)}</span>}
-                        <span className="gov-muted"> · {entry.reviewed ? `Reviewed ${entry.reviewed}` : 'Review date not supplied'}</span>
-                        {entry.title && entry.title !== event.title && <span className="gov-muted"> · {entry.title}</span>}
-                        {note && !long && <span className="gov-muted"> · {note}</span>}
-                      </span>
-                      {long && <StoryText text={note} label="Source note" className="gov-events__note" />}
-                    </Fragment>
-                  )
-                })}
-                {(event.decisions ?? []).map((decision) => <span key={decision.id} className="gov-events__note">Reviewed {decision.decided}: {decision.reason}</span>)}
-                {(event.competingEvents ?? []).map((id) => {
-                  const rival = EVENTS.find((candidate) => candidate.id === id)
-                  return rival && <span key={id} className="gov-events__note">Competing claim: <a href={`#event-${id}`}>{rival.title} ({formatEventDate(rival.date)})</a></span>
-                })}
-                {(event.relatedEvents ?? []).map((id) => {
-                  const related = EVENTS.find((candidate) => candidate.id === id)
-                  return related && <span key={id} className="gov-events__note">Related event: <a href={`#event-${id}`}>{related.title} ({formatEventDate(related.date)})</a></span>
-                })}
-                {(event.legalReferences ?? []).map((reference) => <span key={reference.source_url} className="gov-events__sources"><SourceLink source={{ url: reference.source_url, title: reference.title }} /> · {reference.locator}</span>)}
-                {(event.unresolvedRelated ?? []).map((reference) => <span key={reference.supplied_id} className="gov-events__note">Related organization awaiting a matched record: {reference.label}. {reference.reason}</span>)}
+                {folded
+                  ? (
+                    <details className="gov-events__more">
+                      <summary>Sources</summary>
+                      <span className="gov-events__body"><EventDetail event={event} /></span>
+                    </details>
+                    )
+                  : <EventDetail event={event} />}
               </span>
             </li>
           )
         })}
       </ol>
+      {events.length > limit && (
+        <button type="button" className="gov-show-more" aria-expanded={expanded} onClick={() => setExpanded((value) => !value)}>
+          {expanded ? 'Show fewer' : `Show all ${events.length}`}
+        </button>
+      )}
     </section>
   )
 }
 
 // ── Evidence ─────────────────────────────────────────────────────────────────────────────────────
+
+// The research package's process boilerplate, repeated on a hundred notes: how the research was
+// run, not what it found, so it is left out of the note a reader sees.
+const PROCESS_SENTENCES = [
+  /Additive research; held dates are not removed\.\s*/g,
+  /Automated searches are logged separately from source passages actually reviewed\.\s*/g
+]
+export const researchNote = (note) => {
+  if (!note) return null
+  const text = PROCESS_SENTENCES.reduce((rest, pattern) => rest.replace(pattern, ''), note).trim()
+  return text || null
+}
 
 /** Why this body is drawn as it is: each claim, the source that makes it, and when it was checked. */
 export const EvidenceCard = ({ node }) => {
@@ -104,7 +149,7 @@ export const EvidenceCard = ({ node }) => {
     node.presence === 'seen' && `Its start is unknown. It is drawn because a source shows it by ${node.firstSeen}; the years between sightings are not each confirmed.`,
     node.uncertain && !node.reconcile && 'Not yet confirmed for this year: no source found so far shows it existed then, and none says it began later. Drawn faint because an unknown start is not a sign it did not exist.'
   ].filter(Boolean)
-  const research = node.researched && node.note
+  const research = node.researched && researchNote(node.note)
   if (!claims.length && !caveats.length && !research) return null
   return (
     <section className="gov-card gov-evidence">
@@ -113,7 +158,7 @@ export const EvidenceCard = ({ node }) => {
         <span aria-hidden="true">{open ? '−' : '+'}</span>
       </button>
       {caveats.map((text) => <p key={text} className="gov-notice">{text}</p>)}
-      {open && research && <p className="gov-muted gov-evidence__note"><StoryText text={node.note} label="Research note" lead={`Research note${node.checked ? ` (${node.checked})` : ''}: `} /></p>}
+      {open && research && <p className="gov-muted gov-evidence__note"><StoryText text={research} label="Research note" lead={`Research note${node.checked ? ` (${node.checked})` : ''}: `} /></p>}
       {open && (
         <ul className="gov-evidence__list">
           {claims.map((entry, index) => (
@@ -122,7 +167,7 @@ export const EvidenceCard = ({ node }) => {
               <span className="gov-muted">
                 <SourceLink source={entry.source} />
                 {entry.checked && ` · checked ${entry.checked}`}
-                {entry.note && ` · ${entry.note}`}
+                {entry.note && ` · ${plainLocator(entry.note)}`}
               </span>
             </li>
           ))}
@@ -192,8 +237,7 @@ export const CompareView = ({ year, other, onOther, onPick }) => {
           <span className="gov-muted"> to the year on the timeline, </span><strong>{year}</strong>
         </p>
         <p className="gov-muted">
-          {result.ministries.before} ministries in {from}, {result.ministries.after} in {to} · {result.ministries.continuing} unchanged ·
-          {' '}{result.bodies.before} other bodies then, {result.bodies.after} now · {result.subAgencies.before} → {result.subAgencies.after} sub-agencies on record
+          Ministries {result.ministries.before} → {result.ministries.after} ({result.ministries.continuing} unchanged) · other bodies {result.bodies.before} → {result.bodies.after} · sub-agencies {result.subAgencies.before} → {result.subAgencies.after}
         </p>
       </section>
 
@@ -260,7 +304,7 @@ export const CompareView = ({ year, other, onOther, onPick }) => {
       )}
 
       {result.events.length > 0 && (
-        <EventsCard events={result.events} day={`${to}-12-31`} title={`Dated events, ${from + 1}–${to}`} />
+        <EventsCard events={result.events} day={`${to}-12-31`} title={`Dated events, ${from + 1}–${to}`} limit={5} folded />
       )}
     </div>
   )

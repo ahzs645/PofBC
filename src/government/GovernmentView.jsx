@@ -359,10 +359,13 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
           <div className="gov__tools">
             <SiteLink className="gov-button gov__related-link" to={{ view: 'government', mode: 'related' }}>Related bodies</SiteLink>
             {!narrow && themeButton}
-            <span className="gov-button-group">
-              <button type="button" className="gov-button gov-button--icon" disabled={!selected} onClick={() => step(-1)} aria-label="Previous of this kind"><ChevronIcon direction={-1} /></button>
-              <button type="button" className="gov-button gov-button--icon" disabled={!selected} onClick={() => step(1)} aria-label="Next of this kind"><ChevronIcon direction={1} /></button>
-            </span>
+            {/* Narrow, a chosen body opens in the sheet, which carries these arrows itself. */}
+            {!narrow && (
+              <span className="gov-button-group">
+                <button type="button" className="gov-button gov-button--icon" disabled={!selected} onClick={() => step(-1)} aria-label="Previous of this kind"><ChevronIcon direction={-1} /></button>
+                <button type="button" className="gov-button gov-button--icon" disabled={!selected} onClick={() => step(1)} aria-label="Next of this kind"><ChevronIcon direction={1} /></button>
+              </span>
+            )}
           </div>
         </div>
 
@@ -412,7 +415,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
           : selected
             ? !sheeted && entityCard
             : <OverviewCard government={government} onSelect={setSelectedId} />}
-        <ChangesCard key={year} year={year} onSelect={setSelectedId} onJump={jump} />
+        {!selected && <ChangesCard key={year} year={year} onSelect={setSelectedId} onJump={jump} />}
 
         <Folded className="gov-card gov-sources" summary="Sources and caveats">{() => <>
           <p className="gov-muted">

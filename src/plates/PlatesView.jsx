@@ -17,12 +17,12 @@ import { PlateView, regionFamilies, regionSections, samplePlate, setupPlates, st
 import { writeHistory } from '../site/browserHistory.js'
 import { useCatalogueIndex } from '../site/useCatalogueIndex.js'
 import { searchFor } from '../site/navigation.jsx'
-import { Segmented } from '../site/Segmented.jsx'
 import { holdScroll } from '../site/holdScroll.js'
 import { PlateViewer } from './PlateViewer.jsx'
 import { YearTimeline } from './PlatesTimeline.jsx'
-import { inUse, lanesOf, spanOf } from './timeline.js'
+import { inUse, lanesOf, spanOf, undash } from './timeline.js'
 import './plates.css'
+import '../posters/shelfTools.css'
 import { Select } from '../site/ui/Select.jsx'
 
 const REGION = BRITISH_COLUMBIA
@@ -119,6 +119,7 @@ export const PlatesView = () => {
   const [playing, setPlaying] = useState(false)
   const deferredQuery = useDeferredValue(query)
   const timeline = useRef(null)
+  const tools = useRef(null)
   const mode = place.year === null ? 'family' : 'year'
 
   useEffect(() => { setupPlates() }, [])
@@ -208,29 +209,28 @@ export const PlatesView = () => {
 
   return (
     <section className="plates" aria-label="Licence plates">
-      <div className="plates__intro">
-        <h2>Licence plates <span className="plates__count">{TOTAL}</span></h2>
-        <div className="plates__filters">
-          <label className="plates__filter">
-            <span>Family</span>
-            <Select keepPlace value={place.family ?? ''} onChange={(value) => go({ ...place, family: value || null, plate: null })}>
-              <option value="">All {FAMILIES.length} families</option>
-              {FAMILIES.map((family) => <option key={family.id} value={family.id}>{family.label} ({family.formats.length})</option>)}
-            </Select>
-          </label>
-          <label className="plates__filter plates__filter--grow">
-            <span>Search</span>
-            <input type="search" value={query} placeholder="1953, flag, totem, Expo…" onChange={(event) => setQuery(event.target.value)} />
-          </label>
-          <div className="plates__mode">
-            <Segmented
-              ariaLabel="Arrange the plates"
-              options={MODES}
-              value={mode}
-              onChange={(next) => { setPlaying(false); go({ ...place, year: next === 'year' ? SPAN[1] : null }) }}
-            />
-          </div>
+      {/* The same toolbar as the posters' and patches' (shelfTools.css). */}
+      <div className="shelf-tools" role="group" aria-label="Browse the licence plates" ref={tools}>
+        <div className="shelf-tools__toggle" role="group" aria-label="Arrange the plates">
+          {MODES.map((option) => (
+            <button key={option.value} type="button" title={option.title} aria-pressed={mode === option.value}
+              onClick={() => { if (option.value === mode) return; holdScroll(tools.current); setPlaying(false); go({ ...place, year: option.value === 'year' ? SPAN[1] : null }) }}>
+              {option.label}
+            </button>
+          ))}
         </div>
+        <label className="shelf-tools__filter">
+          <span>Family</span>
+          <Select keepPlace value={place.family ?? ''} onChange={(value) => go({ ...place, family: value || null, plate: null })}>
+            <option value="">All</option>
+            {FAMILIES.map((family) => <option key={family.id} value={family.id}>{family.label}</option>)}
+          </Select>
+        </label>
+        <input type="search" className="shelf-tools__search" aria-label="Search the plates" value={query} placeholder="1953, flag, totem, Expo…" onChange={(event) => setQuery(event.target.value)} />
+        <p className="shelf-tools__count" role="status">
+          {place.family || deferredQuery.trim() ? `${mode === 'family' ? shown : usingCount} of ${TOTAL}` : TOTAL} plates
+          {(place.family || query) && <> · <button type="button" className="shelf-tools__clear" onClick={() => { holdScroll(tools.current); setQuery(''); go({ ...place, family: null, plate: null }) }}>Clear filters</button></>}
+        </p>
       </div>
 
       {mode === 'year' && (
@@ -247,7 +247,7 @@ export const PlatesView = () => {
               // where it is on screen (holdScroll.js).
               onRow={chosen ? undefined : (id) => { holdScroll(timeline.current); go({ ...place, family: id }) }}
               note={chosen
-                ? `${chosen.label}: each bar is one design, across the years it was issued or valid; those in use in ${place.year} are highlighted. Choose “All families” above to see every family again.`
+                ? `${chosen.label}: each bar is one design, across the years it was issued or valid; those in use in ${place.year} are highlighted.`
                 : `Each bar is a design, across the years it was issued or valid; those in use in ${place.year} are highlighted. Choose a family to see its designs one by one.`}
             />
           </section>
@@ -301,14 +301,14 @@ export const PlatesView = () => {
               </a>
             </h3>
             <span className="plates__count">{family.formats.length}</span>
-            {family.summary && <p>{family.summary}</p>}
+            {family.summary && <p>{undash(family.summary)}</p>}
           </header>
           {sections.map((section) => (
             <section key={section.id} className="plates__era" aria-label={section.label}>
               <div className="plates__era-head">
                 {section.period && <span className="plates__period">{section.period}</span>}
                 <h4>{section.label}</h4>
-                {section.summary && <p>{section.summary}</p>}
+                {section.summary && <p>{undash(section.summary)}</p>}
               </div>
               {section.gap ? (
                 <p className="plates__gap">

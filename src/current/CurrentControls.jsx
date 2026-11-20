@@ -27,9 +27,11 @@ import { Select } from '../site/ui/Select.jsx'
 
 const LANGUAGE_OPTIONS = LANGUAGE_ORDER.map((value) => ({ value, label: LANGUAGES[value] }))
 
+// "Solid" is implied beside Colour and Reverse, and dropping it keeps the four on one row.
+const VARIANT_SHORT = { black: 'Black', white: 'White' }
 const VARIANT_OPTIONS = CURRENT_VARIANT_ORDER.map((value) => ({
   value,
-  label: CURRENT_VARIANTS[value].label,
+  label: VARIANT_SHORT[value] ?? CURRENT_VARIANTS[value].label,
   title: CURRENT_VARIANTS[value].description
 }))
 
@@ -79,11 +81,6 @@ export const CurrentControls = ({ state, update }) => {
   return (
     <section className="panel">
       <h2>Ministry mark</h2>
-      <p className="panel__hint">
-        The Province’s mark, used exactly as published, with the wording set in the same alphabet
-        its own marks are lettered with and broken by the same rules, which reproduce 44 of their
-        46 marks exactly.
-      </p>
 
       <Segmented
         label="Language"
@@ -144,15 +141,15 @@ export const CurrentControls = ({ state, update }) => {
           {edited
             ? 'Edited. '
             : listed
-              ? 'No published mark carries this name, so it is set by the Province’s own rules. '
+              ? 'Set by the Province’s rules; no published mark carries this name. '
               : custom
                 // No published mark answers to this name, so there is no official wording to be
                 // faithful to — the rules still set it, but they are the Province's rules applied to
                 // your name rather than a reproduction of its artwork.
-                ? 'A name of your own, set by the Province’s own rules rather than copied from a mark. '
+                ? 'Your own name, set by the Province’s rules. '
                 : stated
-                  ? 'Official wording. This mark breaks against the Province’s own pattern, so its breaks are written in. '
-                  : 'Official wording. Lines break by the Province’s own rules: the opening on its own line, the rest on one line or two. '}
+                  ? 'Official wording, with this mark’s own breaks. '
+                  : 'Official wording. '}
           Press Enter to override.
           {edited && (
             <>
@@ -193,7 +190,7 @@ export const CurrentControls = ({ state, update }) => {
         onChange={(value) => update({ currentBackground: value })}
         allowTransparent
         palette={BCID_PALETTE}
-        hint="The BC identity colours. Changing this moves the colourway to the one the guidance pairs with it."
+        hint="The BC identity colours. The colourway follows the one paired with it."
       />
 
       <Segmented

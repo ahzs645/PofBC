@@ -9,25 +9,6 @@
   padding: 20px;
   margin-bottom: var(--gap);
 }
-.plates__intro h2 { margin: 0 0 6px; font-size: 22px; }
-
-.plates__filters { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-top: 16px; }
-.plates__filter { display: grid; gap: 6px; min-width: 0; flex: 0 1 320px; }
-.plates__filter--grow { flex: 1 1 260px; }
-.plates__filter > span { font-size: 13px; font-weight: 600; color: var(--ink-2); }
-.plates__filter input {
-  width: 100%;
-  min-height: var(--control);
-  padding: 7px 12px;
-  border: 1px solid var(--outline);
-  border-radius: var(--radius);
-  background: var(--hover);
-  color: var(--ink);
-  font: inherit;
-  font-size: 16px;
-}
-.plates__filter input:hover { border-color: var(--mid); }
-@media (min-width: 900px) { .plates__filter input { font-size: 14px; } }
 
 .plates__empty { padding: 24px 4px; color: var(--ink-muted); }
 .plates__count { font-size: 13px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
@@ -35,6 +16,8 @@
 .plates__family-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
 .plates__family-head h3 { margin: 0; font-size: 20px; }
 .plates__family-head h3 a { color: inherit; text-decoration: none; }
+/* The heading narrows the plates to its family: a finger-sized target, laid out as text. */
+.plates__family-head h3 a { display: inline-block; padding: 8px 0; margin: -8px 0; }
 .plates__family-head h3 a:hover { text-decoration: underline; }
 .plates__family-head p { flex-basis: 100%; margin: 2px 0 0; font-size: 13.5px; color: var(--ink-muted); }
 
@@ -81,7 +64,8 @@
   justify-content: center;
   aspect-ratio: 16 / 10;
   padding: 14px;
-  background: radial-gradient(circle at 50% 40%, var(--surface) 0, var(--page) 100%);
+  /* The same plain well as the posters' and patches' cards. */
+  background: var(--hover);
 }
 .plates__art { width: 100%; }
 .plates__art svg,
@@ -175,11 +159,6 @@
   .plate__steps .button { min-width: 40px; justify-content: center; font-size: 18px; line-height: 1; }
 }
 
-/* ── Arranging the index ── */
-.plates__mode { display: flex; align-items: end; flex: 0 0 auto; }
-.plates__mode .field { margin: 0; }
-.plates__mode .segmented button { white-space: nowrap; padding-inline: 14px; }
-
 /* ── The year timeline (PlatesTimeline.jsx), after the government view's ── */
 /* Bars and rules are the site's own greys and inks, so the strip follows the theme; the cursor is
    the masthead's sun, the one colour the chrome allows itself, since ink is taken by the bars. */
@@ -267,6 +246,4 @@
 @media (max-width: 600px) {
   .plates-timeline__body[data-labelled] { grid-template-columns: minmax(0, 5.5rem) minmax(0, 1fr); gap: 0 6px; }
   .plates-timeline__labels :is(button, span) { font-size: 10.5px; }
-  .plates__mode { flex: 1 1 100%; }
-  .plates__mode .field, .plates__mode .segmented { width: 100%; }
 }

@@ -86,6 +86,7 @@ export default function AboutView({ onBrowse }) {
             <li><strong>Remuneration is not a salary rate.</strong> It is what was paid in the year: overtime, retroactive pay, vacation payouts, severance and part-year work all change it.</li>
             <li><strong>The $75,000 threshold has not changed since 2002</strong> and is not indexed to inflation. As pay rises, more people cross it each year, so the number of records grows even when the workforce does not. Employer pages lead with the typical raise of people on consecutive lists for that reason.</li>
             <li><strong>A name is not an identity.</strong> Records are grouped by the name as published. Two records with one name can be different people; joins between spellings are reviewed and say how sure they are.</li>
+            <li><strong>The People list</strong> ranks each name’s highest payment in Canadian dollars at an employer, drawn from each period’s highest-paid records. Payments in other currencies are listed but not ranked.</li>
             <li><strong>A missing record is not evidence of anything.</strong> Many employers and years have not been added yet, and pay at or below the threshold is not listed.</li>
             <li>Amounts shown in another year’s dollars use the B.C. consumer price index from Statistics Canada.</li>
           </ul>
@@ -94,7 +95,7 @@ export default function AboutView({ onBrowse }) {
         <section aria-labelledby="about-employers">
           <h3 id="about-employers" className="salaries__title">Employer comparisons</h3>
           <ul>
-            <li><strong>Median and average</strong> describe each employer’s disclosed records in its official annual schedule, part-year payments included. They mix different roles. Council, board, executive-only, compiled and incomplete schedules are left out.</li>
+            <li><strong>Median and average</strong> describe each employer’s disclosed records in its latest official annual schedule within the periods and sector chosen, part-year payments included. They mix different roles. Council, board, executive-only, compiled and incomplete schedules are left out.</li>
             <li><strong>Typical raise</strong> is the median change in pay for names on both of two consecutive lists with the same threshold and period rules: at least {MIN_STAYERS} names, or {MIN_RANKED_STAYERS} to be ranked. A promotion, a part year or retroactive pay shows as a raise or a cut.</li>
             <li><strong>Most added to the list</strong> counts published records, not employees or new hires, because the fixed threshold lets more people cross it each year.</li>
             <li><strong>Rankings</strong> need at least {MIN_EMPLOYER_RECORDS} records and leave out employers whose latest disclosure is much older than the rest. For a closer comparison, choose one period and sector.</li>

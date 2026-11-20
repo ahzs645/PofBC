@@ -1,0 +1,84 @@
+/* The toolbar over a catalogue: posters, signs, patches, badges and licence plates all open with the
+   same row. A layout switch, the filters (each a short label beside its dropdown), a search where the
+   catalogue has one, and the count on the right. Every control is the same height and corner, so
+   the row reads as one line of controls rather than a form. On a phone the row wraps, two or three
+   short lines instead of a stack of labelled fields. */
+.shelf-tools {
+  --tool-h: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 12px 20px;
+  margin-bottom: var(--gap);
+}
+@media (pointer: coarse) { .shelf-tools { --tool-h: 38px; } }
+
+.shelf-tools__toggle {
+  display: inline-flex;
+  flex: none;
+  height: var(--tool-h);
+  padding: 2px;
+  gap: 2px;
+  border: 1px solid var(--outline);
+  border-radius: var(--radius-sm);
+}
+.shelf-tools__toggle button {
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: var(--ink-muted);
+  font: inherit;
+  font-size: 13.5px;
+  padding: 0 12px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.shelf-tools__toggle button:hover:not([aria-pressed='true']) { color: var(--ink); background: var(--hover); }
+.shelf-tools__toggle button[aria-pressed='true'] { background: var(--ink); color: var(--surface); }
+
+.shelf-tools__filter { display: inline-flex; align-items: center; gap: 6px; min-width: 0; max-width: 100%; font-size: 13px; color: var(--ink-muted); }
+.shelf-tools__filter > span { flex: none; }
+.shelf-tools .shelf-tools__filter .ui-select {
+  width: auto;
+  min-width: 0;
+  max-width: 260px;
+  height: var(--tool-h);
+  min-height: 0;
+  gap: 6px;
+  padding: 0 10px;
+  font-size: 13.5px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--outline);
+  border-radius: var(--radius-sm);
+}
+.shelf-tools__search {
+  flex: 1 1 200px;
+  min-width: 0;
+  max-width: 340px;
+  height: var(--tool-h);
+  padding: 0 12px;
+  border: 1px solid var(--outline);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  /* 16px keeps iOS Safari from zooming the page when the field takes focus. */
+  font-size: 16px;
+}
+@media (min-width: 900px) { .shelf-tools__search { font-size: 13.5px; } }
+.shelf-tools__search:hover, .shelf-tools .shelf-tools__filter .ui-select:hover { border-color: var(--mid); }
+.shelf-tools__count { margin: 0 0 0 auto; font-size: 13px; color: var(--ink-faint); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.shelf-tools__clear { border: 0; background: none; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
+.shelf-tools__toggle button:focus-visible, .shelf-tools .shelf-tools__filter .ui-select:focus-visible,
+.shelf-tools__search:focus-visible, .shelf-tools__clear:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+@media (max-width: 600px) {
+  .shelf-tools { padding: 12px 16px; gap: 8px 12px; }
+  .shelf-tools__search { max-width: none; }
+  .shelf-tools .shelf-tools__filter .ui-select { max-width: 200px; }
+}
+

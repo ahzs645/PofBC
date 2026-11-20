@@ -325,6 +325,7 @@
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: var(--gov-mid);
+  text-align: start;
   cursor: pointer;
 }
 
@@ -1152,7 +1153,14 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 .gov-events__item:first-child { border-top: 0; padding-top: 0; }
 .gov-events__item[data-ahead] { opacity: 0.75; }
 .gov-events__date { font: 500 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--gov-ink-3); }
-.gov-events__body { display: grid; gap: 2px; min-width: 0; }
+.gov-events__body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; min-width: 0; }
+/* Narrow, the date sits over its event rather than beside it, so the text has the card's width. */
+@media (max-width: 559px) { .gov-events__item { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
+.gov-events__more { font-size: 12px; color: var(--gov-ink-3); }
+.gov-events__more > summary { width: max-content; cursor: pointer; text-decoration: underline; text-decoration-color: var(--gov-mid); text-underline-offset: 2px; }
+.gov-events__more[open] > summary { margin-bottom: 4px; }
+.gov-events + .gov-show-more { margin-top: 12px; }
+.gov-nowrap { white-space: nowrap; }
 .gov-events__type { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--gov-ink-4); }
 .gov-events__title { font-size: 14px; line-height: 1.35; }
 .gov-events__note { font-size: 12px; line-height: 1.4; color: var(--gov-ink-3); }
@@ -1191,7 +1199,7 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 .gov-compare__pick { margin: 4px 8px 8px; font-size: 14px; }
 .gov-compare__pick .ui-select { gap: 6px; min-height: 0; height: 32px; padding: 0 8px; border: 1px solid var(--gov-outline); border-radius: 8px; background: var(--gov-hover); color: var(--gov-ink); font: inherit; }
 .gov-compare__head p.gov-muted { margin: 0 8px; font-size: 13px; }
-.gov-compare__rows, .gov-compare__names { list-style: none; margin: 0; padding: 0 8px; display: grid; gap: 6px; font-size: 14px; }
+.gov-compare .gov-compare__rows, .gov-compare .gov-compare__names { list-style: none; margin: 0; padding: 0 8px; display: grid; gap: 6px; font-size: 14px; }
 .gov-compare__rows li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; }
 /* Narrow, a row is its name over its change, every row alike, rather than some wrapping and some not. */
 @media (max-width: 559px) { .gov-compare__rows { gap: 10px; } .gov-compare__rows li { display: grid; gap: 2px; } }

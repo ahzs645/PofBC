@@ -11,7 +11,7 @@ import { SiteLink } from '../site/navigation.jsx'
 import { displayName, EMPLOYER_LAYOUT, personKey, withoutCompiledRepeats } from './people.js'
 import { employerNameKeys } from './nameLinks.js'
 import { meanMoney, titleKey, titleLabel, titleRecords } from './positions.js'
-import { categoryCoverage, coverageAt, expenseLabel, openingYear, reportingYearLabel, scopeLabel } from './coverage.js'
+import { categoryCoverage, coverageAt, expenseLabel, openingYear, scopeLabel } from './coverage.js'
 import { DisclosureSummary } from './DisclosureEvidence.jsx'
 import { formatMoney as money, formatSummaryMoney as summary, medianMoney as median } from './money.js'
 import { PayChart, YearPicker, shortYear } from './parts.jsx'
@@ -229,7 +229,6 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
           {!entry.body && MUNICIPAL_PROFILE_BY_EMPLOYER[entry.slug] && <> · <SiteLink className="salaries__link" to={{ view: 'gallery', subject: MUNICIPAL_PROFILE_BY_EMPLOYER[entry.slug] }}>Municipal profile: logo, arms and council pay</SiteLink></>}
         </p>
         <YearPicker years={years} counts={entry.counts} coverage={entry.coverage} value={year} onChange={pick} />
-        <h3 className="salaries__year-title">{reportingYearLabel(years[year])}</h3>
         {foreignRows.length > 0 && <p className="salaries__hint salaries__hint--small">Comparisons use CAD observations. Other currencies remain available below with their original amounts and evidence.</p>}
         {categories.length > 1 && (
           <label className="salaries__note salaries__category">
@@ -289,9 +288,10 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
               {{ positions: `Positions in ${years[year]}`, people: `Highest paid in ${years[year]}`, everyone: 'Everyone, every year' }[view]}
             </h2>
             <div className="salaries__head-tools">
+              {/* A year's records and positions are counted in the tiles above; here only what a search leaves. */}
               <p className="salaries__meta">
-                {view === 'positions' && count(matchingPositions.length, 'position', 'positions')}
-                {view === 'people' && count(matchingPeople.length, 'record', 'records')}
+                {view === 'positions' && words.length > 0 && count(matchingPositions.length, 'position', 'positions')}
+                {view === 'people' && words.length > 0 && count(matchingPeople.length, 'record', 'records')}
                 {view === 'everyone' && count(matchingEveryone.length, 'name', 'names')}
               </p>
               {view !== 'everyone' && <Segmented compact ariaLabel="Layout" value={layout} onChange={onLayout} options={LAYOUTS} />}
@@ -302,9 +302,10 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
               <Segmented compact ariaLabel="Order positions" value={order} onChange={setOrder} options={[{ value: 'records', label: 'Most records' }, { value: 'average', label: 'Highest average' }, { value: 'name', label: 'A–Z' }]} />
             </div>
           )}
-          {view === 'people' && !withPositions && people.length > 0 && (
+          {/* With none named, the disabled Positions tab already says so. */}
+          {view === 'people' && !withPositions && positionedRecords > 0 && (
             <p className="salaries__hint salaries__hint--small">
-              {positionedRecords ? `${positionedRecords.toLocaleString('en-CA')} of this year’s ${people.length.toLocaleString('en-CA')} records name positions; they are shown where supplied.` : 'This year’s records do not name positions.'}
+              {`${positionedRecords.toLocaleString('en-CA')} of this year’s ${people.length.toLocaleString('en-CA')} records name positions; they are shown where supplied.`}
             </p>
           )}
           {view !== 'everyone' && !people.length && <p className="salaries__hint">No records in {years[year]}. Choose a year with records above, or see all years.</p>}
@@ -441,7 +442,6 @@ const RolePage = ({ entry, years, sources, rows, nameKey, failed, roleKey, wante
         {group && (
           <>
             <YearPicker years={years} counts={counts} value={year} onChange={onYear} label="Year of this position’s records" />
-            <h3 className="salaries__year-title">{reportingYearLabel(years[year])}</h3>
             {stats[year]
               ? (
                 <dl className="salaries__tiles">

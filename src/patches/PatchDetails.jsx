@@ -34,7 +34,7 @@ export function PatchHistory({ patch }) {
       {notes.length > 0 && (
         <p className="patch__source">
           From the <a href={FOREST_SERVICE_TIMELINE.url} target="_blank" rel="noreferrer">BC Forest Service timeline</a>: the dates
-          bound the wording, not the patch itself.
+          bound the wording, not the {patch.collection === 'badges' ? 'badge' : 'patch'} itself.
         </p>
       )}
       {logo && (
@@ -53,7 +53,6 @@ export function PatchHistory({ patch }) {
               </li>
             ))}
           </ul>
-          <p className="patch__source">A shared mark or subject, not evidence that the pieces were issued together.</p>
         </>
       )}
     </section>

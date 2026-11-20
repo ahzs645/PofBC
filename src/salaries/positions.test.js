@@ -132,4 +132,10 @@ test('titles published in capitals are shown in ordinary capitals; mixed case is
   assert.equal(displayTitle('ART TEACHER'), 'Art Teacher')
   assert.equal(displayTitle('Professor - ESM'), 'Professor - ESM')
   assert.equal(displayTitle('SrBrdgSeis&StrucHlthMntrngEng'), 'SrBrdgSeis&StrucHlthMntrngEng')
+  // An acronym an employer's title-casing flattened is set in capitals again; other words are kept.
+  assert.equal(displayTitle('Ceo/Cio'), 'CEO/CIO')
+  assert.equal(displayTitle('Senior Hr Advisor'), 'Senior HR Advisor')
+  assert.equal(displayTitle('Ea To Vp/Hr Coordinator'), 'Ea To VP/HR Coordinator')
+  assert.equal(displayTitle('Chief Operating Officer'), 'Chief Operating Officer')
+  assert.equal(displayTitle('CEO/CIO'), 'CEO/CIO')
 })

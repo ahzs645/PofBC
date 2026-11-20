@@ -22,7 +22,14 @@ export function Modal({ onDismiss, children, ...props }) {
   useLayoutEffect(() => {
     const dialog = ref.current
     dialog.showModal()
-    dialog.querySelector('[data-initial-focus]')?.focus({ preventScroll: true })
+    // Focus starts on the way back, without a ring: the ring is for someone moving by keyboard,
+    // and appears as soon as they do.
+    // showModal has already focused the first control, ring and all; start again without it.
+    const initial = dialog.querySelector('[data-initial-focus]')
+    if (initial) {
+      if (document.activeElement === initial) initial.blur()
+      initial.focus({ preventScroll: true, focusVisible: false })
+    }
     return () => dialog.close()
   }, [])
 

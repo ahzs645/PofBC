@@ -12,6 +12,7 @@ import { Modal } from './ui/Modal.jsx'
 import { NavigationContext, SiteLink, useNavigate } from '../site/navigation.jsx'
 import { PosterViewer } from './PosterViewer.jsx'
 import './posters.css'
+import './shelfTools.css'
 import { Select } from '../site/ui/Select.jsx'
 import { holdScroll } from '../site/holdScroll.js'
 
@@ -29,8 +30,7 @@ import { holdScroll } from '../site/holdScroll.js'
  * @param {object} props.items       Each piece's catalogue card, by id.
  * @param {object} props.loaders     Each piece's loader: resolves to its drawing and parts.
  * @param {object} props.thumbnails  Each piece's card image URL.
- * @param {Array}  [props.facets]    [{ key, label }]: card fields the shelf can be filtered by. Given
- *                                   them, the shelf also offers every piece in one grid.
+ * @param {Array}  [props.facets]    [{ key, label }]: card fields the shelf can be filtered by.
  */
 export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, items, loaders, thumbnails, facets }) => {
   const read = () => {
@@ -133,7 +133,7 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
   const valuesOf = (key) => [...new Set(order.map((id) => items[id][key]).filter(Boolean))]
   const card = (id) => (
     <SiteLink key={id} to={{ view, [param]: id }} className="posters__card" ref={(element) => { cards.current[id] = element }}>
-      <span className="posters__thumb" style={{ background: items[id].background ?? undefined }}>
+      <span className="posters__thumb">
         <img src={thumbnails[id]} alt="" loading="lazy" />
       </span>
       <span className="posters__card-text">
@@ -153,33 +153,33 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
             <p>{intro}</p>
           </div>
         )}
-        {facets && (
-          <div className="posters__tools" role="group" aria-label={`Browse the ${title.toLowerCase()}`} ref={tools}>
-            <div className="posters__layout" role="group" aria-label="Layout">
-              <button type="button" aria-pressed={layout === 'series'} onClick={() => arrange('series')}>By series</button>
-              <button type="button" aria-pressed={layout === 'all'} onClick={() => arrange('all')}>All pieces</button>
-            </div>
-            {facets.map(({ key, label }) => (
-              <label key={key} className="posters__filter">
-                <span>{label}</span>
-                <Select keepPlace value={filters[key] ?? ''} onChange={(value) => setFilters((before) => ({ ...before, [key]: value || null }))}>
-                  <option value="">All</option>
-                  {valuesOf(key).map((value) => <option key={value} value={value}>{value}</option>)}
-                </Select>
-              </label>
-            ))}
-            <p className="posters__count" role="status">
-              {narrowed ? `${found.length} of ${order.length}` : order.length} {found.length === 1 && narrowed ? noun : `${noun}s`}
-              {narrowed && <> · <button type="button" className="posters__clear" onClick={clear}>Clear filters</button></>}
-            </p>
+        {/* Every shelf opens with the same toolbar as the other catalogues (shelfTools.css): the
+            layout, any filters, and the count. */}
+        <div className="shelf-tools" role="group" aria-label={`Browse the ${title.toLowerCase()}`} ref={tools}>
+          <div className="shelf-tools__toggle" role="group" aria-label="Layout">
+            <button type="button" aria-pressed={layout === 'series'} onClick={() => arrange('series')}>By series</button>
+            <button type="button" aria-pressed={layout === 'all'} onClick={() => arrange('all')}>All pieces</button>
           </div>
-        )}
+          {(facets ?? []).map(({ key, label }) => (
+            <label key={key} className="shelf-tools__filter">
+              <span>{label}</span>
+              <Select keepPlace value={filters[key] ?? ''} onChange={(value) => setFilters((before) => ({ ...before, [key]: value || null }))}>
+                <option value="">All</option>
+                {valuesOf(key).map((value) => <option key={value} value={value}>{value}</option>)}
+              </Select>
+            </label>
+          ))}
+          <p className="shelf-tools__count" role="status">
+            {narrowed ? `${found.length} of ${order.length}` : order.length} {found.length === 1 && narrowed ? noun : `${noun}s`}
+            {narrowed && <> · <button type="button" className="shelf-tools__clear" onClick={clear}>Clear filters</button></>}
+          </p>
+        </div>
         {layout === 'all' || narrowed
           ? (
             <section className="posters__series" aria-label={narrowed ? `Matching ${noun}s` : `All ${noun}s`}>
               {found.length
                 ? <div className="posters__grid posters__grid--all">{found.map(card)}</div>
-                : <p className="posters__none">No {noun} matches all of those. <button type="button" className="posters__clear" onClick={clear}>Clear filters</button></p>}
+                : <p className="posters__none">No {noun} matches all of those. <button type="button" className="shelf-tools__clear" onClick={clear}>Clear filters</button></p>}
             </section>
           )
           : (

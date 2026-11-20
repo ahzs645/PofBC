@@ -79,16 +79,19 @@ function AreaDetails({ area, onSelect }) {
 
 function AccuracyTable() {
   const rows = BOUNDARIES.panels
-  return <div className="hm-table-wrap"><table className="hm-table">
-    <caption>Typical distance between a printed boundary and the modern line it was matched to, measured on parts of each map held out of the fit.</caption>
-    <thead><tr><th scope="col">Map panel</th><th scope="col">Typical error</th><th scope="col">Nine in ten within</th><th scope="col">Earlier 3-point fit</th></tr></thead>
+  // The caption sits outside the scrolling box, so it is never carried off with a wide table.
+  return <figure className="hm-figure">
+    <figcaption id="hm-table-caption">Typical distance between a printed boundary and the modern line it was matched to, measured on parts of each map held out of the fit.</figcaption>
+    <div className="hm-table-wrap"><table className="hm-table" aria-labelledby="hm-table-caption">
+    <thead><tr><th scope="col">Map panel</th><th scope="col">Typical error</th><th scope="col">Nine in ten within</th><th scope="col" className="hm-table__baseline">Earlier 3-point fit</th></tr></thead>
     <tbody>{rows.map((row) => <tr key={row.id}>
       <th scope="row">{PANEL_LABELS[row.id] ?? row.id}</th>
       <td>{km(row.heldOut.medianMetres)} km</td>
       <td>{km(row.heldOut.p90Metres)} km</td>
-      <td>{row.seedAffineBaseline ? `${km(row.seedAffineBaseline.medianMetres)} km` : '—'}</td>
+      <td className="hm-table__baseline">{row.seedAffineBaseline ? `${km(row.seedAffineBaseline.medianMetres)} km` : '—'}</td>
     </tr>)}</tbody>
   </table></div>
+  </figure>
 }
 
 export function HealthStoryView() {
@@ -180,7 +183,8 @@ export function HealthStoryView() {
         <label className="hm-field"><span>Map</span><Select keepPlace value={filter} onChange={(value) => setFilter(value)}><option value="all">All maps</option>{FRAMEWORKS.map((entry) => <option key={entry.id} value={entry.id}>{entry.year} · {entry.label}</option>)}</Select></label>
       </div>
       {FRAMEWORKS.filter((entry) => results.some((area) => area.framework === entry.id)).map((entry) => <div className="hm-group" key={entry.id}>
-        <h3>{entry.year} · {entry.label}</h3>
+        {/* One map's list needs no heading: the Map filter above already names it. */}
+        {filter === 'all' && <h3>{entry.year} · {entry.label}</h3>}
         <ul className="hm-cards">{results.filter((area) => area.framework === entry.id).map((area) => <li key={area.id}>
           <button type="button" className={area.id === selectedId ? 'is-selected' : undefined} onClick={() => showInAtlas(area.id)}>
             <i className={`hm-swatch hm-c${area.colour ?? 0}`} aria-hidden="true" />
@@ -193,7 +197,8 @@ export function HealthStoryView() {
     </section>
 
     <section className="hm-method" aria-labelledby="hm-method-title">
-      <div className="hm-section-heading"><div><p className="hm-kicker">Method</p><h2 id="hm-method-title">How these boundaries were made</h2></div></div>
+      <details className="hm-method__fold">
+      <summary className="hm-section-heading"><div><p className="hm-kicker">Method</p><h2 id="hm-method-title">How these boundaries were made</h2></div></summary>
       <ol className="hm-steps">
         <li><b>Georectify the printed maps.</b> The three 1997/98 Ministry maps (published by the Auditor General in March 1998) and the Statistics Canada map were fitted onto modern BC geography. Thousands of points along each printed boundary were matched to the coast, the provincial border and modern local health area (LHA) edges, and each map panel, including the enlarged insets, was warped to fit.</li>
         <li><b>Snap each printed region to local health areas.</b> Health regions were built from LHAs, so every LHA that falls at least half inside a printed region is assigned to it. Two exceptions, where a legal boundary description settles a detail the printed map is too small to show, are noted on those areas.</li>
@@ -201,6 +206,7 @@ export function HealthStoryView() {
       </ol>
       <AccuracyTable />
       <p className="hm-small">Boundaries use today’s LHA lines. Where a 1997 edge did not follow one, the true line can differ locally. The statistical layer also corrects an earlier mix-up: New Westminster belongs to Simon Fraser (region 08) and Burnaby is region 17.</p>
+      </details>
       <div className="hm-downloads">
         <a className="hm-button hm-button--quiet" href={asset('historical-boundaries.geojson')} download>Download all boundaries (GeoJSON) ↓</a>
         <a href={asset('georectification.json')} download>Fit and LHA-share report ↓</a>

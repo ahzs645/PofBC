@@ -214,10 +214,10 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
         </Poster>
 
         <header className="pv-top">
-          {/* The way back sits in the title itself: "← Posters │ REWARD: A Living Forest". */}
+          {/* The way back sits in the title itself: "← All posters │ REWARD: A Living Forest". */}
           <nav className="pv-top-start pv-crumb" aria-label={`${meta.title}, in ${backLabel.toLowerCase()}`}>
             <button type="button" className="pv-back" data-initial-focus onClick={onExit} title={`All ${backLabel.toLowerCase()} (Esc from the whole ${noun})`} aria-label={`Back to all ${backLabel.toLowerCase()}`}>
-              <span aria-hidden="true">←</span> <span className="pv-back-label">{backLabel}</span>
+              <span aria-hidden="true">←</span> <span className="pv-back-label">All {backLabel.toLowerCase()}</span>
             </button>
             <button type="button" className="pv-brand" onClick={() => select('overview')} aria-label={`Back to the whole ${noun}`}>
               <b>{meta.title}</b>
@@ -242,7 +242,6 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
                 <button type="button" className="pv-switch-step" disabled={!next} onClick={next?.open} title={next ? `Next: ${next.title} (])` : undefined} aria-label={next ? `Next ${noun}: ${next.title}` : `No next ${noun}`}>›</button>
               </div>
             )}
-            {canTell && <button type="button" className="pv-ghost pv-story-btn" aria-pressed={telling} onClick={() => tell(!telling)} title="Read it as a story (S)">Story</button>}
             <button type="button" className="pv-ghost" aria-pressed={!telling && aboutOpen && current === 'overview'} onClick={openAbout}>About</button>
             <button type="button" className="pv-ghost pv-tour-btn" aria-pressed={tour.playing} onClick={tour.toggle} title="Play the tour (P)">{tour.playing ? 'Stop' : 'Tour'}</button>
             <button type="button" className="pv-ghost pv-solid" onClick={() => openExport('poster')} disabled={!exportable} title={exportable ? 'Export (E)' : 'Export is ready once the full drawing has loaded'}>Export</button>
@@ -253,7 +252,8 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
           {content}
         </Panel>
 
-        <Dock steps={steps} current={current} onSelect={select} coarse={coarse} hint={`Move across the ${noun} to find its parts`} startLabel="Start the story →" onStart={canTell ? () => tell(true) : undefined} />
+        {/* The story starts from here (or S); the top bar keeps to the piece, About, the tour and export. */}
+        <Dock steps={steps} current={current} onSelect={select} coarse={coarse} startLabel={canTell ? 'Start the story →' : undefined} onStart={canTell ? () => tell(true) : undefined} />
 
         <ExportDialog open={exportOpen} onClose={() => setExportOpen(false)} targets={targets} target={exportTarget} onTarget={setExportTarget} />
       </div>

@@ -82,7 +82,9 @@ const ROMAN = /^(i{1,3}|iv|v|vi{0,3}|ix|x{1,3})$/i
  */
 export const displayTitle = (text) => {
   const value = String(text ?? '')
-  if (!/[A-Z]{2}/.test(value) || /[a-z]/.test(value)) return value
+  // Mixed case is kept, except an acronym an employer's title-casing flattened ("Ceo/Cio").
+  if (/[a-z]/.test(value)) return value.replace(/\b[A-Z][a-z]{1,3}\b/g, (word) => (FLATTENED.has(word.toLowerCase()) ? word.toUpperCase() : word))
+  if (!/[A-Z]{2}/.test(value)) return value
   let first = true
   return value.replace(/[A-Z][A-Z'’]*/g, (word) => {
     const lower = word.toLowerCase()
@@ -95,6 +97,8 @@ export const displayTitle = (text) => {
     return word[0] + lower.slice(1)
   })
 }
+// Acronyms that are never ordinary words, so "Ceo" or "Rn" in a mixed-case title can only be them.
+const FLATTENED = new Set(['ceo', 'cio', 'cfo', 'coo', 'cao', 'cto', 'cno', 'cmo', 'hr', 'rn', 'lpn', 'rcmp', 'bc', 'vp'])
 // Three-letter-or-shorter words that are ordinary words in titles, not acronyms.
 const COMMON = new Set(['aid', 'air', 'all', 'art', 'bus', 'car', 'day', 'dog', 'fit', 'gas', 'ice', 'key', 'lab', 'law', 'log', 'man', 'map', 'net', 'new', 'off', 'oil', 'old', 'one', 'out', 'own', 'pay', 'pre', 'pro', 'sea', 'set', 'sub', 'tax', 'two', 'use', 'vet', 'way', 'web'])
 

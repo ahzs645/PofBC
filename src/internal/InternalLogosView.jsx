@@ -28,12 +28,29 @@ const addMountainLines = (svg, artwork, ink) => {
 }
 
 // In dark mode a logo on the default white paper moves onto a dark tile. Artwork drawn only in black
-// and white is inverted there (exactly: black becomes white); colour artwork keeps its colours, with a
-// light edge so its black outlines still read (internal.css). A variant with a background of its own
+// and white is inverted there (exactly: black becomes white); artwork in dark inks alone sits in a
+// light well; colour artwork keeps its colours, with a light edge so its black outlines still read
+// (internal.css). A variant with a background of its own
 // keeps it.
 const PAPER = new Set(['#fff', '#ffffff', 'white'])
 const PLAIN = new Set(['#000', '#000000', 'black', '#fff', '#ffffff', 'white', 'none', 'transparent', 'currentcolor'])
-const inkOf = (colours) => ([...colours].every((colour) => PLAIN.has(colour.toLowerCase())) ? 'mono' : 'colour')
+// A one-ink study drawn in a near-black or deep green would vanish on the dark tile, and inverting a
+// colour would change the artwork, so that ink is given a light well to sit in instead.
+const isDark = (colour) => {
+  const hex = colour.toLowerCase().match(/^#([0-9a-f]{3}|[0-9a-f]{6})$/)?.[1]
+  if (!hex) return false
+  const full = hex.length === 3 ? [...hex].map((digit) => digit + digit).join('') : hex
+  const [r, g, b] = [0, 2, 4].map((at) => parseInt(full.slice(at, at + 2), 16) / 255)
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b < 0.35
+}
+const inkOf = (colours) => {
+  const all = [...colours].map((colour) => colour.toLowerCase())
+  if (all.every((colour) => PLAIN.has(colour))) return 'mono'
+  // White beside the dark ink means the drawing carries its own dark ground (a reversed study).
+  const white = all.some((colour) => ['#fff', '#ffffff', 'white'].includes(colour))
+  const inks = all.filter((colour) => !PLAIN.has(colour))
+  return !white && inks.every(isDark) ? 'dark' : 'colour'
+}
 const coloursOfMarkup = (markup) => new Set([...markup.matchAll(/(?:fill|stroke)(?:="|:\s*)(#[0-9a-fA-F]{3,6}|[a-z]+)/g)].map((match) => match[1]))
 const coloursOfElement = (root) => {
   const colours = new Set()
@@ -186,14 +203,17 @@ const PosterLinks = ({ logo }) => (
   </ul>
 )
 
-const LogoSources = ({ logo }) => logo.sources.length > 0 && (
+const LogoSources = ({ logo }) => (logo.sources.length > 0 || logo.measurements?.length > 0) && (
   <details className="internal-logos__sources">
     <summary>Sources</summary>
-    <ul>{logo.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>)}</ul>
+    {logo.measurements?.map((measurement) => <p key={measurement}>{measurement}</p>)}
+    {logo.sources.length > 0 && <ul>{logo.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>)}</ul>}
   </details>
 )
 
-const LogoComments = ({ logo }) => (
+// The poster links ride with the history on the family's cards; a logo's own page gives them a
+// section of their own, so its history leaves them out.
+const LogoComments = ({ logo, posters = true }) => (
   <>
     {logo.comments.map((comment) => <p key={comment}>{comment}</p>)}
     {logo.article && (
@@ -205,7 +225,7 @@ const LogoComments = ({ logo }) => (
         <p className="internal-logos__article-source">{logo.article.citation}</p>
       </aside>
     )}
-    {logo.seenOn && (
+    {posters && logo.seenOn && (
       <>
         <h4>On the posters, and as an object</h4>
         <PosterLinks logo={logo} />
@@ -234,7 +254,7 @@ const LogoHistory = ({ logo, folded = false }) => folded
       <div className="internal-logos__comments" aria-label={`${logo.name} historical comments`}>
         <h4>History &amp; comments</h4>
         <p className="internal-logos__evidence">{logo.evidence}</p>
-        <LogoComments logo={logo} />
+        <LogoComments logo={logo} posters={false} />
       </div>
       <LogoSources logo={logo} />
     </>
@@ -319,7 +339,6 @@ export const InternalLogosView = () => {
           {current.seenOn && (
             <>
               <h3 className="internal-logos__section-title">On the posters, and as an object</h3>
-              <p className="internal-logos__footnote">Open a poster at this mark; every other part of the poster is clickable too.</p>
               <PosterLinks logo={current} />
             </>
           )}
@@ -342,7 +361,7 @@ export const InternalLogosView = () => {
                 <div className="internal-logos__notes">
                   <h3 id={`internal-${logo.id}`}>
                     <button type="button" className="internal-logos__title" aria-label={`${logo.name}: view variants`} ref={(element) => { logoButtons.current[logo.id] = element }} onClick={() => navigate(true, logo.id)}>
-                      {logo.name} <span aria-hidden="true">→</span>
+                      {logo.name}{'\u00a0'}<span aria-hidden="true">→</span>
                     </button>
                   </h3>
                   <p className="internal-logos__description">{logo.description}</p>
@@ -366,7 +385,6 @@ export const InternalLogosView = () => {
             <span className="internal-logos__family-text">
               <span className="internal-logos__family-title">Forests <span aria-hidden="true">→</span></span>
               <span>Two early marks and five oval designs</span>
-              <span className="internal-logos__family-description">The Forest Service’s engraved Lands Department seal and its evergreen emblem from before about 1973, then the Forests and long ministry name ovals and three Forest Service ovals. View the logos and their history.</span>
             </span>
           </button>
         </>

@@ -2,7 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import {
   catalogueCards, filterCatalogue, groupCatalogueByTemplate, isGeneratedColourway,
-  patchPlaceParams, patchPlaceUrl, readPatchPlace, sourcePhotoCount, variantCount
+  patchPlaceParams, patchPlaceUrl, plainLabel, readPatchPlace, sourcePhotoCount, splitLabel, variantCount
 } from './patchCatalogue.js'
 
 const shield = { id: 'shield', label: 'Ministry shield', description: 'A shared layout.' }
@@ -103,4 +103,10 @@ test('unknown filters fall back safely, and closing a patch retains the browsing
   assert.equal(url.searchParams.get('family'), 'shield')
   const cleared = patchPlaceUrl(url.href, 'patches', { ...closed, org: null, family: null, q: '', group: 'organization' })
   assert.equal(cleared.search, '?view=patches')
+})
+
+test('a catalogue name is shown as a title over a smaller line, never with its em dash', () => {
+  assert.deepEqual(splitLabel('Forest Service / British Columbia — tree oval'), { title: 'Forest Service / British Columbia', detail: 'Tree oval' })
+  assert.deepEqual(splitLabel('Attorney General'), { title: 'Attorney General', detail: null })
+  assert.equal(plainLabel('Forest / Service — British Columbia shoulder emblem'), 'Forest / Service, British Columbia shoulder emblem')
 })

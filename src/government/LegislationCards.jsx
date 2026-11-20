@@ -5,7 +5,7 @@
 import { formatEventDate } from './events.js'
 import { bodiesOfInstrument, instrumentsOfBody, TYPES } from './instruments.js'
 import { FIRST_YEAR, lifeOf, PRESENT_YEAR } from './snapshot.js'
-import { SourceLink } from './AtlasCards.jsx'
+import { plainLocator, SourceLink } from './AtlasCards.jsx'
 import { AdministeredByCard } from './AmrCards.jsx'
 
 const dateOf = (value) => (value ? formatEventDate({ start: String(value) }) : null)
@@ -27,7 +27,7 @@ const Evidence = ({ relation }) => (relation.evidence ?? [{ ...relation, note: n
   <span key={index} className="gov-events__sources">
     {entry.source && <SourceLink source={entry.source} />}
     {(entry.date ?? relation.from) && relation.evidence && <span className="gov-muted"> · {dateOf(entry.date)}</span>}
-    {entry.locator && <span className="gov-muted"> · {String(entry.locator)}</span>}
+    {entry.locator && <span className="gov-muted"> · {plainLocator(entry.locator)}</span>}
     {entry.note && <span className="gov-muted"> · {entry.note}</span>}
   </span>
 ))

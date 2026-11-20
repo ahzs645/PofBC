@@ -6,6 +6,21 @@ export const OTHER_TEMPLATES = 'other'
 /** Only an explicit reconstruction note identifies a generated colourway. Missing evidence does not. */
 export const isGeneratedColourway = (patch) => /generated recolou?r/i.test(patch.limitations ?? '')
 
+/**
+ * A catalogue name as a title and a smaller second line. The library names a design
+ * "Forest Service / British Columbia — tree oval": the wording on it, then what it is. Shown, the
+ * dash becomes a line break: { title: 'Forest Service / British Columbia', detail: 'Tree oval' }.
+ */
+export const splitLabel = (label = '') => {
+  const at = label.indexOf(' — ')
+  if (at < 0) return { title: label, detail: null }
+  const detail = label.slice(at + 3).trim()
+  return { title: label.slice(0, at), detail: detail.charAt(0).toUpperCase() + detail.slice(1) }
+}
+
+/** A name on one line, for running text and tooltips: "Forest Service / British Columbia, tree oval". */
+export const plainLabel = (label = '') => label.replace(/\s+—\s+/g, ', ')
+
 export const sourcePhotoCount = (patch) => new Set((patch.sightings ?? [])
   .map(({ id }) => id.replace(/-O\d+$/, ''))).size
 

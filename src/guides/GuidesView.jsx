@@ -6,6 +6,7 @@
 import { ManualLibrary } from 'brandkit/manuals'
 import { SiteLink } from '../site/navigation.jsx'
 import { GUIDE_BOOKS, GUIDE_FAMILIES, GUIDE_FOOTNOTE, pageUrl } from './guides.js'
+import './guides.css'
 
 const BASE = import.meta.env.BASE_URL
 const urlOf = (book, page, ext) => pageUrl(BASE, book.id, page.id, ext)
@@ -19,8 +20,9 @@ export const GuidesView = () => (
     pageUrl={urlOf}
     urlState={URL_STATE}
     renderLink={renderLink}
+    // The heading names the way back from a book; on the index the site's own header already says
+    // Visual Guides, so the index opens straight on the families (guides.css).
     heading="Visual guides"
-    intro="Identity manuals, rebuilt page by page as drawings."
     footnote={GUIDE_FOOTNOTE}
     label="Visual guides"
   />

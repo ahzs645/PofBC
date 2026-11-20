@@ -9,8 +9,10 @@ import { codeForName } from './ministryLink.js'
 import { readConfigParam } from './configFormat.js'
 import { decodeShare, readShareToken } from './shareLink.js'
 
-/** The viewing surface and contrast of the parts actually present in the selected artwork. */
-export const getPreviewAppearance = (state) => {
+/** The viewing surface and contrast of the parts actually present in the selected artwork.
+ * `siteTheme` is the page's light or dark: Auto follows it whenever the artwork draws its own
+ * ground, since an opaque background reads the same on either surface. */
+export const getPreviewAppearance = (state, siteTheme = 'light') => {
   const background = state.era === 'document'
     ? state.documentBackground
     : state.era === 'current'
@@ -53,11 +55,12 @@ export const getPreviewAppearance = (state) => {
     : isLightColor(ink.mark) || (hasText && isLightColor(ink.text))
   const backdrop = state.backdrop !== 'auto'
     ? state.backdrop
-    : isTransparent && inkIsLight ? 'dark' : 'light'
+    : !isTransparent ? (siteTheme === 'dark' ? 'dark' : 'light')
+      : inkIsLight ? 'dark' : 'light'
   return { background, isTransparent, contrast, backdrop }
 }
 
-export const useLockupState = () => {
+export const useLockupState = (siteTheme = 'light') => {
   const [state, setState] = useState(DEFAULTS)
 
   // A shared link restores its configuration on arrival. Decoding is asynchronous, so the page
@@ -106,7 +109,7 @@ export const useLockupState = () => {
   // Each era draws on its own background, so everything downstream — preview, export, backdrop,
   // contrast — reads it from here rather than reaching for state.background directly.
   const { background, isTransparent, contrast, backdrop } = useMemo(
-    () => getPreviewAppearance(state), [state]
+    () => getPreviewAppearance(state, siteTheme), [state, siteTheme]
   )
 
   const lockup = useMemo(() => ({

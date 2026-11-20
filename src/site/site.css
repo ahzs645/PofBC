@@ -352,6 +352,14 @@ a { color: inherit; text-underline-offset: 2px; }
 
 .panel > h2 + .panel__hint { margin-top: 0; }
 
+/* A segment's label stays on one line, so every segment in a row shares a height; a row too long
+   for its panel wraps whole segments instead of breaking their words. */
+:is(.controls, .gallery__controls) .segmented { flex-wrap: wrap; }
+:is(.controls, .gallery__controls) .segmented button { white-space: nowrap; }
+.gallery__controls .segmented button { flex: 1 1 auto; }
+/* Four starting colourways do not fit one row of the mark's control column; they sit two by two. */
+.gallery__controls .segmented:has(> button:nth-child(4)) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
 /* Original references remain separate from the exported vector study. */
 /* Five identities share a row: each button takes its label's width, so none breaks onto two lines. */
 .segmented[aria-label='Identity'] button { flex: 1 1 auto; white-space: nowrap; padding-inline: 6px; }
@@ -445,7 +453,7 @@ a { color: inherit; text-underline-offset: 2px; }
 .field--compact .field__head { margin: 0; }
 
 /* A folded field: its label is the summary (ShareLink.jsx). */
-.field--fold > summary { cursor: pointer; margin-bottom: 0; }
+.field--fold > summary { display: list-item; width: fit-content; cursor: pointer; margin-bottom: 0; }
 .field--fold[open] > summary { margin-bottom: 6px; }
 
 .field__note {
@@ -571,8 +579,8 @@ textarea::placeholder { color: var(--ink-faint); }
   /* The floor is what decides how many swatches share a row. 28px fits all nine of the background
      row inside a 326px panel on a narrow phone, where they render at ~29px — small, but these are
      colour chips backed by a picker and a hex field, and still above the 24px minimum target. */
-  grid-template-columns: repeat(auto-fill, minmax(28px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(26px, 1fr));
+  gap: 6px;
   margin-bottom: 10px;
 }
 
@@ -1133,6 +1141,8 @@ input.share__url {
 
 @media (min-width: 760px) {
   .gallery__editor { grid-template-columns: minmax(0, 1fr) 320px; align-items: start; }
+  /* The controls run long; the mark stays in view beside them while they are worked through. */
+  .gallery__editor > .gallery__art--large { position: sticky; top: 16px; }
 }
 
 .gallery__art--large { min-height: 260px; padding: 16px; }
@@ -1272,6 +1282,11 @@ input.share__url {
   border-radius: var(--radius-sm);
 }
 .gallery__collected-image[data-dark="true"] { background: #243449; }
+/* On the dark page a white plate glares; a soft light well keeps a light-ground file legible. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .gallery__collected-image:not([data-dark="true"]):not(.gallery__collected-image--clean) { background: #eceae4; }
+}
+:root[data-theme='dark'] .gallery__collected-image:not([data-dark="true"]):not(.gallery__collected-image--clean) { background: #eceae4; }
 .gallery__art--cover .gallery__collected-image { height: 120px; }
 /* A display copy is trimmed to the logo and drawn for the page, so it needs no ground of its own.
    Its height is its share (--logo-scale, from its proportions) of the tile's. */
@@ -1401,19 +1416,6 @@ input.share__url {
 .gallery__era-more summary:hover { color: var(--ink); }
 .gallery__era-more .gallery__era-dates { margin-top: 8px; }
 .gallery__era-more .gallery__sources { margin-top: 8px; }
-
-/* An era of one mark, or of none, sets it beside its words on a wide screen, not under them with
-   most of the card empty beside it. */
-@media (min-width: 760px) {
-  .gallery__era[data-single] {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(240px, 340px);
-    gap: 24px;
-    align-items: start;
-  }
-  .gallery__era[data-single] > .gallery__tiles { margin-top: 0; grid-template-columns: minmax(0, 1fr); }
-  .gallery__era[data-single] > .gallery__era-missing { margin-top: 0; }
-}
 
 /* A one-off's history, under the open mark: its eras as a collection's are, the open mark among
    them outlined rather than offered again. */
@@ -1646,6 +1648,13 @@ input.share__url {
   line-clamp: 3;
   overflow: hidden;
 }
+.gallery__note--clamped {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
 .gallery__entry > .gallery__chips { margin-top: 10px; }
 .gallery__collection-text .gallery__chips { margin-top: 8px; }
 
@@ -1659,17 +1668,17 @@ input.share__url {
 .gallery__summary-hint { margin-left: 10px; font-size: 13px; color: var(--ink-faint); }
 .gallery__about--closed[open] summary { margin-bottom: 12px; }
 
-.gallery__facts { display: grid; gap: 10px; margin: 0; }
-.gallery__facts > div { display: grid; gap: 2px; }
+.gallery__facts { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin: 0; }
+.gallery__facts > div { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; }
 
 @media (min-width: 760px) {
   .gallery__about .gallery__facts > div { grid-template-columns: 120px minmax(0, 1fr); gap: 16px; }
 }
 
 .gallery__facts dt { font-size: 13px; font-weight: 600; color: var(--ink); }
-.gallery__facts dd { margin: 0; max-width: 78ch; font-size: 13.5px; line-height: 1.55; color: var(--ink-muted); }
+.gallery__facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; max-width: 78ch; font-size: 13.5px; line-height: 1.55; color: var(--ink-muted); }
 
-.gallery__facts-groups { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.gallery__facts-groups { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; margin: 0; padding: 0; list-style: none; }
 .gallery__facts-who { font-weight: 500; color: var(--ink-2); }
 
 /* A body whose mark has not been obtained: a dashed outline on the page itself rather than a
