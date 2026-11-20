@@ -28,6 +28,10 @@ const SourceMarkView = ({ entry }) => {
   // (a white version on the light page) is shown as published, on its own plate.
   const copy = collectedDisplay(asset, theme)
   const display = entry.versions && copy?.recoloured ? null : copy
+  const artworkType = asset.isVector ? 'Vector artwork' : asset.format === 'svg' ? 'Contains bitmap artwork' : 'Image'
+  const downloadNote = asset.reconstruction
+    ? 'The download is the reconstruction, not original artwork.'
+    : 'The download is the file as published.'
   return (
     <section className="gallery__recovered">
       <header className="gallery__head">
@@ -35,7 +39,7 @@ const SourceMarkView = ({ entry }) => {
           <h2>{entry.label}</h2>
           <p className="gallery__note">{dateLabel}</p>
         </div>
-        <span className="gallery__asset-format">{asset.format.toUpperCase()} · {asset.isVector ? 'Vector artwork' : asset.format === 'svg' ? 'Contains bitmap artwork' : 'Image'}</span>
+        <span className="gallery__asset-format">{asset.format.toUpperCase()} · {asset.reconstruction ? 'Reconstruction · ' : ''}{artworkType}</span>
       </header>
       {entry.versions && (
         <div className="segmented" role="group" aria-label="Version">
@@ -65,7 +69,7 @@ const SourceMarkView = ({ entry }) => {
       )}
       <p>{asset.notes}</p>
       <div className="row gallery__asset-downloads">
-        <a className="button" href={assetUrl(asset.file)} download>Download {asset.format.toUpperCase()}</a>
+        <a className="button" href={assetUrl(asset.file)} download>{asset.reconstruction ? 'Download reconstruction' : 'Download'} {asset.format.toUpperCase()}</a>
         {(asset.downloads ?? []).map((extra) => (
           <a key={extra.file} className="button button--ghost" href={assetUrl(extra.file)} download>{extra.label}</a>
         ))}
@@ -77,20 +81,19 @@ const SourceMarkView = ({ entry }) => {
         <div><dt>Source</dt><dd>{asset.publisher}{asset.sourceFile ? ` · ${asset.sourceFile}` : ''}</dd></div>
         <div><dt>Collected</dt><dd>{asset.observedDate}</dd></div>
         {!specimenDate && asset.sourceDate && <div><dt>Source-date context</dt><dd>{asset.sourceDate}</dd></div>}
-        {/* How a redrawn file was made stays in its record, not on the page. */}
-        {!asset.reconstruction && <div><dt>Artwork</dt><dd>{asset.fidelityNote}</dd></div>}
+        <div><dt>Artwork</dt><dd>{asset.reconstruction && 'Reconstruction. '}{asset.fidelityNote}</dd></div>
         {asset.creator && <div><dt>Credit</dt><dd>{asset.creator}</dd></div>}
         {asset.license && <div><dt>Source licence</dt><dd>{asset.license_url ? <a href={asset.license_url} target="_blank" rel="noreferrer">{asset.license}</a> : asset.license}</dd></div>}
         {asset.previewNote && <div><dt>Preview</dt><dd>{asset.previewNote}</dd></div>}
         {display && (
           <div><dt>Shown</dt><dd>{display.recoloured
-            ? `Trimmed to the logo and, for the ${theme === 'dark' ? 'dark' : 'light'} page, with ink that would disappear into it reversed or ${theme === 'dark' ? 'lightened' : 'darkened'}. The download is the file as published.`
+            ? `Trimmed to the logo and, for the ${theme === 'dark' ? 'dark' : 'light'} page, with ink that would disappear into it reversed or ${theme === 'dark' ? 'lightened' : 'darkened'}.`
             : display.plate
-              ? 'Trimmed to the logo and shown in its own colours on a plate, as its overlapping parts cannot be recoloured apart. The download is the file as published.'
-              : 'Trimmed to the logo, in its own colours. The download is the file as published.'}</dd></div>
+              ? 'Trimmed to the logo and shown in its own colours on a plate, as its overlapping parts cannot be recoloured apart.'
+              : 'Trimmed to the logo, in its own colours.'} {downloadNote}</dd></div>
         )}
         {asset.sourcePage && <div><dt>Publication</dt><dd><a href={asset.sourcePage} target="_blank" rel="noreferrer">View source publication or page</a>{asset.sourceLocator ? ` · ${asset.sourceLocator}` : ''}</dd></div>}
-        {asset.sourceUrl && asset.sourceUrl !== asset.sourcePage && <div><dt>Original file</dt><dd><a href={asset.sourceUrl} target="_blank" rel="noreferrer">View the source file</a></dd></div>}
+        {asset.sourceUrl && asset.sourceUrl !== asset.sourcePage && <div><dt>{asset.reconstruction ? 'Source reference' : 'Original file'}</dt><dd><a href={asset.sourceUrl} target="_blank" rel="noreferrer">View the source file</a></dd></div>}
       </dl>
     </section>
   )

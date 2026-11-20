@@ -494,7 +494,7 @@ const BodyTimeline = ({ node, family, year, onJump, onJumpBody, onGo }) => {
             title={row.episode ? `Go to ${row.episode.name}` : `Go to ${yearIn(row.from)}`}
           />
         ))}
-        {node.parentToday && node.present && (
+        {node.parentToday && node.present && !node.jointOwnership && (
           <p className="gov-muted gov-lineage-chart__note">Today: {node.parentName ?? node.parentToday}.</p>
         )}
         {gaps.length > 0 && (
@@ -583,8 +583,8 @@ const Connections = ({ node, government, onSelect }) => {
     const other = byId.get(outgoing ? edge.to : edge.from)
     if (!other) continue
     const relation = RELATIONS[edge.kind]
-    const label = outgoing ? relation.label : { elects: 'Elected by', appoints: 'Appointed by', confidence: 'Needs the confidence of', responsible: 'Answers to', part: 'Part of' }[edge.kind]
-    ;(groups[label] ??= []).push(other)
+    const label = outgoing ? relation.label : { elects: 'Elected by', appoints: 'Appointed by', confidence: 'Needs the confidence of', responsible: 'Answers to', part: 'Part of', owned: 'Owned by', partner: 'Partners with' }[edge.kind]
+    ;(groups[label] ??= []).push({ ...other, connectionPercent: edge.percent })
   }
   const entries = Object.entries(groups)
   if (!entries.length) return null
@@ -599,7 +599,7 @@ const Connections = ({ node, government, onSelect }) => {
               <li key={other.id}>
                 <button type="button" className="gov-link-card" onClick={() => onSelect(other.id)}>
                   <span className="gov-kind-dot" data-branch={other.branch ?? 'people'} />
-                  <span>{other.shortName ?? other.name}</span>
+                  <span>{other.shortName ?? other.name}{other.connectionPercent == null ? '' : ` · ${other.connectionPercent}%`}</span>
                 </button>
               </li>
             ))}

@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { readerNotes, readerNoteSentences, recordPeriodLabel, sourceWarnings } from './coverage.js'
+import { employerDisclosureLabels, materialSourceQualifications, readerNotes, readerNoteSentences, recordPeriodLabel, sourceWarnings } from './coverage.js'
 import { coverageAt, categoryCoverage, shortYearLabel, reportingYearLabel, relevantYearIndexes, samePeriodKinds, coverageStatus, disclosurePeriod, expenseLabel, filterEmployers, gapReason, gapRuns, missingYearMessage, rowCoverage, scopeLabel, sourceHref, thresholdLabel, yearAvailability } from './coverage.js'
 
 test('source caveats follow the selected cohort without leaking into a separate council schedule', () => {
@@ -185,4 +185,28 @@ test('an employer page opens on its newest list of employees, not on a later boa
   // An index without coverage, and an employer with nothing.
   assert.equal(openingYear({ counts: [0, 4, 6] }, sources), 2)
   assert.equal(openingYear({ counts: [0, 0] }, sources), null)
+})
+
+test('discovery separates board totals from an earlier mixed period with an employee schedule', () => {
+  const sources = { board: { scope: 'board-remuneration' }, staff: { scope: 'employee-remuneration' } }
+  const entry = { counts: [100, 10], coverage: [
+    { scope: 'mixed-disclosure', sourceIds: ['staff', 'board'] },
+    { scope: 'board-remuneration', sourceIds: ['board'] }
+  ] }
+  assert.deepEqual(employerDisclosureLabels(entry, null, sources).nouns, ['board payment', 'board payments'])
+  assert.equal(employerDisclosureLabels(entry, null, sources).latestEmployee, 0)
+  assert.deepEqual(employerDisclosureLabels(entry, [0, 1], sources).nouns, ['disclosure record', 'disclosure records'])
+  const council = { counts: [8], coverage: [{ scope: 'elected-officials' }] }
+  assert.deepEqual(employerDisclosureLabels(council).nouns, ['council payment', 'council payments'])
+  assert.equal(employerDisclosureLabels(council).latestEmployee, undefined)
+})
+
+test('material Island Health qualifications are edition-specific and independent of prose filtering', () => {
+  const first = 'gap-health-employees-island-health-2022-23'
+  const next = 'gap-health-employees-island-health-2023-24'
+  const sources = { [first]: {}, [next]: {}, board: {} }
+  assert.deepEqual(materialSourceQualifications([first, first], sources).map(({ kind }) => kind),
+    ['count-discrepancy', 'unreconciled-total'])
+  assert.match(materialSourceQualifications([next], sources)[0].text, /\$45,772 below/)
+  assert.deepEqual(materialSourceQualifications(['board'], sources), [])
 })

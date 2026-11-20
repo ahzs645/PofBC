@@ -593,16 +593,16 @@ export const TIMELINES = {
       {
         id: 'bcws-oval-crest',
         status: 'sought',
-        years: 'from 2015',
+        years: 'June 2021',
         label: 'The oval crest, “Wildfire Service”',
         note: `The name BC Wildfire Service appears at the end of June 2015. ${OVAL_CREST_NOTE}, with a ` +
           '“Wildfire Service” scroll beneath, was published as its logo in 2021. The ministry it names ' +
           'suggests it is older, which is not established.',
         applicability: {
           kind: 'first_observation',
-          years: 'from 2015',
-          note: 'The name is first seen on a news release of 30 June 2015; the crest is seen as the service’s ' +
-            'logo in June 2021.'
+          years: 'June 2021',
+          note: 'The June 2021 publication shows the artwork; earlier use is unestablished. ' +
+            'The 30 June 2015 news release dates the name only.'
         },
         seenAt: ['https://s3.amazonaws.com/wpe-e-know.ca/eknow/wp-content/uploads/2021/06/BC-Wildfire-Service-logo.jpg'],
         sources: [

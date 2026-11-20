@@ -13,8 +13,8 @@ In any year other than today, a sub-agency is drawn only if it is known to have 
 | 2026 | 238 | 238 |
 | 2025 | 223 | 237 |
 | 2020 | 165 | 217 |
-| 2010 | 92 | 192 |
-| 2000 | 15 | 150 |
+| 2010 | 92 | 191 |
+| 2000 | 15 | 149 |
 | 1990 | 11 | 82 |
 | 1980 | 10 | 74 |
 

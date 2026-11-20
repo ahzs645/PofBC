@@ -14,7 +14,10 @@ import { CURRENT_MINISTRIES, episodesIn, fold, forerunnerIn, MINISTRY_EPISODES, 
 import { ELECTIONS, LIEUTENANT_GOVERNORS, PENDING_ELECTION, PREMIERS } from './timelineData.js'
 import { CROWN_CATEGORY_SOURCES, crownCategoryOf } from './crownCategories.js'
 import { monarchOn } from './monarchs.js'
-import { HISTORICAL_BODIES, HISTORY_SOURCES, MINISTERS, OFFICE_HOLDERS, SUB_AGENCIES, LOCAL_BODIES } from './historyData.js'
+import { HISTORICAL_BODIES, HISTORY_SOURCES, MINISTERS, OFFICE_HOLDERS, SUB_AGENCIES as LEGACY_SUB_AGENCIES, LOCAL_BODIES } from './historyData.js'
+import { JOINT_OWNERSHIP } from './jointOwnership.js'
+
+const SUB_AGENCIES = LEGACY_SUB_AGENCIES.map((entry) => JOINT_OWNERSHIP[entry.id] ? { ...entry, ...JOINT_OWNERSHIP[entry.id] } : entry)
 
 /** The BC Archives diagram every ministry episode comes from. */
 const ARCHIVES_DIAGRAM = {
@@ -646,6 +649,9 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
       placement = 'inferred'
     }
     const parent = parentId ? drawn.get(parentId) : null
+    // The chart anchor is a layout choice, not an ownership or accountability edge.
+    const joint = entry.jointOwnership
+    const ownershipShown = joint && (present || yearOf(joint.observedOn) === year || (joint.from && joint.from <= day))
     // An unconfirmed body is shown only beside a parent: with nothing to say it stood, it cannot stand apart.
     if ((!parent || !parent.branch) && (presence === 'unconfirmed' || pastLastSeen)) continue
 
@@ -666,7 +672,7 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
     const evidence = [
       claimOf('Began', entry.establishedClaim, decisionNote('established')),
       !entry.establishedClaim && entry.established
-        ? claim(`${entry.name}, from ${entry.established}`, historySource(entry.establishedSource ?? entry.source), reconcile ? { note: 'Collected, not confirmed: the review left this start unresolved.' } : {})
+        ? claim(`${entry.name}, from ${entry.established}`, joint?.from === entry.established ? { title: 'Columbia Power statement of financial information', url: joint.source } : historySource(entry.establishedSource ?? entry.source), reconcile ? { note: 'Collected, not confirmed: the review left this start unresolved.' } : {})
         : null,
       claimOf('First seen', entry.firstObservedClaim),
       claimOf('Last seen', entry.lastObservedClaim, { note: entry.endStatus === 'untraced' ? 'Its end is not traced.' : 'It has ended; the day is not known.' }),
@@ -674,7 +680,11 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
       nameRow && renamed ? claim(`Known as ${name}${nameRow.coverage === 'observation_only' ? ` in ${nameRow.observedOn}` : ` from ${nameRow.from ?? '?'}${nameRow.to ? ` to ${nameRow.to}` : ''}`}`, historySource(nameRow.source), nameRow.locator ? { note: nameRow.locator } : {}) : null,
       placement === 'stated'
         ? claim(`${statedRow.relation === 'subsidiary_of' ? 'A subsidiary of' : 'Part of'} ${statedRow.name}${statedRow.coverage === 'observation_only' ? ` (observed ${statedRow.observedOn})` : statedRow.from ? ` from ${statedRow.from}` : ''}`, historySource(statedRow.source), statedRow.locator ? { note: statedRow.locator } : {})
-        : placement === 'today' ? claim(`${entry.name}, part of the ${parent.name}`, historySource(entry.source), { checked: CURRENT_AS_OF }) : null,
+        : placement === 'today' && !joint ? claim(`${entry.name}, part of the ${parent.name}`, historySource(entry.source), { checked: CURRENT_AS_OF }) : null,
+      ownershipShown ? claim(`Joint ownership: ${joint.shares.map((row) => `${row.name} ${row.percent}%`).join('; ')}`, { title: 'Columbia Power statement of financial information', url: joint.source }, { note: `${joint.locator}; ${joint.from ? `effective ${joint.from}; ` : ''}observed ${joint.observedOn}. Equal board representation; decisions require unanimity.` }) : null,
+      ...(ownershipShown ? joint.shares.filter((row) => row.directHolder && (present || !row.holderObservedOn || yearOf(row.holderObservedOn) === year)).map((row) => claim(`Direct shareholder for ${row.name}: ${row.directHolder}`, { title: 'Shareholder financial statements', url: row.holderSource }, { note: row.holderLocator })) : []),
+      ownershipShown && (present || year === 2025) ? claim('Columbia Power manages the shared generating assets under shareholder agreements and contracts; management is separate from ownership.', { title: 'Columbia Power asset management policy', url: 'https://columbiapower.org/wp-content/uploads/2025/05/2025_Asset-Management-Policy_FINAL.pdf' }, { note: 'Policy dated March 10, 2025.' }) : null,
+      ownershipShown && joint.previousArrangement ? claim(`Before ${joint.previousArrangement.until}: ${joint.previousArrangement.name} had a different ownership structure (${joint.previousArrangement.shares.map((row) => `${row.name} ${row.percent}%`).join('; ')}).`, { title: 'Columbia Power statement of financial information', url: joint.source }, { note: joint.locator }) : null,
       entry.legalBasis ? claim(entry.legalBasis.citation, historySource(entry.legalBasis.source), entry.legalBasis.locator ? { note: entry.legalBasis.locator } : {}) : null
     ].filter(Boolean)
 
@@ -683,7 +693,8 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
       name,
       ...(renamed ? { shortName: undefined, laterName: entry.name } : {}),
       subType: entry.type,
-      inferredParent: placement === 'inferred' && Boolean(parent),
+      inferredParent: !joint && placement === 'inferred' && Boolean(parent),
+      jointOwnership: ownershipShown ? joint : null,
       parentToday: entry.parent ?? null,
       // Not shown by any source to exist by this year.
       uncertain: presence === 'unconfirmed' || pastLastSeen,
@@ -705,7 +716,12 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
       const node = add({ ...common, kind: 'sub', ring: 'sub', branch: parent.branch, parent: parent.id, parentName: parent.shortName ?? parent.name })
       // A subsidiary is owned, which a source can show without showing who answers for it: drawn as
       // ownership, and not a step on the path to the people.
-      link(parent.id, node.id, placement === 'stated' && statedRow.relation === 'subsidiary_of' ? 'owned' : 'part')
+      if (!joint) link(parent.id, node.id, placement === 'stated' && statedRow.relation === 'subsidiary_of' ? 'owned' : 'part')
+      if (ownershipShown) {
+        for (const row of joint.shares) {
+          if (drawn.has(row.owner)) link(row.owner, node.id, 'owned', { percent: row.percent, indirect: Boolean(row.directHolder && row.directHolder !== row.name) })
+        }
+      }
     } else {
       // Known to stand, under nothing a source names for the year.
       add({ ...common, kind: SUB_AS_BODY[entry.type] ?? 'agency', ring: 'outer', branch: 'executive', parent: null, group: null, unattached: true, unplacedSub: true })
