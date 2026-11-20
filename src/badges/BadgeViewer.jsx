@@ -5,7 +5,7 @@
 // compared Medal Forge and Luster on S51-O01 and preferred Medal Forge for metal badges with raised
 // lettering. Size, relief, finish and curvature are illustrative choices, not measurements.
 
-import { lazy, Suspense, useEffect, useId, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { cardLabel, loadPatchSvg, variantsOf } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
 import { holdScroll } from '../site/holdScroll.js'
@@ -17,7 +17,7 @@ import { PatchHistory, photosOf } from '../patches/PatchDetails.jsx'
 import { plainLabel, splitLabel } from '../patches/patchCatalogue.js'
 import { METALS, NOMINAL_SIZE_MM } from './badgeParts.js'
 import { MEDAL_FORGE, buildBadge } from './medalBadge.js'
-import { BadgeScene } from './badgeScene.js'
+import { BadgeStage } from './BadgeStage.jsx'
 import { BADGE_VIEW_DEFAULTS, badgeModeFor, badgeShapeFor, badgeShapeStatus, applyBadgeShape, loadBadgeView, saveBadgeView } from './badgeView.js'
 import { badgeReviewAssetUrl, badgeReviewSources } from './badgeReview.js'
 import './badges.css'
@@ -41,13 +41,6 @@ const CURVES = [
   { value: 'cylinder', label: 'Curve', title: 'Bent across its width, as a badge curves to a chest or a cap' },
   { value: 'dome', label: 'Dome', title: 'A shallow dome' }
 ]
-const CAMERAS = [
-  { value: 'front', label: 'Front' },
-  { value: 'oblique', label: 'Oblique' },
-  { value: 'top', label: 'Top', title: 'Looking down on the curve' },
-  { value: 'side', label: 'Side' },
-  { value: 'back', label: 'Back', title: 'The reverse: generated, without fittings or marks' }
-]
 
 const storage = () => { try { return globalThis.localStorage } catch { return null } }
 
@@ -57,70 +50,6 @@ const download = (blob, name) => {
   link.download = name
   link.click()
   setTimeout(() => URL.revokeObjectURL(link.href), 1000)
-}
-
-const webglAvailable = () => {
-  try {
-    const canvas = document.createElement('canvas')
-    return Boolean(canvas.getContext('webgl2') || canvas.getContext('webgl'))
-  } catch {
-    return false
-  }
-}
-
-/** The 3D stage: a canvas that fills its pane, the mode switch and the camera presets above it. */
-function BadgeStage ({ sceneRef, toolbar, status, onReady, label, camera, onCamera }) {
-  const canvas = useRef(null)
-  const pane = useRef(null)
-  const hintId = useId()
-  const [failed, setFailed] = useState(false)
-
-  useEffect(() => {
-    if (!webglAvailable()) { setFailed(true); return undefined }
-    let scene
-    try {
-      scene = new BadgeScene(canvas.current)
-    } catch (error) {
-      console.error(error)
-      setFailed(true)
-      return undefined
-    }
-    sceneRef.current = scene
-    const observer = new ResizeObserver(([entry]) => scene.resize(entry.contentRect.width, entry.contentRect.height))
-    observer.observe(pane.current)
-    onReady(scene)
-    return () => { observer.disconnect(); onReady(null); scene.dispose(); if (sceneRef.current === scene) sceneRef.current = null }
-  }, [])
-
-  const onKeyDown = (event) => {
-    const scene = sceneRef.current
-    if (!scene) return
-    const step = 0.1
-    if (event.key === 'r' || event.key === 'R') { scene.setView('oblique'); onCamera('oblique'); return }
-    const moves = { ArrowLeft: [-step, 0], ArrowRight: [step, 0], ArrowUp: [0, -step], ArrowDown: [0, step] }
-    if (!moves[event.key]) return
-    event.preventDefault()
-    event.stopPropagation()
-    scene.orbit(...moves[event.key])
-  }
-
-  return (
-    <div className="patch-stage badge-stage">
-      <div className="patch-stage__bar">
-        <div className="patch-stage__tools">{toolbar}</div>
-        <div className="badge-stage__cameras">
-          <Segmented ariaLabel="Camera" options={CAMERAS} value={camera} onChange={(value) => { sceneRef.current?.setView(value); onCamera(value) }} compact />
-        </div>
-      </div>
-      <div ref={pane} className="badge-stage__pane">
-        {failed
-          ? <p className="patch__status" role="alert">This browser can’t show 3D (WebGL is off or unavailable). The vector is a tab away.</p>
-          : <canvas ref={canvas} tabIndex={0} role="img" aria-label={label} aria-describedby={hintId} onKeyDown={onKeyDown} />}
-        {!failed && status && <p className="patch__status badge-stage__status" role="status">{status}</p>}
-      </div>
-      {!failed && <p id={hintId} className="badge-stage__hint">Drag to rotate · Pinch or scroll to zoom · Arrow keys to turn · R to reset the view</p>}
-    </div>
-  )
 }
 
 /**

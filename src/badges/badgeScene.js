@@ -19,6 +19,15 @@ const VIEWS = {
 }
 export const VIEW_NAMES = Object.keys(VIEWS)
 
+/** Exposure, environment and a scale on the three lights, by surface. */
+const LIGHTING = {
+  metal: { exposure: 1.15, environment: 0.85, lights: 1 },
+  copper: { exposure: 0.85, environment: 0.85, lights: 1 },
+  leather: { exposure: 0.72, environment: 0.85, lights: 0.55 },
+  // Ink on a pale matte face, with the steel back and pin still reading as metal.
+  printed: { exposure: 0.85, environment: 0.55, lights: 0.55 }
+}
+
 export class BadgeScene {
   /** @param {HTMLCanvasElement} canvas */
   constructor (canvas) {
@@ -68,17 +77,21 @@ export class BadgeScene {
     this.curvature = null
     this.reach = 65
     this.viewName = 'oblique'
+    this.fitWidth = false
   }
 
   /**
-   * Show a built badge (medalBadge.js). The scene owns it from here and disposes of it.
-   * Leather takes softer light: lit for polished metal, a diffuse surface washes out.
+   * Show a built badge (medalBadge.js), or a printed pin (src/pins/printedButton.js). The scene
+   * owns it from here and disposes of it. Leather and a printed face take softer light: lit for
+   * polished metal, a diffuse surface washes out. A model that is not `bendable` skips the
+   * curvature's preparation, and `bend` leaves it as it is.
    */
-  setModel (group, { metal = 'gold' } = {}) {
+  setModel (group, { metal = 'gold', bendable = true } = {}) {
     this.clearModel()
-    const soft = metal === 'leather'
-    this.renderer.toneMappingExposure = soft ? 0.72 : metal === 'copper' ? 0.85 : 1.15
-    this.lights.forEach((light, i) => { light.intensity = [3.4, 1.7, 1.3][i] * (soft ? 0.55 : 1) })
+    const light = LIGHTING[metal] ?? LIGHTING.metal
+    this.renderer.toneMappingExposure = light.exposure
+    this.scene.environmentIntensity = light.environment
+    this.lights.forEach((one, i) => { one.intensity = [3.4, 1.7, 1.3][i] * light.lights })
     this.model = group
     this.scene.add(group)
     // Keep long triangles short enough to bend smoothly; finer for a small badge.
@@ -101,7 +114,7 @@ export class BadgeScene {
     Object.assign(shadow, { left: -half, right: half, top: half, bottom: -half, near: 1, far: this.reach * 4 })
     this.lights[0].position.setLength(this.reach * 1.6)
     shadow.updateProjectionMatrix()
-    this.curvature = new PreparedBadgeCurvature(group, { maxEdgeLength: Math.max(0.8, this.reach / 36), maxVertices: 2_400_000 })
+    this.curvature = bendable ? new PreparedBadgeCurvature(group, { maxEdgeLength: Math.max(0.8, this.reach / 36), maxVertices: 2_400_000 }) : null
     this.controls.minDistance = this.reach * 0.9
     this.controls.maxDistance = this.reach * 3.6
     this.setView(this.viewName)
@@ -154,7 +167,9 @@ export class BadgeScene {
   setView (name) {
     this.viewName = VIEWS[name] ? name : 'oblique'
     const [x, y, z] = VIEWS[this.viewName]
-    const distance = this.reach * 1.75
+    // A pane taller than it is wide crops the sides at the badges' distance; a scene that asks to
+    // `fitWidth` (the pins) steps back until the model's width fits too.
+    const distance = this.reach * 1.75 * (this.fitWidth ? Math.max(1, 0.85 / this.camera.aspect) : 1)
     this.camera.position.set(x, y, z).normalize().multiplyScalar(distance)
     this.camera.up.set(0, 1, 0)
     if (this.viewName === 'top') this.camera.up.set(0, 0, -1)

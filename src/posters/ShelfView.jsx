@@ -62,7 +62,7 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
     else url.searchParams.delete(param)
     if (id && part && part !== 'overview') url.searchParams.set('part', part)
     else url.searchParams.delete('part')
-    if (!id) url.searchParams.delete('story')
+    if (!id) { url.searchParams.delete('story'); url.searchParams.delete('3d') }
     if (entering) openCard(url, id, { layout, filters })
     else writeHistory(url, { replace: true })
   }, [openCard, view, param, layout, filters])

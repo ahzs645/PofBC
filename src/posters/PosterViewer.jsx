@@ -9,9 +9,11 @@
 // recolourings (`variations`) gets a switch on its overview; the first is the drawing as it is. An
 // option may instead show layers of its own (`show`), for a piece whose drawing has faces that change. One
 // with a picture of the original (`reference`) can be compared with it, the picture laid into the
-// drawing's own frame; one made of pages (`pages`) can be read a page at a time.
+// drawing's own frame; one made of pages (`pages`) can be read a page at a time. One with a 3D
+// view of the object (`model`, a lazy component given the piece and its module) gets a Drawing / 3D
+// switch in the top bar, and the model takes the stage's place until it is switched back.
 
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { Suspense, useCallback, useEffect, useMemo, useState } from 'react'
 import { writeHistory } from '../site/browserHistory.js'
 import { Modal } from './ui/Modal.jsx'
 import { Poster } from './stage/Poster.jsx'
@@ -29,6 +31,7 @@ import { posterSvgString } from './export/exportSvg.js'
 import { ExportDialog } from './export/ExportDialog.jsx'
 import { posterTarget } from './export/targets.js'
 import { Select } from '../site/ui/Select.jsx'
+import { Segmented } from './ui/Segmented.jsx'
 
 const PANEL_INSET = 440 + 40
 // Keep in step with --pv-dock-h and the narrow sheet's height in posters.css.
@@ -36,19 +39,27 @@ const DOCK_HEIGHT = 60
 const SHEET_SHARE = 0.52
 const TOUR_SECONDS = 12
 const noExtras = () => ({})
+const LOOKS = [
+  { value: 'drawing', label: 'Drawing', title: 'The drawing, part by part' },
+  { value: 'model', label: '3D', title: 'The object in 3D' }
+]
 
 // Story mode is kept in the address (`&story=1`), so a link can open a poster as its story.
 const storyInAddress = () => new URLSearchParams(globalThis.location?.search ?? '').get('story') === '1'
-const writeStory = (on) => {
+const writeFlag = (name) => (on) => {
   if (!globalThis.history?.replaceState) return
   const url = new URL(globalThis.location.href)
-  if (on) url.searchParams.set('story', '1')
-  else url.searchParams.delete('story')
+  if (on) url.searchParams.set(name, '1')
+  else url.searchParams.delete(name)
   writeHistory(url, { replace: true })
 }
+const writeStory = writeFlag('story')
+// So is the 3D view (`&3d=1`).
+const modelInAddress = () => new URLSearchParams(globalThis.location?.search ?? '').get('3d') === '1'
+const writeModel = writeFlag('3d')
 
 export function PosterViewer({ meta, series, module, part, onPart, onExit, previous, next, shelf, backLabel = 'Posters', noun = 'poster' }) {
-  const { parts, order, regions, spotlight, svgRaw, prepare, upgrade, variations, reference, pages, figures } = module
+  const { parts, order, regions, spotlight, svgRaw, prepare, upgrade, variations, reference, pages, figures, model: Model } = module
   const useExtras = module.useExtras ?? noExtras
   const [svg, setSvg] = useState(null)
   // The drawing on the stage: the module's, or once it arrives the one its `upgrade` fetches.
@@ -74,11 +85,19 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
   const chapters = useMemo(() => order.filter((id) => parts[id].story?.length), [order, parts])
   const canTell = chapters.length > 1
   const [telling, setTelling] = useState(() => canTell && storyInAddress())
+  // The 3D view, for a piece that has one: it stands in for the stage, and opening a part, the
+  // story or the tour goes back to the drawing.
+  const [modelled, setModelled] = useState(() => Boolean(Model) && modelInAddress())
+  const look = useCallback((on) => {
+    setModelled(on)
+    writeModel(on)
+  }, [])
   const tell = useCallback((on) => {
     setTelling(on)
     writeStory(on)
     setAboutOpen(false)
-  }, [])
+    if (on) look(false)
+  }, [look])
 
   // The page under the viewer stays where it was and does not scroll behind it.
   useEffect(() => {
@@ -104,7 +123,12 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
     setAboutOpen(false)
     setPage(null)
     if (manual) tour.stop()
-  }, [onPart, tour.stop]) // eslint-disable-line react-hooks/exhaustive-deps
+    if (id && id !== 'overview') look(false)
+  }, [onPart, tour.stop, look]) // eslint-disable-line react-hooks/exhaustive-deps
+  const showModel = (on) => {
+    if (on) { tour.stop(); if (telling) tell(false); if (current !== 'overview') onPart('overview') }
+    look(on)
+  }
   const select = useCallback((id) => move(id, true), [move])
   const openAbout = () => {
     if (telling) { tell(false); select('overview'); setAboutOpen(true); return }
@@ -172,6 +196,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
   const dismiss = () => {
     if (current !== 'overview') select('overview')
     else if (telling) tell(false)
+    else if (modelled) look(false)
     else onExit()
   }
 
@@ -187,7 +212,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
           inset={inset}
           overview={current === 'overview'}
           spotlight={spotlight}
-          className={extras.className ?? ''}
+          className={`${extras.className ?? ''}${Model && modelled ? ' pv-stage--under' : ''}`}
           onSelect={select}
           onReady={setSvg}
         >
@@ -216,6 +241,14 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
             </div>
           )}
         </Poster>
+
+        {Model && modelled && (
+          <div className="pv-model" style={{ right: inset.right || undefined, bottom: narrow && panelOpen ? inset.bottom + 8 : undefined }}>
+            <Suspense fallback={<p className="pv-model-loading" role="status">Loading the 3D view…</p>}>
+              <Model meta={meta} module={module} swap={variation?.swap ?? null} variation={variation?.id ?? null} />
+            </Suspense>
+          </div>
+        )}
 
         <header className="pv-top">
           {/* The way back sits in the title itself: "← All posters │ REWARD: A Living Forest". */}
@@ -246,6 +279,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
                 <button type="button" className="pv-switch-step" disabled={!next} onClick={next?.open} title={next ? `Next: ${next.title} (])` : undefined} aria-label={next ? `Next ${noun}: ${next.title}` : `No next ${noun}`}>›</button>
               </div>
             )}
+            {Model && <Segmented className="pv-look" label="Show" options={LOOKS} value={modelled ? 'model' : 'drawing'} onChange={(value) => showModel(value === 'model')} />}
             <button type="button" className="pv-ghost" aria-pressed={!telling && aboutOpen && current === 'overview'} onClick={openAbout}>About</button>
             <button type="button" className="pv-ghost pv-tour-btn" aria-pressed={tour.playing} onClick={tour.toggle} title="Play the tour (P)">{tour.playing ? 'Stop' : 'Tour'}</button>
             <button type="button" className="pv-ghost pv-solid" onClick={() => openExport('poster')} disabled={!exportable} title={exportable ? 'Export (E)' : 'Export is ready once the full drawing has loaded'}>Export</button>

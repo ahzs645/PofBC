@@ -2,6 +2,7 @@
 // what each part says in story mode. Data only, in the signs' format (src/signs/forest-service/signs.js).
 
 import { PINS } from '../catalogue.js'
+import { diameterWords } from '../construction.js'
 
 // ── Sources ─────────────────────────────────────────────────────────────────────────────────────
 
@@ -47,8 +48,29 @@ const WELCOME_LINKS = [
 
 // ── Welcome to B.C. ─────────────────────────────────────────────────────────────────────────────
 
+// How the 3D view builds it (see ../construction.js). One straight-on photograph is all there is:
+// the size, the dome and the whole back are modelling choices. 1½ in is a common pin-back size.
+const WELCOME_CONSTRUCTION = {
+  kind: 'printed-button',
+  diameterMm: 38,
+  diameterStatus: 'illustrative',
+  dome: 0.02,
+  edge: 'rolled',
+  back: 'tin-back',
+  fitting: 'safety-pin',
+  fittingStatus: 'generic',
+  face: { svg: 'welcome-bc-pattison.svg', background: '#F1F2E9' },
+  evidence: [
+    'One straight-on photograph of the face; the back is not shown.',
+    'The face is matte, with no glare and no distortion of the lettering: flat or very slightly domed.',
+    'Shading only in a narrow band at the rim: a rolled edge.',
+    'A scuffed face and small chips at the rim suggest ink printed on metal; an inference.'
+  ]
+}
+
 const WELCOME_BC = {
   id: 'welcome-bc-pattison',
+  construction: WELCOME_CONSTRUCTION,
   spotlight: { keep: ['wbc-pin-face'] },
   variations: {
     label: 'Face',
@@ -74,7 +96,9 @@ const WELCOME_BC = {
             ['Maker', 'unknown'],
             ['Date', 'undated; no catalogue record found'],
             ['Rebuilt from', 'one supplied photograph'],
-            ['Drawing', '1000 × 1000 units: the face, six lines of outlined letters and the rule']
+            ['Drawing', '1000 × 1000 units: the face, six lines of outlined letters and the rule'],
+            ['Size in 3D', diameterWords(WELCOME_CONSTRUCTION)],
+            ['Back in 3D', 'generic: a plain tin back and safety pin, since the back is not shown']
           ] },
           { note: 'The typeface is unidentified: the headline letters are drawn for this button, the lower lines rebuilt from Latin Modern Mono and Nimbus Mono PS outlines. The diameter is unknown and the face colour is interpreted.' },
           { h: 'Related' },

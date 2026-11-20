@@ -1,0 +1,48 @@
+/* A pin's 3D view, in the poster viewer's dark glass (posters.css .pv-model holds it). The stage
+   is the badges' (BadgeStage.jsx, badges.css); the site's controls in it take the viewer's colours. */
+.pin-model {
+  --surface: var(--bg-2);
+  --outline: var(--line);
+  --ink: var(--text);
+  --ink-muted: var(--muted);
+  --ink-faint: var(--muted);
+  --track: rgba(0, 0, 0, 0.35);
+  --segment: var(--text);
+  --segment-shadow: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+.pin-model .segmented button[aria-pressed='true'] { color: var(--bg); }
+.pin-model .segmented button { white-space: nowrap; }
+.pin-model .badge-stage {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  flex: 1;
+  min-height: 0;
+}
+.pin-model .patch-stage__bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; padding: 8px 12px; border-bottom: 1px solid var(--outline); }
+.pin-model .patch-stage__tools { min-width: 0; }
+.pin-model .patch-stage__tools .field { margin: 0; }
+.pin-model .badge-stage__pane { background: radial-gradient(ellipse at 50% 40%, #2c3238 0%, #181c20 70%, #121518 100%); }
+.pin-model .patch__status { font-size: 13px; }
+.pin-model__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 14px;
+  padding: 8px 12px;
+  border-top: 1px solid var(--outline);
+}
+.pin-model__note { margin: 0; min-width: 0; color: var(--muted); font-size: 12.5px; line-height: 1.45; }
+.pin-model__exports { display: flex; gap: 6px; flex: none; }
+.pin-model__exports .pv-ghost { padding: 5px 12px; font-size: 13px; }
+.pin-model__error { margin: 0; padding: 0 12px 8px; color: var(--danger); font-size: 13px; }
+
+@media (max-width: 600px) {
+  .pin-model .badge-stage__hint { display: none; }
+  .pin-model__foot { flex-wrap: wrap; }
+  .pin-model .patch-stage__bar { padding: 6px 8px; gap: 6px; }
+  .pin-model .field--compact .segmented button { padding: 3px 8px; }
+}
