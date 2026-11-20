@@ -174,7 +174,7 @@ const buildTools = (latest) => [
   {
     name: 'set_lockup',
     description:
-      'Change what is shown. Every field is optional — pass only what should change. In the ' +
+      'Change what is shown. Every field is optional: pass only what should change. In the ' +
       'historical era the ministry may be any text, listed or not, and a newline in it forces a ' +
       'line break. In the current era the wording is fixed artwork: choose a ministry by its code ' +
       '(see list_current_marks), a language, and one of the four official colourways.',
@@ -227,7 +227,7 @@ const buildTools = (latest) => [
         },
         thirdLine: {
           type: 'string',
-          description: 'Flag era. A line after the ministry — a minister, a place, a bulletin number.'
+          description: 'Flag era. A line after the ministry: a minister, a place, a bulletin number.'
         },
         flagPalette: {
           type: 'string',
@@ -348,7 +348,7 @@ const buildTools = (latest) => [
 
       const next = { ...latest.current.state, ...patch }
       const contrast = describeContrast(next[markField], next[backgroundField])
-      return reply(`Colours updated. Contrast ${contrast.ratio ?? '?'}:1 — ${contrast.message}`, { contrast })
+      return reply(`Colours updated. Contrast ${contrast.ratio ?? '?'}:1. ${contrast.message}`, { contrast })
     }
   },
 
@@ -421,7 +421,7 @@ const buildTools = (latest) => [
     inputSchema: { type: 'object', properties: {} },
     execute: () => {
       const lines = CURRENT_MINISTRIES
-        .map((entry) => `${entry.code} — ${entry.en.replace(/\n/g, ' ')}`)
+        .map((entry) => `${entry.code}: ${entry.en.replace(/\n/g, ' ')}`)
       return reply(lines.join('\n'), {
         ministries: CURRENT_MINISTRIES.map(({ code, en, fr }) => ({ code, en, fr }))
       })
@@ -433,7 +433,7 @@ const buildTools = (latest) => [
     description:
       `Search the ${MINISTRIES.length} listed ministries and agencies. The search ignores case and ` +
       'punctuation, so "citizens services" finds "Ministry of Citizens’ Services". The list is a ' +
-      'convenience only — in the historical era set_lockup accepts any name, listed or not. For ' +
+      'convenience only; in the historical era set_lockup accepts any name, listed or not. For ' +
       'the current era use list_current_marks instead; its marks are fixed artwork.',
     inputSchema: {
       type: 'object',

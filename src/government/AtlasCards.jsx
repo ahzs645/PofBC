@@ -98,8 +98,8 @@ export const EvidenceCard = ({ node }) => {
   const [open, setOpen] = useState(false)
   const claims = node.evidence ?? []
   const caveats = [
-    node.unattached && !node.unplacedSub && !node.uncertain && 'Existed in this period — its responsible ministry is not yet established in the sources.',
-    node.unplacedSub && 'Existed in this period — which ministry or body it sat under is not established in the sources, so it is drawn apart.',
+    node.unattached && !node.unplacedSub && !node.uncertain && 'Existed in this period; its responsible ministry is not yet established in the sources.',
+    node.unplacedSub && 'Existed in this period, but which ministry or body it sat under is not established in the sources, so it is drawn apart.',
     node.reconcile && 'Its start is not settled: the sources give competing dates (see its events), and it is drawn from the year the review chose.',
     node.presence === 'seen' && `Its start is unknown. It is drawn because a source shows it by ${node.firstSeen}; the years between sightings are not each confirmed.`,
     node.uncertain && !node.reconcile && 'Not yet confirmed for this year: no source found so far shows it existed then, and none says it began later. Drawn faint because an unknown start is not a sign it did not exist.'
@@ -350,7 +350,7 @@ export const StaffingCard = ({ rows, year }) => {
             className="gov-staffing__bar"
             data-current={Number(row.fiscalYear.slice(0, 4)) === year || undefined}
             style={{ '--h': `${(row.value / max) * 100}%` }}
-            title={`${row.fiscalYear}: ${row.value.toLocaleString('en-CA')} FTE actual${budget.has(row.fiscalYear) ? `, ${budget.get(row.fiscalYear).toLocaleString('en-CA')} budgeted` : ''} — as “${row.printedAs}”`}
+            title={`${row.fiscalYear}: ${row.value.toLocaleString('en-CA')} FTE actual${budget.has(row.fiscalYear) ? `, ${budget.get(row.fiscalYear).toLocaleString('en-CA')} budgeted` : ''}, as “${row.printedAs}”`}
           >
             {budget.has(row.fiscalYear) && <span className="gov-staffing__budget" style={{ '--r': budget.get(row.fiscalYear) / row.value }} />}
           </span>

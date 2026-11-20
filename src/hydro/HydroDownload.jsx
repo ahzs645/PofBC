@@ -84,7 +84,7 @@ export const HydroDownload = ({ fileName, draw, canOutline = false, width: keptW
         }))}
         value={format}
         onChange={(id) => supported[id] && setFormat(id)}
-        hint={spec.vector ? 'Vector — scales to any size.' : 'Pixels. Choose a width at least as large as it will ever be shown.'}
+        hint={spec.vector ? 'Vector: scales to any size.' : 'Pixels. Choose a width at least as large as it will ever be shown.'}
       />
 
       {format === 'svg' && canOutline && (
@@ -96,7 +96,7 @@ export const HydroDownload = ({ fileName, draw, canOutline = false, width: keptW
           <p className="field__note">
             {outline
               ? 'The lettering becomes shapes, the same on every machine. It can no longer be edited as text.'
-              : 'The lettering stays live, asking for TeX Gyre Termes, then Nimbus Roman or Times — editable, but only as faithful as the font installed.'}
+              : 'The lettering stays live, asking for TeX Gyre Termes, then Nimbus Roman or Times: editable, but only as faithful as the font installed.'}
           </p>
         </>
       )}

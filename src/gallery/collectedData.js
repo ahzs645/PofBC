@@ -33,7 +33,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "vector-bc-housing-corporate-component-source-vector",
-        "label": "BC Housing — Emblem and wordmark",
+        "label": "BC Housing: Emblem and wordmark",
         "file": "identity-collected/bc-housing/bc-housing-corporate-component-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -57,7 +57,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-bc-housing-research-centre-source-vector",
-        "label": "BC Housing — Research Centre lockup",
+        "label": "BC Housing: Research Centre lockup",
         "file": "identity-collected/bc-housing/bc-housing-research-centre-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -81,7 +81,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "bc-housing-1978-rebuilt",
-        "label": "BC Housing Management Commission — House symbol and name, 1978",
+        "label": "BC Housing Management Commission: House symbol and name, 1978",
         "file": "identity-collected/bc-housing/bc-housing-1978-rebuilt.svg",
         "format": "svg",
         "isVector": true,
@@ -96,7 +96,7 @@ export const COLLECTED_BODIES = [
         "observedDate": "2026-11-12",
         "dateNote": "The report’s year, not an adoption date.",
         "evidenceType": "supplied-vector-reconstruction",
-        "notes": "BC drawn as a house — a pitched roof over the two letters, with a slit under the roof — beside “British Columbia Housing Management Commission” on three lines, in brown.",
+        "notes": "BC drawn as a house (a pitched roof over the two letters, with a slit under the roof) beside “British Columbia Housing Management Commission” on three lines, in brown.",
         "fidelityNote": "A supplied vector reconstruction, not original artwork: the symbol is two drawn paths (no automatic tracing) and the name is set in Nimbus Sans Bold outlines with close spacing; the original typeface is not verified, and the brown (#836458) approximates the scan.",
         "sha256": "1fceb7ba97d254cd89f0aafece6dede77e75bd3bcb6d2da4d645baf87d696550",
         "bytes": 31283,
@@ -105,7 +105,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "bc-housing-houses",
-        "label": "BC Housing — Houses and apartment block",
+        "label": "BC Housing: Houses and apartment block",
         "file": "identity-collected/bc-housing/bc-housing-houses.svg",
         "format": "svg",
         "isVector": true,
@@ -130,7 +130,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "bc-housing-houses-white",
-        "label": "BC Housing — Houses and apartment block, white",
+        "label": "BC Housing: Houses and apartment block, white",
         "file": "identity-collected/bc-housing/bc-housing-houses-white.svg",
         "format": "svg",
         "isVector": true,
@@ -166,11 +166,11 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Its wordmark is the BCRC acrostic — British Columbia Railway Company stepped down on four lines, with the initials in red — seen in three letterings: the heavier one on its website, and the wide Eurostile of the 2024 report’s cover and the Verdana of its letterhead.",
+    "notes": "Its wordmark is the BCRC acrostic (British Columbia Railway Company stepped down on four lines, with the initials in red), seen in three letterings: the heavier one on its website, and the wide Eurostile of the 2024 report’s cover and the Verdana of its letterhead.",
     "assets": [
       {
         "id": "source-bc-railway-company-bc-railway-company-png",
-        "label": "BC Rail — bc railway company",
+        "label": "BC Rail: bc railway company",
         "file": "identity-collected/bc-railway-company/bc-railway-company.png",
         "format": "png",
         "isVector": false,
@@ -208,12 +208,12 @@ export const COLLECTED_BODIES = [
         "dateNote": "The report's fiscal year, not an adoption date.",
         "darkBackground": false,
         "id": "bcrc-2024-cover-rebuilt",
-        "label": "BC Railway Company — Cover wordmark, 2024 report",
+        "label": "BC Railway Company: Cover wordmark, 2024 report",
         "file": "identity-collected/bc-railway-company/bcrc-2024-cover-rebuilt.svg",
         "reconstruction": true,
         "sourceLocator": "PDF page 1 (repeated on page 36), a 600 × 327 JPEG",
         "evidenceType": "supplied-vector-reconstruction",
-        "notes": "The four words stepped down to the right, each initial in red and the rest in purple-blue, in a wide oblique Eurostile — the BCRC acrostic, as the 2024 report's cover sets it.",
+        "notes": "The four words stepped down to the right, each initial in red and the rest in purple-blue, in a wide oblique Eurostile: the BCRC acrostic, as the 2024 report's cover sets it.",
         "fidelityNote": "A supplied reconstruction: genuine Eurostile Demi outlines with one shared widening (about 131%) and slant (about 15.4°), the red initials about 122% of the blue, each letter placed to the cover image (silhouette overlap 0.97). The cover is a JPEG, so the typeface is a match, not a recovery. Red #E63C2B and purple-blue #3A3376 are sampled from it.",
         "sha256": "a1ff2da285e8a6ef96a74f51a2429f96c307106dff5506308c2ac2c854e2584e",
         "bytes": 13379,
@@ -232,7 +232,7 @@ export const COLLECTED_BODIES = [
         "dateNote": "The report's fiscal year, not an adoption date.",
         "darkBackground": false,
         "id": "bcrc-2024-letterhead",
-        "label": "BC Railway Company — Letterhead wordmark, 2024 report",
+        "label": "BC Railway Company: Letterhead wordmark, 2024 report",
         "file": "identity-collected/bc-railway-company/bcrc-2024-letterhead.svg",
         "reconstruction": false,
         "sourceLocator": "PDF page 3, the management letter's heading",
@@ -251,15 +251,15 @@ export const COLLECTED_BODIES = [
         "publisher": "British Columbia Railway",
         "sourcePage": "https://www.cwrailway.ca/sites/default/files/Cariboo/Cariboo%20-%20Issue%2031.pdf",
         "sourceUrl": null,
-        "sourceLocator": "Lettering: The Cariboo, issue 31 (January 1998), flatcar article, “Painting” — the post-1972 roadname in Microgramma Bold Extended",
+        "sourceLocator": "Lettering: The Cariboo, issue 31 (January 1998), flatcar article, “Painting”: the post-1972 roadname in Microgramma Bold Extended",
         "sourceFile": null,
         "sourceDate": null,
         "observedDate": "2026-11-12",
         "evidenceType": "supplied-vector-reconstruction",
         "id": "bcr-dogwood-white",
-        "label": "British Columbia Railway — Dogwood disc and wordmark",
+        "label": "British Columbia Railway: Dogwood disc and wordmark",
         "file": "identity-collected/bc-railway-company/bcr-dogwood-white-lettering.svg",
-        "notes": "A white dogwood with green leaves on a gold disc, beside BRITISH COLUMBIA RAILWAY on three lines in a wide, squared grotesque — white, as the railway painted it on its green equipment. The mark of the British Columbia Railway name, from 1972; it is on the cover of J. F. Garden’s book British Columbia Railway and on the company’s shoulder patch.",
+        "notes": "A white dogwood with green leaves on a gold disc, beside BRITISH COLUMBIA RAILWAY on three lines in a wide, squared grotesque (white, as the railway painted it on its green equipment). The mark of the British Columbia Railway name, from 1972; it is on the cover of J. F. Garden’s book British Columbia Railway and on the company’s shoulder patch.",
         "fidelityNote": "A supplied vector reconstruction, not original artwork: the dogwood is two circles, five individually drawn petals, five leaves and fifteen stamen strokes, and the fourteen capitals are custom outlines in the manner of Microgramma Bold Extended, the typeface the BC Railway Historical & Technical Society’s The Cariboo names for the post-1972 roadname. Rebuilt after a photograph of a railcar, with an enlarged flower as a check; line widths follow the photograph (636 : 898 : 759). Colours (#F8BF00, #005631) are clean approximations, not verified specifications.",
         "sha256": "7a08c15730c4fce9575af51ffdeefdfc5ecbef8da94314a06cbc7ea82f08e574",
         "bytes": 10147,
@@ -275,13 +275,13 @@ export const COLLECTED_BODIES = [
         "publisher": "British Columbia Railway",
         "sourcePage": "https://www.cwrailway.ca/sites/default/files/Cariboo/Cariboo%20-%20Issue%2031.pdf",
         "sourceUrl": null,
-        "sourceLocator": "Lettering: The Cariboo, issue 31 (January 1998), flatcar article, “Painting” — the post-1972 roadname in Microgramma Bold Extended",
+        "sourceLocator": "Lettering: The Cariboo, issue 31 (January 1998), flatcar article, “Painting”: the post-1972 roadname in Microgramma Bold Extended",
         "sourceFile": null,
         "sourceDate": null,
         "observedDate": "2026-11-12",
         "evidenceType": "supplied-vector-reconstruction",
         "id": "bcr-dogwood-dark",
-        "label": "British Columbia Railway — Dogwood disc and wordmark, dark lettering",
+        "label": "British Columbia Railway: Dogwood disc and wordmark, dark lettering",
         "file": "identity-collected/bc-railway-company/bcr-dogwood-dark-lettering.svg",
         "notes": "The same mark with the lettering dark, for a light ground: the package’s adaptation, not a version the railway is documented using.",
         "fidelityNote": "A supplied vector reconstruction, not original artwork: the dogwood is two circles, five individually drawn petals, five leaves and fifteen stamen strokes, and the fourteen capitals are custom outlines in the manner of Microgramma Bold Extended, the typeface the BC Railway Historical & Technical Society’s The Cariboo names for the post-1972 roadname. Rebuilt after a photograph of a railcar, with an enlarged flower as a check; line widths follow the photograph (636 : 898 : 759). Colours (#F8BF00, #005631) are clean approximations, not verified specifications.",
@@ -368,7 +368,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "bc-assessment-svg",
-        "label": "BC Assessment — Full colour, official media kit",
+        "label": "BC Assessment: Full colour, official media kit",
         "file": "identity-collected/bc-assessment/bc-assessment.svg",
         "format": "svg",
         "isVector": true,
@@ -412,7 +412,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-bc-games-society-bc-games-svg",
-        "label": "BC Games — bc games",
+        "label": "BC Games: bc games",
         "file": "identity-collected/bc-games-society/bc-games.svg",
         "format": "svg",
         "isVector": true,
@@ -440,7 +440,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-bc-games-society-bc-games-society-svg",
-        "label": "BC Games — bc games society",
+        "label": "BC Games: bc games society",
         "file": "identity-collected/bc-games-society/bc-games-society.svg",
         "format": "svg",
         "isVector": true,
@@ -481,7 +481,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-legal-aid-bc-legal-aid-bc-horizontal-svg",
-        "label": "Legal Aid BC — legal aid bc horizontal",
+        "label": "Legal Aid BC: legal aid bc horizontal",
         "file": "identity-collected/legal-aid-bc/legal-aid-bc-horizontal.svg",
         "format": "svg",
         "isVector": true,
@@ -509,7 +509,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-legal-aid-bc-legal-aid-bc-svg",
-        "label": "Legal Aid BC — legal aid bc",
+        "label": "Legal Aid BC: legal aid bc",
         "file": "identity-collected/legal-aid-bc/legal-aid-bc.svg",
         "format": "svg",
         "isVector": true,
@@ -537,7 +537,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-legal-aid-bc-legal-aid-bc-vertical-svg",
-        "label": "Legal Aid BC — legal aid bc vertical",
+        "label": "Legal Aid BC: legal aid bc vertical",
         "file": "identity-collected/legal-aid-bc/legal-aid-bc-vertical.svg",
         "format": "svg",
         "isVector": true,
@@ -579,7 +579,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "vector-bclc-2009-colour-tagline-source-vector",
-        "label": "British Columbia Lottery Corporation — Older palette with tagline, 2009 service plan update",
+        "label": "British Columbia Lottery Corporation: Older palette with tagline, 2009 service plan update",
         "file": "identity-collected/bclc/bclc-2009-colour-tagline-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -604,7 +604,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-bclc-2009-reversed-source-vector",
-        "label": "British Columbia Lottery Corporation — White with coloured dots, 2009 service plan update",
+        "label": "British Columbia Lottery Corporation: White with coloured dots, 2009 service plan update",
         "file": "identity-collected/bclc/bclc-2009-reversed-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -629,7 +629,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-bclc-2011-reversed-tagline-source-vector",
-        "label": "British Columbia Lottery Corporation — White with coloured dots and tagline, 2010/11 annual report",
+        "label": "British Columbia Lottery Corporation: White with coloured dots and tagline, 2010/11 annual report",
         "file": "identity-collected/bclc/bclc-2011-reversed-tagline-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -673,7 +673,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-first-peoples-cultural-council-fpcc-svg",
-        "label": "FPCC — fpcc",
+        "label": "FPCC: fpcc",
         "file": "identity-collected/first-peoples-cultural-council/fpcc.svg",
         "format": "svg",
         "isVector": true,
@@ -701,7 +701,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-first-peoples-cultural-council-fpcc-eps",
-        "label": "FPCC — fpcc",
+        "label": "FPCC: fpcc",
         "file": "identity-collected/first-peoples-cultural-council/fpcc.eps",
         "format": "eps",
         "isVector": true,
@@ -743,7 +743,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-bc-transportation-financing-authority-bctfa-2000-01-white-svg",
-        "label": "BCTFA — bctfa 2000 01 white",
+        "label": "BCTFA: bctfa 2000 01 white",
         "file": "identity-collected/bc-transportation-financing-authority/bctfa-2000-01-white.svg",
         "format": "svg",
         "isVector": true,
@@ -786,7 +786,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "vector-columbia-power-2024-reversed-source-vector",
-        "label": "Columbia Power Corporation — Reversed, 2024 history book",
+        "label": "Columbia Power Corporation: Reversed, 2024 history book",
         "file": "identity-collected/columbia-power/columbia-power-2024-reversed-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -824,7 +824,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-bc-securities-commission-bcsc-svg",
-        "label": "BCSC — bcsc",
+        "label": "BCSC: bcsc",
         "file": "identity-collected/bc-securities-commission/bcsc.svg",
         "format": "svg",
         "isVector": true,
@@ -865,7 +865,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-columbia-basin-trust-columbia-basin-trust-white-svg",
-        "label": "Columbia Basin Trust — columbia basin trust white",
+        "label": "Columbia Basin Trust: columbia basin trust white",
         "file": "identity-collected/columbia-basin-trust/columbia-basin-trust-white.svg",
         "format": "svg",
         "isVector": true,
@@ -907,7 +907,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-bc-energy-regulator-bc-energy-regulator-svg",
-        "label": "BCER — bc energy regulator",
+        "label": "BCER: bc energy regulator",
         "file": "identity-collected/bc-energy-regulator/bc-energy-regulator.svg",
         "format": "svg",
         "isVector": true,
@@ -967,7 +967,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-bc-investment-management-corporation-bci-white-svg",
-        "label": "BCI — bci white",
+        "label": "BCI: bci white",
         "file": "identity-collected/bc-investment-management-corporation/bci-white.svg",
         "format": "svg",
         "isVector": true,
@@ -1009,7 +1009,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "vector-infrastructure-bc-2026-colour-source-vector",
-        "label": "Infrastructure BC — Full colour, Spring 2026 brochure",
+        "label": "Infrastructure BC: Full colour, Spring 2026 brochure",
         "file": "identity-collected/infrastructure-bc/infrastructure-bc-2026-colour-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -1034,7 +1034,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-infrastructure-bc-2026-reversed-source-vector",
-        "label": "Infrastructure BC — Reversed, Spring 2026 brochure",
+        "label": "Infrastructure BC: Reversed, Spring 2026 brochure",
         "file": "identity-collected/infrastructure-bc/infrastructure-bc-2026-reversed-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -1074,7 +1074,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-royal-bc-museum-royal-bc-museum-svg",
-        "label": "Royal BC Museum — royal bc museum",
+        "label": "Royal BC Museum: royal bc museum",
         "file": "identity-collected/royal-bc-museum/royal-bc-museum.svg",
         "format": "svg",
         "isVector": true,
@@ -1115,7 +1115,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-skilledtradesbc-skilledtradesbc-svg",
-        "label": "SkilledTradesBC — skilledtradesbc",
+        "label": "SkilledTradesBC: skilledtradesbc",
         "file": "identity-collected/skilledtradesbc/skilledtradesbc.svg",
         "format": "svg",
         "isVector": true,
@@ -1157,7 +1157,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "vector-community-living-bc-2014-reversed-source-vector",
-        "label": "Community Living British Columbia — Reversed, 2013/14 annual report",
+        "label": "Community Living British Columbia: Reversed, 2013/14 annual report",
         "file": "identity-collected/community-living-bc/community-living-bc-2014-reversed-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -1183,7 +1183,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-community-living-bc-2023-colour-source-vector",
-        "label": "Community Living British Columbia — Full colour, 2023 report",
+        "label": "Community Living British Columbia: Full colour, 2023 report",
         "file": "identity-collected/community-living-bc/community-living-bc-2023-colour-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -1222,7 +1222,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-knowledge-network-knowledge-network-svg",
-        "label": "Knowledge Network — knowledge network",
+        "label": "Knowledge Network: knowledge network",
         "file": "identity-collected/knowledge-network/knowledge-network.svg",
         "format": "svg",
         "isVector": true,
@@ -1252,7 +1252,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-knowledge-network-knowledge-network-colour-eps",
-        "label": "Knowledge Network — knowledge network colour",
+        "label": "Knowledge Network: knowledge network colour",
         "file": "identity-collected/knowledge-network/knowledge-network-colour.eps",
         "format": "eps",
         "isVector": true,
@@ -1295,7 +1295,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "vector-pavco-2025-26-colour-source-vector",
-        "label": "British Columbia Pavilion Corporation — Full colour, FY2025/26 year in review",
+        "label": "British Columbia Pavilion Corporation: Full colour, FY2025/26 year in review",
         "file": "identity-collected/bc-pavilion-corporation/pavco-2025-26-colour-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -1320,7 +1320,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-pavco-2023-reversed-source-vector",
-        "label": "British Columbia Pavilion Corporation — White, 2023–2026 accessibility plan",
+        "label": "British Columbia Pavilion Corporation: White, 2023–2026 accessibility plan",
         "file": "identity-collected/bc-pavilion-corporation/pavco-2023-reversed-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -1360,7 +1360,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "vector-ticorp-2025-colour-source-vector",
-        "label": "Transportation Investment Corporation — Full colour, Summer 2025 project update",
+        "label": "Transportation Investment Corporation: Full colour, Summer 2025 project update",
         "file": "identity-collected/transportation-investment-corporation/ticorp-2025-colour-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -1385,7 +1385,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-ticorp-2020-reversed-source-vector",
-        "label": "Transportation Investment Corporation — White, Spring 2020 project overview",
+        "label": "Transportation Investment Corporation: White, Spring 2020 project overview",
         "file": "identity-collected/transportation-investment-corporation/ticorp-2020-reversed-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -1425,7 +1425,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-destination-bc-destination-bc-svg",
-        "label": "Destination BC — destination bc",
+        "label": "Destination BC: destination bc",
         "file": "identity-collected/destination-bc/destination-bc.svg",
         "format": "svg",
         "isVector": true,
@@ -1467,7 +1467,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-forest-enhancement-society-fesbc-10th-anniversary-svg",
-        "label": "FESBC — fesbc 10th anniversary",
+        "label": "FESBC: fesbc 10th anniversary",
         "file": "identity-collected/forest-enhancement-society/fesbc-10th-anniversary.svg",
         "format": "svg",
         "isVector": true,
@@ -1495,7 +1495,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-forest-enhancement-society-fesbc-horizontal-eps",
-        "label": "FESBC — fesbc horizontal",
+        "label": "FESBC: fesbc horizontal",
         "file": "identity-collected/forest-enhancement-society/fesbc-horizontal.eps",
         "format": "eps",
         "isVector": true,
@@ -1523,7 +1523,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-forest-enhancement-society-fesbc-vertical-eps",
-        "label": "FESBC — fesbc vertical",
+        "label": "FESBC: fesbc vertical",
         "file": "identity-collected/forest-enhancement-society/fesbc-vertical.eps",
         "format": "eps",
         "isVector": true,
@@ -1565,7 +1565,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-bc-infrastructure-benefits-bcib-mobile-png",
-        "label": "BCIB — bcib mobile",
+        "label": "BCIB: bcib mobile",
         "file": "identity-collected/bc-infrastructure-benefits/bcib-mobile.png",
         "format": "png",
         "isVector": false,
@@ -1592,7 +1592,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-bc-infrastructure-benefits-bcib-building-opportunity-here-reverse-png",
-        "label": "BCIB — bcib building opportunity here reverse",
+        "label": "BCIB: bcib building opportunity here reverse",
         "file": "identity-collected/bc-infrastructure-benefits/bcib-building-opportunity-here-reverse.png",
         "format": "png",
         "isVector": false,
@@ -1619,7 +1619,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-bcib-2022-horizontal-reversed-source-vector",
-        "label": "BC Infrastructure Benefits — Full name, reversed, 2021/22 report",
+        "label": "BC Infrastructure Benefits: Full name, reversed, 2021/22 report",
         "file": "identity-collected/bc-infrastructure-benefits/bcib-2022-horizontal-reversed-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -1643,7 +1643,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-bcib-2025-tagline-reversed-source-vector",
-        "label": "BC Infrastructure Benefits — “Building Opportunity Here”, reversed, 2024/25 report",
+        "label": "BC Infrastructure Benefits: “Building Opportunity Here”, reversed, 2024/25 report",
         "file": "identity-collected/bc-infrastructure-benefits/bcib-2025-tagline-reversed-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -1680,7 +1680,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-innovate-bc-innovate-bc-white-eps",
-        "label": "Innovate BC — innovate bc white",
+        "label": "Innovate BC: innovate bc white",
         "file": "identity-collected/innovate-bc/innovate-bc-white.eps",
         "format": "eps",
         "isVector": true,
@@ -1710,7 +1710,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "innovate-bc-2024-colour",
-        "label": "Innovate BC — Full colour, 2024/2025 Impact Report",
+        "label": "Innovate BC: Full colour, 2024/2025 Impact Report",
         "file": "identity-collected/innovate-bc/innovate-bc-2024-colour.svg",
         "format": "svg",
         "isVector": false,
@@ -1749,7 +1749,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "vector-bcfma-2021-source-vector",
-        "label": "BC Family Maintenance Agency — Teal emblem and wordmark, 2020/21 report",
+        "label": "BC Family Maintenance Agency: Teal emblem and wordmark, 2020/21 report",
         "file": "identity-collected/bc-family-maintenance-agency/bcfma-2021-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -1787,7 +1787,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-bc-financial-services-authority-bcfsa-svg",
-        "label": "BCFSA — bcfsa",
+        "label": "BCFSA: bcfsa",
         "file": "identity-collected/bc-financial-services-authority/bcfsa.svg",
         "format": "svg",
         "isVector": true,
@@ -1829,7 +1829,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-inbc-inbc-svg",
-        "label": "InBC — inbc",
+        "label": "InBC: inbc",
         "file": "identity-collected/inbc/inbc.svg",
         "format": "svg",
         "isVector": true,
@@ -1871,7 +1871,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "vector-bccie-2022-source-vector",
-        "label": "BC Council for International Education — Full colour, 2022–2025 strategic plan",
+        "label": "BC Council for International Education: Full colour, 2022–2025 strategic plan",
         "file": "identity-collected/bc-council-for-international-education/bccie-2022-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -1909,7 +1909,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-forestry-innovation-investment-forestry-innovation-investment-svg",
-        "label": "FII — forestry innovation investment",
+        "label": "FII: forestry innovation investment",
         "file": "identity-collected/forestry-innovation-investment/forestry-innovation-investment.svg",
         "format": "svg",
         "isVector": true,
@@ -1988,7 +1988,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-interior-health-interior-health-stacked-jpg",
-        "label": "Interior Health — interior health stacked",
+        "label": "Interior Health: interior health stacked",
         "file": "identity-collected/interior-health/interior-health-stacked.jpg",
         "format": "jpg",
         "isVector": false,
@@ -2012,7 +2012,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-interior-health-interior-health-symbol-jpg",
-        "label": "Interior Health — interior health symbol",
+        "label": "Interior Health: interior health symbol",
         "file": "identity-collected/interior-health/interior-health-symbol.jpg",
         "format": "jpg",
         "isVector": false,
@@ -2036,7 +2036,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-interior-health-blue-horizontal-source-extraction",
-        "label": "Interior Health — Blue, horizontal, 2023 roadmap",
+        "label": "Interior Health: Blue, horizontal, 2023 roadmap",
         "file": "identity-collected/interior-health/interior-health-blue-horizontal-source-extraction.svg",
         "format": "svg",
         "isVector": true,
@@ -2079,7 +2079,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-island-health-island-health-svg",
-        "label": "Island Health — island health",
+        "label": "Island Health: island health",
         "file": "identity-collected/island-health/island-health.svg",
         "format": "svg",
         "isVector": true,
@@ -2104,7 +2104,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-island-health-island-health-white-svg",
-        "label": "Island Health — island health white",
+        "label": "Island Health: island health white",
         "file": "identity-collected/island-health/island-health-white.svg",
         "format": "svg",
         "isVector": true,
@@ -2261,7 +2261,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "vector-phsa-black-source-extraction",
-        "label": "Provincial Health Services Authority — Black",
+        "label": "Provincial Health Services Authority: Black",
         "file": "identity-collected/provincial-health-services-authority/phsa-black-source-extraction.svg",
         "format": "svg",
         "isVector": true,
@@ -2286,7 +2286,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-phsa-white-source-extraction",
-        "label": "Provincial Health Services Authority — White",
+        "label": "Provincial Health Services Authority: White",
         "file": "identity-collected/provincial-health-services-authority/phsa-white-source-extraction.svg",
         "format": "svg",
         "isVector": true,
@@ -2364,7 +2364,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-first-nations-health-authority-fnha-horizontal-png",
-        "label": "FNHA — fnha horizontal",
+        "label": "FNHA: fnha horizontal",
         "file": "identity-collected/first-nations-health-authority/fnha-horizontal.png",
         "format": "png",
         "isVector": false,
@@ -2389,7 +2389,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-first-nations-health-authority-fnha-white-png",
-        "label": "FNHA — fnha white",
+        "label": "FNHA: fnha white",
         "file": "identity-collected/first-nations-health-authority/fnha-white.png",
         "format": "png",
         "isVector": false,
@@ -2415,7 +2415,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-fnha-icon",
-        "label": "First Nations Health Authority — Symbol",
+        "label": "First Nations Health Authority: Symbol",
         "file": "identity-collected/first-nations-health-authority/fnha-icon.svg",
         "format": "svg",
         "isVector": true,
@@ -2439,7 +2439,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-fnha-logo-colour",
-        "label": "First Nations Health Authority — Full colour",
+        "label": "First Nations Health Authority: Full colour",
         "file": "identity-collected/first-nations-health-authority/fnha-logo-colour.svg",
         "format": "svg",
         "isVector": true,
@@ -2464,7 +2464,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-fnha-logo-white",
-        "label": "First Nations Health Authority — White lettering",
+        "label": "First Nations Health Authority: White lettering",
         "file": "identity-collected/first-nations-health-authority/fnha-logo-white.svg",
         "format": "svg",
         "isVector": true,
@@ -2554,7 +2554,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "pge-map-green-livery",
-        "label": "Pacific Great Eastern — Map mark",
+        "label": "Pacific Great Eastern: Map mark",
         "file": "identity-collected/pacific-great-eastern-railway/pge-map-green-livery.svg",
         "format": "svg",
         "isVector": true,
@@ -2598,7 +2598,7 @@ export const COLLECTED_BODIES = [
         "id": "pge-map-solid",
         "variantOf": "pge-map-green-livery",
         "versionLabel": "White panel",
-        "label": "Pacific Great Eastern — Map mark, white panel",
+        "label": "Pacific Great Eastern: Map mark, white panel",
         "file": "identity-collected/pacific-great-eastern-railway/pge-map-solid.svg",
         "format": "svg",
         "isVector": true,
@@ -2623,7 +2623,7 @@ export const COLLECTED_BODIES = [
         "id": "pge-map-striped",
         "variantOf": "pge-map-green-livery",
         "versionLabel": "Striped",
-        "label": "Pacific Great Eastern — Map mark, striped",
+        "label": "Pacific Great Eastern: Map mark, striped",
         "file": "identity-collected/pacific-great-eastern-railway/pge-map-striped.svg",
         "format": "svg",
         "isVector": true,
@@ -2949,7 +2949,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "bc-power-commission-rebuilt",
-        "label": "British Columbia Power Commission — Emblem",
+        "label": "British Columbia Power Commission: Emblem",
         "file": "identity-collected/bc-power-commission/bc-power-commission-rebuilt.svg",
         "format": "svg",
         "isVector": true,
@@ -3152,7 +3152,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-bc-development-corporation-bc-development-1985-logo-png",
-        "label": "British Columbia Development Corporation — The Province’s BC and flag, 1985",
+        "label": "British Columbia Development Corporation: The Province’s BC and flag, 1985",
         "file": "identity-collected/bc-development-corporation/bc-development-1985-logo.png",
         "format": "png",
         "isVector": false,
@@ -3177,7 +3177,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-bc-development-corporation-bc-development-1985-logo-context-png",
-        "label": "British Columbia Development Corporation — BC and flag under its name, 1985",
+        "label": "British Columbia Development Corporation: BC and flag under its name, 1985",
         "file": "identity-collected/bc-development-corporation/bc-development-1985-logo-context.png",
         "format": "png",
         "isVector": false,
@@ -3202,7 +3202,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "bcdc-prism-1975",
-        "label": "British Columbia Development Corporation — Four prisms and four-line name",
+        "label": "British Columbia Development Corporation: Four prisms and four-line name",
         "file": "identity-collected/bc-development-corporation/bcdc-prism-1975-rebuilt.svg",
         "format": "svg",
         "isVector": true,
@@ -3231,8 +3231,8 @@ export const COLLECTED_BODIES = [
           }
         ],
         "evidenceType": "supplied-vector-reconstruction",
-        "notes": "Four outlined prisms turned about a central gap, beside “British Columbia Development Corporation” on four lines of serif type — the corporation’s first known emblem, from its newspaper advertisements of 1975–76.",
-        "fidelityNote": "A supplied vector reconstruction, not original artwork: one idealized three-face prism repeated through four quarter turns, then scaled vertically by 15/14 to the references, built as filled compound paths with transparent faces (no automatic tracing). The name is outlined Nimbus Roman fitted to the scans — an approximation, not an identification of the original typeface. Black, as printed in newspapers. The 1975 newspaper crop is kept as a download.",
+        "notes": "Four outlined prisms turned about a central gap, beside “British Columbia Development Corporation” on four lines of serif type: the corporation’s first known emblem, from its newspaper advertisements of 1975–76.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: one idealized three-face prism repeated through four quarter turns, then scaled vertically by 15/14 to the references, built as filled compound paths with transparent faces (no automatic tracing). The name is outlined Nimbus Roman fitted to the scans: an approximation, not an identification of the original typeface. Black, as printed in newspapers. The 1975 newspaper crop is kept as a download.",
         "sha256": "7cb7f1adc135d5ab94590a7e2b2b085a3a1fe9139a48ae092392c976108e2ca3",
         "bytes": 64819,
         "darkBackground": false,
@@ -3247,7 +3247,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "bcdc-four-square-serif-1980",
-        "label": "The Development Corporation — Serif name over four squares",
+        "label": "The Development Corporation: Serif name over four squares",
         "file": "identity-collected/bc-development-corporation/bcdc-four-square-serif-1980-rebuilt.svg",
         "format": "svg",
         "isVector": true,
@@ -3260,7 +3260,7 @@ export const COLLECTED_BODIES = [
         "sourceFile": "Canadian Intellectual Property Office, application 0460346",
         "sourceDate": "1980-10-22",
         "observedDate": "2026-11-14",
-        "dateNote": "The specimen of a trademark filed on 22 October 1980 and registered on 25 June 1982 (TMA270427), claiming use in Canada since at least 31 March 1980 — the owner’s claim, not a verified first use. Cancelled by the owner on 3 November 1989, after BCDC’s assets had passed to BC Enterprise Corporation. Filed the same day as First Capital City’s mark (0460347).",
+        "dateNote": "The specimen of a trademark filed on 22 October 1980 and registered on 25 June 1982 (TMA270427), claiming use in Canada since at least 31 March 1980 (the owner’s claim, not a verified first use). Cancelled by the owner on 3 November 1989, after BCDC’s assets had passed to BC Enterprise Corporation. Filed the same day as First Capital City’s mark (0460347).",
         "evidenceType": "supplied-vector-reconstruction",
         "notes": "“The Development Corporation” in three lines of light serif capitals above four thin, square-cornered outlined squares: British Columbia Development Corporation’s second identity, registered as its trademark.",
         "fidelityNote": "A supplied vector reconstruction, not original artwork: the four outlined squares are constructed geometry and every letter a hand-authored outline after the one-bit CIPO specimen (no automatic tracing). Raster irregularities are regularized; the historical typeface is not identified. Black, as the specimen is; no official colour is recorded. The CIPO specimen is kept as a download.",
@@ -3278,7 +3278,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "bcdc-four-square-symbol-1980",
-        "label": "The Development Corporation — Four squares",
+        "label": "The Development Corporation: Four squares",
         "file": "identity-collected/bc-development-corporation/bcdc-four-square-symbol-1980-rebuilt.svg",
         "format": "svg",
         "isVector": true,
@@ -3291,7 +3291,7 @@ export const COLLECTED_BODIES = [
         "sourceFile": "Canadian Intellectual Property Office, application 0494945",
         "sourceDate": "1982-11-16",
         "observedDate": "2026-11-14",
-        "dateNote": "The specimen of a trademark for the symbol alone (“Squares Design”), filed on 16 November 1982 and registered on 22 July 1983 (TMA281645), claiming use in Canada since at least 31 March 1980 — the owner’s claim, not a verified first use. Cancelled by the owner on 3 November 1989.",
+        "dateNote": "The specimen of a trademark for the symbol alone (“Squares Design”), filed on 16 November 1982 and registered on 22 July 1983 (TMA281645), claiming use in Canada since at least 31 March 1980 (the owner’s claim, not a verified first use). Cancelled by the owner on 3 November 1989.",
         "evidenceType": "supplied-vector-reconstruction",
         "notes": "The four thin, square-cornered outlined squares alone, as British Columbia Development Corporation registered them.",
         "fidelityNote": "A supplied vector reconstruction, not original artwork: the four outlined squares are constructed geometry and every letter a hand-authored outline after the one-bit CIPO specimen (no automatic tracing). Raster irregularities are regularized; the historical typeface is not identified. Black, as the specimen is; no official colour is recorded. The CIPO specimen is kept as a download.",
@@ -3309,7 +3309,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "bcdc-four-square-sans-1981",
-        "label": "The Development Corporation — Bold name over four rounded squares",
+        "label": "The Development Corporation: Bold name over four rounded squares",
         "file": "identity-collected/bc-development-corporation/bcdc-four-square-sans-1981-rebuilt.svg",
         "format": "svg",
         "isVector": true,
@@ -3340,7 +3340,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "bcdc-four-square-horizontal-1981",
-        "label": "The Development Corporation — Four rounded squares beside the name",
+        "label": "The Development Corporation: Four rounded squares beside the name",
         "file": "identity-collected/bc-development-corporation/bcdc-four-square-horizontal-1981-rebuilt.svg",
         "format": "svg",
         "isVector": true,
@@ -3384,7 +3384,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "bcpc-stacked-white",
-        "label": "British Columbia Petroleum Corporation — Emblem and name",
+        "label": "British Columbia Petroleum Corporation: Emblem and name",
         "file": "identity-collected/bc-petroleum-corporation/bcpc-stacked-logo-white.svg",
         "format": "svg",
         "isVector": true,
@@ -3399,7 +3399,7 @@ export const COLLECTED_BODIES = [
         "observedDate": "2026-11-12",
         "dateNote": "The report’s year, not an adoption date.",
         "evidenceType": "supplied-vector-reconstruction",
-        "notes": "A curled flame — a drop whose tail turns into a ring — over “British Columbia Petroleum Corporation” on four lines, set right, in a heavy old-style serif, white on the black cover of the 1982/83 annual report.",
+        "notes": "A curled flame (a drop whose tail turns into a ring) over “British Columbia Petroleum Corporation” on four lines, set right, in a heavy old-style serif, white on the black cover of the 1982/83 annual report.",
         "fidelityNote": "A supplied reconstruction: the emblem is one compound shape of eight cubic curves and two straight edges, with a real opening; the wordmark is 17 drawn letterforms in the manner of Goudy Heavyface (an inference from their shapes), placed to the 1982/83 scan, its worn C completed from Columbia’s. Emblem overlap 94–96% with the two scans; lettering about 77%. Print colours are not known; black and white follow the monochrome scans.",
         "sha256": "4de8040328088762ab23f8c5f58dccd21c43931d8e90f1a09244d7339134c8f5",
         "bytes": 17504,
@@ -3422,7 +3422,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "bcpc-stacked-black",
-        "label": "British Columbia Petroleum Corporation — Emblem and name, black",
+        "label": "British Columbia Petroleum Corporation: Emblem and name, black",
         "file": "identity-collected/bc-petroleum-corporation/bcpc-stacked-logo-black.svg",
         "format": "svg",
         "isVector": true,
@@ -3448,7 +3448,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "bcpc-emblem-black",
-        "label": "British Columbia Petroleum Corporation — Emblem",
+        "label": "British Columbia Petroleum Corporation: Emblem",
         "file": "identity-collected/bc-petroleum-corporation/bcpc-emblem-black.svg",
         "format": "svg",
         "isVector": true,
@@ -3486,7 +3486,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "bcpc-emblem-white",
-        "label": "British Columbia Petroleum Corporation — Emblem, white",
+        "label": "British Columbia Petroleum Corporation: Emblem, white",
         "file": "identity-collected/bc-petroleum-corporation/bcpc-emblem-white.svg",
         "format": "svg",
         "isVector": true,
@@ -3525,7 +3525,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "ocean-falls-ofc-vector",
-        "label": "Ocean Falls Corporation — OFC trademark",
+        "label": "Ocean Falls Corporation: OFC trademark",
         "file": "identity-collected/ocean-falls-corporation/ocean-falls-ofc.svg",
         "format": "svg",
         "isVector": true,
@@ -3584,7 +3584,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "bc-steamship-round-logo",
-        "label": "British Columbia Steamship Company (1975) Ltd. — Round logo",
+        "label": "British Columbia Steamship Company (1975) Ltd.: Round logo",
         "file": "identity-collected/bc-steamship-company/bc-steamship-round-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -3801,7 +3801,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-bc-resources-investment-corporation-bcric-share-certificate-jpg",
-        "label": "Full share certificate, 1979 — context image",
+        "label": "Full share certificate, 1979: context image",
         "file": "identity-collected/bc-resources-investment-corporation/bcric-share-certificate.jpg",
         "format": "jpg",
         "isVector": false,
@@ -3882,7 +3882,7 @@ export const COLLECTED_BODIES = [
         "dateNote": "Documented in use on the 1982/83 annual report, whose minister’s letter is dated 29 June 1983; the designer, adoption date and period of use are unconfirmed.",
         "evidenceType": "supplied-vector-reconstruction",
         "id": "bcsc-1983-white",
-        "label": "BC Systems — BCSC wordmark, 1982/83 annual report",
+        "label": "BC Systems: BCSC wordmark, 1982/83 annual report",
         "file": "identity-collected/bc-systems-corporation/bcsc-1983-white.svg",
         "notes": "BCSC in heavy, squared italic capitals with offset counters, white on the black cover of the 1982/83 annual report. Designer and adoption date unconfirmed.",
         "fidelityNote": "A supplied geometric reconstruction, not original artwork: B, C and S built upright from straight edges and short corner joins, then given one 30° italic shear, with the B’s offset counters, the C’s middle elbow and the S’s contrast kept, and spacing measured against the cover scan (about 95% overlap). The cover’s slight tilt is treated as scan distortion. The typeface is not identified. The cover scan is kept as a download.",
@@ -3920,7 +3920,7 @@ export const COLLECTED_BODIES = [
         "dateNote": "Documented in use on the 1982/83 annual report, whose minister’s letter is dated 29 June 1983; the designer, adoption date and period of use are unconfirmed.",
         "evidenceType": "supplied-vector-reconstruction",
         "id": "bcsc-1983-black",
-        "label": "BC Systems — BCSC wordmark, black",
+        "label": "BC Systems: BCSC wordmark, black",
         "file": "identity-collected/bc-systems-corporation/bcsc-1983-black.svg",
         "notes": "The same wordmark in black, for a light ground: the package’s version, not one the report shows.",
         "fidelityNote": "A supplied geometric reconstruction, not original artwork: B, C and S built upright from straight edges and short corner joins, then given one 30° italic shear, with the B’s offset counters, the C’s middle elbow and the S’s contrast kept, and spacing measured against the cover scan (about 95% overlap). The cover’s slight tilt is treated as scan distortion. The typeface is not identified. The cover scan is kept as a download.",
@@ -4063,7 +4063,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-urban-transit-authority-urban-transit-authority-png",
-        "label": "Urban Transit Authority — signature",
+        "label": "Urban Transit Authority: signature",
         "file": "identity-collected/urban-transit-authority/urban-transit-authority.png",
         "format": "png",
         "isVector": false,
@@ -4153,7 +4153,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-expo-86-corporation-expo86-symbol-svg",
-        "label": "Expo 86 — symbol",
+        "label": "Expo 86: symbol",
         "file": "identity-collected/expo-86-corporation/expo86-symbol.svg",
         "format": "svg",
         "isVector": true,
@@ -4180,7 +4180,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-expo-86-corporation-expo86-wordmark-svg",
-        "label": "Expo 86 — wordmark",
+        "label": "Expo 86: wordmark",
         "file": "identity-collected/expo-86-corporation/expo86-wordmark.svg",
         "format": "svg",
         "isVector": true,
@@ -4220,7 +4220,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "bc-place-1983-rebuilt",
-        "label": "British Columbia Place Ltd. — Symbol and wordmark",
+        "label": "British Columbia Place Ltd.: Symbol and wordmark",
         "file": "identity-collected/bc-place-ltd/bc-place-1983-rebuilt.svg",
         "format": "svg",
         "isVector": true,
@@ -4245,7 +4245,7 @@ export const COLLECTED_BODIES = [
           }
         ],
         "evidenceType": "supplied-vector-reconstruction",
-        "notes": "The blue b/c/p symbol — bowls on a shared stem inside a fine offset outline — beside “british columbia place” on three staggered lines.",
+        "notes": "The blue b/c/p symbol (bowls on a shared stem inside a fine offset outline) beside “british columbia place” on three staggered lines.",
         "fidelityNote": "A supplied vector reconstruction, not original artwork: the symbol is built geometrically (equal circular bowls on an equilateral grid, two stems, a fine offset outline) and each letter is a custom outline after the scan (no automatic tracing). The wordmark is consistent with ITC Bauhaus; the weight and any modifications are unconfirmed. The blue (#3093D2) is sampled from the scan, not an original specification. The annual-report image is kept as a download.",
         "sha256": "a2925f26a75bf58f04d7b5322a99e3ef94646149c0708f6f4678a8a9e226827f",
         "bytes": 9202,
@@ -4340,7 +4340,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "vector-forest-renewal-bc-2000-colour-source-vector",
-        "label": "Forest Renewal BC — Full colour, December 2000 funded-project report",
+        "label": "Forest Renewal BC: Full colour, December 2000 funded-project report",
         "file": "identity-collected/forest-renewal-bc/forest-renewal-bc-2000-colour-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -4365,7 +4365,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-forest-renewal-bc-1999-black-source-vector",
-        "label": "Forest Renewal BC — Black, March 1999 woodlot inventory manual",
+        "label": "Forest Renewal BC: Black, March 1999 woodlot inventory manual",
         "file": "identity-collected/forest-renewal-bc/forest-renewal-bc-1999-black-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -4451,7 +4451,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "vector-bc-oil-gas-commission-2014",
-        "label": "BC Oil and Gas Commission — Full colour, 2014 report",
+        "label": "BC Oil and Gas Commission: Full colour, 2014 report",
         "file": "identity-collected/oil-and-gas-commission/bc-oil-gas-commission-2014.svg",
         "format": "svg",
         "isVector": true,
@@ -4625,7 +4625,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "vector-partnerships-bc-2012",
-        "label": "Partnerships British Columbia — Full colour, 2012/13 report",
+        "label": "Partnerships British Columbia: Full colour, 2012/13 report",
         "file": "identity-collected/partnerships-bc/partnerships-bc-2012.svg",
         "format": "svg",
         "isVector": true,
@@ -4694,7 +4694,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "vector-bc-transmission-2009",
-        "label": "British Columbia Transmission Corporation — Short name, 2009 service plan",
+        "label": "British Columbia Transmission Corporation: Short name, 2009 service plan",
         "file": "identity-collected/bc-transmission-corporation/bc-transmission-2009.svg",
         "format": "svg",
         "isVector": true,
@@ -5213,7 +5213,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "fvhr-emblem-colour",
-        "label": "Fraser Valley Health Region — Flower and cross",
+        "label": "Fraser Valley Health Region: Flower and cross",
         "file": "identity-collected/fraser-valley-health-region/fvhr-emblem-color.svg",
         "format": "svg",
         "isVector": true,
@@ -5229,7 +5229,7 @@ export const COLLECTED_BODIES = [
         "dateNote": "A dated appearance, not an adoption date.",
         "evidenceType": "supplied-vector-reconstruction",
         "notes": "Eight petals, blue and green in turn, around a white cross, from the cover of the Fraser Valley Health Centre / Eastern Fraser Valley Cancer Centre project report of September 2000.",
-        "fidelityNote": "A supplied reconstruction: one designed petal — a semicircular cap on a right-angled tail — rotated and mirrored into eight, in the report’s blue (#0E218B) and green (#02763F), colour-managed estimates. Silhouette overlap 92.5% with the 78-pixel report image after registration; the source’s slight horizontal distortion is removed.",
+        "fidelityNote": "A supplied reconstruction: one designed petal (a semicircular cap on a right-angled tail) rotated and mirrored into eight, in the report’s blue (#0E218B) and green (#02763F), colour-managed estimates. Silhouette overlap 92.5% with the 78-pixel report image after registration; the source’s slight horizontal distortion is removed.",
         "sha256": "7d88b87ab0cb716a2e34308a9cc7e97290746f9f9aa2c797df05a5e4a8d830fa",
         "bytes": 2287,
         "darkBackground": false,
@@ -5251,7 +5251,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "fvhr-emblem-black",
-        "label": "Fraser Valley Health Region — Flower and cross, black",
+        "label": "Fraser Valley Health Region: Flower and cross, black",
         "file": "identity-collected/fraser-valley-health-region/fvhr-emblem-black.svg",
         "format": "svg",
         "isVector": true,
@@ -5267,7 +5267,7 @@ export const COLLECTED_BODIES = [
         "dateNote": "A dated appearance, not an adoption date.",
         "evidenceType": "supplied-vector-reconstruction",
         "notes": "The same emblem in one colour, black.",
-        "fidelityNote": "A supplied reconstruction: one designed petal — a semicircular cap on a right-angled tail — rotated and mirrored into eight, in the report’s blue (#0E218B) and green (#02763F), colour-managed estimates. Silhouette overlap 92.5% with the 78-pixel report image after registration; the source’s slight horizontal distortion is removed.",
+        "fidelityNote": "A supplied reconstruction: one designed petal (a semicircular cap on a right-angled tail) rotated and mirrored into eight, in the report’s blue (#0E218B) and green (#02763F), colour-managed estimates. Silhouette overlap 92.5% with the 78-pixel report image after registration; the source’s slight horizontal distortion is removed.",
         "sha256": "18d44255f82457ea1ae45dfee6bf888fcbd3427df56b0fbb218641393be0b3ef",
         "bytes": 2178,
         "darkBackground": false,
@@ -5277,7 +5277,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "fvhr-lockup",
-        "label": "Fraser Valley Health Region — Name and “Integrating Health Care”",
+        "label": "Fraser Valley Health Region: Name and “Integrating Health Care”",
         "file": "identity-collected/fraser-valley-health-region/fvhr-lockup-grayscale.svg",
         "format": "svg",
         "isVector": true,
@@ -5598,7 +5598,7 @@ export const COLLECTED_BODIES = [
     "notes": "A reversed original raster survives in a later Trans Canada Trail donor-panel file. Its later file dates document a reproduction, not the logo’s adoption. Earlier recruitment-ad evidence is recorded separately in the research.",
     "assets": [
       {
-        "label": "North Shore Health Region — November 1999 advertisement",
+        "label": "North Shore Health Region: November 1999 advertisement",
         "format": "png",
         "isVector": false,
         "supplied": false,
@@ -5639,7 +5639,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "historical-north-shore-health-region-trail-reversed-raster",
-        "label": "North Shore Health Region — reversed raster preserved in a later donor-panel file",
+        "label": "North Shore Health Region: reversed raster preserved in a later donor-panel file",
         "file": "identity-collected/north-shore-health-region/north-shore-health-region-trail-reversed-raster.png",
         "format": "png",
         "isVector": false,
@@ -5919,7 +5919,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-south-fraser-health-region-south-fraser-health-region-stacked-1998-png",
-        "label": "South Fraser Health Region — south fraser health region stacked 1998",
+        "label": "South Fraser Health Region: south fraser health region stacked 1998",
         "file": "identity-collected/south-fraser-health-region/south-fraser-health-region-stacked-1998.png",
         "format": "png",
         "isVector": false,
@@ -5954,7 +5954,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-south-fraser-health-region-south-fraser-health-region-horizontal-1998-png",
-        "label": "South Fraser Health Region — south fraser health region horizontal 1998",
+        "label": "South Fraser Health Region: south fraser health region horizontal 1998",
         "file": "identity-collected/south-fraser-health-region/south-fraser-health-region-horizontal-1998.png",
         "format": "png",
         "isVector": false,
@@ -6242,7 +6242,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "historical-vancouver-richmond-health-board-2001-visions-raster",
-        "label": "Vancouver/Richmond Health Board — Fall/Winter 2001 wordmark and slogan",
+        "label": "Vancouver/Richmond Health Board: Fall/Winter 2001 wordmark and slogan",
         "file": "identity-collected/vancouver-richmond-health-board/vancouver-richmond-health-board-2001-visions-raster.png",
         "format": "png",
         "isVector": false,
@@ -6850,7 +6850,7 @@ export const COLLECTED_BODIES = [
     "notes": "The earlier recruiting-advertisement scan is joined by an original colour website JPEG and the much larger original monochrome bitmap from the January 2001 Continuum newsletter. All are raster specimens; no vector has been verified. Source and capture dates identify appearances, not adoption.",
     "assets": [
       {
-        "label": "Simon Fraser Health Region — April 10, 1997 original letterhead",
+        "label": "Simon Fraser Health Region: April 10, 1997 original letterhead",
         "format": "png",
         "isVector": false,
         "supplied": false,
@@ -7140,7 +7140,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "source-kootenay-boundary-community-health-services-society-kootenay-boundary-chss-1998-png",
-        "label": "Kootenay Boundary Community Health Services Society — kootenay boundary chss 1998",
+        "label": "Kootenay Boundary Community Health Services Society: kootenay boundary chss 1998",
         "file": "identity-collected/kootenay-boundary-community-health-services-society/kootenay-boundary-chss-1998.png",
         "format": "png",
         "isVector": false,
@@ -7175,7 +7175,7 @@ export const COLLECTED_BODIES = [
       },
       {
         "id": "source-kootenay-boundary-community-health-services-society-kootenay-boundary-chss-fax-png",
-        "label": "Kootenay Boundary Community Health Services Society — kootenay boundary chss fax",
+        "label": "Kootenay Boundary Community Health Services Society: kootenay boundary chss fax",
         "file": "identity-collected/kootenay-boundary-community-health-services-society/kootenay-boundary-chss-fax.png",
         "format": "png",
         "isVector": false,
@@ -7283,7 +7283,7 @@ export const COLLECTED_BODIES = [
     "assets": [
       {
         "id": "bc-trade-1991-rebuilt",
-        "label": "BC Trade — Maple leaf, flag and rising sun",
+        "label": "BC Trade: Maple leaf, flag and rising sun",
         "file": "identity-collected/bc-trade/bc-trade-1991-rebuilt.svg",
         "format": "svg",
         "isVector": true,
@@ -7304,7 +7304,7 @@ export const COLLECTED_BODIES = [
           }
         ],
         "evidenceType": "supplied-vector-reconstruction",
-        "notes": "A red maple leaf rising behind a waving flag — blue field, five red bands parted by white, a gold sun rising from its base — above “BC TRADE”.",
+        "notes": "A red maple leaf rising behind a waving flag (blue field, five red bands parted by white, a gold sun rising from its base) above “BC TRADE”.",
         "fidelityNote": "Manually reconstructed vector, revised against the 196 × 218 pixel colour scan on 2026-11-14 and checked against the 1989 newspaper example. The leaf, varying flag separators, diagonal band and sun use deliberately authored curves; each letter is an independent outline. The open separations in T, R, A, D and E are represented as transparent gaps, as visible in both printed examples. A fixed-registration overlay review further corrects the flag folds, white separators and acute blue ends with local tangent-aligned caps. No automatic tracing or raster content. The exact typeface is not identified; small curves, gap widths and corner radii remain estimates at this scan resolution. Red #B22C20, blue #17447F and gold #EDC445 are approximate display colours, not an original specification. The unchanged 1991 scan remains available for comparison.",
         "sha256": "aca2fd6ef29080684147c003b240486876cdcf21272e5088d30a853f4901c6fc",
         "bytes": 15425,
@@ -7328,7 +7328,7 @@ export const COLLECTED_SPECIMENS = [
     "assets": [
       {
         "id": "vector-bc-public-service-where-ideas-work-2023-reverse",
-        "label": "BC Public Service — “Where ideas work”, reversed, 2023 corporate plan",
+        "label": "BC Public Service: “Where ideas work”, reversed, 2023 corporate plan",
         "file": "identity-collected/public-service/bc-public-service-where-ideas-work-2023-reverse.svg",
         "format": "svg",
         "isVector": true,
@@ -7358,7 +7358,7 @@ export const COLLECTED_SPECIMENS = [
     "assets": [
       {
         "id": "vector-canada-starts-here-2012",
-        "label": "Canada Starts Here — “Canada Starts Here”, 2012",
+        "label": "Canada Starts Here: “Canada Starts Here”, 2012",
         "file": "identity-collected/pacific-gateway/canada-starts-here-2012.svg",
         "format": "svg",
         "isVector": true,
@@ -7383,7 +7383,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "vector-canada-starts-here-bc-jobs-plan-2012",
-        "label": "Canada Starts Here — “Canada Starts Here” with the BC Jobs Plan, 2012",
+        "label": "Canada Starts Here: “Canada Starts Here” with the BC Jobs Plan, 2012",
         "file": "identity-collected/pacific-gateway/canada-starts-here-bc-jobs-plan-2012.svg",
         "format": "svg",
         "isVector": true,
@@ -7413,7 +7413,7 @@ export const COLLECTED_SPECIMENS = [
     "assets": [
       {
         "id": "vector-BCID_StrongerBC_RGB_pos",
-        "label": "StrongerBC — Endorsed, full colour",
+        "label": "StrongerBC: Endorsed, full colour",
         "file": "identity-collected/stronger-bc/BCID_StrongerBC_RGB_pos.svg",
         "format": "svg",
         "isVector": true,
@@ -7438,7 +7438,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "vector-BCID_StrongerBC_RGB_rev",
-        "label": "StrongerBC — Endorsed, full colour, reversed",
+        "label": "StrongerBC: Endorsed, full colour, reversed",
         "file": "identity-collected/stronger-bc/BCID_StrongerBC_RGB_rev.svg",
         "format": "svg",
         "isVector": true,
@@ -7463,7 +7463,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "vector-BCID_StrongerBC_Solid_pos",
-        "label": "StrongerBC — Endorsed, solid colour",
+        "label": "StrongerBC: Endorsed, solid colour",
         "file": "identity-collected/stronger-bc/BCID_StrongerBC_Solid_pos.svg",
         "format": "svg",
         "isVector": true,
@@ -7488,7 +7488,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "vector-BCID_StrongerBC_Solid_rev",
-        "label": "StrongerBC — Endorsed, solid colour, reversed",
+        "label": "StrongerBC: Endorsed, solid colour, reversed",
         "file": "identity-collected/stronger-bc/BCID_StrongerBC_Solid_rev.svg",
         "format": "svg",
         "isVector": true,
@@ -7513,7 +7513,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "vector-StrongerBC_RGB_pos",
-        "label": "StrongerBC — Wordmark, full colour",
+        "label": "StrongerBC: Wordmark, full colour",
         "file": "identity-collected/stronger-bc/StrongerBC_RGB_pos.svg",
         "format": "svg",
         "isVector": true,
@@ -7539,7 +7539,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "vector-StrongerBC_RGB_rev",
-        "label": "StrongerBC — Wordmark, full colour, reversed",
+        "label": "StrongerBC: Wordmark, full colour, reversed",
         "file": "identity-collected/stronger-bc/StrongerBC_RGB_rev.svg",
         "format": "svg",
         "isVector": true,
@@ -7566,7 +7566,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "vector-StrongerBC_Solid_pos",
-        "label": "StrongerBC — Wordmark, solid colour",
+        "label": "StrongerBC: Wordmark, solid colour",
         "file": "identity-collected/stronger-bc/StrongerBC_Solid_pos.svg",
         "format": "svg",
         "isVector": true,
@@ -7592,7 +7592,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "vector-StrongerBC_Solid_rev",
-        "label": "StrongerBC — Wordmark, solid colour, reversed",
+        "label": "StrongerBC: Wordmark, solid colour, reversed",
         "file": "identity-collected/stronger-bc/StrongerBC_Solid_rev.svg",
         "format": "svg",
         "isVector": true,
@@ -7624,7 +7624,7 @@ export const COLLECTED_SPECIMENS = [
     "assets": [
       {
         "id": "vector-welcomebc-2016",
-        "label": "WelcomeBC — The flat mark with a gold rule, 2016",
+        "label": "WelcomeBC: The flat mark with a gold rule, 2016",
         "file": "identity-collected/welcome-bc/welcomebc-2016.svg",
         "format": "svg",
         "isVector": true,
@@ -7649,7 +7649,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "vector-welcomebc-current",
-        "label": "WelcomeBC — Endorsed, with a gold rule, current",
+        "label": "WelcomeBC: Endorsed, with a gold rule, current",
         "file": "identity-collected/welcome-bc/welcomebc-current.svg",
         "format": "svg",
         "isVector": true,
@@ -7679,7 +7679,7 @@ export const COLLECTED_SPECIMENS = [
     "assets": [
       {
         "id": "vector-workbc-2016",
-        "label": "WorkBC — The flat mark with a gold rule, 2016",
+        "label": "WorkBC: The flat mark with a gold rule, 2016",
         "file": "identity-collected/work-bc/workbc-2016.svg",
         "format": "svg",
         "isVector": true,
@@ -7704,7 +7704,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "vector-workbc-current",
-        "label": "WorkBC — The flat mark with a grey rule, current",
+        "label": "WorkBC: The flat mark with a grey rule, current",
         "file": "identity-collected/work-bc/workbc-current.svg",
         "format": "svg",
         "isVector": true,
@@ -7734,7 +7734,7 @@ export const COLLECTED_SPECIMENS = [
     "assets": [
       {
         "id": "vector-worksafe-2003-serif-source-vector",
-        "label": "WorkSafeBC — Distressed WorkSafe wordmark and board name, 2003 annual report",
+        "label": "WorkSafeBC: Distressed WorkSafe wordmark and board name, 2003 annual report",
         "file": "identity-collected/worksafebc/worksafe-2003-serif-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -7759,7 +7759,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "vector-worksafebc-2004-tagline-source-vector",
-        "label": "WorkSafeBC — Black and orange with tagline, 2004 annual report",
+        "label": "WorkSafeBC: Black and orange with tagline, 2004 annual report",
         "file": "identity-collected/worksafebc/worksafebc-2004-tagline-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -7784,7 +7784,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "vector-worksafebc-2024-colour-source-vector",
-        "label": "WorkSafeBC — Black and orange, 2024 annual report",
+        "label": "WorkSafeBC: Black and orange, 2024 annual report",
         "file": "identity-collected/worksafebc/worksafebc-2024-colour-source-vector.svg",
         "format": "svg",
         "isVector": true,
@@ -7814,7 +7814,7 @@ export const COLLECTED_SPECIMENS = [
     "assets": [
       {
         "id": "bc-travel-industry-ca-1970",
-        "label": "Department of Travel Industry — Map and dogwood, about 1970",
+        "label": "Department of Travel Industry: Map and dogwood, about 1970",
         "file": "identity-collected/travel-industry/bc-travel-industry-ca-1970.svg",
         "format": "svg",
         "isVector": true,
@@ -7843,7 +7843,7 @@ export const COLLECTED_SPECIMENS = [
     "assets": [
       {
         "id": "jibc-logo",
-        "label": "Justice Institute of British Columbia — Eagle shield and name",
+        "label": "Justice Institute of British Columbia: Eagle shield and name",
         "file": "identity-collected/justice-institute/jibc-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -7867,7 +7867,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "jibc-logo-reversed",
-        "label": "Justice Institute of British Columbia — Eagle shield and name, reversed",
+        "label": "Justice Institute of British Columbia: Eagle shield and name, reversed",
         "file": "identity-collected/justice-institute/jibc-logo-reversed.svg",
         "format": "svg",
         "isVector": true,
@@ -7892,7 +7892,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "jibc-monogram",
-        "label": "Justice Institute of British Columbia — Monogram",
+        "label": "Justice Institute of British Columbia: Monogram",
         "file": "identity-collected/justice-institute/jibc-monogram.svg",
         "format": "svg",
         "isVector": true,
@@ -7907,7 +7907,7 @@ export const COLLECTED_SPECIMENS = [
         "observedDate": "2026-11-12",
         "evidenceType": "supplied-vector-reconstruction",
         "notes": "The Institute’s monogram: a triangle split by a gap, with B and C in its centre. It is the centre of the Institute’s fan-shield badge and, in gold, of its navy roundel (Patches, S56-O46 and S56-O36).",
-        "fidelityNote": "A supplied vector reconstruction, not original artwork: four authored paths — two angular parts and the B and C, with real counters — rebuilt after an image of the badge. The blue (#0141A2) is sampled from that image.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: four authored paths (two angular parts and the B and C, with real counters) rebuilt after an image of the badge. The blue (#0141A2) is sampled from that image.",
         "sha256": "1a45f5dbb07c53fb7450a7494106c9e44edc1671ba86008db0e8609b2c20b9b1",
         "bytes": 1778,
         "darkBackground": false,
@@ -7920,7 +7920,7 @@ export const COLLECTED_SPECIMENS = [
     "assets": [
       {
         "id": "oag-bc-logo",
-        "label": "Office of the Auditor General of British Columbia — Emblem and name",
+        "label": "Office of the Auditor General of British Columbia: Emblem and name",
         "file": "identity-collected/auditor-general/oag-bc-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -7957,7 +7957,7 @@ export const COLLECTED_SPECIMENS = [
         "evidenceType": "supplied-vector-reconstruction",
         "darkBackground": false,
         "id": "bc-online-2005-emblem",
-        "label": "BC OnLine — Hand and screen emblem, 2005",
+        "label": "BC OnLine: Hand and screen emblem, 2005",
         "file": "identity-collected/bc-online/bc-online-2005-emblem.svg",
         "sourcePage": "https://www.bconline.gov.bc.ca/pdf/DataFilesJul05.pdf",
         "sourceUrl": "https://www.bconline.gov.bc.ca/pdf/DataFilesJul05.pdf",
@@ -7981,7 +7981,7 @@ export const COLLECTED_SPECIMENS = [
         "evidenceType": "supplied-vector-reconstruction",
         "darkBackground": false,
         "id": "bc-online-2011-logo",
-        "label": "BC OnLine — Wordmark and emblem, 2011",
+        "label": "BC OnLine: Wordmark and emblem, 2011",
         "file": "identity-collected/bc-online/bc-online-2011-logo.svg",
         "sourcePage": "https://www.bconline.gov.bc.ca/pdf/websiteUseTandC.pdf",
         "sourceUrl": "https://www.bconline.gov.bc.ca/pdf/websiteUseTandC.pdf",
@@ -8001,7 +8001,7 @@ export const COLLECTED_SPECIMENS = [
     "assets": [
       {
         "id": "bc-cancer-agency-lockup",
-        "label": "BC Cancer Agency — Emblem and name",
+        "label": "BC Cancer Agency: Emblem and name",
         "file": "identity-collected/bc-cancer/bc-cancer-agency-lockup-2015.svg",
         "format": "svg",
         "isVector": true,
@@ -8031,7 +8031,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "bc-cancer-agency-emblem",
-        "label": "BC Cancer Agency — Emblem",
+        "label": "BC Cancer Agency: Emblem",
         "file": "identity-collected/bc-cancer/bc-cancer-agency-emblem-2015.svg",
         "format": "svg",
         "isVector": true,
@@ -8061,7 +8061,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "bc-cancer-phsa",
-        "label": "BC Cancer — with the PHSA line",
+        "label": "BC Cancer: with the PHSA line",
         "file": "identity-collected/bc-cancer/bc-cancer-phsa-colour.svg",
         "format": "svg",
         "isVector": true,
@@ -8076,7 +8076,7 @@ export const COLLECTED_SPECIMENS = [
         "observedDate": "2026-11-12",
         "dateNote": "The source’s year, not an adoption date.",
         "evidenceType": "native-pdf-vector-extraction",
-        "notes": "BC / CAN / CER stacked in heavy geometric capitals — turquoise, with CAN in purple and a dot in the A — over “Provincial Health Services Authority”: BC Cancer’s logo since November 2017. The standards give its colours as Pantone 3115 C and 2583 C.",
+        "notes": "BC / CAN / CER stacked in heavy geometric capitals (turquoise, with CAN in purple and a dot in the A) over “Provincial Health Services Authority”: BC Cancer’s logo since November 2017. The standards give its colours as Pantone 3115 C and 2583 C.",
         "fidelityNote": "The publication’s own vector paths, exported from the PDF and isolated without changing their data, transforms or fills; the lettering was already outlined. Colours are the publication’s RGB rendering.",
         "sha256": "60e7703cdb94e0e5018a92832edf5539a13a55d19cd7d9af73b89167c9b8363a",
         "bytes": 12644,
@@ -8098,7 +8098,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "bc-cancer-research",
-        "label": "BC Cancer Research — with the PHSA line",
+        "label": "BC Cancer Research: with the PHSA line",
         "file": "identity-collected/bc-cancer/bc-cancer-research-colour.svg",
         "format": "svg",
         "isVector": true,
@@ -8123,7 +8123,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "bc-cancer-research-white",
-        "label": "BC Cancer Research — white and purple",
+        "label": "BC Cancer Research: white and purple",
         "file": "identity-collected/bc-cancer/bc-cancer-research-white-purple.svg",
         "format": "svg",
         "isVector": true,
@@ -8173,7 +8173,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "bc-cancer-foundation-2018",
-        "label": "BC Cancer Foundation — earlier logo",
+        "label": "BC Cancer Foundation: earlier logo",
         "file": "identity-collected/bc-cancer/bc-cancer-foundation-2018-colour.svg",
         "format": "svg",
         "isVector": true,
@@ -8198,7 +8198,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "bc-cancer-foundation-2018-white",
-        "label": "BC Cancer Foundation — earlier logo, white and purple",
+        "label": "BC Cancer Foundation: earlier logo, white and purple",
         "file": "identity-collected/bc-cancer/bc-cancer-foundation-2018-white-purple.svg",
         "format": "svg",
         "isVector": true,
@@ -8224,7 +8224,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "bc-cancer-foundation-2026",
-        "label": "BC Cancer Foundation — current logo",
+        "label": "BC Cancer Foundation: current logo",
         "file": "identity-collected/bc-cancer/bc-cancer-foundation-2026-navy-purple.svg",
         "format": "svg",
         "isVector": true,
@@ -8249,7 +8249,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "bc-cancer-foundation-2026-white",
-        "label": "BC Cancer Foundation — current logo, white",
+        "label": "BC Cancer Foundation: current logo, white",
         "file": "identity-collected/bc-cancer/bc-cancer-foundation-2026-white-purple.svg",
         "format": "svg",
         "isVector": true,
@@ -8280,7 +8280,7 @@ export const COLLECTED_SPECIMENS = [
     "assets": [
       {
         "id": "solutions-bc-2003-vector",
-        "label": "Solutions BC — Figures on teal, 2003",
+        "label": "Solutions BC: Figures on teal, 2003",
         "file": "identity-collected/shared-services-bc/solutions-bc-2003.svg",
         "format": "svg",
         "isVector": true,
@@ -8318,7 +8318,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "solutions-bc-2003-black",
-        "label": "Solutions BC — Figures and name, black",
+        "label": "Solutions BC: Figures and name, black",
         "file": "identity-collected/shared-services-bc/solutions-bc-2003-black.svg",
         "format": "svg",
         "isVector": true,
@@ -8344,7 +8344,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "solutions-bc-2006-letterhead",
-        "label": "Solutions BC — On the BC mark, 2006 letterhead",
+        "label": "Solutions BC: On the BC mark, 2006 letterhead",
         "file": "identity-collected/shared-services-bc/solutions-bc-2006-letterhead.png",
         "format": "png",
         "isVector": false,
@@ -8370,7 +8370,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "shared-services-bc-2006-07",
-        "label": "Shared Services BC — On the Best Place on Earth mark",
+        "label": "Shared Services BC: On the Best Place on Earth mark",
         "file": "identity-collected/shared-services-bc/shared-services-bc-2006-07.png",
         "format": "png",
         "isVector": false,
@@ -8402,7 +8402,7 @@ export const COLLECTED_SPECIMENS = [
       },
       {
         "id": "shared-services-bc-2015",
-        "label": "Shared Services BC — Reversed, without tagline, 2015",
+        "label": "Shared Services BC: Reversed, without tagline, 2015",
         "file": "identity-collected/shared-services-bc/shared-services-bc-2015.png",
         "format": "png",
         "isVector": false,
@@ -8461,7 +8461,7 @@ export const COLLECTED_SPECIMENS = [
     "assets": [
       {
         "id": "bceid-reversed",
-        "label": "BCeID — Wordmark, reversed",
+        "label": "BCeID: Wordmark, reversed",
         "file": "identity-collected/bceid/bceid-reversed-2x.png",
         "format": "png",
         "isVector": false,

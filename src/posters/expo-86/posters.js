@@ -32,7 +32,7 @@ export const EXPO_86_DAVIDSON = {
       pad: 0.03,
       panel: {
         eyebrow: 'Expo 86 · official art poster',
-        heading: 'Expo 86 — Robert Davidson',
+        heading: 'Expo 86: Robert Davidson',
         lede: 'A mirrored formline composition in black, red and blue-grey on cream fills the sheet; along the foot, the stacked EXPO 86 mark, the artist’s signature and the fair’s name and dates in English and French.',
         blocks: [
           'An art poster for the 1986 World Exposition in Vancouver, with artwork by the Haida artist Robert Davidson, signed and dated 1985. The credit line names the Expo 86 Corporation as the copyright holder.',
@@ -73,7 +73,7 @@ export const EXPO_86_DAVIDSON = {
             ['Placement', 'one uniform scale, 1.0339 in both directions, so the artwork keeps the restored image’s proportions'],
             ['Known differences', 'a few pixels of curve and edge at high enlargement; flat colour without the print’s texture; an exactly mirrored drawing where the original varies slightly side to side']
           ] },
-          { figure: 'review', alt: 'Two versions side by side — the restored reference artwork and the reconstructed poster — and below them an enlarged strip of the poster’s foot with the logo, signature and event text', caption: 'The restored reference artwork beside the reconstructed poster, and the foot enlarged. The reference’s cream border is the restoration’s, not a measured margin.' }
+          { figure: 'review', alt: 'Two versions side by side (the restored reference artwork and the reconstructed poster), and below them an enlarged strip of the poster’s foot with the logo, signature and event text', caption: 'The restored reference artwork beside the reconstructed poster, and the foot enlarged. The reference’s cream border is the restoration’s, not a measured margin.' }
         ]
       }
     },
@@ -88,7 +88,7 @@ export const EXPO_86_DAVIDSON = {
         heading: 'Robert Davidson 1985',
         lede: 'The artist’s handwritten signature and the year, under the lower right of the design.',
         blocks: [
-          'Rebuilt by hand as 25 rounded strokes from a photograph taken through glass. The name and the year are clear; small crossings — after the R, and between the letters of Davidson — are smoothed where reflection hides them.',
+          'Rebuilt by hand as 25 rounded strokes from a photograph taken through glass. The name and the year are clear; small crossings (after the R, and between the letters of Davidson) are smoothed where reflection hides them.',
           { note: 'A drawn approximation for the reconstructed poster, not a copy of the autograph.' }
         ]
       }
@@ -102,7 +102,7 @@ export const EXPO_86_DAVIDSON = {
       panel: {
         eyebrow: 'Lower left',
         heading: 'EXPO 86',
-        lede: 'The fair’s stacked mark — EXPO over the three interlocking rings of 86 — printed in the poster’s black, with a small TM.',
+        lede: 'The fair’s stacked mark (EXPO over the three interlocking rings of 86) printed in the poster’s black, with a small TM.',
         blocks: [
           'The mark is the gallery’s vector of the Expo 86 symbol, recoloured from its blue and black to the poster’s single dark ink, every coordinate unchanged. That vector is itself a modern reconstruction, drawn for Wikimedia Commons from merchandise photographs. The TM is set separately; it is not part of the source drawing.',
           { links: [EXPO_LOGOS_LINK] }

@@ -268,7 +268,7 @@ const Detail = ({ holder, onBack, titleRef }) => (
         {holder.motto?.text && (
           <p className="arms__motto">
             <em>{holder.motto.text}</em>
-            {holder.motto.translation && <> — {holder.motto.translation}</>}
+            {holder.motto.translation && <> ({holder.motto.translation})</>}
           </p>
         )}
         {holder.motto?.note && <p className="arms__note">{holder.motto.note}</p>}
@@ -299,7 +299,7 @@ const Detail = ({ holder, onBack, titleRef }) => (
         <ul className="arms__sources">
           {holder.register?.url && <li><External href={holder.register.url}>Canadian Heraldic Authority: public register entry</External></li>}
           {holder.related?.map((related) => (
-            <li key={related.url}><External href={related.url}>{related.title}</External>{related.relation && <> — {related.relation}</>}</li>
+            <li key={related.url}><External href={related.url}>{related.title}</External>{related.relation && <>. {related.relation}</>}</li>
           ))}
           {holder.sources?.filter((source) => source.url !== holder.register?.url).map((source) => (
             <li key={source.url}><External href={source.url}>{source.title}</External></li>

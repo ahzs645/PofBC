@@ -121,7 +121,7 @@ const CurrentView = ({ initialVariant = 'colour', onClose }) => {
       note="The logo in use today: the symbol turned into a circle and moved to the left, “BC Hydro” in a contemporary sans, and the “Power smart” tagline."
       onClose={onClose}
       svg={svg}
-      label={`BC Hydro logo — ${spec.label}`}
+      label={`BC Hydro logo, ${spec.label}`}
       transparent={transparent}
       lightInk={lightInk}
       notes={notes}
@@ -178,7 +178,7 @@ const View1990 = ({ onClose }) => {
     <Frame
       years="1990–2016"
       title="BC hydro"
-      note="“BC” and “hydro” in a heavy slab, with the symbol squared off and set after the name — the mark the 2016 logo rounded and moved to the front."
+      note="“BC” and “hydro” in a heavy slab, with the symbol squared off and set after the name: the mark the 2016 logo rounded and moved to the front."
       onClose={onClose}
       svg={svg}
       label="BC hydro, 1990"

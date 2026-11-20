@@ -184,11 +184,11 @@ test('a pixel width sets both dimensions, preserving the aspect ratio', () => {
 test('the accessible name describes what is actually drawn', () => {
   assert.equal(
     resolveLockup({ layout: 'stacked', ...FORESTS }).description,
-    'Province of British Columbia — Ministry of Forests'
+    'Province of British Columbia, Ministry of Forests'
   )
   assert.equal(
     resolveLockup({ layout: 'centred', wordmark: false, ...FORESTS, program: 'Research Program' }).description,
-    'Ministry of Forests — Research Program'
+    'Ministry of Forests, Research Program'
   )
 })
 

@@ -45,8 +45,8 @@ const WILDFIRE_NAMES = source(
 )
 
 /** The oval ministry crest, shared by BC Timber Sales' plans of 2017–2022 and a Wildfire Service logo. */
-const OVAL_CREST_NOTE = 'An oval ministry crest — British Columbia and Forests, Lands and Natural Resource ' +
-  'Operations around an eagle, two conifers, a deer and a fish over water'
+const OVAL_CREST_NOTE = 'An oval ministry crest (British Columbia and Forests, Lands and Natural Resource ' +
+  'Operations around an eagle, two conifers, a deer and a fish over water)'
 
 /** The tagline's years, which bound any mark that carries it. */
 const TAGLINE_YEARS = 'The Best Place on Earth tagline was launched in 2005 and dropped from government use in 2011.'
@@ -83,7 +83,7 @@ export const TIMELINES = {
         status: 'generator',
         years: 'about 1983–2005',
         label: 'The flag logo',
-        note: 'Before the sun mark, the Province’s logo was a stylised provincial flag beside “BC” — the ' +
+        note: 'Before the sun mark, the Province’s logo was a stylised provincial flag beside “BC”; the ' +
           'generator’s Flag identity draws it.',
         generator: { era: 'flag' },
         applicability: {
@@ -114,7 +114,7 @@ export const TIMELINES = {
         years: '2011–present',
         label: 'The mark without its slogan',
         note: 'The slogan went and the mark stayed. Its sun has since been drawn flat, and it is the mark ' +
-          'every ministry mark is set beside today — the generator’s Current identity. When the sun went ' +
+          'every ministry mark is set beside today: the generator’s Current identity. When the sun went ' +
           'flat has not been found.',
         generator: { era: 'current' },
         applicability: {
@@ -157,7 +157,7 @@ export const TIMELINES = {
         marks: ['vector-workbc-2016'],
         years: '2016–2018',
         label: 'The flat mark, with a gold rule',
-        note: 'The BC mark with its sun drawn flat, a thin gold rule, then “Work” in blue and “BC” in gold — ' +
+        note: 'The BC mark with its sun drawn flat, a thin gold rule, then “Work” in blue and “BC” in gold, ' +
           'the same template as WelcomeBC’s header of the same year. The gallery holds the archived header ' +
           'file itself, byte for byte. The header between 2012 and 2016 was archived but has not been looked at.',
         applicability: {
@@ -247,7 +247,7 @@ export const TIMELINES = {
         years: '2016–2025',
         label: 'The flat mark, with a gold rule',
         note: 'The BC mark with its sun drawn flat, a thin gold rule, then “Welcome” in blue and “BC” in ' +
-          'gold — the same template as WorkBC’s header of the same year.',
+          'gold, the same template as WorkBC’s header of the same year.',
         applicability: {
           kind: 'first_observation',
           years: '2016–2025',
@@ -265,7 +265,7 @@ export const TIMELINES = {
         years: '2025–present',
         label: 'Endorsed, with the program named',
         note: 'Since the site’s redesign in September 2025: the BC mark at the left, an upright gold rule, and ' +
-          '“WelcomeBC” to its right, in BC blue and gold — a horizontal endorsed arrangement, not a stacked one.',
+          '“WelcomeBC” to its right, in BC blue and gold: a horizontal endorsed arrangement, not a stacked one.',
         applicability: {
           kind: 'first_observation',
           years: '2025–present',
@@ -329,7 +329,7 @@ export const TIMELINES = {
         marks: ['bc-stats'],
         years: '2007–2012',
         label: 'Beside the shaded sun',
-        note: 'The mark here — “BC” in gold running into “Stats” — is most likely the one in the site’s ' +
+        note: 'The mark here (“BC” in gold running into “Stats”) is most likely the one in the site’s ' +
           'header of these years, a single image linking to the government on its left and to BC Stats on ' +
           'its right. That header has not been compared with this mark.',
         applicability: {
@@ -490,7 +490,7 @@ export const TIMELINES = {
         years: 'from 2011',
         label: '“Canada Starts Here”',
         note: 'Premier Clark’s government replaced the brand with “Canada Starts Here”, revealed at Prince ' +
-          'Rupert on 20 September 2011 — a logo of stacked shipping containers. The gallery holds the flat ' +
+          'Rupert on 20 September 2011: a logo of stacked shipping containers. The gallery holds the flat ' +
           'artwork printed in the BC Jobs Plan of September 2012, alone and with the plan’s name, not the ' +
           'three-dimensional containers of the launch photographs.',
         applicability: { kind: 'documented_adoption', years: 'from 2011', note: 'Its reveal is reported to the day.' },
@@ -577,7 +577,7 @@ export const TIMELINES = {
         years: '2010–2015',
         label: 'The Wildfire Management Branch',
         note: 'Renamed in 2010, the branch went under the Province’s Best Place on Earth mark and its ' +
-          'ministry’s name — on its site and on its guides.',
+          'ministry’s name, on its site and on its guides.',
         applicability: {
           kind: 'first_observation',
           years: '2010–2015',
@@ -596,7 +596,7 @@ export const TIMELINES = {
         years: 'from 2015',
         label: 'The oval crest, “Wildfire Service”',
         note: `The name BC Wildfire Service appears at the end of June 2015. ${OVAL_CREST_NOTE}, with a ` +
-          '“Wildfire Service” scroll beneath — was published as its logo in 2021. The ministry it names ' +
+          '“Wildfire Service” scroll beneath, was published as its logo in 2021. The ministry it names ' +
           'suggests it is older, which is not established.',
         applicability: {
           kind: 'first_observation',
@@ -617,7 +617,7 @@ export const TIMELINES = {
         marks: ['bc-wildfire-service', 'bc-wildfire-service-one-line'],
         years: 'by 2023–present',
         label: 'Beside the BC mark',
-        note: 'The flat-sun BC mark with a gold divider and the name in Garamond, “BC” in gold — on two lines ' +
+        note: 'The flat-sun BC mark with a gold divider and the name in Garamond, “BC” in gold, on two lines ' +
           'or on one. Both are on the wildfire situation site, and on the service’s reports and guides ' +
           'since.',
         applicability: {
@@ -823,7 +823,7 @@ export const COLLECTION_ERAS = {
       status: 'held',
       years: 'by 2002',
       label: 'The flag badge',
-      note: 'The flag symbol in a rounded frame, with “BC” and “Parks” set alike — on the Province’s park ' +
+      note: 'The flag symbol in a rounded frame, with “BC” and “Parks” set alike, on the Province’s park ' +
         'brochures beside the park’s name, with the arms and the ministry at the foot. Its sites of the ' +
         'time used plain type rather than the badge.',
       applicability: {
@@ -845,7 +845,7 @@ export const COLLECTION_ERAS = {
       years: '2005–2007',
       label: '“BCParks” beside the shaded sun',
       note: 'The shaded sun and mountains, then “BCParks” set solid in white serif, on the ministry’s web ' +
-        'banner — without the Best Place on Earth line.',
+        'banner, without the Best Place on Earth line.',
       applicability: { kind: 'first_observation', years: '2005–2007', note: 'Seen on its site from November 2005 to February 2007.' },
       seenAt: [wayback('20070208041812im_', 'http://www.env.gov.bc.ca/bcparks/images/images_ban/bn_enviro_esd_2005.jpg')],
       sources: [source('BC Parks, 10 Nov 2005 (Wayback Machine)', wayback('20051110020339', 'http://wlapwww.gov.bc.ca/bcparks/index.htm'))]
@@ -855,7 +855,7 @@ export const COLLECTION_ERAS = {
       status: 'held',
       years: '2010–2016',
       label: 'Beside the Best Place on Earth mark',
-      note: 'The shaded-sun BC mark with its tagline, a thin gold rule, and “BCParks” in dark blue serif — ' +
+      note: 'The shaded-sun BC mark with its tagline, a thin gold rule, and “BCParks” in dark blue serif: ' +
         'the arrangement of WorkBC’s and WelcomeBC’s marks.',
       applicability: {
         kind: 'first_observation',
@@ -941,7 +941,7 @@ export const COLLECTION_ERAS = {
       status: 'sought',
       years: '2017–2022',
       label: 'Beside the oval crest',
-      note: `${OVAL_CREST_NOTE} — then “BCTS” in a heavy green sans over “BC Timber Sales”: a sans redrawing ` +
+      note: `${OVAL_CREST_NOTE}, then “BCTS” in a heavy green sans over “BC Timber Sales”: a sans redrawing ` +
         'of the wordmark, on the covers of its business plans.',
       applicability: {
         kind: 'first_observation',
@@ -1015,7 +1015,7 @@ export const COLLECTION_ERAS = {
       status: 'held',
       years: 'about 1992',
       label: 'The road badge, in a serif',
-      note: 'The square badge with a road curving through it, and “ICBC” reversed out in a narrow serif — ' +
+      note: 'The square badge with a road curving through it, and “ICBC” reversed out in a narrow serif: ' +
         'the start of the road family every later mark belongs to.',
       applicability: {
         kind: 'first_observation',
@@ -1137,7 +1137,7 @@ export const COLLECTION_ERAS = {
       status: 'held',
       years: '1960s',
       label: 'The early dogwood',
-      note: 'A white dogwood with a yellow centre, its petals outlined in black, on a green waving flag — ' +
+      note: 'A white dogwood with a yellow centre, its petals outlined in black, on a green waving flag, ' +
         'as the ferry system’s 1963 brochure draws it. One illustration does not say what every drawing of ' +
         'the time looked like.',
       applicability: {
@@ -1170,7 +1170,7 @@ export const COLLECTION_ERAS = {
       status: 'held',
       years: '2003–present',
       label: 'The wave',
-      note: 'A stylised wave running into “BCFerries” in a slanted sans, in blue — introduced with BC Ferry ' +
+      note: 'A stylised wave running into “BCFerries” in a slanted sans, in blue, introduced with BC Ferry ' +
         'Services Inc., the company that took over from the Crown corporation, and phased onto the fleet ' +
         'over the following year.',
       applicability: {
@@ -1207,7 +1207,7 @@ export const COLLECTION_ERAS = {
       years: 'from 1983',
       label: 'The province and the worker',
       note: 'The outline of British Columbia with the coast’s islands, shaped into a hand sheltering a ' +
-        'worker’s head, beside the Workers’ Compensation Board’s name — the board, renamed from ' +
+        'worker’s head, beside the Workers’ Compensation Board’s name. The board, renamed from ' +
         '“Workmen’s” in 1974, added the province to its mark in 1983.',
       applicability: {
         kind: 'documented_adoption',

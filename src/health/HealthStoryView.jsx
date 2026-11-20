@@ -211,10 +211,10 @@ export function HealthStoryView() {
     <section className="hm-sources" aria-labelledby="hm-sources-title">
       <h2 id="hm-sources-title">Sources</h2>
       <ul>
-        <li><External href={`${SOURCE_REPORT}#page=28`}>BC Auditor General, <i>A Review of Governance and Accountability in the Regionalization of Health Services</i>, 1997/98 Report 3, Exhibits 3–5</External> — maps credited to the Ministry of Health and Ministry Responsible for Seniors, March 1998.</li>
-        <li><External href={STATCAN_MAP}>Statistics Canada, <i>Health Indicators</i>, April 2001, BC health regions map</External> — reproduced and distributed on an “as is” basis with the permission of Statistics Canada.</li>
-        <li><External href={CONSOLIDATION_SOURCE}>B.C. Reg. 293/2001, Regional Health Boards Regulation</External> — names the organizations amalgamated into each authority.</li>
-        <li><External href="https://catalogue.data.gov.bc.ca/dataset/local-health-area-boundaries">BC Ministry of Health local health area boundaries</External> via <External href="https://github.com/ahzs645/PGMaps">PGMaps</External> — Open Government Licence – British Columbia.</li>
+        <li><External href={`${SOURCE_REPORT}#page=28`}>BC Auditor General, <i>A Review of Governance and Accountability in the Regionalization of Health Services</i>, 1997/98 Report 3, Exhibits 3–5</External>: maps credited to the Ministry of Health and Ministry Responsible for Seniors, March 1998.</li>
+        <li><External href={STATCAN_MAP}>Statistics Canada, <i>Health Indicators</i>, April 2001, BC health regions map</External>, reproduced and distributed on an “as is” basis with the permission of Statistics Canada.</li>
+        <li><External href={CONSOLIDATION_SOURCE}>B.C. Reg. 293/2001, Regional Health Boards Regulation</External>, which names the organizations amalgamated into each authority.</li>
+        <li><External href="https://catalogue.data.gov.bc.ca/dataset/local-health-area-boundaries">BC Ministry of Health local health area boundaries</External> via <External href="https://github.com/ahzs645/PGMaps">PGMaps</External>, under the Open Government Licence – British Columbia.</li>
       </ul>
     </section>
   </main>

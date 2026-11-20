@@ -110,7 +110,7 @@ export const RELATED_BODIES = [
     sources: [POLICE, CMBC, source('TransLink — 2025 Financial Information Act filing and remuneration report', 'https://www.translink.ca/-/media/translink/documents/about-translink/corporate-reports/translink_employee_remuneration/2025-financial-information-act-filing-and-remuneration-report.pdf')],
     salaryEmployers: [
       employer('transit-police', 'Transit Police / TransLink Security Management disclosures'),
-      employer('metro-vancouver-transit-police', 'Metro Vancouver Transit Police — separately filed records')
+      employer('metro-vancouver-transit-police', 'Metro Vancouver Transit Police, separately filed records')
     ],
     salaryNote: 'The salary catalogue retains two employer files. These links do not merge their observations or treat matching names as the same person. The official employee disclosures identify TransLink Security Management Ltd.',
     relationships: [relation('translink', 'TransLink', 'Transit policing within the TransLink enterprise')]

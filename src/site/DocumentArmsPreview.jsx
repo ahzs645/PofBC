@@ -37,7 +37,7 @@ export default function DocumentArmsPreview({ lockup }) {
     textColor: lockup.documentTextColor,
     background: lockup.documentBackground,
     clearSpaceFactor: lockup.clearSpaceFactor,
-    title: 'British Columbia historical document arms — reconstruction study'
+    title: 'British Columbia historical document arms: reconstruction study'
   })
   return (
     <div

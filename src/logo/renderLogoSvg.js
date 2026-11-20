@@ -122,7 +122,7 @@ export const resolveLockup = ({
     lines,
     hasText,
     // The accessible name for this lockup, so every consumer says the same thing.
-    description: [hasWordmark ? PROVINCE_WORDMARK : null, ministry, program].filter(Boolean).join(' — ') || PROVINCE_WORDMARK,
+    description: [hasWordmark ? PROVINCE_WORDMARK : null, ministry, program].filter(Boolean).join(', ') || PROVINCE_WORDMARK,
     mark: { x: round(markX), y: round(markY), width: MARK_BOX.width, height: MARK_BOX.height },
     // The mark and the type are coloured independently — a green mark over black type is a real
     // combination — but `color` sets both at once, which is what most callers want.

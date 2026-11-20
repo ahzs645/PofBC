@@ -224,7 +224,7 @@ export const parseConfig = (text) => {
   try {
     parsed = JSON.parse(trimmed)
   } catch (error) {
-    return { error: `That is not valid JSON — ${error.message}` }
+    return { error: `That is not valid JSON: ${error.message}` }
   }
 
   const patch = fromConfig(parsed)

@@ -109,7 +109,7 @@ export const renderDocumentArmsSvg = ({
   background = TRANSPARENT,
   clearSpaceFactor = 0,
   pixelWidth,
-  title = 'British Columbia historical document heading — provisional study'
+  title = 'British Columbia historical document heading: provisional study'
 } = {}) => {
   const drawing = layoutDocumentArms({ layout })
   const ink = colour(markColor, '#000000')

@@ -62,7 +62,7 @@ export const ONE_OFFS = [
     label: 'BC Parks',
     body: 'BC Parks',
     years: 'by 2002',
-    note: 'The flag symbol inside a rounded frame, with “Parks” set at the same size as “BC” — ' +
+    note: 'The flag symbol inside a rounded frame, with “Parks” set at the same size as “BC”: ' +
       'both words are the wordmark, not a ministry line under a symbol. The frame is a ' +
       'superellipse, which is what gives it sides that bow where a rounded rectangle’s run ' +
       'straight.',
@@ -94,7 +94,7 @@ export const ONE_OFFS = [
     body: 'BC Parks',
     years: '2010–2016',
     note: 'The Best Place on Earth mark, a thin gold divider its full height, and “BCParks” in blue ' +
-      'Garamond on the mark’s baseline — the arrangement of WorkBC’s and WelcomeBC’s marks.',
+      'Garamond on the mark’s baseline: the arrangement of WorkBC’s and WelcomeBC’s marks.',
     caveat: 'Put together from the gallery’s Best Place on Earth mark and the Province’s Garamond, placed as ' +
       'in the archived picture.'
   }),
@@ -103,7 +103,7 @@ export const ONE_OFFS = [
     label: 'WelcomeBC',
     body: 'WelcomeBC',
     years: 'before 2016',
-    note: 'The BC mark beside one word, “WelcomeBC”, in large Garamond with “BC” in gold — ' +
+    note: 'The BC mark beside one word, “WelcomeBC”, in large Garamond with “BC” in gold, ' +
       'where a ministry mark would set a name in the same small size as its own. The wordmark ' +
       'is tracked twice as tight as the ministry marks, at −20/1000 em.',
     caveat: 'Drawn from the published artwork. The sun’s glow is sampled from the print file’s ' +
@@ -133,7 +133,7 @@ export const ONE_OFFS = [
     label: 'Environmental Reporting BC',
     body: 'Environmental Reporting BC',
     years: '2012–2016',
-    note: 'Two lines beside the mark, with “BC” in gold ending the second — the one mark here ' +
+    note: 'Two lines beside the mark, with “BC” in gold ending the second: the one mark here ' +
       'where the accent closes a longer name rather than making up half of one word.',
     caveat: 'Drawn from the published artwork, which is in the screen colours (#234075 and ' +
       '#e3a82b) rather than the print ones the others use.'
@@ -174,8 +174,8 @@ export const ONE_OFFS = [
     label: 'Environmental Lab BC',
     body: 'Environmental Lab BC',
     years: 'by 2025',
-    note: 'Environmental Reporting BC’s arrangement — two lines beside the mark, “BC” in gold closing ' +
-      'the second — but on the later flat sun, with the gold divider kept.',
+    note: 'Environmental Reporting BC’s arrangement (two lines beside the mark, “BC” in gold closing ' +
+      'the second), but on the later flat sun, with the gold divider kept.',
     caveat: 'Drawn from the supplied artwork, in the screen colours (#234075 and #e3a82b).'
   }),
   artwork({
@@ -195,7 +195,7 @@ export const ONE_OFFS = [
     body: 'BC Bid',
     years: 'by 2026',
     note: 'The BC mark, a thin gold divider its full height, and “BCBid” in Garamond on the wordmark’s foot, with ' +
-      '“BC” in gold — the Coroners Service’s arrangement.',
+      '“BC” in gold: the Coroners Service’s arrangement.',
     caveat: 'Put together from the gallery’s BC mark and the Province’s Garamond: WelcomeBC’s B and C, Environmental ' +
       'Lab BC’s i and BC Wildfire Service’s d. Placed as the published logo, a small reversed image, shows it.'
   }),
@@ -204,7 +204,7 @@ export const ONE_OFFS = [
     label: 'BC OnLine',
     body: 'BC OnLine',
     years: 'by 2026',
-    note: 'The BC mark set horizontally — “British Columbia” beside the sun, not under it — then a short gold ' +
+    note: 'The BC mark set horizontally (“British Columbia” beside the sun, not under it), then a short gold ' +
       'divider and “BCOnLine” in Garamond, with “BC” in gold.',
     caveat: 'Put together from the gallery’s BC mark and the Province’s Garamond: “BC” is WelcomeBC’s, L, n, i ' +
       'and e are Environmental Lab BC’s, and the O is the mark’s own from COLUMBIA, enlarged. Placed and spaced ' +
@@ -221,7 +221,7 @@ export const ONE_OFFS = [
     note: 'Set as a ministry mark is today: the BC mark as published, a gold divider, and ' +
       '“PreparedBC” in the Garamond the ministry marks are lettered in. The program’s own lockup, used ' +
       'since 2015, is much the same with “BC” in gold, and its guides print it in one ink of their own ' +
-      'colour — orange, teal or gold. Neither has been obtained, so it is remade here rather than lifted.',
+      'colour: orange, teal or gold. Neither has been obtained, so it is remade here rather than lifted.',
     caveat: 'A remake, not a published mark. It opens in the generator, in the current era, with ' +
       'the wording already typed.'
   },
@@ -231,7 +231,7 @@ export const ONE_OFFS = [
     body: 'BC Public Service',
     years: 'from 2007',
     note: '“BC Public Service” takes the tagline’s place under the mark, and the line beside it ' +
-      'is a slogan — “Where ideas work” — rather than a name.',
+      'is a slogan, “Where ideas work”, rather than a name.',
     caveat: 'Drawn from the published artwork.'
   }),
   artwork({
@@ -249,7 +249,7 @@ export const ONE_OFFS = [
     label: 'The Best Place on Earth',
     body: 'Province of British Columbia',
     years: '2005–2011',
-    note: 'The BC mark itself, stacked, with a gold rule and the tagline beneath it — the ' +
+    note: 'The BC mark itself, stacked, with a gold rule and the tagline beneath it: the ' +
       'version every mark above sets beside a name.',
     caveat: 'Drawn from the published artwork.'
   })
@@ -307,7 +307,7 @@ export const BCTS_ENTRIES = {
       label: 'BCTS, BC Timber Sales',
       body: 'BC Timber Sales',
       years: 'by 2023',
-      note: 'The BC mark with its flat sun, a grey divider, and the initials over the name in a sans — ' +
+      note: 'The BC mark with its flat sun, a grey divider, and the initials over the name in a sans, ' +
         'forest green over black on white, or teal over white reversed.',
       caveat: 'Drawn from the published artwork. The reversed colours are sampled from a picture of ' +
         'the reversed mark, which lines up with this artwork to within a pixel; its ground is ' +

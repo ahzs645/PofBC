@@ -45,7 +45,7 @@ export const MARK_INKS = { light: '#1c1917', dark: '#ede9e2' }
  * @returns {string}
  */
 export const renderEraMark = ({ era, name, theme = 'light' }) => {
-  const title = `${name} — ${era} identity`
+  const title = `${name}, ${era} identity`
   const dark = theme === 'dark'
   const ink = MARK_INKS[dark ? 'dark' : 'light']
   if (era === 'current') {

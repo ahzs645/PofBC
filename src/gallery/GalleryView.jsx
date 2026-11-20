@@ -75,7 +75,7 @@ const SUN_OPTIONS = [
 /** What each part is called in the controls, and which parts share one control. */
 const PART_CONTROLS = [
   { label: 'Sun', roles: ['sun'] },
-  { label: 'Light', roles: ['light'], hint: 'The sun’s core and the rays it fades to — or, flat, the colour cut out of the sun.' },
+  { label: 'Light', roles: ['light'], hint: 'The sun’s core and the rays it fades to (or, flat, the colour cut out of the sun).' },
   { label: 'Mountains', roles: ['mountains'] },
   { label: 'BRITISH COLUMBIA', roles: ['wordmark'] },
   { label: 'Tagline', roles: ['tagline'] },
@@ -181,7 +181,7 @@ const PROVENANCE_SENTENCES = {
   third_party_reconstruction: 'An existing third-party redraw, retained with its attribution. It is not an original historical master.',
   reconstructed: 'Reconstructed: redrawn by this project from pictures or written rules, not taken from ' +
     'original artwork.',
-  synthetic_name_variant: 'A generated interpretation — a name set in a style it never had — and not an ' +
+  synthetic_name_variant: 'A generated interpretation (a name set in a style it never had), and not an ' +
     'authentic historical mark.'
 }
 
@@ -761,7 +761,7 @@ const GallerySearch = ({ query, onChange, inputRef }) => (
       ref={inputRef}
       type="search"
       value={query}
-      placeholder="Search logos and identities — TransLink, GVTA, BC Hydro…"
+      placeholder="Search logos and identities: TransLink, GVTA, BC Hydro…"
       aria-label="Search the logos"
       aria-keyshortcuts={IS_MAC ? 'Meta+K' : 'Control+K'}
       onChange={(event) => onChange(event.target.value)}

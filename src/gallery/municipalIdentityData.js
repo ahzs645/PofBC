@@ -16,7 +16,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-abbotsford-website-logo",
-        "label": "Abbotsford — Website logo",
+        "label": "Abbotsford: Website logo",
         "file": "identity-municipal/abbotsford/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -60,7 +60,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-burnaby-website-logo",
-        "label": "Burnaby — Website logo",
+        "label": "Burnaby: Website logo",
         "file": "identity-municipal/burnaby/website-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -103,7 +103,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-burns-lake-website-logo",
-        "label": "Burns Lake — Website logo",
+        "label": "Burns Lake: Website logo",
         "file": "identity-municipal/burns-lake/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -147,7 +147,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-chilliwack-website-logo",
-        "label": "Chilliwack — Website logo",
+        "label": "Chilliwack: Website logo",
         "file": "identity-municipal/chilliwack/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -191,7 +191,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-coquitlam-website-logo",
-        "label": "Coquitlam — Website logo, white",
+        "label": "Coquitlam: Website logo, white",
         "file": "identity-municipal/coquitlam/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -235,7 +235,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-dawson-creek-website-logo",
-        "label": "Dawson Creek — Website logo",
+        "label": "Dawson Creek: Website logo",
         "file": "identity-municipal/dawson-creek/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -283,7 +283,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-fort-st-john-website-logo",
-        "label": "Fort St. John — Website logo",
+        "label": "Fort St. John: Website logo",
         "file": "identity-municipal/fort-st-john/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -327,7 +327,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-kamloops-website-logo",
-        "label": "Kamloops — Website logo",
+        "label": "Kamloops: Website logo",
         "file": "identity-municipal/kamloops/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -371,7 +371,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-mackenzie-website-logo",
-        "label": "Mackenzie — Website logo",
+        "label": "Mackenzie: Website logo",
         "file": "identity-municipal/mackenzie/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -415,7 +415,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-nanaimo-website-logo",
-        "label": "Nanaimo — Website logo",
+        "label": "Nanaimo: Website logo",
         "file": "identity-municipal/nanaimo/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -459,7 +459,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-prince-george-website-logo",
-        "label": "Prince George — Website logo",
+        "label": "Prince George: Website logo",
         "file": "identity-municipal/prince-george/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -503,7 +503,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-prince-rupert-website-logo",
-        "label": "Prince Rupert — Website logo",
+        "label": "Prince Rupert: Website logo",
         "file": "identity-municipal/prince-rupert/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -547,7 +547,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-quesnel-website-logo",
-        "label": "Quesnel — Website logo",
+        "label": "Quesnel: Website logo",
         "file": "identity-municipal/quesnel/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -576,7 +576,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
       },
       {
         "id": "source-municipal-quesnel-website-logo-compact",
-        "label": "Quesnel — Website logo, compact",
+        "label": "Quesnel: Website logo, compact",
         "file": "identity-municipal/quesnel/website-logo-compact.png",
         "format": "png",
         "isVector": false,
@@ -620,7 +620,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-richmond-website-logo",
-        "label": "Richmond — Website logo",
+        "label": "Richmond: Website logo",
         "file": "identity-municipal/richmond/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -664,7 +664,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-saanich-website-logo",
-        "label": "Saanich — Website logo, green",
+        "label": "Saanich: Website logo, green",
         "file": "identity-municipal/saanich/website-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -707,7 +707,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-smithers-website-logo",
-        "label": "Smithers — Website logo",
+        "label": "Smithers: Website logo",
         "file": "identity-municipal/smithers/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -755,7 +755,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-surrey-website-logo",
-        "label": "Surrey — Website logo, white (footer)",
+        "label": "Surrey: Website logo, white (footer)",
         "file": "identity-municipal/surrey/website-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -798,7 +798,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-terrace-website-logo",
-        "label": "Terrace — Website logo",
+        "label": "Terrace: Website logo",
         "file": "identity-municipal/terrace/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -842,7 +842,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-vanderhoof-website-logo",
-        "label": "Vanderhoof — Website logo",
+        "label": "Vanderhoof: Website logo",
         "file": "identity-municipal/vanderhoof/website-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -870,7 +870,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
       },
       {
         "id": "source-municipal-vanderhoof-website-logo-white",
-        "label": "Vanderhoof — Website logo, white",
+        "label": "Vanderhoof: Website logo, white",
         "file": "identity-municipal/vanderhoof/website-logo-white.svg",
         "format": "svg",
         "isVector": true,
@@ -914,7 +914,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-victoria-website-logo",
-        "label": "Victoria — Website logo",
+        "label": "Victoria: Website logo",
         "file": "identity-municipal/victoria/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -958,7 +958,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-municipal-williams-lake-website-logo",
-        "label": "Williams Lake — Website logo",
+        "label": "Williams Lake: Website logo",
         "file": "identity-municipal/williams-lake/website-logo.png",
         "format": "png",
         "isVector": false,

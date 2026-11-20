@@ -235,7 +235,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   const name = `${patch.id}-${org.id}`
   // A variant is shown under its card's label, and named in full where it stands alone.
   const variants = variantsOf(patch)
-  const title = patch.variant ? `${cardLabel(patch)} — ${patch.variant}` : patch.label
+  const title = patch.variant ? `${cardLabel(patch)} · ${patch.variant}` : patch.label
   const exportPng = () => {
     if (!ready) return
     const png = textured(result, profile, finish, view.lightDeg, exportScale(result))

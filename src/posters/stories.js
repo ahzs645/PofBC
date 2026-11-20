@@ -204,7 +204,7 @@ export const STORIES = {
       'Under the lower right of the design, the artist has signed it: Robert Davidson, 1985, the year before the fair.'
     ],
     logo: [
-      'At the lower left, the fair’s own mark — EXPO stacked over the three rings of 86 — printed in the same black as the artwork, so it signs the sheet rather than competing with it.'
+      'At the lower left, the fair’s own mark (EXPO stacked over the three rings of 86), printed in the same black as the artwork, so it signs the sheet rather than competing with it.'
     ],
     event: [
       'To the right, the fair’s name, place and dates twice over, in English and in French: The 1986 World Exposition, Vancouver, May 2 to October 13, 1986.'

@@ -110,7 +110,7 @@ export const LAYOUTS = {
   columns: {
     id: 'columns',
     label: 'Side by side',
-    description: 'Mark, then the wordmark, then the ministry — three columns in a row. The widest of the four.',
+    description: 'Mark, then the wordmark, then the ministry: three columns in a row. The widest of the four.',
     // The one lockup with no vector original: it is reconstructed from a photograph of signage,
     // so its type size and leading are borrowed from the horizontal lockup (the closest relative,
     // and the only other one that sets the mark beside the type) rather than measured. The two

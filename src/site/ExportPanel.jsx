@@ -165,8 +165,8 @@ export const ExportPanel = ({ lockup, era = 'historical' }) => {
               !spec.vector
                 ? 'Pixels. Choose a width at least as large as it will ever be shown.'
                 : !canOutline || outlineText
-                  ? 'Vector, carrying its own shapes — scales to any size, and needs no font at all.'
-                  : 'Vector, with the brand font embedded — scales to any size.'
+                  ? 'Vector, carrying its own shapes: scales to any size, and needs no font at all.'
+                  : 'Vector, with the brand font embedded: scales to any size.'
             }
           />
 
@@ -185,7 +185,7 @@ export const ExportPanel = ({ lockup, era = 'historical' }) => {
             <p className="field__note">
               {era === 'document'
                 ? 'The arms and fixed heading are already vector outlines. The reconstruction note travels in the SVG metadata.'
-                : 'The official artwork is already outlined — the wording is drawn, not set — so it needs no font and nothing to convert.'}
+                : 'The official artwork is already outlined (the wording is drawn, not set), so it needs no font and nothing to convert.'}
             </p>
           )}
         </>

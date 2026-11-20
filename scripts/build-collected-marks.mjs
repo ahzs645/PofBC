@@ -264,7 +264,7 @@ const BODY_NOTES = {
   'provincial-rental-housing-corporation': 'No separate PRHC logo or readable seal has been found. Incorporated in 1961 as Pemco Holdings Ltd., renamed British Columbia Housing Corporation and then, in December 1976, Provincial Rental Housing Corporation. It holds land and has no staff; BC Housing acts for it, and its correspondence and signage carry BC Housing’s identity. Its own reports use plain name headings. Leads: BC Housing’s PRHC land files and CMHC’s British Columbia files at Library and Archives Canada.',
   'bc-petroleum-corporation': 'The Crown corporation that bought and sold the province’s natural gas from 1973. Its curled-flame emblem, alone and over its four-line name, from its 1982/83 and 1991/92 annual reports.',
   'bc-systems-corporation': 'The Province’s shared computing corporation, from 1977. Its operations moved into government in 1996 and it was dissolved in 2000; its role continues in today’s Connected Services BC.',
-  'bc-railway-company': 'Its wordmark is the BCRC acrostic — British Columbia Railway Company stepped down on four lines, with the initials in red — seen in three letterings: the heavier one on its website, and the wide Eurostile of the 2024 report’s cover and the Verdana of its letterhead.',
+  'bc-railway-company': 'Its wordmark is the BCRC acrostic (British Columbia Railway Company stepped down on four lines, with the initials in red), seen in three letterings: the heavier one on its website, and the wide Eurostile of the 2024 report’s cover and the Verdana of its letterhead.',
   'bc-place-ltd': 'The Crown company that built BC Place Stadium (opened 1983) on the False Creek lands that later held Expo 86. Legislation renamed it BC Enterprise Corporation with effect from 31 March 1987. BCEC ceased operations in 1989 and transferred certain assets and liabilities to the Province and the separately incorporated PavCo.',
   'bc-enterprise-corporation': 'BC Place Ltd. renamed with effect from 31 March 1987, with BC Development Corporation assets and liabilities transferred into it. BCEC ceased operations on 30 September 1989 and transferred certain assets and liabilities to the Province and PavCo. It remained a distinct company until statutory dissolution on 13 March 2023. Its held mark comes from a dated 1988 land-sale prospectus.',
   'bc-development-corporation': 'The Crown corporation the Province set up in 1973 to develop industrial land and lend to and invest in B.C. business: industrial parks around the province and the waterfront redevelopments of Lonsdale Quay in North Vancouver and, through its subsidiary First Capital City Development Company (1977), Westminster Quay in New Westminster. Three identities are held: four prisms beside its four-line name, in its advertisements by September 1975; four squares and “The Development Corporation”, registered from 1980; and the Province’s BC-and-flag mark over its name in its 1984–86 annual reports. Its assets passed to BC Enterprise Corporation on 31 March 1987.',
@@ -297,13 +297,13 @@ const BODY_NOTES = {
 // Display labels for files whose inventory label says how they were made; that stays in the record
 // (reconstruction: true), not on the page.
 const ASSET_LABELS = {
-  'source-urban-transit-authority-urban-transit-authority-png': 'Urban Transit Authority — signature',
-  'source-expo-86-corporation-expo86-symbol-svg': 'Expo 86 — symbol',
-  'source-expo-86-corporation-expo86-wordmark-svg': 'Expo 86 — wordmark',
-  'source-fraser-valley-health-region-fraser-valley-health-region-2000-jpg': 'Fraser Valley Health Region — Flower and cross',
+  'source-urban-transit-authority-urban-transit-authority-png': 'Urban Transit Authority: signature',
+  'source-expo-86-corporation-expo86-symbol-svg': 'Expo 86: symbol',
+  'source-expo-86-corporation-expo86-wordmark-svg': 'Expo 86: wordmark',
+  'source-fraser-valley-health-region-fraser-valley-health-region-2000-jpg': 'Fraser Valley Health Region: Flower and cross',
   // The inventory called this a geometric corporate symbol; it is the Province's BC and waving flag.
-  'source-bc-development-corporation-bc-development-1985-logo-png': 'British Columbia Development Corporation — The Province’s BC and flag, 1985',
-  'source-bc-development-corporation-bc-development-1985-logo-context-png': 'British Columbia Development Corporation — BC and flag under its name, 1985'
+  'source-bc-development-corporation-bc-development-1985-logo-png': 'British Columbia Development Corporation: The Province’s BC and flag, 1985',
+  'source-bc-development-corporation-bc-development-1985-logo-context-png': 'British Columbia Development Corporation: BC and flag under its name, 1985'
 }
 const ASSET_NOTES = {
   'source-bc-development-corporation-bc-development-1985-logo-png': 'The Province’s BC lettering and waving flag, as BCDC printed it in the back matter of its eleventh annual report, for the year ended 31 March 1985. The same arrangement is under its name in the 1984 report (PDF page 24); the 1986 report sets the flag beside “Partners in Enterprise”. Scan texture retained.',
@@ -325,7 +325,7 @@ const fromRegister = (entry, search = 'vector-search-2026-10-30') => {
   const original = entry.sourceBytesUnchanged
   return checked({
     id: `vector-${entry.id}`,
-    label: `${entry.organization} — ${LABELS[entry.id]}`,
+    label: `${entry.organization}: ${LABELS[entry.id]}`,
     file: `identity-collected/${entry.bodyId}/${basename(entry.file)}`,
     format: 'svg',
     isVector: true,

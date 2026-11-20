@@ -96,7 +96,7 @@ export const renderHydroSvg = (settings, {
 
   const svg = `<svg xmlns="${NS}" width="${Math.round(width)}" height="${height}" ` +
     `viewBox="${[view.x, view.y, view.width, view.height].map(num).join(' ')}" role="img" aria-labelledby="${prefix}-title">` +
-    `<title id="${prefix}-title">${escapeXml(titleOf(settings))} — historical B.C. Hydro reconstruction</title>` +
+    `<title id="${prefix}-title">${escapeXml(titleOf(settings))}, historical B.C. Hydro reconstruction</title>` +
     (info
       ? `<desc>Unofficial reconstruction from a historical BC Hydro identity manual; not current BC Hydro brand guidance. ` +
         `Lettering is set in TeX Gyre Termes, a substitute for the unrecovered original. Screen colours are approximations; ` +
@@ -132,7 +132,7 @@ export const renderHydroSheet = (all, group = 'all', { outline = true } = {}) =>
   let body = `<rect width="${width}" height="${height}" fill="#f6f7f2"/>` +
     `<g font-family="${sans}" fill="#183c38">` +
     `<text x="60" y="55" font-size="13" letter-spacing="2">HISTORICAL IDENTITY / RECONSTRUCTION</text>` +
-    `<text x="60" y="98" font-size="32">B.C. Hydro — ${escapeXml(heading)}</text>` +
+    `<text x="60" y="98" font-size="32">B.C. Hydro: ${escapeXml(heading)}</text>` +
     `<text x="60" y="128" font-size="14">Rules transcribed from the manual · approximate screen colours · lettering in TeX Gyre Termes</text></g>`
 
   entries.forEach(([id, settings], i) => {

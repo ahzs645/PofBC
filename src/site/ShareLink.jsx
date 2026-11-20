@@ -68,7 +68,7 @@ export const ShareLink = ({ state, update }) => {
     const link = buildConfigUrl(state)
     setUrl(link)
     setStatus(await copy(link)
-      ? { message: 'Link copied — it opens the generator with these settings.', tone: 'info' }
+      ? { message: 'Link copied. It opens the generator with these settings.', tone: 'info' }
       : { message: 'Copy this link:', tone: 'info' })
   }
 
@@ -88,7 +88,7 @@ export const ShareLink = ({ state, update }) => {
     <section className="panel">
       <h2>Share</h2>
       <p className="panel__hint">
-        Everything travels in the URL — there is nothing to upload and nothing kept.
+        Everything travels in the URL: there is nothing to upload and nothing kept.
       </p>
 
       <div className="row" style={{ flexWrap: 'wrap' }}>
@@ -115,7 +115,7 @@ export const ShareLink = ({ state, update }) => {
       <details className="field field--fold">
         <summary className="field__label">Configuration (JSON)</summary>
         <p className="field__note" style={{ margin: '0 0 6px' }}>
-          The current lockup as JSON. Paste one in and press Apply — the field names are the ones in{' '}
+          The current lockup as JSON. Paste one in and press Apply; the field names are the ones in{' '}
           <a href={`${import.meta.env.BASE_URL}capabilities.json`}>capabilities.json</a>.
         </p>
         <textarea

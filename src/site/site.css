@@ -1619,6 +1619,33 @@ input.share__url {
 /* In a tile the chips and the note line up under the label, with room below for the hover ground. */
 .gallery__pick--tile .gallery__chips { margin: 8px 12px 12px; }
 .gallery__pick--tile .gallery__note { padding: 0 12px; }
+
+/* A tile is borderless because an era's card frames it. On a shelf of its own (search results)
+   nothing does, so it becomes a card itself, matching the collection cards beside it. */
+.gallery__shelf > .gallery__tiles { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+.gallery__shelf > .gallery__tiles > .gallery__pick--tile {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  align-content: start;
+  padding: 16px;
+  background: var(--surface);
+}
+.gallery__shelf > .gallery__tiles > .gallery__pick--tile:hover,
+.gallery__shelf > .gallery__tiles > .gallery__pick--tile:focus-visible { background: var(--hover); }
+.gallery__shelf > .gallery__tiles > .gallery__pick--tile .gallery__art { min-height: 150px; border-radius: var(--radius-sm); }
+.gallery__shelf > .gallery__tiles > .gallery__pick--tile .gallery__label { margin: 14px 0 0; padding: 0; font-size: 18px; font-weight: 600; }
+.gallery__shelf > .gallery__tiles > .gallery__pick--tile .gallery__note { padding: 0; }
+.gallery__shelf > .gallery__tiles > .gallery__pick--tile .gallery__chips { margin: 10px 0 0; }
+
+/* A card gives the gist; the full account is on the mark's or collection's own page. */
+.gallery__pick--tile .gallery__note,
+.gallery__collection .gallery__collection-text > .gallery__note {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
 .gallery__entry > .gallery__chips { margin-top: 10px; }
 .gallery__collection-text .gallery__chips { margin-top: 8px; }
 

@@ -337,7 +337,7 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
         )].filter(Boolean)
       : [],
     monarch,
-    description: `The ${monarch.title}’s representative in British Columbia. Gives royal assent to laws, summons and dissolves the Legislature, and appoints the Premier — by convention, whoever can hold the Assembly’s confidence.`,
+    description: `The ${monarch.title}’s representative in British Columbia. Gives royal assent to laws, summons and dissolves the Legislature, and appoints the Premier: by convention, whoever can hold the Assembly’s confidence.`,
     officialUrl: 'https://ltgov.bc.ca'
   })
 

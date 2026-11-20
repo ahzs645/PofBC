@@ -3,12 +3,12 @@
 // generator every view used to share.
 
 const SITE = 'Province of BC'
-export const DEFAULT_TITLE = 'Province of British Columbia — logo generator'
+export const DEFAULT_TITLE = 'Province of British Columbia logo generator'
 
-/** A title for a page in a view: "University of Northern BC · Salaries — Province of BC". */
+/** A title for a page in a view: "University of Northern BC · Salaries · Province of BC". */
 export const documentTitle = (...parts) => {
   const named = parts.map((part) => String(part ?? '').trim()).filter(Boolean)
-  return named.length ? `${named.join(' · ')} — ${SITE}` : DEFAULT_TITLE
+  return named.length ? `${named.join(' · ')} · ${SITE}` : DEFAULT_TITLE
 }
 
 const metaTag = (name) => {

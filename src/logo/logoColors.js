@@ -93,7 +93,7 @@ export const describeContrast = (foreground, background) => {
   // Worded without naming a part: the same function judges the mark and the type, and the caller
   // says which one it is reporting on.
   if (ratio < 1.5) return { ratio: rounded, level: 'fail', message: 'All but invisible here.' }
-  if (ratio < 3) return { ratio: rounded, level: 'warn', message: 'Low contrast — hard to read at small sizes.' }
+  if (ratio < 3) return { ratio: rounded, level: 'warn', message: 'Low contrast: hard to read at small sizes.' }
   return { ratio: rounded, level: 'pass', message: 'Good contrast.' }
 }
 

@@ -264,7 +264,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
   const name = `${patch.id}-${org.id}`
   const variants = variantsOf(patch)
-  const title = patch.variant ? `${cardLabel(patch)} — ${patch.variant}` : patch.label
+  const title = patch.variant ? `${cardLabel(patch)} · ${patch.variant}` : patch.label
   const metal = modelReady ? METALS[built.metal] : null
   const leather = modelReady ? built.metal === 'leather' : /leather/i.test(patch.medium ?? '')
   const curveLabel = CURVES.find((c) => c.value === applied?.mode)?.label ?? 'Flat'

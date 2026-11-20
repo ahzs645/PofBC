@@ -71,7 +71,7 @@ export const TimelineBar = ({ year, onYear, playing, onPlay, life = null }) => {
   const previous = [...stepYears].reverse().find((candidate) => candidate < year)
   const next = stepYears.find((candidate) => candidate > year)
   const whatIn = (at) => (stepping ? stops.find(([candidate]) => candidate === at)?.[1].join('; ') : null)
-  const stepTitle = (at, word) => at && `${word} ${at}${whatIn(at) ? ` — ${whatIn(at)}` : ''}`
+  const stepTitle = (at, word) => at && `${word} ${at}${whatIn(at) ? `: ${whatIn(at)}` : ''}`
   const height = following ? 90 : 78
   // Drawn from its start, or from the first sighting; to its end, or only as far as a source shows it
   // when its end is untraced. Only a life that continues runs to today.
@@ -240,7 +240,7 @@ export const TimelineBar = ({ year, onYear, playing, onPlay, life = null }) => {
             {life.toKind === 'untraced' && ', as far as a source shows it; later status untraced'}
             {life.toKind === 'occurred_date_unknown' && ', as far as a source shows it; it ended later, on a day not found'}
             {stepping
-              ? <>, and {stops.length} {stops.length === 1 ? 'year' : 'years'} with a dated event — the arrows step through them</>
+              ? <>, and {stops.length} {stops.length === 1 ? 'year' : 'years'} with a dated event; the arrows step through them</>
               : <>; no dated events yet</>}
           </li>
         )}

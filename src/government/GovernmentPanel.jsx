@@ -661,7 +661,7 @@ const PathToPeople = ({ node, government, onSelect }) => {
               <span>{from?.shortName ?? from?.name}</span>{' '}
               <span className="gov-muted">{from?.kind === 'ministry' && step.kind === 'appoints' ? 'has its minister chosen by' : STEP[step.kind]}</span>{' '}
               <button type="button" className="gov-link-button" onClick={() => onSelect(step.from)}>{to?.shortName ?? to?.name}</button>
-              {step.seats ? <span className="gov-muted"> — {step.seats} members</span> : null}
+              {step.seats ? <span className="gov-muted"> ({step.seats} members)</span> : null}
               {step.inferred && <span className="gov-muted"> (inferred: no source names it for {government.year})</span>}
               {also.map((other) => {
                 const by = byId.get(other.from)

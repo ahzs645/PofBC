@@ -16,7 +16,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-translink-website-logo",
-        "label": "TransLink — Website logo",
+        "label": "TransLink: Website logo",
         "file": "identity-expanded/translink/website-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -71,7 +71,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-metro-vancouver-transit-police-website-logo",
-        "label": "Metro Vancouver Transit Police — Website logo",
+        "label": "Metro Vancouver Transit Police: Website logo",
         "file": "identity-expanded/metro-vancouver-transit-police/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -115,7 +115,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-creative-bc-website-logo",
-        "label": "Creative BC — Website logo",
+        "label": "Creative BC: Website logo",
         "file": "identity-expanded/creative-bc/website-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -143,7 +143,7 @@ export const EXPANDED_IDENTITY_BODIES = [
       },
       {
         "id": "source-expanded-creative-bc-provincial-lockup",
-        "label": "Creative BC — Provincial funding lockup",
+        "label": "Creative BC: Provincial funding lockup",
         "file": "identity-expanded/creative-bc/provincial-lockup.svg",
         "sha256": "caa4f1e9236154835a07516ee50816587aff39f328fe6a58eba4233f8f5e1d67",
         "bytes": 23720,
@@ -190,7 +190,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-liquor-distribution-branch-website-logo",
-        "label": "BC Liquor Distribution Branch — Website logo",
+        "label": "BC Liquor Distribution Branch: Website logo",
         "file": "identity-expanded/liquor-distribution-branch/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -234,7 +234,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-sub-bcliquor-website-logo",
-        "label": "BCLIQUOR — Website logo",
+        "label": "BCLIQUOR: Website logo",
         "file": "identity-expanded/sub-bcliquor/website-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -277,7 +277,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-sub-bc-cannabis-stores-website-logo",
-        "label": "BC Cannabis Stores — Website logo",
+        "label": "BC Cannabis Stores: Website logo",
         "file": "identity-expanded/sub-bc-cannabis-stores/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -321,7 +321,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-bc-cannabis-wholesale-website-logo",
-        "label": "BC Cannabis Wholesale — Website logo",
+        "label": "BC Cannabis Wholesale: Website logo",
         "file": "identity-expanded/bc-cannabis-wholesale/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -365,7 +365,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-ldb-wholesale-website-logo",
-        "label": "LDB Wholesale Operations — Website logo",
+        "label": "LDB Wholesale Operations: Website logo",
         "file": "identity-expanded/ldb-wholesale/website-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -408,7 +408,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-e-comm-website-logo",
-        "label": "E-Comm 9-1-1 — Website logo",
+        "label": "E-Comm 9-1-1: Website logo",
         "file": "identity-expanded/e-comm/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -452,7 +452,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-bc-ferry-authority-2003-website-logo",
-        "label": "B.C. Ferry Authority — Website logo",
+        "label": "B.C. Ferry Authority: Website logo",
         "file": "identity-expanded/bc-ferry-authority-2003/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -496,7 +496,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-sub-bc-ferry-commission-website-logo",
-        "label": "Office of the BC Ferries Commissioner — Website logo",
+        "label": "Office of the BC Ferries Commissioner: Website logo",
         "file": "identity-expanded/sub-bc-ferry-commission/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -540,7 +540,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-northern-development-initiative-trust-website-logo",
-        "label": "Northern Development Initiative Trust — Website logo",
+        "label": "Northern Development Initiative Trust: Website logo",
         "file": "identity-expanded/northern-development-initiative-trust/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -584,7 +584,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-island-coastal-economic-trust-website-logo",
-        "label": "Island Coastal Economic Trust — Website logo",
+        "label": "Island Coastal Economic Trust: Website logo",
         "file": "identity-expanded/island-coastal-economic-trust/website-logo.webp",
         "format": "webp",
         "isVector": false,
@@ -628,7 +628,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-etsi-bc-website-logo",
-        "label": "Economic Trust of the Southern Interior — Website logo",
+        "label": "Economic Trust of the Southern Interior: Website logo",
         "file": "identity-expanded/etsi-bc/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -672,7 +672,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-nechako-kitamaat-development-fund-website-logo",
-        "label": "Nechako-Kitamaat Development Fund Society — Website logo",
+        "label": "Nechako-Kitamaat Development Fund Society: Website logo",
         "file": "identity-expanded/nechako-kitamaat-development-fund/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -716,7 +716,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-bc-pension-corporation-website-logo",
-        "label": "BC Pension Corporation — Website logo",
+        "label": "BC Pension Corporation: Website logo",
         "file": "identity-expanded/bc-pension-corporation/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -760,7 +760,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-technical-safety-bc-website-logo",
-        "label": "Technical Safety BC — Website logo",
+        "label": "Technical Safety BC: Website logo",
         "file": "identity-expanded/technical-safety-bc/website-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -803,7 +803,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-land-title-and-survey-authority-website-logo",
-        "label": "Land Title and Survey Authority of British Columbia — Website logo",
+        "label": "Land Title and Survey Authority of British Columbia: Website logo",
         "file": "identity-expanded/land-title-and-survey-authority/website-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -846,7 +846,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-consumer-protection-bc-website-logo",
-        "label": "Consumer Protection BC — Website logo",
+        "label": "Consumer Protection BC: Website logo",
         "file": "identity-expanded/consumer-protection-bc/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -890,7 +890,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-sub-powerex-website-logo",
-        "label": "Powerex — Website logo",
+        "label": "Powerex: Website logo",
         "file": "identity-expanded/sub-powerex/website-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -933,7 +933,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-sub-playnow-website-logo",
-        "label": "PlayNow — Website logo",
+        "label": "PlayNow: Website logo",
         "file": "identity-expanded/sub-playnow/website-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -976,7 +976,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-sub-vancouver-convention-centre-website-logo",
-        "label": "Vancouver Convention Centre — Website logo",
+        "label": "Vancouver Convention Centre: Website logo",
         "file": "identity-expanded/sub-vancouver-convention-centre/website-logo.webp",
         "format": "webp",
         "isVector": false,
@@ -1020,7 +1020,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-sub-bc-womens-hospital-website-logo",
-        "label": "BC Women's Hospital + Health Centre — Website logo",
+        "label": "BC Women's Hospital + Health Centre: Website logo",
         "file": "identity-expanded/sub-bc-womens-hospital/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -1064,7 +1064,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-sub-bc-centre-for-disease-control-website-logo",
-        "label": "BC Centre for Disease Control — Website logo",
+        "label": "BC Centre for Disease Control: Website logo",
         "file": "identity-expanded/sub-bc-centre-for-disease-control/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -1108,7 +1108,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-bc-emergency-health-services-website-logo",
-        "label": "BC Emergency Health Services — Website logo",
+        "label": "BC Emergency Health Services: Website logo",
         "file": "identity-expanded/bc-emergency-health-services/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -1152,7 +1152,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-university-of-northern-bc-website-logo",
-        "label": "University of Northern British Columbia — Website logo",
+        "label": "University of Northern British Columbia: Website logo",
         "file": "identity-expanded/university-of-northern-bc/website-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -1195,7 +1195,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-simon-fraser-university-website-logo",
-        "label": "Simon Fraser University — Website logo",
+        "label": "Simon Fraser University: Website logo",
         "file": "identity-expanded/simon-fraser-university/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -1239,7 +1239,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-university-of-victoria-website-logo",
-        "label": "University of Victoria — Website wordmark",
+        "label": "University of Victoria: Website wordmark",
         "file": "identity-expanded/university-of-victoria/website-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -1282,7 +1282,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-translink-t-marker-toolkit-t-marker",
-        "label": "TransLink — Blue T marker",
+        "label": "TransLink: Blue T marker",
         "file": "identity-expanded/translink-t-marker/toolkit-t-marker.svg",
         "sha256": "6449882fc2949767ec5c009e939ad6690660e1c8947ecb65480518bff9abe828",
         "bytes": 1135,
@@ -1330,7 +1330,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-skytrain-toolkit-wordmark",
-        "label": "SkyTrain — Symbol and wordmark",
+        "label": "SkyTrain: Symbol and wordmark",
         "file": "identity-expanded/skytrain/toolkit-wordmark.svg",
         "sha256": "2a27c6c18b48e697c7f211466a25e96d78366aa558d3b71dde7f131341424e02",
         "bytes": 4774,
@@ -1378,7 +1378,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-metro-vancouver-full-logo",
-        "label": "Metro Vancouver — Full colour symbol, name and tagline",
+        "label": "Metro Vancouver: Full colour symbol, name and tagline",
         "file": "identity-expanded/metro-vancouver/full-logo.svg",
         "sha256": "405b69ac90bf6585297bf7b915ddce3aa724a39f98c01d58c927807135c9b713",
         "bytes": 16053,
@@ -1410,7 +1410,7 @@ export const EXPANDED_IDENTITY_BODIES = [
       },
       {
         "id": "source-expanded-metro-vancouver-wordmark",
-        "label": "Metro Vancouver — Wordmark",
+        "label": "Metro Vancouver: Wordmark",
         "file": "identity-expanded/metro-vancouver/wordmark.svg",
         "sha256": "d53ccb80a2f85969a3fbe2748048f129c68f87370eeb092f782aaa7929238155",
         "bytes": 5045,
@@ -1457,7 +1457,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-handydart-customer-first-logo",
-        "label": "HandyDART — Circle and wordmark",
+        "label": "HandyDART: Circle and wordmark",
         "file": "identity-expanded/handydart/customer-first-logo.svg",
         "sha256": "c6a004db429bdba7c46309895e5f030393e6e0629f8c884410d0dab1676b0ac9",
         "bytes": 3319,
@@ -1505,7 +1505,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-coast-mountain-bus-company-route-map-logo",
-        "label": "Coast Mountain Bus Company — Landscape symbol and name",
+        "label": "Coast Mountain Bus Company: Landscape symbol and name",
         "file": "identity-expanded/coast-mountain-bus-company/route-map-logo.png",
         "sha256": "381d17008e8b52ac40a44dded9267e9ad17919b455b784b15bc5228f95ab1b0f",
         "bytes": 49870,
@@ -1553,7 +1553,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-west-coast-express-performance-report-logo",
-        "label": "West Coast Express — Locomotive symbol and wordmark",
+        "label": "West Coast Express: Locomotive symbol and wordmark",
         "file": "identity-expanded/west-coast-express/performance-report-logo.png",
         "sha256": "8c6400b5ff94dcb3a2316d4018ac9e68af54b1804c70bf25b2341357cbbb7c12",
         "bytes": 82415,
@@ -1601,7 +1601,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-bc-arts-council-provincial-lockup",
-        "label": "BC Arts Council — Provincial funding lockup",
+        "label": "BC Arts Council: Provincial funding lockup",
         "file": "identity-expanded/bc-arts-council/provincial-lockup.svg",
         "sha256": "90b64d3f2892124ca7595f7361ea9a00ad75fe60e75aa1d748b60894fa77e9cb",
         "bytes": 58888,
@@ -1648,7 +1648,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-science-world-black-wordmark",
-        "label": "Science World — Black outlined wordmark",
+        "label": "Science World: Black outlined wordmark",
         "file": "identity-expanded/science-world/black-wordmark.svg",
         "sha256": "9b79a67becd609f6dfcae4353e90f9c9fbed2749c360da8ea2d31adcfc0ba578",
         "bytes": 12908,
@@ -1695,7 +1695,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-university-of-british-columbia-full-signature",
-        "label": "University of British Columbia — Full signature",
+        "label": "University of British Columbia: Full signature",
         "file": "identity-expanded/university-of-british-columbia/full-signature.svg",
         "sha256": "f664c501b112d3b7452c90df6ce77e2d1d194887f7b20a1bba0ca454c28d122a",
         "bytes": 10707,
@@ -1742,7 +1742,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-sub-bc-place-website-logo",
-        "label": "BC Place — Website logo",
+        "label": "BC Place: Website logo",
         "file": "identity-expanded/sub-bc-place/website-logo.svg",
         "sha256": "806dfc8eae613d4d6aff43c8b7258c9a2fb362358e3bb90073953046c8bf9e7d",
         "bytes": 4465,
@@ -1789,7 +1789,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-bcit-website-logo",
-        "label": "British Columbia Institute of Technology — Website logo",
+        "label": "British Columbia Institute of Technology: Website logo",
         "file": "identity-expanded/bcit/website-logo.svg",
         "sha256": "b663205f5ad5efad24e19049335429e41fb88a6fccf59e2c333098d268759f08",
         "bytes": 1140,
@@ -1836,7 +1836,7 @@ export const EXPANDED_IDENTITY_BODIES = [
     "assets": [
       {
         "id": "source-expanded-compass-website-logo",
-        "label": "Compass — Website C symbol",
+        "label": "Compass: Website C symbol",
         "file": "identity-expanded/compass/website-logo.png",
         "sha256": "edc67e8a72f0ad3da64705e5f705ab7419ffcf96751c2bac268dc55477ec3285",
         "bytes": 2884,
@@ -1868,7 +1868,7 @@ export const EXPANDED_IDENTITY_BODIES = [
       },
       {
         "id": "source-expanded-compass-needle-symbol",
-        "label": "Compass — Needle symbol",
+        "label": "Compass: Needle symbol",
         "file": "identity-expanded/compass/needle-symbol.png",
         "sha256": "74bdbc43fa019fd541ceaacccfeb5e16cd407a946b151eec391177619d07744e",
         "bytes": 6872,

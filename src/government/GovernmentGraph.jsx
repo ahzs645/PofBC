@@ -342,7 +342,7 @@ export const edgeTitle = (edge, from, to) => {
     case 'part': return `${b} is part of ${a}`
     case 'partner': return `${b} is a partner of the ${a}`
     case 'owned': return `${b} is a subsidiary of ${a}: owned, which is not answering to it`
-    default: return `${a} — ${b}`
+    default: return `${a} and ${b}`
   }
 }
 const clockwise = (angle) => ((angle + Math.PI / 2) % (Math.PI * 2) + Math.PI * 2) % (Math.PI * 2)

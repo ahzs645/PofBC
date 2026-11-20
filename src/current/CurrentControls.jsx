@@ -81,7 +81,7 @@ export const CurrentControls = ({ state, update }) => {
       <h2>Ministry mark</h2>
       <p className="panel__hint">
         The Province’s mark, used exactly as published, with the wording set in the same alphabet
-        its own marks are lettered with and broken by the same rules — which reproduce 44 of their
+        its own marks are lettered with and broken by the same rules, which reproduce 44 of their
         46 marks exactly.
       </p>
 
@@ -152,7 +152,7 @@ export const CurrentControls = ({ state, update }) => {
                 ? 'A name of your own, set by the Province’s own rules rather than copied from a mark. '
                 : stated
                   ? 'Official wording. This mark breaks against the Province’s own pattern, so its breaks are written in. '
-                  : 'Official wording. Lines break by the Province’s own rules — the opening on its own line, the rest on one line or two. '}
+                  : 'Official wording. Lines break by the Province’s own rules: the opening on its own line, the rest on one line or two. '}
           Press Enter to override.
           {edited && (
             <>

@@ -5,7 +5,7 @@ export const SourceLink = ({ sourceId, sources = {}, pdfPage, label, url }) => {
   const href = sourceHref(source, pdfPage)
   const page = Number.isInteger(pdfPage) && pdfPage > 0 && href?.includes('#page=')
   return href
-    ? <a href={href} target="_blank" rel="noreferrer" title={[source.title, source.publicWarning].filter(Boolean).join(' — ')}>{label ?? (page ? `Source · p. ${pdfPage}` : 'Source')}</a>
+    ? <a href={href} target="_blank" rel="noreferrer" title={[source.title, source.publicWarning].filter(Boolean).join('. ')}>{label ?? (page ? `Source · p. ${pdfPage}` : 'Source')}</a>
     : null
 }
 

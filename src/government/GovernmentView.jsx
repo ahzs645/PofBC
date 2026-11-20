@@ -48,8 +48,8 @@ const SOURCES_NOTE = `
   Council and Wikipedia. Which ministry answered for a body is shown where a source states it, and
   otherwise inferred and marked so. Present-day officials as checked on ${CURRENT_AS_OF} against the
   Province’s and each body’s own pages. Staff are 2025/26 full-time equivalents from the Public
-  Accounts. The dates of the four identities are estimates, most of all the crest’s. Typed events —
-  origins, name and logo changes, appointments, the 2026 election’s schedule — come from the BC
+  Accounts. The dates of the four identities are estimates, most of all the crest’s. Typed events
+  (origins, name and logo changes, appointments, the 2026 election’s schedule) come from the BC
   government atlas research package of 25 September 2026 and the research that followed it
   (${EVENT_SOURCES.length} sources). A date is shown only as precisely as its source gives it; an
   unknown start is not treated as proof a body did not exist.

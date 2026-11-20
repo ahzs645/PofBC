@@ -45,7 +45,7 @@ export const SuppliedMarkView = ({ entry }) => {
   const [backdrop, setBackdrop] = useState('auto')
   const mark = CROWN_MARKS[version]
 
-  const draw = (width) => renderSuppliedSvg({ id: version, background, clearSpace, width, title: `${entry.label} — ${mark.title}` })
+  const draw = (width) => renderSuppliedSvg({ id: version, background, clearSpace, width, title: `${entry.label}: ${mark.title}` })
   const { svg } = useMemo(() => draw(1200), [version, background, clearSpace])
   const transparent = background === TRANSPARENT
   const shownOn = backdrop !== 'auto' ? backdrop : transparent && isReversed(version) ? 'dark' : 'light'

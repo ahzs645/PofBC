@@ -83,7 +83,7 @@ export const CollectedPaletteView = ({ entry }) => {
       <div className="gallery__recovered-preview" data-dark={palette.darkBackground || undefined}
         aria-busy={!loaded}>
         {rendered?.url
-          ? <img src={rendered.url} alt={`${entry.label} — ${palette.label}`} />
+          ? <img src={rendered.url} alt={`${entry.label}, ${palette.label}`} />
           : failed
             ? <p role="alert">The vector preview could not be loaded. <button type="button" className="button button--ghost"
                 onClick={() => setAttempt((value) => value + 1)}>Try again</button></p>

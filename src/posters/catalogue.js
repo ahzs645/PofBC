@@ -228,7 +228,7 @@ export const POSTERS = {
     format: 'Poster',
     blurb: 'Robert Davidson’s formline design for the 1986 World Exposition.',
     series: 'expo-86',
-    title: 'Expo 86 — Robert Davidson',
+    title: 'Expo 86: Robert Davidson',
     when: 'Artwork signed 1985; for the fair of 1986',
     made: 'vector',
     view: { x: 0, y: 0, w: 1200, h: 1600 },

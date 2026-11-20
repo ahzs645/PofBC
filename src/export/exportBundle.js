@@ -94,7 +94,7 @@ const readme = (lockup, entries) => {
   const formats = [...new Set(entries.map((entry) => entry.format))]
 
   if (lockup.era === 'document') return [
-    'British Columbia historical document arms — reconstruction study',
+    'British Columbia historical document arms: reconstruction study',
     '',
     `Layout: ${lockup.documentLayout || 'split-serif'}`,
     `Arms: ${lockup.documentMarkColor}`,
@@ -120,8 +120,8 @@ const readme = (lockup, entries) => {
   const extra = isCrest ? lockup.crestExtra : isFlag ? lockup.flagExtra : lockup.program
 
   return [
-    'Province of British Columbia — logo bundle',
-    '='.repeat(42),
+    'Province of British Columbia: logo bundle',
+    '='.repeat(41),
     '',
     `Ministry:    ${(isCurrent ? lockup.currentName : lockup.ministry) || '(wordmark only)'}`,
     extra && !isCurrent ? `Additional line: ${extra}` : null,

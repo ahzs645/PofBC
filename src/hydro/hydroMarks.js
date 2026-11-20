@@ -78,7 +78,7 @@ export const CURRENT_VARIANTS = {
     colours: { upper: grass, lower: sea, wordmark: granite },
     omit: ['tagline'],
     background: ice,
-    hint: 'Only for signage and permanent installations — never use it anywhere else.'
+    hint: 'Only for signage and permanent installations; never use it anywhere else.'
   },
   symbol: {
     label: 'Symbol',
@@ -178,6 +178,6 @@ export const renderCurrentHydroSvg = ({ variant = 'colour', background, clearSpa
     background: background ?? spec.background,
     clearSpace,
     width,
-    title: `BC Hydro logo — ${spec.label.toLowerCase()}`
+    title: `BC Hydro logo, ${spec.label.toLowerCase()}`
   })
 }

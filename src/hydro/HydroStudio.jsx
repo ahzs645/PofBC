@@ -185,7 +185,7 @@ const MoreFiles = ({ all, active, settings, outline, run, onLoad }) => {
           The rules as JSON
         </button>
       </div>
-      <p className="field__note">Every preset’s settings, as a file to come back to — the original studio’s v1 and v2 files load too.</p>
+      <p className="field__note">Every preset’s settings, as a file to come back to; the original studio’s v1 and v2 files load too.</p>
       <div className="row hydro__buttons">
         <button type="button" className="button" onClick={() => save(JSON.stringify(hydroProject(all, active), null, 2), 'bc-hydro-template-settings-v2.json', 'application/json')}>
           Save settings
@@ -282,7 +282,7 @@ export const HydroStudio = ({ initialPreset = 'standard', onClose }) => {
             data-backdrop={shownOn}
             data-transparent={transparent || undefined}
             role="img"
-            aria-label={`${HYDRO_PRESETS[active].name} — ${HYDRO_MODES[mode]}`}
+            aria-label={`${HYDRO_PRESETS[active].name}, ${HYDRO_MODES[mode]}`}
             dangerouslySetInnerHTML={{ __html: preview.svg }}
           />
 
@@ -405,7 +405,7 @@ export const HydroStudio = ({ initialPreset = 'standard', onClose }) => {
                 name="backgroundValue"
                 settings={settings}
                 update={update}
-                note="0 is the white end, 100 the dark end — the value of the real surface, which a screen colour cannot establish."
+                note="0 is the white end, 100 the dark end: the value of the real surface, which a screen colour cannot establish."
               />
             )}
             {settings.usage === 'vehicle' && (
@@ -431,7 +431,7 @@ export const HydroStudio = ({ initialPreset = 'standard', onClose }) => {
             </details>
             {isSign && (
               <p className="field__note">
-                Cap height {preview.scene.metrics.capHeight.toFixed(1)} · x-height {preview.scene.metrics.xHeight.toFixed(1)} units — the sign’s borders are measured in these.
+                Cap height {preview.scene.metrics.capHeight.toFixed(1)} · x-height {preview.scene.metrics.xHeight.toFixed(1)} units. The sign’s borders are measured in these.
               </p>
             )}
           </section>

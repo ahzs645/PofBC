@@ -284,7 +284,7 @@ export const HYDRO_ENTRIES = [
     id: 'bc-hydro-corporate',
     preset: 'standard',
     label: 'Corporate signature',
-    note: 'The ringed symbol — an H of two four-pointed stars, green over blue — beside “B.C.Hydro”. ' +
+    note: 'The ringed symbol (an H of two four-pointed stars, green over blue) beside “B.C.Hydro”. ' +
       'Only the symbol is coloured; the lettering is black.'
   }),
   hydro({
@@ -436,7 +436,7 @@ const ICBC_ENTRIES = {
   'icbc-rounded': [
     supplied({
       ...SUPPLIED_PATHS('The paths are the supplied orange file’s. The blue is a declared recolour, sampled from ' +
-        'a supplied screenshot — the right colour family, not a certified brand value.'),
+        'a supplied screenshot: the right colour family, not a certified brand value.'),
       applicability: DATED_BY_TIMELINE('estimated_era', '2008–present', 'Blue use is claimed from January 2008; a 2008 rollout is inferred.'),
       rights: ICBC_RIGHTS
     })({
@@ -583,7 +583,7 @@ const BCF_ENTRIES = {
     supplied({
       provenance: 'reconstructed',
       fidelity: 'no comparison',
-      fidelityNote: 'A simplified interpretation of the flag illustrated on the 1963 brochure’s cover — not a ' +
+      fidelityNote: 'A simplified interpretation of the flag illustrated on the 1963 brochure’s cover, not a ' +
         'facsimile, and not a claim about its exact colours. No side-by-side check is recorded.',
       applicability: DATED_BY_TIMELINE('first_observation', 'by 1963', 'On the cover of the 1963 season brochure.'),
       rights: BCF_RIGHTS
@@ -731,7 +731,7 @@ const BCT_ENTRIES = {
       fidelity: 'partially compared',
       fidelityNote: 'The supplied colour file’s paths, with its tagline’s font outlined where it stood. The file ' +
         'shaded part of the loop with a tiny bitmap; here that part is flat blue, cut along the bitmap’s exact ' +
-        'clip, and its white highlights are cut-outs — a derivative, not the file as supplied. When and where ' +
+        'clip, and its white highlights are cut-outs: a derivative, not the file as supplied. When and where ' +
         'the file was published is not recorded.',
       applicability: BCT_LOOP_DATES,
       rights: BCT_RIGHTS
@@ -863,7 +863,7 @@ export const GALLERY_COLLECTIONS = [
         label: 'The Rimmer signature',
         note: 'Designed by Jim Rimmer and launched in 1961: a ringed H of two four-pointed stars, green ' +
           'over blue, beside “B.C.Hydro” in a serif, drawn from five pages of its identity ' +
-          'manual — four signatures, and the rules for signs, backgrounds and vehicles, checked as you ' +
+          'manual: four signatures, and the rules for signs, backgrounds and vehicles, checked as you ' +
           'go. The typeface was never recovered; the lettering is set in a close substitute.',
         identity: {
           provenance: 'reconstructed',
@@ -958,7 +958,7 @@ export const GALLERY_COLLECTIONS = [
     cover: 'bcts',
     intro: 'BC Timber Sales’ marks since it was established in 2003: its initials over its name, first on ' +
       'their own, then beside a ministry crest, then beside the BC mark. The initials have been published ' +
-      'in two greens — forest on white, teal reversed — and every mark here starts from either. Open one ' +
+      'in two greens (forest on white, teal reversed), and every mark here starts from either. Open one ' +
       'to recolour it.',
     eras: withMarks(COLLECTION_ERAS.bcts, {
       'bcts-earlier': BCTS_ENTRIES.earlier.map(withIdentity),
@@ -974,7 +974,7 @@ export const GALLERY_COLLECTIONS = [
     graphNode: 'icbc',
     cover: 'icbc-rounded-blue',
     intro: 'The Insurance Corporation of British Columbia’s marks: a registry emblem of 1974, a half-disc ' +
-      'beside its name by 1989, then the road badge — in a serif, a heavier sans, and since 2008 with ' +
+      'beside its name by 1989, then the road badge: in a serif, a heavier sans, and since 2008 with ' +
       'rounded corners.',
     eras: withMarks(COLLECTION_ERAS.icbc, ICBC_ENTRIES)
   },
@@ -1046,7 +1046,7 @@ export const GALLERY_COLLECTIONS = [
     cover: 'bct-loop-colour',
     intro: 'BC Transit began as the Urban Transit Authority, whose lettering and double-arrow device are here from ' +
       'newspaper advertisements of 1979 and 1980. Then its two families of mark since it took the name in 1982: the provincial flag with the ' +
-      'name, seen in two arrangements — the one above the name is here, from a service plan’s cover — then by ' +
+      'name, seen in two arrangements (the one above the name is here, from a service plan’s cover), then by ' +
       '2009 the blue-and-green loop, which it still uses. Its bus liveries changed in 2007 and 2024; neither is a new logo.',
     eras: withMarks(COLLECTION_ERAS['bc-transit'], withCollected(BCT_ENTRIES, {
       'bct-urban-transit-authority': ['urban-transit-authority']
@@ -1060,8 +1060,8 @@ export const GALLERY_COLLECTIONS = [
     years: '2002–present',
     graphNode: 'sub-bc-parks',
     cover: 'bc-parks',
-    intro: 'BC Parks’ marks, oldest first: its badge from the flag years — the flag symbol in a rounded ' +
-      'frame with “Parks” set at the size of “BC” — then “BCParks” beside the shaded sun, and beside the ' +
+    intro: 'BC Parks’ marks, oldest first: its badge from the flag years (the flag symbol in a rounded ' +
+      'frame with “Parks” set at the size of “BC”), then “BCParks” beside the shaded sun, and beside the ' +
       'Best Place on Earth mark, both put together here from the Province’s own artwork and lettering, ' +
       'and today’s logo as bcparks.ca serves it. The first three open to recolour.',
     eras: withMarks(COLLECTION_ERAS['bc-parks'], {
@@ -1079,7 +1079,7 @@ export const GALLERY_COLLECTIONS = [
     years: '2005–present',
     cover: 'welcome-bc',
     intro: 'Names set beside the BC mark, each drawn once for one body, program or campaign, following ' +
-      'no pattern that generalises — so they sit here rather than in the generator, which is built on ' +
+      'no pattern that generalises, so they sit here rather than in the generator, which is built on ' +
       'patterns. Open one to recolour it.',
     entries: [
       ...ONE_OFFS.filter((entry) => !PARKS_ONE_OFFS.includes(entry.id)).map(provincial),
@@ -1122,8 +1122,8 @@ const PLACED = {
     body: 'The Province’s online registry access service',
     years: '1989–present',
     intro: 'BC OnLine, created in July 1989 and run at first by BC Systems, gives professional users online access to ' +
-      'land titles, personal property, company and other registries. Its earlier logo — a hand reaching through a ' +
-      'screen — is here; its later logo on the BC mark is under “On the BC mark”.'
+      'land titles, personal property, company and other registries. Its earlier logo (a hand reaching through a ' +
+      'screen) is here; its later logo on the BC mark is under “On the BC mark”.'
   },
   // The historical body research/history/bodies-shared-services-2026-11-13.json adds.
   'shared-services-bc': {
@@ -1139,7 +1139,7 @@ const PLACED = {
     body: 'Agency of the Provincial Health Services Authority',
     years: '1974–present',
     intro: 'The BC Cancer Agency’s circular emblem and logo, seen from 2000 to 2015, and the stacked BC / CAN / CER of ' +
-      'its identity as BC Cancer since November 2017 — for BC Cancer, its Research Centre and Institute, and the BC Cancer ' +
+      'its identity as BC Cancer since November 2017: for BC Cancer, its Research Centre and Institute, and the BC Cancer ' +
       'Foundation, its fundraising charity, which shares the identity and has a newer logo of its own.'
   },
   'auditor-general': {

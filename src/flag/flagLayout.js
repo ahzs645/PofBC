@@ -52,7 +52,7 @@ export const FLAG_SYMBOL_HINTS = {
   horizontal: 'BC, then the flag. One of the two the standards page sanctions.',
   vertical: 'The flag above BC. The standards page’s other configuration.',
   flag: 'The flag alone. Common in the documents, though the standard does not show it.',
-  badge: 'Inside a rounded frame, the wording set at the same size as BC — the BC Parks mark.'
+  badge: 'Inside a rounded frame, the wording set at the same size as BC: the BC Parks mark.'
 }
 
 export const NAME_PLACEMENTS = ['below', 'beside']

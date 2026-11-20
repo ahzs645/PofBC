@@ -95,7 +95,7 @@ test('the accessible name survives outlining', { skip: missing }, () => {
   const svg = renderLockupSvg({ layout: 'stacked', ...FORESTS, glyphs: outlines })
   // Turning letters into shapes removes the text from the document; the title is all that is left
   // for a screen reader, so it has to still be there.
-  assert.ok(svg.includes('<title>Province of British Columbia — Ministry of Forests</title>'), svg.slice(0, 300))
+  assert.ok(svg.includes('<title>Province of British Columbia, Ministry of Forests</title>'), svg.slice(0, 300))
 })
 
 test('blank glyphs are skipped, not drawn as empty paths', { skip: missing }, () => {

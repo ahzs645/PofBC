@@ -279,10 +279,13 @@ export const App = () => {
   // The government diagram takes the whole page, as the site it is modelled on does, and carries
   // the view switch in its own breadcrumb.
   if (view === 'government') {
+    // Its links to other views go through `navigate` like every other view's, not a page reload.
     return (
-      <Suspense fallback={<p className="gallery__intro">Loading the government…</p>}>
-        <GovernmentView key={visit} onOpenInGenerator={openInGenerator} onChangeView={showView} />
-      </Suspense>
+      <NavigationContext.Provider value={navigate}>
+        <Suspense fallback={<p className="gallery__intro">Loading the government…</p>}>
+          <GovernmentView key={visit} onOpenInGenerator={openInGenerator} onChangeView={showView} />
+        </Suspense>
+      </NavigationContext.Provider>
     )
   }
 
@@ -674,7 +677,7 @@ export const App = () => {
                   value={isCrest ? state.crestExtra : state.flagExtra}
                   placeholder={isCrest ? 'Research Branch' : 'Honourable Anthony J. Brummet, Minister'}
                   autoComplete="off"
-                  title="A minister, a place, a bulletin number — as the documents do."
+                  title="A minister, a place, a bulletin number, as the documents do."
                   onChange={(event) => update(
                     isCrest ? { crestExtra: event.target.value } : { flagExtra: event.target.value }
                   )}
