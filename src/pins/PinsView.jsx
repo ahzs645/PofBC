@@ -12,8 +12,10 @@ import { ShelfView } from '../posters/ShelfView.jsx'
 import { PINS, PIN_SERIES } from './catalogue.js'
 import { INTERIOR_UNIVERSITY_PINS } from './interior-university/pins.js'
 import { NOVELTY_PINS } from './novelty/pins.js'
+import { FOREST_BRANCH_PINS } from './forest-branch/pins.js'
 import { prefixIds } from './prefixIds.js'
 import welcomeThumb from './novelty/welcome-bc-pattison.svg?url'
+import campfiresThumb from './forest-branch/forest-branch-campfires.svg?url'
 
 const BASE = import.meta.env?.BASE_URL ?? '/'
 const served = (file) => `${BASE}unbc-origins/svg/${file}`
@@ -35,17 +37,20 @@ const society = (id) => {
   })
 }
 const novelty = fromData(NOVELTY_PINS)
+const forestBranch = fromData(FOREST_BRANCH_PINS)
 
 const LOADERS = {
   'ius-enamel-pin': society('ius-enamel-pin'),
   'northern-u-button': society('northern-u-button'),
   'say-yes-button': society('say-yes-button'),
-  'welcome-bc-pattison': novelty('welcome-bc-pattison', () => import('./novelty/welcome-bc-pattison.svg?raw').then((module) => module.default))
+  'welcome-bc-pattison': novelty('welcome-bc-pattison', () => import('./novelty/welcome-bc-pattison.svg?raw').then((module) => module.default)),
+  'forest-branch-campfires': forestBranch('forest-branch-campfires', () => import('./forest-branch/forest-branch-campfires.svg?raw').then((module) => module.default))
 }
 
 const THUMBNAILS = {
   ...Object.fromEntries(Object.entries(INTERIOR_UNIVERSITY_PINS).map(([id, { file }]) => [id, served(file)])),
-  'welcome-bc-pattison': welcomeThumb
+  'welcome-bc-pattison': welcomeThumb,
+  'forest-branch-campfires': campfiresThumb
 }
 
 const pinsOf = (series) => series.pins

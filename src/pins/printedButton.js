@@ -2,25 +2,33 @@
 // the face shell turned from buttonProfile.js with the pin's drawing printed on it, a tin back
 // recessed behind the rolled edge, and a generic safety pin across the back. Millimetres, face
 // towards +z, as BadgeScene expects; its GLB export carries the printed face as a PNG texture.
+//
+// An oval is the same round body carried round an ellipse (buttonProfile.js's ovalPlacer): the rim
+// keeps its width all round, the face is stretched across, and the drawing is still projected
+// straight on from the front, so the lettering keeps its proportions. A round button is built
+// exactly as before.
 
 import * as THREE from 'three'
-import { buttonProfile, profileNormals } from './buttonProfile.js'
+import { buttonProfile, ovalPlacer, profileNormals } from './buttonProfile.js'
 
 export const FACE_TEXTURE_SIZE = 2048
 const SEGMENTS = 192
 
 /**
- * The drawing rasterised square, for the face: its ground colour first, so the corners and the
- * edge outside the drawn circle are the face's colour too.
+ * The drawing rasterised for the face, `size` across and as tall as its viewBox's proportions (a
+ * square drawing, square): its ground colour first, so the corners and the edge outside the drawn
+ * rim are the face's colour too.
  * @returns {Promise<HTMLCanvasElement>}
  */
 export async function faceCanvas (svgText, background, size = FACE_TEXTURE_SIZE) {
   const doc = new DOMParser().parseFromString(svgText, 'image/svg+xml')
   const root = doc.documentElement
   if (root.nodeName !== 'svg') throw new Error('The face is not an SVG drawing')
+  const [, , viewW, viewH] = (root.getAttribute('viewBox') ?? '0 0 1 1').split(/[\s,]+/).map(Number)
+  const height = viewW > 0 && viewH > 0 ? Math.round(size * (viewH / viewW)) : size
   // Drawn at the canvas's own size, so the browser rasterises the vector there, not a 1000 px copy.
   root.setAttribute('width', String(size))
-  root.setAttribute('height', String(size))
+  root.setAttribute('height', String(height))
   const url = URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(doc)], { type: 'image/svg+xml' }))
   try {
     const image = new Image()
@@ -28,11 +36,11 @@ export async function faceCanvas (svgText, background, size = FACE_TEXTURE_SIZE)
     await image.decode()
     const canvas = document.createElement('canvas')
     canvas.width = size
-    canvas.height = size
+    canvas.height = height
     const context = canvas.getContext('2d')
     context.fillStyle = background
-    context.fillRect(0, 0, size, size)
-    context.drawImage(image, 0, 0, size, size)
+    context.fillRect(0, 0, size, height)
+    context.drawImage(image, 0, 0, size, height)
     return canvas
   } finally {
     URL.revokeObjectURL(url)
@@ -100,8 +108,81 @@ function shellGeometry (profile) {
   })
 }
 
-/** The tin back, from its rim (turned up, hidden behind the lip) in to the centre. */
-function backGeometry ({ plateZ, plateRadius }) {
+/**
+ * A profile carried round an oval: `place(r, t)` sets each ring's (x, y) (ovalPlacer), and the
+ * normals are taken from the placed surface itself, across the profile and along the ring, so the
+ * stretched face shades as the shape it is. `uvAt(point, x, y, t)` gives the texture coordinate.
+ */
+function revolveOval (points, place, uvAt) {
+  const normals = profileNormals(points)
+  const ring = SEGMENTS + 1
+  const position = new Float32Array(points.length * ring * 3)
+  const normal = new Float32Array(points.length * ring * 3)
+  const uv = new Float32Array(points.length * ring * 2)
+  const h = 1e-3
+  points.forEach((point, i) => {
+    const { nr, nz } = normals[i]
+    const tr = nz
+    const tz = -nr
+    for (let j = 0; j < ring; j++) {
+      const t = (j / SEGMENTS) * Math.PI * 2
+      const [x, y] = place(point.r, t)
+      // Across the profile: the placement's change with r, along the profile's own tangent.
+      const r0 = Math.max(0, point.r - h)
+      const [xa, ya] = place(r0, t)
+      const [xb, yb] = place(point.r + h, t)
+      const dr = point.r + h - r0
+      const across = [((xb - xa) / dr) * tr, ((yb - ya) / dr) * tr, tz]
+      // Along the ring.
+      const [xc, yc] = place(point.r, t - h)
+      const [xd, yd] = place(point.r, t + h)
+      const along = [(xd - xc) / (2 * h), (yd - yc) / (2 * h), 0]
+      let n = [
+        across[1] * along[2] - across[2] * along[1],
+        across[2] * along[0] - across[0] * along[2],
+        across[0] * along[1] - across[1] * along[0]
+      ]
+      const length = Math.hypot(...n)
+      // At the centre the ring has no length; there the profile's own normal is the answer.
+      n = length > 1e-9 ? n.map((value) => value / length) : [nr * Math.cos(t), nr * Math.sin(t), nz]
+      const k = i * ring + j
+      position.set([x, y, point.z], k * 3)
+      normal.set(n, k * 3)
+      uv.set(uvAt ? uvAt(point, x, y, t) : [j / SEGMENTS, i / (points.length - 1)], k * 2)
+    }
+  })
+  const index = []
+  for (let i = 0; i < points.length - 1; i++) {
+    for (let j = 0; j < SEGMENTS; j++) {
+      const a = i * ring + j
+      const b = (i + 1) * ring + j
+      index.push(a, b, b + 1, a, b + 1, a + 1)
+    }
+  }
+  const geometry = new THREE.BufferGeometry()
+  geometry.setAttribute('position', new THREE.BufferAttribute(position, 3))
+  geometry.setAttribute('normal', new THREE.BufferAttribute(normal, 3))
+  geometry.setAttribute('uv', new THREE.BufferAttribute(uv, 2))
+  geometry.setIndex(index)
+  return geometry
+}
+
+/**
+ * An oval's face shell. The texture is projected straight on, as for a round face: a point's
+ * (x, y) is scaled to the drawn rim (`rim`, in the drawing's units, inside a `view` w × h drawing),
+ * so the lettering keeps its proportions; the side, curl and lip take the ground just inside it.
+ */
+function ovalShellGeometry (profile, place, { aspect, rim, view }) {
+  const a = profile.radius * aspect
+  const b = profile.radius
+  const toUv = (x, y) => [(rim.cx + (x / a) * rim.rx) / view.w, 1 - (rim.cy - (y / b) * rim.ry) / view.h]
+  return revolveOval(profile.points, place, (point, x, y, t) => (point.printed
+    ? toUv(x, y)
+    : toUv(0.995 * a * Math.cos(t), 0.995 * b * Math.sin(t))))
+}
+
+/** The tin back's profile, from its rim (turned up, hidden behind the lip) in to the centre. */
+function backPoints ({ plateZ, plateRadius }) {
   const points = [{ r: plateRadius, z: plateZ + 0.9 }]
   for (let i = 1; i <= 6; i++) {
     const angle = (i / 6) * (Math.PI / 2)
@@ -114,8 +195,11 @@ function backGeometry ({ plateZ, plateRadius }) {
     points.push({ r: ring + 0.9 - 1.8 * t, z: plateZ - 0.12 * Math.sin(Math.PI * t) })
   }
   points.push({ r: ring * 0.5, z: plateZ }, { r: 0, z: plateZ })
-  return revolve(points, null)
+  return points
 }
+
+/** The tin back, turned round. */
+const backGeometry = (profile) => revolve(backPoints(profile), null)
 
 const helix = ({ x, zAxis, radius, pitch, turns, steps = 28 }) => Array.from({ length: Math.round(turns * steps) + 1 }, (_, i) => {
   const angle = (i / steps) * Math.PI * 2
@@ -131,11 +215,12 @@ const line = (from, to, step = 0.6) => {
  * A generic safety pin across the back: a wire bar lying on the tin, a coil at one end, the arm
  * back across to a hooked catch at the other, with its point just past it.
  */
-function safetyPin ({ plateZ, lipRadius }, steel) {
+function safetyPin ({ plateZ, lipRadius }, steel, reach = lipRadius) {
   const wire = 0.45
   const coil = 1.25
   const pitch = 1.05
-  const half = 0.72 * lipRadius
+  // `reach`: how far the lip's edge is from the centre along the pin; on an oval, the long way.
+  const half = 0.72 * reach
   const zBar = plateZ - wire
   const zAxis = zBar - coil
   const zTop = zAxis - coil
@@ -187,17 +272,25 @@ function safetyPin ({ plateZ, lipRadius }, steel) {
  */
 export function buildPrintedButton (recipe, { map, dome = recipe.dome }) {
   let profile = buttonProfile({ diameterMm: recipe.diameterMm, dome })
-  const face = new THREE.MeshStandardMaterial({ name: 'printed face', map, roughness: 0.7, metalness: 0 })
+  const oval = recipe.shape === 'oval'
+  // A celluloid face is a clear, glossy film over the print; a printed one is matte ink.
+  const face = recipe.finish === 'celluloid'
+    ? new THREE.MeshPhysicalMaterial({ name: 'celluloid face', map, roughness: 0.55, metalness: 0, clearcoat: 0.7, clearcoatRoughness: 0.06 })
+    : new THREE.MeshStandardMaterial({ name: 'printed face', map, roughness: 0.7, metalness: 0 })
   const tin = new THREE.MeshStandardMaterial({ name: 'tin back', color: '#cfd2d5', metalness: 1, roughness: 0.4 })
   const steel = new THREE.MeshStandardMaterial({ name: 'steel', color: '#c4c8cc', metalness: 1, roughness: 0.35 })
 
+  const place = oval ? ovalPlacer({ radius: profile.radius, aspect: recipe.aspect }) : null
+  const shellOf = (shape) => (oval ? ovalShellGeometry(shape, place, { aspect: recipe.aspect, rim: recipe.face.rim, view: recipe.face.view }) : shellGeometry(shape))
+
   const group = new THREE.Group()
-  group.name = 'printed button'
-  const shell = new THREE.Mesh(shellGeometry(profile), face)
+  group.name = oval ? 'printed oval button' : 'printed button'
+  const shell = new THREE.Mesh(shellOf(profile), face)
   shell.name = 'face shell'
-  const back = new THREE.Mesh(backGeometry(profile), tin)
+  const back = new THREE.Mesh(oval ? revolveOval(backPoints(profile), place, null) : backGeometry(profile), tin)
   back.name = 'tin back'
-  group.add(shell, back, safetyPin(profile, steel))
+  const reach = oval ? place(profile.lipRadius, 0)[0] : profile.lipRadius
+  group.add(shell, back, safetyPin(profile, steel, reach))
 
   return {
     group,
@@ -205,8 +298,9 @@ export function buildPrintedButton (recipe, { map, dome = recipe.dome }) {
     setDome (next) {
       profile = buttonProfile({ diameterMm: recipe.diameterMm, dome: next })
       const before = shell.geometry
-      shell.geometry = shellGeometry(profile)
+      shell.geometry = shellOf(profile)
       before.dispose()
     }
   }
 }
+

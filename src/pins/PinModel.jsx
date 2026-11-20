@@ -15,6 +15,7 @@ const CAMERAS = [
   { value: 'side', label: 'Side' },
   { value: 'back', label: 'Back', title: 'The back: a generic tin back and safety pin' }
 ]
+// A recipe can word its own note (construction.js); this is the usual one.
 const NOTE = 'Illustrative: diameter, dome and the back are not known from the photograph; the face is printed artwork.'
 
 const escape = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
@@ -31,6 +32,7 @@ const download = (blob, name) => {
 
 export default function PinModel ({ meta, module, swap, variation }) {
   const recipe = module.construction
+  const note = recipe.note ?? NOTE
   const sceneRef = useRef(null)
   const [scene, setScene] = useState(null)
   const [camera, setCamera] = useState('oblique')
@@ -92,7 +94,7 @@ export default function PinModel ({ meta, module, swap, variation }) {
         construction: { ...recipe, dome },
         faceVariation: variation,
         physicalMeasurements: false,
-        limitations: NOTE
+        limitations: note
       })
       download(blob, `${stem}.${format}`)
     } catch (error) {
@@ -122,7 +124,7 @@ export default function PinModel ({ meta, module, swap, variation }) {
         unavailable="This browser can’t show 3D (WebGL is off or unavailable). The drawing is a switch away."
       />
       <div className="pin-model__foot">
-        <p className="pin-model__note" title={`Built at ${diameterWords(recipe)}; ${recipe.evidence.join(' ')}`}>{NOTE}</p>
+        <p className="pin-model__note" title={`Built at ${diameterWords(recipe)}; ${recipe.evidence.join(' ')}`}>{note}</p>
         <div className="pin-model__exports">
           <button type="button" className="pv-ghost" disabled={!ready || Boolean(exporting)} onClick={() => exportModel('png')} title="The view as it is now">{exporting === 'png' ? 'PNG…' : 'Export PNG'}</button>
           <button type="button" className="pv-ghost" disabled={!ready || Boolean(exporting)} onClick={() => exportModel('glb')} title="The model, in metres, with its recipe">{exporting === 'glb' ? 'GLB…' : 'Export GLB'}</button>

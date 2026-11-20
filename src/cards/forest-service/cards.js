@@ -12,7 +12,10 @@ import { CARDS } from '../catalogue.js'
 const NAM = { label: 'National Army Museum, London: British recruiting poster, “England Expects Every Man to do His Duty and Join the Army To-day”, 1914' }
 const TE_PAPA = { label: 'Te Papa: the same recruiting poster, catalogued October 1914, and a 1939 national-service poster using “England expects”' }
 const MACMILLAN = { label: 'H. R. MacMillan, “The Forest Fire: A National Danger and Its Remedy”, The Canadian Magazine, April 1915, pp. 549–553' }
-const PARMINTER = { label: 'John Parminter, Ministry of Forests history of fire prevention' }
+const PARMINTER = {
+  label: 'John Parminter, “Protection as conservation: safeguarding British Columbia’s forests from fire, 1874–1921”, Ministry of Forests, 1981',
+  href: 'https://www.for.gov.bc.ca/hfd/library/documents/bib30294.pdf'
+}
 const ROOT_AND_BRANCH = { label: 'Root and Branch, vol. II, no. 12, cover, catalogued as 1924' }
 const FOREST_SERVICE_TIMELINE = {
   label: 'BC Forest Service Centenary Society, BC Forest Service timeline',

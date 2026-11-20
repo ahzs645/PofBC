@@ -18,6 +18,12 @@ export const PIN_SERIES = [
     title: 'Novelty and souvenir buttons',
     kind: 'Pin-back buttons',
     pins: ['welcome-bc-pattison']
+  },
+  {
+    id: 'forest-branch',
+    title: 'British Columbia Forest Branch',
+    kind: 'Fire-prevention giveaways',
+    pins: ['forest-branch-campfires']
   }
 ]
 
@@ -65,6 +71,17 @@ export const PINS = {
     made: 'vector',
     view: { x: 0, y: 0, w: 1000, h: 1000 },
     page: { w: 10, h: 10 }
+  },
+  'forest-branch-campfires': {
+    id: 'forest-branch-campfires',
+    series: 'forest-branch',
+    title: 'Prevent Forest Fires: Put Your Campfires Out',
+    blurb: 'Two instructions for the woods, on a glossy yellow oval the Forest Branch gave away.',
+    format: 'Celluloid oval',
+    when: 'Forest Branch years, 1912–1945, from its wording',
+    made: 'vector',
+    view: { x: 0, y: 0, w: 1440, h: 880 },
+    page: { w: 14.4, h: 8.8 }
   }
 }
 

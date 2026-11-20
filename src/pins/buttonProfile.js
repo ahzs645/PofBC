@@ -101,3 +101,46 @@ export function profileNormals (points) {
     return { nr: -tz / length, nz: tr / length }
   })
 }
+
+/**
+ * Where a profile point lands on an oval button, for the 3D view's ovals: the round lathe body
+ * stretched across by `aspect`, but not by plain scaling, which would widen the rolled edge at the
+ * oval's ends. Its outer edge is the ellipse with half-axes `radius × aspect` and `radius`; within
+ * `band` of that edge (the shoulder, side, curl, lip and the back's rim) a point sits its own
+ * distance in from the edge along the edge's normal, so the rim keeps one width all round; deeper
+ * in, the face is that inner outline scaled down to the centre, with the two eased into each other
+ * over `blend` so the dome meets the rim without a crease. With `aspect` 1 it is the round body.
+ *
+ * @param {{ radius: number, aspect: number, band?: number, blend?: number }} options
+ * @returns {(r: number, t: number) => [number, number]} a profile radius and the ellipse's angle
+ *   parameter to (x, y), in millimetres.
+ */
+export function ovalPlacer ({ radius, aspect, band = 0.2 * radius, blend = 0.3 * radius }) {
+  if (!(radius > 0)) throw new RangeError('radius must be positive')
+  if (!(aspect >= 1 && aspect <= 2)) throw new RangeError('aspect must be between 1 and 2')
+  const a = radius * aspect
+  const b = radius
+  // An inward offset of the ellipse folds over itself past its tightest radius of curvature, b²/a.
+  const reach = Math.min(band + blend, 0.9 * (b * b) / a)
+  const easeTo = Math.max(reach - band, 1e-6)
+  return (r, t) => {
+    const cos = Math.cos(t)
+    const sin = Math.sin(t)
+    const nx = b * cos
+    const ny = a * sin
+    const length = Math.hypot(nx, ny)
+    const edge = [a * cos, b * sin]
+    const normal = [nx / length, ny / length]
+    const inset = radius - r
+    const offset = (u) => [edge[0] - u * normal[0], edge[1] - u * normal[1]]
+    if (inset <= band) return offset(inset)
+    const inner = offset(band)
+    const scale = r / (radius - band)
+    const scaled = [inner[0] * scale, inner[1] * scale]
+    if (inset >= band + easeTo) return scaled
+    const s = (inset - band) / easeTo
+    const w = 1 - s * s * (3 - 2 * s)
+    const near = offset(inset)
+    return [w * near[0] + (1 - w) * scaled[0], w * near[1] + (1 - w) * scaled[1]]
+  }
+}
