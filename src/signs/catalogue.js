@@ -8,7 +8,7 @@ export const SIGN_SERIES = [
     id: 'forest-service',
     title: 'British Columbia Forest Service',
     kind: 'Fire protection',
-    signs: ['lookout']
+    signs: ['lookout', 'forest-closure']
   },
   {
     id: 'tourism',
@@ -26,6 +26,14 @@ export const SIGNS = {
     when: 'Undated',
     view: { x: 21, y: 121, w: 1347, h: 766 },
     page: { w: 13.47, h: 7.66 }
+  },
+  'forest-closure': {
+    id: 'forest-closure',
+    series: 'forest-service',
+    title: 'FOREST CLOSURE, Zone 3',
+    when: '1960, from the Protection Bulletin',
+    view: { x: 0, y: 0, w: 1000, h: 1030.025404 },
+    page: { w: 10, h: 10.3 }
   },
   'super-natural': {
     id: 'super-natural',

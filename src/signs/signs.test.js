@@ -14,6 +14,7 @@ import { GALLERY_COLLECTIONS } from '../gallery/collections.js'
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
 const DRAWINGS = {
   lookout: read('./forest-service/lookout.svg'),
+  'forest-closure': read('./forest-service/forest-closure.svg'),
   'super-natural': read('./tourism/super-natural.svg')
 }
 const ALL_SIGNS = { ...FOREST_SERVICE_SIGNS, ...TOURISM_SIGNS }
@@ -82,4 +83,29 @@ test('the welcome sign keeps the flag the generator draws, path for path', async
   assert.deepEqual(paths, FLAG.shapes.map(({ d, fill }) => ({ d, fill })))
   // Its ids are prefixed, so it can sit on a page beside another drawing without a collision.
   for (const generic of ['id="title"', 'id="desc"', 'id="above-baseline"', 'id="below-baseline"']) assert.ok(!drawing.includes(generic), generic)
+})
+
+test('the closure sign is the package’s two faces in one drawing, one strip showing at a time', () => {
+  const drawing = DRAWINGS['forest-closure']
+  const artwork = (name) => read(`../../artwork/signs/forest-closure/svg/${name}`)
+  const paths = (svg) => [...svg.matchAll(/ d="([^"]+)"/g)].map(([, d]) => d)
+  const open = artwork('forest-closure-open.svg')
+  const closed = artwork('forest-closure-closed.svg')
+  const closedStrip = closed.slice(closed.indexOf('<g id="closed-panel"'))
+  // Every path of the OPEN sign, then the CLOSED strip's, unchanged.
+  assert.deepEqual(paths(drawing), [...paths(open), ...paths(closedStrip)])
+  // Its ids are prefixed, so it can sit on a page beside another drawing without a collision.
+  for (const [, id] of drawing.matchAll(/ id="([^"]+)"/g)) assert.ok(id.startsWith('fc-'), id)
+  for (const [, id] of drawing.matchAll(/url\(#([^)]+)\)/g)) assert.ok(drawing.includes(`id="${id}"`), id)
+  assert.ok(!/<title[^>]*>[^<]*—/.test(drawing))
+  // The Strip switch names a face for each option; as drawn, the first shows and the rest are hidden.
+  const { options } = ALL_SIGNS['forest-closure'].variations
+  assert.deepEqual(options.map(({ id }) => id), ['open', 'closed'])
+  options.forEach(({ show }, i) => {
+    for (const name of idsIn(show)) {
+      const tag = new RegExp(`<g id="${name}"[^>]*>`).exec(drawing)?.[0]
+      assert.ok(tag, `no #${name}`)
+      assert.equal(tag.includes('display="none"'), i > 0, name)
+    }
+  })
 })

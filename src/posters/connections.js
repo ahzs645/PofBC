@@ -215,6 +215,67 @@ const BY_POSTER = {
     PREVENTION_BADGE,
     DEPARTMENT
   ],
+  'be-careful': [
+    { ...SERVICE_COLLECTION, label: 'BC Forest Service' },
+    firePiece('dont-drop-it', 'Posters · the fire-prevention badge with a cigarette. No record ties the two together.'),
+    firePiece('dont-gamble-with-fire', 'Posters · the fire-prevention badge with the dice'),
+    {
+      group: 'objects',
+      rel: 'Related fire-prevention material',
+      label: 'LOOKOUT',
+      note: 'Signs · the Forest Service’s fire-protection sign',
+      to: { view: 'signs', sign: 'lookout' },
+      certainty: 'thematic'
+    },
+    FIRE_CONTROL_PATCH,
+    PREVENTION_BADGE,
+    {
+      group: 'context',
+      rel: 'Historical context',
+      label: 'Department of Lands and Forests',
+      note: 'Government · 1960: where the Forest Service sat from 1945 to 1962',
+      to: body('department-of-lands-and-forests-1945', 1960),
+      certainty: 'documented'
+    },
+    {
+      group: 'context',
+      rel: 'Date evidence',
+      label: 'Protection Bulletin No. 3, 1960',
+      note: 'The service’s bulletin pictures the same design on p. 5, as new decals for vehicle windows and hard hats',
+      href: 'https://a100.gov.bc.ca/pub/eirs/finishDownloadDocument.do?subdocumentId=21448',
+      certainty: 'documented'
+    }
+  ],
+  'coons-age': [
+    SERVICE_COLLECTION,
+    EVERGREEN,
+    { ...companion('reward-living-forest', 'Posters · the campfire poster, with the same emblem in colour'), rel: 'Same mark appears on', to: piece('reward-living-forest', 'emblem') },
+    { ...companion('enjoy-protect-forests', 'Posters · the sign, with the same emblem'), rel: 'Same mark appears on', to: piece('enjoy-protect-forests', 'emblem') },
+    {
+      group: 'objects',
+      rel: 'Compare',
+      label: POSTERS['coastal-forest'].title,
+      note: 'Posters · the managed forest argued again, by the Ministry of Environment',
+      to: piece('coastal-forest'),
+      certainty: 'thematic'
+    },
+    {
+      group: 'context',
+      rel: 'Historical context',
+      label: 'Department of Lands, Forests and Water Resources',
+      note: 'Government · 1971: where the Forest Service sat when the advertisement ran',
+      to: body('department-of-lands-forests-and-water-resources-1962', 1971),
+      certainty: 'documented'
+    },
+    {
+      group: 'context',
+      rel: 'Date evidence',
+      label: 'Gulf Islands Driftwood, 2 December 1971',
+      note: 'Printed on p. 11 of that issue. Whether it ran elsewhere, or earlier, is not known.',
+      href: 'https://saltspringarchives.com/driftwood/1971/v12n47Dec2-1971.pdf#page=11',
+      certainty: 'documented'
+    }
+  ],
   'wildlife-trees': [
     {
       group: 'issuer',

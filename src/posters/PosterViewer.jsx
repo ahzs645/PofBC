@@ -6,7 +6,8 @@
 // can take over the frame, the stage's class, the panel and the export targets. One whose drawing
 // is too large to wait for (Wildlife Trees) supplies a light stand-in as its drawing and an
 // `upgrade` that resolves to the real one, which replaces it when it arrives. One with named
-// recolourings (`variations`) gets a switch on its overview; the first is the drawing as it is. One
+// recolourings (`variations`) gets a switch on its overview; the first is the drawing as it is. An
+// option may instead show layers of its own (`show`), for a piece whose drawing has faces that change. One
 // with a picture of the original (`reference`) can be compared with it, the picture laid into the
 // drawing's own frame; one made of pages (`pages`) can be read a page at a time.
 
@@ -18,6 +19,7 @@ import { useMedia } from './hooks/useMedia.js'
 import { useKeyboardNav } from './hooks/useKeyboardNav.js'
 import { useTour } from './hooks/useTour.js'
 import { useColourSwap } from './stage/useColourSwap.js'
+import { useLayerShow } from './stage/useLayerShow.js'
 import { useReferenceOverlay } from './stage/useReferenceOverlay.js'
 import { Panel } from './ui/Panel.jsx'
 import { Dock } from './ui/Dock.jsx'
@@ -128,6 +130,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
   const [variationId, setVariationId] = useState(null)
   const variation = variations?.options.find(({ id }) => id === variationId) ?? variations?.options[0] ?? null
   useColourSwap(svg, variation?.swap ?? null)
+  useLayerShow(svg, variations?.options ?? null, variation?.id)
   const variationControl = variations && { ...variations, value: variation.id, onChange: setVariationId }
 
   // The original, laid into the drawing's frame for comparison.
@@ -147,7 +150,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
   const regionList = useMemo(() => regions.map((id) => ({ id, ...parts[id] })), [regions, parts])
 
   const targets = [
-    posterTarget({ meta, noun, getSvg: () => posterSvgString(svg, meta), tag: extras.posterTag ?? (variation?.swap ? variation.id : null), ...(variation?.changed && !extras.posterTag ? { changed: variation.changed } : {}) }),
+    posterTarget({ meta, noun, getSvg: () => posterSvgString(svg, meta), tag: extras.posterTag ?? (variation && variation !== variations.options[0] ? variation.id : null), ...(variation?.changed && !extras.posterTag ? { changed: variation.changed } : {}) }),
     ...(extras.targets ?? [])
   ]
 

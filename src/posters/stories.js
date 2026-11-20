@@ -128,6 +128,45 @@ export const STORIES = {
       'Two badges, one instruction, two ways of saying it: a command, and a wager you are told not to make.'
     ]
   },
+  'be-careful': {
+    overview: [
+      'A decal for a truck window or a hard hat, from 1960: a forest, a fire, and two big letters.',
+      'Read it from the trees down to the name at the foot.'
+    ],
+    forest: [
+      'Conifers along the top and left; on the right the same edge rises into flames. The fire is already in the forest.'
+    ],
+    initials: [
+      'A large B and C. On a Forest Service decal they are the province before they are anything else.'
+    ],
+    careful: [
+      'Then the small letters finish the words: B, e; C, areful. The province’s initials become an instruction.'
+    ],
+    slogan: [
+      'Across the base, in condensed capitals, the instruction said outright: PREVENT FOREST FIRES.'
+    ],
+    signature: [
+      'And under it, small and spaced out, the signature: BC Forest Service.'
+    ]
+  },
+  'coons-age': {
+    overview: [
+      'A newspaper advertisement from December 1971: a photograph, one sentence, and a signature.',
+      'It asks for nothing. It tells readers the forests are being looked after.'
+    ],
+    photograph: [
+      'Most of the space goes to a young raccoon climbing toward the camera. The animal is the argument.'
+    ],
+    headline: [
+      'With proper management British Columbia’s forests will last a coon’s age: the idiom for a very long time, made literal by the picture above it.'
+    ],
+    signature: [
+      'British Columbia Forest Service, on two lines in the same oblique type as the copy.'
+    ],
+    emblem: [
+      'Beside it, the service’s evergreen emblem in newspaper ink: the province, its islands and a tree.'
+    ]
+  },
   'go-bc-ferries': {
     overview: [
       'A small rounded sticker for a car window: teal sea, green mountains, a ferry and a gull. It sells a crossing the way a resort sticker sells a place.',

@@ -597,6 +597,273 @@ export const ENJOY_PROTECT = {
   order: ['overview', 'headline', 'tree', 'character', 'service', 'emblem']
 }
 
+// ── Be Careful: Prevent Forest Fires (1960 decal) ─────────────────────────────────────────────
+
+const LANDS_AND_FORESTS_1960_LINK = {
+  label: 'Department of Lands and Forests',
+  note: 'Government · 1960: the department the Forest Service sat in from 1945 to 1962',
+  to: { view: 'government', year: 1960, node: 'department-of-lands-and-forests-1945' }
+}
+const LOOKOUT_LINK = {
+  label: 'LOOKOUT',
+  note: 'Signs · the Forest Service’s fire-protection sign',
+  to: { view: 'signs', sign: 'lookout' }
+}
+const PROTECTION_BULLETIN = {
+  label: 'BC Forest Service, Protection Bulletin No. 3 (1960), p. 5, “New Protection Decals”',
+  href: 'https://a100.gov.bc.ca/pub/eirs/finishDownloadDocument.do?subdocumentId=21448'
+}
+
+export const BE_CAREFUL = {
+  id: 'be-careful',
+  spotlight: { keep: ['bcc-forest-flame-silhouette'] },
+  regions: ['forest', 'initials', 'careful', 'slogan', 'signature'],
+  parts: {
+    overview: {
+      label: 'Whole decal',
+      box: box('be-careful'),
+      pad: 0.05,
+      panel: {
+        eyebrow: 'BC Forest Service · fire-prevention decal',
+        heading: 'Be Careful',
+        em: 'Prevent Forest Fires',
+        lede: 'A row of conifers turns into flames, and a large B and C stand for the province and for Be Careful at once.',
+        blocks: [
+          { facts: [
+            ['Issued by', 'BC Forest Service, from the signature'],
+            ['Date', '1960: the same design is pictured in Protection Bulletin No. 3 (1960), p. 5'],
+            ['Made for', 'vehicle windows and hard hats, as the bulletin describes it'],
+            ['Rebuilt from', 'one supplied scan'],
+            ['Drawing', '1234 × 909 units, 43 paths in five named layers, lettering outlined']
+          ] },
+          { palette: [
+            { name: 'Grey-green ink', value: '#525850' },
+            { name: 'White', value: '#FFFFFF' }
+          ] },
+          { note: 'The ink is sampled from the scan, not a specified colour, and the decal’s printed size is unknown.' },
+          { sources: [PROTECTION_BULLETIN] }
+        ]
+      }
+    },
+    forest: {
+      label: 'Forest and flames',
+      hint: 'conifers on the left, fire on the right',
+      box: { x: 3, y: 15, w: 1222, h: 876 },
+      pad: 0.04,
+      layer: '#bcc-forest-flame-silhouette',
+      hit: 'shape',
+      panel: {
+        eyebrow: 'The silhouette',
+        heading: 'A forest catching fire',
+        lede: 'One path carries the whole ground: ragged treetops along the top and left, rising into flame tongues on the right.',
+        blocks: [
+          { facts: [
+            ['Layer', 'forest and flames, one compound path'],
+            ['Left out', 'print grain, scratches and scan-edge defects']
+          ] }
+        ]
+      }
+    },
+    initials: {
+      label: 'B and C',
+      hint: 'the two large initials',
+      box: { x: 163, y: 265, w: 863, h: 433 },
+      pad: 0.06,
+      layer: '#bcc-large-initials',
+      hit: 'shape',
+      panel: {
+        eyebrow: 'The initials',
+        heading: 'B and C',
+        em: 'two readings',
+        lede: 'Read alone they are the province; read with the small letters beside them they begin Be Careful.',
+        blocks: [
+          { facts: [
+            ['Layer', 'large B and C, one path each'],
+            ['Letterforms', 'custom masters with an Albertus-like, inscriptional build']
+          ] },
+          { note: 'The scan does not identify a typeface. Albertus is a comparison, not an identification.' }
+        ]
+      }
+    },
+    careful: {
+      label: 'Be Careful',
+      hint: 'the small E and AREFUL',
+      box: { x: 544, y: 426, w: 466, h: 109 },
+      pad: 0.12,
+      layer: '#bcc-be-careful-small-letters',
+      hit: 'shape',
+      panel: {
+        eyebrow: 'The small lettering',
+        heading: 'E, AREFUL',
+        lede: 'Seven narrow capitals tucked into the initials: an E inside the B’s reach, AREFUL beside the C.',
+        blocks: [
+          { facts: [
+            ['Letters', 'seven, each its own group'],
+            ['Style', 'condensed sign lettering, comparable to Alternate Gothic; drawn, not set']
+          ] }
+        ]
+      }
+    },
+    slogan: {
+      label: 'Prevent Forest Fires',
+      hint: 'the slogan along the base',
+      box: { x: 54, y: 709, w: 1000, h: 115 },
+      pad: 0.06,
+      layer: '#bcc-prevent-forest-fires',
+      hit: 'shape',
+      panel: {
+        eyebrow: 'The slogan',
+        heading: 'PREVENT FOREST FIRES',
+        lede: 'Eighteen condensed capitals across the base, with the original’s uneven baseline and its odd R leg kept.',
+        blocks: [
+          { facts: [
+            ['Letters', '18, each its own group'],
+            ['Style', 'custom glyph masters, condensed']
+          ] }
+        ]
+      }
+    },
+    signature: {
+      label: 'Signature',
+      hint: 'BC Forest Service',
+      box: { x: 200, y: 828, w: 680, h: 42 },
+      pad: 0.3,
+      layer: '#bcc-service-signature',
+      hit: 'shape',
+      panel: {
+        eyebrow: 'The signature',
+        heading: 'BC Forest Service',
+        lede: 'The service signs in small, widely spaced lettering under the slogan.',
+        blocks: [
+          { note: 'The least certain part of the drawing: at the scan’s resolution these letters are only a few pixels high.' },
+          { links: [LANDS_AND_FORESTS_1960_LINK, poster('dont-drop-it', 'credit', 'Another fire-prevention piece signed by the service'), LOOKOUT_LINK] }
+        ]
+      }
+    }
+  },
+  order: ['overview', 'forest', 'initials', 'careful', 'slogan', 'signature']
+}
+
+// ── A Coon’s Age (1971 newspaper advertisement) ─────────────────────────────────────────────────
+
+const LANDS_FORESTS_WATER_1971_LINK = {
+  ...DEPARTMENT_LINK,
+  note: 'Government · 1971: the department the Forest Service sat in from 1962 to 1975',
+  to: { ...DEPARTMENT_LINK.to, year: 1971 }
+}
+const DRIFTWOOD = {
+  label: 'Gulf Islands Driftwood, 2 December 1971, p. 11',
+  href: 'https://saltspringarchives.com/driftwood/1971/v12n47Dec2-1971.pdf#page=11'
+}
+
+export const COONS_AGE = {
+  id: 'coons-age',
+  spotlight: { keep: ['coon-paper-border', 'coon-ink-panels'] },
+  regions: ['photograph', 'headline', 'signature', 'emblem'],
+  parts: {
+    overview: {
+      label: 'Whole advertisement',
+      box: box('coons-age'),
+      pad: 0.03,
+      panel: {
+        eyebrow: 'British Columbia Forest Service · newspaper advertisement',
+        heading: 'A coon’s age',
+        lede: 'A young raccoon over one line of copy: with proper management, the province’s forests will last a coon’s age.',
+        blocks: [
+          { facts: [
+            ['Issued by', 'British Columbia Forest Service, from the signature'],
+            ['Date', '2 December 1971: printed in Gulf Islands Driftwood, p. 11'],
+            ['Rebuilt from', 'the newspaper page and a supplied photograph'],
+            ['Drawing', '565 × 1044 units: border, two ink panels, outlined lettering, the emblem and one photograph']
+          ] },
+          { palette: [
+            { name: 'Paper', value: '#E9CDAD' },
+            { name: 'Ink', value: '#3D372F' }
+          ] },
+          { note: 'Paper and ink are chosen from the scan, not specified. The photograph is the supplied image, not the archival original, and the printed size is unknown.' },
+          { sources: [DRIFTWOOD] }
+        ]
+      }
+    },
+    photograph: {
+      label: 'Photograph',
+      hint: 'a young raccoon',
+      box: { x: 60, y: 17, w: 452, h: 658 },
+      pad: 0.04,
+      layer: '#coon-photograph',
+      panel: {
+        eyebrow: 'The photograph',
+        heading: 'A young raccoon',
+        lede: 'The supplied photograph, placed at the newspaper’s proportions and left uncropped and unretouched.',
+        blocks: [
+          { facts: [
+            ['Image', '1040 × 1513 pixels, its halftone texture kept'],
+            ['Placed', 'x 60, y 17, 452 wide']
+          ] }
+        ]
+      }
+    },
+    headline: {
+      label: 'Headline',
+      hint: 'With proper management…',
+      box: { x: 81, y: 719, w: 409, h: 107 },
+      pad: 0.08,
+      layer: '#coon-headline-1, #coon-headline-2, #coon-headline-3',
+      panel: {
+        eyebrow: 'The copy',
+        heading: 'With proper management',
+        em: 'British Columbia’s forests will last a coon’s age.',
+        lede: 'Three lines of oblique geometric sans, light on a dark panel, with the original’s line breaks.',
+        blocks: [
+          { facts: [
+            ['Likely original', 'Futura oblique, medium to bold'],
+            ['Set here in', 'Jost Italic 600, outlined (a substitute)']
+          ] },
+          { note: 'Jost is a modern take on Futura; its W, r and spacing differ from the print.' }
+        ]
+      }
+    },
+    signature: {
+      label: 'Signature',
+      hint: 'British Columbia Forest Service',
+      box: { x: 214, y: 885, w: 259, h: 65 },
+      pad: 0.2,
+      layer: '#coon-signature-1, #coon-signature-2',
+      panel: {
+        eyebrow: 'The signature',
+        heading: 'British Columbia Forest Service',
+        lede: 'The service signs on two lines beside its emblem, in the headline’s face.',
+        blocks: [
+          { links: [LANDS_FORESTS_WATER_1971_LINK, MINISTRY_OF_FORESTS_LINK] },
+          { sources: [TIMELINE_SOURCE] }
+        ]
+      }
+    },
+    emblem: {
+      label: 'Emblem',
+      hint: 'the evergreen emblem, in newspaper ink',
+      box: { x: 92, y: 870, w: 114, h: 114 },
+      pad: 1.1,
+      layer: '#forest-service-emblem',
+      panel: {
+        eyebrow: 'The emblem',
+        heading: 'The evergreen emblem',
+        em: 'in one ink',
+        lede: 'The same emblem drawing as REWARD and the sign, painted for newsprint: an outlined mainland and a light tree on a dark badge.',
+        blocks: [
+          { note: 'The paths are this collection’s emblem, unchanged. The 1971 print’s tree is narrower and its coast a little different.' },
+          { links: [
+            EMBLEM_LINK,
+            poster('reward-living-forest', 'emblem', 'The same emblem in colour, on the campfire poster'),
+            poster('enjoy-protect-forests', 'emblem', 'The same emblem on the sign')
+          ] }
+        ]
+      }
+    }
+  },
+  order: ['overview', 'photograph', 'headline', 'signature', 'emblem']
+}
+
 // Each with its story (../stories.js) attached to its parts.
-export const FOREST_SERVICE_POSTERS = Object.fromEntries([DONT_DROP_IT, DONT_GAMBLE, REWARD, ENJOY_PROTECT]
+export const FOREST_SERVICE_POSTERS = Object.fromEntries([DONT_DROP_IT, DONT_GAMBLE, REWARD, ENJOY_PROTECT, BE_CAREFUL, COONS_AGE]
   .map((poster) => [poster.id, { ...poster, parts: withStories(poster.id, poster.parts) }]))

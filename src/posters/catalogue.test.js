@@ -16,6 +16,7 @@ import { EXPO_86_POSTERS } from './expo-86/posters.js'
 import { GALLERY_COLLECTIONS } from '../gallery/collections.js'
 import { ORDER as COASTAL_ORDER, PARTS as COASTAL_PARTS, REGIONS as COASTAL_REGIONS } from './coastal-forest/parts.js'
 import { FOREST_LOGOS } from '../internal/forestLogos.js'
+import { SIGNS } from '../signs/catalogue.js'
 import { CERTAINTY, GROUPS, MARK_OBJECTS, connectedPosters, connectionsOf, groupedConnections, objectsForLogo, postersForLogo, postersForPatch } from './connections.js'
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
@@ -25,6 +26,8 @@ const DRAWINGS = {
   'dont-gamble-with-fire': read('./forest-service/dont-gamble-with-fire.svg'),
   'reward-living-forest': read('./forest-service/reward-living-forest.svg'),
   'enjoy-protect-forests': read('./forest-service/enjoy-protect-forests.svg'),
+  'be-careful': read('./forest-service/be-careful.svg'),
+  'coons-age': read('./forest-service/coons-age.svg'),
   'go-bc-ferries': read('./bc-ferries/go-bc-ferries.svg'),
   'queen-of-sidney': read('./bc-ferries/queen-of-sidney.svg'),
   'wildlife-trees': read('./wildlife-trees/wildlife-trees.svg'),
@@ -55,6 +58,8 @@ const assertPlace = (to, where) => {
     assert.ok(galleries.has(to.logos), `${where}: no logo collection ${to.logos}`)
   } else if (to.view === 'government') {
     assert.ok(GOVERNMENT.includes(`"${to.node}"`), `${where}: no body ${to.node}`)
+  } else if (to.view === 'signs') {
+    assert.ok(SIGNS[to.sign], `${where}: no sign ${to.sign}`)
   } else if (to.view === 'patches' || to.view === 'badges') {
     // Without the submodule there is nothing to check these against.
     if (!LIBRARY) return
@@ -289,7 +294,7 @@ test('a mark, the pieces that use it and the object made of it name each other',
     }
   }
   // The emblem's cloth square, from both posters; the fire artefacts, from the fire pieces.
-  assert.deepEqual(postersForPatch('S48-O01').map(({ poster }) => poster).sort(), ['enjoy-protect-forests', 'reward-living-forest'])
+  assert.deepEqual(postersForPatch('S48-O01').map(({ poster }) => poster).sort(), ['coons-age', 'enjoy-protect-forests', 'reward-living-forest'])
   assert.ok(postersForPatch('FO-fire-control').some(({ poster, certainty }) => poster === 'dont-drop-it' && certainty === 'thematic'))
   assert.deepEqual(postersForPatch('no-such-patch'), [])
 })
@@ -299,6 +304,9 @@ test('no card dates a piece more firmly than its evidence', () => {
     assert.match(POSTERS[id].when, /^Undated/, `${id}: ${POSTERS[id].when}`)
   }
   assert.match(POSTERS['coastal-forest'].when, /1979–86 or 1988–91/)
+  // Dated by a document, and saying which.
+  assert.equal(POSTERS['be-careful'].when, '1960, from the Protection Bulletin')
+  assert.equal(POSTERS['coons-age'].when, '2 December 1971, Gulf Islands Driftwood')
 })
 
 test('every record says what it rests on, and is printed where it says', () => {
@@ -374,3 +382,39 @@ test('neighbours step through the posters in catalogue order', () => {
   assert.deepEqual(neighbours(ids[0]), { previous: null, next: ids[1] })
   assert.deepEqual(neighbours(ids.at(-1)), { previous: ids.at(-2), next: null })
 })
+
+// The two pieces imported from supplied packages: the 1960 decal and the 1971 advertisement.
+const IMPORTED = ['be-careful', 'coons-age']
+
+test('the imported pieces say nothing with an em dash, on the card, in the panels, the story or the drawing’s title', () => {
+  const strings = (value) => typeof value === 'string' ? [value] : Array.isArray(value) ? value.flatMap(strings) : value && typeof value === 'object' ? Object.values(value).flatMap(strings) : []
+  for (const id of IMPORTED) {
+    const said = [...strings(POSTERS[id]), ...strings(DEFINITIONS[id].parts), ...strings(connectionsOf(id))]
+    for (const text of said) assert.ok(!text.includes('—'), `${id}: “${text}”`)
+    assert.ok(!/<title[^>]*>[^<]*—/.test(DRAWINGS[id]), `${id}: the drawing’s title`)
+  }
+})
+
+test('the imported drawings keep their ids to themselves', () => {
+  const ids = (svg) => [...svg.matchAll(/ id="([^"]+)"/g)].map((m) => m[1])
+  // Every id but the shared emblem layer, which the posters that carry it all call by one name.
+  for (const id of ids(DRAWINGS['be-careful'])) assert.ok(id.startsWith('bcc-'), `be-careful: ${id}`)
+  for (const id of ids(DRAWINGS['coons-age'])) assert.ok(/^(coon-|ad-emblem-|forest-service-emblem$)/.test(id), `coons-age: ${id}`)
+  const all = Object.entries(DRAWINGS).filter(([id]) => !IMPORTED.includes(id)).flatMap(([, svg]) => ids(svg))
+  for (const id of [...ids(DRAWINGS['be-careful']), ...ids(DRAWINGS['coons-age'])]) {
+    if (id !== 'forest-service-emblem') assert.ok(!all.includes(id), `${id} is already used by another drawing`)
+  }
+})
+
+test('the advertisement names its photograph by file, and the file is a light copy of the supplied one', () => {
+  const svg = DRAWINGS['coons-age']
+  assert.ok(!svg.includes('base64,'), 'the photograph is still inside the drawing')
+  assert.ok(svg.length < 200e3, `the drawing is ${Math.round(svg.length / 1e3)} KB`)
+  assert.deepEqual([...svg.matchAll(/<image\b[^>]*\bhref="([^"]+)"/g)].map((m) => m[1]), ['coons-age-raccoon.webp'])
+  const webp = readFileSync(new URL('./forest-service/coons-age-raccoon.webp', import.meta.url))
+  assert.equal(webp.toString('ascii', 8, 12), 'WEBP')
+  assert.ok(webp.length < 600e3, `the photograph is ${Math.round(webp.length / 1e3)} KB`)
+  // The emblem is drawn with plain SVG elements: an HTML parser does not draw prefixed ones.
+  assert.ok(!/<\/?\w+:\w/.test(svg.replace(/<\?xml[^>]*>/, '')), 'a namespace-prefixed element')
+})
+

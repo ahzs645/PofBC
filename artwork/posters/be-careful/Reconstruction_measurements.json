@@ -1,0 +1,80 @@
+{
+  "method": {
+    "alignment": "Original 1234 x 909 coordinates; no registration transform or warping",
+    "threshold": "Unweighted mean RGB below 180 of 255 is ink; all outputs rendered at original resolution",
+    "iou": "Intersection area divided by union area of two binary masks",
+    "limitation": "Whole ink overlap is dominated by solid fill; glyph scores and boundary distances are reported separately. These measures assess this scan, not historical font identification or authentic print colour."
+  },
+  "whole_ink_iou": 0.9736197709506393,
+  "source_ink_pixels": 668774,
+  "vector_ink_pixels": 663520,
+  "different_pixels": 17808,
+  "boundary_distance_pixels": {
+    "median": 1.0,
+    "95th_percentile": 2.23606797749979,
+    "within_2_pixels_fraction": 0.9468040041914699
+  },
+  "threshold_sensitivity": {
+    "160": 0.9742230303823913,
+    "170": 0.9740272464516818,
+    "180": 0.9736197709506393,
+    "190": 0.9729725336513383,
+    "200": 0.9725425687467573
+  },
+  "large_C_white_shape_iou": 0.9582201979504248,
+  "white_regions": {
+    "large_B_region": {
+      "box": [
+        162,
+        266,
+        540,
+        675
+      ],
+      "iou": 0.9759817482844106
+    },
+    "slogan_white_lettering": {
+      "box": [
+        48,
+        706,
+        1060,
+        826
+      ],
+      "iou": 0.9229807875616938
+    },
+    "service_signature_white_lettering": {
+      "box": [
+        190,
+        825,
+        890,
+        875
+      ],
+      "iou": 0.8038528896672504
+    },
+    "small_E": {
+      "box": [
+        540,
+        422,
+        593,
+        529
+      ],
+      "iou": 0.9271600154978691
+    },
+    "AREFUL": {
+      "box": [
+        698,
+        426,
+        1013,
+        540
+      ],
+      "iou": 0.9132693120734433
+    }
+  },
+  "artwork": {
+    "paths": 43,
+    "editable_layers": 5,
+    "external_fonts": 0,
+    "embedded_raster_images": 0,
+    "scan_sampled_ink": "#525850",
+    "physical_original_dimensions": "Unknown"
+  }
+}

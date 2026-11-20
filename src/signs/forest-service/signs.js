@@ -1,6 +1,7 @@
 // The Forest Service's signs: their parts, where each sits in its drawing, and what the panel says.
 // Data only, in the posters' format (see src/posters/forest-service/posters.js): a string block is a
-// paragraph; { h }, { facts }, { note }, { palette }, { links } and { sources } are what they say.
+// paragraph; { h }, { facts }, { note }, { palette }, { links } and { sources } are what they say. A sign
+// whose drawing has faces that change offers `variations` whose options `show` their own layers.
 
 import { SIGNS } from '../catalogue.js'
 
@@ -9,22 +10,24 @@ const LOOKOUT_RELEASE = {
   href: 'https://news.gov.bc.ca/releases/2012FOR0178-001437'
 }
 
+const MARKS_LINK = {
+  label: 'The Forest Service’s marks',
+  note: 'Internal Logos · Forests: the Lands Department seal, the evergreen emblem and the ovals',
+  to: { view: 'internal', internal: 'forests' }
+}
+const BADGES_LINK = {
+  label: 'Its fire-prevention badges',
+  note: 'Posters · DON’T DROP IT! and Don’t gamble with FIRE',
+  to: { view: 'posters', poster: 'dont-drop-it' }
+}
 const SERVICE_LINKS = [
-  {
-    label: 'The Forest Service’s marks',
-    note: 'Internal Logos · Forests: the Lands Department seal, the evergreen emblem and the ovals',
-    to: { view: 'internal', internal: 'forests' }
-  },
+  MARKS_LINK,
   {
     label: 'The Forest Service’s posters',
     note: 'Posters · REWARD: A Living Forest, signed by the service beside its emblem',
     to: { view: 'posters', poster: 'reward-living-forest', part: 'service' }
   },
-  {
-    label: 'Its fire-prevention badges',
-    note: 'Posters · DON’T DROP IT! and Don’t gamble with FIRE',
-    to: { view: 'posters', poster: 'dont-drop-it' }
-  }
+  BADGES_LINK
 ]
 
 export const LOOKOUT = {
@@ -55,7 +58,7 @@ export const LOOKOUT = {
           ] },
           { note: 'The colours are reconstruction choices, not verified paint. A softer palette sampled from the photograph (green #03513B, red #B70416, an off-white panel #E7ECEB) is kept with the source files. Lighting, grain and edge wear were left out, and no physical size is inferred.' },
           { h: 'The same service' },
-          { links: SERVICE_LINKS }
+          { links: [...SERVICE_LINKS, { label: 'FOREST CLOSURE, Zone 3', note: 'Signs · a 1960 closure sign with a changeable strip', to: { view: 'signs', sign: 'forest-closure' } }] }
         ]
       }
     },
@@ -148,4 +151,163 @@ export const LOOKOUT = {
   order: ['overview', 'wordmark', 'province', 'service', 'frame']
 }
 
-export const FOREST_SERVICE_SIGNS = { lookout: LOOKOUT }
+// ── FOREST CLOSURE, Zone 3 ──────────────────────────────────────────────────────────────────────
+// One drawing holds both faces of the changeable strip; the overview's switch shows one or the other.
+
+const BULLETIN = {
+  label: 'BC Forest Service, Forest Service Protection Bulletin, 1960 no. 3, p. 4, “Forest Closure Zone Signs”',
+  href: 'https://a100.gov.bc.ca/pub/eirs/finishDownloadDocument.do?subdocumentId=21448'
+}
+
+const CLOSURE_LINKS = [
+  {
+    label: 'LOOKOUT',
+    note: 'Signs · the service’s other triangle',
+    to: { view: 'signs', sign: 'lookout' }
+  },
+  {
+    label: 'Department of Lands and Forests',
+    note: 'Government · 1960: the department the Forest Service sat in',
+    to: { view: 'government', year: 1960, node: 'department-of-lands-and-forests-1945' }
+  },
+  BADGES_LINK
+]
+
+export const FOREST_CLOSURE = {
+  id: 'forest-closure',
+  spotlight: { keep: ['fc-main-board'] },
+  variations: {
+    label: 'Strip',
+    options: [
+      { id: 'open', label: 'OPEN', note: 'The strip as photographed open: dark letters on white.', show: '#fc-open-panel' },
+      { id: 'closed', label: 'CLOSED', note: 'The strip as photographed closed: WOODS CLOSED TO TRAVEL, light on dark.', show: '#fc-closed-panel', changed: 'with its strip turned to CLOSED' }
+    ]
+  },
+  // The plate comes first so the parts drawn on it sit over it: clicking bare white opens the plate.
+  regions: ['plate', 'heading', 'boundary', 'zone', 'oval', 'strip'],
+  parts: {
+    overview: {
+      label: 'Whole sign',
+      box: SIGNS['forest-closure'].view,
+      pad: 0.05,
+      panel: {
+        eyebrow: 'British Columbia Forest Service · sign',
+        heading: 'FOREST CLOSURE',
+        em: 'Zone 3',
+        lede: 'A white triangle marking the boundary of a closure zone, over a strip the local ranger could change from OPEN to WOODS CLOSED TO TRAVEL.',
+        blocks: [
+          { facts: [
+            ['Issued by', 'British Columbia Forest Service'],
+            ['Date', '1960, from the Protection Bulletin that pictures it'],
+            ['Rebuilt from', 'the bulletin’s two photographs, one with each strip'],
+            ['Drawing', '1000 × 1030 units, black on white; all lettering outlined, both strips in one drawing']
+          ] },
+          { note: 'The typeface is not identified: a heavy geometric sans in the Futura/Spartan tradition. How the strip changed, reversed or swapped, is not proven, and the sizes are normalized, not fabrication sizes. The photographs are black and white, so the colours are a choice.' },
+          { sources: [BULLETIN] },
+          { h: 'The same service' },
+          { links: CLOSURE_LINKS }
+        ]
+      }
+    },
+    plate: {
+      label: 'Plate',
+      hint: 'a triangle in a triangle',
+      box: { x: 0, y: 0, w: 1000, h: 866 },
+      pad: 0.05,
+      layer: '#fc-main-board, #fc-inner-rule',
+      hit: 'shape',
+      panel: {
+        eyebrow: 'The plate',
+        heading: 'A triangle in a triangle',
+        lede: 'A white triangle with a thin black one inside it: the heading along the slopes, BOUNDARY under the base, the zone and the emblem within.',
+        blocks: [
+          { facts: [
+            ['Plate', 'equilateral by convention, 1000 units wide'],
+            ['Inner rule', 'concentric, 0.556 the size of the plate']
+          ] }
+        ]
+      }
+    },
+    heading: {
+      label: 'FOREST CLOSURE',
+      hint: 'along the two slopes',
+      box: { x: 133, y: 191, w: 738, h: 526 },
+      pad: 0.08,
+      layer: '#fc-word-forest, #fc-word-closure',
+      hit: 'shape',
+      panel: {
+        eyebrow: 'The heading',
+        heading: 'FOREST CLOSURE',
+        lede: 'FOREST climbs the left slope and CLOSURE runs down the right, each turned 60° to lie along its side.',
+        blocks: [
+          { facts: [
+            ['Letters', '13, outlined; each repeated letter is one shared drawing'],
+            ['Typeface', 'not identified']
+          ] }
+        ]
+      }
+    },
+    boundary: {
+      label: 'BOUNDARY',
+      hint: 'along the base',
+      box: { x: 211, y: 762, w: 598, h: 86 },
+      pad: 0.2,
+      layer: '#fc-word-boundary',
+      panel: {
+        eyebrow: 'The base',
+        heading: 'BOUNDARY',
+        lede: 'Level along the base, under the inner rule, so the plate reads FOREST CLOSURE BOUNDARY.'
+      }
+    },
+    zone: {
+      label: 'ZONE 3',
+      hint: 'inside the inner triangle',
+      box: { x: 381, y: 481, w: 239, h: 239 },
+      pad: 0.15,
+      layer: '#fc-word-zone, #fc-word-zone-number',
+      panel: {
+        eyebrow: 'The zone',
+        heading: 'ZONE 3',
+        lede: 'The zone’s number, the largest figure on the sign. Its 3, with broad, unequal bowls, is drawn for this sign: no font tested matches it unchanged.'
+      }
+    },
+    oval: {
+      label: 'Forest Service oval',
+      hint: 'at the top of the inner triangle',
+      box: { x: 459, y: 338, w: 82, h: 108 },
+      pad: 0.8,
+      layer: '#fc-forest-service-oval',
+      panel: {
+        eyebrow: 'The emblem',
+        heading: 'Forest Service oval',
+        lede: 'FOREST SERVICE over BRITISH COLUMBIA, around a sparse, tall tree. It is not the evergreen emblem, and none of the service’s ovals in Internal Logos is identified as this one.',
+        blocks: [
+          'Its tree, landscape and tiny lettering are simplified: the photographs show it only small.',
+          { links: [MARKS_LINK] }
+        ]
+      }
+    },
+    strip: {
+      label: 'Changeable strip',
+      hint: 'OPEN or CLOSED',
+      box: { x: 0, y: 900, w: 1000, h: 130 },
+      pad: 0.1,
+      layer: '#fc-open-panel, #fc-closed-panel',
+      panel: {
+        eyebrow: 'The strip',
+        heading: 'OPEN or CLOSED',
+        lede: 'The strip under the plate, changed by the local ranger. Switch faces with the Strip control on the whole sign.',
+        blocks: [
+          { facts: [
+            ['OPEN', 'dark on white, set wide'],
+            ['CLOSED', 'WOODS CLOSED TO TRAVEL, light on dark, set narrow with a smaller TO'],
+            ['Size', '1000 × 130 units for both, a convention, not a measurement']
+          ] }
+        ]
+      }
+    }
+  },
+  order: ['overview', 'heading', 'boundary', 'zone', 'oval', 'strip', 'plate']
+}
+
+export const FOREST_SERVICE_SIGNS = { lookout: LOOKOUT, 'forest-closure': FOREST_CLOSURE }

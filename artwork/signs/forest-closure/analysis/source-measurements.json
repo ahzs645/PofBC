@@ -1,0 +1,1217 @@
+{
+  "coordinate_convention": "Bounding boxes use [x0,y0,x1,y1], exclusive upper bounds. Upright boxes are local to the recorded affine frame. Threshold measurements only, never traced vector outlines.",
+  "photos": {
+    "open": {
+      "FOREST": {
+        "local_bbox": [
+          75,
+          44,
+          591,
+          134
+        ],
+        "canonical_quad_tl_tr_br_bl": [
+          [
+            133.15321248268236,
+            666.0063509461097
+          ],
+          [
+            391.1532124826824,
+            219.13724259333935
+          ],
+          [
+            469.0954988232819,
+            264.13724259333935
+          ],
+          [
+            211.09549882328184,
+            711.0063509461097
+          ]
+        ],
+        "local_to_main": [
+          [
+            0.5000000000000001,
+            0.8660254037844386,
+            57.54809471616707
+          ],
+          [
+            -0.8660254037844386,
+            0.5000000000000001,
+            708.9582562299425
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "threshold_8bit": 178,
+        "connected_components": [
+          {
+            "bbox": [
+              75,
+              46,
+              131,
+              132
+            ],
+            "area_pixels": 3085,
+            "character": "F"
+          },
+          {
+            "bbox": [
+              143,
+              45,
+              232,
+              134
+            ],
+            "area_pixels": 4654,
+            "character": "O"
+          },
+          {
+            "bbox": [
+              248,
+              46,
+              323,
+              132
+            ],
+            "area_pixels": 4787,
+            "character": "R"
+          },
+          {
+            "bbox": [
+              342,
+              46,
+              407,
+              132
+            ],
+            "area_pixels": 4537,
+            "character": "E"
+          },
+          {
+            "bbox": [
+              427,
+              44,
+              502,
+              134
+            ],
+            "area_pixels": 4400,
+            "character": "S"
+          },
+          {
+            "bbox": [
+              513,
+              45,
+              591,
+              132
+            ],
+            "area_pixels": 3224,
+            "character": "T"
+          }
+        ]
+      },
+      "CLOSURE": {
+        "local_bbox": [
+          49,
+          27,
+          602,
+          119
+        ],
+        "canonical_quad_tl_tr_br_bl": [
+          [
+            593.569219381653,
+            191.97698855549493
+          ],
+          [
+            870.069219381653,
+            670.8890368482895
+          ],
+          [
+            790.3948822334847,
+            716.8890368482895
+          ],
+          [
+            513.8948822334846,
+            237.97698855549496
+          ]
+        ],
+        "local_to_main": [
+          [
+            0.5000000000000001,
+            -0.8660254037844386,
+            592.4519052838328
+          ],
+          [
+            0.8660254037844386,
+            0.5000000000000001,
+            136.04174377005745
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "threshold_8bit": 181,
+        "connected_components": [
+          {
+            "bbox": [
+              49,
+              28,
+              119,
+              119
+            ],
+            "area_pixels": 3495,
+            "character": "C"
+          },
+          {
+            "bbox": [
+              131,
+              30,
+              187,
+              114
+            ],
+            "area_pixels": 2537,
+            "character": "L"
+          },
+          {
+            "bbox": [
+              194,
+              27,
+              287,
+              117
+            ],
+            "area_pixels": 4969,
+            "character": "O"
+          },
+          {
+            "bbox": [
+              297,
+              27,
+              369,
+              115
+            ],
+            "area_pixels": 4090,
+            "character": "S"
+          },
+          {
+            "bbox": [
+              382,
+              30,
+              446,
+              115
+            ],
+            "area_pixels": 3752,
+            "character": "U"
+          },
+          {
+            "bbox": [
+              459,
+              29,
+              530,
+              113
+            ],
+            "area_pixels": 4341,
+            "character": "R"
+          },
+          {
+            "bbox": [
+              544,
+              28,
+              602,
+              112
+            ],
+            "area_pixels": 3910,
+            "character": "E"
+          }
+        ]
+      },
+      "BOUNDARY": {
+        "local_bbox": [
+          32,
+          14,
+          628,
+          99
+        ],
+        "canonical_quad_tl_tr_br_bl": [
+          [
+            212,
+            762
+          ],
+          [
+            808,
+            762
+          ],
+          [
+            808,
+            847
+          ],
+          [
+            212,
+            847
+          ]
+        ],
+        "local_to_main": [
+          [
+            1,
+            0,
+            180
+          ],
+          [
+            0,
+            1,
+            748
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "threshold_8bit": 190,
+        "connected_components": [
+          {
+            "bbox": [
+              32,
+              14,
+              94,
+              97
+            ],
+            "area_pixels": 3983,
+            "character": "B"
+          },
+          {
+            "bbox": [
+              102,
+              15,
+              184,
+              99
+            ],
+            "area_pixels": 4167,
+            "character": "O"
+          },
+          {
+            "bbox": [
+              190,
+              15,
+              253,
+              97
+            ],
+            "area_pixels": 3492,
+            "character": "U"
+          },
+          {
+            "bbox": [
+              263,
+              15,
+              326,
+              96
+            ],
+            "area_pixels": 3977,
+            "character": "N"
+          },
+          {
+            "bbox": [
+              337,
+              15,
+              403,
+              96
+            ],
+            "area_pixels": 3637,
+            "character": "D"
+          },
+          {
+            "bbox": [
+              401,
+              16,
+              483,
+              96
+            ],
+            "area_pixels": 3535,
+            "character": "A"
+          },
+          {
+            "bbox": [
+              487,
+              15,
+              555,
+              96
+            ],
+            "area_pixels": 3981,
+            "character": "R"
+          },
+          {
+            "bbox": [
+              555,
+              16,
+              628,
+              96
+            ],
+            "area_pixels": 2463,
+            "character": "Y"
+          }
+        ]
+      },
+      "ZONE": {
+        "local_bbox": [
+          7,
+          10,
+          244,
+          87
+        ],
+        "canonical_quad_tl_tr_br_bl": [
+          [
+            382,
+            483
+          ],
+          [
+            619,
+            483
+          ],
+          [
+            619,
+            560
+          ],
+          [
+            382,
+            560
+          ]
+        ],
+        "local_to_main": [
+          [
+            1,
+            0,
+            375
+          ],
+          [
+            0,
+            1,
+            473
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "threshold_8bit": 194,
+        "connected_components": [
+          {
+            "bbox": [
+              7,
+              12,
+              60,
+              84
+            ],
+            "area_pixels": 2211,
+            "character": "Z"
+          },
+          {
+            "bbox": [
+              62,
+              10,
+              127,
+              87
+            ],
+            "area_pixels": 2993,
+            "character": "O"
+          },
+          {
+            "bbox": [
+              134,
+              12,
+              188,
+              83
+            ],
+            "area_pixels": 3085,
+            "character": "N"
+          },
+          {
+            "bbox": [
+              202,
+              11,
+              244,
+              83
+            ],
+            "area_pixels": 2268,
+            "character": "E"
+          }
+        ]
+      },
+      "3": {
+        "local_bbox": [
+          31,
+          10,
+          154,
+          165
+        ],
+        "canonical_quad_tl_tr_br_bl": [
+          [
+            446,
+            565
+          ],
+          [
+            569,
+            565
+          ],
+          [
+            569,
+            720
+          ],
+          [
+            446,
+            720
+          ]
+        ],
+        "local_to_main": [
+          [
+            1,
+            0,
+            415
+          ],
+          [
+            0,
+            1,
+            555
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "threshold_8bit": 194,
+        "connected_components": [
+          {
+            "bbox": [
+              31,
+              10,
+              154,
+              165
+            ],
+            "area_pixels": 9412,
+            "character": "3"
+          }
+        ]
+      },
+      "panel": {
+        "local_bbox": [
+          279,
+          23,
+          711,
+          114
+        ],
+        "threshold_8bit": 186,
+        "connected_components": [
+          {
+            "bbox": [
+              279,
+              24,
+              384,
+              114
+            ],
+            "area_pixels": 5856
+          },
+          {
+            "bbox": [
+              404,
+              24,
+              497,
+              111
+            ],
+            "area_pixels": 5028
+          },
+          {
+            "bbox": [
+              519,
+              24,
+              588,
+              110
+            ],
+            "area_pixels": 4970
+          },
+          {
+            "bbox": [
+              610,
+              23,
+              711,
+              109
+            ],
+            "area_pixels": 5757
+          }
+        ],
+        "size": [
+          1000,
+          130
+        ]
+      }
+    },
+    "closed": {
+      "FOREST": {
+        "local_bbox": [
+          77,
+          43,
+          594,
+          134
+        ],
+        "canonical_quad_tl_tr_br_bl": [
+          [
+            133.28718707889794,
+            663.7743001385408
+          ],
+          [
+            391.787187078898,
+            216.03916638198598
+          ],
+          [
+            470.5954988232819,
+            261.539166381986
+          ],
+          [
+            212.09549882328184,
+            709.2743001385408
+          ]
+        ],
+        "local_to_main": [
+          [
+            0.5000000000000001,
+            0.8660254037844386,
+            57.54809471616707
+          ],
+          [
+            -0.8660254037844386,
+            0.5000000000000001,
+            708.9582562299425
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "threshold_8bit": 172,
+        "connected_components": [
+          {
+            "bbox": [
+              77,
+              45,
+              133,
+              131
+            ],
+            "area_pixels": 3206,
+            "character": "F"
+          },
+          {
+            "bbox": [
+              144,
+              44,
+              235,
+              134
+            ],
+            "area_pixels": 4866,
+            "character": "O"
+          },
+          {
+            "bbox": [
+              250,
+              44,
+              327,
+              131
+            ],
+            "area_pixels": 4926,
+            "character": "R"
+          },
+          {
+            "bbox": [
+              345,
+              45,
+              411,
+              131
+            ],
+            "area_pixels": 4614,
+            "character": "E"
+          },
+          {
+            "bbox": [
+              429,
+              43,
+              506,
+              133
+            ],
+            "area_pixels": 4508,
+            "character": "S"
+          },
+          {
+            "bbox": [
+              516,
+              45,
+              594,
+              132
+            ],
+            "area_pixels": 3261,
+            "character": "T"
+          }
+        ]
+      },
+      "CLOSURE": {
+        "local_bbox": [
+          48,
+          26,
+          602,
+          119
+        ],
+        "canonical_quad_tl_tr_br_bl": [
+          [
+            593.9352447854375,
+            190.6109631517105
+          ],
+          [
+            870.9352447854375,
+            670.3890368482895
+          ],
+          [
+            790.3948822334847,
+            716.8890368482895
+          ],
+          [
+            513.3948822334846,
+            237.1109631517105
+          ]
+        ],
+        "local_to_main": [
+          [
+            0.5000000000000001,
+            -0.8660254037844386,
+            592.4519052838328
+          ],
+          [
+            0.8660254037844386,
+            0.5000000000000001,
+            136.04174377005745
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "threshold_8bit": 169,
+        "connected_components": [
+          {
+            "bbox": [
+              48,
+              28,
+              118,
+              119
+            ],
+            "area_pixels": 3536,
+            "character": "C"
+          },
+          {
+            "bbox": [
+              130,
+              30,
+              185,
+              114
+            ],
+            "area_pixels": 2654,
+            "character": "L"
+          },
+          {
+            "bbox": [
+              193,
+              26,
+              285,
+              117
+            ],
+            "area_pixels": 5077,
+            "character": "O"
+          },
+          {
+            "bbox": [
+              295,
+              26,
+              368,
+              115
+            ],
+            "area_pixels": 4262,
+            "character": "S"
+          },
+          {
+            "bbox": [
+              381,
+              29,
+              446,
+              114
+            ],
+            "area_pixels": 3904,
+            "character": "U"
+          },
+          {
+            "bbox": [
+              458,
+              28,
+              530,
+              114
+            ],
+            "area_pixels": 4458,
+            "character": "R"
+          },
+          {
+            "bbox": [
+              543,
+              27,
+              602,
+              112
+            ],
+            "area_pixels": 4081,
+            "character": "E"
+          }
+        ]
+      },
+      "BOUNDARY": {
+        "local_bbox": [
+          30,
+          14,
+          629,
+          101
+        ],
+        "canonical_quad_tl_tr_br_bl": [
+          [
+            210,
+            762
+          ],
+          [
+            809,
+            762
+          ],
+          [
+            809,
+            849
+          ],
+          [
+            210,
+            849
+          ]
+        ],
+        "local_to_main": [
+          [
+            1,
+            0,
+            180
+          ],
+          [
+            0,
+            1,
+            748
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "threshold_8bit": 174,
+        "connected_components": [
+          {
+            "bbox": [
+              30,
+              14,
+              94,
+              99
+            ],
+            "area_pixels": 4196,
+            "character": "B"
+          },
+          {
+            "bbox": [
+              101,
+              15,
+              183,
+              101
+            ],
+            "area_pixels": 4311,
+            "character": "O"
+          },
+          {
+            "bbox": [
+              190,
+              15,
+              253,
+              100
+            ],
+            "area_pixels": 3630,
+            "character": "U"
+          },
+          {
+            "bbox": [
+              263,
+              16,
+              325,
+              99
+            ],
+            "area_pixels": 4130,
+            "character": "N"
+          },
+          {
+            "bbox": [
+              336,
+              16,
+              402,
+              99
+            ],
+            "area_pixels": 3802,
+            "character": "D"
+          },
+          {
+            "bbox": [
+              400,
+              16,
+              483,
+              99
+            ],
+            "area_pixels": 3768,
+            "character": "A"
+          },
+          {
+            "bbox": [
+              487,
+              16,
+              556,
+              99
+            ],
+            "area_pixels": 4152,
+            "character": "R"
+          },
+          {
+            "bbox": [
+              555,
+              17,
+              629,
+              98
+            ],
+            "area_pixels": 2571,
+            "character": "Y"
+          }
+        ]
+      },
+      "ZONE": {
+        "local_bbox": [
+          6,
+          7,
+          245,
+          85
+        ],
+        "canonical_quad_tl_tr_br_bl": [
+          [
+            381,
+            480
+          ],
+          [
+            620,
+            480
+          ],
+          [
+            620,
+            558
+          ],
+          [
+            381,
+            558
+          ]
+        ],
+        "local_to_main": [
+          [
+            1,
+            0,
+            375
+          ],
+          [
+            0,
+            1,
+            473
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "threshold_8bit": 175,
+        "connected_components": [
+          {
+            "bbox": [
+              6,
+              9,
+              60,
+              82
+            ],
+            "area_pixels": 2296,
+            "character": "Z"
+          },
+          {
+            "bbox": [
+              62,
+              7,
+              126,
+              85
+            ],
+            "area_pixels": 3089,
+            "character": "O"
+          },
+          {
+            "bbox": [
+              133,
+              9,
+              187,
+              82
+            ],
+            "area_pixels": 3211,
+            "character": "N"
+          },
+          {
+            "bbox": [
+              200,
+              9,
+              245,
+              82
+            ],
+            "area_pixels": 2503,
+            "character": "E"
+          }
+        ]
+      },
+      "3": {
+        "local_bbox": [
+          30,
+          8,
+          153,
+          165
+        ],
+        "canonical_quad_tl_tr_br_bl": [
+          [
+            445,
+            563
+          ],
+          [
+            568,
+            563
+          ],
+          [
+            568,
+            720
+          ],
+          [
+            445,
+            720
+          ]
+        ],
+        "local_to_main": [
+          [
+            1,
+            0,
+            415
+          ],
+          [
+            0,
+            1,
+            555
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "threshold_8bit": 176,
+        "connected_components": [
+          {
+            "bbox": [
+              30,
+              8,
+              153,
+              165
+            ],
+            "area_pixels": 9654,
+            "character": "3"
+          }
+        ]
+      },
+      "panel": {
+        "local_bbox": [
+          53,
+          29,
+          978,
+          99
+        ],
+        "threshold_8bit": 171,
+        "connected_components": [
+          {
+            "bbox": [
+              53,
+              31,
+              120,
+              97
+            ],
+            "area_pixels": 2791
+          },
+          {
+            "bbox": [
+              117,
+              31,
+              168,
+              99
+            ],
+            "area_pixels": 1938
+          },
+          {
+            "bbox": [
+              171,
+              32,
+              220,
+              98
+            ],
+            "area_pixels": 1933
+          },
+          {
+            "bbox": [
+              225,
+              31,
+              270,
+              97
+            ],
+            "area_pixels": 1941
+          },
+          {
+            "bbox": [
+              274,
+              29,
+              315,
+              98
+            ],
+            "area_pixels": 1543
+          },
+          {
+            "bbox": [
+              356,
+              31,
+              399,
+              95
+            ],
+            "area_pixels": 1400
+          },
+          {
+            "bbox": [
+              404,
+              31,
+              432,
+              95
+            ],
+            "area_pixels": 1029
+          },
+          {
+            "bbox": [
+              432,
+              30,
+              483,
+              97
+            ],
+            "area_pixels": 1949
+          },
+          {
+            "bbox": [
+              484,
+              30,
+              528,
+              96
+            ],
+            "area_pixels": 1608
+          },
+          {
+            "bbox": [
+              533,
+              31,
+              564,
+              94
+            ],
+            "area_pixels": 1566
+          },
+          {
+            "bbox": [
+              573,
+              31,
+              619,
+              94
+            ],
+            "area_pixels": 1985
+          },
+          {
+            "bbox": [
+              638,
+              44,
+              667,
+              94
+            ],
+            "area_pixels": 638
+          },
+          {
+            "bbox": [
+              665,
+              44,
+              700,
+              95
+            ],
+            "area_pixels": 1008
+          },
+          {
+            "bbox": [
+              714,
+              31,
+              753,
+              93
+            ],
+            "area_pixels": 1167
+          },
+          {
+            "bbox": [
+              759,
+              30,
+              849,
+              93
+            ],
+            "area_pixels": 3540
+          },
+          {
+            "bbox": [
+              844,
+              30,
+              893,
+              91
+            ],
+            "area_pixels": 1487
+          },
+          {
+            "bbox": [
+              898,
+              30,
+              931,
+              90
+            ],
+            "area_pixels": 1547
+          },
+          {
+            "bbox": [
+              941,
+              30,
+              978,
+              90
+            ],
+            "area_pixels": 1080
+          }
+        ],
+        "size": [
+          1000,
+          158
+        ]
+      }
+    }
+  }
+}

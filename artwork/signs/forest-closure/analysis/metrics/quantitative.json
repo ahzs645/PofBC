@@ -1,0 +1,1066 @@
+{
+  "generated_utc": "2026-11-20T15:20:21.718464+00:00",
+  "classification": "in-sample reconstruction fit, not font identification or independent validation accuracy",
+  "coordinate_system": "Canonical width 1000. Main plate registered by fixed homography; sloping words use fixed rigid coordinate frames. Both status faces share a 1000 by 130 panel convention and have independent photograph homographies. CLOSED uses the revised physical-board boundary, not the photograph bottom edge.",
+  "alignment": "The vector was reconstructed using these photographs. No additional per-letter or per-word alignment is performed by this analysis.",
+  "foreground": "Main lettering only; triangle, oval, board/background and supports excluded. OPEN panel included. CLOSED panel optional.",
+  "source_threshold": "Otsu separately within each fixed photographic text ROI; discard isolated components smaller than 60 pixels or narrower than 5 / shorter than 20 pixels. Threshold sensitivity at Otsu -12, Otsu, Otsu +12.",
+  "vector_threshold": "SVG exported by Inkscape at 4x; alpha downsampled with Lanczos, foreground alpha >= 128.",
+  "boundary_metric": "8-neighbour inner boundaries (mask minus 3x3 erosion). Precision is fraction of vector boundary within 2 canonical pixels of source boundary, recall reverses roles, F1 is harmonic mean.",
+  "difference_colors_rgb": {
+    "source_only": [
+      0,
+      174,
+      201
+    ],
+    "vector_only": [
+      218,
+      43,
+      145
+    ],
+    "overlap": [
+      25,
+      35,
+      44
+    ],
+    "background": [
+      255,
+      255,
+      255
+    ]
+  },
+  "inputs_sha256": {
+    "main-ink-analysis.svg": "528afa8619ba768ad550f790f9d1f367d3b56cc31fa5f3f7d0fa4ed240b09d02",
+    "forest-closure-open.svg": "5ddcb423606a102dbc2dc3692898d5a97886cbb442b5cc37bc3702fc2a186ba1",
+    "forest-closure-closed.svg": "73dd97e85496308eace990bf2db3a17a6c6feaf710f6d149207fed1751671415",
+    "registration.json": "69d668bc142c4061baaf9067c8eb2939c072ced58f4e6f71df63f1051d2ab3c8"
+  },
+  "photos": {
+    "open": {
+      "FOREST": {
+        "source_filename": "open_FOREST_upright.png",
+        "threshold": 178,
+        "roi": [
+          60,
+          32,
+          610,
+          142
+        ],
+        "nominal": {
+          "iou": 0.8796489917849141,
+          "dice": 0.9359715517412639,
+          "boundary_precision_2px": 0.8391224862888482,
+          "boundary_recall_2px": 0.8445632798573975,
+          "boundary_f1_2px": 0.8418340921706723,
+          "source_ink_pixels": 24687,
+          "vector_ink_pixels": 25650,
+          "intersection_pixels": 23557,
+          "union_pixels": 26780,
+          "source_boundary_pixels": 2805,
+          "vector_boundary_pixels": 2735
+        },
+        "threshold_sensitivity": [
+          {
+            "threshold_offset": -12,
+            "threshold": 166,
+            "iou": 0.8753762793497892,
+            "dice": 0.9335473515248797,
+            "boundary_precision_2px": 0.8244972577696527,
+            "boundary_recall_2px": 0.8333920394505108,
+            "boundary_f1_2px": 0.8289207878066847,
+            "source_ink_pixels": 24190,
+            "vector_ink_pixels": 25650,
+            "intersection_pixels": 23264,
+            "union_pixels": 26576,
+            "source_boundary_pixels": 2839,
+            "vector_boundary_pixels": 2735
+          },
+          {
+            "threshold_offset": 0,
+            "threshold": 178,
+            "iou": 0.8796489917849141,
+            "dice": 0.9359715517412639,
+            "boundary_precision_2px": 0.8391224862888482,
+            "boundary_recall_2px": 0.8445632798573975,
+            "boundary_f1_2px": 0.8418340921706723,
+            "source_ink_pixels": 24687,
+            "vector_ink_pixels": 25650,
+            "intersection_pixels": 23557,
+            "union_pixels": 26780,
+            "source_boundary_pixels": 2805,
+            "vector_boundary_pixels": 2735
+          },
+          {
+            "threshold_offset": 12,
+            "threshold": 190,
+            "iou": 0.8840515161637531,
+            "dice": 0.938457901579922,
+            "boundary_precision_2px": 0.8457038391224863,
+            "boundary_recall_2px": 0.850693210095983,
+            "boundary_f1_2px": 0.8481911873462034,
+            "source_ink_pixels": 25112,
+            "vector_ink_pixels": 25650,
+            "intersection_pixels": 23819,
+            "union_pixels": 26943,
+            "source_boundary_pixels": 2813,
+            "vector_boundary_pixels": 2735
+          }
+        ],
+        "sensitivity_range": {
+          "iou": [
+            0.8753762793497892,
+            0.8840515161637531
+          ],
+          "dice": [
+            0.9335473515248797,
+            0.938457901579922
+          ],
+          "boundary_f1_2px": [
+            0.8289207878066847,
+            0.8481911873462034
+          ]
+        }
+      },
+      "CLOSURE": {
+        "source_filename": "open_CLOSURE_upright.png",
+        "threshold": 181,
+        "roi": [
+          35,
+          20,
+          620,
+          125
+        ],
+        "nominal": {
+          "iou": 0.8961566252623611,
+          "dice": 0.9452348116425927,
+          "boundary_precision_2px": 0.9035725576983876,
+          "boundary_recall_2px": 0.9084158415841584,
+          "boundary_f1_2px": 0.90598772680767,
+          "source_ink_pixels": 27094,
+          "vector_ink_pixels": 28014,
+          "intersection_pixels": 26045,
+          "union_pixels": 29063,
+          "source_boundary_pixels": 3232,
+          "vector_boundary_pixels": 3163
+        },
+        "threshold_sensitivity": [
+          {
+            "threshold_offset": -12,
+            "threshold": 169,
+            "iou": 0.8887079449776515,
+            "dice": 0.9410750321042011,
+            "boundary_precision_2px": 0.8925071134998419,
+            "boundary_recall_2px": 0.8983576076851565,
+            "boundary_f1_2px": 0.8954228042363414,
+            "source_ink_pixels": 26496,
+            "vector_ink_pixels": 28014,
+            "intersection_pixels": 25649,
+            "union_pixels": 28861,
+            "source_boundary_pixels": 3227,
+            "vector_boundary_pixels": 3163
+          },
+          {
+            "threshold_offset": 0,
+            "threshold": 181,
+            "iou": 0.8961566252623611,
+            "dice": 0.9452348116425927,
+            "boundary_precision_2px": 0.9035725576983876,
+            "boundary_recall_2px": 0.9084158415841584,
+            "boundary_f1_2px": 0.90598772680767,
+            "source_ink_pixels": 27094,
+            "vector_ink_pixels": 28014,
+            "intersection_pixels": 26045,
+            "union_pixels": 29063,
+            "source_boundary_pixels": 3232,
+            "vector_boundary_pixels": 3163
+          },
+          {
+            "threshold_offset": 12,
+            "threshold": 193,
+            "iou": 0.8998531771775873,
+            "dice": 0.9472870724825219,
+            "boundary_precision_2px": 0.9064179576351565,
+            "boundary_recall_2px": 0.9131375579598145,
+            "boundary_f1_2px": 0.909765350089082,
+            "source_ink_pixels": 27627,
+            "vector_ink_pixels": 28014,
+            "intersection_pixels": 26354,
+            "union_pixels": 29287,
+            "source_boundary_pixels": 3235,
+            "vector_boundary_pixels": 3163
+          }
+        ],
+        "sensitivity_range": {
+          "iou": [
+            0.8887079449776515,
+            0.8998531771775873
+          ],
+          "dice": [
+            0.9410750321042011,
+            0.9472870724825219
+          ],
+          "boundary_f1_2px": [
+            0.8954228042363414,
+            0.909765350089082
+          ]
+        }
+      },
+      "BOUNDARY": {
+        "source_filename": "open_BOUNDARY_crop.png",
+        "threshold": 190,
+        "roi": [
+          0,
+          0,
+          645,
+          108
+        ],
+        "nominal": {
+          "iou": 0.8969501799583255,
+          "dice": 0.9456760535250649,
+          "boundary_precision_2px": 0.9063649222065063,
+          "boundary_recall_2px": 0.913129598189021,
+          "boundary_f1_2px": 0.9097346850455345,
+          "source_ink_pixels": 29235,
+          "vector_ink_pixels": 30849,
+          "intersection_pixels": 28410,
+          "union_pixels": 31674,
+          "source_boundary_pixels": 3534,
+          "vector_boundary_pixels": 3535
+        },
+        "threshold_sensitivity": [
+          {
+            "threshold_offset": -12,
+            "threshold": 178,
+            "iou": 0.8841877898481673,
+            "dice": 0.9385346775009272,
+            "boundary_precision_2px": 0.8893917963224894,
+            "boundary_recall_2px": 0.8941243258586432,
+            "boundary_f1_2px": 0.891751782247462,
+            "source_ink_pixels": 28469,
+            "vector_ink_pixels": 30849,
+            "intersection_pixels": 27836,
+            "union_pixels": 31482,
+            "source_boundary_pixels": 3523,
+            "vector_boundary_pixels": 3535
+          },
+          {
+            "threshold_offset": 0,
+            "threshold": 190,
+            "iou": 0.8969501799583255,
+            "dice": 0.9456760535250649,
+            "boundary_precision_2px": 0.9063649222065063,
+            "boundary_recall_2px": 0.913129598189021,
+            "boundary_f1_2px": 0.9097346850455345,
+            "source_ink_pixels": 29235,
+            "vector_ink_pixels": 30849,
+            "intersection_pixels": 28410,
+            "union_pixels": 31674,
+            "source_boundary_pixels": 3534,
+            "vector_boundary_pixels": 3535
+          },
+          {
+            "threshold_offset": 12,
+            "threshold": 202,
+            "iou": 0.9071977418848989,
+            "dice": 0.9513410402723191,
+            "boundary_precision_2px": 0.915983026874116,
+            "boundary_recall_2px": 0.9245175936435869,
+            "boundary_f1_2px": 0.9202305224823273,
+            "source_ink_pixels": 29962,
+            "vector_ink_pixels": 30849,
+            "intersection_pixels": 28926,
+            "union_pixels": 31885,
+            "source_boundary_pixels": 3524,
+            "vector_boundary_pixels": 3535
+          }
+        ],
+        "sensitivity_range": {
+          "iou": [
+            0.8841877898481673,
+            0.9071977418848989
+          ],
+          "dice": [
+            0.9385346775009272,
+            0.9513410402723191
+          ],
+          "boundary_f1_2px": [
+            0.891751782247462,
+            0.9202305224823273
+          ]
+        }
+      },
+      "ZONE": {
+        "source_filename": "open_ZONE_crop.png",
+        "threshold": 194,
+        "roi": [
+          4,
+          4,
+          247,
+          91
+        ],
+        "nominal": {
+          "iou": 0.8598403570508969,
+          "dice": 0.9246388850431492,
+          "boundary_precision_2px": 0.904296875,
+          "boundary_recall_2px": 0.9208584842387659,
+          "boundary_f1_2px": 0.912502538919938,
+          "source_ink_pixels": 10557,
+          "vector_ink_pixels": 11112,
+          "intersection_pixels": 10018,
+          "union_pixels": 11651,
+          "source_boundary_pixels": 1491,
+          "vector_boundary_pixels": 1536
+        },
+        "threshold_sensitivity": [
+          {
+            "threshold_offset": -12,
+            "threshold": 182,
+            "iou": 0.8509327548806942,
+            "dice": 0.9194637164822801,
+            "boundary_precision_2px": 0.884765625,
+            "boundary_recall_2px": 0.8968729208250167,
+            "boundary_f1_2px": 0.8907781347668002,
+            "source_ink_pixels": 10220,
+            "vector_ink_pixels": 11112,
+            "intersection_pixels": 9807,
+            "union_pixels": 11525,
+            "source_boundary_pixels": 1503,
+            "vector_boundary_pixels": 1536
+          },
+          {
+            "threshold_offset": 0,
+            "threshold": 194,
+            "iou": 0.8598403570508969,
+            "dice": 0.9246388850431492,
+            "boundary_precision_2px": 0.904296875,
+            "boundary_recall_2px": 0.9208584842387659,
+            "boundary_f1_2px": 0.912502538919938,
+            "source_ink_pixels": 10557,
+            "vector_ink_pixels": 11112,
+            "intersection_pixels": 10018,
+            "union_pixels": 11651,
+            "source_boundary_pixels": 1491,
+            "vector_boundary_pixels": 1536
+          },
+          {
+            "threshold_offset": 12,
+            "threshold": 206,
+            "iou": 0.8660230352303523,
+            "dice": 0.9282018698375238,
+            "boundary_precision_2px": 0.8977864583333334,
+            "boundary_recall_2px": 0.9085526315789474,
+            "boundary_f1_2px": 0.9031374605908621,
+            "source_ink_pixels": 10922,
+            "vector_ink_pixels": 11112,
+            "intersection_pixels": 10226,
+            "union_pixels": 11808,
+            "source_boundary_pixels": 1520,
+            "vector_boundary_pixels": 1536
+          }
+        ],
+        "sensitivity_range": {
+          "iou": [
+            0.8509327548806942,
+            0.8660230352303523
+          ],
+          "dice": [
+            0.9194637164822801,
+            0.9282018698375238
+          ],
+          "boundary_f1_2px": [
+            0.8907781347668002,
+            0.912502538919938
+          ]
+        }
+      },
+      "3": {
+        "source_filename": "open_3_crop.png",
+        "threshold": 194,
+        "roi": [
+          0,
+          0,
+          165,
+          175
+        ],
+        "nominal": {
+          "iou": 0.9329517579721995,
+          "dice": 0.9653130287648054,
+          "boundary_precision_2px": 0.9569160997732427,
+          "boundary_recall_2px": 0.9668949771689498,
+          "boundary_f1_2px": 0.961879658072737,
+          "source_ink_pixels": 9412,
+          "vector_ink_pixels": 9500,
+          "intersection_pixels": 9128,
+          "union_pixels": 9784,
+          "source_boundary_pixels": 876,
+          "vector_boundary_pixels": 882
+        },
+        "threshold_sensitivity": [
+          {
+            "threshold_offset": -12,
+            "threshold": 182,
+            "iou": 0.9258001440773901,
+            "dice": 0.961470635387164,
+            "boundary_precision_2px": 0.9569160997732427,
+            "boundary_recall_2px": 0.9636363636363636,
+            "boundary_f1_2px": 0.9602644741643948,
+            "source_ink_pixels": 9213,
+            "vector_ink_pixels": 9500,
+            "intersection_pixels": 8996,
+            "union_pixels": 9717,
+            "source_boundary_pixels": 880,
+            "vector_boundary_pixels": 882
+          },
+          {
+            "threshold_offset": 0,
+            "threshold": 194,
+            "iou": 0.9329517579721995,
+            "dice": 0.9653130287648054,
+            "boundary_precision_2px": 0.9569160997732427,
+            "boundary_recall_2px": 0.9668949771689498,
+            "boundary_f1_2px": 0.961879658072737,
+            "source_ink_pixels": 9412,
+            "vector_ink_pixels": 9500,
+            "intersection_pixels": 9128,
+            "union_pixels": 9784,
+            "source_boundary_pixels": 876,
+            "vector_boundary_pixels": 882
+          },
+          {
+            "threshold_offset": 12,
+            "threshold": 206,
+            "iou": 0.9342118601115054,
+            "dice": 0.9659871075939416,
+            "boundary_precision_2px": 0.9433106575963719,
+            "boundary_recall_2px": 0.9500567536889898,
+            "boundary_f1_2px": 0.9466716874225984,
+            "source_ink_pixels": 9581,
+            "vector_ink_pixels": 9500,
+            "intersection_pixels": 9216,
+            "union_pixels": 9865,
+            "source_boundary_pixels": 881,
+            "vector_boundary_pixels": 882
+          }
+        ],
+        "sensitivity_range": {
+          "iou": [
+            0.9258001440773901,
+            0.9342118601115054
+          ],
+          "dice": [
+            0.961470635387164,
+            0.9659871075939416
+          ],
+          "boundary_f1_2px": [
+            0.9466716874225984,
+            0.961879658072737
+          ]
+        }
+      },
+      "OPEN_PANEL": {
+        "source_filename": "open_panel_rectified.png",
+        "threshold": 186,
+        "roi": [
+          235,
+          7,
+          755,
+          123
+        ],
+        "nominal": {
+          "iou": 0.9323943661971831,
+          "dice": 0.9650145772594753,
+          "boundary_precision_2px": 0.9619228938600667,
+          "boundary_recall_2px": 0.9700570342205324,
+          "boundary_f1_2px": 0.9659728406120376,
+          "source_ink_pixels": 21611,
+          "vector_ink_pixels": 21607,
+          "intersection_pixels": 20853,
+          "union_pixels": 22365,
+          "source_boundary_pixels": 2104,
+          "vector_boundary_pixels": 2101
+        },
+        "threshold_sensitivity": [
+          {
+            "threshold_offset": -12,
+            "threshold": 174,
+            "iou": 0.9282436566492712,
+            "dice": 0.9627866825319055,
+            "boundary_precision_2px": 0.9652546406473108,
+            "boundary_recall_2px": 0.9721303731695796,
+            "boundary_f1_2px": 0.9686803060042933,
+            "source_ink_pixels": 21254,
+            "vector_ink_pixels": 21607,
+            "intersection_pixels": 20633,
+            "union_pixels": 22228,
+            "source_boundary_pixels": 2117,
+            "vector_boundary_pixels": 2101
+          },
+          {
+            "threshold_offset": 0,
+            "threshold": 186,
+            "iou": 0.9323943661971831,
+            "dice": 0.9650145772594753,
+            "boundary_precision_2px": 0.9619228938600667,
+            "boundary_recall_2px": 0.9700570342205324,
+            "boundary_f1_2px": 0.9659728406120376,
+            "source_ink_pixels": 21611,
+            "vector_ink_pixels": 21607,
+            "intersection_pixels": 20853,
+            "union_pixels": 22365,
+            "source_boundary_pixels": 2104,
+            "vector_boundary_pixels": 2101
+          },
+          {
+            "threshold_offset": 12,
+            "threshold": 198,
+            "iou": 0.9332032289541382,
+            "dice": 0.9654476207956684,
+            "boundary_precision_2px": 0.9590671108995716,
+            "boundary_recall_2px": 0.9667931688804554,
+            "boundary_f1_2px": 0.9629146424075247,
+            "source_ink_pixels": 21979,
+            "vector_ink_pixels": 21607,
+            "intersection_pixels": 21040,
+            "union_pixels": 22546,
+            "source_boundary_pixels": 2108,
+            "vector_boundary_pixels": 2101
+          }
+        ],
+        "sensitivity_range": {
+          "iou": [
+            0.9282436566492712,
+            0.9332032289541382
+          ],
+          "dice": [
+            0.9627866825319055,
+            0.9654476207956684
+          ],
+          "boundary_f1_2px": [
+            0.9629146424075247,
+            0.9686803060042933
+          ]
+        }
+      }
+    },
+    "closed": {
+      "FOREST": {
+        "source_filename": "closed_FOREST_upright.png",
+        "threshold": 172,
+        "roi": [
+          60,
+          32,
+          610,
+          142
+        ],
+        "nominal": {
+          "iou": 0.8962877633681394,
+          "dice": 0.9453077541102467,
+          "boundary_precision_2px": 0.8976234003656307,
+          "boundary_recall_2px": 0.8968421052631579,
+          "boundary_f1_2px": 0.8972325827297548,
+          "source_ink_pixels": 25381,
+          "vector_ink_pixels": 25650,
+          "intersection_pixels": 24120,
+          "union_pixels": 26911,
+          "source_boundary_pixels": 2850,
+          "vector_boundary_pixels": 2735
+        },
+        "threshold_sensitivity": [
+          {
+            "threshold_offset": -12,
+            "threshold": 160,
+            "iou": 0.8940969624420171,
+            "dice": 0.9440878478462663,
+            "boundary_precision_2px": 0.8917733089579525,
+            "boundary_recall_2px": 0.8959517045454546,
+            "boundary_f1_2px": 0.8938576237329077,
+            "source_ink_pixels": 24983,
+            "vector_ink_pixels": 25650,
+            "intersection_pixels": 23901,
+            "union_pixels": 26732,
+            "source_boundary_pixels": 2816,
+            "vector_boundary_pixels": 2735
+          },
+          {
+            "threshold_offset": 0,
+            "threshold": 172,
+            "iou": 0.8962877633681394,
+            "dice": 0.9453077541102467,
+            "boundary_precision_2px": 0.8976234003656307,
+            "boundary_recall_2px": 0.8968421052631579,
+            "boundary_f1_2px": 0.8972325827297548,
+            "source_ink_pixels": 25381,
+            "vector_ink_pixels": 25650,
+            "intersection_pixels": 24120,
+            "union_pixels": 26911,
+            "source_boundary_pixels": 2850,
+            "vector_boundary_pixels": 2735
+          },
+          {
+            "threshold_offset": 12,
+            "threshold": 184,
+            "iou": 0.8971666482443535,
+            "dice": 0.9457963527606766,
+            "boundary_precision_2px": 0.906398537477148,
+            "boundary_recall_2px": 0.9062608094085092,
+            "boundary_f1_2px": 0.9063296682104554,
+            "source_ink_pixels": 25841,
+            "vector_ink_pixels": 25650,
+            "intersection_pixels": 24350,
+            "union_pixels": 27141,
+            "source_boundary_pixels": 2891,
+            "vector_boundary_pixels": 2735
+          }
+        ],
+        "sensitivity_range": {
+          "iou": [
+            0.8940969624420171,
+            0.8971666482443535
+          ],
+          "dice": [
+            0.9440878478462663,
+            0.9457963527606766
+          ],
+          "boundary_f1_2px": [
+            0.8938576237329077,
+            0.9063296682104554
+          ]
+        }
+      },
+      "CLOSURE": {
+        "source_filename": "closed_CLOSURE_upright.png",
+        "threshold": 169,
+        "roi": [
+          35,
+          20,
+          620,
+          125
+        ],
+        "nominal": {
+          "iou": 0.9082449981253622,
+          "dice": 0.9519165505662129,
+          "boundary_precision_2px": 0.9241226683528296,
+          "boundary_recall_2px": 0.9267161410018553,
+          "boundary_f1_2px": 0.9254175876362399,
+          "source_ink_pixels": 27972,
+          "vector_ink_pixels": 28014,
+          "intersection_pixels": 26647,
+          "union_pixels": 29339,
+          "source_boundary_pixels": 3234,
+          "vector_boundary_pixels": 3163
+        },
+        "threshold_sensitivity": [
+          {
+            "threshold_offset": -12,
+            "threshold": 157,
+            "iou": 0.9048125407333723,
+            "dice": 0.950027912337253,
+            "boundary_precision_2px": 0.9238065128042997,
+            "boundary_recall_2px": 0.9252537680713626,
+            "boundary_f1_2px": 0.9245295740561318,
+            "source_ink_pixels": 27517,
+            "vector_ink_pixels": 28014,
+            "intersection_pixels": 26378,
+            "union_pixels": 29153,
+            "source_boundary_pixels": 3251,
+            "vector_boundary_pixels": 3163
+          },
+          {
+            "threshold_offset": 0,
+            "threshold": 169,
+            "iou": 0.9082449981253622,
+            "dice": 0.9519165505662129,
+            "boundary_precision_2px": 0.9241226683528296,
+            "boundary_recall_2px": 0.9267161410018553,
+            "boundary_f1_2px": 0.9254175876362399,
+            "source_ink_pixels": 27972,
+            "vector_ink_pixels": 28014,
+            "intersection_pixels": 26647,
+            "union_pixels": 29339,
+            "source_boundary_pixels": 3234,
+            "vector_boundary_pixels": 3163
+          },
+          {
+            "threshold_offset": 12,
+            "threshold": 181,
+            "iou": 0.908811094199222,
+            "dice": 0.9522273806570507,
+            "boundary_precision_2px": 0.9234903572557699,
+            "boundary_recall_2px": 0.9229588704726827,
+            "boundary_f1_2px": 0.9232245373719523,
+            "source_ink_pixels": 28420,
+            "vector_ink_pixels": 28014,
+            "intersection_pixels": 26869,
+            "union_pixels": 29565,
+            "source_boundary_pixels": 3258,
+            "vector_boundary_pixels": 3163
+          }
+        ],
+        "sensitivity_range": {
+          "iou": [
+            0.9048125407333723,
+            0.908811094199222
+          ],
+          "dice": [
+            0.950027912337253,
+            0.9522273806570507
+          ],
+          "boundary_f1_2px": [
+            0.9232245373719523,
+            0.9254175876362399
+          ]
+        }
+      },
+      "BOUNDARY": {
+        "source_filename": "closed_BOUNDARY_crop.png",
+        "threshold": 174,
+        "roi": [
+          0,
+          0,
+          645,
+          108
+        ],
+        "nominal": {
+          "iou": 0.9123380667663179,
+          "dice": 0.9541598137080884,
+          "boundary_precision_2px": 0.9066478076379066,
+          "boundary_recall_2px": 0.9140360766629086,
+          "boundary_f1_2px": 0.9103269514868289,
+          "source_ink_pixels": 30560,
+          "vector_ink_pixels": 30849,
+          "intersection_pixels": 29297,
+          "union_pixels": 32112,
+          "source_boundary_pixels": 3548,
+          "vector_boundary_pixels": 3535
+        },
+        "threshold_sensitivity": [
+          {
+            "threshold_offset": -12,
+            "threshold": 162,
+            "iou": 0.9106667084600194,
+            "dice": 0.9532449635802874,
+            "boundary_precision_2px": 0.9103253182461103,
+            "boundary_recall_2px": 0.9148755656108597,
+            "boundary_f1_2px": 0.9125947700182686,
+            "source_ink_pixels": 30107,
+            "vector_ink_pixels": 30849,
+            "intersection_pixels": 29053,
+            "union_pixels": 31903,
+            "source_boundary_pixels": 3536,
+            "vector_boundary_pixels": 3535
+          },
+          {
+            "threshold_offset": 0,
+            "threshold": 174,
+            "iou": 0.9123380667663179,
+            "dice": 0.9541598137080884,
+            "boundary_precision_2px": 0.9066478076379066,
+            "boundary_recall_2px": 0.9140360766629086,
+            "boundary_f1_2px": 0.9103269514868289,
+            "source_ink_pixels": 30560,
+            "vector_ink_pixels": 30849,
+            "intersection_pixels": 29297,
+            "union_pixels": 32112,
+            "source_boundary_pixels": 3548,
+            "vector_boundary_pixels": 3535
+          },
+          {
+            "threshold_offset": 12,
+            "threshold": 186,
+            "iou": 0.913999133180608,
+            "dice": 0.9550674473522466,
+            "boundary_precision_2px": 0.9097595473833098,
+            "boundary_recall_2px": 0.9188118811881189,
+            "boundary_f1_2px": 0.9142633075188707,
+            "source_ink_pixels": 30977,
+            "vector_ink_pixels": 30849,
+            "intersection_pixels": 29524,
+            "union_pixels": 32302,
+            "source_boundary_pixels": 3535,
+            "vector_boundary_pixels": 3535
+          }
+        ],
+        "sensitivity_range": {
+          "iou": [
+            0.9106667084600194,
+            0.913999133180608
+          ],
+          "dice": [
+            0.9532449635802874,
+            0.9550674473522466
+          ],
+          "boundary_f1_2px": [
+            0.9103269514868289,
+            0.9142633075188707
+          ]
+        }
+      },
+      "ZONE": {
+        "source_filename": "closed_ZONE_crop.png",
+        "threshold": 175,
+        "roi": [
+          4,
+          4,
+          247,
+          91
+        ],
+        "nominal": {
+          "iou": 0.8656866862662747,
+          "dice": 0.9280086443654045,
+          "boundary_precision_2px": 0.9075520833333334,
+          "boundary_recall_2px": 0.9169960474308301,
+          "boundary_f1_2px": 0.9122496241365011,
+          "source_ink_pixels": 11099,
+          "vector_ink_pixels": 11112,
+          "intersection_pixels": 10306,
+          "union_pixels": 11905,
+          "source_boundary_pixels": 1518,
+          "vector_boundary_pixels": 1536
+        },
+        "threshold_sensitivity": [
+          {
+            "threshold_offset": -12,
+            "threshold": 163,
+            "iou": 0.8698583376002731,
+            "dice": 0.9304002555793893,
+            "boundary_precision_2px": 0.9029947916666666,
+            "boundary_recall_2px": 0.9129581151832461,
+            "boundary_f1_2px": 0.9079491212691715,
+            "source_ink_pixels": 10799,
+            "vector_ink_pixels": 11112,
+            "intersection_pixels": 10193,
+            "union_pixels": 11718,
+            "source_boundary_pixels": 1528,
+            "vector_boundary_pixels": 1536
+          },
+          {
+            "threshold_offset": 0,
+            "threshold": 175,
+            "iou": 0.8656866862662747,
+            "dice": 0.9280086443654045,
+            "boundary_precision_2px": 0.9075520833333334,
+            "boundary_recall_2px": 0.9169960474308301,
+            "boundary_f1_2px": 0.9122496241365011,
+            "source_ink_pixels": 11099,
+            "vector_ink_pixels": 11112,
+            "intersection_pixels": 10306,
+            "union_pixels": 11905,
+            "source_boundary_pixels": 1518,
+            "vector_boundary_pixels": 1536
+          },
+          {
+            "threshold_offset": 12,
+            "threshold": 187,
+            "iou": 0.8610857853294654,
+            "dice": 0.9253585107330542,
+            "boundary_precision_2px": 0.89453125,
+            "boundary_recall_2px": 0.9080079417604235,
+            "boundary_f1_2px": 0.9012192166092269,
+            "source_ink_pixels": 11342,
+            "vector_ink_pixels": 11112,
+            "intersection_pixels": 10389,
+            "union_pixels": 12065,
+            "source_boundary_pixels": 1511,
+            "vector_boundary_pixels": 1536
+          }
+        ],
+        "sensitivity_range": {
+          "iou": [
+            0.8610857853294654,
+            0.8698583376002731
+          ],
+          "dice": [
+            0.9253585107330542,
+            0.9304002555793893
+          ],
+          "boundary_f1_2px": [
+            0.9012192166092269,
+            0.9122496241365011
+          ]
+        }
+      },
+      "3": {
+        "source_filename": "closed_3_crop.png",
+        "threshold": 176,
+        "roi": [
+          0,
+          0,
+          165,
+          175
+        ],
+        "nominal": {
+          "iou": 0.9365079365079365,
+          "dice": 0.9672131147540983,
+          "boundary_precision_2px": 0.9206349206349206,
+          "boundary_recall_2px": 0.9319727891156463,
+          "boundary_f1_2px": 0.9262691612752811,
+          "source_ink_pixels": 9654,
+          "vector_ink_pixels": 9500,
+          "intersection_pixels": 9263,
+          "union_pixels": 9891,
+          "source_boundary_pixels": 882,
+          "vector_boundary_pixels": 882
+        },
+        "threshold_sensitivity": [
+          {
+            "threshold_offset": -12,
+            "threshold": 164,
+            "iou": 0.9330488672152799,
+            "dice": 0.9653650076207495,
+            "boundary_precision_2px": 0.9240362811791383,
+            "boundary_recall_2px": 0.935005701254276,
+            "boundary_f1_2px": 0.9294886282636587,
+            "source_ink_pixels": 9527,
+            "vector_ink_pixels": 9500,
+            "intersection_pixels": 9184,
+            "union_pixels": 9843,
+            "source_boundary_pixels": 877,
+            "vector_boundary_pixels": 882
+          },
+          {
+            "threshold_offset": 0,
+            "threshold": 176,
+            "iou": 0.9365079365079365,
+            "dice": 0.9672131147540983,
+            "boundary_precision_2px": 0.9206349206349206,
+            "boundary_recall_2px": 0.9319727891156463,
+            "boundary_f1_2px": 0.9262691612752811,
+            "source_ink_pixels": 9654,
+            "vector_ink_pixels": 9500,
+            "intersection_pixels": 9263,
+            "union_pixels": 9891,
+            "source_boundary_pixels": 882,
+            "vector_boundary_pixels": 882
+          },
+          {
+            "threshold_offset": 12,
+            "threshold": 188,
+            "iou": 0.9372549019607843,
+            "dice": 0.9676113360323887,
+            "boundary_precision_2px": 0.9195011337868481,
+            "boundary_recall_2px": 0.9322033898305084,
+            "boundary_f1_2px": 0.9258086945692671,
+            "source_ink_pixels": 9766,
+            "vector_ink_pixels": 9500,
+            "intersection_pixels": 9321,
+            "union_pixels": 9945,
+            "source_boundary_pixels": 885,
+            "vector_boundary_pixels": 882
+          }
+        ],
+        "sensitivity_range": {
+          "iou": [
+            0.9330488672152799,
+            0.9372549019607843
+          ],
+          "dice": [
+            0.9653650076207495,
+            0.9676113360323887
+          ],
+          "boundary_f1_2px": [
+            0.9258086945692671,
+            0.9294886282636587
+          ]
+        }
+      },
+      "CLOSED_PANEL": {
+        "source_filename": "closed_panel_rectified.png",
+        "threshold": 171,
+        "roi": [
+          8,
+          18,
+          995,
+          118
+        ],
+        "nominal": {
+          "iou": 0.8829508293315264,
+          "dice": 0.9378373726784848,
+          "boundary_precision_2px": 0.9447368421052632,
+          "boundary_recall_2px": 0.9524890829694324,
+          "boundary_f1_2px": 0.9485971243502288,
+          "source_ink_pixels": 31643,
+          "vector_ink_pixels": 32270,
+          "intersection_pixels": 29970,
+          "union_pixels": 33943,
+          "source_boundary_pixels": 5725,
+          "vector_boundary_pixels": 5700
+        },
+        "threshold_sensitivity": [
+          {
+            "threshold_offset": -12,
+            "threshold": 159,
+            "iou": 0.8887460934077168,
+            "dice": 0.941096420010825,
+            "boundary_precision_2px": 0.9449122807017544,
+            "boundary_recall_2px": 0.9516891300542623,
+            "boundary_f1_2px": 0.948288598014045,
+            "source_ink_pixels": 32395,
+            "vector_ink_pixels": 32270,
+            "intersection_pixels": 30428,
+            "union_pixels": 34237,
+            "source_boundary_pixels": 5713,
+            "vector_boundary_pixels": 5700
+          },
+          {
+            "threshold_offset": 0,
+            "threshold": 171,
+            "iou": 0.8829508293315264,
+            "dice": 0.9378373726784848,
+            "boundary_precision_2px": 0.9447368421052632,
+            "boundary_recall_2px": 0.9524890829694324,
+            "boundary_f1_2px": 0.9485971243502288,
+            "source_ink_pixels": 31643,
+            "vector_ink_pixels": 32270,
+            "intersection_pixels": 29970,
+            "union_pixels": 33943,
+            "source_boundary_pixels": 5725,
+            "vector_boundary_pixels": 5700
+          },
+          {
+            "threshold_offset": 12,
+            "threshold": 183,
+            "iou": 0.8757350757350757,
+            "dice": 0.9337513458737096,
+            "boundary_precision_2px": 0.9443859649122807,
+            "boundary_recall_2px": 0.9515734265734266,
+            "boundary_f1_2px": 0.9479660721374741,
+            "source_ink_pixels": 30886,
+            "vector_ink_pixels": 32270,
+            "intersection_pixels": 29486,
+            "union_pixels": 33670,
+            "source_boundary_pixels": 5720,
+            "vector_boundary_pixels": 5700
+          }
+        ],
+        "sensitivity_range": {
+          "iou": [
+            0.8757350757350757,
+            0.8887460934077168
+          ],
+          "dice": [
+            0.9337513458737096,
+            0.941096420010825
+          ],
+          "boundary_f1_2px": [
+            0.9479660721374741,
+            0.9485971243502288
+          ]
+        }
+      }
+    }
+  },
+  "main_pooled_by_photo": {
+    "open": {
+      "iou": 0.8917504956311036,
+      "dice": 0.9427781281839794,
+      "boundary_f1_2px": 0.8971105449186602,
+      "interpretation": "Pooled foreground counts across five main word/number regions; in-sample fit only."
+    },
+    "closed": {
+      "iou": 0.9044554185805842,
+      "dice": 0.9498310223031493,
+      "boundary_f1_2px": 0.9127175947015783,
+      "interpretation": "Pooled foreground counts across five main word/number regions; in-sample fit only."
+    }
+  }
+}

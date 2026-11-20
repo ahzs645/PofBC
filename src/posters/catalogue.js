@@ -18,14 +18,14 @@ export const SERIES = [
   {
     id: 'forest-service',
     title: 'British Columbia Forest Service',
-    kind: 'Campaign posters and signs',
-    posters: ['reward-living-forest', 'enjoy-protect-forests']
+    kind: 'Campaign posters, signs and advertising',
+    posters: ['reward-living-forest', 'enjoy-protect-forests', 'coons-age']
   },
   {
     id: 'fire-prevention',
-    title: 'B. C. Forest Service badges',
+    title: 'B. C. Forest Service badges and decals',
     kind: 'Fire prevention',
-    posters: ['dont-drop-it', 'dont-gamble-with-fire']
+    posters: ['dont-drop-it', 'dont-gamble-with-fire', 'be-careful']
   },
   {
     id: 'forest-practices',
@@ -130,6 +130,32 @@ export const POSTERS = {
     made: 'vector',
     view: { x: 0, y: 0, w: 1233, h: 1233 },
     page: { w: 12, h: 12 }
+  },
+  'coons-age': {
+    id: 'coons-age',
+    issuer: 'BC Forest Service',
+    subject: 'Forests and habitat',
+    format: 'Newspaper ad',
+    blurb: 'A young raccoon, and a promise that managed forests will outlast it.',
+    series: 'forest-service',
+    title: 'A Coon’s Age',
+    when: '2 December 1971, Gulf Islands Driftwood',
+    made: 'mixed',
+    view: { x: 0, y: 0, w: 565, h: 1044 },
+    page: { w: 3.937, h: 7.275 }
+  },
+  'be-careful': {
+    id: 'be-careful',
+    issuer: 'BC Forest Service',
+    subject: 'Fire prevention',
+    format: 'Decal',
+    blurb: 'B and C as the province and as Be Careful, over a forest turning to flame.',
+    series: 'fire-prevention',
+    title: 'Be Careful: Prevent Forest Fires',
+    when: '1960, from the Protection Bulletin',
+    made: 'vector',
+    view: { x: 0, y: 0, w: 1234, h: 909 },
+    page: { w: 12.854, h: 9.469 }
   },
   'wildlife-trees': {
     id: 'wildlife-trees',

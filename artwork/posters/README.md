@@ -11,6 +11,8 @@ palettes and validation records are here.
 | `dont-gamble-with-fire/` | Don’t gamble with FIRE — B. C. Forest Service | `src/posters/forest-service/dont-gamble-with-fire.svg`, **recoloured** (below) |
 | `reward-living-forest/` | REWARD — A Living Forest | `src/posters/forest-service/reward-living-forest.svg`, unchanged |
 | `enjoy-protect-forests/` | Enjoy & Protect our Forests | `src/posters/forest-service/enjoy-protect-forests.svg` (the outlined master), unchanged |
+| `be-careful/` | Be Careful: Prevent Forest Fires (1960 decal) | `src/posters/forest-service/be-careful.svg`, the master with **ids prefixed** (below) |
+| `coons-age/` | A Coon’s Age (1971 newspaper advertisement) | `src/posters/forest-service/coons-age.svg` and `coons-age-raccoon.webp`, the outlined master with **its photograph moved out** (below) |
 | `forest-service-emblem/` | The Forest Service evergreen emblem | `src/internal/forest-service-emblem.svg`, unchanged; also drawn into the two posters above |
 | `go-bc-ferries/` | GO B.C. FERRIES — car decal | `src/posters/bc-ferries/go-bc-ferries.svg`, unchanged |
 | `queen-of-sidney/` | Queen of Sidney — car decal | `src/posters/bc-ferries/queen-of-sidney.svg`, **layer ids renamed** (below) |
@@ -46,6 +48,18 @@ their copy in fonts the files do not carry; `noxious-weeds/build.py` keeps every
 as a file of its own, sets the copy in chosen free substitutes and outlines it, tags each element with
 its part, and gives the weeds inside the composite photographs a highlight for the spotlight:
 [`noxious-weeds/README.md`](noxious-weeds/README.md). The PDFs are not kept; their hashes are.
+
+**The 1960 decal and the 1971 advertisement are lightly adapted.** The Be Careful decal's site copy
+prefixes every id with `bcc-` and re-words its `<title>`; nothing else changes. The raccoon
+advertisement's site copy names its photograph by file (`coons-age-raccoon.webp`, WebP quality 82 at
+the supplied 1040 × 1513, about 450 KB in place of the 5.5 MB inline PNG), writes its nested emblem
+`<svg>` without the `ns0:` prefixes an HTML parser will not draw, prefixes its ids with `coon-` (the
+emblem layer keeps `forest-service-emblem`, as on REWARD and the sign), and replaces the em dash in
+its title. Rendered in Chromium, it matches the supplied master exactly outside the photograph. In
+`coons-age/` the two SVG masters also link `assets/raccoon-supplied.png` (kept, byte for byte)
+instead of embedding it; `build_ad.py` embeds it again. Their scans, comparison images, raster and
+PDF exports, review pages and the copy of this repo's emblem are left out; see each README's last
+section.
 
 **Coastal Forest** comes from its own repository,
 [ahzs645/coastal-forest-poster](https://github.com/ahzs645/coastal-forest-poster), whose

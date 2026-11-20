@@ -1,0 +1,1421 @@
+{
+  "method": "Unchanged master outlines independently rescaled to the observed ink box in x and y; no rotations, translations, shape edits, or tracing. Native local masks from prior measurement grids. Shared vs locally fitted outlines use exactly the same source masks and placements. Box-normalized comparison is independent of changing a panel frame height. These metrics are same-photo fit diagnostics, not font identity probabilities.",
+  "panel_geometry": "Use corrected common real-board geometry around 130 units when confirmed. Prior CLOSED sampling grid is frozen only to preserve comparable shape metrics. Discarded OPEN158/130 scenario is not applied. Neither a black-white photograph nor an arbitrary rectified aspect proves physical dimensions.",
+  "open": {
+    "shared_main": {
+      "shared_O_E_N": {
+        "n": 3,
+        "mean_iou": 0.8868566971851171,
+        "micro_iou": 0.8791124713083397,
+        "rows": [
+          {
+            "bbox": [
+              279,
+              24,
+              384,
+              114
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9166804704323339,
+            "intersection": 5534,
+            "union": 6037
+          },
+          {
+            "bbox": [
+              519,
+              24,
+              588,
+              110
+            ],
+            "observed_in_triangle": true,
+            "character": "E",
+            "iou": 0.9401408450704225,
+            "intersection": 4806,
+            "union": 5112
+          },
+          {
+            "bbox": [
+              610,
+              23,
+              711,
+              109
+            ],
+            "observed_in_triangle": true,
+            "character": "N",
+            "iou": 0.8037487760525948,
+            "intersection": 5746,
+            "union": 7149
+          }
+        ]
+      },
+      "P_not_observed_in_triangle": {
+        "bbox": [
+          404,
+          24,
+          497,
+          111
+        ],
+        "observed_in_triangle": false,
+        "character": "P",
+        "iou": 0.8642195295794726,
+        "intersection": 4850,
+        "union": 5612
+      },
+      "all_four": {
+        "n": 4,
+        "mean_iou": 0.8811974052837059,
+        "micro_iou": 0.8756168966959431,
+        "rows": [
+          {
+            "bbox": [
+              279,
+              24,
+              384,
+              114
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9166804704323339,
+            "intersection": 5534,
+            "union": 6037
+          },
+          {
+            "bbox": [
+              404,
+              24,
+              497,
+              111
+            ],
+            "observed_in_triangle": false,
+            "character": "P",
+            "iou": 0.8642195295794726,
+            "intersection": 4850,
+            "union": 5612
+          },
+          {
+            "bbox": [
+              519,
+              24,
+              588,
+              110
+            ],
+            "observed_in_triangle": true,
+            "character": "E",
+            "iou": 0.9401408450704225,
+            "intersection": 4806,
+            "union": 5112
+          },
+          {
+            "bbox": [
+              610,
+              23,
+              711,
+              109
+            ],
+            "observed_in_triangle": true,
+            "character": "N",
+            "iou": 0.8037487760525948,
+            "intersection": 5746,
+            "union": 7149
+          }
+        ]
+      }
+    },
+    "open_fitted": {
+      "shared_O_E_N": {
+        "n": 3,
+        "mean_iou": 0.9301667539751454,
+        "micro_iou": 0.9296257554625755,
+        "rows": [
+          {
+            "bbox": [
+              279,
+              24,
+              384,
+              114
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9278043945151164,
+            "intersection": 5616,
+            "union": 6053
+          },
+          {
+            "bbox": [
+              519,
+              24,
+              588,
+              110
+            ],
+            "observed_in_triangle": true,
+            "character": "E",
+            "iou": 0.9401408450704225,
+            "intersection": 4806,
+            "union": 5112
+          },
+          {
+            "bbox": [
+              610,
+              23,
+              711,
+              109
+            ],
+            "observed_in_triangle": true,
+            "character": "N",
+            "iou": 0.9225550223398974,
+            "intersection": 5575,
+            "union": 6043
+          }
+        ]
+      },
+      "P_not_observed_in_triangle": {
+        "bbox": [
+          404,
+          24,
+          497,
+          111
+        ],
+        "observed_in_triangle": false,
+        "character": "P",
+        "iou": 0.9423748544819558,
+        "intersection": 4857,
+        "union": 5154
+      },
+      "all_four": {
+        "n": 4,
+        "mean_iou": 0.933218779101848,
+        "micro_iou": 0.9325641713621322,
+        "rows": [
+          {
+            "bbox": [
+              279,
+              24,
+              384,
+              114
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9278043945151164,
+            "intersection": 5616,
+            "union": 6053
+          },
+          {
+            "bbox": [
+              404,
+              24,
+              497,
+              111
+            ],
+            "observed_in_triangle": false,
+            "character": "P",
+            "iou": 0.9423748544819558,
+            "intersection": 4857,
+            "union": 5154
+          },
+          {
+            "bbox": [
+              519,
+              24,
+              588,
+              110
+            ],
+            "observed_in_triangle": true,
+            "character": "E",
+            "iou": 0.9401408450704225,
+            "intersection": 4806,
+            "union": 5112
+          },
+          {
+            "bbox": [
+              610,
+              23,
+              711,
+              109
+            ],
+            "observed_in_triangle": true,
+            "character": "N",
+            "iou": 0.9225550223398974,
+            "intersection": 5575,
+            "union": 6043
+          }
+        ]
+      }
+    }
+  },
+  "closed_notice": {
+    "shared_main": {
+      "shared_intact_instances": {
+        "n": 15,
+        "mean_iou": 0.8776748445469579,
+        "micro_iou": 0.8774807614418793,
+        "rows": [
+          {
+            "index": 1,
+            "bbox": [
+              117,
+              31,
+              168,
+              99
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.8883677298311444,
+            "intersection": 1894,
+            "union": 2132
+          },
+          {
+            "index": 2,
+            "bbox": [
+              171,
+              32,
+              220,
+              98
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.92,
+            "intersection": 1863,
+            "union": 2025
+          },
+          {
+            "index": 3,
+            "bbox": [
+              225,
+              31,
+              269,
+              97
+            ],
+            "observed_in_triangle": true,
+            "character": "D",
+            "iou": 0.900046490004649,
+            "intersection": 1936,
+            "union": 2151
+          },
+          {
+            "index": 4,
+            "bbox": [
+              274,
+              29,
+              315,
+              98
+            ],
+            "observed_in_triangle": true,
+            "character": "S",
+            "iou": 0.767087276550999,
+            "intersection": 1459,
+            "union": 1902
+          },
+          {
+            "index": 5,
+            "bbox": [
+              356,
+              31,
+              399,
+              95
+            ],
+            "observed_in_triangle": true,
+            "character": "C",
+            "iou": 0.84098051539912,
+            "intersection": 1338,
+            "union": 1591
+          },
+          {
+            "index": 6,
+            "bbox": [
+              404,
+              31,
+              432,
+              95
+            ],
+            "observed_in_triangle": true,
+            "character": "L",
+            "iou": 0.8555555555555555,
+            "intersection": 924,
+            "union": 1080
+          },
+          {
+            "index": 7,
+            "bbox": [
+              432,
+              30,
+              483,
+              97
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9302213666987488,
+            "intersection": 1933,
+            "union": 2078
+          },
+          {
+            "index": 8,
+            "bbox": [
+              484,
+              30,
+              528,
+              96
+            ],
+            "observed_in_triangle": true,
+            "character": "S",
+            "iou": 0.7735849056603774,
+            "intersection": 1517,
+            "union": 1961
+          },
+          {
+            "index": 9,
+            "bbox": [
+              533,
+              31,
+              564,
+              94
+            ],
+            "observed_in_triangle": true,
+            "character": "E",
+            "iou": 0.8929208804283165,
+            "intersection": 1501,
+            "union": 1681
+          },
+          {
+            "index": 10,
+            "bbox": [
+              573,
+              31,
+              619,
+              94
+            ],
+            "observed_in_triangle": true,
+            "character": "D",
+            "iou": 0.9322671683913453,
+            "intersection": 1982,
+            "union": 2126
+          },
+          {
+            "index": 11,
+            "bbox": [
+              638,
+              44,
+              667,
+              94
+            ],
+            "observed_in_triangle": true,
+            "character": "T",
+            "iou": 0.895774647887324,
+            "intersection": 636,
+            "union": 710
+          },
+          {
+            "index": 12,
+            "bbox": [
+              665,
+              44,
+              700,
+              95
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9155188246097337,
+            "intersection": 997,
+            "union": 1089
+          },
+          {
+            "index": 13,
+            "bbox": [
+              714,
+              31,
+              753,
+              93
+            ],
+            "observed_in_triangle": true,
+            "character": "T",
+            "iou": 0.8841512469831054,
+            "intersection": 1099,
+            "union": 1243
+          },
+          {
+            "index": 17,
+            "bbox": [
+              898,
+              30,
+              931,
+              90
+            ],
+            "observed_in_triangle": true,
+            "character": "E",
+            "iou": 0.8905972797161443,
+            "intersection": 1506,
+            "union": 1691
+          },
+          {
+            "index": 18,
+            "bbox": [
+              941,
+              30,
+              978,
+              90
+            ],
+            "observed_in_triangle": true,
+            "character": "L",
+            "iou": 0.8780487804878049,
+            "intersection": 1080,
+            "union": 1230
+          }
+        ]
+      },
+      "W_V_not_observed_in_triangle": [
+        {
+          "index": 0,
+          "bbox": [
+            53,
+            31,
+            120,
+            97
+          ],
+          "observed_in_triangle": false,
+          "character": "W",
+          "iou": 0.8360223905169575,
+          "intersection": 2539,
+          "union": 3037
+        },
+        {
+          "index": 16,
+          "bbox": [
+            844,
+            30,
+            892,
+            91
+          ],
+          "observed_in_triangle": false,
+          "character": "V",
+          "iou": 0.9064516129032258,
+          "intersection": 1405,
+          "union": 1550
+        }
+      ],
+      "all_17_intact": {
+        "n": 17,
+        "mean_iou": 0.8769174512720326,
+        "micro_iou": 0.874713939269734,
+        "rows": [
+          {
+            "index": 0,
+            "bbox": [
+              53,
+              31,
+              120,
+              97
+            ],
+            "observed_in_triangle": false,
+            "character": "W",
+            "iou": 0.8360223905169575,
+            "intersection": 2539,
+            "union": 3037
+          },
+          {
+            "index": 1,
+            "bbox": [
+              117,
+              31,
+              168,
+              99
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.8883677298311444,
+            "intersection": 1894,
+            "union": 2132
+          },
+          {
+            "index": 2,
+            "bbox": [
+              171,
+              32,
+              220,
+              98
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.92,
+            "intersection": 1863,
+            "union": 2025
+          },
+          {
+            "index": 3,
+            "bbox": [
+              225,
+              31,
+              269,
+              97
+            ],
+            "observed_in_triangle": true,
+            "character": "D",
+            "iou": 0.900046490004649,
+            "intersection": 1936,
+            "union": 2151
+          },
+          {
+            "index": 4,
+            "bbox": [
+              274,
+              29,
+              315,
+              98
+            ],
+            "observed_in_triangle": true,
+            "character": "S",
+            "iou": 0.767087276550999,
+            "intersection": 1459,
+            "union": 1902
+          },
+          {
+            "index": 5,
+            "bbox": [
+              356,
+              31,
+              399,
+              95
+            ],
+            "observed_in_triangle": true,
+            "character": "C",
+            "iou": 0.84098051539912,
+            "intersection": 1338,
+            "union": 1591
+          },
+          {
+            "index": 6,
+            "bbox": [
+              404,
+              31,
+              432,
+              95
+            ],
+            "observed_in_triangle": true,
+            "character": "L",
+            "iou": 0.8555555555555555,
+            "intersection": 924,
+            "union": 1080
+          },
+          {
+            "index": 7,
+            "bbox": [
+              432,
+              30,
+              483,
+              97
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9302213666987488,
+            "intersection": 1933,
+            "union": 2078
+          },
+          {
+            "index": 8,
+            "bbox": [
+              484,
+              30,
+              528,
+              96
+            ],
+            "observed_in_triangle": true,
+            "character": "S",
+            "iou": 0.7735849056603774,
+            "intersection": 1517,
+            "union": 1961
+          },
+          {
+            "index": 9,
+            "bbox": [
+              533,
+              31,
+              564,
+              94
+            ],
+            "observed_in_triangle": true,
+            "character": "E",
+            "iou": 0.8929208804283165,
+            "intersection": 1501,
+            "union": 1681
+          },
+          {
+            "index": 10,
+            "bbox": [
+              573,
+              31,
+              619,
+              94
+            ],
+            "observed_in_triangle": true,
+            "character": "D",
+            "iou": 0.9322671683913453,
+            "intersection": 1982,
+            "union": 2126
+          },
+          {
+            "index": 11,
+            "bbox": [
+              638,
+              44,
+              667,
+              94
+            ],
+            "observed_in_triangle": true,
+            "character": "T",
+            "iou": 0.895774647887324,
+            "intersection": 636,
+            "union": 710
+          },
+          {
+            "index": 12,
+            "bbox": [
+              665,
+              44,
+              700,
+              95
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9155188246097337,
+            "intersection": 997,
+            "union": 1089
+          },
+          {
+            "index": 13,
+            "bbox": [
+              714,
+              31,
+              753,
+              93
+            ],
+            "observed_in_triangle": true,
+            "character": "T",
+            "iou": 0.8841512469831054,
+            "intersection": 1099,
+            "union": 1243
+          },
+          {
+            "index": 16,
+            "bbox": [
+              844,
+              30,
+              892,
+              91
+            ],
+            "observed_in_triangle": false,
+            "character": "V",
+            "iou": 0.9064516129032258,
+            "intersection": 1405,
+            "union": 1550
+          },
+          {
+            "index": 17,
+            "bbox": [
+              898,
+              30,
+              931,
+              90
+            ],
+            "observed_in_triangle": true,
+            "character": "E",
+            "iou": 0.8905972797161443,
+            "intersection": 1506,
+            "union": 1691
+          },
+          {
+            "index": 18,
+            "bbox": [
+              941,
+              30,
+              978,
+              90
+            ],
+            "observed_in_triangle": true,
+            "character": "L",
+            "iou": 0.8780487804878049,
+            "intersection": 1080,
+            "union": 1230
+          }
+        ]
+      }
+    },
+    "notice_fitted": {
+      "shared_intact_instances": {
+        "n": 15,
+        "mean_iou": 0.8938810347537293,
+        "micro_iou": 0.896563299903487,
+        "rows": [
+          {
+            "index": 1,
+            "bbox": [
+              117,
+              31,
+              168,
+              99
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9079844206426485,
+            "intersection": 1865,
+            "union": 2054
+          },
+          {
+            "index": 2,
+            "bbox": [
+              171,
+              32,
+              220,
+              98
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9177247333671915,
+            "intersection": 1807,
+            "union": 1969
+          },
+          {
+            "index": 3,
+            "bbox": [
+              225,
+              31,
+              269,
+              97
+            ],
+            "observed_in_triangle": true,
+            "character": "D",
+            "iou": 0.9183673469387755,
+            "intersection": 1935,
+            "union": 2107
+          },
+          {
+            "index": 4,
+            "bbox": [
+              274,
+              29,
+              315,
+              98
+            ],
+            "observed_in_triangle": true,
+            "character": "S",
+            "iou": 0.8123233465234596,
+            "intersection": 1437,
+            "union": 1769
+          },
+          {
+            "index": 5,
+            "bbox": [
+              356,
+              31,
+              399,
+              95
+            ],
+            "observed_in_triangle": true,
+            "character": "C",
+            "iou": 0.8679738562091504,
+            "intersection": 1328,
+            "union": 1530
+          },
+          {
+            "index": 6,
+            "bbox": [
+              404,
+              31,
+              432,
+              95
+            ],
+            "observed_in_triangle": true,
+            "character": "L",
+            "iou": 0.8761904761904762,
+            "intersection": 920,
+            "union": 1050
+          },
+          {
+            "index": 7,
+            "bbox": [
+              432,
+              30,
+              483,
+              97
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9188391539596655,
+            "intersection": 1868,
+            "union": 2033
+          },
+          {
+            "index": 8,
+            "bbox": [
+              484,
+              30,
+              528,
+              96
+            ],
+            "observed_in_triangle": true,
+            "character": "S",
+            "iou": 0.8657303370786517,
+            "intersection": 1541,
+            "union": 1780
+          },
+          {
+            "index": 9,
+            "bbox": [
+              533,
+              31,
+              564,
+              94
+            ],
+            "observed_in_triangle": true,
+            "character": "E",
+            "iou": 0.904143475572047,
+            "intersection": 1462,
+            "union": 1617
+          },
+          {
+            "index": 10,
+            "bbox": [
+              573,
+              31,
+              619,
+              94
+            ],
+            "observed_in_triangle": true,
+            "character": "D",
+            "iou": 0.9371129109099571,
+            "intersection": 1967,
+            "union": 2099
+          },
+          {
+            "index": 11,
+            "bbox": [
+              638,
+              44,
+              667,
+              94
+            ],
+            "observed_in_triangle": true,
+            "character": "T",
+            "iou": 0.8489304812834224,
+            "intersection": 635,
+            "union": 748
+          },
+          {
+            "index": 12,
+            "bbox": [
+              665,
+              44,
+              700,
+              95
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9261363636363636,
+            "intersection": 978,
+            "union": 1056
+          },
+          {
+            "index": 13,
+            "bbox": [
+              714,
+              31,
+              753,
+              93
+            ],
+            "observed_in_triangle": true,
+            "character": "T",
+            "iou": 0.9338912133891213,
+            "intersection": 1116,
+            "union": 1195
+          },
+          {
+            "index": 17,
+            "bbox": [
+              898,
+              30,
+              931,
+              90
+            ],
+            "observed_in_triangle": true,
+            "character": "E",
+            "iou": 0.8954854669140383,
+            "intersection": 1448,
+            "union": 1617
+          },
+          {
+            "index": 18,
+            "bbox": [
+              941,
+              30,
+              978,
+              90
+            ],
+            "observed_in_triangle": true,
+            "character": "L",
+            "iou": 0.8773819386909694,
+            "intersection": 1059,
+            "union": 1207
+          }
+        ]
+      },
+      "W_V_not_observed_in_triangle": [
+        {
+          "index": 0,
+          "bbox": [
+            53,
+            31,
+            120,
+            97
+          ],
+          "observed_in_triangle": false,
+          "character": "W",
+          "iou": 0.9146341463414634,
+          "intersection": 2700,
+          "union": 2952
+        },
+        {
+          "index": 16,
+          "bbox": [
+            844,
+            30,
+            892,
+            91
+          ],
+          "observed_in_triangle": false,
+          "character": "V",
+          "iou": 0.8948734587929915,
+          "intersection": 1379,
+          "union": 1541
+        }
+      ],
+      "all_17_intact": {
+        "n": 17,
+        "mean_iou": 0.8951601839082585,
+        "micro_iou": 0.8983547521536506,
+        "rows": [
+          {
+            "index": 0,
+            "bbox": [
+              53,
+              31,
+              120,
+              97
+            ],
+            "observed_in_triangle": false,
+            "character": "W",
+            "iou": 0.9146341463414634,
+            "intersection": 2700,
+            "union": 2952
+          },
+          {
+            "index": 1,
+            "bbox": [
+              117,
+              31,
+              168,
+              99
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9079844206426485,
+            "intersection": 1865,
+            "union": 2054
+          },
+          {
+            "index": 2,
+            "bbox": [
+              171,
+              32,
+              220,
+              98
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9177247333671915,
+            "intersection": 1807,
+            "union": 1969
+          },
+          {
+            "index": 3,
+            "bbox": [
+              225,
+              31,
+              269,
+              97
+            ],
+            "observed_in_triangle": true,
+            "character": "D",
+            "iou": 0.9183673469387755,
+            "intersection": 1935,
+            "union": 2107
+          },
+          {
+            "index": 4,
+            "bbox": [
+              274,
+              29,
+              315,
+              98
+            ],
+            "observed_in_triangle": true,
+            "character": "S",
+            "iou": 0.8123233465234596,
+            "intersection": 1437,
+            "union": 1769
+          },
+          {
+            "index": 5,
+            "bbox": [
+              356,
+              31,
+              399,
+              95
+            ],
+            "observed_in_triangle": true,
+            "character": "C",
+            "iou": 0.8679738562091504,
+            "intersection": 1328,
+            "union": 1530
+          },
+          {
+            "index": 6,
+            "bbox": [
+              404,
+              31,
+              432,
+              95
+            ],
+            "observed_in_triangle": true,
+            "character": "L",
+            "iou": 0.8761904761904762,
+            "intersection": 920,
+            "union": 1050
+          },
+          {
+            "index": 7,
+            "bbox": [
+              432,
+              30,
+              483,
+              97
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9188391539596655,
+            "intersection": 1868,
+            "union": 2033
+          },
+          {
+            "index": 8,
+            "bbox": [
+              484,
+              30,
+              528,
+              96
+            ],
+            "observed_in_triangle": true,
+            "character": "S",
+            "iou": 0.8657303370786517,
+            "intersection": 1541,
+            "union": 1780
+          },
+          {
+            "index": 9,
+            "bbox": [
+              533,
+              31,
+              564,
+              94
+            ],
+            "observed_in_triangle": true,
+            "character": "E",
+            "iou": 0.904143475572047,
+            "intersection": 1462,
+            "union": 1617
+          },
+          {
+            "index": 10,
+            "bbox": [
+              573,
+              31,
+              619,
+              94
+            ],
+            "observed_in_triangle": true,
+            "character": "D",
+            "iou": 0.9371129109099571,
+            "intersection": 1967,
+            "union": 2099
+          },
+          {
+            "index": 11,
+            "bbox": [
+              638,
+              44,
+              667,
+              94
+            ],
+            "observed_in_triangle": true,
+            "character": "T",
+            "iou": 0.8489304812834224,
+            "intersection": 635,
+            "union": 748
+          },
+          {
+            "index": 12,
+            "bbox": [
+              665,
+              44,
+              700,
+              95
+            ],
+            "observed_in_triangle": true,
+            "character": "O",
+            "iou": 0.9261363636363636,
+            "intersection": 978,
+            "union": 1056
+          },
+          {
+            "index": 13,
+            "bbox": [
+              714,
+              31,
+              753,
+              93
+            ],
+            "observed_in_triangle": true,
+            "character": "T",
+            "iou": 0.9338912133891213,
+            "intersection": 1116,
+            "union": 1195
+          },
+          {
+            "index": 16,
+            "bbox": [
+              844,
+              30,
+              892,
+              91
+            ],
+            "observed_in_triangle": false,
+            "character": "V",
+            "iou": 0.8948734587929915,
+            "intersection": 1379,
+            "union": 1541
+          },
+          {
+            "index": 17,
+            "bbox": [
+              898,
+              30,
+              931,
+              90
+            ],
+            "observed_in_triangle": true,
+            "character": "E",
+            "iou": 0.8954854669140383,
+            "intersection": 1448,
+            "union": 1617
+          },
+          {
+            "index": 18,
+            "bbox": [
+              941,
+              30,
+              978,
+              90
+            ],
+            "observed_in_triangle": true,
+            "character": "L",
+            "iou": 0.8773819386909694,
+            "intersection": 1059,
+            "union": 1207
+          }
+        ]
+      }
+    }
+  },
+  "direct_source_shape_normalization": {
+    "summary": {
+      "O": {
+        "n": 4,
+        "mean_iou": 0.9053049169364958
+      },
+      "E": {
+        "n": 3,
+        "mean_iou": 0.8837600904865797
+      },
+      "N": {
+        "n": 2,
+        "mean_iou": 0.7981767180406583
+      }
+    },
+    "rows": [
+      {
+        "char": "O",
+        "source_word": "FOREST",
+        "target_word": "OPEN",
+        "iou": 0.8949412610884679,
+        "source_bbox": [
+          143,
+          45,
+          232,
+          134
+        ],
+        "target_bbox": [
+          279,
+          24,
+          384,
+          114
+        ]
+      },
+      {
+        "char": "O",
+        "source_word": "CLOSURE",
+        "target_word": "OPEN",
+        "iou": 0.92725509214355,
+        "source_bbox": [
+          194,
+          27,
+          287,
+          117
+        ],
+        "target_bbox": [
+          279,
+          24,
+          384,
+          114
+        ]
+      },
+      {
+        "char": "O",
+        "source_word": "BOUNDARY",
+        "target_word": "OPEN",
+        "iou": 0.9213959166088226,
+        "source_bbox": [
+          102,
+          15,
+          184,
+          99
+        ],
+        "target_bbox": [
+          279,
+          24,
+          384,
+          114
+        ]
+      },
+      {
+        "char": "O",
+        "source_word": "ZONE",
+        "target_word": "OPEN",
+        "iou": 0.877627397905143,
+        "source_bbox": [
+          62,
+          10,
+          127,
+          87
+        ],
+        "target_bbox": [
+          279,
+          24,
+          384,
+          114
+        ]
+      },
+      {
+        "char": "E",
+        "source_word": "FOREST",
+        "target_word": "OPEN",
+        "iou": 0.9287450840185913,
+        "source_bbox": [
+          342,
+          46,
+          407,
+          132
+        ],
+        "target_bbox": [
+          519,
+          24,
+          588,
+          110
+        ]
+      },
+      {
+        "char": "E",
+        "source_word": "CLOSURE",
+        "target_word": "OPEN",
+        "iou": 0.9215493159515794,
+        "source_bbox": [
+          544,
+          28,
+          602,
+          112
+        ],
+        "target_bbox": [
+          519,
+          24,
+          588,
+          110
+        ]
+      },
+      {
+        "char": "E",
+        "source_word": "ZONE",
+        "target_word": "OPEN",
+        "iou": 0.8009858714895685,
+        "source_bbox": [
+          202,
+          11,
+          244,
+          83
+        ],
+        "target_bbox": [
+          519,
+          24,
+          588,
+          110
+        ]
+      },
+      {
+        "char": "N",
+        "source_word": "BOUNDARY",
+        "target_word": "OPEN",
+        "iou": 0.818472688022821,
+        "source_bbox": [
+          263,
+          15,
+          326,
+          96
+        ],
+        "target_bbox": [
+          610,
+          23,
+          711,
+          109
+        ]
+      },
+      {
+        "char": "N",
+        "source_word": "ZONE",
+        "target_word": "OPEN",
+        "iou": 0.7778807480584954,
+        "source_bbox": [
+          134,
+          12,
+          188,
+          83
+        ],
+        "target_bbox": [
+          610,
+          23,
+          711,
+          109
+        ]
+      }
+    ]
+  },
+  "font_sha256": {
+    "shared_main": "d70e898d486a21b3bfd79d84023577efcc4b2d16d6b32d7c6ad407bd0bb57285",
+    "open_fitted": "6dfaecc3a596653c416c416bcbfb5059dc851909b12040bf9dc88b1813201b99",
+    "notice_fitted": "ce3802234ec161204d5ec1f5b48d8fefefa865a09b4780e4eeaa670931942214"
+  }
+}

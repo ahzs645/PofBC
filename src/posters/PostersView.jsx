@@ -7,6 +7,8 @@ import dropThumb from './forest-service/dont-drop-it.svg?url'
 import gambleThumb from './forest-service/dont-gamble-with-fire.svg?url'
 import rewardThumb from './forest-service/reward-living-forest.svg?url'
 import enjoyThumb from './forest-service/enjoy-protect-forests.svg?url'
+import beCarefulThumb from './forest-service/be-careful.svg?url'
+import coonsAgeThumb from './forest-service/coons-age.thumb.jpg'
 import goFerriesThumb from './bc-ferries/go-bc-ferries.svg?url'
 import queenThumb from './bc-ferries/queen-of-sidney.svg?url'
 import wildlifeThumb from './wildlife-trees/thumbnail.jpg'
@@ -25,6 +27,8 @@ const LOADERS = {
   'dont-gamble-with-fire': forestService('dont-gamble-with-fire'),
   'reward-living-forest': forestService('reward-living-forest'),
   'enjoy-protect-forests': forestService('enjoy-protect-forests'),
+  'coons-age': forestService('coons-age'),
+  'be-careful': forestService('be-careful'),
   'wildlife-trees': () => import('./wildlife-trees/index.js').then((module) => module.load()),
   'beware-these-alien-invaders': noxiousWeeds('beware-these-alien-invaders'),
   'shattering-the-environment': noxiousWeeds('shattering-the-environment'),
@@ -41,6 +45,8 @@ const THUMBNAILS = {
   'dont-gamble-with-fire': gambleThumb,
   'reward-living-forest': rewardThumb,
   'enjoy-protect-forests': enjoyThumb,
+  'coons-age': coonsAgeThumb,
+  'be-careful': beCarefulThumb,
   'wildlife-trees': wildlifeThumb,
   'beware-these-alien-invaders': bewareThumb,
   'shattering-the-environment': shatteringThumb,
