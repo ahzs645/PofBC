@@ -140,6 +140,7 @@ export const INVERSE_RELATION_LABELS = {
   'operated-by': 'Operates',
   'used-by': 'Uses',
   'predecessor-of': 'Successor of',
+  'campaigned-for': 'Campaign led by',
   'shares-identity-with': 'Shares identity with'
 }
 

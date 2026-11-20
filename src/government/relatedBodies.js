@@ -14,6 +14,8 @@ const WCE = source('TransLink — West Coast Express', `${TRANSIT_OPERATORS.url}
 const POLICE = source('TransLink — Transit Police', `${TRANSIT_OPERATORS.url}/transit-police`)
 const METRO = source('Metro Vancouver — Governance structure', 'https://metrovancouver.org/boards/governance-structure')
 const POSTSECONDARY = source('Province of BC — Public post-secondary institutions', 'https://www2.gov.bc.ca/gov/content/education-training/post-secondary-education/find-a-program-or-institution/find-an-institution')
+const UNBC_HISTORY = source('UNBC — History', 'https://www.unbc.ca/about-unbc/history')
+const UNBC_ACT = source('University of Northern British Columbia Act, SBC 1990, c.28', 'https://www.bclaws.gov.bc.ca/civix/document/id/94consol18/94consol18/90028')
 
 export const RELATED_BODY_KINDS = {
   'regional-transportation-authority': 'Regional transportation authority',
@@ -175,14 +177,20 @@ export const RELATED_BODIES = [
   university('university-of-british-columbia', 'University of British Columbia', 'UBC', 'https://www.ubc.ca/', 'university-of-bc'),
   university('simon-fraser-university', 'Simon Fraser University', 'SFU', 'https://www.sfu.ca/', 'simon-fraser-university'),
   university('university-of-victoria', 'University of Victoria', 'UVic', 'https://www.uvic.ca/', 'university-of-victoria'),
-  university('university-of-northern-bc', 'University of Northern British Columbia', 'UNBC', 'https://www.unbc.ca/', 'university-of-northern-bc'),
+  {
+    ...university('university-of-northern-bc', 'University of Northern British Columbia', 'UNBC', 'https://www.unbc.ca/', 'university-of-northern-bc'),
+    checked: '2026-11-19',
+    description: 'UNBC is a public university established through legislation after a regional campaign led by the Interior University Society. Its origins and reconstructed campaign artwork are connected through the identity collection.',
+    historyNote: 'The Interior University Society was incorporated on 1 December 1987. The UNBC Act passed on 22 June 1990, received assent on 6 July and came into force on 20 July. UNBC officially opened on 17 August 1994. The society and university were separate organisations; this was not a corporate rename.',
+    sources: [POSTSECONDARY, UNBC_HISTORY, UNBC_ACT]
+  },
   {
     id: 'bcit', name: 'British Columbia Institute of Technology', shortName: 'BCIT', aliases: ['BCIT'],
     kind: 'public-institute', officialUrl: 'https://www.bcit.ca/',
     description: 'BCIT is a public post-secondary institute in British Columbia. Its institutional identity and disclosed employer records are connected here.',
     sources: [POSTSECONDARY], salaryEmployers: [employer('bcit', 'BCIT')], relationships: []
   }
-].map((body) => ({ ...body, checked: RELATED_BODIES_AS_OF, chronology: 'current-catalogue' }))
+].map((body) => ({ ...body, checked: body.checked ?? RELATED_BODIES_AS_OF, chronology: 'current-catalogue' }))
 
 const BY_ID = new Map(RELATED_BODIES.map((body) => [body.id, body]))
 export const relatedBodyById = (id) => BY_ID.get(id) ?? null

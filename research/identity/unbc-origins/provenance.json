@@ -1,0 +1,32 @@
+{
+  "source": "User-supplied IUS_Vector_Brand_Kit(1).zip",
+  "suppliedVersion": "1.2",
+  "sourceArchive": {
+    "filename": "IUS_Vector_Brand_Kit(1).zip",
+    "bytes": 40465452,
+    "sha256": "c3125d0894483d83f94fa827068209ae5bece410bab3a5e4036acf2741c79b02"
+  },
+  "import": "Production SVG, PDF and EPS bytes retained unchanged. Authoring sources and documentation retained as supplied; original photographs and raster reference boards excluded.",
+  "independentChecks": {
+    "svgCount": 26,
+    "svgHashesMatchSuppliedManifest": true,
+    "svgContainsEmbeddedImages": false,
+    "svgContainsLiveText": false,
+    "svgContainsScriptOrExternalReferences": false
+  },
+  "evidenceLimits": [
+    "Original fonts, physical dimensions and measured colour targets are unconfirmed.",
+    "The 8 June 1988 invitation is an observed use date, not an identity creation date.",
+    "The archival accession number 1992.2 is not a design date.",
+    "Interpretive illustration and sweatshirt artwork are not recovered original masters.",
+    "Author identity and permission to relicense original historical material have not been established."
+  ],
+  "excluded": [
+    "Original photographs and their EXIF metadata",
+    "Prior raster reconstruction references",
+    "Raster exports and comparison boards",
+    "Image-bearing guides and reports",
+    "Complete standalone HTML gallery"
+  ],
+  "packaging": "node scripts/build-ius-download.mjs; this repackages committed assets and does not execute the supplied Python authoring scripts."
+}

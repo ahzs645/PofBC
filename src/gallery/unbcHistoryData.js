@@ -1,0 +1,177 @@
+// Historical interpretation and claim-level sources for the UNBC origins collection.
+// Campaign artwork, society registration and university establishment have distinct dates.
+const sources = {
+  history: {
+    id: 'unbc-official-history',
+    title: 'UNBC History',
+    url: 'https://www.unbc.ca/about-unbc/history',
+    locator: 'Sections 1987: The Origins; 1989: The IPG; 1990; 1992',
+  },
+  incorporation: {
+    id: 'ius-gazette-incorporation',
+    title: 'British Columbia Gazette, 17 December 1987',
+    url: 'https://www.bclaws.gov.bc.ca/civix/document/id/bcgaz1/hbcgaz1/537064649',
+    locator: 'Printed p. 1767 (PDF p. 17), Incorporations: 1 December 1987, S-23084',
+  },
+  campaign: {
+    id: 'unbc-public-campaign',
+    title: 'The Public Campaign for a Northern University',
+    url: 'https://www.unbc.ca/about-unbc/public-campaign-northern-university',
+    locator: 'UNBC introduction and searchable register of IUS supporters',
+  },
+  coates: {
+    id: 'coates-unbc-founding',
+    title: 'Ken S. Coates, Founding the University of Northern British Columbia',
+    url: 'https://thenorthernreview.ca/index.php/nr/article/download/137/82/330',
+    locator: 'The Northern Review 27 (2007), pp. 20–27; campaign and institutional debate, pp. 21–22',
+  },
+  hansard: {
+    id: 'unbc-bill40-hansard',
+    title: 'BC Hansard, 22 June 1990, morning sitting',
+    url: 'https://lims.leg.bc.ca/hdms/file/Debates/34th4th/34p_04s_900622a.htm',
+    locator: 'Bill 40, committee debate on section 20 and third reading, printed p. 10534',
+  },
+  act: {
+    id: 'unbc-1990-act',
+    title: 'University of Northern British Columbia Act, SBC 1990, c. 28',
+    url: 'https://www.bclaws.gov.bc.ca/civix/document/id/94consol18/94consol18/90028',
+    locator: 'Assent heading; section 2; section 21 and commencement editorial note, B.C. Reg. 233/90',
+  },
+  dissolution: {
+    id: 'ius-gazette-dissolution',
+    title: 'British Columbia Gazette, 10 June 1993',
+    url: 'https://www.bclaws.gov.bc.ca/civix/document/id/bcgaz1/hbcgaz1/1261170925',
+    locator: 'Printed pp. 750–752 (PDF pp. 10–12): dissolution list dated 28 May 1993; S-23084 on p. 752',
+  },
+  opening: {
+    id: 'unbc-opening-retrospective',
+    title: 'UNBC: August 17 — A Day of Celebration',
+    url: 'https://www.unbc.ca/releases/2004/08-17-august-17',
+    locator: '2004 institutional retrospective: campaign, creation and 17 August 1994 opening',
+  },
+};
+
+export const UNBC_HISTORY = {
+  title: 'The university that never was?',
+  subtitle: 'The Interior University Society and the campaign that created UNBC',
+  lead: '“Interior University” appears in the campaign’s surviving visual identity. The Interior University Society (IUS) was an advocacy organisation; UNBC was the university later established by legislation. This is a story of a successful campaign, not an operating university renamed or abandoned.',
+  paragraphs: [
+    {
+      id: 'ius-organising',
+      heading: 'A society before a university',
+      text: 'The IUS incorporated on 1 December 1987. In 1988, 16,000 people paid $5 and joined the society to support a university in the North. The campaign materials give that public movement a visible identity; UNBC’s searchable supporters’ register preserves the names and hometowns behind it.',
+      sources: [sources.incorporation, sources.campaign],
+    },
+    {
+      id: 'ius-ambition',
+      heading: 'A university for northern communities',
+      text: 'Founding vice-president academic Ken Coates describes an ambition extending beyond access to degrees: research, graduate study and teaching shaped by northern circumstances. Urban Dahllof’s feasibility work explored an institution serving communities across the region. The IUS pressed for a full university while the province considered university colleges. The proposal therefore concerned what northern higher education could become, as well as where it would be located.',
+      sources: [sources.coates],
+    },
+    {
+      id: 'ius-to-unbc',
+      heading: 'How the campaign connects to UNBC',
+      text: 'The 1990 Act established a corporation named the University of Northern British Columbia. In the legislative debate, Bruce Strachan also described plans for IUS members and directors to undertake foundation work for the new university. The connection runs through public advocacy, legislation and continuing support. The title above is an interpretation of the campaign wording, not evidence that “Interior University” was an adopted legal university name.',
+      sources: [sources.act, sources.hansard],
+    },
+  ],
+  events: [
+    {
+      id: 'ius-first-meetings',
+      date: 'January 1987',
+      title: 'Local meetings begin',
+      description: 'Local residents bring people together to discuss a northern university. Repeated meetings build support for a formal organisation.',
+      sources: [sources.history],
+    },
+    {
+      id: 'ius-incorporated',
+      date: '1 December 1987',
+      title: 'The Interior University Society incorporates',
+      description: 'The Gazette records society S-23084. This dates the organisation, rather than the creation of a university or the design of a particular logo.',
+      sources: [sources.incorporation],
+    },
+    {
+      id: 'ius-public-support',
+      date: '1988',
+      title: '16,000 supporters join the campaign',
+      description: 'UNBC records 16,000 people paying $5 to become IUS members. Their names and hometowns remain searchable in the university’s public campaign register.',
+      sources: [sources.campaign],
+    },
+    {
+      id: 'unbc-planning-group',
+      date: '1989',
+      title: 'The proposal enters formal planning',
+      description: 'Following IUS discussions with the ministry, an Implementation Planning Group chaired by Horst Sander examines the institution the North should have.',
+      sources: [sources.history],
+    },
+    {
+      id: 'unbc-government-acceptance',
+      date: '9 January 1990',
+      title: 'The government accepts a northern university',
+      description: 'Minister Bruce Strachan announces acceptance of the planning recommendation, with a main campus in Prince George.',
+      sources: [sources.history],
+    },
+    {
+      id: 'unbc-bill-passes',
+      date: '22 June 1990',
+      title: 'Bill 40 passes the Legislature',
+      description: 'Hansard records third reading and passage of the UNBC Act. The debate also connects IUS supporters with proposed university foundation work.',
+      sources: [sources.hansard],
+    },
+    {
+      id: 'unbc-act-in-force',
+      date: '6–20 July 1990',
+      title: 'Assent and legal commencement',
+      description: 'Royal assent follows on 6 July; the Act takes effect on 20 July. Section 2 establishes the University of Northern British Columbia as a corporation.',
+      sources: [sources.act],
+    },
+    {
+      id: 'unbc-quickstart',
+      date: '1992',
+      title: 'Teaching begins before the campus opens',
+      description: 'The QuickStart program registers its first 70 students in August at facilities in Prince George, Terrace, Quesnel, Dawson Creek and Fort St John.',
+      sources: [sources.history],
+    },
+    {
+      id: 'ius-dissolved',
+      date: '28 May 1993',
+      title: 'The society is dissolved',
+      description: 'The Gazette lists IUS S-23084 among societies struck from the register and dissolved. This is a registry event, not the end of UNBC or proof of when campaigning ceased.',
+      sources: [sources.dissolution],
+    },
+    {
+      id: 'unbc-official-opening',
+      date: '17 August 1994',
+      title: 'UNBC officially opens',
+      description: 'Queen Elizabeth II officially opens UNBC. The ceremony follows the university’s legal establishment and its first teaching programs.',
+      sources: [sources.opening, sources.history],
+    },
+  ],
+  connections: [
+    {
+      id: 'ius-campaign-unbc',
+      from: 'Interior University Society',
+      to: 'University of Northern British Columbia',
+      relationship: 'Public campaign for its creation',
+      description: 'The society mobilised public support for the university. Campaign identity and university identity belong to connected, distinct organisations.',
+      sources: [sources.campaign, sources.opening],
+    },
+    {
+      id: 'legislature-establishes-unbc',
+      from: 'Legislative Assembly of British Columbia',
+      to: 'University of Northern British Columbia',
+      relationship: 'Statutory establishment',
+      description: 'Bill 40 supplied the legal foundation for UNBC; the Act established the university under its own name.',
+      sources: [sources.hansard, sources.act],
+    },
+    {
+      id: 'ius-foundation-plans',
+      from: 'Interior University Society supporters',
+      to: 'UNBC foundation work',
+      relationship: 'Fundraising role proposed in June 1990',
+      description: 'Strachan credited Roy Stewart’s leadership in preparing a foundation role for the society’s members and directors. This records an intended role, not a legal renaming.',
+      sources: [sources.hansard],
+    },
+  ],
+  sources: Object.values(sources),
+};

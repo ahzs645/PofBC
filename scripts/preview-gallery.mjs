@@ -38,7 +38,7 @@ if (args.includes('--build')) {
   const outDir = resolve(option('--out', join(root, 'dist-gallery')))
   if (outDir === root || root.startsWith(`${outDir}/`)) throw new Error('Preview output must not replace the repository or its parents')
   await build({ ...config, build: { outDir, emptyOutDir: false } })
-  for (const directory of ['identity-collected', 'identity-display', 'identity-expanded']) {
+  for (const directory of ['identity-collected', 'identity-display', 'identity-expanded', 'unbc-origins']) {
     cpSync(join(root, 'public', directory), join(outDir, directory), { recursive: true })
   }
   console.log(`Gallery preview built at ${outDir}`)
