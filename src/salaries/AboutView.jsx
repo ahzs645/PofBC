@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import { CompanionShell } from './CompanionShell.jsx'
 import { councilNotes, councilSourceUrl, loadCouncilPay } from './councilPay.js'
 import { CouncilSource } from './CouncilPayView.jsx'
+import { MIN_EMPLOYER_RECORDS, MIN_RANKED_STAYERS, MIN_STAYERS } from './employerStats.js'
 
 const BASE = import.meta.env?.BASE_URL ?? '/'
 
@@ -58,6 +59,7 @@ const privateUrl = `${ISSUES}?${new URLSearchParams({
 
 const SECTIONS = [
   ['about-what', 'What the records are'],
+  ['about-employers', 'Employer comparisons'],
   ['about-privacy', 'Privacy'],
   ['about-corrections', 'Corrections and requests'],
   ['about-council', 'Council pay sources']
@@ -86,6 +88,16 @@ export default function AboutView({ onBrowse }) {
             <li><strong>A name is not an identity.</strong> Records are grouped by the name as published. Two records with one name can be different people; joins between spellings are reviewed and say how sure they are.</li>
             <li><strong>A missing record is not evidence of anything.</strong> Many employers and years have not been added yet, and pay at or below the threshold is not listed.</li>
             <li>Amounts shown in another year’s dollars use the B.C. consumer price index from Statistics Canada.</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="about-employers">
+          <h3 id="about-employers" className="salaries__title">Employer comparisons</h3>
+          <ul>
+            <li><strong>Median and average</strong> describe each employer’s disclosed records in its official annual schedule, part-year payments included. They mix different roles. Council, board, executive-only, compiled and incomplete schedules are left out.</li>
+            <li><strong>Typical raise</strong> is the median change in pay for names on both of two consecutive lists with the same threshold and period rules: at least {MIN_STAYERS} names, or {MIN_RANKED_STAYERS} to be ranked. A promotion, a part year or retroactive pay shows as a raise or a cut.</li>
+            <li><strong>Most added to the list</strong> counts published records, not employees or new hires, because the fixed threshold lets more people cross it each year.</li>
+            <li><strong>Rankings</strong> need at least {MIN_EMPLOYER_RECORDS} records and leave out employers whose latest disclosure is much older than the rest. For a closer comparison, choose one period and sector.</li>
           </ul>
         </section>
 

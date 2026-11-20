@@ -1763,12 +1763,15 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__desktop-filters { display: grid; gap: 16px; }
 .salaries__mobile-filters { display: none; }
 @media (max-width: 560px) { .salaries__search { grid-template-columns: 1fr; } .salaries-range__trigger { width: 100%; } }
+/* The search box and the period button sit in one row: one height and one corner for both. */
+.salaries { --salaries-control-height: 46px; --salaries-control-radius: 10px; }
 .salaries__search input, .salaries__search .ui-select, .salaries__mobile-filters input {
   box-sizing: border-box;
   min-width: 0;
+  height: var(--salaries-control-height, 46px);
   padding: 10px 12px;
   border: 1px solid var(--mid);
-  border-radius: 10px;
+  border-radius: var(--salaries-control-radius, 10px);
   background: var(--surface);
   color: var(--ink);
   font: inherit;
@@ -1804,8 +1807,9 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 /* The period picker: a button the height of the search box, opening the bar picker in a panel. */
 .salaries-range { position: relative; }
 .salaries-range__trigger {
-  display: flex; align-items: center; justify-content: space-between; gap: 10px; height: 100%; min-width: 11em;
-  padding: 10px 12px; border: 1px solid var(--mid); border-radius: 10px; background: var(--surface); color: var(--ink);
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; box-sizing: border-box;
+  height: var(--salaries-control-height, 46px); min-width: 11em;
+  padding: 10px 12px; border: 1px solid var(--mid); border-radius: var(--salaries-control-radius, 10px); background: var(--surface); color: var(--ink);
   font: inherit; font-size: 15px; cursor: pointer; white-space: nowrap;
 }
 .salaries-range__trigger:hover { background: var(--hover); }

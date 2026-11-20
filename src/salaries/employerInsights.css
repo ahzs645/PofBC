@@ -5,9 +5,7 @@
 .employer-insights__label { font-size: 12px; text-align: left; }
 .employer-insights__value { font-size: clamp(18px, 2vw, 26px); font-weight: 600; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .employer-insights__name { font-size: 14px; text-align: left; overflow-wrap: anywhere; }
-.employer-insights__definitions { margin-top: 12px; font-size: 13px; color: var(--ink-faint); line-height: 1.5; max-width: 90ch; }
-.employer-insights__definitions summary { cursor: pointer; color: var(--ink); }
-.employer-insights__definitions p { margin: 10px 0 0; }
+.employer-insights > .employer-insights__definitions { margin: 12px 0 0; }
 .employer-insights__order { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 16px; margin-bottom: 12px; }
 .employer-insights__order label { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 13px; }
 .employer-insights__order .ui-select { width: auto; max-width: 100%; min-height: 44px; padding: 6px 10px; border: 1px solid var(--mid); border-radius: 8px; background: var(--surface); color: var(--ink); font: inherit; }
