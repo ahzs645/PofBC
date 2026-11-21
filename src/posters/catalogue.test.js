@@ -115,8 +115,8 @@ test('every series lists posters that exist, and every poster is in the series i
 })
 
 test('an unlisted poster is off the shelf and out of the stepping order, but still a poster', () => {
-  const unlisted = SERIES.filter((series) => series.unlisted).flatMap((series) => series.posters)
-  assert.deepEqual(unlisted, ['expo-86-davidson'])
+  const unlisted = [...SERIES.filter((series) => series.unlisted).flatMap((series) => series.posters), ...Object.keys(POSTERS).filter((id) => POSTERS[id].unlisted)]
+  assert.deepEqual(unlisted.sort(), ['beware-these-alien-invaders', 'expo-86-davidson'])
   for (const id of unlisted) {
     assert.ok(POSTERS[id], `${id} has no card, so its address would not open it`)
     assert.ok(!listedPosterIds().includes(id), `${id} is on the shelf`)

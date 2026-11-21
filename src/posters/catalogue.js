@@ -205,6 +205,8 @@ export const POSTERS = {
   },
   'beware-these-alien-invaders': {
     id: 'beware-these-alien-invaders',
+    // Unlisted: left off the shelf, but its address and the links to it still open it.
+    unlisted: true,
     issuer: 'Ministry of Forests',
     subject: 'Invasive plants',
     format: 'Screen leaflet',
@@ -291,8 +293,8 @@ export const FACETS = [
 ]
 
 export const posterIds = () => SERIES.flatMap((series) => series.posters)
-/** The posters on the shelf, in reading order: every series but the unlisted ones. */
-export const listedPosterIds = () => SERIES.filter((series) => !series.unlisted).flatMap((series) => series.posters)
+/** The posters on the shelf, in reading order: every series but the unlisted ones, less unlisted posters. */
+export const listedPosterIds = () => SERIES.filter((series) => !series.unlisted).flatMap((series) => series.posters).filter((id) => !POSTERS[id].unlisted)
 export const seriesOf = (posterId) => SERIES.find((series) => series.posters.includes(posterId)) ?? null
 
 /** The posters either side of one in reading order, across series. */

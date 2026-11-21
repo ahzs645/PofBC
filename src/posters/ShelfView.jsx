@@ -25,7 +25,8 @@ import { holdScroll } from '../site/holdScroll.js'
  * @param {string} props.noun        What one piece is called (`poster`, `sign`).
  * @param {Array}  props.series      [{ id, title, kind, unlisted? }], in the order shown. An unlisted
  *                                   series is left off the shelf, out of the stepping order and the
- *                                   filters, but its pieces still open from their address.
+ *                                   filters, but its pieces still open from their address. A piece
+ *                                   whose card says `unlisted` is left off the same way, alone.
  * @param {Function} props.itemsOf   A series' piece ids, in order.
  * @param {object} props.items       Each piece's catalogue card, by id.
  * @param {object} props.loaders     Each piece's loader: resolves to its drawing and parts.
@@ -49,9 +50,10 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
   const [layout, setLayout] = useState(() => savedShelf?.view === view ? savedShelf.layout ?? 'series' : 'series')
   const [filters, setFilters] = useState(() => savedShelf?.view === view ? savedShelf.filters ?? {} : {})
   const parentNavigate = useNavigate()
-  // The shelf's own series; an unlisted one is reached only by its address.
-  const listed = series.filter((entry) => !entry.unlisted)
-  const order = listed.flatMap(itemsOf)
+  // The shelf's own series and pieces; an unlisted one is reached only by its address.
+  const shelved = (entry) => itemsOf(entry).filter((id) => !items[id].unlisted)
+  const listed = series.filter((entry) => !entry.unlisted && shelved(entry).length)
+  const order = listed.flatMap(shelved)
   const seriesOf = (id) => series.find((entry) => itemsOf(entry).includes(id)) ?? null
 
   const go = useCallback(({ id, part }, entering = false) => {
@@ -187,12 +189,12 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
             // and a shelf of one-piece series is not a column of mostly empty panels.
             <div className="posters__shelf">
               {listed.map((entry) => (
-                <section key={entry.id} className="posters__series" style={{ '--n': itemsOf(entry).length }} aria-labelledby={`series-${entry.id}`}>
+                <section key={entry.id} className="posters__series" style={{ '--n': shelved(entry).length }} aria-labelledby={`series-${entry.id}`}>
                   <header className="posters__series-head">
                     <h3 id={`series-${entry.id}`}>{entry.title}</h3>
                     <p className="posters__kind">{entry.kind}</p>
                   </header>
-                  <div className="posters__grid">{itemsOf(entry).map(card)}</div>
+                  <div className="posters__grid">{shelved(entry).map(card)}</div>
                 </section>
               ))}
             </div>
