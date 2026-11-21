@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { COLLECTED_BODIES } from '../src/gallery/collectedData.js'
 import { EXPANDED_IDENTITY_BODIES } from '../src/gallery/expandedIdentityData.js'
 import { MUNICIPAL_IDENTITY_BODIES } from '../src/gallery/municipalIdentityData.js'
+import { RECOVERED_IDENTITY_BODIES } from '../src/gallery/recoveredIdentityData.js'
 import { IDENTITY_SUBJECTS } from '../src/gallery/identitySubjects.js'
 import { collectionById, entriesOf } from '../src/gallery/collections.js'
 
@@ -17,7 +18,7 @@ test('expanded artwork, preserved sources and generated metadata pass the offlin
 test('every added artwork body has its own declared subject and retains every accepted file', () => {
   const oldIds = new Set(COLLECTED_BODIES.map((body) => body.id))
   const subjects = new Map(IDENTITY_SUBJECTS.map((subject) => [subject.id, subject]))
-  for (const body of [...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES]) {
+  for (const body of [...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES]) {
     assert.ok(!oldIds.has(body.id), `${body.id}: expansion overwrites a legacy body`)
     const subject = subjects.get(body.id)
     assert.ok(subject, `${body.id}: artwork has no declared identity subject`)

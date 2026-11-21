@@ -26,6 +26,11 @@ before continuing the reconstruction.
 
 ## Subsequent vector recoveries
 
+The [20 November missing-artwork recovery](missing-recovery-2026-11-20/README.md)
+collects previously unheld municipal, transit, independent-office and historical artwork across
+the declared register. Its before/after inventory, original files, native/raster distinctions,
+source checksums, extraction recipes and unresolved-source outcomes are preserved together.
+
 The notes below preserve the original September research state. The
 [8 November vector follow-up](vector-followup-2026-11-08/README.md) adds ten original PDF-vector
 specimens for PavCo, Forest Renewal BC, WorkSafeBC and BCLC, with reproducible extraction,

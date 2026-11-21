@@ -3,12 +3,13 @@
 // separately. Read from research/identity/municipalities-2026-11-15/municipalities.json, the
 // 15 November 2026 gallery audit's join of that layer to CivicInfo BC's municipal directory.
 //
-// No municipal corporate logo is held yet. Salary, council-pay and heraldry links point to the
+// Artwork coverage follows the accepted acquisition batches. Salary, council-pay and heraldry links point to the
 // site's existing records by their exact keys; none of them is evidence of a corporate logo, and
 // none merges records. Arms granted to a predecessor stay the predecessor's. Regional-district
 // membership is context, not ownership.
 
 import { MUNICIPAL_IDENTITY_BODIES } from './municipalIdentityData.js'
+import { RECOVERED_IDENTITY_BODIES } from './recoveredIdentityData.js'
 import registry from '../../research/identity/municipalities-2026-11-15/municipalities.json' with { type: 'json' }
 
 export const MUNICIPAL_REGISTRY_DIR = 'research/identity/municipalities-2026-11-15'
@@ -76,16 +77,22 @@ const leadSources = (lead, collected) => {
 }
 
 const NO_LOGO = 'No corporate logo is held yet. Its arms, council pay and salary records are linked where the site has them; none of them is a corporate logo.'
-const HELD = 'Its logo is held as its official website serves it. Arms, council pay and salary records are linked where the site has them.'
-const COLLECTED = new Set(MUNICIPAL_IDENTITY_BODIES.map((body) => body.id))
+const HELD = 'An official identity specimen is held; its evidence record identifies the source and publication date where known. Arms, council pay and salary records are linked where available.'
+const COLLECTED = new Map([...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES]
+  .filter((body) => body.id.startsWith('municipality-')).map((body) => [body.id, body]))
 
 const subjectOf = (record) => {
   const lead = record.logoLead
+  const collected = COLLECTED.get(municipalSubjectId(record.name))
   const inLayer = record.provincialId.startsWith('bc-lgaa-')
   const legal = record.legalName && record.legalName !== record.name ? [record.legalName] : []
   const council = record.councilMunicipality && record.councilMunicipality !== record.name ? [record.councilMunicipality] : []
   const region = record.regionalDistrict && !/^No separate/.test(record.regionalDistrict) ? record.regionalDistrict : null
   const sources = [
+    ...[...new Map((collected?.assets ?? []).map((asset) => [asset.sourceUrl, {
+      title: 'Accepted official identity artwork', url: asset.sourceUrl,
+      note: asset.fidelityNote
+    }])).values()],
     ...leadSources(lead, COLLECTED.has(municipalSubjectId(record.name))),
     inLayer
       ? { title: 'Provincial legally defined administrative area record', url: record.boundarySource, note: `Provincial identifier ${record.provincialId}.` }
@@ -107,9 +114,9 @@ const subjectOf = (record) => {
     priority: lead ? 1 : 2,
     scope: 'core',
     sources,
-    nextAction: lead?.nextStep && lead.nextStep !== '—'
+    nextAction: collected?.nextAction ?? (lead?.nextStep && lead.nextStep !== '—'
       ? lead.nextStep
-      : 'Find the corporate logo on an official municipal source, then record the file, its source and any adoption evidence.',
+      : 'Find the corporate logo on an official municipal source, then record the file, its source and any adoption evidence.'),
     note: [
       `${MUNICIPAL_KIND_LABELS[KIND_OF_CLASSIFICATION[record.classification]]} ${where}.`,
       record.scope !== 'current municipality' ? record.auditNote : null,

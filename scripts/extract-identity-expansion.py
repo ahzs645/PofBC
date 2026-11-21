@@ -107,7 +107,12 @@ def produce(recipe, source_bytes):
             raise ValueError(f'Ambiguous embedded image {dims}')
         xref, mask = candidates[0][0:2]
         pixmap = fitz.Pixmap(doc, xref)
-        if mask:
+        # Some streams decode with an entirely opaque alpha channel although their
+        # soft mask is still separate. Drop that empty channel before combining.
+        # Retain a non-opaque decoded alpha channel without applying the mask twice.
+        if mask and pixmap.alpha and all(value == 255 for value in pixmap.samples[pixmap.n - 1::pixmap.n]):
+            pixmap = fitz.Pixmap(pixmap, 0)
+        if mask and not pixmap.alpha:
             pixmap = fitz.Pixmap(pixmap, fitz.Pixmap(doc, mask))
         encoded = pixmap.tobytes('png')
         if recipe.get('flipVertical'):

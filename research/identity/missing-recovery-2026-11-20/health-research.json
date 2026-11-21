@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "observedDate": "2026-11-20",
+  "recordedAtUtc": "2026-11-21T00:49:22.220907+00:00",
+  "scope": {
+    "family": "atlas-health",
+    "remainingAtStart": 98,
+    "focusedSubjects": [
+      "thompson-health-region",
+      "coast-garibaldi-regional-health-board",
+      "north-west-community-health-services-society",
+      "east-kootenay-community-health-services-society"
+    ],
+    "relatedRowsReadForDisambiguation": [
+      "north-west-regional-health-board",
+      "east-kootenay-regional-health-board",
+      "east-thompson-north-shuswap-health-council"
+    ],
+    "description": "Short focused follow-up of four historical entities and their strongest discoverable leads. This was not a new search of all 98 remaining health subjects.",
+    "acceptedArtwork": 0,
+    "exhaustive": false
+  },
+  "repositoryNotesReviewed": [
+    "research/identity/collection-2026-10-22/README.md",
+    "research/identity/collection-2026-10-22/second-pass.md",
+    "research/identity/vector-search-2026-10-30/README.md",
+    "research/identity/historical-vector-followup-2026-10-30/README.md",
+    "research/identity/vector-followup-2026-11-08/findings/SEARCH-SUMMARY.md"
+  ],
+  "findings": [
+    {
+      "id": "thompson-health-region",
+      "outcome": "Promising primary advertisement lead located; no downloadable and visually verified artwork accepted.",
+      "sources": [
+        {
+          "url": "https://www.canadian-nurse.com/archive/1990-1999",
+          "outcome": "Official Canadian Nurse archive indexed as containing the decade’s print issues. Direct HTTP retrieval and web retrieval both returned 403."
+        },
+        {
+          "url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/c410c3e5-7c95-123a-4b73-1ced4db7dc64_file.pdf",
+          "urlNote": "Stable object identity only. Discovery URL contained an expired signed query; that complete indexed signed URL returned 403. No unsigned-access result is claimed.",
+          "outcome": "Indexed OCR identifies Thompson Health Region, Kamloops, BC recruitment advertisement for Director, Prevention and Early Intervention, Public Health, with tagline A Path to Better Health. The scan itself could not be downloaded or visually verified; issue date and artwork geometry remain unconfirmed."
+        },
+        {
+          "url": "https://www.merritt.ca/wp-content/uploads/archives/meetings/1998/1998-11-10%20RC%20agenda.pdf",
+          "outcome": "Existing repository lead retried; HTTP 404."
+        },
+        {
+          "url": "https://kamloops.civicweb.net/document/7911/",
+          "outcome": "Retrieved historical council minutes, May 30, 2000. Text mentions Thompson Health Region Sun Sense delegation, but does not supply attributable agency artwork. No mark accepted."
+        }
+      ],
+      "exclusions": [
+        "David Thompson Health Region is an Alberta organization; its mountain/DTHR logo was not assigned to the BC Thompson Health Region.",
+        "Current Interior Health identity is a successor and was not used to fill this gap."
+      ],
+      "recommendedRoute": "Retrieve the original Canadian Nurse issue through its official archive or a public-library periodical copy; search the exact recruitment job title and tagline, establish the issue date, and inspect/extract the actual printed logo. The dated Merritt agenda correspondence is a separate useful municipal-archive request."
+    },
+    {
+      "id": "coast-garibaldi-regional-health-board",
+      "outcome": "Historical newspaper lead remains inaccessible at the old file URL; successor identity excluded.",
+      "sources": [
+        {
+          "url": "https://squamishlibrary.digitalcollections.ca/uploads/r/squamish-public-library/2/1/21571/19960917_The_Squamish_Chief.pdf",
+          "outcome": "Retrieved 680 bytes of text/html titled fallthrough, a migration application shell rather than PDF. Therefore no publication was visually inspected or extracted."
+        },
+        {
+          "url": "https://squamishlibrary.ca/local-history/",
+          "outcome": "Official library page identifies Biblioboard as the current digital collection and says newspapers cover 1948–2001. This is a verified replacement archive route, not proof that the specific issue contains a logo."
+        }
+      ],
+      "exclusions": [
+        "The repository already holds the 2001 teal website GIF of Coast Garibaldi Community Health Services Society. Its attribution does not establish ownership by the earlier Regional Health Board.",
+        "The previously inspected 2000 arsenic report did not establish an attributable board logo; it was not reclassified."
+      ],
+      "recommendedRoute": "Open the 1996-09-17 Squamish Chief issue in the library’s Biblioboard collection, then inspect health-board recruitment/public-notice advertisements.1996-02-27 and 1996-12-03 indexed issues provide additional exact-name context but were not visually inspected in this pass."
+    },
+    {
+      "id": "north-west-community-health-services-society",
+      "outcome": "Focused exact-name searches found primary name-only records, not recoverable original artwork.",
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/pa-1999-00-crf-detailed-schedules-of-payments.pdf",
+          "outcome": "Indexed primary public-account payment table names the society. Text-only payment references were not counted as logo evidence. PDF graphics were not inspected in this short pass."
+        },
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume38",
+          "outcome": "Primary legal record identifies society appointments. It is organizational context, not artwork."
+        }
+      ],
+      "recommendedRoute": "Locate 1997–2001 society-authored annual reports, letterhead or recruitment notices in Prince Rupert/Terrace public-library newspaper holdings and provincial archival catalogues. Inspect original documents before attributing any mark; keep the earlier North West Regional Health Board separate. No specific archival holding is asserted."
+    },
+    {
+      "id": "east-kootenay-community-health-services-society",
+      "outcome": "Focused exact-name searches found name-only primary reports/legal records; no attributable artwork accepted.",
+      "sources": [
+        {
+          "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-20000101-report-government-financial-accountability.pdf",
+          "outcome": "Indexed primary audit table lists the society among audited entities, but the table supplies no attributable society artwork. Full publication was not visually inspected in this short pass."
+        },
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume38",
+          "outcome": "Primary legal record identifies society appointments. It is organizational context, not artwork."
+        }
+      ],
+      "exclusions": [
+        "East Kootenay Foundation for Health is a different organization; its current logo was not assigned to the former society.",
+        "Interior Health successor branding and the separate East Kootenay Regional Health Board were not substituted."
+      ],
+      "recommendedRoute": "Seek 1997–2001 society annual reports and correspondence in Cranbrook-area public-library/municipal archives or provincial health-record collections. Agency-authored recruitment advertisements may contain the original signature. This recommendation is an archival strategy, not a verified catalogue holding."
+    }
+  ],
+  "retrievalEvidence": [
+    {
+      "id": "thompson-council",
+      "url": "https://kamloops.civicweb.net/document/7911/",
+      "file": "research-evidence/thompson-council.html.txt",
+      "bytes": 87270,
+      "sha256": "761eb4ccd7b7b58bd26269343c4854b6c67ea05b8653f7d5d2306dc709a1d57e",
+      "resolvedUrl": "https://kamloops.civicweb.net/document/7911/",
+      "contentType": "text/html; charset=utf-8"
+    },
+    {
+      "id": "coast-garibaldi-newspaper",
+      "url": "https://squamishlibrary.digitalcollections.ca/uploads/r/squamish-public-library/2/1/21571/19960917_The_Squamish_Chief.pdf",
+      "file": "research-evidence/coast-garibaldi-newspaper.html.txt",
+      "bytes": 680,
+      "sha256": "ec55676337dba67e7cd19a22c3af202a89ac25151aa60b505cd60eabbc19e371",
+      "resolvedUrl": "https://redirect.accesstomemory.org/suspended/uploads/r/squamish-public-library/2/1/21571/19960917_The_Squamish_Chief.pdf",
+      "contentType": "text/html"
+    },
+    {
+      "id": "thompson-old-lead",
+      "url": "https://www.merritt.ca/wp-content/uploads/archives/meetings/1998/1998-11-10%20RC%20agenda.pdf",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "conclusion": "No newly accepted asset from this bounded pass. All 98 atlas-health gaps remain unchanged. Failed retrievals, indexed OCR, entity mentions and successor marks were not treated as collected artwork."
+}

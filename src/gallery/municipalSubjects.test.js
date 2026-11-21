@@ -5,6 +5,7 @@ import { HISTORICAL_MUNICIPALITIES, MUNICIPAL_SUBJECTS, municipalSubjectId } fro
 import { IDENTITY_COVERAGE, identitySubjectById, searchIdentitySubjects } from './identityCoverage.js'
 import { GALLERY_COLLECTIONS, entriesOf } from './collections.js'
 import { MUNICIPAL_IDENTITY_BODIES } from './municipalIdentityData.js'
+import { RECOVERED_IDENTITY_BODIES } from './recoveredIdentityData.js'
 import { MUNICIPAL_PROFILE_BY_COUNCIL, MUNICIPAL_PROFILE_BY_EMPLOYER } from '../salaries/municipalProfiles.js'
 
 const json = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url)))
@@ -36,7 +37,7 @@ test('the municipal registry is the 161 legal municipalities plus shíshálh, ho
   assert.equal(new Set(MUNICIPAL_SUBJECTS.map((subject) => subject.municipal.provincialId)).size, 162)
   for (const subject of MUNICIPAL_SUBJECTS) {
     assert.match(subject.municipal.provincialId, subject.municipal.inProvincialLayer ? /^bc-lgaa-\d+$/ : /^bc-shishalh-government-district$/)
-    const collected = MUNICIPAL_IDENTITY_BODIES.find((body) => body.id === subject.id)
+    const collected = [...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES].find((body) => body.id === subject.id)
     const coverage = identitySubjectById(subject.id)
     assert.equal(coverage.hasArtwork, Boolean(collected), `${subject.id}: artwork only from an archived official file`)
     if (collected) {
@@ -110,10 +111,11 @@ test('collected municipal logos are official website files, verified against the
       assert.match(asset.dateNote, /not a logo adoption date/)
     }
   }
-  // Located but not collected: Cloudflare refused the request, or only a guide was found.
+  // Previously blocked or guide-only leads can advance only when their own file is accepted.
+  const recoveredIds = new Set(RECOVERED_IDENTITY_BODIES.map((body) => body.id))
   for (const name of ['Vancouver', 'Kelowna', 'Kitimat']) {
     const subject = identitySubjectById(municipalSubjectId(name))
-    assert.equal(subject.hasArtwork, false, name)
-    assert.equal(subject.state, 'source-located', name)
+    assert.equal(subject.hasArtwork, recoveredIds.has(subject.id), name)
+    if (!subject.hasArtwork) assert.equal(subject.state, 'source-located', name)
   }
 })

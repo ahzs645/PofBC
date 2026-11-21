@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>AirCare vehicle emissions testing program in Metro Vancouver</title>
+<meta charset="UTF-8">
+<meta http-equiv="last-modified" content="Thu, 25 Jul 2013 12:13:14 GMT">
+<meta name="description" content="AirCare improves air quality in the Metro Vancouver area by providing emissions testing and promoting effective repairs to high polluting vehicles">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta name="author" content="Glenn Buholzer"> 
+<meta name="keywords" content="aircare,vehicle,emission,emissions,exhaust,vancouver,bc,pollution,inspection,testing,maintenance,repair,fix,carbon,hydrocarbon,oxides,nitrogen,opacity,air,care,quality">
+<meta name="verify-v1" content="R9XlXmv/bbjUsxzBDqqVP69JdG0FrsSI1jVjdkQ0tb4=">
+
+<!-- libraries and other javascripts -->
+<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery/plugins/combined-20130422.js"></script>
+<script type="text/javascript" src="js/swfobject/swfobject.js"></script>
+<script type="text/javascript">
+  swfobject.registerObject("hdrSwiff", "7");
+</script>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="css/styles.css?18047">
+<!--[if LTE IE 7]><link rel="stylesheet" type="text/css" href="css/styles_ie.css"><![endif]-->
+<style>
+#twitter_feed {
+    display:none;
+    position:absolute;
+    top:-290px;
+    right: 0px;
+	
+	color:#002673;
+	font-family:'Lucida Sans Unicode', Verdana, Arial, sans-serif;
+	font-size:75%;
+}
+</style>
+
+<!-- favicons -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" type="vnd.microsoft.icon" href="favicon.ico">
+<!-- 57 x 57 Android and iPhone 3 icon -->
+<link rel="apple-touch-icon" media="screen and (resolution: 163dpi)" href="icon57x57.png" />
+<!-- 114 x 114 iPhone 4 icon -->
+<link rel="apple-touch-icon" media="screen and (resolution: 326dpi)" href="icon114x114.png" />
+<!-- 57 x 57 Nokia icon -->
+<link rel="shortcut icon" href="icon57x57.png" />
+<!-- analytics -->
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-1266106-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</head>
+
+<body>
+
+<div id="rap">
+
+	<div id="header"><div id="bannerrapper">
+
+      <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="hdrSwiff" width="800" height="48">
+        <param name="movie" value="header.swf">
+		<param name="quality" value="autohigh">
+		<param name="wmode" value="opaque">	
+        <!--[if !IE]>-->
+        <object type="application/x-shockwave-flash" data="header.swf" width="800" height="48">
+ 		  <param name="quality" value="autohigh">
+		  <param name="wmode" value="opaque">	
+       <!--<![endif]-->
+          <img id="staticHeader" src="images/header.jpg" alt="AirCare Logo" width="800" height="48">
+        <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
+
+</div>
+</div>
+	
+	<div id="main">
+
+		<div id="menurapper"><ul id="navMenu">
+
+	<li><a class="first" href="index.php">Home</a></li>
+
+	<li><a class="trigger" href="inspinfo-overview.php">Inspection Info</a>
+		<ul>
+			<li><a href="inspinfo-locationsandhours.php" title="Locations &amp; Hours">Locations &amp; Hours</a></li>
+			<li><a href="inspinfo-waits.php" title="Current Wait Times">Current Wait Times</a></li>
+			<li><a href="inspinfo-desc.php" title="Description of the Tests">Description of the Tests</a></li>
+			<li><a href="inspinfo-standards.php" title="Inspection Standards">AirCare Standards</a></li>
+			<li><a href="inspinfo-get-results.php" title="Inspection Results">Test Results</a></li>
+			<li><a href="inspinfo-get-stats.php" title="Inspection Statistics">Statistics</a></li>
+		</ul>
+	</li>
+
+	<li><a class="trigger" href="repinfo-overview.php">Repair Info</a>
+		<ul>
+			<li><a href="repinfo-listings.php" title="Repair Centre Listings">Repair Centre Listings</a></li>
+			<li><a href="repinfo-whycertrepairs.php" title="Why Certified Repairs&#63;">Why Certified Repairs&#63;</a></li>
+			<li><a href="repinfo-ere-overview.php" title="Emissions Repairs Explained">Emissions Repairs Explained</a></li>
+			<li><a href="repinfo-glossary.php" title="Emissions Repair Glossary">Emissions Repair Glossary</a></li>
+			<li><a href="repinfo-dtcs.php" title="Diagnostic Trouble Codes">Diagnostic Trouble Codes</a></li>
+		</ul>
+	</li>
+	<li><a class="trigger" href="ap-overview.php">Emissions Info</a>
+		<ul>
+			<li><a href="ap-aircareworks.php" title="How AirCare Works">How AirCare Works</a></li>
+			<li><a href="ap-cleanairtips.php" title="Clean Air Tips">Clean Air Tips</a></li>
+			<li><a href="ap-ghg.php" title="Vehicles &amp;Greenhouse Gases">Greenhouse Gases</a></li>
+			<li><a href="ap-calc-select.php" title="Carbon Dioxide and Fuel Cost Calculators">CO<span class="atoms">2</span> Calculators</a></li>
+			<li><a href="ap-impacts.php" title="Vehicle Emissions Impacts">Emissions Impacts</a></li>
+			<li><a href="ap-visiblepolluters.php" title="Visible Polluters">Visible Polluters</a></li>
+		</ul>
+	</li>
+	<li><a class="trigger" href="newspubs-overview.php">News &amp; Publications</a>
+		<ul>
+			<li><a href="newspubs-whatsnew.php" title="What's New">What's New</a></li>
+			<li><a href="newspubs-facts.php" title="Facts About AirCare">Facts About AirCare</a></li>
+			<li><a href="newspubs-reports.php" title="Reports">Reports</a></li>
+			<li><a href="newspubs-e-news.php" title="E-News">E-News</a></li>
+			<li><a href="forthekids-overview.php" title="For The Kids - Pages To Colour">For The Kids</a></li>
+		</ul>
+	</li>
+	<li><a class="trigger" href="aboutus-overview.php">About Us</a>
+		<ul>
+			<li><a href='aboutus-qa.php' title='Questions &amp; Answers'>Questions &amp; Answers</a></li>
+			<li><a href='aboutus-employment.php' title='Employment'>Employment</a></li>
+			<li><a href='aboutus-links.php' title='Links'>Links</a></li>
+			<li><a href='aboutus-who.php' title='Who Are We&#63;'>Who Are We&#63;</a></li>
+			<li><a href='aboutus-contact.php' title='Contact Us'>Contact Us</a></li>
+		</ul>
+	</li>
+
+</ul>
+</div>
+
+		<div id="contentfull">
+		
+		<div id="homepicset">
+			<img id="home_montage" src="images/home/picset-01.jpg" alt="photo montage" width="528" height="171">
+			<br>
+			<img id="home_text" src="images/home/text.gif" alt="The Vehicle Emissions Testing Program for Vancouver and the Fraser Valley" width="469" height="84">
+		</div>
+
+		
+		<div id="leftcta">
+		
+			<!-- the first CTA as determined above -->
+			<h1 class='multiline first'><a href='newspubs-wn-news.php' class='noback'>Important News!</a></h1>
+				<ul class='cta'>
+					<li><a href='inspinfo-renewals.php' title=''>2014 Renewals</a></li>
+					<li><a href='newspubs-wn-news.php' title=''>What's New for 2014</a></li>
+					<li><a href='aboutus-qa.php' title='Questions &amp; Answers'>Questions &amp; Answers</a></li>
+				</ul>			
+			<!-- then the rest of the CTAs -->
+			<h1>Inspection Info</h1>
+			<ul class="cta">
+				<li><a href="inspinfo-locationsandhours.php" title="Inspection Centre Locations &amp; Hours">Locations &amp; Hours</a></li>
+				<li><a href="inspinfo-waits.php" title="Current Wait Times at AirCare Inspection Centres">Current Wait Times</a></li>
+				<li><a href="inspinfo-get-results.php" title="View Vehicle Inspection History">Detailed Test Results</a></li>
+			</ul>
+			
+			<h1>AirCare Works!</h1>
+			<ul class="cta">
+				<li><a href="ap-aircareworks.php" title="Link to page explaining how AirCare works to reduce vehicle emissions in our region">Learn How</a></li>
+				<li><a href="newspubs-reports.php" title="View List of Program Reports">Reports &amp; Analysis</a></li>
+				<li><a href="repinfo-overview.php" title="Learn about emission repairs">Shops &amp; Repair Info</a></li>
+			</ul>
+				
+			<h1>Buying a Vehicle&#63;</h1>
+			<ul class="cta" style="border-bottom: none;">
+				<li><a href="inspinfo-get-results.php" title="View Vehicle Inspection History">Inspection History</a></li>
+				<li><a href="ap-calc-select.php" title="Vehicle CO2 Emission Calculators">CO<span class="atoms">2</span> Calculators</a></li>
+				<!--<li><a href="#" title="View On-Board Computer Information">OBD Info</a></li>-->
+				<li><a href="repinfo-ere-warranties-1.php" title="View Vehicle Emissions Warranty Information">Warranty Info</a></li>
+			</ul>
+			<!--
+			<div>
+				<a id="cta-04" class="image" href="ap-aircareworks.php" title="Link to page explaining how AirCare works to reduce vehicle emissions in our region"></a>
+			</div>
+			-->
+			
+		</div>
+		
+		<div style='display:none;'>ackackadack</div> 
+
+		</div><!-- end of content div -->
+		
+	</div><!-- end of main div -->
+
+</div>
+
+<div id="footer">
+	<div id="foot">
+		<div id="footer_upper">
+			<div id="footer_upper_left">
+				<h2 class='foot'>Did You Know&#63;</h2>&nbsp;&nbsp;AirCare has reduced vehicle emissions in the region by 31&#37;.&nbsp;&nbsp;<a href='newspubs-reports.php'>Read More . . .</a>			</div>
+			<div id="footer_upper_right">
+				<a href="http://www.twitter.com/AirCareBC" title="Follow AirCareBC on Twitter"><img id="footertwit" class="icon" src="images/twitter-04.png" alt="Follow AirCareBC on Twitter" width="40" height="40"></a>
+			</div>
+		</div>
+		<div id="footer_lower">
+			<div id="footer_lower_left">
+			Copyright &#169; 2014 <a href="http://www.translink.ca/en/About-Us/Corporate-Overview/Operating-Companies/AirCare.aspx" title="Link to TransLink website">
+			Pacific Vehicle Testing Technologies Ltd.</a> &#45;  All Rights Reserved.
+			</div>
+			<div id="footer_lower_right">
+				<a href="sitemap.php" title="Link to Site Index">Site Index</a>&nbsp;&nbsp;|&nbsp;
+				<a href="aboutus-qa.php" title="Link to FAQs page">FAQs</a>&nbsp;&nbsp;|&nbsp;
+				<a href="aboutus-contact.php" title="Link to Contact Us page">Contact Us</a>&nbsp;&nbsp;|&nbsp;
+				<a href="privacy.php" title="Link to Privacy page">Privacy</a>&nbsp;&nbsp;|&nbsp;
+				<a href="http://www.twitter.com/AirCareBC" title="Follow AirCareBC on Twitter">Follow Us On Twitter</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Acquired evidence is hash-checked byte for byte. Preserve published line endings
+# and whitespace instead of applying source-code normalization to archived files.
+public/identity-recovered/** -text -whitespace
+research/identity/missing-recovery-2026-11-20/research-evidence/** -text -whitespace
