@@ -31,6 +31,7 @@ const DRAWINGS = {
   'be-careful': read('./forest-service/be-careful.svg'),
   'coons-age': read('./forest-service/coons-age.svg'),
   'prevent-forest-fires': read('./forest-service/prevent-forest-fires.svg'),
+  'matches-not-for-children': read('./forest-service/matches-not-for-children.svg'),
   'go-bc-ferries': read('./bc-ferries/go-bc-ferries.svg'),
   'queen-of-sidney': read('./bc-ferries/queen-of-sidney.svg'),
   'wildlife-trees': read('./wildlife-trees/wildlife-trees.svg'),
@@ -311,6 +312,7 @@ test('no card dates a piece more firmly than its evidence', () => {
     assert.match(POSTERS[id].when, /^Undated/, `${id}: ${POSTERS[id].when}`)
   }
   assert.match(POSTERS['coastal-forest'].when, /1979–86 or 1988–91/)
+  assert.match(POSTERS['matches-not-for-children'].when, /^About 1966–67, from its centenary captions$/)
   // Dated by a document, and saying which.
   assert.equal(POSTERS['be-careful'].when, '1960, from the Protection Bulletin')
   assert.equal(POSTERS['coons-age'].when, '2 December 1971, Gulf Islands Driftwood')
@@ -390,9 +392,9 @@ test('neighbours step through the posters in catalogue order', () => {
   assert.deepEqual(neighbours(ids.at(-1)), { previous: ids.at(-2), next: null })
 })
 
-// The pieces imported from supplied packages: the 1960 decal, the 1971 advertisement and the
-// Prevent Forest Fires poster.
-const IMPORTED = ['be-careful', 'coons-age', 'prevent-forest-fires']
+// The pieces imported from supplied packages: the 1960 decal, the 1971 advertisement, and the
+// Prevent Forest Fires and matches posters.
+const IMPORTED = ['be-careful', 'coons-age', 'prevent-forest-fires', 'matches-not-for-children']
 
 test('the imported pieces say nothing with an em dash, on the card, in the panels, the story or the drawing’s title', () => {
   const strings = (value) => typeof value === 'string' ? [value] : Array.isArray(value) ? value.flatMap(strings) : value && typeof value === 'object' ? Object.values(value).flatMap(strings) : []
@@ -409,6 +411,7 @@ test('the imported drawings keep their ids to themselves', () => {
   for (const id of ids(DRAWINGS['be-careful'])) assert.ok(id.startsWith('bcc-'), `be-careful: ${id}`)
   for (const id of ids(DRAWINGS['coons-age'])) assert.ok(/^(coon-|ad-emblem-|forest-service-emblem$)/.test(id), `coons-age: ${id}`)
   for (const id of ids(DRAWINGS['prevent-forest-fires'])) assert.ok(id.startsWith('pff-'), `prevent-forest-fires: ${id}`)
+  for (const id of ids(DRAWINGS['matches-not-for-children'])) assert.ok(id.startsWith('mnc-'), `matches-not-for-children: ${id}`)
   for (const piece of IMPORTED) {
     const all = Object.entries(DRAWINGS).filter(([id]) => id !== piece).flatMap(([, svg]) => ids(svg))
     for (const id of ids(DRAWINGS[piece])) {
@@ -444,6 +447,35 @@ test('Prevent Forest Fires leads to its series, the fire-prevention pieces and t
   assert.ok(storySources.some(({ label }) => label.startsWith('H. R. MacMillan')))
   assert.ok(storySources.some(({ href }) => href === 'https://www.for.gov.bc.ca/hfd/library/documents/bib30294.pdf'))
   assert.match(parts.slogan.story.join(' '), /neither mentions this poster/)
+})
+
+test('Matches Are Not for Children!! is fetched only when opened, and every reference in it resolves', () => {
+  const svg = DRAWINGS['matches-not-for-children']
+  assert.equal(POSTERS['matches-not-for-children'].prefetch, false, 'a 4 MB drawing fetched on spec')
+  assert.ok(svg.length < 4.5e6, `the drawing is ${(svg.length / 1e6).toFixed(2)} MB`)
+  assert.ok(!/<image\b|base64,|inkscape:/.test(svg), 'a picture or editor markup left in the drawing')
+  for (const m of svg.matchAll(/url\(#([^)]+)\)/g)) assert.ok(hasId(svg, m[1]), `no #${m[1]}`)
+  for (const name of /aria-labelledby="([^"]+)"/.exec(svg)[1].split(' ')) assert.ok(hasId(svg, name), `no #${name}`)
+  // Its eight layers.
+  for (const layer of ['painted-background', 'paper-reserves', 'matchstick-illustration', 'headline-lettering', 'forest-service-oval', 'footer-lettering', 'centennial-caption', 'publication-marks']) {
+    assert.ok(hasId(svg, `mnc-${layer}`), `no ${layer} layer`)
+  }
+  // The parts found by the start of an id find something.
+  for (const [partId, { layer }] of Object.entries(FOREST_SERVICE_POSTERS['matches-not-for-children'].parts)) {
+    for (const [, start] of (layer ?? '').matchAll(/\[id\^="([\w-]+)"\]/g)) assert.ok(svg.includes(`id="${start}`), `${partId}: no id starts ${start}`)
+  }
+  // The captions that date it.
+  assert.match(svg, /aria-label="CENTENARY OF THE CONFEDERATION OF CANADA"/)
+  assert.match(svg, /aria-label="1966"/)
+})
+
+test('the matches poster’s seal and its logo point at each other', () => {
+  const seal = FOREST_LOGOS.find(({ id }) => id === 'forest-service-one-ink-oval')
+  assert.deepEqual(seal.seenOn.map(({ to }) => [to.poster, to.part]), [['matches-not-for-children', 'seal']])
+  assert.deepEqual(postersForLogo('forest-service-one-ink-oval'), ['matches-not-for-children'])
+  const links = FOREST_SERVICE_POSTERS['matches-not-for-children'].parts.seal.panel.blocks.flatMap((block) => block.links ?? [])
+  assert.ok(links.some(({ to }) => to.view === 'internal' && to['internal-logo'] === 'forest-service-one-ink-oval'), 'the seal does not link to its logo')
+  assert.ok(hasId(DRAWINGS['matches-not-for-children'], 'mnc-forest-service-oval'))
 })
 
 test('a part is found by its box, its shapes, or its lettering and the gaps between', () => {

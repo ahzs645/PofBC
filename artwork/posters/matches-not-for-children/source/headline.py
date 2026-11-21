@@ -1,0 +1,92 @@
+"""Reconstructed sign lettering from manually authored Bezier masters.
+No source pixels, bitmap tracing or threshold contours are used to create paths.
+Bounding boxes were measured from the supplied, perspective-normalized photo.
+"""
+from pathlib import Path
+import xml.etree.ElementTree as ET
+from svgpathtools import parse_path
+
+INK='#1d2424'
+GLYPHS={
+'M': '''M 8,1 C 12,0 17,-1 19,1 C 21,3 21,13 22,22 C 25,50 27,74 34,97 C 40,74 46,42 51,10 Q 52,2 57,1 L 65,0 Q 70,0 70,6 L 70,115 Q 70,120 66,120 L 60,120 Q 55,120 55,115 L 55,85 C 49,108 42,122 35,122 C 26,122 22,103 17,70 L 17,114 Q 17,120 12,121 L 6,121 Q 0,120 0,115 C 0,83 1,52 3,26 L 5,7 Q 5,2 8,1 Z''',
+'A': '''M 1,119 Q -2,118 0,109 L 15,13 Q 17,4 23,2 L 31,0 Q 36,0 38,8 L 47,70 L 51,70 Q 56,70 54,76 Q 53,82 48,84 L 53,114 Q 54,119 48,120 L 41,120 Q 37,120 37,115 L 33,87 L 20,87 L 16,115 Q 15,121 10,121 Z M 23,72 L 30,42 L 32,72 Z''',
+'T': '''M 5,1 C 18,0 33,1 43,1 Q 48,1 47,6 L 46,10 Q 45,14 41,14 L 31,14 L 28,114 Q 28,119 24,120 L 17,121 Q 10,120 11,114 L 16,15 L 4,14 Q -1,14 0,9 L 1,4 Q 1,1 5,1 Z''',
+'C': '''M 34,3 C 12,-7 3,13 1,46 C -3,85 -1,111 17,121 C 30,128 44,110 49,90 Q 51,83 47,82 Q 44,81 42,88 C 34,107 26,114 21,107 C 13,97 14,66 18,37 C 20,18 24,10 29,12 C 35,13 35,19 34,29 L 32,51 Q 31,57 37,57 Q 45,58 47,52 C 51,25 49,9 34,3 Z''',
+'H': '''M 12,1 L 17,1 Q 22,1 22,7 L 19,57 L 38,57 L 40,8 Q 40,2 45,1 L 50,1 Q 55,1 55,7 L 53,114 Q 53,120 48,120 L 42,120 Q 38,120 38,115 L 38,71 L 19,72 L 18,115 Q 18,120 14,120 L 6,120 Q 2,120 3,114 L 4,72 L 0,71 Q -4,70 -2,65 L -1,61 Q 0,58 5,59 L 7,8 Q 7,1 12,1 Z''',
+'E': '''M 11,2 C 21,0 34,1 43,0 Q 48,0 46,7 Q 45,13 40,14 L 22,15 L 18,57 L 40,57 Q 45,57 43,63 Q 42,69 36,70 L 17,71 L 16,102 Q 15,107 21,107 L 38,106 Q 44,104 43,111 Q 42,118 35,119 C 20,123 7,121 3,112 Q 1,108 2,101 L 4,72 L 0,71 Q -3,70 -2,65 L 0,61 Q 1,58 5,59 L 7,11 Q 7,4 11,2 Z''',
+'S': '''M 39,3 C 23,-7 7,3 3,26 C -2,45 0,53 12,69 L 32,95 C 38,105 34,114 29,114 C 24,113 16,104 11,101 Q 8,98 5,102 L 3,109 Q 1,112 4,115 C 16,126 24,128 34,123 C 49,117 55,104 47,91 L 20,55 C 14,47 12,40 15,28 C 18,14 23,11 29,14 C 35,17 35,33 34,48 Q 33,55 39,54 L 45,53 Q 51,52 52,44 C 55,20 50,8 39,3 Z''',
+'R': '''M 3,120 Q -1,120 0,113 L 2,10 Q 2,5 9,2 C 23,-5 40,3 46,20 C 55,47 48,70 30,82 C 37,91 46,104 49,115 Q 51,121 44,122 L 38,122 Q 34,121 32,115 C 27,103 20,95 15,89 L 15,115 Q 15,121 10,121 Z M 16,14 L 15,73 C 27,66 32,54 32,37 C 32,22 25,12 16,14 Z''',
+'N': '''M 3,120 Q -1,120 0,113 L 4,11 Q 4,3 10,2 L 16,1 Q 20,1 21,8 L 34,95 C 38,76 39,42 39,9 Q 39,3 44,1 Q 51,-1 52,5 L 53,35 C 53,70 51,102 45,115 Q 43,121 37,121 L 32,122 Q 27,121 25,113 C 19,94 15,69 14,51 L 14,115 Q 14,120 9,121 Z''',
+'O': '''M 27,0 C 9,-2 2,23 0,61 C -3,101 5,120 22,122 C 42,124 49,99 49,60 C 51,23 44,2 27,0 Z M 26,13 C 21,13 17,34 16,59 C 13,90 15,108 22,109 C 29,110 32,90 33,63 C 35,34 32,14 26,13 Z''',
+'F': '''M 8,1 C 17,0 31,1 37,1 Q 44,1 43,6 Q 42,12 35,13 L 19,14 L 18,47 L 34,48 Q 41,48 40,54 Q 40,60 32,61 L 17,63 L 16,109 Q 15,116 10,117 L 6,117 Q 0,117 0,111 L 2,9 Q 2,1 8,1 Z''',
+'I': '''M 6,1 L 13,0 Q 18,0 18,6 L 17,107 Q 17,113 12,114 L 6,115 Q 0,115 0,109 L 0,8 Q 0,2 6,1 Z''',
+'L': '''M 5,1 L 12,0 Q 17,0 17,7 L 15,100 L 34,99 Q 38,98 38,103 L 38,107 Q 38,112 33,113 C 23,117 13,118 5,114 Q -2,111 -2,99 L 0,9 Q 0,1 5,1 Z''',
+'D': '''M 3,117 Q 0,116 0,110 L 2,10 Q 2,4 9,2 C 32,-9 49,4 52,43 C 56,86 42,118 18,119 Z M 18,15 L 16,105 C 31,100 38,73 35,49 C 33,27 27,11 18,15 Z''',
+'!stem': '''M 16,0 Q 24,-1 25,7 L 11,90 Q 10,96 5,95 L 2,93 Q -1,91 0,84 L 11,8 Q 12,1 16,0 Z''',
+'!dot': '''M 7,0 L 14,0 Q 20,1 19,6 L 18,18 Q 17,26 12,26 L 6,26 Q 0,25 0,20 L 1,7 Q 2,0 7,0 Z''',
+}
+# Intentional occurrence variants preserve the uneven lettering of the source.
+GLYPHS['A_leftbar']="""M 4,117 Q 0,117 1,110 L 12,78 L 3,78 Q -1,77 0,71 Q 1,66 6,66 L 13,66 L 21,9 Q 22,2 29,1 L 35,0 Q 41,0 41,6 L 53,111 Q 54,117 49,117 L 44,117 Q 40,117 39,113 L 35,81 L 21,81 L 16,112 Q 15,117 10,117 Z M 25,67 L 30,38 L 32,67 Z"""
+GLYPHS['T_narrow']=GLYPHS['T'].replace('31,14','28,14').replace('28,114','25,114').replace('28,119 24,120','25,119 21,120').replace('17,121','15,121')
+GLYPHS['C_lower']=GLYPHS['C'].replace('49,90 Q 51,83 47,82 Q 44,81 42,88', '47,93 Q 49,88 46,87 Q 43,86 41,92')
+GLYPHS['H_lower']="""M 9,0 L 13,0 Q 17,0 17,7 L 16,55 L 30,55 L 32,8 Q 33,1 39,0 L 44,0 Q 49,1 49,7 L 47,108 Q 47,115 42,115 L 35,115 Q 31,115 31,109 L 31,69 L 15,69 L 14,108 Q 14,115 8,115 L 4,115 Q 0,115 0,109 L 3,10 Q 3,1 9,0 Z"""
+GLYPHS['E_straight']="""M 7,1 L 39,0 Q 43,0 42,7 Q 41,12 37,13 L 19,14 L 18,62 L 34,62 Q 39,62 37,69 Q 36,76 31,76 L 17,76 L 17,99 Q 17,104 22,103 L 34,102 Q 39,101 37,108 Q 36,114 28,114 C 13,119 5,115 5,107 L 4,76 L 0,75 Q -2,74 -1,69 L 0,65 Q 1,62 4,62 L 4,7 Q 4,1 7,1 Z"""
+GLYPHS['E_lower']="""M 7,1 L 40,1 Q 44,2 43,7 Q 42,15 37,15 L 19,15 L 15,54 L 37,52 Q 43,52 42,58 Q 42,66 36,67 L 15,69 L 15,92 Q 15,99 20,99 L 38,97 Q 43,96 42,102 Q 41,111 35,113 C 18,117 6,115 2,107 Q 0,102 0,93 L 3,10 Q 3,2 7,1 Z"""
+GLYPHS['R_wideleg']=GLYPHS['R'].replace('40,3 46,20','35,3 41,20').replace('55,47 48,70','50,47 43,70')
+GLYPHS['N_lower']="""M 3,115 Q 0,114 0,108 L 3,11 Q 3,3 10,2 L 17,1 Q 21,1 23,8 C 27,26 36,65 48,96 C 51,82 52,52 51,9 Q 51,2 57,0 L 62,0 Q 67,1 67,8 C 71,52 67,93 59,109 C 56,115 51,117 45,116 Q 41,116 37,107 C 27,85 20,55 15,35 L 15,108 Q 15,115 9,115 Z"""
+# Measured headline extents on the 1000 x 1400 reference plane.
+LAYOUT=[
+ ('line1-MATCHES','M',(55,1045,121,1161)),
+ ('line1-MATCHES','A',(120,1045,173,1161)),
+ ('line1-MATCHES','T_narrow',(165,1046,210,1160)),
+ ('line1-MATCHES','C',(204,1045,253,1162)),
+ ('line1-MATCHES','H',(252,1046,305,1159)),
+ ('line1-MATCHES','E',(308,1045,355,1161)),
+ ('line1-MATCHES','S',(358,1043,409,1164)),
+ ('line1-ARE','A_leftbar',(442,1044,496,1161)),
+ ('line1-ARE','R',(501,1043,546,1161)),
+ ('line1-ARE','E_straight',(544,1044,586,1159)),
+ ('line1-NOT','N',(616,1046,670,1161)),
+ ('line1-NOT','O',(670,1044,716,1161)),
+ ('line1-NOT','T',(715,1045,755,1161)),
+ ('line2-FOR','F',(59,1190,101,1303)),
+ ('line2-FOR','O',(98,1187,152,1306)),
+ ('line2-FOR','R_wideleg',(156,1188,207,1305)),
+ ('line2-CHILDREN','C_lower',(257,1188,310,1305)),
+ ('line2-CHILDREN','H_lower',(311,1189,360,1303)),
+ ('line2-CHILDREN','I',(367,1190,383,1301)),
+ ('line2-CHILDREN','L',(391,1190,429,1302)),
+ ('line2-CHILDREN','D',(435,1189,485,1303)),
+ ('line2-CHILDREN','R',(492,1188,537,1303)),
+ ('line2-CHILDREN','E_lower',(542,1190,586,1302)),
+ ('line2-CHILDREN','N_lower',(591,1187,660,1302)),
+ ('line2-exclamation','!stem',(696,1174,721,1269)),
+ ('line2-exclamation','!stem',(726,1174,752,1270)),
+ ('line2-exclamation','!dot',(687,1276,706,1303)),
+ ('line2-exclamation','!dot',(718,1277,735,1303)),
+]
+
+def headline_group():
+ out=['<g id="headline" fill="'+INK+'" fill-rule="evenodd" aria-label="MATCHES ARE NOT FOR CHILDREN !!">']
+ previous=None
+ for i,(word,ch,(x,y,x1,y1)) in enumerate(LAYOUT):
+  if word!=previous:
+   if previous: out.append('</g>')
+   out.append(f'<g id="{word}">')
+   previous=word
+  path=GLYPHS[ch]
+  a,b,c,d=parse_path(path).bbox()
+  sx=(x1-x)/(b-a); sy=(y1-y)/(d-c)
+  tx=x-a*sx;ty=y-c*sy
+  out.append(f'<path id="headline-glyph-{i:02d}-{ch.replace("!", "exclamation-")}" data-letter="{ch.split("_")[0]}" data-master="{ch}" transform="matrix({sx:.7f} 0 0 {sy:.7f} {tx:.7f} {ty:.7f})" d="{path}"/>')
+ if previous: out.append('</g>')
+ out.append('</g>')
+ return '\n'.join(out)
+
+if __name__=='__main__':
+ root=Path(__file__).resolve().parent
+ svg='<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1400" viewBox="0 0 1000 1400"><title>Custom reconstructed headline - BC Forest Service poster</title><desc>Manually designed Bezier letter masters with individual glyph placement; not a bitmap trace or a claimed historical typeface.</desc>'+headline_group()+'</svg>'
+ (root/'headline.svg').write_text(svg)
+ detail='<svg xmlns="http://www.w3.org/2000/svg" width="1520" height="640" viewBox="30 1000 760 320"><rect x="30" y="1000" width="760" height="320" fill="#fffdf5"/>'+headline_group()+'</svg>'
+ (root/'headline-detail-vector.svg').write_text(detail)
+ print(root/'headline.svg')

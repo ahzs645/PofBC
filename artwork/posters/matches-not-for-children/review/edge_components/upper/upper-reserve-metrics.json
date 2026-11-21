@@ -1,0 +1,96 @@
+{
+  "reference_mask": "work/revision2/reference-reserve-mask-root.png",
+  "construction": "Manually selected landmarks and authored Bezier curves. No masks or image contours generate the paths.",
+  "comparison": "Exact fixed V2 target mask and original 1000 x 1400 perspective registration. All three other reserve components unchanged. Distances in normalized pixels.",
+  "limitations": "The photographic edge includes print grain, camera blur and colour fringe. Scores describe photo fit, not physical dimensions or authenticity.",
+  "regions": {
+    "upper_beam_and_brace": {
+      "bounds": [
+        220,
+        38,
+        905,
+        515
+      ],
+      "v2": {
+        "intersection_over_union": 0.9590505753613645,
+        "mean_symmetric_edge_distance": 1.5020508213532304,
+        "edge_distance_p95": 4.0,
+        "extra_white_pixels": 3916,
+        "missing_white_pixels": 1308
+      },
+      "v3_upper_only": {
+        "intersection_over_union": 0.9594920267288461,
+        "mean_symmetric_edge_distance": 1.6208956390810627,
+        "edge_distance_p95": 4.0,
+        "extra_white_pixels": 4146,
+        "missing_white_pixels": 1031
+      }
+    },
+    "top_beam": {
+      "bounds": [
+        220,
+        38,
+        905,
+        182
+      ],
+      "v2": {
+        "intersection_over_union": 0.9656160933253795,
+        "mean_symmetric_edge_distance": 1.401036483535704,
+        "edge_distance_p95": 3.605551275463989,
+        "extra_white_pixels": 1504,
+        "missing_white_pixels": 571
+      },
+      "v3_upper_only": {
+        "intersection_over_union": 0.9641051065939514,
+        "mean_symmetric_edge_distance": 1.8522088663497647,
+        "edge_distance_p95": 3.605551275463989,
+        "extra_white_pixels": 1666,
+        "missing_white_pixels": 506
+      }
+    },
+    "triangle_opening": {
+      "bounds": [
+        580,
+        145,
+        795,
+        340
+      ],
+      "v2": {
+        "intersection_over_union": 0.9153925522934059,
+        "mean_symmetric_edge_distance": 2.236026552959086,
+        "edge_distance_p95": 7.099074759677951,
+        "extra_white_pixels": 1262,
+        "missing_white_pixels": 542
+      },
+      "v3_upper_only": {
+        "intersection_over_union": 0.920394767468926,
+        "mean_symmetric_edge_distance": 1.9279665422435193,
+        "edge_distance_p95": 5.830951894845301,
+        "extra_white_pixels": 1421,
+        "missing_white_pixels": 289
+      }
+    },
+    "brace_lower_edge": {
+      "bounds": [
+        495,
+        180,
+        795,
+        475
+      ],
+      "v2": {
+        "intersection_over_union": 0.9299729364005412,
+        "mean_symmetric_edge_distance": 2.190614118598782,
+        "edge_distance_p95": 7.0,
+        "extra_white_pixels": 1434,
+        "missing_white_pixels": 429
+      },
+      "v3_upper_only": {
+        "intersection_over_union": 0.9359118929484288,
+        "mean_symmetric_edge_distance": 1.825310897037618,
+        "edge_distance_p95": 5.656854249492381,
+        "extra_white_pixels": 1434,
+        "missing_white_pixels": 271
+      }
+    }
+  }
+}

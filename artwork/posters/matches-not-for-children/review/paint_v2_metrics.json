@@ -1,0 +1,148 @@
+{
+  "mask_definition": {
+    "photo_conditions": "R>135; B<105; max(R,G,B)-min(R,G,B)>75",
+    "interior_margin_px": 8,
+    "excluded_header_y": [
+      0,
+      65
+    ],
+    "excluded_footer_y": [
+      1325,
+      1400
+    ],
+    "excluded_text_box": [
+      30,
+      1015,
+      778,
+      1325
+    ],
+    "excluded_seal_box": [
+      832,
+      1115,
+      998,
+      1325
+    ],
+    "pixels": 698156
+  },
+  "palette_rgb_offset": [
+    -7,
+    -21,
+    -10
+  ],
+  "all_paint": {
+    "v1_mean_absolute_rgb_error": 13.932484525903476,
+    "v2_mean_absolute_rgb_error": 13.253435717327742,
+    "v1_broad_orange_iou": 0.7506779792344646,
+    "v2_broad_orange_iou": 0.7553581867209745
+  },
+  "regions": [
+    {
+      "name": "Upper-left paint pull",
+      "box": [
+        15,
+        240,
+        185,
+        515
+      ],
+      "pixels": 46750,
+      "reference_median_rgb": [
+        240.0,
+        66.0,
+        7.0
+      ],
+      "v1_mean_absolute_rgb_error": 9.415614973262032,
+      "v2_mean_absolute_rgb_error": 10.65663458110517
+    },
+    {
+      "name": "Central paint mass",
+      "box": [
+        430,
+        290,
+        745,
+        700
+      ],
+      "pixels": 118698,
+      "reference_median_rgb": [
+        242.0,
+        89.0,
+        9.0
+      ],
+      "v1_mean_absolute_rgb_error": 12.563143439653574,
+      "v2_mean_absolute_rgb_error": 13.39769555229799
+    },
+    {
+      "name": "Lower central stroke",
+      "box": [
+        540,
+        690,
+        760,
+        1015
+      ],
+      "pixels": 71119,
+      "reference_median_rgb": [
+        241.0,
+        112.0,
+        18.0
+      ],
+      "v1_mean_absolute_rgb_error": 13.080967580159076,
+      "v2_mean_absolute_rgb_error": 15.530045885534573
+    },
+    {
+      "name": "Quiet yellow field",
+      "box": [
+        180,
+        200,
+        290,
+        470
+      ],
+      "pixels": 29700,
+      "reference_median_rgb": [
+        243.0,
+        193.0,
+        8.0
+      ],
+      "v1_mean_absolute_rgb_error": 7.060875420875421,
+      "v2_mean_absolute_rgb_error": 8.454298540965208
+    },
+    {
+      "name": "Right paint band",
+      "box": [
+        870,
+        70,
+        995,
+        1110
+      ],
+      "pixels": 120539,
+      "reference_median_rgb": [
+        241.0,
+        180.0,
+        15.0
+      ],
+      "v1_mean_absolute_rgb_error": 14.178318497194546,
+      "v2_mean_absolute_rgb_error": 12.910065068843556
+    },
+    {
+      "name": "Lower paint/scumbles",
+      "box": [
+        90,
+        890,
+        520,
+        1015
+      ],
+      "pixels": 51853,
+      "reference_median_rgb": [
+        233.0,
+        158.0,
+        9.0
+      ],
+      "v1_mean_absolute_rgb_error": 23.173136880540504,
+      "v2_mean_absolute_rgb_error": 19.03290712848501
+    }
+  ],
+  "limitations": [
+    "RGB error is a photo-fitting diagnostic in 8-bit display channels, not a calibrated pigment measurement or an accuracy percentage.",
+    "Palette was fitted on this mask, so reported error is a fit residual rather than held-out validation.",
+    "Texture is newly synthesized from hand-authored geometry; exact historical grain and concealed paint remain inferred."
+  ],
+  "orange_mask_definition": "Gaussian-smooth G/max(R,1) by sigma=6 px; orange if ratio<0.50; evaluate only on the same fixed background mask."
+}

@@ -19,7 +19,7 @@ export const SERIES = [
     id: 'forest-service',
     title: 'British Columbia Forest Service',
     kind: 'Campaign posters, signs and advertising',
-    posters: ['reward-living-forest', 'enjoy-protect-forests', 'prevent-forest-fires', 'coons-age']
+    posters: ['reward-living-forest', 'enjoy-protect-forests', 'prevent-forest-fires', 'matches-not-for-children', 'coons-age']
   },
   {
     id: 'fire-prevention',
@@ -119,6 +119,22 @@ export const POSTERS = {
     // The package's 250 × 360 mm, an export size rather than a measurement of the print.
     page: { w: 9.843, h: 14.173 },
     // 1.6 MB: 7,821 paths of woodcut trees, flames and timber.
+    prefetch: false
+  },
+  'matches-not-for-children': {
+    id: 'matches-not-for-children',
+    issuer: 'BC Forest Service',
+    subject: 'Fire prevention',
+    format: 'Poster',
+    blurb: 'A gallows built of matches, and a match figure hanging from it: a warning to keep matches from children.',
+    series: 'forest-service',
+    title: 'Matches Are Not for Children!!',
+    when: 'About 1966–67, from its centenary captions',
+    made: 'vector',
+    view: { x: 0, y: 0, w: 1000, h: 1400 },
+    // 10 × 14 in, an export size in the drawing's 5:7, not a measurement of the print.
+    page: { w: 10, h: 14 },
+    // 4.2 MB, nearly all of it the paint's 740,000 outline points.
     prefetch: false
   },
   'dont-drop-it': {

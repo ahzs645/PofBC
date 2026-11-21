@@ -71,6 +71,6 @@ Updated 2026-11-20.
 
 ## In this repository
 
-The site shows `Forest_Service_BC_Reconstructed.svg` as `src/internal/forest-service-yellow-sky.svg`, with its title and description reworded. Its reference is a generated image, not a photograph, so the page says so; the earlier redraw from the two photographs stays on the page as a study (`src/internal/forest-service-yellow-sky-photo.svg`, package in `../forest-service-yellow-sky/`).
+The site shows `Forest_Service_BC_Reconstructed.svg` as `src/internal/forest-service-yellow-sky.svg`, with its title and description reworded. Its reference is a generated image, not a photograph, so the page says so. The earlier redraw from the two photographs is no longer shown; its package stays in `../forest-service-yellow-sky/`.
 
 Left out, as from every source package here: the PNG previews and comparisons (`Forest_Service_BC_Comparison.png`, `_Overlay.png`, `_Refinement_Comparison.png`, `_Refinement_Details.png`, `_Transparent.png`, `_Preview.png`, and the PNGs in `review/`), which show the generated reference or are raster previews.

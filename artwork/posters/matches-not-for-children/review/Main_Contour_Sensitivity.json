@@ -1,0 +1,188 @@
+{
+  "purpose": "Supplementary sensitivity check; the primary report retains all constructed flecks against the unchanged original reference mask.",
+  "method": "Retain only the largest 4-connected component in each of reference, V2 and V3 masks, then apply the unchanged comparison scope and distance metrics. No photograph or vector geometry is modified.",
+  "component_areas_before_filtering": {
+    "reference": [
+      226307
+    ],
+    "revision2": [
+      229339
+    ],
+    "revision3": [
+      226744,
+      151,
+      20,
+      9
+    ]
+  },
+  "regions": {
+    "All visible illustration reserve": {
+      "bounds": [
+        145,
+        35,
+        925,
+        1250
+      ],
+      "previous": {
+        "intersection_over_union": 0.9585870678589488,
+        "extra_white_pixels": 7338,
+        "missing_white_pixels": 2244,
+        "reference_area_pixels": 224039,
+        "candidate_area_pixels": 229133,
+        "mean_symmetric_edge_distance_pixels": 1.4108279364421226,
+        "edge_distance_p95_pixels": 4.0,
+        "boundary_within_1px": {
+          "precision": 0.6399478657543174,
+          "recall": 0.607540173053152,
+          "f1": 0.6233230700585141
+        },
+        "boundary_within_2px": {
+          "precision": 0.8471814923427826,
+          "recall": 0.8079419035846724,
+          "f1": 0.8270965527879376
+        },
+        "boundary_within_3px": {
+          "precision": 0.9379276637341154,
+          "recall": 0.9003399258343634,
+          "f1": 0.918749509588646
+        }
+      },
+      "revised": {
+        "intersection_over_union": 0.967035557592823,
+        "extra_white_pixels": 5026,
+        "missing_white_pixels": 2525,
+        "reference_area_pixels": 224039,
+        "candidate_area_pixels": 226540,
+        "mean_symmetric_edge_distance_pixels": 1.1003717072801251,
+        "edge_distance_p95_pixels": 3.0,
+        "boundary_within_1px": {
+          "precision": 0.7417582417582418,
+          "recall": 0.728831891223733,
+          "f1": 0.7352382557813296
+        },
+        "boundary_within_2px": {
+          "precision": 0.8930926216640502,
+          "recall": 0.8787082818294191,
+          "f1": 0.885842062219991
+        },
+        "boundary_within_3px": {
+          "precision": 0.9593406593406594,
+          "recall": 0.9448393077873919,
+          "f1": 0.9520347657798609
+        }
+      }
+    },
+    "Upper beam and diagonal brace": {
+      "bounds": [
+        220,
+        40,
+        905,
+        510
+      ],
+      "previous": {
+        "intersection_over_union": 0.9590735114232727,
+        "extra_white_pixels": 3903,
+        "missing_white_pixels": 1283,
+        "reference_area_pixels": 122812,
+        "candidate_area_pixels": 125432,
+        "mean_symmetric_edge_distance_pixels": 1.501287339397743,
+        "edge_distance_p95_pixels": 4.0,
+        "boundary_within_1px": {
+          "precision": 0.6170006464124111,
+          "recall": 0.5768535262206148,
+          "f1": 0.5962520494080521
+        },
+        "boundary_within_2px": {
+          "precision": 0.8500323206205559,
+          "recall": 0.7986738999397227,
+          "f1": 0.8235531838463284
+        },
+        "boundary_within_3px": {
+          "precision": 0.938267614738203,
+          "recall": 0.8918022905364678,
+          "f1": 0.9144450772596382
+        }
+      },
+      "revised": {
+        "intersection_over_union": 0.9623983498897556,
+        "extra_white_pixels": 3725,
+        "missing_white_pixels": 1033,
+        "reference_area_pixels": 122812,
+        "candidate_area_pixels": 125504,
+        "mean_symmetric_edge_distance_pixels": 1.325662853256518,
+        "edge_distance_p95_pixels": 3.605551275463989,
+        "boundary_within_1px": {
+          "precision": 0.6530303030303031,
+          "recall": 0.646172393007836,
+          "f1": 0.649583248099011
+        },
+        "boundary_within_2px": {
+          "precision": 0.8454545454545455,
+          "recall": 0.8378541289933695,
+          "f1": 0.8416371786566489
+        },
+        "boundary_within_3px": {
+          "precision": 0.9381818181818182,
+          "recall": 0.9273658830620856,
+          "f1": 0.9327424967057706
+        }
+      }
+    },
+    "Top beam": {
+      "bounds": [
+        220,
+        40,
+        905,
+        200
+      ],
+      "previous": {
+        "intersection_over_union": 0.9633805413044146,
+        "extra_white_pixels": 1663,
+        "missing_white_pixels": 721,
+        "reference_area_pixels": 63439,
+        "candidate_area_pixels": 64381,
+        "mean_symmetric_edge_distance_pixels": 1.4542122788571226,
+        "edge_distance_p95_pixels": 3.605551275463989,
+        "boundary_within_1px": {
+          "precision": 0.579750346740638,
+          "recall": 0.555408095554081,
+          "f1": 0.5673182244570509
+        },
+        "boundary_within_2px": {
+          "precision": 0.8134535367545076,
+          "recall": 0.7836761778367618,
+          "f1": 0.7982872683509123
+        },
+        "boundary_within_3px": {
+          "precision": 0.9285714285714286,
+          "recall": 0.8984737889847378,
+          "f1": 0.9132747036085817
+        }
+      },
+      "revised": {
+        "intersection_over_union": 0.966493933848969,
+        "extra_white_pixels": 1594,
+        "missing_white_pixels": 585,
+        "reference_area_pixels": 63439,
+        "candidate_area_pixels": 64448,
+        "mean_symmetric_edge_distance_pixels": 1.312142555070902,
+        "edge_distance_p95_pixels": 3.0,
+        "boundary_within_1px": {
+          "precision": 0.5901426718547341,
+          "recall": 0.6031851360318513,
+          "f1": 0.5965926302032997
+        },
+        "boundary_within_2px": {
+          "precision": 0.8158236057068742,
+          "recall": 0.840743198407432,
+          "f1": 0.8280959704067001
+        },
+        "boundary_within_3px": {
+          "precision": 0.9409857328145266,
+          "recall": 0.962176509621765,
+          "f1": 0.951463146772331
+        }
+      }
+    }
+  }
+}

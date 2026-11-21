@@ -1,0 +1,85 @@
+{
+  "scope": "Only suspension-thread-reserve and child-figure-reserve were replaced; other V2 paths unchanged.",
+  "reference": "Unchanged work/revision2/reference-reserve-mask-root.png, 1000 x 1400",
+  "method": "Same V2 evaluator and common valid domain. Alpha threshold >127. Symmetric pooled nearest-boundary distance in normalized pixels. The fixed photographic mask is used for QA only, never SVG contour construction.",
+  "regions": {
+    "Hanging thread and upper knot": {
+      "bounds": [
+        295,
+        65,
+        410,
+        480
+      ],
+      "revision2": {
+        "intersection_over_union": 0.9557363855852633,
+        "extra_white_pixels": 881,
+        "missing_white_pixels": 109,
+        "reference_area_pixels": 21485,
+        "candidate_area_pixels": 22257,
+        "mean_symmetric_edge_distance_pixels": 1.1569235580597486,
+        "edge_distance_p95_pixels": 2.8284271247461903
+      },
+      "revision3": {
+        "intersection_over_union": 0.960476618705036,
+        "extra_white_pixels": 755,
+        "missing_white_pixels": 124,
+        "reference_area_pixels": 21485,
+        "candidate_area_pixels": 22116,
+        "mean_symmetric_edge_distance_pixels": 1.023535853676281,
+        "edge_distance_p95_pixels": 2.23606797749979
+      }
+    },
+    "Child head and neck": {
+      "bounds": [
+        280,
+        470,
+        395,
+        610
+      ],
+      "revision2": {
+        "intersection_over_union": 0.9669973678882365,
+        "extra_white_pixels": 282,
+        "missing_white_pixels": 44,
+        "reference_area_pixels": 9596,
+        "candidate_area_pixels": 9834,
+        "mean_symmetric_edge_distance_pixels": 0.932253365086244,
+        "edge_distance_p95_pixels": 2.0
+      },
+      "revision3": {
+        "intersection_over_union": 0.9742140949250051,
+        "extra_white_pixels": 138,
+        "missing_white_pixels": 113,
+        "reference_area_pixels": 9596,
+        "candidate_area_pixels": 9621,
+        "mean_symmetric_edge_distance_pixels": 0.7397424591928718,
+        "edge_distance_p95_pixels": 2.0
+      }
+    },
+    "Child arms, body and legs": {
+      "bounds": [
+        155,
+        570,
+        540,
+        925
+      ],
+      "revision2": {
+        "intersection_over_union": 0.9491942158819806,
+        "extra_white_pixels": 1715,
+        "missing_white_pixels": 372,
+        "reference_area_pixels": 39363,
+        "candidate_area_pixels": 40706,
+        "mean_symmetric_edge_distance_pixels": 1.291922970683319,
+        "edge_distance_p95_pixels": 3.605551275463989
+      },
+      "revision3": {
+        "intersection_over_union": 0.9690628754505406,
+        "extra_white_pixels": 589,
+        "missing_white_pixels": 647,
+        "reference_area_pixels": 39363,
+        "candidate_area_pixels": 39305,
+        "mean_symmetric_edge_distance_pixels": 0.8362517272485024,
+        "edge_distance_p95_pixels": 2.23606797749979
+      }
+    }
+  }
+}

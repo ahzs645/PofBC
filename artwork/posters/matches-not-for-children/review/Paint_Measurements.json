@@ -1,0 +1,202 @@
+{
+  "revision": 4,
+  "previous_revision": 3,
+  "comparison_plane": [
+    1000,
+    1400
+  ],
+  "fixed_mask_pixels": 698156,
+  "fixed_mask_sha256": "e2f535f5cba5842d35e55ebbf96c1de3ec5db811dc060b6441338afc81286010",
+  "evaluated_paint_sha256": {
+    "v3": "6ec44cf6384cd60642bfb040669bcb294123978fb2b27ae00fd2197238f89915",
+    "v4": "187a49594fb68874cd7043e308a97859618f260506a3b34079d878d415fd7dd5"
+  },
+  "method": {
+    "raw_error": "Mean absolute difference in 8-bit display RGB channels, eligible pixels only.",
+    "broad_orange": "Gaussian sigma 6 px of G / max(R, 1), classified orange when below 0.50; evaluated on identical V2 mask.",
+    "smoothed_error": "Gaussian normalized convolution of RGB through the fixed paint mask at sigma 8 or 24 px. Non-paint photo pixels are excluded before smoothing."
+  },
+  "regions": {
+    "All eligible paint": {
+      "box": [
+        0,
+        0,
+        1000,
+        1400
+      ],
+      "eligible_pixels": 698156,
+      "previous": {
+        "mean_absolute_rgb_error": 13.253435717327742,
+        "broad_orange_iou": 0.7553581867209745,
+        "broad_orange_missing_pixels": 36356,
+        "broad_orange_excess_pixels": 28512,
+        "masked_smooth_rgb_error_sigma_8": 9.52497154762117,
+        "masked_smooth_rgb_error_sigma_24": 7.605014048623673
+      },
+      "revised": {
+        "mean_absolute_rgb_error": 11.278879887398613,
+        "broad_orange_iou": 0.7867365396892956,
+        "broad_orange_missing_pixels": 29618,
+        "broad_orange_excess_pixels": 26501,
+        "masked_smooth_rgb_error_sigma_8": 7.3955170536448875,
+        "masked_smooth_rgb_error_sigma_24": 5.665506068118691
+      }
+    },
+    "Upper-left paint pull": {
+      "box": [
+        15,
+        240,
+        185,
+        515
+      ],
+      "eligible_pixels": 46750,
+      "previous": {
+        "mean_absolute_rgb_error": 10.65663458110517,
+        "broad_orange_iou": 0.9445103988040277,
+        "broad_orange_missing_pixels": 712,
+        "broad_orange_excess_pixels": 1812,
+        "masked_smooth_rgb_error_sigma_8": 7.827054966543675,
+        "masked_smooth_rgb_error_sigma_24": 6.159901010918878
+      },
+      "revised": {
+        "mean_absolute_rgb_error": 7.238716577540107,
+        "broad_orange_iou": 0.9583259166963333,
+        "broad_orange_missing_pixels": 603,
+        "broad_orange_excess_pixels": 1270,
+        "masked_smooth_rgb_error_sigma_8": 4.292039748857566,
+        "masked_smooth_rgb_error_sigma_24": 3.007128454282195
+      }
+    },
+    "Central paint mass": {
+      "box": [
+        430,
+        290,
+        745,
+        700
+      ],
+      "eligible_pixels": 118698,
+      "previous": {
+        "mean_absolute_rgb_error": 13.39769555229799,
+        "broad_orange_iou": 0.8339300432722028,
+        "broad_orange_missing_pixels": 9341,
+        "broad_orange_excess_pixels": 3554,
+        "masked_smooth_rgb_error_sigma_8": 9.452544815039706,
+        "masked_smooth_rgb_error_sigma_24": 6.835563339304298
+      },
+      "revised": {
+        "mean_absolute_rgb_error": 12.247395350665835,
+        "broad_orange_iou": 0.8662528561478965,
+        "broad_orange_missing_pixels": 3199,
+        "broad_orange_excess_pixels": 7747,
+        "masked_smooth_rgb_error_sigma_8": 7.7734437013467925,
+        "masked_smooth_rgb_error_sigma_24": 5.851466989536755
+      }
+    },
+    "Lower central stroke": {
+      "box": [
+        540,
+        690,
+        760,
+        1015
+      ],
+      "eligible_pixels": 71119,
+      "previous": {
+        "mean_absolute_rgb_error": 15.530045885534573,
+        "broad_orange_iou": 0.7649908493917537,
+        "broad_orange_missing_pixels": 1207,
+        "broad_orange_excess_pixels": 9708,
+        "masked_smooth_rgb_error_sigma_8": 12.955720423735286,
+        "masked_smooth_rgb_error_sigma_24": 11.009063283043698
+      },
+      "revised": {
+        "mean_absolute_rgb_error": 10.532309696893002,
+        "broad_orange_iou": 0.8889312685940957,
+        "broad_orange_missing_pixels": 1778,
+        "broad_orange_excess_pixels": 2590,
+        "masked_smooth_rgb_error_sigma_8": 6.23144577156326,
+        "masked_smooth_rgb_error_sigma_24": 4.558519909496042
+      }
+    },
+    "Quiet yellow field": {
+      "box": [
+        180,
+        200,
+        290,
+        470
+      ],
+      "eligible_pixels": 29700,
+      "previous": {
+        "mean_absolute_rgb_error": 8.454298540965208,
+        "broad_orange_iou": 0.10918367346938776,
+        "broad_orange_missing_pixels": 168,
+        "broad_orange_excess_pixels": 705,
+        "masked_smooth_rgb_error_sigma_8": 5.971518297203031,
+        "masked_smooth_rgb_error_sigma_24": 4.6955926915238075
+      },
+      "revised": {
+        "mean_absolute_rgb_error": 5.8180246913580245,
+        "broad_orange_iou": 0.1640625,
+        "broad_orange_missing_pixels": 107,
+        "broad_orange_excess_pixels": 749,
+        "masked_smooth_rgb_error_sigma_8": 3.488019229481595,
+        "masked_smooth_rgb_error_sigma_24": 2.7018579888859593
+      }
+    },
+    "Right paint band": {
+      "box": [
+        870,
+        70,
+        995,
+        1110
+      ],
+      "eligible_pixels": 120539,
+      "previous": {
+        "mean_absolute_rgb_error": 12.910065068843556,
+        "broad_orange_iou": 0.025206524041516628,
+        "broad_orange_missing_pixels": 4459,
+        "broad_orange_excess_pixels": 143,
+        "masked_smooth_rgb_error_sigma_8": 8.730352308692893,
+        "masked_smooth_rgb_error_sigma_24": 7.364359819768805
+      },
+      "revised": {
+        "mean_absolute_rgb_error": 12.163056493472375,
+        "broad_orange_iou": 0.014416775884665793,
+        "broad_orange_missing_pixels": 4512,
+        "broad_orange_excess_pixels": 0,
+        "masked_smooth_rgb_error_sigma_8": 8.200690539879353,
+        "masked_smooth_rgb_error_sigma_24": 6.7370167126633715
+      }
+    },
+    "Lower paint / scumbles": {
+      "box": [
+        90,
+        890,
+        520,
+        1015
+      ],
+      "eligible_pixels": 51853,
+      "previous": {
+        "mean_absolute_rgb_error": 19.03290712848501,
+        "broad_orange_iou": 0.32841864018334604,
+        "broad_orange_missing_pixels": 4168,
+        "broad_orange_excess_pixels": 4623,
+        "masked_smooth_rgb_error_sigma_8": 11.49553361191586,
+        "masked_smooth_rgb_error_sigma_24": 8.290605883006558
+      },
+      "revised": {
+        "mean_absolute_rgb_error": 17.787424707024343,
+        "broad_orange_iou": 0.2117623709976184,
+        "broad_orange_missing_pixels": 5266,
+        "broad_orange_excess_pixels": 6649,
+        "masked_smooth_rgb_error_sigma_8": 10.382379565448973,
+        "masked_smooth_rgb_error_sigma_24": 6.107627485694917
+      }
+    }
+  },
+  "limits": [
+    "Same photograph used for design fitting and evaluation: residuals are not held-out validation.",
+    "Thresholded orange overlap measures broad colour-field placement, not paint-material authenticity.",
+    "Pixel units belong to the estimated 1000 by 1400 registration plane, not original print dimensions.",
+    "Newly authored texture does not reproduce the exact historic grain; colour has not been physically calibrated."
+  ]
+}

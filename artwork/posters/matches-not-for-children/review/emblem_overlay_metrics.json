@@ -1,0 +1,23 @@
+{
+  "method": "Raster comparison only; no source pixel contour generates final paths. Dark reference ink is max(R,G,B) below threshold. Letter spaces are compared within a fixed annulus; full seal uses fixed crop. All geometry is measured at original normalized 1000x1400 resolution.",
+  "threshold_sensitivity": {
+    "90": {
+      "letter_space_iou_before": 0.228023598820059,
+      "letter_space_iou_after": 0.6292613636363636,
+      "seal_ink_iou_before": 0.6141296737151659,
+      "seal_ink_iou_after": 0.7070729872084274
+    },
+    "110": {
+      "letter_space_iou_before": 0.21984,
+      "letter_space_iou_after": 0.6321263482280431,
+      "seal_ink_iou_before": 0.6405918213576273,
+      "seal_ink_iou_after": 0.728218656114897
+    },
+    "130": {
+      "letter_space_iou_before": 0.20397668837847102,
+      "letter_space_iou_after": 0.6089088680016347,
+      "seal_ink_iou_before": 0.6562205783456624,
+      "seal_ink_iou_after": 0.7365972371340634
+    }
+  }
+}

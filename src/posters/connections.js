@@ -289,6 +289,7 @@ const BY_POSTER = {
       certainty: 'thematic'
     },
     firePiece('be-careful', 'Posters · the 1960 decal, PREVENT FOREST FIRES across its base. No record ties the two together.'),
+    firePiece('matches-not-for-children', 'Posters · the service’s matches poster, F. P. 19, from about 1966–67'),
     {
       group: 'objects',
       rel: 'Compare',
@@ -328,6 +329,30 @@ const BY_POSTER = {
       note: 'Signs · the Forest Service’s closure sign, its strip reading OPEN or CLOSED',
       to: { view: 'signs', sign: 'forest-closure' },
       certainty: 'thematic'
+    }
+  ],
+  'matches-not-for-children': [
+    SERVICE_COLLECTION,
+    {
+      group: 'marks',
+      rel: 'Uses mark',
+      label: 'The one-ink oval seal',
+      note: 'Internal Logos · Forests: printed bottom right, beside the headline. When the seal was introduced or replaced is not known.',
+      to: logo('forest-service-one-ink-oval'),
+      certainty: 'printed'
+    },
+    firePiece('prevent-forest-fires', 'Posters · another Forest Service poster, its case made as a loss of timber and wages'),
+    firePiece('be-careful', 'Posters · the 1960 decal. No record ties the two together.'),
+    firePiece('dont-drop-it', 'Posters · one cause of fire, a dropped cigarette, as a badge'),
+    FIRE_CONTROL_PATCH,
+    PREVENTION_BADGE,
+    {
+      group: 'context',
+      rel: 'Historical context',
+      label: 'Department of Lands, Forests and Water Resources',
+      note: 'Government · 1967: where the Forest Service sat in the centennial years the captions name',
+      to: body('department-of-lands-forests-and-water-resources-1962', 1967),
+      certainty: 'inferred'
     }
   ],
   'wildlife-trees': [

@@ -1071,6 +1071,224 @@ export const PREVENT_FOREST_FIRES = {
   order: ['overview', 'canopy', 'flames', 'timber', 'script', 'headline', 'slogan', 'credit']
 }
 
+// ── Matches Are Not for Children!! (F. P. 19) ───────────────────────────────────────────────────
+
+const ONE_INK_OVAL_LINK = {
+  label: 'The one-ink oval seal',
+  note: 'Internal Logos · Forests: the seal on its own, with its colourways',
+  to: { view: 'internal', internal: 'forests', 'internal-logo': 'forest-service-one-ink-oval' }
+}
+const YELLOW_SKY_LINK = {
+  label: 'The yellow-sky oval',
+  note: 'Internal Logos · Forests: the same words round a lone conifer, with dots between them and a sans-serif face',
+  to: { view: 'internal', internal: 'forests', 'internal-logo': 'forest-service-yellow-sky' }
+}
+const DEPARTMENT_1967_LINK = {
+  label: 'Department of Lands, Forests and Water Resources',
+  note: 'Government · 1967: the department the Forest Service sat in during the centennial years',
+  to: { view: 'government', year: 1967, node: 'department-of-lands-forests-and-water-resources-1962' }
+}
+
+export const MATCHES_NOT_FOR_CHILDREN = {
+  id: 'matches-not-for-children',
+  // The paint stays bright: whatever is not lit settles back into it.
+  spotlight: { keep: ['mnc-painted-background'] },
+  regions: ['paint', 'gallows', 'figure', 'centennial', 'headline', 'credit', 'seal', 'marks'],
+  parts: {
+    overview: {
+      label: 'Whole poster',
+      box: box('matches-not-for-children'),
+      pad: 0.03,
+      panel: {
+        eyebrow: 'British Columbia Forest Service · fire-prevention poster F. P. 19',
+        heading: 'Matches Are Not for Children!!',
+        lede: 'A gallows built of matches on broad yellow, orange and red paint, a small figure made of matches hanging from it, and the warning in dark capitals underneath.',
+        blocks: [
+          { facts: [
+            ['Issued by', 'British Columbia Forest Service, from the credit'],
+            ['Date', 'about 1966–67: its captions name the centenaries of those two years'],
+            ['Code', 'F. P. 19, bottom left'],
+            ['Rebuilt from', 'one supplied photograph'],
+            ['Drawing', '1000 × 1400 units on an estimated plane, in eight named layers, lettering outlined']
+          ] },
+          { palette: [
+            { name: 'Ink', value: '#1D2424' },
+            { name: 'Yellow', value: '#F2C209' },
+            { name: 'Orange', value: '#F2520A' },
+            { name: 'Red', value: '#E52F0B' },
+            { name: 'Paper', value: '#E7F3F2' }
+          ] },
+          { note: 'The printed size, inks and typefaces are not identified, and the signature is an unconfirmed reading. The colours are fitted to a photograph, not specified inks. The paint here is lightly simplified from the reconstruction master for the web.' }
+        ]
+      }
+    },
+    paint: {
+      label: 'Paint',
+      hint: 'the yellow, orange and red ground',
+      box: box('matches-not-for-children'),
+      pad: 0.03,
+      layer: '#mnc-painted-background',
+      panel: {
+        eyebrow: 'The ground',
+        heading: 'Broad painted fields',
+        lede: 'Yellow laid over with long pulls of orange and red, dry at the edges, deepening to a solid red band along the foot.',
+        blocks: [
+          { facts: [
+            ['Layer', 'yellow ground, warm underpainting, orange and red pulls, yellow lifts, lower remnants, brush gestures, grain and the red foot'],
+            ['Colours', 'yellow #F2C209, orange #F2520A, red #E52F0B, all fitted to the photograph']
+          ] },
+          { note: 'The fields are composed by hand to match the photograph, not traced from it, and their fine grain is interpreted. The reconstruction’s own report lists where they still differ from it.' }
+        ]
+      }
+    },
+    gallows: {
+      label: 'Gallows',
+      hint: 'built of matches',
+      box: { x: 220, y: 43, w: 683, h: 1192 },
+      pad: 0.04,
+      layer: '#mnc-upper-reserves-v3, #mnc-right-upright-reserve, [id^="mnc-upper-beam"], [id^="mnc-upper-post"], [id^="mnc-lower-post"], [id^="mnc-diagonal-brace"]',
+      hit: 'shape',
+      panel: {
+        eyebrow: 'The gallows',
+        heading: 'A gallows of matches',
+        lede: 'Four outlined matches make the frame: one for the beam, two end to end for the post, and one braced across the corner, each with a dark head.',
+        blocks: [
+          { facts: [
+            ['Layer', 'matches drawn as outlined shafts with heads, on a white reserve with a painted edge'],
+            ['Paper', '#E7F3F2, the white the paint was kept off']
+          ] }
+        ]
+      }
+    },
+    figure: {
+      label: 'Hanging figure',
+      hint: 'a figure made of matches',
+      box: { x: 179, y: 76, w: 350, h: 826 },
+      pad: 0.04,
+      layer: '#mnc-child-reserves-v3, [id^="mnc-child-"], #mnc-thread-and-ties, #mnc-reconstructed-tie-gaps',
+      hit: 'shape',
+      panel: {
+        eyebrow: 'The figure',
+        heading: 'A match on a thread',
+        lede: 'A small figure made of matches hangs from the beam by a thread: a match head for its head, matches for arms and legs, a head at each hand and foot.',
+        blocks: [
+          { facts: [
+            ['Layer', 'five matches, the thread and its ties, and the white reserve around them'],
+            ['The hip', 'a match snapped where the legs meet, with a torn shoulder and splinters']
+          ] },
+          { note: 'The break at the hip is the reconstruction’s most recently redrawn detail, rebuilt from a blurred photograph; its exact contours are interpreted.' }
+        ]
+      }
+    },
+    headline: {
+      label: 'MATCHES ARE NOT FOR CHILDREN!!',
+      hint: 'the headline',
+      box: { x: 55, y: 1043, w: 700, h: 263 },
+      pad: 0.06,
+      layer: '#mnc-headline',
+      hit: 'letters',
+      panel: {
+        eyebrow: 'The headline',
+        heading: 'MATCHES ARE NOT FOR CHILDREN!!',
+        lede: 'Two lines of tall, rounded, hand-drawn capitals in dark ink on the paint, ending in two exclamation marks.',
+        blocks: [
+          { facts: [
+            ['Lettering', '28 constructed letter outlines, with variants where the original’s letters differ'],
+            ['Colour', 'ink #1D2424']
+          ] },
+          { links: [
+            poster('prevent-forest-fires', 'headline', 'Posters · another Forest Service poster that makes its case in a few large words'),
+            poster('be-careful', 'slogan', 'Posters · the 1960 decal, its warning along the base')
+          ] }
+        ]
+      }
+    },
+    credit: {
+      label: 'Credit',
+      hint: 'British Columbia Forest Service',
+      box: { x: 56, y: 1335, w: 877, h: 24 },
+      pad: 0.3,
+      layer: '#mnc-footer-custom-lettering',
+      hit: 'letters',
+      // Widely spaced capitals, with wider spaces between the words: an edge twice their height.
+      gap: 2,
+      panel: {
+        eyebrow: 'The credit',
+        heading: 'British Columbia Forest Service',
+        lede: 'The service’s full name in widely spaced, squared white capitals across the red foot.',
+        blocks: [
+          { links: [
+            poster('prevent-forest-fires', 'credit', 'Posters · signed the same way, along its foot'),
+            poster('reward-living-forest', 'service', 'Posters · the campfire poster, signed in full'),
+            LOOKOUT_LINK
+          ] }
+        ]
+      }
+    },
+    seal: {
+      label: 'Oval seal',
+      hint: 'Forest Service · British Columbia',
+      box: { x: 845, y: 1133, w: 139, h: 169 },
+      pad: 0.12,
+      layer: '#mnc-forest-service-oval',
+      panel: {
+        eyebrow: 'The seal',
+        heading: 'Forest Service, British Columbia',
+        lede: 'A one-ink oval: the two names in serif capitals round a lone conifer over mountains and water, open where the paint shows through.',
+        blocks: [
+          { facts: [
+            ['Lettering', 'URW Bookman Demi outlines fitted to the photographed letters, a stand-in, not an identification'],
+            ['Drawing', 'analytic rings, a hand-drawn tree and landscape']
+          ] },
+          { links: [ONE_INK_OVAL_LINK, YELLOW_SKY_LINK, OVALS_LINK] }
+        ]
+      }
+    },
+    centennial: {
+      label: 'Centenary captions',
+      hint: '1966 and 1967',
+      box: { x: 52, y: 11, w: 520, h: 49 },
+      pad: 0.1,
+      layer: '#mnc-centennial-caption',
+      panel: {
+        eyebrow: 'The captions',
+        heading: '1966 and 1967',
+        lede: 'A narrow panel at the top left, beside two lines of small capitals naming two centenaries.',
+        blocks: [
+          { facts: [
+            ['1966', 'Centenary of the union of the colonies of Vancouver Island and British Columbia under the name British Columbia'],
+            ['1967', 'Centenary of the Confederation of Canada'],
+            ['The panel', 'a leaf built of triangles in a ring, a tall 100, and a six-petalled flower in a disc']
+          ] },
+          { note: 'The captions are the poster’s only date: they place its printing around 1966 and 1967. The panel’s small details are interpreted from the photograph.' },
+          { links: [DEPARTMENT_1967_LINK] }
+        ]
+      }
+    },
+    marks: {
+      label: 'Code and signature',
+      hint: 'F. P. 19 · J. J. ANDRE?',
+      box: { x: 20, y: 1376, w: 954, h: 16 },
+      boxes: [{ x: 20, y: 1376, w: 61, h: 15 }, { x: 888, y: 1376, w: 86, h: 14 }],
+      pad: 0.05,
+      layer: '#mnc-publication-marks',
+      panel: {
+        eyebrow: 'The small print',
+        heading: 'F. P. 19',
+        lede: 'A publication code in small serif capitals at the bottom left, and a faint signature at the bottom right.',
+        blocks: [
+          { facts: [
+            ['Code', 'F. P. 19, perhaps a fire-prevention series number; its meaning is not confirmed'],
+            ['Signature', 'appears to read J. J. ANDRE']
+          ] },
+          { note: 'The signature is a reading of a few photographed pixels, drawn as strokes; neither the reading nor the attribution is confirmed.' }
+        ]
+      }
+    }
+  },
+  order: ['overview', 'paint', 'gallows', 'figure', 'headline', 'credit', 'seal', 'centennial', 'marks']
+}
+
 // Each with its story (../stories.js) attached to its parts.
-export const FOREST_SERVICE_POSTERS = Object.fromEntries([DONT_DROP_IT, DONT_GAMBLE, REWARD, ENJOY_PROTECT, BE_CAREFUL, COONS_AGE, PREVENT_FOREST_FIRES]
+export const FOREST_SERVICE_POSTERS = Object.fromEntries([DONT_DROP_IT, DONT_GAMBLE, REWARD, ENJOY_PROTECT, BE_CAREFUL, COONS_AGE, PREVENT_FOREST_FIRES, MATCHES_NOT_FOR_CHILDREN]
   .map((poster) => [poster.id, { ...poster, parts: withStories(poster.id, poster.parts) }]))

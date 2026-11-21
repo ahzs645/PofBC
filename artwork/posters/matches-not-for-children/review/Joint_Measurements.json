@@ -1,0 +1,307 @@
+{
+  "registration": "Existing 1000 x 1400 perspective-normalized photograph, unchanged for both versions.",
+  "mask": "Dark ink classified by max(R,G,B) < threshold. Main threshold 125; 90/110/140 are fixed sensitivity checks. Masks are QA only, not construction data.",
+  "units": "Normalized source pixels; not physical print size or authenticity.",
+  "evaluated_master_sha256": {
+    "v3": "2259f152b80d4ffb5bc99167ccc8cdf37dc154fd680122536420bf3ccc9faec0",
+    "v4": "e3db9cd10005445673e6efc743d0504a7aab06f19c58b4a2a9e14482c08323cb"
+  },
+  "thresholds": {
+    "90": {
+      "local_joint": {
+        "bounds": [
+          320,
+          763,
+          354,
+          804
+        ],
+        "v3": {
+          "iou": 0.6561604584527221,
+          "dice": 0.7923875432525952,
+          "mean_symmetric_edge_distance": 0.9798494479624212,
+          "edge_distance_p95": 2.9399494936611625,
+          "excess_ink_pixels": 121,
+          "missing_ink_pixels": 119
+        },
+        "v4": {
+          "iou": 0.7925696594427245,
+          "dice": 0.8842832469775475,
+          "mean_symmetric_edge_distance": 0.5873044092180603,
+          "edge_distance_p95": 1.4142135623730951,
+          "excess_ink_pixels": 69,
+          "missing_ink_pixels": 65
+        }
+      },
+      "fracture_and_splinters": {
+        "bounds": [
+          325,
+          766,
+          345,
+          799
+        ],
+        "v3": {
+          "iou": 0.5123287671232877,
+          "dice": 0.677536231884058,
+          "mean_symmetric_edge_distance": 1.1714231630952963,
+          "edge_distance_p95": 3.1622776601683795,
+          "excess_ink_pixels": 102,
+          "missing_ink_pixels": 76
+        },
+        "v4": {
+          "iou": 0.7341772151898734,
+          "dice": 0.8467153284671532,
+          "mean_symmetric_edge_distance": 0.5754553734545699,
+          "edge_distance_p95": 1.4142135623730951,
+          "excess_ink_pixels": 53,
+          "missing_ink_pixels": 31
+        }
+      },
+      "context": {
+        "bounds": [
+          307,
+          758,
+          372,
+          826
+        ],
+        "v3": {
+          "iou": 0.7272074659009332,
+          "dice": 0.8420615128844555,
+          "mean_symmetric_edge_distance": 0.8493015469851025,
+          "edge_distance_p95": 2.0,
+          "excess_ink_pixels": 176,
+          "missing_ink_pixels": 204
+        },
+        "v4": {
+          "iou": 0.7950819672131147,
+          "dice": 0.8858447488584474,
+          "mean_symmetric_edge_distance": 0.6532497498763711,
+          "edge_distance_p95": 1.4142135623730951,
+          "excess_ink_pixels": 125,
+          "missing_ink_pixels": 150
+        }
+      }
+    },
+    "110": {
+      "local_joint": {
+        "bounds": [
+          320,
+          763,
+          354,
+          804
+        ],
+        "v3": {
+          "iou": 0.6808803301237965,
+          "dice": 0.8101472995090017,
+          "mean_symmetric_edge_distance": 0.9216820625224358,
+          "edge_distance_p95": 2.8284271247461903,
+          "excess_ink_pixels": 121,
+          "missing_ink_pixels": 111
+        },
+        "v4": {
+          "iou": 0.8011869436201781,
+          "dice": 0.8896210873146623,
+          "mean_symmetric_edge_distance": 0.57917095683559,
+          "edge_distance_p95": 1.4142135623730951,
+          "excess_ink_pixels": 68,
+          "missing_ink_pixels": 66
+        }
+      },
+      "fracture_and_splinters": {
+        "bounds": [
+          325,
+          766,
+          345,
+          799
+        ],
+        "v3": {
+          "iou": 0.5362694300518135,
+          "dice": 0.6981450252951096,
+          "mean_symmetric_edge_distance": 1.1570527001853246,
+          "edge_distance_p95": 3.0649110640673483,
+          "excess_ink_pixels": 100,
+          "missing_ink_pixels": 79
+        },
+        "v4": {
+          "iou": 0.75,
+          "dice": 0.8571428571428571,
+          "mean_symmetric_edge_distance": 0.5707988404549603,
+          "edge_distance_p95": 1.4142135623730951,
+          "excess_ink_pixels": 50,
+          "missing_ink_pixels": 34
+        }
+      },
+      "context": {
+        "bounds": [
+          307,
+          758,
+          372,
+          826
+        ],
+        "v3": {
+          "iou": 0.7374224672639559,
+          "dice": 0.8488694962316541,
+          "mean_symmetric_edge_distance": 0.8487461044829796,
+          "edge_distance_p95": 2.011803398874979,
+          "excess_ink_pixels": 182,
+          "missing_ink_pixels": 199
+        },
+        "v4": {
+          "iou": 0.7975679542203148,
+          "dice": 0.8873855949064863,
+          "mean_symmetric_edge_distance": 0.6724851775453081,
+          "edge_distance_p95": 1.4142135623730951,
+          "excess_ink_pixels": 129,
+          "missing_ink_pixels": 154
+        }
+      }
+    },
+    "125": {
+      "local_joint": {
+        "bounds": [
+          320,
+          763,
+          354,
+          804
+        ],
+        "v3": {
+          "iou": 0.6823687752355316,
+          "dice": 0.8112,
+          "mean_symmetric_edge_distance": 0.8939275276078895,
+          "edge_distance_p95": 2.8455844122715654,
+          "excess_ink_pixels": 121,
+          "missing_ink_pixels": 115
+        },
+        "v4": {
+          "iou": 0.8122270742358079,
+          "dice": 0.8963855421686747,
+          "mean_symmetric_edge_distance": 0.559331163196509,
+          "edge_distance_p95": 1.4142135623730951,
+          "excess_ink_pixels": 65,
+          "missing_ink_pixels": 64
+        }
+      },
+      "fracture_and_splinters": {
+        "bounds": [
+          325,
+          766,
+          345,
+          799
+        ],
+        "v3": {
+          "iou": 0.5301507537688442,
+          "dice": 0.6929392446633826,
+          "mean_symmetric_edge_distance": 1.1442144920920292,
+          "edge_distance_p95": 3.1622776601683795,
+          "excess_ink_pixels": 103,
+          "missing_ink_pixels": 84
+        },
+        "v4": {
+          "iou": 0.7623188405797101,
+          "dice": 0.8651315789473685,
+          "mean_symmetric_edge_distance": 0.5682296016934388,
+          "edge_distance_p95": 1.4142135623730951,
+          "excess_ink_pixels": 50,
+          "missing_ink_pixels": 32
+        }
+      },
+      "context": {
+        "bounds": [
+          307,
+          758,
+          372,
+          826
+        ],
+        "v3": {
+          "iou": 0.7428958051420839,
+          "dice": 0.8524844720496895,
+          "mean_symmetric_edge_distance": 0.8181312223171553,
+          "edge_distance_p95": 2.0,
+          "excess_ink_pixels": 174,
+          "missing_ink_pixels": 206
+        },
+        "v4": {
+          "iou": 0.8074490513000703,
+          "dice": 0.8934681181959565,
+          "mean_symmetric_edge_distance": 0.6484792026601778,
+          "edge_distance_p95": 1.4142135623730951,
+          "excess_ink_pixels": 119,
+          "missing_ink_pixels": 155
+        }
+      }
+    },
+    "140": {
+      "local_joint": {
+        "bounds": [
+          320,
+          763,
+          354,
+          804
+        ],
+        "v3": {
+          "iou": 0.6776315789473685,
+          "dice": 0.807843137254902,
+          "mean_symmetric_edge_distance": 0.9420611441965947,
+          "edge_distance_p95": 2.8284271247461903,
+          "excess_ink_pixels": 122,
+          "missing_ink_pixels": 123
+        },
+        "v4": {
+          "iou": 0.8108108108108109,
+          "dice": 0.8955223880597015,
+          "mean_symmetric_edge_distance": 0.5955506227620299,
+          "edge_distance_p95": 1.4142135623730951,
+          "excess_ink_pixels": 65,
+          "missing_ink_pixels": 68
+        }
+      },
+      "fracture_and_splinters": {
+        "bounds": [
+          325,
+          766,
+          345,
+          799
+        ],
+        "v3": {
+          "iou": 0.5356265356265356,
+          "dice": 0.6976,
+          "mean_symmetric_edge_distance": 1.1584985284262872,
+          "edge_distance_p95": 3.1622776601683795,
+          "excess_ink_pixels": 103,
+          "missing_ink_pixels": 86
+        },
+        "v4": {
+          "iou": 0.7711864406779662,
+          "dice": 0.8708133971291866,
+          "mean_symmetric_edge_distance": 0.5814067057804845,
+          "edge_distance_p95": 1.4142135623730951,
+          "excess_ink_pixels": 50,
+          "missing_ink_pixels": 31
+        }
+      },
+      "context": {
+        "bounds": [
+          307,
+          758,
+          372,
+          826
+        ],
+        "v3": {
+          "iou": 0.7420844327176781,
+          "dice": 0.8519500189322227,
+          "mean_symmetric_edge_distance": 0.8471972819942157,
+          "edge_distance_p95": 2.0,
+          "excess_ink_pixels": 176,
+          "missing_ink_pixels": 215
+        },
+        "v4": {
+          "iou": 0.8082191780821918,
+          "dice": 0.8939393939393939,
+          "mean_symmetric_edge_distance": 0.6718019193041118,
+          "edge_distance_p95": 1.4142135623730951,
+          "excess_ink_pixels": 120,
+          "missing_ink_pixels": 160
+        }
+      }
+    }
+  }
+}

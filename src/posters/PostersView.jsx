@@ -10,6 +10,7 @@ import enjoyThumb from './forest-service/enjoy-protect-forests.svg?url'
 import beCarefulThumb from './forest-service/be-careful.svg?url'
 import coonsAgeThumb from './forest-service/coons-age.thumb.jpg'
 import preventFiresThumb from './forest-service/prevent-forest-fires.thumb.jpg'
+import matchesThumb from './forest-service/matches-not-for-children.thumb.jpg'
 import goFerriesThumb from './bc-ferries/go-bc-ferries.svg?url'
 import queenThumb from './bc-ferries/queen-of-sidney.svg?url'
 import wildlifeThumb from './wildlife-trees/thumbnail.jpg'
@@ -30,6 +31,7 @@ const LOADERS = {
   'enjoy-protect-forests': forestService('enjoy-protect-forests'),
   'coons-age': forestService('coons-age'),
   'prevent-forest-fires': forestService('prevent-forest-fires'),
+  'matches-not-for-children': forestService('matches-not-for-children'),
   'be-careful': forestService('be-careful'),
   'wildlife-trees': () => import('./wildlife-trees/index.js').then((module) => module.load()),
   'beware-these-alien-invaders': noxiousWeeds('beware-these-alien-invaders'),
@@ -49,6 +51,7 @@ const THUMBNAILS = {
   'enjoy-protect-forests': enjoyThumb,
   'coons-age': coonsAgeThumb,
   'prevent-forest-fires': preventFiresThumb,
+  'matches-not-for-children': matchesThumb,
   'be-careful': beCarefulThumb,
   'wildlife-trees': wildlifeThumb,
   'beware-these-alien-invaders': bewareThumb,

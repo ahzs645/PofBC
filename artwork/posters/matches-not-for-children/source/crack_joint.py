@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+"""Hand-constructed broken match junction for the child figure.
+
+The component locally replaces the earlier broad internal divider and small
+star. Long shaft outlines retain the master's original coordinates. The thin
+split, torn shoulder and tapered splinters are authored from visual inspection
+of the supplied photograph, not from image contour extraction.
+"""
+from pathlib import Path
+from html import escape
+
+PAPER='#e7f3f2'
+INK='#1d2424'
+
+# A small paper cutout removes the earlier thick internal divider. It stays
+# inside the match junction, clear of surrounding paint and outer reserve.
+# The obsolete hip-star thread path must also be removed during integration.
+PATCH='''M342.2 772.8 L349.7 777.1 L340.8 795.0
+L332.7 791.0 L338.5 779.0 Z'''
+
+INK_SHAPES={
+    # The visible upper break is a short stepped shoulder, not a thick
+    # continuous diagonal bar from the torso into the left leg.
+    'joint-torn-upper-shoulder': '''
+M342.4 767.4
+L341.0 769.0 L338.5 767.6 L336.4 769.4
+Q334.9 770.4 334.7 772.6
+L334.2 777.4 L334.5 780.0 L336.0 780.5
+L337.0 775.5 L339.7 776.4 L343.8 778.5
+L347.2 779.3 L348.6 774.2 L348.7 765.5 Z''',
+
+    # Narrow irregular ink seam where the bent left rail meets the broken
+    # inner shaft. Its varying width is visible in the photograph.
+    'joint-fracture-seam': '''
+M326.7 773.9
+Q329.1 774.8 331.0 777.1
+L333.7 779.3 L335.0 778.7
+L335.6 782.6 L335.7 785.3 L337.8 790.9
+L336.0 792.1 L334.4 786.9 L333.7 783.3
+L331.7 780.7 L329.1 778.1 L326.0 775.5 Z''',
+
+    # A compact connected silhouette of the supported splinters. The tips
+    # taper, and the spaces between them remain paper. No decorative rays.
+    'joint-lower-splinters': '''
+M333.4 795.2
+L334.1 792.4 L329.6 791.6 L329.1 790.3
+L333.6 790.8 L328.3 786.4 L327.8 785.2
+L332.5 788.1 L335.7 789.1
+L337.5 785.0 L338.3 782.2 L338.8 782.7
+L338.6 788.9 L341.9 784.2 L343.2 781.2
+L343.5 781.9 L342.5 785.5 L340.5 791.3
+Q341.8 793.0 344.7 794.0
+L341.8 797.3 L337.0 795.5 Z''',
+}
+
+def joint_group(paper=PAPER,ink=INK):
+    parts=['<g id="child-cracked-junction-v4">',
+      '<path id="joint-local-paper" d="'+PATCH+'" fill="'+escape(paper)+'"/>',
+      '<path id="joint-right-rail-continuation" d="M345 775 L356 781.1395349" fill="none" stroke="'+escape(ink)+'" stroke-width="6.4" stroke-linecap="butt"/>',
+      '<g id="joint-reconstructed-break" fill="'+escape(ink)+'">']
+    for name,d in INK_SHAPES.items():parts.append('<path id="'+name+'" d="'+d+'"/>')
+    parts.extend(['</g></g>'])
+    return ''.join(parts)
+
+def svg(paper=PAPER,ink=INK):
+    return '<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1400" viewBox="0 0 1000 1400"><title>Child match cracked junction, revision 4</title><desc>Local manually reconstructed structural split and tapered wood splinters. Other shaft geometry is preserved.</desc>'+joint_group(paper,ink)+'</svg>'
+
+if __name__=='__main__':
+    Path(__file__).with_suffix('.svg').write_text(svg())

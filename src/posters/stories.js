@@ -197,6 +197,41 @@ export const STORIES = {
       'Along the foot, in widely spaced yellow capitals, the service signs in its own name: BRITISH COLUMBIA FOREST SERVICE.'
     ]
   },
+  'matches-not-for-children': {
+    overview: [
+      'A gallows made of matches, a small match figure hanging from it, and the warning underneath in tall dark capitals.',
+      'The picture does the arguing: matches left within a child’s reach end in a death. Read it from the gallows down to the service’s name.'
+    ],
+    paint: [
+      'Behind it all, broad strokes of yellow, orange and red, dragged on dry, so the ground itself reads as fire.',
+      'It deepens to solid red along the foot, under the credit.'
+    ],
+    gallows: [
+      'The gallows is four matches: one for the beam, two end to end for the post, and one braced across the corner.',
+      'They are drawn in outline on a white ground kept clear of the paint, each with its dark head still unstruck.'
+    ],
+    figure: [
+      'From the beam a thread drops to a figure made of matches: a match head for its head, a head at each hand and foot.',
+      'At the hip one match has snapped, splintered where the legs meet.'
+    ],
+    headline: [
+      'Then the words: MATCHES ARE NOT FOR CHILDREN!!, in two lines of tall, rounded capitals, with two exclamation marks.',
+      'It is addressed to the adults who leave matches about, not to the children.'
+    ],
+    credit: [
+      'Across the red foot, in widely spaced white capitals, the service signs in its own name: BRITISH COLUMBIA FOREST SERVICE.'
+    ],
+    seal: [
+      'Beside the headline, the service’s oval seal in one ink: its name in serif capitals round a lone conifer, mountains and water, with the paint showing through.'
+    ],
+    centennial: [
+      'At the top left, a small panel and two captions name two centenaries: 1966, of the union of Vancouver Island and British Columbia, and 1967, of Confederation.',
+      'They are the poster’s only date, and place it in the centennial years.'
+    ],
+    marks: [
+      'At the foot, a code, F. P. 19, and a faint signature that appears to read J. J. ANDRE. Neither the reading nor the artist is confirmed.'
+    ]
+  },
   'go-bc-ferries': {
     overview: [
       'A small rounded sticker for a car window: teal sea, green mountains, a ferry and a gull. It sells a crossing the way a resort sticker sells a place.',

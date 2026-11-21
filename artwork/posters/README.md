@@ -14,6 +14,7 @@ palettes and validation records are here.
 | `be-careful/` | Be Careful: Prevent Forest Fires (1960 decal) | `src/posters/forest-service/be-careful.svg`, the master with **ids prefixed** (below) |
 | `coons-age/` | A Coon’s Age (1971 newspaper advertisement) | `src/posters/forest-service/coons-age.svg` and `coons-age-raccoon.webp`, the outlined master with **its photograph moved out** (below) |
 | `prevent-forest-fires/` | Prevent Forest Fires: Fire Destroys Timber and Payrolls, British Columbia Forest Service | `src/posters/forest-service/prevent-forest-fires.svg`, the master **minified, ids prefixed** (below) |
+| `matches-not-for-children/` | MATCHES ARE NOT FOR CHILDREN!! British Columbia Forest Service, F. P. 19 | `src/posters/forest-service/matches-not-for-children.svg`, a **lighter copy**, ids prefixed (below) |
 | `forest-service-emblem/` | The Forest Service evergreen emblem | `src/internal/forest-service-emblem.svg`, unchanged; also drawn into the two posters above |
 | `go-bc-ferries/` | GO B.C. FERRIES — car decal | `src/posters/bc-ferries/go-bc-ferries.svg`, unchanged |
 | `queen-of-sidney/` | Queen of Sidney — car decal | `src/posters/bc-ferries/queen-of-sidney.svg`, **layer ids renamed** (below) |
@@ -69,6 +70,14 @@ whitespace between tags and inside path data and fills a parent already sets: 1.
 opened, and the shelf shows a JPEG of it. The supplied photograph, the PNG renders and boards, the
 masks, the superseded revision-5 drawing, the review page and the per-pass history are left out; see
 [`prevent-forest-fires/README.md`](prevent-forest-fires/README.md).
+
+**MATCHES ARE NOT FOR CHILDREN!! is shown from a lighter copy.** Its master is 11.3 MB, nearly all
+of it the paint: 780,000 outline points in absolute two-decimal coordinates. `web_copy.py` simplifies
+those outlines within a fifth of a unit, rounds them to a tenth and writes them as relative moves,
+and prefixes every id `mnc-`; nothing outside the paint changes. The copy is 4.2 MB (0.9 MB
+compressed), fetched only when opened, and differs from the master in 0.03% of pixels at 2000 × 2800.
+Its seal is also an Internal Logo. The photograph, PNGs, PDF, review page, history and the separate
+11 MB paint files are left out; see [`matches-not-for-children/README.md`](matches-not-for-children/README.md).
 
 **Coastal Forest** comes from its own repository,
 [ahzs645/coastal-forest-poster](https://github.com/ahzs645/coastal-forest-poster), whose

@@ -1,0 +1,356 @@
+{
+  "revision": 3,
+  "previous_revision": 2,
+  "registration": {
+    "width": 1000,
+    "height": 1400,
+    "same_photo_transform_for_both_versions": true,
+    "physical_print_size": "unverified"
+  },
+  "method": {
+    "reference_mask": "Photographic pale/dark classification in a 35px expansion of the previous illustration-reserve region. One-pixel morphological closing; components selected at fixed figure locations. Enclosed holes smaller than50 pixels filled. Large painted opening retained.",
+    "artwork_masks": "Alpha coverage of the reserve geometry alone, excluding the optional coloured pigment deposits, rendered at1000x1400 and threshold127/255. V2 has the same geometric coverage in its paper-reserve layer.",
+    "exclusion": "Oval seal footprint enlarged to74x90 normalized pixels; image outside specified illustration domain. Hidden paper beneath the seal cannot be recovered from this photograph.",
+    "definition": "Intersection-over-union is shared reserve area divided by combined reserve area. Edge distance is the pooled symmetric nearest-boundary distance. These are registered photo-fit measurements, not historical-authenticity scores.",
+    "construction": "Manually authored Bezier contours and deliberately placed brush-edge detail; the mask is used only for review.",
+    "boundary_tolerance": "For tolerances 1,2,3 normalized pixels, precision is the fraction of candidate boundary within tolerance of the reference; recall is the converse; F1 is their harmonic mean. The same fixed photographic mask is used for both versions."
+  },
+  "regions": {
+    "All visible illustration reserve": {
+      "bounds": [
+        145,
+        35,
+        925,
+        1250
+      ],
+      "previous": {
+        "intersection_over_union": 0.9585870678589488,
+        "extra_white_pixels": 7338,
+        "missing_white_pixels": 2244,
+        "reference_area_pixels": 224039,
+        "candidate_area_pixels": 229133,
+        "mean_symmetric_edge_distance_pixels": 1.4108279364421226,
+        "edge_distance_p95_pixels": 4.0,
+        "boundary_within_1px": {
+          "precision": 0.6399478657543174,
+          "recall": 0.607540173053152,
+          "f1": 0.6233230700585141
+        },
+        "boundary_within_2px": {
+          "precision": 0.8471814923427826,
+          "recall": 0.8079419035846724,
+          "f1": 0.8270965527879376
+        },
+        "boundary_within_3px": {
+          "precision": 0.9379276637341154,
+          "recall": 0.9003399258343634,
+          "f1": 0.918749509588646
+        }
+      },
+      "revised": {
+        "intersection_over_union": 0.9662762546620428,
+        "extra_white_pixels": 5206,
+        "missing_white_pixels": 2525,
+        "reference_area_pixels": 224039,
+        "candidate_area_pixels": 226720,
+        "mean_symmetric_edge_distance_pixels": 1.232528344082961,
+        "edge_distance_p95_pixels": 3.1622776601683795,
+        "boundary_within_1px": {
+          "precision": 0.7302936630602782,
+          "recall": 0.728831891223733,
+          "f1": 0.7295620449305465
+        },
+        "boundary_within_2px": {
+          "precision": 0.879289026275116,
+          "recall": 0.8787082818294191,
+          "f1": 0.8789985581294496
+        },
+        "boundary_within_3px": {
+          "precision": 0.9445131375579598,
+          "recall": 0.9448393077873919,
+          "f1": 0.9446761945183156
+        }
+      }
+    },
+    "Hanging thread and upper knot": {
+      "bounds": [
+        295,
+        65,
+        410,
+        480
+      ],
+      "previous": {
+        "intersection_over_union": 0.9557363855852633,
+        "extra_white_pixels": 881,
+        "missing_white_pixels": 109,
+        "reference_area_pixels": 21485,
+        "candidate_area_pixels": 22257,
+        "mean_symmetric_edge_distance_pixels": 1.1569235580597486,
+        "edge_distance_p95_pixels": 2.8284271247461903,
+        "boundary_within_1px": {
+          "precision": 0.6584463625154131,
+          "recall": 0.653610771113831,
+          "f1": 0.6560196560196561
+        },
+        "boundary_within_2px": {
+          "precision": 0.9235511713933415,
+          "recall": 0.9167686658506732,
+          "f1": 0.9201474201474201
+        },
+        "boundary_within_3px": {
+          "precision": 0.9790382244143033,
+          "recall": 0.9694002447980417,
+          "f1": 0.9741953974020341
+        }
+      },
+      "revised": {
+        "intersection_over_union": 0.96255119953189,
+        "extra_white_pixels": 732,
+        "missing_white_pixels": 100,
+        "reference_area_pixels": 21485,
+        "candidate_area_pixels": 22117,
+        "mean_symmetric_edge_distance_pixels": 0.975119108281657,
+        "edge_distance_p95_pixels": 2.23606797749979,
+        "boundary_within_1px": {
+          "precision": 0.765142150803461,
+          "recall": 0.7564259485924113,
+          "f1": 0.7607590846040261
+        },
+        "boundary_within_2px": {
+          "precision": 0.9456118665018541,
+          "recall": 0.9363525091799265,
+          "f1": 0.9409594095940959
+        },
+        "boundary_within_3px": {
+          "precision": 0.9950556242274413,
+          "recall": 0.9865361077111383,
+          "f1": 0.9907775518633866
+        }
+      }
+    },
+    "Child head and neck": {
+      "bounds": [
+        280,
+        470,
+        395,
+        610
+      ],
+      "previous": {
+        "intersection_over_union": 0.9669973678882365,
+        "extra_white_pixels": 282,
+        "missing_white_pixels": 44,
+        "reference_area_pixels": 9596,
+        "candidate_area_pixels": 9834,
+        "mean_symmetric_edge_distance_pixels": 0.932253365086244,
+        "edge_distance_p95_pixels": 2.0,
+        "boundary_within_1px": {
+          "precision": 0.7684887459807074,
+          "recall": 0.746875,
+          "f1": 0.757527733755943
+        },
+        "boundary_within_2px": {
+          "precision": 0.9678456591639871,
+          "recall": 0.94375,
+          "f1": 0.9556459667160774
+        },
+        "boundary_within_3px": {
+          "precision": 0.9967845659163987,
+          "recall": 0.996875,
+          "f1": 0.9968297809071162
+        }
+      },
+      "revised": {
+        "intersection_over_union": 0.9742140949250051,
+        "extra_white_pixels": 138,
+        "missing_white_pixels": 113,
+        "reference_area_pixels": 9596,
+        "candidate_area_pixels": 9621,
+        "mean_symmetric_edge_distance_pixels": 0.7397424591928718,
+        "edge_distance_p95_pixels": 2.0,
+        "boundary_within_1px": {
+          "precision": 0.884375,
+          "recall": 0.89375,
+          "f1": 0.8890377855887522
+        },
+        "boundary_within_2px": {
+          "precision": 0.984375,
+          "recall": 0.990625,
+          "f1": 0.9874901107594936
+        },
+        "boundary_within_3px": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "Child arms, body and legs": {
+      "bounds": [
+        155,
+        570,
+        540,
+        925
+      ],
+      "previous": {
+        "intersection_over_union": 0.9491942158819806,
+        "extra_white_pixels": 1715,
+        "missing_white_pixels": 372,
+        "reference_area_pixels": 39363,
+        "candidate_area_pixels": 40706,
+        "mean_symmetric_edge_distance_pixels": 1.291922970683319,
+        "edge_distance_p95_pixels": 3.605551275463989,
+        "boundary_within_1px": {
+          "precision": 0.6183368869936035,
+          "recall": 0.6020761245674741,
+          "f1": 0.6100981767180925
+        },
+        "boundary_within_2px": {
+          "precision": 0.8308457711442786,
+          "recall": 0.8124567474048443,
+          "f1": 0.8215483700650967
+        },
+        "boundary_within_3px": {
+          "precision": 0.9402985074626866,
+          "recall": 0.9176470588235294,
+          "f1": 0.9288347037142046
+        }
+      },
+      "revised": {
+        "intersection_over_union": 0.9690628754505406,
+        "extra_white_pixels": 589,
+        "missing_white_pixels": 647,
+        "reference_area_pixels": 39363,
+        "candidate_area_pixels": 39305,
+        "mean_symmetric_edge_distance_pixels": 0.8362517272485024,
+        "edge_distance_p95_pixels": 2.23606797749979,
+        "boundary_within_1px": {
+          "precision": 0.8225584594222833,
+          "recall": 0.8290657439446367,
+          "f1": 0.8257992825591796
+        },
+        "boundary_within_2px": {
+          "precision": 0.9422283356258597,
+          "recall": 0.9501730103806229,
+          "f1": 0.9461839963460692
+        },
+        "boundary_within_3px": {
+          "precision": 0.9786795048143053,
+          "recall": 0.9889273356401385,
+          "f1": 0.9837767334840993
+        }
+      }
+    },
+    "Upper beam and diagonal brace": {
+      "bounds": [
+        220,
+        40,
+        905,
+        510
+      ],
+      "previous": {
+        "intersection_over_union": 0.9590735114232727,
+        "extra_white_pixels": 3903,
+        "missing_white_pixels": 1283,
+        "reference_area_pixels": 122812,
+        "candidate_area_pixels": 125432,
+        "mean_symmetric_edge_distance_pixels": 1.501287339397743,
+        "edge_distance_p95_pixels": 4.0,
+        "boundary_within_1px": {
+          "precision": 0.6170006464124111,
+          "recall": 0.5768535262206148,
+          "f1": 0.5962520494080521
+        },
+        "boundary_within_2px": {
+          "precision": 0.8500323206205559,
+          "recall": 0.7986738999397227,
+          "f1": 0.8235531838463284
+        },
+        "boundary_within_3px": {
+          "precision": 0.938267614738203,
+          "recall": 0.8918022905364678,
+          "f1": 0.9144450772596382
+        }
+      },
+      "revised": {
+        "intersection_over_union": 0.9612512629451881,
+        "extra_white_pixels": 3876,
+        "missing_white_pixels": 1033,
+        "reference_area_pixels": 122812,
+        "candidate_area_pixels": 125655,
+        "mean_symmetric_edge_distance_pixels": 1.5502444095797008,
+        "edge_distance_p95_pixels": 4.0,
+        "boundary_within_1px": {
+          "precision": 0.6379514505624629,
+          "recall": 0.646172393007836,
+          "f1": 0.6420356066072838
+        },
+        "boundary_within_2px": {
+          "precision": 0.8259325044404974,
+          "recall": 0.8378541289933695,
+          "f1": 0.8318506053712825
+        },
+        "boundary_within_3px": {
+          "precision": 0.91651865008881,
+          "recall": 0.9273658830620856,
+          "f1": 0.9219103604389568
+        }
+      }
+    },
+    "Upright support": {
+      "bounds": [
+        750,
+        165,
+        890,
+        1245
+      ],
+      "previous": {
+        "intersection_over_union": 0.9677549204466007,
+        "extra_white_pixels": 2194,
+        "missing_white_pixels": 850,
+        "reference_area_pixels": 92208,
+        "candidate_area_pixels": 93552,
+        "mean_symmetric_edge_distance_pixels": 1.3211945909471103,
+        "edge_distance_p95_pixels": 4.123105625617661,
+        "boundary_within_1px": {
+          "precision": 0.7001401214385801,
+          "recall": 0.6669626998223801,
+          "f1": 0.6831488288758453
+        },
+        "boundary_within_2px": {
+          "precision": 0.860345632881831,
+          "recall": 0.8206039076376554,
+          "f1": 0.8400049748591938
+        },
+        "boundary_within_3px": {
+          "precision": 0.935077066791219,
+          "recall": 0.8978685612788633,
+          "f1": 0.916095150655053
+        }
+      },
+      "revised": {
+        "intersection_over_union": 0.9750978756177395,
+        "extra_white_pixels": 1278,
+        "missing_white_pixels": 1050,
+        "reference_area_pixels": 92208,
+        "candidate_area_pixels": 92436,
+        "mean_symmetric_edge_distance_pixels": 1.0243261108085981,
+        "edge_distance_p95_pixels": 3.605551275463989,
+        "boundary_within_1px": {
+          "precision": 0.8084808946877913,
+          "recall": 0.7690941385435168,
+          "f1": 0.7882958390323727
+        },
+        "boundary_within_2px": {
+          "precision": 0.9105312208760484,
+          "recall": 0.8698934280639432,
+          "f1": 0.8897485502221998
+        },
+        "boundary_within_3px": {
+          "precision": 0.9547996272134203,
+          "recall": 0.9205150976909414,
+          "f1": 0.9373439673326929
+        }
+      }
+    }
+  }
+}
