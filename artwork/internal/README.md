@@ -6,12 +6,14 @@ recipes. Each folder is the package as supplied, minus its raster previews and r
 | Folder | Design | Used by the site as |
 |---|---|---|
 | `forest-service-lands-department/` | Forest Service, Lands Department engraved seal | `src/internal/forest-service-lands-department.svg`, a **lighter copy** (below) |
-| `forest-service-yellow-sky/` | Forest Service, yellow-sky oval (the package's photo-reference redraw) | `src/internal/forest-service-yellow-sky.svg`: `svg/BCFS_reference_green.svg` without its colour tokens and editor labels; the cream colourway is a recolour of it |
+| `forest-service-yellow-sky/` | Forest Service, yellow-sky oval (the package's photo-reference redraw) | `src/internal/forest-service-yellow-sky-photo.svg`, shown as a study: `svg/BCFS_reference_green.svg` without its colour tokens and editor labels; the cream study is a recolour of it |
+| `forest-service-yellow-sky-refined/` | Forest Service, yellow-sky oval, refined redraw of a generated restoration image | `src/internal/forest-service-yellow-sky.svg`, the page's main artwork, with its title and description reworded |
 | `forest-service-green-gold/` | Forest Service, green and gold oval | `src/internal/forest-service-green-gold.svg` (the main master, unchanged) |
 
-**The yellow-sky oval package held two redraws.** Only the one drawn from the two photographs is kept
-here; the other redrew a generated preview image, which is not evidence of the original badge. The
-reference photographs and raster previews are left out.
+**The yellow-sky oval has two redraws.** The page's main artwork is a later, refined redraw that follows
+a generated restoration image of the badge; it is cleaner, but a generated image is not evidence of the
+original, and the page says so. The earlier redraw from the two photographs is kept as a study, as the
+closer witness. Reference photographs, the generated image and raster previews are left out.
 
 **The Lands Department seal is shown from a lighter copy.** Its master is 5.6 MB: 11,600 shapes
 with three-decimal coordinates, ids and editor labels. `forest-service-lands-department/web_copy.py`

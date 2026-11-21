@@ -154,7 +154,7 @@ export const FOREST_LOGOS = [
     comments: [
       '“FOREST SERVICE” arcs over the top and “BRITISH COLUMBIA” under the bottom, with a dot on each side between them. Inside, a slender conifer with wind-shaped upper boughs rises from a lakeshore in front of snow-capped mountains and a band of distant forest, against a flat yellow sky.',
       'Two photographs show it printed in two colourways: a green ring around a strong yellow sky, and a cream ring around a paler one. It shares its wording and lone conifer with the Forest Service tree oval, but has dots where that oval has diamonds, and a different tree. When either was in use, and how the two ovals relate, is not established.',
-      'The artwork is an independent redraw from the two small photographs: analytic ellipses, custom condensed block letters (not an identified typeface), and drawn landscape and tree paths. Fine conifer detail, terrain marks and colours are approximate. The package also held a bolder redraw of a generated preview image; it is not shown here, since a generated image is not evidence of the original.'
+      'The artwork shown is a refined vector redraw that follows a generated restoration image of the emblem, not a photograph: cleaner lettering, borders and tree, but its tree shape, olive ring and lower scene are the generated image’s. The earlier redraw made from the two photographs is kept with the studies, and is the closer witness to the original.'
     ],
     sources: []
   },
@@ -203,8 +203,10 @@ const DRAWING_VARIANTS = {
     { id: 'reverse', study: true, name: 'Reversed · white on black', artwork: 'forest-service-emblem-reverse.svg', recolour: {}, note: 'One-ink separated-island drawing reversed for use on a dark ground. Newly generated treatment.' },
   ],
   'forest-service-yellow-sky.svg': [
-    { id: 'colour', name: 'Green, as in the first photograph', recolour: {}, note: 'A green ring around a strong yellow sky. Colours approximated from a small photograph.' },
-    { id: 'cream', name: 'Cream, as in the second photograph', recolour: { '#12763A': '#CCC98B', '#F4DD04': '#F0D17B', '#F4F0D3': '#F5EBC4', '#DEE6C5': '#CBD5B9', '#0B3024': '#282E1B', '#18553A': '#235950', '#2C7252': '#3E7C6D', '#0D3527': '#163E37', '#19392A': '#333D2A', '#1B5841': '#25594E' }, note: 'The same drawing with a cream ring around a paler yellow sky, the colourway of the second photograph. Approximate, as above.' }
+    { id: 'colour', name: 'Olive and cream', recolour: {}, note: 'The refined redraw as drawn: an olive band with a cream trim around a golden sky. It follows a generated restoration image, so these colours are that image’s, not the emblem’s.' },
+    { id: 'green', name: 'Green, as in the first photograph', recolour: { '#CECF8F': '#12763A', '#E6DFC9': '#12763A', '#F2DF83': '#F4DD04' }, note: 'The refined drawing recoloured to the first photograph’s green ring and strong yellow sky. A generated recolour; colours approximated from a small photograph.' },
+    { id: 'photo-green', study: true, name: 'From the photographs · green', artwork: 'forest-service-yellow-sky-photo.svg', recolour: {}, note: 'The earlier redraw made from the two photographs themselves: a slender, wind-shaped tree and a green ring. Less refined, but drawn from evidence of the emblem.' },
+    { id: 'photo-cream', study: true, name: 'From the photographs · cream', artwork: 'forest-service-yellow-sky-photo.svg', recolour: { '#12763A': '#CCC98B', '#F4DD04': '#F0D17B', '#F4F0D3': '#F5EBC4', '#DEE6C5': '#CBD5B9', '#0B3024': '#282E1B', '#18553A': '#235950', '#2C7252': '#3E7C6D', '#0D3527': '#163E37', '#19392A': '#333D2A', '#1B5841': '#25594E' }, note: 'The same photograph-based redraw in the second photograph’s cream ring and paler sky.' }
   ],
   'forest-service-green-gold.svg': [
     { id: 'colour', name: 'Full colour', recolour: {}, note: 'The reconstruction’s flat colours: badge green, gold, and the landscape’s greens, blue and grey.' },

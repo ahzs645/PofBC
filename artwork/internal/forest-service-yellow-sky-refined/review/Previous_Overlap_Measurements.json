@@ -1,0 +1,132 @@
+{
+  "source_size": [
+    1709,
+    2048
+  ],
+  "alignment": "Original source coordinates, with no further translation, scaling, rotation or local warping.",
+  "dark_mark_rule": "max(R,G,B) < 115 on both JPEG reference and PNG vector render; green fills and other light fields are excluded.",
+  "caveat": "These are mask agreement measurements. They do not establish an original font, color fidelity, or a single overall percentage of visual accuracy.",
+  "metrics": {
+    "all_dark_marks": {
+      "reference_pixels": 459092,
+      "reconstruction_pixels": 430217,
+      "intersection_pixels": 383468,
+      "union_pixels": 505841,
+      "iou": 0.7580801081762847,
+      "source_only_pixels": 75624,
+      "vector_only_pixels": 46749
+    },
+    "two_outer_border_lines": {
+      "reference_pixels": 101908,
+      "reconstruction_pixels": 95712,
+      "intersection_pixels": 89356,
+      "union_pixels": 108264,
+      "iou": 0.8253528412029852,
+      "source_only_pixels": 12552,
+      "vector_only_pixels": 6356,
+      "symmetric_boundary_mean_px": 1.001025879580029,
+      "symmetric_boundary_p95_px": 2.23606797749979
+    },
+    "central_canopy_dark_marks": {
+      "reference_pixels": 47037,
+      "reconstruction_pixels": 42187,
+      "intersection_pixels": 29761,
+      "union_pixels": 59463,
+      "iou": 0.50049610682273,
+      "source_only_pixels": 17276,
+      "vector_only_pixels": 12426
+    },
+    "central_canopy_silhouette": {
+      "reference_pixels": 85325,
+      "reconstruction_pixels": 87431,
+      "intersection_pixels": 81198,
+      "union_pixels": 91558,
+      "iou": 0.8868476812512287,
+      "source_only_pixels": 4127,
+      "vector_only_pixels": 6233,
+      "symmetric_boundary_mean_px": 2.7174520583669195,
+      "symmetric_boundary_p95_px": 7.810249675906654
+    },
+    "lower_landscape_dark_marks": {
+      "reference_pixels": 68315,
+      "reconstruction_pixels": 55062,
+      "intersection_pixels": 35651,
+      "union_pixels": 87726,
+      "iou": 0.40639035177712424,
+      "source_only_pixels": 32664,
+      "vector_only_pixels": 19411
+    },
+    "lettering": {
+      "scope": "28 lettering glyphs only; border, dots and picture excluded",
+      "reference_mask": "Source pixels with max(R,G,B) < 115, connected components identified as lettering",
+      "render_mask": "Inkscape 1x SVG render pixels with max(R,G,B) < 115",
+      "intersection_pixels": 189697,
+      "union_pixels": 204363,
+      "intersection_over_union": 0.9282355416587151,
+      "reference_area_pixels": 198409,
+      "render_area_pixels": 195651
+    }
+  },
+  "regions": {
+    "central_canopy_box_xyxy": [
+      660,
+      423,
+      990,
+      1100
+    ],
+    "central_canopy_color_rule": "Silhouette requires G-R>12. Dark details use max(R,G,B)<115 within one common region formed from the union of the two silhouettes, dilated by 3 px and clipped to the canopy box; this excludes the neutral oval rim without excluding neutral ink inside the tree.",
+    "lower_landscape": "Interior oval eroded by 14 px, y 1185 to 1641 inclusive; includes lower trunk and roots.",
+    "two_outer_border_lines": "Two isolated dark components whose bounding boxes each exceed 1100 px wide and 1600 px tall; excludes the inner picture boundary."
+  },
+  "threshold_sensitivity": {
+    "100": {
+      "all_dark_marks_percent": 75.4627972539825,
+      "canopy_dark_marks_percent": 48.755369249081404,
+      "lower_landscape_dark_marks_percent": 39.13494157557482
+    },
+    "115": {
+      "all_dark_marks_percent": 75.80801081762847,
+      "canopy_dark_marks_percent": 50.049610682273006,
+      "lower_landscape_dark_marks_percent": 40.63903517771242
+    },
+    "130": {
+      "all_dark_marks_percent": 76.10327415774887,
+      "canopy_dark_marks_percent": 51.28310105956143,
+      "lower_landscape_dark_marks_percent": 42.186412785367956
+    }
+  },
+  "lettering_individual_recheck": {
+    "weakest_five": [
+      {
+        "word": "COLUMBIA",
+        "letter": "C",
+        "position_in_word": 1,
+        "iou_percent": 86.6188
+      },
+      {
+        "word": "SERVICE",
+        "letter": "R",
+        "position_in_word": 3,
+        "iou_percent": 87.6783
+      },
+      {
+        "word": "SERVICE",
+        "letter": "C",
+        "position_in_word": 6,
+        "iou_percent": 88.4542
+      },
+      {
+        "word": "FOREST",
+        "letter": "S",
+        "position_in_word": 5,
+        "iou_percent": 89.384
+      },
+      {
+        "word": "BRITISH",
+        "letter": "R",
+        "position_in_word": 2,
+        "iou_percent": 89.4424
+      }
+    ]
+  }
+}

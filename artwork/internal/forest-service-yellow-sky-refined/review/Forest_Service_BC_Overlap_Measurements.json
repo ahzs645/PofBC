@@ -1,0 +1,199 @@
+{
+  "revision": "Refined reconstruction; comparison with the initial delivered version",
+  "source_dimensions": [
+    1709,
+    2048
+  ],
+  "source_filename": "Gemini_Generated_Image_wxlzc8wxlzc8wxlz (1).jpeg",
+  "alignment": "Original source coordinates. No post-render translation, scaling, rotation or warping.",
+  "dark_mark_threshold": "max(R,G,B) < 115",
+  "fixed_lower_scene_region": "Baseline interior-oval mask eroded by 14 px, y1185..1641; unchanged for both candidates.",
+  "canopy_region": "x660..989,y423..1099; silhouette G-R>12; dark detail ROI is the shared union of reference, previous and refined silhouettes, dilated by 3 px inside that box, held fixed for both scores.",
+  "lettering_method": "28 four-connected source components are matched to 28 rendered components by pixel overlap on each full-color emblem render. This uses the actual olive-band background in both versions.",
+  "baseline": {
+    "lettering": {
+      "reference_pixels": 198409,
+      "reconstruction_pixels": 195754,
+      "intersection_pixels": 189746,
+      "union_pixels": 204417,
+      "iou": 0.9282300395759648
+    },
+    "two_outer_border_lines": {
+      "reference_pixels": 101908,
+      "reconstruction_pixels": 95712,
+      "intersection_pixels": 89356,
+      "union_pixels": 108264,
+      "iou": 0.8253528412029852,
+      "symmetric_boundary_mean_px": 1.001025879580029,
+      "symmetric_boundary_p95_px": 2.23606797749979
+    },
+    "central_canopy_silhouette": {
+      "reference_pixels": 85325,
+      "reconstruction_pixels": 87431,
+      "intersection_pixels": 81198,
+      "union_pixels": 91558,
+      "iou": 0.8868476812512287,
+      "symmetric_boundary_mean_px": 2.7174520583669195,
+      "symmetric_boundary_p95_px": 7.810249675906654
+    },
+    "central_canopy_dark_marks": {
+      "reference_pixels": 47050,
+      "reconstruction_pixels": 42187,
+      "intersection_pixels": 29761,
+      "union_pixels": 59476,
+      "iou": 0.5003867106059587
+    },
+    "lower_landscape_dark_marks": {
+      "reference_pixels": 68315,
+      "reconstruction_pixels": 55062,
+      "intersection_pixels": 35651,
+      "union_pixels": 87726,
+      "iou": 0.40639035177712424
+    },
+    "all_dark_marks": {
+      "reference_pixels": 459092,
+      "reconstruction_pixels": 430217,
+      "intersection_pixels": 383468,
+      "union_pixels": 505841,
+      "iou": 0.7580801081762847
+    },
+    "mountains_and_shore": {
+      "reference_pixels": 44007,
+      "reconstruction_pixels": 33258,
+      "intersection_pixels": 23247,
+      "union_pixels": 54018,
+      "iou": 0.4303565478173942
+    },
+    "water_band": {
+      "reference_pixels": 8702,
+      "reconstruction_pixels": 7935,
+      "intersection_pixels": 6024,
+      "union_pixels": 10613,
+      "iou": 0.5676057665127674
+    },
+    "foreground_ground": {
+      "reference_pixels": 15606,
+      "reconstruction_pixels": 13869,
+      "intersection_pixels": 6380,
+      "union_pixels": 23095,
+      "iou": 0.2762502706213466
+    }
+  },
+  "refined": {
+    "lettering": {
+      "reference_pixels": 198409,
+      "reconstruction_pixels": 196947,
+      "intersection_pixels": 192932,
+      "union_pixels": 202424,
+      "iou": 0.9531083270758408
+    },
+    "two_outer_border_lines": {
+      "reference_pixels": 101908,
+      "reconstruction_pixels": 102889,
+      "intersection_pixels": 98774,
+      "union_pixels": 106023,
+      "iou": 0.931628042971808,
+      "symmetric_boundary_mean_px": 0.42527782513171314,
+      "symmetric_boundary_p95_px": 1.0
+    },
+    "central_canopy_silhouette": {
+      "reference_pixels": 85325,
+      "reconstruction_pixels": 86123,
+      "intersection_pixels": 83821,
+      "union_pixels": 87627,
+      "iou": 0.9565658986385475,
+      "symmetric_boundary_mean_px": 1.136325739415918,
+      "symmetric_boundary_p95_px": 3.605551275463989
+    },
+    "central_canopy_dark_marks": {
+      "reference_pixels": 47050,
+      "reconstruction_pixels": 45106,
+      "intersection_pixels": 40300,
+      "union_pixels": 51856,
+      "iou": 0.7771521135452021
+    },
+    "lower_landscape_dark_marks": {
+      "reference_pixels": 68315,
+      "reconstruction_pixels": 65869,
+      "intersection_pixels": 54322,
+      "union_pixels": 79862,
+      "iou": 0.6801983421401918
+    },
+    "all_dark_marks": {
+      "reference_pixels": 459092,
+      "reconstruction_pixels": 451524,
+      "intersection_pixels": 425461,
+      "union_pixels": 485155,
+      "iou": 0.8769589100390597
+    },
+    "mountains_and_shore": {
+      "reference_pixels": 44007,
+      "reconstruction_pixels": 43643,
+      "intersection_pixels": 36193,
+      "union_pixels": 51457,
+      "iou": 0.7033639738033698
+    },
+    "water_band": {
+      "reference_pixels": 8702,
+      "reconstruction_pixels": 6917,
+      "intersection_pixels": 6187,
+      "union_pixels": 9432,
+      "iou": 0.6559584393553859
+    },
+    "foreground_ground": {
+      "reference_pixels": 15606,
+      "reconstruction_pixels": 15309,
+      "intersection_pixels": 11942,
+      "union_pixels": 18973,
+      "iou": 0.6294207558108892
+    }
+  },
+  "improvements_percentage_points": {
+    "lettering": 2.4878287499875973,
+    "two_outer_border_lines": 10.627520176882276,
+    "central_canopy_silhouette": 6.971821738731876,
+    "central_canopy_dark_marks": 27.676540293924333,
+    "lower_landscape_dark_marks": 27.380799036306758,
+    "all_dark_marks": 11.8878801862775,
+    "mountains_and_shore": 27.30074259859756,
+    "water_band": 8.83526728426185,
+    "foreground_ground": 35.31704851895426
+  },
+  "threshold_sensitivity": {
+    "baseline": {
+      "100": {
+        "all_dark_marks": 0.7546279725398249,
+        "central_canopy_dark_marks": 0.48745278625756716,
+        "lower_landscape_dark_marks": 0.3913494157557482
+      },
+      "115": {
+        "all_dark_marks": 0.7580801081762847,
+        "central_canopy_dark_marks": 0.5003867106059587,
+        "lower_landscape_dark_marks": 0.40639035177712424
+      },
+      "130": {
+        "all_dark_marks": 0.7610327415774887,
+        "central_canopy_dark_marks": 0.5127050656537542,
+        "lower_landscape_dark_marks": 0.42186412785367955
+      }
+    },
+    "refined": {
+      "100": {
+        "all_dark_marks": 0.8737758478687755,
+        "central_canopy_dark_marks": 0.7695911075823739,
+        "lower_landscape_dark_marks": 0.6671656235886186
+      },
+      "115": {
+        "all_dark_marks": 0.8769589100390597,
+        "central_canopy_dark_marks": 0.7771521135452021,
+        "lower_landscape_dark_marks": 0.6801983421401918
+      },
+      "130": {
+        "all_dark_marks": 0.8780078683689139,
+        "central_canopy_dark_marks": 0.7821941370026922,
+        "lower_landscape_dark_marks": 0.6874666666666667
+      }
+    }
+  },
+  "limits": "Mask overlap measures selected shape agreement. It does not identify the historical typeface, assess all color differences, or define a universal fidelity percentage."
+}

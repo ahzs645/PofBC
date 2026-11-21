@@ -145,7 +145,8 @@ const DRAWINGS = {
   'forest-service-emblem-three-islands-green.svg': () => import('./forest-service-emblem-three-islands-green.svg?raw'),
   'forest-service-emblem-reverse.svg': () => import('./forest-service-emblem-reverse.svg?raw'),
   'forest-service-green-gold.svg': () => import('./forest-service-green-gold.svg?raw'),
-  'forest-service-yellow-sky.svg': () => import('./forest-service-yellow-sky.svg?raw')
+  'forest-service-yellow-sky.svg': () => import('./forest-service-yellow-sky.svg?raw'),
+  'forest-service-yellow-sky-photo.svg': () => import('./forest-service-yellow-sky-photo.svg?raw')
 }
 const fetched = new Map()
 
