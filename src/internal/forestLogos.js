@@ -149,7 +149,7 @@ export const FOREST_LOGOS = [
     kind: 'drawing',
     artwork: 'forest-service-yellow-sky.svg',
     name: 'Forest Service, yellow-sky oval',
-    description: 'A tall, wind-shaped conifer against a yellow sky, ringed by FOREST SERVICE and BRITISH COLUMBIA.',
+    description: 'A lone conifer before mountains and a lake under a yellow sky, ringed by FOREST SERVICE and BRITISH COLUMBIA.',
     evidence: 'Seen in two photographs · adoption date unverified',
     comments: [
       '“FOREST SERVICE” arcs over the top and “BRITISH COLUMBIA” under the bottom, with a dot on each side between them. Inside, a slender conifer with wind-shaped upper boughs rises from a lakeshore in front of snow-capped mountains and a band of distant forest, against a flat yellow sky.',
