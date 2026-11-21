@@ -1,6 +1,6 @@
 # Remaining identity gaps
 
-117 registered subjects still have no accepted artwork after this acquisition. These include shared or unconfirmed identities, not just missing download files. A parent or successor logo does not fill a subject's gap.
+108 registered subjects still have no accepted artwork after this acquisition. These include shared or unconfirmed identities, not just missing download files. A parent or successor logo does not fill a subject's gap.
 
 The [research outcomes](research-outcomes.json) identify which sources were actually inspected. The historical health group remains an archival research queue; no exhaustive search of every council is claimed.
 
@@ -8,23 +8,14 @@ The [research outcomes](research-outcomes.json) identify which sources were actu
 |---|---|---|---|
 | Pacific Vehicle Testing Technologies | transit | source-located | 2012 TransLink annual report confirms the wholly owned subsidiary managed AirCare and Envirotest Canada was the inspection contractor. No separate PVTT corporate mark was located. CIPO old/current-owner search for Pacific Vehicle Testing returned zero records. This is a bounded search result, not proof no mark ever existed. Do not assign the AirCare program mark to PVTT. |
 | Metro Transit Operating Company | transit | distinct-unconfirmed | Seek a dated corporate specimen; retain an unconfirmed distinct-identity outcome if evidence remains inconclusive. |
-| Liquor Control Board | liquor-distribution | source-located | Locate a dated original signature or seal before claiming a distinct historical logo. |
 | BC Archives | museum-archives | distinct-unconfirmed | Current official website has a live-text <a class="archives-logo h4 bold">BC Archives</a> and separate shared Royal BC Museum graphic. CSS for archives-logo specifies typography/layout only; the Royal Museum graphic uses logo-one-line.e09429f7.svg as a mask. No standalone Archives graphic was accepted or created. |
-| Court of Appeal for British Columbia | courts | distinct-unconfirmed | Review dated seals, arms and publication signatures before classifying a distinct emblem. |
-| Supreme Court of British Columbia | courts | distinct-unconfirmed | Review dated seals, arms and publication signatures before classifying a distinct emblem. |
-| Provincial Court of British Columbia | courts | distinct-unconfirmed | Review dated seals, arms and publication signatures before classifying a distinct emblem. |
-| Office of the Premier | provincial-administration | distinct-unconfirmed | Compare a dated official signature to determine whether shared provincial identity is the correct record. |
-| Government Communications and Public Engagement | provincial-administration | distinct-unconfirmed | Compare a dated official signature to determine whether shared provincial identity is the correct record. |
 | Provincial Rental Housing Corporation | historical-research | shared-identity | Extend the documented shared-identity evidence with other dated specimens, and continue any distinct-mark research. |
 | BC Electric, Crown period | hydro | source-located | Find a clean contemporary mark demonstrably used during provincial ownership. |
 | W.L.C. Developments | historical-research | distinct-unconfirmed | Seek original company documents and property records for an attributable mark or seal. |
 | BC Harbours Board | historical-research | distinct-unconfirmed | Seek a dated corporate specimen and retain an unconfirmed-identity outcome where appropriate. |
-| Grand Forks | municipalities | artwork-missing | Official homepage/document library and the directly indexed 2024 annual-report PDF returned HTTP403. No attributable original could be downloaded in this pass. |
-| Keremeos | municipalities | artwork-missing | Official homepage and the official 2017 Business Recruitment & Resident Attraction Strategy PDF returned HTTP503 on both www and apex domains. |
-| Lions Bay | municipalities | artwork-missing | The candidate was a municipal flag. It is not accepted as a separate corporate logo. |
-| Okanagan Falls | municipalities | artwork-missing | The site displayed a future-website announcement rather than a standalone corporate identifier. The large background photograph is not a logo. |
-| shíshálh Nation Government District | municipalities | artwork-missing | Recovered artwork names shíshálh Nation. Specific attribution to the Government District is not established, so the related Nation artwork does not close the District gap. |
-| Warfield | municipalities | artwork-missing | Official homepage returned a challenge response. The official 2024 annual-report PDF URL returned HTML redirecting to a CAPTCHA rather than PDF bytes. Access challenge was not bypassed. |
+| Grand Forks | municipalities | artwork-missing | Official Grand Forks artwork was confirmed. The City requires approval for use in other organizations’ publications; the original is source-linked only and is not counted as held. |
+| Okanagan Falls | municipalities | artwork-missing | Official placeholder and November 6, 9 and 23 council agenda covers did not show a standalone mark. This is a bounded observation, not a categorical finding of absence. |
+| shíshálh Nation Government District | municipalities | artwork-missing | District business-licence letterhead proves use of a device consistent with the Nation emblem, not a separate District mark. Keep as source-linked shared-use evidence; do not vendor or count the emblem. |
 | Abbotsford/Matsqui Health Council | atlas-health | artwork-missing | Find and compare a source specimen; establish whether a distinct identity was used. |
 | Alberni Valley Health Council | atlas-health | artwork-missing | Find and compare a source specimen; establish whether a distinct identity was used. |
 | Armstrong, Enderby and Spallumcheen Health Council | atlas-health | artwork-missing | Find and compare a source specimen; establish whether a distinct identity was used. |

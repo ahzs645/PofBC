@@ -103,6 +103,10 @@ def produce(recipe, source_bytes):
         page = doc[recipe.get('pageIndex', 0)]
         dims = recipe['imageDimensions']
         candidates = [item for item in page.get_images(full=True) if [item[2], item[3]] == dims]
+        if 'imageXref' in recipe:
+            # A PDF can list a separately stored soft mask at the same dimensions.
+            # A recorded xref targets the actual image in the checksum-pinned source.
+            candidates = [item for item in candidates if item[0] == recipe['imageXref']]
         if len(candidates) != 1:
             raise ValueError(f'Ambiguous embedded image {dims}')
         xref, mask = candidates[0][0:2]

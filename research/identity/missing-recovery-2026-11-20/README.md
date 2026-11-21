@@ -1,5 +1,7 @@
 # Missing identity artwork recovered — 20 November 2026
 
+> **21 November follow-up:** [Nine more subjects recovered](follow-up-2026-11-21.md). Current coverage is **347 / 455**, with **108** unresolved. The figures below describe the original wave.
+
 This acquisition fills **170 previously empty identity subjects** with **177 artwork files**:
 **51 native vectors** and **126 raster specimens**. The declared register remains **455 subjects**;
 artwork is now held for **338**, compared with **168** at baseline commit

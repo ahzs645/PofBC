@@ -14,7 +14,7 @@
       "name": "Grand Forks",
       "sourcePage": "http://grandforks.ca",
       "observedDate": "2026-11-20",
-      "reason": "Official homepage/document library and the directly indexed 2024 annual-report PDF returned HTTP403. No attributable original could be downloaded in this pass.",
+      "reason": "Official Grand Forks artwork was confirmed. The City requires approval for use in other organizations’ publications; the original is source-linked only and is not counted as held.",
       "errors": [
         "Page: HTTP Error 403: Forbidden"
       ],
@@ -28,7 +28,15 @@
         }
       ],
       "family": "municipalities",
-      "researchLog": "municipal-research.json"
+      "researchLog": "municipal-research.json",
+      "followUp": {
+        "observedDate": "2026-11-21",
+        "reason": "Official Grand Forks artwork was confirmed. The City requires approval for use in other organizations’ publications; the original is source-linked only and is not counted as held.",
+        "sourceUrls": [
+          "https://www.grandforks.ca/wp-content/uploads/Grand-Forks-Logo-Home.png",
+          "https://www.grandforks.ca/wp-content/uploads/Logo-Use-Guidelines-and-User-Agreement.pdf"
+        ]
+      }
     },
     {
       "id": "municipality-keremeos",
@@ -75,21 +83,29 @@
       "name": "Okanagan Falls",
       "sourcePage": "https://okanaganfalls.ca",
       "observedDate": "2026-11-20",
-      "reason": "The site displayed a future-website announcement rather than a standalone corporate identifier. The large background photograph is not a logo.",
+      "reason": "Official placeholder and November 6, 9 and 23 council agenda covers did not show a standalone mark. This is a bounded observation, not a categorical finding of absence.",
       "errors": [],
       "candidateSources": [
         "https://okanaganfalls.ca/okanagan-falls-1.jpg",
         "https://okanaganfalls.ca/okanagan-falls-2.jpg"
       ],
       "family": "municipalities",
-      "researchLog": "municipal-research.json"
+      "researchLog": "municipal-research.json",
+      "followUp": {
+        "observedDate": "2026-11-21",
+        "reason": "Official placeholder and November 6, 9 and 23 council agenda covers did not show a standalone mark. This is a bounded observation, not a categorical finding of absence.",
+        "sourceUrls": [
+          "https://okanaganfalls.ca/",
+          "https://infonews.ca/news/7974212/a-new-town-is-being-born-in-the-okanagan-heres-how-they-made-it/"
+        ]
+      }
     },
     {
       "id": "municipality-shishalh-nation-government-district",
       "name": "shíshálh Nation Government District",
       "sourcePage": "https://shishalh.com/",
       "observedDate": "2026-11-20",
-      "reason": "Recovered artwork names shíshálh Nation. Specific attribution to the Government District is not established, so the related Nation artwork does not close the District gap.",
+      "reason": "District business-licence letterhead proves use of a device consistent with the Nation emblem, not a separate District mark. Keep as source-linked shared-use evidence; do not vendor or count the emblem.",
       "errors": [],
       "candidateSources": [
         "https://shishalh.com/wp-content/themes/shishalh/images/shell/shishalh-logo-alt.svg",
@@ -97,7 +113,15 @@
         "https://shishalh.com/wp-content/themes/shishalh/images/shell/shishalh-logo-mobile.svg"
       ],
       "family": "municipalities",
-      "researchLog": "municipal-research.json"
+      "researchLog": "municipal-research.json",
+      "followUp": {
+        "observedDate": "2026-11-21",
+        "reason": "District business-licence letterhead proves use of a device consistent with the Nation emblem, not a separate District mark. Keep as source-linked shared-use evidence; do not vendor or count the emblem.",
+        "sourceUrls": [
+          "https://shishalh.com/wp-content/uploads/2023/09/sNGD-Business-License-Form.pdf",
+          "https://www.civicinfo.bc.ca/municipalities?id=178"
+        ]
+      }
     },
     {
       "id": "municipality-warfield",
@@ -228,5 +252,7 @@
       "evidenceFile": "../../../public/identity-recovered/_sources/aircare-pvtt-2012-source-page.pdf",
       "status": "distinct-corporate-mark-unverified"
     }
-  ]
+  ],
+  "followUpObservedDate": "2026-11-21",
+  "followUpSummary": "Indexed official marks and original publication components; linked rather than vendored where permission-specific or not distinguished from shared usage. See follow-up-2026-11-21.md."
 }

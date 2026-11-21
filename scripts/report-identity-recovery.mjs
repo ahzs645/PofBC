@@ -38,6 +38,7 @@ const families = COVERAGE_FAMILIES.map((family) => {
 const formats = Object.fromEntries([...new Set(assets.map((asset) => asset.format))].sort().map((format) => [format, assets.filter((asset) => asset.format === format).length]))
 const summary = {
   baselineCommit: before.baseCommit, observedDate: manifest.observedDate, observationTimezone: manifest.observationTimezone,
+  ...(manifest.followUpObservedDate ? { followUpObservedDate: manifest.followUpObservedDate } : {}),
   before: { ...before.summary, missing: before.summary.subjects - before.summary.held },
   after: { ...coverageSummary(), missing: IDENTITY_COVERAGE.filter((subject) => !subject.hasArtwork).length },
   recoveredSubjects: acquired.length, artworkFiles: assets.length,
@@ -54,7 +55,7 @@ const remaining = IDENTITY_COVERAGE.filter((subject) => !subject.hasArtwork).map
   sources: subject.sources, ...(notes.get(subject.id) ?? {}),
   ...(subject.family === 'atlas-health' ? { researchScope: 'Historical council/board remains in the declared register. The focused archival checks described in research-outcomes.json are not an exhaustive search for every council.' } : {})
 }))
-write('remaining-gaps.json', { observedDate: manifest.observedDate, missingSubjects: remaining.length, subjects: remaining })
+write('remaining-gaps.json', { observedDate: manifest.followUpObservedDate ?? manifest.observedDate, missingSubjects: remaining.length, subjects: remaining })
 const md = (value) => String(value ?? '').replace(/\|/g, '\\|').replace(/\n/g, ' ')
 write('remaining-gaps.md', `# Remaining identity gaps\n\n${remaining.length} registered subjects still have no accepted artwork after this acquisition. These include shared or unconfirmed identities, not just missing download files. A parent or successor logo does not fill a subject's gap.\n\nThe [research outcomes](research-outcomes.json) identify which sources were actually inspected. The historical health group remains an archival research queue; no exhaustive search of every council is claimed.\n\n| Subject | Family | Evidence state | Remaining work / inspected outcome |\n|---|---|---|---|\n${remaining.map((subject) => `| ${md(subject.label)} | ${md(subject.family)} | ${md(subject.state)} | ${md(subject.reason ?? subject.outcome ?? subject.nextAction)} |`).join('\n')}\n`)
 write('acquired-identities.md', `# Acquired identities\n\n${acquired.length} previously missing subjects now hold ${assets.length} artwork files (${summary.vectorFiles} native vectors and ${summary.rasterFiles} raster specimens). More than one file can belong to the same subject. A held specimen does not establish all eras, all colourways, an adoption date, or permission to use the mark.\n\nFull hashes, source locators, date qualifications, dimensions and extraction recipes are in [assets-manifest.json](assets-manifest.json).\n\n| Subject | Artwork | Format | Primary source |\n|---|---|---|---|\n${manifest.bodies.flatMap((body) => body.assets.map((asset) => `| ${md(body.shortName)} | [${md(asset.label)}](../../../public/${asset.file}) | ${asset.format.toUpperCase()}${asset.isVector ? ' · native vector' : ' · raster'} | [Source](${asset.sourceUrl}) |`)).join('\n')}\n`)

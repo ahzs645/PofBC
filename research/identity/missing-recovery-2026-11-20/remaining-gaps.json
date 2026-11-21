@@ -1,6 +1,6 @@
 {
-  "observedDate": "2026-11-20",
-  "missingSubjects": 117,
+  "observedDate": "2026-11-21",
+  "missingSubjects": 108,
   "subjects": [
     {
       "id": "pacific-vehicle-testing-technologies",
@@ -33,19 +33,6 @@
       ]
     },
     {
-      "id": "liquor-control-board",
-      "label": "Liquor Control Board",
-      "family": "liquor-distribution",
-      "state": "source-located",
-      "nextAction": "Locate a dated original signature or seal before claiming a distinct historical logo.",
-      "sources": [
-        {
-          "title": "BC Archives: Liquor Control Board",
-          "url": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-liquor-board"
-        }
-      ]
-    },
-    {
       "id": "sub-bc-archives",
       "label": "BC Archives",
       "family": "museum-archives",
@@ -58,71 +45,6 @@
       ],
       "outcome": "Current official website has a live-text <a class=\"archives-logo h4 bold\">BC Archives</a> and separate shared Royal BC Museum graphic. CSS for archives-logo specifies typography/layout only; the Royal Museum graphic uses logo-one-line.e09429f7.svg as a mask. No standalone Archives graphic was accepted or created.",
       "researchLog": "institutions-research.json"
-    },
-    {
-      "id": "court-of-appeal",
-      "label": "Court of Appeal for British Columbia",
-      "family": "courts",
-      "state": "distinct-unconfirmed",
-      "nextAction": "Review dated seals, arms and publication signatures before classifying a distinct emblem.",
-      "sources": [
-        {
-          "title": "Court of Appeal for British Columbia official website",
-          "url": "https://www.bccourts.ca/Court_of_Appeal/"
-        }
-      ]
-    },
-    {
-      "id": "supreme-court",
-      "label": "Supreme Court of British Columbia",
-      "family": "courts",
-      "state": "distinct-unconfirmed",
-      "nextAction": "Review dated seals, arms and publication signatures before classifying a distinct emblem.",
-      "sources": [
-        {
-          "title": "Supreme Court of British Columbia official website",
-          "url": "https://www.bccourts.ca/supreme_court/"
-        }
-      ]
-    },
-    {
-      "id": "provincial-court",
-      "label": "Provincial Court of British Columbia",
-      "family": "courts",
-      "state": "distinct-unconfirmed",
-      "nextAction": "Review dated seals, arms and publication signatures before classifying a distinct emblem.",
-      "sources": [
-        {
-          "title": "Provincial Court of British Columbia official website",
-          "url": "https://www.provincialcourt.bc.ca"
-        }
-      ]
-    },
-    {
-      "id": "office-of-the-premier",
-      "label": "Office of the Premier",
-      "family": "provincial-administration",
-      "state": "distinct-unconfirmed",
-      "nextAction": "Compare a dated official signature to determine whether shared provincial identity is the correct record.",
-      "sources": [
-        {
-          "title": "Office of the Premier official website",
-          "url": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/office-of-the-premier"
-        }
-      ]
-    },
-    {
-      "id": "government-communications-and-public-engagement",
-      "label": "Government Communications and Public Engagement",
-      "family": "provincial-administration",
-      "state": "distinct-unconfirmed",
-      "nextAction": "Compare a dated official signature to determine whether shared provincial identity is the correct record.",
-      "sources": [
-        {
-          "title": "Government Communications and Public Engagement official website",
-          "url": "https://news.gov.bc.ca"
-        }
-      ]
     },
     {
       "id": "provincial-rental-housing-corporation",
@@ -202,7 +124,7 @@
       "name": "Grand Forks",
       "sourcePage": "http://grandforks.ca",
       "observedDate": "2026-11-20",
-      "reason": "Official homepage/document library and the directly indexed 2024 annual-report PDF returned HTTP403. No attributable original could be downloaded in this pass.",
+      "reason": "Official Grand Forks artwork was confirmed. The City requires approval for use in other organizations’ publications; the original is source-linked only and is not counted as held.",
       "errors": [
         "Page: HTTP Error 403: Forbidden"
       ],
@@ -215,75 +137,15 @@
           "error": "HTTP Error 403: Forbidden"
         }
       ],
-      "researchLog": "municipal-research.json"
-    },
-    {
-      "id": "municipality-keremeos",
-      "label": "Keremeos",
-      "family": "municipalities",
-      "state": "artwork-missing",
-      "nextAction": "Find the corporate logo on an official municipal source, then record the file, its source and any adoption evidence.",
-      "sources": [
-        {
-          "title": "Provincial legally defined administrative area record",
-          "url": "https://delivery.maps.gov.bc.ca/arcgis/rest/services/mpcm/bcgwpub/MapServer/3/query?f=json&where=LGL_ADMIN_AREA_ID%3D128&outFields=LGL_ADMIN_AREA_ID%2CADMIN_AREA_NAME%2CADMIN_AREA_ABBREVIATION%2CADMIN_AREA_GROUP_NAME&returnGeometry=false",
-          "note": "Provincial identifier bc-lgaa-128."
-        },
-        {
-          "title": "CivicInfo BC municipal directory",
-          "url": "https://www.civicinfo.bc.ca/municipalities?pn=3"
-        }
-      ],
-      "name": "Keremeos",
-      "sourcePage": "http://www.keremeos.ca",
-      "observedDate": "2026-11-20",
-      "reason": "Official homepage and the official 2017 Business Recruitment & Resident Attraction Strategy PDF returned HTTP503 on both www and apex domains.",
-      "errors": [
-        "Page: HTTP Error 503: Service Unavailable"
-      ],
-      "candidateSources": [],
-      "finalAttempts": [
-        {
-          "slug": "keremeos",
-          "url": "https://www.keremeos.ca/files/documents/2017-05-15-FINALBusinessRecruitmentResidentAttractionStrategy-17041WITHEDITS2.pdf",
-          "sourcePage": "https://www.keremeos.ca/",
-          "error": "HTTP Error 503: Service Unavailable"
-        },
-        {
-          "slug": "keremeos",
-          "url": "https://keremeos.ca/files/documents/2017-05-15-FINALBusinessRecruitmentResidentAttractionStrategy-17041WITHEDITS2.pdf",
-          "sourcePage": "https://www.keremeos.ca/",
-          "error": "HTTP Error 503: Service Unavailable"
-        }
-      ],
-      "researchLog": "municipal-research.json"
-    },
-    {
-      "id": "municipality-lions-bay",
-      "label": "Lions Bay",
-      "family": "municipalities",
-      "state": "artwork-missing",
-      "nextAction": "Find the corporate logo on an official municipal source, then record the file, its source and any adoption evidence.",
-      "sources": [
-        {
-          "title": "Provincial legally defined administrative area record",
-          "url": "https://delivery.maps.gov.bc.ca/arcgis/rest/services/mpcm/bcgwpub/MapServer/3/query?f=json&where=LGL_ADMIN_AREA_ID%3D123&outFields=LGL_ADMIN_AREA_ID%2CADMIN_AREA_NAME%2CADMIN_AREA_ABBREVIATION%2CADMIN_AREA_GROUP_NAME&returnGeometry=false",
-          "note": "Provincial identifier bc-lgaa-123."
-        },
-        {
-          "title": "CivicInfo BC municipal directory",
-          "url": "https://www.civicinfo.bc.ca/municipalities?pn=3"
-        }
-      ],
-      "name": "Lions Bay",
-      "sourcePage": "https://www.lionsbay.ca/",
-      "observedDate": "2026-11-20",
-      "reason": "The candidate was a municipal flag. It is not accepted as a separate corporate logo.",
-      "errors": [],
-      "candidateSources": [
-        "https://www.lionsbay.ca/sites/2/files/lb_flag-web.png"
-      ],
-      "researchLog": "municipal-research.json"
+      "researchLog": "municipal-research.json",
+      "followUp": {
+        "observedDate": "2026-11-21",
+        "reason": "Official Grand Forks artwork was confirmed. The City requires approval for use in other organizations’ publications; the original is source-linked only and is not counted as held.",
+        "sourceUrls": [
+          "https://www.grandforks.ca/wp-content/uploads/Grand-Forks-Logo-Home.png",
+          "https://www.grandforks.ca/wp-content/uploads/Logo-Use-Guidelines-and-User-Agreement.pdf"
+        ]
+      }
     },
     {
       "id": "municipality-okanagan-falls",
@@ -305,13 +167,21 @@
       "name": "Okanagan Falls",
       "sourcePage": "https://okanaganfalls.ca",
       "observedDate": "2026-11-20",
-      "reason": "The site displayed a future-website announcement rather than a standalone corporate identifier. The large background photograph is not a logo.",
+      "reason": "Official placeholder and November 6, 9 and 23 council agenda covers did not show a standalone mark. This is a bounded observation, not a categorical finding of absence.",
       "errors": [],
       "candidateSources": [
         "https://okanaganfalls.ca/okanagan-falls-1.jpg",
         "https://okanaganfalls.ca/okanagan-falls-2.jpg"
       ],
-      "researchLog": "municipal-research.json"
+      "researchLog": "municipal-research.json",
+      "followUp": {
+        "observedDate": "2026-11-21",
+        "reason": "Official placeholder and November 6, 9 and 23 council agenda covers did not show a standalone mark. This is a bounded observation, not a categorical finding of absence.",
+        "sourceUrls": [
+          "https://okanaganfalls.ca/",
+          "https://infonews.ca/news/7974212/a-new-town-is-being-born-in-the-okanagan-heres-how-they-made-it/"
+        ]
+      }
     },
     {
       "id": "municipality-shishalh-nation-government-district",
@@ -337,51 +207,22 @@
       "name": "shíshálh Nation Government District",
       "sourcePage": "https://shishalh.com/",
       "observedDate": "2026-11-20",
-      "reason": "Recovered artwork names shíshálh Nation. Specific attribution to the Government District is not established, so the related Nation artwork does not close the District gap.",
+      "reason": "District business-licence letterhead proves use of a device consistent with the Nation emblem, not a separate District mark. Keep as source-linked shared-use evidence; do not vendor or count the emblem.",
       "errors": [],
       "candidateSources": [
         "https://shishalh.com/wp-content/themes/shishalh/images/shell/shishalh-logo-alt.svg",
         "https://shishalh.com/wp-content/uploads/2024/05/shishalh-logo.svg",
         "https://shishalh.com/wp-content/themes/shishalh/images/shell/shishalh-logo-mobile.svg"
       ],
-      "researchLog": "municipal-research.json"
-    },
-    {
-      "id": "municipality-warfield",
-      "label": "Warfield",
-      "family": "municipalities",
-      "state": "artwork-missing",
-      "nextAction": "Find the corporate logo on an official municipal source, then record the file, its source and any adoption evidence.",
-      "sources": [
-        {
-          "title": "Provincial legally defined administrative area record",
-          "url": "https://delivery.maps.gov.bc.ca/arcgis/rest/services/mpcm/bcgwpub/MapServer/3/query?f=json&where=LGL_ADMIN_AREA_ID%3D228&outFields=LGL_ADMIN_AREA_ID%2CADMIN_AREA_NAME%2CADMIN_AREA_ABBREVIATION%2CADMIN_AREA_GROUP_NAME&returnGeometry=false",
-          "note": "Provincial identifier bc-lgaa-228."
-        },
-        {
-          "title": "CivicInfo BC municipal directory",
-          "url": "https://www.civicinfo.bc.ca/municipalities?pn=7"
-        }
-      ],
-      "name": "Warfield",
-      "sourcePage": "https://warfield.ca/",
-      "observedDate": "2026-11-20",
-      "reason": "Official homepage returned a challenge response. The official 2024 annual-report PDF URL returned HTML redirecting to a CAPTCHA rather than PDF bytes. Access challenge was not bypassed.",
-      "errors": [],
-      "candidateSources": [],
-      "finalAttempts": [
-        {
-          "slug": "warfield",
-          "url": "https://warfield.ca/wp-content/uploads/VoW-2024-Annual-Report-1.pdf",
-          "sourcePage": "https://warfield.ca/village-office/finance/",
-          "file": "final/warfield/ded9ffd3ff16.txt",
-          "resolvedSourceUrl": "https://warfield.ca/wp-content/uploads/VoW-2024-Annual-Report-1.pdf",
-          "contentType": "text/html",
-          "bytes": 219,
-          "sha256": "33e16b72cf970ebae509f4805e4b4174583af01771bd10369824dafc3dd04708"
-        }
-      ],
-      "researchLog": "municipal-research.json"
+      "researchLog": "municipal-research.json",
+      "followUp": {
+        "observedDate": "2026-11-21",
+        "reason": "District business-licence letterhead proves use of a device consistent with the Nation emblem, not a separate District mark. Keep as source-linked shared-use evidence; do not vendor or count the emblem.",
+        "sourceUrls": [
+          "https://shishalh.com/wp-content/uploads/2023/09/sNGD-Business-License-Form.pdf",
+          "https://www.civicinfo.bc.ca/municipalities?id=178"
+        ]
+      }
     },
     {
       "id": "abbotsford-matsqui-health-council",
