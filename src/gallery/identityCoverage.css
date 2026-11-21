@@ -55,7 +55,7 @@
 .identity-sources { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; font-size: 13px; line-height: 1.55; }
 .identity-sources a { color: var(--ink); text-underline-offset: 3px; overflow-wrap: anywhere; }
 .identity-sources p { margin: 4px 0 0; color: var(--ink-muted); }
-.identity-collection-links { margin: 25px 0; padding: 14px 0; border-top: 1px solid var(--mid); border-bottom: 1px solid var(--mid); }
+.identity-collection-links { display: grid; gap: 10px; margin: 25px 0; padding: 14px 0; border-top: 1px solid var(--mid); border-bottom: 1px solid var(--mid); }
 .identity-collection-links > div { display: flex; flex-wrap: wrap; gap: 10px 24px; }
 .identity-collection-links > p { margin: 0 0 10px; }
 a.identity-subject-link, .identity-relations a, .identity-collection-links a { text-decoration: none; }

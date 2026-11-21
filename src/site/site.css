@@ -1021,7 +1021,7 @@ input.share__url {
 
 /* ── The gallery view ──────────────────────────────────────────────────────────────────────── */
 
-.gallery { display: grid; gap: var(--gap); }
+.gallery { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap); }
 
 .gallery__intro {
   margin: 0;
@@ -1049,15 +1049,17 @@ input.share__url {
 
 .gallery__head {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  gap: 12px;
+  gap: 2px 12px;
 }
 
 .gallery__head h2 { margin: 0; font-size: 18px; font-weight: 600; line-height: 1.3; }
 
 .gallery__years {
   flex: none;
+  max-width: 100%;
   font-size: 13px;
   color: var(--ink-faint);
   font-variant-numeric: tabular-nums;
@@ -1376,8 +1378,12 @@ input.share__url {
 
 .gallery__graph-link {
   justify-self: start;
-  padding: 0 12px;
-  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 4px 12px;
+  min-height: 32px;
+  text-align: left;
   border: 1px solid var(--outline);
   border-radius: var(--radius);
   background: var(--hover);
