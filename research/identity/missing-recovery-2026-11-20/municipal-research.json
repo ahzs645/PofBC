@@ -1,0 +1,110 @@
+{
+  "observedDate": "2026-11-20",
+  "scannedSubjects": 141,
+  "acceptedSubjects": 135,
+  "remainingSubjects": 6,
+  "note": "This pass does not assert that an unaccepted subject never had a logo. Source/ownership or retrieval work remains.",
+  "subjects": [
+    {
+      "id": "municipality-grand-forks",
+      "name": "Grand Forks",
+      "sourcePage": "http://grandforks.ca",
+      "observedDate": "2026-11-20",
+      "reason": "Official homepage/document library and the directly indexed 2024 annual-report PDF returned HTTP403. No attributable original could be downloaded in this pass.",
+      "errors": [
+        "Page: HTTP Error 403: Forbidden"
+      ],
+      "candidateSources": [],
+      "finalAttempts": [
+        {
+          "slug": "grand-forks",
+          "url": "https://www.grandforks.ca/wp-content/uploads/GrandForks-2024AnnualReport-web.pdf",
+          "sourcePage": "https://www.grandforks.ca/document-library/",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "id": "municipality-keremeos",
+      "name": "Keremeos",
+      "sourcePage": "http://www.keremeos.ca",
+      "observedDate": "2026-11-20",
+      "reason": "Official homepage and the official 2017 Business Recruitment & Resident Attraction Strategy PDF returned HTTP503 on both www and apex domains.",
+      "errors": [
+        "Page: HTTP Error 503: Service Unavailable"
+      ],
+      "candidateSources": [],
+      "finalAttempts": [
+        {
+          "slug": "keremeos",
+          "url": "https://www.keremeos.ca/files/documents/2017-05-15-FINALBusinessRecruitmentResidentAttractionStrategy-17041WITHEDITS2.pdf",
+          "sourcePage": "https://www.keremeos.ca/",
+          "error": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "slug": "keremeos",
+          "url": "https://keremeos.ca/files/documents/2017-05-15-FINALBusinessRecruitmentResidentAttractionStrategy-17041WITHEDITS2.pdf",
+          "sourcePage": "https://www.keremeos.ca/",
+          "error": "HTTP Error 503: Service Unavailable"
+        }
+      ]
+    },
+    {
+      "id": "municipality-lions-bay",
+      "name": "Lions Bay",
+      "sourcePage": "https://www.lionsbay.ca/",
+      "observedDate": "2026-11-20",
+      "reason": "The candidate was a municipal flag. It is not accepted as a separate corporate logo.",
+      "errors": [],
+      "candidateSources": [
+        "https://www.lionsbay.ca/sites/2/files/lb_flag-web.png"
+      ]
+    },
+    {
+      "id": "municipality-okanagan-falls",
+      "name": "Okanagan Falls",
+      "sourcePage": "https://okanaganfalls.ca",
+      "observedDate": "2026-11-20",
+      "reason": "The site displayed a future-website announcement rather than a standalone corporate identifier. The large background photograph is not a logo.",
+      "errors": [],
+      "candidateSources": [
+        "https://okanaganfalls.ca/okanagan-falls-1.jpg",
+        "https://okanaganfalls.ca/okanagan-falls-2.jpg"
+      ]
+    },
+    {
+      "id": "municipality-shishalh-nation-government-district",
+      "name": "shíshálh Nation Government District",
+      "sourcePage": "https://shishalh.com/",
+      "observedDate": "2026-11-20",
+      "reason": "Recovered artwork names shíshálh Nation. Specific attribution to the Government District is not established, so the related Nation artwork does not close the District gap.",
+      "errors": [],
+      "candidateSources": [
+        "https://shishalh.com/wp-content/themes/shishalh/images/shell/shishalh-logo-alt.svg",
+        "https://shishalh.com/wp-content/uploads/2024/05/shishalh-logo.svg",
+        "https://shishalh.com/wp-content/themes/shishalh/images/shell/shishalh-logo-mobile.svg"
+      ]
+    },
+    {
+      "id": "municipality-warfield",
+      "name": "Warfield",
+      "sourcePage": "https://warfield.ca/",
+      "observedDate": "2026-11-20",
+      "reason": "Official homepage returned a challenge response. The official 2024 annual-report PDF URL returned HTML redirecting to a CAPTCHA rather than PDF bytes. Access challenge was not bypassed.",
+      "errors": [],
+      "candidateSources": [],
+      "finalAttempts": [
+        {
+          "slug": "warfield",
+          "url": "https://warfield.ca/wp-content/uploads/VoW-2024-Annual-Report-1.pdf",
+          "sourcePage": "https://warfield.ca/village-office/finance/",
+          "file": "final/warfield/ded9ffd3ff16.txt",
+          "resolvedSourceUrl": "https://warfield.ca/wp-content/uploads/VoW-2024-Annual-Report-1.pdf",
+          "contentType": "text/html",
+          "bytes": 219,
+          "sha256": "33e16b72cf970ebae509f4805e4b4174583af01771bd10369824dafc3dd04708"
+        }
+      ]
+    }
+  ]
+}
