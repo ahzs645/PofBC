@@ -99,13 +99,16 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
 .pv-stage .pv-hs.pv-active { pointer-events: none; }
 /* A region found by its ink: clones of the shapes, transparent but still hit. */
 .pv-stage .pv-hs-shape { opacity: 0; outline: none; }
+/* Lettering found by its ink and the gaps between: each clone's wide edge counts, painted or not. */
+.pv-stage .pv-hs-letters { pointer-events: all; stroke-linejoin: round; stroke-linecap: round; }
 
 /* The spotlight: everything but the hovered layer settles back. */
 .pv-sheet > svg > g { transition: opacity 180ms ease; }
 
 .pv-chip {
   position: absolute;
-  transform: translate(16px, 18px);
+  /* `translate`, not `transform`, so the chip's entrance animation (which sets transform) keeps it. */
+  translate: 16px 18px;
   pointer-events: none;
   background: rgba(10, 12, 10, 0.82);
   backdrop-filter: blur(12px);
@@ -117,6 +120,9 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
   max-width: 240px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
+.pv-chip.pv-chip-up { translate: 16px calc(-100% - 12px); }
+.pv-chip.pv-chip-left { translate: calc(-100% - 12px) 18px; }
+.pv-chip.pv-chip-up.pv-chip-left { translate: calc(-100% - 12px) calc(-100% - 12px); }
 .pv-chip span { font-family: var(--display); font-weight: 600; font-size: 14px; letter-spacing: -0.01em; }
 .pv-chip small { color: var(--muted); font-size: 12px; line-height: 1.3; }
 

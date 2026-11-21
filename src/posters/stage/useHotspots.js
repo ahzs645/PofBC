@@ -13,6 +13,39 @@ const parentMatrix = (svg, element) => {
   return matrix
 }
 
+const DRAWN = 'path, polygon, polyline, rect, circle, ellipse, line, text'
+const scaleOf = (m) => Math.sqrt(Math.abs(m.a * m.d - m.b * m.c)) || 1
+
+/**
+ * The glyphs of some lettering, each cloned with a wide edge that hit-tests as part of it. A glyph's
+ * edge is `gap` times its own height (capped at twice the lettering's median, so a long rule or a
+ * ribbon does not swell), so big letters close the wide gaps between them and small ones the narrow.
+ */
+const letterClones = (svg, shapes, gap) => {
+  const glyphs = []
+  for (const shape of shapes) {
+    for (const leaf of shape.matches(DRAWN) ? [shape] : shape.querySelectorAll(DRAWN)) {
+      const parent = parentMatrix(svg, leaf)
+      const own = leaf.transform?.baseVal?.consolidate()
+      const full = own ? parent.multiply(own.matrix) : parent
+      let height
+      try { height = leaf.getBBox().height * Math.hypot(full.c, full.d) } catch { continue }
+      glyphs.push({ leaf, parent, full, height })
+    }
+  }
+  const heights = glyphs.map((g) => g.height).sort((a, b) => a - b)
+  const cap = 2 * (heights[Math.floor(heights.length / 2)] ?? 0)
+  return glyphs.map(({ leaf, parent, full, height }) => {
+    const placed = document.createElementNS(SVG_NS, 'g')
+    placed.setAttribute('transform', `matrix(${parent.a} ${parent.b} ${parent.c} ${parent.d} ${parent.e} ${parent.f})`)
+    const clone = leaf.cloneNode(true)
+    for (const el of [clone, ...clone.querySelectorAll('[id]')]) el.removeAttribute('id')
+    clone.style.strokeWidth = String((gap * Math.min(height, cap)) / scaleOf(full))
+    placed.appendChild(clone)
+    return placed
+  })
+}
+
 /**
  * Invisible clickable regions drawn into an SVG in its own units.
  *
@@ -21,6 +54,10 @@ const parentMatrix = (svg, element) => {
  * enlarged. With `hit: 'shape'` the targets are the drawn shapes of the region's `layer` (a
  * selector of elements with ids), cloned with <use> and made transparent, so a region can be found
  * by the ink itself — a badge's lettering and the cigarette crossing it, say, whose boxes overlap.
+ * `hit: 'letters'` is the same for lettering, with the gaps between its letters, words and lines
+ * counted as part of it: each glyph is cloned with a wide invisible edge, a fraction (`gap`, 0.5
+ * unless the region says otherwise) of the glyph's own height, so the pointer moving along a line
+ * keeps the lettering lit and leaves it only past the lettering's outline, not between two letters.
  * Returns the id under the pointer.
  *
  * With `spotlight`, the open region — or, while the pointer is over one, the region under it — dims
@@ -50,11 +87,17 @@ export const useHotspots = (svg, regions, { onSelect, active, margin = 0.08, spo
       return element
     }
     for (const region of regions) {
-      const shapes = region.hit === 'shape' && region.layer ? [...svg.querySelectorAll(region.layer)].filter((el) => el.id) : []
+      const byInk = (region.hit === 'shape' || region.hit === 'letters') && region.layer
+      const shapes = byInk ? [...svg.querySelectorAll(region.layer)].filter((el) => el.id) : []
       if (shapes.length) {
         // One focusable wrapper per region, holding a clone of each of its shapes.
         const wrapper = target(document.createElementNS(SVG_NS, 'g'), region)
-        wrapper.setAttribute('class', 'pv-hs pv-hs-shape')
+        wrapper.setAttribute('class', `pv-hs pv-hs-shape${region.hit === 'letters' ? ' pv-hs-letters' : ''}`)
+        if (region.hit === 'letters') {
+          for (const placed of letterClones(svg, shapes, region.gap ?? 0.5)) wrapper.appendChild(placed)
+          group.appendChild(wrapper)
+          continue
+        }
         for (const shape of shapes) {
           const placed = document.createElementNS(SVG_NS, 'g')
           const m = parentMatrix(svg, shape)

@@ -67,7 +67,9 @@ export const GO_BC_FERRIES = {
       box: { x: 47, y: 43, w: 1264, h: 1060 },
       pad: 0.03,
       layer: '#perimeter-text, #perimeter-dots',
-      hit: 'shape',
+      hit: 'letters',
+      // Spaced lettering round the rim: a wide edge joins the names and the dots between them.
+      gap: 1.5,
       panel: {
         eyebrow: 'The rim',
         heading: 'Victoria – Vancouver – Nanaimo',

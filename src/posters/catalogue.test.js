@@ -446,6 +446,15 @@ test('Prevent Forest Fires leads to its series, the fire-prevention pieces and t
   assert.match(parts.slogan.story.join(' '), /neither mentions this poster/)
 })
 
+test('a part is found by its box, its shapes, or its lettering and the gaps between', () => {
+  for (const [id, { parts }] of Object.entries(DEFINITIONS)) {
+    for (const [partId, part] of Object.entries(parts)) {
+      assert.ok([undefined, 'shape', 'letters'].includes(part.hit), `${id}/${partId}: hit ${part.hit}`)
+      if (part.gap !== undefined) assert.ok(part.hit === 'letters' && part.gap > 0 && part.gap <= 2, `${id}/${partId}: gap ${part.gap}`)
+    }
+  }
+})
+
 test('the advertisement names its photograph by file, and the file is a light copy of the supplied one', () => {
   const svg = DRAWINGS['coons-age']
   assert.ok(!svg.includes('base64,'), 'the photograph is still inside the drawing')

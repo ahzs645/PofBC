@@ -30,7 +30,7 @@ export function Poster({
 }) {
   const stageRef = useRef(null)
   const hostRef = useRef(null)
-  const [cursor, setCursor] = useState({ x: 0, y: 0 })
+  const [cursor, setCursor] = useState({ x: 0, y: 0, up: false, left: false })
 
   const svg = useInlineSvg(hostRef, svgRaw, { prepare })
   useReadyOnce(svg, onReady)
@@ -42,7 +42,11 @@ export function Poster({
 
   const onPointerMove = (e) => {
     const rect = stageRef.current.getBoundingClientRect()
-    setCursor({ x: e.clientX - rect.left, y: e.clientY - rect.top })
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+    // The chip sits below and right of the pointer, unless that would run it under the dock along
+    // the foot or a panel down the side: then above, or to the left.
+    setCursor({ x, y, up: y + CHIP.h > rect.height - inset.bottom, left: x + CHIP.w > rect.width - inset.right })
     tilt.move(e, rect)
   }
 
@@ -58,13 +62,16 @@ export function Poster({
       <motion.div ref={hostRef} className="pv-sheet" style={{ rotateX: tilt.rx, rotateY: tilt.ry }} />
       <AnimatePresence>
         {region && region.id !== current && (
-          <Chip key={region.id} x={cursor.x} y={cursor.y} title={region.label} hint={region.hint} />
+          <Chip key={region.id} x={cursor.x} y={cursor.y} up={cursor.up} left={cursor.left} title={region.label} hint={region.hint} />
         )}
       </AnimatePresence>
       {children}
     </div>
   )
 }
+
+// The room the chip needs beside the pointer: its offset, its widest (posters.css) and a two-line hint.
+const CHIP = { w: 16 + 240 + 12, h: 18 + 72 + 12 }
 
 // Calls onReady once per mounted <svg>, without making callers memoise their callback.
 const useReadyOnce = (svg, onReady) => {

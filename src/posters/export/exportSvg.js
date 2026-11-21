@@ -3,6 +3,8 @@
 // SVG is the string itself. Rasters go through an <img> and a canvas. PDF goes through jsPDF and
 // svg2pdf.js, loaded on demand since most visits never export.
 
+import { restoreTitles } from '../stage/titles.js'
+
 export const FORMATS = {
   svg: { label: 'SVG', ext: 'svg', mime: 'image/svg+xml', vector: true, note: 'Self-contained; any photographs are embedded.' },
   pdf: { label: 'PDF', ext: 'pdf', mime: 'application/pdf', vector: true, note: 'Vector, page sized to the artwork.' },
@@ -67,6 +69,8 @@ const inlineImages = async (root) => {
 export const posterSvgString = async (svgEl, { view, page }) => {
   const clone = svgEl.cloneNode(true)
   clone.querySelector('#hotspots')?.remove()
+  // The titles the stage lifted off, so the browser would not show them as tooltips.
+  restoreTitles(clone)
   // A reference picture laid over the drawing for comparison is the viewer's, not the poster's.
   clone.querySelector('#pv-reference')?.remove()
   // A highlight is only for the viewer's spotlight (see useHotspots).

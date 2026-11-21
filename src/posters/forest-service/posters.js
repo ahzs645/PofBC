@@ -3,7 +3,10 @@
 // checked without a browser.
 //
 // Boxes are in each drawing's own units, measured from its named layers. A part with `hit: 'shape'`
-// is found by the ink of its `layer` rather than by its box, for badges whose parts overlap.
+// is found by the ink of its `layer` rather than by its box, for badges whose parts overlap. With
+// `hit: 'letters'` it is lettering, found by its ink and the gaps between its letters, so the pointer
+// moving along a line does not drop through to the part behind; `gap` widens the edge that closes
+// them, for widely spaced capitals (see ../stage/useHotspots.js).
 //
 // Panels are blocks: a string is a paragraph, and { h }, { facts }, { note }, { palette } and
 // { links } are what they say. A link's `to` is a place on the site (see site/navigation.jsx). What a
@@ -96,7 +99,7 @@ export const DONT_DROP_IT = {
       box: { x: 126, y: 157, w: 936, h: 921 },
       pad: 0.06,
       layer: '#main-lettering',
-      hit: 'shape',
+      hit: 'letters',
       panel: {
         eyebrow: 'The lettering',
         heading: 'DON’T DROP IT!',
@@ -216,7 +219,7 @@ export const DONT_GAMBLE = {
       box: { x: 236, y: 79, w: 794, h: 378 },
       pad: 0.08,
       layer: '#headline',
-      hit: 'shape',
+      hit: 'letters',
       panel: {
         eyebrow: 'The headline',
         heading: 'don’t gamble!',
@@ -260,7 +263,7 @@ export const DONT_GAMBLE = {
       box: { x: 385, y: 719, w: 559, h: 374 },
       pad: 0.1,
       layer: '#word-with, #word-fire',
-      hit: 'shape',
+      hit: 'letters',
       panel: {
         eyebrow: 'The punchline',
         heading: 'with FIRE',
@@ -691,7 +694,7 @@ export const BE_CAREFUL = {
       box: { x: 544, y: 426, w: 466, h: 109 },
       pad: 0.12,
       layer: '#bcc-be-careful-small-letters',
-      hit: 'shape',
+      hit: 'letters',
       panel: {
         eyebrow: 'The small lettering',
         heading: 'E, AREFUL',
@@ -710,7 +713,7 @@ export const BE_CAREFUL = {
       box: { x: 54, y: 709, w: 1000, h: 115 },
       pad: 0.06,
       layer: '#bcc-prevent-forest-fires',
-      hit: 'shape',
+      hit: 'letters',
       panel: {
         eyebrow: 'The slogan',
         heading: 'PREVENT FOREST FIRES',
@@ -729,7 +732,9 @@ export const BE_CAREFUL = {
       box: { x: 200, y: 828, w: 680, h: 42 },
       pad: 0.3,
       layer: '#bcc-service-signature',
-      hit: 'shape',
+      hit: 'letters',
+      // Small, widely spaced letters: an edge half again their height joins them into one line.
+      gap: 1.5,
       panel: {
         eyebrow: 'The signature',
         heading: 'BC Forest Service',
@@ -1022,7 +1027,7 @@ export const PREVENT_FOREST_FIRES = {
       box: { x: 32, y: 1152, w: 966, h: 208 },
       pad: 0.06,
       layer: `${DARK_GROUND}, #pff-lettering-sparks, #pff-fire-brush-lettering, #pff-destroys, #pff-timber, #pff-and, #pff-payrolls, #pff-yellow-exclamation`,
-      hit: 'shape',
+      hit: 'letters',
       panel: {
         eyebrow: 'The slogan',
         heading: 'FIRE DESTROYS TIMBER AND PAYROLLS!',
@@ -1044,7 +1049,9 @@ export const PREVENT_FOREST_FIRES = {
       box: { x: 37, y: 1388, w: 936, h: 27 },
       pad: 0.3,
       layer: `${DARK_GROUND}, #pff-forest-service-credit`,
-      hit: 'shape',
+      hit: 'letters',
+      // Widely spaced capitals: an edge half again as wide as a letter is tall closes the word spaces.
+      gap: 1.5,
       panel: {
         eyebrow: 'The credit',
         heading: 'British Columbia Forest Service',

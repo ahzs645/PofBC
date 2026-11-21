@@ -1,9 +1,11 @@
 import { useLayoutEffect, useState } from 'react'
+import { liftTitles } from './titles.js'
 
 /**
  * Puts an SVG document (as a string) into `hostRef` and returns the live <svg> element, sized to
  * its container. `prepare` may rewrite the string first, e.g. to point image references at the
- * app's base path.
+ * app's base path. Its <title>s are lifted off (./titles.js), so no browser tooltip covers the
+ * stage's own labels.
  */
 export const useInlineSvg = (hostRef, raw, { prepare } = {}) => {
   const [svg, setSvg] = useState(null)
@@ -15,6 +17,7 @@ export const useInlineSvg = (hostRef, raw, { prepare } = {}) => {
     el.removeAttribute('width')
     el.removeAttribute('height')
     el.setAttribute('preserveAspectRatio', 'xMidYMid meet')
+    liftTitles(el)
     setSvg(el)
     return () => {
       host.innerHTML = ''
