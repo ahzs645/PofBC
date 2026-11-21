@@ -1,0 +1,200 @@
+{
+  "scope": {
+    "canvas": [
+      1000,
+      1440
+    ],
+    "registration": "Fixed reference-rectified.png; unchanged from delivered revision 5",
+    "classifiers": {
+      "orange": {
+        "red_min": 170,
+        "green_min": 55,
+        "green_red_ratio_max": 0.75,
+        "blue_red_ratio_max": 0.5
+      },
+      "ivory": {
+        "red_min": 190,
+        "green_min": 180,
+        "blue_min": 130,
+        "red_green_delta_max": 40,
+        "green_blue_delta_max": 70
+      }
+    },
+    "regions": {
+      "crest_left": {
+        "name": "Left flame crest",
+        "box": [
+          0,
+          170,
+          240,
+          440
+        ],
+        "class": "orange"
+      },
+      "crest_middle_left": {
+        "name": "Middle-left flame crest",
+        "box": [
+          240,
+          100,
+          500,
+          310
+        ],
+        "class": "orange"
+      },
+      "crest_middle_right": {
+        "name": "Middle-right flame crest",
+        "box": [
+          500,
+          145,
+          750,
+          330
+        ],
+        "class": "orange"
+      },
+      "crest_right": {
+        "name": "Right flame crest",
+        "box": [
+          750,
+          180,
+          1000,
+          550
+        ],
+        "class": "orange"
+      },
+      "right_outer_arc": {
+        "name": "Right outer flame arc",
+        "box": [
+          925,
+          430,
+          1000,
+          690
+        ],
+        "class": "orange"
+      },
+      "prevent_script": {
+        "name": "Prevent script",
+        "box": [
+          220,
+          260,
+          835,
+          435
+        ],
+        "class": "ivory"
+      }
+    },
+    "notes": [
+      "Fixed before revision 6 root edits.",
+      "Local boxes can overlap and scores cannot be combined.",
+      "Raw colour masks are diagnostic only. No mask generates artwork.",
+      "Ivory script mask includes antialiasing and photographed print variation.",
+      "Orange comparison includes the field within each box; edge distances and colour views are required to assess contour changes."
+    ]
+  },
+  "reference": "/workspace/scratch/7341ea049290/work/reference-rectified.png",
+  "candidate": "/workspace/scratch/7341ea049290/deliverables/BC_Forest_Service_Preview.png",
+  "label": "after",
+  "regions": {
+    "crest_left": {
+      "definition": {
+        "name": "Left flame crest",
+        "box": [
+          0,
+          170,
+          240,
+          440
+        ],
+        "class": "orange"
+      },
+      "intersection": 22113,
+      "missing": 1724,
+      "extra": 975,
+      "iou": 0.8912219893599871,
+      "mean_symmetric_edge_px": 4.406562592663077
+    },
+    "crest_middle_left": {
+      "definition": {
+        "name": "Middle-left flame crest",
+        "box": [
+          240,
+          100,
+          500,
+          310
+        ],
+        "class": "orange"
+      },
+      "intersection": 19463,
+      "missing": 953,
+      "extra": 1049,
+      "iou": 0.9067318891218262,
+      "mean_symmetric_edge_px": 3.355463413543861
+    },
+    "crest_middle_right": {
+      "definition": {
+        "name": "Middle-right flame crest",
+        "box": [
+          500,
+          145,
+          750,
+          330
+        ],
+        "class": "orange"
+      },
+      "intersection": 19024,
+      "missing": 1263,
+      "extra": 1203,
+      "iou": 0.8852489530013959,
+      "mean_symmetric_edge_px": 2.6698759524224056
+    },
+    "crest_right": {
+      "definition": {
+        "name": "Right flame crest",
+        "box": [
+          750,
+          180,
+          1000,
+          550
+        ],
+        "class": "orange"
+      },
+      "intersection": 36825,
+      "missing": 1470,
+      "extra": 2196,
+      "iou": 0.9094613617841002,
+      "mean_symmetric_edge_px": 3.3922361920652757
+    },
+    "right_outer_arc": {
+      "definition": {
+        "name": "Right outer flame arc",
+        "box": [
+          925,
+          430,
+          1000,
+          690
+        ],
+        "class": "orange"
+      },
+      "intersection": 15904,
+      "missing": 238,
+      "extra": 394,
+      "iou": 0.9617803580067731,
+      "mean_symmetric_edge_px": 1.0533744605899917
+    },
+    "prevent_script": {
+      "definition": {
+        "name": "Prevent script",
+        "box": [
+          220,
+          260,
+          835,
+          435
+        ],
+        "class": "ivory"
+      },
+      "intersection": 21284,
+      "missing": 1901,
+      "extra": 2200,
+      "iou": 0.8384479023045105,
+      "mean_symmetric_edge_px": 1.309467713908194
+    }
+  }
+}

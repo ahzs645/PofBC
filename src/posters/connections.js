@@ -276,6 +276,60 @@ const BY_POSTER = {
       certainty: 'documented'
     }
   ],
+  'prevent-forest-fires': [
+    SERVICE_COLLECTION,
+    { ...companion('reward-living-forest', 'Posters · the campfire poster, signed in full the same way'), certainty: 'thematic' },
+    { ...companion('enjoy-protect-forests', 'Posters · the sign, signed in full the same way'), certainty: 'thematic' },
+    {
+      group: 'objects',
+      rel: 'Related fire-prevention material',
+      label: 'B. C. Forest Service badges and decals',
+      note: 'Posters · DON’T DROP IT!, Don’t gamble with FIRE and Be Careful, the fire-prevention series',
+      to: piece('dont-drop-it'),
+      certainty: 'thematic'
+    },
+    firePiece('be-careful', 'Posters · the 1960 decal, PREVENT FOREST FIRES across its base. No record ties the two together.'),
+    {
+      group: 'objects',
+      rel: 'Compare',
+      label: POSTERS['coons-age'].title,
+      note: 'Posters · the forest as lasting wealth again, argued in a 1971 newspaper advertisement',
+      to: piece('coons-age'),
+      certainty: 'thematic'
+    },
+    {
+      group: 'objects',
+      rel: 'Related fire-prevention material',
+      label: 'England Expects: Prevent Forest Fires',
+      note: 'Cards · the same plea as a call to duty, under the Lands Department seal',
+      to: { view: 'cards', card: 'england-expects' },
+      certainty: 'thematic'
+    },
+    {
+      group: 'objects',
+      rel: 'Related fire-prevention material',
+      label: 'Prevent Forest Fires: Put Your Campfires Out',
+      note: 'Pins · the Forest Branch’s yellow campfire oval, with the same three words over the top',
+      to: { view: 'pins', pin: 'forest-branch-campfires' },
+      certainty: 'thematic'
+    },
+    {
+      group: 'objects',
+      rel: 'Related fire-prevention material',
+      label: 'LOOKOUT',
+      note: 'Signs · the Forest Service’s fire-protection sign',
+      to: { view: 'signs', sign: 'lookout' },
+      certainty: 'thematic'
+    },
+    {
+      group: 'objects',
+      rel: 'Related fire-prevention material',
+      label: 'FOREST CLOSURE, Zone 3',
+      note: 'Signs · the Forest Service’s closure sign, its strip reading OPEN or CLOSED',
+      to: { view: 'signs', sign: 'forest-closure' },
+      certainty: 'thematic'
+    }
+  ],
   'wildlife-trees': [
     {
       group: 'issuer',

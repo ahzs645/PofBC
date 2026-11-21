@@ -19,7 +19,8 @@ const DRAWINGS = {
   'be-careful': () => import('./be-careful.svg?raw'),
   'reward-living-forest': () => import('./reward-living-forest.svg?raw'),
   'enjoy-protect-forests': () => import('./enjoy-protect-forests.svg?raw'),
-  'coons-age': () => import('./coons-age.svg?raw')
+  'coons-age': () => import('./coons-age.svg?raw'),
+  'prevent-forest-fires': () => import('./prevent-forest-fires.svg?raw')
 }
 
 export const loaderFor = (id) => async () => {

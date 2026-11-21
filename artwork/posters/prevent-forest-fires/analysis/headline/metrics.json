@@ -1,0 +1,94 @@
+{
+  "reference": "/workspace/scratch/7341ea049290/work/reference-rectified.png",
+  "candidate": "/workspace/scratch/7341ea049290/deliverables/BC_Forest_Service_Preview.png",
+  "baseline": "/workspace/scratch/7341ea049290/work/baseline_v5/BC_Forest_Service_Preview.png",
+  "label": "after",
+  "scope": "/workspace/scratch/7341ea049290/work/overlap_v6/headline/scope_before_edits.json",
+  "scope_sha256": "9aebd4cdef7ea53918591f31085119165989d033d0aa41e7d9df7ff10d1517aa",
+  "regions": {
+    "FOREST": {
+      "ink": {
+        "intersection": 68659,
+        "missing": 4211,
+        "extra": 2239,
+        "source_area": 72870,
+        "candidate_area": 70898,
+        "iou": 0.9141248052829887,
+        "mean_symmetric_edge_px": 1.3755774729640597,
+        "p95_symmetric_edge_px": 4.0,
+        "baseline": {
+          "intersection": 64861,
+          "missing": 8009,
+          "extra": 3649,
+          "source_area": 72870,
+          "candidate_area": 68510,
+          "iou": 0.8476456827715992,
+          "mean_symmetric_edge_px": 2.5241115075475298,
+          "p95_symmetric_edge_px": 7.615773105863909
+        }
+      },
+      "ivory": {
+        "intersection": 18744,
+        "missing": 6361,
+        "extra": 6960,
+        "source_area": 25105,
+        "candidate_area": 25704,
+        "iou": 0.5845626072041167,
+        "mean_symmetric_edge_px": 1.230558672206512,
+        "p95_symmetric_edge_px": 3.1622776601683795,
+        "baseline": {
+          "intersection": 14227,
+          "missing": 10878,
+          "extra": 10807,
+          "source_area": 25105,
+          "candidate_area": 25034,
+          "iou": 0.39616284250389844,
+          "mean_symmetric_edge_px": 2.0023639912032682,
+          "p95_symmetric_edge_px": 6.324555320336759
+        }
+      }
+    },
+    "FIRES": {
+      "ink": {
+        "intersection": 52836,
+        "missing": 3626,
+        "extra": 1686,
+        "source_area": 56462,
+        "candidate_area": 54522,
+        "iou": 0.9086469010112128,
+        "mean_symmetric_edge_px": 1.4422173603780437,
+        "p95_symmetric_edge_px": 4.47213595499958,
+        "baseline": {
+          "intersection": 50271,
+          "missing": 6191,
+          "extra": 1632,
+          "source_area": 56462,
+          "candidate_area": 51903,
+          "iou": 0.8653389334526801,
+          "mean_symmetric_edge_px": 2.1781030620471147,
+          "p95_symmetric_edge_px": 7.280109889280518
+        }
+      },
+      "ivory": {
+        "intersection": 14373,
+        "missing": 5223,
+        "extra": 6023,
+        "source_area": 19596,
+        "candidate_area": 20396,
+        "iou": 0.5610289238455833,
+        "mean_symmetric_edge_px": 1.2794241797012562,
+        "p95_symmetric_edge_px": 4.0,
+        "baseline": {
+          "intersection": 11830,
+          "missing": 7766,
+          "extra": 7687,
+          "source_area": 19596,
+          "candidate_area": 19517,
+          "iou": 0.43360334274090095,
+          "mean_symmetric_edge_px": 1.8161035884945247,
+          "p95_symmetric_edge_px": 5.0990195135927845
+        }
+      }
+    }
+  }
+}

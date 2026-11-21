@@ -1,0 +1,199 @@
+{
+  "label": "before",
+  "reference": "work/reference-rectified.png",
+  "candidate": "work/baseline_v5/BC_Forest_Service_Preview.png",
+  "method": "Fixed rectangular diagnostic areas; raw maxRGB <140; same registration as primary analysis; areas may overlap.",
+  "regions": {
+    "upper_left": {
+      "definition": {
+        "name": "Left canopy and trunk tip",
+        "box": [
+          0,
+          0,
+          265,
+          425
+        ],
+        "exclusions": []
+      },
+      "raw": {
+        "valid_roi_px": 112625,
+        "reference_ink_px": 34908,
+        "vector_ink_px": 36267,
+        "shared_px": 31087,
+        "missing_px": 3821,
+        "extra_px": 5180,
+        "iou": 0.7754689682698064,
+        "precision": 0.8571704304188381,
+        "recall": 0.8905408502349031
+      }
+    },
+    "upper_second": {
+      "definition": {
+        "name": "Second crown and hanging boughs",
+        "box": [
+          210,
+          0,
+          415,
+          280
+        ],
+        "exclusions": []
+      },
+      "raw": {
+        "valid_roi_px": 57400,
+        "reference_ink_px": 23741,
+        "vector_ink_px": 24192,
+        "shared_px": 20670,
+        "missing_px": 3071,
+        "extra_px": 3522,
+        "iou": 0.7581704141143675,
+        "precision": 0.8544146825396826,
+        "recall": 0.8706457183774904
+      }
+    },
+    "upper_centre": {
+      "definition": {
+        "name": "Central tree and its boughs",
+        "box": [
+          410,
+          0,
+          735,
+          290
+        ],
+        "exclusions": []
+      },
+      "raw": {
+        "valid_roi_px": 94250,
+        "reference_ink_px": 36420,
+        "vector_ink_px": 37060,
+        "shared_px": 31165,
+        "missing_px": 5255,
+        "extra_px": 5895,
+        "iou": 0.7365000590807043,
+        "precision": 0.840933621154884,
+        "recall": 0.8557111477210324
+      }
+    },
+    "upper_right": {
+      "definition": {
+        "name": "Right canopy and outer branches",
+        "box": [
+          740,
+          0,
+          1000,
+          380
+        ],
+        "exclusions": []
+      },
+      "raw": {
+        "valid_roi_px": 98800,
+        "reference_ink_px": 40699,
+        "vector_ink_px": 42355,
+        "shared_px": 34857,
+        "missing_px": 5842,
+        "extra_px": 7498,
+        "iou": 0.7232192875075212,
+        "precision": 0.8229724943926336,
+        "recall": 0.8564583896410232
+      }
+    },
+    "leaning_trunk": {
+      "definition": {
+        "name": "Leaning trunk and root area",
+        "box": [
+          25,
+          780,
+          270,
+          1145
+        ],
+        "exclusions": [
+          [
+            125,
+            780,
+            270,
+            880
+          ]
+        ]
+      },
+      "raw": {
+        "valid_roi_px": 74925,
+        "reference_ink_px": 34102,
+        "vector_ink_px": 34468,
+        "shared_px": 29598,
+        "missing_px": 4504,
+        "extra_px": 4870,
+        "iou": 0.7594683362414041,
+        "precision": 0.8587095276778461,
+        "recall": 0.8679256348601255
+      }
+    },
+    "main_log": {
+      "definition": {
+        "name": "Fallen-log middle span",
+        "box": [
+          285,
+          885,
+          650,
+          1015
+        ],
+        "exclusions": []
+      },
+      "raw": {
+        "valid_roi_px": 47450,
+        "reference_ink_px": 12851,
+        "vector_ink_px": 13195,
+        "shared_px": 10852,
+        "missing_px": 1999,
+        "extra_px": 2343,
+        "iou": 0.7142293010398841,
+        "precision": 0.822432739674119,
+        "recall": 0.8444479028869348
+      }
+    },
+    "rear_branches": {
+      "definition": {
+        "name": "Rear branches and right-stump area",
+        "box": [
+          535,
+          1005,
+          875,
+          1095
+        ],
+        "exclusions": []
+      },
+      "raw": {
+        "valid_roi_px": 30600,
+        "reference_ink_px": 15219,
+        "vector_ink_px": 15579,
+        "shared_px": 12792,
+        "missing_px": 2427,
+        "extra_px": 2787,
+        "iou": 0.7104298567144285,
+        "precision": 0.821105334103601,
+        "recall": 0.840528287009659
+      }
+    },
+    "ground_right": {
+      "definition": {
+        "name": "Right-hand ground openings",
+        "box": [
+          745,
+          1075,
+          1000,
+          1145
+        ],
+        "exclusions": []
+      },
+      "raw": {
+        "valid_roi_px": 17850,
+        "reference_ink_px": 15965,
+        "vector_ink_px": 16111,
+        "shared_px": 15361,
+        "missing_px": 604,
+        "extra_px": 750,
+        "iou": 0.918994914747233,
+        "precision": 0.9534479548134814,
+        "recall": 0.962167240839336
+      }
+    }
+  }
+}

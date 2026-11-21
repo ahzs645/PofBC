@@ -1,0 +1,155 @@
+{
+  "diagnostic": "Footer local ivory and dark-space overlap; separate from tree diagnostics",
+  "reference": "/workspace/scratch/7341ea049290/work/reference-rectified.png",
+  "candidate": "/workspace/scratch/7341ea049290/deliverables/BC_Forest_Service_Preview.png",
+  "baseline": "/workspace/scratch/7341ea049290/work/baseline_v5/BC_Forest_Service_Preview.png",
+  "label": "after",
+  "scope": {
+    "diagnostic": "Footer local ivory and dark-space overlap; separate from tree diagnostics",
+    "version": 1,
+    "canvas": [
+      1000,
+      1440
+    ],
+    "registration": "Fixed rectified 1000x1440 reference; no independent translation, scaling, or registration fitting",
+    "classifiers": {
+      "ivory": {
+        "r_min_exclusive": 180,
+        "g_min_exclusive": 180,
+        "b_min_exclusive": 140,
+        "chroma_max_exclusive": 100
+      },
+      "dark": {
+        "max_channel_exclusive": 140
+      }
+    },
+    "ivory_sensitivity_b": [
+      130,
+      140,
+      150
+    ],
+    "regions": {
+      "timber": {
+        "name": "TIMBER",
+        "box": [
+          640,
+          1168,
+          990,
+          1242
+        ],
+        "exclusions": []
+      },
+      "payrolls": {
+        "name": "PAYROLLS",
+        "box": [
+          480,
+          1255,
+          940,
+          1330
+        ],
+        "exclusions": []
+      }
+    },
+    "scope_provenance": "Boxes and classifiers frozen in fixed_manifest.json before the first footer edit; this file is a portable serialization of the same scope."
+  },
+  "regions": {
+    "timber": {
+      "definition": {
+        "name": "TIMBER",
+        "box": [
+          640,
+          1168,
+          990,
+          1242
+        ],
+        "exclusions": []
+      },
+      "ivory": {
+        "candidate": {
+          "iou": 0.8334268612046389,
+          "shared_px": 8911,
+          "missing_px": 1451,
+          "extra_px": 330,
+          "mean_symmetric_boundary_px": 1.07933444286556
+        },
+        "baseline": {
+          "iou": 0.5518301610541728,
+          "shared_px": 7538,
+          "missing_px": 2824,
+          "extra_px": 3298,
+          "mean_symmetric_boundary_px": 3.0029342760658646
+        }
+      },
+      "dark": {
+        "candidate": {
+          "iou": 0.8693740458015267,
+          "shared_px": 14236,
+          "missing_px": 241,
+          "extra_px": 1898,
+          "mean_symmetric_boundary_px": 0.8149692316239252
+        },
+        "baseline": {
+          "iou": 0.6479096942537864,
+          "shared_px": 11422,
+          "missing_px": 3055,
+          "extra_px": 3152,
+          "mean_symmetric_boundary_px": 2.0097432401642625
+        }
+      },
+      "ivory_sensitivity": {
+        "130": 0.8334268612046389,
+        "140": 0.8334268612046389,
+        "150": 0.8334268612046389
+      }
+    },
+    "payrolls": {
+      "definition": {
+        "name": "PAYROLLS",
+        "box": [
+          480,
+          1255,
+          940,
+          1330
+        ],
+        "exclusions": []
+      },
+      "ivory": {
+        "candidate": {
+          "iou": 0.7665732252443367,
+          "shared_px": 10118,
+          "missing_px": 1986,
+          "extra_px": 1095,
+          "mean_symmetric_boundary_px": 1.44565343246059
+        },
+        "baseline": {
+          "iou": 0.49468505132721863,
+          "shared_px": 8144,
+          "missing_px": 3960,
+          "extra_px": 4359,
+          "mean_symmetric_boundary_px": 3.0243345931530365
+        }
+      },
+      "dark": {
+        "candidate": {
+          "iou": 0.8511633842358246,
+          "shared_px": 20010,
+          "missing_px": 985,
+          "extra_px": 2514,
+          "mean_symmetric_boundary_px": 1.044494218252417
+        },
+        "baseline": {
+          "iou": 0.6584170065892689,
+          "shared_px": 16787,
+          "missing_px": 4208,
+          "extra_px": 4501,
+          "mean_symmetric_boundary_px": 1.958540812994383
+        }
+      },
+      "ivory_sensitivity": {
+        "130": 0.7665732252443367,
+        "140": 0.7665732252443367,
+        "150": 0.7666313077739051
+      }
+    }
+  }
+}

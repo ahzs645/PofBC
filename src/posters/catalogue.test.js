@@ -17,6 +17,8 @@ import { GALLERY_COLLECTIONS } from '../gallery/collections.js'
 import { ORDER as COASTAL_ORDER, PARTS as COASTAL_PARTS, REGIONS as COASTAL_REGIONS } from './coastal-forest/parts.js'
 import { FOREST_LOGOS } from '../internal/forestLogos.js'
 import { SIGNS } from '../signs/catalogue.js'
+import { CARDS } from '../cards/catalogue.js'
+import { PINS } from '../pins/catalogue.js'
 import { CERTAINTY, GROUPS, MARK_OBJECTS, connectedPosters, connectionsOf, groupedConnections, objectsForLogo, postersForLogo, postersForPatch } from './connections.js'
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
@@ -28,6 +30,7 @@ const DRAWINGS = {
   'enjoy-protect-forests': read('./forest-service/enjoy-protect-forests.svg'),
   'be-careful': read('./forest-service/be-careful.svg'),
   'coons-age': read('./forest-service/coons-age.svg'),
+  'prevent-forest-fires': read('./forest-service/prevent-forest-fires.svg'),
   'go-bc-ferries': read('./bc-ferries/go-bc-ferries.svg'),
   'queen-of-sidney': read('./bc-ferries/queen-of-sidney.svg'),
   'wildlife-trees': read('./wildlife-trees/wildlife-trees.svg'),
@@ -60,6 +63,10 @@ const assertPlace = (to, where) => {
     assert.ok(GOVERNMENT.includes(`"${to.node}"`), `${where}: no body ${to.node}`)
   } else if (to.view === 'signs') {
     assert.ok(SIGNS[to.sign], `${where}: no sign ${to.sign}`)
+  } else if (to.view === 'cards') {
+    assert.ok(CARDS[to.card], `${where}: no card ${to.card}`)
+  } else if (to.view === 'pins') {
+    assert.ok(PINS[to.pin], `${where}: no pin ${to.pin}`)
   } else if (to.view === 'patches' || to.view === 'badges') {
     // Without the submodule there is nothing to check these against.
     if (!LIBRARY) return
@@ -300,7 +307,7 @@ test('a mark, the pieces that use it and the object made of it name each other',
 })
 
 test('no card dates a piece more firmly than its evidence', () => {
-  for (const id of ['reward-living-forest', 'enjoy-protect-forests', 'wildlife-trees', 'beware-these-alien-invaders', 'shattering-the-environment', 'explosion-in-slow-motion', 'queen-of-sidney']) {
+  for (const id of ['reward-living-forest', 'enjoy-protect-forests', 'prevent-forest-fires', 'wildlife-trees', 'beware-these-alien-invaders', 'shattering-the-environment', 'explosion-in-slow-motion', 'queen-of-sidney']) {
     assert.match(POSTERS[id].when, /^Undated/, `${id}: ${POSTERS[id].when}`)
   }
   assert.match(POSTERS['coastal-forest'].when, /1979–86 or 1988–91/)
@@ -383,8 +390,9 @@ test('neighbours step through the posters in catalogue order', () => {
   assert.deepEqual(neighbours(ids.at(-1)), { previous: ids.at(-2), next: null })
 })
 
-// The two pieces imported from supplied packages: the 1960 decal and the 1971 advertisement.
-const IMPORTED = ['be-careful', 'coons-age']
+// The pieces imported from supplied packages: the 1960 decal, the 1971 advertisement and the
+// Prevent Forest Fires poster.
+const IMPORTED = ['be-careful', 'coons-age', 'prevent-forest-fires']
 
 test('the imported pieces say nothing with an em dash, on the card, in the panels, the story or the drawing’s title', () => {
   const strings = (value) => typeof value === 'string' ? [value] : Array.isArray(value) ? value.flatMap(strings) : value && typeof value === 'object' ? Object.values(value).flatMap(strings) : []
@@ -400,10 +408,42 @@ test('the imported drawings keep their ids to themselves', () => {
   // Every id but the shared emblem layer, which the posters that carry it all call by one name.
   for (const id of ids(DRAWINGS['be-careful'])) assert.ok(id.startsWith('bcc-'), `be-careful: ${id}`)
   for (const id of ids(DRAWINGS['coons-age'])) assert.ok(/^(coon-|ad-emblem-|forest-service-emblem$)/.test(id), `coons-age: ${id}`)
-  const all = Object.entries(DRAWINGS).filter(([id]) => !IMPORTED.includes(id)).flatMap(([, svg]) => ids(svg))
-  for (const id of [...ids(DRAWINGS['be-careful']), ...ids(DRAWINGS['coons-age'])]) {
-    if (id !== 'forest-service-emblem') assert.ok(!all.includes(id), `${id} is already used by another drawing`)
+  for (const id of ids(DRAWINGS['prevent-forest-fires'])) assert.ok(id.startsWith('pff-'), `prevent-forest-fires: ${id}`)
+  for (const piece of IMPORTED) {
+    const all = Object.entries(DRAWINGS).filter(([id]) => id !== piece).flatMap(([, svg]) => ids(svg))
+    for (const id of ids(DRAWINGS[piece])) {
+      if (id !== 'forest-service-emblem') assert.ok(!all.includes(id), `${piece}: ${id} is already used by another drawing`)
+    }
   }
+})
+
+test('Prevent Forest Fires is fetched only when opened, and every reference in it resolves', () => {
+  const svg = DRAWINGS['prevent-forest-fires']
+  const meta = POSTERS['prevent-forest-fires']
+  assert.equal(meta.prefetch, false, 'a 1.6 MB drawing fetched on spec')
+  assert.equal(meta.when, 'Undated')
+  assert.ok(svg.length < 1.7e6, `the drawing is ${(svg.length / 1e6).toFixed(2)} MB`)
+  assert.ok(!/<image\b|base64,|inkscape:/.test(svg), 'a picture or editor markup left in the drawing')
+  for (const m of svg.matchAll(/url\(#([^)]+)\)/g)) assert.ok(hasId(svg, m[1]), `no #${m[1]}`)
+  for (const name of /aria-labelledby="([^"]+)"/.exec(svg)[1].split(' ')) assert.ok(hasId(svg, name), `no #${name}`)
+  // Its seven layers, one per part but the lettering split three ways.
+  for (const layer of ['paper', 'canopy', 'flames', 'foreground', 'script', 'headline', 'footer']) assert.ok(hasId(svg, `pff-layer-${layer}`), `no ${layer} layer`)
+})
+
+test('Prevent Forest Fires leads to its series, the fire-prevention pieces and the signs', () => {
+  const { parts } = FOREST_SERVICE_POSTERS['prevent-forest-fires']
+  const panel = Object.values(parts).flatMap(({ panel }) => (panel.blocks ?? []).flatMap((block) => block.links ?? [])).map(({ to }) => to)
+  const places = [...panel, ...connectionsOf('prevent-forest-fires').map(({ to }) => to).filter(Boolean)]
+  const leads = (view, key, value) => places.some((to) => to.view === view && to[key] === value)
+  for (const poster of ['reward-living-forest', 'enjoy-protect-forests', 'dont-drop-it', 'be-careful', 'coons-age']) assert.ok(leads('posters', 'poster', poster), `no link to ${poster}`)
+  assert.ok(leads('cards', 'card', 'england-expects'), 'no link to the England Expects card')
+  assert.ok(leads('pins', 'pin', 'forest-branch-campfires'), 'no link to the campfire oval')
+  for (const sign of ['lookout', 'forest-closure']) assert.ok(leads('signs', 'sign', sign), `no link to ${sign}`)
+  // The context for its argument, cited as context.
+  const { storySources } = parts.slogan
+  assert.ok(storySources.some(({ label }) => label.startsWith('H. R. MacMillan')))
+  assert.ok(storySources.some(({ href }) => href === 'https://www.for.gov.bc.ca/hfd/library/documents/bib30294.pdf'))
+  assert.match(parts.slogan.story.join(' '), /neither mentions this poster/)
 })
 
 test('the advertisement names its photograph by file, and the file is a light copy of the supplied one', () => {

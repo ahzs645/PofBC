@@ -1,0 +1,44 @@
+{
+  "canvas": [
+    1000,
+    1440
+  ],
+  "registration": "unchanged reference-rectified.png",
+  "classifier": {
+    "max_rgb_less_than": 140
+  },
+  "regions": {
+    "FOREST": [
+      50,
+      445,
+      955,
+      650
+    ],
+    "FIRES": [
+      130,
+      665,
+      825,
+      865
+    ]
+  },
+  "fixed_before_headline_edits": true,
+  "classifiers": {
+    "ink": {
+      "max_rgb_less_than": 140
+    },
+    "ivory": {
+      "red_min": 190,
+      "green_min": 180,
+      "blue_min": 130,
+      "red_green_delta_max": 40,
+      "green_blue_delta_max": 70
+    }
+  },
+  "notes": [
+    "Original parent ink scopes retained identically.",
+    "Ivory classifier frozen before any headline geometry edit; matches existing root script diagnostic.",
+    "Measure dark fill and ivory outline separately; neither score is a combined fidelity rating.",
+    "One LANCZOS reduction from 3000px render to fixed 1000x1440 reference canvas.",
+    "No re-registration or reference warp; glyph placement and scale may be calibrated as authored design parameters."
+  ]
+}

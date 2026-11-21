@@ -1,0 +1,403 @@
+{
+  "canvas": [
+    1000,
+    1440
+  ],
+  "registration": "same fixed rectified photograph as tree analysis",
+  "classifier": {
+    "red_min": 150,
+    "green_min": 140,
+    "green_red_ratio_min": 0.74,
+    "blue_red_ratio_max": 0.55
+  },
+  "regions": {
+    "left_long": {
+      "name": "Left long vein, isolated lower shaft",
+      "box": [
+        28,
+        405,
+        80,
+        530
+      ],
+      "sensitivity": {
+        "0.68": {
+          "iou_percent": 85.1546,
+          "precision_percent": 93.228,
+          "recall_percent": 90.7692,
+          "overlap_pixels": 413,
+          "missing_pixels": 42,
+          "extra_pixels": 30,
+          "reference_pixels": 455,
+          "candidate_pixels": 443
+        },
+        "0.74": {
+          "iou_percent": 84.3458,
+          "precision_percent": 87.8345,
+          "recall_percent": 95.5026,
+          "overlap_pixels": 361,
+          "missing_pixels": 17,
+          "extra_pixels": 50,
+          "reference_pixels": 378,
+          "candidate_pixels": 411
+        },
+        "0.8": {
+          "iou_percent": 75.3886,
+          "precision_percent": 76.5789,
+          "recall_percent": 97.9798,
+          "overlap_pixels": 291,
+          "missing_pixels": 6,
+          "extra_pixels": 89,
+          "reference_pixels": 297,
+          "candidate_pixels": 380
+        }
+      },
+      "iou_percent": 84.3458,
+      "precision_percent": 87.8345,
+      "recall_percent": 95.5026,
+      "overlap_pixels": 361,
+      "missing_pixels": 17,
+      "extra_pixels": 50,
+      "reference_pixels": 378,
+      "candidate_pixels": 411
+    },
+    "left_mid": {
+      "name": "Left middle arc",
+      "box": [
+        0,
+        480,
+        72,
+        600
+      ],
+      "sensitivity": {
+        "0.68": {
+          "iou_percent": 79.8683,
+          "precision_percent": 97.0286,
+          "recall_percent": 81.8708,
+          "overlap_pixels": 849,
+          "missing_pixels": 188,
+          "extra_pixels": 26,
+          "reference_pixels": 1037,
+          "candidate_pixels": 875
+        },
+        "0.74": {
+          "iou_percent": 80.1015,
+          "precision_percent": 93.5943,
+          "recall_percent": 84.7476,
+          "overlap_pixels": 789,
+          "missing_pixels": 142,
+          "extra_pixels": 54,
+          "reference_pixels": 931,
+          "candidate_pixels": 843
+        },
+        "0.8": {
+          "iou_percent": 78.4228,
+          "precision_percent": 88.8337,
+          "recall_percent": 86.9988,
+          "overlap_pixels": 716,
+          "missing_pixels": 107,
+          "extra_pixels": 90,
+          "reference_pixels": 823,
+          "candidate_pixels": 806
+        }
+      },
+      "iou_percent": 80.1015,
+      "precision_percent": 93.5943,
+      "recall_percent": 84.7476,
+      "overlap_pixels": 789,
+      "missing_pixels": 142,
+      "extra_pixels": 54,
+      "reference_pixels": 931,
+      "candidate_pixels": 843
+    },
+    "left_low": {
+      "name": "Left lower tongue",
+      "box": [
+        0,
+        650,
+        42,
+        775
+      ],
+      "sensitivity": {
+        "0.68": {
+          "iou_percent": 79.4802,
+          "precision_percent": 97.8114,
+          "recall_percent": 80.9192,
+          "overlap_pixels": 581,
+          "missing_pixels": 137,
+          "extra_pixels": 13,
+          "reference_pixels": 718,
+          "candidate_pixels": 594
+        },
+        "0.74": {
+          "iou_percent": 81.6024,
+          "precision_percent": 96.1538,
+          "recall_percent": 84.3558,
+          "overlap_pixels": 550,
+          "missing_pixels": 102,
+          "extra_pixels": 22,
+          "reference_pixels": 652,
+          "candidate_pixels": 572
+        },
+        "0.8": {
+          "iou_percent": 82.1656,
+          "precision_percent": 93.1408,
+          "recall_percent": 87.4576,
+          "overlap_pixels": 516,
+          "missing_pixels": 74,
+          "extra_pixels": 38,
+          "reference_pixels": 590,
+          "candidate_pixels": 554
+        }
+      },
+      "iou_percent": 81.6024,
+      "precision_percent": 96.1538,
+      "recall_percent": 84.3558,
+      "overlap_pixels": 550,
+      "missing_pixels": 102,
+      "extra_pixels": 22,
+      "reference_pixels": 652,
+      "candidate_pixels": 572
+    },
+    "right_oblique": {
+      "name": "Right oblique cut",
+      "box": [
+        810,
+        610,
+        925,
+        765
+      ],
+      "sensitivity": {
+        "0.68": {
+          "iou_percent": 78.1638,
+          "precision_percent": 94.4528,
+          "recall_percent": 81.9246,
+          "overlap_pixels": 630,
+          "missing_pixels": 139,
+          "extra_pixels": 37,
+          "reference_pixels": 769,
+          "candidate_pixels": 667
+        },
+        "0.74": {
+          "iou_percent": 78.8952,
+          "precision_percent": 87.7165,
+          "recall_percent": 88.6943,
+          "overlap_pixels": 557,
+          "missing_pixels": 71,
+          "extra_pixels": 78,
+          "reference_pixels": 628,
+          "candidate_pixels": 635
+        },
+        "0.8": {
+          "iou_percent": 75.0392,
+          "precision_percent": 79.402,
+          "recall_percent": 93.1774,
+          "overlap_pixels": 478,
+          "missing_pixels": 35,
+          "extra_pixels": 124,
+          "reference_pixels": 513,
+          "candidate_pixels": 602
+        }
+      },
+      "iou_percent": 78.8952,
+      "precision_percent": 87.7165,
+      "recall_percent": 88.6943,
+      "overlap_pixels": 557,
+      "missing_pixels": 71,
+      "extra_pixels": 78,
+      "reference_pixels": 628,
+      "candidate_pixels": 635
+    },
+    "right_low": {
+      "name": "Right lower edge flick",
+      "box": [
+        955,
+        750,
+        1000,
+        845
+      ],
+      "sensitivity": {
+        "0.68": {
+          "iou_percent": 75.1004,
+          "precision_percent": 98.9418,
+          "recall_percent": 75.7085,
+          "overlap_pixels": 187,
+          "missing_pixels": 60,
+          "extra_pixels": 2,
+          "reference_pixels": 247,
+          "candidate_pixels": 189
+        },
+        "0.74": {
+          "iou_percent": 79.717,
+          "precision_percent": 94.4134,
+          "recall_percent": 83.6634,
+          "overlap_pixels": 169,
+          "missing_pixels": 33,
+          "extra_pixels": 10,
+          "reference_pixels": 202,
+          "candidate_pixels": 179
+        },
+        "0.8": {
+          "iou_percent": 78.9189,
+          "precision_percent": 87.4251,
+          "recall_percent": 89.0244,
+          "overlap_pixels": 146,
+          "missing_pixels": 18,
+          "extra_pixels": 21,
+          "reference_pixels": 164,
+          "candidate_pixels": 167
+        }
+      },
+      "iou_percent": 79.717,
+      "precision_percent": 94.4134,
+      "recall_percent": 83.6634,
+      "overlap_pixels": 169,
+      "missing_pixels": 33,
+      "extra_pixels": 10,
+      "reference_pixels": 202,
+      "candidate_pixels": 179
+    }
+  },
+  "reference_path": "/workspace/scratch/7341ea049290/work/reference-rectified.png",
+  "candidate_path": "/workspace/scratch/7341ea049290/deliverables/BC_Forest_Service_Preview.png",
+  "baseline_path": null,
+  "label": "after",
+  "scope_path": "/workspace/scratch/7341ea049290/work/overlap_v6/flames/regions_before_edits.json",
+  "measurement_domain_notes": [
+    "Boxes and domain exclusions fixed before any revision 5 flame edits.",
+    "Exclude the outer 3 pixels of the registered canvas to avoid the photographed paper/print boundary.",
+    "The oblique-ribbon polygon is a broad manually specified measurement window excluding nearby headline-outline discoloration; it does not define artwork geometry.",
+    "Left-middle context/ROI also includes the lower tip of the long-left ribbon; regions are reported individually and not combined."
+  ],
+  "scope": {
+    "canvas": [
+      1000,
+      1440
+    ],
+    "registration": "same fixed rectified photograph as tree analysis",
+    "primary_classifier": {
+      "red_min": 150,
+      "green_min": 140,
+      "green_red_ratio_min": 0.74,
+      "blue_red_ratio_max": 0.55
+    },
+    "sensitivity_green_red_ratio": [
+      0.68,
+      0.74,
+      0.8
+    ],
+    "regions": {
+      "left_long": {
+        "name": "Left long vein, isolated lower shaft",
+        "box": [
+          28,
+          405,
+          80,
+          530
+        ],
+        "context": [
+          0,
+          315,
+          100,
+          540
+        ]
+      },
+      "left_mid": {
+        "name": "Left middle arc",
+        "box": [
+          0,
+          480,
+          72,
+          600
+        ],
+        "context": [
+          0,
+          450,
+          85,
+          610
+        ]
+      },
+      "left_low": {
+        "name": "Left lower tongue",
+        "box": [
+          0,
+          650,
+          42,
+          775
+        ],
+        "context": [
+          0,
+          620,
+          60,
+          790
+        ]
+      },
+      "right_oblique": {
+        "name": "Right oblique cut",
+        "box": [
+          810,
+          610,
+          925,
+          765
+        ],
+        "context": [
+          805,
+          600,
+          935,
+          775
+        ],
+        "polygon": [
+          [
+            910,
+            610
+          ],
+          [
+            925,
+            625
+          ],
+          [
+            878,
+            690
+          ],
+          [
+            840,
+            765
+          ],
+          [
+            810,
+            765
+          ],
+          [
+            832,
+            700
+          ],
+          [
+            869,
+            645
+          ]
+        ]
+      },
+      "right_low": {
+        "name": "Right lower edge flick",
+        "box": [
+          955,
+          750,
+          1000,
+          845
+        ],
+        "context": [
+          940,
+          730,
+          1000,
+          860
+        ]
+      }
+    },
+    "exclude_outer_canvas_pixels": 3,
+    "measurement_domain_notes": [
+      "Boxes and domain exclusions fixed before any revision 5 flame edits.",
+      "Exclude the outer 3 pixels of the registered canvas to avoid the photographed paper/print boundary.",
+      "The oblique-ribbon polygon is a broad manually specified measurement window excluding nearby headline-outline discoloration; it does not define artwork geometry.",
+      "Left-middle context/ROI also includes the lower tip of the long-left ribbon; regions are reported individually and not combined."
+    ]
+  }
+}

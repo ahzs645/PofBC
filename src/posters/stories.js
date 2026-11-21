@@ -167,6 +167,36 @@ export const STORIES = {
       'Beside it, the service’s evergreen emblem in newspaper ink: the province, its islands and a tree.'
     ]
   },
+  'prevent-forest-fires': {
+    overview: [
+      'A yellow sky, a forest going up in orange flame, and burnt timber at the foot: the case against fire made as a loss.',
+      'Read it from the treetops down to the name at the foot. Its drawing and lettering give an impression of the middle of the century, but that is an impression: nothing on the poster dates it.'
+    ],
+    canopy: [
+      'Along the top, dark conifers stand against the yellow, cut like a woodcut. The flames are already climbing into them.'
+    ],
+    flames: [
+      'Below them the sky turns to fire: an orange field with yellow tongues licking up between the trunks. The words are set on it.'
+    ],
+    timber: [
+      'At the foot, what the fire leaves: burnt snags, broken stumps, fallen logs and roots, black with a few pale faces of exposed wood.',
+      'This is the timber the slogan counts.'
+    ],
+    script: [
+      'Prevent, in a quick ivory script across the flames: the instruction, written as if by hand.'
+    ],
+    headline: [
+      'Then FOREST FIRES, in heavy dark italic capitals outlined in ivory, the largest words on the sheet.'
+    ],
+    slogan: [
+      'The slogan makes the case in money: fire destroys timber and payrolls, so a burnt forest is lost wages as well as lost wood.',
+      'The Forest Service had long framed forests as public wealth: in 1915 H. R. MacMillan tied timber revenue to roads, schools, wharves and bridges, and Parminter’s history records a 1918 survey that found fire had destroyed two-thirds of the province’s forests.',
+      'These sources give context only; neither mentions this poster.'
+    ],
+    credit: [
+      'Along the foot, in widely spaced yellow capitals, the service signs in its own name: BRITISH COLUMBIA FOREST SERVICE.'
+    ]
+  },
   'go-bc-ferries': {
     overview: [
       'A small rounded sticker for a car window: teal sea, green mountains, a ferry and a gull. It sells a crossing the way a resort sticker sells a place.',

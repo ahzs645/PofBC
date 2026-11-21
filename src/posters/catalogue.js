@@ -19,7 +19,7 @@ export const SERIES = [
     id: 'forest-service',
     title: 'British Columbia Forest Service',
     kind: 'Campaign posters, signs and advertising',
-    posters: ['reward-living-forest', 'enjoy-protect-forests', 'coons-age']
+    posters: ['reward-living-forest', 'enjoy-protect-forests', 'prevent-forest-fires', 'coons-age']
   },
   {
     id: 'fire-prevention',
@@ -104,6 +104,22 @@ export const POSTERS = {
     made: 'vector',
     view: { x: 0, y: 0, w: 1122, h: 1402 },
     page: { w: 11.22, h: 14.02 }
+  },
+  'prevent-forest-fires': {
+    id: 'prevent-forest-fires',
+    issuer: 'BC Forest Service',
+    subject: 'Fire prevention',
+    format: 'Poster',
+    blurb: 'A forest burning to the ground, and the cost counted in timber and in wages.',
+    series: 'forest-service',
+    title: 'Prevent Forest Fires: Fire Destroys Timber and Payrolls',
+    when: 'Undated',
+    made: 'vector',
+    view: { x: 0, y: 0, w: 1000, h: 1440 },
+    // The package's 250 × 360 mm, an export size rather than a measurement of the print.
+    page: { w: 9.843, h: 14.173 },
+    // 1.6 MB: 7,821 paths of woodcut trees, flames and timber.
+    prefetch: false
   },
   'dont-drop-it': {
     id: 'dont-drop-it',

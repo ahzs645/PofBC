@@ -1,0 +1,56 @@
+{
+  "revision": 6,
+  "baseline_revision": 5,
+  "reference_sha256": "12b59abbc0794763866dfb20bfdc189b45227a2da4e4c98f727daa42eba6a7ad",
+  "baseline_svg_sha256": "f8f4f34d1cbce16bdeb440ebc416415ecd76b65dcf9f3b0ee79d4e67fbcb3a61",
+  "areas": [
+    {
+      "name": "Upper conifers",
+      "selected": "cycle16, following 19 recorded render/review cycles",
+      "record": "history/upper/README.md and ledger.json",
+      "summary": "Unequal bough tiers, returning hooks, staggered pendant foliage, thinner trunk toes, connected twig tips and restrained wood scars replace repeated generic sprays. Two closing reviews deepen the small right crown and open the yellow collar beside the central flame apex."
+    },
+    {
+      "name": "Lower trunks and fallen timber",
+      "selected": "pass9_branch_bend, with the accepted isolated pale-gold material trial",
+      "record": "history/lower/LEDGER.md",
+      "summary": "The leaning shaft is narrower, its root turns earlier, stump faces are quieter and better placed, and the main log has a more coherent exposed face and curved pendant branch. The snag shoulder and right log bend were revised after a partial rejection. Dense invented face grain was rejected."
+    },
+    {
+      "name": "Ground openings and fragments",
+      "selected": "ground pass7 geometry, then root material-colour alignment",
+      "record": "history/ground/README.md, ledger.json and root_colour/",
+      "summary": "Broad orange blobs become grouped directional cuts. Stepped gaps and the right fork are rejoined continuously; a central orange club becomes a short exposed end face. A root colour-only pass uses the same pale gold as the foreground wood; no additional ground geometry changed."
+    },
+    {
+      "name": "Flame crest and Prevent script",
+      "selected": "root pass10, following ten recorded cycles",
+      "record": "history/root/iterations.json",
+      "summary": "Unequal curved tongues, shallower splits, left folds and a narrower right neck replace incorrect crest shapes. The central orange tip is lowered to retain its yellow collar. Five detached ribbons remain unchanged. Prevent uses individually fitted existing lowercase masters plus a new continuous capital-P outline, with a final narrower lower downstroke."
+    },
+    {
+      "name": "FOREST / FIRES headline",
+      "selected": "headline pass6",
+      "record": "history/headline/README.md, ledger.json and selected_state.json",
+      "summary": "Shared constructed letter masters receive fuller E/F/S/T forms and revised O/R contours. Occurrence-specific fitting corrects proportions and placement. A uniform six-unit ivory keyline is selected after colour review; a wider alternative with higher ivory IoU is rejected for excess visible outline weight."
+    },
+    {
+      "name": "TIMBER / PAYROLLS footer",
+      "selected": "footer pass2_cap_heights",
+      "record": "history/footer/LEDGER.md",
+      "summary": "Two closing cycles correct internal letter spacing, width and cap heights using bounded transformations of the existing masters. All other footer paths and both glyph master functions remain unchanged. The final frozen word boxes contain every changed rendered pixel."
+    }
+  ],
+  "selected_source_sha256": {
+    "build_poster.py": "129c8d10b033001984834623a7fbaba095cd71044d69391b49c6d9e4a46d04f6",
+    "canopy.py": "6de7a79466efd39fdbc4e707be1ce3313742e912d5133633ca277537843969eb",
+    "foreground_v2.py": "b5a5f64914138c507fefb3a12a73ce0edf0e6e4363895051824187e57b8059b5",
+    "ground_details_v4.py": "7e83819d5fb6e205927ca4bcd8b05b039fbdbfd282b496cf313a4cd617c632b9",
+    "flames_v2.py": "416cfaafb1bac1a61c35a945faaa46e31b48aad7f047b22a40e4b5e4cf33de6e",
+    "illustration.py": "917310aa5cb8dd003ac0975c4e2022e2a99dd870304f7550681c3ab18e55f4ee",
+    "headline.py": "0a38272b6700c26c3b2ad4d467b833b5b03e303d8dadf256d904246156de2dcd",
+    "footer.py": "5bcf011434fc3cf035c01901e3094b46c9f6fcc63d76a40f615313bcd830ac42"
+  },
+  "combined_review": "Final independent review found no blocking clipping, collision, layer gap or disconnected patch at poster/detail review scale. All sources held.",
+  "construction": "Authored editable vector geometry. Diagnostic masks never generate contours; bounded construction-parameter fitting is used for selected lettering."
+}

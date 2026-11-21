@@ -1,0 +1,91 @@
+{
+  "canvas": [
+    1000,
+    1440
+  ],
+  "registration": "Fixed reference-rectified.png; unchanged from delivered revision 5",
+  "classifiers": {
+    "orange": {
+      "red_min": 170,
+      "green_min": 55,
+      "green_red_ratio_max": 0.75,
+      "blue_red_ratio_max": 0.5
+    },
+    "ivory": {
+      "red_min": 190,
+      "green_min": 180,
+      "blue_min": 130,
+      "red_green_delta_max": 40,
+      "green_blue_delta_max": 70
+    }
+  },
+  "regions": {
+    "crest_left": {
+      "name": "Left flame crest",
+      "box": [
+        0,
+        170,
+        240,
+        440
+      ],
+      "class": "orange"
+    },
+    "crest_middle_left": {
+      "name": "Middle-left flame crest",
+      "box": [
+        240,
+        100,
+        500,
+        310
+      ],
+      "class": "orange"
+    },
+    "crest_middle_right": {
+      "name": "Middle-right flame crest",
+      "box": [
+        500,
+        145,
+        750,
+        330
+      ],
+      "class": "orange"
+    },
+    "crest_right": {
+      "name": "Right flame crest",
+      "box": [
+        750,
+        180,
+        1000,
+        550
+      ],
+      "class": "orange"
+    },
+    "right_outer_arc": {
+      "name": "Right outer flame arc",
+      "box": [
+        925,
+        430,
+        1000,
+        690
+      ],
+      "class": "orange"
+    },
+    "prevent_script": {
+      "name": "Prevent script",
+      "box": [
+        220,
+        260,
+        835,
+        435
+      ],
+      "class": "ivory"
+    }
+  },
+  "notes": [
+    "Fixed before revision 6 root edits.",
+    "Local boxes can overlap and scores cannot be combined.",
+    "Raw colour masks are diagnostic only. No mask generates artwork.",
+    "Ivory script mask includes antialiasing and photographed print variation.",
+    "Orange comparison includes the field within each box; edge distances and colour views are required to assess contour changes."
+  ]
+}

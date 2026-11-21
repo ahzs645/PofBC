@@ -1,0 +1,132 @@
+{
+  "canvas": [
+    1000,
+    1440
+  ],
+  "registration": "same fixed rectified photograph as tree analysis",
+  "primary_classifier": {
+    "red_min": 150,
+    "green_min": 140,
+    "green_red_ratio_min": 0.74,
+    "blue_red_ratio_max": 0.55
+  },
+  "sensitivity_green_red_ratio": [
+    0.68,
+    0.74,
+    0.8
+  ],
+  "regions": {
+    "left_long": {
+      "name": "Left long vein, isolated lower shaft",
+      "box": [
+        28,
+        405,
+        80,
+        530
+      ],
+      "context": [
+        0,
+        315,
+        100,
+        540
+      ]
+    },
+    "left_mid": {
+      "name": "Left middle arc",
+      "box": [
+        0,
+        480,
+        72,
+        600
+      ],
+      "context": [
+        0,
+        450,
+        85,
+        610
+      ]
+    },
+    "left_low": {
+      "name": "Left lower tongue",
+      "box": [
+        0,
+        650,
+        42,
+        775
+      ],
+      "context": [
+        0,
+        620,
+        60,
+        790
+      ]
+    },
+    "right_oblique": {
+      "name": "Right oblique cut",
+      "box": [
+        810,
+        610,
+        925,
+        765
+      ],
+      "context": [
+        805,
+        600,
+        935,
+        775
+      ],
+      "polygon": [
+        [
+          910,
+          610
+        ],
+        [
+          925,
+          625
+        ],
+        [
+          878,
+          690
+        ],
+        [
+          840,
+          765
+        ],
+        [
+          810,
+          765
+        ],
+        [
+          832,
+          700
+        ],
+        [
+          869,
+          645
+        ]
+      ]
+    },
+    "right_low": {
+      "name": "Right lower edge flick",
+      "box": [
+        955,
+        750,
+        1000,
+        845
+      ],
+      "context": [
+        940,
+        730,
+        1000,
+        860
+      ]
+    }
+  },
+  "exclude_outer_canvas_pixels": 3,
+  "measurement_domain_notes": [
+    "Boxes and domain exclusions fixed before any revision 5 flame edits.",
+    "Exclude the outer 3 pixels of the registered canvas to avoid the photographed paper/print boundary.",
+    "The oblique-ribbon polygon is a broad manually specified measurement window excluding nearby headline-outline discoloration; it does not define artwork geometry.",
+    "Left-middle context/ROI also includes the lower tip of the long-left ribbon; regions are reported individually and not combined."
+  ]
+}

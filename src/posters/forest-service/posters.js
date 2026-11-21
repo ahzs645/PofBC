@@ -864,6 +864,206 @@ export const COONS_AGE = {
   order: ['overview', 'photograph', 'headline', 'signature', 'emblem']
 }
 
+// ── Prevent Forest Fires: Fire Destroys Timber and Payrolls ───────────────────────────────────
+
+const MACMILLAN = { label: 'H. R. MacMillan, “The Forest Fire: A National Danger and Its Remedy”, The Canadian Magazine, April 1915, pp. 549–553' }
+const PARMINTER = {
+  label: 'John Parminter, “Protection as conservation: safeguarding British Columbia’s forests from fire, 1874–1921”, Ministry of Forests, 1981',
+  href: 'https://www.for.gov.bc.ca/hfd/library/documents/bib30294.pdf'
+}
+const CAMPFIRE_OVAL_LINK = {
+  label: 'Prevent Forest Fires: Put Your Campfires Out',
+  note: 'Pins · the Forest Branch’s yellow oval, with the same three words over the top',
+  to: { view: 'pins', pin: 'forest-branch-campfires' }
+}
+const ENGLAND_EXPECTS_LINK = {
+  label: 'England Expects: Prevent Forest Fires',
+  note: 'Cards · the same plea as a call to duty',
+  to: { view: 'cards', card: 'england-expects' }
+}
+const FOREST_CLOSURE_LINK = {
+  label: 'FOREST CLOSURE, Zone 3',
+  note: 'Signs · the Forest Service’s closure sign, its strip reading OPEN or CLOSED',
+  to: { view: 'signs', sign: 'forest-closure' }
+}
+
+// The lettering stays lit on the ground it is printed on: the flame field behind the script and
+// the headline (found by box), and the dark ground under the slogan and credit, a path without an
+// id, so it is lit but is not a target when those two are found by their shapes.
+const DARK_GROUND = '#pff-burnt-forest > path:first-child'
+
+export const PREVENT_FOREST_FIRES = {
+  id: 'prevent-forest-fires',
+  spotlight: { keep: ['pff-layer-paper'] },
+  regions: ['flames', 'canopy', 'timber', 'script', 'headline', 'slogan', 'credit'],
+  parts: {
+    overview: {
+      label: 'Whole poster',
+      box: box('prevent-forest-fires'),
+      pad: 0.03,
+      panel: {
+        eyebrow: 'British Columbia Forest Service · fire-prevention poster',
+        heading: 'Prevent Forest Fires',
+        em: 'fire destroys timber and payrolls',
+        lede: 'Conifers against a yellow sky, an orange field of flame, and burnt trunks and logs under the slogan.',
+        blocks: [
+          { facts: [
+            ['Issued by', 'British Columbia Forest Service, from the credit'],
+            ['Date', 'not established'],
+            ['Rebuilt from', 'one supplied photograph'],
+            ['Drawing', '1000 × 1440 units: 7,821 paths in seven named layers, lettering outlined']
+          ] },
+          { palette: [
+            { name: 'Ink', value: '#242332' },
+            { name: 'Yellow', value: '#F5E928' },
+            { name: 'Orange', value: '#F77913' },
+            { name: 'Ivory', value: '#F5F0D7' },
+            { name: 'Wood', value: '#ECD878' }
+          ] },
+          { note: 'The typefaces, artist, date, printed size and inks are not identified. These are the reconstruction’s working colours, not specified inks.' }
+        ]
+      }
+    },
+    canopy: {
+      label: 'Canopy',
+      hint: 'conifers against the sky',
+      box: { x: 0, y: 0, w: 1000, h: 388 },
+      pad: 0.03,
+      layer: '#pff-layer-canopy',
+      panel: {
+        eyebrow: 'The canopy',
+        heading: 'Burning conifers',
+        lede: 'Dark conifers cut like a woodcut, standing against the yellow as the flames climb into them.',
+        blocks: [
+          { facts: [
+            ['Layer', 'conifer canopy: small trees, trunks, boughs, needle fringes and bark cuts'],
+            ['Colours', 'ink #242332 on yellow #F5E928']
+          ] }
+        ]
+      }
+    },
+    flames: {
+      label: 'Flames',
+      hint: 'the orange field',
+      // The flame layer runs to the foot of the sheet; below y 1043 the burnt ground covers it.
+      box: { x: 0, y: 137, w: 1000, h: 906 },
+      pad: 0.03,
+      layer: '#pff-layer-flames',
+      panel: {
+        eyebrow: 'The fire',
+        heading: 'The flame field',
+        lede: 'One orange shape with yellow tongues cut into it, rising from the ground into the trees.',
+        blocks: [
+          { facts: [
+            ['Layer', 'flame field and tongues'],
+            ['Orange', '#F77913, a working colour']
+          ] }
+        ]
+      }
+    },
+    timber: {
+      label: 'Burnt timber',
+      hint: 'snags, stumps and fallen logs',
+      box: { x: 0, y: 747, w: 1000, h: 693 },
+      pad: 0.03,
+      layer: '#pff-layer-foreground',
+      panel: {
+        eyebrow: 'The foreground',
+        heading: 'Burnt timber',
+        lede: 'Leaning snags, stumps, fallen logs and roots in dark ink, with pale faces where the wood is exposed.',
+        blocks: [
+          { facts: [
+            ['Layer', 'burnt trunks, logs, roots and woodcut marks'],
+            ['Exposed wood', '#ECD878, an interpretive colour']
+          ] }
+        ]
+      }
+    },
+    script: {
+      label: 'Prevent',
+      hint: 'the script',
+      box: { x: 237, y: 276, w: 580, h: 146 },
+      pad: 0.1,
+      layer: '#pff-layer-script, #pff-orange-flame-silhouette',
+      panel: {
+        eyebrow: 'The script',
+        heading: 'Prevent',
+        lede: 'One word in an ivory brush script, written across the flames.',
+        blocks: [
+          { facts: [
+            ['Lettering', 'a constructed brush script, outlined'],
+            ['Colour', 'ivory #F5F0D7']
+          ] }
+        ]
+      }
+    },
+    headline: {
+      label: 'FOREST FIRES',
+      hint: 'the headline',
+      box: { x: 82, y: 461, w: 854, h: 401 },
+      pad: 0.06,
+      layer: '#pff-layer-headline, #pff-orange-flame-silhouette',
+      panel: {
+        eyebrow: 'The headline',
+        heading: 'FOREST FIRES',
+        lede: 'The largest words on the sheet: heavy dark italic capitals with an ivory keyline.',
+        blocks: [
+          { facts: [
+            ['Lettering', 'constructed capitals, outlined'],
+            ['Colours', 'ink #242332, keyline #F5F0D7']
+          ] },
+          { links: [poster('be-careful', 'slogan', 'Posters · the 1960 decal, PREVENT FOREST FIRES across its base'), CAMPFIRE_OVAL_LINK, ENGLAND_EXPECTS_LINK] }
+        ]
+      }
+    },
+    slogan: {
+      label: 'Slogan',
+      hint: 'Fire destroys timber and payrolls!',
+      box: { x: 32, y: 1152, w: 966, h: 208 },
+      pad: 0.06,
+      layer: `${DARK_GROUND}, #pff-lettering-sparks, #pff-fire-brush-lettering, #pff-destroys, #pff-timber, #pff-and, #pff-payrolls, #pff-yellow-exclamation`,
+      hit: 'shape',
+      panel: {
+        eyebrow: 'The slogan',
+        heading: 'FIRE DESTROYS TIMBER AND PAYROLLS!',
+        lede: 'FIRE in yellow brush capitals, then the rest in ivory on the dark ground, ending in a yellow exclamation mark.',
+        blocks: [
+          { facts: [
+            ['Lettering', 'constructed, outlined'],
+            ['The argument', 'fire as a loss of timber and of wages']
+          ] },
+          { note: 'The sources below give context for that argument. Neither mentions this poster.' },
+          { sources: [MACMILLAN, PARMINTER] }
+        ]
+      },
+      storySources: [MACMILLAN, PARMINTER]
+    },
+    credit: {
+      label: 'Credit',
+      hint: 'British Columbia Forest Service',
+      box: { x: 37, y: 1388, w: 936, h: 27 },
+      pad: 0.3,
+      layer: `${DARK_GROUND}, #pff-forest-service-credit`,
+      hit: 'shape',
+      panel: {
+        eyebrow: 'The credit',
+        heading: 'British Columbia Forest Service',
+        lede: 'The service’s full name in widely spaced yellow capitals along the foot.',
+        blocks: [
+          { links: [
+            poster('reward-living-forest', 'service', 'Posters · the campfire poster, signed the same way'),
+            poster('enjoy-protect-forests', 'service', 'Posters · the sign, signed the same way'),
+            poster('coons-age', 'signature', 'Posters · the 1971 advertisement, signed on two lines'),
+            LOOKOUT_LINK,
+            FOREST_CLOSURE_LINK
+          ] }
+        ]
+      }
+    }
+  },
+  order: ['overview', 'canopy', 'flames', 'timber', 'script', 'headline', 'slogan', 'credit']
+}
+
 // Each with its story (../stories.js) attached to its parts.
-export const FOREST_SERVICE_POSTERS = Object.fromEntries([DONT_DROP_IT, DONT_GAMBLE, REWARD, ENJOY_PROTECT, BE_CAREFUL, COONS_AGE]
+export const FOREST_SERVICE_POSTERS = Object.fromEntries([DONT_DROP_IT, DONT_GAMBLE, REWARD, ENJOY_PROTECT, BE_CAREFUL, COONS_AGE, PREVENT_FOREST_FIRES]
   .map((poster) => [poster.id, { ...poster, parts: withStories(poster.id, poster.parts) }]))

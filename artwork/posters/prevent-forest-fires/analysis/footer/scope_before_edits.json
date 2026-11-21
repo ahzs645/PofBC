@@ -1,0 +1,48 @@
+{
+  "diagnostic": "Footer local ivory and dark-space overlap; separate from tree diagnostics",
+  "version": 1,
+  "canvas": [
+    1000,
+    1440
+  ],
+  "registration": "Fixed rectified 1000x1440 reference; no independent translation, scaling, or registration fitting",
+  "classifiers": {
+    "ivory": {
+      "r_min_exclusive": 180,
+      "g_min_exclusive": 180,
+      "b_min_exclusive": 140,
+      "chroma_max_exclusive": 100
+    },
+    "dark": {
+      "max_channel_exclusive": 140
+    }
+  },
+  "ivory_sensitivity_b": [
+    130,
+    140,
+    150
+  ],
+  "regions": {
+    "timber": {
+      "name": "TIMBER",
+      "box": [
+        640,
+        1168,
+        990,
+        1242
+      ],
+      "exclusions": []
+    },
+    "payrolls": {
+      "name": "PAYROLLS",
+      "box": [
+        480,
+        1255,
+        940,
+        1330
+      ],
+      "exclusions": []
+    }
+  },
+  "scope_provenance": "Boxes and classifiers frozen in fixed_manifest.json before the first footer edit; this file is a portable serialization of the same scope."
+}

@@ -13,6 +13,7 @@ palettes and validation records are here.
 | `enjoy-protect-forests/` | Enjoy & Protect our Forests | `src/posters/forest-service/enjoy-protect-forests.svg` (the outlined master), unchanged |
 | `be-careful/` | Be Careful: Prevent Forest Fires (1960 decal) | `src/posters/forest-service/be-careful.svg`, the master with **ids prefixed** (below) |
 | `coons-age/` | A Coon’s Age (1971 newspaper advertisement) | `src/posters/forest-service/coons-age.svg` and `coons-age-raccoon.webp`, the outlined master with **its photograph moved out** (below) |
+| `prevent-forest-fires/` | Prevent Forest Fires: Fire Destroys Timber and Payrolls, British Columbia Forest Service | `src/posters/forest-service/prevent-forest-fires.svg`, the master **minified, ids prefixed** (below) |
 | `forest-service-emblem/` | The Forest Service evergreen emblem | `src/internal/forest-service-emblem.svg`, unchanged; also drawn into the two posters above |
 | `go-bc-ferries/` | GO B.C. FERRIES — car decal | `src/posters/bc-ferries/go-bc-ferries.svg`, unchanged |
 | `queen-of-sidney/` | Queen of Sidney — car decal | `src/posters/bc-ferries/queen-of-sidney.svg`, **layer ids renamed** (below) |
@@ -60,6 +61,14 @@ its title. Rendered in Chromium, it matches the supplied master exactly outside 
 instead of embedding it; `build_ad.py` embeds it again. Their scans, comparison images, raster and
 PDF exports, review pages and the copy of this repo's emblem are left out; see each README's last
 section.
+
+**Prevent Forest Fires is minified without changing a number.** Its site copy prefixes every id with
+`pff-`, rewords its `<title>` and `<desc>`, keeps the Inkscape layer labels as `data-label`, and drops
+whitespace between tags and inside path data and fills a parent already sets: 1.56 MB in place of
+1.67 MB, with no pixel changed in a Chromium render at three times its size. It is fetched only when
+opened, and the shelf shows a JPEG of it. The supplied photograph, the PNG renders and boards, the
+masks, the superseded revision-5 drawing, the review page and the per-pass history are left out; see
+[`prevent-forest-fires/README.md`](prevent-forest-fires/README.md).
 
 **Coastal Forest** comes from its own repository,
 [ahzs645/coastal-forest-poster](https://github.com/ahzs645/coastal-forest-poster), whose
