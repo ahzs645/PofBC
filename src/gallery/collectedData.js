@@ -7787,7 +7787,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Authentic marks recovered from original published documents or official letterheads. Dates identify source sightings, not first use. Vector files were not invented from scans.",
+    "notes": "Marks recovered from published documents, and one traced vector. The traced logo is a reconstruction from a supplied image, labelled as such, with the June 1999 health services plan’s cover kept beside it as the published sighting. Dates identify source sightings, not first use.",
     "assets": [
       {
         "id": "source-okanagan-similkameen-health-region-okanagan-similkameen-health-region-1999-png",
@@ -7822,7 +7822,41 @@ export const COLLECTED_BODIES = [
           "render_scale": 4
         },
         "previewWidth": 900,
-        "previewHeight": 768
+        "previewHeight": 768,
+        "versionLabel": "Published image",
+        "variantOf": "okanagan-similkameen-health-region-traced"
+      },
+      {
+        "id": "okanagan-similkameen-health-region-traced",
+        "label": "Okanagan Similkameen Health Region: logo, traced vector",
+        "file": "identity-collected/okanagan-similkameen-health-region/okanagan-similkameen-health-region-traced.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Okanagan Similkameen Health Region; reproduced in Douglas Gordon Stickney, Royal Roads University thesis, Library and Archives Canada",
+        "sourcePage": "https://nlc-bnc.ca/obj/s4/f2/dsk1/tape4/PQDD_0015/MQ49217.pdf",
+        "sourceUrl": "https://nlc-bnc.ca/obj/s4/f2/dsk1/tape4/PQDD_0015/MQ49217.pdf",
+        "sourceLocator": "Traced from a supplied black-and-white GIF (600 × 490 px) of the logo; the design is the one on the cover of the June 1999 health services plan",
+        "sourceFile": null,
+        "sourceDate": "1999-06",
+        "observedDate": "2026-11-22",
+        "dateNote": "The 1999 plan dates a sighting of the design; the supplied GIF's own publication is not recorded.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The silhouettes of two adults and a child inside an arc, with OKANAGAN SIMILKAMEEN set around it and HEALTH REGION reversed out of a bar below.",
+        "fidelityNote": "Traced with Potrace from the supplied GIF, not original artwork: its outlines overlap the GIF's ink 98 percent at the GIF's size, the difference being the image's stair-stepped edges. The lettering is the traced shapes, not a font. The supplied GIF is kept as a download.",
+        "sha256": "4755aaed3b909e8e6b215100962e34da8668eed3813450072d934e54a72ddc2b",
+        "bytes": 22893,
+        "darkBackground": false,
+        "downloads": [
+          {
+            "label": "Download the supplied GIF it was traced from",
+            "file": "identity-collected/okanagan-similkameen-health-region/okanagan-similkameen-health-region-supplied.gif",
+            "sha256": "c6f75f4cade1a362fa34072f08dcc5a390c55abdefe58af02f5aab95a3b476df"
+          }
+        ],
+        "search": "traced-vectors-2026-11-22",
+        "versionLabel": "Vector reconstruction"
       }
     ]
   },

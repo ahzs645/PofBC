@@ -15,11 +15,15 @@ import './arms.css'
 const SPECIMEN_IMAGES = import.meta.glob('../../research/identity/arms-variants-2026-11-14/reference/*', { eager: true, query: '?url', import: 'default' })
 const HOLDER_IMAGES = import.meta.glob('./images/*', { eager: true, query: '?url', import: 'default' })
 const ARTWORK_IMAGES = import.meta.glob('./artwork/*.webp', { eager: true, query: '?url', import: 'default' })
+// The originals of artwork that is an SVG (build-arms-artwork.py copies them beside their WebPs).
+// A rendering is shown as the vector it is; the lighter WebP stays the thumbnail in lists of holders.
+const ARTWORK_VECTORS = import.meta.glob('./artwork/*.svg', { eager: true, query: '?url', import: 'default' })
 const specimenUrl = (file) => SPECIMEN_IMAGES[`../../research/identity/arms-variants-2026-11-14/reference/${file}`] ?? null
 const holderImageUrl = (file) => HOLDER_IMAGES[`./images/${file}`] ?? null
 const artworkUrl = (id) => ARTWORK_IMAGES[`./artwork/${id}.webp`] ?? null
 /** An artwork record's display copy: the acquisition's, or a file kept in ./images/. */
-const artworkImageUrl = (item) => (item.file ? holderImageUrl(item.file) : artworkUrl(item.id))
+const artworkVectorUrl = (item) => (item.vectorImage ? ARTWORK_VECTORS[`./artwork/${item.vectorImage}`] ?? null : null)
+const artworkImageUrl = (item) => (item.file ? holderImageUrl(item.file) : artworkVectorUrl(item) ?? artworkUrl(item.id))
 
 const REPOSITORY = 'https://github.com/ahzs645/PofBC/blob/main'
 

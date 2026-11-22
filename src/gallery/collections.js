@@ -264,6 +264,17 @@ const ONE_OFF_IDENTITY = {
       'and its own lockup is first seen that September.'),
     rights: PROVINCE_RIGHTS
   },
+  // Drawn by the generator: its pattern is the one GCPE prints, as the 2024 Estimate Notes footer shows.
+  gcpe: {
+    provenance: 'synthetic_name_variant',
+    fidelity: 'source compared',
+    fidelityNote: 'The BC mark is the published one and the name is set in the ministry alphabet, broken ' +
+      'after “Communications”. Laid beside the scanned footer of GCPE’s 2024 Estimate Notes, the mark, ' +
+      'the divider, the line break and the lettering match; the scan’s print is heavier.',
+    applicability: UNDATED('Seen on the footer of GCPE’s Estimate Notes of 29 April 2024 (its collection ' +
+      'keeps the scan). That is a sighting, not when GCPE began to use the BC mark.'),
+    rights: PROVINCE_RIGHTS
+  },
   bcts: {
     ...PUBLISHED,
     applicability: DATED_BY_TIMELINE('first_observation', 'by 2023',
@@ -815,6 +826,7 @@ const GRAPH_NODES = {
   'public-service': 'bc-public-service-agency',
   // A remake, not the program's own lockup: its card keeps that label wherever it is reached from.
   'prepared-bc': 'sub-preparedbc',
+  gcpe: 'government-communications-and-public-engagement',
   'healthlink-bc-logo': 'sub-healthlink-bc'
 }
 

@@ -245,6 +245,21 @@ export const ONE_OFFS = [
     caveat: 'A remake, not a published mark. It opens in the generator, in the current era, with ' +
       'the wording already typed.'
   },
+  {
+    id: 'gcpe',
+    kind: 'current',
+    label: 'Government Communications and Public Engagement',
+    body: 'Government Communications and Public Engagement',
+    years: 'drawn in the current identity',
+    // Set, not lifted: the generator's current era draws it, as GCPE's own documents print it.
+    text: 'Government Communications\nand Public Engagement',
+    note: 'Set as the Province prints it: the BC mark as published, the divider, and the name on two ' +
+      'lines in the Garamond the ministry marks are lettered in, broken after “Communications” as on ' +
+      'the footer of GCPE’s 2024 Estimate Notes, whose scan is kept in its own collection.',
+    caveat: 'Drawn by the generator, not lifted from GCPE’s files: compared with the 2024 footer, the ' +
+      'mark, the divider and the wording match. It opens in the generator, in the current era, with ' +
+      'the wording already typed.'
+  },
   artwork({
     id: 'public-service',
     label: 'BC Public Service',

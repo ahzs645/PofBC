@@ -5,6 +5,9 @@ Reads research/identity/arms-acquisition-2026-11-16/ (catalogue.json, holders.js
 files under assets/) and writes:
 
   src/arms/artwork/<asset id>.webp   one display copy per artwork record, never upscaled
+  src/arms/artwork/<asset id>.svg    the original itself, for each record that is an SVG, so the
+                                     view draws vector artwork as vector (the WebP stays its
+                                     fallback and thumbnail)
   src/arms/artwork.json              the holders, their artwork and the credits the view shows
 
 The originals stay where they are, unchanged; the display copies are only downsampled (SVGs are
@@ -110,6 +113,24 @@ def display_copy(asset, out, rendered):
     return image.size
 
 
+UNSAFE_SVG = re.compile(r'<(?:\w+:)?(?:script|foreignObject|iframe|object|embed)\b|\son\w+\s*=|javascript\s*:|@import\b', re.I)
+EXTERNAL_REF = re.compile(r'(?:xlink:)?href\s*=\s*["\'](?!#)([^"\']+)', re.I)
+
+
+def vector_copy(asset):
+    """The original SVG, copied unchanged beside its display copy, once checked to draw only itself."""
+    if asset['format'] != 'SVG':
+        return None
+    text = (SOURCE / 'assets' / asset['file']).read_text(encoding='utf-8')
+    if UNSAFE_SVG.search(text):
+        sys.exit(f"{asset['id']}: active content in {asset['file']}")
+    if EXTERNAL_REF.search(text) or re.search(r'url\(\s*["\']?(?!#)', text):
+        sys.exit(f"{asset['id']}: external reference in {asset['file']}")
+    name = f"{asset['id']}.svg"
+    (OUT_DIR / name).write_text(text, encoding='utf-8')
+    return name
+
+
 def main():
     catalogue = json.loads((SOURCE / 'catalogue.json').read_text())
     holders = json.loads((SOURCE / 'holders.json').read_text())
@@ -137,6 +158,7 @@ def main():
             'vector': bool(asset['isVector']),
             'notes': asset.get('notes'),
             'image': name,
+            'vectorImage': vector_copy(asset),
             'size': list(size)
         }
 
@@ -166,7 +188,8 @@ def main():
     for holder in catalogue.get('additionalHolders', []):
         additional.append({key: holder.get(key) for key in ('id', 'name', 'group', 'year', 'registered', 'grantedLabel', 'granted', 'motto', 'description', 'note', 'sources')})
 
-    unused = sorted(path.name for path in OUT_DIR.glob('*.webp') if path.stem not in artwork)
+    unused = sorted(path.name for path in [*OUT_DIR.glob('*.webp'), *OUT_DIR.glob('*.svg')]
+                    if path.stem not in artwork or (path.suffix == '.svg' and not artwork[path.stem]['vectorImage']))
     for name in unused:
         (OUT_DIR / name).unlink()
 

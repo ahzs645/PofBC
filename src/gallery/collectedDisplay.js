@@ -1660,6 +1660,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "okanagan-similkameen-health-region-traced": {
+  "light": {
+   "file": "identity-display/okanagan-similkameen-health-region-traced.light.svg",
+   "aspect": 1.2179,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/okanagan-similkameen-health-region-traced.dark.svg",
+   "aspect": 1.2179,
+   "recoloured": true
+  }
+ },
  "simon-fraser-health-region-monochrome-rebuilt": {
   "light": {
    "file": "identity-display/simon-fraser-health-region-monochrome-rebuilt.light.svg",
