@@ -808,7 +808,11 @@ const BCT_SOURCES = {
   S7: source('The Daily Colonist, 16 Sep 1979, p. 10 [S7]', 'https://archive.org/details/dailycolonist19790916/page/n9/mode/1up',
     'an Urban Transit Authority recruitment advertisement, signed with its lettering'),
   S8: source('The Daily Colonist, 1 Jul 1980, p. 12 [S8]', 'https://archive.org/details/dailycolonist19800701/page/n11/mode/1up',
-    'a Capital Region transit advertisement signed by the Capital Regional District and the Urban Transit Authority')
+    'a Capital Region transit advertisement signed by the Capital Regional District and the Urban Transit Authority'),
+  S9: source('Henri Robideau, “Gallery In Transit Vancouver” [S9]', 'https://henrirobideau.com/gallery-in-transit-vancouver.html',
+    'the exhibition of 8–27 June 1985, whose poster was “printed on card stock as a pop-out fold-up model BC Transit bus”; the bus’s roof carries the red double arrow and blue “BC Transit”'),
+  S10: source('Urban Transit Authority, Graphic Standards Manual (TRID record 165550) [S10]', 'https://trid.trb.org/View/165550',
+    'a catalogue record of the authority’s standards for its mark, colours, type and vehicles; no copy seen, and its publication date is not given')
 }
 
 /**
@@ -1342,6 +1346,26 @@ export const COLLECTION_ERAS = {
           'not when they were introduced. The authority was renamed BC Transit in 1982.'
       },
       sources: [BCT_SOURCES.S7, BCT_SOURCES.S8, BCT_SOURCES.S1]
+    },
+    {
+      id: 'bct-double-arrow',
+      status: 'held',
+      years: '1982–by 1985',
+      label: 'The double arrow beside “BC Transit”',
+      note: 'The Urban Transit Authority’s double-arrow device, now red, beside “BC Transit” in a heavy blue ' +
+        'sans: the authority’s mark carried over to its new name. Seen on the roof of the red-and-white bus ' +
+        'that was the poster for Gallery In Transit in Vancouver, June 1985; held as the paper model’s own ' +
+        'drawing of it.',
+      applicability: {
+        kind: 'dated_specimen',
+        years: 'June 1985',
+        note: 'The poster dates a use of it, June 1985. The authority took the name BC Transit in 1982, so this ' +
+          'arrangement is no older than that; when it came in and when the flag replaced it are not known. A ' +
+          'Museum of Vancouver estimate of 1982–1985 for handyDART pamphlets with the same arrow (H2015.37.361a–c) ' +
+          'was reported to the project but has not been checked here. The authority’s graphic standards manual ' +
+          'is the lead for its construction.'
+      },
+      sources: [BCT_SOURCES.S9, BCT_SOURCES.S1, BCT_SOURCES.S10]
     },
     {
       id: 'bct-flag',

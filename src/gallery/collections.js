@@ -728,6 +728,22 @@ const BCT_RIGHTS = { status: 'unresolved', note: `BC Transit’s mark. ${NO_PERM
 const BCT_LOOP_DATES = DATED_BY_TIMELINE('first_observation', 'by 2009', 'On the service plan tabled in February 2009.')
 
 const BCT_ENTRIES = {
+  'bct-double-arrow': [
+    supplied({
+      ...RECONSTRUCTED('The roof logo of the red-and-white Gallery In Transit paper model, cut from its printable PDF: ' +
+        'its three paths (the two arrow halves and the outlined lettering) as the PDF draws them, nothing traced or ' +
+        'redrawn. The model is a modern drawing of the June 1985 poster bus, so the photograph of that poster supports ' +
+        'the design and its date but cannot certify these letterforms, their spacing or the colours: #f31410 and ' +
+        '#172bb2 are the model file’s values, not brand specifications. The designer and typeface are not known.'),
+      applicability: DATED_BY_TIMELINE('dated_specimen', 'June 1985', 'On the Gallery In Transit poster bus, Vancouver, 8–27 June 1985.'),
+      rights: BCT_RIGHTS
+    })({
+      id: 'bct-double-arrow-paper-model',
+      label: 'The double arrow and “BC Transit”, from the 1985 paper bus',
+      years: 'June 1985',
+      note: 'The red double arrow beside “BC Transit” in heavy blue sans, as on the roof of the Gallery In Transit poster bus.'
+    })
+  ],
   'bct-flag': [
     supplied({
       provenance: 'extracted_from_published_artwork',
@@ -1086,9 +1102,11 @@ export const GALLERY_COLLECTIONS = [
     aliases: ['collected-urban-transit-authority'],
     cover: 'bct-loop-colour',
     intro: 'BC Transit began as the Urban Transit Authority, whose lettering and double-arrow device are here from ' +
-      'newspaper advertisements of 1979 and 1980. Then its two families of mark since it took the name in 1982: the provincial flag with the ' +
-      'name, seen in two arrangements (the one above the name is here, from a service plan’s cover), then by ' +
-      '2009 the blue-and-green loop, which it still uses. Its bus liveries changed in 2007 and 2024; neither is a new logo.',
+      'newspaper advertisements of 1979 and 1980. When it took the name BC Transit in 1982 the arrow went with it, ' +
+      'red beside the new name in blue, as on the roof of the paper bus that was a June 1985 exhibition poster. ' +
+      'Then the provincial flag with the name, seen in two arrangements (the one above the name is here, from a ' +
+      'service plan’s cover), and by 2009 the blue-and-green loop, which it still uses. Its bus liveries changed ' +
+      'in 2007 and 2024; neither is a new logo.',
     eras: withMarks(COLLECTION_ERAS['bc-transit'], withCollected(BCT_ENTRIES, {
       'bct-urban-transit-authority': ['urban-transit-authority']
     }))

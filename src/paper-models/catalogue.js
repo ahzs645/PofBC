@@ -32,7 +32,11 @@ export const PAPER_MODEL_SERIES = [
           'Continuous outer lines are the cut; dotted lines are folds.',
           'Keep the wheels attached to the side walls.'
         ],
-        related: [{ label: 'BC Transit in Logos', to: { view: 'gallery', subject: 'bc-transit' } }],
+        // The roof logo is in Logos as its own entry, cut from this model's printable PDF.
+        related: [
+          { label: 'Its roof logo in Logos', to: { view: 'gallery', logos: 'bc-transit', mark: 'bct-double-arrow-paper-model' } },
+          { label: 'BC Transit in Logos', to: { view: 'gallery', subject: 'bc-transit' } }
+        ],
         sha256: {
           json: '364cb28e429f121875d54b2e84de9d5f1cb5ed21139a7698277ec6a2c8b9cbfd',
           pdf: 'eb361167ce55aa5952a24fd2a4f3880a61181b62ff09184fe59d4987f95872be'

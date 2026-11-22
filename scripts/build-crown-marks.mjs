@@ -51,6 +51,7 @@ const MARKS = {
   'wcb-1983': 'artwork/worksafebc/wcb-1983-family-reconstruction.svg',
   'wcb-1983-symbol': 'artwork/worksafebc/wcb-1983-symbol-reconstruction.svg',
   'worksafebc': 'artwork/worksafebc/worksafebc-current-reconstruction.svg',
+  'bct-double-arrow-paper-model': 'artwork/bc-transit/bc-transit-double-arrow-paper-model.svg',
   'bct-flag': 'artwork/bc-transit/bc-transit-flag-on-grey.svg',
   'bct-flag-white': 'artwork/bc-transit/bc-transit-flag.svg',
   'bct-loop-colour': 'artwork/bc-transit/bc-transit-loop-colour-flat.svg',
