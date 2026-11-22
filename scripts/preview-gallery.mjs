@@ -25,20 +25,20 @@ import '@fontsource/inter/400.css'
 import '@fontsource/inter/600.css'
 const Preview = () => {
   const { name, toggle } = useSiteTheme()
-  return <div className="app"><header className="masthead"><h1 className="masthead__crumbs">Province of BC / Gallery preview</h1><button type="button" onClick={toggle}>Switch to {name === 'light' ? 'dark' : 'light'}</button></header><GalleryView /></div>
+  return <div className="app"><header className="masthead"><h1 className="masthead__crumbs" style={{ whiteSpace: 'normal' }}>Province of BC / Gallery preview</h1><button type="button" style={{ flexShrink: 0 }} onClick={toggle}>Switch to {name === 'light' ? 'dark' : 'light'}</button></header><GalleryView /></div>
 }
 createRoot(document.getElementById('root')).render(<StrictMode><Preview /></StrictMode>)
 `)
 const config = {
   configFile: false, root: temp, base: option('--base', '/'), plugins: [react()],
   resolve: { dedupe: ['react', 'react-dom'] }, publicDir: false,
-  server: { host: '0.0.0.0', port: Number(option('--port', 4175)), strictPort: true, fs: { allow: [root] } }
+  server: { host: option('--host', '0.0.0.0'), port: Number(option('--port', 4175)), strictPort: true, fs: { allow: [root] } }
 }
 if (args.includes('--build')) {
   const outDir = resolve(option('--out', join(root, 'dist-gallery')))
   if (outDir === root || root.startsWith(`${outDir}/`)) throw new Error('Preview output must not replace the repository or its parents')
   await build({ ...config, build: { outDir, emptyOutDir: false } })
-  for (const directory of ['identity-collected', 'identity-display', 'identity-expanded', 'unbc-origins']) {
+  for (const directory of ['identity-collected', 'identity-display', 'identity-expanded', 'unbc-origins', 'tourism']) {
     cpSync(join(root, 'public', directory), join(outDir, directory), { recursive: true })
   }
   console.log(`Gallery preview built at ${outDir}`)

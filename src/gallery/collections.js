@@ -861,6 +861,21 @@ const withSpecimens = (marks, program) => {
  */
 export const GALLERY_COLLECTIONS = [
   {
+    id: 'tourism-bc-destination-bc',
+    shelf: 'bodies',
+    label: 'Tourism BC & Destination BC',
+    body: 'Tourism identities, websites and campaigns',
+    years: '1997–present',
+    graphNode: 'destination-bc',
+    graphNodes: ['tourism-bc', 'destination-bc'],
+    aliases: ['collected-tourism-bc', 'collected-destination-bc'],
+    cover: 'source-tourism-bc-tourism-british-columbia-2005-svg',
+    intro: 'A connected collection of tourism websites, apps, logos and publications. The 2013 asset-transfer order links the material across Tourism BC, the ministry interval and Destination BC.',
+    tourismCollection: true,
+    // Related custodians, not one corporation renamed: retain each body's own identity record.
+    entries: [...collectedEntriesOf('tourism-bc'), ...collectedEntriesOf('destination-bc')]
+  },
+  {
     id: 'bc-hydro',
     shelf: 'bodies',
     label: 'BC Hydro',
