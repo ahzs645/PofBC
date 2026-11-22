@@ -1660,6 +1660,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "thompson-health-region-rebuilt": {
+  "light": {
+   "file": "identity-display/thompson-health-region-rebuilt.light.svg",
+   "aspect": 4.441,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/thompson-health-region-rebuilt.dark.svg",
+   "aspect": 4.441,
+   "recoloured": true
+  }
+ },
  "vancouver-richmond-health-board-original-colour-lockup": {
   "light": {
    "file": "identity-display/vancouver-richmond-health-board-original-colour-lockup.light.svg",

@@ -34,7 +34,7 @@ for (const { register: packaged } of PACKAGES) if (packaged.body) {
 }
 // Histories of a body's earlier identities: dated pictures of a mark in use (kept as images, and
 // said to be) beside any of its vectors, with a design's other sightings as its versions.
-const HISTORIES = ['bc-assessment-history-2026-11-21', 'evidence-2026-11-21', 'bc-place-history-2026-11-21', 'bc-health-logo-search-2026-11-22', 'bc-health-vector-findings-2026-11-22']
+const HISTORIES = ['bc-assessment-history-2026-11-21', 'evidence-2026-11-21', 'bc-place-history-2026-11-21', 'bc-health-logo-search-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 const railway = read('research/identity/railway-history-2026-11-12/source-register.json')
 const railwayHistory = read('research/identity/railway-history-2026-11-12/history.json')
@@ -211,6 +211,8 @@ const VARIANT_OF = {
 
 // What each version is called inside its design's entry.
 const VERSION_LABELS = {
+  'thompson-health-region-rebuilt': 'Vector reconstruction, black (as on the letterheads)',
+  'thompson-health-region-1999-letterhead': 'Image, letterhead (September 1999)',
   'vancouver-richmond-health-board-original-colour-lockup': 'Original vector (Take Care handbook, 2000)',
   'historical-vancouver-richmond-health-board-colour-2000-original': 'Image, diesel review (November 2000)',
   'historical-vancouver-richmond-health-board-colour-2001': 'Image, report (April 2001)',
@@ -437,7 +439,7 @@ for (const { search, register: history } of HISTORIES) {
 // exists, reconstructions that say so. Each file is checked here for what it claims: no embedded
 // image, no live text, no outside reference.
 const FOLDED = new Map()
-const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16', 'current-bodies-vector-2026-11-16', 'railway-marks-vector-2026-11-16', 'reversed-vectors-2026-11-21', 'traced-vectors-2026-11-22', 'bc-health-vector-findings-2026-11-22']
+const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16', 'current-bodies-vector-2026-11-16', 'railway-marks-vector-2026-11-16', 'reversed-vectors-2026-11-21', 'traced-vectors-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22']
 const pureVector = (asset) => {
   const svg = readFileSync(new URL(`public/${asset.file}`, root), 'utf8')
   if (/<(?:\w+:)?(?:image|text|foreignObject|script)\b/i.test(svg) || /(?:xlink:)?href\s*=\s*["'](?!#)/i.test(svg)) {
