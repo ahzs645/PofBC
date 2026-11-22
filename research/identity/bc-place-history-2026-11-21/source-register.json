@@ -1,6 +1,6 @@
 {
   "researchDate": "2026-11-21",
-  "summary": "Two dated sightings of British Columbia Place Ltd.’s identity, from the closed reconstruction branch codex/bc-place-historical-vector-20261103 (PR #45), whose own redraw main does not use, since main’s 1983 rebuild covers the same design: a 22 September 1982 newspaper advertisement with the same outlined symbol, kept as a version of the 1983 rebuild, and the Spring 1984 newsletter’s different symbol in a blue disc, kept as its own design. The branch’s README and evidence register are kept beside this file.",
+  "summary": "Two dated sightings of British Columbia Place Ltd.’s identity, from the closed reconstruction branch codex/bc-place-historical-vector-20261103 (PR #45), whose own redraw main does not use, since main’s 1983 rebuild covers the same design: a 22 September 1982 newspaper advertisement with the same outlined symbol, kept as a version of the 1983 rebuild, and the Spring 1984 newsletter’s different symbol in a blue disc, kept as its own design. The branch’s README and evidence register are kept beside this file. The 1984 disc design is also rebuilt as vectors (21 November 2026) from the 1983 reconstruction’s outlines, laid out after the newsletter, with the newsletter’s masthead kept as its version.",
   "assets": [
     {
       "bodyId": "bc-place-ltd",
@@ -32,6 +32,37 @@
     },
     {
       "bodyId": "bc-place-ltd",
+      "id": "bc-place-1984-disc-rebuilt",
+      "label": "British Columbia Place Ltd.: Symbol in a blue disc",
+      "file": "identity-collected/bc-place-ltd/bc-place-1984-disc-rebuilt.svg",
+      "format": "svg",
+      "isVector": true,
+      "supplied": false,
+      "reconstruction": true,
+      "publisher": "British Columbia Place Ltd., BC Place Update; Museum of Vancouver H2025.7.1",
+      "sourcePage": "https://openmovportal.ca/argus/final/ViewRecord.aspx?record=8bc778ca-4bea-4503-ba93-89f537dbd82d&template=Object",
+      "sourceUrl": "https://openmovportal.ca/argus/final/ViewImage.aspx?template=Image&field=DerivedIma&hash=7a0e5571fef0c4a25f1e0ea422510259&width=max&height=max&r=-1735779844&lang=en-CA",
+      "sourceLocator": "Rebuilt after the masthead of BC Place Update, Spring Issue 1984 (Museum of Vancouver H2025.7.1), from the outlines of this collection's 1983 reconstruction",
+      "sourceFile": null,
+      "sourceDate": "1984",
+      "observedDate": "2026-11-21",
+      "dateNote": "The issue’s season and year, printed on it. The museum names Ray Dykes, BC Place’s head of public relations, as the newsletter’s author; that is not evidence of who designed the mark.",
+      "evidenceType": "vector-reconstruction-from-collected-outlines",
+      "notes": "The b/c/p symbol solid white inside a royal-blue disc, beside “british columbia place” on three flush-left lines in black: a different arrangement from the outlined 1982–83 symbol, without its parallel outline.",
+      "fidelityNote": "A vector reconstruction, not original artwork, built from the 1983 reconstruction's own outlines rather than traced from the scan. The symbol is the 1983 b/c/p without its fine parallel outline, solid white in a disc it is clipped to, placed by fitting it to the white inside the newsletter's disc. The three lines take the scan's left edge, line heights and one lettering scale, and keep the 1983 letters and spacing; the newsletter sets its round letters a little wider (the c of columbia and the e of place most), which is not redrawn. The 1983 shared h/l stem is split into a separate h and l. The blue (#2D50CB) is sampled from the museum's photograph, not an original specification.",
+      "sha256": "4d49d8af5bc1c51c7813c1527916b399888e88a29c9c6bdf74e2d3e01f61208a",
+      "bytes": 9163,
+      "darkBackground": false,
+      "versionLabel": "Vector reconstruction",
+      "verification": {
+        "genuineVectorVerified": true,
+        "embeddedImages": 0,
+        "textElements": 0,
+        "externalResources": []
+      }
+    },
+    {
+      "bodyId": "bc-place-ltd",
       "id": "bc-place-1984-disc",
       "label": "British Columbia Place Ltd.: Symbol in a blue disc, 1984 newsletter",
       "designLabel": "British Columbia Place Ltd.: Symbol in a blue disc",
@@ -55,7 +86,9 @@
       "bytes": 135026,
       "darkBackground": false,
       "previewWidth": 695,
-      "previewHeight": 205
+      "previewHeight": 205,
+      "variantOf": "bc-place-1984-disc-rebuilt",
+      "versionLabel": "Newsletter masthead, Spring 1984"
     }
   ]
 }

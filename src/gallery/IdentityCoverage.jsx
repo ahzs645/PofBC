@@ -323,9 +323,20 @@ export const IdentityCollectionLinks = ({ collectionId, entryId, graphShown, onO
   // each mark's page to its owner; a row of every owner above the cards said all of that again.
   // A collection whose own organization link is already in its header needs no second way out.
   if (!subjects.length || subjects.length > 3) return false
-  if (graphShown && subjects.every((subject) => subject.graphNode === graphShown)) return false
-  return <section className="identity-collection-links" aria-label="Identity context">{subjects.map((subject) => <div key={subject.id}>
-    <SubjectLink id={subject.id} onOpen={onOpenSubject} className="gallery__graph-link">{subject.label} in the register →</SubjectLink>
-    {subject.graphNode && subject.graphNode !== graphShown && onOpenGovernment && <button type="button" className="gallery__graph-link" onClick={() => onOpenGovernment(subject.graphNode, subject.graphYear)}>Organization and salary links →</button>}
+  // A subject's defined ties (shareholder of, part of, operated by, and the reverse), as links to the
+  // subjects they name, so a mark's page leads to the bodies it belongs with. A bare "related to" is
+  // left to the register page, which explains it.
+  const tiesOf = (subject) => connectionGroups(subject)
+    .flatMap(({ label, relations }) => relations.filter((relation) => relation.type !== 'related-to').map((relation) => ({ label, relation })))
+    .slice(0, 4)
+  const registerShown = !(graphShown && subjects.every((subject) => subject.graphNode === graphShown))
+  const rows = subjects.map((subject) => ({ subject, ties: tiesOf(subject) })).filter(({ ties }) => registerShown || ties.length)
+  if (!rows.length) return false
+  return <section className="identity-collection-links" aria-label="Identity context">{rows.map(({ subject, ties }) => <div key={subject.id}>
+    {registerShown && <SubjectLink id={subject.id} onOpen={onOpenSubject} className="gallery__graph-link">{subject.label} in the register →</SubjectLink>}
+    {registerShown && subject.graphNode && subject.graphNode !== graphShown && onOpenGovernment && <button type="button" className="gallery__graph-link" onClick={() => onOpenGovernment(subject.graphNode, subject.graphYear)}>Organization and salary links →</button>}
+    {ties.map(({ label, relation }) => (
+      <SubjectLink key={`${relation.type}:${relation.target.id}`} id={relation.target.id} onOpen={onOpenSubject} className="gallery__graph-link">{label} {relation.target.label} →</SubjectLink>
+    ))}
   </div>)}</section>
 }

@@ -4,10 +4,11 @@ import { existsSync, readFileSync } from 'node:fs'
 import { COLLECTED_BODIES, COLLECTED_SPECIMENS } from './collectedData.js'
 import { EXPANDED_IDENTITY_BODIES } from './expandedIdentityData.js'
 import { MUNICIPAL_IDENTITY_BODIES } from './municipalIdentityData.js'
+import { RECOVERED_IDENTITY_BODIES } from './recoveredIdentityData.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
 import { collectedDisplay, logoScale } from './tileArt.js'
 
-const assets = new Map([...COLLECTED_BODIES, ...COLLECTED_SPECIMENS, ...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES]
+const assets = new Map([...COLLECTED_BODIES, ...COLLECTED_SPECIMENS, ...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES]
   .flatMap((each) => each.assets ?? []).map((asset) => [asset.id, asset]))
 const publicFile = (path) => new URL(`../../public/${path}`, import.meta.url)
 
@@ -26,6 +27,8 @@ test('every display copy is of a collected vector file, for both themes, and exi
       assert.ok(existsSync(publicFile(copy.file)), `${copy.file} exists`)
       assert.ok(copy.aspect > 0, `${id} has its proportions`)
       assert.equal(typeof copy.recoloured, 'boolean')
+      // A palette chosen by hand (collected-display-overrides.json) is a redrawn copy, never a plate.
+      if (copy.palette) assert.ok(copy.recoloured && !copy.plate, `${id}: a ${theme} palette copy is redrawn`)
     }
   }
 })

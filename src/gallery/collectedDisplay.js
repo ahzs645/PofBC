@@ -1333,6 +1333,19 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bc-place-1984-disc-rebuilt": {
+  "light": {
+   "file": "identity-display/bc-place-1984-disc-rebuilt.light.svg",
+   "aspect": 2.3023,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-place-1984-disc-rebuilt.dark.svg",
+   "aspect": 2.3023,
+   "recoloured": true,
+   "palette": true
+  }
+ },
  "vector-forest-renewal-bc-2000-colour-source-vector": {
   "light": {
    "file": "identity-display/vector-forest-renewal-bc-2000-colour-source-vector.light.svg",
@@ -1496,10 +1509,10 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   },
   "dark": {
-   "file": "identity-display/historical-capital-health-region-2000-dark-grey.light.svg",
-   "aspect": 2.9302,
-   "recoloured": false,
-   "plate": true
+   "file": "identity-display/historical-capital-health-region-2000-dark-grey.dark.svg",
+   "aspect": 2.8226,
+   "recoloured": true,
+   "palette": true
   }
  },
  "historical-capital-health-region-2000-dark-white": {
@@ -2881,6 +2894,19 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/municipal-victoria-property-tax-sheet-2025.dark.svg",
    "aspect": 2.3181,
    "recoloured": true
+  }
+ },
+ "source-recovered-bc-childrens-hospital-phsa": {
+  "light": {
+   "file": "identity-display/source-recovered-bc-childrens-hospital-phsa.light.svg",
+   "aspect": 1.1878,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-recovered-bc-childrens-hospital-phsa.dark.svg",
+   "aspect": 1.1878,
+   "recoloured": true,
+   "palette": true
   }
  }
 }

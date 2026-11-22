@@ -55,6 +55,7 @@ export const IDENTITY_RELATION_LABELS = {
   "part-of": "Part of",
   "service-of": "Service of",
   "owned-by": "Owned by",
+  "shareholder-of": "Holds the voting share of",
   "operated-by": "Operated by",
   "used-by": "Used by",
   "predecessor-of": "Predecessor of",
@@ -1545,8 +1546,8 @@ const CURATED_SUBJECTS = [
     "relations": [
       {
         "subject": "bc-ferry-corporation",
-        "type": "related-to",
-        "label": "Modern ferry-governance context"
+        "type": "shareholder-of",
+        "note": "Under the Coastal Ferry Act of 2003 the Authority holds the single voting share of BC Ferry Services Inc., the operator that succeeded the British Columbia Ferry Corporation; the Province holds its preferred shares."
       }
     ]
   },

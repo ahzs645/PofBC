@@ -5138,6 +5138,31 @@ export const COLLECTED_BODIES = [
         "search": "bc-place-history-2026-11-21"
       },
       {
+        "id": "bc-place-1984-disc-rebuilt",
+        "label": "British Columbia Place Ltd.: Symbol in a blue disc",
+        "file": "identity-collected/bc-place-ltd/bc-place-1984-disc-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "British Columbia Place Ltd., BC Place Update; Museum of Vancouver H2025.7.1",
+        "sourcePage": "https://openmovportal.ca/argus/final/ViewRecord.aspx?record=8bc778ca-4bea-4503-ba93-89f537dbd82d&template=Object",
+        "sourceUrl": "https://openmovportal.ca/argus/final/ViewImage.aspx?template=Image&field=DerivedIma&hash=7a0e5571fef0c4a25f1e0ea422510259&width=max&height=max&r=-1735779844&lang=en-CA",
+        "sourceLocator": "Rebuilt after the masthead of BC Place Update, Spring Issue 1984 (Museum of Vancouver H2025.7.1), from the outlines of this collection's 1983 reconstruction",
+        "sourceFile": null,
+        "sourceDate": "1984",
+        "observedDate": "2026-11-21",
+        "dateNote": "The issue’s season and year, printed on it. The museum names Ray Dykes, BC Place’s head of public relations, as the newsletter’s author; that is not evidence of who designed the mark.",
+        "evidenceType": "vector-reconstruction-from-collected-outlines",
+        "notes": "The b/c/p symbol solid white inside a royal-blue disc, beside “british columbia place” on three flush-left lines in black: a different arrangement from the outlined 1982–83 symbol, without its parallel outline.",
+        "fidelityNote": "A vector reconstruction, not original artwork, built from the 1983 reconstruction's own outlines rather than traced from the scan. The symbol is the 1983 b/c/p without its fine parallel outline, solid white in a disc it is clipped to, placed by fitting it to the white inside the newsletter's disc. The three lines take the scan's left edge, line heights and one lettering scale, and keep the 1983 letters and spacing; the newsletter sets its round letters a little wider (the c of columbia and the e of place most), which is not redrawn. The 1983 shared h/l stem is split into a separate h and l. The blue (#2D50CB) is sampled from the museum's photograph, not an original specification.",
+        "sha256": "4d49d8af5bc1c51c7813c1527916b399888e88a29c9c6bdf74e2d3e01f61208a",
+        "bytes": 9163,
+        "darkBackground": false,
+        "versionLabel": "Vector reconstruction",
+        "search": "bc-place-history-2026-11-21"
+      },
+      {
         "id": "bc-place-1984-disc",
         "label": "British Columbia Place Ltd.: Symbol in a blue disc, 1984 newsletter",
         "designLabel": "British Columbia Place Ltd.: Symbol in a blue disc",
@@ -5162,6 +5187,8 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "previewWidth": 695,
         "previewHeight": 205,
+        "variantOf": "bc-place-1984-disc-rebuilt",
+        "versionLabel": "Newsletter masthead, Spring 1984",
         "search": "bc-place-history-2026-11-21"
       }
     ]
@@ -6705,6 +6732,31 @@ export const COLLECTED_BODIES = [
         "versionLabel": "Vector"
       },
       {
+        "id": "north-shore-health-region-reversed-rebuilt",
+        "label": "North Shore Health Region — reversed white logo with Sharing a Vision of Health",
+        "file": "identity-collected/north-shore-health-region/north-shore-health-region-reversed-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "Trans Canada Trail, North Vancouver pavilion panel",
+        "sourcePage": "https://tctrail.ca/wp-content/uploads/2020/02/012_Pavilion-Panels-North-Vancouver-2017-04-18.pdf",
+        "sourceUrl": "https://tctrail.ca/wp-content/uploads/2020/02/012_Pavilion-Panels-North-Vancouver-2017-04-18.pdf",
+        "sourceLocator": "Rebuilt from the 1999/2000 Annual Report cover logo's native paths (north-shore-health-region-annual-report-2000.svg), reversed as the later Trans Canada Trail donor-panel raster shows the logo",
+        "sourceFile": null,
+        "sourceDate": "2020-01-19",
+        "observedDate": "2026-11-21",
+        "dateNote": "PDF creation metadata. Filename has 2017-04-18. These later file dates are not evidence of the logo’s original adoption date.",
+        "evidenceType": "vector-reconstruction-from-collected-outlines",
+        "notes": "The reversed logo: frame, mountain, NORTH SHORE, Health Region and the tagline in white, with lettering the colour version draws in white over green cut out of the white. White artwork, for a dark ground; the same design as the green annual-report logo.",
+        "fidelityNote": "A vector rebuild, not original reversed artwork: the 1999/2000 annual report's own logo paths, unchanged, reversed through a mask (green there is white here, white there is open), so it is exactly that design in the raster's colourway. The donor-panel raster is too small (118×124 px) to show whether the reversed original differed in detail; the raster is kept as this rebuild's version.",
+        "sha256": "85ace3504ac72d2828af7dba54acba8bdfc4b21d3c57484b2a8ffa00d5bb0f5b",
+        "bytes": 32724,
+        "darkBackground": true,
+        "search": "reversed-vectors-2026-11-21",
+        "versionLabel": "Vector reconstruction"
+      },
+      {
         "id": "historical-north-shore-health-region-trail-reversed-raster",
         "label": "North Shore Health Region: reversed raster preserved in a later donor-panel file",
         "file": "identity-collected/north-shore-health-region/north-shore-health-region-trail-reversed-raster.png",
@@ -6728,7 +6780,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": true,
         "previewWidth": 118,
         "previewHeight": 124,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "versionLabel": "Published image",
+        "variantOf": "north-shore-health-region-reversed-rebuilt"
       }
     ]
   },

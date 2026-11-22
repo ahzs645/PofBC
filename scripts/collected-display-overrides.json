@@ -1,9 +1,13 @@
 {
-  "_comment": "Per-logo settings for build_collected_display.py, keyed by collected asset id. facing: the share of a faint shape's edge that must meet the page for it to be redrawn (default 0.5; higher keeps more of a logo's own colours). light / dark: false keeps the file's own colours on that ground; \"plate\" shows them on a light plate of their own there. skip: true leaves the file out.",
+  "_comment": "Per-logo settings for build_collected_display.py, keyed by collected asset id. facing: the share of a faint shape's edge that must meet the page for it to be redrawn (default 0.5; higher keeps more of a logo's own colours). light / dark: false keeps the file's own colours on that ground; \"plate\" shows them on a light plate of their own there. light-palette / dark-palette: {\"#source\": \"#shown\"} maps the file's colours by hand for that ground (every key must be a colour the file uses). skip: true leaves the file out.",
   "historical-capital-health-region-2000-dark-grey": {
     "light": false,
-    "dark": "plate",
-    "note": "The C of Capital is drawn over the weave's pale strands, so reversing either loses it."
+    "dark-palette": {
+      "#231f20": "#ede9e2",
+      "#c7c8ca": "#6b655e",
+      "#ffffff": "#211e1a"
+    },
+    "note": "The C of Capital is drawn over the weave's pale strands, so the automatic redraw (which makes both light on the dark page) runs them together. On the dark page the ink becomes the page's light ink, the pale strands a mid grey the light C still reads against, and the white separators and knockout the page's own colour, so they stay gaps."
   },
   "historical-capital-health-region-2000-dark-white": {
     "light": false,
@@ -25,5 +29,17 @@
   "south-fraser-health-region-stacked-1998-rebuilt": {
     "facing": 0.08,
     "note": "Each swirl part is filled and stroked in one colour, and the stroke's edge blends into the fill, so the part reads as sitting on other ink; a low share still reverses the black swirl on the dark page."
+  },
+  "source-recovered-bc-childrens-hospital-phsa": {
+    "dark-palette": {
+      "#0072bc": "#3592df"
+    },
+    "note": "The hospital blue meets the dark page at 3.3:1, just above where the automatic redraw starts, so it was left as drawn and the small PHSA line read dimly. On the dark page it takes the redraw's own rule, lightened at its hue to 5:1; the orange already meets the page at 6.8:1 and keeps its colour."
+  },
+  "bc-place-1984-disc-rebuilt": {
+    "dark-palette": {
+      "#111111": "#e3e3e3"
+    },
+    "note": "The blue disc is faint on the dark page too, and its lettering sits beside it, so the automatic redraw reads the black lettering as sitting on other ink and keeps it. On the dark page it takes the reversed ink the 1983 rebuild's copy has (#e3e3e3); the disc carries its own white symbol and keeps its blue."
   }
 }

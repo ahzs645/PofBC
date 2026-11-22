@@ -134,7 +134,10 @@ export const RELATED_BODIES = [
     historyNote: 'This is the modern authority. The historical British Columbia Ferry Authority of 1964–1977 has its own atlas record and artwork.',
     sources: [source('B.C. Ferry Authority — About us and governance model', 'https://www.bcferryauthority.com/about-us/')],
     salaryEmployers: [],
-    relationships: [relation('bc-ferry-authority', 'British Columbia Ferry Authority, 1964–1977', 'Earlier authority with a similar name', { year: 1970, mode: 'graph' })]
+    relationships: [
+      relation('bc-ferry-corporation', 'BC Ferries', 'Holds the voting share of BC Ferry Services Inc., which succeeded the British Columbia Ferry Corporation in 2003', { year: 2002, mode: 'graph' }),
+      relation('bc-ferry-authority', 'British Columbia Ferry Authority, 1964–1977', 'Earlier authority with a similar name', { year: 1970, mode: 'graph' })
+    ]
   },
   {
     id: 'e-comm', name: 'E-Comm 9-1-1', shortName: 'E-Comm', aliases: ['E-Comm', 'EComm', 'E-Comm 911'],

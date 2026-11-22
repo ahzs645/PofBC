@@ -137,6 +137,7 @@ export const INVERSE_RELATION_LABELS = {
   'part-of': 'Includes',
   'service-of': 'Provides the service',
   'owned-by': 'Owns',
+  'shareholder-of': 'Voting share held by',
   'operated-by': 'Operates',
   'used-by': 'Uses',
   'predecessor-of': 'Successor of',

@@ -25,9 +25,11 @@ const SourceMarkView = ({ entry }) => {
     : 'Logo dates unestablished'
   const { name: theme } = useSiteTheme()
   // A version chosen by its colour is shown in that colour: one whose page copy would be redrawn
-  // (a white version on the light page) is shown as published, on its own plate.
+  // (a white version on the light page) is shown as published, on its own plate. A copy redrawn in
+  // a palette chosen by hand for this ground (collected-display-overrides.json) is shown even so:
+  // it is that version's own reverse, kept to its colours' relationships, not a guess at them.
   const copy = collectedDisplay(asset, theme)
-  const display = entry.versions && copy?.recoloured ? null : copy
+  const display = entry.versions && copy?.recoloured && !copy.palette ? null : copy
   const artworkType = asset.isVector ? 'Vector artwork' : asset.format === 'svg' ? 'Contains bitmap artwork' : 'Image'
   const downloadNote = asset.reconstruction
     ? 'The download is the reconstruction, not original artwork.'
@@ -86,7 +88,9 @@ const SourceMarkView = ({ entry }) => {
         {asset.license && <div><dt>Source licence</dt><dd>{asset.license_url ? <a href={asset.license_url} target="_blank" rel="noreferrer">{asset.license}</a> : asset.license}</dd></div>}
         {asset.previewNote && <div><dt>Preview</dt><dd>{asset.previewNote}</dd></div>}
         {display && (
-          <div><dt>Shown</dt><dd>{display.recoloured
+          <div><dt>Shown</dt><dd>{display.palette
+            ? `Trimmed to the logo and, for the ${theme === 'dark' ? 'dark' : 'light'} page, redrawn in colours chosen for it, so each part keeps its contrast with the page and with the parts around it.`
+            : display.recoloured
             ? `Trimmed to the logo and, for the ${theme === 'dark' ? 'dark' : 'light'} page, with ink that would disappear into it reversed or ${theme === 'dark' ? 'lightened' : 'darkened'}.`
             : display.plate
               ? 'Trimmed to the logo and shown in its own colours on a plate, as its overlapping parts cannot be recoloured apart.'

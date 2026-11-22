@@ -15,7 +15,8 @@ and dark grounds, and leaves the source file alone for download:
 
 The copies stay vector: they are recoloured by changing the file's own colour values. An EPS is
 first drawn into SVG by Ghostscript and pdftocairo. Raster files (PNG, JPEG, GIF) are left as they
-are. Per-logo settings are in collected-display-overrides.json; the manifest (src/gallery/collectedDisplay.js) records which
+are. Per-logo settings are in collected-display-overrides.json, including a hand-chosen palette for a
+ground where the automatic redraw would run a logo's overlapping parts together; the manifest (src/gallery/collectedDisplay.js) records which
 copies were redrawn, so the gallery can say so.
 
 Run: npm run build:collected-display (Python 3 with numpy, scipy and Pillow; Node for resvg;
@@ -308,10 +309,30 @@ def build_vector(asset, settings, work):
     alpha = pixels[..., 3]
 
     outputs = {}
+    palettes = {}
     for theme in ("light", "dark"):
         name = f"{asset['id']}.{theme}.svg"
         content, recoloured = trimmed, False
-        if settings.get(theme, True) is True and places:
+        # A palette chosen by hand for a ground, as {"#source": "#shown"}: for a logo whose parts lie
+        # over one another so that the automatic redraw would run them together (it would make them
+        # all light on the dark page), but whose few colours can be mapped so that each part keeps
+        # its contrast with its neighbours, as a printer's reverse artwork would.
+        palette = {k.lower(): v for k, v in (settings.get(f"{theme}-palette") or {}).items()}
+        if palette and places:
+            parts, last, used = [], 0, set()
+            for start, end, colour in places:
+                shown = palette.get(hex_of(colour))
+                if shown:
+                    parts += [trimmed[last:start], shown]
+                    last = end
+                    used.add(hex_of(colour))
+            parts.append(trimmed[last:])
+            unused = set(palette) - used
+            if unused:
+                raise SystemExit(f"{asset['id']}: {theme}-palette names colours the file does not use: {sorted(unused)}")
+            content, recoloured = "".join(parts), True
+            palettes[theme] = True
+        elif settings.get(theme, True) is True and places:
             new_colours, amounts = redraw(np.array([colour for _, _, colour in places]), theme)
             amount = np.where(place >= 0, amounts[np.maximum(place, 0)], 0)
             mask = facing_mask(alpha, amount, settings.get("facing", 0.5))
@@ -341,15 +362,18 @@ def build_vector(asset, settings, work):
         # in its own colours on a light plate of its own on that ground.
         if settings.get(theme) == "plate":
             entry[theme]["plate"] = True
+        if palettes.get(theme):
+            entry[theme]["palette"] = True
     return entry
 
 
 def collected_assets():
     script = ("Promise.all([import('./src/gallery/collectedData.js'), import('./src/gallery/expandedIdentityData.js'),"
-              " import('./src/gallery/municipalIdentityData.js')]).then(([{ COLLECTED_BODIES, COLLECTED_SPECIMENS },"
-              " { EXPANDED_IDENTITY_BODIES }, { MUNICIPAL_IDENTITY_BODIES }]) =>"
+              " import('./src/gallery/municipalIdentityData.js'), import('./src/gallery/recoveredIdentityData.js')])"
+              ".then(([{ COLLECTED_BODIES, COLLECTED_SPECIMENS }, { EXPANDED_IDENTITY_BODIES },"
+              " { MUNICIPAL_IDENTITY_BODIES }, { RECOVERED_IDENTITY_BODIES }]) =>"
               " console.log(JSON.stringify([...COLLECTED_BODIES, ...COLLECTED_SPECIMENS, ...EXPANDED_IDENTITY_BODIES,"
-              " ...MUNICIPAL_IDENTITY_BODIES].flatMap((each) => each.assets ?? []))))")
+              " ...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES].flatMap((each) => each.assets ?? []))))")
     result = subprocess.run(["node", "--input-type=module", "-e", script], cwd=ROOT, capture_output=True, text=True, check=True)
     return json.loads(result.stdout)
 
