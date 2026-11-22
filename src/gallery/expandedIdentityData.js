@@ -280,6 +280,45 @@ export const EXPANDED_IDENTITY_BODIES = [
         "contentType": "image/svg+xml",
         "search": "current-bodies-vector-2026-11-16",
         "versionLabel": "Vector"
+      },
+      {
+        "id": "source-expanded-liquor-distribution-branch-q2-2026-reverse",
+        "label": "Liquor Distribution Branch — official reversed lockup",
+        "file": "identity-expanded/liquor-distribution-branch/liquor-distribution-branch-q2-2026-reverse.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://www.bcldb.com/publications/bc-cannabis-wholesale-quarterly-sales",
+        "sourceUrl": "https://www.bcldb.com/sites/default/files/BC%20Cannabis%20Wholesale%20Quarterly%20Sales%20Report%20--%20Q2%202026.pdf",
+        "publisher": "BC Liquor Distribution Branch",
+        "sourceLocator": "PDF page 1; crop in top-left page points [83.0, 617.0, 220.0, 659.0]",
+        "sourceFile": null,
+        "sourceDate": "FY2026 Q2 quarterly sales report",
+        "dateNote": "Document/report-period or dated-URL context only; no adoption or retirement date inferred.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "Original white LDB provincial-symbol lockup from the report cover. A documented reversed treatment of the existing corporate lockup.",
+        "fidelityNote": "Native paths extracted from an official PDF, with source text converted to its original glyph outlines where needed. Original geometry and source colour treatment preserved; PDF-to-RGB conversion may affect screen colour. Page backgrounds and unrelated material removed. No tracing, substitute fonts, redrawing or manual recolouring. This is a source-derived specimen, not a supplied standalone master.",
+        "darkBackground": true,
+        "sha256": "963345b02c94b6b49714f590b36dbaa019f9af0d2e77b8a204455c84a8fe7ce8",
+        "bytes": 22722,
+        "dimensions": {
+          "viewBox": "0 0 137.0 42.0"
+        },
+        "contentType": "image/svg+xml",
+        "search": "vector-recovery-2026-11-21",
+        "downloads": [
+          {
+            "file": "identity-expanded/liquor-distribution-branch/liquor-distribution-branch-q2-2026-reverse.pdf",
+            "sha256": "3e9fe7439de38767d98ac00860e13554e517a86d8e0380c501e3bacb6c67fd26",
+            "bytes": 9362,
+            "label": "Download vector PDF",
+            "format": "pdf"
+          }
+        ],
+        "versionLabel": "Reversed, Q2 2026",
+        "variantOf": "source-expanded-liquor-distribution-branch-wholesale-site-lockup"
       }
     ]
   },
@@ -411,6 +450,83 @@ export const EXPANDED_IDENTITY_BODIES = [
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
         "darkBackground": false
+      },
+      {
+        "id": "source-expanded-bc-cannabis-wholesale-shipping-2026-black",
+        "label": "BC Cannabis Wholesale — official black wordmark",
+        "file": "identity-expanded/bc-cannabis-wholesale/bc-cannabis-wholesale-shipping-2026-black.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://www.bcldb.com/bcldb-cannabis-supplier-information",
+        "sourceUrl": "https://www.bcldb.com/sites/default/files/2026-06/Wholesale_Shipping_Guidelines_March_2026.pdf",
+        "publisher": "BC Liquor Distribution Branch",
+        "sourceLocator": "PDF page 1; crop in top-left page points [61.0, 49.0, 367.0, 70.0]",
+        "sourceFile": null,
+        "sourceDate": "March 2026 shipping requirements guide",
+        "dateNote": "Document/report-period or dated-URL context only; no adoption or retirement date inferred.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "Original black horizontal wordmark without an underline. The existing underlined website image is retained as a different lockup.",
+        "fidelityNote": "Native paths extracted from an official PDF, with source text converted to its original glyph outlines where needed. Original geometry and source colour treatment preserved; PDF-to-RGB conversion may affect screen colour. Page backgrounds and unrelated material removed. No tracing, substitute fonts, redrawing or manual recolouring. This is a source-derived specimen, not a supplied standalone master.",
+        "darkBackground": false,
+        "sha256": "1554847cf5897f445c6d2f3da20ab3cc9b7432de14a2d10fec5fe520c7d9a4b6",
+        "bytes": 7461,
+        "dimensions": {
+          "viewBox": "0 0 306.0 21.0"
+        },
+        "contentType": "image/svg+xml",
+        "search": "vector-recovery-2026-11-21",
+        "downloads": [
+          {
+            "file": "identity-expanded/bc-cannabis-wholesale/bc-cannabis-wholesale-shipping-2026-black.pdf",
+            "sha256": "1fa2979106a07a81a2ad61a98e4d0edcdfda15240aab2d3461e0dbe21a4234d6",
+            "bytes": 2910,
+            "label": "Download vector PDF",
+            "format": "pdf"
+          }
+        ],
+        "versionLabel": "Black, shipping guide"
+      },
+      {
+        "id": "source-expanded-bc-cannabis-wholesale-q2-2026-reverse",
+        "label": "BC Cannabis Wholesale — official reversed wordmark",
+        "file": "identity-expanded/bc-cannabis-wholesale/bc-cannabis-wholesale-q2-2026-reverse.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://www.bcldb.com/publications/bc-cannabis-wholesale-quarterly-sales",
+        "sourceUrl": "https://www.bcldb.com/sites/default/files/BC%20Cannabis%20Wholesale%20Quarterly%20Sales%20Report%20--%20Q2%202026.pdf",
+        "publisher": "BC Liquor Distribution Branch",
+        "sourceLocator": "PDF page 1; crop in top-left page points [83.0, 57.0, 472.0, 82.0]",
+        "sourceFile": null,
+        "sourceDate": "FY2026 Q2 quarterly sales report",
+        "dateNote": "Document/report-period or dated-URL context only; no adoption or retirement date inferred.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "Original white horizontal wordmark without an underline. The existing underlined website image is retained as a different lockup.",
+        "fidelityNote": "Native paths extracted from an official PDF, with source text converted to its original glyph outlines where needed. Original geometry and source colour treatment preserved; PDF-to-RGB conversion may affect screen colour. Page backgrounds and unrelated material removed. No tracing, substitute fonts, redrawing or manual recolouring. This is a source-derived specimen, not a supplied standalone master.",
+        "darkBackground": true,
+        "sha256": "08becfa284fc9e158dfdcb4e4557839945f14a9f206ebb2d185244a2f94364c5",
+        "bytes": 7937,
+        "dimensions": {
+          "viewBox": "0 0 389.0 25.0"
+        },
+        "contentType": "image/svg+xml",
+        "search": "vector-recovery-2026-11-21",
+        "downloads": [
+          {
+            "file": "identity-expanded/bc-cannabis-wholesale/bc-cannabis-wholesale-q2-2026-reverse.pdf",
+            "sha256": "25e78cd66a6e05108c5840efb07e27aa27e70a64ba27ede958997102be19534f",
+            "bytes": 2927,
+            "label": "Download vector PDF",
+            "format": "pdf"
+          }
+        ],
+        "versionLabel": "White, Q2 report",
+        "variantOf": "source-expanded-bc-cannabis-wholesale-shipping-2026-black"
       }
     ]
   },
@@ -661,7 +777,163 @@ export const EXPANDED_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": true
+        "darkBackground": true,
+        "variantOf": "source-expanded-northern-development-2023-stacked-reversed",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "source-expanded-northern-development-2023-stacked-reversed",
+        "label": "Northern Development — stacked, gradient symbol and white name",
+        "file": "identity-expanded/northern-development-initiative-trust/northern-development-2023-stacked-reversed.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://www.northerndevelopment.bc.ca/",
+        "sourceUrl": "https://www.northerndevelopment.bc.ca/wp-content/uploads/2024/05/NDIT_2023-AR-_Web.pdf",
+        "publisher": "Northern Development Initiative Trust",
+        "sourceLocator": "PDF page 51; crop in top-left page points [262, 511, 350, 574]",
+        "sourceFile": null,
+        "sourceDate": "2023 annual report; official URL path includes /2024/05/",
+        "dateNote": "Document/report-period or dated-URL context only; no adoption or retirement date inferred.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction-with-converted-gradients",
+        "notes": "Stacked logo design matching website layout; a distinct original source colour treatment.",
+        "fidelityNote": "Native PDF paths and shadings converted with Poppler pdftocairo. Gradient shadings retained as SVG linearGradient elements; no bitmap approximation. The extracted mark is a source-derived specimen, not a standalone official master.",
+        "darkBackground": true,
+        "sha256": "bd512b2e927caa31b106b3a51007358187db276010e557d922963b8097d9f41a",
+        "bytes": 40907,
+        "dimensions": {
+          "viewBox": "0 0 88 63"
+        },
+        "contentType": "image/svg+xml",
+        "search": "vector-recovery-2026-11-21",
+        "downloads": [
+          {
+            "file": "identity-expanded/northern-development-initiative-trust/northern-development-2023-stacked-reversed.pdf",
+            "sha256": "e959777a691e7e590a92232c83e91aad1364f53c6cabe4a2abd648eeb10c8c45",
+            "bytes": 40783,
+            "label": "Download vector PDF",
+            "format": "pdf"
+          }
+        ],
+        "versionLabel": "Gradient symbol, white name"
+      },
+      {
+        "id": "source-expanded-northern-development-2020-stacked",
+        "label": "Northern Development — stacked, colour",
+        "file": "identity-expanded/northern-development-initiative-trust/northern-development-2020-stacked.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://www.northerndevelopment.bc.ca/",
+        "sourceUrl": "https://www.northerndevelopment.bc.ca/wp-content/uploads/2021/04/NDIT2020AR_Final_Web.pdf",
+        "publisher": "Northern Development Initiative Trust",
+        "sourceLocator": "PDF page 1; crop in top-left page points [420, 60, 554, 153]",
+        "sourceFile": null,
+        "sourceDate": "2020 annual report; official URL path includes /2021/04/",
+        "dateNote": "Document/report-period or dated-URL context only; no adoption or retirement date inferred.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction-with-converted-gradients",
+        "notes": "Variant of the original-source stacked Northern Development design.",
+        "fidelityNote": "Native PDF paths and shadings converted with Poppler pdftocairo. Gradient shadings retained as SVG linearGradient elements; no bitmap approximation. The extracted mark is a source-derived specimen, not a standalone official master.",
+        "darkBackground": false,
+        "sha256": "785bd0347eb5f9dc67c67289d252aa62e40b100892ac3ee5ee8c05c317c63648",
+        "bytes": 36880,
+        "dimensions": {
+          "viewBox": "0 0 134 93"
+        },
+        "contentType": "image/svg+xml",
+        "search": "vector-recovery-2026-11-21",
+        "downloads": [
+          {
+            "file": "identity-expanded/northern-development-initiative-trust/northern-development-2020-stacked.pdf",
+            "sha256": "37b58c4ad093054882d88951210784b8a64097e3853731901a0f14e7a247ea7c",
+            "bytes": 35142,
+            "label": "Download vector PDF",
+            "format": "pdf"
+          }
+        ],
+        "versionLabel": "Colour, 2020 report",
+        "variantOf": "source-expanded-northern-development-2023-stacked-reversed"
+      },
+      {
+        "id": "source-expanded-northern-development-2020-horizontal",
+        "label": "Northern Development — horizontal, colour",
+        "file": "identity-expanded/northern-development-initiative-trust/northern-development-2020-horizontal.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://www.northerndevelopment.bc.ca/",
+        "sourceUrl": "https://www.northerndevelopment.bc.ca/wp-content/uploads/2021/04/NDIT2020AR_Final_Web.pdf",
+        "publisher": "Northern Development Initiative Trust",
+        "sourceLocator": "PDF page 13; crop in top-left page points [350, 178, 510, 223]",
+        "sourceFile": null,
+        "sourceDate": "2020 annual report; official URL path includes /2021/04/",
+        "dateNote": "Document/report-period or dated-URL context only; no adoption or retirement date inferred.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction-with-converted-gradients",
+        "notes": "Separate horizontal Northern Development lockup; should not be grouped as the stacked website PNG.",
+        "fidelityNote": "Native PDF paths and shadings converted with Poppler pdftocairo. Gradient shadings retained as SVG linearGradient elements; no bitmap approximation. The extracted mark is a source-derived specimen, not a standalone official master.",
+        "darkBackground": false,
+        "sha256": "8ccfafddb28acaf194065cccc08e382f04c882ecb8862bf5b307386dc8b9bb6a",
+        "bytes": 36931,
+        "dimensions": {
+          "viewBox": "0 0 160 45"
+        },
+        "contentType": "image/svg+xml",
+        "search": "vector-recovery-2026-11-21",
+        "downloads": [
+          {
+            "file": "identity-expanded/northern-development-initiative-trust/northern-development-2020-horizontal.pdf",
+            "sha256": "29cb833de1ae9cadad4bd5dc7a2b381d6e12447d4c2472feca272a0e52642840",
+            "bytes": 35260,
+            "label": "Download vector PDF",
+            "format": "pdf"
+          }
+        ],
+        "versionLabel": "Colour"
+      },
+      {
+        "id": "source-expanded-northern-development-2023-horizontal-reversed",
+        "label": "Northern Development — horizontal, reversed",
+        "file": "identity-expanded/northern-development-initiative-trust/northern-development-2023-horizontal-reversed.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://www.northerndevelopment.bc.ca/",
+        "sourceUrl": "https://www.northerndevelopment.bc.ca/wp-content/uploads/2024/05/NDIT_2023-AR-_Web.pdf",
+        "publisher": "Northern Development Initiative Trust",
+        "sourceLocator": "PDF page 1; crop in top-left page points [72, 70, 240, 118]",
+        "sourceFile": null,
+        "sourceDate": "2023 annual report; official URL path includes /2024/05/",
+        "dateNote": "Document/report-period or dated-URL context only; no adoption or retirement date inferred.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction-with-converted-gradients",
+        "notes": "Separate horizontal Northern Development lockup; should not be grouped as the stacked website PNG.",
+        "fidelityNote": "Native PDF paths and shadings converted with Poppler pdftocairo. Gradient shadings retained as SVG linearGradient elements; no bitmap approximation. The extracted mark is a source-derived specimen, not a standalone official master.",
+        "darkBackground": true,
+        "sha256": "aae183986e326c59380c8dbb02ba7543fe3ca49f529226b40b2794c28c907256",
+        "bytes": 39310,
+        "dimensions": {
+          "viewBox": "0 0 168 48"
+        },
+        "contentType": "image/svg+xml",
+        "search": "vector-recovery-2026-11-21",
+        "downloads": [
+          {
+            "file": "identity-expanded/northern-development-initiative-trust/northern-development-2023-horizontal-reversed.pdf",
+            "sha256": "eaf9ae04c506f5e2807989b911d670907650e1fefe635c74525e9012b254bbe5",
+            "bytes": 36394,
+            "label": "Download vector PDF",
+            "format": "pdf"
+          }
+        ],
+        "versionLabel": "Reversed",
+        "variantOf": "source-expanded-northern-development-2020-horizontal"
       }
     ]
   },
@@ -706,6 +978,43 @@ export const EXPANDED_IDENTITY_BODIES = [
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
         "darkBackground": false
+      },
+      {
+        "id": "source-expanded-island-coastal-economic-trust-2023-24-wordmark",
+        "label": "Island Coastal Economic Trust — four-line wordmark, 2023–24 report",
+        "file": "identity-expanded/island-coastal-economic-trust/island-coastal-economic-trust-2023-24-wordmark.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://islandcoastaltrust.ca/",
+        "sourceUrl": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/Island-Coastal-Economic-Trust-2023-24-Impact-Report-Web.pdf",
+        "publisher": "Island Coastal Economic Trust",
+        "sourceLocator": "PDF page 1; crop in top-left page points [49, 643, 184, 743]",
+        "sourceFile": null,
+        "sourceDate": "2023–24 impact report; official URL path includes /2026/08/",
+        "dateNote": "Document/report-period or dated-URL context only; no adoption or retirement date inferred.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "Earlier four-line wordmark identity; keep separate from current paddle-symbol website logo. Publication period is 2023–24; no adoption/retirement date established.",
+        "fidelityNote": "Original native paths selected from MuPDF PDF-to-SVG output by their transformed source bounds. Original Bézier data, positions and fills retained; removed page backgrounds and unused clipping definitions. No tracing, retyping or recolouring. The extracted mark is a source-derived specimen, not a standalone official master.",
+        "darkBackground": true,
+        "sha256": "08d8f3e2114241b52a21e1d67b437c3c8d09a79fac3c820ecb41c70b026017df",
+        "bytes": 7261,
+        "dimensions": {
+          "viewBox": "0 0 135 100"
+        },
+        "contentType": "image/svg+xml",
+        "search": "vector-recovery-2026-11-21",
+        "downloads": [
+          {
+            "file": "identity-expanded/island-coastal-economic-trust/island-coastal-economic-trust-2023-24-wordmark.pdf",
+            "sha256": "a2459d9bd2429efc1b320ad47eb387bf7c4aa43afd20c77439a9c7b2fd45dec6",
+            "bytes": 3598,
+            "label": "Download vector PDF",
+            "format": "pdf"
+          }
+        ]
       }
     ]
   },
@@ -1060,7 +1369,86 @@ export const EXPANDED_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "source-expanded-consumer-protection-bc-2017-colour",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "source-expanded-consumer-protection-bc-2017-colour",
+        "label": "Consumer Protection BC — colour corporate logo",
+        "file": "identity-expanded/consumer-protection-bc/consumer-protection-bc-2017-colour.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://www.consumerprotectionbc.ca/",
+        "sourceUrl": "https://www.consumerprotectionbc.ca/wordpress/wp-content/uploads/2018/06/Annual-Report-2017.pdf",
+        "publisher": "Consumer Protection BC",
+        "sourceLocator": "PDF page 1; crop in top-left page points [44, 39, 270, 112]",
+        "sourceFile": null,
+        "sourceDate": "2017 annual report; official URL path includes /2018/06/",
+        "dateNote": "Document/report-period or dated-URL context only; no adoption or retirement date inferred.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "Same horizontal corporate layout as website PNG; native source vector can lead with published PNG as source variant.",
+        "fidelityNote": "Original native paths selected from MuPDF PDF-to-SVG output by their transformed source bounds. Original Bézier data, positions and fills retained; removed page backgrounds and unused clipping definitions. No tracing, retyping or recolouring. The extracted mark is a source-derived specimen, not a standalone official master.",
+        "darkBackground": false,
+        "sha256": "b206f93d521e292dce30bf0bc8480db81bee255be3b0624bd52c1210a865117e",
+        "bytes": 8533,
+        "dimensions": {
+          "viewBox": "0 0 226 73"
+        },
+        "contentType": "image/svg+xml",
+        "search": "vector-recovery-2026-11-21",
+        "downloads": [
+          {
+            "file": "identity-expanded/consumer-protection-bc/consumer-protection-bc-2017-colour.pdf",
+            "sha256": "72e59f7a91949a0e445c63af5ca218f9eff33859740ba4f57337460cdee8ef0e",
+            "bytes": 4141,
+            "label": "Download vector PDF",
+            "format": "pdf"
+          }
+        ],
+        "versionLabel": "Colour"
+      },
+      {
+        "id": "source-expanded-consumer-protection-bc-rack-card-reversed",
+        "label": "Consumer Protection BC — reversed corporate logo",
+        "file": "identity-expanded/consumer-protection-bc/consumer-protection-bc-rack-card-reversed.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://www.consumerprotectionbc.ca/",
+        "sourceUrl": "https://www.consumerprotectionbc.ca/wordpress/wp-content/uploads/2017/06/Funeral-services-rack-card.pdf",
+        "publisher": "Consumer Protection BC",
+        "sourceLocator": "PDF page 1; crop in top-left page points [23, 23, 168, 73]",
+        "sourceFile": null,
+        "sourceDate": "Undated rack card; official URL path includes /2017/06/",
+        "dateNote": "Document/report-period or dated-URL context only; no adoption or retirement date inferred.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "Official reversed corporate logo, colour shield and white wordmark; variant of CPBC colour identity.",
+        "fidelityNote": "Original native paths selected from MuPDF PDF-to-SVG output by their transformed source bounds. Original Bézier data, positions and fills retained; removed page backgrounds and unused clipping definitions. No tracing, retyping or recolouring. The extracted mark is a source-derived specimen, not a standalone official master.",
+        "darkBackground": true,
+        "sha256": "0e516e2ba25c539392a2685c943b3c27709dcc3be9b6c3d2699b53921f48bb87",
+        "bytes": 10055,
+        "dimensions": {
+          "viewBox": "0 0 145 50"
+        },
+        "contentType": "image/svg+xml",
+        "search": "vector-recovery-2026-11-21",
+        "downloads": [
+          {
+            "file": "identity-expanded/consumer-protection-bc/consumer-protection-bc-rack-card-reversed.pdf",
+            "sha256": "314a9c5e11f072e47d9910063317b9b987b87999659da34471bfe5090ccc0736",
+            "bytes": 4053,
+            "label": "Download vector PDF",
+            "format": "pdf"
+          }
+        ],
+        "versionLabel": "Reversed",
+        "variantOf": "source-expanded-consumer-protection-bc-2017-colour"
       }
     ]
   },

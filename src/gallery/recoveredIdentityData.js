@@ -7155,7 +7155,9 @@ export const RECOVERED_IDENTITY_BODIES = [
         },
         "supplied": false,
         "reconstruction": false,
-        "observedDate": "2026-11-20"
+        "observedDate": "2026-11-20",
+        "variantOf": "source-recovered-forest-practices-board-2023-source-vector",
+        "versionLabel": "Published image"
       },
       {
         "id": "source-recovered-forest-practices-board-30th",
@@ -7186,6 +7188,44 @@ export const RECOVERED_IDENTITY_BODIES = [
         "supplied": false,
         "reconstruction": false,
         "observedDate": "2026-11-20"
+      },
+      {
+        "id": "source-recovered-forest-practices-board-2023-source-vector",
+        "label": "Forest Practices Board — colour horizontal logo",
+        "file": "identity-recovered/forest-practices-board/forest-practices-board-2023-source-vector.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://www.bcfpb.ca/reports-publications/annual-reports/",
+        "sourceUrl": "https://www.bcfpb.ca/wp-content/uploads/2023/11/FPB-2022-2023-Annual-Report.pdf",
+        "publisher": "Forest Practices Board",
+        "sourceLocator": "PDF page 1; crop in top-left page points [118, 523, 243, 582]",
+        "sourceFile": null,
+        "sourceDate": "2022–2023 annual report, official November 2023 URL",
+        "dateNote": "Document/report-period or dated-URL context only; no adoption or retirement date inferred.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "Native paths from the 2022–2023 Annual Report cover. The 2024–2025 cover was also inspected but holds a raster logo, so it was not converted into a claimed source vector. Original source colours retained.",
+        "fidelityNote": "Native paths extracted from an official PDF, with source text converted to its original glyph outlines where needed. Original geometry and source colour treatment preserved; PDF-to-RGB conversion may affect screen colour. Page backgrounds and unrelated material removed. No tracing, substitute fonts, redrawing or manual recolouring. This is a source-derived specimen, not a supplied standalone master.",
+        "darkBackground": false,
+        "sha256": "2ff99b695a0626c89a382f7ab5cae7907678716f21bd7ee05bd413fc47e67b27",
+        "bytes": 8581,
+        "dimensions": {
+          "viewBox": "120.375 538.5 119.875 40.5"
+        },
+        "contentType": "image/svg+xml",
+        "search": "vector-recovery-2026-11-21",
+        "downloads": [
+          {
+            "file": "identity-recovered/forest-practices-board/forest-practices-board-2023-source-vector.pdf",
+            "sha256": "d7ecd497f8bc6295672f7d64f626110f898b0545ab850a5cb52f21698711e2ad",
+            "bytes": 3084,
+            "label": "Download vector PDF",
+            "format": "pdf"
+          }
+        ],
+        "versionLabel": "Colour"
       }
     ]
   },
@@ -7276,6 +7316,43 @@ export const RECOVERED_IDENTITY_BODIES = [
         "supplied": false,
         "reconstruction": false,
         "observedDate": "2026-11-20"
+      },
+      {
+        "id": "source-recovered-gamesense-bclc-2025-reverse",
+        "label": "GameSense — reversed capsule with BCLC endorsement",
+        "file": "identity-recovered/gamesense/gamesense-bclc-2025-reverse.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://www.bclcretailerhub.com/",
+        "sourceUrl": "https://www.bclcretailerhub.com/content/dam/retailerhub/training/resources/GameSense_Info_Card-2025.pdf",
+        "publisher": "BCLC",
+        "sourceLocator": "PDF page 1; crop in top-left page points [262.0, 207.0, 338.0, 238.3]",
+        "sourceFile": null,
+        "sourceDate": "GameSense Info Card, official 2025 file",
+        "dateNote": "Document/report-period or dated-URL context only; no adoption or retirement date inferred.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "Original green lettering in a white capsule, with the white BCLC endorsement below. This is a different lockup from the standalone white website capsule; both are retained.",
+        "fidelityNote": "Native paths extracted from an official PDF, with source text converted to its original glyph outlines where needed. Original geometry and source colour treatment preserved; PDF-to-RGB conversion may affect screen colour. Page backgrounds and unrelated material removed. No tracing, substitute fonts, redrawing or manual recolouring. This is a source-derived specimen, not a supplied standalone master.",
+        "darkBackground": true,
+        "sha256": "1959acb41ae5bd6e84864c9cee370e3071900c26050efbb9bc987823a7b9c998",
+        "bytes": 5958,
+        "dimensions": {
+          "viewBox": "262.875 208.125 74.375 29.625"
+        },
+        "contentType": "image/svg+xml",
+        "search": "vector-recovery-2026-11-21",
+        "downloads": [
+          {
+            "file": "identity-recovered/gamesense/gamesense-bclc-2025-reverse.pdf",
+            "sha256": "1e77df71a36ce1b85dd3a1663453148d30a998d81aba465014ed7f86de277a01",
+            "bytes": 2475,
+            "label": "Download vector PDF",
+            "format": "pdf"
+          }
+        ]
       }
     ]
   },
@@ -7314,7 +7391,47 @@ export const RECOVERED_IDENTITY_BODIES = [
         "darkBackground": false,
         "supplied": false,
         "reconstruction": false,
-        "observedDate": "2026-11-20"
+        "observedDate": "2026-11-20",
+        "variantOf": "source-recovered-elections-bc-2026-source-vector",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "source-recovered-elections-bc-2026-source-vector",
+        "label": "Elections BC — colour logo with Legislature tagline",
+        "file": "identity-recovered/chief-electoral-officer/elections-bc-2026-source-vector.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://elections.bc.ca/resources/reports/",
+        "sourceUrl": "https://elections.bc.ca/docs/rpt/2025-26-ARSP-September-2026.pdf",
+        "publisher": "Elections BC",
+        "sourceLocator": "PDF page 1; crop in top-left page points [190, 715, 432, 760]",
+        "sourceFile": null,
+        "sourceDate": "2025/26 annual report, dated 21 September 2026",
+        "dateNote": "Document/report-period or dated-URL context only; no adoption or retirement date inferred.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "Includes the original logo and its original printed A non-partisan Office of the Legislature tagline. Pale cover background removed; native logo paths and outlined source glyphs retained.",
+        "fidelityNote": "Native paths extracted from an official PDF, with source text converted to its original glyph outlines where needed. Original geometry and source colour treatment preserved; PDF-to-RGB conversion may affect screen colour. Page backgrounds and unrelated material removed. No tracing, substitute fonts, redrawing or manual recolouring. This is a source-derived specimen, not a supplied standalone master.",
+        "darkBackground": false,
+        "sha256": "b37aafeef3a70180cbdc36fb76c67c168148bb6a510370c6b14a2a8db1fb0b0a",
+        "bytes": 27885,
+        "dimensions": {
+          "viewBox": "192.625 719.125 236.875 37.625"
+        },
+        "contentType": "image/svg+xml",
+        "search": "vector-recovery-2026-11-21",
+        "downloads": [
+          {
+            "file": "identity-recovered/chief-electoral-officer/elections-bc-2026-source-vector.pdf",
+            "sha256": "f5e6c39ffc313c182d4e661e020a22202f7dbf81929d88256f55e85d2b5ea413",
+            "bytes": 6218,
+            "label": "Download vector PDF",
+            "format": "pdf"
+          }
+        ],
+        "versionLabel": "Colour"
       }
     ]
   },
