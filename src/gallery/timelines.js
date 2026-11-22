@@ -817,6 +817,31 @@ const BCT_SOURCES = {
  * eras itself; what is here is everything else an era says.
  */
 export const COLLECTION_ERAS = {
+  'bc-lands': [
+    {
+      id: 'lands-badge',
+      status: 'held',
+      years: 'by 1986–88',
+      label: 'The flag badge',
+      note: 'The flag symbol in a rounded frame, with “BC” and “Lands” set alike: BC Parks’ arrangement, ' +
+        'in regular letters and a thinner frame. Seen in the corner of a photocopied form whose text names ' +
+        'the Ministry of Forests and Lands.',
+      applicability: {
+        kind: 'first_observation',
+        years: 'by 1986–88',
+        note: 'The form names the Ministry of Forests and Lands, which held that name from 14 August 1986 to ' +
+          '6 July 1988; a form can outlast a ministry’s name, so that dates the form’s wording, not the ' +
+          'badge. When BC Lands took up the badge, and when it dropped it, have not been found.'
+      },
+      sources: [
+        {
+          title: 'A photocopied Ministry of Forests and Lands form on an assignment, with a checklist of items ' +
+            'required, supplied as a screenshot; its title, number and date are not in the picture',
+          print: true
+        }
+      ]
+    }
+  ],
   'bc-parks': [
     {
       id: 'parks-badge',

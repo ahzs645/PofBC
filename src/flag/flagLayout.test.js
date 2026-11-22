@@ -14,6 +14,8 @@ import {
 } from './flagLayout.js'
 import { FLAG_PALETTES, paletteFill, recommendedPalette } from './flagPalettes.js'
 import { flagSize, renderFlagSvg } from './renderFlagSvg.js'
+import { layoutBadge } from './parksBadge.js'
+import { PARKS_FRAME } from '../assets/parksFrame.js'
 
 const INKS = { letterColor: '#111111', textColor: '#111111' }
 
@@ -205,4 +207,24 @@ test('the constants are the ones measured, not tidied afterwards', () => {
   assert.equal(ARRANGEMENTS.horizontal.flagHeight, 1.12)
   assert.equal(ARRANGEMENTS.vertical.flagHeight, 1.28)
   assert.ok(NAME_CAP > 0.25 && NAME_CAP < 0.32, 'inside the range the documents show')
+})
+
+test('a badge can be lighter than BC Parks’: regular letters, a thinner frame, the wording further in', () => {
+  const parks = layoutBadge({ second: 'Parks' })
+  assert.equal(parks.frame, PARKS_FRAME, 'BC Parks’ badge keeps its frame as drawn')
+  assert.equal(parks.first.style.weight, 'bold')
+
+  const lands = layoutBadge({ second: 'Lands', weight: 'regular', wall: 18, inset: 0.12 })
+  assert.equal(lands.first.style.weight, 'regular')
+  assert.equal(lands.second.style.weight, 'regular')
+  // The outer edge is the drawing's own; only the hole grows, to an 18-unit wall each side.
+  assert.ok(lands.frame.d.startsWith(PARKS_FRAME.d.slice(0, PARKS_FRAME.d.lastIndexOf('M'))))
+  assert.ok(Math.abs(lands.frame.inner.width - (PARKS_FRAME.width - 36)) < 0.01)
+  assert.equal(lands.frame.d.match(/M/g).length, 2)
+  // The wording fits inside the hole.
+  assert.ok(lands.second.x > lands.frame.inner.x && lands.flag.x + lands.flag.width < lands.frame.inner.x + lands.frame.inner.width)
+
+  const { svg } = renderFlagSvg({ symbol: 'badge', ministry: 'Lands', badgeStyle: { weight: 'regular', wall: 18 } })
+  assert.match(svg, /font-weight="400">BC</)
+  assert.match(renderFlagSvg({ symbol: 'badge', ministry: 'Parks' }).svg, /font-weight="700">BC</)
 })

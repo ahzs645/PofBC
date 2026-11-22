@@ -128,6 +128,18 @@ const ONE_OFF_IDENTITY = {
       'it belongs to, and no adoption record is cited.'),
     rights: PROVINCE_RIGHTS
   },
+  'bc-lands': {
+    provenance: 'reconstructed',
+    fidelity: 'partially compared',
+    fidelityNote: 'Set by this project’s flag renderer in BC Parks’ badge, with “Lands” as the second word ' +
+      'in the regular weight and the frame’s wall thinned, compared by eye with a small photocopy of the ' +
+      'mark. The frame’s shape and the letters are BC Parks’ and the identity’s; the weight, wall and ' +
+      'spacing are read off the photocopy, not measured from BC Lands’ own artwork.',
+    applicability: DATED_BY_TIMELINE('first_observation', 'by 1986–88',
+      'Seen on a form naming the Ministry of Forests and Lands (August 1986 to July 1988). When BC Lands took ' +
+      'the badge up is not known.'),
+    rights: PROVINCE_RIGHTS
+  },
   'welcome-bc': {
     ...PUBLISHED,
     applicability: DATED_BY_TIMELINE('estimated_era', 'before 2016',
@@ -808,6 +820,8 @@ const GRAPH_NODES = {
 
 /** BC Parks' marks, which its own collection holds rather than the Province's shelf. */
 const PARKS_ONE_OFFS = ['bc-parks', 'bc-parks-banner', 'bc-parks-best-place']
+/** BC Lands' badge, held by its own collection likewise. */
+const LANDS_ONE_OFFS = ['bc-lands']
 
 const withNode = (entry) => (GRAPH_NODES[entry.id] ? { ...entry, graphNode: GRAPH_NODES[entry.id] } : entry)
 
@@ -1072,6 +1086,21 @@ export const GALLERY_COLLECTIONS = [
     })
   },
   {
+    id: 'bc-lands',
+    shelf: 'bodies',
+    label: 'BC Lands',
+    body: 'Crown lands · Ministry of Forests and Lands',
+    years: 'by 1986–88',
+    cover: 'bc-lands',
+    intro: 'BC Lands’ badge from the flag years: the flag symbol in a rounded frame with “Lands” set at ' +
+      'the size of “BC”, the arrangement of BC Parks’ badge, but lighter, in regular letters and a thinner ' +
+      'frame. Known here from one photocopied form, so it is set from BC Parks’ badge to the photocopy’s ' +
+      'proportions rather than redrawn from its own artwork. Open it to recolour.',
+    eras: withMarks(COLLECTION_ERAS['bc-lands'], {
+      'lands-badge': ONE_OFFS.filter((entry) => LANDS_ONE_OFFS.includes(entry.id)).map(provincial)
+    })
+  },
+  {
     id: 'bc-mark',
     shelf: 'bc-mark',
     label: 'On the BC mark',
@@ -1082,7 +1111,7 @@ export const GALLERY_COLLECTIONS = [
       'no pattern that generalises, so they sit here rather than in the generator, which is built on ' +
       'patterns. Open one to recolour it.',
     entries: [
-      ...ONE_OFFS.filter((entry) => !PARKS_ONE_OFFS.includes(entry.id)).map(provincial),
+      ...ONE_OFFS.filter((entry) => !PARKS_ONE_OFFS.includes(entry.id) && !LANDS_ONE_OFFS.includes(entry.id)).map(provincial),
       // Before the crest: a department's own mark, on the BC mark's timeline.
       ...specimenEntriesOf('travel-industry', 'bc-mark'),
       // A service wordmark in the BC mark's Garamond, held as published.

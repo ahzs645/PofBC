@@ -33,6 +33,7 @@ const round = (value) => Math.round(value * 1000) / 1000
  * @param {string} [options.title]
  * @param {object} [options.glyphs]      Outline table; draws the type as paths instead of text.
  * @param {string} [options.fontCss]     Embedded @font-face, for a self-contained file.
+ * @param {object} [options.badgeStyle]  For the badge: { weight, wall, inset } (parksBadge.js).
  */
 export const renderFlagSvg = ({
   ministry = '',
@@ -49,12 +50,13 @@ export const renderFlagSvg = ({
   pixelWidth,
   title,
   glyphs,
-  fontCss
+  fontCss,
+  badgeStyle
 } = {}) => {
   // The badge is its own composition — a frame, and two words set alike inside it — so it does not
   // go through the lockup layout at all. The ministry field supplies the second word.
   const badge = symbol === 'badge'
-    ? layoutBadge({ second: String(ministry).replace(/\s+/g, ' ').trim() || 'Parks', cap: FLAG_CAP })
+    ? layoutBadge({ ...badgeStyle, second: String(ministry).replace(/\s+/g, ' ').trim() || 'Parks', cap: FLAG_CAP })
     : null
   const layout = badge ?? layoutFlagLockup({ ministry, symbol, placement, province, extra, bold, cap: FLAG_CAP })
   const ink = resolveColor(letterColor)
@@ -89,7 +91,7 @@ export const renderFlagSvg = ({
           : badgeLines(badge).map((line) =>
             `<text data-role="name" x="${round(line.x)}" y="${round(line.y)}" fill="${escapeXml(type)}"` +
             ` font-family="${escapeXml(LOGO_FONT_FAMILY)}" font-size="${round(line.style.fontSize)}"` +
-            ' font-weight="700">' + escapeXml(line.text) + '</text>').join(''))
+            ` font-weight="${line.style.weight === 'bold' ? 700 : 400}">` + escapeXml(line.text) + '</text>').join(''))
       : flagLockupMarkup({ layout, letterColor: ink, textColor: type, flagPalette, glyphs })) +
     '</svg>'
 
@@ -101,7 +103,7 @@ export const flagSize = (options = {}) => {
   // The badge has its own layout, and an export asks for the box before anything is drawn — so
   // this has to branch the same way the renderer does or a badge exports at the wrong size.
   const { box } = options.symbol === 'badge'
-    ? layoutBadge({ second: String(options.ministry ?? '').replace(/\s+/g, ' ').trim() || 'Parks', cap: FLAG_CAP })
+    ? layoutBadge({ ...options.badgeStyle, second: String(options.ministry ?? '').replace(/\s+/g, ' ').trim() || 'Parks', cap: FLAG_CAP })
     : layoutFlagLockup({ ...options, cap: FLAG_CAP })
   return { width: box.width, height: box.height }
 }

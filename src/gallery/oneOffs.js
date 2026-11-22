@@ -77,6 +77,26 @@ export const ONE_OFFS = [
       { id: 'reverse', label: 'Reversed', ink: '#ffffff', palette: 'ink', background: '#10069f' }
     ]
   },
+  {
+    id: 'bc-lands',
+    label: 'BC Lands',
+    body: 'BC Lands',
+    years: 'by 1986–88',
+    note: 'BC Parks’ arrangement with “Lands” in place of “Parks”: the flag symbol beside “BC” in a rounded ' +
+      'frame, and the second word under it at the same size, so both words are the wordmark. Unlike BC ' +
+      'Parks’ badge, its letters are a regular weight, not bold, and its frame is about half as thick.',
+    caveat: 'Not drawn from BC Lands’ own artwork, which has not been found: the one picture of it is a ' +
+      'small photocopy on a form. BC Parks’ frame is thinned to the photocopy’s wall, and its type set in ' +
+      'the regular weight, so the shapes are BC Parks’ and the proportions are read off the photocopy.',
+    kind: 'flag',
+    // Its wall is about 18 frame units against BC Parks’ 30, and its wording sits further in.
+    draw: { symbol: 'badge', ministry: 'Lands', badgeStyle: { weight: 'regular', wall: 18, inset: 0.12 } },
+    presets: [
+      { id: 'mono', label: 'One ink, as photocopied', ink: '#000000', palette: 'ink', background: '#ffffff' },
+      { id: 'colour', label: 'Colour, as BC Parks’', ink: '#10069f', palette: 'official', background: '#ffffff' },
+      { id: 'reverse', label: 'Reversed', ink: '#ffffff', palette: 'ink', background: '#10069f' }
+    ]
+  },
   artwork({
     id: 'bc-parks-banner',
     label: '“BCParks” beside the shaded sun',

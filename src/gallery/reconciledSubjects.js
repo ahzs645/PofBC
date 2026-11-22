@@ -16,6 +16,8 @@ export const RECONCILED_FAMILIES = [
 
 /** Entries that were held with no owner: each is given the program it was published for. */
 export const PROGRAM_ENTRY_OWNERS = {
+  // BC Lands is not a body in the atlas, so its badge is owned by its register subject.
+  'bc-lands': 'bc-lands',
   'welcome-bc': 'welcome-bc',
   'vector-welcomebc-2016': 'welcome-bc',
   'vector-welcomebc-current': 'welcome-bc',
@@ -82,6 +84,18 @@ export const RECONCILED_SUBJECTS = [
     ],
     nextAction: 'Compare the archival master files with the earlier marks and date the banner and “Best Place on Earth” versions.',
     note: 'Park signage, the branch’s corporate marks and campaign lockups are kept as separate entries.'
+  }),
+  subject({
+    id: 'bc-lands',
+    label: 'BC Lands',
+    kind: 'government-branch',
+    collectionIds: ['bc-lands'],
+    sources: [{
+      title: 'Ministry of Forests and Lands form, photocopied',
+      citation: 'A form on an assignment, with its BC Lands badge, supplied as a screenshot; title, number and date not in the picture.'
+    }],
+    nextAction: 'Find a dated BC Lands publication with the badge, and whether it began under Lands, Parks and Housing or ended with the Ministry of Crown Lands.',
+    note: 'The Crown lands side of the 1980s ministries, not a body in the atlas. Its badge is BC Parks’ with the second word changed, so it is drawn in BC Parks’ frame.'
   }),
   subject({
     id: 'justice-institute',

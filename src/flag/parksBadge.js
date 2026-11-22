@@ -14,9 +14,32 @@ import { getFaceMetrics } from '../logo/fontMetrics.js'
 import { measureLine, positionWords } from '../logo/logoText.js'
 import { FLAG_ASPECT } from './flagLayout.js'
 
-const BOLD = getFaceMetrics('bold')
-
 const sizeForCap = (cap, face) => cap * 1000 / face.capHeight
+
+const round = (value) => Math.round(value * 100) / 100
+
+/**
+ * The frame with a thinner wall: its outer edge as drawn, and its inner edge scaled out about the
+ * hole's middle until the wall is `wall` units across. Scaling keeps the inner edge's hand-drawn
+ * shape, its corners widening with it, which a stroke or an offset of the outer edge would not.
+ */
+export const thinFrame = (wall) => {
+  const { width, height, inner, d } = PARKS_FRAME
+  const at = d.lastIndexOf('M')
+  const [, mx, my, rest] = /^M(-?[\d.]+)[ ,](-?[\d.]+)(.*)$/s.exec(d.slice(at))
+  const k = (width - 2 * wall) / inner.width
+  const cx = inner.x + inner.width / 2
+  const cy = inner.y + inner.height / 2
+  // Every number after the move is a relative step, so it scales as it stands.
+  const steps = rest.replace(/-?(?:\d+\.?\d*|\.\d+)/g, (n) => String(round(Number(n) * k)))
+  const hole = { width: inner.width * k, height: inner.height * k }
+  return {
+    width,
+    height,
+    inner: { x: cx - hole.width / 2, y: cy - hole.height / 2, ...hole },
+    d: `${d.slice(0, at)}M${round(cx + (Number(mx) - cx) * k)} ${round(cy + (Number(my) - cy) * k)}${steps}`
+  }
+}
 
 /**
  * The badge's proportions, as multiples of the wordmark's cap height.
@@ -46,9 +69,13 @@ const escapeXml = (value) => String(value)
  * @param {string} [options.first]   The word beside the flag. "BC" in the mark everyone knows.
  * @param {string} [options.second]  The word beneath it.
  * @param {number} [options.cap]     Wordmark cap height.
+ * @param {string} [options.weight]  'bold', as BC Parks', or 'regular'.
+ * @param {number} [options.wall]    A thinner frame wall, in frame units (BC Parks' is about 30).
+ * @param {number} [options.inset]   Clear space inside the frame, as a share of the hole.
  */
-export const layoutBadge = ({ first = 'BC', second = 'Parks', cap = 100 } = {}) => {
-  const style = { fontSize: sizeForCap(cap, BOLD), weight: 'bold' }
+export const layoutBadge = ({ first = 'BC', second = 'Parks', cap = 100, weight = 'bold', wall, inset = BADGE.inset } = {}) => {
+  const style = { fontSize: sizeForCap(cap, getFaceMetrics(weight)), weight }
+  const frame = wall ? thinFrame(wall) : PARKS_FRAME
   const top = measureLine(first, style)
   const bottom = measureLine(second, style)
 
@@ -64,10 +91,10 @@ export const layoutBadge = ({ first = 'BC', second = 'Parks', cap = 100 } = {}) 
 
   // The frame is a fixed drawing, so the wording is fitted into its hole rather than the frame
   // being grown around the wording. Whichever way the wording runs longer decides the scale.
-  const hole = PARKS_FRAME.inner
-  const room = { width: hole.width * (1 - 2 * BADGE.inset), height: hole.height * (1 - 2 * BADGE.inset) }
+  const hole = frame.inner
+  const room = { width: hole.width * (1 - 2 * inset), height: hole.height * (1 - 2 * inset) }
   const scale = Math.min(room.width / contentWidth, room.height / contentHeight)
-  const side = PARKS_FRAME.width
+  const side = frame.width
 
   // Centred in the hole, in the frame's own units.
   const originX = hole.x + (hole.width - contentWidth * scale) / 2 - top.inkLeft * scale
@@ -77,7 +104,7 @@ export const layoutBadge = ({ first = 'BC', second = 'Parks', cap = 100 } = {}) 
     cap,
     scale,
     side,
-    frame: PARKS_FRAME,
+    frame,
     first: { text: first, style, x: originX, y: originY, ink: top, scale },
     second: {
       text: second,
@@ -93,7 +120,7 @@ export const layoutBadge = ({ first = 'BC', second = 'Parks', cap = 100 } = {}) 
       width: flagWidth * scale,
       height: flagHeight * scale
     },
-    box: { x: 0, y: 0, width: side, height: PARKS_FRAME.height }
+    box: { x: 0, y: 0, width: side, height: frame.height }
   }
 }
 
