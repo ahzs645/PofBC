@@ -1,8 +1,14 @@
 /* Paper models: a choice of model, PackCAD's viewer as the stage, and a panel of stages and files. */
 
 .paper-models {
+  /* The stage's ground; packcadFrame.js paints the viewer's viewport the same (STAGE_GROUND). */
+  --paper-stage: #f1efea;
   display: grid;
   gap: var(--gap);
+}
+
+:root[data-theme='dark'] .paper-models {
+  --paper-stage: #1c1915;
 }
 
 .paper-models__series {
@@ -69,8 +75,7 @@
   aspect-ratio: 4 / 3;
   min-height: 320px;
   border-radius: var(--radius);
-  /* PackCAD's viewport draws on its own light ground; the stage keeps it in both themes. */
-  background: #f2f2f3;
+  background: var(--paper-stage);
 }
 
 .paper-models__frame {
@@ -87,14 +92,14 @@
   place-items: center;
   margin: 0;
   padding: 16px;
-  color: #52525b;
+  color: var(--ink-muted);
   text-align: center;
   pointer-events: none;
 }
 
 .paper-models__status--error {
   color: var(--danger);
-  background: #f2f2f3;
+  background: var(--paper-stage);
 }
 
 .paper-models__panel {

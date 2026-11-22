@@ -11,16 +11,24 @@ export const viewerPage = (base) => `${base}packcad/viewer.html`
  * The viewer's address for a project. The project path is relative to the viewer page, which is
  * one folder down (packcad/), so a path under public/ is reached with `../`.
  */
-export const viewerSrc = (base, projectPath, { step = 'final', autoplay = false, layout = '3d', controls = false } = {}) => {
+export const viewerSrc = (base, projectPath, { step = 'final', autoplay = false, layout = '3d', controls = false, theme = 'light', background = null } = {}) => {
   const params = new URLSearchParams({
     project: `../${projectPath}`,
     step: String(step),
     autoplay: autoplay ? '1' : '0',
     layout,
-    controls: controls ? '1' : '0'
+    controls: controls ? '1' : '0',
+    theme
   })
+  if (background) params.set('background', background.replace(/^#/, ''))
   return `${viewerPage(base)}?${params}`
 }
+
+/**
+ * The stage's ground in each of the site's themes: a shade set back from the panels, so the
+ * model stands out from the page in both. The frame's viewport is painted the same colour.
+ */
+export const STAGE_GROUND = { light: '#f1efea', dark: '#1c1915' }
 
 const EVENTS = new Set(['packcad:ready', 'packcad:state', 'packcad:error'])
 

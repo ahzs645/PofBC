@@ -8,13 +8,14 @@
 //
 // The place is kept in the address bar (`?view=paper-models&model=bc-transit`).
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { writeHistory } from '../site/browserHistory.js'
 import { SiteLink } from '../site/navigation.jsx'
 import { Segmented } from '../site/Segmented.jsx'
+import { useSiteTheme } from '../site/useTheme.js'
 import { PACKCAD_EDITOR_URL, PAPER_MODELS, PAPER_MODEL_SERIES, filesOf, sheetWords } from './catalogue.js'
 import { PackcadFrame, usePackcadViewer } from './PackcadFrame.jsx'
-import { stagesOf, viewerSrc } from './packcadFrame.js'
+import { STAGE_GROUND, stagesOf, viewerSrc } from './packcadFrame.js'
 import './paperModels.css'
 
 const BASE = import.meta.env.BASE_URL
@@ -41,9 +42,26 @@ export const PaperModelsView = () => {
   const [model, setModel] = useState(readModel)
   const [layout, setLayout] = useState('3d')
   const files = filesOf(model)
-  // Opens on the finished model and folds it once from the flat sheet.
-  const src = viewerSrc(BASE, files.json, { autoplay: true, layout: '3d' })
+  const { name: theme } = useSiteTheme()
+  const themeRef = useRef(theme)
+  themeRef.current = theme
+  // Opens on the finished model and folds it once from the flat sheet. The address is made once
+  // per model, in the theme of the moment: a later change of theme is sent to the frame (below)
+  // rather than written into the address, which would reload it and fold the model again.
+  const src = useMemo(() => viewerSrc(BASE, files.json, {
+    autoplay: true,
+    layout: '3d',
+    theme: themeRef.current,
+    background: STAGE_GROUND[themeRef.current]
+  }), [files.json])
   const { frame, ready, state, error, send } = usePackcadViewer(src)
+
+  // Follow the site's light/dark toggle without reloading the frame.
+  useEffect(() => {
+    if (!ready) return
+    send({ type: 'packcad:theme', theme })
+    send({ type: 'packcad:background', color: STAGE_GROUND[theme] })
+  }, [ready, send, theme])
   const { setup, folds } = stagesOf(ready?.steps)
 
   // Back and Forward move between models.

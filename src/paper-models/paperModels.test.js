@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { createHash } from 'node:crypto'
 import { readFileSync } from 'node:fs'
 import { PAPER_MODELS, filesOf, sheetWords } from './catalogue.js'
-import { stagesOf, viewerEvent, viewerSrc } from './packcadFrame.js'
+import { STAGE_GROUND, stagesOf, viewerEvent, viewerSrc } from './packcadFrame.js'
 
 const publicFile = (path) => readFileSync(new URL(`../../public/${path}`, import.meta.url))
 
@@ -39,6 +39,14 @@ test('the viewer address reaches a project under public/ from packcad/', () => {
   assert.equal(new URL(src.searchParams.get('project'), src).pathname, '/PofBC/paper-models/a/b.packcad.json')
   assert.equal(src.searchParams.get('autoplay'), '1')
   assert.equal(src.searchParams.get('controls'), '0')
+  assert.equal(src.searchParams.get('theme'), 'light')
+})
+
+test('the viewer opens in the site theme, on the stage colour', () => {
+  const src = new URL(viewerSrc('/', 'a.json', { theme: 'dark', background: STAGE_GROUND.dark }), 'https://x.test')
+  assert.equal(src.searchParams.get('theme'), 'dark')
+  assert.equal(`#${src.searchParams.get('background')}`, STAGE_GROUND.dark)
+  assert.match(STAGE_GROUND.light, /^#[0-9a-f]{6}$/)
 })
 
 test('only the viewer’s own messages are read', () => {
