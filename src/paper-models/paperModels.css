@@ -289,4 +289,30 @@
   .paper-models__series {
     padding: 14px 16px;
   }
+
+  /* On a phone the bus comes first: the stage, then the series and its choice of model, then the panel. */
+  .paper-models__body {
+    display: contents;
+  }
+
+  .paper-models__stage {
+    order: -1;
+  }
+
+  .paper-models__picker {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+
+  .paper-models__choice {
+    align-content: start;
+  }
+
+  .paper-models__choice {
+    padding: 8px 12px;
+  }
+
+  .paper-models__choice span {
+    font-size: 0.82em;
+  }
 }
