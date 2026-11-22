@@ -842,6 +842,43 @@ export const COLLECTION_ERAS = {
       ]
     }
   ],
+  'bc-environment': [
+    {
+      id: 'environment-flag',
+      status: 'held',
+      years: 'undated',
+      label: 'The flag symbol beside “BC”',
+      note: '“BC” in bold sans serif beside the flag symbol, “Environment” tightly set below, printed in ' +
+        'cream on a green band running diagonally across a cover photograph: the flag years’ way of naming ' +
+        'a ministry, as BC Parks’ and BC Lands’ badges name theirs.',
+      applicability: {
+        kind: 'unknown',
+        years: 'undated',
+        note: 'Known from one scan of an undated cover, whose title is not in the picture. The Ministry of ' +
+          'Environment of 1988–1991 is the ministry of that name in the flag years, so it is placed there; ' +
+          'whether the name and mark carried on under Environment, Lands and Parks from 1991 is not established.'
+      },
+      sources: [{ title: 'An undated printed cover with the BC Environment band, supplied as a scan; its title and date are not in the picture', print: true }]
+    }
+  ],
+  'tourism-recreation-culture': [
+    {
+      id: 'trc-flag-stripes',
+      status: 'held',
+      years: '1986–1988',
+      label: 'The flag with long stripes, Hon. Bill Reid, Minister',
+      note: 'The flag symbol with its stripes drawn out to the left as three long bands, “Tourism” above ' +
+        'them and “Recreation and Culture” below in italic serif, and the minister’s name, in one ' +
+        'blue-violet ink. The flag’s stripes are the Super, Natural sign’s.',
+      applicability: {
+        kind: 'dated_specimen',
+        years: '1986–1988',
+        note: 'It names its minister: Bill Reid was Minister of Tourism, Recreation and Culture from ' +
+          '6 November 1986 to 6 July 1988, the whole life of the ministry of that name.'
+      },
+      sources: [{ title: 'The ministry’s logo with “HON. BILL REID, MINISTER”, supplied as a screenshot; the document it was taken from is not recorded', print: true }]
+    }
+  ],
   'bc-parks': [
     {
       id: 'parks-badge',

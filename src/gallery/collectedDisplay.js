@@ -2188,6 +2188,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bc-environment-flag-years": {
+  "light": {
+   "file": "identity-display/bc-environment-flag-years.light.svg",
+   "aspect": 3.3102,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-environment-flag-years.dark.svg",
+   "aspect": 3.3102,
+   "recoloured": true
+  }
+ },
+ "tourism-recreation-culture-1986": {
+  "light": {
+   "file": "identity-display/tourism-recreation-culture-1986.light.svg",
+   "aspect": 2.5079,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/tourism-recreation-culture-1986.dark.svg",
+   "aspect": 2.5079,
+   "recoloured": true
+  }
+ },
  "bceid-reversed-rebuilt": {
   "light": {
    "file": "identity-display/bceid-reversed-rebuilt.light.svg",

@@ -1,0 +1,65 @@
+{
+  "reference_pixels": [
+    730,
+    442
+  ],
+  "method": "Vector supersampled 4x and reduced to reference grid; reference ink coverage estimated from the supplied screenshot. Mask threshold 50%; Euclidean distances between 1px mask boundaries. No registration refit was made for this final measurement.",
+  "caution": "Low-resolution screenshot, scan blur, and threshold choice affect these values. They are overlap diagnostics, not historical-authenticity percentages. Master has each band/text baseline straightened; comparison uses source-aligned geometry before straightening.",
+  "regions": {
+    "Flag and stripes": {
+      "silhouette_iou_at_50_percent_ink": 0.9501128792467375,
+      "mean_symmetric_edge_distance_source_px": 0.2581535923402981,
+      "p95_symmetric_edge_distance_source_px": 1.0,
+      "iou_at_thresholds_35_50_65_percent": [
+        0.9290142591444513,
+        0.9501128792467375,
+        0.9162660256410257
+      ],
+      "coverage_mae": 0.07700830128015387
+    },
+    "Flag detail": {
+      "silhouette_iou_at_50_percent_ink": 0.8883543229092967,
+      "mean_symmetric_edge_distance_source_px": 0.5075877140643039,
+      "p95_symmetric_edge_distance_source_px": 1.4142135623730951,
+      "iou_at_thresholds_35_50_65_percent": [
+        0.8839545334390695,
+        0.8883543229092967,
+        0.8651769646070786
+      ],
+      "coverage_mae": 0.08812163554069356
+    },
+    "Tourism": {
+      "silhouette_iou_at_50_percent_ink": 0.6634036144578314,
+      "mean_symmetric_edge_distance_source_px": 0.573134353332432,
+      "p95_symmetric_edge_distance_source_px": 1.4142135623730951,
+      "iou_at_thresholds_35_50_65_percent": [
+        0.6477987421383647,
+        0.6634036144578314,
+        0.6434540389972145
+      ],
+      "coverage_mae": 0.10242684476412964
+    },
+    "Recreation and Culture": {
+      "silhouette_iou_at_50_percent_ink": 0.6261505143475907,
+      "mean_symmetric_edge_distance_source_px": 0.5903284978412717,
+      "p95_symmetric_edge_distance_source_px": 2.0,
+      "iou_at_thresholds_35_50_65_percent": [
+        0.6226498562264986,
+        0.6261505143475907,
+        0.5840825840825841
+      ],
+      "coverage_mae": 0.11490313982771642
+    },
+    "Minister line": {
+      "silhouette_iou_at_50_percent_ink": 0.5839813374805599,
+      "mean_symmetric_edge_distance_source_px": 0.43336128285663805,
+      "p95_symmetric_edge_distance_source_px": 1.4142135623730951,
+      "iou_at_thresholds_35_50_65_percent": [
+        0.6480092325447201,
+        0.5839813374805599,
+        0.3035897435897436
+      ],
+      "coverage_mae": 0.1069989341219513
+    }
+  }
+}

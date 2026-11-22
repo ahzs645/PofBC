@@ -5,9 +5,11 @@ import { CURRENT_BODIES } from '../government/currentData.js'
 import { HISTORICAL_BODIES, LOCAL_BODIES, SUB_AGENCIES } from '../government/historyData.js'
 import { RELATED_BODIES } from '../government/relatedBodies.js'
 import { FIRST_YEAR, PRESENT_YEAR, governmentIn, lifeOf } from '../government/snapshot.js'
+import { MINISTRY_EPISODES } from '../government/episodes.js'
 
 const byId = new Map(IDENTITY_SUBJECTS.map((subject) => [subject.id, subject]))
-const graphIds = new Set([...CURRENT_BODIES, ...HISTORICAL_BODIES, ...LOCAL_BODIES, ...SUB_AGENCIES, ...RELATED_BODIES].map((body) => body.id))
+// A ministry's own marks are tied to that ministry's node on the map, one of the archives' episodes.
+const graphIds = new Set([...CURRENT_BODIES, ...HISTORICAL_BODIES, ...LOCAL_BODIES, ...SUB_AGENCIES, ...RELATED_BODIES, ...MINISTRY_EPISODES].map((body) => body.id))
 const fold = (value) => value.normalize('NFKC').toLocaleLowerCase('en-CA').trim()
 
 test('identity subjects have stable unique keys, readable evidence and a declared collection scope', () => {

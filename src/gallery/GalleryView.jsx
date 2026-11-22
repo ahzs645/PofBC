@@ -650,8 +650,8 @@ const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator }) => {
 }
 
 /** A link from a mark to the body it stands for, in the government diagram. */
-const GraphLink = ({ node, onOpenGovernment }) => node && onOpenGovernment && (
-  <button type="button" className="gallery__graph-link" onClick={() => onOpenGovernment(node)}>
+const GraphLink = ({ node, year, onOpenGovernment }) => node && onOpenGovernment && (
+  <button type="button" className="gallery__graph-link" onClick={() => onOpenGovernment(node, year)}>
     Organization in the atlas <span aria-hidden="true">→</span>
   </button>
 )
@@ -1035,7 +1035,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
           <h2 className="gallery__collection-heading">{collection.label}</h2>
           <p className="gallery__note">{collection.body} · {collection.years}</p>
         </div>
-        <GraphLink node={collection.graphNode} onOpenGovernment={onOpenGovernment} />
+        <GraphLink node={collection.graphNode} year={collection.graphYear} onOpenGovernment={onOpenGovernment} />
       </div>
       <p className="gallery__intro">{collection.intro}</p>
       {collection.foldedUnder && (

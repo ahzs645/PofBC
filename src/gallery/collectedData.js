@@ -9964,6 +9964,153 @@ export const COLLECTED_SPECIMENS = [
     ]
   },
   {
+    "program": "bc-environment",
+    "assets": [
+      {
+        "id": "bc-environment-flag-years",
+        "label": "BC Environment: the flag symbol and wordmark",
+        "file": "identity-collected/bc-environment/bc-environment.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Ministry of Environment, Province of British Columbia",
+        "sourcePage": null,
+        "sourceUrl": null,
+        "sourceLocator": "An undated printed cover, supplied to the project as a scan (reference/supplied-cover-scan.png, 594 × 446 px); its title and date are not in the picture",
+        "sourceFile": "supplied cover scan",
+        "sourceDate": "undated",
+        "observedDate": "2026-11-22",
+        "dateNote": "The cover is undated. “BC Environment” beside the flag symbol places it in the flag years; the Ministry of Environment of 1988–1991, between Environment and Parks and Environment, Lands and Parks, is the ministry of that name, which is where it is placed. Whether the name and mark carried on under Environment, Lands and Parks from 1991 is not established.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "“BC” in bold sans serif beside the flag symbol, with “Environment” below, tightly set. Printed in cream on a green band running diagonally across a cover photograph; drawn here upright in one dark ink.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: the flag symbol is the gallery’s own twelve-path flag (src/assets/flagMark.js) placed as one unit, and the 13 letters are outlines of the site’s Helvetica Bold, each fitted to the scan, the lower line tightly spaced as printed. Against the scan’s cream ink the silhouettes overlap by 82.6 percent (intersection over union; lettering 85 percent, the flag 69 percent, whose fine separations the print fills in). Cream #F7F3D6 and green #5EBD7E are sampled from a textured scan, not colour specifications.",
+        "downloads": [
+          {
+            "label": "Download vector PDF (upright mark and cover band)",
+            "file": "identity-collected/bc-environment/bc-environment.pdf",
+            "sha256": "530651423d5b428630cd3416dabad03079e5b6d45a9ddec221430159f1678de4"
+          }
+        ],
+        "sha256": "30c4e3d217e137b8c63263c3da390bfdea820e16bfbdc0ee5ee61d5fed225b5a",
+        "bytes": 13956,
+        "darkBackground": false,
+        "search": "bc-environment-vector-2026-11-22"
+      },
+      {
+        "id": "bc-environment-flag-years-cream",
+        "variantOf": "bc-environment-flag-years",
+        "label": "BC Environment: in the cover’s cream",
+        "file": "identity-collected/bc-environment/bc-environment-cream.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Ministry of Environment, Province of British Columbia",
+        "sourcePage": null,
+        "sourceUrl": null,
+        "sourceLocator": "An undated printed cover, supplied to the project as a scan (reference/supplied-cover-scan.png, 594 × 446 px); its title and date are not in the picture",
+        "sourceFile": "supplied cover scan",
+        "sourceDate": "undated",
+        "observedDate": "2026-11-22",
+        "dateNote": "The cover is undated. “BC Environment” beside the flag symbol places it in the flag years; the Ministry of Environment of 1988–1991, between Environment and Parks and Environment, Lands and Parks, is the ministry of that name, which is where it is placed. Whether the name and mark carried on under Environment, Lands and Parks from 1991 is not established.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The same mark in the cover’s cream, for a dark or green ground.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: the flag symbol is the gallery’s own twelve-path flag (src/assets/flagMark.js) placed as one unit, and the 13 letters are outlines of the site’s Helvetica Bold, each fitted to the scan, the lower line tightly spaced as printed. Against the scan’s cream ink the silhouettes overlap by 82.6 percent (intersection over union; lettering 85 percent, the flag 69 percent, whose fine separations the print fills in). Cream #F7F3D6 and green #5EBD7E are sampled from a textured scan, not colour specifications.",
+        "sha256": "e7d5c9b801603bbbb44d6666ad8173b85846c1c02111911172618cfc49f5b499",
+        "bytes": 13956,
+        "darkBackground": true,
+        "search": "bc-environment-vector-2026-11-22"
+      },
+      {
+        "id": "bc-environment-flag-years-cover-band",
+        "variantOf": "bc-environment-flag-years",
+        "label": "BC Environment: the cover’s diagonal green band",
+        "file": "identity-collected/bc-environment/bc-environment-cover-banner.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Ministry of Environment, Province of British Columbia",
+        "sourcePage": null,
+        "sourceUrl": null,
+        "sourceLocator": "An undated printed cover, supplied to the project as a scan (reference/supplied-cover-scan.png, 594 × 446 px); its title and date are not in the picture",
+        "sourceFile": "supplied cover scan",
+        "sourceDate": "undated",
+        "observedDate": "2026-11-22",
+        "dateNote": "The cover is undated. “BC Environment” beside the flag symbol places it in the flag years; the Ministry of Environment of 1988–1991, between Environment and Parks and Environment, Lands and Parks, is the ministry of that name, which is where it is placed. Whether the name and mark carried on under Environment, Lands and Parks from 1991 is not established.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The mark as the cover prints it: cream on a green band at 45 degrees, with two narrow stripes cut out of the band. The cut-outs and the corner outside the band are transparent; the photograph under them is not part of the artwork.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: the flag symbol is the gallery’s own twelve-path flag (src/assets/flagMark.js) placed as one unit, and the 13 letters are outlines of the site’s Helvetica Bold, each fitted to the scan, the lower line tightly spaced as printed. Against the scan’s cream ink the silhouettes overlap by 82.6 percent (intersection over union; lettering 85 percent, the flag 69 percent, whose fine separations the print fills in). Cream #F7F3D6 and green #5EBD7E are sampled from a textured scan, not colour specifications.",
+        "sha256": "8a48669f4f8fea0b80d9eeb6036513a0319a3a464e2b1b3dc73665eb34dadeb0",
+        "bytes": 14266,
+        "darkBackground": false,
+        "search": "bc-environment-vector-2026-11-22"
+      }
+    ]
+  },
+  {
+    "program": "tourism-recreation-culture",
+    "assets": [
+      {
+        "id": "tourism-recreation-culture-1986",
+        "label": "Tourism, Recreation and Culture: the flag and stripes, Hon. Bill Reid, Minister",
+        "file": "identity-collected/tourism-recreation-culture/tourism-recreation-culture.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Ministry of Tourism, Recreation and Culture, Province of British Columbia",
+        "sourcePage": null,
+        "sourceUrl": null,
+        "sourceLocator": "A screenshot of the ministry’s logo, 730 × 442 px, supplied to the project; the document it was taken from is not recorded",
+        "sourceFile": "supplied screenshot",
+        "sourceDate": "1986–1988",
+        "observedDate": "2026-11-22",
+        "dateNote": "Its own wording dates it: “HON. BILL REID, MINISTER”. Bill Reid was Minister of Tourism, Recreation and Culture from 6 November 1986 to 6 July 1988, the whole life of the ministry of that name.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The flag symbol with its stripes drawn out to the left as three long bands, “Tourism” above them and “Recreation and Culture” below in italic serif, and “HON. BILL REID, MINISTER”, in one blue-violet ink.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: eight paths of the gallery’s own flag (src/assets/flagMark.js, as on the Super, Natural sign) placed to the screenshot, three wave stripes redrawn as closed curves running out to the left, and the gold sun left out, as the one-ink print shows it. The lettering is outlined C059 Italic (the main line) and Liberation Serif Italic, spaced to the screenshot; the original typeface is not identified. Overlap with the screenshot: flag and stripes 95 percent, lettering 58–66 percent (intersection over union at screenshot resolution). The blue-violet #3C40A0 is estimated from the screenshot, not a colour specification.",
+        "downloads": [
+          {
+            "label": "Download vector PDF",
+            "file": "identity-collected/tourism-recreation-culture/tourism-recreation-culture.pdf",
+            "sha256": "90c3c66ac7bf6ba3c4879752d5457b4c8fc6b0fd1c4d41d1c79c9013ca6e48e9"
+          }
+        ],
+        "sha256": "af8457a38589964a9648a56168917baf1b39d58f2cd8ef49b0e8a6eb404af17e",
+        "bytes": 40034,
+        "darkBackground": false,
+        "search": "tourism-recreation-culture-vector-2026-11-22"
+      },
+      {
+        "id": "tourism-recreation-culture-1986-black",
+        "variantOf": "tourism-recreation-culture-1986",
+        "label": "Tourism, Recreation and Culture: in black",
+        "file": "identity-collected/tourism-recreation-culture/tourism-recreation-culture-black.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Ministry of Tourism, Recreation and Culture, Province of British Columbia",
+        "sourcePage": null,
+        "sourceUrl": null,
+        "sourceLocator": "A screenshot of the ministry’s logo, 730 × 442 px, supplied to the project; the document it was taken from is not recorded",
+        "sourceFile": "supplied screenshot",
+        "sourceDate": "1986–1988",
+        "observedDate": "2026-11-22",
+        "dateNote": "Its own wording dates it: “HON. BILL REID, MINISTER”. Bill Reid was Minister of Tourism, Recreation and Culture from 6 November 1986 to 6 July 1988, the whole life of the ministry of that name.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The same artwork in black.",
+        "fidelityNote": "A supplied vector reconstruction, not original artwork: eight paths of the gallery’s own flag (src/assets/flagMark.js, as on the Super, Natural sign) placed to the screenshot, three wave stripes redrawn as closed curves running out to the left, and the gold sun left out, as the one-ink print shows it. The lettering is outlined C059 Italic (the main line) and Liberation Serif Italic, spaced to the screenshot; the original typeface is not identified. Overlap with the screenshot: flag and stripes 95 percent, lettering 58–66 percent (intersection over union at screenshot resolution). The blue-violet #3C40A0 is estimated from the screenshot, not a colour specification.",
+        "sha256": "0dc22df8ae67cf9b14162cb978440be88ede8749aa9b8a353792bb2488a224ad",
+        "bytes": 40034,
+        "darkBackground": false,
+        "search": "tourism-recreation-culture-vector-2026-11-22"
+      }
+    ]
+  },
+  {
     "program": "bceid",
     "assets": [
       {

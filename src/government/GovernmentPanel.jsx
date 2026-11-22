@@ -827,7 +827,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
         {node.kind === 'premier' && <PremierList year={year} />}
       </section>
 
-      {isBody && <LogoCard node={node} theme={theme} />}
+      {(isBody || node.kind === 'ministry') && <LogoCard node={node} theme={theme} />}
       <Suspense fallback={null}><Salaries key={node.id} node={node} year={year} /></Suspense>
       <EventsCard events={node.events} day={day} />
       {onOpenInstrument && <LegislationCard node={node} onOpen={onOpenInstrument} />}

@@ -35,6 +35,9 @@ export const PROGRAM_ENTRY_OWNERS = {
   'vector-canada-starts-here-bc-jobs-plan-2012': 'pacific-gateway',
   'best-place-on-earth': 'best-place-on-earth',
   'bc-travel-industry-ca-1970': 'department-of-travel-industry',
+  // Ministries' flag-years marks: owned by the ministry's node on the government map.
+  'bc-environment-flag-years': 'ministry-of-environment-1988',
+  'tourism-recreation-culture-1986': 'ministry-of-tourism-recreation-and-culture-1986',
   'bceid-reversed': 'bceid',
   'bceid-reversed-rebuilt': 'bceid'
 }
@@ -219,6 +222,47 @@ export const RECONCILED_SUBJECTS = [
     sources: [{ title: '“This is British Columbia”, published by the Department of Travel Industry, undated [about 1970]', citation: 'Print publication; no online copy recorded.' }],
     nextAction: 'Find dated publications of the department, 1967–1975, that show the map-and-dogwood mark.',
     note: 'A provincial department, 1967–1975. Its map-and-dogwood mark is held as a reconstruction from a photograph of an undated book. The department is a ministry in the government atlas, not a separate agency.'
+  }),
+  subject({
+    id: 'ministry-of-environment-1988',
+    label: 'BC Environment',
+    name: 'Ministry of Environment, 1988–1991',
+    kind: 'government-branch',
+    graphNode: 'ministry-of-environment-1988',
+    graphYear: 1989,
+    aliases: ['BC Environment', 'Ministry of Environment'],
+    collectionIds: ['bc-environment'],
+    priority: 3,
+    sources: [{
+      title: 'An undated printed cover with the BC Environment band',
+      citation: 'Supplied as a scan; its title and date are not in the picture.'
+    }],
+    nextAction: 'Find a dated publication with the BC Environment band, and whether it was used under Environment and Parks before 1988 or Environment, Lands and Parks after 1991.',
+    note: 'The ministry between Environment and Parks (1986–1988) and Environment, Lands and Parks (1991–2001). Its mark names it in the way BC Parks’ and BC Lands’ badges name theirs, so it is held as a reconstruction on the gallery’s own flag artwork.',
+    relations: [
+      { subject: 'sub-bc-parks', type: 'related-to', label: 'Badges of the same flag-years identity' },
+      { subject: 'bc-lands', type: 'related-to', label: 'Badges of the same flag-years identity' }
+    ]
+  }),
+  subject({
+    id: 'ministry-of-tourism-recreation-and-culture-1986',
+    label: 'Tourism, Recreation and Culture',
+    name: 'Ministry of Tourism, Recreation and Culture, 1986–1988',
+    kind: 'government-branch',
+    graphNode: 'ministry-of-tourism-recreation-and-culture-1986',
+    graphYear: 1987,
+    aliases: ['Ministry of Tourism, Recreation and Culture', 'Tourism, Recreation and Culture'],
+    collectionIds: ['tourism-recreation-culture'],
+    priority: 3,
+    sources: [{
+      title: 'The ministry’s logo with “HON. BILL REID, MINISTER”',
+      citation: 'Supplied as a screenshot; the document it was taken from is not recorded.'
+    }],
+    nextAction: 'Find the printed source of the logo, and its colour, in the ministry’s publications of 1986–1988.',
+    note: 'A ministry from November 1986 to July 1988, with one minister, Bill Reid, whose name its logo carries. The Province’s tourism marketing was later Tourism BC’s.',
+    relations: [
+      { subject: 'department-of-travel-industry', type: 'related-to', label: 'An earlier department for the Province’s tourism' }
+    ]
   }),
   subject({
     id: 'bceid',

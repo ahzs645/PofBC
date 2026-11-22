@@ -1127,6 +1127,44 @@ export const GALLERY_COLLECTIONS = [
       'lands-badge': ONE_OFFS.filter((entry) => LANDS_ONE_OFFS.includes(entry.id)).map(provincial)
     })
   },
+  // Ministries' own marks from the flag years. A ministry is not a body of the atlas, but it is a
+  // node of the government map, so each collection is tied to its ministry there.
+  {
+    id: 'bc-environment',
+    shelf: 'bodies',
+    label: 'BC Environment',
+    body: 'Ministry of Environment, 1988–1991',
+    years: 'flag years',
+    graphNode: 'ministry-of-environment-1988',
+    graphYear: 1989,
+    cover: 'bc-environment-flag-years',
+    intro: 'The Ministry of Environment’s mark from the flag years: “BC” beside the flag symbol with ' +
+      '“Environment” below, as an undated cover prints it, cream on a diagonal green band. Rebuilt from ' +
+      'the gallery’s own flag artwork and Helvetica Bold, fitted to a scan; it opens upright in one ink, ' +
+      'with the cover’s cream and its diagonal band as versions. BC Parks’ and BC Lands’ badges are the ' +
+      'same family.',
+    eras: withMarks(COLLECTION_ERAS['bc-environment'], {
+      'environment-flag': specimenEntriesOf('bc-environment')
+    })
+  },
+  {
+    id: 'tourism-recreation-culture',
+    shelf: 'bodies',
+    label: 'Tourism, Recreation and Culture',
+    body: 'Ministry of Tourism, Recreation and Culture, 1986–1988',
+    years: '1986–1988',
+    graphNode: 'ministry-of-tourism-recreation-and-culture-1986',
+    graphYear: 1987,
+    cover: 'tourism-recreation-culture-1986',
+    intro: 'The ministry’s mark under its only minister, Bill Reid: the flag symbol with its stripes run ' +
+      'out to the left as three long bands between “Tourism” and “Recreation and Culture”, in one ' +
+      'blue-violet ink. Rebuilt from the gallery’s own flag artwork (the Super, Natural sign’s) and ' +
+      'italic serif outlines, fitted to a screenshot. The Province’s tourism marketing later went to ' +
+      'Tourism BC.',
+    eras: withMarks(COLLECTION_ERAS['tourism-recreation-culture'], {
+      'trc-flag-stripes': specimenEntriesOf('tourism-recreation-culture')
+    })
+  },
   {
     id: 'bc-mark',
     shelf: 'bc-mark',
@@ -1157,7 +1195,7 @@ GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
 // The Department of Travel Industry's is folded into the BC mark collection.
 // A program's published specimens belong to the body its one-off stands for (WorkBC's to WorkBC, Where
 // ideas work to the Public Service Agency), so that body's panel finds its original files too.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc'].includes(collection.id))
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc', 'specimens-bc-environment', 'specimens-tourism-recreation-culture'].includes(collection.id))
   .map((collection) => {
     const node = GRAPH_NODES[collection.id.replace(/^specimens-/, '')]
     return node ? { ...collection, entries: collection.entries.map((entry) => ({ ...entry, graphNode: entry.graphNode ?? node })) } : collection
