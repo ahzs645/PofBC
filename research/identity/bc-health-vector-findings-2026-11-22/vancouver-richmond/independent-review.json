@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "review": "Independent second review of three SVG and PDF exports against original source PDFs",
+  "svg_checks": {
+    "embedded_images": 0,
+    "live_text_elements": 0,
+    "external_resources": 0,
+    "clipped_artwork_found": false
+  },
+  "eight_times_render_comparison": {
+    "colour_lockup_pdf_vs_original_source_crop_rgb_mae_0_255": 0.0,
+    "colour_emblem_pdf_vs_original_source_crop_rgb_mae_0_255": 0.0
+  },
+  "svg_vs_pdf_rgb_mae_0_255": {
+    "colour_lockup": 0.0322,
+    "colour_emblem": 0.0514,
+    "purple_lockup": 0.1181
+  },
+  "visual_checks": "Stem, leaf, dry-brush gaps, heart, board name and tagline retained. Purple publication cream background omitted as documented. Source white knockout shapes retained in two-colour artwork."
+}

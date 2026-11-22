@@ -6962,6 +6962,34 @@ export const COLLECTED_BODIES = [
     "notes": "The 1999 health plan supplies the complete green trees and council name; the original 2000 website supplies the black standalone tree emblem. Both are raster specimens for the Community Health Council.",
     "assets": [
       {
+        "id": "historical-south-cariboo-thankyou-monochrome",
+        "label": "South Cariboo Community Health Council: black-and-grey logo, opening-ceremonies thank-you page",
+        "file": "identity-collected/south-cariboo-community-health-council/south-cariboo-community-health-council-thankyou-monochrome.jpg",
+        "format": "jpg",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "South Cariboo Community Health Council",
+        "sourcePage": "https://web.archive.org/web/20010718201751id_/http://www.100mile.com:80/health/thankyou/",
+        "sourceUrl": "https://web.archive.org/web/20040916225305id_/http://www.100mile.com:80/health/thankyou/image11.jpg",
+        "sourceLocator": "The council’s thank-you page for the opening ceremonies, image11.jpg; the same file name is on the page in captures of 2000 and 2001, but the image itself is verified only from the capture of 16 September 2004",
+        "sourceFile": null,
+        "sourceDate": "2004-09-16",
+        "observedDate": "2026-11-22",
+        "dateNote": "The Internet Archive’s capture date of the image. The page naming it was captured in 2000 and 2001, which does not by itself date these bytes.",
+        "evidenceType": "archived-website-raster",
+        "notes": "The two brush-textured trees, one black and one grey, beside the stacked name in black: the green 1999 logo in one colour and grey.",
+        "fidelityNote": "The archived original JPEG, byte for byte, at its own 200 × 100 px; the page displayed it slightly larger.",
+        "sha256": "74ac1ccf97d6abb8e662621461643acf6e3ef06967cd2ff2ade1a091ba3a913b",
+        "bytes": 5586,
+        "darkBackground": false,
+        "previewWidth": 200,
+        "previewHeight": 100,
+        "variantOf": "historical-south-cariboo-1999-health-plan",
+        "versionLabel": "Black and grey, thank-you page (2004 capture)",
+        "search": "bc-health-vector-findings-2026-11-22"
+      },
+      {
         "isVector": false,
         "supplied": false,
         "reconstruction": false,
@@ -7444,6 +7472,104 @@ export const COLLECTED_BODIES = [
         "previewHeight": 208
       },
       {
+        "id": "vancouver-richmond-health-board-original-colour-lockup",
+        "label": "Vancouver/Richmond Health Board: red-and-purple logo with tagline, original vector",
+        "file": "identity-collected/vancouver-richmond-health-board/vancouver-richmond-health-board-original-colour-lockup.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Vancouver/Richmond Health Board",
+        "sourcePage": "https://web.archive.org/web/20030426095928id_/http://www.vcn.bc.ca:80/vrhb/Down_Loads/CaregiverSupport/TakeCareHandBook.pdf",
+        "sourceUrl": "https://web.archive.org/web/20030426095928id_/http://www.vcn.bc.ca:80/vrhb/Down_Loads/CaregiverSupport/TakeCareHandBook.pdf",
+        "sourceLocator": "“Take Care: A handbook for families caring for older adults”, revised 2000 (back cover form HED2050 00/08), PDF page 1, the cover; the Internet Archive’s capture of 26 April 2003",
+        "sourceFile": "TakeCareHandBook.pdf",
+        "sourceDate": "2000-09",
+        "observedDate": "2026-11-22",
+        "dateNote": "The handbook says it was revised in 2000; its form code reads 00/08 and its PDF was made on 28 September 2000. The 2003 capture is when the archive kept it, not when the logo was adopted.",
+        "evidenceType": "official-pdf-vector",
+        "notes": "The board’s apple-heart emblem, a red heart in a purple dry-brush apple, beside “Vancouver/Richmond Health Board” in red serif and “Working Together for Better Health” in purple italic.",
+        "fidelityNote": "Original artwork: the cover’s own PDF drawing operations for the logo, isolated with their coordinates, curves and fills unchanged (no tracing, redrawing or font substitution; the lettering was already outlines). Rendered at 14×, the isolated PDF matches the cover to within antialiasing. The PDF download keeps the publication’s named inks, PANTONE 1797 CVC (red) and PANTONE 2627 CVC (purple); the SVG’s colours are RGB conversions of them, not a print standard. The dry-brush knockouts are white shapes, as printed, not holes.",
+        "sha256": "6a6fa277b08b87380e4399eccd143628aec2021c6268082371699d350c190551",
+        "bytes": 119613,
+        "darkBackground": false,
+        "downloads": [
+          {
+            "label": "Download original vector PDF (named inks)",
+            "file": "identity-collected/vancouver-richmond-health-board/vancouver-richmond-health-board-original-colour-lockup.pdf",
+            "sha256": "6c9cf450f9cfcc65eb82e48859b055eeee242b688dc0163b1a40f4d651900d31"
+          }
+        ],
+        "search": "bc-health-vector-findings-2026-11-22",
+        "versionLabel": "Original vector (Take Care handbook, 2000)"
+      },
+      {
+        "id": "vancouver-richmond-health-board-original-purple-lockup",
+        "label": "Vancouver/Richmond Health Board: one-colour purple logo, original vector",
+        "file": "identity-collected/vancouver-richmond-health-board/vancouver-richmond-health-board-original-purple-lockup.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Vancouver/Richmond Health Board",
+        "sourcePage": "https://web.archive.org/web/20040107163909id_/http://www.vcn.bc.ca:80/vrhb/Down_Loads/VRHB_Health_Plans/Directional_Plan/VHRB_Directional_Plan.pdf",
+        "sourceUrl": "https://web.archive.org/web/20040107163909id_/http://www.vcn.bc.ca:80/vrhb/Down_Loads/VRHB_Health_Plans/Directional_Plan/VHRB_Directional_Plan.pdf",
+        "sourceLocator": "“Directional Plan: Working Together for Better Health 2000–2003”, PDF page 1, the cover’s upper left; the Internet Archive’s capture of 7 January 2004",
+        "sourceFile": "VHRB_Directional_Plan.pdf",
+        "sourceDate": "2000-02",
+        "observedDate": "2026-11-22",
+        "dateNote": "The plan’s PDF was made on 29 February 2000 and modified in July 2001. The 2004 capture is when the archive kept it.",
+        "evidenceType": "official-pdf-vector",
+        "notes": "The same logo in one purple, with the heart left open so the page shows through, as on the cover of the 2000–2003 directional plan.",
+        "fidelityNote": "Original artwork: the plan cover’s own PDF drawing operations for the logo, isolated unchanged (no tracing or redrawing; the lettering was already outlines). The cover’s pale cream ground is not part of the logo and is left out. The purple is the cover’s process colour (C 83, M 100, Y 0, K 23), converted to RGB for the SVG.",
+        "sha256": "ee964a7c16a99c49595fef08ea488bc4b376b8961c59aa2314f67b8304b586ee",
+        "bytes": 82152,
+        "darkBackground": false,
+        "downloads": [
+          {
+            "label": "Download original vector PDF (named inks)",
+            "file": "identity-collected/vancouver-richmond-health-board/vancouver-richmond-health-board-original-purple-lockup.pdf",
+            "sha256": "e50b16050efd783af8e4d415e6261f407b48d33be3753f79f30a10ca1b39592c"
+          }
+        ],
+        "search": "bc-health-vector-findings-2026-11-22",
+        "variantOf": "vancouver-richmond-health-board-original-colour-lockup",
+        "versionLabel": "One colour, purple (directional plan, 2000)"
+      },
+      {
+        "id": "vancouver-richmond-health-board-original-colour-emblem",
+        "label": "Vancouver/Richmond Health Board: the apple-heart emblem alone, original vector",
+        "file": "identity-collected/vancouver-richmond-health-board/vancouver-richmond-health-board-original-colour-emblem.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Vancouver/Richmond Health Board",
+        "sourcePage": "https://web.archive.org/web/20030426095928id_/http://www.vcn.bc.ca:80/vrhb/Down_Loads/CaregiverSupport/TakeCareHandBook.pdf",
+        "sourceUrl": "https://web.archive.org/web/20030426095928id_/http://www.vcn.bc.ca:80/vrhb/Down_Loads/CaregiverSupport/TakeCareHandBook.pdf",
+        "sourceLocator": "“Take Care: A handbook for families caring for older adults”, revised 2000 (back cover form HED2050 00/08), PDF page 1, the cover; the Internet Archive’s capture of 26 April 2003",
+        "sourceFile": "TakeCareHandBook.pdf",
+        "sourceDate": "2000-09",
+        "observedDate": "2026-11-22",
+        "dateNote": "The handbook says it was revised in 2000; its form code reads 00/08 and its PDF was made on 28 September 2000. The 2003 capture is when the archive kept it, not when the logo was adopted.",
+        "evidenceType": "official-pdf-vector",
+        "notes": "The red-and-purple apple-heart emblem without the name, from the same cover.",
+        "fidelityNote": "Original artwork: the cover’s own PDF drawing operations for the logo, isolated with their coordinates, curves and fills unchanged (no tracing, redrawing or font substitution; the lettering was already outlines). Rendered at 14×, the isolated PDF matches the cover to within antialiasing. The PDF download keeps the publication’s named inks, PANTONE 1797 CVC (red) and PANTONE 2627 CVC (purple); the SVG’s colours are RGB conversions of them, not a print standard. The dry-brush knockouts are white shapes, as printed, not holes.",
+        "sha256": "22b46a30a688061605f8e77541e81b366c8df157ee58bd1b3f4b19500c20c63e",
+        "bytes": 50467,
+        "darkBackground": false,
+        "downloads": [
+          {
+            "label": "Download original vector PDF (named inks)",
+            "file": "identity-collected/vancouver-richmond-health-board/vancouver-richmond-health-board-original-colour-emblem.pdf",
+            "sha256": "5723775f3f6ffc6b65a4ba3a2b81af79a01455c986c44b17f4a37708cb22fc6b"
+          }
+        ],
+        "search": "bc-health-vector-findings-2026-11-22",
+        "variantOf": "vancouver-richmond-health-board-original-colour-lockup",
+        "versionLabel": "Emblem alone"
+      },
+      {
         "id": "historical-vancouver-richmond-health-board-tmj-2001",
         "label": "Official mark specimen with Working Together for Better Health tagline",
         "file": "identity-collected/vancouver-richmond-health-board/vancouver-richmond-health-board-2001-official-mark.png",
@@ -7519,7 +7645,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "previewWidth": 237,
         "previewHeight": 63,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "versionLabel": "Image, report (April 2001)",
+        "variantOf": "vancouver-richmond-health-board-original-colour-lockup"
       },
       {
         "id": "historical-vancouver-richmond-health-board-colour-2000-original",
@@ -7545,7 +7673,9 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "previewWidth": 1200,
         "previewHeight": 320,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "versionLabel": "Image, diesel review (November 2000)",
+        "variantOf": "vancouver-richmond-health-board-original-colour-lockup"
       }
     ]
   },

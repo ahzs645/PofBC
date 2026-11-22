@@ -1,0 +1,156 @@
+{
+  "result": "Confirmed genuine original vector artwork in two original publication PDFs.",
+  "sources": [
+    {
+      "file": "TakeCareHandBook.pdf",
+      "url": "https://web.archive.org/web/20030426095928id_/http://www.vcn.bc.ca:80/vrhb/Down_Loads/CaregiverSupport/TakeCareHandBook.pdf",
+      "title": "Take Care: A handbook for families caring for older adults",
+      "publication_date_evidence": "Page 2 states revised in 2000; back cover form code HED2050 00/08.",
+      "source_pdf_metadata": {
+        "format": "PDF 1.2",
+        "title": "Take Care - 2.0",
+        "author": "estelle",
+        "subject": "Take Care - 2.0",
+        "keywords": "",
+        "creator": "Adobe PageMaker 6.52",
+        "producer": "Acrobat Distiller 4.0 for Windows",
+        "creationDate": "D:20000928105437",
+        "modDate": "D:20000928105556-07'00'",
+        "trapped": "",
+        "encryption": null
+      },
+      "sha256": "bf855f55c04a9cb962ab411319b3192f64975cfd0e99ff209966afc787ef0d99",
+      "cover_image_objects": 0,
+      "cover_path_count": 130,
+      "spot_colours": [
+        "PANTONE 1797 CVC",
+        "PANTONE 2627 CVC"
+      ]
+    },
+    {
+      "file": "VHRB_Directional_Plan.pdf",
+      "url": "https://web.archive.org/web/20040107163909id_/http://www.vcn.bc.ca:80/vrhb/Down_Loads/VRHB_Health_Plans/Directional_Plan/VHRB_Directional_Plan.pdf",
+      "title": "Directional Plan: Working Together for Better Health 2000\u20132003",
+      "source_pdf_metadata": {
+        "format": "PDF 1.2",
+        "title": "",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "",
+        "producer": "Acrobat Distiller 3.0 for Power Macintosh",
+        "creationDate": "D:20000229140722",
+        "modDate": "D:20010724135711-07'00'",
+        "trapped": "",
+        "encryption": "Standard V1 R2 40-bit RC4"
+      },
+      "sha256": "591f21cffd6cac80342bb6c76aa9bbf99f2dce7dddfc631a3137ecf7a071036f",
+      "cover_image_objects": 0,
+      "cover_path_count": 131,
+      "purple_device_cmyk": [
+        0.83,
+        1,
+        0,
+        0.23
+      ],
+      "note": "Open heart/negative-space monochrome variant. Original cover background pale cream is preserved in source crop only; logo SVG/PDF have no added background."
+    }
+  ],
+  "method": "Isolate original PDF content-stream path operators belonging to logo, preserving original coordinates, B\u00e9zier control points, fills, strokes, overprint state and colour resources; copy source page resources, remove unused Font resources, set crop to logo; export isolated PDF through PyMuPDF SVG writer. No tracing, reconstruction, smoothing, recolouring or font substitution. All lettering was already vector outlines in source.",
+  "colour_note": "Original named Pantone colours and PDF colour-space definitions remain in colour PDFs. SVG colours are RGB conversions of those definitions and are not a replacement print colour standard. White dry-brush knockout shapes in two-colour source have been preserved as white shapes, not converted to transparency.",
+  "artifacts": [
+    {
+      "name": "VRHB-original-colour-lockup",
+      "source_label": "Vancouver/Richmond Health Board original two-colour logo; Take Care, revised 2000, cover",
+      "source_page": 1,
+      "crop_original_page_points": [
+        146.7,
+        454.7,
+        358.1,
+        512.6
+      ],
+      "source_path_count_in_extraction": 127,
+      "svg_path_count": 161,
+      "svg_image_count": 0,
+      "svg_text_count": 0,
+      "external_references": [],
+      "svg_sha256": "f38d0939dacc701ecd7512e7aa0205b3c20e279519959afaa24d23446122c7da",
+      "pdf_sha256": "6c9cf450f9cfcc65eb82e48859b055eeee242b688dc0163b1a40f4d651900d31"
+    },
+    {
+      "name": "VRHB-original-colour-emblem",
+      "source_label": "Vancouver/Richmond Health Board original two-colour emblem; Take Care, revised 2000, cover",
+      "source_page": 1,
+      "crop_original_page_points": [
+        146.7,
+        454.7,
+        180.3,
+        496.3
+      ],
+      "source_path_count_in_extraction": 67,
+      "svg_path_count": 73,
+      "svg_image_count": 0,
+      "svg_text_count": 0,
+      "external_references": [],
+      "svg_sha256": "a404a798f2797a424ae533020c4eda447698c86527f31399890b0b2ef970c8c3",
+      "pdf_sha256": "5723775f3f6ffc6b65a4ba3a2b81af79a01455c986c44b17f4a37708cb22fc6b"
+    },
+    {
+      "name": "VRHB-original-purple-lockup",
+      "source_label": "Vancouver/Richmond Health Board original single-colour purple logo; Directional Plan 2000\u20132003, cover",
+      "source_page": 1,
+      "crop_original_page_points": [
+        77.3,
+        33.5,
+        279.8,
+        89.1
+      ],
+      "source_path_count_in_extraction": 92,
+      "svg_path_count": 93,
+      "svg_image_count": 0,
+      "svg_text_count": 0,
+      "external_references": [],
+      "svg_sha256": "3e5b3f643d6954a376400f9702105c674d90279adab5ec1c10fd1e2e1a4ecaa7",
+      "pdf_sha256": "e50b16050efd783af8e4d415e6261f407b48d33be3753f79f30a10ca1b39592c"
+    }
+  ],
+  "validation": [
+    {
+      "name": "VRHB-original-colour-lockup",
+      "render_scale": 14,
+      "pixels": [
+        2960,
+        811
+      ],
+      "mean_absolute_channel_difference_0_to_255": 0.0008234189800157741,
+      "fraction_pixels_any_channel_different": 0.0003145099476788749,
+      "note": "Tiny antialiasing differences from crop translation rounding; identical source path operators. Monochrome comparator substitutes white for cover cream solely to compare geometry.",
+      "svg_render_mean_absolute_channel_difference_0_to_255": 0.032320236389286945
+    },
+    {
+      "name": "VRHB-original-colour-emblem",
+      "render_scale": 14,
+      "pixels": [
+        471,
+        583
+      ],
+      "mean_absolute_channel_difference_0_to_255": 0.003990147843050139,
+      "fraction_pixels_any_channel_different": 0.0016752065784633985,
+      "note": "Tiny antialiasing differences from crop translation rounding; identical source path operators. Monochrome comparator substitutes white for cover cream solely to compare geometry.",
+      "svg_render_mean_absolute_channel_difference_0_to_255": 0.05137664349297567
+    },
+    {
+      "name": "VRHB-original-purple-lockup",
+      "render_scale": 14,
+      "pixels": [
+        2835,
+        779
+      ],
+      "mean_absolute_channel_difference_0_to_255": 0.001624506916191412,
+      "fraction_pixels_any_channel_different": 0.000493555478579013,
+      "note": "Tiny antialiasing differences from crop translation rounding; identical source path operators. Monochrome comparator substitutes white for cover cream solely to compare geometry.",
+      "svg_render_mean_absolute_channel_difference_0_to_255": 0.11748748565179887
+    }
+  ],
+  "variant_comparison": "The colour source is not merely a recolouring of the monochrome source: the two-spot Take Care artwork includes explicit fine strokes around name letters and apple elements, and white knockout shapes in the colour emblem. The Directional Plan one-colour artwork uses filled compound paths, with an open negative-space heart. Each extraction preserves its publication-specific original geometry and colour treatment."
+}

@@ -1660,6 +1660,19 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "vancouver-richmond-health-board-original-colour-lockup": {
+  "light": {
+   "file": "identity-display/vancouver-richmond-health-board-original-colour-lockup.light.svg",
+   "aspect": 3.6834,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-richmond-health-board-original-colour-lockup.dark.svg",
+   "aspect": 3.6834,
+   "recoloured": true,
+   "palette": true
+  }
+ },
  "okanagan-similkameen-health-region-traced": {
   "light": {
    "file": "identity-display/okanagan-similkameen-health-region-traced.light.svg",
