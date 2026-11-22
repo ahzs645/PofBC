@@ -1,4 +1,11 @@
 // The index stays small: an initiative's sourced records are loaded only when it opens.
+// The index card's cover sits on a light panel, so a logo made for a dark ground is shown there as
+// the gallery's copy of its vector redrawn for a light page, not as the white file itself.
+const gamesenseCover = {
+  file: 'identity-display/source-recovered-gamesense-bclc-2025-reverse.light.svg',
+  alt: 'GameSense capsule with the BCLC wordmark beneath',
+  caption: 'BCLC’s 2025 retailer card, its white logo redrawn for a light ground'
+}
 const gamesenseLogo = {
   file: 'identity-recovered/gamesense/gamesense-reversed.png',
   alt: 'GameSense — white capsule logo',
@@ -35,7 +42,7 @@ export const INITIATIVES = [
     title: 'GameSense',
     subtitle: 'British Columbia Lottery Corporation',
     summary: 'BCLC’s player health and responsible-gambling program, introduced in its casinos in 2009 and since licensed to lotteries and operators across North America.',
-    cover: gamesenseLogo,
+    cover: gamesenseCover,
     tags: ['Program', 'Logos', 'Timeline'],
     searchTerms: ['GameSense', 'Game Sense', 'BCLC', 'British Columbia Lottery Corporation', 'player health', 'responsible gambling', 'GameSense Advisor'],
     relatedBodyIds: ['bclc', 'gamesense']

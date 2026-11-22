@@ -84,11 +84,6 @@ export const InitiativesView = () => {
 
   const results = searchInitiatives(query, INITIATIVES)
   return <main className="initiatives">
-    <header className="initiatives__intro">
-      <p className="initiatives__eyebrow">Programs · campaigns · public services</p>
-      <h2>The programs<br />behind the marks.</h2>
-      <p>{INDEX_DESCRIPTION} Follow each initiative across the organizations and eras that shaped it.</p>
-    </header>
     <div className="initiatives__toolbar">
       <div><h3>Explore initiatives</h3><p aria-live="polite">{results.length} {results.length === 1 ? 'initiative' : 'initiatives'}{query.trim() ? ' matching your search' : ' in the collection'}</p></div>
       <label className="initiatives__search"><span className="initiatives__sr-only">Search initiatives</span><input type="search" placeholder="Search initiatives or programs" value={query} onChange={(event) => setQuery(event.target.value)} /></label>
