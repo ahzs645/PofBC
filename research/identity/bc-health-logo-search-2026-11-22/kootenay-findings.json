@@ -1,0 +1,97 @@
+{
+  "organization": "Kootenay Boundary Community Health Services Society",
+  "result": "No original vector verified. Recovered original colour website variant as a small raster GIF.",
+  "retrieved_date": "2026-11-22",
+  "asset": {
+    "filename": "archive-logo.gif",
+    "local_path": "/workspace/scratch/8313ed9fef44/research/kootenay/archive-logo.gif",
+    "source_url": "https://web.archive.org/web/20020812142027id_/http://kbchss.hnet.bc.ca:80/images/nav_top/kbh_logo.gif",
+    "original_url": "http://kbchss.hnet.bc.ca:80/images/nav_top/kbh_logo.gif",
+    "archive_capture": "2002-08-12T14:20:27Z",
+    "format": "GIF",
+    "width": 131,
+    "height": 139,
+    "bytes": 3373,
+    "sha256": "739ddef76c5ccb471634ceb3a51a1acb4bb3a3a394a8562b0600c6ba869244fb",
+    "main_palette": [
+      "#330066",
+      "#669999",
+      "#FFFFFF"
+    ],
+    "vector": false,
+    "visual_description": "Purple linked figures and upper outer Kootenay Boundary Health wording; teal mountains/ground; round white enclosure and lower inner Together for health slogan."
+  },
+  "variant_caution": "This is a distinct archived colour website variant, not conclusive colour evidence for the exact 1998 letterhead lockup. The letterhead has together at the top inside the circle, for near the middle below the figures, health at bottom, and no upper outer organization name. Any new SVG from either raster is a reconstruction, not a recovered original vector.",
+  "context_sources": [
+    {
+      "filename": "archive-home.html",
+      "url": "https://web.archive.org/web/20020719103729id_/http://www.kbchss.hnet.bc.ca:80/",
+      "verification": "Original homepage identifies organization as Kootenay Boundary Health, metadata connects its April 1997 formation with community health services societies. Last Revised January 21, 2002. HTML directly references the recovered GIF at 131x139."
+    },
+    {
+      "filename": "kb-about.html",
+      "url": "https://web.archive.org/web/20020803165237id_/http://www.kbchss.hnet.bc.ca:80/about_us.html",
+      "verification": "Organization mission/services and same GIF. Last Revised January 21, 2002."
+    },
+    {
+      "filename": "kbh-credits.html",
+      "url": "https://web.archive.org/web/20020803171643id_/http://www.kbchss.hnet.bc.ca:80/credits.html",
+      "verification": "Metadata author is Designucleus Corporate Communications www.designucleus.com. Visible credits body blank. This establishes website authorship only, not logo authorship."
+    }
+  ],
+  "archive_checks": [
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=kbchss.hnet.bc.ca/*&output=json&filter=statuscode:200&collapse=urlkey",
+      "outcome": "Successful URL inventory returned HTML, GIF and JPEG entries. No PDF/EPS/AI/SVG entry observed. Exact record count not retained; do not treat as an exhaustive count of every capture."
+    },
+    {
+      "filename": "cdx-publications-hnet.json",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.kbchss.hnet.bc.ca/publications.html&output=json",
+      "outcome": "One capture, timestamp 20020907015213, HTTP404. No usable publications page."
+    },
+    {
+      "filename": "cdx-publications-alias.json",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.kootenay-boundary-health.ca/publications.html&output=json",
+      "outcome": "Successful query returned empty array."
+    },
+    {
+      "filename": "cdx-kbh-exact-home.json",
+      "url": "https://web.archive.org/cdx/search/cdx?url=www.kootenay-boundary-health.ca/&output=json",
+      "outcome": "Successful query returned empty array."
+    },
+    {
+      "filename": "cdx-kbh-images.json",
+      "url": "https://web.archive.org/cdx/search/cdx?url=kootenay-boundary-health.ca/*&output=json&filter=statuscode:200&filter=mimetype:image/.*&collapse=urlkey",
+      "outcome": "Successful query returned empty array."
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=kootenay-boundary-health.ca/*&output=json&filter=statuscode:200&filter=mimetype:application/pdf&collapse=urlkey",
+      "outcome": "Timed out; no conclusion about available PDFs."
+    },
+    {
+      "url": "https://web.archive.org/cdx/search/cdx?url=kootenay-boundary-health.ca&matchType=domain&output=json&collapse=urlkey",
+      "outcome": "HTTP503; no conclusion about all domain captures."
+    }
+  ],
+  "uninspected_lead": {
+    "description": "Canadian Nurse September 2001 vol97 no8 printed p56 recruitment ad; lead supplied by existing project notes, not visually verified in this search.",
+    "publisher_url": "https://canadian-nurse.com/archive/2000-2009",
+    "pdf_url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/8de47524-f9d6-87da-7be2-8a87771997ec_file.pdf",
+    "outcome": "Publisher archive and bare S3 PDF returned HTTP403. Issue existence appears in indexed publisher archive, but ad/logo/vector status remains unverified."
+  },
+  "existing_reference_check": {
+    "filename": "response.pdf",
+    "url": "https://docs.openinfo.gov.bc.ca/Response_Package_TRA-2017-70554.pdf",
+    "verification": "34-page PDF; page28 (November9 1998 letter) has one raster image 1273x1658 and zero vector drawings; page32 (August28 1998 letter) has one raster image 1269x1652 and zero vector drawings. Both visually inspected.",
+    "rendered_pages": [
+      "response-page-28.png",
+      "response-page-32.png"
+    ]
+  },
+  "excluded_asset": {
+    "filename": "archive-logo.jpg",
+    "url": "https://web.archive.org/web/20021011005649id_/http://kbchss.hnet.bc.ca:80/logo.jpg",
+    "reason": "Interior Health successor banner, not target logo."
+  },
+  "citation_note": "Wayback assets and HTML fetched successfully with urllib and image inspected locally; web-search open returned accessibility errors. Use direct source links, not error refs as citations of retrieved contents."
+}

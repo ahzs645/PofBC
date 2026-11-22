@@ -1,0 +1,152 @@
+{
+  "subject": "Sunshine Coast Community Health Council",
+  "research_date": "2026-11-22",
+  "result": "No original vector recovered in this search. Existing original colour raster banner remains the best verified council-logo reference.",
+  "new_findings": [
+    "Successfully retrieved broad Wayback CDX inventory after filtered queries returned 503.",
+    "Found three historically linked PDF filenames, but all captures returned by the inventory are HTML HTTP 404 records.",
+    "Inspected generic GIF candidates: one totem illustration and three quotations, not a better council logo."
+  ],
+  "prior_known_baseline": {
+    "source_homepage": "https://web.archive.org/web/20010402060735id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/",
+    "assembled_banner_url": "https://projects.ahmadjalil.com/PofBC/identity-collected/sunshine-coast-community-health-council/sunshine-coast-community-health-council-2001-website-banner.png",
+    "local_file": "banner.png",
+    "size_px": [
+      625,
+      150
+    ],
+    "format": "PNG assembled previously from three original JPEG strips",
+    "original_strips": [
+      {
+        "url": "https://web.archive.org/web/20010602235437id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/banner_top_1.jpg",
+        "size_px": [
+          625,
+          54
+        ]
+      },
+      {
+        "url": "https://web.archive.org/web/20010602234716id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/banner_mid_2.jpg",
+        "size_px": [
+          625,
+          73
+        ]
+      },
+      {
+        "url": "https://web.archive.org/web/20010602233316id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/banner_bottom_3.jpg",
+        "size_px": [
+          625,
+          23
+        ]
+      }
+    ]
+  },
+  "archive_inventory": {
+    "query_url": "https://web.archive.org/cdx/search/cdx?url=www.sunshinecoastcommunityhealthcouncil.com/*&output=json",
+    "local_file": "cdx_prefix_simple.json",
+    "capture_records": 895,
+    "distinct_urlkeys": 75,
+    "successful_capture_records": 577,
+    "earliest_timestamp": "20010218044015",
+    "latest_timestamp": "20110919110229",
+    "mime_counts": {
+      "text/html": 712,
+      "image/jpeg": 137,
+      "image/gif": 14,
+      "unk": 4,
+      "text/plain": 28
+    },
+    "status_counts": {
+      "200": 577,
+      "404": 315,
+      "400": 1,
+      "502": 2
+    },
+    "scope_caution": "Counts refer to records returned by this exact prefix query, not every document the organization ever produced. HTTP 404 HTML records are not usable PDFs."
+  },
+  "alternate_domain": {
+    "query_url": "https://web.archive.org/cdx/search/cdx?url=www.scchc.bc.ca/*&output=json",
+    "local_file": "cdx_scchc_simple.json",
+    "records_returned": 0
+  },
+  "pdf_leads": {
+    "about_page_url": "https://web.archive.org/web/20010803075132id_/http://www.sunshinecoastcommunityhealthcouncil.com/about_us.html",
+    "about_page_local": "about_us.html",
+    "captures": [
+      {
+        "urlkey": "com,sunshinecoastcommunityhealthcouncil)/health_plan.pdf",
+        "timestamp": "20030403035509",
+        "original": "http://www.sunshinecoastcommunityhealthcouncil.com:80/Health_Plan.pdf",
+        "mimetype": "text/html",
+        "statuscode": "404",
+        "digest": "CGMWAMMSJDPMUPTZ3AA7FNNKK44ZWNQA",
+        "length": "2116"
+      },
+      {
+        "urlkey": "com,sunshinecoastcommunityhealthcouncil)/health_plan_print.pdf",
+        "timestamp": "20010605091050",
+        "original": "http://www.sunshinecoastcommunityhealthcouncil.com:80/Health_Plan_print.pdf",
+        "mimetype": "text/html",
+        "statuscode": "404",
+        "digest": "GVN3W4BRKV5HTNYTR7CPAZ5AXOE67CG3",
+        "length": "568"
+      },
+      {
+        "urlkey": "com,sunshinecoastcommunityhealthcouncil)/health_plan_screen.pdf",
+        "timestamp": "20010605085154",
+        "original": "http://www.sunshinecoastcommunityhealthcouncil.com:80/Health_Plan_screen.pdf",
+        "mimetype": "text/html",
+        "statuscode": "404",
+        "digest": "GVN3W4BRKV5HTNYTR7CPAZ5AXOE67CG3",
+        "length": "568"
+      }
+    ],
+    "recovery_status": "Not recovered. Direct Wayback replay returns 404 and availability endpoint returns empty archived_snapshots for Health_Plan.pdf."
+  },
+  "generic_image_inspections": [
+    {
+      "filename": "image002.gif",
+      "size_px": [
+        53,
+        317
+      ],
+      "content": "Vertical totem-pole illustration, not the three-person/sun council symbol",
+      "source_url": "https://web.archive.org/web/20010605061517id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/image002.gif",
+      "sha256": "ccf1b12b79b28362101e98cb6635fac27c148edca3b4d660011125d857ccf3ff"
+    },
+    {
+      "filename": "image003.gif",
+      "size_px": [
+        425,
+        70
+      ],
+      "content": "Raster quotation graphic",
+      "source_url": "https://web.archive.org/web/20010815010224id_/http://sunshinecoastcommunityhealthcouncil.com:80/images/image003.gif",
+      "sha256": "5b0e14cc6221d4cec977ef4ce042be63fd4dca2b4f122f6ce7c013eb49b76425"
+    },
+    {
+      "filename": "image004.gif",
+      "size_px": [
+        214,
+        101
+      ],
+      "content": "Raster quotation graphic",
+      "source_url": "https://web.archive.org/web/20010605063454id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/image004.gif",
+      "sha256": "a8333c59632c082ef8a85998e7ca21088acb8b80819ebfecbecba0607cdeb3b8"
+    },
+    {
+      "filename": "image005.gif",
+      "size_px": [
+        310,
+        82
+      ],
+      "content": "Raster quotation graphic",
+      "source_url": "https://web.archive.org/web/20010605070008id_/http://www.sunshinecoastcommunityhealthcouncil.com:80/images/image005.gif",
+      "sha256": "ab7dff5cb72ae2c9500993711c8085742291b213ee42242837c3386842422073"
+    }
+  ],
+  "unresolved_leads": [
+    "A surviving local/original copy of Health_Plan.pdf, Health_Plan_print.pdf or Health_Plan_screen.pdf could still contain a better or vector logo. No content was available to inspect.",
+    "Physical stationery, a printer/designer original, or former council records held by its successor or a local archive remain unverified routes."
+  ],
+  "search_note": "Exact-name, shorter-name, former-domain, logo/vector and annual-report searches run through both web search engines; no vector asset returned. Prior thesis/retyped-appendix route was identified but not repeated after root confirmed it had already been excluded."
+}
