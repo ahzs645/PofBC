@@ -1,7 +1,10 @@
 // How a badge is being looked at, kept from one badge to the next. No React and no DOM.
 
 export const BADGE_VIEW_KEY = 'pofbc.badge-view.v1'
-export const BADGE_MODES = ['metal', 'vector', 'source', 'compare', 'relief', 'overlay', 'embroidery']
+export const BADGE_MODES = ['metal', 'vector', 'source', 'compare', 'overlay']
+// Views a badge no longer has, and where a reader who last used one lands: the relief is part of the
+// 3D view now (its stand-in where the full model cannot be built), and a badge is not sewn.
+const RETIRED_MODES = { relief: 'metal', embroidery: 'metal' }
 export const BADGE_CURVES = ['flat', 'cylinder', 'dome']
 export const BADGE_CAMERAS = ['front', 'oblique', 'top', 'side', 'back']
 export const MAX_RISE_MM = 8
@@ -15,7 +18,7 @@ export function normalizeBadgeView (raw) {
   const view = raw && typeof raw === 'object' ? raw : {}
   const rise = Number(view.rise)
   return {
-    mode: oneOf(view.mode, BADGE_MODES, BADGE_VIEW_DEFAULTS.mode),
+    mode: oneOf(RETIRED_MODES[view.mode] ?? view.mode, BADGE_MODES, BADGE_VIEW_DEFAULTS.mode),
     curvature: oneOf(view.curvature, BADGE_CURVES, BADGE_VIEW_DEFAULTS.curvature),
     rise: Number.isFinite(rise) ? Math.max(0, Math.min(MAX_RISE_MM, Math.round(rise * 2) / 2)) : BADGE_VIEW_DEFAULTS.rise,
     camera: oneOf(view.camera, BADGE_CAMERAS, BADGE_VIEW_DEFAULTS.camera)

@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { BADGE_VIEW_KEY, applyBadgeShape, badgeModeFor, badgeShapeFor, badgeShapeStatus, loadBadgeView, saveBadgeView } from './badgeView.js'
+import { BADGE_MODES, BADGE_VIEW_KEY, applyBadgeShape, badgeModeFor, badgeShapeFor, badgeShapeStatus, loadBadgeView, normalizeBadgeView, saveBadgeView } from './badgeView.js'
 
 test('legacy 3D preferences survive comparison and a model-specific rise cap', () => {
   const stored = new Map([[BADGE_VIEW_KEY, JSON.stringify({ mode: 'metal', curvature: 'dome', rise: 7.5, camera: 'back' })]])
@@ -55,4 +55,10 @@ test('failed or incomplete bending cannot reuse an earlier successful result', (
   }
   build.scene.bend = (mode, rise) => ({ mode, rise, radius: 90 })
   assert.equal(badgeShapeStatus(applyBadgeShape(build, shape), build, shape), 'ready', 'a successful retry restores export availability')
+})
+
+test('a reader who last used the retired Relief or Embroidery view lands on 3D', () => {
+  assert.equal(normalizeBadgeView({ mode: 'relief' }).mode, 'metal')
+  assert.equal(normalizeBadgeView({ mode: 'embroidery' }).mode, 'metal')
+  assert.ok(!BADGE_MODES.includes('relief') && !BADGE_MODES.includes('embroidery'))
 })

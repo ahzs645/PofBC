@@ -1,11 +1,16 @@
 // One badge: its drawing built as a solid metal (or leather) badge you can turn, bend across its
 // width or into a shallow dome, and export as a PNG or a GLB model, with the vector a tab away.
 //
+// One 3D view: the full model, and where that cannot be built (a drawing Medal Forge cannot read, a
+// browser whose WebGL gives out under it), the lighter front relief in its place, so 3D still shows
+// something better than a flat drawing. A badge is struck or tooled, not sewn, so it has no
+// embroidery view; the Patches view sews the cloth ones.
+//
 // Preliminary. It follows the curved badge trial of 14 November 2026 (research/badges/), which
 // compared Medal Forge and Luster on S51-O01 and preferred Medal Forge for metal badges with raised
 // lettering. Size, relief, finish and curvature are illustrative choices, not measurements.
 
-import { lazy, Suspense, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { cardLabel, loadPatchSvg, variantsOf } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
 import { holdScroll } from '../site/holdScroll.js'
@@ -24,12 +29,10 @@ import './badges.css'
 import { Select } from '../site/ui/Select.jsx'
 import { Slider } from '../site/ui/Slider.jsx'
 
-const EmbroideryViewer = lazy(() => import('../patches/PatchViewer.jsx').then((module) => ({ default: module.PatchViewer })))
 const REVIEW_URL = `${import.meta.env.BASE_URL}badge-review/index.json`
 const REVIEW_LABELS = { refine: 'Needs refinement', reconstruct: 'Needs reconstruction', reviewed: 'Reviewed', unreviewed: 'Not yet reviewed' }
 const MODES = [
   { value: 'metal', label: '3D', title: 'The drawing built as a solid badge' },
-  { value: 'relief', label: 'Relief', title: 'The front, drawn in relief' },
   { value: 'vector', label: 'Vector' }
 ]
 const REVIEW_MODES = [
@@ -180,7 +183,6 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
   // Focus starts on the way back, without a ring until the reader moves by keyboard.
   useEffect(() => { back.current?.focus({ preventScroll: true, focusVisible: false }) }, [])
   useEffect(() => {
-    if (mode === 'embroidery') return undefined
     const onKey = (event) => {
       if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey) return
       if (event.target.closest?.('input, select, textarea, canvas, [contenteditable="true"], [role="menu"], [role="listbox"]')) return
@@ -191,7 +193,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
     }
     globalThis.addEventListener('keydown', onKey)
     return () => globalThis.removeEventListener('keydown', onKey)
-  }, [onClose, onOpen, previous, next, mode])
+  }, [onClose, onOpen, previous, next])
 
   const name = `${patch.id}-${org.id}`
   const variants = variantsOf(patch)
@@ -236,7 +238,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
   const status = phase === 'loading' ? 'Loading drawing…'
     : phase === 'building' ? 'Building the badge…'
-      : phase === 'failed-build' ? 'This badge couldn’t be built in 3D. The vector is a tab away.'
+      : phase === 'failed-build' ? 'The full model couldn’t be built; this is the front in relief.'
         : phase === 'failed-source' ? 'The drawing could not be loaded.'
           : modelReady && shapeStatus === 'pending' ? 'Applying the shape…' : null
   // The 3D stage and the flat one each draw this switch in their own toolbar, so the one pressed is
@@ -246,7 +248,6 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
   if (sources.length) options.push(...REVIEW_MODES)
   // Short labels, so the tabs stay one row the height of the camera switch beside them.
   if (reference) options.push({ value: 'overlay', label: 'Overlay', title: 'The drawing laid over its source' })
-  options.push({ value: 'embroidery', label: 'Embroidery', title: 'An embroidery adaptation of the badge' })
   const modeSwitch = <Segmented ariaLabel="View" options={options} value={mode} onChange={(value) => { holdScroll(visuals.current); set({ mode: value }) }} compact />
   const sourcePane = {
     key: 'source',
@@ -259,13 +260,6 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
     key: 'vector',
     label: sources.length ? 'Vector reconstruction' : 'Vector',
     node: <img className="patch__vector" src={current?.url ?? patch.previewUrl} alt={title} draggable={false} />
-  }
-
-  if (mode === 'embroidery') {
-    return <Suspense fallback={<p role="status">Loading embroidery adaptation…</p>}>
-      <EmbroideryViewer patch={patch} org={org} position={position} previous={previous} next={next}
-        onOpen={onOpen} onClose={onClose} noun={noun} badgeToolbar={modeSwitch} />
-    </Suspense>
   }
 
   return (
@@ -285,7 +279,13 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
       <div className="patch__body">
         <div className="patch__visuals" ref={visuals}>
-          {mode === 'metal'
+          {mode === 'metal' && phase === 'failed-build'
+            ? <div className="patch-stage">
+                <div className="patch-stage__bar"><div className="patch-stage__tools">{modeSwitch}</div></div>
+                <BadgeRelief key={patch.id} drawing={current} patch={patch} title={title} failed={false} />
+                <p className="patch__status badge__fallback" role="status">The full model couldn’t be built, so this is the front in relief: it turns, but has no back, curve or exports. <button type="button" className="button--inline" onClick={() => setAttempt((n) => n + 1)}>Try the model again</button></p>
+              </div>
+            : mode === 'metal'
             ? <BadgeStage
                 sceneRef={sceneRef}
                 toolbar={modeSwitch}
@@ -295,12 +295,10 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
                 camera={view.camera}
                 onCamera={(camera) => set({ camera })}
               />
-            : mode === 'overlay' || mode === 'relief'
+            : mode === 'overlay'
             ? <div className="patch-stage">
                 <div className="patch-stage__bar"><div className="patch-stage__tools">{modeSwitch}</div></div>
-                {mode === 'overlay'
-                  ? <SourceOverlay key={patch.id} record={reference} drawing={current} title={title} />
-                  : <BadgeRelief key={patch.id} drawing={current} patch={patch} title={title} failed={phase === 'failed-source'} />}
+                <SourceOverlay key={patch.id} record={reference} drawing={current} title={title} />
               </div>
             : <PatchStage
                 resetKey={`${patch.id}:${mode}:${sourceKey}`}
@@ -323,7 +321,8 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
               />
             </div>
           )}
-          {mode === 'metal' && <>
+          {/* The relief that stands in for a model that couldn't be built has no shape to set or export. */}
+          {mode === 'metal' && phase !== 'failed-build' && <>
             <Segmented label="Shape" options={CURVES} value={view.curvature} onChange={(value) => set({ curvature: value })} compact />
             <label className="patch__light">
               <span>Rise</span>
@@ -356,7 +355,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
           </>}
 
           <div className="patch__exports">
-            {mode === 'metal' && <>
+            {mode === 'metal' && phase !== 'failed-build' && <>
               <button type="button" className="button button--primary" disabled={!ready || Boolean(exporting)} onClick={() => exportBadge('png')} title="The view as it is now">{exporting === 'png' ? 'PNG…' : 'PNG'}</button>
               <button type="button" className="button" disabled={!ready || Boolean(exporting)} onClick={() => exportBadge('glb')} title="The model as it is bent now, in metres">{exporting === 'glb' ? 'GLB…' : 'GLB'}</button>
             </>}
@@ -365,9 +364,9 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
               : <button type="button" className="button" disabled>SVG</button>}
           </div>
           {exportError && <p className="patch__status" role="alert">{exportError}</p>}
-          {(phase === 'failed-source' || (mode === 'metal' && phase === 'failed-build')) && (
+          {phase === 'failed-source' && (
             <p className="patch__status" role="alert">
-              {phase === 'failed-source' ? 'The drawing could not be loaded.' : 'The 3D model could not be built.'} <button type="button" className="button--inline" onClick={() => setAttempt((n) => n + 1)}>Try again</button>
+              The drawing could not be loaded. <button type="button" className="button--inline" onClick={() => setAttempt((n) => n + 1)}>Try again</button>
             </p>
           )}
 

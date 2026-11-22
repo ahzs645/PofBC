@@ -90,7 +90,7 @@ const textured = (result, profile, finish, lightDeg, scale, canvas) => renderTex
  * @param {(patch: object) => void} props.onOpen
  * @param {() => void} props.onClose
  */
-export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onClose, noun = 'patches', badgeToolbar = null }) => {
+export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onClose, noun = 'patches' }) => {
   // How the patch is looked at is kept from one patch to the next, and for the next visit.
   const [view, setView] = useState(() => loadView(storage()))
   const set = (change) => setView((current) => { const next = { ...current, ...change }; saveView(storage(), next); return next })
@@ -138,7 +138,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
   const textile = ['Cloth patch', 'Cloth rocker', 'Cloth embroidery'].includes(patch.medium)
   const [adaptation, setAdaptation] = useState(null)
   const preferredMode = !textile && view.mode === 'embroidery' && adaptation !== patch.id ? 'vector' : view.mode
-  const mode = badgeToolbar ? 'embroidery' : modeFor(preferredMode, showSourceReview, Boolean(reference))
+  const mode = modeFor(preferredMode, showSourceReview, Boolean(reference))
   const sew = mode === 'embroidery' || mode === 'compare'
   const options = Object.entries(MODE_LABELS)
     .filter(([id]) => id === 'overlay' ? Boolean(reference) : showSourceReview || (id !== 'source' && id !== 'compare'))
@@ -305,7 +305,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
           </div> : <PatchStage
             resetKey={`${patch.id}:${mode}`}
             panes={[sourcePane, vectorPane, simulationPane].filter((pane) => (mode === 'compare' ? pane.key !== 'source' || showSourceReview : pane.key === mode))}
-            toolbar={badgeToolbar ?? modeSwitch}
+            toolbar={modeSwitch}
           />}
         </div>
 

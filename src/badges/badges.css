@@ -17,3 +17,6 @@
 .badge-stage__pane canvas:focus-visible { outline: 2px solid var(--focus, #6aa6ff); outline-offset: -2px; }
 .badge-stage__pane > .patch__status { position: absolute; inset: auto 0 16px; margin: 0; color: #d6dde2; }
 .badge-stage__pane > .patch__status[role='alert'] { inset: 0; display: grid; place-items: center; padding: 24px; }
+
+/* Where the full model could not be built, the relief stands in, and says so. */
+.badge__fallback { margin: 0; padding: 0 12px 12px; text-align: center; }
