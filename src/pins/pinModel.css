@@ -1,5 +1,6 @@
-/* A pin's 3D view, in the poster viewer's dark glass (posters.css .pv-model holds it). The stage
-   is the badges' (BadgeStage.jsx, badges.css); the site's controls in it take the viewer's colours. */
+/* A pin's 3D view, on the poster viewer's stage (posters.css .pv-model holds it): the canvas is
+   clear, so the stage's ground is the model's, and the controls float over it in the viewer's
+   glass, as the drawing's do. The stage is the badges' (BadgeStage.jsx, badges.css). */
 .pin-model {
   --surface: var(--bg-2);
   --outline: var(--line);
@@ -17,32 +18,65 @@
 .pin-model .segmented button[aria-pressed='true'] { color: var(--bg); }
 .pin-model .segmented button { white-space: nowrap; }
 .pin-model .badge-stage {
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;
+  position: relative;
+  display: block;
   flex: 1;
   min-height: 0;
+  border: 0;
+  background: none;
 }
-.pin-model .patch-stage__bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; padding: 8px 12px; border-bottom: 1px solid var(--outline); }
-.pin-model .patch-stage__tools { min-width: 0; }
-.pin-model .patch-stage__tools .field { margin: 0; }
-.pin-model .badge-stage__pane { background: radial-gradient(ellipse at 50% 40%, #2c3238 0%, #181c20 70%, #121518 100%); }
-.pin-model .patch__status { font-size: 13px; }
-.pin-model__foot {
+.pin-model .badge-stage__pane { position: absolute; inset: 0; background: none; }
+/* The controls float over the model; only they take the pointer, so a drag anywhere else turns it. */
+.pin-model .patch-stage__bar {
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  right: 20px;
+  z-index: 1;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 8px 14px;
-  padding: 8px 12px;
-  border-top: 1px solid var(--outline);
+  gap: 8px 12px;
+  padding: 0;
+  border: 0;
+  pointer-events: none;
 }
-.pin-model__note { margin: 0; min-width: 0; color: var(--muted); font-size: 12.5px; line-height: 1.45; }
+.pin-model .patch-stage__bar > * { pointer-events: auto; }
+.pin-model .patch-stage__bar .segmented {
+  background: rgba(14, 17, 14, 0.72);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+.pin-model .patch-stage__tools { min-width: 0; }
+.pin-model .patch-stage__tools .field { margin: 0; }
+/* The keys and gestures are said to a screen reader; the pointer finds them by use. */
+.pin-model .badge-stage__hint { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; padding: 0; }
+.pin-model .patch__status { font-size: 13px; }
+.pin-model__foot {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 10px;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px 14px;
+  pointer-events: none;
+}
+.pin-model__foot > * { pointer-events: auto; }
+.pin-model__note { margin: 0; min-width: 0; max-width: 56ch; color: var(--muted); font-size: 12px; line-height: 1.45; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
 .pin-model__exports { display: flex; gap: 6px; flex: none; }
 .pin-model__exports .pv-ghost { padding: 5px 12px; font-size: 13px; }
-.pin-model__error { margin: 0; padding: 0 12px 8px; color: var(--danger); font-size: 13px; }
+.pin-model__error { position: absolute; left: 20px; bottom: 44px; z-index: 1; margin: 0; color: var(--danger); font-size: 13px; }
 
 @media (max-width: 600px) {
-  .pin-model .badge-stage__hint { display: none; }
-  .pin-model__foot { flex-wrap: wrap; }
-  .pin-model .patch-stage__bar { padding: 6px 8px; gap: 6px; }
+  .pin-model__foot { flex-wrap: wrap; left: 10px; right: 10px; }
+  .pin-model .patch-stage__bar { left: 10px; right: 10px; gap: 6px; }
   .pin-model .field--compact .segmented button { padding: 3px 8px; }
 }
+
+/* On a phone with a part's sheet open, the model has the top of the screen: its exports and note
+   wait until the sheet is closed. */
+.pv-model--short .pin-model__foot, .pv-model--short .pin-model__error { display: none; }

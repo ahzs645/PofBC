@@ -265,25 +265,24 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
 .pv-ghost.pv-solid:hover { background: #fff; }
 .pv-ghost:disabled { opacity: 0.4; cursor: default; }
 
-/* ── The 3D view, for a piece with one: a pane over the stage, between the top bar and the dock ── */
+/* ── The 3D view, for a piece with one: the model on the stage itself, in the drawing's place ──
+   No pane of its own: the stage's ground shows through the canvas, and the model's controls float
+   over it as the viewer's do. It sits between the top bar and the dock, and beside an open panel. */
 .pv-model {
   position: absolute;
-  top: calc(82px + env(safe-area-inset-top, 0px));
-  left: 20px;
-  right: 20px;
-  bottom: calc(var(--pv-dock-h) + env(safe-area-inset-bottom, 0px) + 14px);
+  top: calc(72px + env(safe-area-inset-top, 0px));
+  left: 0;
+  right: 0;
+  bottom: calc(var(--pv-dock-h) + env(safe-area-inset-bottom, 0px));
   z-index: 4;
   display: flex;
   flex-direction: column;
   min-height: 0;
-  background: var(--bg-2);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
 }
 .pv-model-loading { margin: auto; color: var(--muted); }
-/* The drawing stays laid out under the model, for its exports, but out of sight. */
-.pv-stage.pv-stage--under { visibility: hidden; }
+/* The drawing stays laid out under the model, for its exports, but out of sight; the stage's
+   ground stays, as the model's. */
+.pv-stage.pv-stage--under .pv-sheet { visibility: hidden; }
 .pv-look button { padding: 4px 11px; }
 
 /* ── Dock: a bar along the bottom edge, which the drawing is framed above ── */
@@ -599,7 +598,7 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
   .pv-chip { display: none; }
   .pv-switch-step { display: none; }
   .pv-switch-pick { border: 0; }
-  .pv-model { top: calc(72px + env(safe-area-inset-top, 0px)); left: 10px; right: 10px; bottom: calc(var(--pv-dock-h) + env(safe-area-inset-bottom, 0px) + 8px); }
+  .pv-model { top: calc(64px + env(safe-area-inset-top, 0px)); }
 }
 @media (max-width: 600px) {
   .pv-back-label, .pv-tour-btn { display: none; }

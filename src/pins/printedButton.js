@@ -265,10 +265,27 @@ function safetyPin ({ plateZ, lipRadius }, steel, reach = lipRadius) {
 }
 
 /**
+ * Where a point of the drawing sits on the face, in the model's millimetres: the inverse of the
+ * straight-on projection the face shells print with. `view` is the drawing's viewBox ({ x, y, w,
+ * h }); `dome` the face's current dome, which sets the printed radius.
+ */
+export function facePoint (recipe, view, dome, px, py) {
+  const { radius } = buttonProfile({ diameterMm: recipe.diameterMm, dome })
+  if (recipe.shape === 'oval') {
+    const { rim } = recipe.face
+    return { x: ((px - view.x - rim.cx) / rim.rx) * radius * recipe.aspect, y: ((rim.cy - (py - view.y)) / rim.ry) * radius }
+  }
+  return { x: (((px - view.x) / view.w) - 0.5) * 2 * radius, y: (0.5 - ((py - view.y) / view.h)) * 2 * radius }
+}
+
+/** The drawing's point under a texture coordinate of the face (a raycast's `uv`), in its own units. */
+export const drawingPoint = (view, uv) => ({ x: view.x + uv.x * view.w, y: view.y + (1 - uv.y) * view.h })
+
+/**
  * @param {object} recipe  A pin's construction (construction.js).
  * @param {{ map: THREE.Texture, dome?: number }} options  The printed face, and a dome to use in
  *   place of the recipe's.
- * @returns {{ group: THREE.Group, setDome: (dome: number) => void }}
+ * @returns {{ group: THREE.Group, shell: THREE.Mesh, setMap: (map: THREE.Texture) => void, setDome: (dome: number) => void }}
  */
 export function buildPrintedButton (recipe, { map, dome = recipe.dome }) {
   let profile = buttonProfile({ diameterMm: recipe.diameterMm, dome })
@@ -294,6 +311,13 @@ export function buildPrintedButton (recipe, { map, dome = recipe.dome }) {
 
   return {
     group,
+    /** The face shell, for picking a point of the drawing and printing it afresh. */
+    shell,
+    /** Print a new face, as when a part is spotlit; the old texture is the caller's to dispose of. */
+    setMap (next) {
+      face.map = next
+      face.needsUpdate = true
+    },
     /** Reshape the face (the back and the pin stay where they are). */
     setDome (next) {
       profile = buttonProfile({ diameterMm: recipe.diameterMm, dome: next })

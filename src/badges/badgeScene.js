@@ -165,6 +165,8 @@ export class BadgeScene {
   }
 
   setView (name) {
+    this.stopFlight()
+    if (this.reach) this.controls.minDistance = this.reach * 0.9
     this.viewName = VIEWS[name] ? name : 'oblique'
     const [x, y, z] = VIEWS[this.viewName]
     // A pane taller than it is wide crops the sides at the badges' distance; a scene that asks to
@@ -176,6 +178,53 @@ export class BadgeScene {
     this.controls.target.set(0, 0, -0.8)
     this.controls.update()
     this.render()
+  }
+
+  /**
+   * Turn to a point of the model and come close enough that `size` (mm) fills about half the view,
+   * looking from the current view's direction, slightly from the front. Glides there over `ms`.
+   */
+  focus ({ x, y, z = 0 }, size, ms = 520) {
+    const target = new THREE.Vector3(x, y, z)
+    const [dx, dy, dz] = VIEWS[this.viewName === 'back' ? 'oblique' : this.viewName]
+    const direction = new THREE.Vector3(dx * 0.6, dy * 0.6, dz).normalize()
+    const fit = (size / 2) / Math.tan(THREE.MathUtils.degToRad(this.camera.fov / 2)) / Math.min(1, this.camera.aspect)
+    const distance = Math.max(this.reach * 0.35, Math.min(this.reach * 1.75, fit * 1.5))
+    this.controls.minDistance = Math.min(this.reach * 0.9, distance * 0.6)
+    this.fly(target, target.clone().addScaledVector(direction, distance), ms)
+  }
+
+  /** Glide the camera and its target to new places. */
+  fly (target, position, ms) {
+    this.stopFlight()
+    const fromTarget = this.controls.target.clone()
+    const fromPosition = this.camera.position.clone()
+    const reduce = globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    const start = performance.now()
+    const step = (now) => {
+      const t = reduce || ms <= 0 ? 1 : Math.min(1, (now - start) / ms)
+      const ease = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+      this.controls.target.lerpVectors(fromTarget, target, ease)
+      this.camera.position.lerpVectors(fromPosition, position, ease)
+      this.controls.update()
+      this.render()
+      this.flight = t < 1 ? requestAnimationFrame(step) : null
+    }
+    this.flight = requestAnimationFrame(step)
+  }
+
+  stopFlight () {
+    if (this.flight) cancelAnimationFrame(this.flight)
+    this.flight = null
+  }
+
+  /** The first hit on `object` under a point of the canvas (client pixels), or null. */
+  pick (clientX, clientY, object) {
+    const rect = this.canvas.getBoundingClientRect()
+    const pointer = new THREE.Vector2(((clientX - rect.left) / rect.width) * 2 - 1, -((clientY - rect.top) / rect.height) * 2 + 1)
+    const ray = new THREE.Raycaster()
+    ray.setFromCamera(pointer, this.camera)
+    return ray.intersectObject(object, false)[0] ?? null
   }
 
   resize (width, height) {
@@ -235,6 +284,7 @@ export class BadgeScene {
   }
 
   dispose () {
+    this.stopFlight()
     this.clearModel()
     this.controls.dispose()
     this.environment.dispose()

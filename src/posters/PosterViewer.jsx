@@ -11,7 +11,9 @@
 // with a picture of the original (`reference`) can be compared with it, the picture laid into the
 // drawing's own frame; one made of pages (`pages`) can be read a page at a time. One with a 3D
 // view of the object (`model`, a lazy component given the piece and its module) gets a Drawing / 3D
-// switch in the top bar, and the model takes the stage's place until it is switched back.
+// switch in the top bar, and the model takes the drawing's place on the stage until it is switched
+// back. It is a mode of the same viewer, not a window of its own: the open part, the story and the
+// tour carry on in it, and the model is told the open part and how to open another.
 
 import { Suspense, useCallback, useEffect, useMemo, useState } from 'react'
 import { writeHistory } from '../site/browserHistory.js'
@@ -85,8 +87,8 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
   const chapters = useMemo(() => order.filter((id) => parts[id].story?.length), [order, parts])
   const canTell = chapters.length > 1
   const [telling, setTelling] = useState(() => canTell && storyInAddress())
-  // The 3D view, for a piece that has one: it stands in for the stage, and opening a part, the
-  // story or the tour goes back to the drawing.
+  // The 3D view, for a piece that has one: it stands in for the drawing, and the parts, the story
+  // and the tour go on in it.
   const [modelled, setModelled] = useState(() => Boolean(Model) && modelInAddress())
   const look = useCallback((on) => {
     setModelled(on)
@@ -96,8 +98,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
     setTelling(on)
     writeStory(on)
     setAboutOpen(false)
-    if (on) look(false)
-  }, [look])
+  }, [])
 
   // The page under the viewer stays where it was and does not scroll behind it.
   useEffect(() => {
@@ -123,12 +124,8 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
     setAboutOpen(false)
     setPage(null)
     if (manual) tour.stop()
-    if (id && id !== 'overview') look(false)
-  }, [onPart, tour.stop, look]) // eslint-disable-line react-hooks/exhaustive-deps
-  const showModel = (on) => {
-    if (on) { tour.stop(); if (telling) tell(false); if (current !== 'overview') onPart('overview') }
-    look(on)
-  }
+  }, [onPart, tour.stop]) // eslint-disable-line react-hooks/exhaustive-deps
+  const showModel = (on) => look(on)
   const select = useCallback((id) => move(id, true), [move])
   const openAbout = () => {
     if (telling) { tell(false); select('overview'); setAboutOpen(true); return }
@@ -243,9 +240,9 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
         </Poster>
 
         {Model && modelled && (
-          <div className="pv-model" style={{ right: inset.right || undefined, bottom: narrow && panelOpen ? inset.bottom + 8 : undefined }}>
+          <div className={`pv-model${narrow && panelOpen ? ' pv-model--short' : ''}`} style={{ right: inset.right || undefined, bottom: narrow && panelOpen ? inset.bottom + 8 : undefined }}>
             <Suspense fallback={<p className="pv-model-loading" role="status">Loading the 3D view…</p>}>
-              <Model meta={meta} module={module} swap={variation?.swap ?? null} variation={variation?.id ?? null} />
+              <Model meta={meta} module={module} swap={variation?.swap ?? null} variation={variation?.id ?? null} current={current} regions={regionList} onSelect={select} />
             </Suspense>
           </div>
         )}

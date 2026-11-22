@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
+import { spotlightWalk } from './spotlight.js'
 
 const SVG_NS = 'http://www.w3.org/2000/svg'
-const NOT_DRAWN = new Set(['defs', 'title', 'desc', 'style', 'metadata', 'clipPath', 'mask', 'linearGradient', 'radialGradient', 'pattern', 'symbol'])
 
 /** The transform from an element's parent to the root <svg>, read from the transform attributes. */
 const parentMatrix = (svg, element) => {
@@ -168,18 +168,11 @@ export const useHotspots = (svg, regions, { onSelect, active, margin = 0.08, spo
     if (!lit.length) return
     for (const el of lit) el.classList.add('pv-lit')
     litNow.current = lit
-    const keep = new Set(spotlight.keep ?? [])
-    const walk = (parent) => {
-      for (const child of parent.children) {
-        if (NOT_DRAWN.has(child.tagName) || child.id === 'hotspots' || keep.has(child.id)) continue
-        if (lit.includes(child)) continue
-        if (lit.some((el) => child.contains(el))) { walk(child); continue }
-        child.style.transition = 'opacity 180ms ease'
-        child.style.opacity = String(spotlight.dim ?? 0.32)
-        dimmed.current.add(child)
-      }
-    }
-    walk(svg)
+    spotlightWalk(svg, lit, new Set(spotlight.keep ?? []), (child) => {
+      child.style.transition = 'opacity 180ms ease'
+      child.style.opacity = String(spotlight.dim ?? 0.32)
+      dimmed.current.add(child)
+    })
   }, [svg, hover, active, regions, spotlight])
 
   return hover
