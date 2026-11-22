@@ -769,6 +769,42 @@ which one.
 
 ---
 
+## Paper models
+
+**Paper Models** in the title menu (`?view=paper-models`) shows fold-up models made in
+[PackCAD](https://github.com/ahzs645/packcad), each folding in 3D step by step beside its printable
+sheet. The first are the two **Gallery In Transit** buses: the BC Transit livery in red and white
+(`?view=paper-models&model=bc-transit`, 31 panels, 7 folding stages) and the original Gallery In
+Transit bus in green, orange, blue and yellow (`&model=gallery-in-transit-original`, 27 panels, 5
+stages, open bottom). Each offers its `.packcad.pdf`, which prints at actual size and also carries
+the editable project, so dropping it onto PackCAD reopens the model with its stages. The files are in
+`public/paper-models/`; `src/paper-models/paperModels.test.js` holds the catalogue's counts and sheet
+sizes to them, and their checksums to the export they came from.
+
+PackCAD is React 19 and TypeScript on its own three.js and the
+[Atelier](https://github.com/ahzs645/atelier) engine, so the site does not import it. PackCAD ships
+an embeddable viewer page ([`docs/embed.md`](vendor/packcad/docs/embed.md)): the editor's viewport,
+fold solver and settlement worker without the editor. `npm run build:packcad` (part of
+`build:assets`) builds it into `public/packcad/`, and the view puts it in an iframe, drawing the
+model picker, stages, play and downloads itself and driving the viewer with window messages
+(`src/paper-models/packcadFrame.js`). Both are submodules: `vendor/packcad`, and `vendor/atelier`
+beside it, because PackCAD depends on Atelier by the sibling path `../atelier`. The build installs
+each with pnpm (or `npx pnpm@9` if pnpm is not installed) only when its lockfile changes, and
+rebuilds the viewer only when either pinned commit does.
+
+To take a newer PackCAD, or the Atelier it needs:
+
+```
+git -C vendor/packcad fetch && git -C vendor/packcad checkout origin/main
+git -C vendor/atelier fetch && git -C vendor/atelier checkout origin/main
+git add vendor/packcad vendor/atelier && git commit -m "PackCAD: …"
+```
+
+To add a model, export it from PackCAD (**File → Export PDF Project…**, and the project as JSON),
+put both under `public/paper-models/<series>/`, and add it to `src/paper-models/catalogue.js`.
+
+---
+
 ## Historic document arms
 
 **Historic** (the historic arms) in the Identity builder adds four fixed historical-heading studies: arms alone,

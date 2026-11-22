@@ -23,6 +23,7 @@ const CardsView = lazyView('cards', 'CardsView')
 const PinsView = lazyView('pins', 'PinsView')
 const PatchesView = lazyView('patches', 'PatchesView')
 const PlatesView = lazyView('plates', 'PlatesView')
+const PaperModelsView = lazyView('paper-models', 'PaperModelsView')
 const ArmsView = lazyView('arms', 'ArmsView')
 const GuidesView = lazyView('guides', 'GuidesView')
 const StationeryView = lazyView('stationery', 'StationeryView')
@@ -349,6 +350,12 @@ export const App = () => {
       {view === 'badges' && (
         <Suspense fallback={<p className="gallery__intro" role="status">Loading the badges…</p>}>
           <PatchesView key={visit} collection="badges" />
+        </Suspense>
+      )}
+
+      {view === 'paper-models' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the paper models…</p>}>
+          <PaperModelsView key={visit} />
         </Suspense>
       )}
 

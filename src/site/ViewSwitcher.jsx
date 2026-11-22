@@ -20,6 +20,7 @@ export const VIEWS = [
   { id: 'pins', label: 'Pins', description: 'Pins and buttons by series, every part clickable for its history', badge: 'New' },
   { id: 'patches', label: 'Patches', description: 'Patches by organization, sewn as embroidery', badge: 'New' },
   { id: 'badges', label: 'Badges', description: 'Metal badges by organization', badge: 'New' },
+  { id: 'paper-models', label: 'Paper Models', description: 'Fold-up models to print, folded step by step in PackCAD', badge: 'New' },
   { id: 'plates', label: 'Licence Plates', description: 'B.C. licence plates since 1904, by family and era, from PlateForge', badge: 'New' },
   { id: 'arms', label: 'Coats of Arms', description: 'The Province’s arms and its dated drawings, and the arms of public bodies and universities', badge: 'New' },
   { id: 'guides', label: 'Visual Guides', description: 'Identity manuals, rebuilt page by page' },

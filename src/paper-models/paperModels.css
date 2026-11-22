@@ -1,0 +1,278 @@
+/* Paper models: a choice of model, PackCAD's viewer as the stage, and a panel of stages and files. */
+
+.paper-models {
+  display: grid;
+  gap: var(--gap);
+}
+
+.paper-models__series {
+  display: grid;
+  gap: 12px;
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.paper-models__series-head h2 {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+
+.paper-models__series-head p {
+  margin: 0;
+  max-width: 70ch;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.paper-models__picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.paper-models__choice {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.paper-models__choice span {
+  color: var(--ink-muted);
+  font-size: 0.9em;
+}
+
+.paper-models__choice:hover {
+  background: var(--hover);
+}
+
+.paper-models__choice[aria-current='true'] {
+  border-color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+
+.paper-models__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  gap: var(--gap);
+  align-items: start;
+}
+
+.paper-models__stage {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  min-height: 320px;
+  border-radius: var(--radius);
+  /* PackCAD's viewport draws on its own light ground; the stage keeps it in both themes. */
+  background: #f2f2f3;
+}
+
+.paper-models__frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.paper-models__status {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 16px;
+  color: #52525b;
+  text-align: center;
+  pointer-events: none;
+}
+
+.paper-models__status--error {
+  color: var(--danger);
+  background: #f2f2f3;
+}
+
+.paper-models__panel {
+  display: grid;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.paper-models__panel header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.paper-models__panel header p {
+  margin: 2px 0 0;
+  color: var(--ink-muted);
+}
+
+.paper-models__transport {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.paper-models__play {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: var(--control);
+  padding: 0 14px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: var(--primary-ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+.paper-models__play:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.paper-models__play:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.paper-models__progress {
+  height: 3px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--track);
+}
+
+.paper-models__progress span {
+  display: block;
+  height: 100%;
+  background: var(--ink);
+}
+
+.paper-models__stages {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.paper-models__stages button {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  width: 100%;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.paper-models__stages button:hover:not(:disabled) {
+  background: var(--hover);
+}
+
+.paper-models__stages button:disabled {
+  color: var(--ink-faint);
+  cursor: default;
+}
+
+.paper-models__stages button[aria-current='step'] {
+  background: var(--hover);
+  font-weight: 600;
+}
+
+.paper-models__stage-n {
+  flex: none;
+  min-width: 1.4em;
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.paper-models__facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+  margin: 0;
+}
+
+.paper-models__facts dt {
+  color: var(--ink-faint);
+  font-size: 0.85em;
+}
+
+.paper-models__facts dd {
+  margin: 0;
+}
+
+.paper-models__notes {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding-left: 1.1em;
+  color: var(--ink-muted);
+  font-size: 0.92em;
+  line-height: 1.45;
+}
+
+.paper-models__downloads {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+}
+
+.paper-models__downloads a {
+  color: var(--ink);
+}
+
+.paper-models__download {
+  display: inline-flex;
+  align-items: center;
+  height: var(--control);
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+
+.paper-models__download:hover {
+  background: var(--hover);
+}
+
+.paper-models__fineprint,
+.paper-models__related {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.88em;
+  line-height: 1.45;
+}
+
+@media (max-width: 860px) {
+  .paper-models__body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .paper-models__stage {
+    aspect-ratio: 1 / 1;
+    min-height: 280px;
+  }
+
+  .paper-models__series {
+    padding: 14px 16px;
+  }
+}

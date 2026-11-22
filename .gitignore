@@ -33,6 +33,10 @@ scripts/current-fit.json
 # letterforms) are committed, so the app works without this.
 src/current/generated/
 
+# PackCAD's viewer, built from vendor/packcad by `npm run build:packcad` (part of build:assets) for the
+# Paper Models view. Vite copies it to dist/packcad/.
+public/packcad/
+
 # Python bytecode from the extraction scripts.
 __pycache__/
 

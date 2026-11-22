@@ -18,6 +18,8 @@ export const VIEW_LOADERS = {
   // The patch library and digitizer come from the Patcher submodule (vendor/patcher).
   patches: () => import('../patches/PatchesView.jsx'),
   badges: () => import('../patches/PatchesView.jsx'),
+  // Paper models fold in PackCAD's own viewer (vendor/packcad), framed; this chunk is only the chrome.
+  'paper-models': () => import('../paper-models/PaperModelsView.jsx'),
   // Licence plates are drawn by PlateForge (vendor/plateforge), with its B.C. region data and fonts.
   plates: () => import('../plates/PlatesView.jsx'),
   arms: () => import('../arms/ArmsView.jsx'),
