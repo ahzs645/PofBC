@@ -218,6 +218,21 @@ blurring it. The SVGs are in [`artwork/icbc/`](artwork/icbc), [`artwork/bclc/`](
 [`artwork/bc-transit/`](artwork/bc-transit); `npm run build:crown-marks` packages them into
 `src/assets/crownMarks.js`.
 
+**Recreation and Conservation** is the department's collection, from a reconstruction package of
+21 November 2026 redrawn from its annual reports: an engraved dogwood oval in 1970; five square
+symbols from 1971 to 1973, one for the department and one each for Fish and Wildlife, Provincial
+Parks, the Provincial Museum and Commercial Fisheries, each opening in black, the reports' two greens
+and white; and the 1973 Fish and Wildlife emblem and Parks dogwood shield. The Parks Branch's spirals
+and shield also start **BC Parks'** timeline, and the Provincial Museum's square starts the **Royal BC
+Museum's**, whose collection is now a researched one with today's logo and an open era between. The
+22 park signs *proposed* in the 1971 report are in the **Signs** view (`?view=signs&sign=proposed-park-symbols`),
+each with its own panel, labelled throughout as a proposal. The package's other files (report dividers,
+cover blocks, report and handbook lettering, the Provincial Museum's handbook panels) are kept with
+the marks in
+[`artwork/recreation-conservation/`](artwork/recreation-conservation/README.md), its notes and
+construction records in
+[`research/identity/recreation-conservation-2026-11-21/`](research/identity/recreation-conservation-2026-11-21/README.md).
+
 Most of the gallery is the **Best Place on Earth years**: WelcomeBC, WorkBC, BC Stats,
 Environmental Reporting BC, the BC Public Service's "Where ideas work", Canada's Pacific Gateway,
 and the stacked BC mark with its tagline. Each is the BC mark with a shaded sun, a gold divider, and

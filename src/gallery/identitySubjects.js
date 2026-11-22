@@ -2473,7 +2473,7 @@ const CURATED_SUBJECTS = [
       "RBCM"
     ],
     "collectionIds": [
-      "collected-royal-bc-museum"
+      "royal-bc-museum"
     ],
     "salaryEmployers": [],
     "priority": 3,

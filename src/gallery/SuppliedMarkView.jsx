@@ -1,4 +1,4 @@
-// ICBC's and BCLC's marks, opened from the gallery.
+// The Crown corporations' and agencies' supplied marks, opened from the gallery.
 //
 // These are shown as supplied (renderSupplied.js): the mark is not recoloured or redrawn, so the
 // choices are only where it sits — its ground, its clear space, and, for a mark supplied in a
@@ -31,6 +31,8 @@ const GROUND_SWATCHES = [
   { name: 'ICBC orange (as supplied)', value: '#f37224' },
   { name: 'BCLC purple', value: '#9936d2' },
   { name: 'BCLC ink', value: '#28222a' },
+  { name: 'Recreation and Conservation report paper (scan approximation)', value: '#e3e0cb' },
+  { name: 'Recreation and Conservation report dark (scan approximation)', value: '#0c1c1b' },
   { name: 'black', value: '#000000' }
 ]
 
@@ -50,9 +52,13 @@ export const SuppliedMarkView = ({ entry }) => {
   const transparent = background === TRANSPARENT
   const shownOn = backdrop !== 'auto' ? backdrop : transparent && isReversed(version) ? 'dark' : 'light'
 
-  const versions = entry.reverse && [
-    { value: entry.mark, label: 'As supplied' },
-    { value: entry.reverse, label: 'Reversed', title: 'The same paths in white, supplied for dark grounds' }
+  // A mark supplied in other inks too (the Recreation and Conservation symbols' report greens)
+  // offers each as a version: the same paths, in a colour the package itself supplied.
+  const alternates = entry.alternates ?? []
+  const versions = (entry.reverse || alternates.length > 0) && [
+    { value: entry.mark, label: entry.markLabel ?? 'As supplied' },
+    ...alternates.map(({ mark: value, label, title }) => ({ value, label, title })),
+    ...(entry.reverse ? [{ value: entry.reverse, label: 'Reversed', title: 'The same paths in white, supplied for dark grounds' }] : [])
   ]
 
   return (
@@ -105,7 +111,7 @@ export const SuppliedMarkView = ({ entry }) => {
               options={CLEAR_SPACE_OPTIONS}
               value={clearSpace}
               onChange={setClearSpace}
-              hint="Neither body’s clear-space rule was supplied, so this is a margin, not a standard."
+              hint="No clear-space rule was supplied with these marks, so this is a margin, not a standard."
             />
           </section>
 

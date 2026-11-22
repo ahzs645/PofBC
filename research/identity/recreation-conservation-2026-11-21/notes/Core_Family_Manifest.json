@@ -1,0 +1,120 @@
+{
+  "title": "British Columbia Department of Recreation and Conservation identity family",
+  "created": "2026-11-21",
+  "status": "historical geometric reconstructions, not recovered original artwork",
+  "symbols": [
+    {
+      "key": "department",
+      "file": "01_Department_Recreation_Conservation",
+      "name": "Recreation and Conservation",
+      "lines": [
+        "Department of Recreation",
+        "and Conservation"
+      ],
+      "svg": "svg/01_Department_Recreation_Conservation.svg",
+      "ref": "review/department_reference.png",
+      "source": "1973 report, PDF 144 / AA143"
+    },
+    {
+      "key": "fishwildlife",
+      "file": "02_Fish_and_Wildlife",
+      "name": "Fish and Wildlife",
+      "lines": [
+        "Fish and Wildlife",
+        "Branch"
+      ],
+      "svg": "svg/02_Fish_and_Wildlife.svg",
+      "ref": "review/fishwildlife_reference.png",
+      "source": "1971 report, PDF 16 / DD15"
+    },
+    {
+      "key": "parks",
+      "file": "03_Provincial_Parks",
+      "name": "Provincial Parks",
+      "lines": [
+        "Provincial Parks",
+        "Branch"
+      ],
+      "svg": "svg/03_Provincial_Parks.svg",
+      "ref": "review/parks_reference.png",
+      "source": "1971 report, PDF 64 / DD63"
+    },
+    {
+      "key": "museum",
+      "file": "04_BC_Provincial_Museum",
+      "name": "British Columbia Provincial Museum",
+      "lines": [
+        "British Columbia",
+        "Provincial Museum"
+      ],
+      "svg": "svg/04_BC_Provincial_Museum.svg",
+      "ref": "review/museum_reference.png",
+      "source": "1971 report, PDF 98 / DD97"
+    },
+    {
+      "key": "fisheries",
+      "file": "05_Commercial_Fisheries_Marine_Resources",
+      "name": "Commercial Fisheries / Marine Resources",
+      "lines": [
+        "Commercial Fisheries",
+        "later Marine Resources"
+      ],
+      "svg": "svg/05_Commercial_Fisheries_Marine_Resources.svg",
+      "ref": "review/fisheries_reference.png",
+      "source": "1973 report, PDF 144 / AA143"
+    }
+  ],
+  "metrics": {
+    "department": {
+      "whole_ink_IoU": 0.9047,
+      "interior_ink_IoU": 0.8065,
+      "source": "1973 report, PDF 144 / AA143",
+      "note": "Ink overlap to a small printed scan, not a percentage of historical accuracy. Whole score includes frame.",
+      "registration": "Tight bounding boxes independently scaled to1000-square; no local warp.",
+      "scan_rule_excluded": false
+    },
+    "fishwildlife": {
+      "whole_ink_IoU": 0.8685,
+      "interior_ink_IoU": 0.7972,
+      "source": "1971 report, PDF 16 / DD15",
+      "note": "Ink overlap to a small printed scan, not a percentage of historical accuracy. Whole score includes frame.",
+      "registration": "Tight bounding boxes independently scaled to1000-square; no local warp.",
+      "scan_rule_excluded": true
+    },
+    "parks": {
+      "whole_ink_IoU": 0.9019,
+      "interior_ink_IoU": 0.8998,
+      "source": "1971 report, PDF 64 / DD63",
+      "note": "Ink overlap to a small printed scan, not a percentage of historical accuracy. Whole score includes frame.",
+      "registration": "Tight bounding boxes independently scaled to1000-square; no local warp.",
+      "scan_rule_excluded": false
+    },
+    "museum": {
+      "whole_ink_IoU": 0.9056,
+      "interior_ink_IoU": 0.9245,
+      "source": "1971 report, PDF 98 / DD97",
+      "note": "Ink overlap to a small printed scan, not a percentage of historical accuracy. Whole score includes frame.",
+      "registration": "Tight bounding boxes independently scaled to1000-square; no local warp.",
+      "scan_rule_excluded": false
+    },
+    "fisheries": {
+      "whole_ink_IoU": 0.8346,
+      "interior_ink_IoU": 0.7447,
+      "source": "1973 report, PDF 144 / AA143",
+      "note": "Ink overlap to a small printed scan, not a percentage of historical accuracy. Whole score includes frame.",
+      "registration": "Tight bounding boxes independently scaled to1000-square; no local warp.",
+      "scan_rule_excluded": false
+    }
+  },
+  "typeface_and_variants": {
+    "added": "2026-11-21",
+    "atlas_pages": 12,
+    "report_font": "Corporate (high-confidence visual identification)",
+    "current_revival": "Corporatus",
+    "archived_related_font_styles": 10,
+    "report_applications": 25,
+    "handbook_titles": 23,
+    "handbook_records": 24,
+    "new_variants_status": "Documented source images; original five SVG reconstructions retained"
+  }
+}

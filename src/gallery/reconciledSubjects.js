@@ -38,6 +38,11 @@ export const PROGRAM_ENTRY_OWNERS = {
   // Ministries' flag-years marks: owned by the ministry's node on the government map.
   'bc-environment-flag-years': 'ministry-of-environment-1988',
   'tourism-recreation-culture-1986': 'ministry-of-tourism-recreation-and-culture-1986',
+  // The Department of Recreation and Conservation is a ministry, not an atlas body, so its marks are
+  // owned by its register subject. BC Parks' copies of the Parks Branch's two are BC Parks' own.
+  ...Object.fromEntries(['drc-dogwood-oval-1970', 'drc-department', 'drc-fish-wildlife', 'drc-parks', 'drc-museum',
+    'drc-fisheries', 'drc-fw-oval-1973', 'drc-fw-lockup-1973', 'drc-parks-shield-1973']
+    .map((id) => [id, 'department-of-recreation-and-conservation'])),
   'bceid-reversed': 'bceid',
   'bceid-reversed-rebuilt': 'bceid'
 }
@@ -263,6 +268,21 @@ export const RECONCILED_SUBJECTS = [
     relations: [
       { subject: 'department-of-travel-industry', type: 'related-to', label: 'An earlier department for the Province’s tourism' }
     ]
+  }),
+  subject({
+    id: 'department-of-recreation-and-conservation',
+    label: 'Department of Recreation and Conservation',
+    kind: 'government-branch',
+    aliases: ['Recreation and Conservation', 'Fish and Wildlife Branch', 'Provincial Parks Branch', 'Commercial Fisheries Branch', 'Marine Resources Branch'],
+    collectionIds: ['recreation-conservation'],
+    priority: 3,
+    sources: [
+      { title: 'Department of Recreation and Conservation, Annual Report 1970', url: 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1970.pdf' },
+      { title: 'Department of Recreation and Conservation, Annual Report 1971', url: 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1971.pdf' },
+      { title: 'Department of Recreation and Conservation, Annual Report 1973', url: 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1973.pdf' }
+    ],
+    nextAction: 'Find who designed the five square symbols, and any identity manual; date the 1970 oval beyond its one report.',
+    note: 'A provincial department, 1957–1976. Its 1970 oval, the five square symbols of its 1971–1973 reports and two 1973 emblems are held as reconstructions from the reports. The department is a ministry in the government atlas, not a separate agency, and its branches have no atlas bodies of their own, so their marks sit with it; the Parks Branch’s two are also on BC Parks’ timeline.'
   }),
   subject({
     id: 'bceid',

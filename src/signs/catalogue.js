@@ -1,6 +1,6 @@
 // The signs, by series. Like the posters' catalogue (src/posters/catalogue.js): each sign names its
 // series, each series lists its signs, and nothing here imports a drawing, so it can be tested
-// without a browser. Adding a sign is a drawing and its parts (see forest-service/ and tourism/), an entry here,
+// without a browser. Adding a sign is a drawing and its parts (see forest-service/, tourism/ and parks/), an entry here,
 // and a loader in SignsView.jsx.
 
 export const SIGN_SERIES = [
@@ -15,6 +15,12 @@ export const SIGN_SERIES = [
     title: 'Province of British Columbia',
     kind: 'Welcome signs',
     signs: ['super-natural']
+  },
+  {
+    id: 'parks',
+    title: 'Provincial Parks Branch',
+    kind: 'Proposed park symbols',
+    signs: ['proposed-park-symbols']
   }
 ]
 
@@ -42,6 +48,14 @@ export const SIGNS = {
     when: 'Flag era, about 1983–2001',
     view: { x: 0, y: 0, w: 1200, h: 1150 },
     page: { w: 12, h: 11.5 }
+  },
+  'proposed-park-symbols': {
+    id: 'proposed-park-symbols',
+    series: 'parks',
+    title: 'Proposed park symbols',
+    when: '1971, proposed in the annual report',
+    view: { x: 0, y: 0, w: 1000, h: 1500 },
+    page: { w: 10, h: 15 }
   }
 }
 

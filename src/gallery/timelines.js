@@ -51,6 +51,18 @@ const OVAL_CREST_NOTE = 'An oval ministry crest (British Columbia and Forests, L
 /** The tagline's years, which bound any mark that carries it. */
 const TAGLINE_YEARS = 'The Best Place on Earth tagline was launched in 2005 and dropped from government use in 2011.'
 
+// The Department of Recreation and Conservation's annual reports, where its marks are printed. The
+// report years are a year behind the printing: the 1971 report was printed in 1972, and so on.
+const DRC_1970 = 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1970.pdf'
+const DRC_1971 = 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1971.pdf'
+const DRC_1972 = 'https://rbcm.ca/wp-content/uploads/2025/07/annual_report_1972.pdf'
+const DRC_1973 = 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1973.pdf'
+const DRC_REPORT = (year, url, page, locator) =>
+  source(`Department of Recreation and Conservation, Annual Report ${year}, PDF page ${page}`, `${url}#page=${page}`, locator)
+const DRC_SQUARES = 'Printed on the section dividers of the annual reports for 1971, 1972 and 1973 (printed 1972–1974), ' +
+  'and on their back covers. No identity manual or designer has been found, so these are the reports’ dates, ' +
+  'not an introduction; the 1970 report uses an earlier badge.'
+
 // ── The timelines ────────────────────────────────────────────────────────────────────────────────
 
 export const TIMELINES = {
@@ -821,6 +833,110 @@ const BCT_SOURCES = {
  * eras itself; what is here is everything else an era says.
  */
 export const COLLECTION_ERAS = {
+  'royal-bc-museum': [
+    {
+      id: 'rbcm-bcpm-square',
+      status: 'held',
+      years: '1971–1973',
+      label: 'The Provincial Museum’s square',
+      note: 'BC over PM, the letters sharing their strokes, in a rounded square: the British Columbia Provincial ' +
+        'Museum’s symbol in the Department of Recreation and Conservation’s family of five, which has its own ' +
+        'collection. The museum was part of that department, and its handbook series set the same symbol beside ' +
+        'the museum’s name.',
+      applicability: { kind: 'dated_specimen', years: '1971–1973', note: DRC_SQUARES },
+      sources: [
+        DRC_REPORT(1971, DRC_1971, 98, 'British Columbia Provincial Museum divider'),
+        DRC_REPORT(1973, DRC_1973, 112, 'British Columbia Provincial Museum divider')
+      ]
+    },
+    {
+      id: 'rbcm-between',
+      status: 'sought',
+      years: 'after 1973',
+      label: 'Later marks',
+      note: 'What the museum used between the department’s square and today’s logo, including under its later ' +
+        'name, the Royal British Columbia Museum, has not been collected. Its annual reports are the place to look.',
+      applicability: {
+        kind: 'unknown',
+        years: 'after 1973',
+        note: 'Nothing here is dated. The department’s 1974 and 1975/76 reports no longer open their chapters with ' +
+          'the squares, which says nothing about the museum’s own use.'
+      },
+      sources: [source('Royal BC Museum, annual report archive', 'https://rbcm.ca/corporate-information/reports-policies/annual-report-archive/')]
+    },
+    {
+      id: 'rbcm-current',
+      status: 'held',
+      years: 'by 2026',
+      label: 'Today’s logo',
+      note: 'The logo in the header of rbcm.ca, kept as the site serves it.',
+      applicability: {
+        kind: 'first_observation',
+        years: 'by 2026',
+        note: 'Taken from the site on 22 October 2026. When it was introduced has not been looked into.'
+      },
+      sources: [source('Royal BC Museum', 'https://rbcm.ca/')]
+    }
+  ],
+  'recreation-conservation': [
+    {
+      id: 'drc-dogwood-oval',
+      status: 'held',
+      years: '1970',
+      label: 'The dogwood oval',
+      note: 'An engraved dogwood flower in a dark oval, with BRITISH COLUMBIA arched over it and the ' +
+        'department’s name beneath: the badge of the department’s 1970 annual report, before the square symbols.',
+      applicability: {
+        kind: 'dated_specimen',
+        years: '1970',
+        note: 'Printed in the annual report for 1970. When the badge was introduced, and how widely it was ' +
+          'used beyond the report, have not been found.'
+      },
+      sources: [DRC_REPORT(1970, DRC_1970, 10)]
+    },
+    {
+      id: 'drc-five-squares',
+      status: 'held',
+      years: '1971–1973',
+      label: 'Five square symbols',
+      note: 'One symbol for the department and one for each of four of its parts, all in the same rounded ' +
+        'square: four lobes around a ring for the department, a deer and fish for Fish and Wildlife, two ' +
+        'spirals on stems for Provincial Parks, BC over PM for the Provincial Museum, and three fish on a ' +
+        'grid for Commercial Fisheries (the Marine Resources Branch by 1973). Each section of the reports ' +
+        'opens on a divider with the five in a column, its own in full ink and the rest pale.',
+      applicability: { kind: 'dated_specimen', years: '1971–1973', note: DRC_SQUARES },
+      sources: [
+        DRC_REPORT(1971, DRC_1971, 10, 'General Administration divider'),
+        DRC_REPORT(1971, DRC_1971, 16, 'Fish and Wildlife Branch divider'),
+        DRC_REPORT(1971, DRC_1971, 64, 'Provincial Parks Branch divider'),
+        DRC_REPORT(1971, DRC_1971, 98, 'Provincial Museum divider'),
+        DRC_REPORT(1971, DRC_1971, 126, 'Commercial Fisheries Branch divider'),
+        source('Department of Recreation and Conservation, Annual Report 1972 (colour copy, Royal BC Museum)', DRC_1972),
+        source('Department of Recreation and Conservation, Annual Report 1973', DRC_1973)
+      ]
+    },
+    {
+      id: 'drc-1973-emblems',
+      status: 'held',
+      years: '1973',
+      label: 'Fish and Wildlife’s oval, and the Parks shield',
+      note: 'Two further designs in the 1973 report. Fish and Wildlife’s dividers trade the square for a narrow ' +
+        'dark emblem over “F&W”, beside a panel naming the branch; the Parks Branch’s organization chart ' +
+        'carries a shield with a dogwood over the province, PARKS above and BRITISH COLUMBIA below. Neither ' +
+        'replaced the squares outright: the same report keeps the old Fish and Wildlife square on its back ' +
+        'cover, and the spirals on the Parks divider.',
+      applicability: {
+        kind: 'dated_specimen',
+        years: '1973',
+        note: 'Printed in the annual report for 1973. The report also mentions a logo proposal for the Parks ' +
+          'Branch (PDF page 106) without showing it, so the shield is not assumed to be that proposal.'
+      },
+      sources: [
+        DRC_REPORT(1973, DRC_1973, 22, 'Fish and Wildlife Branch divider'),
+        DRC_REPORT(1973, DRC_1973, 80, 'Parks Branch organization chart')
+      ]
+    }
+  ],
   'bc-lands': [
     {
       id: 'lands-badge',
@@ -884,6 +1000,35 @@ export const COLLECTION_ERAS = {
     }
   ],
   'bc-parks': [
+    {
+      id: 'parks-spirals',
+      status: 'held',
+      years: '1971–1973',
+      label: 'The Parks Branch’s spirals',
+      note: 'Two spirals on stems in a rounded square: the Provincial Parks Branch’s symbol in the Department ' +
+        'of Recreation and Conservation’s family of five, which has its own collection.',
+      applicability: { kind: 'dated_specimen', years: '1971–1973', note: DRC_SQUARES },
+      sources: [
+        DRC_REPORT(1971, DRC_1971, 64, 'Provincial Parks Branch divider'),
+        DRC_REPORT(1973, DRC_1973, 78, 'Parks Branch divider')
+      ]
+    },
+    {
+      id: 'parks-shield',
+      status: 'held',
+      years: '1973',
+      label: 'The dogwood shield',
+      note: 'A dogwood over the province in a shield, PARKS above and BRITISH COLUMBIA below, on the Parks ' +
+        'Branch’s organization chart, while the spirals stayed on the branch’s divider in the same report.',
+      applicability: {
+        kind: 'dated_specimen',
+        years: '1973',
+        note: 'Printed in the annual report for 1973. The report also mentions a logo proposal for the branch ' +
+          '(PDF page 106) without showing it, so the shield is not assumed to be that proposal. What the ' +
+          'branch used between 1973 and the flag badge has not been found.'
+      },
+      sources: [DRC_REPORT(1973, DRC_1973, 80, 'Parks Branch organization chart')]
+    },
     {
       id: 'parks-badge',
       status: 'held',

@@ -1,0 +1,117 @@
+{
+  "status": "Measured reconstruction presets, not a recovered historical typesetting specification.",
+  "font": "Corporatus",
+  "basis": "Official public raster specimens compared with native pixels from the 1971 and 1973 report scans.",
+  "presets": {
+    "General Administration": {
+      "horizontal_scale_percent": 100,
+      "vertical_scale_percent": 100,
+      "tracking_per_1000_em": -50,
+      "letter_spacing_em": -0.05,
+      "word_spacing_addition_em": -0.22,
+      "word_spacing_percent_of_default_before_tracking": 64.8
+    },
+    "Department of Recreation and Conservation": {
+      "horizontal_scale_percent": 97,
+      "vertical_scale_percent": 100,
+      "tracking_per_1000_em": -22,
+      "letter_spacing_em": -0.022,
+      "word_spacing_addition_em": -0.3,
+      "word_spacing_percent_of_default_before_tracking": 52.0
+    },
+    "Department alternative at normal width": {
+      "horizontal_scale_percent": 100,
+      "vertical_scale_percent": 100,
+      "tracking_per_1000_em": -33,
+      "letter_spacing_em": -0.033,
+      "word_spacing_addition_em": -0.29,
+      "word_spacing_percent_of_default_before_tracking": 53.6
+    }
+  },
+  "uncertainty": "General Administration strongly supports normal width. The department line prefers approximately 96\u201397% in these fits, but 100% remains close; a few percent cannot be established as intentional historical compression at roughly 21 source pixels of cap height. Tracking values are practical starting values, not exact original specifications.",
+  "spacing_convention": "Tracking is added after all characters, including spaces. CSS word-spacing is an additional adjustment to the default space. Word-spacing percentages here apply before tracking. Default space approximately 0.625em is inferred from public raster metrics, not read from a font binary.",
+  "fits": {
+    "general_admin_rs120": {
+      "phrase": "General Administration",
+      "source_file": "admin_1973_source.png",
+      "source_crop": [
+        0,
+        0,
+        460,
+        32
+      ],
+      "preview_file": "corporatus_admin.png",
+      "preview_em_px": 160.0,
+      "parameters": {
+        "sx": 0.20689812948531153,
+        "sy": 0.2056471045355714,
+        "x": 10.095293525168696,
+        "y": 8.766486633116383,
+        "tracking_scan_px": -1.6310187927393462,
+        "extra_word_scan_px": -8.90534775550759,
+        "baseline_slope": -0.00539351637699922,
+        "ink_spread_scan_px": 0.2939147934083418
+      },
+      "horizontal_scale_pct": 100.60833579571442,
+      "tracking_per_1000_em": -49.269983638709576,
+      "word_spacing_extra_per_1000_em_including_tracking": -219.74367835224544,
+      "mse": 0.0347712784617951,
+      "width_100pct_fit": {
+        "parameters": [
+          0.20686434950368854,
+          0.20686434950368854,
+          10.101988222755782,
+          8.690533717776797,
+          -1.6295594627252499,
+          -8.878787231159542,
+          -0.005376008657457897,
+          0.27645447548478913
+        ],
+        "mse": 0.03490040759202128,
+        "tracking_per_1000_em": -49.233938406826404,
+        "word_spacing_extra_per_1000_em_including_tracking": -219.02117818472368
+      }
+    },
+    "department_rs96": {
+      "phrase": "Department of Recreation and Conservation",
+      "source_file": "department_1973_source.png",
+      "source_crop": [
+        0,
+        5,
+        885,
+        41
+      ],
+      "preview_file": "../font_fit/preview_metrics/department_rs96.png",
+      "preview_em_px": 128.0,
+      "parameters": {
+        "sx": 0.24644541180260418,
+        "sy": 0.25332939894194384,
+        "x": 11.267888280163204,
+        "y": 5.104383502669528,
+        "tracking_scan_px": -0.7069818526048078,
+        "extra_word_scan_px": -10.082461209134461,
+        "baseline_slope": -0.004344425747321468,
+        "ink_spread_scan_px": 0.5685270408091699
+      },
+      "horizontal_scale_pct": 97.28259445287782,
+      "tracking_per_1000_em": -22.411842375459052,
+      "word_spacing_extra_per_1000_em_including_tracking": -297.20956027193495,
+      "mse": 0.0327183409243065,
+      "width_100pct_fit": {
+        "parameters": [
+          0.24999646630612016,
+          0.24999646630612016,
+          11.117001052581834,
+          5.27749199937262,
+          -1.0395588905147535,
+          -10.343918485101465,
+          -0.0043455973122573195,
+          0.5857045749240692
+        ],
+        "mse": 0.03359005752613175,
+        "tracking_per_1000_em": -32.48667452043776,
+        "word_spacing_extra_per_1000_em_including_tracking": -290.7653472337467
+      }
+    }
+  }
+}

@@ -365,8 +365,9 @@ const ICBC_RIGHTS = {
 const BCLC_RIGHTS = { status: 'unresolved', note: `BCLC’s mark. ${NO_PERMISSION}` }
 
 /** A mark from a package, drawn as the file has it, with `reverse` the file to show on a dark page. */
-const supplied = (identity) => ({ id, label, note, years, reverse, onDark }) => ({
-  id, kind: 'supplied', mark: id, label, note, years, ...(reverse ? { reverse } : {}), ...(onDark ? { onDark } : {}), identity
+const supplied = (identity) => ({ id, label, note, years, reverse, onDark, alternates, markLabel }) => ({
+  id, kind: 'supplied', mark: id, label, note, years, ...(reverse ? { reverse } : {}), ...(onDark ? { onDark } : {}),
+  ...(alternates ? { alternates } : {}), ...(markLabel ? { markLabel } : {}), identity
 })
 
 /** Rebuilt by the package's researcher from a registry drawing, a photograph or a screenshot. */
@@ -816,7 +817,82 @@ const BCP_2023 = (id, label, note, reverse) => supplied({
   rights: BCP_RIGHTS
 })({ id, label, years: '2023–present', note, reverse })
 
+// ── The Department of Recreation and Conservation, 1970–1973 ──────────────────────────────────────
+//
+// From a reconstruction package (research/identity/recreation-conservation-2026-11-21): every mark
+// redrawn by hand from the department's printed annual reports, with its lettering as outlines.
+// The square symbols come in black, the reports' dark and pale greens, and white, all the same paths.
+
+const DRC_RIGHTS = {
+  status: 'unresolved',
+  note: `A mark of a former provincial department, whose use is governed by the Government of British Columbia. ${NO_PERMISSION}`
+}
+
+const DRC_SQUARE_FIDELITY = 'Redrawn by hand as geometry from scans of the printed annual reports, and overlaid ' +
+  'on them in the package’s review sheets. The greens approximate the scans; they are not printing specifications.'
+
+/** One of the five square symbols, in black, with the reports' greens and white as its versions. */
+const drcSquare = (key, label, note) => supplied({
+  ...RECONSTRUCTED(DRC_SQUARE_FIDELITY),
+  applicability: DATED_BY_TIMELINE('dated_specimen', '1971–1973', 'Printed in the department’s annual reports for 1971 to 1973.'),
+  rights: DRC_RIGHTS
+})({
+  id: `drc-${key}`,
+  label,
+  years: '1971–1973',
+  note,
+  markLabel: 'Black',
+  alternates: [
+    { mark: `drc-${key}-green`, label: 'Report green', title: 'The dark green of the reports’ full-ink symbol, approximated from the scans' },
+    { mark: `drc-${key}-pale`, label: 'Report pale', title: 'The pale green of the reports’ other symbols, approximated from the scans' }
+  ],
+  reverse: `drc-${key}-white`
+})
+
+const DRC_SQUARES = {
+  department: drcSquare('department', 'Department of Recreation and Conservation',
+    'Four lobes around a ring in a rounded square: the department’s own symbol, set larger than the others at the foot of the reports’ back covers.'),
+  fishWildlife: drcSquare('fish-wildlife', 'Fish and Wildlife Branch',
+    'A deer’s head and a fish, interlocked in the rounded square.'),
+  parks: drcSquare('parks', 'Provincial Parks Branch',
+    'Two spirals on upright stems, mirrored, joined to the frame.'),
+  museum: drcSquare('museum', 'British Columbia Provincial Museum',
+    'BC over PM, the letters sharing their strokes, now the Royal BC Museum.'),
+  fisheries: drcSquare('fisheries', 'Commercial Fisheries Branch',
+    'Three fish across a grid. The 1973 report sets the same symbol beside the Marine Resources Branch, as the branch was renamed.')
+}
+
+/** One of the department's other emblems, as a single black master. */
+const drcEmblem = (id, label, years, note, fidelityNote) => supplied({
+  ...RECONSTRUCTED(fidelityNote),
+  applicability: DATED_BY_TIMELINE('dated_specimen', years, `Printed in the department’s annual report for ${years}.`),
+  rights: DRC_RIGHTS
+})({ id, label, years, note })
+
+const DRC_EMBLEMS = {
+  oval: drcEmblem('drc-dogwood-oval-1970', 'Dogwood oval', '1970',
+    'An engraved dogwood in a dark oval, BRITISH COLUMBIA arched above it and the department’s name below.',
+    'Redrawn from the 1970 report’s scan. The engraving’s hatching is interpreted rather than recovered, and the ' +
+      'small lettering is a close outlined sans, not the original face.'),
+  fwOval: drcEmblem('drc-fw-oval-1973', 'Fish and Wildlife emblem', '1973',
+    'A narrow dark emblem over “F&W”, on the 1973 report’s Fish and Wildlife dividers.',
+    'The silhouette, frame and letters redrawn by hand from the 1973 report’s scan; the ampersand is a close ' +
+      'outlined Bookman, not the original.'),
+  fwLockup: drcEmblem('drc-fw-lockup-1973', 'Fish and Wildlife emblem and name', '1973',
+    'The emblem beside a panel reading British Columbia Fish & Wildlife Branch.',
+    'The emblem as drawn for it alone; the panel’s wording is set in an outlined substitute serif, not an ' +
+      'identification of the original face.'),
+  parksShield: drcEmblem('drc-parks-shield-1973', 'Parks dogwood shield', '1973',
+    'A dogwood over the province in a shield, PARKS above and BRITISH COLUMBIA below.',
+    'Shield, province, islands and bracts redrawn by hand from the 1973 report’s organization chart; the small ' +
+      'captions are approximated with outlined substitutes, and the petals are less certain than the rest.')
+}
+
 const BCP_ENTRIES = {
+  // The Parks Branch's own marks of the 1970s, also in the department's collection; held here under
+  // their own ids so that each collection's page can scroll to its copy.
+  'parks-spirals': [{ ...DRC_SQUARES.parks, id: 'bcp-1971-spirals' }],
+  'parks-shield': [{ ...DRC_EMBLEMS.parksShield, id: 'bcp-1973-shield' }],
   'parks-current': [
     BCP_2023('bcp-2023', 'The logo, as on its site', 'The flat sun and mountains with “British Columbia”, a gold upright bar, ' +
       'and “BC Parks” in serif, reversed on the site’s navy.', 'bcp-2023-white'),
@@ -1116,19 +1192,60 @@ export const GALLERY_COLLECTIONS = [
     shelf: 'bodies',
     label: 'BC Parks',
     body: 'Division · Ministry of Environment and Parks',
-    years: '2002–present',
+    years: '1971–present',
     graphNode: 'sub-bc-parks',
     cover: 'bc-parks',
-    intro: 'BC Parks’ marks, oldest first: its badge from the flag years (the flag symbol in a rounded ' +
+    intro: 'BC Parks’ marks, oldest first: the Parks Branch’s spirals and dogwood shield from the Department of ' +
+      'Recreation and Conservation’s reports of 1971–1973, reconstructions shared with that department’s ' +
+      'collection; its badge from the flag years (the flag symbol in a rounded ' +
       'frame with “Parks” set at the size of “BC”), then “BCParks” beside the shaded sun, and beside the ' +
       'Best Place on Earth mark, both put together here from the Province’s own artwork and lettering, ' +
-      'and today’s logo as bcparks.ca serves it. The first three open to recolour.',
+      'and today’s logo as bcparks.ca serves it. The flag badge and the two banners open to recolour.',
     eras: withMarks(COLLECTION_ERAS['bc-parks'], {
       'parks-badge': ONE_OFFS.filter((entry) => entry.id === 'bc-parks').map(provincial),
       'parks-shaded-banner': ONE_OFFS.filter((entry) => entry.id === 'bc-parks-banner').map(provincial),
       'parks-best-place': ONE_OFFS.filter((entry) => entry.id === 'bc-parks-best-place').map(provincial),
       ...BCP_ENTRIES
     })
+  },
+  {
+    id: 'recreation-conservation',
+    shelf: 'bodies',
+    label: 'Recreation and Conservation',
+    body: 'Provincial department, 1957–1976',
+    years: '1970–1973',
+    cover: 'drc-department',
+    intro: 'The Department of Recreation and Conservation’s marks, from its annual reports: an engraved dogwood ' +
+      'oval in 1970; then, from 1971 to 1973, five square symbols, one for the department and one each for ' +
+      'Fish and Wildlife, Provincial Parks, the Provincial Museum and Commercial Fisheries; and two emblems ' +
+      'that join them in 1973. All are reconstructions, redrawn from the reports’ scans. The squares open in ' +
+      'black, the reports’ two greens and white. The package’s report dividers, cover blocks, handbook panels ' +
+      'and the 22 park signs proposed in 1971 are kept with it in artwork/recreation-conservation.',
+    eras: withMarks(COLLECTION_ERAS['recreation-conservation'], {
+      'drc-dogwood-oval': [DRC_EMBLEMS.oval],
+      'drc-five-squares': Object.values(DRC_SQUARES),
+      'drc-1973-emblems': [DRC_EMBLEMS.fwOval, DRC_EMBLEMS.fwLockup, DRC_EMBLEMS.parksShield]
+    })
+  },
+  {
+    id: 'royal-bc-museum',
+    shelf: 'bodies',
+    label: 'Royal BC Museum',
+    body: 'Crown corporation · formerly the British Columbia Provincial Museum',
+    years: '1886–present',
+    graphNode: 'royal-bc-museum',
+    // The collection the acquisition pass made for it, whose links still lead here.
+    aliases: ['collected-royal-bc-museum'],
+    cover: 'source-royal-bc-museum-royal-bc-museum-svg',
+    intro: 'The museum’s marks, oldest first: the Provincial Museum’s BC-over-PM square from the Department of ' +
+      'Recreation and Conservation’s reports of 1971–1973, a reconstruction shared with that department’s ' +
+      'collection; then today’s logo as rbcm.ca serves it. The marks in between are still sought.',
+    eras: withMarks(COLLECTION_ERAS['royal-bc-museum'], withCollected({
+      // Held here under its own id, so that each collection's page can scroll to its copy.
+      'rbcm-bcpm-square': [{ ...DRC_SQUARES.museum, id: 'rbcm-1971-bcpm' }]
+    }, {
+      'rbcm-current': ['royal-bc-museum']
+    }))
   },
   {
     id: 'bc-lands',

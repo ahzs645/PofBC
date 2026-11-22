@@ -1,5 +1,6 @@
 // Packages the Crown corporations' and agencies' marks — ICBC, BCLC, BC Ferries, WorkSafeBC, BC
-// Transit and BC Parks — from the research packages' SVGs, drawn as supplied.
+// Transit and BC Parks, and the Department of Recreation and Conservation's of 1970–1973 — from the
+// research packages' SVGs, drawn as supplied.
 //
 // Unlike the one-offs these are not lifted into parts: each file is already one mark, tightly
 // cropped, and each says in its own <title> and <desc> what it is — a supplied vector, a declared
@@ -59,7 +60,33 @@ const MARKS = {
   'bcp-2023': 'artwork/bc-parks/bc-parks-2023-on-navy.svg',
   'bcp-2023-white': 'artwork/bc-parks/bc-parks-2023.svg',
   'bcp-2023-vertical': 'artwork/bc-parks/bc-parks-2023-vertical-on-navy.svg',
-  'bcp-2023-vertical-white': 'artwork/bc-parks/bc-parks-2023-vertical.svg'
+  'bcp-2023-vertical-white': 'artwork/bc-parks/bc-parks-2023-vertical.svg',
+  // The Department of Recreation and Conservation's five square symbols (1971–1973), each in black,
+  // the reports' two greens and white, and the department's other emblems of 1970 and 1973.
+  'drc-department': 'artwork/recreation-conservation/symbols/01_Department_Recreation_Conservation_black.svg',
+  'drc-department-green': 'artwork/recreation-conservation/symbols/01_Department_Recreation_Conservation_report_green.svg',
+  'drc-department-pale': 'artwork/recreation-conservation/symbols/01_Department_Recreation_Conservation_report_pale.svg',
+  'drc-department-white': 'artwork/recreation-conservation/symbols/01_Department_Recreation_Conservation_White.svg',
+  'drc-fish-wildlife': 'artwork/recreation-conservation/symbols/02_Fish_and_Wildlife_black.svg',
+  'drc-fish-wildlife-green': 'artwork/recreation-conservation/symbols/02_Fish_and_Wildlife_report_green.svg',
+  'drc-fish-wildlife-pale': 'artwork/recreation-conservation/symbols/02_Fish_and_Wildlife_report_pale.svg',
+  'drc-fish-wildlife-white': 'artwork/recreation-conservation/symbols/02_Fish_and_Wildlife_White.svg',
+  'drc-parks': 'artwork/recreation-conservation/symbols/03_Provincial_Parks_black.svg',
+  'drc-parks-green': 'artwork/recreation-conservation/symbols/03_Provincial_Parks_report_green.svg',
+  'drc-parks-pale': 'artwork/recreation-conservation/symbols/03_Provincial_Parks_report_pale.svg',
+  'drc-parks-white': 'artwork/recreation-conservation/symbols/03_Provincial_Parks_White.svg',
+  'drc-museum': 'artwork/recreation-conservation/symbols/04_BC_Provincial_Museum_black.svg',
+  'drc-museum-green': 'artwork/recreation-conservation/symbols/04_BC_Provincial_Museum_report_green.svg',
+  'drc-museum-pale': 'artwork/recreation-conservation/symbols/04_BC_Provincial_Museum_report_pale.svg',
+  'drc-museum-white': 'artwork/recreation-conservation/symbols/04_BC_Provincial_Museum_White.svg',
+  'drc-fisheries': 'artwork/recreation-conservation/symbols/05_Commercial_Fisheries_Marine_Resources_black.svg',
+  'drc-fisheries-green': 'artwork/recreation-conservation/symbols/05_Commercial_Fisheries_Marine_Resources_report_green.svg',
+  'drc-fisheries-pale': 'artwork/recreation-conservation/symbols/05_Commercial_Fisheries_Marine_Resources_report_pale.svg',
+  'drc-fisheries-white': 'artwork/recreation-conservation/symbols/05_Commercial_Fisheries_Marine_Resources_White.svg',
+  'drc-dogwood-oval-1970': 'artwork/recreation-conservation/related_emblems/09_Department_Dogwood_Oval_1970.svg',
+  'drc-fw-oval-1973': 'artwork/recreation-conservation/related_emblems/06_Fish_Wildlife_Oval_1973.svg',
+  'drc-fw-lockup-1973': 'artwork/recreation-conservation/related_emblems/07_Fish_Wildlife_Paired_Lockup_1973.svg',
+  'drc-parks-shield-1973': 'artwork/recreation-conservation/related_emblems/08_Parks_Dogwood_Shield_1973.svg'
 }
 
 /** Attributes on the root that its children inherit, and so must survive it being replaced. */
@@ -74,6 +101,44 @@ const textOf = (source, tag) => {
   return found ? decode(found[1]).replace(/\s+/g, ' ') : null
 }
 
+/** The whole element with this id — its opening tag to its matching close — or null. */
+const elementById = (body, id) => {
+  const open = new RegExp(`<([\\w:-]+)\\b[^>]*\\sid="${id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"[^>]*?(/?)>`).exec(body)
+  if (!open) return null
+  if (open[2]) return open[0]
+  const tag = new RegExp(`<(/?)${open[1]}\\b[^>]*?(/?)>`, 'g')
+  tag.lastIndex = open.index + open[0].length
+  for (let depth = 1, found; (found = tag.exec(body));) {
+    if (found[1]) depth -= 1
+    else if (!found[2]) depth += 1
+    if (depth === 0) return body.slice(open.index, found.index + found[0].length)
+  }
+  throw new Error(`#${id} is never closed`)
+}
+
+/**
+ * A <use> drawn out in full: the element it points at, copied in its place under the <use>'s own
+ * position and transform. The copy's ids are dropped, since they would now appear twice; a copy
+ * that something else points into cannot be made this way, and is refused. The <defs> the
+ * originals sat in are dropped once nothing points into them.
+ */
+const inlineUses = (body, path) => {
+  const inlined = body.replace(/<use\b([^>]*?)\/?>(?:<\/use>)?/g, (_, attributes) => {
+    const { id, href, 'xlink:href': xlink, x = 0, y = 0, transform, width, height, ...rest } = attributesOf(attributes)
+    const target = (href ?? xlink ?? '').replace(/^#/, '')
+    const element = target && elementById(body, target)
+    if (!element) throw new Error(`${path}: <use> of #${target}, which it lacks`)
+    const copy = element.replace(/\sid="[^"]*"/g, '')
+    if (/url\(#/.test(copy)) throw new Error(`${path}: #${target} points elsewhere, so cannot be copied`)
+    const place = [Number(x) || Number(y) ? `translate(${Number(x)} ${Number(y)})` : '', transform ?? ''].filter(Boolean).join(' ')
+    const kept = Object.entries(rest).map(([name, value]) => ` ${name}="${value}"`).join('')
+    return `<g${place ? ` transform="${place}"` : ''}${kept}>${copy}</g>`
+  })
+  const pointed = new Set([...inlined.matchAll(/url\(#([^)]+)\)|href="#([^"]+)"/g)].map((m) => m[1] ?? m[2]))
+  return inlined.replace(/<defs\b[^>]*>[\s\S]*?<\/defs>/g, (defs) =>
+    [...defs.matchAll(/\sid="([^"]*)"/g)].some(([, id]) => pointed.has(id)) ? defs : '')
+}
+
 const pack = (key, path) => {
   const source = readFileSync(resolve(root, path), 'utf8')
   const svg = source.match(/<svg\b([^>]*)>([\s\S]*)<\/svg>\s*$/)
@@ -86,6 +151,9 @@ const pack = (key, path) => {
   let body = svg[2]
     .replace(/<!--[\s\S]*?-->/g, '')
     .replace(/<(title|desc|metadata)\b[^>]*>[\s\S]*?<\/\1>/g, '')
+  // A shape drawn more than once by <use> (the Fisheries symbol's three fish) is written out, so the
+  // mark draws the same with nothing outside it to point at.
+  if (/<use\b/.test(body)) body = inlineUses(body, path)
 
   for (const banned of ['image', 'text', 'script', 'style', 'foreignObject', 'use']) {
     if (new RegExp(`<${banned}\\b`).test(body)) throw new Error(`${path}: has a <${banned}>, which a supplied mark here must not`)
@@ -113,7 +181,8 @@ const marks = Object.fromEntries(Object.entries(MARKS).map(([key, path]) => [key
 
 const header = `// Generated by scripts/build-crown-marks.mjs — do not edit.
 //
-// ICBC's, BCLC's, BC Ferries', WorkSafeBC's and BC Transit's marks, from the research packages in
+// ICBC's, BCLC's, BC Ferries', WorkSafeBC's, BC Transit's, BC Parks' and the Department of Recreation
+// and Conservation's marks, from the research packages in
 // research/identity/, drawn exactly as supplied. \`body\` is each file's drawing with its ids
 // prefixed by the mark's key; \`title\` and \`description\` are the file's own account of what it is;
 // \`inks\` are the colours it uses.

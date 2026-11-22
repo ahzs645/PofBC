@@ -7,6 +7,7 @@ import { readFileSync } from 'node:fs'
 import { SIGNS, SIGN_SERIES, signIds } from './catalogue.js'
 import { FOREST_SERVICE_SIGNS } from './forest-service/signs.js'
 import { TOURISM_SIGNS } from './tourism/signs.js'
+import { PARKS_SIGNS } from './parks/signs.js'
 import { POSTERS } from '../posters/catalogue.js'
 import { FOREST_SERVICE_POSTERS } from '../posters/forest-service/posters.js'
 import { GALLERY_COLLECTIONS } from '../gallery/collections.js'
@@ -15,9 +16,10 @@ const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
 const DRAWINGS = {
   lookout: read('./forest-service/lookout.svg'),
   'forest-closure': read('./forest-service/forest-closure.svg'),
-  'super-natural': read('./tourism/super-natural.svg')
+  'super-natural': read('./tourism/super-natural.svg'),
+  'proposed-park-symbols': read('./parks/proposed-park-symbols.svg')
 }
-const ALL_SIGNS = { ...FOREST_SERVICE_SIGNS, ...TOURISM_SIGNS }
+const ALL_SIGNS = { ...FOREST_SERVICE_SIGNS, ...TOURISM_SIGNS, ...PARKS_SIGNS }
 const GOVERNMENT = read('../government/historyData.js')
 const GALLERIES = new Set(GALLERY_COLLECTIONS.map(({ id }) => id))
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
@@ -108,4 +110,26 @@ test('the closure sign is the package’s two faces in one drawing, one strip sh
       assert.equal(tag.includes('display="none"'), i > 0, name)
     }
   })
+})
+
+test('the park symbols are the package’s 22 drawings, in the report’s order, and say they were proposed', () => {
+  const drawing = DRAWINGS['proposed-park-symbols']
+  const manifest = JSON.parse(read('../../research/identity/recreation-conservation-2026-11-21/construction/park_symbols/manifest.json'))
+  const sign = PARKS_SIGNS['proposed-park-symbols']
+  assert.equal(manifest.symbols.length, 22)
+  assert.deepEqual(sign.order.slice(1).map((key) => sign.parts[key].label), manifest.symbols.map(({ name }) => name))
+  manifest.symbols.forEach(({ id }, index) => {
+    const source = read(`../../artwork/recreation-conservation/park_symbols/${id}.svg`)
+    const key = sign.order[index + 1]
+    const group = new RegExp(`<g id="pps-${key}"[^>]*>([\\s\\S]*?)</g></g></g>`).exec(drawing)?.[1]
+    assert.ok(group, key)
+    // Every shape is the file's own, unchanged.
+    const shapes = (svg) => [...svg.matchAll(/<(path|circle|rect|polygon|line|ellipse)\b([^>]*)>/g)].map((m) => m[0].replace(/\s*\/?>$/, ''))
+      .map((tag) => tag.replace(/clip-path="[^"]*"/, '').replace(/\s+/g, ' '))
+    assert.ok(shapes(source).length >= 2, key)
+    assert.deepEqual(shapes(group), shapes(source), key)
+  })
+  for (const [, id] of drawing.matchAll(/ id="([^"]+)"/g)) assert.match(id, /^pps-[a-z-]+$/)
+  for (const key of sign.order.slice(1)) assert.match(sign.parts[key].panel.em, /proposed/)
+  assert.match(sign.parts.overview.panel.blocks[0], /proposals/)
 })
