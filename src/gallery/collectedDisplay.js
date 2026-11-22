@@ -2284,6 +2284,45 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "ndit-annual-report-2006-northern-trust": {
+  "light": {
+   "file": "identity-display/ndit-annual-report-2006-northern-trust.light.svg",
+   "aspect": 2.1818,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/ndit-annual-report-2006-northern-trust.dark.svg",
+   "aspect": 2.1818,
+   "recoloured": true,
+   "palette": true
+  }
+ },
+ "ndit-annual-report-2024-horizontal": {
+  "light": {
+   "file": "identity-display/ndit-annual-report-2024-horizontal.light.svg",
+   "aspect": 4.237,
+   "recoloured": true,
+   "palette": true
+  },
+  "dark": {
+   "file": "identity-display/ndit-annual-report-2024-horizontal.dark.svg",
+   "aspect": 4.237,
+   "recoloured": false
+  }
+ },
+ "ndit-annual-report-2024-stacked": {
+  "light": {
+   "file": "identity-display/ndit-annual-report-2024-stacked.light.svg",
+   "aspect": 1.4756,
+   "recoloured": true,
+   "palette": true
+  },
+  "dark": {
+   "file": "identity-display/ndit-annual-report-2024-stacked.dark.svg",
+   "aspect": 1.4756,
+   "recoloured": false
+  }
+ },
  "source-expanded-etsi-bc-bylaws-2026-full-name-colour": {
   "light": {
    "file": "identity-display/source-expanded-etsi-bc-bylaws-2026-full-name-colour.light.svg",

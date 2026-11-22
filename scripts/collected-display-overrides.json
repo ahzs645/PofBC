@@ -41,5 +41,25 @@
       "#111111": "#e3e3e3"
     },
     "note": "The blue disc is faint on the dark page too, and its lettering sits beside it, so the automatic redraw reads the black lettering as sitting on other ink and keeps it. On the dark page it takes the reversed ink the 1983 rebuild's copy has (#e3e3e3); the disc carries its own white symbol and keeps its blue."
+  },
+  "ndit-annual-report-2024-horizontal": {
+    "light-palette": {
+      "#ffffff": "#112242"
+    },
+    "note": "Its lettering is white, as printed on the report's navy cover, and Poppler draws each letter as its own clipped fill, so the automatic redraw reverses only some of them. On the light page the white takes the cover's own navy (#112242), sampled from the report; the symbol's blue gradients are left as printed."
+  },
+  "ndit-annual-report-2024-stacked": {
+    "light-palette": {
+      "#ffffff": "#112242"
+    },
+    "note": "Its lettering is white, as printed on the report's navy cover, and Poppler draws each letter as its own clipped fill, so the automatic redraw reverses only some of them. On the light page the white takes the cover's own navy (#112242), sampled from the report; the symbol's blue gradients are left as printed."
+  },
+  "ndit-annual-report-2006-northern-trust": {
+    "dark-palette": {
+      "#0073c7": "#3391e7",
+      "#260f54": "#9082d1",
+      "#737070": "#c2bebe"
+    },
+    "note": "The dark purple of Trust and the grey name line all but disappear on the dark page, while the blue of northern and the symbol's gradient read. On the dark page each flat colour takes the redraw's own rule: the blue and purple lightened at their hue to 5:1, the grey reversed; the symbol's gradient is left as printed."
   }
 }

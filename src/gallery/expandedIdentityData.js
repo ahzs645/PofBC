@@ -632,8 +632,153 @@ export const EXPANDED_IDENTITY_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-11-15",
-    "notes": "Officially published identity artwork. Source publication and capture dates are recorded separately from logo adoption dates.",
+    "notes": "Officially published identity artwork: the Northern Trust identity from the 2006 and 2007 annual reports, and the Northern Development identity from the Annual Report 2024 and the website. Source publication and capture dates are recorded separately from logo adoption dates.",
     "assets": [
+      {
+        "id": "ndit-annual-report-2006-northern-trust",
+        "label": "Northern Development Initiative Trust: Northern Trust logo, 2006 Annual Report",
+        "file": "identity-expanded/northern-development-initiative-trust/annual-report-2006-northern-trust.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "85603b0077cdb7b5877965c7bebcdaa060a5ca8e5eaf9f13502f7f6d4efb2f80",
+        "bytes": 56036,
+        "sourcePage": "https://web.archive.org/web/20170615093019/http://www.northerndevelopment.bc.ca/uploads/files/2006AnnualReport.pdf",
+        "sourceUrl": "https://web.archive.org/web/20170615093019/http://www.northerndevelopment.bc.ca/uploads/files/2006AnnualReport.pdf",
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Northern Development Initiative Trust",
+        "sourceLocator": "2006 Annual Report, front cover (PDF page 1)",
+        "sourceFile": "identity-expanded/_sources/ndit-2006-annual-report-page-1.pdf",
+        "sourceDate": "2007-04",
+        "dateNote": "The 2006 Annual Report's PDF was created on 11 April 2007: a publication sighting of the identity, not its adoption.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The trust's first identity: the script wordmark northern Trust, the NORTHERN DEVELOPMENT INITIATIVE TRUST line, and a square symbol of a white river winding under stars, in a blue gradient.",
+        "fidelityNote": "Native PDF paths, fills and shadings converted to SVG by Poppler's pdftocairo (which writes each axial shading as an SVG gradient and applies Poppler's colour conversion); only drawing outside the logo was removed. No tracing, retyping or raster. The symbol's gradient is the PDF's own shading inside its vector clip.",
+        "darkBackground": false,
+        "downloads": [
+          {
+            "file": "identity-expanded/_sources/ndit-2006-annual-report-page-1.pdf",
+            "sha256": "b00485c8c7797ccedda1b8394dfecd55bf73dfeb439bcde45261a44c4c4f02b1",
+            "bytes": 52900,
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "dimensions": {
+          "viewBox": "403.289 280.437 151.512 67.848"
+        },
+        "versionLabel": "2006 Annual Report"
+      },
+      {
+        "id": "ndit-annual-report-2007-northern-trust",
+        "label": "Northern Development Initiative Trust: Northern Trust logo, 2007 Annual Report",
+        "file": "identity-expanded/northern-development-initiative-trust/annual-report-2007-northern-trust.png",
+        "format": "png",
+        "isVector": false,
+        "sha256": "fd299985794c0360e71dea4ea23b648283453d165b4bf1264b06ec117688cba6",
+        "bytes": 61457,
+        "sourcePage": "https://web.archive.org/web/20170615175441/http://www.northerndevelopment.bc.ca/uploads/files/2007AnnualReport.pdf",
+        "sourceUrl": "https://web.archive.org/web/20170615175441/http://www.northerndevelopment.bc.ca/uploads/files/2007AnnualReport.pdf",
+        "contentType": "image/png",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Northern Development Initiative Trust",
+        "sourceLocator": "2007 Annual Report, back cover (PDF page 48)",
+        "sourceFile": "identity-expanded/_sources/ndit-2007-annual-report-page-48.pdf",
+        "sourceDate": "2008-05",
+        "dateNote": "The 2007 Annual Report's PDF was created on 5 May 2008: a publication sighting, not adoption.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "rendered-pdf-region",
+        "notes": "The same Northern Trust design in the 2007 report's colours: a brighter blue northern, navy Trust and a navy name line.",
+        "fidelityNote": "Rendered at 600 dpi from the PDF page with a transparent ground. The wordmark is drawn from the PDF's vector paths; the symbol is the PDF's own 47 by 47 pixel CMYK image in its vector clip, so this is kept as an image rather than a vector.",
+        "darkBackground": false,
+        "downloads": [
+          {
+            "file": "identity-expanded/_sources/ndit-2007-annual-report-page-48.pdf",
+            "sha256": "9ce494ea74c878891b8880f95b52a227fb32073b8cd78902336417ee59ff0c20",
+            "bytes": 121548,
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "dimensions": {
+          "width": 892,
+          "height": 417
+        },
+        "variantOf": "ndit-annual-report-2006-northern-trust",
+        "versionLabel": "2007 Annual Report colours"
+      },
+      {
+        "id": "ndit-annual-report-2024-horizontal",
+        "label": "Northern Development Initiative Trust: Northern Development logo, horizontal, Annual Report 2024",
+        "file": "identity-expanded/northern-development-initiative-trust/annual-report-2024-horizontal.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "79eff94713d884ae5dc7af153340e621c6c205bb0435ee43254f99fdf7054ae5",
+        "bytes": 41728,
+        "sourcePage": "https://www.northerndevelopment.bc.ca/wp-content/uploads/2025/05/NDIT_2024-AR_Web.pdf",
+        "sourceUrl": "https://www.northerndevelopment.bc.ca/wp-content/uploads/2025/05/NDIT_2024-AR_Web.pdf",
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Northern Development Initiative Trust",
+        "sourceLocator": "Annual Report 2024, front cover (PDF page 1)",
+        "sourceFile": "identity-expanded/_sources/ndit-2024-annual-report-page-1.pdf",
+        "sourceDate": "2025-05",
+        "dateNote": "The Annual Report 2024's PDF was created on 2 May 2025: a publication sighting, not adoption.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The Northern Development identity: a rounded square symbol of a wave in two blue gradients beside NORTHERN DEVELOPMENT, the name in white as printed on the report's navy cover.",
+        "fidelityNote": "Native PDF paths, fills and shadings converted to SVG by Poppler's pdftocairo (which writes each axial shading as an SVG gradient and applies Poppler's colour conversion); only drawing outside the logo was removed. No tracing, retyping or raster.",
+        "darkBackground": true,
+        "downloads": [
+          {
+            "file": "identity-expanded/_sources/ndit-2024-annual-report-page-1.pdf",
+            "sha256": "6c183bae84aea3cdfad75a91c1173232da3bd7b7baccec0a02f0906df3412f0b",
+            "bytes": 1226875,
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "dimensions": {
+          "viewBox": "76.641 77.98 156.891 37.215"
+        }
+      },
+      {
+        "id": "ndit-annual-report-2024-stacked",
+        "label": "Northern Development Initiative Trust: Northern Development logo, stacked, Annual Report 2024",
+        "file": "identity-expanded/northern-development-initiative-trust/annual-report-2024-stacked.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "02837a1288c67e663f084c87f8f2b9f2ffacfc5c6a47a57c71d27ddb6a77817e",
+        "bytes": 43924,
+        "sourcePage": "https://www.northerndevelopment.bc.ca/wp-content/uploads/2025/05/NDIT_2024-AR_Web.pdf",
+        "sourceUrl": "https://www.northerndevelopment.bc.ca/wp-content/uploads/2025/05/NDIT_2024-AR_Web.pdf",
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Northern Development Initiative Trust",
+        "sourceLocator": "Annual Report 2024, back cover (PDF page 49)",
+        "sourceFile": "identity-expanded/_sources/ndit-2024-annual-report-page-49.pdf",
+        "sourceDate": "2025-05",
+        "dateNote": "The Annual Report 2024's PDF was created on 2 May 2025: a publication sighting, not adoption.",
+        "observedDate": "2026-11-21",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The stacked Northern Development logo: the wave symbol in its blue gradients above NORTHERN DEVELOPMENT in white, as printed on the report's navy back cover; the website shows the same lockup in one colour.",
+        "fidelityNote": "Native PDF paths, fills and shadings converted to SVG by Poppler's pdftocairo (which writes each axial shading as an SVG gradient and applies Poppler's colour conversion); only drawing outside the logo was removed. No tracing, retyping or raster.",
+        "darkBackground": true,
+        "downloads": [
+          {
+            "file": "identity-expanded/_sources/ndit-2024-annual-report-page-49.pdf",
+            "sha256": "7917117cdf6c267d707ab2d62462fd0c5dd4dd58f876815b8e81ee25069b4424",
+            "bytes": 22950,
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "dimensions": {
+          "viewBox": "265.574 504.57 80.852 65.363"
+        },
+        "versionLabel": "Annual Report 2024"
+      },
       {
         "id": "source-expanded-northern-development-initiative-trust-website-logo",
         "label": "Northern Development Initiative Trust: Website logo",
@@ -661,7 +806,9 @@ export const EXPANDED_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": true
+        "darkBackground": true,
+        "variantOf": "ndit-annual-report-2024-stacked",
+        "versionLabel": "Website, one colour"
       }
     ]
   },
