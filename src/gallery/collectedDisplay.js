@@ -2332,6 +2332,19 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "rebuild-expanded-bc-ferry-commission": {
+  "light": {
+   "file": "identity-display/rebuild-expanded-bc-ferry-commission.light.svg",
+   "aspect": 0.9398,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rebuild-expanded-bc-ferry-commission.dark.svg",
+   "aspect": 0.9398,
+   "recoloured": true,
+   "palette": true
+  }
+ },
  "ndit-annual-report-2006-northern-trust": {
   "light": {
    "file": "identity-display/ndit-annual-report-2006-northern-trust.light.svg",

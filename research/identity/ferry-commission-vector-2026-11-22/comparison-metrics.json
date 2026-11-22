@@ -1,0 +1,75 @@
+{
+  "reference_pixels": [
+    841,
+    895
+  ],
+  "silhouette_intersection_over_union": 0.9975823911007117,
+  "rgb_mean_absolute_difference_nonblank_neighborhood_0_255": 2.8086300530246877,
+  "mean_symmetric_binary_edge_distance_source_pixels": 0.05161930225537971,
+  "edge_distance_95th_percentile_source_pixels": 1.0,
+  "maximum_binary_edge_distance_source_pixels": 1.0,
+  "svg_paths": 248,
+  "svg_images": 0,
+  "svg_live_text_elements": 0,
+  "pdf_pages": 1,
+  "pdf_embedded_images": 0,
+  "pdf_font_resources": 0,
+  "pdf_vector_drawings": 238,
+  "duplicate_ids": 0,
+  "perimeter_fit": {
+    "path": "M181.24706,237.24706 H675.00000 V409.00000 C675.00000,473.77850 655.95470,676.76208 428.13553,786.38911 C199.95845,676.59306 181.24706,472.91401 181.24706,409.00000 Z",
+    "left_controls": [
+      [
+        181.24705882352941,
+        409.0
+      ],
+      [
+        181.24705882352941,
+        472.9140129024933
+      ],
+      [
+        199.9584464451991,
+        676.5930579531623
+      ],
+      [
+        428.13553262602716,
+        786.3891110441766
+      ]
+    ],
+    "right_controls": [
+      [
+        675.0,
+        409.0
+      ],
+      [
+        675.0,
+        473.7784992534574
+      ],
+      [
+        655.9547016033059,
+        676.7620777187907
+      ],
+      [
+        428.13553262602716,
+        786.3891110441766
+      ]
+    ],
+    "top": 237.24705882352941,
+    "boundary_coverage_fit_rms_pixels": 0.05956212109138847,
+    "maximum_boundary_coverage_fit_error_pixels": 0.17655043860895603
+  },
+  "lettering_fit": {
+    "binary_ink_iou": 0.9849269657101419,
+    "alpha_mae_ink_neighborhood": 0.014305218086279058,
+    "alpha_mean_absolute_difference_whole_canvas": 0.0011916760805518573,
+    "source_ink_area": 38129.737254901964,
+    "reconstructed_ink_area": 38147.57647058823,
+    "symmetric_edge_distance_pixels_mean": 0.06156901658211045,
+    "symmetric_edge_distance_pixels_95th_percentile": 0.25,
+    "symmetric_edge_distance_pixels_max": 0.5590169943749475,
+    "binary_ink_iou_excluding_source_alpha_112_to_144": 0.9983365529083494
+  },
+  "source_sha256": "16768fcadafd144282d394481d628eb61dfe19dc61db07550ff7f241d8a62fd4",
+  "svg_sha256": "7cc0badb3a3d389977f63d4f82d0579a97637078757719e169022a5c6dd35286",
+  "metric_note": "Whole-logo silhouette IoU and binary edge metrics use alpha>=128 at reference resolution; antialias ties affect these measurements. Colour difference includes boundary antialiasing. These are reproduction checks, not proof of an official master."
+}
