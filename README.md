@@ -19,6 +19,24 @@ outlined exports and PDFs all work, with slightly different letterforms. Builds 
 `FONT_REQUIRED` set still require Helvetica. `npm run shots:salaries` screenshots the salary
 pages at phone and desktop widths and counts their words (needs Playwright with Chromium).
 
+## School district histories and logos
+
+The **School Districts** view (`?view=school-districts`) connects all 60 current B.C. districts
+to their original logos, sourced histories, documented predecessors and existing salary records.
+Open a district directly with `?view=school-districts&district=school-district-57`.
+The collection includes 31 immediate predecessors of the 1996 amalgamations, clickable succession
+links, 67 artwork files and the separate source evidence behind dates and identity changes.
+
+The [district catalogue](research/education/school-districts/CATALOGUE.md) shows every current
+district and its collected logo. The [research notes](research/education/school-districts/README.md)
+distinguish legal creation, district-reported dates, earlier institutional origins and unresolved
+claims. The current district roster is complete; the earlier district and logo histories remain
+open to further documented additions.
+
+Rebuild offline with `npm run build:school-districts`; run `npm run check:school-districts` to
+check source dates, predecessor identities, original asset hashes, salary links and rendered pages.
+The same catalogue supplies the Logos register and Government’s related-bodies directory.
+
 ## Salary data and coverage
 
 The [consolidated recovery and preservation checks](research/salaries/consolidation-2026-11-06.md) keep original salary evidence and reviewed name decisions intact while adding official elected, Assembly staff and police records. The Workforce view also provides all 30 archived official Workforce Profile CSV tables, separately from employee payment records.

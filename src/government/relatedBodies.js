@@ -2,6 +2,8 @@
 // chronology. These are current, sourced catalogue records; they are never projected backwards
 // into a ministry's historical responsibility or drawn as members of the provincial executive.
 
+import { SCHOOL_RELATED_BODIES } from '../schools/integration.js'
+
 export const RELATED_BODIES_AS_OF = '2026-11-15'
 
 const source = (title, url) => ({ title, url })
@@ -18,6 +20,8 @@ const UNBC_HISTORY = source('UNBC — History', 'https://www.unbc.ca/about-unbc/
 const UNBC_ACT = source('University of Northern British Columbia Act, SBC 1990, c.28', 'https://www.bclaws.gov.bc.ca/civix/document/id/94consol18/94consol18/90028')
 
 export const RELATED_BODY_KINDS = {
+  'school-district': 'School district',
+  'francophone-school-district': 'Francophone school district',
   'regional-transportation-authority': 'Regional transportation authority',
   'transit-company': 'Transit operating company',
   'transit-police': 'Transit police service',
@@ -40,6 +44,7 @@ export const RELATED_BODY_KINDS = {
  * own kind and governance.
  */
 export const RELATED_BODY_GROUPS = [
+  { id: 'school-districts', label: 'School districts', kinds: ['school-district', 'francophone-school-district'] },
   { id: 'transit', label: 'Transit in Metro Vancouver', kinds: ['regional-transportation-authority', 'transit-company', 'transit-police'] },
   { id: 'services', label: 'Regional and public services', kinds: ['regional-federation', 'ferry-authority', 'emergency-communications', 'statutory-authority', 'independent-regulator', 'corporate-subsidiary'] },
   { id: 'development', label: 'Economic development', kinds: ['development-trust', 'development-society'] },
@@ -64,6 +69,7 @@ const university = (id, name, shortName, officialUrl, slug) => ({
 })
 
 export const RELATED_BODIES = [
+  ...SCHOOL_RELATED_BODIES,
   {
     id: 'translink', name: 'South Coast British Columbia Transportation Authority', shortName: 'TransLink',
     aliases: ['TransLink', 'Greater Vancouver Transportation Authority', 'GVTA', 'SCBCTA'],

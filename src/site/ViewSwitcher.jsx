@@ -27,6 +27,7 @@ export const VIEWS = [
   { id: 'guides', label: 'Visual Guides', description: 'Identity manuals, rebuilt page by page' },
   { id: 'stationery', label: 'Stationery', description: 'The 1977 calling card, letterhead and envelope, filled in', badge: 'New' },
   { id: 'government', label: 'Government', description: 'The Province’s structure, back to 1871' },
+  { id: 'school-districts', label: 'School Districts', description: 'District histories, predecessor connections, original logos and salary records', badge: 'New' },
   { id: 'health-map', label: 'Health Maps', description: 'Historical health areas and their modern boundary comparisons', badge: 'New' },
   { id: 'salaries', label: 'Salaries', description: 'Public-sector pay by name, followed across the years', badge: 'New' }
 ]
