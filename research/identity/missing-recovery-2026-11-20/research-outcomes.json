@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "observedDate": "2026-11-20",
+  "observationTimezone": "America/Cambridge_Bay",
+  "scope": "The declared 455-subject register was inventoried. All141 unheld municipal subjects received acquisition checks. Curated source leads and dated institution/transit publications were researched. The health follow-up covered four historical subjects in depth, not all98 individually.",
+  "researchLogs": [
+    "municipal-research.json",
+    "institutions-research.json",
+    "health-research.json"
+  ],
+  "subjects": [
+    {
+      "id": "municipality-grand-forks",
+      "name": "Grand Forks",
+      "sourcePage": "http://grandforks.ca",
+      "observedDate": "2026-11-20",
+      "reason": "Official Grand Forks artwork was confirmed. The City requires approval for use in other organizations’ publications; the original is source-linked only and is not counted as held.",
+      "errors": [
+        "Page: HTTP Error 403: Forbidden"
+      ],
+      "candidateSources": [],
+      "finalAttempts": [
+        {
+          "slug": "grand-forks",
+          "url": "https://www.grandforks.ca/wp-content/uploads/GrandForks-2024AnnualReport-web.pdf",
+          "sourcePage": "https://www.grandforks.ca/document-library/",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ],
+      "family": "municipalities",
+      "researchLog": "municipal-research.json",
+      "followUp": {
+        "observedDate": "2026-11-21",
+        "reason": "Official Grand Forks artwork was confirmed. The City requires approval for use in other organizations’ publications; the original is source-linked only and is not counted as held.",
+        "sourceUrls": [
+          "https://www.grandforks.ca/wp-content/uploads/Grand-Forks-Logo-Home.png",
+          "https://www.grandforks.ca/wp-content/uploads/Logo-Use-Guidelines-and-User-Agreement.pdf"
+        ]
+      }
+    },
+    {
+      "id": "municipality-keremeos",
+      "name": "Keremeos",
+      "sourcePage": "http://www.keremeos.ca",
+      "observedDate": "2026-11-20",
+      "reason": "Official homepage and the official 2017 Business Recruitment & Resident Attraction Strategy PDF returned HTTP503 on both www and apex domains.",
+      "errors": [
+        "Page: HTTP Error 503: Service Unavailable"
+      ],
+      "candidateSources": [],
+      "finalAttempts": [
+        {
+          "slug": "keremeos",
+          "url": "https://www.keremeos.ca/files/documents/2017-05-15-FINALBusinessRecruitmentResidentAttractionStrategy-17041WITHEDITS2.pdf",
+          "sourcePage": "https://www.keremeos.ca/",
+          "error": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "slug": "keremeos",
+          "url": "https://keremeos.ca/files/documents/2017-05-15-FINALBusinessRecruitmentResidentAttractionStrategy-17041WITHEDITS2.pdf",
+          "sourcePage": "https://www.keremeos.ca/",
+          "error": "HTTP Error 503: Service Unavailable"
+        }
+      ],
+      "family": "municipalities",
+      "researchLog": "municipal-research.json"
+    },
+    {
+      "id": "municipality-lions-bay",
+      "name": "Lions Bay",
+      "sourcePage": "https://www.lionsbay.ca/",
+      "observedDate": "2026-11-20",
+      "reason": "The candidate was a municipal flag. It is not accepted as a separate corporate logo.",
+      "errors": [],
+      "candidateSources": [
+        "https://www.lionsbay.ca/sites/2/files/lb_flag-web.png"
+      ],
+      "family": "municipalities",
+      "researchLog": "municipal-research.json"
+    },
+    {
+      "id": "municipality-okanagan-falls",
+      "name": "Okanagan Falls",
+      "sourcePage": "https://okanaganfalls.ca",
+      "observedDate": "2026-11-20",
+      "reason": "Official placeholder and November 6, 9 and 23 council agenda covers did not show a standalone mark. This is a bounded observation, not a categorical finding of absence.",
+      "errors": [],
+      "candidateSources": [
+        "https://okanaganfalls.ca/okanagan-falls-1.jpg",
+        "https://okanaganfalls.ca/okanagan-falls-2.jpg"
+      ],
+      "family": "municipalities",
+      "researchLog": "municipal-research.json",
+      "followUp": {
+        "observedDate": "2026-11-21",
+        "reason": "Official placeholder and November 6, 9 and 23 council agenda covers did not show a standalone mark. This is a bounded observation, not a categorical finding of absence.",
+        "sourceUrls": [
+          "https://okanaganfalls.ca/",
+          "https://infonews.ca/news/7974212/a-new-town-is-being-born-in-the-okanagan-heres-how-they-made-it/"
+        ]
+      }
+    },
+    {
+      "id": "municipality-shishalh-nation-government-district",
+      "name": "shíshálh Nation Government District",
+      "sourcePage": "https://shishalh.com/",
+      "observedDate": "2026-11-20",
+      "reason": "District business-licence letterhead proves use of a device consistent with the Nation emblem, not a separate District mark. Keep as source-linked shared-use evidence; do not vendor or count the emblem.",
+      "errors": [],
+      "candidateSources": [
+        "https://shishalh.com/wp-content/themes/shishalh/images/shell/shishalh-logo-alt.svg",
+        "https://shishalh.com/wp-content/uploads/2024/05/shishalh-logo.svg",
+        "https://shishalh.com/wp-content/themes/shishalh/images/shell/shishalh-logo-mobile.svg"
+      ],
+      "family": "municipalities",
+      "researchLog": "municipal-research.json",
+      "followUp": {
+        "observedDate": "2026-11-21",
+        "reason": "District business-licence letterhead proves use of a device consistent with the Nation emblem, not a separate District mark. Keep as source-linked shared-use evidence; do not vendor or count the emblem.",
+        "sourceUrls": [
+          "https://shishalh.com/wp-content/uploads/2023/09/sNGD-Business-License-Form.pdf",
+          "https://www.civicinfo.bc.ca/municipalities?id=178"
+        ]
+      }
+    },
+    {
+      "id": "municipality-warfield",
+      "name": "Warfield",
+      "sourcePage": "https://warfield.ca/",
+      "observedDate": "2026-11-20",
+      "reason": "Official homepage returned a challenge response. The official 2024 annual-report PDF URL returned HTML redirecting to a CAPTCHA rather than PDF bytes. Access challenge was not bypassed.",
+      "errors": [],
+      "candidateSources": [],
+      "finalAttempts": [
+        {
+          "slug": "warfield",
+          "url": "https://warfield.ca/wp-content/uploads/VoW-2024-Annual-Report-1.pdf",
+          "sourcePage": "https://warfield.ca/village-office/finance/",
+          "file": "final/warfield/ded9ffd3ff16.txt",
+          "resolvedSourceUrl": "https://warfield.ca/wp-content/uploads/VoW-2024-Annual-Report-1.pdf",
+          "contentType": "text/html",
+          "bytes": 219,
+          "sha256": "33e16b72cf970ebae509f4805e4b4174583af01771bd10369824dafc3dd04708"
+        }
+      ],
+      "family": "municipalities",
+      "researchLog": "municipal-research.json"
+    },
+    {
+      "id": "sub-bc-archives",
+      "outcome": "Current official website has a live-text <a class=\"archives-logo h4 bold\">BC Archives</a> and separate shared Royal BC Museum graphic. CSS for archives-logo specifies typography/layout only; the Royal Museum graphic uses logo-one-line.e09429f7.svg as a mask. No standalone Archives graphic was accepted or created.",
+      "nextAction": "Find a dated historical Archives-issued mark or an explicitly issued shared lockup; do not turn website text into a fabricated vector.",
+      "researchLog": "institutions-research.json",
+      "sources": [
+        {
+          "url": "https://bcarchives.ca/"
+        }
+      ]
+    },
+    {
+      "id": "thompson-health-region",
+      "outcome": "Promising primary advertisement lead located; no downloadable and visually verified artwork accepted.",
+      "sources": [
+        {
+          "url": "https://www.canadian-nurse.com/archive/1990-1999",
+          "outcome": "Official Canadian Nurse archive indexed as containing the decade’s print issues. Direct HTTP retrieval and web retrieval both returned 403."
+        },
+        {
+          "url": "https://hl-prod-ca-oc-download.s3.ca-central-1.amazonaws.com/CNA/c410c3e5-7c95-123a-4b73-1ced4db7dc64_file.pdf",
+          "urlNote": "Stable object identity only. Discovery URL contained an expired signed query; that complete indexed signed URL returned 403. No unsigned-access result is claimed.",
+          "outcome": "Indexed OCR identifies Thompson Health Region, Kamloops, BC recruitment advertisement for Director, Prevention and Early Intervention, Public Health, with tagline A Path to Better Health. The scan itself could not be downloaded or visually verified; issue date and artwork geometry remain unconfirmed."
+        },
+        {
+          "url": "https://www.merritt.ca/wp-content/uploads/archives/meetings/1998/1998-11-10%20RC%20agenda.pdf",
+          "outcome": "Existing repository lead retried; HTTP 404."
+        },
+        {
+          "url": "https://kamloops.civicweb.net/document/7911/",
+          "outcome": "Retrieved historical council minutes, May 30, 2000. Text mentions Thompson Health Region Sun Sense delegation, but does not supply attributable agency artwork. No mark accepted."
+        }
+      ],
+      "exclusions": [
+        "David Thompson Health Region is an Alberta organization; its mountain/DTHR logo was not assigned to the BC Thompson Health Region.",
+        "Current Interior Health identity is a successor and was not used to fill this gap."
+      ],
+      "recommendedRoute": "Retrieve the original Canadian Nurse issue through its official archive or a public-library periodical copy; search the exact recruitment job title and tagline, establish the issue date, and inspect/extract the actual printed logo. The dated Merritt agenda correspondence is a separate useful municipal-archive request.",
+      "family": "atlas-health",
+      "researchLog": "health-research.json"
+    },
+    {
+      "id": "coast-garibaldi-regional-health-board",
+      "outcome": "Historical newspaper lead remains inaccessible at the old file URL; successor identity excluded.",
+      "sources": [
+        {
+          "url": "https://squamishlibrary.digitalcollections.ca/uploads/r/squamish-public-library/2/1/21571/19960917_The_Squamish_Chief.pdf",
+          "outcome": "Retrieved 680 bytes of text/html titled fallthrough, a migration application shell rather than PDF. Therefore no publication was visually inspected or extracted."
+        },
+        {
+          "url": "https://squamishlibrary.ca/local-history/",
+          "outcome": "Official library page identifies Biblioboard as the current digital collection and says newspapers cover 1948–2001. This is a verified replacement archive route, not proof that the specific issue contains a logo."
+        }
+      ],
+      "exclusions": [
+        "The repository already holds the 2001 teal website GIF of Coast Garibaldi Community Health Services Society. Its attribution does not establish ownership by the earlier Regional Health Board.",
+        "The previously inspected 2000 arsenic report did not establish an attributable board logo; it was not reclassified."
+      ],
+      "recommendedRoute": "Open the 1996-09-17 Squamish Chief issue in the library’s Biblioboard collection, then inspect health-board recruitment/public-notice advertisements.1996-02-27 and 1996-12-03 indexed issues provide additional exact-name context but were not visually inspected in this pass.",
+      "family": "atlas-health",
+      "researchLog": "health-research.json"
+    },
+    {
+      "id": "north-west-community-health-services-society",
+      "outcome": "Focused exact-name searches found primary name-only records, not recoverable original artwork.",
+      "sources": [
+        {
+          "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/1999-00/pa-1999-00-crf-detailed-schedules-of-payments.pdf",
+          "outcome": "Indexed primary public-account payment table names the society. Text-only payment references were not counted as logo evidence. PDF graphics were not inspected in this short pass."
+        },
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume38",
+          "outcome": "Primary legal record identifies society appointments. It is organizational context, not artwork."
+        }
+      ],
+      "recommendedRoute": "Locate 1997–2001 society-authored annual reports, letterhead or recruitment notices in Prince Rupert/Terrace public-library newspaper holdings and provincial archival catalogues. Inspect original documents before attributing any mark; keep the earlier North West Regional Health Board separate. No specific archival holding is asserted.",
+      "family": "atlas-health",
+      "researchLog": "health-research.json"
+    },
+    {
+      "id": "east-kootenay-community-health-services-society",
+      "outcome": "Focused exact-name searches found name-only primary reports/legal records; no attributable artwork accepted.",
+      "sources": [
+        {
+          "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-20000101-report-government-financial-accountability.pdf",
+          "outcome": "Indexed primary audit table lists the society among audited entities, but the table supplies no attributable society artwork. Full publication was not visually inspected in this short pass."
+        },
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2001resume38",
+          "outcome": "Primary legal record identifies society appointments. It is organizational context, not artwork."
+        }
+      ],
+      "exclusions": [
+        "East Kootenay Foundation for Health is a different organization; its current logo was not assigned to the former society.",
+        "Interior Health successor branding and the separate East Kootenay Regional Health Board were not substituted."
+      ],
+      "recommendedRoute": "Seek 1997–2001 society annual reports and correspondence in Cranbrook-area public-library/municipal archives or provincial health-record collections. Agency-authored recruitment advertisements may contain the original signature. This recommendation is an archival strategy, not a verified catalogue holding.",
+      "family": "atlas-health",
+      "researchLog": "health-research.json"
+    },
+    {
+      "id": "pacific-vehicle-testing-technologies",
+      "outcome": "2012 TransLink annual report confirms the wholly owned subsidiary managed AirCare and Envirotest Canada was the inspection contractor. No separate PVTT corporate mark was located. CIPO old/current-owner search for Pacific Vehicle Testing returned zero records. This is a bounded search result, not proof no mark ever existed. Do not assign the AirCare program mark to PVTT.",
+      "evidenceFile": "../../../public/identity-recovered/_sources/aircare-pvtt-2012-source-page.pdf",
+      "status": "distinct-corporate-mark-unverified"
+    }
+  ],
+  "followUpObservedDate": "2026-11-21",
+  "followUpSummary": "Indexed official marks and original publication components; linked rather than vendored where permission-specific or not distinguished from shared usage. See follow-up-2026-11-21.md."
+}

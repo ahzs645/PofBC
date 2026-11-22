@@ -11,7 +11,8 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 // Each manifest generates its own module; IDs must stay unique across all of them.
 const MANIFESTS = [
   { manifest: 'research/identity/coverage-expansion-2026-11-15/assets-manifest.json', output: 'src/gallery/expandedIdentityData.js', name: 'EXPANDED_IDENTITY_BODIES', dir: 'identity-expanded' },
-  { manifest: 'research/identity/municipalities-2026-11-15/assets-manifest.json', output: 'src/gallery/municipalIdentityData.js', name: 'MUNICIPAL_IDENTITY_BODIES', dir: 'identity-municipal' }
+  { manifest: 'research/identity/municipalities-2026-11-15/assets-manifest.json', output: 'src/gallery/municipalIdentityData.js', name: 'MUNICIPAL_IDENTITY_BODIES', dir: 'identity-municipal' },
+  { manifest: 'research/identity/missing-recovery-2026-11-20/assets-manifest.json', output: 'src/gallery/recoveredIdentityData.js', name: 'RECOVERED_IDENTITY_BODIES', dir: 'identity-recovered' }
 ]
 const check = process.argv.includes('--check')
 const seenBodies = new Set()
@@ -54,8 +55,23 @@ function verifySvg(data, asset) {
     assert(ref.startsWith('#'), `External or embedded SVG reference in ${asset.file}: ${ref.slice(0, 80)}`)
     assert(ids.get(ref.slice(1)) === 1, `Unresolved or ambiguous SVG reference ${ref}: ${asset.file}`)
   }
+  // Source exports sometimes retain a simple class rule for a deleted shape. Its absent
+  // gradient cannot affect rendering when no element uses the class. Preserve those original
+  // bytes, but require every reference in an applied rule or SVG attribute to resolve.
+  const usedClasses = new Set(Array.from(document.getElementsByTagName('*'))
+    .flatMap((element) => (element.getAttribute('class') || '').split(/\s+/).filter(Boolean)))
+  let referencedSvg = svg
+  for (const style of Array.from(document.getElementsByTagName('style'))) {
+    const css = style.textContent || ''
+    for (const [rule, className] of css.matchAll(/(?:^|(?<=}))\s*\.([A-Za-z_][\w-]*)\s*\{[^{}]*\}/g)) {
+      if (!usedClasses.has(className)) referencedSvg = referencedSvg.replace(rule, '')
+    }
+  }
+  // External URLs are forbidden even in unused source rules.
   for (const [, ref] of svg.matchAll(/url\(\s*["']?([^)'"\s]+)/g)) {
     assert(ref.startsWith('#'), `External SVG CSS URL: ${asset.file}`)
+  }
+  for (const [, ref] of referencedSvg.matchAll(/url\(\s*["']?([^)'"\s]+)/g)) {
     assert(ids.get(ref.slice(1)) === 1, `Unresolved or ambiguous SVG definition ${ref}: ${asset.file}`)
   }
   assert(!/@import\b|javascript\s*:/i.test(svg), `External or active SVG style: ${asset.file}`)
@@ -84,9 +100,14 @@ for (const { manifest: manifestFile, output, name, dir } of MANIFESTS) {
       assert(asset.isVector === (asset.format === 'svg'), `Inconsistent vector label: ${asset.id}`)
       const data = verifyFile(asset)
       assert(checkedFiles.has(asset.sourceFile), `Archived source is missing from the manifest: ${asset.id}`)
+      for (const source of [asset.sourcePageFile, ...(asset.supportingSourceFiles ?? [])].filter(Boolean)) {
+        assert(checkedFiles.has(source), `Supporting source is missing from the manifest: ${asset.id}: ${source}`)
+      }
       if (asset.format === 'svg') verifySvg(data, asset)
       if (asset.format === 'png') assert(data.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10])), `Invalid PNG: ${asset.file}`)
       if (asset.format === 'webp') assert(data.toString('ascii', 0, 4) === 'RIFF' && data.toString('ascii', 8, 12) === 'WEBP', `Invalid WebP: ${asset.file}`)
+      if (['jpg', 'jpeg'].includes(asset.format)) assert(data[0] === 0xff && data[1] === 0xd8 && data[2] === 0xff, `Invalid JPEG: ${asset.file}`)
+      if (asset.format === 'gif') assert(['GIF87a', 'GIF89a'].includes(data.toString('ascii', 0, 6)), `Invalid GIF: ${asset.file}`)
       for (const download of asset.downloads ?? []) verifyFile(download)
       // A resized copy for the page; the archived file stays the evidence.
       if (asset.preview) {

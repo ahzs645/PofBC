@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "startedAtUtc": "2026-11-21T00:44:39+00:00",
+  "completedAtUtc": "2026-11-21T00:49:37.631576+00:00",
+  "scope": "Focused final primary-source search; approximately eight-minute practical timebox.",
+  "acceptedArtworkCount": 2,
+  "outcomes": [
+    {
+      "subjectId": "industry-training-and-apprenticeship-commission",
+      "status": "artwork-acquired",
+      "assetIds": [
+        "itac-letterhead-2003"
+      ],
+      "finding": "Original ITAC spiral, lowercase itac and full-name letterhead recovered from its financial statement letter dated 10 June 2003. Raster publication specimen; source is a scan split across image tiles. Distinct from later ITA and SkilledTradesBC.",
+      "nextAction": "Seek an issued native vector or earlier original annual report; no adoption date established."
+    },
+    {
+      "subjectId": "emergency-health-services-commission",
+      "status": "artwork-acquired",
+      "assetIds": [
+        "ehsc-launch-advertisement-1974"
+      ],
+      "finding": "Original attributed Commission advertisement includes e+hS signature and full agency name in a dated 1974 newspaper. Kept as exact scan pixels, distinct from BCAS/BCEHS successors.",
+      "nextAction": "Seek an issued master or further dated Commission specimens; this source establishes publication use only."
+    },
+    {
+      "subjectId": "sub-bc-archives",
+      "status": "no-separate-artwork-acquired",
+      "finding": "Current official website has a live-text <a class=\"archives-logo h4 bold\">BC Archives</a> and separate shared Royal BC Museum graphic. CSS for archives-logo specifies typography/layout only; the Royal Museum graphic uses logo-one-line.e09429f7.svg as a mask. No standalone Archives graphic was accepted or created.",
+      "sourceUrl": "https://bcarchives.ca/",
+      "sourceEvidence": [
+        "research-evidence/bcarchives-home.html.txt",
+        "research-evidence/bcarchives-site.css.txt",
+        "research-evidence/royalbc-archives-link.html.txt"
+      ],
+      "recommendation": "Update source lead to current bcarchives.ca; retain distinct-unconfirmed or document the observed shared current signature. This does not establish that no distinct historical Archives mark existed.",
+      "nextAction": "Find a dated historical Archives-issued mark or an explicitly issued shared lockup; do not turn website text into a fabricated vector."
+    },
+    {
+      "subjectId": "liquor-control-board",
+      "status": "no-artwork-acquired",
+      "finding": "Focused official-domain and historical-report searches found agency history and reports mentioned in Hansard, but no original attributable signature or seal suitable for acquisition during this pass. Current LDB/BCLS marks and Ontario/Pennsylvania liquor boards were excluded.",
+      "sourceUrls": [
+        "https://news.gov.bc.ca/releases/2021FIN0038-001103",
+        "https://www.bcldb.com/about/communications/news/bc-liquor-distribution-branch-celebrates-its-95th-anniversary",
+        "https://lims.leg.bc.ca/hdms/file/Debates/29th3rd/29p_03s_720120p.htm",
+        "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-liquor-board"
+      ],
+      "nextAction": "Inspect original 1921–1975 LCB annual reports, permits, seals and letterhead; retain as unresolved until an original signature is verified."
+    }
+  ],
+  "queries": [
+    {
+      "engine": "system1",
+      "query": "site.bcbudget.gov.bc.ca \"Industry Training and Apprenticeship Commission\" \"2002\"",
+      "result": "Found official Public Accounts 2002/03 ITAC financial statements with attributable original letterhead."
+    },
+    {
+      "engine": "system1",
+      "query": "site.royalbcmuseum.bc.ca \"BC Archives\" \"logo\"",
+      "result": "No distinct archival logo file located; mostly Royal BC Museum collection/service pages."
+    },
+    {
+      "engine": "system1",
+      "query": "site.gov.bc.ca \"Emergency Health Services Commission\" \"annual report\" logo",
+      "result": "Historical Hansard references but no downloadable logo in the returned government sources."
+    },
+    {
+      "engine": "system1",
+      "query": "site.bcbudget.gov.bc.ca \"Liquor Control Board\"",
+      "result": "Historical context; no attributable LCB mark acquired."
+    },
+    {
+      "engine": "system2",
+      "query": "site.royalbcmuseum.bc.ca \"BC Archives\" \"logo\" filetype:pdf",
+      "result": "2018 Archives history sheet and research guides show Royal BC Museum marks, not a separate verified Archives master."
+    },
+    {
+      "engine": "system2",
+      "query": "\"BC Archives\" \"logo\" government",
+      "result": "Coverage gap: irrelevant archives and third-party results; verified promising official sources with system1."
+    },
+    {
+      "engine": "system2",
+      "query": "site.bcehs.ca \"Commission\" \"annual report\" \"2012\"",
+      "result": "No useful original Commission artwork returned."
+    },
+    {
+      "engine": "system2",
+      "query": "site.bcldb.com \"Liquor Control Board\" \"logo\"",
+      "result": "No attributable historical BC LCB artwork; irrelevant Ontario and Pennsylvania results excluded."
+    },
+    {
+      "engine": "system1",
+      "query": "site.bcarchives.ca \"BC Archives\"",
+      "result": "Found current official Archives website; verified relationship through Royal BC Museum links and retained HTML/CSS."
+    },
+    {
+      "engine": "system1",
+      "query": "site.bcehs.ca \"EHSC\" filetype:pdf",
+      "result": "Successor-era BCEHS sources establish history but do not provide an EHSC-era mark."
+    },
+    {
+      "engine": "system1",
+      "query": "\"Emergency and Health Services Commission\" \"annual report\" pdf",
+      "result": "Modern financial statements and legal history only; not substituted for historical Commission artwork."
+    },
+    {
+      "engine": "system1",
+      "query": "site.bcldb.com \"Liquor Control Board\" \"1974\"",
+      "result": "Government and legislative historical references; no acquired mark."
+    },
+    {
+      "engine": "system1",
+      "query": "\"Emergency and Health Services Commission\" \"FINANCIAL STATEMENTS\" \"2011\"",
+      "result": "Modern BCEHS financial statements; no attributable earlier mark in returned results."
+    },
+    {
+      "engine": "system1",
+      "query": "\"Emergency Health Services Commission\" \"logo\" -Ontario -Pennsylvania",
+      "result": "Found original government launch advertisement in 26 June 1974 Gulf Islands Driftwood, p19, archived by Salt Spring Island Archives."
+    },
+    {
+      "engine": "system1",
+      "query": "\"BC Archives\" \"logo\" site:rbcm.ca",
+      "result": "No separate image master located."
+    },
+    {
+      "engine": "system1",
+      "query": "\"Liquor Control Board\" \"British Columbia\" \"annual report\" filetype:pdf",
+      "result": "No directly usable historical identity artwork located."
+    },
+    {
+      "engine": "system1",
+      "query": "\"Liquor Control Board\" \"British Columbia\" \"logo\" -Ontario -Pennsylvania -LCBO",
+      "result": "No attributable historical BC LCB artwork; current liquor/cannabis comparisons excluded."
+    },
+    {
+      "engine": "system1",
+      "query": "\"BC Archives\" \"Archives logo\" -Bakersfield -Boston -Friends -Northern",
+      "result": "Found official history page; no accepted independent mark."
+    },
+    {
+      "engine": "system1",
+      "query": "\"Industry Training and Apprenticeship Commission\" \"itac\" \"annual report\"",
+      "result": "Official 1999 news release and ministry reports corroborate agency identity; no better master obtained during final pass."
+    },
+    {
+      "engine": "system1",
+      "query": "site.open.library.ubc.ca \"LIQUOR CONTROL BOARD\" \"1972\" \"ANNUAL\"",
+      "result": "Returned Hansard mentions of 49th/50th annual reports, not an inspectable image master."
+    },
+    {
+      "engine": "system1",
+      "query": "site.bcldb.com \"1921\" \"logo\"",
+      "result": "Found official 95th/100th anniversary history; no original LCB logo or seal acquired."
+    }
+  ],
+  "requestOutcomes": [
+    {
+      "url": "https://royalbcmuseum.bc.ca/bc-archives",
+      "status": 200,
+      "resolvedUrl": "https://rbcm.ca/bc-archives-to-temporarily-close-november-22-as-collections-move-to-new-campus/",
+      "outcome": "Official museum page links to bcarchives.ca resources and service changes."
+    },
+    {
+      "url": "https://www.royalbcmuseum.bc.ca/sites/default/files/sites/default/files/images/historybcarchives_informationsheet_bca201806.pdf",
+      "status": 404,
+      "resolvedUrl": "https://rbcm.ca/sites/default/files/sites/default/files/images/historybcarchives_informationsheet_bca201806.pdf",
+      "outcome": "Normal curl followed redirect; source unavailable. Not used as an acquired file."
+    },
+    {
+      "url": "https://saltspringarchives.com/driftwood/1974/v15n24June26-1974.pdf",
+      "status": 200,
+      "outcome": "Normal curl retrieved 20-page original PDF. Source p19 visually inspected. Search-service open separately returned a verification-page response; no challenge was solved or bypassed."
+    },
+    {
+      "url": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-liquor-board",
+      "status": "search-service-open-error",
+      "outcome": "Search-service open reported URL not accessible; no source artwork acquired."
+    }
+  ],
+  "retainedContext": [
+    {
+      "file": "research-evidence/bcarchives-home.html.txt",
+      "url": "https://bcarchives.ca/",
+      "bytes": 84366,
+      "sha256": "7b29e333aee79eb52c25630550fbc4ac6aeaa1b352a741415c1c8fd09457bef2"
+    },
+    {
+      "file": "research-evidence/bcarchives-site.css.txt",
+      "url": "https://bcarchives.ca/wp-content/themes/rbcm/dist/index.css?ver=261118-173826",
+      "bytes": 232549,
+      "sha256": "541b9ab5ae409109042bc13156a7cb5fb6488a59a0c02c53e36e6d5caa1f0499"
+    },
+    {
+      "file": "research-evidence/royalbc-archives-link.html.txt",
+      "url": "https://royalbcmuseum.bc.ca/bc-archives",
+      "bytes": 1269304,
+      "sha256": "638b2e6ffc2c6b1702ea538eec434b9d8bb4b292348356394b76c9d86ed2559f",
+      "resolvedUrl": "https://rbcm.ca/bc-archives-to-temporarily-close-november-22-as-collections-move-to-new-campus/"
+    }
+  ],
+  "limitations": [
+    "Search failures do not prove that a distinct mark never existed.",
+    "Search-result dates, upload-path years and PDF scan dates are not adoption dates.",
+    "No graphics were invented, traced, retypeset or generated."
+  ]
+}

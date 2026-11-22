@@ -103,11 +103,20 @@ def produce(recipe, source_bytes):
         page = doc[recipe.get('pageIndex', 0)]
         dims = recipe['imageDimensions']
         candidates = [item for item in page.get_images(full=True) if [item[2], item[3]] == dims]
+        if 'imageXref' in recipe:
+            # A PDF can list a separately stored soft mask at the same dimensions.
+            # A recorded xref targets the actual image in the checksum-pinned source.
+            candidates = [item for item in candidates if item[0] == recipe['imageXref']]
         if len(candidates) != 1:
             raise ValueError(f'Ambiguous embedded image {dims}')
         xref, mask = candidates[0][0:2]
         pixmap = fitz.Pixmap(doc, xref)
-        if mask:
+        # Some streams decode with an entirely opaque alpha channel although their
+        # soft mask is still separate. Drop that empty channel before combining.
+        # Retain a non-opaque decoded alpha channel without applying the mask twice.
+        if mask and pixmap.alpha and all(value == 255 for value in pixmap.samples[pixmap.n - 1::pixmap.n]):
+            pixmap = fitz.Pixmap(pixmap, 0)
+        if mask and not pixmap.alpha:
             pixmap = fitz.Pixmap(pixmap, fitz.Pixmap(doc, mask))
         encoded = pixmap.tobytes('png')
         if recipe.get('flipVertical'):

@@ -14,6 +14,7 @@
 
 import { RECONCILED_FAMILIES, RECONCILED_SUBJECTS } from './reconciledSubjects.js'
 import { MUNICIPAL_FAMILIES, MUNICIPAL_KIND_LABELS, MUNICIPAL_SUBJECTS } from './municipalSubjects.js'
+import { RECOVERED_IDENTITY_BODIES } from './recoveredIdentityData.js'
 
 export const IDENTITY_KIND_LABELS = {
   ...MUNICIPAL_KIND_LABELS,
@@ -3422,4 +3423,8 @@ const CURATED_SUBJECTS = [
 // The reconciled gallery owners and the municipal registry follow the curated subjects.
 // Municipalities come before the historical-research family in the register.
 export const IDENTITY_FAMILIES = [...CURATED_FAMILIES.slice(0, -1), ...RECONCILED_FAMILIES, ...MUNICIPAL_FAMILIES, CURATED_FAMILIES.at(-1)]
+const recoveredById = new Map(RECOVERED_IDENTITY_BODIES.map((body) => [body.id, body]))
 export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS]
+  .map((subject) => recoveredById.get(subject.id)?.nextAction
+    ? { ...subject, nextAction: recoveredById.get(subject.id).nextAction }
+    : subject)

@@ -549,6 +549,13 @@ approximations. None of this is current BC Hydro brand guidance.
 
 ### Collected logos, as the page shows them
 
+The [20 November missing-artwork recovery](research/identity/missing-recovery-2026-11-20/README.md)
+adds official municipal, transit, independent-office and historical specimens to previously empty
+subjects. Its [accepted files](research/identity/missing-recovery-2026-11-20/acquired-identities.md)
+and [remaining gaps](research/identity/missing-recovery-2026-11-20/remaining-gaps.md) are explicit.
+These originals use their source colours, with a dark plate for white lettering; they retain
+format, source hashes, publication context and reproducible extraction records.
+
 The collected files under `public/identity-collected/` are kept exactly as found, and they are what
 the gallery offers for download. For the collected **SVGs**, the gallery shows display copies from
 `npm run build:collected-display` (Python with numpy, scipy and Pillow, and the pre-installed

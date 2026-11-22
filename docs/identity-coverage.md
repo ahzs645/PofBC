@@ -4,7 +4,22 @@ The gallery's original automatic acquisition list selected only Crown corporatio
 
 This change introduces an explicit identity-subject register, accepts source artwork where it can be inspected, and connects the collection to organization and salary records. Research leads remain visible when artwork is still missing. The register is a declared research scope, not a census of every institution in British Columbia.
 
-## What is included
+## 20 November 2026 acquisition update
+
+The [missing-artwork recovery](../research/identity/missing-recovery-2026-11-20/README.md)
+adds attributable originals to previously empty subjects in the expanded 455-subject register.
+Its [before/after counts](../research/identity/missing-recovery-2026-11-20/coverage-summary.json),
+[accepted artwork list](../research/identity/missing-recovery-2026-11-20/acquired-identities.md),
+and [remaining gaps](../research/identity/missing-recovery-2026-11-20/remaining-gaps.md)
+are generated from actual owner-resolved coverage. The earlier held subjects remain held.
+
+The additional manifest is `research/identity/missing-recovery-2026-11-20/assets-manifest.json`;
+`scripts/build-identity-expansion.mjs` verifies it and generates `src/gallery/recoveredIdentityData.js`.
+Original files and preserved publication evidence are in `public/identity-recovered/`.
+The extraction check is `python scripts/extract-recovered-identities.py --check`.
+The dated implementation and validation counts below describe the original expansion.
+
+## What was included in the original 15 November expansion
 
 - **105 curated subjects in 19 families**, including the full named audit scope: regional transit, Metro Vancouver, the LDB retail and wholesale family, Creative BC and BC Arts Council, emergency communications, ferry governance, development trusts, specialist health services, regulators, independent officers, courts, and historical agency identities. Six named wider institutions have a separate scope filter.
 - **40 additional artwork collections containing 43 entries**: 21 vector artworks and 22 raster specimens. These extend the existing gallery without replacing its historical artwork or public links.
@@ -74,7 +89,7 @@ Append these query strings to a local checkout's running site. Existing `logos` 
 | `?view=gallery&coverage=1&identity-family=transit` | Operators and service identities together, with distinct evidence states. |
 | `?view=gallery&subject=translink` | Corporate artwork, historical research still open, primary sources and organization link. |
 | `?view=gallery&subject=translink-t-marker` | Separate T-marker source specimen and supported colourway. |
-| `?view=gallery&subject=british-columbia-rapid-transit-company` | Source lead without invented artwork; organization and salary connections remain available. |
+| `?view=gallery&subject=british-columbia-rapid-transit-company` | Recovered official raster wordmark, dated source publication, and organization/salary connections. |
 | `?view=gallery&subject=liquor-distribution-branch` | The branch identity and distinct retail/wholesale family members. |
 | `?view=gallery&subject=bc-ferry-authority` | Historical specimen and valid historical atlas year. |
 | `?view=gallery&subject=bc-ferry-authority-2003` | Separate modern authority. |
@@ -102,13 +117,13 @@ Local Linux builds use the repository's existing TeX Gyre Heros stand-in for unr
 ### Manual review checklist
 
 1. Search **GVTA**, **BCRTC**, **Sea-Bus** and **BCLIQUOR**. Open their subjects and check their family relationships.
-2. Filter transit to **Without artwork**, open BCRTC, then use the organization and salary links.
+2. Filter transit to **With artwork**, open BCRTC, then use the organization and salary links. Verify that the remaining **Without artwork** subjects retain their own unresolved evidence.
 3. Open the T-marker file. Confirm the source colourway, dated specimen label, original-source/download links and absence of unsupported recolouring controls.
 4. Navigate subject → artwork → subject → organization → salary, then use browser Back/Forward.
 5. Compare historical and modern Ferry Authority routes. Verify the historical link selects a real 1970s atlas node while the modern authority opens its current catalogue record.
 6. At a narrow viewport, check filter controls, long aliases, status labels, source links and the related-body directory. Repeat key artwork pages in dark mode, including the white Transit Police and Powerex source files.
 
-### Validation recorded for this PR
+### Validation recorded for the original 15 November expansion
 
 - `npm run check:identity-coverage`: **131 tests passed**, followed by **538 successful subject-page renders** (269 subjects in each theme), register/overview rendering and local image checks at `/PofBC/`.
 - Salary navigation/search/people and existing government salary regressions: **34 tests passed**.
@@ -121,6 +136,6 @@ Live browser interaction and viewport layout review could not be completed in th
 
 ## Research that remains open
 
-BCRTC, SeaBus, RapidBus, B-Line, Metro Vancouver Regional Parks, BC Children's Hospital and LandSure are among the source-located subjects still awaiting accepted artwork. Other historical designs and original master files remain explicit next actions. Accepting a current file does not close those research tasks.
+BCRTC, SeaBus, RapidBus, B-Line, Metro Vancouver Regional Parks, BC Children's Hospital and LandSure now have accepted source specimens in the 20 November recovery. SeaBus is represented by its official service icon; RapidBus and B-Line are dated raster specimens. These do not establish every wordmark, variant, master file or adoption date. The [current remaining-gap list](../research/identity/missing-recovery-2026-11-20/remaining-gaps.md) records subjects still without accepted artwork.
 
 Adding a later acquisition requires a source, a checked local file and manifest record, regeneration, and the same ownership/provenance checks. It does not require changing a legal organization kind or adding a fictitious node to make the subject eligible.
