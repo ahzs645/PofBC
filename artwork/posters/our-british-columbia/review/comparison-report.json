@@ -1,0 +1,404 @@
+{
+  "source": "/workspace/scratch/e258d6d556c6/registration/reference_rectified.png",
+  "reconstruction": "/workspace/scratch/e258d6d556c6/work/poster-preview.png",
+  "render_sha256": "08d792fefa384f00ad6ff972443dd0d6965f761f472c54c1fb081a196a1bb643",
+  "artboard": [
+    1000,
+    1450
+  ],
+  "automatic_fitting": false,
+  "numeric_fidelity_score": null,
+  "method": "Manually registered photo; separate colour-shape and dark-lettering edge views. No artwork optimization.",
+  "limitations": [
+    "Do not build a permanent asymmetry from small photo deviations. The main sunburst/ray motif is strongly bilateral.",
+    "The red strip along the bottom is visibly curved in the photo; draw the original baseline straight.",
+    "Horizontal title/credit baselines need local optical correction; one homography cannot flatten curved paper.",
+    "RGB difference scoring is dominated by paper ageing, lighting, and glare. Use geometry and glyph-edge checks separately."
+  ],
+  "selected_anchor_residuals": {
+    "definition": "Vector centreline vertex minus manually selected photo centreline vertex, in the 1000x1450 frame. Includes perspective/curl/measurement uncertainty.",
+    "count": 27,
+    "median_distance_units": 2.123,
+    "maximum_distance_units": 7.016,
+    "vertices": [
+      {
+        "index": 0,
+        "photo": [
+          497.953,
+          544.409
+        ],
+        "vector": [
+          500,
+          544
+        ],
+        "dx": 2.047,
+        "dy": -0.409,
+        "distance": 2.087
+      },
+      {
+        "index": 1,
+        "photo": [
+          439.926,
+          680.188
+        ],
+        "vector": [
+          440,
+          680
+        ],
+        "dx": 0.074,
+        "dy": -0.188,
+        "distance": 0.202
+      },
+      {
+        "index": 2,
+        "photo": [
+          421.784,
+          684.277
+        ],
+        "vector": [
+          420,
+          684
+        ],
+        "dx": -1.784,
+        "dy": -0.277,
+        "distance": 1.805
+      },
+      {
+        "index": 3,
+        "photo": [
+          311.593,
+          585.724
+        ],
+        "vector": [
+          310,
+          585
+        ],
+        "dx": -1.593,
+        "dy": -0.724,
+        "distance": 1.75
+      },
+      {
+        "index": 4,
+        "photo": [
+          312.305,
+          729.166
+        ],
+        "vector": [
+          310,
+          728
+        ],
+        "dx": -2.305,
+        "dy": -1.166,
+        "distance": 2.583
+      },
+      {
+        "index": 5,
+        "photo": [
+          295.31,
+          739.343
+        ],
+        "vector": [
+          294,
+          738
+        ],
+        "dx": -1.31,
+        "dy": -1.343,
+        "distance": 1.876
+      },
+      {
+        "index": 6,
+        "photo": [
+          156.287,
+          682.233
+        ],
+        "vector": [
+          155,
+          682
+        ],
+        "dx": -1.287,
+        "dy": -0.233,
+        "distance": 1.308
+      },
+      {
+        "index": 7,
+        "photo": [
+          212.098,
+          822.458
+        ],
+        "vector": [
+          211,
+          822
+        ],
+        "dx": -1.098,
+        "dy": -0.458,
+        "distance": 1.19
+      },
+      {
+        "index": 8,
+        "photo": [
+          204.377,
+          840.621
+        ],
+        "vector": [
+          200,
+          840
+        ],
+        "dx": -4.377,
+        "dy": -0.621,
+        "distance": 4.421
+      },
+      {
+        "index": 9,
+        "photo": [
+          54.008,
+          840.621
+        ],
+        "vector": [
+          51,
+          840
+        ],
+        "dx": -3.008,
+        "dy": -0.621,
+        "distance": 3.071
+      },
+      {
+        "index": 10,
+        "photo": [
+          153.343,
+          949.997
+        ],
+        "vector": [
+          151,
+          948
+        ],
+        "dx": -2.343,
+        "dy": -1.997,
+        "distance": 3.079
+      },
+      {
+        "index": 11,
+        "photo": [
+          148.839,
+          974.935
+        ],
+        "vector": [
+          146,
+          974
+        ],
+        "dx": -2.839,
+        "dy": -0.935,
+        "distance": 2.989
+      },
+      {
+        "index": 12,
+        "photo": [
+          34.579,
+          1029.606
+        ],
+        "vector": [
+          30,
+          1027
+        ],
+        "dx": -4.579,
+        "dy": -2.606,
+        "distance": 5.269
+      },
+      {
+        "index": 13,
+        "photo": [
+          35.886,
+          1203.766
+        ],
+        "vector": [
+          30,
+          1205
+        ],
+        "dx": -5.886,
+        "dy": 1.234,
+        "distance": 6.014
+      },
+      {
+        "index": 14,
+        "photo": [
+          974.979,
+          1204.743
+        ],
+        "vector": [
+          970,
+          1205
+        ],
+        "dx": -4.979,
+        "dy": 0.257,
+        "distance": 4.986
+      },
+      {
+        "index": 15,
+        "photo": [
+          975.115,
+          1024.647
+        ],
+        "vector": [
+          970,
+          1027
+        ],
+        "dx": -5.115,
+        "dy": 2.353,
+        "distance": 5.63
+      },
+      {
+        "index": 16,
+        "photo": [
+          857.392,
+          973.939
+        ],
+        "vector": [
+          854,
+          974
+        ],
+        "dx": -3.392,
+        "dy": 0.061,
+        "distance": 3.393
+      },
+      {
+        "index": 17,
+        "photo": [
+          850.73,
+          947.001
+        ],
+        "vector": [
+          849,
+          948
+        ],
+        "dx": -1.73,
+        "dy": 0.999,
+        "distance": 1.998
+      },
+      {
+        "index": 18,
+        "photo": [
+          952.229,
+          839.613
+        ],
+        "vector": [
+          949,
+          840
+        ],
+        "dx": -3.229,
+        "dy": 0.387,
+        "distance": 3.252
+      },
+      {
+        "index": 19,
+        "photo": [
+          806.876,
+          838.605
+        ],
+        "vector": [
+          800,
+          840
+        ],
+        "dx": -6.876,
+        "dy": 1.395,
+        "distance": 7.016
+      },
+      {
+        "index": 20,
+        "photo": [
+          790.989,
+          821.448
+        ],
+        "vector": [
+          789,
+          822
+        ],
+        "dx": -1.989,
+        "dy": 0.552,
+        "distance": 2.064
+      },
+      {
+        "index": 21,
+        "photo": [
+          845.734,
+          682.233
+        ],
+        "vector": [
+          845,
+          682
+        ],
+        "dx": -0.734,
+        "dy": -0.233,
+        "distance": 0.77
+      },
+      {
+        "index": 22,
+        "photo": [
+          706.145,
+          737.308
+        ],
+        "vector": [
+          706,
+          738
+        ],
+        "dx": -0.145,
+        "dy": 0.692,
+        "distance": 0.707
+      },
+      {
+        "index": 23,
+        "photo": [
+          688.064,
+          727.129
+        ],
+        "vector": [
+          690,
+          728
+        ],
+        "dx": 1.936,
+        "dy": 0.871,
+        "distance": 2.123
+      },
+      {
+        "index": 24,
+        "photo": [
+          687.682,
+          583.662
+        ],
+        "vector": [
+          690,
+          585
+        ],
+        "dx": 2.318,
+        "dy": 1.338,
+        "distance": 2.676
+      },
+      {
+        "index": 25,
+        "photo": [
+          579.243,
+          684.277
+        ],
+        "vector": [
+          580,
+          684
+        ],
+        "dx": 0.757,
+        "dy": -0.277,
+        "distance": 0.806
+      },
+      {
+        "index": 26,
+        "photo": [
+          559.051,
+          680.188
+        ],
+        "vector": [
+          560,
+          680
+        ],
+        "dx": 0.949,
+        "dy": -0.188,
+        "distance": 0.967
+      }
+    ]
+  }
+}

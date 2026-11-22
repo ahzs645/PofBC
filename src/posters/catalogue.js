@@ -45,13 +45,14 @@ export const SERIES = [
     kind: 'Car decals',
     posters: ['go-bc-ferries', 'queen-of-sidney']
   },
-  // Unlisted: left off the shelf, but its address opens it (?view=posters&poster=expo-86-davidson).
+  // Unlisted: left off the shelf, but each address opens its poster (?view=posters&poster=expo-86-davidson),
+  // and the three step among themselves.
   {
     id: 'expo-86',
     title: 'Expo 86',
-    kind: 'Art poster · unlisted',
+    kind: 'Art posters and a pavilion film poster · unlisted',
     unlisted: true,
-    posters: ['expo-86-davidson']
+    posters: ['expo-86-davidson', 'expo-86-fiorucci', 'our-british-columbia']
   }
 ]
 
@@ -282,6 +283,34 @@ export const POSTERS = {
     made: 'vector',
     view: { x: 0, y: 0, w: 1200, h: 1600 },
     page: { w: 23.62, h: 31.5 }
+  },
+  'expo-86-fiorucci': {
+    id: 'expo-86-fiorucci',
+    issuer: 'Expo 86 Corporation',
+    subject: 'Expo 86',
+    format: 'Poster',
+    blurb: 'Vittorio Fiorucci’s four bright shapes, each with a row of windows, for the 1986 World Exposition.',
+    series: 'expo-86',
+    title: 'Expo 86: Vittorio Fiorucci',
+    when: 'Undated · for the fair of 1986',
+    made: 'vector',
+    view: { x: 0, y: 0, w: 1100, h: 1593.700787402 },
+    // A dealer’s 635 × 920 mm for a matching copy, not a measurement of this one.
+    page: { w: 25, h: 36.22 }
+  },
+  'our-british-columbia': {
+    id: 'our-british-columbia',
+    issuer: 'British Columbia Pavilion',
+    subject: 'Expo 86',
+    format: 'Poster',
+    blurb: 'The province’s name in a sunburst of flag colours: the British Columbia Pavilion’s film at Expo 86.',
+    series: 'expo-86',
+    title: 'Our British Columbia',
+    when: '1986, from its copyright line',
+    made: 'vector',
+    view: { x: 0, y: 0, w: 1000, h: 1450 },
+    // 10 × 14.5 in, an export size in the photograph’s working proportion; the sheet was not measured.
+    page: { w: 10, h: 14.5 }
   }
 }
 
@@ -297,9 +326,13 @@ export const posterIds = () => SERIES.flatMap((series) => series.posters)
 export const listedPosterIds = () => SERIES.filter((series) => !series.unlisted).flatMap((series) => series.posters).filter((id) => !POSTERS[id].unlisted)
 export const seriesOf = (posterId) => SERIES.find((series) => series.posters.includes(posterId)) ?? null
 
-/** The posters either side of one in reading order, across series. */
+/**
+ * The posters either side of one in reading order, across series. An unlisted series is read on its
+ * own, its posters stepping among themselves; a poster unlisted alone has no neighbours.
+ */
 export const neighbours = (posterId) => {
-  const ids = listedPosterIds()
+  const own = seriesOf(posterId)
+  const ids = own?.unlisted && !POSTERS[posterId].unlisted ? own.posters : listedPosterIds()
   const i = ids.indexOf(posterId)
   return { previous: i > 0 ? ids[i - 1] : null, next: i >= 0 && i < ids.length - 1 ? ids[i + 1] : null }
 }

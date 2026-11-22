@@ -38,7 +38,9 @@ const DRAWINGS = {
   'beware-these-alien-invaders': read('./noxious-weeds/beware-these-alien-invaders.svg'),
   'shattering-the-environment': read('./noxious-weeds/shattering-the-environment.svg'),
   'explosion-in-slow-motion': read('./noxious-weeds/explosion-in-slow-motion.svg'),
-  'expo-86-davidson': read('./expo-86/expo-86-davidson.svg')
+  'expo-86-davidson': read('./expo-86/expo-86-davidson.svg'),
+  'expo-86-fiorucci': read('./expo-86/expo-86-fiorucci.svg'),
+  'our-british-columbia': read('./expo-86/our-british-columbia.svg')
 }
 const GOVERNMENT = read('../government/historyData.js')
 
@@ -116,12 +118,16 @@ test('every series lists posters that exist, and every poster is in the series i
 
 test('an unlisted poster is off the shelf and out of the stepping order, but still a poster', () => {
   const unlisted = [...SERIES.filter((series) => series.unlisted).flatMap((series) => series.posters), ...Object.keys(POSTERS).filter((id) => POSTERS[id].unlisted)]
-  assert.deepEqual(unlisted.sort(), ['beware-these-alien-invaders', 'expo-86-davidson'])
+  assert.deepEqual(unlisted.sort(), ['beware-these-alien-invaders', 'expo-86-davidson', 'expo-86-fiorucci', 'our-british-columbia'])
   for (const id of unlisted) {
     assert.ok(POSTERS[id], `${id} has no card, so its address would not open it`)
     assert.ok(!listedPosterIds().includes(id), `${id} is on the shelf`)
-    assert.deepEqual(neighbours(id), { previous: null, next: null })
   }
+  // A poster unlisted alone stands alone; an unlisted series steps among its own.
+  assert.deepEqual(neighbours('beware-these-alien-invaders'), { previous: null, next: null })
+  assert.deepEqual(neighbours('expo-86-davidson'), { previous: null, next: 'expo-86-fiorucci' })
+  assert.deepEqual(neighbours('expo-86-fiorucci'), { previous: 'expo-86-davidson', next: 'our-british-columbia' })
+  assert.deepEqual(neighbours('our-british-columbia'), { previous: 'expo-86-fiorucci', next: null })
   for (const id of listedPosterIds()) for (const near of Object.values(neighbours(id))) assert.ok(!unlisted.includes(near), `${id} steps to an unlisted poster`)
 })
 
@@ -392,9 +398,9 @@ test('neighbours step through the posters in catalogue order', () => {
   assert.deepEqual(neighbours(ids.at(-1)), { previous: ids.at(-2), next: null })
 })
 
-// The pieces imported from supplied packages: the 1960 decal, the 1971 advertisement, and the
-// Prevent Forest Fires and matches posters.
-const IMPORTED = ['be-careful', 'coons-age', 'prevent-forest-fires', 'matches-not-for-children']
+// The pieces imported from supplied packages: the 1960 decal, the 1971 advertisement, the
+// Prevent Forest Fires and matches posters, and two of the Expo 86 posters.
+const IMPORTED = ['be-careful', 'coons-age', 'prevent-forest-fires', 'matches-not-for-children', 'expo-86-fiorucci', 'our-british-columbia']
 
 test('the imported pieces say nothing with an em dash, on the card, in the panels, the story or the drawing’s title', () => {
   const strings = (value) => typeof value === 'string' ? [value] : Array.isArray(value) ? value.flatMap(strings) : value && typeof value === 'object' ? Object.values(value).flatMap(strings) : []
@@ -412,6 +418,8 @@ test('the imported drawings keep their ids to themselves', () => {
   for (const id of ids(DRAWINGS['coons-age'])) assert.ok(/^(coon-|ad-emblem-|forest-service-emblem$)/.test(id), `coons-age: ${id}`)
   for (const id of ids(DRAWINGS['prevent-forest-fires'])) assert.ok(id.startsWith('pff-'), `prevent-forest-fires: ${id}`)
   for (const id of ids(DRAWINGS['matches-not-for-children'])) assert.ok(id.startsWith('mnc-'), `matches-not-for-children: ${id}`)
+  for (const id of ids(DRAWINGS['expo-86-fiorucci'])) assert.ok(id.startsWith('fio-'), `expo-86-fiorucci: ${id}`)
+  for (const id of ids(DRAWINGS['our-british-columbia'])) assert.ok(id.startsWith('obc-'), `our-british-columbia: ${id}`)
   for (const piece of IMPORTED) {
     const all = Object.entries(DRAWINGS).filter(([id]) => id !== piece).flatMap(([, svg]) => ids(svg))
     for (const id of ids(DRAWINGS[piece])) {

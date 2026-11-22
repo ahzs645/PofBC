@@ -24,9 +24,10 @@ import { holdScroll } from '../site/holdScroll.js'
  * @param {string} [props.intro]     A heading and one line over the shelf; left out, the shelf starts with its series.
  * @param {string} props.noun        What one piece is called (`poster`, `sign`).
  * @param {Array}  props.series      [{ id, title, kind, unlisted? }], in the order shown. An unlisted
- *                                   series is left off the shelf, out of the stepping order and the
- *                                   filters, but its pieces still open from their address. A piece
- *                                   whose card says `unlisted` is left off the same way, alone.
+ *                                   series is left off the shelf, out of the shelf's stepping order and
+ *                                   the filters, but its pieces still open from their address and step
+ *                                   among themselves. A piece whose card says `unlisted` is left off
+ *                                   the same way, alone.
  * @param {Function} props.itemsOf   A series' piece ids, in order.
  * @param {object} props.items       Each piece's catalogue card, by id.
  * @param {object} props.loaders     Each piece's loader: resolves to its drawing and parts.
@@ -55,6 +56,11 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
   const listed = series.filter((entry) => !entry.unlisted && shelved(entry).length)
   const order = listed.flatMap(shelved)
   const seriesOf = (id) => series.find((entry) => itemsOf(entry).includes(id)) ?? null
+  // The pieces stepped through from one: the shelf's, or an unlisted series' own, among themselves.
+  const runOf = (id) => {
+    const own = seriesOf(id)
+    return own?.unlisted && !items[id]?.unlisted ? shelved(own) : order
+  }
 
   const go = useCallback(({ id, part }, entering = false) => {
     setPlace({ id, part })
@@ -80,9 +86,10 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
       .then((loaded) => {
         if (gone) return
         setModule({ id: place.id, ...loaded })
-        const at = order.indexOf(place.id)
+        const run = runOf(place.id)
+        const at = run.indexOf(place.id)
         // A heavy drawing (`prefetch: false` in its card) is left until it is asked for.
-        for (const id of [order[at - 1], order[at + 1]]) if (id && items[id].prefetch !== false) loaders[id]().catch(() => {})
+        for (const id of at < 0 ? [] : [run[at - 1], run[at + 1]]) if (id && items[id].prefetch !== false) loaders[id]().catch(() => {})
       })
       .catch((error) => { console.error(error); if (!gone) setFailed(true) })
     return () => { gone = true }
@@ -105,10 +112,11 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
   // What's on screen: the piece asked for once it has loaded, until then the one before it.
   const shown = meta && module ? items[module.id] : null
   const switching = Boolean(shown && shown.id !== meta.id)
-  const index = shown ? order.indexOf(shown.id) : -1
+  const run = shown ? runOf(shown.id) : order
+  const index = shown ? run.indexOf(shown.id) : -1
   const step = (id) => id && { title: items[id].title, open: () => go({ id, part: 'overview' }) }
-  // An unlisted piece stands alone: no stepping to the shelf's pieces either side of it.
-  const shelf = index < 0 ? null : { list: order.map((id) => ({ id, title: items[id].title })), index, open: (id) => go({ id, part: 'overview' }) }
+  // A piece unlisted alone stands alone: no stepping to the shelf's pieces either side of it.
+  const shelf = index < 0 ? null : { list: run.map((id) => ({ id, title: items[id].title })), index, open: (id) => go({ id, part: 'overview' }) }
 
   // While a piece is open over the shelf, the shelf cannot be tabbed into or read from behind it.
   useEffect(() => {
@@ -213,8 +221,8 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
             onExit={exit}
             backLabel={title}
             noun={noun}
-            previous={index < 0 ? null : step(order[index - 1])}
-            next={index < 0 ? null : step(order[index + 1])}
+            previous={index < 0 ? null : step(run[index - 1])}
+            next={index < 0 ? null : step(run[index + 1])}
             shelf={shelf}
           />
         </div>

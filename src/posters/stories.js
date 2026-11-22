@@ -317,6 +317,72 @@ export const STORIES = {
       'Last, the fine print along the foot: the artist named, the copyright held by the Expo 86 Corporation, and Printed in Canada.',
       'That is the poster: an artist’s image given the whole sheet, with the fair content to sign it.'
     ]
+  },
+  'expo-86-fiorucci': {
+    overview: [
+      'Four shapes in flat primary colours fill the sheet, one under another, pointing left, then right, then left, then right. Each has a row of windows. The fair signs only the foot.',
+      'What follows reads them as passenger aircraft drawn like fish. It is a reading of the picture, not the artist’s account: no statement from Vittorio Fiorucci about this poster has been found, and the dealer’s record of a matching copy titles it only The 1986 World Exposition.'
+    ],
+    red: [
+      'At the top, the red shape heads left: a pointed nose, swept wings above and below, and a forked tail at the right edge. Four pale yellow windows run along its middle.',
+      'The windows are the strongest clue, and they make it a passenger plane. The curved body, the fins and the forked tail make it a fish. The eye can switch between the two, and that double reading seems to be the point: a machine for travel drawn as something alive.'
+    ],
+    blue: [
+      'The blue shape below turns round and heads right, its six mint windows square where the red’s were round.',
+      'Left, right, left, right: the shapes alternate, so the sheet reads as traffic both ways, arrivals and departures, people moving between places. That suits the fair’s theme, Transportation and Communication: World in Motion, World in Touch, and a fair with plazas given to land, air and water transport.'
+    ],
+    yellow: [
+      'The yellow one heads left again, its long tail sweeping down to the right edge, with seven orange windows, the most of any.',
+      'Bright bodies and contrasting windows give the whole parade a cheerful, almost toy-like look. The McCord Stewart Museum describes Fiorucci’s work as simple shapes, vibrant colours, enigmatic characters and playfulness. That was written about his work in general, not this poster, but it fits it.'
+    ],
+    green: [
+      'At the bottom, the green shape heads right with four pink rounds, the same count and shape as the red one’s at the top, so the sheet ends where it began.',
+      'Nothing found gives the four colours, the number of shapes, the counts of windows, or round against square, a meaning of their own. They keep the rhythm varied; they are not read here as a code.'
+    ],
+    signature: [
+      'Beside the green shape’s tail, small and grey, the artist’s name: Vittorio.'
+    ],
+    logo: [
+      'Under it, the fair’s stacked mark in black, the one strong dark on the sheet.'
+    ],
+    event: [
+      'To the right, the fair’s name, place and dates in English and in French, the same words as on the Davidson poster.',
+      'That is the poster: four bright craft on the move, or four fish, with the fair content to sign the corner.'
+    ]
+  },
+  'our-british-columbia': {
+    overview: [
+      'Blue, white and red come down the sheet into a yellow sunburst, and in the sunburst the film’s title. Under it, the film’s credits, like any film poster’s.',
+      'Read it from the top: the bands and the sun, the title, the credits, the fine print, then the three marks round the foot.'
+    ],
+    rays: [
+      'Two blue fields and a red one fall straight from the top edge, with white between them, and red rays slant in from the sides. Red, white, blue and gold are the provincial flag’s colours.'
+    ],
+    sunburst: [
+      'Where the bands meet it, the yellow sunburst throws up its points, so the bands read as its rays; its lower half widens into a panel right across the sheet.'
+    ],
+    our: [
+      'Over the title, one quick handwritten word: OUR.'
+    ],
+    title: [
+      'Then the province’s name, in two lines of tall formal capitals, the B and C larger than the rest. Our, and then British Columbia: the title claims the place for the people watching.'
+    ],
+    billing: [
+      'Under the sunburst, the billing: THE BRITISH COLUMBIA PAVILION PRESENTS, the title again, and the film’s makers, from Richard Jefferies, its writer and director, to Bob Rogers, its producer.'
+    ],
+    'fine-print': [
+      'A dedication, For Lisa, Tyler and Jordy, then the studios, the thanks, the distributors, the printer, Mitchell Press, and the copyright, 1986.'
+    ],
+    showmanship: [
+      'At the lower left, a winged emblem with a movie camera: INDUSTRIAL SHOWMANSHIP.'
+    ],
+    'bob-rogers-company': [
+      'Under it, the producer’s company, Bob Rogers & Company, Inc., with a strip of film through the ampersand.'
+    ],
+    pavilion: [
+      'At the lower right, the pavilion’s own badge: the provincial flag waving on yellow, and THE BRITISH COLUMBIA PAVILION EXPO 86.',
+      'That is the poster: a film poster laid out like any other, whose title and colours are the province’s.'
+    ]
   }
 }
 

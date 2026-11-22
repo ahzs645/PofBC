@@ -121,6 +121,15 @@ const companion = (poster, note) => ({
   to: piece(poster),
   certainty: 'printed'
 })
+const EXPO_MARKS = {
+  group: 'marks',
+  rel: 'Uses mark',
+  label: 'Expo 86’s marks',
+  note: 'Logos · Expo 86 Corporation: the stacked EXPO and three-ring 86 at the poster’s foot',
+  to: { view: 'gallery', logos: 'collected-expo-86-corporation' },
+  certainty: 'printed'
+}
+const expoPiece = (poster, note, certainty) => ({ ...companion(poster, note), rel: 'Also from Expo 86', certainty })
 const CREDITS = {
   group: 'context',
   rel: 'Made by',
@@ -537,7 +546,7 @@ const BY_POSTER = {
     },
     { ...companion('go-bc-ferries', 'Posters · the Toll Authority’s sticker for the whole system'), rel: 'Also a decal', certainty: 'thematic' }
   ],
-  // Unlisted on the shelf (catalogue.js), so no other piece points to it.
+  // Unlisted on the shelf (catalogue.js): the Expo 86 pieces point only to one another.
   'expo-86-davidson': [
     {
       group: 'issuer',
@@ -547,14 +556,42 @@ const BY_POSTER = {
       to: body('expo-86-corporation', 1986),
       certainty: 'printed'
     },
+    EXPO_MARKS,
+    expoPiece('expo-86-fiorucci', 'Posters · another of the fair’s art posters, with the same mark and event text', 'printed'),
+    expoPiece('our-british-columbia', 'Posters · the British Columbia Pavilion’s poster for its film', 'thematic')
+  ],
+  'expo-86-fiorucci': [
     {
-      group: 'marks',
-      rel: 'Uses mark',
-      label: 'Expo 86’s marks',
-      note: 'Logos · Expo 86 Corporation: the stacked EXPO and three-ring 86 at the poster’s foot',
-      to: { view: 'gallery', logos: 'collected-expo-86-corporation' },
+      group: 'issuer',
+      rel: 'Issued by',
+      label: 'Expo 86 Corporation',
+      note: 'Government · 1986: the publisher a dealer’s listing gives for a matching copy; the sheet carries no credit line',
+      to: body('expo-86-corporation', 1986),
+      certainty: 'documented'
+    },
+    EXPO_MARKS,
+    expoPiece('expo-86-davidson', 'Posters · another of the fair’s art posters, with the same mark and event text', 'printed'),
+    expoPiece('our-british-columbia', 'Posters · the British Columbia Pavilion’s poster for its film', 'thematic')
+  ],
+  'our-british-columbia': [
+    {
+      group: 'issuer',
+      rel: 'Presented by',
+      label: 'B.C. Pavilion Corporation',
+      note: 'Government · 1986: the credit line names THE BRITISH COLUMBIA PAVILION, not a body; this is the Crown corporation incorporated in 1984 under its name. The copyright is International Media Distribution’s.',
+      to: body('bc-pavilion-corporation', 1986),
+      certainty: 'inferred'
+    },
+    {
+      group: 'context',
+      rel: 'Historical context',
+      label: 'Expo 86 Corporation',
+      note: 'Government · 1986: the Crown corporation that ran the fair the pavilion’s badge names',
+      to: body('expo-86-corporation', 1986),
       certainty: 'printed'
-    }
+    },
+    expoPiece('expo-86-davidson', 'Posters · one of the fair’s art posters', 'thematic'),
+    expoPiece('expo-86-fiorucci', 'Posters · another of the fair’s art posters', 'thematic')
   ]
 }
 

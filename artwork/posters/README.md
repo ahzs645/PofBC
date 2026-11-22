@@ -20,6 +20,8 @@ palettes and validation records are here.
 | `queen-of-sidney/` | Queen of Sidney — car decal | `src/posters/bc-ferries/queen-of-sidney.svg`, **layer ids renamed** (below) |
 | `wildlife-trees/` | Wildlife Trees — Ministry of Forests, Forest Practices Branch | `src/posters/wildlife-trees/wildlife-trees.svg`, a **lighter copy** (below) |
 | `noxious-weeds/` | Beware These Alien Invaders, Shattering the Environment, Explosion in Slow Motion — the Noxious Weeds campaign | `src/posters/noxious-weeds/`, **rebuilt from the PDFs** by `noxious-weeds/build.py` (below) |
+| `expo-86-fiorucci/` | Expo 86, art poster by Vittorio Fiorucci | `src/posters/expo-86/expo-86-fiorucci.svg`, the master with **ids prefixed** (below) |
+| `our-british-columbia/` | Our British Columbia, the British Columbia Pavilion's film poster for Expo 86 | `src/posters/expo-86/our-british-columbia.svg`, the master with **ids prefixed and two layers split** (below) |
 
 **The gamble badge is green on the site.** The one supplied photograph shows it deep blue
 (`#01375D`), and the master here was drawn to that photograph. The blue is the photograph's, not the
@@ -87,3 +89,18 @@ panel images beside them; rebuild them there and copy them across.
 
 None of these is an original production master, and none implies affiliation with, or rights in,
 the historical designs.
+
+**The two Expo 86 additions are lightly adapted, and unlisted like the Davidson poster.** Both
+masters reuse the Davidson poster's Expo mark and event text, ids and all, so each site copy
+prefixes its ids (`fio-`, `obc-`), drops the Inkscape markup and JSON metadata, and rewords its
+title and description. The Fiorucci copy is otherwise unchanged, pixel for pixel. Our British
+Columbia's master writes its three emblems with `ns0:` prefixes, which an HTML parser will not draw,
+so its copy writes them in the drawing's own namespace; it also takes the white paper out of the
+first layer and the fine print out of the billing layer, each into a layer of its own in the same
+place, so the Posters view dims a layer as one group. Lighting the fine print inside the billing
+layer dimmed every credit line separately, and with the sheet tilted, Chrome left most of the poster
+undrawn. The three Expo 86 posters are off the shelf, open from their addresses, and step among
+themselves. The photographs, PNGs, PDFs, comparison page, the fonts (Six Caps and Oswald, both open)
+and the copies of this repo's own files are left out; see
+[`expo-86-fiorucci/README.md`](expo-86-fiorucci/README.md) and
+[`our-british-columbia/README.md`](our-british-columbia/README.md).
