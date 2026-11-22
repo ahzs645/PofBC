@@ -128,7 +128,6 @@ export const PaperModelsView = () => {
             </button>
             <Segmented
               ariaLabel="View"
-              compact
               options={LAYOUTS}
               value={layout}
               onChange={(value) => { setLayout(value); send({ type: 'packcad:layout', layout: value }) }}

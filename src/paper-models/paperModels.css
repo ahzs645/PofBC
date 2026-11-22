@@ -122,18 +122,27 @@
   gap: 8px;
 }
 
+/* The same height, corners and type as the 3D / Flat / Both control beside it (.segmented). */
 .paper-models__play {
   display: inline-flex;
+  flex: none;
   align-items: center;
   gap: 8px;
   height: var(--control);
   padding: 0 14px;
   border: 0;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius);
   background: var(--primary);
   color: var(--primary-ink);
   font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
   cursor: pointer;
+}
+
+.paper-models .paper-models__transport .field {
+  margin: 0;
 }
 
 .paper-models__play:hover:not(:disabled) {
