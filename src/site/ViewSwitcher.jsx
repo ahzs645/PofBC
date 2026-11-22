@@ -4,8 +4,8 @@
 // rather than a choice between three things of equal standing. It is now the title's own last
 // word — "Province of British Columbia / Generator ▾" — opening a menu that says what each view is,
 // after the org-graph site the government view is modelled on. The menu follows the WAI-ARIA menu
-// button pattern: arrows move, Home and End jump, Escape closes and returns focus. With sixteen views it
-// is two columns on a wide screen and a scrolling sheet across a phone's, so none falls off the page.
+// button pattern: arrows move, Home and End jump, Escape closes and returns focus. The views use
+// two columns on a wide screen and a scrolling sheet across a phone's, so none falls off the page.
 
 import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
 import { preloadView } from './viewLoaders.js'
@@ -13,6 +13,7 @@ import { preloadView } from './viewLoaders.js'
 export const VIEWS = [
   { id: 'generator', label: 'Generator', description: 'A ministry lockup in any of the four identities' },
   { id: 'gallery', label: 'Logos', description: 'BC Hydro, BC Timber Sales, BC Parks, and the Province’s one-off marks' },
+  { id: 'initiatives', label: 'Initiatives', description: 'Programs, campaigns and their websites, identities and publications', badge: 'New' },
   { id: 'internal', label: 'Internal Logos', description: 'Internal logo families and their history, starting with Forests' },
   { id: 'posters', label: 'Posters', description: 'Posters by series, every part clickable for its history' },
   { id: 'signs', label: 'Signs', description: 'Signs by series, every part clickable for its history' },

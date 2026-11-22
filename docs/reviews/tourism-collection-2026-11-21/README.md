@@ -1,19 +1,31 @@
-# Tourism collection: implementation and visual review
+# Initiatives: Tourism implementation and visual review
 
-This change expands the gallery’s Tourism BC and Destination BC material into one
-connected collection of identities, websites, apps, publications and documentary
-evidence. It uses the existing gallery, theme, organization links and artwork
-records. The two corporations retain their own histories and graph nodes.
+This change adds **Initiatives** to the site’s main navigation. Its searchable
+index opens a documented Tourism collection connecting identities, websites,
+apps, publications and their sources. A lightweight registry, lazy data loaders
+and shared section renderer support future initiatives when their evidence is
+ready. Tourism is the only live entry; the index has no speculative placeholders.
 
-Open the gallery at:
+| Destination | Stable route |
+| --- | --- |
+| Initiatives index | `?view=initiatives` |
+| Tourism | `?view=initiatives&initiative=tourism` |
+| Websites & apps | `?view=initiatives&initiative=tourism&section=websites` |
+| HelloBC record | `?view=initiatives&initiative=tourism&section=websites&record=hellobc` |
+| Corporate identity gallery | `?view=gallery&logos=tourism-bc-destination-bc` |
 
-```text
-?view=gallery&logos=tourism-bc-destination-bc#tourism-websites
-```
+The corporate artwork remains in Logos. The old `collected-tourism-bc` and
+`collected-destination-bc` collection IDs still resolve there. A former tourism
+detail link such as
+`?view=gallery&logos=tourism-bc-destination-bc#tourism-websites/hellobc` migrates to
+the equivalent initiative section and record. Gallery links selecting a corporate
+mark keep their original destination. Both corporations retain their own histories,
+graph nodes and artwork ownership.
 
-The old `collected-tourism-bc` and `collected-destination-bc` collection links still
-resolve. Named records such as HelloBC, WorldHost, BC Escapes and Near Me BC are
-also discoverable through the gallery’s main search.
+Named records such as HelloBC, WorldHost, BC Escapes and Near Me BC are discoverable
+through initiative search and the gallery’s main search. The
+[initiative contributor guide](../../initiatives.md) documents the registry,
+detail model, optional sections and stable identifiers.
 
 ## What changed
 
@@ -37,7 +49,7 @@ Printed case, spelling and source positions are preserved. These entries do not
 become asserted live websites or contact links.
 
 Tourism BC’s 2010 dissolution, Destination BC’s 2012 establishment and its 2013
-operational start/asset transfer remain distinct. The shared shelf does not add
+operational start/asset transfer remain distinct. The connected collection does not add
 a legal rename relationship.
 
 The [source and acquisition notes](../../../research/identity/tourism-asset-transfer-2013/README.md)
@@ -45,35 +57,45 @@ explain the evidence, remaining gaps and deterministic data build.
 
 ## Screenshots
 
-These are browser screenshots of the implemented `GalleryView`, served from its
-production build through `scripts/preview-gallery.mjs`. They show the gallery
-inside the existing lightweight review shell, rather than the whole application’s
-navigation. No proposed interface or historical website was drawn to simulate a
-screenshot.
+These are browser screenshots of the implemented `InitiativesView`, `GalleryView`
+and `ViewSwitcher`, served from a focused production build through
+`scripts/preview-gallery.mjs`. The preview uses the site’s masthead and real view
+menu. It disables other views and their preloading only within the local preview,
+so their separate assets are not required for this review. It does not claim to
+render the complete application. No proposed interface or historical website was
+drawn to simulate a screenshot.
 
-Desktop captures use a 1348-pixel browser viewport; several use browser-native
-clipping to show a complete section. Mobile captures use the same app inside a
-390 × 844 pixel iframe, including its 15-pixel desktop scrollbar. Its content area
+Desktop captures include the navigation, index and detail views; several use
+browser-native clipping to show a complete section. Mobile captures use the same
+app inside a 390 × 844 pixel iframe, including its 15-pixel desktop scrollbar. Its content area
 is 375 pixels wide. The table scrolls within its own container without widening
 the document. Exact image dimensions and SHA-256 checksums are in
 [`screenshots.json`](screenshots.json).
 
 | View | Screenshot |
 | --- | --- |
-| Collection opening | [01-collection-overview.jpg](01-collection-overview.jpg) |
+| Initiatives index | [00-initiatives-index.jpg](00-initiatives-index.jpg) |
+| Tourism initiative opening | [01-collection-overview.jpg](01-collection-overview.jpg) |
 | Websites, apps and evidence filters | [02-websites-and-apps.jpg](02-websites-and-apps.jpg) |
 | Logo family | [03-logos-and-signs.jpg](03-logos-and-signs.jpg) |
 | Original vector, variant controls and exact source page | [04-vector-record.jpg](04-vector-record.jpg) |
 | Source library and searchable address inventory | [05-sources-and-domains.jpg](05-sources-and-domains.jpg) |
 | Timeline | [06-timeline.jpg](06-timeline.jpg) |
 | Publication records | [07-publications.jpg](07-publications.jpg) |
-| Mobile opening | [08-mobile-overview.jpg](08-mobile-overview.jpg) |
+| Mobile Tourism opening | [08-mobile-overview.jpg](08-mobile-overview.jpg) |
 | Mobile website card | [09-mobile-websites.jpg](09-mobile-websites.jpg) |
 | Dark theme | [10-dark-theme.jpg](10-dark-theme.jpg) |
+| Main navigation with Initiatives | [11-navigation-menu.jpg](11-navigation-menu.jpg) |
+| Corporate identities retained in Logos | [12-corporate-identities.jpg](12-corporate-identities.jpg) |
+| Mobile Initiatives index | [13-mobile-index.jpg](13-mobile-index.jpg) |
 
-### Collection opening
+### Initiatives index
 
-![Tourism collection opening](01-collection-overview.jpg)
+![Searchable Initiatives index with the documented Tourism collection](00-initiatives-index.jpg)
+
+### Tourism opening
+
+![Tourism initiative opening](01-collection-overview.jpg)
 
 ### Website records
 
@@ -85,43 +107,64 @@ the document. Exact image dimensions and SHA-256 checksums are in
 
 ### Mobile
 
-![Mobile collection opening](08-mobile-overview.jpg)
+![Mobile Tourism initiative opening](08-mobile-overview.jpg)
 
 ## Verification
 
-Completed locally:
+Focused verification commands:
 
 ```sh
 npm run check:tourism-collection
-node --test src/gallery/collections.test.js src/gallery/galleryPlace.test.js
+node --test src/gallery/collections.test.js src/gallery/galleryPlace.test.js src/site/browserHistory.test.js
 node scripts/preview-gallery.mjs --build --base /PofBC/ --out dist-gallery
 git diff --check
 ```
 
-The focused suites pass **27 tests**. They cover deterministic generation and
-image bytes, complete address-cell transcription, exact source spellings,
-evidence dates, corporate chronology, legacy routes, separate artwork ownership,
-search behavior and navigation away from a tourism section.
+The focused suites pass **41 tests**: 29 in `npm run check:tourism-collection`
+and twelve in the gallery, collection and browser-history suites above. They cover
+deterministic generation and image bytes, complete address-cell transcription,
+exact source spellings, evidence dates, corporate
+chronology, legacy routes, separate artwork ownership, search behavior and browser
+history. Initiative model tests also use an unrelated, test-only subject to check
+custom section IDs, optional evidence fields, stale record selection and server
+rendering without adding that subject to the live registry. All 58 acquired
+specimens pass their recorded SHA-256 checks.
 
-Browser checks covered all five sections, the website image filters (two records
-with images and seven awaiting images), name search, the seven-entry email
-filter, preserved `BCWorldHost.com` capitalization, and the JSON download. The
-download contains all 193 entries and its source record. Artwork selection
-updates the exact source-page link, including the reverse Horizontal B vector
-on manual PDF page 10; reverse specimens use a dark plate. Escape closes the
-dialog. Arrow, Home and End keys select tabs. Light and dark themes and the mobile
-layout were inspected.
+Browser checks verified:
 
-The gallery production bundle builds successfully. Vite reports its existing
-large-bundle and mixed static/dynamic-import warnings. The preview uses the
-repository’s supported TeX Gyre font stand-in where licensed generator fonts are
+- Initiatives index search for WorldHost, empty results and reset, and Back
+  navigation restoring both the query and card focus.
+- Desktop and mobile navigation menus, all five Tourism sections, Home/End tab
+  selection and focus, and Escape closing the record dialog.
+- Website image provenance distinguishing the July 2022 HelloBC publication from
+  the 2025 SupernaturalBC launch image. Selecting the reverse Horizontal B vector
+  retains its dark plate and points to manual PDF page 10.
+- The seven-row email filter and a JSON download that still includes all 193
+  address entries and the Ministerial Order 68 source record.
+- Migration of a legacy `#tourism-websites/hellobc` gallery link to the canonical
+  initiative query and record, plus the reciprocal corporate-identity link.
+- Light and dark theme computed styles, a mobile index and detail page with no
+  document overflow at 375 pixels of content width, and a source table that scrolls
+  within its own container. The WorldHost dialog fits inside the 390 × 844 review
+  frame, with a 339 × 824 dialog positioned 18 pixels from the content edge and
+  10 pixels from the top.
+
+The focused Logos and Initiatives production preview builds successfully at both
+the root path (`/`) and the project path (`/PofBC/`), with **333 modules**. The
+preview uses the repository’s supported TeX Gyre font stand-in where licensed generator fonts are
 unavailable; the collected vectors retain their original outlined lettering.
 
-This is a focused gallery review, not a claim that the entire repository’s
-production build or every test has run. A broader existing collected-artwork test
-attempt reached two missing-file failures for a pre-existing BC Housing asset in
-the sparse checkout; the focused tourism and navigation suites pass. No GitHub
-Actions run was requested; the PR commit uses `[skip ci]`.
+All fourteen review screenshots were verified as JPEG files and recorded with
+their SHA-256 checksums in `screenshots.json`. The source checksums of the 58
+acquired specimens are unchanged.
+
+A full application bundle was attempted and remains blocked by **19 unresolved
+imports**: sixteen pre-existing research files absent from the sparse checkout and
+three unbuilt geo-toolkit outputs. This preview does not establish a successful
+full-site production build. An earlier broader collected-artwork test attempt also
+reached two missing-file failures for a pre-existing BC Housing asset absent from
+the checkout. Those limitations are separate from the focused tourism checks.
+No GitHub Actions run was requested; PR commits use `[skip ci]`.
 
 ## Reproduce the preview
 
@@ -134,8 +177,11 @@ npm run build:current-extras
 node scripts/preview-gallery.mjs --port 4175
 ```
 
-Open the printed local URL with the gallery query above. The preview script also
-accepts `--host` and copies `public/tourism/` into a static review build.
+Open the printed local URL with `?view=initiatives`, then open Tourism or use one
+of the stable detail links above. The same preview supports the corporate Logos
+gallery. The script also accepts `--host` and copies `public/tourism/` into a
+static review build. Other menu destinations are intentionally outside this local
+preview; their production routes remain the responsibility of the full app.
 
 ## Remaining collection work
 

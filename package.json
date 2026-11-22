@@ -55,7 +55,7 @@
     "check:identity-coverage": "node scripts/build-identity-expansion.mjs --check && node --test \"src/gallery/*.test.js\" scripts/identity-expansion.test.mjs src/government/relatedBodies.test.js src/government/government.test.js src/site/browserHistory.test.js && node scripts/check-identity-render.mjs",
     "build:collected-marks": "node scripts/build-collected-marks.mjs",
     "build:tourism-collection": "node scripts/build-tourism-collection.mjs",
-    "check:tourism-collection": "node scripts/build-tourism-collection.mjs --check && node --test scripts/tourism-collection.test.mjs src/gallery/tourismIntegration.test.js src/gallery/gallerySearch.test.js",
+    "check:tourism-collection": "node scripts/build-tourism-collection.mjs --check && node --test scripts/tourism-collection.test.mjs src/gallery/tourismIntegration.test.js src/gallery/gallerySearch.test.js src/initiatives/*.test.js",
     "build:collected-display": "python3 scripts/build_collected_display.py",
     "brandkit:build": "node brandkit/scripts/build.mjs",
     "brandkit:pack": "node brandkit/scripts/pack.mjs",

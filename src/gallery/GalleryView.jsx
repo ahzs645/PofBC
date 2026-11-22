@@ -30,7 +30,7 @@ import { BCTS_FOREST, BCTS_TEAL } from './oneOffs.js'
 import { SuppliedMarkView } from './SuppliedMarkView.jsx'
 import { CollectedMarkView } from './CollectedMarkView.jsx'
 import { RailwayHistory, RailwayHistoryLinks } from './RailwayHistory.jsx'
-import { TourismCollection, TourismCollectionTeaser } from './TourismCollection.jsx'
+import { InitiativeLink } from '../initiatives/InitiativeLink.jsx'
 import { UnbcOriginsTeaser } from './UnbcOrigins.jsx'
 import { generatorArt, onPage, tileArt } from './tileArt.js'
 import { isSearchShortcut, searchGallery } from './gallerySearch.js'
@@ -470,7 +470,7 @@ const CollectionCard = ({ collection, onOpen, theme }) => {
         <span className="gallery__collection-title">{collection.label}</span>
         <span className="gallery__note">{collection.body}</span>
         <span className="gallery__years">
-          {collection.years} · {collection.tourismCollection ? 'Websites, logos & source register' : <>{count} {collection.fileCollection ? (count === 1 ? 'artwork file' : 'artwork files') : (count === 1 ? 'mark' : 'marks')}</>}
+          {collection.years} · {count} {collection.fileCollection ? (count === 1 ? 'artwork file' : 'artwork files') : (count === 1 ? 'mark' : 'marks')}
           {collection.eras ? ` · ${collection.eras.length} eras` : ''}
         </span>
       </span>
@@ -933,7 +933,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
           </section>
         )}
         <RailwayHistory history={collection?.railwayHistory} compact />
-        {collection?.tourismCollection && <TourismCollectionTeaser />}
+        {collection?.initiativeId && <InitiativeLink id={collection.initiativeId} />}
         <IdentityCollectionLinks collectionId={collection?.id} entryId={open.id} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
         <AboutMark identity={open.identity} drawing={open.caveat} />
       </div>
@@ -1010,21 +1010,19 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   return (
     <div className="gallery">
       {crumbs}
-      {!collection.tourismCollection && <><div className="gallery__collection-head">
+      <div className="gallery__collection-head">
         <div>
           <h2 className="gallery__collection-heading">{collection.label}</h2>
           <p className="gallery__note">{collection.body} · {collection.years}</p>
         </div>
         <GraphLink node={collection.graphNode} onOpenGovernment={onOpenGovernment} />
       </div>
-      <p className="gallery__intro">{collection.intro}</p></>}
+      <p className="gallery__intro">{collection.intro}</p>
       <UnbcOriginsTeaser owner={collection.entries?.[0]?.owner} />
-      {!collection.tourismCollection && <IdentityCollectionLinks collectionId={collection.id} graphShown={collection.graphNode} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />}
+      <IdentityCollectionLinks collectionId={collection.id} graphShown={collection.graphNode} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
       <RailwayHistoryLinks history={collection.railwayHistory} />
 
-      {collection.tourismCollection && <TourismCollection />}
-      {collection.tourismCollection && <IdentityCollectionLinks collectionId={collection.id} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />}
-      {collection.tourismCollection && <h3 className="gallery__shelf-title">The corporate identities</h3>}
+      {collection.initiativeId && <InitiativeLink id={collection.initiativeId} />}
 
       {timeline}
       {collection.eras

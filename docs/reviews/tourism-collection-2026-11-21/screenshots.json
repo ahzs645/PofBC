@@ -1,29 +1,37 @@
 {
-  "captureMethod": "Browser screenshots of the actual GalleryView production preview. Panel views use browser-native clipping; mobile views show the same app in a 390 by 844 pixel iframe.",
+  "captureMethod": "Browser screenshots of the implemented InitiativesView, GalleryView and ViewSwitcher in the focused production preview. Panel views use browser-native clipping; mobile views show the same app in a 390 by 844 pixel iframe with a 375 pixel content width. Other site views are excluded only from this local preview.",
   "images": [
+    {
+      "file": "00-initiatives-index.jpg",
+      "dimensions": [
+        1348,
+        1089
+      ],
+      "sha256": "d7d0177536adbd2b7804a9c0b58e699401238a8b890a44d61823482f365be6ad"
+    },
     {
       "file": "01-collection-overview.jpg",
       "dimensions": [
         1348,
         650
       ],
-      "sha256": "5fa28e821a9f7dedf7c4a2290752ae45d33080b02b3dcbcfadf62b359d7d5798"
+      "sha256": "9197f83b1896685ce450dea1099bb02c6b1fba1b4deca51693e839a8a58f7dbb"
     },
     {
       "file": "02-websites-and-apps.jpg",
       "dimensions": [
         1316,
-        900
+        1000
       ],
-      "sha256": "bc19c3de43b94e0af859498d2845c7d4e767ea64552df3f8b8a75b0fdcc5e880"
+      "sha256": "f30afe0f86fad5a14babc4dfa2e2efdea533665ef2d811031f2d1487a6f4835f"
     },
     {
       "file": "03-logos-and-signs.jpg",
       "dimensions": [
-        1348,
-        926
+        1316,
+        1020
       ],
-      "sha256": "7860b36383bd18bdc12535cb235fbd31d2e5b94e375d10c95a0c234818f58cf0"
+      "sha256": "b7842c52a4dbd570417ff6a2214442d505a8dcd27bc657d695feed6d556c11ff"
     },
     {
       "file": "04-vector-record.jpg",
@@ -31,31 +39,31 @@
         1348,
         926
       ],
-      "sha256": "98b5e5e31ac8d78622f9da5d2bfcb2ac507f7d9b8663e580ee956c3a9b1fa607"
+      "sha256": "60dd865793a0ea5b30058efa9ff8eec2173269cdb88482a0ffb2573b26edbe40"
     },
     {
       "file": "05-sources-and-domains.jpg",
       "dimensions": [
         1316,
-        1000
+        1060
       ],
-      "sha256": "13bbd9e5c1cbc8da5e45ba58da68bba769a2ff406b149d0d1e85ed0e6495c621"
+      "sha256": "2e909a75a2002e5db5c450f82238d4fa317a17b51d496118bcd1cdfa4900f308"
     },
     {
       "file": "06-timeline.jpg",
       "dimensions": [
         1316,
-        1050
+        1070
       ],
-      "sha256": "ba27807ed152e00f120c1a28122a56bbb1c1c153b7540adb88c5563f62d2ec66"
+      "sha256": "ac8f827674f50e9fbbe51814827f9df8993eb9332e5e23c063168eb52feec895"
     },
     {
       "file": "07-publications.jpg",
       "dimensions": [
         1316,
-        1050
+        1070
       ],
-      "sha256": "9cb1983e829385120adb3465b06fae0984c111d002cffa8561530d7c46891bad"
+      "sha256": "4ecca5c6c8264017931865786d3338ba3cb8873a880592654ead68a814583e1d"
     },
     {
       "file": "08-mobile-overview.jpg",
@@ -63,7 +71,7 @@
         390,
         844
       ],
-      "sha256": "8f417c5f825d566f090b228f4f5d1e1381aef50cb88b93daaae243346df1fc47"
+      "sha256": "e773f83a692da029345fe9f1776e1dcc0757f13aceaa28495e8d89d85a8da432"
     },
     {
       "file": "09-mobile-websites.jpg",
@@ -71,7 +79,7 @@
         390,
         844
       ],
-      "sha256": "b4c1d9de0fc96f213ffc135c345978493d9a91bec04931c981513db76b0acdde"
+      "sha256": "6df92a0c964bfdcdc446b24b397ef8b0155b4eac807a7291150433d724f2a667"
     },
     {
       "file": "10-dark-theme.jpg",
@@ -79,7 +87,31 @@
         1348,
         926
       ],
-      "sha256": "25e2fea26d466ea882f08a8ed00a13c1f1f345d944d9a1fe950f7eb6168f1e91"
+      "sha256": "2435594400bf0ee990168b8583960798d56ac2e8722522033f8de8ad6b383173"
+    },
+    {
+      "file": "11-navigation-menu.jpg",
+      "dimensions": [
+        1348,
+        926
+      ],
+      "sha256": "c4f2aba249dbdfbaffb80e10a0e340020c3d6635e059f421415e9799dfea7c92"
+    },
+    {
+      "file": "12-corporate-identities.jpg",
+      "dimensions": [
+        1348,
+        926
+      ],
+      "sha256": "5e556cb56d40d182b72955d19e7cb3c3de4a009f40f3ab7d82d49118ef905fed"
+    },
+    {
+      "file": "13-mobile-index.jpg",
+      "dimensions": [
+        390,
+        844
+      ],
+      "sha256": "7fc0f9e19b186ef512c01a2b9dccea8574a6f6e098f303c3f93fe34addd78e61"
     }
   ]
 }

@@ -6,13 +6,9 @@
 import { GALLERY_COLLECTIONS, entriesOf } from './collections.js'
 import { searchIdentitySubjects } from './identityCoverage.js'
 import { nodesOf } from './collectedCollections.js'
-import { TOURISM_COLLECTION } from './tourismData.js'
+import { initiativeById } from '../initiatives/initiatives.js'
 
-// Index the named records visitors can open, including their curated addresses. The full
-// source inventory also contains email addresses and unverified domains, so it stays out.
-const tourismSearchText = [...TOURISM_COLLECTION.digitalRecords, ...TOURISM_COLLECTION.marks]
-  .flatMap((record) => [record.title, record.description, ...(record.domains ?? [])]).join(' ')
-
+// Related initiative names remain discoverable without loading its full evidence inventory.
 const fold = (text) => String(text ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
 /** The query's words, or none for an empty query. */
@@ -39,7 +35,7 @@ export const searchGallery = (query, collections = GALLERY_COLLECTIONS) => {
     .filter((collection) => ownCollection(subject, collection)).map((collection) => collection.id)))
   const found = collections.filter((collection) =>
     aliases.has(collection.id) || matches(words, collection.label, collection.body, collection.years, collection.intro,
-      collection.id === TOURISM_COLLECTION.id ? tourismSearchText : ''))
+      ...(initiativeById(collection.initiativeId)?.searchTerms ?? [])))
   const shown = new Set(found.map((collection) => collection.id))
   const seen = new Set()
   const marks = []

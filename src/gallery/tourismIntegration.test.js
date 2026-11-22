@@ -9,7 +9,7 @@ const collectionId = 'tourism-bc-destination-bc'
 
 test('both legacy tourism collection links resolve to the combined collection', () => {
   const collection = collectionById(collectionId)
-  assert.ok(collection?.tourismCollection)
+  assert.equal(collection?.initiativeId, 'tourism')
   for (const id of tourismIds) {
     assert.equal(collectionById(`collected-${id}`), collection)
     assert.ok(!GALLERY_COLLECTIONS.some((each) => each.id === `collected-${id}`), `${id} has no duplicate shelf`)

@@ -7,6 +7,34 @@ transfer agreement names **1 April 2013** as its completion date unless the part
 agree otherwise. Those are not logo-adoption, domain-registration or website-launch
 dates.
 
+## Where the collection appears
+
+Tourism is the first collection in the site’s top-level **Initiatives** section:
+
+- Index: `?view=initiatives`
+- Tourism: `?view=initiatives&initiative=tourism`
+- Website records: `?view=initiatives&initiative=tourism&section=websites`
+- HelloBC detail: `?view=initiatives&initiative=tourism&section=websites&record=hellobc`
+
+The [initiative registry and adapter](../../../src/initiatives/initiatives.js)
+load the generated tourism dataset lazily. The shared renderer uses its existing
+record, timeline, publication, source and inventory arrays without copying or
+inventing entries. The [Initiatives contributor guide](../../../docs/initiatives.md)
+explains how a future documented initiative can use the same model and include
+only the sections supported by its evidence.
+
+Corporate artwork remains in Logos at
+`?view=gallery&logos=tourism-bc-destination-bc`. The earlier
+`collected-tourism-bc` and `collected-destination-bc` IDs still resolve to that
+gallery collection. Old `#tourism-…` section and record fragments on those
+collection URLs migrate to the corresponding initiative route; links selecting
+a corporate gallery mark stay in Logos. Tourism BC and Destination BC retain
+their separate government graph nodes and artwork ownership.
+
+The [implementation and visual review](../../../docs/reviews/tourism-collection-2026-11-21/README.md)
+includes desktop and mobile captures, stable links, focused checks and the limits
+of the local preview build.
+
 ## What is included
 
 - Nine digital records: HelloBC / SupernaturalBC.com; SuperHost / WorldHost; Near
@@ -16,7 +44,7 @@ dates.
   vectors and names recorded without artwork retain separate evidence labels.
 - Thirteen dated events connecting the corporate, program, publication and website
   histories.
-- Seven publication leads and all sixteen program areas in Appendix 9, with an
+- Seven publication records and all sixteen program areas in Appendix 9, with an
   additional international-portfolio research lead.
 - The complete Appendix 5 inventory: **193 listed table-cell entries**, containing
   **191 distinct addresses**. This is not a count of working websites. Seven cells
@@ -42,16 +70,16 @@ The builder resolves each record’s `assetIds` against these manifests and chec
 the files under `public/tourism/` before writing the runtime module.
 
 ```sh
-node scripts/build-tourism-collection.mjs
-node scripts/build-tourism-collection.mjs --check
-node --test scripts/tourism-collection.test.mjs
+npm run build:tourism-collection
+npm run check:tourism-collection
 ```
 
 The generated module is `src/gallery/tourismData.js`. Edit the source records and
 regenerate it; do not make editorial changes only in the generated output.
 Generation contains no clock-dependent values, downloads or network requests.
-The `--check` command verifies source consistency, image checksums and exact
-reproducibility without writing files. Validation and preview are local; this
+The check command verifies source consistency, image checksums, exact
+reproducibility and the focused collection and initiative regressions without
+rewriting generated data. Validation and preview are local; this
 addition does not require a GitHub Actions runner.
 
 ## Image evidence
