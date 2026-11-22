@@ -29,3 +29,9 @@ test('a gallery page cannot carry a related-body or comparison mode into its nex
   const url = galleryPlaceUrl('https://example.org/PofBC/?view=government&mode=related&node=translink&year=1970&compare=2020&undated=0&local=1&instrument=old', { subject: 'bc-hydro' })
   assert.equal(url.search, '?view=gallery&subject=bc-hydro')
 })
+
+test('tourism sections and open records do not leak into another gallery page', () => {
+  const url = galleryPlaceUrl('https://example.org/PofBC/?view=gallery&logos=tourism-bc-destination-bc#tourism-websites/hellobc', { collection: 'bc-hydro' })
+  assert.equal(url.search, '?view=gallery&logos=bc-hydro')
+  assert.equal(url.hash, '')
+})

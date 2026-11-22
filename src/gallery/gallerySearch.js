@@ -6,7 +6,9 @@
 import { GALLERY_COLLECTIONS, entriesOf } from './collections.js'
 import { searchIdentitySubjects } from './identityCoverage.js'
 import { nodesOf } from './collectedCollections.js'
+import { initiativeById } from '../initiatives/initiatives.js'
 
+// Related initiative names remain discoverable without loading its full evidence inventory.
 const fold = (text) => String(text ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
 
 /** The query's words, or none for an empty query. */
@@ -32,7 +34,8 @@ export const searchGallery = (query, collections = GALLERY_COLLECTIONS) => {
   const aliases = new Set(searchIdentitySubjects(query).flatMap((subject) => subject.collections
     .filter((collection) => ownCollection(subject, collection)).map((collection) => collection.id)))
   const found = collections.filter((collection) =>
-    aliases.has(collection.id) || matches(words, collection.label, collection.body, collection.years, collection.intro))
+    aliases.has(collection.id) || matches(words, collection.label, collection.body, collection.years, collection.intro,
+      ...(initiativeById(collection.initiativeId)?.searchTerms ?? [])))
   const shown = new Set(found.map((collection) => collection.id))
   const seen = new Set()
   const marks = []

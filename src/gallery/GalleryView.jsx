@@ -30,6 +30,7 @@ import { BCTS_FOREST, BCTS_TEAL } from './oneOffs.js'
 import { SuppliedMarkView } from './SuppliedMarkView.jsx'
 import { CollectedMarkView } from './CollectedMarkView.jsx'
 import { RailwayHistory, RailwayHistoryLinks } from './RailwayHistory.jsx'
+import { InitiativeLink } from '../initiatives/InitiativeLink.jsx'
 import { UnbcOriginsTeaser } from './UnbcOrigins.jsx'
 import { generatorArt, onPage, tileArt } from './tileArt.js'
 import { isSearchShortcut, searchGallery } from './gallerySearch.js'
@@ -932,6 +933,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
           </section>
         )}
         <RailwayHistory history={collection?.railwayHistory} compact />
+        {collection?.initiativeId && <InitiativeLink id={collection.initiativeId} />}
         <IdentityCollectionLinks collectionId={collection?.id} entryId={open.id} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
         <AboutMark identity={open.identity} drawing={open.caveat} />
       </div>
@@ -1019,6 +1021,8 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
       <UnbcOriginsTeaser owner={collection.entries?.[0]?.owner} />
       <IdentityCollectionLinks collectionId={collection.id} graphShown={collection.graphNode} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
       <RailwayHistoryLinks history={collection.railwayHistory} />
+
+      {collection.initiativeId && <InitiativeLink id={collection.initiativeId} />}
 
       {timeline}
       {collection.eras

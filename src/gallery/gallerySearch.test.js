@@ -14,6 +14,19 @@ test('a collection is found by its name, every word anywhere in it', () => {
   assert.ok(searchGallery('housing commission').collections.some((collection) => collection.id === 'collected-bc-housing'))
 })
 
+test('tourism websites and brands find their connected collection without duplicate logo results', () => {
+  for (const query of ['HelloBC', 'WorldHost', 'BC Escapes', 'Near Me BC', 'hellobc.co.uk', '100BCMoments']) {
+    const result = searchGallery(query)
+    assert.equal(result.collections.filter((collection) => collection.id === 'tourism-bc-destination-bc').length, 1, query)
+    assert.ok(!result.marks.some(({ collection }) => collection.id === 'tourism-bc-destination-bc'), query)
+  }
+})
+
+test('an inventory-only tourism address is not indexed as a named website record', () => {
+  const result = searchGallery('commmunitytourismfoundations.com')
+  assert.ok(!result.collections.some((collection) => collection.id === 'tourism-bc-destination-bc'))
+})
+
 test('a logo is found by its title, with the collection it opens in, once', () => {
   const { marks } = searchGallery('coroners')
   const found = marks.find(({ entry }) => entry.id === 'coroners-service')

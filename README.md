@@ -556,6 +556,14 @@ and [remaining gaps](research/identity/missing-recovery-2026-11-20/remaining-gap
 These originals use their source colours, with a dark plate for white lettering; they retain
 format, source hashes, publication context and reproducible extraction records.
 
+The **Tourism BC & Destination BC** collection connects websites and apps, source logo specimens,
+native publication vectors, a dated timeline and publication leads. Its searchable source inventory
+preserves all 193 addresses listed in the 2013 asset-transfer order, including historical email
+addresses and repeated entries. The [tourism research record](research/identity/tourism-asset-transfer-2013/README.md)
+documents the sources and extraction methods. Both bodies keep their own graph nodes and artwork
+ownership, and their earlier collection links still work. Rebuild with `npm run build:tourism-collection`
+and verify the data, assets, links and search with `npm run check:tourism-collection`.
+
 The collected files under `public/identity-collected/` are kept exactly as found, and they are what
 the gallery offers for download. For the collected **SVGs**, the gallery shows display copies from
 `npm run build:collected-display` (Python with numpy, scipy and Pillow, and the pre-installed

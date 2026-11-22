@@ -7,6 +7,7 @@
 export const VIEW_LOADERS = {
   // The gallery's marks are drawn from their own artwork and renderers, which the generator never needs.
   gallery: () => import('../gallery/GalleryView.jsx'),
+  initiatives: () => import('../initiatives/InitiativesView.jsx'),
   // The government diagram carries a century and a half of ministries with it.
   government: () => import('../government/GovernmentView.jsx'),
   internal: () => import('../internal/InternalLogosView.jsx'),

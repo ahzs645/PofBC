@@ -9,7 +9,7 @@ export const readCoverageFilters = (search = globalThis.location?.search ?? '') 
 export const galleryPlaceUrl = (href, { collection, mark, subject, coverage = false, filters = {} } = {}) => {
   const url = new URL(href)
   GALLERY_PLACE_KEYS.forEach((key) => url.searchParams.delete(key))
-  for (const key of ['year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument']) url.searchParams.delete(key)
+  for (const key of ['year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', 'initiative', 'section', 'record']) url.searchParams.delete(key)
   url.searchParams.delete('colour')
   url.searchParams.set('view', 'gallery')
   if (subject) url.searchParams.set('subject', subject)
@@ -22,5 +22,6 @@ export const galleryPlaceUrl = (href, { collection, mark, subject, coverage = fa
   }
   if (/^#railway-(history|connections|evidence)$/.test(url.hash)) url.hash = ''
   if (/^#unbc-origins(?:-(campaign|timeline|sources))?$/.test(url.hash)) url.hash = ''
+  if (/^#tourism-/.test(url.hash)) url.hash = ''
   return url
 }

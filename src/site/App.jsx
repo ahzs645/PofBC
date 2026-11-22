@@ -15,6 +15,7 @@ const CurrentControls = lazy(() => loadCurrentControls().then((module) => ({ def
 // Every other view is loaded when it is opened (viewLoaders.js says why each is its own chunk).
 const lazyView = (id, name) => lazy(() => VIEW_LOADERS[id]().then((module) => ({ default: module[name] })))
 const GalleryView = lazyView('gallery', 'GalleryView')
+const InitiativesView = lazyView('initiatives', 'InitiativesView')
 const GovernmentView = lazyView('government', 'GovernmentView')
 const InternalLogosView = lazyView('internal', 'InternalLogosView')
 const PostersView = lazyView('posters', 'PostersView')
@@ -58,6 +59,7 @@ import { VIEW_LOADERS } from './viewLoaders.js'
 import { NavigationContext, searchFor } from './navigation.jsx'
 import { writeHistory } from './browserHistory.js'
 import { salaryPlaceUrl } from '../salaries/viewState.js'
+import { legacyInitiativeUrl } from '../initiatives/initiativePlace.js'
 import { SunGlyph, ThemeIcon } from './icons.jsx'
 import { useSiteTheme } from './useTheme.js'
 import { useAgentTools } from './useAgentTools.js'
@@ -154,7 +156,11 @@ const VIEW_IDS = [...VIEWS, ...HIDDEN_VIEWS].map(({ id }) => id)
 
 /** The view in the address bar, so a link to the gallery or the diagram opens it. */
 const initialView = () => {
-  const view = new URLSearchParams(globalThis.location?.search ?? '').get('view')
+  // Replace once before reading the view, including on Back/Forward. No navigation event or extra
+  // history entry is needed, and the entry's return/focus metadata remains attached to it.
+  const migrated = globalThis.location?.href ? legacyInitiativeUrl(globalThis.location.href) : null
+  if (migrated) globalThis.history?.replaceState(globalThis.history.state, '', migrated)
+  const view = new URLSearchParams(migrated?.search ?? globalThis.location?.search ?? '').get('view')
   return VIEW_IDS.includes(view) ? view : 'generator'
 }
 
@@ -164,7 +170,8 @@ const initialView = () => {
  */
 const writeView = (view) => {
   const url = salaryPlaceUrl(globalThis.location.href, {})
-  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', 'logos', 'mark', 'subject', 'coverage', 'identity-family', 'identity-state', 'identity-scope', 'identity-query', 'internal', 'internal-logo', 'poster', 'sign', 'card', 'pin', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'plate', 'area', 'chapter', 'story', 'holder']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', 'logos', 'mark', 'subject', 'coverage', 'identity-family', 'identity-state', 'identity-scope', 'identity-query', 'internal', 'internal-logo', 'poster', 'sign', 'card', 'pin', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'plate', 'area', 'chapter', 'story', 'holder', 'initiative', 'section', 'record']) url.searchParams.delete(key)
+  if (/^#tourism-/.test(url.hash)) url.hash = ''
   if (view !== 'generator') url.searchParams.set('view', view)
   writeHistory(url)
 }
@@ -188,9 +195,9 @@ export const App = () => {
     globalThis.addEventListener('popstate', restore)
     return () => globalThis.removeEventListener('popstate', restore)
   }, [])
-  // Each view names itself in the tab; the salary pages refine this for the page they show.
+  // Detail views that own their metadata also name the selected page in the tab.
   useEffect(() => {
-    if (view === 'salaries') return
+    if (view === 'salaries' || view === 'initiatives') return
     const entry = [...VIEWS, ...HIDDEN_VIEWS].find(({ id }) => id === view)
     setDocumentMeta({
       title: view === 'generator' || !entry ? DEFAULT_TITLE : documentTitle(entry.label),
@@ -220,6 +227,7 @@ export const App = () => {
     const next = VIEW_IDS.includes(params.view) ? params.view : 'generator'
     const url = new URL(globalThis.location.href)
     url.search = searchFor({ ...params, view: next === 'generator' ? null : next })
+    if (/^#tourism-/.test(url.hash)) url.hash = ''
     writeHistory(url)
     setView(next)
     setVisit((value) => value + 1)
@@ -411,6 +419,12 @@ export const App = () => {
               globalThis.scrollTo?.({ top: 0 })
             }}
           />
+        </Suspense>
+      )}
+
+      {view === 'initiatives' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the initiatives…</p>}>
+          <InitiativesView key={visit} />
         </Suspense>
       )}
 

@@ -861,6 +861,21 @@ const withSpecimens = (marks, program) => {
  */
 export const GALLERY_COLLECTIONS = [
   {
+    id: 'tourism-bc-destination-bc',
+    shelf: 'bodies',
+    label: 'Tourism BC & Destination BC',
+    body: 'The tourism organizations’ corporate identities',
+    years: '1997–present',
+    graphNode: 'destination-bc',
+    graphNodes: ['tourism-bc', 'destination-bc'],
+    aliases: ['collected-tourism-bc', 'collected-destination-bc'],
+    cover: 'source-tourism-bc-tourism-british-columbia-2005-svg',
+    intro: 'The corporate identities of Tourism BC and Destination BC, with each organization’s own artwork and history. Their websites, campaigns and publications are connected in the Tourism initiative.',
+    initiativeId: 'tourism',
+    // Related custodians, not one corporation renamed: retain each body's own identity record.
+    entries: [...collectedEntriesOf('tourism-bc'), ...collectedEntriesOf('destination-bc')]
+  },
+  {
     id: 'bc-hydro',
     shelf: 'bodies',
     label: 'BC Hydro',
