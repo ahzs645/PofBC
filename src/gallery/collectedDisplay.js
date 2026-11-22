@@ -121,6 +121,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "bc-assessment-italic-2010": {
+  "light": {
+   "file": "identity-display/bc-assessment-italic-2010.light.svg",
+   "aspect": 3.1905,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-assessment-italic-2010.dark.svg",
+   "aspect": 3.1905,
+   "recoloured": true
+  }
+ },
  "source-bc-games-society-bc-games-svg": {
   "light": {
    "file": "identity-display/source-bc-games-society-bc-games-svg.light.svg",

@@ -32,6 +32,10 @@ for (const { register: packaged } of PACKAGES) if (packaged.body) {
   if (inventory.bodies.some((body) => body.id === packaged.body.id)) throw new Error(`Body already in the inventory: ${packaged.body.id}`)
   inventory.bodies.push(packaged.body)
 }
+// Histories of a body's earlier identities: dated pictures of a mark in use (kept as images, and
+// said to be) beside any of its vectors, with a design's other sightings as its versions.
+const HISTORIES = ['bc-assessment-history-2026-11-21']
+  .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 const railway = read('research/identity/railway-history-2026-11-12/source-register.json')
 const railwayHistory = read('research/identity/railway-history-2026-11-12/history.json')
 
@@ -272,7 +276,6 @@ const BODY_NOTES = {
   'bc-steamship-company': 'The Crown company that ran the Princess Marguerite between Victoria and Seattle from 1975. It sold its ships in 1988 and was renamed Victoria Line Ltd. in 1994.',
   'transportation-investment-corporation': 'One design in full colour and white, both original vector artwork from Pattullo Bridge Replacement Project publications.',
   'bc-housing': 'The British Columbia Housing Management Commission, known as BC Housing, since 1967: its house-shaped BC of 1978, the illustrated houses it registered as a trademark (advertised 2010), and today’s emblem from its 2015 rebrand, with the Research Centre lockup.',
-  'bc-assessment': 'The full-colour logo from the official media kit: an SVG converted from its EPS, with the EPS itself as the original download.',
   'columbia-power': 'The logo as original vector artwork, reversed, from the 2024 history book.',
   'infrastructure-bc': 'One design in full colour and reversed, both original vector artwork from the Spring 2026 brochure.',
   'community-living-bc': 'One design in full colour and reversed, both original vector artwork from its 2014 and 2023 reports.',
@@ -411,6 +414,18 @@ for (const { search, register: packaged } of PACKAGES) for (const { bodyId, veri
   if (!additions.has(bodyId)) additions.set(bodyId, [])
   additions.get(bodyId).push(checked({ ...asset, search }))
 }
+for (const { search, register: history } of HISTORIES) {
+  for (const bodyId of Object.keys(history.bodyUpdates ?? {})) if (!bodyIds.has(bodyId)) throw new Error(`Unknown body update: ${bodyId}`)
+  for (const { bodyId, verification, ...asset } of history.assets) {
+    if (!bodyIds.has(bodyId)) throw new Error(`Unknown body: ${bodyId}`)
+    if (asset.isVector && (!verification?.genuineVectorVerified || verification.embeddedImages !== 0 || verification.textElements !== 0 || verification.externalResources?.length !== 0)) {
+      throw new Error(`Not verified as pure vector: ${asset.id}`)
+    }
+    for (const extra of asset.downloads ?? []) checked({ file: extra.file, sha256: extra.sha256 })
+    if (!additions.has(bodyId)) additions.set(bodyId, [])
+    additions.get(bodyId).push(checked({ ...asset, search }))
+  }
+}
 for (const { bodyId, verification, ...asset } of historical.assets) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown historical body: ${bodyId}`)
   if (asset.isVector && (!verification?.genuineVectorVerified || verification.embeddedImages !== 0 || verification.textElements !== 0 || verification.externalResources?.length !== 0)) {
@@ -472,6 +487,7 @@ const bodies = inventory.bodies.map((body) => {
     ...display,
     ...historical.bodyUpdates[body.id],
     ...railway.bodyUpdates[body.id],
+    ...Object.assign({}, ...HISTORIES.map(({ register: history }) => history.bodyUpdates?.[body.id])),
     status: 'asset-collected',
     assets: [...display.assets, ...added]
   } : display

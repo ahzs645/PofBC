@@ -109,7 +109,9 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
   kind: 'collected',
   ...(timeline ? { timeline } : {}),
   ...(owner ? { owner } : {}),
-  label: COLLECTED_PALETTES[asset.id]?.label ?? (versions.length > 1 ? asset.publisher : asset.label),
+  // A design seen in several places is named for the design where its record names one, else for
+  // its publisher; a single file keeps its own label.
+  label: COLLECTED_PALETTES[asset.id]?.label ?? (versions.length > 1 ? asset.designLabel ?? asset.publisher : asset.label),
   // A card says what the mark is in a sentence; its full account, versions and sources are on its page.
   note: firstSentence(asset.notes),
   // A publication reproducing historical artwork is dated as such, beside the use it records.

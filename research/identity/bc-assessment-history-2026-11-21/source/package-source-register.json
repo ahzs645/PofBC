@@ -1,0 +1,162 @@
+{
+  "review_date_vancouver": "2026-11-21",
+  "repository": "ahzs645/PofBC",
+  "repository_ref": "bb468bc78bbc81d214477293934e0a8e3d4977d7",
+  "scope": "Read-only repository audit and historical identity research; no repository mutation.",
+  "sources": [
+    {
+      "id": "disclosure",
+      "url": "https://docs.openinfo.gov.bc.ca/Response_Package_FIN-2016-64551.pdf",
+      "pages": 171,
+      "locators": {
+        "1982_letterhead": {
+          "pdf_page": 129,
+          "printed_page": "134 of 176 FNR-2016-62793"
+        },
+        "1989_1990_notice": {
+          "pdf_page": 10,
+          "printed_page": "10 of 176 FNR-2016-62793"
+        }
+      },
+      "source_sha256": "b251237168a4469de56509c38c1296af825a69ffff9929ae1f5c90d83c4717ff",
+      "source_bytes": 6495431
+    },
+    {
+      "id": "seminar-paper",
+      "url": "https://info.bcassessment.ca/about/Shared%20Documents/Evolution%20of%20Real%20Property%20Taxation%20in%20BC%20-%201992.pdf",
+      "pages": 11,
+      "source_sha256": "1b9f4b44e44773c09df1d3791bf368e17780e2b0d4b306abad54d2c3015753ae",
+      "source_bytes": 388214
+    },
+    {
+      "id": "avicc-2019",
+      "url": "https://avicc.ca/wp-content/uploads/2019/05/April-13-BC-Assessment-Fair-Taxation-and-the-Fundamentals-of-Property-Assessment.pdf",
+      "pages": 47,
+      "source_sha256": "b85b694caa413ffb787a58455c8a0c702796d53a3c3e51b901a86bae55371f90",
+      "source_bytes": 4318838
+    },
+    {
+      "id": "rossland-2021",
+      "url": "https://rossland.civicweb.net/document/10599/City%20of%20Rossland%20March%208%202021.pdf?handle=A4CE874F241C4CB38A88D6462C92F4D6",
+      "pages": 46,
+      "source_sha256": "b8a95e34a7c353fc753d10c54e1b17bdc6ae4508e0d0229cc30fa31d26ae7f33",
+      "source_bytes": 1235498
+    },
+    {
+      "id": "service-plan-2010",
+      "url": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/agency/bcaa.pdf",
+      "pages": 34,
+      "source_sha256": "5c1a79ea4b5b7533dfdc516f36c2170638921d7617ed503a66ff90b4148660f5",
+      "source_bytes": 2424462
+    },
+    {
+      "id": "corporate-history",
+      "url": "https://info.bcassessment.ca/about/Shared%20Documents/BCA-Corporate-History.pdf",
+      "pages": 96,
+      "relevant_pages": [
+        40,
+        43,
+        78
+      ],
+      "source_sha256": "af7bda5f9faa72ecbcce8272c981ce10ac81fea29191c017fffc655be95f3748",
+      "source_bytes": 8607616
+    },
+    {
+      "id": "trademarks-2000",
+      "url": "https://publications.gc.ca/collections/Collection/RG42-2-47-2375.pdf",
+      "locator": "Official mark 911,901; printed p187 / PDF p190; 3 May 2000",
+      "inspection": "Text retrieved from publication; full PDF not redistributed"
+    }
+  ],
+  "assets": [
+    {
+      "file": "BC_Assessment_1982_Letterhead_Crop.png",
+      "source_id": "disclosure",
+      "pdf_page": 129,
+      "method_and_limits": "Focused unretouched letterhead crop. Day in May 1982 is unclear; printed release page 134 of 176.",
+      "sha256": "7146de10d17456a300e75ec521556a5ca756cba08132d8974b143ff7bd8654a7",
+      "bytes": 80714,
+      "pixels": [
+        1605,
+        450
+      ]
+    },
+    {
+      "file": "BC_Assessment_1989_1990_Notice_Crop.png",
+      "source_id": "disclosure",
+      "pdf_page": 10,
+      "method_and_limits": "Focused unretouched organizational mark and assessment-year crop; printed release page 10 of 176.",
+      "sha256": "8bcd07c63e512feabb5ba8aee573f872259bb4acd2ef1d618021dcd068228e88",
+      "bytes": 52704,
+      "pixels": [
+        528,
+        366
+      ]
+    },
+    {
+      "file": "BC_Assessment_1992_Seminar_Logo_Crop.png",
+      "source_id": "seminar-paper",
+      "pdf_page": 1,
+      "method_and_limits": "Rendered cover crop. Paper associated with 1992 seminar; independent printing date unconfirmed; scan metadata 2004.",
+      "sha256": "bb7eed9dcf75109384364e4400475d85c6e00c97f380f1a4a44140f5bc9725e9",
+      "bytes": 46972,
+      "pixels": [
+        366,
+        315
+      ]
+    },
+    {
+      "file": "BC_Assessment_Historical_Logo_2019.png",
+      "source_id": "avicc-2019",
+      "pdf_page": 12,
+      "method_and_limits": "Direct extraction of embedded raster image (xref 113); original pixel dimensions retained; no reconstruction or retouching.",
+      "sha256": "6cee894af2929c79a1f51e28a05ff3138c30e02f0b9e61c41da4ee90da936df5",
+      "bytes": 60496,
+      "pixels": [
+        1042,
+        279
+      ]
+    },
+    {
+      "file": "BC_Assessment_Official_History_Row_2021.png",
+      "source_id": "rossland-2021",
+      "pdf_page": 4,
+      "method_and_limits": "Rendered crop of three-logo row; centre is a 40th-anniversary application. Later retrospective publication.",
+      "sha256": "9ea155810d08a7e237e9a93c1be1633447309a3d4caa61be1d9871ec945b3b62",
+      "bytes": 119851,
+      "pixels": [
+        1515,
+        240
+      ]
+    },
+    {
+      "file": "BC_Assessment_Wordmark_2010.svg",
+      "source_id": "service-plan-2010",
+      "pdf_page": 34,
+      "method_and_limits": "Native PDF paths extracted as SVG; no embedded raster images or font substitution. Blue publication treatment.",
+      "sha256": "cd0a1f7912dbb870619c1cf77f00ab83fcb4ef82dc0da0c08a04e8423fae529e",
+      "bytes": 17832
+    },
+    {
+      "file": "BC_Assessment_Wordmark_2010.pdf",
+      "source_id": "service-plan-2010",
+      "pdf_page": 34,
+      "method_and_limits": "Cropped source-derived PDF; surrounding artwork removed, source logo paths retained; no embedded raster images.",
+      "sha256": "6bac65e903b9162006e6e717ff93142d23f34fa3a206aa0abde54d29aa29588a",
+      "bytes": 141061
+    },
+    {
+      "file": "BC_Assessment_Wordmark_2010.png",
+      "source_id": "service-plan-2010",
+      "pdf_page": 34,
+      "method_and_limits": "PNG preview rendered from extracted vector PDF.",
+      "sha256": "b72513d468691ae2f4c587996093ec11250e7bab8a2ff35cc90180975d6e63bd",
+      "bytes": 35399,
+      "pixels": [
+        860,
+        308
+      ]
+    }
+  ],
+  "historical_map_master_status": "No original vector master, designer attribution, colour standard, or introduction date verified."
+}
