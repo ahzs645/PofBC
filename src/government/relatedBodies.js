@@ -30,7 +30,8 @@ export const RELATED_BODY_KINDS = {
   'development-society': 'Economic development society',
   'public-university': 'Public university',
   'public-institute': 'Public institute',
-  'charitable-society': 'Charitable society'
+  'charitable-society': 'Charitable society',
+  'corporate-subsidiary': 'Corporate subsidiary'
 }
 
 /**
@@ -40,7 +41,7 @@ export const RELATED_BODY_KINDS = {
  */
 export const RELATED_BODY_GROUPS = [
   { id: 'transit', label: 'Transit in Metro Vancouver', kinds: ['regional-transportation-authority', 'transit-company', 'transit-police'] },
-  { id: 'services', label: 'Regional and public services', kinds: ['regional-federation', 'ferry-authority', 'emergency-communications', 'statutory-authority', 'independent-regulator'] },
+  { id: 'services', label: 'Regional and public services', kinds: ['regional-federation', 'ferry-authority', 'emergency-communications', 'statutory-authority', 'independent-regulator', 'corporate-subsidiary'] },
   { id: 'development', label: 'Economic development', kinds: ['development-trust', 'development-society'] },
   { id: 'learning', label: 'Education and science', kinds: ['public-university', 'public-institute', 'charitable-society'] }
 ]
@@ -146,11 +147,20 @@ export const RELATED_BODIES = [
     sources: [source('E-Comm — Shareholders', 'https://www.ecomm911.ca/about-e-comm/shareholders/')], salaryEmployers: [], relationships: []
   },
   {
-    id: 'land-title-and-survey-authority', name: 'Land Title and Survey Authority of British Columbia', shortName: 'LTSA', aliases: ['LTSA', 'LandSure'],
+    id: 'land-title-and-survey-authority', name: 'Land Title and Survey Authority of British Columbia', shortName: 'LTSA', aliases: ['LTSA'],
     kind: 'statutory-authority', officialUrl: 'https://ltsa.ca/',
-    description: 'A non-governmental, self-funded statutory corporation operating British Columbia’s land title and survey systems and other land-related registries. LandSure Systems Ltd. is its subsidiary.',
+    description: 'A non-governmental, self-funded statutory corporation operating British Columbia’s land title and survey systems and other land-related registries. LandSure Systems Ltd. is its wholly-owned subsidiary.',
     sources: [source('LTSA — About us', 'https://ltsa.ca/about-ltsa/'), source('LTSA — Our mandate', 'https://ltsa.ca/about-ltsa/ltsa-mandate/')],
-    salaryEmployers: [], relationships: []
+    salaryEmployers: [],
+    relationships: [relation('landsure-systems', 'LandSure Systems Ltd.', 'Wholly-owned subsidiary that develops and operates LTSA’s land-registry technology')]
+  },
+  {
+    id: 'landsure-systems', name: 'LandSure Systems Ltd.', shortName: 'LandSure', aliases: ['LandSure', 'LandSure Systems'],
+    kind: 'corporate-subsidiary', officialUrl: 'https://www.landsure.ca/',
+    description: 'A wholly-owned subsidiary of the Land Title and Survey Authority of British Columbia. It develops and operates LTSA’s mission-critical technology for land-related transactions, as part of the business model that funds LTSA’s continued improvement.',
+    sources: [source('LandSure Systems — Welcome', 'https://www.landsure.ca/'), source('LTSA — About us', 'https://ltsa.ca/about-ltsa/')],
+    salaryEmployers: [],
+    relationships: [relation('land-title-and-survey-authority', 'Land Title and Survey Authority of British Columbia', 'Its parent and sole owner')]
   },
   {
     id: 'consumer-protection-bc', name: 'Consumer Protection BC', shortName: 'Consumer Protection BC', aliases: ['CPBC', 'Business Practices and Consumer Protection Authority'],

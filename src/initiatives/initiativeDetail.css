@@ -18,6 +18,9 @@
 .initiative__hero-art { margin: 24px 24px 24px 0; background: #f8f5eb; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 28px; gap: 24px; min-width: 0; }
 .initiative__hero-art img { width: 100%; max-width: 300px; height: 195px; object-fit: contain; }
 .initiative__hero-art span { color: #67665b; font-size: 12px; text-align: center; line-height: 1.6; }
+/* Reverse artwork (a white logo) is shown on the dark ground it was made for. */
+.initiative__hero-art--dark { background: #23211d; }
+.initiative__hero-art--dark span { color: #b9b4a8; }
 .initiative__tabs { display: flex; gap: 25px; overflow-x: auto; border-bottom: 1px solid var(--mid); margin: 24px 0 0; scrollbar-width: thin; }
 .initiative__tabs button { border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--ink-muted); padding: 16px 0; flex-shrink: 0; cursor: pointer; font-size: 16px; font-weight: 500; min-height: 48px; }
 .initiative__tabs button[aria-selected='true'] { color: var(--ink); border-bottom-color: var(--ink); }

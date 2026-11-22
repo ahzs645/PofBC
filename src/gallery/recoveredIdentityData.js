@@ -6914,7 +6914,7 @@ export const RECOVERED_IDENTITY_BODIES = [
     "name": "LandSure Systems",
     "shortName": "LandSure Systems",
     "kind": "corporate-subsidiary",
-    "graphNode": null,
+    "graphNode": "landsure-systems",
     "from": null,
     "to": null,
     "current": true,

@@ -1240,6 +1240,60 @@ export const collectionById = (id) => GALLERY_COLLECTIONS.find((collection) => c
 export const entriesOfNode = (collection, node) => entriesOf(collection)
   .filter((entry) => (entry.owner ?? entry.graphNode ?? collection.graphNode) === node)
 
+// ── Programs, services and subsidiaries, under their organization ─────────────────────────────────
+//
+// A service brand, program or subsidiary with logos of its own keeps its own collection, but is
+// shelved under the organization it belongs to rather than beside it as a body of its own: the
+// gallery's first page lists them by organization, and the organization's page lists its own.
+// The ties are the register's (identitySubjects.js) and were checked against each organization's
+// own pages, reports and filings; a line's or service's operator is not its owner, so the Canada
+// and Millennium lines sit under TransLink, whose services they are, not under BCRTC or the
+// Canada Line's concessionaire. Umo is BC Transit's, licensed from Cubic, not TransLink's.
+export const FOLDED_UNDER = [
+  {
+    parent: 'collected-translink',
+    children: ['collected-translink-t-marker', 'collected-compass', 'collected-skytrain', 'collected-expo-line', 'collected-millennium-line',
+      'collected-canada-line', 'collected-seabus', 'collected-b-line', 'collected-rapidbus', 'collected-nightbus', 'collected-handydart',
+      'collected-quickpass', 'collected-aircare', 'collected-transit-security', 'collected-coast-mountain-bus-company',
+      'collected-british-columbia-rapid-transit-company', 'collected-west-coast-express', 'collected-metro-vancouver-transit-police']
+  },
+  { parent: 'bc-transit', children: ['collected-umo'] },
+  { parent: 'bc-hydro', children: ['collected-power-smart', 'collected-sub-powerex'] },
+  { parent: 'bclc', children: ['collected-gamesense', 'collected-sub-playnow'] },
+  { parent: 'collected-liquor-distribution-branch', children: ['collected-sub-bcliquor', 'collected-sub-bc-cannabis-stores', 'collected-bc-cannabis-wholesale', 'collected-ldb-wholesale'] },
+  { parent: 'collected-land-title-and-survey-authority', children: ['collected-landsure-systems'] },
+  { parent: 'collected-metro-vancouver', children: ['collected-metro-vancouver-regional-parks'] },
+  {
+    parent: 'collected-provincial-health-services-authority',
+    children: ['collected-sub-bc-childrens-hospital', 'collected-sub-bc-womens-hospital', 'collected-sub-bc-centre-for-disease-control', 'collected-sub-bc-cancer', 'collected-bc-emergency-health-services']
+  },
+  { parent: 'collected-bc-pavilion-corporation', children: ['collected-sub-bc-place', 'collected-sub-vancouver-convention-centre'] }
+]
+
+// GameSense is a program with an initiative page of its own; its collection links there.
+GALLERY_COLLECTIONS.find((collection) => collection.id === 'collected-gamesense').initiativeId = 'gamesense'
+
+for (const { parent, children } of FOLDED_UNDER) {
+  if (!GALLERY_COLLECTIONS.some((collection) => collection.id === parent)) throw new Error(`Unknown parent collection: ${parent}`)
+  for (const id of children) {
+    const child = GALLERY_COLLECTIONS.find((collection) => collection.id === id)
+    if (!child) throw new Error(`Unknown collection to fold under ${parent}: ${id}`)
+    if (child.foldedUnder) throw new Error(`Collection folded twice: ${id}`)
+    child.shelf = 'grouped'
+    child.foldedUnder = parent
+  }
+}
+
+/** The collections shelved under an organization's, in the order above. */
+export const childCollectionsOf = (id) => (FOLDED_UNDER.find((group) => group.parent === id)?.children ?? [])
+  .map((child) => GALLERY_COLLECTIONS.find((collection) => collection.id === child))
+
+/** Each organization with its programs, services and subsidiaries, for the first page. */
+export const FOLDED_GROUPS = FOLDED_UNDER.map(({ parent }) => ({
+  parent: GALLERY_COLLECTIONS.find((collection) => collection.id === parent),
+  children: childCollectionsOf(parent)
+}))
+
 export const COLLECTIONS_ON_SHELF = (shelf) => GALLERY_COLLECTIONS.filter((collection) => collection.shelf === shelf)
 
 /** Every entry of a collection, across its eras. */

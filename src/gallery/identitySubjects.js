@@ -229,7 +229,8 @@ const CURATED_SUBJECTS = [
     "relations": [
       {
         "subject": "translink",
-        "type": "service-of"
+        "type": "part-of",
+        "note": "TransLink's own wayfinding mark, not a separate service."
       }
     ]
   },
@@ -374,8 +375,8 @@ const CURATED_SUBJECTS = [
     "relations": [
       {
         "subject": "translink",
-        "type": "related-to",
-        "label": "Polices the regional transit system"
+        "type": "part-of",
+        "note": "One of TransLink's operating companies, within the TransLink enterprise."
       }
     ]
   },
@@ -845,8 +846,8 @@ const CURATED_SUBJECTS = [
       },
       {
         "subject": "translink",
-        "type": "related-to",
-        "label": "Historical program relationship"
+        "type": "service-of",
+        "note": "A TransLink program, run by its subsidiary Pacific Vehicle Testing Technologies; ended 31 December 2014."
       }
     ]
   },
@@ -877,8 +878,8 @@ const CURATED_SUBJECTS = [
     "relations": [
       {
         "subject": "translink",
-        "type": "related-to",
-        "label": "Historical subsidiary relationship"
+        "type": "owned-by",
+        "note": "TransLink's subsidiary that ran AirCare until the program ended at the close of 2014."
       }
     ]
   },
@@ -908,8 +909,8 @@ const CURATED_SUBJECTS = [
     "relations": [
       {
         "subject": "translink",
-        "type": "related-to",
-        "label": "Historical bridge-tolling service"
+        "type": "service-of",
+        "note": "Golden Ears Bridge tolling accounts, administered by TransLink, 2009–2017."
       }
     ]
   },
@@ -1010,8 +1011,8 @@ const CURATED_SUBJECTS = [
     "relations": [
       {
         "subject": "bc-transit",
-        "type": "related-to",
-        "label": "Historical transit identity"
+        "type": "predecessor-of",
+        "note": "The same corporation, renamed BC Transit in 1982."
       }
     ]
   },
@@ -1365,8 +1366,8 @@ const CURATED_SUBJECTS = [
     "relations": [
       {
         "subject": "creative-bc",
-        "type": "related-to",
-        "label": "Predecessor and present program context"
+        "type": "predecessor-of",
+        "note": "Creative BC was formed on 1 April 2013 from the BC Film Commission and BC Film + Media."
       }
     ]
   },
@@ -1516,6 +1517,11 @@ const CURATED_SUBJECTS = [
         "subject": "bc-ferry-authority-2003",
         "type": "related-to",
         "label": "Different body with a similar name"
+      },
+      {
+        "subject": "bc-ferry-corporation",
+        "type": "predecessor-of",
+        "note": "Continued as the British Columbia Ferry Corporation in 1977."
       }
     ]
   },
@@ -1779,13 +1785,7 @@ const CURATED_SUBJECTS = [
     ],
     "nextAction": "Date the current identity through published specimens and collect the earlier BCSA era separately.",
     "note": "Already represented in the atlas; it is eligible for identity collection without being reclassified as a Crown.",
-    "relations": [
-      {
-        "subject": "bc-safety-authority",
-        "type": "related-to",
-        "label": "Earlier operating name"
-      }
-    ]
+    "relations": []
   },
   {
     "id": "land-title-and-survey-authority",
@@ -1820,7 +1820,7 @@ const CURATED_SUBJECTS = [
     "name": "LandSure Systems",
     "kind": "corporate-subsidiary",
     "family": "regulators-administration",
-    "graphNode": null,
+    "graphNode": "landsure-systems",
     "aliases": [
       "LandSure",
       "LandSure Systems Ltd."
@@ -1954,11 +1954,6 @@ const CURATED_SUBJECTS = [
       {
         "subject": "provincial-health-services-authority",
         "type": "part-of"
-      },
-      {
-        "subject": "emergency-health-services-commission",
-        "type": "related-to",
-        "label": "Historical governance context"
       }
     ]
   },
@@ -2026,8 +2021,7 @@ const CURATED_SUBJECTS = [
     "relations": [
       {
         "subject": "bc-emergency-health-services",
-        "type": "related-to",
-        "label": "Historical commission"
+        "type": "predecessor-of"
       }
     ],
     "identityStatus": "distinct-unconfirmed"
@@ -3307,8 +3301,7 @@ const CURATED_SUBJECTS = [
     "relations": [
       {
         "subject": "bc-hydro",
-        "type": "related-to",
-        "label": "Historical utility context"
+        "type": "predecessor-of"
       }
     ]
   },

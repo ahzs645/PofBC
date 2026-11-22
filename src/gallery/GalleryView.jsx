@@ -19,7 +19,8 @@ import { renderFlagSvg } from '../flag/renderFlagSvg.js'
 import { FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_PALETTE_ORDER, FLAG_SWATCHES } from '../flag/flagPalettes.js'
 import {
   APPLICABILITY, COLLECTIONS_ON_SHELF, FIDELITY, GALLERY_COLLECTIONS, PROVENANCE, RIGHTS, collectionById, entriesOf,
-  entriesOfNode, eraStatus, findGalleryEntry, timelineOf
+  entriesOfNode, eraStatus, findGalleryEntry, timelineOf,
+  FOLDED_GROUPS, childCollectionsOf
 } from './collections.js'
 import { ASSET_STATUS, WANTED, WANTED_AS_OF } from './wanted.js'
 import { HydroStudio } from '../hydro/HydroStudio.jsx'
@@ -981,6 +982,25 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             </div>
           </section>
         )}
+        {/* Service brands, programs and subsidiaries, each under the organization it belongs to. */}
+        <section className="gallery__shelf" aria-labelledby="shelf-grouped">
+          <h2 id="shelf-grouped" className="gallery__shelf-title">Programs, services and subsidiaries</h2>
+          <p className="gallery__intro gallery__shelf-intro">
+            Brands, programs and companies with logos of their own, under the organization they belong to.
+          </p>
+          {FOLDED_GROUPS.map(({ parent, children }) => (
+            <div key={parent.id} className="gallery__group">
+              <h3 className="gallery__group-title">
+                <button type="button" className="gallery__group-link" onClick={() => choose(parent.id)}>{parent.label} →</button>
+              </h3>
+              <div className="gallery__collections">
+                {children.map((entry) => (
+                  <CollectionCard key={entry.id} collection={entry} theme={theme} onOpen={() => choose(entry.id)} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
         <section className="gallery__shelf" aria-labelledby="shelf-bc-mark">
           <h2 id="shelf-bc-mark" className="gallery__shelf-title">The Province’s one-off marks</h2>
           <div className="gallery__collections">
@@ -1018,6 +1038,13 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         <GraphLink node={collection.graphNode} onOpenGovernment={onOpenGovernment} />
       </div>
       <p className="gallery__intro">{collection.intro}</p>
+      {collection.foldedUnder && (
+        <p className="gallery__folded-under">
+          <button type="button" className="gallery__group-link" onClick={() => choose(collection.foldedUnder)}>
+            Shelved under {collectionById(collection.foldedUnder)?.label} →
+          </button>
+        </p>
+      )}
       <UnbcOriginsTeaser owner={collection.entries?.[0]?.owner} />
       <IdentityCollectionLinks collectionId={collection.id} graphShown={collection.graphNode} onOpenSubject={openSubject} onOpenGovernment={onOpenGovernment} />
       <RailwayHistoryLinks history={collection.railwayHistory} />
@@ -1034,6 +1061,17 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             ))}
           </div>
           )}
+      {childCollectionsOf(collection.id).length > 0 && (
+        <section className="gallery__shelf gallery__children" aria-labelledby="collection-children">
+          <h2 id="collection-children" className="gallery__shelf-title">Under {collection.label}</h2>
+          <p className="gallery__intro gallery__shelf-intro">Its programs, services and subsidiaries with logos of their own.</p>
+          <div className="gallery__collections">
+            {childCollectionsOf(collection.id).map((entry) => (
+              <CollectionCard key={entry.id} collection={entry} theme={theme} onOpen={() => choose(entry.id)} />
+            ))}
+          </div>
+        </section>
+      )}
       <RailwayHistory history={collection.railwayHistory} />
       <AboutCollection collection={collection} />
     </div>

@@ -1,4 +1,10 @@
 // The index stays small: an initiative's sourced records are loaded only when it opens.
+const gamesenseLogo = {
+  file: 'identity-recovered/gamesense/gamesense-reversed.png',
+  alt: 'GameSense — white capsule logo',
+  caption: 'The program’s logo as its website serves it, in white for a dark ground',
+  darkBackground: true
+}
 const tourismCover = {
   file: 'tourism/marks/super-natural-canada-stacked-spot-2005.svg',
   alt: 'Super, Natural British Columbia Canada — published 2005 identity',
@@ -23,6 +29,16 @@ export const INITIATIVES = [
       'Sun, sea and mountain', 'British Columbia Insider’s Guide'
     ],
     relatedBodyIds: ['tourism-bc', 'destination-bc']
+  },
+  {
+    id: 'gamesense',
+    title: 'GameSense',
+    subtitle: 'British Columbia Lottery Corporation',
+    summary: 'BCLC’s player health and responsible-gambling program, introduced in its casinos in 2009 and since licensed to lotteries and operators across North America.',
+    cover: gamesenseLogo,
+    tags: ['Program', 'Logos', 'Timeline'],
+    searchTerms: ['GameSense', 'Game Sense', 'BCLC', 'British Columbia Lottery Corporation', 'player health', 'responsible gambling', 'GameSense Advisor'],
+    relatedBodyIds: ['bclc', 'gamesense']
   }
 ]
 
@@ -132,8 +148,126 @@ const tourismDetail = (data) => {
   }
 }
 
+// GameSense is small enough to describe here: one held logo, its dated milestones and their sources.
+// BCLC runs the program and owns the GAMESENSE mark; other organizations use it under licence, which
+// does not make them part of BCLC or GameSense a body of its own.
+const GAMESENSE_SOURCES = [
+  {
+    id: 'wla-gamesense-journey',
+    title: 'Shaping tomorrow’s safer play: GameSense’s journey of continuous innovation (BCLC member news)',
+    url: 'https://publications.world-lotteries.org/blog-posts/shaping-tomorrows-safer-play-gamesenses-journey-of-continuous-innovation',
+    publisher: 'World Lottery Association',
+    note: 'BCLC’s account: introduced to casinos in 2009, since extended to all its legal wagering including online; licensed to other gambling organizations, MGM Resorts the first commercial operator, in 2017.'
+  },
+  {
+    id: 'globenewswire-connecticut-2016',
+    title: 'BCLC’s GameSense adopted by Connecticut Lottery Corporation',
+    url: 'https://www.globenewswire.com/news-release/2016/02/02/976435/0/en/BCLC-s-GameSense-Adopted-by-Connecticut-Lottery-Corporation.html',
+    publisher: 'BCLC via GlobeNewswire',
+    date: '2016-02-02'
+  },
+  {
+    id: 'prnewswire-naspl-2020',
+    title: 'BCLC offers free player health program to North American lottery jurisdictions',
+    url: 'https://prnewswire.com/news-releases/bclc-offers-free-player-health-program-to-north-american-lottery-jurisdictions-300986935.html',
+    publisher: 'BCLC via PR Newswire',
+    date: '2020-01'
+  },
+  {
+    id: 'uspto-gamesense',
+    title: 'GAMESENSE, U.S. trademark serial 86625814, owner British Columbia Lottery Corporation',
+    url: 'https://trademarks.justia.com/866/25/gamesense-86625814.html',
+    publisher: 'USPTO record via Justia',
+    note: 'Registered to BCLC. The Canadian record is not cited here.'
+  },
+  {
+    id: 'gamesense-website',
+    title: 'GameSense website',
+    url: 'https://www.gamesense.com/',
+    publisher: 'British Columbia Lottery Corporation',
+    note: 'The program’s public site, run by BCLC; the logo below is the file it serves.'
+  }
+]
+
+const gamesenseDetail = () => ({
+  id: 'gamesense',
+  title: 'GameSense',
+  hero: {
+    eyebrow: 'A BCLC program',
+    title: 'GameSense',
+    description: initiativeById('gamesense').summary,
+    image: gamesenseLogo,
+    caption: gamesenseLogo.caption
+  },
+  stats: [
+    { value: 2009, label: 'introduced in casinos' },
+    { value: GAMESENSE_SOURCES.length, label: 'sources' }
+  ],
+  sources: GAMESENSE_SOURCES,
+  relatedLinks: [
+    { label: 'GameSense in the logo gallery', to: { view: 'gallery', logos: 'collected-gamesense' } },
+    { label: 'BCLC’s logos', to: { view: 'gallery', logos: 'bclc' } },
+    { label: 'BCLC in government', to: { view: 'government', node: 'bclc' } }
+  ],
+  sections: [
+    {
+      id: 'marks',
+      label: 'Logo',
+      type: 'records',
+      eyebrow: 'Visual identity',
+      title: 'The program’s logo',
+      description: 'The logo held in the gallery, with its source. Licensees use the program’s identity under licence from BCLC.',
+      layout: 'marks',
+      records: [
+        {
+          id: 'gamesense-logo',
+          title: 'GameSense logo',
+          kind: 'program-identity',
+          description: 'The white capsule logo the GameSense website serves, for a dark ground. Its collection date is not the logo’s adoption date.',
+          images: [{
+            id: 'source-recovered-gamesense-website',
+            ...gamesenseLogo,
+            width: 417,
+            height: 93,
+            evidenceType: 'official-published-website-image',
+            sourceId: 'gamesense-website',
+            sourceUrl: 'https://www.gamesense.com/',
+            dateLabel: 'Website logo, collected 20 November 2026'
+          }],
+          sourceRefs: [{ sourceId: 'gamesense-website' }],
+          links: [{ label: 'Open in the logo gallery', url: '?view=gallery&logos=collected-gamesense' }]
+        }
+      ]
+    },
+    {
+      id: 'timeline',
+      label: 'Timeline',
+      type: 'timeline',
+      eyebrow: 'From one province to a continent',
+      title: 'How the program spread',
+      description: 'The program’s launch and the licences that took it beyond British Columbia.',
+      records: [
+        { id: 'gamesense-2009', date: '2009', dateRole: 'program launch', title: 'Introduced in BC casinos', description: 'BCLC introduces GameSense in its casinos, later extending it to lottery, sports and online play.', sourceRefs: [{ sourceId: 'wla-gamesense-journey' }] },
+        { id: 'gamesense-2016', date: '2016-02-02', dateRole: 'announcement', title: 'Connecticut Lottery Corporation adopts it', description: 'A North American lottery takes the program under licence from BCLC.', sourceRefs: [{ sourceId: 'globenewswire-connecticut-2016' }] },
+        { id: 'gamesense-2017', date: '2017', dateRole: 'licence', title: 'MGM Resorts, the first commercial operator', description: 'The first commercial gambling company in North America to adopt a program of this kind.', sourceRefs: [{ sourceId: 'wla-gamesense-journey' }] },
+        { id: 'gamesense-2020', date: '2020-01', dateRole: 'announcement', title: 'Offered free to North American lotteries', description: 'BCLC makes the program available without charge to lottery jurisdictions in North America.', sourceRefs: [{ sourceId: 'prnewswire-naspl-2020' }] }
+      ]
+    },
+    {
+      id: 'sources',
+      label: 'Sources',
+      type: 'sources',
+      eyebrow: 'The evidence',
+      title: 'A source for every record',
+      description: 'BCLC’s own accounts and announcements, the trademark record and the program’s website.',
+      records: GAMESENSE_SOURCES
+    }
+  ]
+})
+
 // Literal imports let the bundler keep each initiative's data in its own deferred chunk.
 const LOADERS = {
+  gamesense: async () => gamesenseDetail(),
   tourism: async () => {
     const { TOURISM_COLLECTION } = await import('../gallery/tourismData.js')
     return tourismDetail(TOURISM_COLLECTION)

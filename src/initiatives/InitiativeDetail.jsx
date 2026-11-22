@@ -204,7 +204,7 @@ export const InitiativeDetail = ({ initiative, place, onChange }) => {
       <div className="initiative__hero-copy"><p className="initiative__eyebrow">{hero.eyebrow}</p><h2>{hero.title}</h2><p>{hero.description}</p>
         {initiative.stats?.length > 0 && <div className="initiative__hero-stats">{initiative.stats.map((stat) => <span key={stat.label}><strong>{stat.value}</strong>{stat.label}</span>)}</div>}
       </div>
-      {hero.image && <div className="initiative__hero-art"><img src={assetUrl(fileOf(hero.image))} alt={hero.image.alt ?? initiative.title} />{hero.caption && <span>{hero.caption}</span>}</div>}
+      {hero.image && <div className={`initiative__hero-art ${hero.image.darkBackground ? 'initiative__hero-art--dark' : ''}`}><img src={assetUrl(fileOf(hero.image))} alt={hero.image.alt ?? initiative.title} />{hero.caption && <span>{hero.caption}</span>}</div>}
     </div>
     <div ref={tabs} className="initiative__tabs" role="tablist" aria-label={`${initiative.title} initiative sections`} onKeyDown={onTabKey}>{sections.map((section) => <button type="button" role="tab" id={`initiative-tab-${section.id}`} aria-controls={`initiative-panel-${section.id}`} aria-selected={current?.id === section.id} tabIndex={current?.id === section.id ? 0 : -1} key={section.id} onClick={() => onChange(section.id)}>{section.label}</button>)}</div>
     {missingRecord && <p className="initiative__notice" role="status">That record is not in this initiative. <button className="initiative__text-button" type="button" onClick={() => onChange(current?.id)}>Browse the available records</button></p>}

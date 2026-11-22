@@ -1239,6 +1239,12 @@ input.share__url {
 @media (hover: none), (pointer: coarse) { .gallery__search-key { display: none; } }
 .gallery__search-none { margin: 4px; }
 .gallery__shelf-title { margin: 8px 4px 0; font-size: 14px; font-weight: 600; color: var(--ink-muted); }
+.gallery__group { display: grid; gap: 8px; margin-top: 6px; }
+.gallery__group-title { margin: 6px 4px 0; font-size: 15px; font-weight: 600; }
+.gallery__group-link { padding: 0; border: 0; background: none; color: var(--ink); font: inherit; cursor: pointer; }
+.gallery__group-link:hover { text-decoration: underline; }
+.gallery__folded-under { margin: 0 4px; font-size: 14px; }
+.gallery__children { margin-top: var(--gap); }
 
 .gallery__collections {
   display: grid;
