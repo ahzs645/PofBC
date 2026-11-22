@@ -1,0 +1,253 @@
+{
+ "config": {
+  "source": "<work>/src/pge55-logo-302-red.png",
+  "thr": 128,
+  "centre": [
+   252.0,
+   255.8
+  ],
+  "band": [
+   121.5,
+   161.5
+  ],
+  "polarity": "neg",
+  "minw": 4,
+  "keepArea": 150,
+  "runs": [
+   {
+    "text": "PACIFICGREATEASTERN",
+    "range": [
+     125,
+     55
+    ],
+    "start": 125,
+    "clockwise": true,
+    "outward_up": true
+   },
+   {
+    "text": "RLY.",
+    "range": [
+     60,
+     115
+    ],
+    "start": 115,
+    "clockwise": false,
+    "outward_up": false
+   }
+  ],
+  "title": "Pacific Great Eastern Railway: caribou badge, yellow and black",
+  "shapes": [
+   {
+    "kind": "disc",
+    "c": [
+     251.84,
+     255.75
+    ],
+    "r": 168.95,
+    "fill": "#1F1A16"
+   },
+   {
+    "kind": "ring",
+    "c": [
+     252.4,
+     255.9
+    ],
+    "r": [
+     162.17,
+     164.86
+    ],
+    "stroke": "#EEA920"
+   },
+   {
+    "kind": "ring",
+    "c": [
+     251.8,
+     254.95
+    ],
+    "r": [
+     118.13,
+     120.85
+    ],
+    "stroke": "#EEA920"
+   }
+  ],
+  "trace": {
+   "region": [
+    "circle",
+    251.8,
+    254.95,
+    117.3
+   ],
+   "polarity": "neg",
+   "fill": "#EEA920",
+   "turdsize": 40,
+   "thr": 128
+  },
+  "lettering": [
+   {
+    "font": "<fonts>/Poppins-ExtraBold.ttf",
+    "size": 44,
+    "xs": 1.15,
+    "fill": "#EEA920"
+   },
+   {
+    "font": "<fonts>/Poppins-ExtraBold.ttf",
+    "size": 44,
+    "xs": 1.25,
+    "fill": "#EEA920"
+   }
+  ],
+  "viewBox": [
+   82.64000000000001,
+   86.55000000000001,
+   421.03999999999996,
+   424.95
+  ]
+ },
+ "runs": [
+  {
+   "text": "PACIFICGREATEASTERN",
+   "font": "Poppins-ExtraBold.ttf",
+   "axes": null,
+   "size": 44,
+   "xs": 1.15,
+   "meanIoU": 0.8358,
+   "letters": [
+    {
+     "ch": "P",
+     "iou": 0.833,
+     "rotation": 231.37
+    },
+    {
+     "ch": "A",
+     "iou": 0.848,
+     "rotation": 241.51
+    },
+    {
+     "ch": "C",
+     "iou": 0.764,
+     "rotation": 253.68
+    },
+    {
+     "ch": "I",
+     "iou": 0.885,
+     "rotation": 267.55
+    },
+    {
+     "ch": "F",
+     "iou": 0.829,
+     "rotation": -85.61
+    },
+    {
+     "ch": "I",
+     "iou": 0.93,
+     "rotation": -71.32
+    },
+    {
+     "ch": "C",
+     "iou": 0.788,
+     "rotation": -63.39
+    },
+    {
+     "ch": "G",
+     "iou": 0.781,
+     "rotation": -34.36
+    },
+    {
+     "ch": "R",
+     "iou": 0.842,
+     "rotation": -20.37
+    },
+    {
+     "ch": "E",
+     "iou": 0.84,
+     "rotation": -6.15
+    },
+    {
+     "ch": "A",
+     "iou": 0.853,
+     "rotation": 10.4
+    },
+    {
+     "ch": "T",
+     "iou": 0.823,
+     "rotation": 21.28
+    },
+    {
+     "ch": "E",
+     "iou": 0.811,
+     "rotation": 43.42
+    },
+    {
+     "ch": "A",
+     "iou": 0.874,
+     "rotation": 60.42
+    },
+    {
+     "ch": "S",
+     "iou": 0.816,
+     "rotation": 74.73
+    },
+    {
+     "ch": "T",
+     "iou": 0.809,
+     "rotation": 88.72
+    },
+    {
+     "ch": "E",
+     "iou": 0.842,
+     "rotation": 106.73
+    },
+    {
+     "ch": "R",
+     "iou": 0.839,
+     "rotation": 119.03
+    },
+    {
+     "ch": "N",
+     "iou": 0.873,
+     "rotation": 135.31
+    }
+   ]
+  },
+  {
+   "text": "RLY.",
+   "font": "Poppins-ExtraBold.ttf",
+   "axes": null,
+   "size": 44,
+   "xs": 1.25,
+   "meanIoU": 0.8363,
+   "letters": [
+    {
+     "ch": "R",
+     "iou": 0.852,
+     "rotation": 19.21
+    },
+    {
+     "ch": "L",
+     "iou": 0.834,
+     "rotation": 4.54
+    },
+    {
+     "ch": "Y",
+     "iou": 0.862,
+     "rotation": -10.47
+    },
+    {
+     "ch": ".",
+     "iou": 0.797,
+     "rotation": -22.06
+    }
+   ]
+  }
+ ],
+ "trace": {
+  "tool": "potracer 0.0.4",
+  "upsample": 4,
+  "threshold": 128,
+  "turdsize": 40,
+  "alphamax": 1.0,
+  "opttolerance": 0.2,
+  "contours": 12
+ }
+}

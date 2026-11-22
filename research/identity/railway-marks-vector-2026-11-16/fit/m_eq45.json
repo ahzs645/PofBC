@@ -1,0 +1,248 @@
+{
+ "config": {
+  "source": "<repo>/public/identity-collected/pacific-great-eastern-railway/pge-caribou-rolling-stock-1945.png",
+  "thr": 128,
+  "centre": [
+   239.9,
+   237.9
+  ],
+  "band": [
+   130,
+   204.5
+  ],
+  "polarity": "pos",
+  "minw": 4,
+  "keepArea": 150,
+  "runs": [
+   {
+    "text": "PACIFICGREATEASTERN",
+    "range": [
+     112,
+     58
+    ],
+    "start": 112,
+    "clockwise": true,
+    "outward_up": true
+   },
+   {
+    "text": "RLY",
+    "range": [
+     60,
+     110
+    ],
+    "start": 115,
+    "clockwise": false,
+    "outward_up": false
+   }
+  ],
+  "title": "Pacific Great Eastern Railway: caribou equipment herald (1945)",
+  "shapes": [
+   {
+    "kind": "ring",
+    "c": [
+     239.8,
+     237.88
+    ],
+    "r": [
+     206.62,
+     222.48
+    ],
+    "stroke": "#1A1A1A"
+   },
+   {
+    "kind": "ring",
+    "c": [
+     239.95,
+     237.95
+    ],
+    "r": [
+     111.9,
+     127.86
+    ],
+    "stroke": "#1A1A1A"
+   }
+  ],
+  "trace": {
+   "region": [
+    "circle",
+    239.95,
+    237.95,
+    110.9
+   ],
+   "polarity": "pos",
+   "fill": "#1A1A1A",
+   "turdsize": 40
+  },
+  "lettering": [
+   {
+    "font": "<fonts>/Oswald[wght].ttf",
+    "axes": {
+     "wght": 700
+    },
+    "size": 69,
+    "xs": 1.2,
+    "fill": "#1A1A1A"
+   },
+   {
+    "font": "<fonts>/Oswald[wght].ttf",
+    "axes": {
+     "wght": 700
+    },
+    "size": 52,
+    "xs": 1.1,
+    "fill": "#1A1A1A"
+   }
+  ],
+  "viewBox": [
+   17.25999999999999,
+   14.780000000000001,
+   462.86,
+   460.38
+  ]
+ },
+ "runs": [
+  {
+   "text": "PACIFICGREATEASTERN",
+   "font": "Oswald[wght].ttf",
+   "axes": {
+    "wght": 700
+   },
+   "size": 69,
+   "xs": 1.2,
+   "meanIoU": 0.8058,
+   "letters": [
+    {
+     "ch": "P",
+     "iou": 0.842,
+     "rotation": 217.64
+    },
+    {
+     "ch": "A",
+     "iou": 0.779,
+     "rotation": 228.79
+    },
+    {
+     "ch": "C",
+     "iou": 0.679,
+     "rotation": 241.53
+    },
+    {
+     "ch": "I",
+     "iou": 0.898,
+     "rotation": 256.93
+    },
+    {
+     "ch": "F",
+     "iou": 0.817,
+     "rotation": 270.1
+    },
+    {
+     "ch": "I",
+     "iou": 0.914,
+     "rotation": -80.42
+    },
+    {
+     "ch": "C",
+     "iou": 0.668,
+     "rotation": -70.09
+    },
+    {
+     "ch": "G",
+     "iou": 0.722,
+     "rotation": -45.43
+    },
+    {
+     "ch": "R",
+     "iou": 0.827,
+     "rotation": -24.24
+    },
+    {
+     "ch": "E",
+     "iou": 0.806,
+     "rotation": -7.02
+    },
+    {
+     "ch": "A",
+     "iou": 0.771,
+     "rotation": 8.12
+    },
+    {
+     "ch": "T",
+     "iou": 0.818,
+     "rotation": 21.46
+    },
+    {
+     "ch": "E",
+     "iou": 0.794,
+     "rotation": 41.75
+    },
+    {
+     "ch": "A",
+     "iou": 0.85,
+     "rotation": 58.62
+    },
+    {
+     "ch": "S",
+     "iou": 0.809,
+     "rotation": 72.58
+    },
+    {
+     "ch": "T",
+     "iou": 0.834,
+     "rotation": 88.7
+    },
+    {
+     "ch": "E",
+     "iou": 0.794,
+     "rotation": 102.8
+    },
+    {
+     "ch": "R",
+     "iou": 0.859,
+     "rotation": 124.04
+    },
+    {
+     "ch": "N",
+     "iou": 0.828,
+     "rotation": 139.94
+    }
+   ]
+  },
+  {
+   "text": "RLY",
+   "font": "Oswald[wght].ttf",
+   "axes": {
+    "wght": 700
+   },
+   "size": 52,
+   "xs": 1.1,
+   "meanIoU": 0.792,
+   "letters": [
+    {
+     "ch": "R",
+     "iou": 0.766,
+     "rotation": 4.95
+    },
+    {
+     "ch": "L",
+     "iou": 0.801,
+     "rotation": -0.48
+    },
+    {
+     "ch": "Y",
+     "iou": 0.81,
+     "rotation": -7.7
+    }
+   ]
+  }
+ ],
+ "trace": {
+  "tool": "potracer 0.0.4",
+  "upsample": 4,
+  "threshold": 128,
+  "turdsize": 40,
+  "alphamax": 1.0,
+  "opttolerance": 0.2,
+  "contours": 5
+ }
+}

@@ -111,8 +111,10 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
   ...(timeline ? { timeline } : {}),
   ...(owner ? { owner } : {}),
   // A design seen in several places is named for the design where its record names one, else for
-  // its publisher; a single file keeps its own label.
-  label: COLLECTED_PALETTES[asset.id]?.label ?? (versions.length > 1 ? asset.designLabel ?? asset.publisher : asset.label),
+  // its publisher, when its versions are colourways; one whose other version is the image it was
+  // redrawn or found in place of keeps its own name. A single file keeps its own label.
+  label: COLLECTED_PALETTES[asset.id]?.label ??
+    (versions.length > 1 && !versions.some((version) => version.versionLabel === 'Published image') ? asset.designLabel ?? asset.publisher : asset.label),
   // A card says what the mark is in a sentence; its full account, versions and sources are on its page.
   note: firstSentence(asset.notes),
   // A publication reproducing historical artwork is dated as such, beside the use it records.
@@ -126,7 +128,7 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
   ...(versions.length > 1 ? { versions } : {}),
   identity: {
     provenance: asset.reconstruction ? 'third_party_reconstruction' : asset.supplied ? 'original_supplied'
-      : asset.isVector && ['native-pdf-vector-extraction', 'official-vector-master-conversion', 'official-inline-vector-extraction'].includes(asset.evidenceType)
+      : asset.isVector && ['native-pdf-vector-extraction', 'native-pdf-vector-extraction-with-converted-gradients', 'official-vector-master-conversion', 'official-inline-vector-extraction'].includes(asset.evidenceType)
         ? 'extracted_from_official_vector' : asset.isVector ? 'published_vector' : 'published_raster',
     fidelity: asset.fidelity ?? 'source compared',
     fidelityNote: asset.fidelityNote,

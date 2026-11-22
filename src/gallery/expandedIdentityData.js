@@ -96,7 +96,39 @@ export const EXPANDED_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": true
+        "darkBackground": true,
+        "variantOf": "source-expanded-metro-vancouver-transit-police-community-report-2025-reversed",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "source-expanded-metro-vancouver-transit-police-community-report-2025-reversed",
+        "label": "Metro Vancouver Transit Police — Crest and name, reversed",
+        "file": "identity-expanded/metro-vancouver-transit-police/report-to-community-2025-reversed.svg",
+        "format": "svg",
+        "isVector": true,
+        "sourcePage": "https://transitpolice.ca/",
+        "sourceUrl": "https://transitpolice.ca/wp-content/uploads/_pda/2026/06/2025-Report-to-the-Community.pdf",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Metro Vancouver Transit Police",
+        "sourceLocator": "2025 Report to the Community, PDF page 1 (cover), lower right",
+        "sourceFile": null,
+        "sourceDate": "2026-05",
+        "dateNote": "Publication, archive or observation date only; not a logo adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The crest with “METRO VANCOUVER TRANSIT POLICE” beside it, all in white: the same lockup as the website’s Logo-White-Horiz.png.",
+        "fidelityNote": "Official publication, original native vector paths extracted with PyMuPDF (page converted to SVG, text as glyph outlines); only the shapes inside the logo's box kept, in their source colours. Page photographs, neighbouring text and backgrounds removed. Not a supplied standalone master. No tracing, type recreation or recolouring.",
+        "darkBackground": true,
+        "specimenDate": "2026-05",
+        "sha256": "c0f0b842372a4d5bf63eb6d9f1d89197a0d39a52c707f23993677f76f24b55c3",
+        "bytes": 197165,
+        "dimensions": {
+          "viewBox": "435.125 691.375 126.625 59.75"
+        },
+        "contentType": "image/svg+xml",
+        "search": "current-bodies-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -215,7 +247,39 @@ export const EXPANDED_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "source-expanded-liquor-distribution-branch-wholesale-site-lockup",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "source-expanded-liquor-distribution-branch-wholesale-site-lockup",
+        "label": "BC Liquor Distribution Branch — B.C. logo and name lockup",
+        "file": "identity-expanded/liquor-distribution-branch/ldb-wholesale-site-ldb-lockup.svg",
+        "format": "svg",
+        "isVector": true,
+        "sourcePage": "https://wholesale.bcldb.com/",
+        "sourceUrl": "https://wholesale.bcldb.com/themes/ldbwo/logo.svg",
+        "resolvedSourceUrl": "https://wholesale.bcldb.com/themes/ldbwo/logo.svg",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "BC Liquor Distribution Branch",
+        "sourceLocator": "LDB Wholesale Operations website logo (Adobe Illustrator SVG); right-hand part only",
+        "sourceFile": null,
+        "sourceDate": "Undated web asset (server Last-Modified 2022-03-13) observed 2026-11-16",
+        "dateNote": "The observation date and server modification date are not a logo adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "official-website-vector",
+        "notes": "The B.C. government logo, a vertical rule and “LIQUOR DISTRIBUTION BRANCH” in crimson: the LDB lockup used on bcldb.com. On the wholesale site it stands to the right of the red “LDB Wholesale Operations” banner, which is left out. Here the B.C. logo is black and the name #C60C46; the bcldb.com PNG shows a grey logo and a brighter red.",
+        "fidelityNote": "Official SVG; the lockup’s own elements kept unchanged (same path data, attributes and colours), the banner elements removed and the viewBox fitted. Extracted component, not a standalone master. No tracing, type recreation or recolouring.",
+        "darkBackground": false,
+        "sha256": "2f15b73a9e928513fb983065ff207a31ae7be8b5687bf8ed56ae5cced884d824",
+        "bytes": 14969,
+        "dimensions": {
+          "viewBox": "294.533 99.591 192.986 55.009"
+        },
+        "contentType": "image/svg+xml",
+        "search": "current-bodies-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -433,7 +497,39 @@ export const EXPANDED_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "source-expanded-e-comm-aspire-plan-2019-colour",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "source-expanded-e-comm-aspire-plan-2019-colour",
+        "label": "E-Comm 9-1-1 — Logo with tagline, colour",
+        "file": "identity-expanded/e-comm/aspire-strategic-plan-2019-colour.svg",
+        "format": "svg",
+        "isVector": true,
+        "sourcePage": "https://www.ecomm911.ca/",
+        "sourceUrl": "https://www.ecomm911.ca/wp-content/uploads/2019/05/EC_aSPIRE_Report.pdf",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "E-Comm 9-1-1",
+        "sourceLocator": "(a)SPIRE 2023 Strategic Plan, PDF page 1 (cover), upper left",
+        "sourceFile": null,
+        "sourceDate": "2019-04",
+        "dateNote": "Publication, archive or observation date only; not a logo adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "“E-Comm” in dark grey and “9-1-1” in red over “Helping to Save Lives and Protect Property”: the same design as the website logo. Later E-Comm reports (2021–2026) and Word documents carry the logo only as images.",
+        "fidelityNote": "Official publication, original native vector paths extracted with PyMuPDF (page converted to SVG, text as glyph outlines); only the shapes inside the logo's box kept, in their source colours. Page photographs, neighbouring text and backgrounds removed. Not a supplied standalone master. No tracing, type recreation or recolouring. A photograph behind the logo on the cover is not included.",
+        "darkBackground": false,
+        "specimenDate": "2019-04",
+        "sha256": "ffb9642c864b017486270a5724d6bdd563e0b9d8f71712ea26a2181b88632730",
+        "bytes": 14232,
+        "dimensions": {
+          "viewBox": "59.625 71.75 153.75 32.125"
+        },
+        "contentType": "image/svg+xml",
+        "search": "current-bodies-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -654,6 +750,67 @@ export const EXPANDED_IDENTITY_BODIES = [
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
         "darkBackground": true
+      },
+      {
+        "id": "source-expanded-etsi-bc-bylaws-2026-full-name-colour",
+        "label": "Economic Trust of the Southern Interior — Full-name logo, colour",
+        "file": "identity-expanded/etsi-bc/bylaws-2026-full-name-colour.svg",
+        "format": "svg",
+        "isVector": true,
+        "sourcePage": "https://www.etsi-bc.ca/about/key-publications/",
+        "sourceUrl": "https://www.etsi-bc.ca/wp-content/uploads/2026/07/ETSI-BC-Bylaw-and-Board-Policy-Manual-with-AI-and-Cybersecurity-2026.pdf",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Economic Trust of the Southern Interior",
+        "sourceLocator": "Bylaws and Board Policies (revised March 2026), PDF page 1 (cover)",
+        "sourceFile": null,
+        "sourceDate": "2026-06",
+        "dateNote": "Publication, archive or observation date only; not a logo adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "“etsi BC” with the name “Economic Trust of the Southern Interior” set to its right: the full-name horizontal logo. The website file is the stacked short-name version; this is the same identity in its other official layout, not the same lockup.",
+        "fidelityNote": "Official publication, original native vector paths extracted with PyMuPDF (page converted to SVG, text as glyph outlines); only the shapes inside the logo's box kept, in their source colours. Page photographs, neighbouring text and backgrounds removed. Not a supplied standalone master. No tracing, type recreation or recolouring.",
+        "darkBackground": false,
+        "specimenDate": "2026-06",
+        "sha256": "1962f4c44605804d1fcd0d33d2ec44b09fed7d032c5a976247cdfdd45bf66c7f",
+        "bytes": 16763,
+        "dimensions": {
+          "viewBox": "66.125 63.75 286.5 66"
+        },
+        "contentType": "image/svg+xml",
+        "search": "current-bodies-vector-2026-11-16",
+        "versionLabel": "Colour"
+      },
+      {
+        "id": "source-expanded-etsi-bc-rac-terms-2024-full-name-reversed",
+        "label": "Economic Trust of the Southern Interior — Full-name logo, reversed",
+        "file": "identity-expanded/etsi-bc/rac-terms-2024-full-name-reversed.svg",
+        "format": "svg",
+        "isVector": true,
+        "sourcePage": "https://www.etsi-bc.ca/about/key-publications/",
+        "sourceUrl": "https://www.etsi-bc.ca/wp-content/uploads/2024/09/ETSI-BC-Columbia-Kootenay-RAC-Terms-of-Reference-Amended-2024_06_14.pdf",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Economic Trust of the Southern Interior",
+        "sourceLocator": "Columbia-Kootenay Regional Advisory Committee Terms of Reference (amended 2024-06-14), PDF page 1 (cover band)",
+        "sourceFile": null,
+        "sourceDate": "2024-06-14 amendment; PDF 2024-09",
+        "dateNote": "Publication, archive or observation date only; not a logo adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The full-name horizontal logo in white, from the blue cover band. Same lockup as the colour bylaws cover; white like the website’s reversed short-name file.",
+        "fidelityNote": "Official publication, original native vector paths extracted with PyMuPDF (page converted to SVG, text as glyph outlines); only the shapes inside the logo's box kept, in their source colours. Page photographs, neighbouring text and backgrounds removed. Not a supplied standalone master. No tracing, type recreation or recolouring.",
+        "darkBackground": true,
+        "specimenDate": "2024-09",
+        "sha256": "20f3123027099f69cd5766faf72ea93d3ec072af241d060949b6d32d784992e5",
+        "bytes": 16834,
+        "dimensions": {
+          "viewBox": "66.375 65.125 286.375 67.5"
+        },
+        "contentType": "image/svg+xml",
+        "search": "current-bodies-vector-2026-11-16",
+        "variantOf": "source-expanded-etsi-bc-bylaws-2026-full-name-colour",
+        "versionLabel": "Reversed"
       }
     ]
   },
@@ -741,7 +898,39 @@ export const EXPANDED_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "source-expanded-bc-pension-corporation-wave-2-plan-colour",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "source-expanded-bc-pension-corporation-wave-2-plan-colour",
+        "label": "BC Pension Corporation — Logo, full colour, Wave 2 Strategic Plan",
+        "file": "identity-expanded/bc-pension-corporation/wave-2-strategic-plan-2024-colour.svg",
+        "format": "svg",
+        "isVector": true,
+        "sourcePage": "https://www.bcpensioncorp.ca/publications",
+        "sourceUrl": "https://www.bcpensioncorp.ca/documents/1050273/5100587/Wave+2+Strategic+Plan.pdf/4f11ac1b-fbb0-f14b-85a6-6e635f51ba01?t=1712069307100",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "BC Pension Corporation",
+        "sourceLocator": "Wave 2 Strategic Plan 2024–2027, PDF page 1 (cover), logo left of the Plan 20|30 mark",
+        "sourceFile": null,
+        "sourceDate": "2024-03",
+        "dateNote": "Publication, archive or observation date only; not a logo adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The dot arrow with “BC PENSION” in teal and “CORPORATION” in warm grey, as on the website logo. On the cover it sits beside a rule and the Plan 20|30 mark, which are left out.",
+        "fidelityNote": "Official publication, original native vector paths extracted with PyMuPDF (page converted to SVG, text as glyph outlines); only the shapes inside the logo's box kept, in their source colours. Page photographs, neighbouring text and backgrounds removed. Not a supplied standalone master. No tracing, type recreation or recolouring. Extracted component of a cover lockup.",
+        "darkBackground": false,
+        "specimenDate": "2024-03",
+        "sha256": "28a3f4de0ab1409f331ebc7e37208c16ae43d424da0e57859def7e9fd450c2f0",
+        "bytes": 17225,
+        "dimensions": {
+          "viewBox": "54 134.125 177.75 26.125"
+        },
+        "contentType": "image/svg+xml",
+        "search": "current-bodies-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -1001,7 +1190,39 @@ export const EXPANDED_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "source-expanded-sub-vancouver-convention-centre-sustainability-toolkit-reversed",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "source-expanded-sub-vancouver-convention-centre-sustainability-toolkit-reversed",
+        "label": "Vancouver Convention Centre — Logo, one colour reversed",
+        "file": "identity-expanded/sub-vancouver-convention-centre/sustainability-toolkit-2026-reversed.svg",
+        "format": "svg",
+        "isVector": true,
+        "sourcePage": "https://www.vancouverconventioncentre.com/about-us/sustainability",
+        "sourceUrl": "https://assets.vancouverconventioncentre.com/28042026_sustainability_toolkit_final.pdf",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Vancouver Convention Centre",
+        "sourceLocator": "Sustainability Toolkit (last updated 2026-08-20), PDF page 16 (back cover), lower left",
+        "sourceFile": null,
+        "sourceDate": "2026-08-20",
+        "dateNote": "Publication, archive or observation date only; not a logo adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "“VANCOUVER” with its splash and “CONVENTION CENTRE” in flat white. Same design as the website logo, whose letters carry a blue water photograph; this one-colour version has no photograph.",
+        "fidelityNote": "Official publication, original native vector paths extracted with PyMuPDF (page converted to SVG, text as glyph outlines); only the shapes inside the logo's box kept, in their source colours. Page photographs, neighbouring text and backgrounds removed. Not a supplied standalone master. No tracing, type recreation or recolouring.",
+        "darkBackground": true,
+        "specimenDate": "2026-08-20",
+        "sha256": "8c2b6924224da50541ccb8e0c3edc3a462c308998c68bfb4883ddb259e268efb",
+        "bytes": 132261,
+        "dimensions": {
+          "viewBox": "35.5 671.875 188.25 54.125"
+        },
+        "contentType": "image/svg+xml",
+        "search": "current-bodies-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -1045,7 +1266,34 @@ export const EXPANDED_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "bc-womens-2024-foundation-impact-report",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "bc-womens-2024-foundation-impact-report",
+        "label": "BC Women's Hospital + Health Centre — Logo, 2024 foundation impact report",
+        "file": "identity-expanded/sub-bc-womens-hospital/bc-womens-2024-foundation-impact-report.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "BC Women's Health Foundation",
+        "sourcePage": "https://bcwomensfoundation.org/wp-content/uploads/2024/08/BCWHF-Impact-Report-2024-Single-Pages.pdf",
+        "sourceUrl": "https://bcwomensfoundation.org/wp-content/uploads/2024/08/BCWHF-Impact-Report-2024-Single-Pages.pdf",
+        "sourceLocator": "PDF page 4, top left",
+        "sourceFile": "BC Women's Health Foundation Impact Report 2024 (single pages)",
+        "sourceDate": "2024-08",
+        "observedDate": "2026-11-16",
+        "dateNote": "The report's date, not an adoption date.",
+        "evidenceType": "native-pdf-vector-extraction-with-converted-gradients",
+        "notes": "The name in teal and grey beside the folded-ribbon W in grey and teal gradients.",
+        "fidelityNote": "The lettering (30 glyph outlines) and the W's 11 clipping shapes are the PDF's own paths and colours (scripts/bc_womens.py). The PDF fills those shapes with about 800 thin strips, a gradient broken into bands, and paints the three folds with small (34 × 43 px) images that vary only from top to bottom; here each shape is filled with an SVG linear gradient through those strips' or image rows' own colours, at their own heights. No tracing.",
+        "sha256": "cbdae757d244626c02349efa7d24deb4180bc0184fa13e9f5ce7ca361e637f62",
+        "bytes": 67545,
+        "darkBackground": false,
+        "search": "health-bodies-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -1089,7 +1337,34 @@ export const EXPANDED_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "bccdc-2021-research-report",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "bccdc-2021-research-report",
+        "label": "BC Centre for Disease Control — CDC symbol and name, 2020/2021 research report",
+        "file": "identity-expanded/sub-bc-centre-for-disease-control/bccdc-2021-research-report.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "BC Centre for Disease Control",
+        "sourcePage": "https://www.bccdc.ca/about/accountability/annual-reports",
+        "sourceUrl": "https://www.bccdc.ca/Our-Research-Site/Documents/BCCDC%20Annual%20Research%20Report%202021.pdf",
+        "sourceLocator": "PDF page 1 (cover), lower right",
+        "sourceFile": "BCCDC Annual Research Report 2020/2021",
+        "sourceDate": "2021",
+        "observedDate": "2026-11-16",
+        "dateNote": "The report's year, not an adoption date.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The interlocking CDC letters over “BC Centre for Disease Control”, in blue.",
+        "fidelityNote": "The PDF's own 2 symbol paths and 25 glyph outlines, extracted with PyMuPDF (scripts/bccdc.py); no tracing or recolouring. The cover adds an endorsement line, “Provincial Health Services Authority”, under the name; it is left out, as on the website logo. The PDF's blue converts to #0065a4, lighter than the website PNG.",
+        "sha256": "d1a4afc198e461eb6496ef4c9d92a58f5eb98bdb4b09c0a1ce018062db398cc6",
+        "bytes": 11747,
+        "darkBackground": false,
+        "search": "health-bodies-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -1133,7 +1408,58 @@ export const EXPANDED_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "bcehs-website-layout-rebuilt",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "bcehs-2024-progress-report-endorsed",
+        "label": "BC Emergency Health Services — Logo with PHSA line, 2023/24 progress report",
+        "file": "identity-expanded/bc-emergency-health-services/bcehs-2024-progress-report-endorsed.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "BC Emergency Health Services",
+        "sourcePage": "https://www.bcehs.ca/about/accountability/reports",
+        "sourceUrl": "https://www.bcehs.ca/about-site/Documents/bcehs_progress_report_2023-24.pdf",
+        "sourceLocator": "PDF page 1 (cover), top right",
+        "sourceFile": "BCEHS 2023/2024 Progress Report",
+        "sourceDate": "2023/24",
+        "observedDate": "2026-11-16",
+        "dateNote": "The report's year, not an adoption date.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "BCEHS in blue and red with the red rule and the name, over “Provincial Health Services Authority”. The endorsed version: its name is larger beside the letters than on the website logo.",
+        "fidelityNote": "The PDF's own 65 paths and colours, extracted with PyMuPDF (scripts/bcehs.py); no tracing or recolouring. A related version of the website logo, not the same artwork: it carries the PHSA line and different proportions.",
+        "sha256": "c944c3d809b02237527dc0a88f07909f785de903fef3697dd2821271fbc5ba8e",
+        "bytes": 39839,
+        "darkBackground": false,
+        "search": "health-bodies-vector-2026-11-16"
+      },
+      {
+        "id": "bcehs-website-layout-rebuilt",
+        "label": "BC Emergency Health Services — Logo",
+        "file": "identity-expanded/bc-emergency-health-services/bcehs-website-layout-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "BC Emergency Health Services",
+        "sourcePage": "https://www.bcehs.ca/",
+        "sourceUrl": "https://www.bcehs.ca/about-site/Documents/bcehs_progress_report_2023-24.pdf",
+        "sourceLocator": "Layout: the website logo PNG. Parts: the logo on PDF page 1 of the 2023/24 progress report",
+        "sourceFile": "BCEHS 2023/2024 Progress Report",
+        "sourceDate": null,
+        "observedDate": "2026-11-16",
+        "dateNote": "The website PNG is undated; the parts come from the 2023/24 report. Not adoption dates.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "BCEHS in blue and red, a red rule and “BC Emergency Health Services” on two lines, as on the website.",
+        "fidelityNote": "A reconstruction of the website layout from original parts: the BCEHS letters (5 paths), the rule (2) and the name (25 glyph outlines) are the progress report's own paths, each scaled uniformly and placed on the box it occupies in the website PNG (fitted heights within 2% of the PNG). Colours are the PDF's own (#004b8d, #c42032); the website PNG's red is brighter.",
+        "sha256": "cec6a2f9b4567cfe8fe92135b7539615fbc617400ceedccdd5b213d238ea171c",
+        "bytes": 14957,
+        "darkBackground": false,
+        "search": "health-bodies-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
       }
     ]
   },
@@ -1220,7 +1546,39 @@ export const EXPANDED_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "source-expanded-simon-fraser-university-powerpoint-horizontal-colour",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "source-expanded-simon-fraser-university-powerpoint-horizontal-colour",
+        "label": "Simon Fraser University — Horizontal logo, colour",
+        "file": "identity-expanded/simon-fraser-university/powerpoint-template-horizontal-colour.svg",
+        "format": "svg",
+        "isVector": true,
+        "sourcePage": "https://www.sfu.ca/communicators-toolkit/brand/templates/microsoft-office.html",
+        "sourceUrl": "https://www.sfu.ca/content/dam/sfu/communicators-toolkit/brand/templates/microsoft-office/SFU-PowerPoint-Template-Arial.pptx",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Simon Fraser University",
+        "sourceLocator": "Official PowerPoint template, embedded file ppt/media/image4.svg (used by slide layout 2 and slide 8)",
+        "sourceFile": null,
+        "sourceDate": "2025-04 (template modified 2025-04-03)",
+        "dateNote": "Publication, archive or observation date only; not a logo adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "official-website-vector",
+        "notes": "The red SFU block with “SIMON FRASER UNIVERSITY” in grey to its right, as on the website logo. The SVG is the one SFU ships inside its brand PowerPoint template.",
+        "fidelityNote": "Embedded SVG kept byte for byte (red #A6192E, grey #54585A). No tracing, type recreation or recolouring.",
+        "darkBackground": false,
+        "specimenDate": "2025-04",
+        "sha256": "f2439037cd07902212791eea7918801dbff9a60786fe39735f2f8ab594a21277",
+        "bytes": 11304,
+        "dimensions": {
+          "viewBox": "0 0 143.67 33.8"
+        },
+        "contentType": "image/svg+xml",
+        "search": "current-bodies-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -1864,7 +2222,9 @@ export const EXPANDED_IDENTITY_BODIES = [
             "label": "Original source image",
             "format": "png"
           }
-        ]
+        ],
+        "variantOf": "rebuild-expanded-compass-c-symbol",
+        "versionLabel": "Published image"
       },
       {
         "id": "source-expanded-compass-needle-symbol",
@@ -1887,7 +2247,67 @@ export const EXPANDED_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Separately published Compass needle symbol from TransLink’s Compass Card information page.",
         "fidelityNote": "Original PNG bytes retained with source colours and transparency. No tracing, upscaling or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "rebuild-expanded-compass-needle-symbol",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "rebuild-expanded-compass-needle-symbol",
+        "label": "Compass — Needle symbol (rebuilt)",
+        "file": "identity-expanded/compass/needle-symbol-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "sourcePage": "https://www.translink.ca/compasscard",
+        "sourceUrl": "https://www.translink.ca/-/media/translink/icons/content-pages/handydart/compass_needle_upperright-arrow.png",
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "TransLink",
+        "sourceLocator": "Rebuilt over TransLink’s 561 × 561 needle-symbol PNG",
+        "sourceFile": null,
+        "sourceDate": "Undated web asset observed 2026-11-15",
+        "dateNote": "Rebuilt in 2026 from an undated web image; no adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The blue needle — a circle drawn to a point at the upper right — with a white C. No vector original was found on translink.ca, compasscard.ca or in TransLink PDFs checked.",
+        "fidelityNote": "Vector reconstruction from geometry fitted to the 561 px PNG: the needle is one large circle joined by its tangents to a small rounded tip; the C is a ring cut by two horizontal lines (measured from the image). Overlap with the source: 0.998 for the needle, 0.987 for the C (IoU). Colours sampled: #0099CC, white. No tracing, no embedded image.",
+        "darkBackground": false,
+        "sha256": "014d3b82d387e6f31a1ef248ebc996af3193974f06c6152af76e3e2ef5866ea9",
+        "bytes": 391,
+        "dimensions": {
+          "viewBox": "-1 -0.5 563.5 563"
+        },
+        "contentType": "image/svg+xml",
+        "search": "current-bodies-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
+      },
+      {
+        "id": "rebuild-expanded-compass-c-symbol",
+        "label": "Compass — C symbol (rebuilt)",
+        "file": "identity-expanded/compass/c-symbol-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "sourcePage": "https://www.compasscard.ca/",
+        "sourceUrl": "https://www.compasscard.ca/images/sprite-s599e3523b9.png",
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "TransLink",
+        "sourceLocator": "Same geometry as the rebuilt needle symbol, coloured as the compasscard.ca sprite (81 × 80)",
+        "sourceFile": null,
+        "sourceDate": "Undated source observed 2026-11-15",
+        "dateNote": "Rebuilt in 2026 from undated web images; no adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "vector-reconstruction",
+        "notes": "White needle with a blue C, as the website sprite shows it. It is the same shape as the needle symbol with the colours swapped; checked against the 81 × 80 sprite crop.",
+        "fidelityNote": "Vector reconstruction; geometry fitted to TransLink’s 561 px needle PNG (see the rebuilt needle symbol) and checked against the sprite crop: overlap 0.997 for the needle, 0.990 for the C (IoU). Colours sampled from the sprite: white, #009DDC. No tracing, no embedded image.",
+        "darkBackground": false,
+        "sha256": "99581a11bd29fd9584102453993c6c1a1fe133b49ddbaf2faf01007a0648c41d",
+        "bytes": 391,
+        "dimensions": {
+          "viewBox": "-1 -0.5 563.5 563"
+        },
+        "contentType": "image/svg+xml",
+        "search": "current-bodies-vector-2026-11-16",
+        "versionLabel": "Vector reconstruction"
       }
     ]
   }

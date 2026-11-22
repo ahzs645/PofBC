@@ -41,7 +41,39 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "municipal-abbotsford-annual-report-2025",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "municipal-abbotsford-annual-report-2025",
+        "label": "Abbotsford — Logo, 2025 Annual Report",
+        "file": "identity-municipal/abbotsford/annual-report-2025-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "57cefc6d349d38d68c8f17771070f938b29e4c1350f6664c7cb0c552217a684d",
+        "bytes": 9680,
+        "sourcePage": "https://www.abbotsford.ca",
+        "sourceUrl": "https://www.abbotsford.ca/sites/default/files/2026-06/2025%20Annual%20Report_FINAL%20for%20WEB.pdf",
+        "resolvedSourceUrl": "https://www.abbotsford.ca/sites/default/files/2026-06/2025%20Annual%20Report_FINAL%20for%20WEB.pdf",
+        "dimensions": {
+          "viewBox": "457.3 691.61 94.97 38.48"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "City of Abbotsford",
+        "sourceLocator": "PDF page 140 (back cover)",
+        "sourceFile": null,
+        "sourceDate": "2025 Annual Report; PDF created 2 June 2026",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The same design and colours as the website logo, drawn as vector paths on the report’s back cover.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "search": "municipal-logos-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -128,7 +160,39 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "municipal-burns-lake-housing-needs-report-2024",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "municipal-burns-lake-housing-needs-report-2024",
+        "label": "Burns Lake — Logo, 2024 Interim Housing Needs Report",
+        "file": "identity-municipal/burns-lake/housing-needs-report-2024-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "97dd9504b6bdcfafcaf07bf4e5e39d883d3829b08d0ea7d8806851a7ca67b6ab",
+        "bytes": 8481,
+        "sourcePage": "https://www.burnslake.ca",
+        "sourceUrl": "https://www.burnslake.ca/media/file/burns-lake-housing-needs-report-v4-dec-6th-2024-final",
+        "resolvedSourceUrl": "https://www.burnslake.ca/media/file/burns-lake-housing-needs-report-v4-dec-6th-2024-final",
+        "dimensions": {
+          "viewBox": "361.23 468.6 161 110.84"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "The Corporation of the Village of Burns Lake",
+        "sourceLocator": "PDF page 1 (cover)",
+        "sourceFile": null,
+        "sourceDate": "2024 Interim Housing Needs Report, draft version 3.0, 6 December 2024",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The same design and colours as the website logo, drawn as vector paths on the report’s cover.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "search": "municipal-logos-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -172,7 +236,69 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "municipal-chilliwack-climate-action-plan-2022",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "municipal-chilliwack-climate-action-plan-2022",
+        "label": "Chilliwack — Logo, horizontal, Corporate Climate Action Plan 2022",
+        "file": "identity-municipal/chilliwack/climate-action-plan-2022-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "74cb978194012285adfe456927983b4389bc4cf2a077fc02cd1675eee69f5d61",
+        "bytes": 14659,
+        "sourcePage": "https://www.chilliwack.com",
+        "sourceUrl": "https://www.chilliwack.com/main/attachments/Files/2024/City%20of%20Chilliwack%20Corporate%20Climate%20Action%20Plan_FINAL.pdf",
+        "resolvedSourceUrl": "https://www.chilliwack.com/main/attachments/Files/2024/City%20of%20Chilliwack%20Corporate%20Climate%20Action%20Plan_FINAL.pdf",
+        "dimensions": {
+          "viewBox": "35.61 128.57 221 38.63"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "City of Chilliwack",
+        "sourceLocator": "PDF page 1 (cover)",
+        "sourceFile": null,
+        "sourceDate": "Corporate Climate Action Plan, 16 August 2022",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The horizontal lockup the website uses. In this printing “City of” is dark green rather than the website’s light green, and the snowcaps are open (no white fill), so the cover shows through them.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "search": "municipal-logos-vector-2026-11-16",
+        "versionLabel": "Vector"
+      },
+      {
+        "id": "municipal-chilliwack-climate-actions-summary-stacked",
+        "label": "Chilliwack — Logo, stacked, City Climate Actions summary",
+        "file": "identity-municipal/chilliwack/climate-actions-summary-logo-stacked.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "06439727f98c14b43e90fedcdc3608ad3062aa230349fe5160367d3c643663aa",
+        "bytes": 14372,
+        "sourcePage": "https://www.chilliwack.com",
+        "sourceUrl": "https://www.chilliwack.com/main/attachments/Files/2876/City%20Climate%20Actions%20%2D%20Summary%2Epdf",
+        "resolvedSourceUrl": "https://www.chilliwack.com/main/attachments/Files/2876/City%20Climate%20Actions%20%2D%20Summary%2Epdf",
+        "dimensions": {
+          "viewBox": "265.54 721.97 82.48 51.09"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "City of Chilliwack",
+        "sourceLocator": "PDF page 1",
+        "sourceFile": null,
+        "sourceDate": "City Climate Actions summary; PDF created 28 March 2022",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The stacked lockup, with the white ground under the mountains and the light-green “City of” the website logo shows. The website uses the horizontal lockup.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "variantOf": "municipal-chilliwack-climate-action-plan-2022",
+        "search": "municipal-logos-vector-2026-11-16"
       }
     ]
   },
@@ -216,7 +342,69 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte. White artwork for the website’s dark masthead. The same bytes were recorded by the 15 November 2026 audit.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": true
+        "darkBackground": true,
+        "variantOf": "municipal-coquitlam-treasury-report-2025-white",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "municipal-coquitlam-treasury-report-2025-white",
+        "label": "Coquitlam — Logo, white, 2025 Treasury Report",
+        "file": "identity-municipal/coquitlam/treasury-report-2025-logo-white.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "f3666f46851e858544b5743ff61ac917b9bd6c6b2a716959fbdc65b0f2f5a9c7",
+        "bytes": 4354,
+        "sourcePage": "https://www.coquitlam.ca",
+        "sourceUrl": "https://coquitlam.ca/DocumentCenter/View/19383/2025_Treasury_Report",
+        "resolvedSourceUrl": "https://coquitlam.ca/DocumentCenter/View/19383/2025_Treasury_Report",
+        "dimensions": {
+          "viewBox": "93.36 671.39 136.53 35.65"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "City of Coquitlam",
+        "sourceLocator": "PDF page 1 (cover)",
+        "sourceFile": null,
+        "sourceDate": "2025 Treasury Report (year ended 31 December 2025)",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The white version, as on the website’s dark masthead, drawn as vector paths on the report’s cover. The website file adds a drop shadow; this does not.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": true,
+        "search": "municipal-logos-vector-2026-11-16",
+        "versionLabel": "Vector"
+      },
+      {
+        "id": "municipal-coquitlam-treasury-report-2025",
+        "label": "Coquitlam — Logo, blue, 2025 Treasury Report",
+        "file": "identity-municipal/coquitlam/treasury-report-2025-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "d6b8428dad6719e5c3e0b0071bd4af873a521a92fe84187fd1e2739180f37c85",
+        "bytes": 4256,
+        "sourcePage": "https://www.coquitlam.ca",
+        "sourceUrl": "https://coquitlam.ca/DocumentCenter/View/19383/2025_Treasury_Report",
+        "resolvedSourceUrl": "https://coquitlam.ca/DocumentCenter/View/19383/2025_Treasury_Report",
+        "dimensions": {
+          "viewBox": "48.23 608.22 122.89 32.16"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "City of Coquitlam",
+        "sourceLocator": "PDF page 12 (back page)",
+        "sourceFile": null,
+        "sourceDate": "2025 Treasury Report (year ended 31 December 2025)",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The blue version, from the same report’s back page.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "variantOf": "municipal-coquitlam-treasury-report-2025-white",
+        "search": "municipal-logos-vector-2026-11-16"
       }
     ]
   },
@@ -264,7 +452,39 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "preview": "identity-municipal/dawson-creek/website-logo-preview.png",
         "previewSha256": "3521ec728517d119145d725f6466411d403aaed70d6cf3282ba5f52316846293",
         "previewBytes": 99430,
-        "previewNote": "A 1200-pixel-wide copy for the page, resized from the archived file; the archived file is the evidence."
+        "previewNote": "A 1200-pixel-wide copy for the page, resized from the archived file; the archived file is the evidence.",
+        "variantOf": "municipal-dawson-creek-community-profile-2024",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "municipal-dawson-creek-community-profile-2024",
+        "label": "Dawson Creek — Logo, 2024 Community Profile",
+        "file": "identity-municipal/dawson-creek/community-profile-2024-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "21a649b8911f6b3bfa4e59ec790c87c9c7bc2cc9315aa7bbffe97af39832a41f",
+        "bytes": 25172,
+        "sourcePage": "https://www.dawsoncreek.ca",
+        "sourceUrl": "https://www.dawsoncreek.ca/media/nr4fvuix/community-profile-2024.pdf",
+        "resolvedSourceUrl": "https://www.dawsoncreek.ca/media/nr4fvuix/community-profile-2024.pdf",
+        "dimensions": {
+          "viewBox": "33.83 34.99 184.89 70.82"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "The Corporation of the City of Dawson Creek",
+        "sourceLocator": "PDF page 40 (back cover)",
+        "sourceFile": null,
+        "sourceDate": "Community Profile & Investment Guide 2024; PDF created 17 May 2024",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The same design and colours as the website logo. This drawing differs slightly at the foot of the building, where white steps cut into the blue; its white parts are kept as drawn.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "search": "municipal-logos-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -309,6 +529,35 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
         "darkBackground": false
+      },
+      {
+        "id": "municipal-fort-st-john-ocp-2025-stacked",
+        "label": "Fort St. John — Logo, stacked, Official Community Plan 2025",
+        "file": "identity-municipal/fort-st-john/ocp-2025-logo-stacked.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "6bf6cee72641c41cf74649acdcb465a108fc5614a00c50b3b0360e3ed14c49ad",
+        "bytes": 25427,
+        "sourcePage": "https://www.fortstjohn.ca/ocp",
+        "sourceUrl": "https://www.fortstjohn.ca/media/file/official-community-plan-bylaw",
+        "resolvedSourceUrl": "https://www.fortstjohn.ca/media/file/official-community-plan-bylaw",
+        "dimensions": {
+          "viewBox": "478.27 671.86 105.25 69.57"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "City of Fort St John",
+        "sourceLocator": "PDF page 1 (cover)",
+        "sourceFile": null,
+        "sourceDate": "Official Community Plan bylaw; PDF created 17 December 2025",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The same logo and colours as the website, in the stacked lockup (arcs above the name). The website file is the horizontal lockup; no vector copy of it was found.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "search": "municipal-logos-vector-2026-11-16"
       }
     ]
   },
@@ -352,7 +601,39 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte. The line “Canada’s Tournament Capital” is white, for a dark header. The same bytes were recorded by the 15 November 2026 audit.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": true
+        "darkBackground": true,
+        "variantOf": "municipal-kamloops-annual-report-2025",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "municipal-kamloops-annual-report-2025",
+        "label": "Kamloops — Logo, 2025 Annual Report",
+        "file": "identity-municipal/kamloops/annual-report-2025-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "129ffb1e68c47c72164dac2635946408ffeea6bf7d24e990819d7630c69ecd89",
+        "bytes": 110048,
+        "sourcePage": "https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
+        "sourceUrl": "https://www.kamloops.ca/sites/default/files/CityofKamloops_AnnualReport2025_11x8-5_May2026_FINAL-WEB.pdf",
+        "resolvedSourceUrl": "https://www.kamloops.ca/sites/default/files/CityofKamloops_AnnualReport2025_11x8-5_May2026_FINAL-WEB.pdf",
+        "dimensions": {
+          "viewBox": "303.66 184.2 184.68 115.69"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "City of Kamloops",
+        "sourceLocator": "PDF page 142 (back cover)",
+        "sourceFile": null,
+        "sourceDate": "Annual Report 2025; PDF created 3 June 2026",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The same logo as the website, with “Canada’s Tournament Capital” in white for a dark ground, as on the website.",
+        "fidelityNote": "Replayed from the logo’s own marked-content block in the page’s content stream: every path and clip is the PDF’s own, and each of the 26 colour ramps is the PDF’s own axial shading written as an SVG linear gradient with the shading’s own axis and its 64 sampled colours as stops. CMYK converted to RGB by MuPDF. No tracing, redrawing or recolouring.",
+        "darkBackground": true,
+        "search": "municipal-logos-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -396,7 +677,39 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "municipal-mackenzie-brand-book-2018",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "municipal-mackenzie-brand-book-2018",
+        "label": "Mackenzie — Logo, Brand Book 2018",
+        "file": "identity-municipal/mackenzie/brand-book-2018-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "d0f8669c3684ea58ad43ba1c093196db1a7e64d4487a00e7ce01dc03c21fcb19",
+        "bytes": 15756,
+        "sourcePage": "https://districtofmackenzie.ca/business-development/branding/",
+        "sourceUrl": "https://districtofmackenzie.ca/wp-content/uploads/2019/02/Brand-Book-V2.pdf",
+        "resolvedSourceUrl": "https://districtofmackenzie.ca/wp-content/uploads/2019/02/Brand-Book-V2.pdf",
+        "dimensions": {
+          "viewBox": "70.94 316.18 165.16 66.51"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "District of Mackenzie",
+        "sourceLocator": "PDF page 2",
+        "sourceFile": null,
+        "sourceDate": "Brand Book, version 2, November 2018",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The primary logo from the District’s published brand book; the same design and colours as the website logo.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "search": "municipal-logos-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -440,7 +753,39 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "municipal-nanaimo-annual-report-2025",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "municipal-nanaimo-annual-report-2025",
+        "label": "Nanaimo — Logo, 2025 Annual Report",
+        "file": "identity-municipal/nanaimo/annual-report-2025-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "1035ceee70c04d40a585ecd543bc69c5eeb488a7aba08501bdf387f1b276ca8a",
+        "bytes": 22017,
+        "sourcePage": "https://www.nanaimo.ca/your-government/budget-finance/annual-financial-reports",
+        "sourceUrl": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2025-annual-report-web.pdf",
+        "resolvedSourceUrl": "https://www.nanaimo.ca/docs/your-government/budget-and-finance/2025-annual-report-web.pdf",
+        "dimensions": {
+          "viewBox": "198.78 657.53 214.17 51.62"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "City of Nanaimo",
+        "sourceLocator": "PDF page 1 (cover)",
+        "sourceFile": null,
+        "sourceDate": "2025 Annual Report; PDF created 23 June 2026",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The same design as the website logo. The print colours are brighter process blues than the website file’s, and the waves carry thin black keylines, as printed.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "search": "municipal-logos-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -485,6 +830,35 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
         "darkBackground": false
+      },
+      {
+        "id": "municipal-prince-george-annual-report-2025-horizontal",
+        "label": "Prince George — Logo, horizontal, 2025 Annual Report",
+        "file": "identity-municipal/prince-george/annual-report-2025-logo-horizontal.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "faf758a03a81a5747652e4aa3c8bb25d0a609065433827920999039f4ab2b2dd",
+        "bytes": 7883,
+        "sourcePage": "https://www.princegeorge.ca/city-hall/finance/annual-report-corporate-plan",
+        "sourceUrl": "https://www.princegeorge.ca/sites/default/files/2026-06/Prince%20George%20Annual%20Report%202025%20-%20FINAL%20reduced%20size.pdf",
+        "resolvedSourceUrl": "https://www.princegeorge.ca/sites/default/files/2026-06/Prince%20George%20Annual%20Report%202025%20-%20FINAL%20reduced%20size.pdf",
+        "dimensions": {
+          "viewBox": "38.03 299.27 151.02 65.93"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "City of Prince George",
+        "sourceLocator": "PDF page 1 (cover)",
+        "sourceFile": null,
+        "sourceDate": "2025 Annual Report; PDF created 23 June 2026",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The same logo and colour as the website, in the horizontal lockup (symbol beside the name). The website file is the stacked lockup; no vector copy of it was found.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "search": "municipal-logos-vector-2026-11-16"
       }
     ]
   },
@@ -529,6 +903,35 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
         "darkBackground": false
+      },
+      {
+        "id": "municipal-prince-rupert-community-assessment-2024",
+        "label": "Prince Rupert — Logo, Complete Community Assessment 2024",
+        "file": "identity-municipal/prince-rupert/community-assessment-2024-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "c4f06d7e30404fd03c7eece1fb1c5b55d7036ed413aeeb5d655167867cb0adf5",
+        "bytes": 7372,
+        "sourcePage": "https://www.princerupert.ca",
+        "sourceUrl": "https://princerupert.ca/sites/7/files/2024-12/PR%20Complete%20Community%20Assessment%20%26%20Plan.pdf",
+        "resolvedSourceUrl": "https://princerupert.ca/sites/7/files/2024-12/PR%20Complete%20Community%20Assessment%20%26%20Plan.pdf",
+        "dimensions": {
+          "viewBox": "546.99 440.17 148.58 108.2"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "City of Prince Rupert",
+        "sourceLocator": "PDF page 1 (cover)",
+        "sourceFile": null,
+        "sourceDate": "Complete Community Assessment & Plan; PDF created 25 October 2024",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The full logo adopted in 2022: the red arch above “The City of Prince Rupert”. The website file shows a wordmark alone, set wider; that arrangement was not found as a vector.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "search": "municipal-logos-vector-2026-11-16"
       }
     ]
   },
@@ -572,7 +975,9 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "municipal-quesnel-brand-guidelines-2016",
+        "versionLabel": "Published image"
       },
       {
         "id": "source-municipal-quesnel-website-logo-compact",
@@ -601,7 +1006,69 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte. The compact version the website serves on small screens, without “City of”.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "municipal-quesnel-brand-guidelines-2016",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "municipal-quesnel-brand-guidelines-2016",
+        "label": "Quesnel — Logo, Brand Guidelines 2016",
+        "file": "identity-municipal/quesnel/brand-guidelines-2017-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "5eb23d13be7f5fcb44c296c4e32fbc1dfdca898b22fcea468c4c9a9eed6eaa80",
+        "bytes": 8479,
+        "sourcePage": "https://www.quesnel.ca",
+        "sourceUrl": "https://www.quesnel.ca/media/file/city-quesnel-guidelines-v3-size-edits",
+        "resolvedSourceUrl": "https://www.quesnel.ca/media/file/city-quesnel-guidelines-v3-size-edits",
+        "dimensions": {
+          "viewBox": "455.76 610.24 223.93 70.99"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "City of Quesnel",
+        "sourceLocator": "PDF page 7",
+        "sourceFile": null,
+        "sourceDate": "Brand Guidelines, version 02, 13 December 2016; PDF created 17 January 2017",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The “City of Quesnel” lockup from the City’s brand guidelines. The website file is the same design but its wordmark and wave are drawn taller relative to “City of”.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "search": "municipal-logos-vector-2026-11-16",
+        "versionLabel": "Vector"
+      },
+      {
+        "id": "municipal-quesnel-brand-guidelines-2016-compact",
+        "label": "Quesnel — Logo, compact, Brand Guidelines 2016",
+        "file": "identity-municipal/quesnel/brand-guidelines-2017-logo-compact.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "80616afe0b5ba6db26db8c1fb93d6c66fc13cc895af9cb18ebec313b33395d8d",
+        "bytes": 7165,
+        "sourcePage": "https://www.quesnel.ca",
+        "sourceUrl": "https://www.quesnel.ca/media/file/city-quesnel-guidelines-v3-size-edits",
+        "resolvedSourceUrl": "https://www.quesnel.ca/media/file/city-quesnel-guidelines-v3-size-edits",
+        "dimensions": {
+          "viewBox": "455.76 411.96 223.93 57.46"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "City of Quesnel",
+        "sourceLocator": "PDF page 7",
+        "sourceFile": null,
+        "sourceDate": "Brand Guidelines, version 02, 13 December 2016; PDF created 17 January 2017",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The “Quesnel” lockup without “City of”, from the same page of the brand guidelines.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "variantOf": "municipal-quesnel-brand-guidelines-2016",
+        "search": "municipal-logos-vector-2026-11-16"
       }
     ]
   },
@@ -645,7 +1112,39 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "municipal-richmond-strategic-plan-highlights",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "municipal-richmond-strategic-plan-highlights",
+        "label": "Richmond — Logo, Council Strategic Plan term highlights",
+        "file": "identity-municipal/richmond/strategic-plan-highlights-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "3cf09831d057aa18f3bfcfbad1081498ea31723755e4a5f5f1bf62ff35239bfc",
+        "bytes": 5503,
+        "sourcePage": "https://www.richmond.ca",
+        "sourceUrl": "https://www.richmond.ca/__shared/assets/overview2022-2026stratplan79453.pdf",
+        "resolvedSourceUrl": "https://www.richmond.ca/__shared/assets/overview2022-2026stratplan79453.pdf",
+        "dimensions": {
+          "viewBox": "686.79 549.06 83.08 23.13"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "City of Richmond",
+        "sourceLocator": "PDF page 1",
+        "sourceFile": null,
+        "sourceDate": "Council Strategic Plan 2022–2026, Term Highlights at a Glance; PDF created 6 July 2026",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The heron logo; the same design and colours as the website logo.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "search": "municipal-logos-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -737,6 +1236,65 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "previewSha256": "cdedc136765d2838bfc0abdc29792539ac5d3a0b759473e2b8ebd3e611b994ad",
         "previewBytes": 109785,
         "previewNote": "A 1200-pixel-wide copy for the page, resized from the archived file; the archived file is the evidence."
+      },
+      {
+        "id": "municipal-smithers-new-residents-guide-2026",
+        "label": "Smithers — Logo, New Resident Guide 2026",
+        "file": "identity-municipal/smithers/new-residents-guide-2026-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "48b4ae29857396d099da23a89dc9d6e6e27a13c0b3a82492dc370e8c721fba54",
+        "bytes": 5849,
+        "sourcePage": "https://www.smithers.ca",
+        "sourceUrl": "https://www.smithers.ca/sites/default/files/2026-03/TownofSmithers_New%20Residents%20Guide_2026_Web.pdf",
+        "resolvedSourceUrl": "https://www.smithers.ca/sites/default/files/2026-03/TownofSmithers_New%20Residents%20Guide_2026_Web.pdf",
+        "dimensions": {
+          "viewBox": "59.11 318.31 133.58 56.23"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Town of Smithers",
+        "sourceLocator": "PDF page 2",
+        "sourceFile": null,
+        "sourceDate": "New Resident Guide 2026; PDF created 4 March 2026",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The stacked logo with the name in slate, without the tagline. The website file is the same stacked logo with a white name and “A Town For All Seasons”.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "search": "municipal-logos-vector-2026-11-16"
+      },
+      {
+        "id": "municipal-smithers-new-residents-guide-2026-tagline-white",
+        "label": "Smithers — Logo with tagline, white, New Resident Guide 2026",
+        "file": "identity-municipal/smithers/new-residents-guide-2026-logo-tagline-white.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "64cbce505701b7fe72ed4b1e9791d974ce82f4dbdb6ecfc17d263032cc4282d6",
+        "bytes": 11755,
+        "sourcePage": "https://www.smithers.ca",
+        "sourceUrl": "https://www.smithers.ca/sites/default/files/2026-03/TownofSmithers_New%20Residents%20Guide_2026_Web.pdf",
+        "resolvedSourceUrl": "https://www.smithers.ca/sites/default/files/2026-03/TownofSmithers_New%20Residents%20Guide_2026_Web.pdf",
+        "dimensions": {
+          "viewBox": "212.96 703.69 204.19 35.83"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Town of Smithers",
+        "sourceLocator": "PDF page 1 (cover)",
+        "sourceFile": null,
+        "sourceDate": "New Resident Guide 2026; PDF created 4 March 2026",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The horizontal lockup with a white name and the tagline “A Town For All Seasons”, for a dark ground.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": true,
+        "variantOf": "municipal-smithers-new-residents-guide-2026",
+        "search": "municipal-logos-vector-2026-11-16"
       }
     ]
   },
@@ -939,7 +1497,39 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "municipal-victoria-property-tax-sheet-2025",
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "municipal-victoria-property-tax-sheet-2025",
+        "label": "Victoria — Logo, 2025 property tax information sheet",
+        "file": "identity-municipal/victoria/property-tax-sheet-2025-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "5623041f76d8c28e6258bf3f99056cfacee12e03e6504a0c8c6902f4405358ce",
+        "bytes": 5323,
+        "sourcePage": "https://www.victoria.ca",
+        "sourceUrl": "https://www.victoria.ca/media/file/2025-property-tax-info-sheet",
+        "resolvedSourceUrl": "https://www.victoria.ca/media/file/2025-property-tax-info-sheet",
+        "dimensions": {
+          "viewBox": "22 733.43 73.22 32.08"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "The Corporation of the City of Victoria",
+        "sourceLocator": "PDF page 4",
+        "sourceFile": null,
+        "sourceDate": "2025 property tax information sheet; PDF created 29 April 2025",
+        "dateNote": "Publication date, not an adoption date.",
+        "observedDate": "2026-11-16",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The same design as the website logo. In this printing the blue is slightly lighter and the lettering pure black.",
+        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
+        "darkBackground": false,
+        "search": "municipal-logos-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },

@@ -2,17 +2,23 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { existsSync, readFileSync } from 'node:fs'
 import { COLLECTED_BODIES, COLLECTED_SPECIMENS } from './collectedData.js'
+import { EXPANDED_IDENTITY_BODIES } from './expandedIdentityData.js'
+import { MUNICIPAL_IDENTITY_BODIES } from './municipalIdentityData.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
 import { collectedDisplay, logoScale } from './tileArt.js'
 
-const assets = new Map([...COLLECTED_BODIES, ...COLLECTED_SPECIMENS].flatMap((each) => each.assets).map((asset) => [asset.id, asset]))
+const assets = new Map([...COLLECTED_BODIES, ...COLLECTED_SPECIMENS, ...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES]
+  .flatMap((each) => each.assets ?? []).map((asset) => [asset.id, asset]))
 const publicFile = (path) => new URL(`../../public/${path}`, import.meta.url)
+
+// Drawn as vector: an SVG (Innovate BC's keeps the report's photograph in its disc) or an EPS.
+const drawable = (asset) => asset.format === 'svg' || (asset.format === 'eps' && asset.isVector)
 
 test('every display copy is of a collected vector file, for both themes, and exists', () => {
   for (const [id, entry] of Object.entries(COLLECTED_DISPLAY)) {
     const asset = assets.get(id)
     assert.ok(asset, `${id} is a collected file`)
-    assert.ok(asset.format === 'svg' && asset.isVector, `${id} is a vector file`)
+    assert.ok(drawable(asset), `${id} is a vector file`)
     for (const theme of ['light', 'dark']) {
       const copy = entry[theme]
       assert.ok(copy, `${id} has a ${theme} copy`)
@@ -33,7 +39,7 @@ test('a display copy keeps the source file as it is, apart from its viewBox and 
 })
 
 test('raster files have no display copy and keep their plate', () => {
-  const raster = [...assets.values()].find((asset) => asset.format !== 'svg')
+  const raster = [...assets.values()].find((asset) => ['png', 'jpg', 'jpeg', 'gif', 'webp'].includes(asset.format))
   assert.equal(collectedDisplay(raster, 'dark'), null)
 })
 

@@ -109,6 +109,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bcrc-website-wordmark-rebuilt": {
+  "light": {
+   "file": "identity-display/bcrc-website-wordmark-rebuilt.light.svg",
+   "aspect": 2.0215,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcrc-website-wordmark-rebuilt.dark.svg",
+   "aspect": 2.0215,
+   "recoloured": true
+  }
+ },
  "bc-assessment-svg": {
   "light": {
    "file": "identity-display/bc-assessment-svg.light.svg",
@@ -238,6 +250,18 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/source-first-peoples-cultural-council-fpcc-svg.dark.svg",
    "aspect": 5.3757,
+   "recoloured": true
+  }
+ },
+ "source-first-peoples-cultural-council-fpcc-eps": {
+  "light": {
+   "file": "identity-display/source-first-peoples-cultural-council-fpcc-eps.light.svg",
+   "aspect": 3.9074,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-first-peoples-cultural-council-fpcc-eps.dark.svg",
+   "aspect": 3.9074,
    "recoloured": true
   }
  },
@@ -397,6 +421,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "source-knowledge-network-knowledge-network-colour-eps": {
+  "light": {
+   "file": "identity-display/source-knowledge-network-knowledge-network-colour-eps.light.svg",
+   "aspect": 5.0701,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-knowledge-network-knowledge-network-colour-eps.dark.svg",
+   "aspect": 5.0701,
+   "recoloured": true
+  }
+ },
  "vector-pavco-2025-26-colour-source-vector": {
   "light": {
    "file": "identity-display/vector-pavco-2025-26-colour-source-vector.light.svg",
@@ -469,6 +505,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "source-forest-enhancement-society-fesbc-horizontal-eps": {
+  "light": {
+   "file": "identity-display/source-forest-enhancement-society-fesbc-horizontal-eps.light.svg",
+   "aspect": 2.986,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-forest-enhancement-society-fesbc-horizontal-eps.dark.svg",
+   "aspect": 2.986,
+   "recoloured": true
+  }
+ },
+ "source-forest-enhancement-society-fesbc-vertical-eps": {
+  "light": {
+   "file": "identity-display/source-forest-enhancement-society-fesbc-vertical-eps.light.svg",
+   "aspect": 0.9818,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-forest-enhancement-society-fesbc-vertical-eps.dark.svg",
+   "aspect": 0.9818,
+   "recoloured": true
+  }
+ },
  "vector-bcib-2022-horizontal-reversed-source-vector": {
   "light": {
    "file": "identity-display/vector-bcib-2022-horizontal-reversed-source-vector.light.svg",
@@ -491,6 +551,42 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/vector-bcib-2025-tagline-reversed-source-vector.dark.svg",
    "aspect": 7.4499,
    "recoloured": false
+  }
+ },
+ "vector-bcib-2026-short-reversed-source-vector": {
+  "light": {
+   "file": "identity-display/vector-bcib-2026-short-reversed-source-vector.light.svg",
+   "aspect": 4.8989,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vector-bcib-2026-short-reversed-source-vector.dark.svg",
+   "aspect": 4.8989,
+   "recoloured": false
+  }
+ },
+ "source-innovate-bc-innovate-bc-white-eps": {
+  "light": {
+   "file": "identity-display/source-innovate-bc-innovate-bc-white-eps.light.svg",
+   "aspect": 1.4322,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-innovate-bc-innovate-bc-white-eps.dark.svg",
+   "aspect": 1.4322,
+   "recoloured": false
+  }
+ },
+ "innovate-bc-2024-colour": {
+  "light": {
+   "file": "identity-display/innovate-bc-2024-colour.light.svg",
+   "aspect": 1.4343,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/innovate-bc-2024-colour.dark.svg",
+   "aspect": 1.4343,
+   "recoloured": true
   }
  },
  "vector-bcfma-2021-source-vector": {
@@ -574,6 +670,30 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/vector-interior-health-blue-horizontal-source-extraction.dark.svg",
    "aspect": 4.8039,
+   "recoloured": true
+  }
+ },
+ "interior-health-symbol-2024-pdf": {
+  "light": {
+   "file": "identity-display/interior-health-symbol-2024-pdf.light.svg",
+   "aspect": 1.6982,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/interior-health-symbol-2024-pdf.dark.svg",
+   "aspect": 1.6982,
+   "recoloured": true
+  }
+ },
+ "interior-health-stacked-rebuilt": {
+  "light": {
+   "file": "identity-display/interior-health-stacked-rebuilt.light.svg",
+   "aspect": 1.8241,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/interior-health-stacked-rebuilt.dark.svg",
+   "aspect": 1.8241,
    "recoloured": true
   }
  },
@@ -721,6 +841,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "fnha-white-stacked-2026-pdf": {
+  "light": {
+   "file": "identity-display/fnha-white-stacked-2026-pdf.light.svg",
+   "aspect": 1.8892,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/fnha-white-stacked-2026-pdf.dark.svg",
+   "aspect": 1.8892,
+   "recoloured": false
+  }
+ },
+ "fnha-horizontal-colour-rebuilt": {
+  "light": {
+   "file": "identity-display/fnha-horizontal-colour-rebuilt.light.svg",
+   "aspect": 4.8453,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fnha-horizontal-colour-rebuilt.dark.svg",
+   "aspect": 4.8453,
+   "recoloured": true
+  }
+ },
  "pge-map-solid": {
   "light": {
    "file": "identity-display/pge-map-solid.light.svg",
@@ -742,6 +886,138 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/pge-map-striped.light.svg",
    "aspect": 0.9187,
+   "recoloured": false
+  }
+ },
+ "pge-point-ellice-diamond-1929-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-point-ellice-diamond-1929-rebuilt.light.svg",
+   "aspect": 0.8171,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-point-ellice-diamond-1929-rebuilt.dark.svg",
+   "aspect": 0.8171,
+   "recoloured": true
+  }
+ },
+ "pge-square-diamond-unshaded-c1934-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-square-diamond-unshaded-c1934-rebuilt.light.svg",
+   "aspect": 0.9964,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-square-diamond-unshaded-c1934-rebuilt.dark.svg",
+   "aspect": 0.9964,
+   "recoloured": true
+  }
+ },
+ "pge-circular-script-monogram-1935-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-circular-script-monogram-1935-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-circular-script-monogram-1935-rebuilt.dark.svg",
+   "aspect": 1.0,
+   "recoloured": true
+  }
+ },
+ "pge-caribou-rolling-stock-1945-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-caribou-rolling-stock-1945-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-caribou-rolling-stock-1945-rebuilt.dark.svg",
+   "aspect": 1.0,
+   "recoloured": true
+  }
+ },
+ "pge-caribou-corporate-light-1946-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-caribou-corporate-light-1946-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-caribou-corporate-light-1946-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  }
+ },
+ "pge-caribou-corporate-bold-1948-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-caribou-corporate-bold-1948-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-caribou-corporate-bold-1948-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  }
+ },
+ "pge-caribou-rolling-stock-mid1946-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-caribou-rolling-stock-mid1946-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-caribou-rolling-stock-mid1946-rebuilt.dark.svg",
+   "aspect": 1.0,
+   "recoloured": true
+  }
+ },
+ "pge-caribou-passenger-roman-1947-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-caribou-passenger-roman-1947-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-caribou-passenger-roman-1947-rebuilt.dark.svg",
+   "aspect": 1.0,
+   "recoloured": true
+  }
+ },
+ "pge-caribou-oval-advertising-1956-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-caribou-oval-advertising-1956-rebuilt.light.svg",
+   "aspect": 1.6185,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-caribou-oval-advertising-1956-rebuilt.light.svg",
+   "aspect": 1.6185,
+   "recoloured": false
+  }
+ },
+ "pge-brochure-logo-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-brochure-logo-rebuilt.light.svg",
+   "aspect": 1.686,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-brochure-logo-rebuilt.light.svg",
+   "aspect": 1.686,
+   "recoloured": false
+  }
+ },
+ "pge-scenic-route-brochure-logo-rebuilt": {
+  "light": {
+   "file": "identity-display/pge-scenic-route-brochure-logo-rebuilt.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pge-scenic-route-brochure-logo-rebuilt.light.svg",
+   "aspect": 1.0,
    "recoloured": false
   }
  },
@@ -817,6 +1093,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bc-development-1985-bc-flag-rebuilt": {
+  "light": {
+   "file": "identity-display/bc-development-1985-bc-flag-rebuilt.light.svg",
+   "aspect": 2.6554,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-development-1985-bc-flag-rebuilt.dark.svg",
+   "aspect": 2.6554,
+   "recoloured": true
+  }
+ },
  "bcpc-stacked-white": {
   "light": {
    "file": "identity-display/bcpc-stacked-white.light.svg",
@@ -889,6 +1177,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bc-buildings-corporation-2000-vector": {
+  "light": {
+   "file": "identity-display/bc-buildings-corporation-2000-vector.light.svg",
+   "aspect": 0.3677,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-buildings-corporation-2000-vector.dark.svg",
+   "aspect": 0.3677,
+   "recoloured": true
+  }
+ },
  "historical-bc-buildings-corporation-2005": {
   "light": {
    "file": "identity-display/historical-bc-buildings-corporation-2005.light.svg",
@@ -910,6 +1210,18 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/historical-bc-heritage-trust-2002.light.svg",
    "aspect": 1.2972,
+   "recoloured": false
+  }
+ },
+ "bcric-1979-wordmark-rebuilt": {
+  "light": {
+   "file": "identity-display/bcric-1979-wordmark-rebuilt.light.svg",
+   "aspect": 4.0428,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcric-1979-wordmark-rebuilt.light.svg",
+   "aspect": 4.0428,
    "recoloured": false
   }
  },
@@ -937,6 +1249,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "urban-transit-authority-1980-arrow-rebuilt": {
+  "light": {
+   "file": "identity-display/urban-transit-authority-1980-arrow-rebuilt.light.svg",
+   "aspect": 0.9728,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/urban-transit-authority-1980-arrow-rebuilt.dark.svg",
+   "aspect": 0.9728,
+   "recoloured": true
+  }
+ },
+ "urban-transit-authority-1980-regional-signature-rebuilt": {
+  "light": {
+   "file": "identity-display/urban-transit-authority-1980-regional-signature-rebuilt.light.svg",
+   "aspect": 4.5831,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/urban-transit-authority-1980-regional-signature-rebuilt.dark.svg",
+   "aspect": 4.5831,
+   "recoloured": true
+  }
+ },
  "source-expo-86-corporation-expo86-symbol-svg": {
   "light": {
    "file": "identity-display/source-expo-86-corporation-expo86-symbol-svg.light.svg",
@@ -958,6 +1294,30 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/source-expo-86-corporation-expo86-wordmark-svg.light.svg",
    "aspect": 0.9958,
+   "recoloured": false
+  }
+ },
+ "expo86-cipo-1982-rebuilt": {
+  "light": {
+   "file": "identity-display/expo86-cipo-1982-rebuilt.light.svg",
+   "aspect": 0.7588,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/expo86-cipo-1982-rebuilt.dark.svg",
+   "aspect": 0.7588,
+   "recoloured": true
+  }
+ },
+ "expo86-1986-wordmark-rebuilt": {
+  "light": {
+   "file": "identity-display/expo86-1986-wordmark-rebuilt.light.svg",
+   "aspect": 4.7362,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/expo86-1986-wordmark-rebuilt.dark.svg",
+   "aspect": 4.7362,
    "recoloured": false
   }
  },
@@ -1021,6 +1381,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bcal-1999-letterhead-rebuilt": {
+  "light": {
+   "file": "identity-display/bcal-1999-letterhead-rebuilt.light.svg",
+   "aspect": 6.6853,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcal-1999-letterhead-rebuilt.dark.svg",
+   "aspect": 6.6853,
+   "recoloured": true
+  }
+ },
  "historical-bc-assets-and-land-corporation-1999": {
   "light": {
    "file": "identity-display/historical-bc-assets-and-land-corporation-1999.light.svg",
@@ -1030,6 +1402,18 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/historical-bc-assets-and-land-corporation-1999.dark.svg",
    "aspect": 4.8384,
+   "recoloured": true
+  }
+ },
+ "land-and-water-bc-2004-rebuilt": {
+  "light": {
+   "file": "identity-display/land-and-water-bc-2004-rebuilt.light.svg",
+   "aspect": 2.477,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/land-and-water-bc-2004-rebuilt.dark.svg",
+   "aspect": 2.477,
    "recoloured": true
   }
  },
@@ -1069,6 +1453,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bc-transmission-corporation-2004-vector": {
+  "light": {
+   "file": "identity-display/bc-transmission-corporation-2004-vector.light.svg",
+   "aspect": 5.4053,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-transmission-corporation-2004-vector.dark.svg",
+   "aspect": 5.4053,
+   "recoloured": true
+  }
+ },
  "source-pacific-carbon-trust-pacific-carbon-trust-2013-svg": {
   "light": {
    "file": "identity-display/source-pacific-carbon-trust-pacific-carbon-trust-2013-svg.light.svg",
@@ -1078,6 +1474,18 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/source-pacific-carbon-trust-pacific-carbon-trust-2013-svg.dark.svg",
    "aspect": 2.36,
+   "recoloured": true
+  }
+ },
+ "pacific-carbon-trust-2011-vector": {
+  "light": {
+   "file": "identity-display/pacific-carbon-trust-2011-vector.light.svg",
+   "aspect": 2.363,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/pacific-carbon-trust-2011-vector.dark.svg",
+   "aspect": 2.363,
    "recoloured": true
   }
  },
@@ -1116,6 +1524,18 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/source-central-vancouver-island-health-region-central-vancouver-island-health-region-1999-svg.dark.svg",
    "aspect": 3.3402,
+   "recoloured": true
+  }
+ },
+ "central-vancouver-island-health-region-1999-emblem-rebuilt": {
+  "light": {
+   "file": "identity-display/central-vancouver-island-health-region-1999-emblem-rebuilt.light.svg",
+   "aspect": 2.1927,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/central-vancouver-island-health-region-1999-emblem-rebuilt.dark.svg",
+   "aspect": 2.1927,
    "recoloured": true
   }
  },
@@ -1179,6 +1599,42 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "south-fraser-health-region-horizontal-colour-2001-rebuilt": {
+  "light": {
+   "file": "identity-display/south-fraser-health-region-horizontal-colour-2001-rebuilt.light.svg",
+   "aspect": 2.3965,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/south-fraser-health-region-horizontal-colour-2001-rebuilt.dark.svg",
+   "aspect": 2.3965,
+   "recoloured": true
+  }
+ },
+ "south-fraser-health-region-horizontal-1998-rebuilt": {
+  "light": {
+   "file": "identity-display/south-fraser-health-region-horizontal-1998-rebuilt.light.svg",
+   "aspect": 2.9212,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/south-fraser-health-region-horizontal-1998-rebuilt.dark.svg",
+   "aspect": 2.9212,
+   "recoloured": true
+  }
+ },
+ "south-fraser-health-region-stacked-1998-rebuilt": {
+  "light": {
+   "file": "identity-display/south-fraser-health-region-stacked-1998-rebuilt.light.svg",
+   "aspect": 1.471,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/south-fraser-health-region-stacked-1998-rebuilt.dark.svg",
+   "aspect": 1.471,
+   "recoloured": true
+  }
+ },
  "historical-south-fraser-health-region-stacked-tagline-2001": {
   "light": {
    "file": "identity-display/historical-south-fraser-health-region-stacked-tagline-2001.light.svg",
@@ -1189,6 +1645,42 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/historical-south-fraser-health-region-stacked-tagline-2001.dark.svg",
    "aspect": 1.0064,
    "recoloured": true
+  }
+ },
+ "simon-fraser-health-region-monochrome-rebuilt": {
+  "light": {
+   "file": "identity-display/simon-fraser-health-region-monochrome-rebuilt.light.svg",
+   "aspect": 1.9597,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/simon-fraser-health-region-monochrome-rebuilt.dark.svg",
+   "aspect": 1.9597,
+   "recoloured": true
+  }
+ },
+ "simon-fraser-health-region-colour-rebuilt": {
+  "light": {
+   "file": "identity-display/simon-fraser-health-region-colour-rebuilt.light.svg",
+   "aspect": 1.9597,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/simon-fraser-health-region-colour-rebuilt.dark.svg",
+   "aspect": 1.9597,
+   "recoloured": true
+  }
+ },
+ "coast-garibaldi-health-rebuilt": {
+  "light": {
+   "file": "identity-display/coast-garibaldi-health-rebuilt.light.svg",
+   "aspect": 3.1046,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/coast-garibaldi-health-rebuilt.dark.svg",
+   "aspect": 3.1046,
+   "recoloured": false
   }
  },
  "bc-trade-1991-rebuilt": {
@@ -1623,6 +2115,42 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "shared-services-bc-2006-07-rebuilt": {
+  "light": {
+   "file": "identity-display/shared-services-bc-2006-07-rebuilt.light.svg",
+   "aspect": 3.6199,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/shared-services-bc-2006-07-rebuilt.dark.svg",
+   "aspect": 3.6199,
+   "recoloured": true
+  }
+ },
+ "shared-services-bc-2015-rebuilt": {
+  "light": {
+   "file": "identity-display/shared-services-bc-2015-rebuilt.light.svg",
+   "aspect": 3.6255,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/shared-services-bc-2015-rebuilt.dark.svg",
+   "aspect": 3.6255,
+   "recoloured": true
+  }
+ },
+ "solutions-bc-2006-letterhead-rebuilt": {
+  "light": {
+   "file": "identity-display/solutions-bc-2006-letterhead-rebuilt.light.svg",
+   "aspect": 5.4172,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/solutions-bc-2006-letterhead-rebuilt.dark.svg",
+   "aspect": 5.4172,
+   "recoloured": true
+  }
+ },
  "healthlink-bc-logo": {
   "light": {
    "file": "identity-display/healthlink-bc-logo.light.svg",
@@ -1632,6 +2160,726 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/healthlink-bc-logo.dark.svg",
    "aspect": 4.4039,
+   "recoloured": true
+  }
+ },
+ "bceid-reversed-rebuilt": {
+  "light": {
+   "file": "identity-display/bceid-reversed-rebuilt.light.svg",
+   "aspect": 4.0509,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bceid-reversed-rebuilt.dark.svg",
+   "aspect": 4.0509,
+   "recoloured": false
+  }
+ },
+ "source-expanded-translink-website-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-translink-website-logo.light.svg",
+   "aspect": 2.2686,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-translink-website-logo.dark.svg",
+   "aspect": 2.2686,
+   "recoloured": true
+  }
+ },
+ "source-expanded-metro-vancouver-transit-police-community-report-2025-reversed": {
+  "light": {
+   "file": "identity-display/source-expanded-metro-vancouver-transit-police-community-report-2025-reversed.light.svg",
+   "aspect": 2.1382,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-metro-vancouver-transit-police-community-report-2025-reversed.dark.svg",
+   "aspect": 2.1382,
+   "recoloured": false
+  }
+ },
+ "source-expanded-creative-bc-website-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-creative-bc-website-logo.light.svg",
+   "aspect": 4.0604,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-creative-bc-website-logo.light.svg",
+   "aspect": 4.0604,
+   "recoloured": false
+  }
+ },
+ "source-expanded-creative-bc-provincial-lockup": {
+  "light": {
+   "file": "identity-display/source-expanded-creative-bc-provincial-lockup.light.svg",
+   "aspect": 8.3269,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-creative-bc-provincial-lockup.dark.svg",
+   "aspect": 8.3269,
+   "recoloured": true
+  }
+ },
+ "source-expanded-liquor-distribution-branch-wholesale-site-lockup": {
+  "light": {
+   "file": "identity-display/source-expanded-liquor-distribution-branch-wholesale-site-lockup.light.svg",
+   "aspect": 3.5583,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-liquor-distribution-branch-wholesale-site-lockup.dark.svg",
+   "aspect": 3.5583,
+   "recoloured": true
+  }
+ },
+ "source-expanded-sub-bcliquor-website-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-sub-bcliquor-website-logo.light.svg",
+   "aspect": 4.5925,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-sub-bcliquor-website-logo.dark.svg",
+   "aspect": 4.5925,
+   "recoloured": true
+  }
+ },
+ "source-expanded-ldb-wholesale-website-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-ldb-wholesale-website-logo.light.svg",
+   "aspect": 3.7495,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-ldb-wholesale-website-logo.dark.svg",
+   "aspect": 3.7495,
+   "recoloured": true
+  }
+ },
+ "source-expanded-e-comm-aspire-plan-2019-colour": {
+  "light": {
+   "file": "identity-display/source-expanded-e-comm-aspire-plan-2019-colour.light.svg",
+   "aspect": 4.9103,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-e-comm-aspire-plan-2019-colour.dark.svg",
+   "aspect": 4.9103,
+   "recoloured": true
+  }
+ },
+ "source-expanded-etsi-bc-bylaws-2026-full-name-colour": {
+  "light": {
+   "file": "identity-display/source-expanded-etsi-bc-bylaws-2026-full-name-colour.light.svg",
+   "aspect": 4.3811,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-etsi-bc-bylaws-2026-full-name-colour.light.svg",
+   "aspect": 4.3811,
+   "recoloured": false
+  }
+ },
+ "source-expanded-etsi-bc-rac-terms-2024-full-name-reversed": {
+  "light": {
+   "file": "identity-display/source-expanded-etsi-bc-rac-terms-2024-full-name-reversed.light.svg",
+   "aspect": 4.2857,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-etsi-bc-rac-terms-2024-full-name-reversed.dark.svg",
+   "aspect": 4.2857,
+   "recoloured": false
+  }
+ },
+ "source-expanded-bc-pension-corporation-wave-2-plan-colour": {
+  "light": {
+   "file": "identity-display/source-expanded-bc-pension-corporation-wave-2-plan-colour.light.svg",
+   "aspect": 7.0022,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-bc-pension-corporation-wave-2-plan-colour.dark.svg",
+   "aspect": 7.0022,
+   "recoloured": false
+  }
+ },
+ "source-expanded-technical-safety-bc-website-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-technical-safety-bc-website-logo.light.svg",
+   "aspect": 3.5652,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-technical-safety-bc-website-logo.dark.svg",
+   "aspect": 3.5652,
+   "recoloured": true
+  }
+ },
+ "source-expanded-land-title-and-survey-authority-website-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-land-title-and-survey-authority-website-logo.light.svg",
+   "aspect": 4.9149,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-land-title-and-survey-authority-website-logo.dark.svg",
+   "aspect": 4.9149,
+   "recoloured": true
+  }
+ },
+ "source-expanded-sub-powerex-website-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-sub-powerex-website-logo.light.svg",
+   "aspect": 3.3274,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-sub-powerex-website-logo.dark.svg",
+   "aspect": 3.3274,
+   "recoloured": false
+  }
+ },
+ "source-expanded-sub-playnow-website-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-sub-playnow-website-logo.light.svg",
+   "aspect": 6.9318,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-sub-playnow-website-logo.dark.svg",
+   "aspect": 6.9318,
+   "recoloured": true
+  }
+ },
+ "source-expanded-sub-vancouver-convention-centre-sustainability-toolkit-reversed": {
+  "light": {
+   "file": "identity-display/source-expanded-sub-vancouver-convention-centre-sustainability-toolkit-reversed.light.svg",
+   "aspect": 3.5126,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-sub-vancouver-convention-centre-sustainability-toolkit-reversed.dark.svg",
+   "aspect": 3.5126,
+   "recoloured": false
+  }
+ },
+ "bc-womens-2024-foundation-impact-report": {
+  "light": {
+   "file": "identity-display/bc-womens-2024-foundation-impact-report.light.svg",
+   "aspect": 4.434,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-womens-2024-foundation-impact-report.light.svg",
+   "aspect": 4.434,
+   "recoloured": false
+  }
+ },
+ "bccdc-2021-research-report": {
+  "light": {
+   "file": "identity-display/bccdc-2021-research-report.light.svg",
+   "aspect": 3.1551,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bccdc-2021-research-report.dark.svg",
+   "aspect": 3.1551,
+   "recoloured": true
+  }
+ },
+ "bcehs-2024-progress-report-endorsed": {
+  "light": {
+   "file": "identity-display/bcehs-2024-progress-report-endorsed.light.svg",
+   "aspect": 5.8992,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcehs-2024-progress-report-endorsed.dark.svg",
+   "aspect": 5.8992,
+   "recoloured": true
+  }
+ },
+ "bcehs-website-layout-rebuilt": {
+  "light": {
+   "file": "identity-display/bcehs-website-layout-rebuilt.light.svg",
+   "aspect": 8.1959,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcehs-website-layout-rebuilt.dark.svg",
+   "aspect": 8.1959,
+   "recoloured": true
+  }
+ },
+ "source-expanded-university-of-northern-bc-website-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-university-of-northern-bc-website-logo.light.svg",
+   "aspect": 5.7893,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-university-of-northern-bc-website-logo.dark.svg",
+   "aspect": 5.7893,
+   "recoloured": true
+  }
+ },
+ "source-expanded-simon-fraser-university-powerpoint-horizontal-colour": {
+  "light": {
+   "file": "identity-display/source-expanded-simon-fraser-university-powerpoint-horizontal-colour.light.svg",
+   "aspect": 4.2438,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-simon-fraser-university-powerpoint-horizontal-colour.dark.svg",
+   "aspect": 4.2438,
+   "recoloured": true
+  }
+ },
+ "source-expanded-university-of-victoria-website-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-university-of-victoria-website-logo.light.svg",
+   "aspect": 3.4718,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-university-of-victoria-website-logo.dark.svg",
+   "aspect": 3.4718,
+   "recoloured": true
+  }
+ },
+ "source-expanded-translink-t-marker-toolkit-t-marker": {
+  "light": {
+   "file": "identity-display/source-expanded-translink-t-marker-toolkit-t-marker.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-translink-t-marker-toolkit-t-marker.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  }
+ },
+ "source-expanded-skytrain-toolkit-wordmark": {
+  "light": {
+   "file": "identity-display/source-expanded-skytrain-toolkit-wordmark.light.svg",
+   "aspect": 4.5558,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-skytrain-toolkit-wordmark.dark.svg",
+   "aspect": 4.5558,
+   "recoloured": true
+  }
+ },
+ "source-expanded-metro-vancouver-full-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-metro-vancouver-full-logo.light.svg",
+   "aspect": 6.8781,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-metro-vancouver-full-logo.dark.svg",
+   "aspect": 6.8781,
+   "recoloured": true
+  }
+ },
+ "source-expanded-metro-vancouver-wordmark": {
+  "light": {
+   "file": "identity-display/source-expanded-metro-vancouver-wordmark.light.svg",
+   "aspect": 11.4099,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-metro-vancouver-wordmark.dark.svg",
+   "aspect": 11.4099,
+   "recoloured": true
+  }
+ },
+ "source-expanded-handydart-customer-first-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-handydart-customer-first-logo.light.svg",
+   "aspect": 1.9779,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-handydart-customer-first-logo.dark.svg",
+   "aspect": 1.9779,
+   "recoloured": true
+  }
+ },
+ "source-expanded-bc-arts-council-provincial-lockup": {
+  "light": {
+   "file": "identity-display/source-expanded-bc-arts-council-provincial-lockup.light.svg",
+   "aspect": 5.9514,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-bc-arts-council-provincial-lockup.dark.svg",
+   "aspect": 5.9514,
+   "recoloured": true
+  }
+ },
+ "source-expanded-science-world-black-wordmark": {
+  "light": {
+   "file": "identity-display/source-expanded-science-world-black-wordmark.light.svg",
+   "aspect": 1.7799,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-science-world-black-wordmark.dark.svg",
+   "aspect": 1.7799,
+   "recoloured": true
+  }
+ },
+ "source-expanded-university-of-british-columbia-full-signature": {
+  "light": {
+   "file": "identity-display/source-expanded-university-of-british-columbia-full-signature.light.svg",
+   "aspect": 7.6001,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-university-of-british-columbia-full-signature.dark.svg",
+   "aspect": 7.6001,
+   "recoloured": true
+  }
+ },
+ "source-expanded-sub-bc-place-website-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-sub-bc-place-website-logo.light.svg",
+   "aspect": 3.5855,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-sub-bc-place-website-logo.dark.svg",
+   "aspect": 3.5855,
+   "recoloured": false
+  }
+ },
+ "source-expanded-bcit-website-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-bcit-website-logo.light.svg",
+   "aspect": 1.0947,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-bcit-website-logo.light.svg",
+   "aspect": 1.0947,
+   "recoloured": false
+  }
+ },
+ "rebuild-expanded-compass-needle-symbol": {
+  "light": {
+   "file": "identity-display/rebuild-expanded-compass-needle-symbol.light.svg",
+   "aspect": 1.003,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rebuild-expanded-compass-needle-symbol.light.svg",
+   "aspect": 1.003,
+   "recoloured": false
+  }
+ },
+ "rebuild-expanded-compass-c-symbol": {
+  "light": {
+   "file": "identity-display/rebuild-expanded-compass-c-symbol.light.svg",
+   "aspect": 1.003,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rebuild-expanded-compass-c-symbol.light.svg",
+   "aspect": 1.003,
+   "recoloured": false
+  }
+ },
+ "municipal-abbotsford-annual-report-2025": {
+  "light": {
+   "file": "identity-display/municipal-abbotsford-annual-report-2025.light.svg",
+   "aspect": 2.5025,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-abbotsford-annual-report-2025.dark.svg",
+   "aspect": 2.5025,
+   "recoloured": true
+  }
+ },
+ "source-municipal-burnaby-website-logo": {
+  "light": {
+   "file": "identity-display/source-municipal-burnaby-website-logo.light.svg",
+   "aspect": 2.4007,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-municipal-burnaby-website-logo.light.svg",
+   "aspect": 2.4007,
+   "recoloured": false
+  }
+ },
+ "municipal-burns-lake-housing-needs-report-2024": {
+  "light": {
+   "file": "identity-display/municipal-burns-lake-housing-needs-report-2024.light.svg",
+   "aspect": 1.4584,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-burns-lake-housing-needs-report-2024.dark.svg",
+   "aspect": 1.4584,
+   "recoloured": true
+  }
+ },
+ "municipal-chilliwack-climate-action-plan-2022": {
+  "light": {
+   "file": "identity-display/municipal-chilliwack-climate-action-plan-2022.light.svg",
+   "aspect": 5.8243,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-chilliwack-climate-action-plan-2022.dark.svg",
+   "aspect": 5.8243,
+   "recoloured": true
+  }
+ },
+ "municipal-chilliwack-climate-actions-summary-stacked": {
+  "light": {
+   "file": "identity-display/municipal-chilliwack-climate-actions-summary-stacked.light.svg",
+   "aspect": 1.6214,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-chilliwack-climate-actions-summary-stacked.dark.svg",
+   "aspect": 1.6214,
+   "recoloured": true
+  }
+ },
+ "municipal-coquitlam-treasury-report-2025-white": {
+  "light": {
+   "file": "identity-display/municipal-coquitlam-treasury-report-2025-white.light.svg",
+   "aspect": 3.8961,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-coquitlam-treasury-report-2025-white.dark.svg",
+   "aspect": 3.8961,
+   "recoloured": false
+  }
+ },
+ "municipal-coquitlam-treasury-report-2025": {
+  "light": {
+   "file": "identity-display/municipal-coquitlam-treasury-report-2025.light.svg",
+   "aspect": 3.8997,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-coquitlam-treasury-report-2025.dark.svg",
+   "aspect": 3.8997,
+   "recoloured": true
+  }
+ },
+ "municipal-dawson-creek-community-profile-2024": {
+  "light": {
+   "file": "identity-display/municipal-dawson-creek-community-profile-2024.light.svg",
+   "aspect": 2.6598,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-dawson-creek-community-profile-2024.dark.svg",
+   "aspect": 2.6598,
+   "recoloured": true
+  }
+ },
+ "municipal-fort-st-john-ocp-2025-stacked": {
+  "light": {
+   "file": "identity-display/municipal-fort-st-john-ocp-2025-stacked.light.svg",
+   "aspect": 1.5183,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-fort-st-john-ocp-2025-stacked.light.svg",
+   "aspect": 1.5183,
+   "recoloured": false
+  }
+ },
+ "municipal-kamloops-annual-report-2025": {
+  "light": {
+   "file": "identity-display/municipal-kamloops-annual-report-2025.light.svg",
+   "aspect": 1.5951,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-kamloops-annual-report-2025.dark.svg",
+   "aspect": 1.5951,
+   "recoloured": false
+  }
+ },
+ "municipal-mackenzie-brand-book-2018": {
+  "light": {
+   "file": "identity-display/municipal-mackenzie-brand-book-2018.light.svg",
+   "aspect": 2.4988,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-mackenzie-brand-book-2018.dark.svg",
+   "aspect": 2.4988,
+   "recoloured": true
+  }
+ },
+ "municipal-nanaimo-annual-report-2025": {
+  "light": {
+   "file": "identity-display/municipal-nanaimo-annual-report-2025.light.svg",
+   "aspect": 4.1892,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-nanaimo-annual-report-2025.dark.svg",
+   "aspect": 4.1892,
+   "recoloured": true
+  }
+ },
+ "municipal-prince-george-annual-report-2025-horizontal": {
+  "light": {
+   "file": "identity-display/municipal-prince-george-annual-report-2025-horizontal.light.svg",
+   "aspect": 2.3042,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-prince-george-annual-report-2025-horizontal.dark.svg",
+   "aspect": 2.3042,
+   "recoloured": true
+  }
+ },
+ "municipal-prince-rupert-community-assessment-2024": {
+  "light": {
+   "file": "identity-display/municipal-prince-rupert-community-assessment-2024.light.svg",
+   "aspect": 1.3755,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-prince-rupert-community-assessment-2024.dark.svg",
+   "aspect": 1.3755,
+   "recoloured": true
+  }
+ },
+ "municipal-quesnel-brand-guidelines-2016": {
+  "light": {
+   "file": "identity-display/municipal-quesnel-brand-guidelines-2016.light.svg",
+   "aspect": 3.1771,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-quesnel-brand-guidelines-2016.dark.svg",
+   "aspect": 3.1771,
+   "recoloured": true
+  }
+ },
+ "municipal-quesnel-brand-guidelines-2016-compact": {
+  "light": {
+   "file": "identity-display/municipal-quesnel-brand-guidelines-2016-compact.light.svg",
+   "aspect": 3.94,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-quesnel-brand-guidelines-2016-compact.dark.svg",
+   "aspect": 3.94,
+   "recoloured": true
+  }
+ },
+ "municipal-richmond-strategic-plan-highlights": {
+  "light": {
+   "file": "identity-display/municipal-richmond-strategic-plan-highlights.light.svg",
+   "aspect": 3.6987,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-richmond-strategic-plan-highlights.dark.svg",
+   "aspect": 3.6987,
+   "recoloured": true
+  }
+ },
+ "source-municipal-saanich-website-logo": {
+  "light": {
+   "file": "identity-display/source-municipal-saanich-website-logo.light.svg",
+   "aspect": 1.4345,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-municipal-saanich-website-logo.dark.svg",
+   "aspect": 1.4345,
+   "recoloured": true
+  }
+ },
+ "municipal-smithers-new-residents-guide-2026": {
+  "light": {
+   "file": "identity-display/municipal-smithers-new-residents-guide-2026.light.svg",
+   "aspect": 2.396,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-smithers-new-residents-guide-2026.dark.svg",
+   "aspect": 2.396,
+   "recoloured": true
+  }
+ },
+ "municipal-smithers-new-residents-guide-2026-tagline-white": {
+  "light": {
+   "file": "identity-display/municipal-smithers-new-residents-guide-2026-tagline-white.light.svg",
+   "aspect": 5.8274,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-smithers-new-residents-guide-2026-tagline-white.dark.svg",
+   "aspect": 5.8274,
+   "recoloured": false
+  }
+ },
+ "source-municipal-surrey-website-logo": {
+  "light": {
+   "file": "identity-display/source-municipal-surrey-website-logo.light.svg",
+   "aspect": 3.1416,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-municipal-surrey-website-logo.dark.svg",
+   "aspect": 3.1416,
+   "recoloured": false
+  }
+ },
+ "source-municipal-vanderhoof-website-logo": {
+  "light": {
+   "file": "identity-display/source-municipal-vanderhoof-website-logo.light.svg",
+   "aspect": 5.0889,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-municipal-vanderhoof-website-logo.dark.svg",
+   "aspect": 5.0889,
+   "recoloured": true
+  }
+ },
+ "source-municipal-vanderhoof-website-logo-white": {
+  "light": {
+   "file": "identity-display/source-municipal-vanderhoof-website-logo-white.light.svg",
+   "aspect": 5.1021,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-municipal-vanderhoof-website-logo-white.dark.svg",
+   "aspect": 5.1021,
+   "recoloured": false
+  }
+ },
+ "municipal-victoria-property-tax-sheet-2025": {
+  "light": {
+   "file": "identity-display/municipal-victoria-property-tax-sheet-2025.light.svg",
+   "aspect": 2.3181,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-victoria-property-tax-sheet-2025.dark.svg",
+   "aspect": 2.3181,
    "recoloured": true
   }
  }

@@ -426,6 +426,37 @@ for (const { search, register: history } of HISTORIES) {
     additions.get(bodyId).push(checked({ ...asset, search }))
   }
 }
+// The 16 November vector searches: each package proposes SVGs for marks the gallery held only as
+// images — originals found as vector paths in official PDFs or on official sites, and, where none
+// exists, reconstructions that say so. Each file is checked here for what it claims: no embedded
+// image, no live text, no outside reference.
+const FOLDED = new Map()
+const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16', 'current-bodies-vector-2026-11-16', 'railway-marks-vector-2026-11-16']
+const pureVector = (asset) => {
+  const svg = readFileSync(new URL(`public/${asset.file}`, root), 'utf8')
+  if (/<(?:\w+:)?(?:image|text|foreignObject|script)\b/i.test(svg) || /(?:xlink:)?href\s*=\s*["'](?!#)/i.test(svg)) {
+    throw new Error(`Not pure vector: ${asset.id}`)
+  }
+  return asset
+}
+for (const search of VECTOR_SEARCHES) for (const { dataFile, bodyId, program, targetAssetId, sameDesign = true, asset } of read(`research/identity/${search}/proposed-assets.json`)) {
+  if (dataFile !== 'collectedData.js') continue
+  // A body's file, or a one-off program's specimen (Shared Services BC's), filed under that program.
+  const owner = bodyId ?? program
+  if (bodyId ? !bodyIds.has(bodyId) : !additions.has(program)) throw new Error(`Unknown owner: ${owner}`)
+  if (asset.format !== 'svg' || !asset.isVector || asset.search !== search) throw new Error(`Unexpected record for ${asset.id}`)
+  if (!additions.has(owner)) additions.set(owner, [])
+  additions.get(owner).push(checked(pureVector(asset)))
+  // The image it was drawn from, or found in place of, becomes a version of it, so the vector
+  // leads the card and the image stays beside it as evidence.
+  if (sameDesign && !VARIANT_OF[targetAssetId]) {
+    for (const [id, keeper] of Object.entries(VARIANT_OF)) if (keeper === targetAssetId) VARIANT_OF[id] = asset.id
+    VARIANT_OF[targetAssetId] = asset.id
+    FOLDED.set(targetAssetId, asset.id)
+    VERSION_LABELS[targetAssetId] ??= 'Published image'
+    VERSION_LABELS[asset.id] ??= asset.reconstruction ? 'Vector reconstruction' : 'Vector'
+  }
+}
 for (const { bodyId, verification, ...asset } of historical.assets) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown historical body: ${bodyId}`)
   if (asset.isVector && (!verification?.genuineVectorVerified || verification.embeddedImages !== 0 || verification.textElements !== 0 || verification.externalResources?.length !== 0)) {
@@ -527,6 +558,8 @@ if (contextByFile.size) throw new Error('Unassigned railway supporting images')
 const railwayIds = new Set(bodies.filter((body) => ['pacific-great-eastern-railway', 'bc-railway-company'].includes(body.id))
   .flatMap((body) => body.assets.map((asset) => asset.id)))
 const railwayVersions = bodies.flatMap((body) => body.assets).filter((asset) => asset.variantOf)
+// An era that named an image now names the vector drawn in its place, which carries it as a version.
+for (const era of railwayHistory.eras) if (era.assetIds) era.assetIds = era.assetIds.map((id) => FOLDED.get(id) ?? id)
 for (const era of railwayHistory.eras) for (const id of era.assetIds ?? []) {
   if (!railwayIds.delete(id)) throw new Error(`Missing or repeated railway logo: ${id}`)
   // A design's other colourways go with it.

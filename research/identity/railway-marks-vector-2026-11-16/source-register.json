@@ -1,0 +1,628 @@
+{
+ "package": "railway-marks-vector-2026-11-16",
+ "observedDate": "2026-11-16",
+ "sources": [
+  {
+   "url": "https://bcrco.com/ and https://www.bcrco.com/",
+   "outcome": "blocked",
+   "notes": "TLS certificate does not match the host (curl error 60) through this session's proxy; http:// redirects to https://. Site not read directly; Wayback Machine used instead."
+  },
+  {
+   "url": "https://web.archive.org/cdx/search/cdx?url=bcrco.com/*",
+   "outcome": "read",
+   "notes": "543 captured URLs; 63 archived PDFs (status 200, application/pdf) and the logo image files listed below were fetched with the id_ suffix."
+  },
+  {
+   "url": "https://web.archive.org/web/20090704192053id_/http://www.bcrco.com:80/08disclosure.pdf",
+   "original": "http://www.bcrco.com:80/08disclosure.pdf",
+   "capture": "20090704192053",
+   "sha256": "17cb589787a257e3a0bd5d142bdbe6318205dd57fd83425bb144451a4589438e",
+   "bytes": 32989,
+   "pages": 3,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20100910131227id_/http://bcrco.com:80/09disclosure.pdf",
+   "original": "http://bcrco.com:80/09disclosure.pdf",
+   "capture": "20100910131227",
+   "sha256": "8a48c2fb2cf534a402723b80ff589080effd25befe4036191ed1e436a8b0a8b3",
+   "bytes": 35999,
+   "pages": 3,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20210308012059id_/http://www.bcrco.com/11disclosure.pdf",
+   "original": "http://www.bcrco.com/11disclosure.pdf",
+   "capture": "20210308012059",
+   "sha256": "e09d2d1b22bc66924f83825873b1587b0a92196ba67bc4b1366d7bddd19bb819",
+   "bytes": 41779,
+   "pages": 3,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20060826024544id_/http://www.bcrco.com:80/2001report.pdf",
+   "original": "http://www.bcrco.com:80/2001report.pdf",
+   "capture": "20060826024544",
+   "sha256": "75b0c17304260714059ebc529a3cde85b38da88339eeeadfecd505a846c80d22",
+   "bytes": 1957915,
+   "pages": 35,
+   "outcome": "inspected: blue BCRC monogram cover mark as vector paths: a different, earlier mark, not the target; not extracted"
+  },
+  {
+   "url": "https://web.archive.org/web/20060826024803id_/http://www.bcrco.com:80/2002report.pdf",
+   "original": "http://www.bcrco.com:80/2002report.pdf",
+   "capture": "20060826024803",
+   "sha256": "1a386b57201d5199acdd8c57cc10004c7f2fc7d52c18695f674c8e179f2e8f5e",
+   "bytes": 1215345,
+   "pages": 50,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20060826024807id_/http://www.bcrco.com:80/2003report.pdf",
+   "original": "http://www.bcrco.com:80/2003report.pdf",
+   "capture": "20060826024807",
+   "sha256": "63bf49ace1da34819aa569a33ac70076d0c9aebdeecaf564794e579793184839",
+   "bytes": 312102,
+   "pages": 38,
+   "outcome": "inspected: blue BCRC monogram cover mark as vector paths: a different, earlier mark, not the target; not extracted"
+  },
+  {
+   "url": "https://web.archive.org/web/20060826024126id_/http://www.bcrco.com:80/2004report.pdf",
+   "original": "http://www.bcrco.com:80/2004report.pdf",
+   "capture": "20060826024126",
+   "sha256": "6a1b555705ecd2fdb392cbd3b0976c31e7199edc846a2d857771895001772e4c",
+   "bytes": 436695,
+   "pages": 41,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20060826024816id_/http://www.bcrco.com:80/2005report.pdf",
+   "original": "http://www.bcrco.com:80/2005report.pdf",
+   "capture": "20060826024816",
+   "sha256": "a2df2335f65a871145d13eb5edae9f7361061a03e6b1dd27370b9649cbd7baf9",
+   "bytes": 749703,
+   "pages": 29,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20060503190747id_/http://www.bcrco.com:80/2005serveplan.pdf",
+   "original": "http://www.bcrco.com:80/2005serveplan.pdf",
+   "capture": "20060503190747",
+   "sha256": "debda08456cb03286a4c0cdc5c8471a996e7503b1043ac731d2fd4d55acd14d7",
+   "bytes": 97647,
+   "pages": 14,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20070809135859id_/http://www.bcrco.com/2006report.pdf",
+   "original": "http://www.bcrco.com/2006report.pdf",
+   "capture": "20070809135859",
+   "sha256": "3ec49ba4d35eda7e69e3e3eefb0ff9849b32ef480db8c1ca2ab80e8261f33819",
+   "bytes": 225405,
+   "pages": 42,
+   "outcome": "inspected: cover acrostic is live Eurostile-Demi text (different lettering)"
+  },
+  {
+   "url": "https://web.archive.org/web/20081204190353id_/http://www.bcrco.com/2007report.pdf",
+   "original": "http://www.bcrco.com/2007report.pdf",
+   "capture": "20081204190353",
+   "outcome": "download failed (connection reset)"
+  },
+  {
+   "url": "https://web.archive.org/web/20160429091036id_/http://www.bcrco.com:80/2008report.pdf",
+   "original": "http://www.bcrco.com:80/2008report.pdf",
+   "capture": "20160429091036",
+   "sha256": "b9fea85fb97d8214b01b59919b7a2af9153c917017c4eaeeea7ddd20b07f958c",
+   "bytes": 1282597,
+   "pages": 44,
+   "outcome": "inspected: cover acrostic is live Eurostile-Demi text (different lettering)"
+  },
+  {
+   "url": "https://web.archive.org/web/20081204190559id_/http://www.bcrco.com/2008servplan.pdf",
+   "original": "http://www.bcrco.com/2008servplan.pdf",
+   "capture": "20081204190559",
+   "sha256": "b4ebf716adfcb3b8e52e7ebb39be5f8c5bd79500d765a6a6a1a28f5f03afdbb9",
+   "bytes": 130707,
+   "outcome": "unreadable (capture truncated at 1 MiB or damaged)"
+  },
+  {
+   "url": "https://web.archive.org/web/20160429091041id_/http://www.bcrco.com:80/2009report.pdf",
+   "original": "http://www.bcrco.com:80/2009report.pdf",
+   "capture": "20160429091041",
+   "sha256": "c576a7eb83c62369f275aa9dc53d4245b9eaf9f3e711481eb90ccedfbe61a57f",
+   "bytes": 1268529,
+   "pages": 39,
+   "outcome": "inspected: cover acrostic is live Eurostile-Demi text (different lettering; prior package)"
+  },
+  {
+   "url": "https://web.archive.org/web/20090704192058id_/http://www.bcrco.com:80/2009servplan.pdf",
+   "original": "http://www.bcrco.com:80/2009servplan.pdf",
+   "capture": "20090704192058",
+   "sha256": "759c21f8df00c08f4cb2e269a9d8f152352c7d75b53de5f962211bcdcab803d1",
+   "bytes": 142382,
+   "pages": 25,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20220627165319id_/https://bcrco.com/2017fia.pdf",
+   "original": "https://bcrco.com/2017fia.pdf",
+   "capture": "20220627165319",
+   "sha256": "38f2eebdfe8d9c81c32d90bd19080bec0fa3f17498a98e95ea6f27fae3f0fe25",
+   "bytes": 1048576,
+   "outcome": "unreadable (capture truncated at 1 MiB or damaged)"
+  },
+  {
+   "url": "https://web.archive.org/web/20200719110703id_/https://www.bcrco.com/20plan.pdf",
+   "original": "https://www.bcrco.com/20plan.pdf",
+   "capture": "20200719110703",
+   "sha256": "1e40185f117e3edbc0aafbc26932963a353542f77aff09b3579098b8a23098ae",
+   "bytes": 81994,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20220812144439id_/https://bcrco.com/22fire.pdf",
+   "original": "https://bcrco.com/22fire.pdf",
+   "capture": "20220812144439",
+   "sha256": "848a699e18c5b0e0bf4515a9b1ffcb58a48585917f9b3f9dd310406af4b89699",
+   "bytes": 1048576,
+   "pages": 23,
+   "outcome": "inspected: BCR Properties logo bitmap"
+  },
+  {
+   "url": "https://web.archive.org/web/20140825204317id_/http://bcrco.com/audio_policy.pdf",
+   "original": "http://bcrco.com/audio_policy.pdf",
+   "capture": "20140825204317",
+   "sha256": "c59164ca070d3fc8d4b3c3de99980ed63b4e789d18ba9766ad485f0482dc253c",
+   "bytes": 52805,
+   "pages": 3,
+   "outcome": "inspected: acrostic as 193 x 93 bitmap"
+  },
+  {
+   "url": "https://web.archive.org/web/20110905050955id_/http://www.bcrco.com/bios/gm_bio.pdf",
+   "original": "http://www.bcrco.com/bios/gm_bio.pdf",
+   "capture": "20110905050955",
+   "sha256": "15ae8c5584e7ba351358429450a6f1abc50fc66f8419748756e29573bf109d48",
+   "bytes": 218178,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20210828094356id_/https://www.bcrco.com/bios/kk_bio.pdf",
+   "original": "https://www.bcrco.com/bios/kk_bio.pdf",
+   "capture": "20210828094356",
+   "sha256": "155a171904874d05f32fd6d61f96e81d8278f030be621159d02a819c14cad6b8",
+   "bytes": 48125,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20230205144048id_/https://bcrco.com/Bod2022.pdf",
+   "original": "https://bcrco.com/Bod2022.pdf",
+   "capture": "20230205144048",
+   "sha256": "a39026d807c6e0630a0d8ad54bc3b2a11d8aa9815376a7e169ffbb2305babf02",
+   "bytes": 40435,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20240621235605id_/https://bcrco.com/BoDatt2020.pdf",
+   "original": "https://bcrco.com/BoDatt2020.pdf",
+   "capture": "20240621235605",
+   "sha256": "e31c53dd8a41386adcdbc7f44f98265fafd222e7d6fb42ae57011edc5fa7c4bf",
+   "bytes": 42187,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20240805120932id_/https://bcrco.com/BoDatt2021.pdf",
+   "original": "https://bcrco.com/BoDatt2021.pdf",
+   "capture": "20240805120932",
+   "sha256": "13e9704d64c6176167d6004c86992c93943df3cd95ea08fe8fc27366a41bdfb7",
+   "bytes": 40342,
+   "pages": 1,
+   "outcome": "inspected: acrostic as 496 x 64 bitmap header"
+  },
+  {
+   "url": "https://web.archive.org/web/20060618202554id_/http://www.bcrco.com:80/bodattend.pdf",
+   "original": "http://www.bcrco.com:80/bodattend.pdf",
+   "capture": "20060618202554",
+   "sha256": "f5506dc8cd20150fa29c74178c1eb1fe537f7c5095fec5350bc139c0fbb130d7",
+   "bytes": 38879,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20070127171425id_/http://www.bcrco.com:80/bodattend2.pdf",
+   "original": "http://www.bcrco.com:80/bodattend2.pdf",
+   "capture": "20070127171425",
+   "sha256": "b8c5b2c447b163aae7ea0ebdba9331098def100a0702bf33fbf20f73c7342117",
+   "bytes": 12844,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20080719121621id_/http://www.bcrco.com/bodattend3.pdf",
+   "original": "http://www.bcrco.com/bodattend3.pdf",
+   "capture": "20080719121621",
+   "sha256": "2f75597ed63cde4be8ff64cbf544ac998db81e69dcb0c2e18ba5fb76fcca1a39",
+   "bytes": 32239,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20090423225242id_/http://www.bcrco.com:80/bodattend4.pdf",
+   "original": "http://www.bcrco.com:80/bodattend4.pdf",
+   "capture": "20090423225242",
+   "sha256": "630f32cef485b22467ed198447f8088981b4ec48f4d7f7def05b36c143f77e30",
+   "bytes": 29923,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20150813001927id_/http://bcrco.com/coc_policy.pdf",
+   "original": "http://bcrco.com/coc_policy.pdf",
+   "capture": "20150813001927",
+   "sha256": "39491021ea91e38de880148f6f1d9adf806e3a55382df7170fb79546ed517116",
+   "bytes": 125881,
+   "pages": 11,
+   "outcome": "inspected: acrostic as 274 x 132 bitmap"
+  },
+  {
+   "url": "https://web.archive.org/web/20240620184619id_/https://bcrco.com/compensation2021.pdf",
+   "original": "https://bcrco.com/compensation2021.pdf",
+   "capture": "20240620184619",
+   "sha256": "180608b016ed62f8dbd99ee261650f1787a69c15b18502de5440974e99991b31",
+   "bytes": 151188,
+   "pages": 3,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20060618202611id_/http://www.bcrco.com:80/conduct.pdf",
+   "original": "http://www.bcrco.com:80/conduct.pdf",
+   "capture": "20060618202611",
+   "sha256": "a6e14339ed082c023067ae0ead4f770e001cd0c114d212ba21d0a170e1681517",
+   "bytes": 105470,
+   "pages": 9,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20101230011606id_/http://bcrco.com/fia2009.pdf",
+   "original": "http://bcrco.com/fia2009.pdf",
+   "capture": "20101230011606",
+   "sha256": "e62da08dc51ca87dd90219f8de736cb4f147ecc15def43d39d56c568b4213345",
+   "bytes": 175314,
+   "pages": 8,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20220627170904id_/https://bcrco.com/fia2018.pdf",
+   "original": "https://bcrco.com/fia2018.pdf",
+   "capture": "20220627170904",
+   "sha256": "e4c8a2ded4b0715c5adb4cec19e5cd5454fb4884f5d0fa0b588a3ffa688d7f8d",
+   "bytes": 471628,
+   "pages": 41,
+   "outcome": "inspected: cover acrostic is an embedded 600 x 327 bitmap (same in fia2019-2021)"
+  },
+  {
+   "url": "https://web.archive.org/web/20220627181515id_/https://bcrco.com/fia2019.pdf",
+   "original": "https://bcrco.com/fia2019.pdf",
+   "capture": "20220627181515",
+   "sha256": "7df65a19d1412d7ed7d6293feec97293df969a070eb05b4c0fed2bd28e3135fc",
+   "bytes": 430332,
+   "pages": 40,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20220627165053id_/https://bcrco.com/fia2020.pdf",
+   "original": "https://bcrco.com/fia2020.pdf",
+   "capture": "20220627165053",
+   "sha256": "e5f3ac230923861deeec468494b6ddc1a550641dd152c5e254168b1003612c1b",
+   "bytes": 825485,
+   "pages": 45,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20220627175648id_/https://bcrco.com/fia2021.pdf",
+   "original": "https://bcrco.com/fia2021.pdf",
+   "capture": "20220627175648",
+   "sha256": "6b9d2c6f9f3b13e6cebe891dad176762a3e4cf5846590386525be79800d341ea",
+   "bytes": 646573,
+   "pages": 44,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20221206230137id_/https://bcrco.com/fia2022.pdf",
+   "original": "https://bcrco.com/fia2022.pdf",
+   "capture": "20221206230137",
+   "sha256": "76d87ed7dd59c914e88edcad206e39680a513210d82d1ba766a1771da4cb6905",
+   "bytes": 1048576,
+   "pages": 47,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20221207005553id_/https://bcrco.com/ivm2022.pdf",
+   "original": "https://bcrco.com/ivm2022.pdf",
+   "capture": "20221207005553",
+   "sha256": "61716b49bdee031934e6ff2b40b84a6537a9fe007c190a91d3c42a71ce0d2ead",
+   "bytes": 1048576,
+   "outcome": "unreadable (capture truncated at 1 MiB or damaged)"
+  },
+  {
+   "url": "https://web.archive.org/web/20220627173730id_/https://bcrco.com/ivm2022draft.pdf",
+   "original": "https://bcrco.com/ivm2022draft.pdf",
+   "capture": "20220627173730",
+   "sha256": "a2d5c3b240b3da6cbc338624bc9e2c04aa3d9350cafe1fc60e79916a04f78029",
+   "bytes": 1048576,
+   "outcome": "unreadable (capture truncated at 1 MiB or damaged)"
+  },
+  {
+   "url": "https://web.archive.org/web/20070809140021id_/http://www.bcrco.com/IVMPLAN2007.pdf",
+   "original": "http://www.bcrco.com/IVMPLAN2007.pdf",
+   "capture": "20070809140021",
+   "sha256": "d207e9f7a486932facc21811011dfa42edfb2c27cc84338cd552fb02b14f1d3d",
+   "bytes": 2033746,
+   "pages": 45,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20070809135726id_/http://www.bcrco.com/kinder_news.pdf",
+   "original": "http://www.bcrco.com/kinder_news.pdf",
+   "capture": "20070809135726",
+   "sha256": "3b1c97390f9d7730c14bd060d699f19f9e6e5726283d6b7ad1bb0c3333f5fc58",
+   "bytes": 21733,
+   "pages": 2,
+   "outcome": "inspected: acrostic as live Verdana Bold Italic text (letterhead lettering, already extracted by bc-railway-vector-2026-11-12)"
+  },
+  {
+   "url": "https://web.archive.org/web/20220627183903id_/https://bcrco.com/kk_bio.pdf",
+   "original": "https://bcrco.com/kk_bio.pdf",
+   "capture": "20220627183903",
+   "sha256": "155a171904874d05f32fd6d61f96e81d8278f030be621159d02a819c14cad6b8",
+   "bytes": 48125,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20060618202809id_/http://www.bcrco.com:80/operating.pdf",
+   "original": "http://www.bcrco.com:80/operating.pdf",
+   "capture": "20060618202809",
+   "sha256": "e2b4434c87bad91d0672d2e7eaf48fc2e8c003ac91e9dbdeea41b671298280b0",
+   "bytes": 78616,
+   "pages": 3,
+   "outcome": "inspected: acrostic as 278 x 57 bitmap"
+  },
+  {
+   "url": "https://web.archive.org/web/20100910131315id_/http://bcrco.com:80/renumeration2010.pdf",
+   "original": "http://bcrco.com:80/renumeration2010.pdf",
+   "capture": "20100910131315",
+   "sha256": "3d50945abe635f5b9beaa8ecc6cfaff0b6381985d5bef960c0af55123bf03965",
+   "bytes": 54780,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20070809135846id_/http://www.bcrco.com/serveplan.pdf",
+   "original": "http://www.bcrco.com/serveplan.pdf",
+   "capture": "20070809135846",
+   "sha256": "ece96ce7cb5622bb6618202be0a913f650508222a550b9c158335be6dd92537f",
+   "bytes": 157295,
+   "pages": 22,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20251015013430id_/http://bcrco.com/sfi_2012_13.pdf",
+   "original": "http://bcrco.com/sfi_2012_13.pdf",
+   "capture": "20251015013430",
+   "sha256": "33d364b7c0704037b056bdf65d690627c40ee2a390a471ac3ad6af2ce372b422",
+   "bytes": 193887,
+   "outcome": "unreadable (capture truncated at 1 MiB or damaged)"
+  },
+  {
+   "url": "https://web.archive.org/web/20060618202821id_/http://www.bcrco.com:80/termsAFRM.pdf",
+   "original": "http://www.bcrco.com:80/termsAFRM.pdf",
+   "capture": "20060618202821",
+   "sha256": "acfd1c87089f2ae8cf89b099fd6b4b2b2369da4e27a8667dce72ff6865d442bf",
+   "bytes": 89185,
+   "pages": 7,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20060618202919id_/http://www.bcrco.com:80/termsBOARD.pdf",
+   "original": "http://www.bcrco.com:80/termsBOARD.pdf",
+   "capture": "20060618202919",
+   "sha256": "0958b8d7a3c038a4bfcb2549bee6907007b7acaa579f1643440a0e62622e0ab6",
+   "bytes": 22158,
+   "pages": 3,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20060618202931id_/http://www.bcrco.com:80/termsCHAIR.pdf",
+   "original": "http://www.bcrco.com:80/termsCHAIR.pdf",
+   "capture": "20060618202931",
+   "sha256": "fa1b2ab2750d95553ca8f8861bc8197a1ca04012f8e4e513d87540de00cf976c",
+   "bytes": 8741,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20070701122004id_/http://www.bcrco.com/termsE&S.pdf",
+   "original": "http://www.bcrco.com/termsE&S.pdf",
+   "capture": "20070701122004",
+   "sha256": "36492ac26b4f526ddf08d2abb6a0cc6110d65ddec545b125c351ee60f633d4ed",
+   "bytes": 102929,
+   "pages": 5,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20081121175553id_/http://bcrco.com/termsECD.pdf",
+   "original": "http://bcrco.com/termsECD.pdf",
+   "capture": "20081121175553",
+   "sha256": "12d0953cd5d9a31d5ec9e56f80626ee2779f2ccc74b871d321bc1ef911bd19c3",
+   "bytes": 69248,
+   "pages": 4,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20060618202836id_/http://www.bcrco.com:80/termsHRGN.pdf",
+   "original": "http://www.bcrco.com:80/termsHRGN.pdf",
+   "capture": "20060618202836",
+   "sha256": "044d7c24f128595c1e231466863eedc73d400223b2c4681bf705d1d580dd928b",
+   "bytes": 67001,
+   "pages": 3,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20060618202849id_/http://www.bcrco.com:80/termsRESA.pdf",
+   "original": "http://www.bcrco.com:80/termsRESA.pdf",
+   "capture": "20060618202849",
+   "sha256": "1e9ec93f61f4a0e483203a85e000111947fcfdc87b6208a12ee37ff8d2c493d6",
+   "bytes": 63014,
+   "pages": 2,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20121221074457id_/http://www.bcrco.com/termsVWD.pdf",
+   "original": "http://www.bcrco.com/termsVWD.pdf",
+   "capture": "20121221074457",
+   "sha256": "ca9acc4077a178d25a209f05d446b008c6788f6532ca1ed3142bd922bd2aafe0",
+   "bytes": 56186,
+   "pages": 2,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20160306091404id_/http://bcrco.com/veg_mgmt_plan.pdf",
+   "original": "http://bcrco.com/veg_mgmt_plan.pdf",
+   "capture": "20160306091404",
+   "sha256": "d17afb9051b431cfe9adbf1ee97a25ae62400173786a064645563f53eb6b2679",
+   "bytes": 1475187,
+   "pages": 45,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20140824193711id_/http://bcrco.com/video_policy.pdf",
+   "original": "http://bcrco.com/video_policy.pdf",
+   "capture": "20140824193711",
+   "sha256": "7f36a6824515318567b8f09df13a997b487a230c291724a7844e32ffbc832168",
+   "bytes": 36226,
+   "pages": 3,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20060618202637id_/http://www.bcrco.com:80/vwl_news.pdf",
+   "original": "http://www.bcrco.com:80/vwl_news.pdf",
+   "capture": "20060618202637",
+   "sha256": "594f3da2ed67b6f1ee1115d62f884771e93a76acd5bd59b1932aef9bb384c647",
+   "bytes": 65699,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20230205134844id_/https://bcrco.com/wp1/wp-content/uploads/2022/08/BCRC-Executive-Compensation-Disclosure-2021-2022.pdf",
+   "original": "https://bcrco.com/wp1/wp-content/uploads/2022/08/BCRC-Executive-Compensation-Disclosure-2021-2022.pdf",
+   "capture": "20230205134844",
+   "sha256": "db5ec8b2d8dcc434e745d8406249234d8b1a49ff2f1655e34f637086099981f4",
+   "bytes": 169849,
+   "pages": 3,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20240423011942id_/https://bcrco.com/wp1/wp-content/uploads/2023/06/Bod2023.pdf",
+   "original": "https://bcrco.com/wp1/wp-content/uploads/2023/06/Bod2023.pdf",
+   "capture": "20240423011942",
+   "sha256": "6a15c8be346de0830b7e89265a58cf81d1ec52d01ee17066b5e294515bfaadbc",
+   "bytes": 40076,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20231225145720id_/https://bcrco.com/wp1/wp-content/uploads/2023/06/pida.pdf",
+   "original": "https://bcrco.com/wp1/wp-content/uploads/2023/06/pida.pdf",
+   "capture": "20231225145720",
+   "sha256": "26a1a45d022d96928f00189d1649b160563a1eb279001297287718437064ab40",
+   "bytes": 38888,
+   "pages": 1,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20240714145635id_/https://bcrco.com/wp1/wp-content/uploads/2023/06/privacy.pdf",
+   "original": "https://bcrco.com/wp1/wp-content/uploads/2023/06/privacy.pdf",
+   "capture": "20240714145635",
+   "sha256": "ef15d18f976c112aaee654d0c6c8e20ca0b436e30c22b76d0087446a79372b51",
+   "bytes": 94624,
+   "pages": 2,
+   "outcome": "inspected: Verdana-style acrostic as 276 x 152 bitmap"
+  },
+  {
+   "url": "https://web.archive.org/web/20240423002510id_/https://bcrco.com/wp1/wp-content/uploads/2023/08/execcomp2023.pdf",
+   "original": "https://bcrco.com/wp1/wp-content/uploads/2023/08/execcomp2023.pdf",
+   "capture": "20240423002510",
+   "sha256": "edb73a756bee87698d92f4a864e37fff4d76020f8b06c7b94a69d9d2047f9ad0",
+   "bytes": 125720,
+   "pages": 3,
+   "outcome": "inspected: no vector BCRC acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20231209045528id_/https://bcrco.com/wp1/wp-content/uploads/2023/09/FIA_2023.pdf",
+   "original": "https://bcrco.com/wp1/wp-content/uploads/2023/09/FIA_2023.pdf",
+   "capture": "20231209045528",
+   "sha256": "2bb576f54a67e9d967aa981b1f1fc2bd9b2d0fc4ff2fe6b43a1df175e8878905",
+   "bytes": 1048576,
+   "outcome": "unreadable (capture truncated at 1 MiB or damaged)"
+  },
+  {
+   "url": "https://web.archive.org/web/20060618202943id_/https://bcrco.com/.../bcrlogo.gif",
+   "capture": "20060618202943",
+   "sha256": "3b056df578d28697f2181e78dca1a0defdd2edb0bff865e612672ebc9e4fed70",
+   "outcome": "raster PNG/GIF only",
+   "notes": "2006 site header: BCR Properties mark, not the acrostic"
+  },
+  {
+   "url": "https://web.archive.org/web/20220708025602id_/https://bcrco.com/.../cropped-bcrco_logo.png",
+   "capture": "20220708025602",
+   "sha256": "f9113f87c5b37181781988242e8675ec35a8e34248ee9555c099c0968c40eeea",
+   "outcome": "raster PNG/GIF only",
+   "notes": "485 x 250 RGBA, 2022 capture of the same artwork as the current file; used as the fitting reference"
+  },
+  {
+   "url": "https://web.archive.org/web/20230815172004id_/https://bcrco.com/.../inner_logo.png",
+   "capture": "20230815172004",
+   "sha256": "02f43492b00fc9b571e62ec51b38a108f5eac85b2e2461e2c481aed715bc26db",
+   "outcome": "raster PNG/GIF only",
+   "notes": "identical bytes to bcrco_logo-1.png"
+  },
+  {
+   "url": "https://web.archive.org/web/20230815172005id_/https://bcrco.com/.../bcrco_logo.png",
+   "capture": "20230815172005",
+   "sha256": "000d86fb5182565864b76cb57630c9acfddf894acab0341d37e4c0a62022889a",
+   "outcome": "raster PNG/GIF only",
+   "notes": "462 x 238 RGBA, 2023 capture"
+  },
+  {
+   "url": "https://web.archive.org/web/20250109010631id_/https://bcrco.com/.../bcrco_logo-1.png",
+   "capture": "20250109010631",
+   "sha256": "02f43492b00fc9b571e62ec51b38a108f5eac85b2e2461e2c481aed715bc26db",
+   "outcome": "raster PNG/GIF only",
+   "notes": "236 x 124 RGBA, identical to the gallery file (sha256 02f434…)"
+  },
+  {
+   "url": "https://www.cwrailway.ca/sites/default/files/Cariboo/Cariboo%20-%20Issue%203.pdf",
+   "sha256": "c56778844ec827227151df1183bfeb9148bf01fe4d590ccd400302a8525f2b23",
+   "outcome": "read; the PGE illustrations are 1-bit ~300-dpi scans, so the registered 300-dpi crops already hold all available detail; the crops were used as fitting references"
+  },
+  {
+   "url": "https://streamlinermemories.info/CAN/PGEbro.pdf",
+   "sha256": "75c290d74bb0be83958230650803c62f39c5743b1a7b67f1e131dc35b6274a1f",
+   "outcome": "read; page 1 is a ~302-dpi JPEG; oval mark re-rendered at 302 dpi (clip 150,525-280,600 pt) as fitting reference; no vector content"
+  },
+  {
+   "url": "https://streamlinermemories.info/CAN/PGE55.pdf",
+   "sha256": "fe97c61d1fb537989aaf729dff7e1cc47091c32ce165f0fda483bc5c2dd9f77d",
+   "outcome": "read; page 1 is a ~302-dpi JPEG; circular mark re-rendered at 302 dpi (clip 70,0-200,125 pt) as fitting reference; no vector content"
+  },
+  {
+   "url": "https://github.com/google/fonts (raw files)",
+   "outcome": "typefaces downloaded for outlining: Source Sans 3 Italic, Poppins (ExtraBold, Black), Montserrat, Oswald, C059 (URW, installed); other candidates scored and rejected are listed in fit/ and README"
+  }
+ ]
+}

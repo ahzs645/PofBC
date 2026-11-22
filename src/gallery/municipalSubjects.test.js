@@ -106,9 +106,10 @@ test('collected municipal logos are official website files, verified against the
     assert.ok(audited, `${body.id}: the audit's located file is not among the collected ones`)
     assert.equal(audited.sha256, lead.sha256, `${body.id}: bytes differ from the audit's record`)
     for (const asset of body.assets) {
-      assert.match(asset.evidenceType, /^official-website-(vector|raster)$/)
+      // The website files, and vector paths the 16 November search took from the city's own PDFs.
+      assert.match(asset.evidenceType, asset.search ? /^native-pdf-vector-extraction/ : /^official-website-(vector|raster)$/)
       assert.equal(asset.reconstruction, false)
-      assert.match(asset.dateNote, /not a logo adoption date/)
+      assert.match(asset.dateNote, /not (?:a logo|an) adoption date/)
     }
   }
   // Previously blocked or guide-only leads can advance only when their own file is accepted.
