@@ -181,6 +181,14 @@ const GAMESENSE_SOURCES = [
     note: 'Registered to BCLC. The Canadian record is not cited here.'
   },
   {
+    id: 'gamesense-info-card-2025',
+    title: 'GameSense Info Card, 2025',
+    url: 'https://www.bclcretailerhub.com/content/dam/retailerhub/training/resources/GameSense_Info_Card-2025.pdf',
+    publisher: 'BCLC Retailer Hub',
+    date: '2025',
+    note: 'BCLC’s card for its retailers; the endorsed logo below is its own vector artwork.'
+  },
+  {
     id: 'gamesense-website',
     title: 'GameSense website',
     url: 'https://www.gamesense.com/',
@@ -223,7 +231,7 @@ const gamesenseDetail = () => ({
           id: 'gamesense-logo',
           title: 'GameSense logo',
           kind: 'program-identity',
-          description: 'The white capsule logo the GameSense website serves, for a dark ground. Its collection date is not the logo’s adoption date.',
+          description: 'The capsule logo, in white for a dark ground: as the GameSense website serves it, and with BCLC’s endorsement on BCLC’s 2025 card for retailers. Collection and publication dates are not the logo’s adoption date.',
           images: [{
             id: 'source-recovered-gamesense-website',
             ...gamesenseLogo,
@@ -233,8 +241,19 @@ const gamesenseDetail = () => ({
             sourceId: 'gamesense-website',
             sourceUrl: 'https://www.gamesense.com/',
             dateLabel: 'Website logo, collected 20 November 2026'
+          }, {
+            id: 'source-recovered-gamesense-bclc-2025-reverse',
+            file: 'identity-recovered/gamesense/gamesense-bclc-2025-reverse.svg',
+            alt: 'GameSense capsule with the BCLC wordmark beneath, in white',
+            label: 'With BCLC’s endorsement, 2025 Info Card',
+            darkBackground: true,
+            evidenceType: 'native-pdf-vector-extraction',
+            sourceId: 'gamesense-info-card-2025',
+            sourceUrl: 'https://www.bclcretailerhub.com/content/dam/retailerhub/training/resources/GameSense_Info_Card-2025.pdf',
+            sourcePage: 1,
+            dateLabel: 'GameSense Info Card, 2025'
           }],
-          sourceRefs: [{ sourceId: 'gamesense-website' }],
+          sourceRefs: [{ sourceId: 'gamesense-website' }, { sourceId: 'gamesense-info-card-2025', page: 1 }],
           links: [{ label: 'Open in the logo gallery', url: '?view=gallery&logos=collected-gamesense' }]
         }
       ]

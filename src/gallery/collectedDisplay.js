@@ -2248,6 +2248,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "source-expanded-liquor-distribution-branch-q2-2026-reverse": {
+  "light": {
+   "file": "identity-display/source-expanded-liquor-distribution-branch-q2-2026-reverse.light.svg",
+   "aspect": 3.3881,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-liquor-distribution-branch-q2-2026-reverse.dark.svg",
+   "aspect": 3.3881,
+   "recoloured": false
+  }
+ },
  "source-expanded-sub-bcliquor-website-logo": {
   "light": {
    "file": "identity-display/source-expanded-sub-bcliquor-website-logo.light.svg",
@@ -2258,6 +2270,30 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/source-expanded-sub-bcliquor-website-logo.dark.svg",
    "aspect": 4.5925,
    "recoloured": true
+  }
+ },
+ "source-expanded-bc-cannabis-wholesale-shipping-2026-black": {
+  "light": {
+   "file": "identity-display/source-expanded-bc-cannabis-wholesale-shipping-2026-black.light.svg",
+   "aspect": 18.6636,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-bc-cannabis-wholesale-shipping-2026-black.dark.svg",
+   "aspect": 18.6636,
+   "recoloured": true
+  }
+ },
+ "source-expanded-bc-cannabis-wholesale-q2-2026-reverse": {
+  "light": {
+   "file": "identity-display/source-expanded-bc-cannabis-wholesale-q2-2026-reverse.light.svg",
+   "aspect": 18.6396,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-bc-cannabis-wholesale-q2-2026-reverse.dark.svg",
+   "aspect": 18.6396,
+   "recoloured": false
   }
  },
  "source-expanded-ldb-wholesale-website-logo": {
@@ -2323,6 +2359,68 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "source-expanded-northern-development-2023-stacked-reversed": {
+  "light": {
+   "file": "identity-display/source-expanded-northern-development-2023-stacked-reversed.light.svg",
+   "aspect": 1.3695,
+   "recoloured": true,
+   "palette": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-northern-development-2023-stacked-reversed.dark.svg",
+   "aspect": 1.3695,
+   "recoloured": false
+  }
+ },
+ "source-expanded-northern-development-2020-stacked": {
+  "light": {
+   "file": "identity-display/source-expanded-northern-development-2020-stacked.light.svg",
+   "aspect": 1.4049,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-northern-development-2020-stacked.dark.svg",
+   "aspect": 1.4049,
+   "recoloured": true
+  }
+ },
+ "source-expanded-northern-development-2020-horizontal": {
+  "light": {
+   "file": "identity-display/source-expanded-northern-development-2020-horizontal.light.svg",
+   "aspect": 3.7085,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-northern-development-2020-horizontal.dark.svg",
+   "aspect": 3.7085,
+   "recoloured": true
+  }
+ },
+ "source-expanded-northern-development-2023-horizontal-reversed": {
+  "light": {
+   "file": "identity-display/source-expanded-northern-development-2023-horizontal-reversed.light.svg",
+   "aspect": 3.7311,
+   "recoloured": true,
+   "palette": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-northern-development-2023-horizontal-reversed.dark.svg",
+   "aspect": 3.7311,
+   "recoloured": false
+  }
+ },
+ "source-expanded-island-coastal-economic-trust-2023-24-wordmark": {
+  "light": {
+   "file": "identity-display/source-expanded-island-coastal-economic-trust-2023-24-wordmark.light.svg",
+   "aspect": 1.3195,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-island-coastal-economic-trust-2023-24-wordmark.dark.svg",
+   "aspect": 1.3195,
+   "recoloured": false
+  }
+ },
  "source-expanded-etsi-bc-bylaws-2026-full-name-colour": {
   "light": {
    "file": "identity-display/source-expanded-etsi-bc-bylaws-2026-full-name-colour.light.svg",
@@ -2381,6 +2479,30 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/source-expanded-land-title-and-survey-authority-website-logo.dark.svg",
    "aspect": 4.9149,
    "recoloured": true
+  }
+ },
+ "source-expanded-consumer-protection-bc-2017-colour": {
+  "light": {
+   "file": "identity-display/source-expanded-consumer-protection-bc-2017-colour.light.svg",
+   "aspect": 3.3972,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-consumer-protection-bc-2017-colour.dark.svg",
+   "aspect": 3.3972,
+   "recoloured": true
+  }
+ },
+ "source-expanded-consumer-protection-bc-rack-card-reversed": {
+  "light": {
+   "file": "identity-display/source-expanded-consumer-protection-bc-rack-card-reversed.light.svg",
+   "aspect": 3.2395,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-consumer-protection-bc-rack-card-reversed.dark.svg",
+   "aspect": 3.2395,
+   "recoloured": false
   }
  },
  "source-expanded-sub-powerex-website-logo": {
@@ -2946,6 +3068,42 @@ export const COLLECTED_DISPLAY = {
    "aspect": 1.1878,
    "recoloured": true,
    "palette": true
+  }
+ },
+ "source-recovered-forest-practices-board-2023-source-vector": {
+  "light": {
+   "file": "identity-display/source-recovered-forest-practices-board-2023-source-vector.light.svg",
+   "aspect": 2.9658,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-recovered-forest-practices-board-2023-source-vector.dark.svg",
+   "aspect": 2.9658,
+   "recoloured": true
+  }
+ },
+ "source-recovered-gamesense-bclc-2025-reverse": {
+  "light": {
+   "file": "identity-display/source-recovered-gamesense-bclc-2025-reverse.light.svg",
+   "aspect": 2.566,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-recovered-gamesense-bclc-2025-reverse.dark.svg",
+   "aspect": 2.566,
+   "recoloured": false
+  }
+ },
+ "source-recovered-elections-bc-2026-source-vector": {
+  "light": {
+   "file": "identity-display/source-recovered-elections-bc-2026-source-vector.light.svg",
+   "aspect": 6.3555,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-recovered-elections-bc-2026-source-vector.dark.svg",
+   "aspect": 6.3555,
+   "recoloured": true
   }
  }
 }

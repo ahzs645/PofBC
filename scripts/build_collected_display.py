@@ -332,6 +332,21 @@ def build_vector(asset, settings, work):
                 raise SystemExit(f"{asset['id']}: {theme}-palette names colours the file does not use: {sorted(unused)}")
             content, recoloured = "".join(parts), True
             palettes[theme] = True
+        elif settings.get(theme) == "all" and places:
+            # Every colour too faint for this ground takes the redraw's rule, wherever it lies: for a
+            # file whose lettering is drawn letter by letter in clipped fills (as Poppler and some
+            # PDF exports write it), where the facing test sees each letter as ink on ink and
+            # reverses only some of them.
+            new_colours, amounts = redraw(np.array([colour for _, _, colour in places]), theme)
+            swap = [amounts[k] > 0.05 for k in range(len(places))]
+            if any(swap):
+                parts, last = [], 0
+                for k, (start, end, _) in enumerate(places):
+                    if swap[k]:
+                        parts += [trimmed[last:start], hex_of(new_colours[k])]
+                        last = end
+                parts.append(trimmed[last:])
+                content, recoloured = "".join(parts), True
         elif settings.get(theme, True) is True and places:
             new_colours, amounts = redraw(np.array([colour for _, _, colour in places]), theme)
             amount = np.where(place >= 0, amounts[np.maximum(place, 0)], 0)

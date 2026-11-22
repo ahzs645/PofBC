@@ -1,5 +1,5 @@
 {
-  "_comment": "Per-logo settings for build_collected_display.py, keyed by collected asset id. facing: the share of a faint shape's edge that must meet the page for it to be redrawn (default 0.5; higher keeps more of a logo's own colours). light / dark: false keeps the file's own colours on that ground; \"plate\" shows them on a light plate of their own there. light-palette / dark-palette: {\"#source\": \"#shown\"} maps the file's colours by hand for that ground (every key must be a colour the file uses). skip: true leaves the file out.",
+  "_comment": "Per-logo settings for build_collected_display.py, keyed by collected asset id. facing: the share of a faint shape's edge that must meet the page for it to be redrawn (default 0.5; higher keeps more of a logo's own colours). light / dark: false keeps the file's own colours on that ground; \"plate\" shows them on a light plate of their own there. light-palette / dark-palette: {\"#source\": \"#shown\"} maps the file's colours by hand for that ground (every key must be a colour the file uses). \"all\" for light / dark redraws every colour too faint for that ground, without the test of whether it meets the page (for lettering drawn letter by letter in clipped fills). skip: true leaves the file out.",
   "historical-capital-health-region-2000-dark-grey": {
     "light": false,
     "dark-palette": {
@@ -61,5 +61,61 @@
       "#737070": "#c2bebe"
     },
     "note": "The dark purple of Trust and the grey name line all but disappear on the dark page, while the blue of northern and the symbol's gradient read. On the dark page each flat colour takes the redraw's own rule: the blue and purple lightened at their hue to 5:1, the grey reversed; the symbol's gradient is left as printed."
+  },
+  "source-expanded-bc-cannabis-wholesale-shipping-2026-black": {
+    "dark": "all",
+    "note": "Its lettering is drawn letter by letter in clipped fills, so the automatic redraw reverses only some letters; on the dark page every colour too faint for the ground takes the redraw's rule."
+  },
+  "source-expanded-bc-cannabis-wholesale-q2-2026-reverse": {
+    "light": "all",
+    "note": "Its lettering is drawn letter by letter in clipped fills, so the automatic redraw reverses only some letters; on the light page every colour too faint for the ground takes the redraw's rule."
+  },
+  "source-expanded-liquor-distribution-branch-q2-2026-reverse": {
+    "light": "all",
+    "note": "Its lettering is drawn letter by letter in clipped fills, so the automatic redraw reverses only some letters; on the light page every colour too faint for the ground takes the redraw's rule."
+  },
+  "source-expanded-northern-development-2020-stacked": {
+    "dark": "all",
+    "note": "Its lettering is drawn letter by letter in clipped fills, so the automatic redraw reverses only some letters; on the dark page every colour too faint for the ground takes the redraw's rule."
+  },
+  "source-expanded-northern-development-2020-horizontal": {
+    "dark": "all",
+    "note": "Its lettering is drawn letter by letter in clipped fills, so the automatic redraw reverses only some letters; on the dark page every colour too faint for the ground takes the redraw's rule."
+  },
+  "source-expanded-island-coastal-economic-trust-2023-24-wordmark": {
+    "light": "all",
+    "note": "Its lettering is drawn letter by letter in clipped fills, so the automatic redraw reverses only some letters; on the light page every colour too faint for the ground takes the redraw's rule."
+  },
+  "source-expanded-consumer-protection-bc-2017-colour": {
+    "dark": "all",
+    "note": "Its lettering is drawn letter by letter in clipped fills, so the automatic redraw reverses only some letters; on the dark page every colour too faint for the ground takes the redraw's rule."
+  },
+  "source-expanded-consumer-protection-bc-rack-card-reversed": {
+    "light": "all",
+    "note": "Its lettering is drawn letter by letter in clipped fills, so the automatic redraw reverses only some letters; on the light page every colour too faint for the ground takes the redraw's rule."
+  },
+  "source-recovered-elections-bc-2026-source-vector": {
+    "dark": "all",
+    "note": "Its lettering is drawn letter by letter in clipped fills, so the automatic redraw reverses only some letters; on the dark page every colour too faint for the ground takes the redraw's rule."
+  },
+  "source-recovered-forest-practices-board-2023-source-vector": {
+    "dark": "all",
+    "note": "Its lettering is drawn letter by letter in clipped fills, so the automatic redraw reverses only some letters; on the dark page every colour too faint for the ground takes the redraw's rule."
+  },
+  "source-recovered-gamesense-bclc-2025-reverse": {
+    "light": "all",
+    "note": "Its lettering is drawn letter by letter in clipped fills, so the automatic redraw reverses only some letters; on the light page every colour too faint for the ground takes the redraw's rule."
+  },
+  "source-expanded-northern-development-2023-stacked-reversed": {
+    "light-palette": {
+      "#ffffff": "#112242"
+    },
+    "note": "As the 2024 report's white-lettered logos: on the light page the white name takes the report covers' navy (#112242); the symbol's gradients are left as printed."
+  },
+  "source-expanded-northern-development-2023-horizontal-reversed": {
+    "light-palette": {
+      "#ffffff": "#112242"
+    },
+    "note": "As the 2024 report's white-lettered logos: on the light page the white name takes the report covers' navy (#112242); the symbol's gradients are left as printed."
   }
 }

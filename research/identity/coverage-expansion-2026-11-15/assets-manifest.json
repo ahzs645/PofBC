@@ -965,7 +965,7 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-15",
-      "notes": "Officially published identity artwork: the Northern Trust identity from the 2006 and 2007 annual reports, and the Northern Development identity from the Annual Report 2024 and the website. Source publication and capture dates are recorded separately from logo adoption dates.",
+      "notes": "Officially published identity artwork: the Northern Trust identity from the 2006 and 2007 annual reports, and the Northern Development identity, horizontal and stacked, in colour (2020 report) and with a white name (2023 and 2024 reports, and the website). Source publication and capture dates are recorded separately from logo adoption dates.",
       "assets": [
         {
           "id": "ndit-annual-report-2006-northern-trust",
@@ -1074,7 +1074,9 @@
           ],
           "dimensions": {
             "viewBox": "76.641 77.98 156.891 37.215"
-          }
+          },
+          "variantOf": "source-expanded-northern-development-2020-horizontal",
+          "versionLabel": "Reversed, 2024 report"
         },
         {
           "id": "ndit-annual-report-2024-stacked",
@@ -1110,7 +1112,8 @@
           "dimensions": {
             "viewBox": "265.574 504.57 80.852 65.363"
           },
-          "versionLabel": "Annual Report 2024"
+          "versionLabel": "Gradient symbol, white name, 2024 report",
+          "variantOf": "source-expanded-northern-development-2023-stacked-reversed"
         },
         {
           "id": "source-expanded-northern-development-initiative-trust-website-logo",
@@ -1139,9 +1142,7 @@
           "evidenceType": "official-website-raster",
           "notes": "Source-native website logo, archived byte-for-byte.",
           "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-          "darkBackground": true,
-          "variantOf": "ndit-annual-report-2024-stacked",
-          "versionLabel": "Website, one colour"
+          "darkBackground": true
         }
       ]
     },
