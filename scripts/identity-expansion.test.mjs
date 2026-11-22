@@ -26,7 +26,10 @@ test('every added artwork body has its own declared subject and retains every ac
     assert.equal(body.graphNode, subject.graphNode, `${body.id}: organization link drift`)
     const collection = collectionById(`collected-${body.id}`)
     assert.ok(collection, `${body.id}: no reachable collection`)
-    const accepted = new Set(entriesOf(collection).flatMap((entry) => (entry.versions ?? [entry.asset]).map((asset) => asset.id)))
+    // A body shelved in a shared collection (the Office of the Premier with the one-off marks) is
+    // reached by its old address, and keeps every file among the entries it owns there.
+    const own = collection.id === `collected-${body.id}` ? entriesOf(collection) : entriesOf(collection).filter((entry) => entry.owner === body.id)
+    const accepted = new Set(own.flatMap((entry) => (entry.versions ?? [entry.asset]).map((asset) => asset.id)))
     assert.deepEqual([...accepted].sort(), body.assets.map((asset) => asset.id).sort(), `${body.id}: artwork lost in collection assembly`)
   }
 })

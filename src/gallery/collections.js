@@ -1172,6 +1172,8 @@ export const GALLERY_COLLECTIONS = [
     body: 'The Province’s one-off marks',
     years: '2005–present',
     cover: 'welcome-bc',
+    // The Office of the Premier's letterhead had a collection of its own before it was shelved here.
+    aliases: ['collected-office-of-the-premier'],
     intro: 'Names set beside the BC mark, each drawn once for one body, program or campaign, following ' +
       'no pattern that generalises, so they sit here rather than in the generator, which is built on ' +
       'patterns. Open one to recolour it.',
@@ -1182,14 +1184,18 @@ export const GALLERY_COLLECTIONS = [
       // A service wordmark in the BC mark's Garamond, held as published.
       ...specimenEntriesOf('bceid'),
       // A service on the BC mark, as its website serves it.
-      ...specimenEntriesOf('healthlink-bc').map(withNode)
+      ...specimenEntriesOf('healthlink-bc').map(withNode),
+      // An office's signature from before the BC mark: the arms in a rounded frame over its name, on
+      // its 1991 letterhead, drawn once for it and held as found.
+      ...collectedEntriesOf('office-of-the-premier')
     ]
   }
 ]
 
 // Collections recovered by the acquisition pass use source files directly. Existing researched
 // histories remain authoritative for bodies that already have a collection.
-GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) =>
+// The Office of the Premier's letterhead is shelved with the one-off marks (collection "bc-mark").
+GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) => candidate.id !== 'collected-office-of-the-premier' &&
   !GALLERY_COLLECTIONS.some((held) => nodesOf(held).includes(candidate.graphNode))))
 // WorkSafeBC's specimens are folded into its collection above; the one-off programs keep theirs.
 // The Department of Travel Industry's is folded into the BC mark collection.
