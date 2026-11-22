@@ -246,6 +246,7 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
         <div className="identity-actions">
           <Status subject={subject} />
           {hasUnbcOrigins(subject.id) && <UnbcOriginsLink local />}
+          {subject.schoolDistrict && <SiteLink className="identity-action" to={{ view: 'school-districts', district: subject.schoolDistrict }}>Connected district history <span aria-hidden="true">→</span></SiteLink>}
           {subject.graphNode && onOpenGovernment && <button type="button" className="identity-action" onClick={() => onOpenGovernment(subject.graphNode, subject.graphYear)}>Organization and salaries <span aria-hidden="true">→</span></button>}
           {municipal?.councilMunicipality && <SiteLink className="identity-action" to={{ view: 'salaries', browse: 'council', 'council-municipality': municipal.councilMunicipality }}>Council pay <span aria-hidden="true">→</span></SiteLink>}
           {municipal && subject.salaryEmployers.map((slug) => <SiteLink key={slug} className="identity-action" to={{ view: 'salaries', employer: slug }}>Staff salaries <span aria-hidden="true">→</span></SiteLink>)}

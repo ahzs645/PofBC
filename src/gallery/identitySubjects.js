@@ -15,8 +15,12 @@
 import { RECONCILED_FAMILIES, RECONCILED_SUBJECTS } from './reconciledSubjects.js'
 import { MUNICIPAL_FAMILIES, MUNICIPAL_KIND_LABELS, MUNICIPAL_SUBJECTS } from './municipalSubjects.js'
 import { RECOVERED_IDENTITY_BODIES } from './recoveredIdentityData.js'
+import { SCHOOL_IDENTITY_SUBJECTS } from '../schools/integration.js'
+import { SCHOOL_FAMILY } from '../schools/districts.js'
 
 export const IDENTITY_KIND_LABELS = {
+  'school-district': 'School district',
+  'francophone-school-district': 'Francophone school district',
   ...MUNICIPAL_KIND_LABELS,
   "campaign": "Campaign or slogan",
   "regional-authority": "Regional authority",
@@ -51,6 +55,7 @@ export const IDENTITY_KIND_LABELS = {
 }
 
 export const IDENTITY_RELATION_LABELS = {
+  'successor-of': 'Successor of',
   "related-to": "Related to",
   "part-of": "Part of",
   "service-of": "Service of",
@@ -3416,9 +3421,9 @@ const CURATED_SUBJECTS = [
 
 // The reconciled gallery owners and the municipal registry follow the curated subjects.
 // Municipalities come before the historical-research family in the register.
-export const IDENTITY_FAMILIES = [...CURATED_FAMILIES.slice(0, -1), ...RECONCILED_FAMILIES, ...MUNICIPAL_FAMILIES, CURATED_FAMILIES.at(-1)]
+export const IDENTITY_FAMILIES = [...CURATED_FAMILIES.slice(0, -1), ...RECONCILED_FAMILIES, ...MUNICIPAL_FAMILIES, SCHOOL_FAMILY, CURATED_FAMILIES.at(-1)]
 const recoveredById = new Map(RECOVERED_IDENTITY_BODIES.map((body) => [body.id, body]))
-export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS]
+export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS, ...SCHOOL_IDENTITY_SUBJECTS]
   .map((subject) => recoveredById.get(subject.id)?.nextAction
     ? { ...subject, nextAction: recoveredById.get(subject.id).nextAction }
     : subject)

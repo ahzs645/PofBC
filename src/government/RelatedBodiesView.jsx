@@ -110,6 +110,7 @@ export const RelatedBodiesView = ({ selectedId, onChangeView, themeName, onToggl
             {selected.shortName !== selected.name && <p className="gov-muted">{selected.shortName}</p>}
             <p className="gov-description">{selected.description}</p>
             {selected.historyNote && <p className="gov-muted">{selected.historyNote}</p>}
+            {selected.schoolDistrict && <p className="gov-links"><SiteLink to={{ view: 'school-districts', district: selected.schoolDistrict }}>District history, predecessor connections and logos →</SiteLink></p>}
             <p className="gov-links"><a href={selected.officialUrl} target="_blank" rel="noreferrer">Official website ↗</a></p>
           </section>
 
