@@ -6317,10 +6317,37 @@ export const COLLECTED_BODIES = [
     "from": 1994,
     "to": 2001,
     "current": false,
-    "status": "unresolved",
+    "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "At least one exact-name indexed-web query was run for this entity. Results were reviewed for original artwork or dated logo sightings. Name-only legislation, appointments, financial schedules and successor logos were not counted as marks. This limited search pass is not proof that no logo existed. Second pass: Second pass reviewed further indexed-web and/or archival catalogue leads. No attributable artwork was recovered. Legislation, name-only lists, unrelated Alberta organizations, and successor branding were not counted as logos.",
-    "assets": []
+    "notes": "The Thompson Health Region’s letterhead mark: a black cross with a white winding path through it, beside the name in serif and “A Path to Better Health” in italic, from a letter of 9 September 1999 by the chair of its Board of Governors, kept in Merritt’s council records. An earlier letter, of 24 September 1998, has a typographic THOMPSON REGIONAL HEALTH BOARD header instead, which does not date the emblem’s introduction. Its colours, typeface, designer and dates of use are not established. David Thompson Health Region, in Alberta, is a different body.",
+    "assets": [
+      {
+        "id": "thompson-health-region-1999-letterhead",
+        "label": "Thompson Health Region: Cross and path, with A Path to Better Health, 1999 letterhead",
+        "file": "identity-collected/thompson-health-region/thompson-health-region-1999-letterhead.png",
+        "format": "png",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Thompson Health Region; letter in the City of Merritt’s council agenda of 12 October 1999",
+        "sourcePage": "https://old.merritt.ca/virtual-city-archives/",
+        "sourceUrl": "https://old.merritt.ca/wp-content/uploads/archives/meetings/1999/1999-10-12%20RC%20agenda.pdf",
+        "sourceLocator": "PDF page 118 of 132 (agenda page 116): letter of 9 September 1999 from Bettie Hall, Chair of the Board of Governors",
+        "sourceFile": null,
+        "sourceDate": "1999-09-09",
+        "observedDate": "2026-11-21",
+        "dateNote": "The letter’s date: in use by then, not introduced then. A letter of 24 September 1998 (the agenda of 10 November 1998, PDF page 60) uses a typographic Thompson Regional Health Board header instead.",
+        "evidenceType": "faithful-crop-of-primary-document",
+        "notes": "A black cross with a white path winding up through it to a burst of rays, beside “Thompson Health Region” in serif and “A Path to Better Health” in italic: the region’s own letterhead, the first attributable picture of its mark.",
+        "fidelityNote": "A rendered crop of the scanned letterhead, with no redrawing, tracing or enlargement; the scan’s speckle is kept. One-colour as photocopied: the mark’s colours, if it had any, are not known. The full page and the one-page PDF are kept in the research record.",
+        "sha256": "1b7b2e39743699b8a88a2e207ef94f1c112b9807a2d1ad783c1b915354453afd",
+        "bytes": 25135,
+        "darkBackground": false,
+        "previewWidth": 990,
+        "previewHeight": 240,
+        "search": "evidence-2026-11-21"
+      }
+    ]
   },
   {
     "id": "tri-cities-health-council",
