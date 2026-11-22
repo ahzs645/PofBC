@@ -34,7 +34,7 @@ for (const { register: packaged } of PACKAGES) if (packaged.body) {
 }
 // Histories of a body's earlier identities: dated pictures of a mark in use (kept as images, and
 // said to be) beside any of its vectors, with a design's other sightings as its versions.
-const HISTORIES = ['bc-assessment-history-2026-11-21', 'evidence-2026-11-21']
+const HISTORIES = ['bc-assessment-history-2026-11-21', 'evidence-2026-11-21', 'bc-place-history-2026-11-21']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 const railway = read('research/identity/railway-history-2026-11-12/source-register.json')
 const railwayHistory = read('research/identity/railway-history-2026-11-12/history.json')
