@@ -122,8 +122,8 @@ export const PaperModelsView = () => {
 
       <div className="paper-models__body">
         <div className="paper-models__stage">
-          <PackcadFrame ref={frame} src={src} title={`${model.title}, folding in 3D`} className="paper-models__frame" />
-          {!ready && !error && <p className="paper-models__status" role="status">Folding the {model.title.toLowerCase()}…</p>}
+          <PackcadFrame ref={frame} src={src} title={`${model.title}, folding in 3D`} className="paper-models__frame" loading={!ready} />
+          {!ready && !error && <p className="paper-models__status" role="status">Opening the {model.title}…</p>}
           {error && (
             <p className="paper-models__status paper-models__status--error" role="alert">
               The model could not be opened: {error}

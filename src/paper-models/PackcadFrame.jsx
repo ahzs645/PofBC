@@ -39,13 +39,14 @@ export const usePackcadViewer = (src) => {
   return { frame, ready, state, error, send }
 }
 
-export const PackcadFrame = forwardRef(({ src, title, className }, ref) => (
+export const PackcadFrame = forwardRef(({ src, title, className, loading = false }, ref) => (
   <iframe
     ref={ref}
     key={src}
     src={src}
     title={title}
     className={className}
+    data-loading={loading || undefined}
     // The viewer fetches its project from this site and renders with WebGL; it needs nothing else.
     sandbox="allow-scripts allow-same-origin"
     allow="fullscreen"
