@@ -1315,6 +1315,17 @@ input.share__url {
   border-radius: var(--radius-sm);
 }
 .gallery__recovered { display: grid; gap: 16px; }
+/* On the page's own ground the track is the page's colour and vanishes, leaving the chosen
+   segment as a lone white pill and the others as loose text: give it the toolbar's track, sized
+   to its choices. */
+.gallery__recovered > .segmented {
+  --track: var(--mid);
+  --segment: var(--surface);
+  justify-self: start;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+.gallery__recovered > .segmented button { flex: 0 1 auto; padding-inline: 14px; white-space: nowrap; }
 .gallery__recovered h2, .gallery__recovered p { margin: 0; }
 .gallery__recovered-preview {
   display: grid;
@@ -1326,7 +1337,10 @@ input.share__url {
   border-radius: var(--radius);
 }
 .gallery__recovered-preview[data-dark] { background: #243449; }
-.gallery__recovered-preview--clean { background: var(--page); }
+/* Every mark sits on a panel, so it reads as one object with an edge, whichever way it was
+   collected: a display copy (made for this page's ground) on the surface colour, a file shown as
+   published on white, as above. */
+.gallery__recovered-preview--clean { background: var(--surface); }
 .gallery__recovered-preview--clean img { width: auto; height: min(300px, 40vw); max-height: none; }
 .gallery__recovered-preview img { max-width: 100%; width: auto; max-height: 420px; object-fit: contain; }
 .gallery__asset-format { font-size: 13px; color: var(--ink-muted); }
