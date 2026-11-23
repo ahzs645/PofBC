@@ -955,7 +955,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
     return (
       <div className="gallery">
         {search}
-        <IdentityCoverageOverview onOpenRegister={openRegister} onOpenSubject={openSubject} />
+        <IdentityCoverageOverview onOpenRegister={openRegister} />
         <section className="gallery__shelf" aria-labelledby="shelf-bodies">
           <h2 id="shelf-bodies" className="gallery__shelf-title">Crown corporations and public bodies</h2>
           <div className="gallery__collections">

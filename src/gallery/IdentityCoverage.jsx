@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {
   COVERAGE_FAMILIES, COVERAGE_STATES, IDENTITY_COVERAGE, INVERSE_RELATION_LABELS, coverageSummary, familyById,
-  filterIdentityCoverage, identitySubjectById, regionOf, relationsOf, subjectsForCollection
+  filterIdentityCoverage, regionOf, relationsOf, subjectsForCollection
 } from './identityCoverage.js'
 import { MUNICIPAL_AS_OF, MUNICIPAL_REGIONS } from './municipalSubjects.js'
 import { SiteLink } from '../site/navigation.jsx'
@@ -52,9 +52,8 @@ export const IdentitySearchResults = ({ subjects, onOpen }) => subjects.length >
   </section>
 )
 
-export const IdentityCoverageOverview = ({ onOpenRegister, onOpenSubject }) => {
+export const IdentityCoverageOverview = ({ onOpenRegister }) => {
   const summary = coverageSummary()
-  const featured = ['translink', 'metro-vancouver', 'liquor-distribution-branch', 'creative-bc'].map(identitySubjectById).filter(Boolean)
   return (
     // One line above the shelves: the marks are what the page is for, so the register is a way in
     // from it, not a banner over it.
@@ -63,9 +62,6 @@ export const IdentityCoverageOverview = ({ onOpenRegister, onOpenSubject }) => {
       <p className="identity-overview__counts" title="Regional transit, public agencies, service brands and institutions, alongside the Crown and health collections: their relationships, sources and remaining gaps.">
         <strong>{summary.subjects}</strong> subjects · <strong>{summary.held}</strong> with artwork · <strong>{summary.sources}</strong> leads
       </p>
-      <div className="identity-featured">
-        {featured.map((subject) => <button type="button" key={subject.id} onClick={() => onOpenSubject(subject.id)}>{subject.label} <span aria-hidden="true">↗</span></button>)}
-      </div>
       <button type="button" className="identity-primary" onClick={() => onOpenRegister()}>Browse the register <span aria-hidden="true">→</span></button>
     </section>
   )
