@@ -241,7 +241,7 @@ async function readyEmployer(query, entry) {
 
 async function readyTitles(query, { year, sector } = {}) {
   const match = titleMatcher(query)
-  const eligible = titles.filter(title => match(title.key) !== null && (
+  const eligible = titles.filter(title => match(title.key, title.departmentKey) !== null && (
     (year === undefined && sector === undefined) || titleScopes[title.key].some(([employer, period]) =>
       (year === undefined || employersIndex.years[period] === year) &&
       (sector === undefined || employersIndex.employers[employer].sector === sector))
@@ -508,7 +508,7 @@ try {
       search(query)
       const section = await readyTitles(query)
       const match = titleMatcher(query)
-      assert.ok(cards(section).every(card => match(titleKey(card.querySelector('.salaries__name').textContent)) !== null))
+      assert.ok(cards(section).every(card => titles.some(title => title.label === card.querySelector('.salaries__name').textContent && match(title.key, title.departmentKey) !== null)))
     }
   })
 

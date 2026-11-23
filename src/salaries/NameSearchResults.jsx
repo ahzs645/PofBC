@@ -11,8 +11,13 @@ const readLinks = (shard, reload) => loadJson(`salaries/links/${shard}.json.gzip
   throw error
 })
 
-/** Discover names independently of surname storage, then hydrate only the current result page. */
-export const NameSearchResults = ({ query, index, sector, range, onOpen, renderCard, describeGroup, initials = [], initialsLoading = false, initialsFailed = false, onRetryInitials }) => {
+/**
+ * Discover names independently of surname storage, then hydrate only the current result page.
+ * With `quiet` (employers or positions already answer the search), the section stays out of the way
+ * while it searches and when it finds no one; `onNoNames` is told whether that is so, so the page can
+ * say it in one line after the other results.
+ */
+export const NameSearchResults = ({ query, index, sector, range, onOpen, renderCard, describeGroup, initials = [], initialsLoading = false, initialsFailed = false, onRetryInitials, quiet = false, onNoNames }) => {
   const [manifest, setManifest] = useState(null)
   const [manifestFailed, setManifestFailed] = useState(false)
   const [contextChanged, setContextChanged] = useState(false)
@@ -108,6 +113,14 @@ export const NameSearchResults = ({ query, index, sector, range, onOpen, renderC
   const directKeys = new Set(matches.map((item) => item.key))
   const initialsOnly = initials.filter((item) => !directKeys.has(item.key))
   const filtered = Boolean(range) || sector !== 'all'
+  const noNames = directoryReady && !directoryFailed && !contextChanged && matches.length === 0 && !initialsLoading && !initialsFailed && initialsOnly.length === 0
+  const searching = !directoryFailed && !contextChanged && (!directoryReady || (matches.length === 0 && initialsLoading))
+  useEffect(() => {
+    onNoNames?.(noNames)
+  }, [noNames]) // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => () => onNoNames?.(false), []) // eslint-disable-line react-hooks/exhaustive-deps
+
+  if (quiet && (noNames || searching)) return null
 
   return (
     <section aria-labelledby="salaries-people-results" aria-busy={!contextChanged && !directoryFailed && !pageFailed && !missingRows && (!directoryReady || !pageReady)}>
