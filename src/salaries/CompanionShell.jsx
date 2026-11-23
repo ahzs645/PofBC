@@ -1,20 +1,48 @@
 // The frame every salary section shares: the search field, a heading with its figures in tiles, the
-// browse bar (Employers · People · Positions · Council pay · Workforce) with the cards/table switch,
-// then the section's own chips and content. Council pay and Workforce use it so they read, and are
-// worked, the same way as Employers and People.
+// browse bar with the cards/table switch, then the section's own chips and content. Council pay and
+// Workforce use it so they read, and are worked, the same way as Employers and People.
 
 import { Segmented } from '../site/Segmented.jsx'
 import { SalarySearchField } from './MobileFilters.jsx'
 import { LAYOUTS } from './common.jsx'
 
-// On a phone "Council pay" is "Council": the five sections and the layout switch then fit one row.
-export const BROWSE = [
+// The bar holds two kinds of thing. Employers, People and Positions are three ways through the same
+// payment records, and keep the period and sector chosen: a segmented control. Council pay, Workforce
+// and About are other collections, with their own figures and sources: plainer links beside it.
+export const RECORD_BROWSE = [
   { value: 'employers', label: 'Employers' },
   { value: 'people', label: 'People' },
-  { value: 'positions', label: 'Positions' },
-  { value: 'council', label: <>Council<span className="salaries__tab-more"> pay</span></>, ariaLabel: 'Council pay' },
-  { value: 'workforce', label: 'Workforce' }
+  { value: 'positions', label: 'Positions' }
 ]
+export const OTHER_BROWSE = [
+  { value: 'council', label: 'Council pay' },
+  { value: 'workforce', label: 'Workforce' },
+  { value: 'about', label: 'About' }
+]
+/** Every section with a tab of its own (About is a page of notes, not a section). */
+export const BROWSE = [...RECORD_BROWSE, ...OTHER_BROWSE.filter(({ value }) => value !== 'about')]
+
+/**
+ * The sections, drawn the same on every page: SalariesView's settleBrowse finds the bar by its
+ * `salaries__browse-bar--sections` class, to keep it under the reader's finger as the section
+ * changes. On a collection of its own (Council pay, Workforce, About) none of the three records
+ * tabs is pressed.
+ */
+export const BrowseBar = ({ browse, onBrowse, layout, onLayout }) => (
+  <div className="salaries__browse-bar salaries__browse-bar--sections">
+    <div className="salaries__sections">
+      <Segmented ariaLabel="Browse the payment records" value={browse} onChange={onBrowse} options={RECORD_BROWSE} />
+      <div className="salaries__other-sections" role="group" aria-label="Other collections">
+        {OTHER_BROWSE.map((option) => (
+          <button key={option.value} type="button" className="salaries__section-link" aria-pressed={browse === option.value} onClick={() => onBrowse(option.value)}>
+            {option.label}
+          </button>
+        ))}
+      </div>
+    </div>
+    {onLayout && <Segmented compact ariaLabel="Layout" value={layout} onChange={onLayout} options={LAYOUTS} />}
+  </div>
+)
 
 /**
  * @param {object} props
@@ -42,10 +70,7 @@ export const CompanionShell = ({ browse, onBrowse, layout, onLayout, query, onSe
         </dl>
       )}
     </section>
-    <div className="salaries__browse-bar salaries__browse-bar--sections">
-      <Segmented ariaLabel="Browse" value={browse} onChange={onBrowse} options={BROWSE} />
-      {onLayout && <Segmented compact ariaLabel="Layout" value={layout} onChange={onLayout} options={LAYOUTS} />}
-    </div>
+    {onBrowse && <BrowseBar browse={browse} onBrowse={onBrowse} layout={layout} onLayout={onLayout} />}
     {children}
   </div>
 )

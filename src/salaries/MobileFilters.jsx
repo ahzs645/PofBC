@@ -30,16 +30,53 @@ export const SalarySearchField = ({ value, onChange, labelled = false, label = '
   )
 }
 
-export const SalarySectorChips = ({ sectors, employers, value, onChange }) => (
-  <div className="salaries__chips" role="group" aria-label="Sector">
-    <button type="button" aria-pressed={value === 'all'} onClick={(event) => { holdScrollFrom(event); onChange('all') }}>All sectors</button>
-    {sectors.map((name) => (
-      <button key={name} type="button" aria-pressed={value === name} onClick={(event) => { holdScrollFrom(event); onChange(value === name ? 'all' : name) }}>
-        {name} <span>{employers.filter((entry) => entry.sector === name).length}</span>
-      </button>
-    ))}
-  </div>
-)
+/**
+ * A row that scrolls sideways rather than wrap: which of its ends has more beyond it, as
+ * `data-more="start"`, `"end"` or `"both"`, for the CSS to fade that end; and the pressed chip
+ * brought into the row's view, so a sector chosen from a link is not hidden past its edge.
+ */
+export const useScrollRow = (selected) => {
+  const row = useRef(null)
+  useEffect(() => {
+    const node = row.current
+    if (!node) return undefined
+    const mark = () => {
+      const start = node.scrollLeft > 1
+      const end = node.scrollLeft + node.clientWidth < node.scrollWidth - 1
+      if (start || end) node.dataset.more = start && end ? 'both' : start ? 'start' : 'end'
+      else delete node.dataset.more
+    }
+    mark()
+    node.addEventListener('scroll', mark, { passive: true })
+    const resized = globalThis.ResizeObserver ? new ResizeObserver(mark) : null
+    resized?.observe(node)
+    return () => { node.removeEventListener('scroll', mark); resized?.disconnect() }
+  }, [])
+  useEffect(() => {
+    const node = row.current
+    const chip = node?.querySelector('[aria-pressed="true"]')
+    if (!chip || node.scrollWidth <= node.clientWidth) return
+    // The row's own scroll, not scrollIntoView: that would move the page as well.
+    const left = chip.offsetLeft - node.offsetLeft
+    if (left < node.scrollLeft || left + chip.offsetWidth > node.scrollLeft + node.clientWidth - 40) node.scrollLeft = Math.max(0, left - 16)
+  }, [selected])
+  return row
+}
+
+/** The sectors, one line on a page (`scroll`), or wrapping in the filter sheet, where there is room down. */
+export const SalarySectorChips = ({ sectors, employers, value, onChange, scroll = true }) => {
+  const row = useScrollRow(value)
+  return (
+    <div ref={row} className={`salaries__chips${scroll ? ' salaries__chips--scroll' : ''}`} role="group" aria-label="Sector">
+      <button type="button" aria-pressed={value === 'all'} onClick={(event) => { holdScrollFrom(event); onChange('all') }}>All sectors</button>
+      {sectors.map((name) => (
+        <button key={name} type="button" aria-pressed={value === name} onClick={(event) => { holdScrollFrom(event); onChange(value === name ? 'all' : name) }}>
+          {name} <span>{employers.filter((entry) => entry.sector === name).length}</span>
+        </button>
+      ))}
+    </div>
+  )
+}
 
 const focusable = (dialog) => [...dialog.querySelectorAll('button:not(:disabled), input:not(:disabled), select:not(:disabled), a[href], [tabindex="0"]')]
   .filter((node) => node.getClientRects().length && !node.closest('[hidden], [inert]'))
@@ -52,6 +89,12 @@ export const MobileSalaryFilters = ({ query, onSearch, years, counts, range, onR
   const title = useRef(null)
   const trigger = useRef(null)
   const active = Number(Boolean(query.trim())) + Number(Boolean(range)) + Number(showSector && sector !== 'all')
+  // The button counts what is set behind it: the search is in plain view beside it. Each set filter
+  // is also a pill under the search, to see at a glance and to take off with one tap.
+  const pills = showFilters ? [
+    range && { key: 'period', label: rangeLabel(years, range), remove: 'period', clear: () => onRange(null) },
+    showSector && sector !== 'all' && { key: 'sector', label: sector, remove: 'sector', clear: () => onSector('all') }
+  ].filter(Boolean) : []
   const summary = [query.trim() && `“${query.trim()}”`, rangeLabel(years, range), showSector && (sector === 'all' ? 'All sectors' : sector)].filter(Boolean).join(' · ')
 
   useEffect(() => {
@@ -127,7 +170,8 @@ export const MobileSalaryFilters = ({ query, onSearch, years, counts, range, onR
   return (
     <>
       <div className="salaries__mobile-filters">
-        <SalarySearchField value={query} onChange={onSearch} placeholder="Name or place" />
+        {/* The wide screen's "First name, surname, employer or position", as short as a phone needs. */}
+        <SalarySearchField value={query} onChange={onSearch} placeholder="Name, employer, position" />
         {showFilters && <button
           ref={trigger}
           type="button"
@@ -135,17 +179,28 @@ export const MobileSalaryFilters = ({ query, onSearch, years, counts, range, onR
           aria-haspopup="dialog"
           aria-controls={id}
           aria-expanded={open}
-          aria-label={`Filters${active ? `, ${active} active` : ''}`}
+          aria-label={`Filters${pills.length ? `, ${pills.length} active` : ''}`}
           aria-description={summary}
+          data-active={pills.length > 0 || undefined}
           onClick={() => setOpen(true)}
         >
           <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
             <path d="M3 5h14M3 10h14M3 15h14M7 3v4m6 1v4m-6 1v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
           <span>Filters</span>
-          {active > 0 && <span className="salaries__filter-count" aria-hidden="true">{active}</span>}
+          {pills.length > 0 && <span className="salaries__filter-count" aria-hidden="true">{pills.length}</span>}
         </button>}
       </div>
+      {pills.length > 0 && (
+        <div className="salaries__filter-pills" role="group" aria-label="Filters set">
+          {pills.map((pill) => (
+            <button key={pill.key} type="button" className="salaries__filter-pill" aria-label={`Remove ${pill.remove} filter: ${pill.label}`} onClick={(event) => { holdScrollFrom(event); pill.clear() }}>
+              <span>{pill.label}</span>
+              <svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg>
+            </button>
+          ))}
+        </div>
+      )}
       <dialog
         ref={dialog}
         id={id}
@@ -171,7 +226,7 @@ export const MobileSalaryFilters = ({ query, onSearch, years, counts, range, onR
             </section>
             {showSector && <section aria-label="Filter by sector" className="salaries__filter-field">
               <h3 className="salaries__filter-label">Sector</h3>
-              <SalarySectorChips sectors={sectors} employers={employers} value={sector} onChange={onSector} />
+              <SalarySectorChips scroll={false} sectors={sectors} employers={employers} value={sector} onChange={onSector} />
             </section>}
           </div>
           <div className="salaries-filter-sheet__actions">
