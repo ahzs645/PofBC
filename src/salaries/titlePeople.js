@@ -64,13 +64,13 @@ export const titlePeople = (files, key, { sources = {}, year = null, keep = () =
     }
     const kept = []
     for (const row of rows ?? []) {
-      if (year !== null && row[4] !== year) continue
+      if ((year !== null && row[4] !== year) || !row[1] || titleKey(row[1]) !== key) continue
       if (keep(row, entry)) kept.push(row)
-      else if (row[1] && titleKey(row[1]) === key) setAside += 1
+      else setAside += 1
     }
     for (const row of titleRecords(kept, key, sources, { nameKey })) {
       people.push({
-        row, name: row[0] || null, position: row[1], pay: row[2], expenses: row[3], year: row[4], sourceId: row[5], page: row[6],
+        id: `${entry.slug}:${people.length}`, row, name: row[0] || null, position: row[1], pay: row[2], expenses: row[3], year: row[4], sourceId: row[5], page: row[6],
         slug: entry.slug, employer: entry.names.at(-1), sector: entry.sector
       })
     }

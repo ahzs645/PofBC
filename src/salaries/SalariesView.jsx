@@ -486,15 +486,18 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
         titleKey={place.title}
         employers={employersIndex.employers}
         years={years}
+        sources={employersIndex.sources ?? index.sources}
         sector={sector}
         year={pageYear}
         layout={place.layout === 'table' ? 'table' : 'cards'}
         back={back}
-        onYear={setYear}
+        // A year, or null for every year (no year in the address).
+        onYear={(at) => setPlace((current) => ({ ...current, employerYear: at === null ? null : years[at] }))}
         onLayout={(next) => setPlace((current) => ({ ...current, layout: next }))}
         onSector={setSector}
         onEmployerRole={openRole}
         onTitle={openTitle}
+        onPerson={(name, slug) => openPersonAt(name, slug)}
         remember={remember}
       />
     )
