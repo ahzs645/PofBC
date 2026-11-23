@@ -23,9 +23,8 @@ import { PeriodRange, YearStrip } from './parts.jsx'
 import { MobileSalaryFilters, SalarySearchField, SalarySectorChips } from './MobileFilters.jsx'
 import { personEmployerForBack, salaryYearRange, salaryYearValue } from './viewState.js'
 import { useSalaryPlace } from './useSalaryPlace.js'
-import { Segmented } from '../site/Segmented.jsx'
 import { EmployerBrowse, EmployerCard, PeopleBrowse, PositionBrowse } from './Browse.jsx'
-import { count, LAYOUTS, loadJson, Paged, PersonIcon, toTop } from './common.jsx'
+import { count, loadJson, Paged, PersonIcon, toTop } from './common.jsx'
 import { holdScroll } from '../site/holdScroll.js'
 import { EmployerPage } from './EmployerPage.jsx'
 import { PersonPage } from './PersonPage.jsx'
@@ -38,7 +37,7 @@ import { employerMatcher } from './employerSearch.js'
 import { documentTitle, setDocumentMeta } from '../site/documentMeta.js'
 import { connectRelatedSalaryBodies } from '../government/relatedBodies.js'
 import { loadSalaryIndexes } from './browseIndex.js'
-import { BROWSE } from './CompanionShell.jsx'
+import { BrowseBar } from './CompanionShell.jsx'
 
 const CouncilPayView = lazy(() => import('./CouncilPayView.jsx'))
 const WorkforceView = lazy(() => import('./WorkforceView.jsx'))
@@ -568,17 +567,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
         </dl>
       </section>}
 
-      {!typed && (
-        <div className="salaries__browse-bar salaries__browse-bar--sections">
-          <Segmented
-            ariaLabel="Browse"
-            value={browse}
-            onChange={(next) => go({ browse: next }, settleBrowse(next))}
-            options={BROWSE}
-          />
-          <Segmented compact ariaLabel="Layout" value={layout} onChange={(next) => setPlace((current) => ({ ...current, layout: next }))} options={LAYOUTS} />
-        </div>
-      )}
+      {!typed && <BrowseBar browse={browse} onBrowse={(next) => go({ browse: next }, settleBrowse(next))} layout={layout} onLayout={(next) => setPlace((current) => ({ ...current, layout: next }))} />}
     </>
   )
 

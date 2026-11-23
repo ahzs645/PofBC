@@ -18,7 +18,8 @@ import { DataTable } from './DataTable.jsx'
 import { TitleCard } from './TitlePage.jsx'
 import { GrowthTip, rateColumn } from './Growth.jsx'
 import { Segmented } from '../site/Segmented.jsx'
-import { employerRanking, employerSnapshot } from './employerStats.js'
+import { employerRanking, employerSnapshot, MIN_EMPLOYER_RECORDS } from './employerStats.js'
+import { medianOf } from './growth.js'
 import { EmployerInsights, EMPLOYER_ORDERS, employerRate, useEmployerStatistics } from './EmployerInsights.jsx'
 import { Select } from '../site/ui/Select.jsx'
 import { holdScrollFrom } from '../site/holdScroll.js'
@@ -53,7 +54,8 @@ export const EmployerCard = ({ entry, years, range, onOpen, stats, sources }) =>
   )
 }
 
-const PREVIEW = 4
+/** How many of a sector's largest employers its overview row names. */
+const LARGEST = 3
 /** The Financial Information Act's threshold: said once in the notes, and on a card only when it differs. */
 export const STANDARD_THRESHOLD = 75000
 
@@ -88,13 +90,14 @@ export const EmployerBrowse = ({ employers, years, sector, range, layout, onOpen
   ], [onOpen, years])
 
   const measured = order === 'sector' ? rows : employerRanking(rows, order)
-  const header = <>
-    <EmployerInsights rows={rows} years={years} ready={Boolean(statistics)} failed={failed} onRetry={retry} onOpen={onOpen} onOrder={setOrder} />
-    <div className="employer-insights__order">
-      <label>Order employers <Select aria-label="Order employers" value={order} onChange={(value) => setOrder(value)}>{EMPLOYER_ORDERS.map(({ value, label }) => <option key={value} value={value}>{label}</option>)}</Select></label>
-      {order !== 'sector' && <p className="salaries__meta" role="status">{count(measured.length, 'organization', 'organizations')} with eligible statistics</p>}
-    </div>
-  </>
+  const header = (
+    <EmployerInsights rows={rows} years={years} ready={Boolean(statistics)} failed={failed} onRetry={retry} onOpen={onOpen} onOrder={setOrder} tools={(
+      <div className="employer-insights__order">
+        {order !== 'sector' && <p className="salaries__meta" role="status">{count(measured.length, 'organization', 'organizations')} with eligible statistics</p>}
+        <label>Order employers <Select aria-label="Order employers" value={order} onChange={(value) => setOrder(value)}>{EMPLOYER_ORDERS.map(({ value, label }) => <option key={value} value={value}>{label}</option>)}</Select></label>
+      </div>
+    )} />
+  )
 
   if (layout === 'table') {
     return <>{header}<DataTable key={order} data={measured} columns={columns} sorting={[{ id: order === 'sector' ? 'records' : order, desc: true }]} label="Employers" /></>
@@ -122,15 +125,53 @@ export const EmployerBrowse = ({ employers, years, sector, range, layout, onOpen
       </>
     )
   }
-  return <>{header}{[...bySector].sort(([a], [b]) => a.localeCompare(b)).map(([name, list]) => (
-    <div key={name} className="salaries__sector">
-      <h3 className="salaries__sector-title">{name} <span className="salaries__meta">{list.length}</span></h3>
-      <div className="salaries__grid">
-        {[...list].sort(largest).slice(0, PREVIEW).map((entry) => <EmployerCard key={entry.slug} entry={entry} stats={statsBySlug.get(entry.slug)} years={years} range={range} sources={sources} onOpen={onOpen} />)}
+  // Every sector at once is an overview, one row a sector: its size, its records and its typical pay,
+  // with its largest few employers named. The cards, with each employer's figures and years, are a
+  // sector's own list, a click on.
+  const recordsOf = (entry) => entry.counts.reduce((sum, value, at) => sum + (inRange(at) ? value : 0), 0)
+  const overview = [...bySector].sort(([a], [b]) => a.localeCompare(b)).map(([name, list]) => {
+    const eligible = list.map((entry) => statsBySlug.get(entry.slug)).filter((stats) => stats && stats.count >= MIN_EMPLOYER_RECORDS && Number.isFinite(stats.median))
+    return { name, list: [...list].sort(largest), records: list.reduce((sum, entry) => sum + recordsOf(entry), 0), median: medianOf(eligible.map((stats) => stats.median)), measured: eligible.length }
+  })
+  return <>{header}
+    <section className="salaries-sectors" aria-labelledby="salaries-sectors-heading">
+      <div className="salaries__head">
+        <h3 id="salaries-sectors-heading" className="salaries__title">Employers by sector</h3>
+        <p className="salaries__meta">{count(visible.length, 'employer', 'employers')} in {count(overview.length, 'sector', 'sectors')}{range ? ` · ${rangeLabel(years, range)}` : ''}</p>
       </div>
-      {list.length > PREVIEW && <button type="button" className="salaries__more" onClick={() => onSector(name)}>All {list.length} {name.toLowerCase()} →</button>}
-    </div>
-  ))}</>
+      <ul className="salaries-sectors__list">
+        {overview.map(({ name, list, records, median, measured }) => (
+          <li key={name} className="salaries-sectors__row">
+            <div className="salaries-sectors__name">
+              <h4 className="salaries-sectors__title">{name}</h4>
+              <p className="salaries-sectors__largest">
+                <span className="visually-hidden">Largest: </span>
+                {list.slice(0, LARGEST).map((entry, at) => (
+                  <span key={entry.slug}>
+                    {at > 0 && <span aria-hidden="true"> · </span>}
+                    <button type="button" className="salaries__link" onClick={() => onOpen(entry.slug, statsBySlug.get(entry.slug) ? years[statsBySlug.get(entry.slug).year] : undefined)}>{entry.names.at(-1)}</button>
+                  </span>
+                ))}
+              </p>
+            </div>
+            <div className="salaries-sectors__figures">
+              <p className="salaries-sectors__figure"><b>{list.length.toLocaleString('en-CA')}</b> {list.length === 1 ? 'employer' : 'employers'}</p>
+              <p className="salaries-sectors__figure"><b>{records.toLocaleString('en-CA')}</b> {records === 1 ? 'record' : 'records'}</p>
+              <p className="salaries-sectors__figure" title={measured ? `The middle of ${count(measured, 'employer’s', 'employers’')} median pay` : undefined}>
+                {median != null ? <>Median <b>{summary(median)}</b></> : statistics ? 'No median' : failed ? 'Median —' : 'Median …'}
+              </p>
+            </div>
+            <button type="button" className="salaries__more salaries-sectors__all" onClick={() => onSector(name)} aria-label={`All ${list.length} ${name.toLowerCase()}`}>
+              All {list.length.toLocaleString('en-CA')} <span aria-hidden="true">→</span>
+            </button>
+          </li>
+        ))}
+      </ul>
+      <p className="salaries__meta salaries-sectors__note">
+        Records count every disclosed payment in the periods chosen. Median is the middle of the sector’s employer medians, each employer with {MIN_EMPLOYER_RECORDS} or more employee records counted once, from its latest employee disclosure.
+      </p>
+    </section>
+  </>
 }
 
 /**

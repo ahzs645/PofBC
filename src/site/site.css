@@ -2024,6 +2024,51 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__browse-bar .segmented { --track: var(--mid); --segment: var(--surface); }
 .salaries__browse-bar .segmented button { white-space: nowrap; }
 .salaries__intro .salaries__tiles { margin-top: 12px; }
+/* The sections (CompanionShell.jsx's BrowseBar): the three ways through the payment records as one
+   control, then, past a rule, the other collections as plainer links; the layout switch at the end. */
+.salaries__sections { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; min-width: 0; }
+.salaries__sections > .field { margin: 0; width: auto; }
+.salaries__sections > .field .segmented button { min-width: 6.5em; }
+.salaries__other-sections { display: flex; align-items: center; gap: 2px; padding-left: 14px; border-left: 1px solid var(--mid); }
+.salaries__section-link {
+  display: inline-flex; align-items: center; min-height: 36px; padding: 4px 10px; border: 0; border-radius: 9px;
+  background: none; color: var(--ink-muted); font: inherit; font-size: 14px; font-weight: 500; white-space: nowrap; cursor: pointer;
+}
+.salaries__section-link:hover { color: var(--ink); background: var(--hover); }
+.salaries__section-link[aria-pressed='true'] { color: var(--ink); background: var(--hover); box-shadow: inset 0 -2px 0 var(--salaries-ink); }
+.salaries__section-link:focus-visible { outline: 2px solid var(--salaries-ink); outline-offset: 1px; }
+
+/* Every sector at once (Browse.jsx): a row a sector, its figures in columns, its whole list a click on. */
+.salaries-sectors__list { margin: 0; padding: 0; list-style: none; border: 1px solid var(--mid); border-radius: 12px; background: var(--surface); overflow: hidden; }
+.salaries-sectors__row {
+  display: grid; grid-template-columns: minmax(0, 1fr) 8.5em 10.5em 10.5em 6.5em; align-items: center; gap: 4px 20px;
+  padding: 10px 12px 10px 16px;
+}
+.salaries-sectors__row + .salaries-sectors__row { border-top: 1px solid var(--outline); }
+.salaries-sectors__name { display: grid; gap: 2px; min-width: 0; }
+.salaries-sectors__title { margin: 0; font-size: 15px; font-weight: 600; color: var(--ink); }
+.salaries-sectors__largest { margin: 0; font-size: 12px; line-height: 1.5; color: var(--ink-faint); overflow-wrap: anywhere; }
+.salaries-sectors__largest .salaries__link:hover { color: var(--salaries-ink); }
+.salaries-sectors__figures { display: contents; }
+.salaries-sectors__figure { margin: 0; font-size: 13px; color: var(--ink-faint); text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.salaries-sectors__figure b { font-size: 15px; font-weight: 600; color: var(--ink); }
+.salaries-sectors .salaries-sectors__all { justify-self: end; margin: 0; min-height: 36px; white-space: nowrap; }
+.salaries-sectors__all:focus-visible { outline: 2px solid var(--salaries-ink); outline-offset: 2px; }
+.salaries-sectors__note { margin-top: 8px; max-width: 90ch; }
+@media (max-width: 900px) {
+  /* The name and its way to the whole list on one line; the largest employers, then the figures,
+     each the row's full width under them. */
+  .salaries-sectors__row { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: 'title all' 'largest largest' 'figures figures'; gap: 2px 12px; padding: 10px 12px 12px 14px; }
+  .salaries-sectors__name { display: contents; }
+  .salaries-sectors__title { grid-area: title; align-self: center; }
+  .salaries-sectors__largest { grid-area: largest; }
+  .salaries-sectors .salaries-sectors__all { grid-area: all; min-height: 40px; }
+  .salaries-sectors__figures { grid-area: figures; display: flex; flex-wrap: wrap; gap: 2px 14px; margin-top: 2px; }
+  .salaries-sectors__figure { text-align: left; }
+  .salaries-sectors__figure b { font-size: 14px; }
+  /* A name in the line of the largest is a link to tap: given a line's height to land on. */
+  .salaries-sectors__largest .salaries__link { display: inline-block; padding: 5px 0; }
+}
 
 /* The main mobile filters use one modal sheet; its period chips stay inside that sheet. */
 .salaries__filter-field { min-width: 0; }
@@ -2035,6 +2080,19 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 }
 .salaries__filter-trigger:hover { background: var(--hover); }
 .salaries__filter-count { display: grid; place-items: center; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px; background: var(--salaries-ink); color: var(--surface); font-size: 11px; font-variant-numeric: tabular-nums; }
+/* With a period or sector set behind it, the button takes the salaries' blue, and each filter set is
+   a pill under the search that takes it off. A wide screen has the controls themselves in view. */
+.salaries__filter-trigger[data-active] { border-color: color-mix(in srgb, var(--salaries-ink) 60%, var(--mid)); background: color-mix(in srgb, var(--salaries-ink) 8%, var(--surface)); }
+.salaries__filter-pills { display: none; }
+.salaries__filter-pill {
+  display: inline-flex; align-items: center; gap: 6px; min-width: 0; max-width: 100%; min-height: 40px; padding: 6px 10px 6px 14px;
+  border: 1px solid color-mix(in srgb, var(--salaries-ink) 40%, var(--mid)); border-radius: 999px;
+  background: color-mix(in srgb, var(--salaries-ink) 10%, var(--surface)); color: var(--ink); font: inherit; font-size: 14px; cursor: pointer;
+}
+.salaries__filter-pill span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.salaries__filter-pill svg { flex: none; color: var(--ink-muted); }
+.salaries__filter-pill:hover { background: color-mix(in srgb, var(--salaries-ink) 18%, var(--surface)); }
+.salaries__filter-pill:focus-visible { outline: 2px solid var(--salaries-ink); outline-offset: 2px; }
 .salaries-filter-sheet {
   position: fixed; inset: auto 0 var(--salaries-sheet-bottom, 0px); width: 100%; max-width: 560px; max-height: 90vh; max-height: var(--salaries-sheet-height, 90dvh); margin: 0 auto; padding: 0;
   grid-template-rows: auto minmax(0, 1fr) auto; overflow: hidden;
@@ -2066,6 +2124,7 @@ button.gallery__collecting-status, .gallery__collecting-graph {
   .salaries__mobile-filters > .salaries__filter-field { flex: 1 1 0; }
   .salaries__mobile-filters input { height: 44px; padding: 9px 12px; }
   .salaries__mobile-filters .salaries__tip { display: none; }
+  .salaries__filter-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: -8px; }
   .salaries-disclosure--mobile-notes .salaries-disclosure__line { display: none; }
   .salaries-disclosure--mobile-notes:not(:has(.salaries__caveats)) { display: none; }
   .salaries__browse-bar { flex-wrap: wrap; gap: 6px; }
@@ -2075,10 +2134,24 @@ button.gallery__collecting-status, .gallery__collecting-graph {
   .salaries__browse-bar .segmented { min-height: 44px; gap: 0; padding: 2px; }
   .salaries__browse-bar .segmented button { flex: 1 1 auto; min-width: 0; min-height: 40px; padding: 4px; font-size: 12px; }
   .salaries__browse-bar .field--compact .segmented button { min-height: 40px; padding: 4px 5px; font-size: 12px; }
-  /* Three pixels a side is the least the five names need to share a 375-pixel phone with the
-     switch; on anything wider they spread to fill the row. */
-  .salaries__browse-bar--sections .field:not(.field--compact) .segmented button { padding: 4px 3px; }
-  .salaries__tab-more { display: none; }
+  /* The sections in two rows: the three records tabs at a readable size with the layout switch at
+     their end, and the other collections as a row of links under them, scrolling sideways should
+     large text need more room than a phone has. */
+  .salaries__browse-bar--sections { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 4px 6px; }
+  .salaries__browse-bar--sections .salaries__sections { display: contents; }
+  .salaries__browse-bar--sections .field:not(.field--compact) .segmented button { min-width: 0; padding: 4px 6px; font-size: 14px; }
+  .salaries__other-sections { grid-column: 1 / -1; grid-row: 2; gap: 4px; margin: 0 -4px; padding: 0; border: 0; overflow-x: auto; scrollbar-width: none; }
+  .salaries__section-link { min-height: 40px; padding: 4px 10px; }
+  /* A finger's worth (40 pixels) for what is tapped on a phone: an employer's tabs and layout switch,
+     the pages under a list, a table's sort and filter, the amount to rank, the link to the notes. */
+  .salaries__records > .field .segmented button, .salaries__head-tools .field--compact .segmented button { min-height: 40px; }
+  .salaries__head-tools .field--compact .segmented button { min-width: 40px; }
+  .salaries .salaries-pager button { min-width: 40px; height: 40px; }
+  .salaries .salaries-datatable__sort { line-height: 40px; }
+  .salaries .salaries-datatable__filter { min-height: 40px; font-size: 16px; }
+  .salaries .salaries__rank input { min-height: 40px; font-size: 16px; }
+  .salaries__about-link .salaries__link { display: inline-block; padding: 8px 0; margin: -8px 0; }
+  .employer-insights__tile :is(.employer-insights__label, .employer-insights__name) { min-height: 32px; display: inline-flex; align-items: center; gap: 0.3em; }
   /* Beside the sections the switch is one button: it shows the layout a tap would change to. */
   .salaries__browse-bar--sections .field--compact .segmented button[aria-pressed='true'] { display: none; }
   .salaries__browse-bar--sections .field--compact .segmented button { min-width: 36px; }
@@ -2143,7 +2216,6 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__source p { margin: 0.35em 0; }
 .salaries__name[data-missing] { color: var(--ink-faint); font-style: italic; }
 .salaries__search--one { grid-template-columns: 1fr; margin-bottom: 12px; }
-.salaries__sector { margin-top: 8px; }
 .salaries__tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin: 4px 0 0; }
 .salaries__dollars { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; margin: 16px 0 4px; }
 .salaries__dollars .field { margin: 0; }
@@ -2208,10 +2280,6 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-bands__count { text-align: right; color: var(--ink); }
 .salaries__title--spaced { margin-top: 12px; }
 .salaries__year-title { margin: 4px 0 0; font-size: 15px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
-.salaries__sector { display: grid; gap: 8px; margin-top: 16px; }
-.salaries__sector-title { margin: 0; font-size: 14px; font-weight: 600; color: var(--ink); }
-.salaries__sector-title .salaries__meta { display: inline; margin-left: 6px; font-weight: 400; }
-.salaries__sector .salaries__more { margin-top: 0; }
 
 /* The sectors as chips under the search: one at a time, or all. On a phone they scroll sideways
    rather than wrap into a block. */
@@ -2230,6 +2298,16 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__chips button span { margin-left: 4px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
 .salaries__chips button[aria-pressed='true'] { border-color: var(--ink); background: var(--ink); color: var(--surface); }
 .salaries__chips button[aria-pressed='true'] span { color: inherit; opacity: 0.7; }
+.salaries__chips button:focus-visible { outline: 2px solid var(--salaries-ink); outline-offset: 1px; }
+/* The sectors under the search keep to one line at any width: where they do not all fit, the row
+   scrolls sideways and fades at whichever end has more past it (useScrollRow, MobileFilters.jsx).
+   A few pixels of padding keep a focused chip's outline clear of the row's clipped edge. */
+.salaries__chips--scroll { flex-wrap: nowrap; gap: 4px; overflow-x: auto; margin: -3px; padding: 3px; scrollbar-width: none; overscroll-behavior-x: contain; }
+.salaries__chips--scroll::-webkit-scrollbar { display: none; }
+.salaries__chips--scroll button { padding: 6px 10px; }
+.salaries__chips--scroll[data-more='end'] { -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent); }
+.salaries__chips--scroll[data-more='start'] { -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent); }
+.salaries__chips--scroll[data-more='both'] { -webkit-mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
 @media (max-width: 640px) {
   /* One row that scrolls sideways; its last 28 pixels fade, so a chip cut off there reads as more
      to come and not as a row that does not fit. The padding lets the last chip scroll clear of it. */

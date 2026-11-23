@@ -50,12 +50,16 @@ const detail = (metric, stats, years) => {
   return `${years[stats.year]} · ${count(stats.count, 'employee record', 'employee records')}`
 }
 
-export const EmployerInsights = ({ rows, years, ready, failed, onRetry, onOpen, onOrder }) => {
+/** The three leaders, small: a line of tiles above the list, with `tools` (the list's order) beside its heading. */
+export const EmployerInsights = ({ rows, years, ready, failed, onRetry, onOpen, onOrder, tools = null }) => {
   const since = currentSince(rows)
   const older = rows.filter(({ stats }) => stats && stats.count >= MIN_EMPLOYER_RECORDS && !isCurrent(stats, since)).length
   return (
   <section className="employer-insights" aria-labelledby="employer-insights-heading">
-    <h3 id="employer-insights-heading" className="salaries__title">Across organizations</h3>
+    <div className="salaries__head employer-insights__head">
+      <h3 id="employer-insights-heading" className="salaries__title">Across organizations</h3>
+      {tools}
+    </div>
     {failed
       ? <p className="salaries__hint" role="alert">Organization statistics could not be loaded. <button type="button" className="salaries__link" onClick={onRetry}>Retry statistics</button></p>
       : !ready
@@ -79,9 +83,10 @@ export const EmployerInsights = ({ rows, years, ready, failed, onRetry, onOpen, 
             )
           })}
         </div>}
-    {ready && older > 0 && <p className="salaries__meta employer-insights__older">{count(older, 'organization', 'organizations')} not ranked: latest disclosure over {Math.round(CURRENT_WINDOW_DAYS / 365 * 12)} months older than the newest.</p>}
+    {/* The caveats as one line under the tiles, not two paragraphs between them and the list. */}
     <p className="salaries__meta employer-insights__definitions">
       Figures describe the disclosed records, not salary rates.{' '}
+      {ready && older > 0 && <>{count(older, 'organization', 'organizations')} not ranked: latest disclosure over {Math.round(CURRENT_WINDOW_DAYS / 365 * 12)} months older than the newest.{' '}</>}
       <SiteLink to={{ view: 'salaries', browse: 'about' }} className="salaries__link">How they are worked out</SiteLink>
     </p>
   </section>
