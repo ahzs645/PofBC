@@ -62,8 +62,10 @@ jobs:
         if: ${{ github.event_name != 'workflow_dispatch' || inputs.run_tests }}
         run: npm test
 
+      # `npm run build` would run build:assets a second time (the salary search alone is ~25 s);
+      # the assets were built above, so only Vite is left.
       - name: Build the site
-        run: npm run build
+        run: npx vite build
         env:
           # The repository's own name, so renaming it cannot leave the asset URLs pointing at a
           # path that no longer exists.

@@ -2449,7 +2449,8 @@ export const EXPANDED_IDENTITY_BODIES = [
         "fidelityNote": "Vector reconstruction; not recovered artwork. The double arrow is the paper bus’s two arrow paths unchanged, only scaled, placed and recoloured. The wordmark is new outlined lettering from Liberation Sans Italic, fitted to the scan (shape correlation 0.87 against eight sans-serif candidates); the original typeface is not identified. The rules are drawn anew to the scan’s placement and weight. Colour #E44E5B approximates the printed red in the scan; the 1985 corporate red is not established. The scan is 500 × 319, so letter details and hue are uncertain.",
         "sha256": "4ed1d370e82636cbd532877ff76dffe8037ba670b0877399ead57d88b3111d57",
         "bytes": 4378,
-        "versionLabel": "Brochure red"
+        "versionLabel": "Brochure red",
+        "search": "handydart-1985-vector-2026-11-23"
       },
       {
         "id": "rebuild-expanded-handydart-1985-brochure-paper-model-red",
@@ -2479,7 +2480,8 @@ export const EXPANDED_IDENTITY_BODIES = [
         "sha256": "e24a182701d579d1d2d486c612d63ef3fd59433cbad019dcd9e000b0e824455b",
         "bytes": 4378,
         "variantOf": "rebuild-expanded-handydart-1985-brochure",
-        "versionLabel": "Paper-bus red"
+        "versionLabel": "Paper-bus red",
+        "search": "handydart-1985-vector-2026-11-23"
       }
     ]
   },
