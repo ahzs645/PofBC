@@ -36,9 +36,19 @@ cannot vouch for the original letterforms, spacing or inks.
   https://trid.trb.org/View/165550). A catalogue record of the authority's graphic standards,
   covering the mark, colours, type and vehicles. No copy has been seen, and the record gives no
   publication date. It is the lead for the mark's original construction.
-- **Museum of Vancouver, H2015.37.361a–c.** handyDART pamphlets with the same arrow in white on
-  red, which the museum is reported to estimate at 1982–1985. This was reported to the project
-  but its record was not found online, so it is not yet a cited source.
+- **TransLink, The Buzzer, "75 facts about Vancouver's trolleybus system"** (16 August 2023,
+  https://buzzer.translink.ca/2023/08/75-facts-about-trolleybus/). Fact 8: the trolleybuses were
+  painted in the UTA's orange and white on 2 April 1982, then "in August" the Province renamed the
+  UTA BC Transit, and a red, white and blue scheme followed. The year beside "August" is implied
+  by the April 1982 date, not stated.
+- **Museum of Vancouver, H2015.37.361a-c, "Pamphlet, BC Transit, handyDART, c. 1980s"**
+  (https://openmovportal.ca/argus/final/Portal/Main.aspx?component=AAFG&record=b565fe34-98af-435c-85de-9195188cbb78;
+  accession 2015.9.361). Dated 1982–1985, estimated from the adoption of the name BC Transit in
+  1982 and from the pamphlets predating BC Transit's change of logo to the BC flag in 1985. Colours
+  red, white, blue and black. Checked 22 November 2026: the record's text does not describe the
+  arrow, so the "white arrow on red" reported to the project rests on its photographs, which were
+  not examined here. Its range is the museum's estimate for these objects, not a retirement date
+  for the mark.
 
 ## Links
 

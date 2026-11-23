@@ -17,6 +17,7 @@ const lazyView = (id, name) => lazy(() => VIEW_LOADERS[id]().then((module) => ({
 const GalleryView = lazyView('gallery', 'GalleryView')
 const InitiativesView = lazyView('initiatives', 'InitiativesView')
 const SchoolDistrictsView = lazyView('school-districts', 'SchoolDistrictsView')
+const PartiesView = lazyView('parties', 'PartiesView')
 const GovernmentView = lazyView('government', 'GovernmentView')
 const InternalLogosView = lazyView('internal', 'InternalLogosView')
 const PostersView = lazyView('posters', 'PostersView')
@@ -171,7 +172,7 @@ const initialView = () => {
  */
 const writeView = (view) => {
   const url = salaryPlaceUrl(globalThis.location.href, {})
-  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', 'logos', 'mark', 'subject', 'coverage', 'identity-family', 'identity-state', 'identity-scope', 'identity-query', 'internal', 'internal-logo', 'poster', 'sign', 'card', 'pin', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'plate', 'area', 'chapter', 'story', 'holder', 'initiative', 'section', 'record', 'district', 'school-query', 'school-scope']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', 'logos', 'mark', 'subject', 'coverage', 'identity-family', 'identity-state', 'identity-scope', 'identity-query', 'internal', 'internal-logo', 'poster', 'sign', 'card', 'pin', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'plate', 'area', 'chapter', 'story', 'holder', 'initiative', 'section', 'record', 'district', 'school-query', 'school-scope', 'party', 'party-query', 'party-scope', 'party-design']) url.searchParams.delete(key)
   if (/^#tourism-/.test(url.hash)) url.hash = ''
   if (view !== 'generator') url.searchParams.set('view', view)
   writeHistory(url)
@@ -198,7 +199,7 @@ export const App = () => {
   }, [])
   // Detail views that own their metadata also name the selected page in the tab.
   useEffect(() => {
-    if (view === 'salaries' || view === 'initiatives' || view === 'school-districts') return
+    if (view === 'salaries' || view === 'initiatives' || view === 'school-districts' || view === 'parties') return
     const entry = [...VIEWS, ...HIDDEN_VIEWS].find(({ id }) => id === view)
     setDocumentMeta({
       title: view === 'generator' || !entry ? DEFAULT_TITLE : documentTitle(entry.label),
@@ -341,6 +342,12 @@ export const App = () => {
       {view === 'school-districts' && (
         <Suspense fallback={<p className="gallery__intro" role="status">Loading the school districts…</p>}>
           <SchoolDistrictsView key={visit} />
+        </Suspense>
+      )}
+
+      {view === 'parties' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the political parties…</p>}>
+          <PartiesView key={visit} />
         </Suspense>
       )}
 

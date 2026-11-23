@@ -38,6 +38,8 @@ export const PROGRAM_ENTRY_OWNERS = {
   // Ministries' flag-years marks: owned by the ministry's node on the government map.
   'bc-environment-flag-years': 'ministry-of-environment-1988',
   'tourism-recreation-culture-1986': 'ministry-of-tourism-recreation-and-culture-1986',
+  // A ministry program's mark: owned by the program's subject, which links to the ministry's node.
+  'superhost-1986': 'superhost',
   // The Department of Recreation and Conservation is a ministry, not an atlas body, so its marks are
   // owned by its register subject. BC Parks' copies of the Parks Branch's two are BC Parks' own.
   ...Object.fromEntries(['drc-dogwood-oval-1970', 'drc-department', 'drc-fish-wildlife', 'drc-parks', 'drc-museum',
@@ -267,6 +269,30 @@ export const RECONCILED_SUBJECTS = [
     note: 'A ministry from November 1986 to July 1988, with one minister, Bill Reid, whose name its logo carries. The Province’s tourism marketing was later Tourism BC’s.',
     relations: [
       { subject: 'department-of-travel-industry', type: 'related-to', label: 'An earlier department for the Province’s tourism' }
+    ]
+  }),
+  subject({
+    id: 'superhost',
+    label: 'SuperHost',
+    name: 'SuperHost, the Ministry of Tourism’s hospitality-training program',
+    kind: 'service-brand',
+    graphNode: 'ministry-of-tourism-1980',
+    // The map's Ministry of Tourism ends in 1986, when Tourism, Recreation and Culture takes over.
+    graphYear: 1985,
+    aliases: ['SuperHost', 'Super Host', 'Expect the most'],
+    collectionIds: ['superhost'],
+    priority: 3,
+    sources: [
+      {
+        title: 'A SuperHost newspaper advertisement credited to Claude Richmond, Minister of Tourism/Expo 86',
+        citation: 'Supplied as a screenshot; the package cites the Squamish Times, 29 April 1986, page 19.'
+      },
+      { title: 'CIPO record 0904301, SuperHost & Design', url: 'https://ised-isde.canada.ca/cipo/trademark-search/0904301?lang=eng' }
+    ],
+    nextAction: 'Find when SuperHost began and the printed colours of its “Expect the most” mark.',
+    note: 'The Ministry of Tourism’s training program for front-line hospitality staff, run in the Expo 86 years. It later went with the Province’s tourism marketing to Tourism BC and Destination BC, whose 2013 transfer lists a later SuperHost figure mark.',
+    relations: [
+      { subject: 'ministry-of-tourism-recreation-and-culture-1986', type: 'related-to', label: 'The ministry that followed, from November 1986' }
     ]
   }),
   subject({

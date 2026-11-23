@@ -513,13 +513,13 @@ export const ResearchCard = () => (
     <h3 className="gov-card__subheading">Historical source rosters</h3>
     <p>These lists record what a report printed. A name match is a research lead; it does not establish founding, continuous responsibility or institutional identity.</p>
     {HISTORICAL_CENSUSES.map((census) => (
-      <div key={census.ministry}>
-        <h4>{census.ministry}</h4>
+      <div key={census.title ?? census.ministry}>
+        <h4>{census.title ?? census.ministry}</h4>
         {census.rosters.map((roster) => (
           <details key={roster.id}>
-            <summary>{roster.report_period}: {`Appendix ${roster.id.slice(-1).toUpperCase()}`} · {roster.rows.length} entries · {roster.observed_on ? `observed ${roster.observed_on}` : 'exact observation date unresolved'}</summary>
+            <summary>{roster.report_period}: {roster.title ?? `Appendix ${roster.id.slice(-1).toUpperCase()}`} · {roster.rows.length} entries · {roster.observed_on ? `observed ${roster.observed_on}` : 'exact observation date unresolved'}</summary>
             <SourceLink source={{ url: roster.source_url, title: 'Open source roster' }} />
-            <p className="gov-notice">{roster.limitation}</p>
+            {roster.limitation && <p className="gov-notice">{roster.limitation}</p>}
             <ul>{roster.rows.map((row) => (
               <li key={row.ordinal}>
                 <strong>{row.name_as_printed}</strong> · {row.parent_as_printed}

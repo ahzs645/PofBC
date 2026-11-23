@@ -6389,8 +6389,51 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-31",
-    "notes": "Complete people-and-oval emblem and council name recovered from its archived 2001 website. Original grey background and small lettering are preserved.",
+    "notes": "Complete people-and-oval emblem and council name recovered from its archived 2001 website. Original transparent background and small lettering are preserved.",
     "assets": [
+      {
+        "id": "greater-trail-chc-rebuilt",
+        "label": "Greater Trail Community Health Council: people-and-oval symbol and name, vector reconstruction",
+        "file": "identity-collected/greater-trail-community-health-council/greater-trail-chc-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Greater Trail Community Health Council",
+        "sourcePage": "https://web.archive.org/web/20010404093451id_/http://www.trailnet.bc.ca/~trh/",
+        "sourceUrl": "https://web.archive.org/web/20010606033527id_/http://www.trailnet.bc.ca:80/~trh/GTCHC_logo.gif",
+        "sourceLocator": "Rebuilt from a supplied screenshot of the logo (1166 × 488, research package source/Reference-Supplied-Screenshot.png), whose publication and date are not established; the motif is corroborated by the council’s archived 2001 website GIF",
+        "sourceFile": null,
+        "sourceDate": null,
+        "observedDate": "2026-11-22",
+        "dateNote": "The screenshot it follows is undated; the 2001 website GIF dates a sighting of the design, not its adoption.",
+        "alsoSeen": [
+          {
+            "date": "2001-06-06",
+            "source": "https://web.archive.org/web/20010606033527id_/http://www.trailnet.bc.ca:80/~trh/GTCHC_logo.gif"
+          }
+        ],
+        "evidenceType": "vector-reconstruction",
+        "notes": "Three figures with oval heads rising from three nested oval bands, between “Greater” and “Trail” in serif capitals over a sloped rule, with “Community Health Council” below in widely spaced capitals and a heavier HEALTH, in black.",
+        "fidelityNote": "A vector reconstruction, not original artwork, which has not been found. It follows a supplied screenshot, not the 2001 website GIF: the screenshot has heavier oval bands and differently lettered small capitals, so the two show one design family, not one master. The symbol is three analytic oval heads, three drawn body paths and three oval bands (no automatic tracing). GREATER and TRAIL are custom serif capitals; the caption is outlines derived from Albertus, the closest typeface tested. Neither typeface is confirmed, and all lettering is outlined. Overlap with the screenshot is about 0.90 overall (0.94 for the symbol, 0.78–0.84 for the words). No colour, designer or adoption date is asserted.",
+        "sha256": "5c6d577775db59afeb5cdf0dfab42813242d6b12252d5d91172c2ead13ae98e4",
+        "bytes": 28412,
+        "darkBackground": false,
+        "search": "greater-trail-chc-vector-2026-11-22",
+        "downloads": [
+          {
+            "label": "Download vector PDF",
+            "file": "identity-collected/greater-trail-community-health-council/greater-trail-chc-rebuilt.pdf",
+            "sha256": "8f693ea331ce43eea166c0417a97b4e5649a478d26b50bb6b5e6746fa907d693"
+          },
+          {
+            "label": "Download symbol SVG",
+            "file": "identity-collected/greater-trail-community-health-council/greater-trail-chc-symbol-rebuilt.svg",
+            "sha256": "d39f68c9bd4a2fee7b150ef151b20154d94eba93f3ec6b8528f04bc414f38760"
+          }
+        ],
+        "versionLabel": "Vector reconstruction"
+      },
       {
         "isVector": false,
         "supplied": false,
@@ -6410,12 +6453,14 @@ export const COLLECTED_BODIES = [
         "sourceDate": "2001-06-06",
         "dateNote": "Image captured 6 June 2001; homepage captured 4 April 2001 references the same image path. These sightings do not establish first use.",
         "evidenceType": "original-archived-web-raster",
-        "fidelityNote": "Original 205 by 105 GIF preserved byte-for-byte, including its grey background and small lettering. No enhancement or tracing.",
+        "fidelityNote": "Original 205 by 105 GIF preserved byte-for-byte, with its transparent background (its transparent palette entry is grey where transparency is ignored) and small lettering. No enhancement or tracing.",
         "notes": "Complete people/oval emblem with Greater Trail and Community Health Council lettering. Distinct from the Trail Regional Hospital and hospital foundation.",
         "sourceFile": null,
         "previewWidth": 205,
         "previewHeight": 105,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "versionLabel": "Published image",
+        "variantOf": "greater-trail-chc-rebuilt"
       }
     ]
   },
@@ -6959,7 +7004,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-31",
-    "notes": "The 1999 health plan supplies the complete green trees and council name; the original 2000 website supplies the black standalone tree emblem. Both are raster specimens for the Community Health Council.",
+    "notes": "The 1999 health plan supplies the complete green trees and council name; the original 2000 website supplies the black standalone tree emblem. Both are raster specimens for the Community Health Council; the green mark is also redrawn as a vector reconstruction (south-cariboo-vector-2026-11-22).",
     "assets": [
       {
         "id": "historical-south-cariboo-thankyou-monochrome",
@@ -6985,9 +7030,51 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "previewWidth": 200,
         "previewHeight": 100,
-        "variantOf": "historical-south-cariboo-1999-health-plan",
+        "variantOf": "south-cariboo-chc-rebuilt",
         "versionLabel": "Black and grey, thank-you page (2004 capture)",
         "search": "bc-health-vector-findings-2026-11-22"
+      },
+      {
+        "id": "south-cariboo-chc-rebuilt",
+        "label": "South Cariboo Community Health Council: two green trees and name, vector reconstruction",
+        "file": "identity-collected/south-cariboo-community-health-council/south-cariboo-chc-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "South Cariboo Community Health Council",
+        "sourcePage": "https://web.archive.org/web/20000915110312id_/http://www2.bcinternet.net:80/~100mile/health/healthplan99.pdf",
+        "sourceUrl": "https://web.archive.org/web/20000915110312id_/http://www2.bcinternet.net:80/~100mile/health/healthplan99.pdf",
+        "sourceLocator": "Rebuilt from the one logo image in the council’s Health Plan (cover, a 315 × 141 JPEG; the plan holds no drawing paths), with the black 2000 website emblem and the black-and-grey thank-you lockup as corroboration",
+        "sourceFile": null,
+        "sourceDate": "1999-11-01",
+        "observedDate": "2026-11-22",
+        "dateNote": "The Health Plan’s approval date, printed on its cover; not the logo’s adoption.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "Two brush-drawn trees, a dark green one and a smaller pale green one behind it to the right, beside “South Cariboo Community Health Council” on four lines in a soft serif.",
+        "fidelityNote": "A vector reconstruction, not original artwork, which has not been found. The trees are redrawn by hand over a 315 × 141 image, so the brush texture is interpreted, not recovered (no automatic tracing). The pale tree is a linked copy of the dark one at five-sixths scale, on the assumption that the artwork reused one tree; the source’s pale tree looks fuller on the right, so that tree matches it less closely (about 0.66 overlap against 0.89 for the dark tree and the lettering). The earlier, closer-fitted drawing is kept in the research package. The lettering is outlined after ITC Souvenir Demi, the closest typeface tested; the original typeface is not identified. The greens #417A3A and #9BBC95 are sampled from the image, not print specifications.",
+        "sha256": "43bafd8e7811198e196b51a096f27f8994f0e7cad3818a6536f835134940eae6",
+        "bytes": 128202,
+        "darkBackground": false,
+        "search": "south-cariboo-vector-2026-11-22",
+        "downloads": [
+          {
+            "label": "Download vector PDF",
+            "file": "identity-collected/south-cariboo-community-health-council/south-cariboo-chc-rebuilt.pdf",
+            "sha256": "b0ab5b213c694e4a2e4f79bffda303a3c0bf532d789c17498476635222d0c4e4"
+          },
+          {
+            "label": "Download expanded SVG",
+            "file": "identity-collected/south-cariboo-community-health-council/south-cariboo-chc-rebuilt-expanded.svg",
+            "sha256": "91af0390517f7298675bf4f6d5674f255f461ef4a590ab49bb54d62db1abbeaf"
+          },
+          {
+            "label": "Download tree SVG",
+            "file": "identity-collected/south-cariboo-community-health-council/south-cariboo-chc-tree-rebuilt.svg",
+            "sha256": "9167608c58a82435c0a7f061a42f11ef29843067134357101fd621802bbd9d6e"
+          }
+        ],
+        "versionLabel": "Vector reconstruction"
       },
       {
         "isVector": false,
@@ -7013,7 +7100,9 @@ export const COLLECTED_BODIES = [
         "sourceFile": null,
         "previewWidth": 315,
         "previewHeight": 141,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "versionLabel": "Published image",
+        "variantOf": "south-cariboo-chc-rebuilt"
       },
       {
         "isVector": false,
@@ -9013,6 +9102,118 @@ export const COLLECTED_BODIES = [
     "assets": []
   },
   {
+    "id": "housing-corporation-of-bc",
+    "name": "Housing Corporation of British Columbia",
+    "kind": "crown-corporation",
+    "from": 1974,
+    "to": 1990,
+    "current": false,
+    "status": "unresolved",
+    "observedDate": "2026-11-22",
+    "notes": "Added to the atlas on 2026-11-22 from the subsidiary research package; no logo search has been made yet. This is an unsearched gap, not a claim that it had no mark.",
+    "assets": []
+  },
+  {
+    "id": "panco-poultry",
+    "name": "British Columbia Food Exhibitions Ltd.",
+    "kind": "crown-corporation",
+    "from": 1975,
+    "to": 1992,
+    "current": false,
+    "status": "unresolved",
+    "observedDate": "2026-11-22",
+    "notes": "Added to the atlas on 2026-11-22 from the subsidiary research package; no logo search has been made yet. This is an unsearched gap, not a claim that it had no mark.",
+    "assets": []
+  },
+  {
+    "id": "ts-holdings",
+    "name": "T.S. Holdings Ltd.",
+    "kind": "crown-corporation",
+    "from": 1975,
+    "to": null,
+    "current": false,
+    "untraced": true,
+    "status": "unresolved",
+    "observedDate": "2026-11-22",
+    "notes": "Added to the atlas on 2026-11-22 from the subsidiary research package; no logo search has been made yet. This is an unsearched gap, not a claim that it had no mark.",
+    "assets": []
+  },
+  {
+    "id": "pacific-coach-lines",
+    "name": "Pacific Coach Lines Limited",
+    "kind": "crown-corporation",
+    "from": 1978,
+    "to": null,
+    "current": false,
+    "untraced": true,
+    "status": "unresolved",
+    "observedDate": "2026-11-22",
+    "notes": "Added to the atlas on 2026-11-22 from the subsidiary research package; no logo search has been made yet. This is an unsearched gap, not a claim that it had no mark.",
+    "assets": []
+  },
+  {
+    "id": "crown-development-corporation",
+    "name": "Crown Development Corporation",
+    "kind": "crown-corporation",
+    "from": 1975,
+    "to": null,
+    "current": false,
+    "untraced": true,
+    "status": "unresolved",
+    "observedDate": "2026-11-22",
+    "notes": "Added to the atlas on 2026-11-22 from the subsidiary research package; no logo search has been made yet. This is an unsearched gap, not a claim that it had no mark.",
+    "assets": []
+  },
+  {
+    "id": "iok-poultry",
+    "name": "I.O.K. Poultry Ltd.",
+    "kind": "crown-corporation",
+    "from": null,
+    "to": null,
+    "current": false,
+    "untraced": true,
+    "status": "unresolved",
+    "observedDate": "2026-11-22",
+    "notes": "Added to the atlas on 2026-11-22 from the subsidiary research package; no logo search has been made yet. This is an unsearched gap, not a claim that it had no mark.",
+    "assets": []
+  },
+  {
+    "id": "bc-cellulose-company",
+    "name": "British Columbia Cellulose Company",
+    "kind": "crown-corporation",
+    "from": 1973,
+    "to": 1986,
+    "current": false,
+    "status": "unresolved",
+    "observedDate": "2026-11-22",
+    "notes": "Added to the atlas on 2026-11-22 from the verified subsidiary research; no logo search has been made yet. This is an unsearched gap, not a claim that it had no mark.",
+    "assets": []
+  },
+  {
+    "id": "plateau-mills",
+    "name": "Plateau Mills Ltd.",
+    "kind": "crown-corporation",
+    "from": null,
+    "to": 1978,
+    "current": false,
+    "status": "unresolved",
+    "observedDate": "2026-11-22",
+    "notes": "Added to the atlas on 2026-11-22 from the verified subsidiary research; no logo search has been made yet. This is an unsearched gap, not a claim that it had no mark.",
+    "assets": []
+  },
+  {
+    "id": "swan-valley-foods",
+    "name": "Swan Valley Foods Ltd.",
+    "kind": "crown-corporation",
+    "from": 1977,
+    "to": 1977,
+    "current": false,
+    "status": "unresolved",
+    "observedDate": "2026-11-22",
+    "notes": "Added to the atlas on 2026-11-22 from the subsidiary research; no logo search has been made yet. This is an unsearched gap, not a claim that it had no mark.",
+    "assets": []
+  },
+  {
     "id": "bc-trade-development-corporation",
     "name": "British Columbia Trade Development Corporation",
     "shortName": "BC Trade",
@@ -10424,6 +10625,138 @@ export const COLLECTED_SPECIMENS = [
         "bytes": 40034,
         "darkBackground": false,
         "search": "tourism-recreation-culture-vector-2026-11-22"
+      }
+    ]
+  },
+  {
+    "program": "superhost",
+    "assets": [
+      {
+        "id": "superhost-1986",
+        "label": "SuperHost: “Expect the most”, the star spray over the flag",
+        "file": "identity-collected/superhost/superhost-newspaper-black.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Ministry of Tourism, Province of British Columbia",
+        "sourcePage": null,
+        "sourceUrl": null,
+        "sourceLocator": "A newspaper advertisement for the SuperHost program, supplied to the project as a screenshot (reference/newspaper-supplied.png), credited to “The Honourable Claude Richmond, Minister of Tourism/Expo 86”; the package cites the Squamish Times of 29 April 1986, page 19",
+        "sourceFile": "supplied newspaper screenshot",
+        "sourceDate": "1986",
+        "observedDate": "2026-11-22",
+        "dateNote": "Its credit dates it: Claude Richmond was Minister of Tourism from 10 August 1982 to 14 August 1986, and the advertisement ties the program to Expo 86. The package cites a printing in the Squamish Times of 29 April 1986, page 19. When the program and its mark began is not established.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "A spray of stars bursting up out of the flag symbol, with “Expect the most” in brush script across the foot of the flag and “SUPERHOST” below in a serif with an enlarged S and H, in black, as the 1986 newspaper advertisement prints it.",
+        "fidelityNote": "A supplied vector reconstruction (revision 2), not original artwork. The flag is the gallery’s own twelve-path flag (src/assets/flagMark.js), every path unchanged and placed as one unit; the stars are regular five-point shapes (inner radius 0.445) placed on the reference’s landmarks, where the dense base of the spray, merged in print, is partly inferred; “SUPERHOST” is drawn from eight custom serif letter masters and “Expect the most” from ten brush-stroke skeletons swept with a mathematical nib, both refitted to the references in the second revision. The original typefaces are not identified. Overlap of the lettering with the references (intersection over union at a 0.5 threshold): wordmark 0.70 and script 0.58 against the newspaper, 0.83 and 0.64 against the trademark specimen. The two references set the stars differently, so each layout is reconstructed on its own rather than one being stretched to the other.",
+        "downloads": [
+          {
+            "label": "Download vector PDF",
+            "file": "identity-collected/superhost/superhost-newspaper-black.pdf",
+            "sha256": "b24424a611e7432d3aae73304edb6021caf5e20c10eaf0340002121cbd4d3167"
+          }
+        ],
+        "sha256": "918753a669c4d03c3159f4a1a941de14572abe4a3e2c4acd1cb9ab8b283a03a4",
+        "bytes": 99359,
+        "darkBackground": false,
+        "search": "superhost-vector-2026-11-22"
+      },
+      {
+        "id": "superhost-1986-colour",
+        "variantOf": "superhost-1986",
+        "label": "SuperHost: in the flag’s colours",
+        "file": "identity-collected/superhost/superhost-newspaper-colour.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Ministry of Tourism, Province of British Columbia",
+        "sourcePage": null,
+        "sourceUrl": null,
+        "sourceLocator": "A newspaper advertisement for the SuperHost program, supplied to the project as a screenshot (reference/newspaper-supplied.png), credited to “The Honourable Claude Richmond, Minister of Tourism/Expo 86”; the package cites the Squamish Times of 29 April 1986, page 19",
+        "sourceFile": "supplied newspaper screenshot",
+        "sourceDate": "1986",
+        "observedDate": "2026-11-22",
+        "dateNote": "Its credit dates it: Claude Richmond was Minister of Tourism from 10 August 1982 to 14 August 1986, and the advertisement ties the program to Expo 86. The package cites a printing in the Squamish Times of 29 April 1986, page 19. When the program and its mark began is not established.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The same artwork with the flag in the gallery’s blue #013366, red #AD0000 and gold #FCBA19, stars and lettering in black. A colour interpretation: a contemporary advertisement and a surviving enamel pin support red, blue and yellow, but not these values.",
+        "fidelityNote": "A supplied vector reconstruction (revision 2), not original artwork. The flag is the gallery’s own twelve-path flag (src/assets/flagMark.js), every path unchanged and placed as one unit; the stars are regular five-point shapes (inner radius 0.445) placed on the reference’s landmarks, where the dense base of the spray, merged in print, is partly inferred; “SUPERHOST” is drawn from eight custom serif letter masters and “Expect the most” from ten brush-stroke skeletons swept with a mathematical nib, both refitted to the references in the second revision. The original typefaces are not identified. Overlap of the lettering with the references (intersection over union at a 0.5 threshold): wordmark 0.70 and script 0.58 against the newspaper, 0.83 and 0.64 against the trademark specimen. The two references set the stars differently, so each layout is reconstructed on its own rather than one being stretched to the other.",
+        "downloads": [
+          {
+            "label": "Download vector PDF (colour)",
+            "file": "identity-collected/superhost/superhost-newspaper-colour.pdf",
+            "sha256": "a77b6d8dd3063805e58e0a0ace57311b8190bbdf4c9368ee889492ff8fff31a5"
+          }
+        ],
+        "sha256": "e4cfe94039a107aad9a1a68b48b2674df92d755246260abab06f540c5a3de732",
+        "bytes": 99458,
+        "darkBackground": false,
+        "search": "superhost-vector-2026-11-22"
+      },
+      {
+        "id": "superhost-1986-cipo",
+        "variantOf": "superhost-1986",
+        "label": "SuperHost: the trademark specimen’s arrangement",
+        "file": "identity-collected/superhost/superhost-cipo-black.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Ministry of Tourism, Province of British Columbia",
+        "sourcePage": null,
+        "sourceUrl": "https://ised-isde.canada.ca/cipo/trademark-search/0904301?lang=eng",
+        "sourceLocator": "The SuperHost & Design specimen of CIPO record 0904301, with a Tourism British Columbia endorsement under it that is left out of the reconstruction (reference/cipo-904301-logo.png)",
+        "sourceFile": "CIPO record 0904301 specimen",
+        "sourceDate": "undated",
+        "observedDate": "2026-11-22",
+        "dateNote": "The same mark as the 1986 advertisement, in the trademark specimen’s wider arrangement. The record’s own dates are not taken into the gallery here.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The same mark in the wider arrangement of the trademark specimen: a broader, lower star spray and a flag drawn at its own proportions. The Tourism British Columbia endorsement under the specimen is not part of it.",
+        "fidelityNote": "A supplied vector reconstruction (revision 2), not original artwork. The flag is the gallery’s own twelve-path flag (src/assets/flagMark.js), every path unchanged and placed as one unit; the stars are regular five-point shapes (inner radius 0.445) placed on the reference’s landmarks, where the dense base of the spray, merged in print, is partly inferred; “SUPERHOST” is drawn from eight custom serif letter masters and “Expect the most” from ten brush-stroke skeletons swept with a mathematical nib, both refitted to the references in the second revision. The original typefaces are not identified. Overlap of the lettering with the references (intersection over union at a 0.5 threshold): wordmark 0.70 and script 0.58 against the newspaper, 0.83 and 0.64 against the trademark specimen. The two references set the stars differently, so each layout is reconstructed on its own rather than one being stretched to the other.",
+        "downloads": [
+          {
+            "label": "Download vector PDF (trademark arrangement)",
+            "file": "identity-collected/superhost/superhost-cipo-black.pdf",
+            "sha256": "d785f192437577c560185c5a88e95c3d0d41d6bea73a01db9276fd2c687bd19e"
+          }
+        ],
+        "sha256": "6966985a70d600873b37dbb98e914622c842def9180728d6f322bfc8e8c0b184",
+        "bytes": 81988,
+        "darkBackground": false,
+        "search": "superhost-vector-2026-11-22"
+      },
+      {
+        "id": "superhost-1986-cipo-colour",
+        "variantOf": "superhost-1986",
+        "label": "SuperHost: the trademark arrangement, in colour",
+        "file": "identity-collected/superhost/superhost-cipo-colour.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "publisher": "Ministry of Tourism, Province of British Columbia",
+        "sourcePage": null,
+        "sourceUrl": "https://ised-isde.canada.ca/cipo/trademark-search/0904301?lang=eng",
+        "sourceLocator": "The SuperHost & Design specimen of CIPO record 0904301, with a Tourism British Columbia endorsement under it that is left out of the reconstruction (reference/cipo-904301-logo.png)",
+        "sourceFile": "CIPO record 0904301 specimen",
+        "sourceDate": "undated",
+        "observedDate": "2026-11-22",
+        "dateNote": "The same mark as the 1986 advertisement, in the trademark specimen’s wider arrangement. The record’s own dates are not taken into the gallery here.",
+        "evidenceType": "supplied-vector-reconstruction",
+        "notes": "The trademark specimen’s arrangement with the flag in the gallery’s blue, red and gold, a colour interpretation as above.",
+        "fidelityNote": "A supplied vector reconstruction (revision 2), not original artwork. The flag is the gallery’s own twelve-path flag (src/assets/flagMark.js), every path unchanged and placed as one unit; the stars are regular five-point shapes (inner radius 0.445) placed on the reference’s landmarks, where the dense base of the spray, merged in print, is partly inferred; “SUPERHOST” is drawn from eight custom serif letter masters and “Expect the most” from ten brush-stroke skeletons swept with a mathematical nib, both refitted to the references in the second revision. The original typefaces are not identified. Overlap of the lettering with the references (intersection over union at a 0.5 threshold): wordmark 0.70 and script 0.58 against the newspaper, 0.83 and 0.64 against the trademark specimen. The two references set the stars differently, so each layout is reconstructed on its own rather than one being stretched to the other.",
+        "downloads": [
+          {
+            "label": "Download vector PDF (trademark arrangement, colour)",
+            "file": "identity-collected/superhost/superhost-cipo-colour.pdf",
+            "sha256": "e25b044b8d8903375bcdb4e366fec02fff7d551fe70886ffdd912f673017c1af"
+          }
+        ],
+        "sha256": "66c12675d4c01197d4f317a7b2d27e962c7defb40166ffc922d515f3965a681f",
+        "bytes": 82087,
+        "darkBackground": false,
+        "search": "superhost-vector-2026-11-22"
       }
     ]
   },

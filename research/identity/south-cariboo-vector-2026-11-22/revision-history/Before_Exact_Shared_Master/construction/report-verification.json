@@ -1,0 +1,78 @@
+{
+  "candidate": "candidate07",
+  "status": "complete; final PDFs visually verified",
+  "large_artwork_format": "SVG-derived PDF vector forms",
+  "checks": [
+    {
+      "file": "South_Cariboo_Tree_Rebuild_Report.pdf",
+      "sha256": "abf0f85f7d0886ed2e2e04ce5b1162d5bcc35bf272629e01d6f493e1459a0a7a",
+      "pages": 3,
+      "page_size_pt": [
+        [
+          595.276,
+          841.89
+        ],
+        [
+          595.276,
+          841.89
+        ],
+        [
+          595.276,
+          841.89
+        ]
+      ],
+      "images_per_page": [
+        3,
+        4,
+        0
+      ],
+      "drawing_objects_per_page": [
+        50,
+        303,
+        17
+      ],
+      "rendered_at_dpi": 130,
+      "visual_review": "Every final candidate07 page inspected at 130 dpi; readable text, aligned crops, no clipping or overlap, correct footer counts."
+    },
+    {
+      "file": "research-page2.pdf",
+      "sha256": "a68c9d52134bdbf0fe235b12f2dbf6b0c0ce41c83116eadc1db0b682072a5ae7",
+      "pages": 1,
+      "page_size_pt": [
+        [
+          595.276,
+          841.89
+        ]
+      ],
+      "images_per_page": [
+        1
+      ],
+      "drawing_objects_per_page": [
+        10
+      ],
+      "rendered_at_dpi": 130,
+      "visual_review": "Every final candidate07 page inspected at 130 dpi; readable text, aligned crops, no clipping or overlap, correct footer counts."
+    }
+  ],
+  "embedded_artwork_verification": [
+    {
+      "file": "assets/before-vector.pdf",
+      "images": 0,
+      "drawings": 36
+    },
+    {
+      "file": "assets/after-vector.pdf",
+      "images": 0,
+      "drawings": 36
+    }
+  ],
+  "embedded_artwork_has_raster_images": false,
+  "input_provenance_file": "report-inputs.json",
+  "measurement_verification": "Builder freshly rendered both SVGs at 6x, downsampled with Lanczos to 315 x 141 and matched selected metrics.json without differences.",
+  "notes": [
+    "Source and native-resolution comparison panels intentionally retain raster pixels.",
+    "Page 2 of the rebuild report embeds true vector artwork in the previous and rebuilt columns.",
+    "The research replacement page is A4 with the 2 / 4 footer.",
+    "All visible before metrics refer to the previously rejected refinement/pass07, distinct from the final round2-dark/candidate07."
+  ]
+}

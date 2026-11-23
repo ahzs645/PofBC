@@ -1,0 +1,86 @@
+[
+  {
+    "priority": "P0",
+    "subject": "Swan Valley Foods — exact-share-sale and federal legal changes",
+    "action": "Import three separate legal events; verify resulting 1978 amalgamated company name as-of date; do not infer Creston Foods is same corporation",
+    "source_ids": [
+      "SRC03",
+      "SRC04",
+      "SRC05"
+    ],
+    "reason": "Fully dated legal events; wrong merge would corrupt history"
+  },
+  {
+    "priority": "P0",
+    "subject": "Dunhill group dual company numbers",
+    "action": "Create two distinct legal entities keyed No.73385 and No.91003 with name-history events; migrate the eight 1974 subsidiary ownership observations as snapshot only",
+    "source_ids": [
+      "SRC12",
+      "SRC13",
+      "SRC14",
+      "SRC15",
+      "SRC16",
+      "SRC20"
+    ],
+    "reason": "Repeated Dunhill name belongs to two corporations"
+  },
+  {
+    "priority": "P1",
+    "subject": "T.S. Holdings 1975–1980 bus group",
+    "action": "Retrieve audit report tabled in Hansard Jan25 1977 and recover company-specific subsidiaries, registry numbers, shares and closure dates",
+    "source_ids": [
+      "SRC06",
+      "SRC08",
+      "SRC09"
+    ],
+    "reason": "Potential large unindexed historical transit family"
+  },
+  {
+    "priority": "P1",
+    "subject": "I.O.K. Poultry dissolution",
+    "action": "Add FY1979/80 dissolution observation; seek Gazette notice for exact legal dissolution day",
+    "source_ids": [
+      "SRC02"
+    ],
+    "reason": "Existing first-pass entity now has a bounded end"
+  },
+  {
+    "priority": "P1",
+    "subject": "Crown Development Corporation historical wind-up",
+    "action": "Create candidate legal entity with FY1977/78 winding-up observation; find registry number to distinguish similarly named companies",
+    "source_ids": [
+      "SRC01"
+    ],
+    "reason": "Missing historic Crown equity holding"
+  },
+  {
+    "priority": "P1",
+    "subject": "Historical minority holdings",
+    "action": "Separate equity investments from wholly owned subsidiaries; reconcile Class A/B ownership and post-1980 divestitures",
+    "source_ids": [
+      "SRC01",
+      "SRC02"
+    ],
+    "reason": "Three publicly funded food-processing companies would be misrepresented if called subsidiaries"
+  },
+  {
+    "priority": "P1",
+    "subject": "Venture Realty versus Ventures Realty Ltd",
+    "action": "Compare BC registry company numbers and government accounts; hold identity merge until confirmed",
+    "source_ids": [
+      "SRC10",
+      "SRC20"
+    ],
+    "reason": "One-character naming difference not proof of entity identity"
+  },
+  {
+    "priority": "P2",
+    "subject": "Thompson-Okanagan Transit and Vancouver Island Transit",
+    "action": "Find corporate records, annual reports and transit service acquisition chains before adding ownership edges",
+    "source_ids": [
+      "SRC02",
+      "SRC07"
+    ],
+    "reason": "One records lending, the other unspecified consolidated subsidiary"
+  }
+]

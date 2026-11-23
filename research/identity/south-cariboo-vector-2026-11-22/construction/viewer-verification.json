@@ -1,0 +1,80 @@
+{
+  "file": "/workspace/scratch/ca0496602dbf/work/crown-cleanup-viewer/South_Cariboo_Interactive_Comparison.html",
+  "bytes": 605764,
+  "sha256": "6b84d0c8b0646b234fe23b2aac83aa3448e6215a47e7b9dea7a02cd47f0c8ef8",
+  "before_directory": "/workspace/scratch/ca0496602dbf/work/round2-dark/candidate07",
+  "refined_directory": "/workspace/scratch/ca0496602dbf/work/crown-cleanup/selected",
+  "before_metrics": {
+    "iou": 0.915079556412729,
+    "boundary_mean": 0.3216675361421828,
+    "boundary_p95": 1.0,
+    "within1": 0.9795201872440024,
+    "source": 16210,
+    "vector": 15565,
+    "source_only": 1027,
+    "vector_only": 382,
+    "density_mse": 0.009215058907259413
+  },
+  "refined_metrics": {
+    "iou": 0.7940626319917938,
+    "boundary_mean": 0.5907199494954863,
+    "boundary_p95": 2.0,
+    "within1": 0.9279289536604804,
+    "source": 16210,
+    "vector": 13523,
+    "source_only": 3050,
+    "vector_only": 363,
+    "density_mse": 0.021821530528235586
+  },
+  "javascript_syntax": "passed node --check",
+  "embedded_assets": [
+    {
+      "asset": "source",
+      "mime": "image/png",
+      "bytes": 60881,
+      "size": [
+        315,
+        141
+      ]
+    },
+    {
+      "asset": "before_svg",
+      "mime": "image/svg+xml",
+      "bytes": 141160,
+      "paths": 36,
+      "local_use_instances": 0,
+      "viewBox": "0 0 315 141"
+    },
+    {
+      "asset": "before_density",
+      "mime": "image/png",
+      "bytes": 53740,
+      "size": [
+        315,
+        141
+      ]
+    },
+    {
+      "asset": "refined_svg",
+      "mime": "image/svg+xml",
+      "bytes": 128202,
+      "paths": 35,
+      "local_use_instances": 1,
+      "viewBox": "0 0 315 141"
+    },
+    {
+      "asset": "refined_density",
+      "mime": "image/png",
+      "bytes": 54851,
+      "size": [
+        315,
+        141
+      ]
+    }
+  ],
+  "unique_controls": 24,
+  "all_referenced_controls_present": true,
+  "browser_visual_qa": "Not performed; browser execution is unavailable in this environment.",
+  "external_dependencies": false,
+  "svg_zoom": "Selected SVG data URI is resized directly; no bitmap substitution."
+}

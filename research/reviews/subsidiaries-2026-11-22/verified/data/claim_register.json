@@ -1,0 +1,1066 @@
+{
+  "review_date": "2026-11-22",
+  "count_note": "These are evidence assertions and ownership observations, not a count of distinct legal entities or graph events. Name-continuity chains are also preserved in review_workstreams/identity_findings.json.",
+  "claims": [
+    {
+      "id": "SC01",
+      "issue": 1,
+      "subject": "T.S. Holdings Ltd.",
+      "status": "confirmed_as_source_reported",
+      "finding": "Statistics Canada lists 1975 in the incorporation-year column.",
+      "date": "1975",
+      "date_precision": "year",
+      "sources": [
+        "S75",
+        "S76"
+      ],
+      "locators": [
+        "S75 printed 22 / PDF 24",
+        "S76 printed 22 / PDF 24"
+      ],
+      "action": "Retain 1975 as source-reported incorporation year; correct citation to the table. 1975 p. 27 describes operations, not inception.",
+      "verification_scope": "What the specified Statistics Canada source reports; legal continuity and currentness require corroboration.",
+      "workstream": "statistics_canada",
+      "workstream_file": "review_workstreams/STATCAN_FINDINGS.json"
+    },
+    {
+      "id": "SC02",
+      "issue": 1,
+      "subject": "Panco Poultry Ltd.",
+      "status": "confirmed",
+      "finding": "The Province bought all issued common and preferred shares in February 1975 for CAD 4,800,000; B.C. Testing Farms, Pacific Hatching and Western Feeds are described as wholly owned subsidiaries.",
+      "date": "1975-02",
+      "date_precision": "month",
+      "sources": [
+        "S75"
+      ],
+      "locators": [
+        "S75 printed 27 / PDF 29"
+      ],
+      "action": "Keep month precision for this Statistics Canada assertion and distinguish acquisition from the table’s incorporation year, 1974. For the final acquisition event, use the companion identity review’s more precise direct-accounts evidence: 17 February 1975, in the 1978/79 Public Accounts, F215.",
+      "verification_scope": "What the specified Statistics Canada source reports; legal continuity and currentness require corroboration.",
+      "cross_review_note": {
+        "review": "Companion identity review",
+        "source": "Public Accounts of British Columbia, 1978/79, F215",
+        "reported_acquisition_date": "1975-02-17",
+        "verification_scope": "Communicated by the identity reviewer; this Statistics Canada review independently verifies only the month."
+      },
+      "workstream": "statistics_canada",
+      "workstream_file": "review_workstreams/STATCAN_FINDINGS.json"
+    },
+    {
+      "id": "SC03",
+      "issue": 1,
+      "subject": "Venture Realty",
+      "status": "sale_confirmed_identity_unresolved",
+      "finding": "Housing Corporation real-estate sales subsidiary and some assets were sold during the reporting year.",
+      "date": "1978",
+      "date_precision": "reporting_year",
+      "sources": [
+        "S78"
+      ],
+      "locators": [
+        "S78 printed 26 / PDF 28; Housing fiscal-end column printed 22 / PDF 24"
+      ],
+      "action": "Keep source spelling Venture Realty. The paragraph alone does not prove exact transaction date or legal equivalence to Ventures Realty Ltd.",
+      "verification_scope": "What the specified Statistics Canada source reports; legal continuity and currentness require corroboration.",
+      "workstream": "statistics_canada",
+      "workstream_file": "review_workstreams/STATCAN_FINDINGS.json"
+    },
+    {
+      "id": "SC04",
+      "issue": 1,
+      "subject": "Vancouver Island Transit Ltd.",
+      "status": "reference_period_confirmed_parent_not_stated_in_this_source",
+      "finding": "Listed as a consolidated subsidiary in the January–March 1981 issue, published September 1981. No parent is expressly named.",
+      "observed_period": "1981-Q1",
+      "date_precision": "quarter",
+      "sources": [
+        "S81Q1"
+      ],
+      "locators": [
+        "title PDF 3; printed 37 / PDF 39"
+      ],
+      "action": "Add dated roster observation, not 1981 incorporation or assumed T.S. Holdings parent.",
+      "verification_scope": "What the specified Statistics Canada source reports; legal continuity and currentness require corroboration.",
+      "cross_review_resolution": {
+        "review": "TRANSIT_FINDINGS.json",
+        "source": "TR-S01",
+        "finding": "The separate 1977/78 Public Accounts review identifies Vancouver Island Transit Ltd. as a wholly owned T. S. Holdings subsidiary at 31 March 1978. This resolves the overall parent question without changing the narrower limits of the Statistics Canada row."
+      },
+      "workstream": "statistics_canada",
+      "workstream_file": "review_workstreams/STATCAN_FINDINGS.json",
+      "companion_evidence": "TR-O03 / TR-S01 documents T.S. Holdings as the 100% owner at 31 March 1978; see TRANSIT_FINDINGS.json."
+    },
+    {
+      "id": "SC05",
+      "issue": 2,
+      "subject": "1984 volume appendix",
+      "status": "confirmed_no_date_contradiction",
+      "finding": "1984 is the financial reference year; publication is May 1987; the appendix snapshot is 31 December 1986.",
+      "date": "1986-12-31",
+      "date_precision": "day_snapshot",
+      "sources": [
+        "S84"
+      ],
+      "locators": [
+        "title PDF 3; printed 143–144 / PDF 145–146"
+      ],
+      "action": "Keep 1986-12-31 as the reported roster date; distinguish financial reference year, publication date and snapshot date.",
+      "verification_scope": "What the specified Statistics Canada source reports; legal continuity and currentness require corroboration.",
+      "workstream": "statistics_canada",
+      "workstream_file": "review_workstreams/STATCAN_FINDINGS.json"
+    },
+    {
+      "id": "SC06",
+      "issue": 2,
+      "subject": "1985 volume appendix",
+      "status": "date_confirmed_page_corrected",
+      "finding": "1985 is the financial reference year; publication is June 1988; the appendix snapshot is 31 December 1987. The British Columbia roster is printed on page 103, not 102.",
+      "date": "1987-12-31",
+      "date_precision": "day_snapshot",
+      "sources": [
+        "S85"
+      ],
+      "locators": [
+        "title PDF 3; printed 103 / PDF 105; code legend printed 104 / PDF 106"
+      ],
+      "action": "Keep 1987-12-31 as the reported roster date; change the British Columbia page locator to 103.",
+      "verification_scope": "What the specified Statistics Canada source reports; legal continuity and currentness require corroboration.",
+      "workstream": "statistics_canada",
+      "workstream_file": "review_workstreams/STATCAN_FINDINGS.json"
+    },
+    {
+      "id": "SC07",
+      "issue": 2,
+      "subject": "Peace Power Constructors Ltd.",
+      "status": "reported_relationship_confirmed",
+      "finding": "Listed at level 02 under BC Hydro in both appendices.",
+      "observations": [
+        "1986-12-31",
+        "1987-12-31"
+      ],
+      "sources": [
+        "S84",
+        "S85"
+      ],
+      "locators": [
+        "S84 printed 143 / PDF 145",
+        "S85 printed 103 / PDF 105"
+      ],
+      "action": "Unhold date conflict; these are statistical roster observations, not incorporation dates or proof every row was current.",
+      "verification_scope": "What the specified Statistics Canada source reports; legal continuity and currentness require corroboration.",
+      "workstream": "statistics_canada",
+      "workstream_file": "review_workstreams/STATCAN_FINDINGS.json"
+    },
+    {
+      "id": "SC08",
+      "issue": 5,
+      "subject": "Dunhill Development Corporation; HCBC Construction Ltd.",
+      "status": "reported_relationship_confirmed",
+      "finding": "Both appear at level 02 under Housing Corporation of British Columbia on the two roster dates.",
+      "observations": [
+        "1986-12-31",
+        "1987-12-31"
+      ],
+      "sources": [
+        "S84",
+        "S85"
+      ],
+      "locators": [
+        "S84 printed 144 / PDF 146",
+        "S85 printed 103 / PDF 105"
+      ],
+      "action": "Use as later ownership observations. Integrate with separate 1976/77 Public Accounts identity evidence: Dunhill is renamed W.K.P.; HCBC is renamed Fisher Developments, not new nodes.",
+      "verification_scope": "What the specified Statistics Canada source reports; legal continuity and currentness require corroboration.",
+      "workstream": "statistics_canada",
+      "workstream_file": "review_workstreams/STATCAN_FINDINGS.json"
+    },
+    {
+      "id": "SC09",
+      "issue": 2,
+      "subject": "Duke Point Terminals Ltd.; Discovery Park Industries Ltd.",
+      "status": "earlier_roster_sighting",
+      "finding": "Both names already appear in the January–March 1981 issue. Duke Point Terminals is marked consolidated subsidiary within the BCDC list.",
+      "observed_period": "1981-Q1",
+      "sources": [
+        "S81Q1"
+      ],
+      "locators": [
+        "printed 36 / PDF 38"
+      ],
+      "action": "Add earlier source observation. Do not infer exact corporate start or Discovery legal continuity from adjacent names.",
+      "verification_scope": "What the specified Statistics Canada source reports; legal continuity and currentness require corroboration.",
+      "workstream": "statistics_canada",
+      "workstream_file": "review_workstreams/STATCAN_FINDINGS.json"
+    },
+    {
+      "id": "SC10",
+      "issue": 2,
+      "subject": "Roster reliability and hierarchy",
+      "status": "caution",
+      "finding": "Verified headings do not guarantee current legal existence or accurate parentage of every row. The 1984 appendix prints Surrey Farm Products Investments Ltd., Western Feed Co. Ltd. and Pacific Hatchery Ltd. as inactive level 01 entities. The Duke Point rows follow Ocean Falls and First Capital across the page break. British Columbia Cellulose Company also remains listed in the roster headed 31 December 1986.",
+      "sources": [
+        "S84",
+        "S85"
+      ],
+      "action": "Preserve as-printed data and the code legend. Resolve anomalous edges using company annual accounts, registry records and legal instruments. Prefer direct legal or audited evidence in conflicts. For the Cellulose example, consult companion ownership review claim OWN-C09 and sources OWN-S05–OWN-S07; this review verifies the roster row, not those legal dates.",
+      "verification_scope": "What the specified Statistics Canada source reports; legal continuity and currentness require corroboration.",
+      "cross_review_note": {
+        "review": "OWNERSHIP_FINDINGS.json",
+        "claim_id": "OWN-C09",
+        "source_ids": [
+          "OWN-S05",
+          "OWN-S06",
+          "OWN-S07"
+        ],
+        "reported_conflict": "The companion review reports a repeal effective 31 March 1986 and an accounts dissolution date of 1 April 1986, both earlier than the roster heading. It preserves the unresolved one-day legal boundary.",
+        "verification_scope": "Legal and accounts dates are attributed to the separate ownership review; independently verified here only that the 31 December 1986 roster still includes British Columbia Cellulose Company."
+      },
+      "workstream": "statistics_canada",
+      "workstream_file": "review_workstreams/STATCAN_FINDINGS.json"
+    },
+    {
+      "id": "TR-O01",
+      "company": "V I T Holdings Ltd.",
+      "owner": "T. S. Holdings Ltd.",
+      "ownership_pct": 100,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Wholly owned subsidiary in the T. S. Holdings consolidated group; no incorporation or acquisition day supplied.",
+      "workstream": "transit_ownership",
+      "workstream_file": "review_workstreams/TRANSIT_FINDINGS.json"
+    },
+    {
+      "id": "TR-O02",
+      "company": "Thompson-Okanagan Transit Ltd.",
+      "owner": "T. S. Holdings Ltd.",
+      "ownership_pct": 100,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Wholly owned subsidiary in the T. S. Holdings consolidated group; no incorporation or acquisition day supplied.",
+      "workstream": "transit_ownership",
+      "workstream_file": "review_workstreams/TRANSIT_FINDINGS.json"
+    },
+    {
+      "id": "TR-O03",
+      "company": "Vancouver Island Transit Ltd.",
+      "owner": "T. S. Holdings Ltd.",
+      "ownership_pct": 100,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Wholly owned subsidiary in the T. S. Holdings consolidated group; no incorporation or acquisition day supplied.",
+      "workstream": "transit_ownership",
+      "workstream_file": "review_workstreams/TRANSIT_FINDINGS.json"
+    },
+    {
+      "id": "TR-O04",
+      "company": "Vancouver Island Transportation Company Limited",
+      "owner_or_ultimate_group_holder": "V I T Holdings Ltd.",
+      "ownership_pct": 98.5,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Source expressly permits direct ownership or ownership through a subsidiary. Do not assign a direct edge to every company.",
+      "workstream": "transit_ownership",
+      "workstream_file": "review_workstreams/TRANSIT_FINDINGS.json"
+    },
+    {
+      "id": "TR-O05",
+      "company": "Vancouver Island Coach Lines Limited",
+      "owner_or_ultimate_group_holder": "V I T Holdings Ltd.",
+      "ownership_pct": 98.5,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Source expressly permits direct ownership or ownership through a subsidiary. Do not assign a direct edge to every company.",
+      "workstream": "transit_ownership",
+      "workstream_file": "review_workstreams/TRANSIT_FINDINGS.json"
+    },
+    {
+      "id": "TR-O06",
+      "company": "Gray Line & Empress Taxi & Sightseeing Company Limited",
+      "owner_or_ultimate_group_holder": "V I T Holdings Ltd.",
+      "ownership_pct": 98.5,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Source expressly permits direct ownership or ownership through a subsidiary. Do not assign a direct edge to every company.",
+      "workstream": "transit_ownership",
+      "workstream_file": "review_workstreams/TRANSIT_FINDINGS.json"
+    },
+    {
+      "id": "TR-O07",
+      "company": "Imperial Charter Service Company Limited",
+      "owner_or_ultimate_group_holder": "V I T Holdings Ltd.",
+      "ownership_pct": 98.5,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Source expressly permits direct ownership or ownership through a subsidiary. Do not assign a direct edge to every company.",
+      "workstream": "transit_ownership",
+      "workstream_file": "review_workstreams/TRANSIT_FINDINGS.json"
+    },
+    {
+      "id": "TR-O08",
+      "company": "British Columbia Parlour Car Tours Limited",
+      "owner_or_ultimate_group_holder": "V I T Holdings Ltd.",
+      "ownership_pct": 98.5,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Source expressly permits direct ownership or ownership through a subsidiary. Do not assign a direct edge to every company.",
+      "workstream": "transit_ownership",
+      "workstream_file": "review_workstreams/TRANSIT_FINDINGS.json"
+    },
+    {
+      "id": "ID-C01",
+      "type": "acquisition",
+      "subjects": [
+        "panco_surrey_food_exhibitions"
+      ],
+      "date": "1975-02-17",
+      "date_precision": "day",
+      "statement": "Province purchased all issued shares of Panco Poultry Ltd.",
+      "sources": [
+        "ID-S06 F215 note 3"
+      ],
+      "ownership_percentage": 100,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C02",
+      "type": "asset_sale",
+      "subjects": [
+        "panco_surrey_food_exhibitions"
+      ],
+      "date": "1979-01-29",
+      "date_precision": "day",
+      "statement": "Surrey Farm Products Investments Ltd. and subsidiaries sold assets and business.",
+      "sources": [
+        "ID-S06 F215 note 2"
+      ],
+      "currency": "CAD",
+      "gross_proceeds": 12076253,
+      "disbursements_and_adjustments": 351593,
+      "net_proceeds": 11724660,
+      "net_book_cost": 2714030,
+      "gain": 9010630,
+      "buyer": null,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C03",
+      "type": "dividend",
+      "subjects": [
+        "panco_surrey_food_exhibitions"
+      ],
+      "date": "1979-05-04",
+      "date_precision": "day",
+      "statement": "$14,800,000 was transferred to the Minister of Finance by dividend; it is not the gross price in the asset-sale note.",
+      "sources": [
+        "ID-S06 F215 note 4",
+        "ID-S11 A9 note 7(D)"
+      ],
+      "currency": "CAD",
+      "amount": 14800000,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C04",
+      "type": "identity_interpretation",
+      "subjects": [
+        "panco_surrey_food_exhibitions"
+      ],
+      "date": null,
+      "date_precision": "undated",
+      "statement": "The shorter Surrey Farm Products Ltd. label in the $14.8 million receipts row is not evidence for a separate buyer/company; reconcile this source-as-printed label to the full-name company through the dividend and investment notes.",
+      "sources": [
+        "ID-S10 A6, B4, B8, C3",
+        "ID-S06 F215"
+      ],
+      "status": "reasoned_identity_resolution",
+      "caution": "Does not claim that no unrelated company with the shorter name has ever existed.",
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C05",
+      "type": "name_change",
+      "subjects": [
+        "BC73385"
+      ],
+      "date": "1976-11-18",
+      "date_precision": "day",
+      "statement": "Dunhill Development Corporation Ltd. renamed Housing Corporation of British Columbia.",
+      "sources": [
+        "ID-S01 p1629",
+        "ID-S04 F133"
+      ],
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C06",
+      "type": "name_change",
+      "subjects": [
+        "BC91003"
+      ],
+      "date": "1976-11-26",
+      "date_precision": "day",
+      "statement": "W.K.P. Construction Ltd. renamed Dunhill Development Corporation (without Ltd.).",
+      "sources": [
+        "ID-S02 p1664",
+        "ID-S04 F133"
+      ],
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C07",
+      "type": "name_change",
+      "subjects": [
+        "BC71787"
+      ],
+      "date": "1976-11-26",
+      "date_precision": "day",
+      "statement": "Fisher Developments Ltd. renamed HCBC Construction Ltd.",
+      "sources": [
+        "ID-S02 p1664",
+        "ID-S04 F133"
+      ],
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C08",
+      "type": "ownership_snapshot",
+      "subjects": [
+        "BC73385",
+        "W.K.P. Construction Ltd.",
+        "Crown Lumber Limited",
+        "Fisher Developments Ltd.",
+        "Dunhill Homes Ltd.",
+        "Dunhill Holdings Ltd.",
+        "Venture Realty Ltd.",
+        "Georgia Park Holdings Ltd."
+      ],
+      "date": "1975-10-31",
+      "date_precision": "day",
+      "statement": "Consolidation note explicitly identifies these subsidiaries as wholly owned by the original Dunhill / Housing parent.",
+      "sources": [
+        "ID-S03 F103"
+      ],
+      "parent_entity_id": "BC73385",
+      "child_names_as_printed": [
+        "W.K.P. Construction Ltd.",
+        "Crown Lumber Limited",
+        "Fisher Developments Ltd.",
+        "Dunhill Homes Ltd.",
+        "Dunhill Holdings Ltd.",
+        "Venture Realty Ltd.",
+        "Georgia Park Holdings Ltd."
+      ],
+      "ownership_percentage": 100,
+      "not_acquisition_or_disposal_date": true,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C09",
+      "type": "ownership_snapshot",
+      "subjects": [
+        "BC73385",
+        "Dunhill Development Corporation",
+        "Crown Lumber Limited",
+        "HCBC Construction Ltd.",
+        "Venture Realty Ltd."
+      ],
+      "date": "1976-10-31",
+      "date_precision": "day",
+      "statement": "Consolidation note explicitly identifies these subsidiaries as wholly owned by the original Dunhill / Housing parent.",
+      "sources": [
+        "ID-S04 F133"
+      ],
+      "parent_entity_id": "BC73385",
+      "child_names_as_printed": [
+        "Dunhill Development Corporation",
+        "Crown Lumber Limited",
+        "HCBC Construction Ltd.",
+        "Venture Realty Ltd."
+      ],
+      "ownership_percentage": 100,
+      "not_acquisition_or_disposal_date": true,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C10",
+      "type": "ownership_snapshot",
+      "subjects": [
+        "BC73385",
+        "Dunhill Development Corporation",
+        "HCBC Construction Ltd.",
+        "Venture Realty Ltd."
+      ],
+      "date": "1977-10-31",
+      "date_precision": "day",
+      "statement": "Consolidation note explicitly identifies these subsidiaries as wholly owned by the original Dunhill / Housing parent.",
+      "sources": [
+        "ID-S05 F152"
+      ],
+      "parent_entity_id": "BC73385",
+      "child_names_as_printed": [
+        "Dunhill Development Corporation",
+        "HCBC Construction Ltd.",
+        "Venture Realty Ltd."
+      ],
+      "ownership_percentage": 100,
+      "not_acquisition_or_disposal_date": true,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C11",
+      "type": "ownership_snapshot",
+      "subjects": [
+        "BC73385",
+        "Dunhill Development Corporation",
+        "HCBC Construction Ltd.",
+        "Venture Realty Ltd."
+      ],
+      "date": "1978-10-31",
+      "date_precision": "day",
+      "statement": "Consolidation note explicitly identifies these subsidiaries as wholly owned by the original Dunhill / Housing parent.",
+      "sources": [
+        "ID-S06 F154"
+      ],
+      "parent_entity_id": "BC73385",
+      "child_names_as_printed": [
+        "Dunhill Development Corporation",
+        "HCBC Construction Ltd.",
+        "Venture Realty Ltd."
+      ],
+      "ownership_percentage": 100,
+      "not_acquisition_or_disposal_date": true,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C12",
+      "type": "ownership_snapshot",
+      "subjects": [
+        "BC73385",
+        "Dunhill Development Corporation",
+        "HCBC Construction Ltd."
+      ],
+      "date": "1984-10-31",
+      "date_precision": "day",
+      "statement": "Consolidation note explicitly identifies these subsidiaries as wholly owned by the original Dunhill / Housing parent.",
+      "sources": [
+        "ID-S07 G247"
+      ],
+      "parent_entity_id": "BC73385",
+      "child_names_as_printed": [
+        "Dunhill Development Corporation",
+        "HCBC Construction Ltd."
+      ],
+      "ownership_percentage": 100,
+      "not_acquisition_or_disposal_date": true,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C13",
+      "type": "winding_up",
+      "subjects": [
+        "Dunhill Homes Ltd."
+      ],
+      "date": "1976",
+      "date_precision": "year",
+      "statement": "Subsidiary included in 1975 comparative consolidation was wound up in 1976.",
+      "sources": [
+        "ID-S04 F133"
+      ],
+      "legal_dissolution_date": null,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C14",
+      "type": "winding_up",
+      "subjects": [
+        "Dunhill Holdings Ltd."
+      ],
+      "date": "1976",
+      "date_precision": "year",
+      "statement": "Subsidiary included in 1975 comparative consolidation was wound up in 1976.",
+      "sources": [
+        "ID-S04 F133"
+      ],
+      "legal_dissolution_date": null,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C15",
+      "type": "winding_up",
+      "subjects": [
+        "Georgia Park Holdings Ltd."
+      ],
+      "date": "1976",
+      "date_precision": "year",
+      "statement": "Subsidiary included in 1975 comparative consolidation was wound up in 1976.",
+      "sources": [
+        "ID-S04 F133"
+      ],
+      "legal_dissolution_date": null,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C16",
+      "type": "share_sale",
+      "subjects": [
+        "Crown Lumber Limited"
+      ],
+      "date": "1976-11-01",
+      "date_precision": "day",
+      "statement": "Housing sold Crown Lumber Limited at book value.",
+      "sources": [
+        "ID-S05 F152",
+        "ID-S04 F133"
+      ],
+      "sale_price_amount": null,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C17",
+      "type": "wind_down_directive",
+      "subjects": [
+        "BC73385"
+      ],
+      "date": "1978-09-29",
+      "date_precision": "day",
+      "statement": "Ministry directive initiated winding up Housing operations.",
+      "sources": [
+        "ID-S06 F154",
+        "ID-S07 G247"
+      ],
+      "not_legal_dissolution": true,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C18",
+      "type": "subsidiary_and_asset_sale",
+      "subjects": [
+        "Venture Realty Ltd."
+      ],
+      "date": "1978-11-30",
+      "date_precision": "day",
+      "statement": "Venture Realty Ltd. and certain professional-services division assets were sold effective this date.",
+      "sources": [
+        "ID-S06 F154"
+      ],
+      "name_caution": "Source prints Venture singular; do not invent a legal rename from the earlier Ventures spelling.",
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C19",
+      "type": "name_continuity",
+      "subjects": [
+        "Pacific Hatchery Ltd.",
+        "Surrey Farm Products Hatchery Ltd."
+      ],
+      "date": null,
+      "date_precision": "unknown",
+      "statement": "The 1979 consolidation note calls Surrey Farm Products Hatchery Ltd. formerly Pacific Hatchery Ltd.; this is a renamed existing subsidiary.",
+      "sources": [
+        "ID-S06 F215 note 1"
+      ],
+      "caution": "Earlier baseline Pacific Hatching spelling should be preserved as a source variant until independently reconciled; do not make a second Hatchery company merely from this later name.",
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C20",
+      "type": "winding_up",
+      "subjects": [
+        "Surrey Farm Products Hatchery Ltd."
+      ],
+      "date": null,
+      "date_precision": "fiscal_year",
+      "statement": "Food Exhibitions notes state that this wholly owned subsidiary was wound up during the year ended 31 March 1985.",
+      "sources": [
+        "ID-S07 G55 note 1"
+      ],
+      "period_start": "1984-04-01",
+      "period_end": "1985-03-31",
+      "legal_dissolution_date": null,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C21",
+      "type": "winding_up",
+      "subjects": [
+        "Western Feed Co. Ltd."
+      ],
+      "date": null,
+      "date_precision": "fiscal_year",
+      "statement": "Food Exhibitions notes state that this wholly owned subsidiary was wound up during the year ended 31 March 1985.",
+      "sources": [
+        "ID-S07 G55 note 1"
+      ],
+      "period_start": "1984-04-01",
+      "period_end": "1985-03-31",
+      "legal_dissolution_date": null,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C22",
+      "type": "legal_dissolution",
+      "subjects": [
+        "panco_surrey_food_exhibitions"
+      ],
+      "date": "1992-06-19",
+      "date_precision": "day",
+      "statement": "British Columbia Food Exhibitions Ltd., no.63265, was struck off and dissolved; notice published 9 July 1992.",
+      "sources": [
+        "ID-S08 p840"
+      ],
+      "notice_publication_date": "1992-07-09",
+      "caution": "This proves legal dissolution, not uninterrupted provincial ownership through that date.",
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C23",
+      "type": "legal_dissolution",
+      "subjects": [
+        "BC91003"
+      ],
+      "date": "1989-06-12",
+      "date_precision": "day",
+      "statement": "Dunhill Development Corporation, no.91003, dissolved; notice published 22 June 1989.",
+      "sources": [
+        "ID-S09 p819"
+      ],
+      "notice_publication_date": "1989-06-22",
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C24",
+      "type": "ownership_roster_snapshot",
+      "subjects": [
+        "BC73385",
+        "BC91003",
+        "BC71787"
+      ],
+      "date": "1986-12-31",
+      "date_precision": "day",
+      "statement": "Later-dated Statistics Canada organization list places Dunhill and HCBC under Housing; corroborates post-1974 parent relationship. Verification belongs to parallel Statistics Canada report.",
+      "sources": [
+        "ID-S12 1984 volume p144"
+      ],
+      "verification_owner": "statcan_verification",
+      "not_formation_date": true,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "ID-C25",
+      "type": "ownership_roster_snapshot",
+      "subjects": [
+        "BC73385",
+        "BC91003",
+        "BC71787"
+      ],
+      "date": "1987-12-31",
+      "date_precision": "day",
+      "statement": "Later-dated Statistics Canada organization list places Dunhill and HCBC under Housing; corroborates post-1974 parent relationship. Verification belongs to parallel Statistics Canada report.",
+      "sources": [
+        "ID-S12 1985 volume p103"
+      ],
+      "verification_owner": "statcan_verification",
+      "not_formation_date": true,
+      "workstream": "legal_identity",
+      "workstream_file": "review_workstreams/identity_findings.json"
+    },
+    {
+      "id": "OWN-C01",
+      "review_question": 6,
+      "entity": "Swan Valley Foods Ltd.",
+      "finding": "Standard Brands acquired all outstanding shares and certain debentures from BC Government for CAD 2.2 million on 1 December 1977.",
+      "date": "1977-12-01",
+      "date_kind": "share_sale",
+      "ownership_immediately_before_sale_pct": 100,
+      "sources": [
+        "OWN-S03"
+      ],
+      "confidence": "high",
+      "workstream": "public_ownership",
+      "workstream_file": "review_workstreams/OWNERSHIP_FINDINGS.json"
+    },
+    {
+      "id": "OWN-C02",
+      "review_question": 6,
+      "entity": "Swan Valley Foods Ltd.",
+      "finding": "Province held 40% at 31 March 1977; additional shares were acquired during 1977/78 before full holding was sold. Exact attainment of 100% not established.",
+      "ownership_start_bounds": {
+        "after": "1977-03-31",
+        "on_or_before": "1977-12-01"
+      },
+      "not_proven": "Duration of wholly-owned phase; a claim of several months is unsupported by the checked evidence.",
+      "sources": [
+        "OWN-S02",
+        "OWN-S03"
+      ],
+      "confidence": "high for endpoints; start day unknown",
+      "graph_disposition": "Eligible as historic wholly publicly owned entity; represent unknown/bounded ownership start. If renderer requires a precise continuous interval, hold interval rather than invent January 1 or March 31 start.",
+      "workstream": "public_ownership",
+      "workstream_file": "review_workstreams/OWNERSHIP_FINDINGS.json"
+    },
+    {
+      "id": "OWN-C03",
+      "review_question": 7,
+      "entity": "Plateau Mills Ltd.",
+      "finding": "BC Cellulose bought 225 shares representing 2.5% under option exercised 23 June 1975; Province owned remaining 97.5%. This implies 100% combined direct and indirect public ownership.",
+      "date": "1975-06-23",
+      "date_kind": "minority_interest_acquired_by_public_parent",
+      "owners": [
+        {
+          "name": "Province of British Columbia",
+          "pct": 97.5
+        },
+        {
+          "name": "British Columbia Cellulose Company",
+          "pct": 2.5
+        }
+      ],
+      "ultimate_public_pct": 100,
+      "sources": [
+        "OWN-S01"
+      ],
+      "confidence": "high",
+      "inference": "100% ultimate public ownership is arithmetic from two explicitly stated holdings and whole Crown ownership of BC Cellulose.",
+      "graph_disposition": "Add as publicly owned; retain two owners and exact percentages, do not label 100% directly Province-owned.",
+      "workstream": "public_ownership",
+      "workstream_file": "review_workstreams/OWNERSHIP_FINDINGS.json",
+      "audited_observation_date": "1975-12-31",
+      "date_semantics": "23 June is the minority-interest purchase. The two-owner snapshot is reported in statements at 31 December 1975."
+    },
+    {
+      "id": "OWN-C04",
+      "review_question": 7,
+      "entity": "Plateau Mills Ltd.",
+      "finding": "1977 comparator shows 8,775 shares/97.5% directly Province-owned; 1977/78 transfer combines these with 225 shares received as BC Cellulose dividend. All 9,000 shares transferred to BCRIC.",
+      "date": "1978-03-09",
+      "date_kind": "transfer_agreement_and_approval",
+      "sources": [
+        "OWN-S02",
+        "OWN-S08"
+      ],
+      "confidence": "high",
+      "graph_disposition": "Record BCRIC transfer using approval/agreement date 9 March 1978; accounts independently confirm completed transfer by 31 March 1978. Do not turn order approval alone into proof of execution timing.",
+      "workstream": "public_ownership",
+      "workstream_file": "review_workstreams/OWNERSHIP_FINDINGS.json"
+    },
+    {
+      "id": "OWN-C05",
+      "review_question": 7,
+      "entity": "Plateau Mills Ltd.",
+      "finding": "StatsCan 1973 reports 97% acquired by BC Cellulose effective 26 June 1973 and transferred directly to Province 24 October 1973.",
+      "dates": [
+        "1973-06-26",
+        "1973-10-24"
+      ],
+      "sources": [
+        "OWN-S09"
+      ],
+      "confidence": "medium-high; official extracted text, page image not inspected here",
+      "caution": "Preserve 97% as printed; do not silently rewrite as 97.5% or assume all 1973 shares publicly owned.",
+      "workstream": "public_ownership",
+      "workstream_file": "review_workstreams/OWNERSHIP_FINDINGS.json"
+    },
+    {
+      "id": "OWN-C06",
+      "review_question": 8,
+      "entity": "British Columbia Cellulose Company",
+      "finding": "Incorporated 15 March 1973 as British Columbia Cellulose Limited; statutory continuation as British Columbia Cellulose Company and Crown-agent status 18 April 1973.",
+      "incorporated": "1973-03-15",
+      "name_and_statutory_status_change": "1973-04-18",
+      "sources": [
+        "OWN-S01",
+        "OWN-S04"
+      ],
+      "confidence": "high",
+      "graph_disposition": "Add distinct historic Crown node with two legal names, preserving incorporation and statutory continuation as separate events.",
+      "workstream": "public_ownership",
+      "workstream_file": "review_workstreams/OWNERSHIP_FINDINGS.json"
+    },
+    {
+      "id": "OWN-C07",
+      "review_question": 8,
+      "entity": "British Columbia Cellulose Company",
+      "finding": "Scheduled agreement dated 2 April 1973 identifies British Columbia Cellulose Limited as wholly Crown-owned. It is distinct from Canadian Cellulose Company, Limited and Columbia Cellulose Company, Limited.",
+      "wholly_owned_observation": "1973-04-02",
+      "sources": [
+        "OWN-S04"
+      ],
+      "confidence": "high",
+      "workstream": "public_ownership",
+      "workstream_file": "review_workstreams/OWNERSHIP_FINDINGS.json"
+    },
+    {
+      "id": "OWN-C08",
+      "review_question": 8,
+      "entity": "British Columbia Cellulose Company",
+      "finding": "At 31 December 1975 the holding company owned 79% of Canadian Cellulose and 100% of Kootenay Forest Products, alongside its 2.5% of Plateau. Canadian Cellulose stake acquired 29 June 1973.",
+      "observation_date": "1975-12-31",
+      "sources": [
+        "OWN-S01"
+      ],
+      "confidence": "high",
+      "caution": "Do not merge BC Cellulose with Canadian/Columbia Cellulose or use a subsidiary 79% holding as Province ownership of the holding company.",
+      "workstream": "public_ownership",
+      "workstream_file": "review_workstreams/OWNERSHIP_FINDINGS.json"
+    },
+    {
+      "id": "OWN-C09",
+      "review_question": 8,
+      "entity": "British Columbia Cellulose Company",
+      "finding": "Repeal statute assented 23 September 1983 but commencement required regulation; statute table gives repeal 31 March 1986. Accounts separately report dissolution effective 1 April 1986.",
+      "repeal_assent": "1983-09-23",
+      "repeal_effective_reported": "1986-03-31",
+      "dissolution_effective_reported_by_accounts": "1986-04-01",
+      "sources": [
+        "OWN-S05",
+        "OWN-S06",
+        "OWN-S07"
+      ],
+      "confidence": "high for each printed statement; unresolved legal day boundary",
+      "graph_disposition": "Use 1986 year-level endpoint and retain both dated source assertions. Do not assert 1983 dissolution. Retrieve original commencement regulation before selecting one exact legal dissolution day.",
+      "conflict": "Repeal Act s 2 ties dissolution to repeal, while accounts state following day. No evidence found establishing the exact legal reconciliation.",
+      "roster_caution": "Later StatsCan roster headed 31 December 1986 still lists this company; roster observation does not override law and accounts indicating 1986 termination.",
+      "workstream": "public_ownership",
+      "workstream_file": "review_workstreams/OWNERSHIP_FINDINGS.json"
+    },
+    {
+      "id": "OWN-C10",
+      "review_question": 9,
+      "entity": "Crown Development Corporation",
+      "finding": "Incorporated 26 August 1975 under BC Companies Act; capital held Attorney-General for Crown; purposes included ferry ships and Crown land development/management.",
+      "date": "1975-08-26",
+      "date_kind": "incorporation",
+      "sources": [
+        "OWN-S01"
+      ],
+      "confidence": "high",
+      "graph_disposition": "Replace 1977 first-seen start with exact incorporation 26 August 1975.",
+      "workstream": "public_ownership",
+      "workstream_file": "review_workstreams/OWNERSHIP_FINDINGS.json"
+    },
+    {
+      "id": "OWN-C11",
+      "review_question": 9,
+      "entity": "Crown Development Corporation",
+      "finding": "31 March 1976 agreement transferred its Princess Marguerite interest to BC Steamship and addressed debts; 23 April 1976 sale of Prince George to Wong Bros. reported.",
+      "dates": [
+        "1976-03-31",
+        "1976-04-23"
+      ],
+      "sources": [
+        "OWN-S01"
+      ],
+      "confidence": "high",
+      "caution": "Asset/debt transactions do not establish BC Steamship parent ownership of Crown Development.",
+      "workstream": "public_ownership",
+      "workstream_file": "review_workstreams/OWNERSHIP_FINDINGS.json"
+    },
+    {
+      "id": "OWN-C12",
+      "review_question": 9,
+      "entity": "Crown Development Corporation",
+      "finding": "1977/78 accounts state corporation wound up and CAD 1,000 investment written off; 1977 comparator lists entire 10 common shares.",
+      "latest_windup_date": "1978-03-31",
+      "sources": [
+        "OWN-S02"
+      ],
+      "confidence": "high",
+      "graph_disposition": "Keep wound-up-by 31 March 1978; exact dissolution date remains unknown.",
+      "workstream": "public_ownership",
+      "workstream_file": "review_workstreams/OWNERSHIP_FINDINGS.json"
+    },
+    {
+      "id": "PC-C01",
+      "subject": "Pacific Coach Lines",
+      "date": "1979-04-01",
+      "date_kind": "operations_commenced",
+      "finding": "Pacific Coach Lines began operations, replacing Pacific Stage Lines and Vancouver Island Coach Lines.",
+      "sources": [
+        "PC-S01"
+      ],
+      "limit": "This is an operational start, not a proven incorporation or public-acquisition date.",
+      "workstream": "pacific_coach",
+      "workstream_file": "review_workstreams/PACIFIC_COACH_FINDINGS.json"
+    },
+    {
+      "id": "PC-C02",
+      "subject": "Pacific Coach Lines",
+      "date": "1978-09-05",
+      "date_kind": "announcement",
+      "finding": "The planned replacement of the two bus services was announced.",
+      "sources": [
+        "PC-S01"
+      ],
+      "workstream": "pacific_coach",
+      "workstream_file": "review_workstreams/PACIFIC_COACH_FINDINGS.json"
+    },
+    {
+      "id": "PC-C03",
+      "subject": "Pacific Coach Lines",
+      "date": "1984-03-31",
+      "date_kind": "operations_ceased",
+      "finding": "The 1984/85 Public Accounts state that operations ceased on this date and winding up was still in progress.",
+      "sources": [
+        "PC-S02"
+      ],
+      "limit": "Do not treat the cessation date as a legal dissolution date.",
+      "workstream": "pacific_coach",
+      "workstream_file": "review_workstreams/PACIFIC_COACH_FINDINGS.json"
+    },
+    {
+      "id": "PC-C04",
+      "subject": "Pacific Coach Lines",
+      "date": "1986-03-31",
+      "date_kind": "financial_reporting_checkpoint",
+      "finding": "The 1985/86 accounts describe continued disposal of remaining real estate following the termination of operations.",
+      "sources": [
+        "PC-S03"
+      ],
+      "limit": "An accounting checkpoint for wind-down activity, not an exact legal end date.",
+      "workstream": "pacific_coach",
+      "workstream_file": "review_workstreams/PACIFIC_COACH_FINDINGS.json"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "version": "2.0",
+  "date": "2026-11-22",
+  "source_commit": "46a0b38f2784f41c84a717ee5b7c835ec92ac172",
+  "palette": {
+    "blue": "#013366",
+    "red": "#ad0000",
+    "yellow": "#fcba19",
+    "lettering_and_stars": "#000000"
+  },
+  "palette_note": "Colour interpretation using the PofBC source flag palette; original SuperHost printing inks have not been authenticated.",
+  "layouts": {
+    "Newspaper": {
+      "title": "Newspaper layout",
+      "viewBox": "100 72 262 408",
+      "width": 524,
+      "height": 816,
+      "stars": "Stars_Newspaper.svg",
+      "flag_transform": "translate(147.4005899 253) scale(.176109534 .225633181)",
+      "wordmark_transform": "translate(101.370487759 135.084847452) scale(0.439372281 0.571156933)",
+      "slogan_transform": "translate(102.947625553 147.679363980) scale(0.435220243 0.546771736)"
+    },
+    "CIPO": {
+      "title": "CIPO specimen layout",
+      "viewBox": "0 0 588 600",
+      "width": 588,
+      "height": 600,
+      "stars": "Stars_CIPO.svg",
+      "flag_transform": "translate(101.707824 201.481607) scale(.39999082)",
+      "wordmark_transform": "",
+      "slogan_transform": ""
+    }
+  },
+  "notes": [
+    "Twelve existing PofBC flag path strings are preserved exactly; only placement and fills change.",
+    "The newspaper and CIPO star arrangements are separately reconstructed from geometric five-point stars.",
+    "Letterforms are custom structural reconstructions. Exact original typefaces are unverified.",
+    "Slogan outlines are cubic fits of a mathematical brush-nib sweep over hand-authored skeletons.",
+    "Dense overlapping star centres are partly inferred; source JSON distinguishes them.",
+    "Core logo only: surrounding newspaper copy, minister credit, and separate CIPO tourism endorsement are outside this reconstruction.",
+    "Revision 2 refines shared serif masters and brush skeletons; no source contours are traced.",
+    "Flag and star geometry and transforms are unchanged from revision 1.",
+    "Brush outline cubic fitting tolerance is 0.075 CIPO reference unit."
+  ],
+  "filename_suffix": "_Refined",
+  "prior_package": "SuperHost_Vector_Package.zip"
+}

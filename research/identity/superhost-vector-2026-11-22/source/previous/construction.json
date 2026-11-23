@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "date": "2026-11-22",
+  "source_commit": "46a0b38f2784f41c84a717ee5b7c835ec92ac172",
+  "palette": {
+    "blue": "#013366",
+    "red": "#ad0000",
+    "yellow": "#fcba19",
+    "lettering_and_stars": "#000000"
+  },
+  "palette_note": "Colour interpretation using the PofBC source flag palette; original SuperHost printing inks have not been authenticated.",
+  "layouts": {
+    "Newspaper": {
+      "title": "Newspaper layout",
+      "viewBox": "100 72 262 408",
+      "width": 524,
+      "height": 816,
+      "stars": "Stars_Newspaper.svg",
+      "flag_transform": "translate(147.4005899 253) scale(.176109534 .225633181)",
+      "wordmark_transform": "translate(101.237899109 146.126584802) scale(0.436452374 0.550017389)",
+      "slogan_transform": "translate(100.498681926 145.985350691) scale(0.438738899 0.548626894)"
+    },
+    "CIPO": {
+      "title": "CIPO specimen layout",
+      "viewBox": "0 0 588 600",
+      "width": 588,
+      "height": 600,
+      "stars": "Stars_CIPO.svg",
+      "flag_transform": "translate(101.707824 201.481607) scale(.39999082)",
+      "wordmark_transform": "",
+      "slogan_transform": ""
+    }
+  },
+  "notes": [
+    "Twelve existing PofBC flag path strings are preserved exactly; only placement and fills change.",
+    "The newspaper and CIPO star arrangements are separately reconstructed from geometric five-point stars.",
+    "Letterforms are custom structural reconstructions. Exact original typefaces are unverified.",
+    "Slogan outlines are cubic fits of a mathematical brush-nib sweep over hand-authored skeletons.",
+    "Dense overlapping star centres are partly inferred; source JSON distinguishes them.",
+    "Core logo only: surrounding newspaper copy, minister credit, and separate CIPO tourism endorsement are outside this reconstruction."
+  ]
+}

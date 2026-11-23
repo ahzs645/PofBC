@@ -1,0 +1,229 @@
+{
+  "selected_optical_stroke_width_source_px": 0.24,
+  "outward_offset_per_edge_source_px": 0.12,
+  "selected_initial_capitals": [
+    "community-1-C",
+    "health-1-H",
+    "council-1-C"
+  ],
+  "initial_capital_translation_source_px": [
+    -0.4,
+    -0.2
+  ],
+  "global_wordmark_translation": [
+    0,
+    0
+  ],
+  "line_scales_changed": false,
+  "glyph_source": "Existing native ITC Souvenir Demi contours; no raster contour extraction. All 34 glyphs preserved as vector fill outlines; stroke expanded using Inkscape Boolean geometry.",
+  "choice_reason": "Conservative optical weight chosen over 0.32 px minimum continuous MSE: 0.24 px gave better mid-density IoU and closer foreground area while avoiding over-thickening. Uniform initial C/H/C correction improved all three cap windows. Larger shifts and heavier weights rejected.",
+  "baseline_metrics": {
+    "All": {
+      "iou": 0.8636687233032748,
+      "boundary_mean": 0.4960970229114141,
+      "boundary_p95": 1.4142135623730951,
+      "within1": 0.927908056651962,
+      "source": 16210,
+      "vector": 15204,
+      "source_only": 1652,
+      "vector_only": 646,
+      "density_mse": 0.01990125763405346
+    },
+    "Dark": {
+      "iou": 0.7837415320479416,
+      "boundary_mean": 0.812947564321213,
+      "boundary_p95": 2.23606797749979,
+      "within1": 0.824354657687991,
+      "source": 3483,
+      "vector": 3363,
+      "source_only": 475,
+      "vector_only": 355,
+      "density_mse": 0.05081823863587057
+    },
+    "Pale": {
+      "iou": 0.8936735778841042,
+      "boundary_mean": 0.7861833810484348,
+      "boundary_p95": 2.0,
+      "within1": 0.8308605341246291,
+      "source": 3626,
+      "vector": 3498,
+      "source_only": 264,
+      "vector_only": 136,
+      "density_mse": 0.01370149024847214
+    },
+    "Type": {
+      "iou": 0.8718716577540107,
+      "boundary_mean": 0.24732400159926962,
+      "boundary_p95": 1.0,
+      "within1": 0.9995510662177329,
+      "source": 4549,
+      "vector": 4202,
+      "source_only": 473,
+      "vector_only": 126,
+      "density_mse": 0.0070598274464668525
+    },
+    "Dark crown": {
+      "iou": 0.8340425531914893,
+      "boundary_mean": 0.8234046037786371,
+      "boundary_p95": 2.23606797749979,
+      "within1": 0.8315334773218143,
+      "source": 1110,
+      "vector": 1045,
+      "source_only": 130,
+      "vector_only": 65,
+      "density_mse": 0.029034806447149935
+    },
+    "Dark middle": {
+      "iou": 0.7982120051085568,
+      "boundary_mean": 0.8307060092796762,
+      "boundary_p95": 2.23606797749979,
+      "within1": 0.8138847858197932,
+      "source": 1404,
+      "vector": 1412,
+      "source_only": 154,
+      "vector_only": 162,
+      "density_mse": 0.04762231489042697
+    },
+    "Dark lower": {
+      "iou": 0.7092069279854147,
+      "boundary_mean": 0.8114651409725309,
+      "boundary_p95": 2.8284271247461903,
+      "within1": 0.8161993769470405,
+      "source": 969,
+      "vector": 906,
+      "source_only": 191,
+      "vector_only": 128,
+      "density_mse": 0.08212233164721199
+    }
+  },
+  "selected_metrics": {
+    "All": {
+      "iou": 0.8722235349716446,
+      "boundary_mean": 0.46576625227002305,
+      "boundary_p95": 1.4142135623730951,
+      "within1": 0.9293831168831169,
+      "source": 16210,
+      "vector": 15483,
+      "source_only": 1445,
+      "vector_only": 718,
+      "density_mse": 0.018298958053510492
+    },
+    "Dark": {
+      "iou": 0.7837415320479416,
+      "boundary_mean": 0.812947564321213,
+      "boundary_p95": 2.23606797749979,
+      "within1": 0.824354657687991,
+      "source": 3483,
+      "vector": 3363,
+      "source_only": 475,
+      "vector_only": 355,
+      "density_mse": 0.05081823863587057
+    },
+    "Pale": {
+      "iou": 0.8936735778841042,
+      "boundary_mean": 0.7861833810484348,
+      "boundary_p95": 2.0,
+      "within1": 0.8308605341246291,
+      "source": 3626,
+      "vector": 3498,
+      "source_only": 264,
+      "vector_only": 136,
+      "density_mse": 0.01370149024847214
+    },
+    "Type": {
+      "iou": 0.8953247827885809,
+      "boundary_mean": 0.21112347052280311,
+      "boundary_p95": 1.0,
+      "within1": 1.0,
+      "source": 4549,
+      "vector": 4613,
+      "source_only": 221,
+      "vector_only": 285,
+      "density_mse": 0.005258275367535155
+    },
+    "Dark crown": {
+      "iou": 0.8340425531914893,
+      "boundary_mean": 0.8234046037786371,
+      "boundary_p95": 2.23606797749979,
+      "within1": 0.8315334773218143,
+      "source": 1110,
+      "vector": 1045,
+      "source_only": 130,
+      "vector_only": 65,
+      "density_mse": 0.029034806447149935
+    },
+    "Dark middle": {
+      "iou": 0.7982120051085568,
+      "boundary_mean": 0.8307060092796762,
+      "boundary_p95": 2.23606797749979,
+      "within1": 0.8138847858197932,
+      "source": 1404,
+      "vector": 1412,
+      "source_only": 154,
+      "vector_only": 162,
+      "density_mse": 0.04762231489042697
+    },
+    "Dark lower": {
+      "iou": 0.7092069279854147,
+      "boundary_mean": 0.8114651409725309,
+      "boundary_p95": 2.8284271247461903,
+      "within1": 0.8161993769470405,
+      "source": 969,
+      "vector": 906,
+      "source_only": 191,
+      "vector_only": 128,
+      "density_mse": 0.08212233164721199
+    }
+  },
+  "capital_metrics": {
+    "C in Community": {
+      "baseline": {
+        "iou": 0.7049808429118773,
+        "density_mse": 0.06748369030079444
+      },
+      "final": {
+        "iou": 0.7644787644787645,
+        "density_mse": 0.05280426294171059
+      }
+    },
+    "H in Health": {
+      "baseline": {
+        "iou": 0.7443037974683544,
+        "density_mse": 0.04172987290624136
+      },
+      "final": {
+        "iou": 0.8417085427135679,
+        "density_mse": 0.0335083090177102
+      }
+    },
+    "C in Council": {
+      "baseline": {
+        "iou": 0.7601476014760148,
+        "density_mse": 0.028161807946573664
+      },
+      "final": {
+        "iou": 0.8095238095238095,
+        "density_mse": 0.024311997521605056
+      }
+    }
+  },
+  "expansion_render_comparison": {
+    "whole_6x_rgb_mae": 0.02856725914251525,
+    "max_single_channel_difference": 104,
+    "note": "Small antialiasing differences from mathematical stroke expansion; no bitmap content."
+  },
+  "threshold_sensitivity": {
+    "0.25": {
+      "before_iou": 0.8898598516075845,
+      "after_iou": 0.9092985318107667
+    },
+    "0.5": {
+      "before_iou": 0.8937722087151674,
+      "after_iou": 0.932427469702534
+    },
+    "0.75": {
+      "before_iou": 0.8718716577540107,
+      "after_iou": 0.8953247827885809
+    }
+  }
+}

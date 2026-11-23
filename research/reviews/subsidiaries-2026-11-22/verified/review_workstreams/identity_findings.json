@@ -1,0 +1,808 @@
+{
+  "title": "Identity and ownership continuation: Panco, Dunhill, Fisher / HCBC",
+  "prepared": "2026-11-22",
+  "scope": "Questions 3 and 5, with connected subsidiary events; research only, no repository edits or paid Registry retrievals",
+  "legal_identity_chains": [
+    {
+      "entity_id": "BC73385",
+      "registry_number_as_printed": "73385",
+      "incorporated": "1967-03-17",
+      "incorporation_is_not_crown_acquisition": true,
+      "names": [
+        {
+          "name": "Dunhill Development Corporation Ltd.",
+          "known_until": "1976-11-17"
+        },
+        {
+          "name": "Housing Corporation of British Columbia",
+          "effective_from": "1976-11-18"
+        }
+      ],
+      "rename_date_precision": "day",
+      "sources": [
+        "ID-S01",
+        "ID-S04"
+      ],
+      "note": "Original parent; distinct from BC91003. Do not omit Ltd. from the original legal name."
+    },
+    {
+      "entity_id": "BC91003",
+      "registry_number_as_printed": "91003",
+      "incorporated": "1969-12-19",
+      "incorporation_is_not_crown_acquisition": true,
+      "names": [
+        {
+          "name": "W.K.P. Construction Ltd.",
+          "known_until": "1976-11-25"
+        },
+        {
+          "name": "Dunhill Development Corporation",
+          "effective_from": "1976-11-26"
+        }
+      ],
+      "rename_date_precision": "day",
+      "dissolved": "1989-06-12",
+      "sources": [
+        "ID-S02",
+        "ID-S04",
+        "ID-S09"
+      ],
+      "note": "Subsidiary, not the original parent. The later name has no Ltd. in the Gazette."
+    },
+    {
+      "entity_id": "BC71787",
+      "registry_number_as_printed": "71787",
+      "incorporated": "1966-11-17",
+      "incorporation_is_not_crown_acquisition": true,
+      "names": [
+        {
+          "name": "Fisher Developments Ltd.",
+          "known_until": "1976-11-25"
+        },
+        {
+          "name": "HCBC Construction Ltd.",
+          "effective_from": "1976-11-26"
+        }
+      ],
+      "rename_date_precision": "day",
+      "sources": [
+        "ID-S02",
+        "ID-S04"
+      ],
+      "note": "HCBC is the existing Fisher subsidiary under a later name; merge the held HCBC candidate into Fisher rather than adding a node."
+    },
+    {
+      "entity_id": "panco_surrey_food_exhibitions",
+      "registry_number_as_printed": "63265",
+      "registry_number_verified_at": "1992-06-19",
+      "names": [
+        {
+          "name": "Panco Poultry Ltd.",
+          "source_date": "1975-02-17"
+        },
+        {
+          "name": "Surrey Farm Products Investments Ltd.",
+          "observed_in_statements_as_at": "1979-03-31",
+          "audit_date": "1979-10-23",
+          "legal_rename_date": null
+        },
+        {
+          "name": "British Columbia Food Exhibitions Ltd.",
+          "observed_in_statements_as_at": "1985-03-31",
+          "audit_date": "1985-06-17",
+          "legal_rename_date": null
+        }
+      ],
+      "dissolved": "1992-06-19",
+      "sources": [
+        "ID-S06",
+        "ID-S07",
+        "ID-S08"
+      ],
+      "note": "The two formerly clauses establish continuity. Company number 63265 is read from the final Gazette dissolution entry; no full historical Registry profile was obtained. Statement dates must not be used as exact legal rename dates."
+    }
+  ],
+  "claims": [
+    {
+      "id": "ID-C01",
+      "type": "acquisition",
+      "subjects": [
+        "panco_surrey_food_exhibitions"
+      ],
+      "date": "1975-02-17",
+      "date_precision": "day",
+      "statement": "Province purchased all issued shares of Panco Poultry Ltd.",
+      "sources": [
+        "ID-S06 F215 note 3"
+      ],
+      "ownership_percentage": 100
+    },
+    {
+      "id": "ID-C02",
+      "type": "asset_sale",
+      "subjects": [
+        "panco_surrey_food_exhibitions"
+      ],
+      "date": "1979-01-29",
+      "date_precision": "day",
+      "statement": "Surrey Farm Products Investments Ltd. and subsidiaries sold assets and business.",
+      "sources": [
+        "ID-S06 F215 note 2"
+      ],
+      "currency": "CAD",
+      "gross_proceeds": 12076253,
+      "disbursements_and_adjustments": 351593,
+      "net_proceeds": 11724660,
+      "net_book_cost": 2714030,
+      "gain": 9010630,
+      "buyer": null
+    },
+    {
+      "id": "ID-C03",
+      "type": "dividend",
+      "subjects": [
+        "panco_surrey_food_exhibitions"
+      ],
+      "date": "1979-05-04",
+      "date_precision": "day",
+      "statement": "$14,800,000 was transferred to the Minister of Finance by dividend; it is not the gross price in the asset-sale note.",
+      "sources": [
+        "ID-S06 F215 note 4",
+        "ID-S11 A9 note 7(D)"
+      ],
+      "currency": "CAD",
+      "amount": 14800000
+    },
+    {
+      "id": "ID-C04",
+      "type": "identity_interpretation",
+      "subjects": [
+        "panco_surrey_food_exhibitions"
+      ],
+      "date": null,
+      "date_precision": "undated",
+      "statement": "The shorter Surrey Farm Products Ltd. label in the $14.8 million receipts row is not evidence for a separate buyer/company; reconcile this source-as-printed label to the full-name company through the dividend and investment notes.",
+      "sources": [
+        "ID-S10 A6, B4, B8, C3",
+        "ID-S06 F215"
+      ],
+      "status": "reasoned_identity_resolution",
+      "caution": "Does not claim that no unrelated company with the shorter name has ever existed."
+    },
+    {
+      "id": "ID-C05",
+      "type": "name_change",
+      "subjects": [
+        "BC73385"
+      ],
+      "date": "1976-11-18",
+      "date_precision": "day",
+      "statement": "Dunhill Development Corporation Ltd. renamed Housing Corporation of British Columbia.",
+      "sources": [
+        "ID-S01 p1629",
+        "ID-S04 F133"
+      ]
+    },
+    {
+      "id": "ID-C06",
+      "type": "name_change",
+      "subjects": [
+        "BC91003"
+      ],
+      "date": "1976-11-26",
+      "date_precision": "day",
+      "statement": "W.K.P. Construction Ltd. renamed Dunhill Development Corporation (without Ltd.).",
+      "sources": [
+        "ID-S02 p1664",
+        "ID-S04 F133"
+      ]
+    },
+    {
+      "id": "ID-C07",
+      "type": "name_change",
+      "subjects": [
+        "BC71787"
+      ],
+      "date": "1976-11-26",
+      "date_precision": "day",
+      "statement": "Fisher Developments Ltd. renamed HCBC Construction Ltd.",
+      "sources": [
+        "ID-S02 p1664",
+        "ID-S04 F133"
+      ]
+    },
+    {
+      "id": "ID-C08",
+      "type": "ownership_snapshot",
+      "subjects": [
+        "BC73385",
+        "W.K.P. Construction Ltd.",
+        "Crown Lumber Limited",
+        "Fisher Developments Ltd.",
+        "Dunhill Homes Ltd.",
+        "Dunhill Holdings Ltd.",
+        "Venture Realty Ltd.",
+        "Georgia Park Holdings Ltd."
+      ],
+      "date": "1975-10-31",
+      "date_precision": "day",
+      "statement": "Consolidation note explicitly identifies these subsidiaries as wholly owned by the original Dunhill / Housing parent.",
+      "sources": [
+        "ID-S03 F103"
+      ],
+      "parent_entity_id": "BC73385",
+      "child_names_as_printed": [
+        "W.K.P. Construction Ltd.",
+        "Crown Lumber Limited",
+        "Fisher Developments Ltd.",
+        "Dunhill Homes Ltd.",
+        "Dunhill Holdings Ltd.",
+        "Venture Realty Ltd.",
+        "Georgia Park Holdings Ltd."
+      ],
+      "ownership_percentage": 100,
+      "not_acquisition_or_disposal_date": true
+    },
+    {
+      "id": "ID-C09",
+      "type": "ownership_snapshot",
+      "subjects": [
+        "BC73385",
+        "Dunhill Development Corporation",
+        "Crown Lumber Limited",
+        "HCBC Construction Ltd.",
+        "Venture Realty Ltd."
+      ],
+      "date": "1976-10-31",
+      "date_precision": "day",
+      "statement": "Consolidation note explicitly identifies these subsidiaries as wholly owned by the original Dunhill / Housing parent.",
+      "sources": [
+        "ID-S04 F133"
+      ],
+      "parent_entity_id": "BC73385",
+      "child_names_as_printed": [
+        "Dunhill Development Corporation",
+        "Crown Lumber Limited",
+        "HCBC Construction Ltd.",
+        "Venture Realty Ltd."
+      ],
+      "ownership_percentage": 100,
+      "not_acquisition_or_disposal_date": true
+    },
+    {
+      "id": "ID-C10",
+      "type": "ownership_snapshot",
+      "subjects": [
+        "BC73385",
+        "Dunhill Development Corporation",
+        "HCBC Construction Ltd.",
+        "Venture Realty Ltd."
+      ],
+      "date": "1977-10-31",
+      "date_precision": "day",
+      "statement": "Consolidation note explicitly identifies these subsidiaries as wholly owned by the original Dunhill / Housing parent.",
+      "sources": [
+        "ID-S05 F152"
+      ],
+      "parent_entity_id": "BC73385",
+      "child_names_as_printed": [
+        "Dunhill Development Corporation",
+        "HCBC Construction Ltd.",
+        "Venture Realty Ltd."
+      ],
+      "ownership_percentage": 100,
+      "not_acquisition_or_disposal_date": true
+    },
+    {
+      "id": "ID-C11",
+      "type": "ownership_snapshot",
+      "subjects": [
+        "BC73385",
+        "Dunhill Development Corporation",
+        "HCBC Construction Ltd.",
+        "Venture Realty Ltd."
+      ],
+      "date": "1978-10-31",
+      "date_precision": "day",
+      "statement": "Consolidation note explicitly identifies these subsidiaries as wholly owned by the original Dunhill / Housing parent.",
+      "sources": [
+        "ID-S06 F154"
+      ],
+      "parent_entity_id": "BC73385",
+      "child_names_as_printed": [
+        "Dunhill Development Corporation",
+        "HCBC Construction Ltd.",
+        "Venture Realty Ltd."
+      ],
+      "ownership_percentage": 100,
+      "not_acquisition_or_disposal_date": true
+    },
+    {
+      "id": "ID-C12",
+      "type": "ownership_snapshot",
+      "subjects": [
+        "BC73385",
+        "Dunhill Development Corporation",
+        "HCBC Construction Ltd."
+      ],
+      "date": "1984-10-31",
+      "date_precision": "day",
+      "statement": "Consolidation note explicitly identifies these subsidiaries as wholly owned by the original Dunhill / Housing parent.",
+      "sources": [
+        "ID-S07 G247"
+      ],
+      "parent_entity_id": "BC73385",
+      "child_names_as_printed": [
+        "Dunhill Development Corporation",
+        "HCBC Construction Ltd."
+      ],
+      "ownership_percentage": 100,
+      "not_acquisition_or_disposal_date": true
+    },
+    {
+      "id": "ID-C13",
+      "type": "winding_up",
+      "subjects": [
+        "Dunhill Homes Ltd."
+      ],
+      "date": "1976",
+      "date_precision": "year",
+      "statement": "Subsidiary included in 1975 comparative consolidation was wound up in 1976.",
+      "sources": [
+        "ID-S04 F133"
+      ],
+      "legal_dissolution_date": null
+    },
+    {
+      "id": "ID-C14",
+      "type": "winding_up",
+      "subjects": [
+        "Dunhill Holdings Ltd."
+      ],
+      "date": "1976",
+      "date_precision": "year",
+      "statement": "Subsidiary included in 1975 comparative consolidation was wound up in 1976.",
+      "sources": [
+        "ID-S04 F133"
+      ],
+      "legal_dissolution_date": null
+    },
+    {
+      "id": "ID-C15",
+      "type": "winding_up",
+      "subjects": [
+        "Georgia Park Holdings Ltd."
+      ],
+      "date": "1976",
+      "date_precision": "year",
+      "statement": "Subsidiary included in 1975 comparative consolidation was wound up in 1976.",
+      "sources": [
+        "ID-S04 F133"
+      ],
+      "legal_dissolution_date": null
+    },
+    {
+      "id": "ID-C16",
+      "type": "share_sale",
+      "subjects": [
+        "Crown Lumber Limited"
+      ],
+      "date": "1976-11-01",
+      "date_precision": "day",
+      "statement": "Housing sold Crown Lumber Limited at book value.",
+      "sources": [
+        "ID-S05 F152",
+        "ID-S04 F133"
+      ],
+      "sale_price_amount": null
+    },
+    {
+      "id": "ID-C17",
+      "type": "wind_down_directive",
+      "subjects": [
+        "BC73385"
+      ],
+      "date": "1978-09-29",
+      "date_precision": "day",
+      "statement": "Ministry directive initiated winding up Housing operations.",
+      "sources": [
+        "ID-S06 F154",
+        "ID-S07 G247"
+      ],
+      "not_legal_dissolution": true
+    },
+    {
+      "id": "ID-C18",
+      "type": "subsidiary_and_asset_sale",
+      "subjects": [
+        "Venture Realty Ltd."
+      ],
+      "date": "1978-11-30",
+      "date_precision": "day",
+      "statement": "Venture Realty Ltd. and certain professional-services division assets were sold effective this date.",
+      "sources": [
+        "ID-S06 F154"
+      ],
+      "name_caution": "Source prints Venture singular; do not invent a legal rename from the earlier Ventures spelling."
+    },
+    {
+      "id": "ID-C19",
+      "type": "name_continuity",
+      "subjects": [
+        "Pacific Hatchery Ltd.",
+        "Surrey Farm Products Hatchery Ltd."
+      ],
+      "date": null,
+      "date_precision": "unknown",
+      "statement": "The 1979 consolidation note calls Surrey Farm Products Hatchery Ltd. formerly Pacific Hatchery Ltd.; this is a renamed existing subsidiary.",
+      "sources": [
+        "ID-S06 F215 note 1"
+      ],
+      "caution": "Earlier baseline Pacific Hatching spelling should be preserved as a source variant until independently reconciled; do not make a second Hatchery company merely from this later name."
+    },
+    {
+      "id": "ID-C20",
+      "type": "winding_up",
+      "subjects": [
+        "Surrey Farm Products Hatchery Ltd."
+      ],
+      "date": null,
+      "date_precision": "fiscal_year",
+      "statement": "Food Exhibitions notes state that this wholly owned subsidiary was wound up during the year ended 31 March 1985.",
+      "sources": [
+        "ID-S07 G55 note 1"
+      ],
+      "period_start": "1984-04-01",
+      "period_end": "1985-03-31",
+      "legal_dissolution_date": null
+    },
+    {
+      "id": "ID-C21",
+      "type": "winding_up",
+      "subjects": [
+        "Western Feed Co. Ltd."
+      ],
+      "date": null,
+      "date_precision": "fiscal_year",
+      "statement": "Food Exhibitions notes state that this wholly owned subsidiary was wound up during the year ended 31 March 1985.",
+      "sources": [
+        "ID-S07 G55 note 1"
+      ],
+      "period_start": "1984-04-01",
+      "period_end": "1985-03-31",
+      "legal_dissolution_date": null
+    },
+    {
+      "id": "ID-C22",
+      "type": "legal_dissolution",
+      "subjects": [
+        "panco_surrey_food_exhibitions"
+      ],
+      "date": "1992-06-19",
+      "date_precision": "day",
+      "statement": "British Columbia Food Exhibitions Ltd., no.63265, was struck off and dissolved; notice published 9 July 1992.",
+      "sources": [
+        "ID-S08 p840"
+      ],
+      "notice_publication_date": "1992-07-09",
+      "caution": "This proves legal dissolution, not uninterrupted provincial ownership through that date."
+    },
+    {
+      "id": "ID-C23",
+      "type": "legal_dissolution",
+      "subjects": [
+        "BC91003"
+      ],
+      "date": "1989-06-12",
+      "date_precision": "day",
+      "statement": "Dunhill Development Corporation, no.91003, dissolved; notice published 22 June 1989.",
+      "sources": [
+        "ID-S09 p819"
+      ],
+      "notice_publication_date": "1989-06-22"
+    },
+    {
+      "id": "ID-C24",
+      "type": "ownership_roster_snapshot",
+      "subjects": [
+        "BC73385",
+        "BC91003",
+        "BC71787"
+      ],
+      "date": "1986-12-31",
+      "date_precision": "day",
+      "statement": "Later-dated Statistics Canada organization list places Dunhill and HCBC under Housing; corroborates post-1974 parent relationship. Verification belongs to parallel Statistics Canada report.",
+      "sources": [
+        "ID-S12 1984 volume p144"
+      ],
+      "verification_owner": "statcan_verification",
+      "not_formation_date": true
+    },
+    {
+      "id": "ID-C25",
+      "type": "ownership_roster_snapshot",
+      "subjects": [
+        "BC73385",
+        "BC91003",
+        "BC71787"
+      ],
+      "date": "1987-12-31",
+      "date_precision": "day",
+      "statement": "Later-dated Statistics Canada organization list places Dunhill and HCBC under Housing; corroborates post-1974 parent relationship. Verification belongs to parallel Statistics Canada report.",
+      "sources": [
+        "ID-S12 1985 volume p103"
+      ],
+      "verification_owner": "statcan_verification",
+      "not_formation_date": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "ID-S01",
+      "title": "British Columbia Gazette, 9 December 1976",
+      "url": "https://archive.org/details/governmentgazett0116gove_f5t2/page/1629/mode/1up",
+      "download_url": "https://archive.org/download/governmentgazett0116gove_f5t2/governmentgazett0116gove_f5t2.pdf",
+      "pages": [
+        {
+          "printed": "1629",
+          "pdf_1based": 23,
+          "verification_image_filename_not_packaged": "housing_rename1976_p1629.png"
+        }
+      ],
+      "verification": "page image visually inspected",
+      "bytes": 8996506,
+      "sha256": "0a3d7eaab3e57c569b3fdccace526fe3b75df0da5e7eaf4b8e4ebbf705767569",
+      "retrieved_filename": "housing_rename1976.pdf",
+      "source_file_included": false
+    },
+    {
+      "id": "ID-S02",
+      "title": "British Columbia Gazette, 16 December 1976",
+      "url": "https://archive.org/details/governmentgazett0116gove_v1t1/page/1664/mode/1up",
+      "download_url": "https://ia801601.us.archive.org/9/items/governmentgazett0116gove_v1t1/governmentgazett0116gove_v1t1.pdf",
+      "pages": [
+        {
+          "printed": "1664",
+          "pdf_1based": 14,
+          "verification_image_filename_not_packaged": "wkp_rename1976_p1664.png"
+        }
+      ],
+      "verification": "page image visually inspected",
+      "bytes": 7177749,
+      "sha256": "6ec5813ce34a24440314d7f9da0b26925df775b6c243492fe6c3dd8d2932f4cd",
+      "retrieved_filename": "wkp_rename1976.pdf",
+      "source_file_included": false
+    },
+    {
+      "id": "ID-S03",
+      "title": "British Columbia Public Accounts 1975/76",
+      "url": "https://archive.org/details/publicaccountsof00mini_4",
+      "download_url": "https://archive.org/download/publicaccountsof00mini_4/publicaccountsof00mini_4.pdf",
+      "ocr_url": "https://ia600709.us.archive.org/20/items/publicaccountsof00mini_4/publicaccountsof00mini_4_djvu.txt",
+      "pages": [
+        {
+          "printed": "F103",
+          "pdf_1based": 489,
+          "verification_image_filename_not_packaged": "accounts1976_page489.png"
+        }
+      ],
+      "verification": "page image visually inspected; statement year ended 31 October 1975",
+      "bytes": 63237286,
+      "sha256": "49cd8fa85eb8624dadb580621cde0c32bc63da055a470c11b2580c6eb57c66fd",
+      "retrieved_filename": "accounts-1976.pdf",
+      "source_file_included": false
+    },
+    {
+      "id": "ID-S04",
+      "title": "British Columbia Public Accounts 1976/77",
+      "url": "https://archive.org/details/britishcolumbiap01brit_11",
+      "download_url": "https://ia601006.us.archive.org/3/items/britishcolumbiap01brit_11/britishcolumbiap01brit_11.pdf",
+      "ocr_url": "https://archive.org/download/britishcolumbiap01brit_11/britishcolumbiap01brit_11_djvu.txt",
+      "pages": [
+        {
+          "printed": "F133",
+          "pdf_1based": 531,
+          "verification_image_filename_not_packaged": "accounts1977_alt_page531.png"
+        }
+      ],
+      "verification": "page image visually inspected; left gutter partly cropped; exact rename dates independently established by Gazette",
+      "alternate_url": "https://archive.org/details/publicaccountsof00mini_3",
+      "alternate_pdf_1based": 537,
+      "bytes": 53471585,
+      "sha256": "27991e9a9ba6d09dec9a423a3c4ec920823b3a3567bffc1a1f34bfc04f82ba9e",
+      "retrieved_filename": "accounts1977_alt.pdf",
+      "source_file_included": false
+    },
+    {
+      "id": "ID-S05",
+      "title": "British Columbia Public Accounts 1977/78",
+      "url": "https://archive.org/details/britishcolumbiap01brit_12",
+      "download_url": "https://ia800804.us.archive.org/1/items/britishcolumbiap01brit_12/britishcolumbiap01brit_12.pdf",
+      "ocr_url": "https://archive.org/download/britishcolumbiap01brit_12/britishcolumbiap01brit_12_djvu.txt",
+      "pages": [
+        {
+          "printed": "F152",
+          "pdf_1based": 580,
+          "verification_image_filename_not_packaged": "accounts1978_page580.png"
+        }
+      ],
+      "verification": "page image visually inspected; statement year ended 31 October 1977",
+      "bytes": 56228991,
+      "sha256": "e9d8b6c515c7837ec157f7f46e14ab62361bf74edf6ebba6eedce469d0cb9ef1",
+      "retrieved_filename": "accounts1978.pdf",
+      "source_file_included": false
+    },
+    {
+      "id": "ID-S06",
+      "title": "British Columbia Public Accounts 1978/79, volume 1",
+      "url": "https://archive.org/details/britishcolumbiap01brit_13",
+      "download_url": "https://ia803207.us.archive.org/13/items/britishcolumbiap01brit_13/britishcolumbiap01brit_13.pdf",
+      "ocr_url": "https://archive.org/download/britishcolumbiap01brit_13/britishcolumbiap01brit_13_djvu.txt",
+      "pages": [
+        {
+          "printed": "F154",
+          "pdf_1based": 472,
+          "verification_image_filename_not_packaged": "accounts1979_page472.png"
+        },
+        {
+          "printed": "F209",
+          "pdf_1based": 527,
+          "verification_image_filename_not_packaged": "accounts1979_page527.png"
+        },
+        {
+          "printed": "F215",
+          "pdf_1based": 533,
+          "verification_image_filename_not_packaged": "accounts1979_page533.png"
+        }
+      ],
+      "verification": "page images visually inspected; F154 Housing 31 October 1978; F215 Surrey 31 March 1979; F209 auditor dated 23 October 1979",
+      "bytes": 30941246,
+      "sha256": "9270773527e8873a643d1ae2d54d599f4ec2bc4cad49ad06f162b479facb2436",
+      "retrieved_filename": "accounts1979.pdf",
+      "source_file_included": false
+    },
+    {
+      "id": "ID-S07",
+      "title": "British Columbia Public Accounts 1984/85, volume 3",
+      "url": "https://archive.org/details/britishcolumbiap03brit_2",
+      "download_url": "https://ia600803.us.archive.org/20/items/britishcolumbiap03brit_2/britishcolumbiap03brit_2.pdf",
+      "ocr_url": "https://archive.org/download/britishcolumbiap03brit_2/britishcolumbiap03brit_2_djvu.txt",
+      "pages": [
+        {
+          "printed": "G52",
+          "pdf_1based": 58,
+          "verification": "PDF text extracted; audit 17 June 1985"
+        },
+        {
+          "printed": "G55",
+          "pdf_1based": 61,
+          "verification_image_filename_not_packaged": "accounts1985_v3_page61.png"
+        },
+        {
+          "printed": "G247",
+          "pdf_1based": 253,
+          "verification_image_filename_not_packaged": "accounts1985_v3_page253.png"
+        }
+      ],
+      "verification": "G55 and G247 page images visually inspected; G55 Food Exhibitions 31 March 1985; G247 Housing 31 October 1984",
+      "bytes": 21165170,
+      "sha256": "e6178016e55ef8bad891deac9360b66d43c6b0c6173928f8ca9e3cdbca40576d",
+      "retrieved_filename": "accounts1985_v3.pdf",
+      "source_file_included": false
+    },
+    {
+      "id": "ID-S08",
+      "title": "British Columbia Gazette, 9 July 1992",
+      "url": "https://www.bclaws.gov.bc.ca/civix/document/id/bcgaz1/hbcgaz1/197038893",
+      "pages": [
+        {
+          "printed": "840",
+          "pdf_1based": 8,
+          "verification_image_filename_not_packaged": "food_dissolution1992_p840.png"
+        }
+      ],
+      "verification": "full page image visually inspected; DISSOLUTIONS dated 19 June 1992; do not rely on misleading search snippet grouping",
+      "bytes": 5763354,
+      "sha256": "29e442049d0014c446ae8d1af173a9c6f118c9871bc6ecc47d78af732bcb980e",
+      "retrieved_filename": "food_dissolution1992.pdf",
+      "source_file_included": false
+    },
+    {
+      "id": "ID-S09",
+      "title": "British Columbia Gazette, 22 June 1989",
+      "url": "https://free.bcpublications.ca/civix/document/id/bcgaz1/hbcgaz1/1134577619",
+      "pages": [
+        {
+          "printed": "819"
+        }
+      ],
+      "verification": "official web text retrieved; no selected page image in this subpackage",
+      "source_file_included": false
+    },
+    {
+      "id": "ID-S10",
+      "title": "Report of the Auditor General 1980, appended 1979/80 Public Accounts",
+      "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19800301-report-auditor-general-1980.pdf",
+      "pages": [
+        {
+          "printed": "A6",
+          "pdf_1based": 160
+        },
+        {
+          "printed": "B4",
+          "pdf_1based": 172
+        },
+        {
+          "printed": "B8",
+          "pdf_1based": 176
+        },
+        {
+          "printed": "C3",
+          "pdf_1based": 189
+        }
+      ],
+      "verification": "PDF text retrieved; shorter Surrey Farm Products Ltd receipt label cross-checked against full legal-name investment schedule and ID-S06 F215",
+      "bytes": 8790709,
+      "sha256": "f65520898406b431a73d780a59ad6071292d0b8aec4c2da32d6cd9d22e690a4e",
+      "retrieved_filename": "oag1980.pdf",
+      "source_file_included": false
+    },
+    {
+      "id": "ID-S11",
+      "title": "Report of the Auditor General 1979 (transmitted 13 March 1980), appended 1978/79 Public Accounts",
+      "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19790301-report-auditor-general-1979.pdf",
+      "pages": [
+        {
+          "printed": "A9",
+          "pdf_1based": 85
+        }
+      ],
+      "verification": "PDF text retrieved; note 7(D) corroborates asset sale and subsequent $14.8 million dividend",
+      "bytes": 5905442,
+      "sha256": "6d5ae2816f2ad5c9c04861e0762dd1fbdbda4d7e26474ac868a482d5be16b8cb",
+      "retrieved_filename": "oag1979.pdf",
+      "source_file_included": false
+    },
+    {
+      "id": "ID-S12",
+      "title": "Statistics Canada, Provincial government enterprise finance 1984 and 1985: later-dated organization lists",
+      "url": "https://publications.gc.ca/collections/collection_2016/statcan/61-204/CS61-204-1984.pdf",
+      "other_url": "https://publications.gc.ca/collections/collection_2016/statcan/61-204/CS61-204-1985.pdf",
+      "pages": [
+        {
+          "volume": "1984",
+          "printed": "144",
+          "pdf_1based": 146,
+          "as_of": "1986-12-31",
+          "verification_image_filename_not_packaged": "1984_pdfpage146.png"
+        },
+        {
+          "volume": "1985",
+          "printed": "103",
+          "pdf_1based": 105,
+          "as_of": "1987-12-31",
+          "verification_image_filename_not_packaged": "1985_pdfpage105.png"
+        }
+      ],
+      "verification": "visually verified by parallel Statistics Canada agent; see that agent’s separate report; not independently re-rendered in identity subpackage",
+      "source_file_included": false
+    }
+  ],
+  "integration_priorities": [
+    "Merge the held HCBC candidate into the existing Fisher Developments record; exact rename 1976-11-26, company no71787.",
+    "Keep the two Dunhill companies separate: parent73385 with Ltd before Housing; child91003 with no Ltd after W.K.P.",
+    "Replace the assertion of an unknown/no parent after1974 with dated explicit ownership observations in1975,1976,1977,1978,1984 and the independently checked1986/1987 rosters.",
+    "Date Panco acquisition17February1975; distinguish gross sale proceeds12,076,253 on29January1979 from14.8million dividend4May1979.",
+    "Add source-supported name observations for Surrey Investments and Food Exhibitions, retaining unknown effective rename dates.",
+    "Record year-only and fiscal-year windups at their genuine precision; do not automatically turn them into legal-dissolution dates."
+  ],
+  "unresolved": [
+    "Exact effective Registry dates of Panco Poultry to Surrey Farm Products Investments and then British Columbia Food Exhibitions.",
+    "Exact effective rename date of Pacific Hatchery to Surrey Farm Products Hatchery; earlier Pacific Hatching spelling requires source identity reconciliation.",
+    "Full legal Registry profile for company63265 and its entire name history, beyond audited formerly clauses and final Gazette number.",
+    "Exit date/status of B.C. Testing Farms and United Provincial Investments; absence from later consolidation lists is not a dated disposition.",
+    "Uninterrupted day-by-day ownership between dated observations and any parent transfer after31December1987.",
+    "The precise purchaser of the1979 Panco/Surrey assets is not identified in the inspected notes."
+  ],
+  "package_note": "This file contains authored findings and source metadata. Original PDFs, raw OCR and research-session screenshots are not packaged. Retrieval filenames below identify the verified source copy, not a promised package member."
+}

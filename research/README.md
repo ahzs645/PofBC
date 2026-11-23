@@ -204,3 +204,15 @@ corrects hand-kept files in place, and writes `overrides.json`, which the instit
 converter applies to the files it owns; so run the two converters in that order, then
 `npm run build:government`. Its `INTEGRATION.md` says what changed. `WANTED.md` was rewritten after
 it, and `node scripts/measure-government.mjs` gives the measures at its top.
+
+## Crown subsidiaries (22 November 2026)
+
+`reviews/subsidiaries-2026-11-22/` holds the subsidiary research package (`package/`), its verified
+follow-up (`verified/`) and a last follow-up (`followup/`), as delivered, with `INTEGRATION.md` saying which claims were re-read in the
+original documents, what changed and what was held. It adds nine companies the Province owned outright,
+or wholly through its own companies, to `history/bodies-subsidiaries-2026-11-22.json`; Dunhill's, Panco's
+and T.S. Holdings' subsidiaries and Peace Power Constructors to the sub-agency `gone` list;
+`atlas/events-subsidiaries-2026-11-22.json`; and `censuses/crown-subsidiaries-2026-11-22.json`, the
+rosters as printed. Minority investments are census rows, not bodies; their events wait in the
+review's `held-events.json`. A body's name row may carry `changedAfter` where a rename's day is unknown:
+`from` is then the latest day it had happened, and the panel says the window.

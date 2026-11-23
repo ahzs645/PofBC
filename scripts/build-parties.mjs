@@ -1,0 +1,123 @@
+// Rebuild the political parties catalogue from the filed research package. No network access is needed.
+//
+// The package (research/parties/bc-political-party-logos-2026-11-22) keeps its own data, notes and
+// PDF catalogue; its artwork and display previews are served from public/parties/. This keeps only
+// what the Parties view reads, with paths rewritten to where the files are served.
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
+import { basename, dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
+const PACKAGE = 'research/parties/bc-political-party-logos-2026-11-22'
+const catalogue = JSON.parse(readFileSync(resolve(root, PACKAGE, 'data/catalogue.json'), 'utf8'))
+const out = resolve(root, 'src/parties/partyData.js')
+const servedFile = (path) => `parties/${path}`
+const servedPreview = (path) => `parties/previews/${basename(path)}`
+const missing = []
+const served = (path) => { if (!existsSync(resolve(root, 'public', path))) missing.push(path); return path }
+
+const parties = catalogue.coverage.map((row) => ({
+  id: row.party_id,
+  name: row.name ?? row.display_name,
+  aliases: row.aliases ?? [],
+  status: row.coverage_status ?? row.status,
+  summary: row.summary,
+  notes: row.notes ?? null,
+  gaps: row.gaps ?? [],
+  earliestUse: row.earliest_confirmed_visual_use ?? null,
+  earliestFile: row.earliest_file_observation ?? null,
+  latestUse: row.latest_confirmed_visual_use ?? null,
+  datesNote: row.visual_dates_note ?? null,
+  designIds: row.design_ids ?? [],
+  sourceIds: row.source_ids ?? []
+}))
+
+const assets = catalogue.assets.map((row) => ({
+  id: row.asset_id,
+  party: row.party_id,
+  design: row.design_id,
+  title: row.title,
+  file: served(servedFile(row.relative_path)),
+  preview: served(servedPreview(row.preview_path)),
+  previewSize: [row.preview_width_px, row.preview_height_px],
+  format: row.format,
+  bytes: row.bytes ?? row.file_size_bytes,
+  sha256: row.sha256,
+  assetClass: row.asset_class,
+  kind: row.specimen_type ?? row.role ?? null,
+  variant: row.variant ?? null,
+  dateLabel: row.date_label,
+  dateFrom: row.date_from ?? null,
+  dateTo: row.date_to ?? null,
+  dateBasis: row.date_basis ?? null,
+  confidence: row.confidence,
+  notes: row.notes ?? null,
+  rights: row.rights_note ?? null,
+  source: { id: row.source_id ?? null, url: row.source_url, title: row.source_title, locator: row.source_locator ?? null },
+  companions: (row.companion_files ?? []).map((path) => served(servedFile(path)))
+}))
+
+const events = catalogue.events.map((row) => ({
+  id: row.event_id,
+  type: row.event_type,
+  parties: row.party_ids,
+  dateLabel: row.date_label,
+  dateFrom: row.date_from ?? null,
+  dateTo: row.date_to ?? null,
+  description: row.description,
+  qualification: row.qualification ?? null,
+  assets: row.asset_ids ?? [],
+  visual: Boolean(row.is_visual),
+  sourceIds: row.source_ids ?? [],
+  sourceUrls: row.source_urls ?? []
+}))
+
+const groups = catalogue.groups.map((row) => ({
+  id: row.id,
+  title: row.title,
+  parties: row.parties,
+  intro: row.intro,
+  events: row.event_ids ?? [],
+  designs: row.cards.map((card) => ({ id: card.design_id, representative: card.representative_asset_id, assets: card.asset_ids, sortDate: card.sort_date }))
+}))
+
+const sources = Object.fromEntries(catalogue.sources.map((row) => [row.source_id, { url: row.url, title: row.title, retrievedOn: row.retrieved_on ?? null }]))
+
+// The records must agree with each other before the view relies on them.
+const partyIds = new Set(parties.map((party) => party.id))
+const assetIds = new Set(assets.map((asset) => asset.id))
+const problems = [...missing.map((path) => `missing served file public/${path}`)]
+for (const asset of assets) if (!partyIds.has(asset.party)) problems.push(`asset ${asset.id}: unknown party ${asset.party}`)
+for (const event of events) {
+  for (const id of event.parties) if (!partyIds.has(id)) problems.push(`event ${event.id}: unknown party ${id}`)
+  for (const id of event.assets) if (!assetIds.has(id)) problems.push(`event ${event.id}: unknown asset ${id}`)
+  for (const id of event.sourceIds) if (!sources[id]) problems.push(`event ${event.id}: unknown source ${id}`)
+}
+for (const group of groups) {
+  for (const id of group.parties) if (!partyIds.has(id)) problems.push(`group ${group.id}: unknown party ${id}`)
+  for (const design of group.designs) for (const id of [design.representative, ...design.assets]) if (!assetIds.has(id)) problems.push(`group ${group.id}: unknown asset ${id}`)
+}
+for (const party of parties) for (const id of party.sourceIds) if (!sources[id]) problems.push(`party ${party.id}: unknown source ${id}`)
+if (problems.length) throw new Error(`The party catalogue does not agree with itself:\n${problems.join('\n')}`)
+
+const data = {
+  asOf: catalogue.as_of,
+  title: catalogue.title,
+  scope: catalogue.scope,
+  package: PACKAGE,
+  parties, groups, assets, events, sources
+}
+const text = `// Generated by scripts/build-parties.mjs from ${PACKAGE}/data/catalogue.json. Do not edit by hand.\nexport const PARTY_DATA = ${JSON.stringify(data, null, 2)}\n`
+
+if (process.argv.includes('--check')) {
+  if (!existsSync(out) || readFileSync(out, 'utf8') !== text) {
+    console.error('src/parties/partyData.js is out of date: run npm run build:parties')
+    process.exit(1)
+  }
+  console.log(`Party catalogue is current: ${parties.length} parties, ${assets.length} logo files, ${events.length} events.`)
+} else {
+  writeFileSync(out, text)
+  // The full catalogue is offered for download beside the artwork.
+  writeFileSync(resolve(root, 'public/parties/catalogue.json'), readFileSync(resolve(root, PACKAGE, 'data/catalogue.json')))
+  console.log(`Wrote src/parties/partyData.js: ${parties.length} parties, ${groups.length} lineages, ${assets.length} logo files, ${events.length} events, ${Object.keys(sources).length} sources.`)
+}

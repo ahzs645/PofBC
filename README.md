@@ -37,6 +37,24 @@ Rebuild offline with `npm run build:school-districts`; run `npm run check:school
 check source dates, predecessor identities, original asset hashes, salary links and rendered pages.
 The same catalogue supplies the Logos register and Government’s related-bodies directory.
 
+## Political parties
+
+The **Political Parties** view (`?view=parties`) shows B.C.'s provincial parties through the marks
+they used: nine lineages (BC Liberal → BC United, CCF → BC NDP, Social Credit, the Conservatives,
+the Greens and others) as strips of designs, oldest first, and a page per party
+(`?view=parties&party=bc-ndp`) with its designs and their colourway/format files, organizational
+history (formations, registered-name changes, deregistrations), open gaps and numbered sources.
+All 27 parties and historical labels are listed, including the 15 with no recovered artwork. In
+Government, the premiers' parties and the 2026 standings link to their party pages.
+
+The research package (22 November 2026) is filed whole in
+[`research/parties/bc-political-party-logos-2026-11-22`](research/parties/bc-political-party-logos-2026-11-22/README.md):
+its data, notes, PDF catalogue and contact sheet. Its 68 original files (65 artwork records and 3
+cropped PDF companions) and 65 display previews are served from `public/parties/assets/` and
+`public/parties/previews/`. Rebuild with `npm run build:parties`. Run `npm run check:parties` to
+check that the generated data is current, every file is served, designs are in order, and the
+directory and all 27 party pages render.
+
 ## Salary data and coverage
 
 The [consolidated recovery and preservation checks](research/salaries/consolidation-2026-11-06.md) keep original salary evidence and reviewed name decisions intact while adding official elected, Assembly staff and police records. The Workforce view also provides all 30 archived official Workforce Profile CSV tables, separately from employee payment records.

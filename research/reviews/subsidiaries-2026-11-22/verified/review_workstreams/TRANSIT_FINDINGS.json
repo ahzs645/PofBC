@@ -1,0 +1,157 @@
+{
+  "review_date": "2026-11-22",
+  "scope": "Independent scan verification of the T. S. Holdings group in the 1977/78 Public Accounts; new evidence resolving the Vancouver Island Transit and Thompson-Okanagan questions.",
+  "sources": [
+    {
+      "id": "TR-S01",
+      "title": "Public Accounts of British Columbia, 1977/78 — T. S. Holdings Ltd., notes to consolidated financial statements",
+      "statement_date": "1978-03-31",
+      "printed_pages": [
+        "F220",
+        "F221"
+      ],
+      "pdf_pages_one_based": [
+        648,
+        649
+      ],
+      "note": "1(a), consolidation; 1(d), income taxes",
+      "url": "https://archive.org/download/britishcolumbiap01brit_12/britishcolumbiap01brit_12.pdf",
+      "text_url": "https://archive.org/stream/britishcolumbiap01brit_12/britishcolumbiap01brit_12_djvu.txt",
+      "bytes": 56228991,
+      "sha256": "e9d8b6c515c7837ec157f7f46e14ab62361bf74edf6ebba6eedce469d0cb9ef1",
+      "verification": "Original PDF pages rendered and visually inspected; source date and all company names checked against page images.",
+      "retrieved_filename": "accounts1978.pdf",
+      "source_file_included": false
+    }
+  ],
+  "ownership_observations": [
+    {
+      "id": "TR-O01",
+      "company": "V I T Holdings Ltd.",
+      "owner": "T. S. Holdings Ltd.",
+      "ownership_pct": 100,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Wholly owned subsidiary in the T. S. Holdings consolidated group; no incorporation or acquisition day supplied."
+    },
+    {
+      "id": "TR-O02",
+      "company": "Thompson-Okanagan Transit Ltd.",
+      "owner": "T. S. Holdings Ltd.",
+      "ownership_pct": 100,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Wholly owned subsidiary in the T. S. Holdings consolidated group; no incorporation or acquisition day supplied."
+    },
+    {
+      "id": "TR-O03",
+      "company": "Vancouver Island Transit Ltd.",
+      "owner": "T. S. Holdings Ltd.",
+      "ownership_pct": 100,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Wholly owned subsidiary in the T. S. Holdings consolidated group; no incorporation or acquisition day supplied."
+    },
+    {
+      "id": "TR-O04",
+      "company": "Vancouver Island Transportation Company Limited",
+      "owner_or_ultimate_group_holder": "V I T Holdings Ltd.",
+      "ownership_pct": 98.5,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Source expressly permits direct ownership or ownership through a subsidiary. Do not assign a direct edge to every company."
+    },
+    {
+      "id": "TR-O05",
+      "company": "Vancouver Island Coach Lines Limited",
+      "owner_or_ultimate_group_holder": "V I T Holdings Ltd.",
+      "ownership_pct": 98.5,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Source expressly permits direct ownership or ownership through a subsidiary. Do not assign a direct edge to every company."
+    },
+    {
+      "id": "TR-O06",
+      "company": "Gray Line & Empress Taxi & Sightseeing Company Limited",
+      "owner_or_ultimate_group_holder": "V I T Holdings Ltd.",
+      "ownership_pct": 98.5,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Source expressly permits direct ownership or ownership through a subsidiary. Do not assign a direct edge to every company."
+    },
+    {
+      "id": "TR-O07",
+      "company": "Imperial Charter Service Company Limited",
+      "owner_or_ultimate_group_holder": "V I T Holdings Ltd.",
+      "ownership_pct": 98.5,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Source expressly permits direct ownership or ownership through a subsidiary. Do not assign a direct edge to every company."
+    },
+    {
+      "id": "TR-O08",
+      "company": "British Columbia Parlour Car Tours Limited",
+      "owner_or_ultimate_group_holder": "V I T Holdings Ltd.",
+      "ownership_pct": 98.5,
+      "as_at": "1978-03-31",
+      "date_kind": "financial_statement_observation",
+      "source": "TR-S01",
+      "locator": "F220, note 1(a); PDF648",
+      "relationship_precision": "Source expressly permits direct ownership or ownership through a subsidiary. Do not assign a direct edge to every company."
+    }
+  ],
+  "additional_evidence": [
+    {
+      "id": "TR-C01",
+      "finding": "Note 1(d) expressly identifies Vancouver Island Transportation Company Limited as a subsidiary of V I T Holdings and says it was seeking the remaining minority shares.",
+      "source": "TR-S01",
+      "locator": "F221, note 1(d); PDF649",
+      "implication": "The 98.5% holding must not be rounded to wholly owned."
+    }
+  ],
+  "integration_actions": [
+    {
+      "entity": "Vancouver Island Transit Ltd.",
+      "action": "Add a historical wholly owned T. S. Holdings subsidiary observation dated 31 March 1978. The 1981-Q1 Statistics Canada row is later corroborative roster evidence. Do not infer an incorporation date."
+    },
+    {
+      "entity": "Thompson-Okanagan Transit Ltd.",
+      "action": "Correct the blanket loan-only classification: the 31 March 1978 accounts identify it as wholly owned within T. S. Holdings. Preserve the separately sourced loan event as a different relationship."
+    },
+    {
+      "entity": "V I T Holdings Ltd.",
+      "action": "Add the missing wholly owned T. S. Holdings subsidiary observation at 31 March 1978."
+    },
+    {
+      "entities": [
+        "Vancouver Island Transportation Company Limited",
+        "Vancouver Island Coach Lines Limited",
+        "Gray Line & Empress Taxi & Sightseeing Company Limited",
+        "Imperial Charter Service Company Limited",
+        "British Columbia Parlour Car Tours Limited"
+      ],
+      "action": "Retain 98.5% group holdings and uncertain intermediate ownership paths. Keep them distinct from the wholly owned tier and from similarly named Vancouver Island Transit."
+    }
+  ],
+  "limits": [
+    "No incorporation dates or acquisition dates are supplied for these eight companies.",
+    "A 1978 ownership snapshot does not prove unchanged ownership throughout later years.",
+    "Vancouver Island Transit Ltd., V I T Holdings Ltd., and Vancouver Island Transportation Company Limited are three distinct named companies in the source.",
+    "No source text here identifies every intermediate company in the 98.5% tier."
+  ],
+  "package_note": "This file contains authored findings and source metadata. Original PDFs, raw OCR and research-session screenshots are not packaged. Retrieval filenames below identify the verified source copy, not a promised package member."
+}

@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { SiteLink } from '../site/navigation.jsx'
+import { partyPlaceFor } from '../parties/partyLinks.js'
 
 /** New election evidence can be displayed without relabelling an older government snapshot. */
 export const ElectionResultsCard = ({ results, snapshotDate }) => {
@@ -11,7 +13,10 @@ export const ElectionResultsCard = ({ results, snapshotDate }) => {
       <h2 id="election-results-heading" className="gov-card__heading">2026 election results</h2>
       <p className="gov-muted">Final count published {results.publishedOn} · checked {results.checkedOn}</p>
       <ul className="gov-standings">
-        {Object.entries(results.parties).map(([party, count]) => <li key={party}><strong>{count}</strong> {party}</li>)}
+        {Object.entries(results.parties).map(([party, count]) => {
+          const place = partyPlaceFor(party)
+          return <li key={party}><strong>{count}</strong> {place ? <SiteLink to={place}>{party}</SiteLink> : party}</li>
+        })}
       </ul>
       <p>{results.totalSeats} candidates declared elected on Elections BC’s final-count list. Kelowna Centre and Ladysmith-Oceanside are subject to judicial recounts.</p>
       <p className="gov-muted">Government offices shown in this view were checked on {snapshotDate}. These election results do not establish appointments or swearing-in dates.</p>

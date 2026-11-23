@@ -1,0 +1,103 @@
+{
+  "method": "Foreground intersection-over-union (IoU), black <128, Inkscape render at the original 1166 x 488 source resolution. Higher means more shared foreground area.",
+  "registration": "Only the outer canvas of each delivered SVG was changed to 0 0 1166 488. Its artwork transforms, paths and placements were kept unchanged. No additional registration, independent word fitting, rotation or warping was applied to the delivered files for this audit.",
+  "caveat": "This is an ink-overlap diagnostic, not historical accuracy or proof of a font identity. The blurred source contains scan defects. Restoring source placement and changing letter shapes both affect the result.",
+  "regions": {
+    "GREATER": [
+      55,
+      335,
+      487,
+      406
+    ],
+    "TRAIL": [
+      722,
+      334,
+      998,
+      406
+    ],
+    "COMMUNITY": [
+      217,
+      431,
+      552,
+      485
+    ],
+    "HEALTH": [
+      554,
+      431,
+      833,
+      485
+    ],
+    "COUNCIL": [
+      838,
+      431,
+      1085,
+      485
+    ],
+    "underline": [
+      300,
+      407,
+      882,
+      423
+    ]
+  },
+  "previous_delivered": {
+    "full_logo": 0.8175062880282205,
+    "symbol": 0.9411755520159905,
+    "GREATER": 0.5963808893302438,
+    "TRAIL": 0.4439515441051015,
+    "COMMUNITY": 0.6671836915577222,
+    "HEALTH": 0.6640689089417555,
+    "COUNCIL": 0.46804625684723067,
+    "underline": 0.5422349844460397
+  },
+  "previous_source_aligned": {
+    "full_logo": 0.8619656114002902,
+    "symbol": 0.9411755520159905,
+    "GREATER": 0.6061848814010198,
+    "TRAIL": 0.6986191715029018,
+    "COMMUNITY": 0.7162346521145976,
+    "HEALTH": 0.7235546038543897,
+    "COUNCIL": 0.7035193743334518,
+    "underline": 0.8056648308418568
+  },
+  "intermediate_passes": [
+    {
+      "pass": "Restore source placement; refine oval/rule",
+      "metrics": {
+        "full_logo": 0.8641492963144335,
+        "symbol": 0.9436117840118777,
+        "GREATER": 0.6061848814010198,
+        "TRAIL": 0.6986191715029018,
+        "COMMUNITY": 0.7162346521145976,
+        "HEALTH": 0.7235546038543897,
+        "COUNCIL": 0.7035193743334518,
+        "underline": 0.8221343873517787
+      }
+    },
+    {
+      "pass": "First custom main-capital pass",
+      "metrics": {
+        "full_logo": 0.8891383907847434,
+        "symbol": 0.9436117840118777,
+        "GREATER": 0.7919780767314399,
+        "TRAIL": 0.8085787451984635,
+        "COMMUNITY": 0.7162346521145976,
+        "HEALTH": 0.7235546038543897,
+        "COUNCIL": 0.7035193743334518,
+        "underline": 0.8221343873517787
+      }
+    }
+  ],
+  "replacement_delivered": {
+    "full_logo": 0.9025602458882386,
+    "symbol": 0.9436117840118777,
+    "GREATER": 0.8214599824098505,
+    "TRAIL": 0.841565105837075,
+    "COMMUNITY": 0.7830985915492957,
+    "HEALTH": 0.7750055691690799,
+    "COUNCIL": 0.7795158286778399,
+    "underline": 0.8221343873517787
+  },
+  "source_sha256": "402095e211f9a4aa88f108dbfdff3b74312edfb186aa8ec1ea55e73bd247196c",
+  "delivered_svg_sha256": "5c6d577775db59afeb5cdf0dfab42813242d6b12252d5d91172c2ead13ae98e4"
+}

@@ -1,0 +1,456 @@
+{
+  "review_date": "2026-11-22",
+  "scope": "Semantic instructions, not an executable patch against the unavailable uncommitted checkout.",
+  "actions": [
+    {
+      "id": "F01",
+      "followup_question": 7,
+      "priority": "precommit_correction",
+      "subject": "Pacific Coach Lines Limited,178561",
+      "operation": "separate_incorporation_from_public_ownership",
+      "values": {
+        "incorporated": "1978-08-02",
+        "provincial_100_pct_observed": "1979-03-31",
+        "original_subscription_date": null
+      },
+      "evidence_files": [
+        "details/TRANSIT_FOLLOWUP.json"
+      ],
+      "limits": "Incorporation alone does not establish the first Crown ownership day."
+    },
+    {
+      "id": "F02",
+      "followup_question": 7,
+      "priority": "precommit_correction",
+      "subject": "Pacific Coach Lines Limited,178561",
+      "operation": "correct_first_operations_and_preserve_later_transfer",
+      "values": {
+        "operations_commenced": "1978-08-31",
+        "asset_liability_source": "Vancouver Island Transportation Company Limited",
+        "pacific_stage_assets_and_responsibilities_transferred": "1979-04-01",
+        "prior_claim_superseded": "PC-C01 and the first-operations interpretation in A25"
+      },
+      "evidence_files": [
+        "details/TRANSIT_FOLLOWUP.json"
+      ],
+      "limits": "No legal merger or transfer of the five subsidiaries shares to Pacific Coach is proved by the asset transaction."
+    },
+    {
+      "id": "F03",
+      "followup_question": 7,
+      "priority": "identity_separation",
+      "subject": "Pacific Coach legal entities",
+      "operation": "retain_three_registry_identities",
+      "values": {
+        "entities": [
+          {
+            "number": "178561",
+            "incorporated": "1978-08-02",
+            "rename": "1990-07-19",
+            "new_name": "178561 B.C. Ltd."
+          },
+          {
+            "number": "273925",
+            "incorporated": "1984-02-07",
+            "former_name": "Pacific Coach Lines (1984) Ltd.",
+            "rename": "1990-07-17",
+            "new_name": "273925 B.C. Ltd."
+          },
+          {
+            "number": "362538",
+            "incorporated": "1989-03-29",
+            "former_name": "Royal Victorian Holdings Corporation",
+            "rename": "1990-07-19",
+            "new_name": "Pacific Coach Lines Ltd."
+          }
+        ]
+      },
+      "evidence_files": [
+        "details/TRANSIT_FOLLOWUP.json"
+      ],
+      "limits": "The later entities have no proved Crown ownership from these notices. Do not treat the1990 rename as continued public ownership or dissolution."
+    },
+    {
+      "id": "F04",
+      "followup_question": 3,
+      "priority": "precommit_correction",
+      "subject": "Panco Poultry Ltd.,63265",
+      "operation": "apply_exact_rename",
+      "values": {
+        "from_name": "Panco Poultry Ltd.",
+        "to_name": "Surrey Farm Products Investments Ltd.",
+        "effective": "1979-02-14",
+        "publication": "1979-03-08"
+      },
+      "evidence_files": [
+        "details/identity_followup.json"
+      ]
+    },
+    {
+      "id": "F05",
+      "followup_question": 4,
+      "priority": "verified_addition",
+      "subject": "Pacific Hatchery Ltd.,64184",
+      "operation": "apply_exact_rename",
+      "values": {
+        "from_name": "Pacific Hatchery Ltd.",
+        "to_name": "Surrey Farm Products Hatchery Ltd.",
+        "effective": "1979-02-14"
+      },
+      "evidence_files": [
+        "details/identity_followup.json"
+      ],
+      "limits": "This does not independently establish a legal Pacific Hatching-to-Hatchery rename."
+    },
+    {
+      "id": "F06",
+      "followup_question": 3,
+      "priority": "precommit_correction",
+      "subject": "Panco transaction labels",
+      "operation": "use_event_time_names",
+      "values": {
+        "1979-01-29_asset_sale": "Panco Poultry Ltd.",
+        "1979-05-04_dividend": "Surrey Farm Products Investments Ltd."
+      },
+      "evidence_files": [
+        "details/identity_followup.json"
+      ],
+      "limits": "Preserve the Surrey heading used by the later accounts as source wording; transaction amounts remain unchanged."
+    },
+    {
+      "id": "F07",
+      "followup_question": 3,
+      "priority": "qualified_display",
+      "subject": "Surrey Investments / BC Food Exhibitions",
+      "operation": "retain_unknown_second_rename_and_later_name_observation",
+      "values": {
+        "rename_after_exclusive": "1979-02-14",
+        "rename_by_inclusive": "1985-06-17",
+        "statement_as_at": "1985-03-31",
+        "audit_date": "1985-06-17",
+        "legal_effective_date": null,
+        "1985_accounts_card_name": "British Columbia Food Exhibitions Ltd."
+      },
+      "evidence_files": [
+        "details/identity_followup.json"
+      ],
+      "limits": "Do not make either statement or audit date an exact rename; do not imply Panco was still its legal name in1992. Archive gaps do not define the rename window."
+    },
+    {
+      "id": "F08",
+      "followup_question": 4,
+      "priority": "held_identity_bridges",
+      "subject": "Three printed-name spelling pairs",
+      "operation": "preserve_candidate_equivalence",
+      "values": {
+        "Ventures_Venture": {
+          "candidate_registry_number": "83729",
+          "proven_plural_to_singular_rename": false
+        },
+        "Hatching_Hatchery": {
+          "candidate_registry_number": "64184",
+          "proven_spelling_bridge": false
+        },
+        "Feeds_Feed": {
+          "candidate_registry_number": null,
+          "proven_spelling_bridge": false
+        }
+      },
+      "evidence_files": [
+        "details/identity_followup.json"
+      ],
+      "limits": "Do not create duplicate legal companies or fictitious rename events solely from spelling differences."
+    },
+    {
+      "id": "F09",
+      "followup_question": 2,
+      "priority": "verified_addition",
+      "subject": "Thompson-Okanagan / Vancouver Island Transit",
+      "operation": "record_former_name_links",
+      "values": {
+        "observed_on": "1976-03-31",
+        "Thompson-Okanagan Transit Ltd.": "Tweed Line Tours Ltd.",
+        "Vancouver Island Transit Ltd.": "McArthur Transportation Limited",
+        "exact_rename_days": null
+      },
+      "evidence_files": [
+        "details/TRANSIT_FOLLOWUP.json"
+      ]
+    },
+    {
+      "id": "F10",
+      "followup_question": 2,
+      "priority": "precommit_precision",
+      "subject": "V I T five-company interests",
+      "operation": "retain_dated_percentage_series",
+      "values": {
+        "1976-03-31": "98.24",
+        "1977-03-31": "98.4",
+        "1978-03-31": "98.5",
+        "unit": "percent"
+      },
+      "evidence_files": [
+        "details/TRANSIT_FOLLOWUP.json"
+      ],
+      "limits": "Observations do not date the changes in percentage; do not round to98 or backfill98.5 across all years."
+    },
+    {
+      "id": "F11",
+      "followup_question": 2,
+      "priority": "verified_direct_relationship",
+      "subject": "Vancouver Island Transportation Company Limited",
+      "operation": "close_holdings_parent_edge_at_share_transfer",
+      "values": {
+        "seller": "V I T Holdings Ltd.",
+        "buyer": "Province of British Columbia",
+        "percentage": "98.5",
+        "transferred": "1978-07-24",
+        "original_acquisition_day": null
+      },
+      "evidence_files": [
+        "details/TRANSIT_FOLLOWUP.json"
+      ],
+      "limits": "This is a share sale, distinct from Pacific Coach’s later asset purchase."
+    },
+    {
+      "id": "F12",
+      "followup_question": 2,
+      "priority": "precommit_correction",
+      "subject": "V I T Holdings / T.S.1979 subsidiaries",
+      "operation": "record_liquidation_and_correct_year_end_group",
+      "values": {
+        "liquidated": "1979-01-22",
+        "registry_dissolved": null,
+        "as_at": "1979-03-31",
+        "continuing_wholly_owned_subsidiaries": [
+          "Thompson-Okanagan Transit Ltd.",
+          "Vancouver Island Transit Ltd."
+        ]
+      },
+      "evidence_files": [
+        "details/TRANSIT_FOLLOWUP.json"
+      ],
+      "limits": "Do not extend the prior three-company consolidation into the March1979 checkpoint; liquidation is not proven registry dissolution."
+    },
+    {
+      "id": "F13",
+      "followup_question": 2,
+      "priority": "conditional_graph_addition",
+      "subject": "Four other V I T group companies",
+      "operation": "retain_group_interest_without_invented_direct_edges",
+      "values": {
+        "immediate_parent": null,
+        "relationship": "direct or through a subsidiary, as printed",
+        "display_requirement": "separately labelled group/indirect association"
+      },
+      "evidence_files": [
+        "details/TRANSIT_FOLLOWUP.json"
+      ],
+      "limits": "Keep in roster for this commit if no appropriate relationship display exists; the collective assertion cannot be converted into four ordinary direct-parent edges."
+    },
+    {
+      "id": "F14",
+      "followup_question": 1,
+      "priority": "hold_continuous_interval",
+      "subject": "Swan Valley Foods",
+      "operation": "do_not_use_sale_as_start",
+      "values": {
+        "ownership_start": null,
+        "start_after": "1977-03-31",
+        "start_on_or_before": "1977-12-01",
+        "ownership_pct_immediately_before_sale": 100,
+        "sale": "1977-12-01",
+        "current_graph_decision": "keep unsupported continuous interval off the dated graph"
+      },
+      "evidence_files": [
+        "SWAN_AND_MODEL_REVIEW.md"
+      ],
+      "limits": "Preserve research and transaction evidence. A future uncertain-start interval or transaction marker must not create a false founding date."
+    },
+    {
+      "id": "F15",
+      "followup_question": 5,
+      "priority": "precommit_correction",
+      "subject": "British Columbia Cellulose Company",
+      "operation": "use_supported_legal_endpoint",
+      "values": {
+        "legal_end": "1986-03-31",
+        "original_order": "OIC631/1986",
+        "order_approved": "1986-03-19",
+        "commencement_regulation": "B.C. Reg.49/86",
+        "original_order_visually_verified": true,
+        "accounts_date_as_printed": "1986-04-01"
+      },
+      "evidence_files": [
+        "details/CELLULOSE_FOLLOWUP.json"
+      ],
+      "limits": "Use legal source for the legal endpoint and retain the distinct accounting assertion; do not claim both sources print the same date or invent a midnight explanation."
+    },
+    {
+      "id": "F16",
+      "followup_question": 6,
+      "priority": "verified_graph_addition",
+      "subject": "Kootenay Forest Products Ltd.",
+      "operation": "add_wholly_owned_subsidiary",
+      "values": {
+        "owner": "British Columbia Cellulose Company",
+        "ownership_pct": 100,
+        "public_share_acquisition_effective": "1974-03-01"
+      },
+      "evidence_files": [
+        "details/CELLULOSE_FOLLOWUP.json"
+      ],
+      "limits": "Acquisition is not original incorporation. Distinguish the company from similarly named Eddy Match divisions and their asset sale."
+    },
+    {
+      "id": "F17",
+      "followup_question": 6,
+      "priority": "qualified_graph_addition",
+      "subject": "Canadian Cellulose Company, Limited",
+      "operation": "add_majority_owned_holding_with_correct_percentage",
+      "values": {
+        "owner": "British Columbia Cellulose Company",
+        "ownership_pct_as_at_1975": 79,
+        "majority_interest_acquired": "1973-06-29"
+      },
+      "evidence_files": [
+        "details/CELLULOSE_FOLLOWUP.json"
+      ],
+      "limits": "It is not wholly provincially owned on this evidence. Keep in a partial/majority-controlled layer if the graph’s present category is restricted to100%."
+    },
+    {
+      "id": "F18",
+      "followup_question": 6,
+      "priority": "ownership_path_correction",
+      "subject": "BC Cellulose holdings before BCRIC transfer",
+      "operation": "preserve_intermediate_provincial_ownership",
+      "values": {
+        "event": "dividend of holdings to Province",
+        "date_after": "1977-03-31",
+        "date_on_or_before": "1978-03-09",
+        "exact_day": null,
+        "canadian_cellulose_separate_provincial_common_shares": 278100,
+        "canadian_cellulose_combined_interest_transferred_pct": 81
+      },
+      "evidence_files": [
+        "details/CELLULOSE_FOLLOWUP.json"
+      ],
+      "limits": "Do not substitute81% for the earlier79% BC Cellulose observation or imply the dividend date is exactly9March."
+    },
+    {
+      "id": "F19",
+      "followup_question": 6,
+      "priority": "verified_transfer_date",
+      "subject": "Canadian Cellulose / Kootenay / Plateau",
+      "operation": "record_actual_BCRIC_transfer",
+      "values": {
+        "transferred": "1978-03-09",
+        "basis": "Finance Minister’s10April1978 statement of actual transfer, supported by accounts/order",
+        "recipient": "British Columbia Resources Investment Corporation"
+      },
+      "evidence_files": [
+        "details/CELLULOSE_FOLLOWUP.json"
+      ],
+      "limits": "This strengthens the prior approval-only treatment; keep the preceding dividends separately bounded."
+    },
+    {
+      "id": "F20",
+      "followup_question": 6,
+      "priority": "ownership_scope",
+      "subject": "BCRIC holdings after public share distribution",
+      "operation": "separate_public_ownership_from_later_private_history",
+      "values": {
+        "public_ownership_change_year": 1979,
+        "exact_day": null,
+        "provincial_BCRIC_share_pct_at_1980_03_31": 4.65
+      },
+      "evidence_files": [
+        "details/CELLULOSE_FOLLOWUP.json"
+      ],
+      "limits": "Do not extend wholly provincial status merely because former Crown subsidiaries still exist or BCRIC later acquires100% of them. This is not a corporate dissolution year."
+    },
+    {
+      "id": "F21",
+      "followup_question": 6,
+      "priority": "post_public_successor_history",
+      "subject": "Canadian Cellulose / Kootenay / Plateau",
+      "operation": "record_new_same_named_amalgamated_successor",
+      "values": {
+        "amalgamation_effective": "1980-12-31",
+        "new_company_name": "Canadian Cellulose Company, Limited",
+        "predecessors": [
+          "Canadian Cellulose Company, Limited",
+          "Kootenay Forest Products Ltd.",
+          "Plateau Mills Ltd."
+        ]
+      },
+      "evidence_files": [
+        "details/CELLULOSE_FOLLOWUP.json"
+      ],
+      "limits": "New legal company, not a rename of the provincial BC Cellulose holding company; no extension of Crown ownership to1980."
+    },
+    {
+      "id": "F22",
+      "followup_question": 3,
+      "priority": "legal_history_precision",
+      "subject": "Panco / Pacific Hatchery",
+      "operation": "retain_private_formation_events_separately",
+      "values": {
+        "Panco_63265": {
+          "type": "amalgamation",
+          "date": "1965-02-01"
+        },
+        "Pacific_Hatchery_64184": {
+          "type": "incorporation",
+          "date": "1965-04-12"
+        }
+      },
+      "evidence_files": [
+        "details/identity_followup.json"
+      ],
+      "limits": "Preserve contradictory/abbreviated statistical roster values as printed. Neither date replaces the1975 public acquisition."
+    },
+    {
+      "id": "F23",
+      "followup_question": 4,
+      "priority": "registry_lead",
+      "subject": "Venture Realty Ltd.,83729",
+      "operation": "retain_post_sale_rename_as_separate_identity_evidence",
+      "values": {
+        "incorporated": "1968-12-30",
+        "renamed": "1979-04-11",
+        "new_name": "Venture Realty Consultants Ltd."
+      },
+      "evidence_files": [
+        "details/identity_followup.json"
+      ],
+      "limits": "Notice alone does not identify the shareholder or prove the plural Ventures source variant."
+    },
+    {
+      "id": "F24",
+      "followup_question": null,
+      "priority": "scoped_commit",
+      "subject": "Subsidiary integration",
+      "operation": "stage_and_validate_only_intended_files",
+      "values": {
+        "exclude": [
+          "three BC Enterprise Corporation SVGs",
+          "collected-display-overrides.json",
+          "collectedDisplay.js"
+        ],
+        "validation": "existing suite and npm run check:government in isolated staged-tree checkout/export",
+        "working_tree_results_as_reported": {
+          "passed": 1141,
+          "skipped": 6,
+          "failed": 1,
+          "total": 1148
+        }
+      },
+      "evidence_files": [
+        "PRE_COMMIT_REVIEW.md",
+        "data/repo_read_metadata.json"
+      ],
+      "limits": "No local checkout was accessible here; no repository changes, commit, push or test rerun were performed. Do not modify another session’s files or trigger GitHub Actions for local verification."
+    }
+  ]
+}

@@ -182,6 +182,10 @@ def trim_box(alpha, threshold=0.06):
 
 COLOUR_PROPERTY = re.compile(
     r"((?:fill|stroke|stop-color|flood-color)\s*(?:=\s*[\"']|:)\s*)(#[0-9a-fA-F]{3,8}\b|rgba?\([^)]*\)|[a-zA-Z]+)")
+# With the "current-color" setting, `color` too: what a file's `currentColor` fills and strokes
+# draw with. Only where asked, since counting it changes how other files' colours are judged.
+CURRENT_COLOUR_PROPERTY = re.compile(
+    r"((?:fill|stroke|stop-color|flood-color|(?<![\w-])color)\s*(?:=\s*[\"']|:)\s*)(#[0-9a-fA-F]{3,8}\b|rgba?\([^)]*\)|[a-zA-Z]+)")
 ROOT_TAG = re.compile(r"<(?:\w+:)?svg\b[^>]*>", re.S)
 SKIP = {"none", "currentcolor", "transparent", "inherit", "url"}
 
@@ -284,7 +288,7 @@ def build_vector(asset, settings, work):
     # what they paint is left as it is.
     masked = [m.span() for m in re.finditer(r"<(?:\w+:)?mask\b.*?</(?:\w+:)?mask>", trimmed, re.S)]
     places = []
-    for match in COLOUR_PROPERTY.finditer(trimmed):
+    for match in (CURRENT_COLOUR_PROPERTY if settings.get("current-color") else COLOUR_PROPERTY).finditer(trimmed):
         colour = parse_colour(match.group(2))
         inside_mask = any(start <= match.start() < end for start, end in masked)
         if colour is not None and not inside_mask and not match.group(1).lstrip().startswith("stop-color"):

@@ -1,0 +1,66 @@
+{
+  "status": "complete; final crown cleanup candidate B",
+  "selected_svg_sha256": "43bafd8e7811198e196b51a096f27f8994f0e7cad3818a6536f835134940eae6",
+  "checks": [
+    {
+      "file": "South_Cariboo_Shared_Master_Report.pdf",
+      "sha256": "f8547808a14dc145d380bd067c87b53f3f2c9c3fbd82c5af1a2388f6743c3ce8",
+      "pages": 2,
+      "page_size_pt": [
+        [
+          595.276,
+          841.89
+        ],
+        [
+          595.276,
+          841.89
+        ]
+      ],
+      "images_per_page": [
+        3,
+        1
+      ],
+      "drawing_objects_per_page": [
+        45,
+        85
+      ],
+      "render_dpi": 130,
+      "visual_review": "Every final page inspected individually. Softened crown appears in both instances; labels and tables readable; no clipping or overlap; correct footer counts."
+    },
+    {
+      "file": "research-page2.pdf",
+      "sha256": "da532577a1e92c34c0c26147715edf7cdc7cfc881a220e44e630fe3b90be3302",
+      "pages": 1,
+      "page_size_pt": [
+        [
+          595.276,
+          841.89
+        ]
+      ],
+      "images_per_page": [
+        1
+      ],
+      "drawing_objects_per_page": [
+        10
+      ],
+      "render_dpi": 130,
+      "visual_review": "Every final page inspected individually. Softened crown appears in both instances; labels and tables readable; no clipping or overlap; correct footer counts."
+    }
+  ],
+  "large_artwork_format": "SVG-derived PDF vector forms",
+  "recorded_metric_check": "Fresh 6x Inkscape renders reduced to 315 x 141 match recorded metrics exactly.",
+  "selected_svg_hash_rechecked_after_report_build": true,
+  "shared_link_transform_identical_to_previous": true,
+  "input_provenance_file": "report-inputs.json",
+  "link_audit_file": "link-audit.json",
+  "embedded_vector_pdfs": {
+    "before-vector.pdf": {
+      "raster_images": 0,
+      "drawings": 36
+    },
+    "after-vector.pdf": {
+      "raster_images": 0,
+      "drawings": 36
+    }
+  }
+}

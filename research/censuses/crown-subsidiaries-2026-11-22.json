@@ -1,0 +1,1588 @@
+{
+  "schema_version": "historical-census/1",
+  "reviewed_on": "2026-11-22",
+  "title": "Crown subsidiaries and Province-held companies, 1974–2026",
+  "ministry": null,
+  "scope": "Rosters of companies the Province, or a Crown body, held or listed as subsidiaries, from the sources the 2026-11-22 subsidiary research package used (reviews/subsidiaries-2026-11-22). Each roster is printed as the source has it, with what the source says was held; match_ids name the atlas record a row was matched to. These are observations, not lifecycles: a percentage held, an advance or a listing is not ownership over a period, and a minority investment is not a subsidiary. Rosters marked 'transcribed: research package' were not re-read during integration.",
+  "rosters": [
+    {
+      "id": "pa-1975_76-f9-bc-cellulose-holdings",
+      "title": "British Columbia Cellulose Company, holdings",
+      "source_url": "https://archive.org/download/publicaccountsof00mini_4/publicaccountsof00mini_4.pdf",
+      "report_period": "year ended 31 December 1975",
+      "observed_on": "1975-12-31",
+      "coverage": "dated_observation",
+      "transcribed": "integration, from the archive.org text of the volume",
+      "limitation": "Kootenay’s and Canadian Cellulose’s details are from their own notes (F128, F94) as read by the follow-up research package.",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "Canadian Cellulose Company, Limited",
+          "level": "company",
+          "parent_as_printed": "British Columbia Cellulose Company",
+          "holding_as_printed": "79 per cent, acquired 29 June 1973",
+          "locator": "Public Accounts 1975/76, F8–F9 (PDF pp. 394–395), row 1",
+          "match_ids": [],
+          "disposition": "majority_holding_not_wholly_owned"
+        },
+        {
+          "ordinal": 2,
+          "name_as_printed": "Kootenay Forest Products Ltd.",
+          "level": "company",
+          "parent_as_printed": "British Columbia Cellulose Company",
+          "holding_as_printed": "all shares, purchased effective 1 March 1974",
+          "locator": "Public Accounts 1975/76, F8–F9 (PDF pp. 394–395), row 2",
+          "match_ids": [
+            "sub-kootenay-forest-products"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 3,
+          "name_as_printed": "Plateau Mills Ltd.",
+          "level": "company",
+          "parent_as_printed": "British Columbia Cellulose Company",
+          "holding_as_printed": "2.5 per cent, 225 shares, bought 23 June 1975 (the Province held 97.5 per cent)",
+          "locator": "Public Accounts 1975/76, F8–F9 (PDF pp. 394–395), row 3",
+          "match_ids": [
+            "plateau-mills"
+          ],
+          "disposition": "added_2026_11_22"
+        }
+      ]
+    },
+    {
+      "id": "pa-1977_78-b4-crown-corporations",
+      "title": "Investment in, and Advances to, Crown Corporations",
+      "source_url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19780301-report-auditor-general-1978.pdf",
+      "report_period": "1977/78",
+      "observed_on": "1978-03-31",
+      "coverage": "dated_observation",
+      "transcribed": "integration, from the PDF's text layer and checked against the page image where the OCR was garbled",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "British Columbia Buildings Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "advances",
+          "locator": "Public Accounts 1977/78, printed B4 (PDF p. 72), row 1",
+          "match_ids": [
+            "bc-buildings-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 2,
+          "name_as_printed": "British Columbia Cellulose Company",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of two common shares; advances",
+          "locator": "Public Accounts 1977/78, printed B4 (PDF p. 72), row 2",
+          "match_ids": [
+            "bc-cellulose-company"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 3,
+          "name_as_printed": "British Columbia Development Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of 250,000 common shares",
+          "locator": "Public Accounts 1977/78, printed B4 (PDF p. 72), row 3",
+          "match_ids": [
+            "bc-development-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 4,
+          "name_as_printed": "British Columbia Ferry Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of 58,497 shares of $100 each",
+          "locator": "Public Accounts 1977/78, printed B4 (PDF p. 72), row 4",
+          "match_ids": [
+            "bc-ferry-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 5,
+          "name_as_printed": "British Columbia Harbours Board",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "advances",
+          "locator": "Public Accounts 1977/78, printed B4 (PDF p. 72), row 5",
+          "match_ids": [
+            "bc-harbours-board"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 6,
+          "name_as_printed": "British Columbia Railway Company",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of 1,855,729 shares of $100 each",
+          "locator": "Public Accounts 1977/78, printed B4 (PDF p. 72), row 6",
+          "match_ids": [
+            "bc-railway-company"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 7,
+          "name_as_printed": "British Columbia Steamship Company (1975) Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of five common shares",
+          "locator": "Public Accounts 1977/78, printed B4 (PDF p. 72), row 7",
+          "match_ids": [
+            "bc-steamship-company"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 8,
+          "name_as_printed": "Crown Development Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of 10 common shares (1977 only)",
+          "locator": "Public Accounts 1977/78, printed B4 (PDF p. 72), row 8",
+          "match_ids": [
+            "crown-development-corporation"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 9,
+          "name_as_printed": "I.O.K. Poultry Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "100 per cent interest, 600 common shares at cost",
+          "locator": "Public Accounts 1977/78, printed B4 (PDF p. 72), row 9",
+          "match_ids": [
+            "iok-poultry"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 10,
+          "name_as_printed": "Ocean Falls Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "amount paid under the Ocean Falls Corporation Appropriation Act, 1973; advances",
+          "locator": "Public Accounts 1977/78, printed B4 (PDF p. 72), row 10",
+          "match_ids": [
+            "ocean-falls-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 11,
+          "name_as_printed": "Panco Poultry Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of 101,750 common and 11,027 preferred shares",
+          "locator": "Public Accounts 1977/78, printed B4 (PDF p. 72), row 11",
+          "match_ids": [
+            "panco-poultry"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 12,
+          "name_as_printed": "Plateau Mills Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "97.5 per cent interest, 8,775 common shares at cost (1977 only)",
+          "locator": "Public Accounts 1977/78, printed B4 (PDF p. 72), row 12",
+          "match_ids": [
+            "plateau-mills"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 13,
+          "name_as_printed": "T.S. Holdings Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of one common share; advances",
+          "locator": "Public Accounts 1977/78, printed B4 (PDF p. 72), row 13",
+          "match_ids": [
+            "ts-holdings"
+          ],
+          "disposition": "added_2026_11_22"
+        }
+      ]
+    },
+    {
+      "id": "pa-1977_78-b5-investments-other",
+      "title": "Investments, Other",
+      "source_url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19780301-report-auditor-general-1978.pdf",
+      "report_period": "1977/78",
+      "observed_on": "1978-03-31",
+      "coverage": "dated_observation",
+      "transcribed": "integration",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "British Columbia Resources Investment Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "shares and note",
+          "locator": "Public Accounts 1977/78, printed B5 (PDF p. 73), row 1",
+          "match_ids": [
+            "bc-resources-investment-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 2,
+          "name_as_printed": "Chef Ready Foods Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "33.33 per cent interest, 10,000 common shares at cost",
+          "locator": "Public Accounts 1977/78, printed B5 (PDF p. 73), row 2",
+          "match_ids": [],
+          "disposition": "minority_investment"
+        },
+        {
+          "ordinal": 3,
+          "name_as_printed": "Kootenay Dehydrators Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "33.33 per cent interest, 2,000 common shares; entire issued capital stock of 98,000 Class B common shares",
+          "locator": "Public Accounts 1977/78, printed B5 (PDF p. 73), row 3",
+          "match_ids": [],
+          "disposition": "minority_investment_multiclass"
+        },
+        {
+          "ordinal": 4,
+          "name_as_printed": "South Peace Dehy-Products Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "27.7 per cent interest, 277 non-voting common and 277 voting preferred shares",
+          "locator": "Public Accounts 1977/78, printed B5 (PDF p. 73), row 4",
+          "match_ids": [],
+          "disposition": "minority_investment"
+        },
+        {
+          "ordinal": 5,
+          "name_as_printed": "Swan Valley Foods Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "40 per cent interest, 219,804 common and 28,266 preferred shares (1977 column; sold during 1977/78)",
+          "locator": "Public Accounts 1977/78, printed B5 (PDF p. 73), row 5",
+          "match_ids": [
+            "swan-valley-foods"
+          ],
+          "disposition": "part_owned_then_wholly_owned_in_1977"
+        },
+        {
+          "ordinal": 6,
+          "name_as_printed": "Westcoast Transmission Company Limited",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "10.6 per cent interest, 1,157,125 common shares (1977 column; gone by 1978)",
+          "locator": "Public Accounts 1977/78, printed B5 (PDF p. 73), row 6",
+          "match_ids": [],
+          "disposition": "minority_investment"
+        }
+      ]
+    },
+    {
+      "id": "pa-1977_78-f221-ts-holdings-subsidiaries",
+      "title": "T.S. Holdings Ltd., principles of consolidation",
+      "source_url": "https://archive.org/download/britishcolumbiap01brit_12/britishcolumbiap01brit_12.pdf",
+      "report_period": "year ended 31 March 1978",
+      "observed_on": "1978-03-31",
+      "coverage": "dated_observation",
+      "transcribed": "integration, from the archive.org text of the volume",
+      "limitation": "The same lists are printed at 31 March 1976 (F176, 98.24 per cent) and 1977 (F202, 98.4 per cent). V I T Holdings sold Vancouver Island Transportation to the Province on 24 July 1978 and was liquidated on 22 January 1979; by 31 March 1979 only Thompson-Okanagan Transit and Vancouver Island Transit remained.",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "V I T Holdings Ltd.",
+          "level": "company",
+          "parent_as_printed": "T.S. Holdings Ltd.",
+          "holding_as_printed": "wholly owned",
+          "locator": "Public Accounts 1977/78, F221, note 1(a) (PDF p. 649), row 1",
+          "match_ids": [
+            "sub-vit-holdings"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 2,
+          "name_as_printed": "Thompson-Okanagan Transit Ltd.",
+          "level": "company",
+          "parent_as_printed": "T.S. Holdings Ltd.",
+          "holding_as_printed": "wholly owned",
+          "locator": "Public Accounts 1977/78, F221, note 1(a) (PDF p. 649), row 2",
+          "match_ids": [
+            "sub-thompson-okanagan-transit"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 3,
+          "name_as_printed": "Vancouver Island Transit Ltd.",
+          "level": "company",
+          "parent_as_printed": "T.S. Holdings Ltd.",
+          "holding_as_printed": "wholly owned",
+          "locator": "Public Accounts 1977/78, F221, note 1(a) (PDF p. 649), row 3",
+          "match_ids": [
+            "sub-vancouver-island-transit"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 4,
+          "name_as_printed": "Vancouver Island Transportation Company Limited",
+          "level": "company",
+          "parent_as_printed": "V I T Holdings Ltd.",
+          "holding_as_printed": "98.5 per cent, directly or through a subsidiary",
+          "locator": "Public Accounts 1977/78, F221, note 1(a) (PDF p. 649), row 4",
+          "match_ids": [],
+          "disposition": "sold_to_province_1978_07_24_assets_to_pacific_coach_lines"
+        },
+        {
+          "ordinal": 5,
+          "name_as_printed": "Vancouver Island Coach Lines Limited",
+          "level": "company",
+          "parent_as_printed": "V I T Holdings Ltd.",
+          "holding_as_printed": "98.5 per cent, directly or through a subsidiary",
+          "locator": "Public Accounts 1977/78, F221, note 1(a) (PDF p. 649), row 5",
+          "match_ids": [],
+          "disposition": "held_immediate_parent_unresolved"
+        },
+        {
+          "ordinal": 6,
+          "name_as_printed": "Gray Line & Empress Taxi & Sightseeing Company Limited",
+          "level": "company",
+          "parent_as_printed": "V I T Holdings Ltd.",
+          "holding_as_printed": "98.5 per cent, directly or through a subsidiary",
+          "locator": "Public Accounts 1977/78, F221, note 1(a) (PDF p. 649), row 6",
+          "match_ids": [],
+          "disposition": "held_immediate_parent_unresolved"
+        },
+        {
+          "ordinal": 7,
+          "name_as_printed": "Imperial Charter Service Company Limited",
+          "level": "company",
+          "parent_as_printed": "V I T Holdings Ltd.",
+          "holding_as_printed": "98.5 per cent, directly or through a subsidiary",
+          "locator": "Public Accounts 1977/78, F221, note 1(a) (PDF p. 649), row 7",
+          "match_ids": [],
+          "disposition": "held_immediate_parent_unresolved"
+        },
+        {
+          "ordinal": 8,
+          "name_as_printed": "British Columbia Parlour Car Tours Limited",
+          "level": "company",
+          "parent_as_printed": "V I T Holdings Ltd.",
+          "holding_as_printed": "98.5 per cent, directly or through a subsidiary",
+          "locator": "Public Accounts 1977/78, F221, note 1(a) (PDF p. 649), row 8",
+          "match_ids": [],
+          "disposition": "held_immediate_parent_unresolved"
+        }
+      ]
+    },
+    {
+      "id": "pa-1979_80-b4-crown-corporations",
+      "title": "Investment in, and Advances to, Crown Corporations",
+      "source_url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19800301-report-auditor-general-1980.pdf",
+      "report_period": "1979/80",
+      "observed_on": "1980-03-31",
+      "coverage": "dated_observation",
+      "transcribed": "integration",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "British Columbia Buildings Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "advances",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 1",
+          "match_ids": [
+            "bc-buildings-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 2,
+          "name_as_printed": "British Columbia Cellulose Company",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of two common shares",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 2",
+          "match_ids": [
+            "bc-cellulose-company"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 3,
+          "name_as_printed": "British Columbia Development Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of 425,000 common shares of $100 each",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 3",
+          "match_ids": [
+            "bc-development-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 4,
+          "name_as_printed": "British Columbia Ferry Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of 58,497 shares of $100 each",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 4",
+          "match_ids": [
+            "bc-ferry-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 5,
+          "name_as_printed": "British Columbia Harbours Board",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "advances",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 5",
+          "match_ids": [
+            "bc-harbours-board"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 6,
+          "name_as_printed": "British Columbia Railway Company",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of 1,855,729 shares of $100 each (written down to $1)",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 6",
+          "match_ids": [
+            "bc-railway-company"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 7,
+          "name_as_printed": "British Columbia Steamship Company (1975) Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of five common shares",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 7",
+          "match_ids": [
+            "bc-steamship-company"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 8,
+          "name_as_printed": "British Columbia Systems Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "advances",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 8",
+          "match_ids": [
+            "bc-systems-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 9,
+          "name_as_printed": "I.O.K. Poultry Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "100 per cent interest, 600 common shares at cost (1979 column only; proceeds on dissolution in 1979/80)",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 9",
+          "match_ids": [
+            "iok-poultry"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 10,
+          "name_as_printed": "Ocean Falls Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "amount paid; advances (provided for in 1979/80)",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 10",
+          "match_ids": [
+            "ocean-falls-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 11,
+          "name_as_printed": "Surrey Farm Products Investments Limited (formerly Panco Poultry Ltd.)",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of 101,750 common and 11,027 preferred shares, carried at $1",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 11",
+          "match_ids": [
+            "panco-poultry"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 12,
+          "name_as_printed": "Pacific Coach Lines Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of two common shares; advances (provided for)",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 12",
+          "match_ids": [
+            "pacific-coach-lines"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 13,
+          "name_as_printed": "T.S. Holdings Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "entire issued capital stock of one common share; advances (returned and provided for)",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 13",
+          "match_ids": [
+            "ts-holdings"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 14,
+          "name_as_printed": "Thompson-Okanagan Transit Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "advance, $50,000",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 14",
+          "match_ids": [
+            "sub-thompson-okanagan-transit"
+          ],
+          "disposition": "funding_to_a_ts_holdings_subsidiary"
+        },
+        {
+          "ordinal": 15,
+          "name_as_printed": "Urban Transit Authority",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "advance",
+          "locator": "Public Accounts 1979/80, printed B4 (PDF p. 172), row 15",
+          "match_ids": [
+            "urban-transit-authority"
+          ],
+          "disposition": "matched"
+        }
+      ]
+    },
+    {
+      "id": "pa-1979_80-b5-investments-other",
+      "title": "Investments, Other",
+      "source_url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19800301-report-auditor-general-1980.pdf",
+      "report_period": "1979/80",
+      "observed_on": "1980-03-31",
+      "coverage": "dated_observation",
+      "transcribed": "integration",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "British Columbia Resources Investment Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "4.65 per cent interest, 4,475,870 common shares",
+          "locator": "Public Accounts 1979/80, printed B5 (PDF p. 173), row 1",
+          "match_ids": [
+            "bc-resources-investment-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 2,
+          "name_as_printed": "Chef Ready Foods Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "33.33 per cent interest, 10,000 common shares, net of an $85,000 provision",
+          "locator": "Public Accounts 1979/80, printed B5 (PDF p. 173), row 2",
+          "match_ids": [],
+          "disposition": "minority_investment"
+        },
+        {
+          "ordinal": 3,
+          "name_as_printed": "Kootenay Dehydrators Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "35.9 per cent interest, 2,000 Class A common shares; entire issued capital stock of 98,000 Class B common shares",
+          "locator": "Public Accounts 1979/80, printed B5 (PDF p. 173), row 3",
+          "match_ids": [],
+          "disposition": "minority_investment_multiclass"
+        },
+        {
+          "ordinal": 4,
+          "name_as_printed": "South Peace Dehy-Products Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "27.7 per cent interest, 277 non-voting common and 277 voting preferred shares, net of a $554 provision",
+          "locator": "Public Accounts 1979/80, printed B5 (PDF p. 173), row 4",
+          "match_ids": [],
+          "disposition": "minority_investment"
+        }
+      ]
+    },
+    {
+      "id": "pa-1984_85-appendix-ii",
+      "title": "Public bodies of which the Auditor General was the appointed auditor",
+      "source_url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19860401a-1986reportpart2appendices.pdf",
+      "report_period": "1984/85",
+      "observed_on": "1985-03-31",
+      "coverage": "dated_observation",
+      "transcribed": "integration",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "British Columbia Buildings Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 1",
+          "match_ids": [
+            "bc-buildings-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 2,
+          "name_as_printed": "British Columbia Cellulose Company",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 2",
+          "match_ids": [
+            "bc-cellulose-company"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 3,
+          "name_as_printed": "British Columbia Development Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 3",
+          "match_ids": [
+            "bc-development-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 4,
+          "name_as_printed": "British Columbia Ferry Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 4",
+          "match_ids": [
+            "bc-ferry-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 5,
+          "name_as_printed": "British Columbia Food Exhibitions Ltd. (formerly Surrey Farm Products Investments Ltd.)",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 5",
+          "match_ids": [
+            "panco-poultry"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 6,
+          "name_as_printed": "British Columbia Housing Management Commission",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 6",
+          "match_ids": [
+            "bc-housing"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 7,
+          "name_as_printed": "British Columbia Hydro and Power Authority",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 7",
+          "match_ids": [
+            "bc-hydro"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 8,
+          "name_as_printed": "British Columbia Hydro and Power Authority Pension Fund",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 8",
+          "match_ids": [],
+          "disposition": "fund_not_a_body"
+        },
+        {
+          "ordinal": 9,
+          "name_as_printed": "British Columbia Lottery Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 9",
+          "match_ids": [
+            "bclc"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 10,
+          "name_as_printed": "B.C. Pavilion Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 10",
+          "match_ids": [
+            "bc-pavilion-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 11,
+          "name_as_printed": "British Columbia Petroleum Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 11",
+          "match_ids": [
+            "bc-petroleum-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 12,
+          "name_as_printed": "British Columbia Railway Company",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 12",
+          "match_ids": [
+            "bc-railway-company"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 13,
+          "name_as_printed": "British Columbia Steamship Company (1975) Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 13",
+          "match_ids": [
+            "bc-steamship-company"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 14,
+          "name_as_printed": "British Columbia Systems Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 14",
+          "match_ids": [
+            "bc-systems-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 15,
+          "name_as_printed": "British Columbia Transit",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 15",
+          "match_ids": [
+            "bc-transit"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 16,
+          "name_as_printed": "Discovery Foundation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 16",
+          "match_ids": [],
+          "disposition": "body_not_in_graph"
+        },
+        {
+          "ordinal": 17,
+          "name_as_printed": "Housing Corporation of British Columbia",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 17",
+          "match_ids": [
+            "housing-corporation-of-bc"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 18,
+          "name_as_printed": "Insurance Corporation of British Columbia",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 18",
+          "match_ids": [
+            "icbc"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 19,
+          "name_as_printed": "Metro Transit Operating Company",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 19",
+          "match_ids": [
+            "metro-transit-operating-company"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 20,
+          "name_as_printed": "Ocean Falls Corporation",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 20",
+          "match_ids": [
+            "ocean-falls-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 21,
+          "name_as_printed": "Pacific Coach Lines Limited",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 21",
+          "match_ids": [
+            "pacific-coach-lines"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 22,
+          "name_as_printed": "Science Council of British Columbia and Secretariat on Science, Research and Development",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 22",
+          "match_ids": [
+            "science-council-of-bc"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 23,
+          "name_as_printed": "Universities Council",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 23",
+          "match_ids": [],
+          "disposition": "body_not_in_graph"
+        },
+        {
+          "ordinal": 24,
+          "name_as_printed": "W.L.C. Developments Ltd.",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": null,
+          "locator": "Public Accounts 1984/85, Appendix II (PDF p. 7), row 24",
+          "match_ids": [
+            "wlc-developments"
+          ],
+          "disposition": "matched"
+        }
+      ]
+    },
+    {
+      "id": "pa-1974_75-dunhill-subsidiaries",
+      "title": "Wholly owned subsidiaries of Dunhill Development Corporation Ltd.",
+      "source_url": "https://archive.org/download/publicaccountsof00mini_2/publicaccountsof00mini_2.pdf",
+      "report_period": "year ended 31 October 1974",
+      "observed_on": "1974-10-31",
+      "coverage": "dated_observation",
+      "transcribed": "round-4 research (claim R4E-C004); not re-read",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "W.K.P. Construction Ltd.",
+          "level": "company",
+          "parent_as_printed": "Dunhill Development Corporation Ltd.",
+          "holding_as_printed": "wholly owned",
+          "locator": "Public Accounts 1974/75, F55, note 2(a)(i), row 1",
+          "match_ids": [
+            "sub-wkp-construction"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 2,
+          "name_as_printed": "Crown Lumber Limited",
+          "level": "company",
+          "parent_as_printed": "Dunhill Development Corporation Ltd.",
+          "holding_as_printed": "wholly owned",
+          "locator": "Public Accounts 1974/75, F55, note 2(a)(i), row 2",
+          "match_ids": [
+            "sub-crown-lumber"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 3,
+          "name_as_printed": "Fisher Developments Ltd.",
+          "level": "company",
+          "parent_as_printed": "Dunhill Development Corporation Ltd.",
+          "holding_as_printed": "wholly owned",
+          "locator": "Public Accounts 1974/75, F55, note 2(a)(i), row 3",
+          "match_ids": [
+            "sub-fisher-developments"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 4,
+          "name_as_printed": "Dunhill Homes Ltd.",
+          "level": "company",
+          "parent_as_printed": "Dunhill Development Corporation Ltd.",
+          "holding_as_printed": "wholly owned",
+          "locator": "Public Accounts 1974/75, F55, note 2(a)(i), row 4",
+          "match_ids": [
+            "sub-dunhill-homes"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 5,
+          "name_as_printed": "Dunhill Holdings Ltd.",
+          "level": "company",
+          "parent_as_printed": "Dunhill Development Corporation Ltd.",
+          "holding_as_printed": "wholly owned",
+          "locator": "Public Accounts 1974/75, F55, note 2(a)(i), row 5",
+          "match_ids": [
+            "sub-dunhill-holdings"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 6,
+          "name_as_printed": "United Provincial Investments Ltd.",
+          "level": "company",
+          "parent_as_printed": "Dunhill Development Corporation Ltd.",
+          "holding_as_printed": "wholly owned",
+          "locator": "Public Accounts 1974/75, F55, note 2(a)(i), row 6",
+          "match_ids": [
+            "sub-united-provincial-investments"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 7,
+          "name_as_printed": "Ventures Realty Ltd.",
+          "level": "company",
+          "parent_as_printed": "Dunhill Development Corporation Ltd.",
+          "holding_as_printed": "wholly owned",
+          "locator": "Public Accounts 1974/75, F55, note 2(a)(i), row 7",
+          "match_ids": [
+            "sub-ventures-realty"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 8,
+          "name_as_printed": "Georgia Park Holdings Ltd.",
+          "level": "company",
+          "parent_as_printed": "Dunhill Development Corporation Ltd.",
+          "holding_as_printed": "wholly owned",
+          "locator": "Public Accounts 1974/75, F55, note 2(a)(i), row 8",
+          "match_ids": [
+            "sub-georgia-park-holdings"
+          ],
+          "disposition": "added_2026_11_22"
+        }
+      ],
+      "limitation": "Transcribed by the round-4 research; not re-read when it was imported."
+    },
+    {
+      "id": "statcan-61-204-1975-p27",
+      "title": "Provincial Government Enterprise Finance 1975, British Columbia notes",
+      "source_url": "https://publications.gc.ca/collections/collection_2016/statcan/61-204/CS61-204-1975.pdf",
+      "report_period": "1975",
+      "observed_on": "1975",
+      "coverage": "dated_observation",
+      "transcribed": "research package; not re-read (the site refuses automated downloads)",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "Panco Poultry Limited",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "all issued common and preferred shares acquired, February 1975, $4,800,000",
+          "locator": "Provincial Government Enterprise Finance 1975, printed p. 27, row 1",
+          "match_ids": [
+            "panco-poultry"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 2,
+          "name_as_printed": "B.C. Testing Farms",
+          "level": "company",
+          "parent_as_printed": "Panco Poultry Limited",
+          "holding_as_printed": "wholly owned subsidiary",
+          "locator": "Provincial Government Enterprise Finance 1975, printed p. 27, row 2",
+          "match_ids": [
+            "sub-bc-testing-farms"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 3,
+          "name_as_printed": "Pacific Hatching",
+          "level": "company",
+          "parent_as_printed": "Panco Poultry Limited",
+          "holding_as_printed": "wholly owned subsidiary",
+          "locator": "Provincial Government Enterprise Finance 1975, printed p. 27, row 3",
+          "match_ids": [
+            "sub-pacific-hatching"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 4,
+          "name_as_printed": "Western Feeds",
+          "level": "company",
+          "parent_as_printed": "Panco Poultry Limited",
+          "holding_as_printed": "wholly owned subsidiary",
+          "locator": "Provincial Government Enterprise Finance 1975, printed p. 27, row 4",
+          "match_ids": [
+            "sub-western-feeds"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 5,
+          "name_as_printed": "T.S. Holdings Limited",
+          "level": "company",
+          "parent_as_printed": "Province of British Columbia",
+          "holding_as_printed": "holds shares in companies running scheduled bus routes, sightseeing and charter services and regional transit",
+          "locator": "Provincial Government Enterprise Finance 1975, printed p. 27, row 5",
+          "match_ids": [
+            "ts-holdings"
+          ],
+          "disposition": "added_2026_11_22"
+        }
+      ],
+      "limitation": "Transcribed by the 2026-11-22 research package; not re-read when it was imported."
+    },
+    {
+      "id": "statcan-61-204-1984-subsidiaries",
+      "title": "Provincial Government Enterprise Finance, British Columbia enterprise list with subsidiary levels",
+      "source_url": "https://publications.gc.ca/collections/collection_2016/statcan/61-204/CS61-204-1984.pdf",
+      "report_period": "reference year 1984, published May 1987",
+      "observed_on": "1986-12-31",
+      "coverage": "dated_observation",
+      "transcribed": "research package; not re-read",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "Peace Power Constructors Ltd.",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "level 02 subsidiary",
+          "locator": "Provincial Government Enterprise Finance (61-204), reference year 1984, printed pp. 143–144, row 1",
+          "match_ids": [
+            "sub-peace-power-constructors"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 2,
+          "name_as_printed": "HCBC Construction Ltd.",
+          "level": "company",
+          "parent_as_printed": "Housing Corporation of British Columbia",
+          "holding_as_printed": "level 02 subsidiary",
+          "locator": "Provincial Government Enterprise Finance (61-204), reference year 1984, printed pp. 143–144, row 2",
+          "match_ids": [
+            "sub-fisher-developments"
+          ],
+          "disposition": "alias_of_existing_record"
+        },
+        {
+          "ordinal": 3,
+          "name_as_printed": "Duke Point Terminals Ltd.",
+          "level": "company",
+          "parent_as_printed": "not legible; possibly British Columbia Development Corporation",
+          "holding_as_printed": "level 02 subsidiary",
+          "locator": "Provincial Government Enterprise Finance (61-204), reference year 1984, printed pp. 143–144, row 3",
+          "match_ids": [],
+          "disposition": "held_parent_unresolved"
+        },
+        {
+          "ordinal": 4,
+          "name_as_printed": "Discovery Park Industries Ltd.",
+          "level": "company",
+          "parent_as_printed": "Discovery Foundation group (to verify)",
+          "holding_as_printed": "listed government enterprise",
+          "locator": "Provincial Government Enterprise Finance (61-204), reference year 1984, printed pp. 143–144, row 4",
+          "match_ids": [],
+          "disposition": "held_parent_unresolved"
+        },
+        {
+          "ordinal": 5,
+          "name_as_printed": "Dunhill Development Corporation",
+          "level": "company",
+          "parent_as_printed": "Housing Corporation of British Columbia",
+          "holding_as_printed": "level 02 subsidiary",
+          "locator": "Provincial Government Enterprise Finance (61-204), reference year 1984, printed p. 144 (PDF p. 146)",
+          "match_ids": [
+            "sub-wkp-construction"
+          ],
+          "disposition": "alias_of_existing_record"
+        }
+      ],
+      "limitation": "Transcribed by the 2026-11-22 research packages; not re-read when it was imported. The appendix is printed as at 31 December 1986."
+    },
+    {
+      "id": "statcan-61-204-1985-subsidiaries",
+      "title": "Provincial Government Enterprise Finance, British Columbia enterprise list with subsidiary levels",
+      "source_url": "https://publications.gc.ca/collections/collection_2016/statcan/61-204/CS61-204-1985.pdf",
+      "report_period": "reference year 1985, published June 1988",
+      "observed_on": "1987-12-31",
+      "coverage": "dated_observation",
+      "transcribed": "research package; not re-read",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "Peace Power Constructors Ltd.",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "level 02 subsidiary",
+          "locator": "Provincial Government Enterprise Finance (61-204), reference year 1985, printed p. 103 (PDF p. 105), row 1",
+          "match_ids": [
+            "sub-peace-power-constructors"
+          ],
+          "disposition": "added_2026_11_22"
+        },
+        {
+          "ordinal": 2,
+          "name_as_printed": "HCBC Construction Ltd.",
+          "level": "company",
+          "parent_as_printed": "Housing Corporation of British Columbia",
+          "holding_as_printed": "level 02 subsidiary",
+          "locator": "Provincial Government Enterprise Finance (61-204), reference year 1985, printed p. 103 (PDF p. 105), row 2",
+          "match_ids": [
+            "sub-fisher-developments"
+          ],
+          "disposition": "alias_of_existing_record"
+        },
+        {
+          "ordinal": 3,
+          "name_as_printed": "Techwest Enterprises Ltd.",
+          "level": "company",
+          "parent_as_printed": "British Columbia Research Council (Special Fund)",
+          "holding_as_printed": "level 02 subsidiary",
+          "locator": "Provincial Government Enterprise Finance (61-204), reference year 1985, printed p. 103 (PDF p. 105), row 3",
+          "match_ids": [],
+          "disposition": "parent_not_in_graph"
+        },
+        {
+          "ordinal": 4,
+          "name_as_printed": "Discovery Park Incorporated",
+          "level": "company",
+          "parent_as_printed": "Discovery Foundation group",
+          "holding_as_printed": "level 01 public enterprise",
+          "locator": "Provincial Government Enterprise Finance (61-204), reference year 1985, printed p. 103 (PDF p. 105), row 4",
+          "match_ids": [],
+          "disposition": "held_parent_unresolved"
+        },
+        {
+          "ordinal": 5,
+          "name_as_printed": "272 319 B.C. Ltd.",
+          "level": "company",
+          "parent_as_printed": "Discovery Foundation group",
+          "holding_as_printed": "level 01 public enterprise",
+          "locator": "Provincial Government Enterprise Finance (61-204), reference year 1985, printed p. 103 (PDF p. 105), row 5",
+          "match_ids": [],
+          "disposition": "held_parent_unresolved"
+        },
+        {
+          "ordinal": 6,
+          "name_as_printed": "3112 Investments Ltd.",
+          "level": "company",
+          "parent_as_printed": "272 319 B.C. Ltd.",
+          "holding_as_printed": "level 02 public enterprise",
+          "locator": "Provincial Government Enterprise Finance (61-204), reference year 1985, printed p. 103 (PDF p. 105), row 6",
+          "match_ids": [],
+          "disposition": "held_parent_unresolved"
+        },
+        {
+          "ordinal": 7,
+          "name_as_printed": "Discovery Enterprises Inc.",
+          "level": "company",
+          "parent_as_printed": "Discovery Foundation group",
+          "holding_as_printed": "level 01 public enterprise",
+          "locator": "Provincial Government Enterprise Finance (61-204), reference year 1985, printed p. 103 (PDF p. 105), row 7",
+          "match_ids": [],
+          "disposition": "held_parent_unresolved"
+        },
+        {
+          "ordinal": 8,
+          "name_as_printed": "Dunhill Development Corporation",
+          "level": "company",
+          "parent_as_printed": "Housing Corporation of British Columbia",
+          "holding_as_printed": "level 02 subsidiary",
+          "locator": "Provincial Government Enterprise Finance (61-204), reference year 1985, printed p. 103 (PDF p. 105)",
+          "match_ids": [
+            "sub-wkp-construction"
+          ],
+          "disposition": "alias_of_existing_record"
+        }
+      ],
+      "limitation": "Transcribed by the 2026-11-22 research packages; not re-read when it was imported. The appendix is printed as at 31 December 1987."
+    },
+    {
+      "id": "statcan-72-007-23-1-bc",
+      "title": "Provincial Government Employment, British Columbia enterprise list",
+      "source_url": "https://publications.gc.ca/collections/collection_2015/statcan/72-007/CS72-007-23-1.pdf",
+      "report_period": "January–March 1981, published September 1981",
+      "observed_on": "1981-03",
+      "coverage": "dated_observation",
+      "transcribed": "research package; not re-read",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "Vancouver Island Transit Ltd.",
+          "level": "company",
+          "parent_as_printed": "not named on the list",
+          "holding_as_printed": "subsidiary consolidated",
+          "locator": "Statistics Canada 72-007, vol. 23 no. 1, printed p. 37 (PDF p. 39), row 1",
+          "match_ids": [
+            "sub-vancouver-island-transit"
+          ],
+          "disposition": "added_2026_11_22"
+        }
+      ],
+      "limitation": "Transcribed by the 2026-11-22 research packages; not re-read when it was imported."
+    },
+    {
+      "id": "bc-hydro-governance-manual-2025-12-c4",
+      "title": "BC Hydro Board Governance Manual, Subsidiary Governance",
+      "source_url": "https://www.bchydro.com/content/dam/BCHydro/customer-portal/documents/corporate/accountability-reports/openness-accountability/bc-hydro-2026-board-governance-manual.pdf",
+      "report_period": "manual dated December 2025",
+      "observed_on": "2025-12",
+      "coverage": "dated_observation",
+      "transcribed": "integration",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "Powerex Corp.",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Active Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 1",
+          "match_ids": [
+            "sub-powerex"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 2,
+          "name_as_printed": "Powertech Labs Inc.",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Active Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 2",
+          "match_ids": [
+            "sub-powertech-labs"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 3,
+          "name_as_printed": "1111472 BC Ltd.",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 3",
+          "match_ids": [],
+          "disposition": "inactive_or_nominee_left_out"
+        },
+        {
+          "ordinal": 4,
+          "name_as_printed": "1597798 BC Ltd.",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 4",
+          "match_ids": [],
+          "disposition": "inactive_or_nominee_left_out"
+        },
+        {
+          "ordinal": 5,
+          "name_as_printed": "BCHPA Captive Insurance Company",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 5",
+          "match_ids": [
+            "sub-bchpa-captive-insurance"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 6,
+          "name_as_printed": "British Columbia Hydro International Limited",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 6",
+          "match_ids": [],
+          "disposition": "inactive_or_nominee_left_out"
+        },
+        {
+          "ordinal": 7,
+          "name_as_printed": "British Columbia Power Exchange Corporation",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 7",
+          "match_ids": [],
+          "disposition": "inactive_or_nominee_left_out"
+        },
+        {
+          "ordinal": 8,
+          "name_as_printed": "British Columbia Power Export Corporation",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 8",
+          "match_ids": [],
+          "disposition": "inactive_or_nominee_left_out"
+        },
+        {
+          "ordinal": 9,
+          "name_as_printed": "British Columbia Transmission Corporation",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 9",
+          "match_ids": [
+            "bc-transmission-corporation"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 10,
+          "name_as_printed": "Columbia Estate Company, Limited",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 10",
+          "match_ids": [],
+          "disposition": "inactive_or_nominee_left_out"
+        },
+        {
+          "ordinal": 11,
+          "name_as_printed": "Columbia Hydro Constructors Ltd.",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 11",
+          "match_ids": [
+            "sub-columbia-hydro-constructors"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 12,
+          "name_as_printed": "Edmonds Centre Developments Limited",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 12",
+          "match_ids": [],
+          "disposition": "inactive_or_nominee_left_out"
+        },
+        {
+          "ordinal": 13,
+          "name_as_printed": "Fauquier Water and Sewerage Corporation",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 13",
+          "match_ids": [],
+          "disposition": "inactive_or_nominee_left_out"
+        },
+        {
+          "ordinal": 14,
+          "name_as_printed": "Hydro Monitoring (Alberta) Inc.",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 14",
+          "match_ids": [],
+          "disposition": "inactive_or_nominee_left_out"
+        },
+        {
+          "ordinal": 15,
+          "name_as_printed": "Tongass Power and Light Company",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 15",
+          "match_ids": [
+            "sub-tongass-power-and-light"
+          ],
+          "disposition": "matched"
+        },
+        {
+          "ordinal": 16,
+          "name_as_printed": "Victoria Gas Company Limited",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 16",
+          "match_ids": [],
+          "disposition": "inactive_or_nominee_left_out"
+        },
+        {
+          "ordinal": 17,
+          "name_as_printed": "Waneta Holdings (US) Inc.",
+          "level": "company",
+          "parent_as_printed": "British Columbia Hydro and Power Authority",
+          "holding_as_printed": "Other Subsidiary",
+          "locator": "Board Governance Manual, Tab C.4, Subsidiary Governance (PDF p. 44), row 17",
+          "match_ids": [],
+          "disposition": "inactive_or_nominee_left_out"
+        }
+      ]
+    },
+    {
+      "id": "bc-ferries-fs-2025_26-note-1",
+      "title": "British Columbia Ferry Services Inc., consolidated financial statements, note 1",
+      "source_url": "https://www.bcferries.com/web_image/hc6/h92/9091176464414.pdf",
+      "report_period": "year ended 31 March 2026",
+      "observed_on": "2026-03-31",
+      "coverage": "dated_observation",
+      "transcribed": "integration",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "Pacific Marine Leasing Inc.",
+          "level": "company",
+          "parent_as_printed": "British Columbia Ferry Services Inc.",
+          "holding_as_printed": "wholly owned subsidiary; leases capital assets to the group",
+          "locator": "Consolidated financial statements, note 1, row 1",
+          "match_ids": [],
+          "disposition": "parent_not_in_graph"
+        },
+        {
+          "ordinal": 2,
+          "name_as_printed": "Pacific Marine Holdings Inc.",
+          "level": "company",
+          "parent_as_printed": "British Columbia Ferry Services Inc.",
+          "holding_as_printed": "wholly owned subsidiary; incorporated September 2025, no business activities, assets or operations in 2025/26",
+          "locator": "Consolidated financial statements, note 1, row 2",
+          "match_ids": [],
+          "disposition": "parent_not_in_graph"
+        }
+      ]
+    },
+    {
+      "id": "pa-2024_25-post-secondary-subsidiaries",
+      "title": "Summary financial statements, post-secondary self-supported subsidiaries",
+      "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/pa-2024-25-summary-financial-statements.pdf",
+      "report_period": "2024/25",
+      "observed_on": "2025-03-31",
+      "coverage": "dated_observation",
+      "transcribed": "research package; not re-read",
+      "rows": [
+        {
+          "ordinal": 1,
+          "name_as_printed": "Great Northern Way Campus Trust",
+          "level": "company",
+          "parent_as_printed": "University of British Columbia; Simon Fraser University; British Columbia Institute of Technology; Emily Carr University of Art + Design",
+          "holding_as_printed": "25 per cent each",
+          "locator": "Summary financial statements 2024/25, notes 6–7 (around printed p. 58), row 1",
+          "match_ids": [],
+          "disposition": "parent_not_in_graph"
+        },
+        {
+          "ordinal": 2,
+          "name_as_printed": "Heritage Realty Properties Ltd.",
+          "level": "company",
+          "parent_as_printed": "University of Victoria",
+          "holding_as_printed": "subsidiary",
+          "locator": "Summary financial statements 2024/25, notes 6–7 (around printed p. 58), row 2",
+          "match_ids": [],
+          "disposition": "parent_not_in_graph"
+        },
+        {
+          "ordinal": 3,
+          "name_as_printed": "SFU Community Trust",
+          "level": "company",
+          "parent_as_printed": "Simon Fraser University",
+          "holding_as_printed": "self-supported subsidiary",
+          "locator": "Summary financial statements 2024/25, notes 6–7 (around printed p. 58), row 3",
+          "match_ids": [],
+          "disposition": "parent_not_in_graph"
+        },
+        {
+          "ordinal": 4,
+          "name_as_printed": "UBC Properties Investments Ltd.",
+          "level": "company",
+          "parent_as_printed": "University of British Columbia",
+          "holding_as_printed": "self-supported subsidiary",
+          "locator": "Summary financial statements 2024/25, notes 6–7 (around printed p. 58), row 4",
+          "match_ids": [],
+          "disposition": "parent_not_in_graph"
+        },
+        {
+          "ordinal": 5,
+          "name_as_printed": "Vancouver Island Technology Park Trust",
+          "level": "company",
+          "parent_as_printed": "a post-secondary institution (to verify)",
+          "holding_as_printed": "self-supported subsidiary",
+          "locator": "Summary financial statements 2024/25, notes 6–7 (around printed p. 58), row 5",
+          "match_ids": [],
+          "disposition": "parent_not_in_graph"
+        }
+      ],
+      "limitation": "Transcribed by the 2026-11-22 research package; not re-read when it was imported."
+    }
+  ]
+}

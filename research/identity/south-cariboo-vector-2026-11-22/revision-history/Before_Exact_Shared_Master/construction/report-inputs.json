@@ -1,0 +1,196 @@
+{
+  "source": "/workspace/scratch/ca0496602dbf/baseline/South_Cariboo_Vector/evidence/source-colour-logo.png",
+  "source_sha256": "3b6e41d34996338da5dd08f0aff3a1b6aca69d89bcf29f757ba300b3da1f9645",
+  "canvas": [
+    315,
+    141
+  ],
+  "render_scale": 6,
+  "downsample": "Lanczos",
+  "inputs": {
+    "before": {
+      "directory": "/workspace/scratch/ca0496602dbf/work/refinement/pass07",
+      "svg_sha256": "e98b527a729b754140926001f08b1c04ffc03a4b1fcba4372aa1354d0e15e557",
+      "measured_metrics": {
+        "All": {
+          "iou": 0.8866120218579235,
+          "boundary_mean": 0.41819503911258044,
+          "boundary_p95": 1.4142135623730951,
+          "within1": 0.9419414770088249,
+          "source": 16210,
+          "vector": 15553,
+          "source_only": 1283,
+          "vector_only": 626,
+          "density_mse": 0.014602209169767356
+        },
+        "Dark": {
+          "iou": 0.8293135435992579,
+          "boundary_mean": 0.689149091757566,
+          "boundary_p95": 2.0,
+          "within1": 0.8845720720720721,
+          "source": 3483,
+          "vector": 3419,
+          "source_only": 354,
+          "vector_only": 290,
+          "density_mse": 0.0354919281226202
+        },
+        "Pale": {
+          "iou": 0.9092602448110697,
+          "boundary_mean": 0.6956967701863128,
+          "boundary_p95": 2.0,
+          "within1": 0.8661338661338661,
+          "source": 3626,
+          "vector": 3549,
+          "source_only": 209,
+          "vector_only": 132,
+          "density_mse": 0.011099233113790267
+        },
+        "Type": {
+          "iou": 0.8953247827885809,
+          "boundary_mean": 0.21112347052280311,
+          "boundary_p95": 1.0,
+          "within1": 1.0,
+          "source": 4549,
+          "vector": 4613,
+          "source_only": 221,
+          "vector_only": 285,
+          "density_mse": 0.005258275367535155
+        },
+        "Dark crown": {
+          "iou": 0.8548249359521777,
+          "boundary_mean": 0.739998124809821,
+          "boundary_p95": 2.0,
+          "within1": 0.8521739130434782,
+          "source": 1110,
+          "vector": 1062,
+          "source_only": 109,
+          "vector_only": 61,
+          "density_mse": 0.024815920716297964
+        },
+        "Dark middle": {
+          "iou": 0.8475016223231667,
+          "boundary_mean": 0.6961285802382264,
+          "boundary_p95": 2.0,
+          "within1": 0.9039881831610044,
+          "source": 1404,
+          "vector": 1443,
+          "source_only": 98,
+          "vector_only": 137,
+          "density_mse": 0.03169530495376857
+        },
+        "Dark lower": {
+          "iou": 0.7747408105560791,
+          "boundary_mean": 0.6711157431531873,
+          "boundary_p95": 2.0,
+          "within1": 0.8732394366197183,
+          "source": 969,
+          "vector": 914,
+          "source_only": 147,
+          "vector_only": 92,
+          "density_mse": 0.053677631920808815
+        }
+      },
+      "recorded_metric_max_deltas": {
+        "All": 0.0,
+        "Dark": 0.0,
+        "Pale": 0.0,
+        "Type": 0.0,
+        "Dark crown": 0.0,
+        "Dark middle": 0.0,
+        "Dark lower": 0.0
+      }
+    },
+    "after": {
+      "directory": "/workspace/scratch/ca0496602dbf/work/round2-dark/candidate07",
+      "svg_sha256": "765cd6c89402a24cac0612a8e9f3a8bc11816562d8650722ec80ef12697b0f63",
+      "measured_metrics": {
+        "All": {
+          "iou": 0.915079556412729,
+          "boundary_mean": 0.3216675361421828,
+          "boundary_p95": 1.0,
+          "within1": 0.9795201872440024,
+          "source": 16210,
+          "vector": 15565,
+          "source_only": 1027,
+          "vector_only": 382,
+          "density_mse": 0.009215058907259413
+        },
+        "Dark": {
+          "iou": 0.8918694690265486,
+          "boundary_mean": 0.4428125278125798,
+          "boundary_p95": 1.0,
+          "within1": 0.9539170506912442,
+          "source": 3483,
+          "vector": 3358,
+          "source_only": 258,
+          "vector_only": 133,
+          "density_mse": 0.018690958881321832
+        },
+        "Pale": {
+          "iou": 0.94426318651441,
+          "boundary_mean": 0.46255966661655906,
+          "boundary_p95": 1.0,
+          "within1": 0.9606060606060606,
+          "source": 3626,
+          "vector": 3525,
+          "source_only": 153,
+          "vector_only": 52,
+          "density_mse": 0.004907407803792438
+        },
+        "Type": {
+          "iou": 0.8953247827885809,
+          "boundary_mean": 0.21112347052280311,
+          "boundary_p95": 1.0,
+          "within1": 1.0,
+          "source": 4549,
+          "vector": 4613,
+          "source_only": 221,
+          "vector_only": 285,
+          "density_mse": 0.005258275367535155
+        },
+        "Dark crown": {
+          "iou": 0.9081272084805654,
+          "boundary_mean": 0.43162695351982594,
+          "boundary_p95": 1.0,
+          "within1": 0.9745762711864406,
+          "source": 1110,
+          "vector": 1050,
+          "source_only": 82,
+          "vector_only": 22,
+          "density_mse": 0.013276503223623299
+        },
+        "Dark middle": {
+          "iou": 0.892905866302865,
+          "boundary_mean": 0.5049475088832311,
+          "boundary_p95": 1.4142135623730951,
+          "within1": 0.9206842923794712,
+          "source": 1404,
+          "vector": 1371,
+          "source_only": 95,
+          "vector_only": 62,
+          "density_mse": 0.01895207197321924
+        },
+        "Dark lower": {
+          "iou": 0.8722986247544204,
+          "boundary_mean": 0.3965210751884567,
+          "boundary_p95": 1.0,
+          "within1": 0.9694041867954911,
+          "source": 969,
+          "vector": 937,
+          "source_only": 81,
+          "vector_only": 49,
+          "density_mse": 0.0251261092612758
+        }
+      },
+      "recorded_metric_max_deltas": {
+        "All": 0.0,
+        "Dark": 0.0,
+        "Pale": 0.0,
+        "Type": 0.0,
+        "Dark crown": 0.0,
+        "Dark middle": 0.0,
+        "Dark lower": 0.0
+      }
+    }
+  }
+}

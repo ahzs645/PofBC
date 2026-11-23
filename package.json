@@ -25,6 +25,8 @@
   ],
   "scripts": {
     "build:school-districts": "node scripts/build-school-districts.mjs",
+    "build:parties": "node scripts/build-parties.mjs",
+    "check:parties": "node scripts/build-parties.mjs --check && node --test src/parties/*.test.js && node scripts/check-parties-render.mjs",
     "check:school-districts": "node scripts/build-school-districts.mjs --check && node --test src/schools/*.test.js && node scripts/check-school-district-render.mjs",
     "dev": "npm run build:assets --silent && vite",
     "build": "npm run build:assets --silent && vite build",

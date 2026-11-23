@@ -1,0 +1,65 @@
+{
+  "prepared": "2026-11-22",
+  "method": "Exact-name and registry-number public web searches, then normalized text search across downloaded Gazette OCR; promising notices verified against scans.",
+  "search_terms": [
+    "Panco Poultry",
+    "Surrey Farm Products Investments",
+    "British Columbia Food Exhibitions",
+    "63265",
+    "Pacific Hatching",
+    "Pacific Hatchery",
+    "64184",
+    "Western Feeds",
+    "Western Feed Co",
+    "Ventures Realty",
+    "Venture Realty"
+  ],
+  "gazette_coverage": [
+    {
+      "year": 1978,
+      "catalogued_issues": 52,
+      "ocr_issues_searched": 30,
+      "unretrieved_issues": 22,
+      "notes": "OCR search, not manual page-by-page exhaustive review."
+    },
+    {
+      "year": 1979,
+      "catalogued_issues": 52,
+      "ocr_issues_searched": 27,
+      "unretrieved_issues": 25,
+      "notes": "OCR search, not manual page-by-page exhaustive review."
+    },
+    {
+      "year": 1984,
+      "catalogued_issues": 52,
+      "ocr_issues_searched": 52,
+      "unretrieved_issues": 0,
+      "notes": "OCR search, not manual page-by-page exhaustive review."
+    },
+    {
+      "year": 1985,
+      "catalogued_issues": 11,
+      "ocr_issues_searched": 11,
+      "unretrieved_issues": 0,
+      "notes": "1985 available run ends14March; one issue metadata omits date and labels title March01."
+    }
+  ],
+  "unsearched": [
+    "1980–1983 Gazette issue runs were not comprehensively searched.",
+    "Other historical periods needed for the spelling variants were not exhaustively searched."
+  ],
+  "availability_limits": [
+    "Official Historical Gazette API returned only1986–2002 volume directories.",
+    "Internet Archive1985 query returned11 issues ending14March1985; broader title/year1985 query also returned11.",
+    "1978 and1979 runs have failed downloads as itemized in gazette_scan_results.json;1984 andavailable1985 were completed through named archive hosts.",
+    "A negative OCR search can miss an entry; it is not proof that a legal event did not occur."
+  ],
+  "access": "No sign-in, paid Registry report, or repository mutation performed.",
+  "web_queries_summary": [
+    "Exact Panco/Surrey/Food names with name/changed/Gazette/63265 and official-domain filters",
+    "Venture and Ventures Realty with Dunhill/British Columbia/Gazette",
+    "Pacific Hatching/Hatchery and Western Feeds/Feed with Panco/Gazette",
+    "Specific lateMarch/earlyApril1985 Gazette date searches"
+  ],
+  "next_target": "Public historical Registry name-history/certificate for no63265; if unavailable without a paid search, consult the remaining1980–1983 notices and unavailable1985 issues. For variants, obtain records connecting83729,64184 and the unidentified Western Feed number to the source spellings."
+}

@@ -824,7 +824,11 @@ const BCT_SOURCES = {
   S9: source('Henri Robideau, “Gallery In Transit Vancouver” [S9]', 'https://henrirobideau.com/gallery-in-transit-vancouver.html',
     'the exhibition of 8–27 June 1985, whose poster was “printed on card stock as a pop-out fold-up model BC Transit bus”; the bus’s roof carries the red double arrow and blue “BC Transit”'),
   S10: source('Urban Transit Authority, Graphic Standards Manual (TRID record 165550) [S10]', 'https://trid.trb.org/View/165550',
-    'a catalogue record of the authority’s standards for its mark, colours, type and vehicles; no copy seen, and its publication date is not given')
+    'a catalogue record of the authority’s standards for its mark, colours, type and vehicles; no copy seen, and its publication date is not given'),
+  S11: source('TransLink, The Buzzer, “75 facts about Vancouver’s trolleybus system”, 16 Aug 2023 [S11]', 'https://buzzer.translink.ca/2023/08/75-facts-about-trolleybus/',
+    'fact 8: trolleybuses painted in the UTA’s orange and white on 2 April 1982; “in August” the Province renamed the UTA BC Transit, and a red, white and blue scheme followed'),
+  S12: source('Museum of Vancouver, H2015.37.361a-c, “Pamphlet, BC Transit, handyDART, c. 1980s” [S12]', 'https://openmovportal.ca/argus/final/Portal/Main.aspx?component=AAFG&record=b565fe34-98af-435c-85de-9195188cbb78',
+    'dated 1982–1985, estimated from the adoption of the name BC Transit (1982) and from the object predating BC Transit’s change of logo to the BC flag (1985); red, white, blue and black; the record does not describe the arrow')
 }
 
 /**
@@ -997,6 +1001,28 @@ export const COLLECTION_ERAS = {
           '6 November 1986 to 6 July 1988, the whole life of the ministry of that name.'
       },
       sources: [{ title: 'The ministry’s logo with “HON. BILL REID, MINISTER”, supplied as a screenshot; the document it was taken from is not recorded', print: true }]
+    }
+  ],
+  superhost: [
+    {
+      id: 'superhost-expect-the-most',
+      status: 'held',
+      years: '1986',
+      label: '“Expect the most”: the star spray over the flag',
+      note: 'A spray of stars bursting up out of the flag symbol, “Expect the most” in brush script across ' +
+        'the foot of the flag, and “SUPERHOST” below in a serif with an enlarged S and H. The flag is the ' +
+        'one on the Super, Natural sign.',
+      applicability: {
+        kind: 'dated_specimen',
+        years: '1986',
+        note: 'The advertisement is credited to Claude Richmond as “Minister of Tourism/Expo 86”. He held the ' +
+          'office from August 1982 to August 1986. The package cites a printing in the Squamish Times of ' +
+          '29 April 1986. When the program and its mark began is not established.'
+      },
+      sources: [
+        { title: 'A SuperHost newspaper advertisement credited to Claude Richmond, Minister of Tourism/Expo 86, supplied as a screenshot; cited as the Squamish Times, 29 April 1986, page 19', print: true },
+        { title: 'CIPO record 0904301, SuperHost & Design', url: 'https://ised-isde.canada.ca/cipo/trademark-search/0904301?lang=eng' }
+      ]
     }
   ],
   'bc-parks': [
@@ -1504,13 +1530,14 @@ export const COLLECTION_ERAS = {
       applicability: {
         kind: 'dated_specimen',
         years: 'June 1985',
-        note: 'The poster dates a use of it, June 1985. The authority took the name BC Transit in 1982, so this ' +
-          'arrangement is no older than that; when it came in and when the flag replaced it are not known. A ' +
-          'Museum of Vancouver estimate of 1982–1985 for handyDART pamphlets with the same arrow (H2015.37.361a–c) ' +
-          'was reported to the project but has not been checked here. The authority’s graphic standards manual ' +
-          'is the lead for its construction.'
+        note: 'The poster dates a use of it, June 1985. The authority was renamed BC Transit in August 1982, ' +
+          'and a red, white and blue paint scheme followed, so this arrangement is no older than that; when it ' +
+          'came in is not known. The Museum of Vancouver dates handyDART pamphlets in BC Transit’s name to ' +
+          '1982–1985, reasoning that BC Transit changed its logo to the flag in 1985; its record does not ' +
+          'describe the mark, and its range is an estimate, not a retirement date. The authority’s graphic ' +
+          'standards manual is the lead for its construction.'
       },
-      sources: [BCT_SOURCES.S9, BCT_SOURCES.S1, BCT_SOURCES.S10]
+      sources: [BCT_SOURCES.S9, BCT_SOURCES.S1, BCT_SOURCES.S11, BCT_SOURCES.S12, BCT_SOURCES.S10]
     },
     {
       id: 'bct-flag',

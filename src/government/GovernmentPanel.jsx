@@ -21,6 +21,8 @@ import { ActsAdministeredCard } from './AmrCards.jsx'
 import { electionStages, eventsInYear, formatEventDate, typeOf } from './events.js'
 import { PENDING_ELECTION, PREMIERS } from './timelineData.js'
 import { partyColour } from './theme.js'
+import { SiteLink } from '../site/navigation.jsx'
+import { partyPlaceFor } from '../parties/partyLinks.js'
 import { areaById, healthMapLink } from '../health/healthStoryData.js'
 
 // The pay card brings every employer's totals with it (salaryIndex.js, about twelve megabytes of
@@ -54,7 +56,15 @@ const formatDate = (day) => {
   return d ? `${d} ${month} ${y}` : `${month} ${y}`
 }
 
-const PersonCard = ({ role, person, since, note, party, acting }) => (
+/** A party's name, linked to its page in the Parties view where it has one. */
+const PartyName = ({ party }) => {
+  const place = partyPlaceFor(party)
+  return place ? <SiteLink to={place} title={`${party}: logos and history`}>{party}</SiteLink> : party
+}
+
+const PersonCard = ({ role, person, since, note, party, acting }) => {
+  const rest = [acting && 'Acting', since && `Since ${formatDate(since)}`, note].filter(Boolean)
+  return (
   <div className="gov-person">
     <span className="gov-person__initials" style={party ? { borderColor: partyColour(party) } : undefined} aria-hidden="true">
       {person ? person.split(/\s+/).filter((word) => /^[A-Z]/.test(word)).slice(0, 2).map((word) => word[0]).join('') : '—'}
@@ -64,12 +74,15 @@ const PersonCard = ({ role, person, since, note, party, acting }) => (
       <span className="gov-person__role">{role}</span>
       {(since || party || note) && (
         <span className="gov-person__since">
-          {[party, acting && 'Acting', since && `Since ${formatDate(since)}`, note].filter(Boolean).join(' · ')}
+          {party && <PartyName party={party} />}
+          {party && rest.length > 0 && ' · '}
+          {rest.join(' · ')}
         </span>
       )}
     </span>
   </div>
-)
+  )
+}
 
 /** The ministry's lockup in the identity of the year on screen, and a way into the generator. */
 const MarkCard = ({ node, year, theme, onOpenInGenerator }) => {
@@ -801,6 +814,10 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
           <p className="gov-notice">{node.ended ? `Later renamed the ${node.laterName}.` : `Known today as ${node.laterName}.`}</p>
         )}
 
+        {node.nameTransition && (
+          <p className="gov-notice">Renamed {node.nameTransition.name} on a day between {node.nameTransition.after} and {node.nameTransition.by} that is not known, so in {year} it may already have carried that name.</p>
+        )}
+
         {node.inferredGroup && (
           <p className="gov-notice">
             Shown beside the {year} forerunner of the ministry that answers for it today; which
@@ -888,7 +905,7 @@ const PremierList = ({ year }) => {
         {recent.map((premier) => (
           <li key={`${premier.name}-${premier.from}`}>
             <span className="gov-kind-dot" style={{ background: partyColour(premier.party) }} />
-            {premier.name} <span className="gov-muted">{premier.party} · {premier.from.slice(0, 4)}–{premier.to ? premier.to.slice(0, 4) : ''}</span>
+            {premier.name} <span className="gov-muted"><PartyName party={premier.party} /> · {premier.from.slice(0, 4)}–{premier.to ? premier.to.slice(0, 4) : ''}</span>
           </li>
         ))}
       </ul>
@@ -941,7 +958,7 @@ export const ChangesCard = ({ year, onSelect, onJump, limit = 5 }) => {
     ...premiers.map((premier) => (
       <li key={premier.name} className="gov-feed__item">
         <span className="gov-chip" data-type="premier">Premier</span>
-        <span><strong>{premier.name}</strong> <span className="gov-muted">({premier.party})</span> took office on {formatDate(premier.from)}.</span>
+        <span><strong>{premier.name}</strong> <span className="gov-muted">(<PartyName party={premier.party} />)</span> took office on {formatDate(premier.from)}.</span>
       </li>
     )),
     ...changes.map((change, index) => (

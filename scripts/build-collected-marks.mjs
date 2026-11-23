@@ -22,7 +22,7 @@ const bceid = read('research/identity/bceid-2026-11-12/source-register.json')
 const sharedServices = read('research/identity/shared-services-bc-2026-11-12/source-register.json')
 const bcCancerNow = read('research/identity/bc-cancer-current-2026-11-12/source-register.json')
 // Programs' marks held as supplied reconstructions, with no body of their own in the inventory.
-const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12', 'solutions-bc-vector-2026-11-12', 'healthlink-bc-2026-11-12', 'bc-cancer-modern-2026-11-12', 'bc-environment-vector-2026-11-22', 'tourism-recreation-culture-vector-2026-11-22']
+const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12', 'solutions-bc-vector-2026-11-12', 'healthlink-bc-2026-11-12', 'bc-cancer-modern-2026-11-12', 'bc-environment-vector-2026-11-22', 'tourism-recreation-culture-vector-2026-11-22', 'superhost-vector-2026-11-22']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
 const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12', 'bc-housing-houses-vector-2026-11-12', 'fvhr-vector-2026-11-12', 'bc-steamship-vector-2026-11-12', 'pge-map-vector-2026-11-12', 'ocean-falls-vector-2026-11-12', 'bc-trade-vector-2026-11-13', 'bc-development-corporation-vector-2026-11-14']
@@ -439,7 +439,7 @@ for (const { search, register: history } of HISTORIES) {
 // exists, reconstructions that say so. Each file is checked here for what it claims: no embedded
 // image, no live text, no outside reference.
 const FOLDED = new Map()
-const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16', 'current-bodies-vector-2026-11-16', 'railway-marks-vector-2026-11-16', 'reversed-vectors-2026-11-21', 'traced-vectors-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22']
+const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16', 'current-bodies-vector-2026-11-16', 'railway-marks-vector-2026-11-16', 'reversed-vectors-2026-11-21', 'traced-vectors-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22', 'greater-trail-chc-vector-2026-11-22', 'south-cariboo-vector-2026-11-22']
 const pureVector = (asset) => {
   const svg = readFileSync(new URL(`public/${asset.file}`, root), 'utf8')
   if (/<(?:\w+:)?(?:image|text|foreignObject|script)\b/i.test(svg) || /(?:xlink:)?href\s*=\s*["'](?!#)/i.test(svg)) {
@@ -506,7 +506,8 @@ const finished = (asset) => ({
   ...(ASSET_NOTES[asset.id] ? { notes: ASSET_NOTES[asset.id] } : {}),
   ...(ASSET_LABELS[asset.id] ? { label: ASSET_LABELS[asset.id] } : {}),
   ...(VERSION_LABELS[asset.id] ? { versionLabel: VERSION_LABELS[asset.id] } : {}),
-  ...(VARIANT_OF[asset.id] ? { variantOf: VARIANT_OF[asset.id] } : {})
+  // A register's own version of an image that a vector has since folded in moves to that vector.
+  ...(VARIANT_OF[asset.id] ? { variantOf: VARIANT_OF[asset.id] } : FOLDED.has(asset.variantOf) ? { variantOf: FOLDED.get(asset.variantOf) } : {})
 })
 
 // Where later research changed a body's years: the Steamship Company was renamed in 1994, not

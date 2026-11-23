@@ -1346,6 +1346,19 @@ export const COLLECTED_DISPLAY = {
    "palette": true
   }
  },
+ "bc-enterprise-corporation-rebuilt-bw": {
+  "light": {
+   "file": "identity-display/bc-enterprise-corporation-rebuilt-bw.light.svg",
+   "aspect": 2.4512,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-enterprise-corporation-rebuilt-bw.dark.svg",
+   "aspect": 2.4512,
+   "recoloured": true,
+   "palette": true
+  }
+ },
  "vector-forest-renewal-bc-2000-colour-source-vector": {
   "light": {
    "file": "identity-display/vector-forest-renewal-bc-2000-colour-source-vector.light.svg",
@@ -1588,6 +1601,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "greater-trail-chc-rebuilt": {
+  "light": {
+   "file": "identity-display/greater-trail-chc-rebuilt.light.svg",
+   "aspect": 2.1147,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/greater-trail-chc-rebuilt.dark.svg",
+   "aspect": 2.1147,
+   "recoloured": true
+  }
+ },
  "source-north-okanagan-health-region-north-okanagan-health-region-2000-emblem-svg": {
   "light": {
    "file": "identity-display/source-north-okanagan-health-region-north-okanagan-health-region-2000-emblem-svg.light.svg",
@@ -1610,6 +1635,19 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/historical-northern-interior-regional-health-board-blue-2001.dark.svg",
    "aspect": 2.6445,
    "recoloured": true
+  }
+ },
+ "south-cariboo-chc-rebuilt": {
+  "light": {
+   "file": "identity-display/south-cariboo-chc-rebuilt.light.svg",
+   "aspect": 2.234,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/south-cariboo-chc-rebuilt.dark.svg",
+   "aspect": 2.234,
+   "recoloured": true,
+   "palette": true
   }
  },
  "south-fraser-health-region-horizontal-colour-2001-rebuilt": {
@@ -2234,6 +2272,18 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/tourism-recreation-culture-1986.dark.svg",
    "aspect": 2.5079,
+   "recoloured": true
+  }
+ },
+ "superhost-1986": {
+  "light": {
+   "file": "identity-display/superhost-1986.light.svg",
+   "aspect": 0.6301,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/superhost-1986.dark.svg",
+   "aspect": 0.6301,
    "recoloured": true
   }
  },

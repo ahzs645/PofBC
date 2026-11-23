@@ -1238,7 +1238,13 @@ export const TOURISM_COLLECTION = {
         }
       ],
       "domains": [],
-      "links": [],
+      "links": [
+        {
+          "label": "Open the earlier “Expect the most” mark of 1986, rebuilt as a vector",
+          "url": "?view=gallery&logos=superhost",
+          "kind": "collection"
+        }
+      ],
       "relatedIds": [
         "worldhost"
       ],

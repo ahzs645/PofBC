@@ -1301,6 +1301,25 @@ export const GALLERY_COLLECTIONS = [
     })
   },
   {
+    id: 'superhost',
+    shelf: 'bodies',
+    label: 'SuperHost',
+    body: 'Ministry of Tourism’s hospitality-training program',
+    years: 'Expo 86 years',
+    graphNode: 'ministry-of-tourism-1980',
+    graphYear: 1985,
+    cover: 'superhost-1986',
+    intro: 'The Ministry of Tourism’s training program for the people who served visitors in the Expo 86 ' +
+      'years. Its mark is “Expect the most”: a spray of stars bursting up out of the flag symbol over ' +
+      '“SUPERHOST”. Rebuilt on the gallery’s own flag artwork, with fitted stars and redrawn lettering, ' +
+      'from a 1986 newspaper advertisement. The trademark specimen’s wider arrangement and colour ' +
+      'interpretations are versions. The later SuperHost figure mark is in the Tourism BC & Destination BC ' +
+      'initiative.',
+    eras: withMarks(COLLECTION_ERAS.superhost, {
+      'superhost-expect-the-most': specimenEntriesOf('superhost')
+    })
+  },
+  {
     id: 'bc-mark',
     shelf: 'bc-mark',
     label: 'On the BC mark',
@@ -1336,7 +1355,7 @@ GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) => candidat
 // The Department of Travel Industry's is folded into the BC mark collection.
 // A program's published specimens belong to the body its one-off stands for (WorkBC's to WorkBC, Where
 // ideas work to the Public Service Agency), so that body's panel finds its original files too.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc', 'specimens-bc-environment', 'specimens-tourism-recreation-culture'].includes(collection.id))
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc', 'specimens-bc-environment', 'specimens-tourism-recreation-culture', 'specimens-superhost'].includes(collection.id))
   .map((collection) => {
     const node = GRAPH_NODES[collection.id.replace(/^specimens-/, '')]
     return node ? { ...collection, entries: collection.entries.map((entry) => ({ ...entry, graphNode: entry.graphNode ?? node })) } : collection

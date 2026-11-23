@@ -1,0 +1,94 @@
+{
+  "review_date": "2026-11-22",
+  "scope": "Question 4: operational dates of Pacific Coach Lines and limits of those dates.",
+  "sources": [
+    {
+      "id": "PC-S01",
+      "title": "British Columbia Hydro and Power Authority Annual Report 1978/79",
+      "url": "https://digital.library.mcgill.ca/images/hrcorpreports/pdfs/6/632602.pdf",
+      "text_url": "https://archive.org/stream/McGillLibrary-632602-27869/632602_djvu.txt",
+      "locators": [
+        "Printed 10; PDF 12"
+      ],
+      "verification": "Original PDF downloaded; printed page 10 rendered and visually read; OCR corroborated.",
+      "bytes": 21831655,
+      "sha256": "f2c33281892c26594d3d7931f7f1644319b766462898ba8bcf1538a4b5537eef",
+      "retrieved_filename": "BCHydro_1978-79.pdf",
+      "source_file_included": false
+    },
+    {
+      "id": "PC-S02",
+      "title": "Auditor General 1986, Part 2 appendices: Public Accounts 1984/85",
+      "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19860401a-1986reportpart2appendices.pdf",
+      "locators": [
+        "B16, note 9(i); PDF 21",
+        "C17, note 9(g); PDF 80"
+      ],
+      "verification": "Original PDF retrieved; relevant accounting note read in extracted text.",
+      "bytes": 6151233,
+      "sha256": "cfc5c173e39bc122e491c3dbfec96e53a0a9a18f4049614a2e5643c492c7cc52",
+      "retrieved_filename": "oag-1986-appendices.pdf",
+      "source_file_included": false
+    },
+    {
+      "id": "PC-S03",
+      "title": "Auditor General 1987: Public Accounts 1985/86",
+      "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-19870301-report-auditor-general-1987.pdf",
+      "locators": [
+        "A12; PDF 160"
+      ],
+      "verification": "Original PDF retrieved; asset-disposal statement read in extracted text.",
+      "bytes": 9137123,
+      "sha256": "84c09254acad8298c5fe42ed807e64373aa578220ccebe9b33cd217013e7aa97",
+      "retrieved_filename": "oag-1987.pdf",
+      "source_file_included": false
+    }
+  ],
+  "claims": [
+    {
+      "id": "PC-C01",
+      "subject": "Pacific Coach Lines",
+      "date": "1979-04-01",
+      "date_kind": "operations_commenced",
+      "finding": "Pacific Coach Lines began operations, replacing Pacific Stage Lines and Vancouver Island Coach Lines.",
+      "sources": [
+        "PC-S01"
+      ],
+      "limit": "This is an operational start, not a proven incorporation or public-acquisition date."
+    },
+    {
+      "id": "PC-C02",
+      "subject": "Pacific Coach Lines",
+      "date": "1978-09-05",
+      "date_kind": "announcement",
+      "finding": "The planned replacement of the two bus services was announced.",
+      "sources": [
+        "PC-S01"
+      ]
+    },
+    {
+      "id": "PC-C03",
+      "subject": "Pacific Coach Lines",
+      "date": "1984-03-31",
+      "date_kind": "operations_ceased",
+      "finding": "The 1984/85 Public Accounts state that operations ceased on this date and winding up was still in progress.",
+      "sources": [
+        "PC-S02"
+      ],
+      "limit": "Do not treat the cessation date as a legal dissolution date."
+    },
+    {
+      "id": "PC-C04",
+      "subject": "Pacific Coach Lines",
+      "date": "1986-03-31",
+      "date_kind": "financial_reporting_checkpoint",
+      "finding": "The 1985/86 accounts describe continued disposal of remaining real estate following the termination of operations.",
+      "sources": [
+        "PC-S03"
+      ],
+      "limit": "An accounting checkpoint for wind-down activity, not an exact legal end date."
+    }
+  ],
+  "name_caution": "The Hydro description of provincially owned Vancouver Island Coach Lines does not establish identity with Vancouver Island Transit or Vancouver Island Transportation; the 1978 T.S. accounts list these names separately.",
+  "package_note": "This file contains authored findings and source metadata. Original PDFs, raw OCR and research-session screenshots are not packaged. Retrieval filenames below identify the verified source copy, not a promised package member."
+}

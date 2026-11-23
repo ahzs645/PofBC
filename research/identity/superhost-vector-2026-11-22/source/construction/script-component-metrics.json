@@ -1,0 +1,17 @@
+{
+  "region": [
+    120,
+    450,
+    450,
+    508
+  ],
+  "method": "same fixed CIPO coordinates, excludes dilated reused flag and serif intrusions; blur .45/.42; threshold .5 for IoU",
+  "before": {
+    "soft_mse": 0.13997704920765042,
+    "mask_iou": 0.359620886981402
+  },
+  "after": {
+    "soft_mse": 0.061933808014767146,
+    "mask_iou": 0.6163585209003215
+  }
+}

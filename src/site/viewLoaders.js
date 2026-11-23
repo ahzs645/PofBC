@@ -9,6 +9,7 @@ export const VIEW_LOADERS = {
   gallery: () => import('../gallery/GalleryView.jsx'),
   initiatives: () => import('../initiatives/InitiativesView.jsx'),
   'school-districts': () => import('../schools/SchoolDistrictsView.jsx'),
+  parties: () => import('../parties/PartiesView.jsx'),
   // The government diagram carries a century and a half of ministries with it.
   government: () => import('../government/GovernmentView.jsx'),
   internal: () => import('../internal/InternalLogosView.jsx'),

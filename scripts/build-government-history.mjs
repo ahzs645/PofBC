@@ -204,7 +204,9 @@ const bodies = researched
     // The start's own source, where it is not the record's general one (BC Hydro's proclamation).
     ...(record.establishedSource ? { establishedSource: sourceIndex(record.establishedSource), ...(record.establishedLocator ? { establishedLocator: record.establishedLocator } : {}) } : {}),
     // The names it held, period by period, where an order renamed it: [name, from, to, source, locator].
-    ...(record.names?.length ? { names: record.names.map(({ name, from, to, source, locator }) => [name, from ? String(from) : null, to ? String(to) : null, sourceIndex(source ?? record.source), locator ?? null]) } : {}),
+    // A rename whose day is not known is dated by the latest day it had happened (`from`), with the last
+    // day the old name is still shown (`changedAfter`) as a sixth element: [..., { after }].
+    ...(record.names?.length ? { names: record.names.map(({ name, from, to, source, locator, changedAfter }) => [name, from ? String(from) : null, to ? String(to) : null, sourceIndex(source ?? record.source), locator ?? null, ...(changedAfter ? [{ after: String(changedAfter) }] : [])]) } : {}),
     predecessors: [
       ...(record.predecessorIds ?? []),
       // A body whose services passed to this one, which is not an amalgamation: a society's to an authority.

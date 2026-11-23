@@ -1,0 +1,597 @@
+{
+  "source": "baseline/South_Cariboo_Vector/evidence/source-colour-logo.png",
+  "landmark_input": "work/round2-evidence/manual-landmark-fit.json",
+  "landmarks_used": 11,
+  "scope": "Fits to manually selected features in the raw source only. No reconstructed vector is used as evidence.",
+  "coordinate_frame": "Master tree already expressed in source / final rendered dark-tree coordinates. SVG transform matrix(s 0 0 s tx ty).",
+  "models": {
+    "translation_only": {
+      "scale": 1.0,
+      "translation": [
+        47.72727272727271,
+        10.900000000000006
+      ],
+      "matrix": [
+        1.0,
+        0,
+        0,
+        1.0,
+        47.72727272727271,
+        10.900000000000006
+      ],
+      "rms_source_pixels": 6.889001894863871,
+      "max_source_pixels": 12.403548545836609,
+      "per_feature": [
+        {
+          "feature": "apex",
+          "predicted_pale": [
+            98.72727272727272,
+            10.900000000000006
+          ],
+          "observed_pale": [
+            96.0,
+            23.0
+          ],
+          "residual": [
+            -2.7272727272727195,
+            12.099999999999994
+          ],
+          "error": 12.403548545836609
+        },
+        {
+          "feature": "upper_left_shelf",
+          "predicted_pale": [
+            72.72727272727272,
+            45.900000000000006
+          ],
+          "observed_pale": [
+            74.0,
+            52.0
+          ],
+          "residual": [
+            1.2727272727272805,
+            6.099999999999994
+          ],
+          "error": 6.231358977842936
+        },
+        {
+          "feature": "outer_lower_hook",
+          "predicted_pale": [
+            47.72727272727271,
+            128.9
+          ],
+          "observed_pale": [
+            53.5,
+            122.0
+          ],
+          "residual": [
+            5.772727272727288,
+            -6.900000000000006
+          ],
+          "error": 8.996353714994175
+        },
+        {
+          "feature": "upper_slit",
+          "predicted_pale": [
+            91.92727272727271,
+            38.00000000000001
+          ],
+          "observed_pale": [
+            90.5,
+            45.5
+          ],
+          "residual": [
+            -1.4272727272727082,
+            7.499999999999993
+          ],
+          "error": 7.634599363294473
+        },
+        {
+          "feature": "upper_channel_tip",
+          "predicted_pale": [
+            92.82727272727271,
+            55.2
+          ],
+          "observed_pale": [
+            91.1,
+            59.6
+          ],
+          "residual": [
+            -1.7272727272727195,
+            4.399999999999999
+          ],
+          "error": 4.726888096240499
+        },
+        {
+          "feature": "small_hook_hole",
+          "predicted_pale": [
+            80.92727272727271,
+            81.2
+          ],
+          "observed_pale": [
+            80.8,
+            81.5
+          ],
+          "residual": [
+            -0.127272727272711,
+            0.29999999999999716
+          ],
+          "error": 0.32588087870789867
+        },
+        {
+          "feature": "small_oval",
+          "predicted_pale": [
+            84.5272727272727,
+            86.7
+          ],
+          "observed_pale": [
+            84.1,
+            86.3
+          ],
+          "residual": [
+            -0.42727272727270815,
+            -0.4000000000000057
+          ],
+          "error": 0.5852879491934398
+        },
+        {
+          "feature": "diagonal_slit_center",
+          "predicted_pale": [
+            84.32727272727271,
+            95.80000000000001
+          ],
+          "observed_pale": [
+            83.9,
+            93.5
+          ],
+          "residual": [
+            -0.42727272727270815,
+            -2.3000000000000114
+          ],
+          "error": 2.3393507611025566
+        },
+        {
+          "feature": "lower_oval",
+          "predicted_pale": [
+            85.42727272727271,
+            108.10000000000001
+          ],
+          "observed_pale": [
+            84.4,
+            104.2
+          ],
+          "residual": [
+            -1.0272727272727025,
+            -3.9000000000000057
+          ],
+          "error": 4.033024827123971
+        },
+        {
+          "feature": "root_oval",
+          "predicted_pale": [
+            75.22727272727272,
+            129.9
+          ],
+          "observed_pale": [
+            76.0,
+            122.5
+          ],
+          "residual": [
+            0.7727272727272805,
+            -7.400000000000006
+          ],
+          "error": 7.4402357111866175
+        },
+        {
+          "feature": "root_notch",
+          "predicted_pale": [
+            76.92727272727271,
+            142.3
+          ],
+          "observed_pale": [
+            77.0,
+            132.8
+          ],
+          "residual": [
+            0.07272727272729185,
+            -9.5
+          ],
+          "error": 9.500278377826534
+        }
+      ]
+    },
+    "fixed_five_sixths": {
+      "scale": 0.8333333333333334,
+      "translation": [
+        53.27727272727272,
+        23.06666666666667
+      ],
+      "matrix": [
+        0.8333333333333334,
+        0,
+        0,
+        0.8333333333333334,
+        53.27727272727272,
+        23.06666666666667
+      ],
+      "rms_source_pixels": 0.3972934141575541,
+      "max_source_pixels": 0.653669798669995,
+      "per_feature": [
+        {
+          "feature": "apex",
+          "predicted_pale": [
+            95.77727272727272,
+            23.06666666666667
+          ],
+          "observed_pale": [
+            96.0,
+            23.0
+          ],
+          "residual": [
+            0.22272727272728332,
+            -0.06666666666666998
+          ],
+          "error": 0.23249060725323623
+        },
+        {
+          "feature": "upper_left_shelf",
+          "predicted_pale": [
+            74.11060606060605,
+            52.233333333333334
+          ],
+          "observed_pale": [
+            74.0,
+            52.0
+          ],
+          "residual": [
+            -0.11060606060604528,
+            -0.23333333333333428
+          ],
+          "error": 0.2582211166563127
+        },
+        {
+          "feature": "outer_lower_hook",
+          "predicted_pale": [
+            53.27727272727272,
+            121.4
+          ],
+          "observed_pale": [
+            53.5,
+            122.0
+          ],
+          "residual": [
+            0.22272727272728332,
+            0.5999999999999943
+          ],
+          "error": 0.6400058109240312
+        },
+        {
+          "feature": "upper_slit",
+          "predicted_pale": [
+            90.11060606060605,
+            45.650000000000006
+          ],
+          "observed_pale": [
+            90.5,
+            45.5
+          ],
+          "residual": [
+            0.3893939393939547,
+            -0.15000000000000568
+          ],
+          "error": 0.4172860410279076
+        },
+        {
+          "feature": "upper_channel_tip",
+          "predicted_pale": [
+            90.86060606060605,
+            59.983333333333334
+          ],
+          "observed_pale": [
+            91.1,
+            59.6
+          ],
+          "residual": [
+            0.23939393939394904,
+            -0.38333333333333286
+          ],
+          "error": 0.4519445791941727
+        },
+        {
+          "feature": "small_hook_hole",
+          "predicted_pale": [
+            80.94393939393939,
+            81.65
+          ],
+          "observed_pale": [
+            80.8,
+            81.5
+          ],
+          "residual": [
+            -0.14393939393939092,
+            -0.15000000000000568
+          ],
+          "error": 0.20789071438532525
+        },
+        {
+          "feature": "small_oval",
+          "predicted_pale": [
+            83.94393939393939,
+            86.23333333333333
+          ],
+          "observed_pale": [
+            84.1,
+            86.3
+          ],
+          "residual": [
+            0.15606060606060623,
+            0.06666666666666288
+          ],
+          "error": 0.16970373363143096
+        },
+        {
+          "feature": "diagonal_slit_center",
+          "predicted_pale": [
+            83.77727272727272,
+            93.81666666666669
+          ],
+          "observed_pale": [
+            83.9,
+            93.5
+          ],
+          "residual": [
+            0.122727272727289,
+            -0.3166666666666913
+          ],
+          "error": 0.3396170803255804
+        },
+        {
+          "feature": "lower_oval",
+          "predicted_pale": [
+            84.69393939393939,
+            104.06666666666666
+          ],
+          "observed_pale": [
+            84.4,
+            104.2
+          ],
+          "residual": [
+            -0.2939393939393824,
+            0.13333333333333997
+          ],
+          "error": 0.3227663939867826
+        },
+        {
+          "feature": "root_oval",
+          "predicted_pale": [
+            76.19393939393939,
+            122.23333333333335
+          ],
+          "observed_pale": [
+            76.0,
+            122.5
+          ],
+          "residual": [
+            -0.19393939393938808,
+            0.2666666666666515
+          ],
+          "error": 0.32973261839357076
+        },
+        {
+          "feature": "root_notch",
+          "predicted_pale": [
+            77.61060606060605,
+            132.5666666666667
+          ],
+          "observed_pale": [
+            77.0,
+            132.8
+          ],
+          "residual": [
+            -0.6106060606060453,
+            0.23333333333332007
+          ],
+          "error": 0.653669798669995
+        }
+      ]
+    },
+    "fitted_uniform": {
+      "scale": 0.8379895279724509,
+      "translation": [
+        53.1222214457901,
+        22.726764458011097
+      ],
+      "matrix": [
+        0.8379895279724509,
+        0,
+        0,
+        0.8379895279724509,
+        53.1222214457901,
+        22.726764458011097
+      ],
+      "rms_source_pixels": 0.3445865620433914,
+      "max_source_pixels": 0.5927730141387807,
+      "per_feature": [
+        {
+          "feature": "apex",
+          "predicted_pale": [
+            95.8596873723851,
+            22.726764458011097
+          ],
+          "observed_pale": [
+            96.0,
+            23.0
+          ],
+          "residual": [
+            0.14031262761490382,
+            0.2732355419889032
+          ],
+          "error": 0.30715679200396717
+        },
+        {
+          "feature": "upper_left_shelf",
+          "predicted_pale": [
+            74.07195964510137,
+            52.05639793704688
+          ],
+          "observed_pale": [
+            74.0,
+            52.0
+          ],
+          "residual": [
+            -0.07195964510137287,
+            -0.05639793704688145
+          ],
+          "error": 0.09142711756508318
+        },
+        {
+          "feature": "outer_lower_hook",
+          "predicted_pale": [
+            53.1222214457901,
+            121.60952875876029
+          ],
+          "observed_pale": [
+            53.5,
+            122.0
+          ],
+          "residual": [
+            0.3777785542098968,
+            0.3904712412397089
+          ],
+          "error": 0.5433087761634252
+        },
+        {
+          "feature": "upper_slit",
+          "predicted_pale": [
+            90.16135858217243,
+            45.43628066606452
+          ],
+          "observed_pale": [
+            90.5,
+            45.5
+          ],
+          "residual": [
+            0.3386414178275743,
+            0.0637193339354809
+          ],
+          "error": 0.34458404400878906
+        },
+        {
+          "feature": "upper_channel_tip",
+          "predicted_pale": [
+            90.91554915734764,
+            59.849700547190665
+          ],
+          "observed_pale": [
+            91.1,
+            59.6
+          ],
+          "residual": [
+            0.18445084265235323,
+            -0.24970054719066326
+          ],
+          "error": 0.31043916734600324
+        },
+        {
+          "feature": "small_hook_hole",
+          "predicted_pale": [
+            80.94347377447548,
+            81.63742827447439
+          ],
+          "observed_pale": [
+            80.8,
+            81.5
+          ],
+          "residual": [
+            -0.14347377447548126,
+            -0.137428274474388
+          ],
+          "error": 0.1986737390478394
+        },
+        {
+          "feature": "small_oval",
+          "predicted_pale": [
+            83.9602360751763,
+            86.24637067832288
+          ],
+          "observed_pale": [
+            84.1,
+            86.3
+          ],
+          "residual": [
+            0.13976392482369704,
+            0.05362932167712131
+          ],
+          "error": 0.1496998958772924
+        },
+        {
+          "feature": "diagonal_slit_center",
+          "predicted_pale": [
+            83.7926381695818,
+            93.87207538287217
+          ],
+          "observed_pale": [
+            83.9,
+            93.5
+          ],
+          "residual": [
+            0.10736183041819913,
+            -0.37207538287216835
+          ],
+          "error": 0.38725528165567585
+        },
+        {
+          "feature": "lower_oval",
+          "predicted_pale": [
+            84.7144266503515,
+            104.17934657693331
+          ],
+          "observed_pale": [
+            84.4,
+            104.2
+          ],
+          "residual": [
+            -0.31442665035149275,
+            0.02065342306669038
+          ],
+          "error": 0.3151042404278806
+        },
+        {
+          "feature": "root_oval",
+          "predicted_pale": [
+            76.1669334650325,
+            122.44751828673276
+          ],
+          "observed_pale": [
+            76.0,
+            122.5
+          ],
+          "residual": [
+            -0.16693346503249984,
+            0.05248171326724105
+          ],
+          "error": 0.1749888910051771
+        },
+        {
+          "feature": "root_notch",
+          "predicted_pale": [
+            77.59151566258566,
+            132.83858843359116
+          ],
+          "observed_pale": [
+            77.0,
+            132.8
+          ],
+          "residual": [
+            -0.5915156625856639,
+            -0.03858843359114417
+          ],
+          "error": 0.5927730141387807
+        }
+      ]
+    }
+  },
+  "max_difference_between_uniform_transforms_over_74x141_box_pixels": 0.38916122708517026,
+  "judgment": "The fixed 5/6 scale is sufficient at the original source resolution. Its 0.397 px RMS residual is within the approximate 0.5\u20131 px feature-reading uncertainty. The freely fitted uniform scale reduces RMS by only about 0.053 px. No visual evidence justifies a skew or nonuniform scale.",
+  "strict_reuse_mismatch": "Strict copying preserves the dark tree\u2019s right-hand openings and sparse lower branches. In the supplied raster, the corresponding pale region is substantially fuller, including a broad right mass. The letters also hide part of that area. Those source differences are expected under the user-authorized exact-reuse construction; no independent pale completion or hole suppression is proposed."
+}

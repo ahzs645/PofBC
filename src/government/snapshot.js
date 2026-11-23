@@ -483,7 +483,7 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
         record?.operationalEnd
           ? claim(`Its operations passed elsewhere on ${record.operationalEnd[0]}, which was not its legal end${record.operationalEnd[1] ? `: ${record.operationalEnd[1]}` : ''}`, historySource(record.operationalEnd[2]), record.operationalEnd[3] ? { note: record.operationalEnd[3] } : {})
           : null,
-        ...(record?.names ?? []).filter(([, from]) => from).map(([name, from, , source, locator]) => claim(`Known as ${name} from ${from}`, historySource(source), locator ? { note: locator } : {})),
+        ...(record?.names ?? []).filter(([, from]) => from).map(([name, from, , source, locator, bounds]) => claim(bounds?.after ? `Known as ${name} by ${from}; renamed on a day after ${bounds.after} that is not known` : `Known as ${name} from ${from}`, historySource(source), locator ? { note: locator } : {})),
         record?.firstSeen && !record.established
           ? claim(`Shown to exist by ${record.firstSeen[0]}; its start is unknown`, historySource(record.firstSeen[1]), record.firstSeen[2] ? { note: record.firstSeen[2] } : {})
           : null,
@@ -525,6 +525,12 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
   const KIND = { 'crown-corporation': 'crown-corporation', agency: 'agency', tribunal: 'tribunal', 'health-authority': 'health-authority' }
   // What a body was called on the day: the period an order gave it, or its record's name.
   const nameOn = (record) => (record.names ?? []).find(([, from, to]) => (!from || startOf(from) <= day) && (!to || startOf(to) > day)) ?? null
+  // Between the last day the old name is shown and the latest day of the rename, either name may be the
+  // right one: the old name is drawn, and the rename's window said.
+  const nameTransitionOn = (record) => {
+    const next = (record.names ?? []).find(([, from, , , , bounds]) => bounds?.after && from && startOf(bounds.after) < day && startOf(from) > day)
+    return next ? { name: next[0], after: next[5].after, by: next[1] } : null
+  }
   for (const record of HISTORICAL_BODIES) {
     if (placed.has(record.id) || record.current || !record.name) continue
     // A body whose start is unknown is drawn from the first day a source shows it, and says so. One
@@ -547,6 +553,7 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
       ring: 'outer',
       name: nameOn(record)?.[0] ?? record.name,
       ...(nameOn(record) && nameOn(record)[0] !== record.name ? { laterName: record.name, nameSince: nameOn(record) } : {}),
+      ...(nameTransitionOn(record) ? { nameTransition: nameTransitionOn(record) } : {}),
       shortName: record.shortName,
       established: record.established,
       ended: record.ended,

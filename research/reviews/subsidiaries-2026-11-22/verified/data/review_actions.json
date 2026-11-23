@@ -1,0 +1,889 @@
+{
+  "review_date": "2026-11-22",
+  "scope": "Semantic integration instructions for the user’s uncommitted graph, not an executable repository patch.",
+  "repository_status": "Local uncommitted repository was unavailable; no edits, commit, push or independent rerun of its tests were performed.",
+  "precedence": "These corrections supersede conflicting claims in prior_research/. Original printed rosters remain source evidence.",
+  "actions": [
+    {
+      "id": "A01",
+      "review_questions": [
+        1
+      ],
+      "priority": "correction",
+      "subject": "T.S. Holdings Ltd.",
+      "operation": "retain_year_with_correct_locator",
+      "recommendation": "Retain Statistics Canada’s reported incorporation year 1975; cite the year column, not only the descriptive paragraph.",
+      "source_ids": [
+        "S75",
+        "S76"
+      ],
+      "claim_ids": [
+        "SC01"
+      ],
+      "values": {
+        "incorporation_year_as_reported": 1975,
+        "date_precision": "year",
+        "primary_locator": "1976 volume, printed 22 / PDF 24"
+      },
+      "limits": "Do not invent a day or treat incorporation as an independently established acquisition date."
+    },
+    {
+      "id": "A02",
+      "review_questions": [
+        1,
+        3
+      ],
+      "priority": "correction",
+      "subject": "Panco Poultry Ltd.",
+      "operation": "refine_public_acquisition_date",
+      "recommendation": "Refine February 1975 to the exact acquisition date in the audited accounts; retain federal corroboration of price and the three subsidiaries.",
+      "source_ids": [
+        "S75",
+        "ID-S06"
+      ],
+      "claim_ids": [
+        "SC02",
+        "ID-C01"
+      ],
+      "values": {
+        "acquired": "1975-02-17",
+        "acquired_shares_pct": 100,
+        "currency": "CAD",
+        "purchase_price": 4800000
+      },
+      "limits": "Acquisition is not incorporation."
+    },
+    {
+      "id": "A03",
+      "review_questions": [
+        1,
+        5
+      ],
+      "priority": "identity_review",
+      "subject": "Venture Realty Ltd. / Ventures Realty Ltd.",
+      "operation": "record_sale_hold_unproved_alias_bridge",
+      "recommendation": "Record the singular-name company sale; retain the spelling discrepancy when matching the earlier roster.",
+      "source_ids": [
+        "S78",
+        "ID-S06"
+      ],
+      "claim_ids": [
+        "SC03",
+        "ID-C18"
+      ],
+      "values": {
+        "sale_effective": "1978-11-30",
+        "name_as_printed": "Venture Realty Ltd."
+      },
+      "limits": "No legal rename or registry bridge to Ventures Realty Ltd. was recovered."
+    },
+    {
+      "id": "A04",
+      "review_questions": [
+        1
+      ],
+      "priority": "correction",
+      "subject": "72-007 volume 23 number 1",
+      "operation": "correct_reference_period",
+      "recommendation": "Identify the issue as January–March 1981, published September 1981.",
+      "source_ids": [
+        "S81Q1"
+      ],
+      "claim_ids": [
+        "SC04"
+      ],
+      "values": {
+        "reference_period": "1981-Q1",
+        "published": "1981-09",
+        "vancouver_island_transit_printed_page": 37,
+        "pdf_page_one_based": 39
+      }
+    },
+    {
+      "id": "A05",
+      "review_questions": [
+        1
+      ],
+      "priority": "graph_addition",
+      "subject": "V I T Holdings Ltd.",
+      "operation": "add_wholly_owned_observation",
+      "recommendation": "Match or add the legal entity and attach the documented T.S. Holdings ownership checkpoint.",
+      "source_ids": [
+        "TR-S01"
+      ],
+      "claim_ids": [
+        "TR-O01"
+      ],
+      "values": {
+        "owner": "T. S. Holdings Ltd.",
+        "ownership_pct": 100,
+        "observed_on": "1978-03-31",
+        "event_kind": "ownership_observation"
+      },
+      "limits": "No incorporation or acquisition day is supplied. Thompson-Okanagan’s separate loan evidence remains a funding event. Keep Vancouver Island Transit distinct from Vancouver Island Transportation."
+    },
+    {
+      "id": "A06",
+      "review_questions": [
+        1
+      ],
+      "priority": "graph_addition",
+      "subject": "Thompson-Okanagan Transit Ltd.",
+      "operation": "add_wholly_owned_observation",
+      "recommendation": "Match or add the legal entity and attach the documented T.S. Holdings ownership checkpoint.",
+      "source_ids": [
+        "TR-S01"
+      ],
+      "claim_ids": [
+        "TR-O02"
+      ],
+      "values": {
+        "owner": "T. S. Holdings Ltd.",
+        "ownership_pct": 100,
+        "observed_on": "1978-03-31",
+        "event_kind": "ownership_observation"
+      },
+      "limits": "No incorporation or acquisition day is supplied. Thompson-Okanagan’s separate loan evidence remains a funding event. Keep Vancouver Island Transit distinct from Vancouver Island Transportation."
+    },
+    {
+      "id": "A07",
+      "review_questions": [
+        1
+      ],
+      "priority": "graph_addition",
+      "subject": "Vancouver Island Transit Ltd.",
+      "operation": "add_wholly_owned_observation",
+      "recommendation": "Match or add the legal entity and attach the documented T.S. Holdings ownership checkpoint.",
+      "source_ids": [
+        "TR-S01"
+      ],
+      "claim_ids": [
+        "TR-O03"
+      ],
+      "values": {
+        "owner": "T. S. Holdings Ltd.",
+        "ownership_pct": 100,
+        "observed_on": "1978-03-31",
+        "event_kind": "ownership_observation"
+      },
+      "limits": "No incorporation or acquisition day is supplied. Thompson-Okanagan’s separate loan evidence remains a funding event. Keep Vancouver Island Transit distinct from Vancouver Island Transportation."
+    },
+    {
+      "id": "A08",
+      "review_questions": [
+        1
+      ],
+      "priority": "qualified_addition",
+      "subject": "Five V I T Holdings transit interests",
+      "operation": "retain_percentage_and_unresolved_immediate_path",
+      "recommendation": "Preserve the five 98.5% group holdings without inventing five direct parent edges.",
+      "source_ids": [
+        "TR-S01"
+      ],
+      "claim_ids": [
+        "TR-O04",
+        "TR-O05",
+        "TR-O06",
+        "TR-O07",
+        "TR-O08"
+      ],
+      "values": {
+        "holder": "V I T Holdings Ltd.",
+        "ownership_pct": 98.5,
+        "observed_on": "1978-03-31",
+        "ownership_path": "direct or through a subsidiary; source wording",
+        "companies": [
+          "Vancouver Island Transportation Company Limited",
+          "Vancouver Island Coach Lines Limited",
+          "Gray Line & Empress Taxi & Sightseeing Company Limited",
+          "Imperial Charter Service Company Limited",
+          "British Columbia Parlour Car Tours Limited"
+        ]
+      },
+      "limits": "F221 note 1(d) separately names Vancouver Island Transportation as a V I T subsidiary. Remaining immediate paths and lifecycles are unresolved; these are not 100% holdings."
+    },
+    {
+      "id": "A09",
+      "review_questions": [
+        2
+      ],
+      "priority": "correction",
+      "subject": "Statistics Canada 1984 / 1985 appendices",
+      "operation": "retain_snapshot_dates_correct_page",
+      "recommendation": "Keep the later appendix as-of dates; distinguish financial year, publication date and roster date.",
+      "source_ids": [
+        "S84",
+        "S85"
+      ],
+      "claim_ids": [
+        "SC05",
+        "SC06"
+      ],
+      "values": {
+        "1984_volume": {
+          "published": "1987-05",
+          "snapshot": "1986-12-31",
+          "bc_printed_pages": [
+            143,
+            144
+          ],
+          "bc_pdf_pages_one_based": [
+            145,
+            146
+          ]
+        },
+        "1985_volume": {
+          "published": "1988-06",
+          "snapshot": "1987-12-31",
+          "bc_printed_page": 103,
+          "bc_pdf_page_one_based": 105
+        }
+      },
+      "limits": "Printed 102 in the 1985 volume is not the BC roster page."
+    },
+    {
+      "id": "A10",
+      "review_questions": [
+        2
+      ],
+      "priority": "qualified_addition",
+      "subject": "Peace Power Constructors Ltd.",
+      "operation": "add_reported_ownership_observations",
+      "recommendation": "The date contradiction is resolved; use two reported roster observations under BC Hydro.",
+      "source_ids": [
+        "S84",
+        "S85"
+      ],
+      "claim_ids": [
+        "SC07"
+      ],
+      "values": {
+        "owner": "British Columbia Hydro and Power Authority",
+        "observed_on": [
+          "1986-12-31",
+          "1987-12-31"
+        ],
+        "roster_level": "02"
+      },
+      "limits": "The roster observations do not establish incorporation, exact ownership percentage, continuous ownership or active status. Apply the repository’s existing inactive/nominee policy separately."
+    },
+    {
+      "id": "A11",
+      "review_questions": [
+        2
+      ],
+      "priority": "qualified_addition",
+      "subject": "Techwest / Duke Point / Discovery records",
+      "operation": "preserve_source_dates_qualify_hierarchy",
+      "recommendation": "Release the date-only hold, retain the raw printed rows, and require separate evidence before resolving ambiguous corporate identities or immediate parentage.",
+      "source_ids": [
+        "S84",
+        "S85",
+        "S81Q1"
+      ],
+      "claim_ids": [
+        "SC05",
+        "SC06",
+        "SC09",
+        "SC10"
+      ],
+      "values": {
+        "earlier_reference_period": "1981-Q1",
+        "earlier_names": [
+          "Duke Point Terminals Ltd.",
+          "Discovery Park Industries Ltd."
+        ]
+      },
+      "limits": "Discovery special-fund headings and the Ocean Falls/First Capital/Duke Point page-break hierarchy are not sufficient for unqualified legal parent edges."
+    },
+    {
+      "id": "A12",
+      "review_questions": [
+        2,
+        5
+      ],
+      "priority": "identity_correction",
+      "subject": "Fisher Developments Ltd. / HCBC Construction Ltd.",
+      "operation": "merge_alias_into_existing_legal_entity",
+      "recommendation": "Use the existing Fisher record for HCBC; do not add HCBC as another company.",
+      "source_ids": [
+        "ID-S02",
+        "ID-S04"
+      ],
+      "claim_ids": [
+        "ID-C07"
+      ],
+      "values": {
+        "registry_number_as_printed": "71787",
+        "former_name": "Fisher Developments Ltd.",
+        "new_name": "HCBC Construction Ltd.",
+        "rename_effective": "1976-11-26"
+      }
+    },
+    {
+      "id": "A13",
+      "review_questions": [
+        5
+      ],
+      "priority": "identity_correction",
+      "subject": "The two Dunhill companies",
+      "operation": "keep_separate_registry_identities_and_correct_suffix",
+      "recommendation": "Keep parent no.73385 separate from subsidiary no.91003; correct exact legal names.",
+      "source_ids": [
+        "ID-S01",
+        "ID-S02",
+        "ID-S04"
+      ],
+      "claim_ids": [
+        "ID-C05",
+        "ID-C06"
+      ],
+      "values": {
+        "parent": {
+          "registry_number": "73385",
+          "former_name": "Dunhill Development Corporation Ltd.",
+          "new_name": "Housing Corporation of British Columbia",
+          "rename_effective": "1976-11-18",
+          "private_incorporation": "1967-03-17"
+        },
+        "subsidiary": {
+          "registry_number": "91003",
+          "former_name": "W.K.P. Construction Ltd.",
+          "new_name": "Dunhill Development Corporation",
+          "rename_effective": "1976-11-26",
+          "private_incorporation": "1969-12-19"
+        }
+      },
+      "limits": "The later Dunhill has no Ltd. in the Gazette notice; private incorporation must not backdate public acquisition."
+    },
+    {
+      "id": "A14",
+      "review_questions": [
+        2,
+        5
+      ],
+      "priority": "ownership_correction",
+      "subject": "W.K.P./Dunhill and Fisher/HCBC",
+      "operation": "replace_blanket_unknown_parent_with_observations",
+      "recommendation": "Attach the direct audited ownership checkpoints to the existing legal entities, followed by separately typed federal roster observations.",
+      "source_ids": [
+        "ID-S03",
+        "ID-S04",
+        "ID-S05",
+        "ID-S06",
+        "ID-S07",
+        "S84",
+        "S85"
+      ],
+      "claim_ids": [
+        "ID-C08",
+        "ID-C09",
+        "ID-C10",
+        "ID-C11",
+        "ID-C12",
+        "SC08"
+      ],
+      "values": {
+        "parent_registry_number": "73385",
+        "child_registry_numbers": [
+          "91003",
+          "71787"
+        ],
+        "audited_wholly_owned_dates": [
+          "1975-10-31",
+          "1976-10-31",
+          "1977-10-31",
+          "1978-10-31",
+          "1984-10-31"
+        ],
+        "reported_roster_dates": [
+          "1986-12-31",
+          "1987-12-31"
+        ]
+      },
+      "limits": "1976 statements use later names and disclose renames after their year-end. Preserve name-effective dates; do not infer continuous ownership through every unobserved date."
+    },
+    {
+      "id": "A15",
+      "review_questions": [
+        5
+      ],
+      "priority": "event_addition",
+      "subject": "Crown Lumber Limited",
+      "operation": "add_share_sale",
+      "recommendation": "Record the sale at book value.",
+      "source_ids": [
+        "ID-S05",
+        "ID-S04"
+      ],
+      "claim_ids": [
+        "ID-C16"
+      ],
+      "values": {
+        "event_date": "1976-11-01",
+        "event_kind": "share_sale",
+        "sale_price": null
+      }
+    },
+    {
+      "id": "A16",
+      "review_questions": [
+        5
+      ],
+      "priority": "event_addition",
+      "subject": "Dunhill Homes / Dunhill Holdings / Georgia Park Holdings",
+      "operation": "add_year_precision_windups",
+      "recommendation": "Record the three windups during 1976.",
+      "source_ids": [
+        "ID-S04"
+      ],
+      "claim_ids": [
+        "ID-C13",
+        "ID-C14",
+        "ID-C15"
+      ],
+      "values": {
+        "event_year": 1976,
+        "date_precision": "year"
+      },
+      "limits": "Do not convert a winding-up report to an exact legal dissolution day."
+    },
+    {
+      "id": "A17",
+      "review_questions": [
+        1,
+        5
+      ],
+      "priority": "event_addition",
+      "subject": "Housing Corporation of British Columbia",
+      "operation": "record_wind_down_directive",
+      "recommendation": "Distinguish the ministry directive from later sales and legal dissolution.",
+      "source_ids": [
+        "ID-S06",
+        "ID-S07"
+      ],
+      "claim_ids": [
+        "ID-C17"
+      ],
+      "values": {
+        "directive_date": "1978-09-29",
+        "event_kind": "wind_down_directive"
+      }
+    },
+    {
+      "id": "A18",
+      "review_questions": [
+        5
+      ],
+      "priority": "corroboration",
+      "subject": "Dunhill Development Corporation, no.91003",
+      "operation": "retain_legal_dissolution_with_registry_identifier",
+      "recommendation": "Use the Gazette’s legal dissolution date for the renamed W.K.P. entity.",
+      "source_ids": [
+        "ID-S09"
+      ],
+      "claim_ids": [
+        "ID-C23"
+      ],
+      "values": {
+        "registry_number": "91003",
+        "dissolved": "1989-06-12",
+        "notice_published": "1989-06-22"
+      },
+      "limits": "Does not by itself prove its parent held it continuously until dissolution."
+    },
+    {
+      "id": "A19",
+      "review_questions": [
+        3
+      ],
+      "priority": "name_correction",
+      "subject": "Panco / Surrey Investments / Food Exhibitions",
+      "operation": "record_name_continuity_without_inventing_rename_days",
+      "recommendation": "Use one legal identity and the two audited formerly clauses; retain exact rename dates as unresolved.",
+      "source_ids": [
+        "ID-S06",
+        "ID-S07",
+        "ID-S08"
+      ],
+      "claim_ids": [],
+      "values": {
+        "names": [
+          "Panco Poultry Ltd.",
+          "Surrey Farm Products Investments Ltd.",
+          "British Columbia Food Exhibitions Ltd."
+        ],
+        "surrey_statement_date": "1979-03-31",
+        "surrey_audit_date": "1979-10-23",
+        "food_statement_date": "1985-03-31",
+        "food_audit_date": "1985-06-17",
+        "exact_rename_dates": [
+          null,
+          null
+        ],
+        "registry_number_at_1992_dissolution": "63265"
+      },
+      "limits": "Name history is in legal_identity_chains in identity_findings.json. Statement and audit dates are evidence dates, not legal rename days; a full Registry historical profile was not obtained."
+    },
+    {
+      "id": "A20",
+      "review_questions": [
+        3
+      ],
+      "priority": "financial_correction",
+      "subject": "Panco / Surrey asset sale and dividend",
+      "operation": "separate_asset_sale_from_shareholder_distribution",
+      "recommendation": "Correct the description of the CAD14.8m figure; preserve gross/net sale proceeds separately.",
+      "source_ids": [
+        "ID-S06",
+        "ID-S11"
+      ],
+      "claim_ids": [
+        "ID-C02",
+        "ID-C03"
+      ],
+      "values": {
+        "asset_sale_date": "1979-01-29",
+        "currency": "CAD",
+        "gross_proceeds": 12076253,
+        "disbursements_and_adjustments": 351593,
+        "net_proceeds": 11724660,
+        "net_book_cost": 2714030,
+        "gain": 9010630,
+        "dividend_date": "1979-05-04",
+        "dividend_amount": 14800000
+      },
+      "limits": "The detailed note does not identify a separate company named Surrey Farm Products Ltd. as purchaser."
+    },
+    {
+      "id": "A21",
+      "review_questions": [
+        3
+      ],
+      "priority": "identity_review",
+      "subject": "Surrey Farm Products Ltd.",
+      "operation": "preserve_as_printed_label_do_not_invent_buyer",
+      "recommendation": "Reconcile the short receipt label with the full-name company through the former-Panco and dividend notes.",
+      "source_ids": [
+        "ID-S10",
+        "ID-S06"
+      ],
+      "claim_ids": [
+        "ID-C04"
+      ],
+      "values": {
+        "classification": "source label; reasoned identity reconciliation"
+      },
+      "limits": "This does not assert that no unrelated company ever used the short name. A separate-company claim needs its own identifier."
+    },
+    {
+      "id": "A22",
+      "review_questions": [
+        3
+      ],
+      "priority": "identity_correction",
+      "subject": "Pacific Hatchery / Surrey Farm Products Hatchery",
+      "operation": "record_formerly_link",
+      "recommendation": "Retain the explicit later-name continuity within the existing subsidiary candidate.",
+      "source_ids": [
+        "ID-S06"
+      ],
+      "claim_ids": [
+        "ID-C19"
+      ],
+      "values": {
+        "former_name": "Pacific Hatchery Ltd.",
+        "later_name": "Surrey Farm Products Hatchery Ltd.",
+        "rename_date": null
+      },
+      "limits": "Do not automatically merge the earlier Pacific Hatching spelling without further identity evidence."
+    },
+    {
+      "id": "A23",
+      "review_questions": [
+        3
+      ],
+      "priority": "event_addition",
+      "subject": "Surrey Farm Products Hatchery / Western Feed",
+      "operation": "record_fiscal_year_windups",
+      "recommendation": "Record windups during the year ended 31 March 1985.",
+      "source_ids": [
+        "ID-S07"
+      ],
+      "claim_ids": [
+        "ID-C20",
+        "ID-C21"
+      ],
+      "values": {
+        "period_start": "1984-04-01",
+        "period_end": "1985-03-31",
+        "date_precision": "fiscal_year",
+        "legal_dissolution_days": null
+      },
+      "limits": "Match Western Feed Co. Ltd. to the earlier Western Feeds roster spelling only with an explicit identity note."
+    },
+    {
+      "id": "A24",
+      "review_questions": [
+        3
+      ],
+      "priority": "event_addition",
+      "subject": "British Columbia Food Exhibitions Ltd.",
+      "operation": "add_legal_dissolution",
+      "recommendation": "Add the verified legal end event under the later company name.",
+      "source_ids": [
+        "ID-S08"
+      ],
+      "claim_ids": [
+        "ID-C22"
+      ],
+      "values": {
+        "registry_number": "63265",
+        "dissolved": "1992-06-19",
+        "notice_published": "1992-07-09"
+      },
+      "limits": "Does not prove continuous provincial ownership through 1992."
+    },
+    {
+      "id": "A25",
+      "review_questions": [
+        4
+      ],
+      "priority": "event_precision",
+      "subject": "Pacific Coach Lines",
+      "operation": "retain_operational_start_and_cessation",
+      "recommendation": "Keep the exact dates with operational event meanings.",
+      "source_ids": [
+        "PC-S01",
+        "PC-S02",
+        "PC-S03"
+      ],
+      "claim_ids": [
+        "PC-C01",
+        "PC-C02",
+        "PC-C03",
+        "PC-C04"
+      ],
+      "values": {
+        "announced": "1978-09-05",
+        "operations_commenced": "1979-04-01",
+        "operations_ceased": "1984-03-31",
+        "legal_incorporation": null,
+        "legal_dissolution": null
+      },
+      "limits": "Later accounts still describe wind-down activity; cessation is not dissolution."
+    },
+    {
+      "id": "A26",
+      "review_questions": [
+        6
+      ],
+      "priority": "conditional_graph_addition",
+      "subject": "Swan Valley Foods Ltd.",
+      "operation": "represent_wholly_public_phase_with_bounded_start",
+      "recommendation": "Add the documented 100% public phase when the graph can represent uncertainty.",
+      "source_ids": [
+        "OWN-S02",
+        "OWN-S03"
+      ],
+      "claim_ids": [
+        "OWN-C01",
+        "OWN-C02"
+      ],
+      "values": {
+        "ownership_before_sale_pct": 100,
+        "full_ownership_start": {
+          "after": "1977-03-31",
+          "on_or_before": "1977-12-01"
+        },
+        "sale_date": "1977-12-01",
+        "buyer": "Standard Brands Limited",
+        "currency": "CAD",
+        "shares_and_debentures_price": 2200000
+      },
+      "limits": "Several months of 100% ownership is not established. If the renderer requires an exact interval, hold that interval and retain the evidence; do not invent a start."
+    },
+    {
+      "id": "A27",
+      "review_questions": [
+        7,
+        8
+      ],
+      "priority": "ownership_correction",
+      "subject": "Plateau Mills Ltd.",
+      "operation": "represent_combined_public_ownership",
+      "recommendation": "Add two explicit ownership interests and derive total public ownership from them.",
+      "source_ids": [
+        "OWN-S01",
+        "OWN-S04"
+      ],
+      "claim_ids": [
+        "OWN-C03",
+        "OWN-C07",
+        "OWN-C08"
+      ],
+      "values": {
+        "minority_interest_acquired": "1975-06-23",
+        "audited_observation_date": "1975-12-31",
+        "owners": [
+          {
+            "name": "Province of British Columbia",
+            "pct": 97.5
+          },
+          {
+            "name": "British Columbia Cellulose Company",
+            "pct": 2.5
+          }
+        ],
+        "ultimate_public_pct": 100
+      },
+      "limits": "100% ultimate ownership is an inference from the two holdings and whole Crown ownership of BC Cellulose. Do not label the Province’s direct share as 100%."
+    },
+    {
+      "id": "A28",
+      "review_questions": [
+        7
+      ],
+      "priority": "event_precision",
+      "subject": "Plateau Mills transfer to BCRIC",
+      "operation": "separate_approval_from_completion",
+      "recommendation": "Record the order/agreement date and the accounts’ completed-by evidence.",
+      "source_ids": [
+        "OWN-S02",
+        "OWN-S08"
+      ],
+      "claim_ids": [
+        "OWN-C04"
+      ],
+      "values": {
+        "agreement_approved": "1978-03-09",
+        "transfer_completed_by": "1978-03-31",
+        "shares_transferred": 9000,
+        "recipient": "British Columbia Resources Investment Corporation"
+      },
+      "limits": "Approval alone does not establish an execution day. Do not extend Crown status through BCRIC’s later privatization without evidence."
+    },
+    {
+      "id": "A29",
+      "review_questions": [
+        7
+      ],
+      "priority": "qualified_historical_lead",
+      "subject": "Plateau Mills 1973 majority interest",
+      "operation": "preserve_as_printed_percentage",
+      "recommendation": "Retain the earlier federal source as a separate historical observation.",
+      "source_ids": [
+        "OWN-S09"
+      ],
+      "claim_ids": [
+        "OWN-C05"
+      ],
+      "values": {
+        "percentage_as_printed": 97,
+        "bc_cellulose_acquisition_reported": "1973-06-26",
+        "transfer_to_province_reported": "1973-10-24",
+        "verification_level": "official text extraction; page image not inspected"
+      },
+      "limits": "Do not silently change 97% to 97.5% or infer full public ownership in 1973."
+    },
+    {
+      "id": "A30",
+      "review_questions": [
+        8
+      ],
+      "priority": "graph_addition",
+      "subject": "British Columbia Cellulose Company",
+      "operation": "add_distinct_crown_legal_entity",
+      "recommendation": "Add the missing holding company with separate incorporation, public ownership observation and statutory continuation events.",
+      "source_ids": [
+        "OWN-S01",
+        "OWN-S04"
+      ],
+      "claim_ids": [
+        "OWN-C06",
+        "OWN-C07",
+        "OWN-C08"
+      ],
+      "values": {
+        "initial_name": "British Columbia Cellulose Limited",
+        "incorporated": "1973-03-15",
+        "wholly_crown_owned_observed": "1973-04-02",
+        "statutory_name": "British Columbia Cellulose Company",
+        "statutory_continuation": "1973-04-18"
+      },
+      "limits": "Do not merge with Canadian Cellulose or Columbia Cellulose. Its 79% holding in Canadian Cellulose is a different ownership relation."
+    },
+    {
+      "id": "A31",
+      "review_questions": [
+        8,
+        2
+      ],
+      "priority": "date_conflict",
+      "subject": "British Columbia Cellulose Company",
+      "operation": "use_year_endpoint_preserve_conflicting_days",
+      "recommendation": "Use a 1986 endpoint until the original commencement regulation resolves the day boundary.",
+      "source_ids": [
+        "OWN-S05",
+        "OWN-S06",
+        "OWN-S07",
+        "S84"
+      ],
+      "claim_ids": [
+        "OWN-C09",
+        "SC10"
+      ],
+      "values": {
+        "end_year": 1986,
+        "date_precision": "year",
+        "repeal_assent": "1983-09-23",
+        "statute_table_repeal": "1986-03-31",
+        "accounts_dissolution": "1986-04-01"
+      },
+      "limits": "The repeal statute ties dissolution to repeal. Preserve both conflicting day assertions; neither 1983 assent nor stale 31 December 1986 roster inclusion establishes a different legal lifespan."
+    },
+    {
+      "id": "A32",
+      "review_questions": [
+        9
+      ],
+      "priority": "date_correction",
+      "subject": "Crown Development Corporation",
+      "operation": "replace_first_seen_with_incorporation",
+      "recommendation": "Use the company’s own incorporation note rather than 1977 first-seen evidence.",
+      "source_ids": [
+        "OWN-S01"
+      ],
+      "claim_ids": [
+        "OWN-C10"
+      ],
+      "values": {
+        "incorporated": "1975-08-26",
+        "source_locator": "Public Accounts 1975/76 F99 / PDF 485",
+        "capital_held_by": "Attorney-General for the Crown"
+      },
+      "limits": "F84–F85 provide related-company context, not the decisive incorporation note."
+    },
+    {
+      "id": "A33",
+      "review_questions": [
+        9
+      ],
+      "priority": "event_precision",
+      "subject": "Crown Development Corporation",
+      "operation": "retain_windup_bound",
+      "recommendation": "Keep the accounts’ wound-up-by evidence.",
+      "source_ids": [
+        "OWN-S02"
+      ],
+      "claim_ids": [
+        "OWN-C12"
+      ],
+      "values": {
+        "wound_up_by": "1978-03-31",
+        "legal_dissolution": null
+      },
+      "limits": "Do not convert the reporting-year endpoint into an exact legal dissolution day."
+    }
+  ]
+}

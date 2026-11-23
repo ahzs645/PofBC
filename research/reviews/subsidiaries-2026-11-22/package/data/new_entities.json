@@ -1,0 +1,123 @@
+[
+  {
+    "name": "T.S. Holdings Limited",
+    "id": "candidate-ts-holdings",
+    "public_role": "direct_provincial_holding_company",
+    "parent": "Province of British Columbia",
+    "relationship": "direct provincial shareholding, one common share recorded",
+    "observation_date": "1980-03-31",
+    "exact_company_number": null,
+    "confidence": "confirmed_observation",
+    "source_ids": [
+      "SRC02",
+      "SRC06",
+      "SRC08",
+      "SRC19"
+    ],
+    "notes": "Bus-operator shareholding structure recorded in Statistics Canada 1975; exact operating subsidiaries require audited report. 1975 is source establishment year only."
+  },
+  {
+    "name": "Vancouver Island Transit Ltd.",
+    "id": "candidate-vancouver-island-transit",
+    "public_role": "consolidated_subsidiary_parent_unresolved",
+    "parent": null,
+    "relationship": "listed as subsidiary consolidated in government-enterprise employment report",
+    "observation_date": null,
+    "exact_company_number": null,
+    "confidence": "confirmed_company_role_parent_unverified",
+    "source_ids": [
+      "SRC07"
+    ],
+    "notes": "Do not conflate with Vancouver Island Coach Lines or assume T.S. Holdings parent without financial statement."
+  },
+  {
+    "name": "Thompson-Okanagan Transit Ltd.",
+    "id": "candidate-thompson-okanagan-transit",
+    "public_role": "provincially_financed_company_control_unverified",
+    "parent": null,
+    "relationship": "$50,000 government advance in 1979/80; ownership not demonstrated",
+    "observation_date": "1980-03-31",
+    "exact_company_number": null,
+    "confidence": "confirmed_financial_relationship_only",
+    "source_ids": [
+      "SRC02"
+    ],
+    "notes": "Should not be drawn as government-owned subsidiary on this evidence alone; hold pending company registry/shareholder schedule."
+  },
+  {
+    "name": "Swan Valley Foods Ltd.",
+    "id": "candidate-swan-valley-foods",
+    "public_role": "provincial_equity_investee_later_disposed",
+    "parent": "Province of British Columbia (historic shareholding)",
+    "relationship": "40% reported for earlier snapshot; all shares sold to Standard Brands 1977-12-01 after additional share acquisition",
+    "observation_date": "1977-12-01",
+    "exact_company_number": "federal 026524-1 (continuance 1978-01-06)",
+    "confidence": "confirmed_event_with_evolving_ownership",
+    "source_ids": [
+      "SRC01",
+      "SRC03",
+      "SRC04",
+      "SRC05"
+    ],
+    "notes": "Do not classify whole history as wholly owned Crown. BC government previously held 40%, then disposed of all its shares on 1977-12-01; buyer says purchased 100% outstanding. Later federal continuance and amalgamation, no legal renaming to Creston Valley Foods."
+  },
+  {
+    "name": "Crown Development Corporation",
+    "id": "candidate-crown-development-corporation",
+    "public_role": "historical_provincial_investment_wound_up",
+    "parent": "Province of British Columbia",
+    "relationship": "shares written off on winding-up",
+    "observation_date": "1978-03-31",
+    "exact_company_number": null,
+    "confidence": "confirmed_financial_accounting_observation",
+    "source_ids": [
+      "SRC01"
+    ],
+    "notes": "Printed 1977/78 Public Accounts B8 says corporation wound up and $1,000 shares written off. Does not give an exact dissolution date."
+  },
+  {
+    "name": "Chef Ready Foods Ltd.",
+    "id": "candidate-chef-ready-foods",
+    "public_role": "minority_equity_investee",
+    "parent": "Province of British Columbia (historic minority shareholder)",
+    "relationship": "33.33% interest in 10,000 common shares (1979 comparison); accounting provision in 1979/80",
+    "observation_date": "1979-03-31",
+    "exact_company_number": null,
+    "confidence": "confirmed_minor_equity_observation",
+    "source_ids": [
+      "SRC01",
+      "SRC02"
+    ],
+    "notes": "1980 zero book value is net of provision for doubtful recoveries, NOT proof shares were disposed or company dissolved."
+  },
+  {
+    "name": "Kootenay Dehydrators Ltd.",
+    "id": "candidate-kootenay-dehydrators",
+    "public_role": "multi_class_equity_investee",
+    "parent": "Province of British Columbia (historic equity holder)",
+    "relationship": "1977/78 says 33.33% interest; 1979/80 B5 says 35.9% of 2,000 Class A shares plus all issued 98,000 Class B shares",
+    "observation_date": "1980-03-31",
+    "exact_company_number": null,
+    "confidence": "confirmed_complex_equity_observation",
+    "source_ids": [
+      "SRC01",
+      "SRC02"
+    ],
+    "notes": "Ownership percentage discrepancy between report years; class B stock owned in entirety does not establish voting control or overall percentage."
+  },
+  {
+    "name": "South Peace Dehy-Products Ltd.",
+    "id": "candidate-south-peace-dehy-products",
+    "public_role": "minority_equity_investee",
+    "parent": "Province of British Columbia (historic minority shareholder)",
+    "relationship": "27.7% interest; 277 non-voting common and 277 voting preferred shares",
+    "observation_date": "1979-03-31",
+    "exact_company_number": null,
+    "confidence": "confirmed_minor_equity_observation",
+    "source_ids": [
+      "SRC01",
+      "SRC02"
+    ],
+    "notes": "1980 book-value reduction recorded as provision; no disposition/dissolution demonstrated."
+  }
+]
