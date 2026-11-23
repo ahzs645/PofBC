@@ -20,7 +20,11 @@ export const SIGN_SERIES = [
     id: 'parks',
     title: 'Provincial Parks Branch',
     kind: 'Proposed park symbols',
-    signs: ['proposed-park-symbols']
+    signs: ['proposed-park-symbols'],
+    // A sheet of proposals from an annual report, not a sign that stood: it is shown under BC
+    // Parks in the Visual Guides (src/guides/guides.js), and its page here, each symbol with its
+    // history, is reached from there by its address.
+    unlisted: true
   }
 ]
 

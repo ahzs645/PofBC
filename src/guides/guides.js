@@ -13,11 +13,43 @@ const LINKS = {
   ],
   'bc-hydro': [
     { label: 'BC Hydro’s marks, in the Logos gallery', to: { view: 'gallery', logos: 'bc-hydro' } }
+  ],
+  'bc-parks': [
+    { label: 'Each symbol, with its history', to: { view: 'signs', sign: 'proposed-park-symbols' } },
+    { label: 'BC Parks’ marks, in the Logos gallery', to: { view: 'gallery', logos: 'bc-parks' } }
   ]
 }
 
-export const GUIDE_BOOKS = BC_BOOKS
-export const GUIDE_FAMILIES = BC_FAMILIES.map((family) => ({ ...family, links: LINKS[family.id] ?? [] }))
+/**
+ * Guides this site draws itself, beside brandkit's manuals: a page names its drawing (`art`, a
+ * path under src/), which GuidesView turns into the page's image.
+ */
+export const SITE_BOOKS = [
+  {
+    id: 'park-symbols-1971',
+    title: 'Proposed park symbols',
+    edition: '1971',
+    pages: [{
+      id: 'DD67',
+      title: 'Proposed park symbols',
+      printed: 'DD67',
+      width: 1000,
+      height: 1500,
+      art: 'signs/parks/proposed-park-symbols.svg',
+      notes: [
+        'Twenty-two pictograms for park facilities and activities, printed on a page of the Department of Recreation and Conservation’s annual report for 1971 (printed 1972, PDF page 68). They are proposals: the report does not say who drew them, whether they were approved, or where any went up.',
+        'Each symbol is rebuilt from circles, polygons, strokes and curves, with no tracing, in black as a working master; the report’s ink is not a specification.'
+      ]
+    }]
+  }
+]
+
+const SITE_FAMILIES = [
+  { id: 'bc-parks', title: 'BC Parks', kind: 'Proposed park symbols, 1971', books: ['park-symbols-1971'] }
+]
+
+export const GUIDE_BOOKS = [...BC_BOOKS, ...SITE_BOOKS]
+export const GUIDE_FAMILIES = [...BC_FAMILIES, ...SITE_FAMILIES].map((family) => ({ ...family, links: LINKS[family.id] ?? [] }))
 export const GUIDE_FOOTNOTE = BC_FOOTNOTE
 export const GUIDE_LINKS = LINKS
 

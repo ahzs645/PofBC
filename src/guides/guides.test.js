@@ -4,13 +4,13 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { existsSync, readFileSync } from 'node:fs'
-import { GUIDE_BOOKS, GUIDE_FAMILIES, GUIDE_LINKS, familyOf, pageUrl } from './guides.js'
+import { GUIDE_BOOKS, GUIDE_FAMILIES, GUIDE_LINKS, SITE_BOOKS, familyOf, pageUrl } from './guides.js'
 
 // The menu's views, read from its source: Node's test runner cannot load a .jsx module.
 const VIEWS = [...readFileSync(new URL('../site/ViewSwitcher.jsx', import.meta.url), 'utf8').matchAll(/\{ id: '([\w-]+)', label:/g)].map(([, id]) => ({ id }))
 
 test('the BC pack is checked out, with every page the books list', () => {
-  const pages = GUIDE_BOOKS.flatMap((book) => book.pages.map((page) => ({ book, page })))
+  const pages = GUIDE_BOOKS.filter((book) => !SITE_BOOKS.includes(book)).flatMap((book) => book.pages.map((page) => ({ book, page })))
   assert.equal(pages.length, 156)
   for (const { book, page } of pages) {
     assert.ok(existsSync(new URL(`../../vendor/brandkit/manuals/bc/pages/${book.id}/${page.id}.svg`, import.meta.url)), `${page.id}.svg`)
@@ -36,4 +36,16 @@ test('links go to views that exist, and read without em dashes', () => {
 test('pages are addressed where the site serves them', () => {
   assert.equal(pageUrl('/PofBC/', 'sign', 'S05'), '/PofBC/visual-guides/sign/S05.svg')
   assert.equal(pageUrl('/', 'sign', 'S05', 'webp'), '/visual-guides/sign/S05.webp')
+})
+
+test('the site’s own guide pages are drawings it has, the size the page says, each imported by the view', () => {
+  const view = readFileSync(new URL('./GuidesView.jsx', import.meta.url), 'utf8')
+  for (const book of SITE_BOOKS) {
+    for (const page of book.pages) {
+      assert.ok(view.includes(`'${page.art}':`), `GuidesView does not import ${page.art}`)
+      const svg = readFileSync(new URL(`../${page.art}`, import.meta.url), 'utf8')
+      const [, , width, height] = /viewBox="([^"]+)"/.exec(svg)[1].split(/[\s,]+/).map(Number)
+      assert.deepEqual([width, height], [page.width, page.height], page.art)
+    }
+  }
 })
