@@ -311,14 +311,17 @@ const Artwork = ({ items }) => {
 
 const Detail = ({ holder, onBack, titleRef }) => (
   <article className="arms__detail" aria-labelledby="arms-holder-name">
-    {/* The header already names the view: an arrow back, not "← Coats of Arms" again. */}
-    <button type="button" className="icon-back arms__back-icon" aria-label="Back to Coats of Arms" title="Back to Coats of Arms" onClick={onBack}>
-      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3.5M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>
-    </button>
     <header className="arms__header">
       <div className="arms__art arms__art--large"><HolderImage holder={holder} label={`Arms of ${holder.name}`} /></div>
       <div className="arms__header-text">
-        <h2 id="arms-holder-name" ref={titleRef} tabIndex={-1}>{holder.name}</h2>
+        {/* The site's header already names the view, so the way back is an arrow on the title's
+            line rather than "← Coats of Arms" on a line of its own above the card. */}
+        <div className="arms__title-row">
+          <button type="button" className="icon-back" aria-label="Back to Coats of Arms" title="Back to Coats of Arms" onClick={onBack}>
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3.5M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          </button>
+          <h2 id="arms-holder-name" ref={titleRef} tabIndex={-1}>{holder.name}</h2>
+        </div>
         {holder.motto?.text && (
           <p className="arms__motto">
             <em>{holder.motto.text}</em>

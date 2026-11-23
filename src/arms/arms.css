@@ -65,7 +65,8 @@
 .arms__card-meta { color: var(--ink-muted); font-size: 13px; }
 
 .arms__detail { display: grid; gap: var(--gap); min-width: 0; }
-.arms__back-icon { justify-self: start; }
+.arms__title-row { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.arms__title-row h2 { min-width: 0; }
 .arms__header {
   display: grid;
   grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
@@ -149,6 +150,10 @@
 
 @media (max-width: 640px) {
   .arms__header { grid-template-columns: minmax(0, 1fr); padding: 16px; }
+  /* Stacked, the arms come first and would push the title, and its way back, below them: the
+     title's line leads instead. */
+  .arms__header-text { display: contents; }
+  .arms__title-row { order: -1; }
   .arms__art--large { width: min(70%, 220px); justify-self: center; }
   .arms__card--feature .arms__open { grid-template-columns: 96px minmax(0, 1fr); padding: 16px; gap: 16px; }
   .arms__section { padding: 16px; }
