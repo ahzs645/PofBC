@@ -1232,9 +1232,17 @@ input.share__url {
   border-radius: 12px; background: var(--surface, var(--card, #fff)); color: inherit; font: inherit; font-size: 15px;
 }
 .gallery__search input:focus { outline: 2px solid var(--accent, #2563eb); outline-offset: 1px; }
-/* The right padding is room for the ⌘K hint, which goes once there is a query; the browser's own
-   clear button then sits inside the padding, so without this it stood 64px in from the edge. */
-.gallery__search input:not(:placeholder-shown) { padding-right: 12px; }
+/* The browser's own clear button is drawn in its accent blue (Chrome) or not at all (Firefox): the
+   site draws its own in the page's ink, in the place the ⌘K hint holds before there is a query. */
+.gallery__search input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; display: none; }
+.gallery__search input:not(:placeholder-shown) { padding-right: 48px; }
+.gallery__search-clear {
+  position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+  display: grid; place-items: center; width: 32px; height: 32px; padding: 0;
+  border: 0; border-radius: 8px; background: transparent; color: var(--ink-muted); cursor: pointer;
+}
+.gallery__search-clear:hover { background: var(--hover); color: var(--ink); }
+.gallery__search-clear:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
 .gallery__search-key {
   position: absolute; right: 12px; top: 50%; transform: translateY(-50%); padding: 2px 7px;
   border: 1px solid var(--border); border-radius: 6px; font: 12px/1.4 inherit; color: var(--ink-muted); pointer-events: none;

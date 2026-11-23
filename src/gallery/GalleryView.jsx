@@ -756,7 +756,18 @@ const GallerySearch = ({ query, onChange, inputRef }) => (
         if (event.key === 'Escape' && query) { event.preventDefault(); onChange('') }
       }}
     />
-    {!query && <kbd className="gallery__search-key" aria-hidden="true">{IS_MAC ? '⌘K' : 'Ctrl K'}</kbd>}
+    {query
+      ? (
+        <button
+          type="button"
+          className="gallery__search-clear"
+          aria-label="Clear the search"
+          onClick={() => { onChange(''); inputRef?.current?.focus() }}
+        >
+          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3.5 3.5l7 7m0-7l-7 7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>
+        </button>
+        )
+      : <kbd className="gallery__search-key" aria-hidden="true">{IS_MAC ? '⌘K' : 'Ctrl K'}</kbd>}
   </div>
 )
 
