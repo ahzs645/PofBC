@@ -542,6 +542,11 @@ textarea::placeholder { color: var(--ink-faint); }
 .info-dialog__body p { margin: 0; color: var(--ink-muted); line-height: 1.5; }
 .info-dialog__body .button { justify-self: end; margin-top: 4px; }
 
+/* A heading that takes two lines splits them evenly, so a name ends on a phrase ("Province of /
+   British Columbia"), not a lone last word ("Province of British / Columbia"). Browsers without
+   text-wrap: balance keep the ordinary wrap. */
+h1, h2, h3, .gallery__collection-title { text-wrap: balance; }
+
 /* ── Segmented control ─────────────────────────────────────────────────────────────────────── */
 
 /* A grey track with the chosen segment lifted out of it, as the government view's Graph | List. */
@@ -1277,7 +1282,21 @@ input.share__url {
 .gallery__shelf { display: grid; gap: 10px; }
 
 /* The gallery's search, above its shelves; the shortcut is shown only where there is a keyboard. */
-.gallery__search { position: relative; }
+/* The search stays at the top of the window as the shelves scroll under it, so a search is never
+   more than a tap away down a long page. A square of page colour behind it (not a ring, whose
+   rounded corners let the cards show through) keeps them from showing at its edges as they pass. */
+.gallery__search {
+  position: sticky;
+  top: 8px;
+  z-index: 5;
+}
+.gallery__search::before {
+  content: '';
+  position: absolute;
+  inset: -8px -8px -6px;
+  z-index: -1;
+  background: var(--page);
+}
 .gallery__search input {
   width: 100%; box-sizing: border-box; padding: 12px 64px 12px 16px; border: 1px solid var(--border);
   border-radius: 12px; background: var(--surface, var(--card, #fff)); color: inherit; font: inherit; font-size: 15px;
@@ -1298,9 +1317,12 @@ input.share__url {
   position: absolute; right: 12px; top: 50%; transform: translateY(-50%); padding: 2px 7px;
   border: 1px solid var(--border); border-radius: 6px; font: 12px/1.4 inherit; color: var(--ink-muted); pointer-events: none;
 }
-@media (hover: none), (pointer: coarse) { .gallery__search-key { display: none; } }
+/* No keyboard shortcut to show on a touch screen, nor room for one beside the placeholder on a narrow one. */
+@media (hover: none), (pointer: coarse), (max-width: 639px) { .gallery__search-key { display: none; } }
 .gallery__search-none { margin: 4px; }
-.gallery__shelf-title { margin: 8px 4px 0; font-size: 14px; font-weight: 600; color: var(--ink-muted); }
+/* The page's own gap is the only space above a shelf's title, as between any two of its blocks:
+   a margin here (and the register's own, above it) made the first one stand 42px off. */
+.gallery__shelf-title { margin: 0 4px; font-size: 14px; font-weight: 600; color: var(--ink-muted); }
 .gallery__group { display: grid; gap: 8px; margin-top: 6px; }
 .gallery__group-title { margin: 6px 4px 0; font-size: 15px; font-weight: 600; }
 .gallery__group-link { padding: 0; border: 0; background: none; color: var(--ink); font: inherit; cursor: pointer; }
