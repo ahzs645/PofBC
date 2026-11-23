@@ -5,6 +5,7 @@ import mountainBase from '../../vendor/forestoval/shared-primitives/bc-ministry-
 import { FOREST_LOGOS, variantsFor } from './forestLogos.js'
 import { SiteLink } from '../site/navigation.jsx'
 import { objectsForLogo } from '../posters/connections.js'
+import { Modal } from '../posters/ui/Modal.jsx'
 import './internal.css'
 
 // Forest Oval's single-colour recreation retains both mountain edges as lines.
@@ -213,8 +214,8 @@ const LogoSources = ({ logo }) => (logo.sources.length > 0 || logo.measurements?
   </details>
 )
 
-// The poster links ride with the history on the family's cards; a logo's own page gives them a
-// section of their own, so its history leaves them out.
+// A logo's own page gives its poster links a section of their own, so its history leaves them
+// out (posters={false}); the links are drawn here only for a caller that wants them inline.
 const LogoComments = ({ logo, posters = true }) => (
   <>
     {logo.comments.map((comment) => <p key={comment}>{comment}</p>)}
@@ -236,31 +237,59 @@ const LogoComments = ({ logo, posters = true }) => (
   </>
 )
 
-// On a logo's own page its history is shown whole; on the family's page, each card carries only
-// what dates it, with the comments and sources folded beneath.
-const LogoHistory = ({ logo, folded = false }) => folded
-  ? (
-    <>
+// A logo's history, dating and sources are on its own page; the family's cards carry the picture,
+// the name and a line about the design.
+const LogoHistory = ({ logo }) => (
+  <>
+    <div className="internal-logos__comments" aria-label={`${logo.name} historical comments`}>
+      <h4>History &amp; comments</h4>
       <p className="internal-logos__evidence">{logo.evidence}</p>
-      <details className="internal-logos__history">
-        <summary>History &amp; comments</summary>
-        <div className="internal-logos__comments" aria-label={`${logo.name} historical comments`}>
-          <LogoComments logo={logo} />
-        </div>
-        <LogoSources logo={logo} />
-      </details>
-    </>
-    )
-  : (
+      <LogoComments logo={logo} posters={false} />
+    </div>
+    <LogoSources logo={logo} />
+  </>
+)
+
+/** What the whole family's artwork is, behind an information button rather than open under it. */
+const AboutForests = () => {
+  const [open, setOpen] = useState(false)
+  const titleId = useId()
+  return (
     <>
-      <div className="internal-logos__comments" aria-label={`${logo.name} historical comments`}>
-        <h4>History &amp; comments</h4>
-        <p className="internal-logos__evidence">{logo.evidence}</p>
-        <LogoComments logo={logo} posters={false} />
-      </div>
-      <LogoSources logo={logo} />
+      <button
+        type="button"
+        className="icon-info"
+        aria-haspopup="dialog"
+        aria-label="About these reconstructions"
+        title="About these reconstructions"
+        onClick={() => setOpen(true)}
+      >
+        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+          <circle cx="9" cy="9" r="7.6" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          <path d="M9 8v5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+          <circle cx="9" cy="5.3" r="1.05" fill="currentColor" />
+        </svg>
+      </button>
+      {open && (
+        <Modal
+          className="info-dialog"
+          aria-labelledby={titleId}
+          onDismiss={() => setOpen(false)}
+          // A click on the backdrop (the dialog element itself, outside its content) closes it.
+          onClick={(event) => { if (event.target === event.currentTarget) setOpen(false) }}
+        >
+          <div className="info-dialog__body">
+            <h2 id={titleId}>All are reconstructions</h2>
+            <p>Their order is not a verified sequence of adoption.</p>
+            <p>Three of the ovals are reconstructed in Forest Oval from supplied references; the Lands Department seal, the evergreen emblem and the yellow-sky and green-and-gold Forest Service ovals are separate vector reconstructions from supplied images. The designs are grouped by family; apart from the seal and the emblem coming before the ovals, their order does not imply a verified sequence of adoption.</p>
+            <p>Each design’s history, dating and sources are on its own page.</p>
+            <button type="button" className="button" data-initial-focus onClick={() => setOpen(false)}>Close</button>
+          </div>
+        </Modal>
+      )}
     </>
-    )
+  )
+}
 
 const VariantCard = ({ variant }) => (
   <article className="internal-logos__variant" aria-labelledby={`variant-${variant.id}`}>
@@ -361,6 +390,7 @@ export const InternalLogosView = () => {
               <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3.5M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </button>
             <h2 ref={title} tabIndex={-1}>Forests</h2>
+            <AboutForests />
           </div>
           <div className="internal-logos__designs">
             {FOREST_LOGOS.map((logo) => (
@@ -377,15 +407,10 @@ export const InternalLogosView = () => {
                     </button>
                   </h3>
                   <p className="internal-logos__description">{logo.description}</p>
-                  <LogoHistory logo={logo} folded />
                 </div>
               </article>
             ))}
           </div>
-          <details className="internal-logos__footnote">
-            <summary>All are reconstructions, and their order is not a verified sequence of adoption.</summary>
-            <p>Three of the ovals are reconstructed in Forest Oval from supplied references; the Lands Department seal, the evergreen emblem and the yellow-sky and green-and-gold Forest Service ovals are separate vector reconstructions from supplied images. The designs are grouped by family; apart from the seal and the emblem coming before the ovals, their order does not imply a verified sequence of adoption.</p>
-          </details>
         </>
       ) : (
         <>

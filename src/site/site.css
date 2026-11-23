@@ -510,6 +510,38 @@ textarea::placeholder { color: var(--ink-faint); }
 .icon-back:hover { background: var(--hover); }
 .icon-back:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
+/* An information button and the dialog it opens: notes about a whole page kept out of its way. */
+.icon-info {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--ink-muted);
+  cursor: pointer;
+}
+.icon-info:hover { background: var(--hover); color: var(--ink); }
+.icon-info:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.info-dialog {
+  width: min(520px, calc(100vw - 32px));
+  max-height: calc(100dvh - 48px);
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+.info-dialog::backdrop { background: rgba(20, 17, 14, 0.45); }
+.info-dialog__body { display: grid; gap: 12px; padding: 22px; }
+.info-dialog__body h2 { margin: 0; font-size: 18px; }
+.info-dialog__body p { margin: 0; color: var(--ink-muted); line-height: 1.5; }
+.info-dialog__body .button { justify-self: end; margin-top: 4px; }
+
 /* ── Segmented control ─────────────────────────────────────────────────────────────────────── */
 
 /* A grey track with the chosen segment lifted out of it, as the government view's Graph | List. */
