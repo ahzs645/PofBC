@@ -9,7 +9,6 @@ import {
   catalogueCards, filterCatalogue, groupCatalogueByTemplate,
   patchPlaceParams, patchPlaceUrl, plainLabel, readPatchPlace, sourcePhotoCount, splitLabel
 } from './patchCatalogue.js'
-import { isRetiredPatch, withoutRetiredPatches } from './retiredPatches.js'
 import './patches.css'
 import '../posters/shelfTools.css'
 import { Select } from '../site/ui/Select.jsx'
@@ -25,19 +24,13 @@ const COLLECTIONS = {
   badges: { view: 'badges', title: 'Badges', placeholder: 'Park Ranger, cap badge…', noun: 'badges', one: 'badge' }
 }
 
-/** A patch this site offers: a retired one is left unopened, as if it were not in the library. */
-const findOfferedPatch = (id) => {
-  const patch = findPatch(id)
-  return isRetiredPatch(patch) ? undefined : patch
-}
-
 const isPlainClick = (event) => event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey
 const countLabel = (count, noun) => `${count} ${noun}${count === 1 ? '' : 's'}`
 
 /** @param {{ collection?: 'patches' | 'badges' }} props */
 export const PatchesView = ({ collection = 'patches' }) => {
   const copy = COLLECTIONS[collection]
-  const sectors = useMemo(() => withoutRetiredPatches(orgsBySector(collection)), [collection])
+  const sectors = useMemo(() => orgsBySector(collection), [collection])
   const catalogue = useMemo(() => catalogueCards(sectors, { isCard, variantsOf, cardLabel, templateFamilyOf }), [sectors])
   const allCards = useMemo(() => filterCatalogue(catalogue), [catalogue])
   const familySections = useMemo(() => groupCatalogueByTemplate(allCards, TEMPLATE_FAMILIES), [allCards])
@@ -46,7 +39,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
     collection,
     orgIds: organizations.map(({ id }) => id),
     familyIds: familySections.map(({ family }) => family.id),
-    findPatch: findOfferedPatch
+    findPatch
   }), [collection, organizations, familySections])
   const [place, setPlace] = useState(read)
   const currentPlace = useRef(place)

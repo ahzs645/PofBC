@@ -683,8 +683,8 @@ loading and viewer, given a catalogue. A sign is added as a poster is: its drawi
 ## Patches
 
 **Patches** in the title menu (`?view=patches`) is the patch library of
-[Patcher](https://github.com/ahzs645/patcher), a git submodule at `vendor/patcher`. Its 126 cards cover
-154 patch designs and variants from the BC Forestry Patch Atlas, grouped by organization under sectors. The atlas
+[Patcher](https://github.com/ahzs645/patcher), a git submodule at `vendor/patcher`. Its 125 cards cover
+149 patch designs and variants from the BC Forestry Patch Atlas, grouped by organization under sectors. The atlas
 lists a design once per photograph it appears in; Patcher merges those into one patch (the Parks scenic
 arch, seen in five photographs, is one card), and the viewer links every photograph. Some designs use a better drawing supplied to Patcher in
 place of the atlas's (the Parks Branch elk roundel, the Recreation and Conservation arch, the scenic
@@ -699,10 +699,11 @@ wildlife ovals, and the green-and-gold oval), each with a variant switch for its
 colourways and its Wildfire Management, Wildfire Service, Fire Control, Airtanker and Ministry of Forests
 editions. Patcher's `supplied/pofbc-forest-ovals/capture.mjs` renders them from this site's dev server
 with the lettering outlined; an old link to an atlas id they replaced (`&patch=R22-O01`) opens its
-variant. Patcher also carries a yellow-sky oval card, but that oval was printed on Forest Service
-posters, not sewn, so this site leaves it out of Patches (`src/patches/retiredPatches.js`): a link to
-it (`&patch=FO-yellow-sky`, its other variants, or the atlas ids S04-O01, S05-O01 and S54-O01) opens
-the yellow-sky oval in Internal Logos instead. Among
+variant. The green-and-gold oval keeps its two photographed variants, Full colour and Light band.
+The yellow-sky oval was printed on Forest Service posters, not sewn, so it is not a patch: a link to
+its old patch card (`&patch=FO-yellow-sky`, its other variants, or the atlas ids S04-O01, S05-O01 and
+S54-O01) opens it in Internal Logos instead, and a link to one of the green-and-gold oval's dropped
+black recolours opens its full-colour patch (`src/patches/retiredPatches.js`). Among
 them are the BC Forest Service, BC Parks, the Conservation Officer Service and
 its Fish & Game predecessors, BC Sheriff Service, BC Corrections, Highways and Motor Vehicles, BC
 Hydro's patrol patches and the universities. The atlas's logos, signs, decals and printed emblems

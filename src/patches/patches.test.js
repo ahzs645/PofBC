@@ -104,7 +104,7 @@ test('atlas entries absorbed into a supplied design are gone, and the design say
     assert.ok(designs.get(into).absorbs.includes(id), `${into} doesn't record ${id}`)
   }
   // The atlas's Forest Service and Wildfire Service ovals are PofBC's Forest Ovals, one card per design.
-  const ovals = ['forest-service-oval', 'forests-oval', 'long-ministry-oval', 'forest-service-yellow-sky', 'forest-service-green-gold']
+  const ovals = ['forest-service-oval', 'forests-oval', 'long-ministry-oval', 'forest-service-green-gold']
   for (const id of ovals) assert.ok(manifest.variants.some((g) => g.id === id), `${id} is missing`)
   for (const id of ['R22-O01', 'R13-O01', 'S43-O01', 'S58-O05', 'S47-O01']) assert.ok(manifest.absorbed.some((a) => a.id === id), `${id} should be absorbed`)
   assert.ok(!manifest.orgs.some((org) => org.id === 'bc-wildfire-service'), 'every Wildfire Service oval is a Forest Oval variant now')
