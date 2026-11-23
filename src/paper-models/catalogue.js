@@ -35,6 +35,8 @@ export const PAPER_MODEL_SERIES = [
         // The roof logo is in Logos as its own entry, cut from this model's printable PDF.
         related: [
           { label: 'Its roof logo in Logos', to: { view: 'gallery', logos: 'bc-transit', mark: 'bct-double-arrow-paper-model' } },
+          // The 1985 handyDART mark is rebuilt around this model's double arrow.
+          { label: 'handyDART’s 1985 mark, rebuilt from its arrow', to: { view: 'gallery', logos: 'collected-handydart', mark: 'rebuild-expanded-handydart-1985-brochure' } },
           { label: 'BC Transit in Logos', to: { view: 'gallery', subject: 'bc-transit' } }
         ],
         sha256: {

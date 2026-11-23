@@ -2420,6 +2420,66 @@ export const EXPANDED_IDENTITY_BODIES = [
           }
         ],
         "specimenDate": "2025-11"
+      },
+      {
+        "id": "rebuild-expanded-handydart-1985-brochure",
+        "label": "handyDART — double arrow and italic wordmark between rules, 1985 (rebuilt)",
+        "designLabel": "handyDART, 1985",
+        "file": "identity-expanded/handydart/brochure-1985-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "sourcePage": "https://openmovportal.ca/argus/final/Portal/Main.aspx?component=AAFG&record=38821f8f-d367-4f89-9684-eaedc3b7f00d",
+        "sourceUrl": "https://openmovportal.ca/argus/final/Portal/Main.aspx?component=AAFG&record=38821f8f-d367-4f89-9684-eaedc3b7f00d",
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "BC Transit",
+        "sourceLocator": "Museum of Vancouver H2015.37.362, Pamphlet, BC Transit, handyDART, marked March 1985: the lockup on its cover, from a 500 × 319 image of the item",
+        "sourceFile": null,
+        "sourceDate": "1985-03",
+        "specimenDate": "1985-03",
+        "dateNote": "March 1985 is the date marked on the pamphlet; it is not an adoption date.",
+        "observedDate": "2026-11-23",
+        "evidenceType": "vector-reconstruction",
+        "darkBackground": false,
+        "dimensions": {
+          "viewBox": "0 0 116 76"
+        },
+        "contentType": "image/svg+xml",
+        "notes": "BC Transit’s handyDART mark as its March 1985 pamphlet shows it: the red double arrow beside an italic lower-case “handy” and capital “DART”, between two rules. The arrow is BC Transit’s own, the one on the roof of the 1985 Gallery In Transit paper bus.",
+        "fidelityNote": "Vector reconstruction; not recovered artwork. The double arrow is the paper bus’s two arrow paths unchanged, only scaled, placed and recoloured. The wordmark is new outlined lettering from Liberation Sans Italic, fitted to the scan (shape correlation 0.87 against eight sans-serif candidates); the original typeface is not identified. The rules are drawn anew to the scan’s placement and weight. Colour #E44E5B approximates the printed red in the scan; the 1985 corporate red is not established. The scan is 500 × 319, so letter details and hue are uncertain.",
+        "sha256": "4ed1d370e82636cbd532877ff76dffe8037ba670b0877399ead57d88b3111d57",
+        "bytes": 4378,
+        "versionLabel": "Brochure red"
+      },
+      {
+        "id": "rebuild-expanded-handydart-1985-brochure-paper-model-red",
+        "label": "handyDART, 1985 (rebuilt), in the paper bus’s red",
+        "file": "identity-expanded/handydart/brochure-1985-rebuilt-paper-model-red.svg",
+        "format": "svg",
+        "isVector": true,
+        "sourcePage": "https://openmovportal.ca/argus/final/Portal/Main.aspx?component=AAFG&record=38821f8f-d367-4f89-9684-eaedc3b7f00d",
+        "sourceUrl": "https://openmovportal.ca/argus/final/Portal/Main.aspx?component=AAFG&record=38821f8f-d367-4f89-9684-eaedc3b7f00d",
+        "supplied": false,
+        "reconstruction": true,
+        "publisher": "BC Transit",
+        "sourceLocator": "Museum of Vancouver H2015.37.362, Pamphlet, BC Transit, handyDART, marked March 1985: the lockup on its cover, from a 500 × 319 image of the item",
+        "sourceFile": null,
+        "sourceDate": "1985-03",
+        "specimenDate": "1985-03",
+        "dateNote": "March 1985 is the date marked on the pamphlet; it is not an adoption date.",
+        "observedDate": "2026-11-23",
+        "evidenceType": "vector-reconstruction",
+        "darkBackground": false,
+        "dimensions": {
+          "viewBox": "0 0 116 76"
+        },
+        "contentType": "image/svg+xml",
+        "notes": "The same reconstruction in #F31410, the red of the double arrow on the BC Transit paper bus.",
+        "fidelityNote": "As the brochure-red reconstruction, recoloured to the paper model’s #F31410. That is the model file’s value, not a verified 1985 print ink.",
+        "sha256": "e24a182701d579d1d2d486c612d63ef3fd59433cbad019dcd9e000b0e824455b",
+        "bytes": 4378,
+        "variantOf": "rebuild-expanded-handydart-1985-brochure",
+        "versionLabel": "Paper-bus red"
       }
     ]
   },

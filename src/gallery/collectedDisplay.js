@@ -1346,19 +1346,6 @@ export const COLLECTED_DISPLAY = {
    "palette": true
   }
  },
- "bc-enterprise-corporation-rebuilt-bw": {
-  "light": {
-   "file": "identity-display/bc-enterprise-corporation-rebuilt-bw.light.svg",
-   "aspect": 2.4512,
-   "recoloured": false
-  },
-  "dark": {
-   "file": "identity-display/bc-enterprise-corporation-rebuilt-bw.dark.svg",
-   "aspect": 2.4512,
-   "recoloured": true,
-   "palette": true
-  }
- },
  "vector-forest-renewal-bc-2000-colour-source-vector": {
   "light": {
    "file": "identity-display/vector-forest-renewal-bc-2000-colour-source-vector.light.svg",
@@ -2807,6 +2794,30 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/source-expanded-handydart-customer-first-logo.dark.svg",
    "aspect": 1.9779,
    "recoloured": true
+  }
+ },
+ "rebuild-expanded-handydart-1985-brochure": {
+  "light": {
+   "file": "identity-display/rebuild-expanded-handydart-1985-brochure.light.svg",
+   "aspect": 1.6482,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rebuild-expanded-handydart-1985-brochure.light.svg",
+   "aspect": 1.6482,
+   "recoloured": false
+  }
+ },
+ "rebuild-expanded-handydart-1985-brochure-paper-model-red": {
+  "light": {
+   "file": "identity-display/rebuild-expanded-handydart-1985-brochure-paper-model-red.light.svg",
+   "aspect": 1.6482,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rebuild-expanded-handydart-1985-brochure-paper-model-red.light.svg",
+   "aspect": 1.6482,
+   "recoloured": false
   }
  },
  "source-expanded-bc-arts-council-provincial-lockup": {
