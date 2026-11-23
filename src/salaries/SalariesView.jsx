@@ -674,7 +674,7 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
         <section aria-label="Browse" className="salaries__records">
           {browse === 'employers' && <EmployerBrowse employers={employersIndex.employers} sources={employersIndex.sources} years={employersIndex.years} sector={sector} range={range} layout={layout} onOpen={openEmployer} onSector={(name) => { setSector(name); showListStart() }} />}
           {browse === 'people' && <PeopleBrowse index={index} sector={sector} range={range} layout={layout} onPerson={openPersonAt} onEmployer={openEmployer} />}
-          {browse === 'positions' && !titleFailed && <PositionBrowse titles={availableTitles} years={years} scoped={scopedTitles} filterKey={`${place.year}|${sector}`} layout={layout} onTitle={openTitle} />}
+          {browse === 'positions' && !titleFailed && <PositionBrowse titles={availableTitles} years={years} scoped={scopedTitles} filterKey={`${place.year}|${sector}`} layout={layout} onTitle={openTitle} category={place.category} onCategory={(value) => setPlace((current) => ({ ...current, category: value }))} />}
         </section>
       )}
     </div>,

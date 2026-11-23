@@ -16,6 +16,7 @@ import { count, LAYOUTS, loadJson, Paged, RoleIcon, SalaryPageHeading } from './
 import { DataTable } from './DataTable.jsx'
 import { formatRate, pooledGrowth, seriesGrowth } from './growth.js'
 import { GrowthTiles, rateColumn } from './Growth.jsx'
+import { jobCategory, jobCategoryLabel } from './jobCategories.js'
 
 const ORDER = {
   median: (a, b) => b.median - a.median || b.count - a.count,
@@ -130,7 +131,7 @@ export const TitlePage = ({ titleKey: key, employers, years, sector, year: wante
         <SalaryPageHeading id="salaries-title" back={back}>{label}</SalaryPageHeading>
         {detail && (
           <p className="salaries__note">
-            {count(employerCount, 'employer', 'employers')}{sector !== 'all' ? ` in ${sector.toLowerCase()}` : ''} · {count(inSector.reduce((sum, cell) => sum + cell.count, 0), 'record', 'records')}
+            {count(employerCount, 'employer', 'employers')}{sector !== 'all' ? ` in ${sector.toLowerCase()}` : ''} · {count(inSector.reduce((sum, cell) => sum + cell.count, 0), 'record', 'records')} · {jobCategoryLabel(jobCategory(key))}
           </p>
         )}
         {detail?.spellings?.length > 1 && (
