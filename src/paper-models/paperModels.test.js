@@ -40,6 +40,9 @@ test('the viewer address reaches a project under public/ from packcad/', () => {
   assert.equal(src.searchParams.get('autoplay'), '1')
   assert.equal(src.searchParams.get('controls'), '0')
   assert.equal(src.searchParams.get('theme'), 'light')
+  // The viewer's own pace and camera unless asked.
+  assert.equal(src.searchParams.has('speed'), false)
+  assert.equal(new URL(viewerSrc('/', 'a.json', { speed: 0.5 }), 'https://x.test').searchParams.get('speed'), '0.5')
 })
 
 test('the viewer opens in the site theme, on the stage colour', () => {

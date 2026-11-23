@@ -11,7 +11,7 @@ export const viewerPage = (base) => `${base}packcad/viewer.html`
  * The viewer's address for a project. The project path is relative to the viewer page, which is
  * one folder down (packcad/), so a path under public/ is reached with `../`.
  */
-export const viewerSrc = (base, projectPath, { step = 'final', autoplay = false, layout = '3d', controls = false, theme = 'light', background = null } = {}) => {
+export const viewerSrc = (base, projectPath, { step = 'final', autoplay = false, layout = '3d', controls = false, theme = 'light', background = null, speed = null } = {}) => {
   const params = new URLSearchParams({
     project: `../${projectPath}`,
     step: String(step),
@@ -21,6 +21,7 @@ export const viewerSrc = (base, projectPath, { step = 'final', autoplay = false,
     theme
   })
   if (background) params.set('background', background.replace(/^#/, ''))
+  if (speed) params.set('speed', String(speed))
   return `${viewerPage(base)}?${params}`
 }
 

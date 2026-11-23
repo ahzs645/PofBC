@@ -19,6 +19,9 @@ import { STAGE_GROUND, stagesOf, viewerSrc } from './packcadFrame.js'
 import './paperModels.css'
 
 const BASE = import.meta.env.BASE_URL
+// Half PackCAD's editing pace, so each stage can be watched: the viewer turns to the panels a
+// stage moves as it begins, and that needs the stage to last longer than the turn.
+const FOLD_SPEED = 0.5
 const LAYOUTS = [
   { value: '3d', label: '3D', title: 'The model folded in 3D' },
   { value: '2d', label: 'Flat', title: 'The sheet as printed, folding in 2D' },
@@ -51,6 +54,7 @@ export const PaperModelsView = () => {
   const src = useMemo(() => viewerSrc(BASE, files.json, {
     autoplay: true,
     layout: '3d',
+    speed: FOLD_SPEED,
     theme: themeRef.current,
     background: STAGE_GROUND[themeRef.current]
   }), [files.json])
