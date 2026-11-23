@@ -43,7 +43,8 @@ const TitleCards = ({ titles, years, onTitle }) => (
 
 /**
  * A title as a card: its commonest spelling, how widely it is used, and the years it spans; at its
- * side its latest average, or with `measure` ('growth' or 'raise') how fast its pay moved.
+ * side its latest average, or with `measure` ('growth' or 'raise') how fast its pay moved. A search
+ * result may carry a `note` saying why it answered (the department it matched in).
  */
 export const TitleCard = ({ title, years, onOpen, measure }) => (
   <button type="button" className="salaries__card" onClick={() => onOpen(title.key)}>
@@ -52,6 +53,7 @@ export const TitleCard = ({ title, years, onOpen, measure }) => (
       <span className="salaries__name">{title.label}</span>
       <span className="salaries__line">{count(title.employers, 'employer', 'employers')} · {count(title.rows, 'record', 'records')}</span>
       <span className="salaries__line">{yearSpan([years[title.first], years[title.last]].filter((label, at, all) => all.indexOf(label) === at))}</span>
+      {title.note && <span className="salaries__line">{title.note}</span>}
     </span>
     {measure && title[measure]
       ? (

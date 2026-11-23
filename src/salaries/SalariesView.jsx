@@ -332,14 +332,19 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
 
   // Titles answering what was typed: the same title first, then every title beginning with it or
   // holding its words, the most widely used first — so "nurse" finds Nurse, then the nursing titles
-  // most employers use, ahead of rare ones that merely start with the word.
+  // most employers use, ahead of rare ones that merely start with the word. Titles that answer only
+  // through a shortened word ("Clin Info Lead"), and then only through their department, come after.
   const titleMatches = useMemo(() => {
     if (!titleQuery || !availableTitles) return []
     const match = titleMatcher(titleQuery)
-    return availableTitles.map((title) => ({ title, tier: match(title.key) })).filter(({ tier }) => tier !== null)
-      .sort((a, b) => (a.tier > 0) - (b.tier > 0) || b.title.employers - a.title.employers || b.title.rows - a.title.rows)
-      .map(({ title }) => title)
+    const rank = (tier) => (tier === 0 ? 0 : tier <= 2 ? 1 : tier)
+    return availableTitles.map((title) => ({ title, tier: match(title.key, title.departmentKey) })).filter(({ tier }) => tier !== null)
+      .sort((a, b) => rank(a.tier) - rank(b.tier) || b.title.employers - a.title.employers || b.title.rows - a.title.rows)
+      .map(({ title, tier }) => (tier === 4 ? { ...title, note: `Department: ${displayTitle(title.department)}` } : title))
   }, [titleQuery, availableTitles])
+  // A word search that finds no names, while employers or positions answer it, is told in one line
+  // after those results rather than as an empty People section above them.
+  const [namesEmpty, setNamesEmpty] = useState(false)
 
   // The tab names the page: an employer, a title or a name. A name's page asks not to be indexed.
   const pageEmployer = employersIndex && place.employer
@@ -607,6 +612,8 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
             initialsLoading={found.some((each) => each.loading)}
             initialsFailed={nameSearchFailed}
             onRetryInitials={retryNames}
+            quiet={employerMatches.length > 0 || titleMatches.length > 0}
+            onNoNames={setNamesEmpty}
           />}
 
           {!wordSearch && readings.length > 0 && !(peopleSettled && !nameSearchFailed && !people.length && (employerMatches.length > 0 || titleMatches.length > 0)) && (
@@ -664,6 +671,10 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
                 {(page) => <div className="salaries__grid">{page.map((title) => <TitleCard key={title.key} title={title} years={years} onOpen={openTitle} />)}</div>}
               </Paged>
             </section>
+          )}
+
+          {(employerMatches.length > 0 || titleMatches.length > 0) && (wordSearch ? namesEmpty : readings.length > 0 && peopleSettled && !nameSearchFailed && !people.length) && (
+            <p className="salaries__hint salaries__hint--small">No disclosed name matches “{typed}”{filtered ? ' with these filters' : ''}.</p>
           )}
 
           {!wordSearch && !readings.length && !employerMatches.length && !titleMatches.length && <p className="salaries__hint">Type at least two letters of any part of a name, or part of an employer’s name or a position.</p>}

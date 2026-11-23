@@ -51,21 +51,37 @@ export const titleRecords = (rows, key, sources = {}, { nameKey = null } = {}) =
 /** The slice of the position index a title is filed under: its key's first two letters or digits. */
 export const titleShard = (key) => String(key ?? '').replace(/[^a-z0-9]/g, '').slice(0, 2).padEnd(2, '_')
 
+/** The department the compiled records add after a position's " · ", as published, or null. */
+export const titleDepartment = (position) => String(position ?? '').split(' · ').slice(1).join(' · ').trim() || null
+
+// How a word typed fits a word of a title: 2 it begins the title's word, 1 the title's word is a
+// shortening of it of at least three letters ("clin" for "clinical", "info" for "informatics"), 0 neither.
+const wordFit = (part, word) => (word.startsWith(part) ? 2 : word.length >= 3 && part.startsWith(word) ? 1 : 0)
+
 /**
  * A test of how closely a title's key answers what was typed, best first: 0 the same title, 1 a title
  * that begins with it ("teacher" → "teacher elementary", "teach" → "teaching staff"), 2 one with every
- * word typed beginning one of its words, in any order ("analyst policy" → "senior policy analyst").
+ * word typed beginning one of its words, in any order ("analyst policy" → "senior policy analyst"),
+ * 3 one whose words begin or shorten every word typed ("clinical informatics" → "clin informatics
+ * analyst"), 4 one that answers only with the words of its department, given as a second argument in
+ * the form `titleWords` reads it ("clinical informatics" → "proj mgr · CST Prj Clinical Informatics").
  * null where it does not answer. A word typed is read as titles are, so "teachers" finds "teacher".
+ * Keys are never changed by this: shortened words are matched here, not written out in the key.
  */
 export const titleMatcher = (query) => {
   const wanted = titleWords(query)
   const typed = wanted.join(' ')
-  return (key) => {
+  return (key, department = '') => {
     if (!wanted.length || !key) return null
     if (key === typed) return 0
     if (key.startsWith(typed)) return 1
     const words = key.split(' ')
-    return wanted.every((part) => words.some((word) => word.startsWith(part))) ? 2 : null
+    const fits = wanted.map((part) => Math.max(...words.map((word) => wordFit(part, word))))
+    if (fits.every((fit) => fit === 2)) return 2
+    if (fits.every((fit) => fit > 0)) return 3
+    if (!department) return null
+    const more = department.split(' ')
+    return wanted.every((part, at) => fits[at] > 0 || more.some((word) => wordFit(part, word) > 0)) ? 4 : null
   }
 }
 
@@ -114,15 +130,18 @@ export const meanMoney = (values) => (values.length ? Math.round(values.reduce((
 const keyed = new WeakMap()
 
 /**
- * The position index's titles, each with its key: { key, label, rows, employers, first, last, mean,
- * growth, raise }, in the index's order (most records first); `mean` is the average in its last
+ * The position index's titles, each with its key: { key, label, department, departmentKey, rows,
+ * employers, first, last, mean, growth, raise }, in the index's order (most records first); `department`
+ * is the commonest spelling's department as published (or null) and `departmentKey` its words as
+ * `titleMatcher` reads them (or ''); `mean` is the average in its last
  * period, `growth` how that average moved and `raise` the typical raise of a name kept under it
  * (growth.js), each null where it could not be measured. Worked out once an index.
  */
 export const keyedTitles = (index) => {
   if (!keyed.has(index)) {
     keyed.set(index, index.titles.map(([spelling, rows, employers, first, last, mean = null, growth = null, weight = 0, growthEmployers = 0, from = null, to = null, raise = null, pairs = 0, people = 0]) => ({
-      key: titleKey(spelling), label: titleLabel(spelling), rows, employers, first, last, mean,
+      key: titleKey(spelling), label: titleLabel(spelling), department: titleDepartment(spelling),
+      departmentKey: titleDepartment(spelling) ? titleDepartment(spelling).split(' · ').map(titleKey).join(' ') : '', rows, employers, first, last, mean,
       growth: growth === null ? null : { rate: growth, weight, employers: growthEmployers, from, to },
       raise: raise === null ? null : { rate: raise, pairs, people }
     })))
@@ -137,7 +156,8 @@ export const keyedTitles = (index) => {
 export const relatedTitles = (titles, key) => {
   const adds = titleMatcher(key)
   const words = new Set(key.split(' '))
-  const narrower = titles.filter((title) => title.key !== key && adds(title.key) !== null)
+  // Only the titles holding every word: a title that merely shortens one ("sr pol analyst") is not narrower.
+  const narrower = titles.filter((title) => { const tier = title.key !== key ? adds(title.key) : null; return tier !== null && tier <= 2 })
   const broader = titles.filter((title) => title.key !== key && title.key.split(' ').every((word) => words.has(word)))
   const order = (a, b) => b.employers - a.employers || b.rows - a.rows
   return { narrower: narrower.sort(order), broader: broader.sort(order) }

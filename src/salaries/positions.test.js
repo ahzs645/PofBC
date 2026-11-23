@@ -3,7 +3,7 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { gunzipSync } from 'node:zlib'
 import { EMPLOYER_LAYOUT, personKey, withoutCompiledRepeats } from './people.js'
-import { keyedTitles, meanMoney, relatedTitles, shortTitle, titleKey, titleLabel, titleMatcher, titleRecords, titleShard } from './positions.js'
+import { keyedTitles, meanMoney, relatedTitles, shortTitle, titleDepartment, titleKey, titleLabel, titleMatcher, titleRecords, titleShard } from './positions.js'
 
 const DIR = new URL('../../public/salaries/positions/', import.meta.url)
 const read = (file) => JSON.parse(gunzipSync(readFileSync(new URL(file, DIR))))
@@ -34,8 +34,46 @@ test('a title search finds the same title, then those beginning with it, then th
   assert.equal(titleMatcher('')('teacher'), null)
 })
 
+test('a title search then finds titles that shorten its words, then titles that answer only in their department', () => {
+  const match = titleMatcher('clinical informatics')
+  assert.equal(match(titleKey('Director, Clinical Informatics')), 2)
+  assert.equal(match(titleKey('Clin Informatics Analyst CST · CST Prj Clinical Informatics')), 3, 'clin shortens clinical')
+  assert.equal(match(titleKey('Dir, Clin Info / Decision Supp')), 3, 'info shortens informatics')
+  const department = titleKey(titleDepartment('Proj Mgr, Cln Imp Lead · CST Prj Clinical Informatics'))
+  assert.equal(department, 'cst prj clinical informatic')
+  assert.equal(match(titleKey('Proj Mgr, Cln Imp Lead'), department), 4)
+  assert.equal(match(titleKey('Proj Mgr, Cln Imp Lead')), null, 'no department, no answer')
+  assert.equal(match(titleKey('Clin Info Lead'), department), 3, 'the title itself answers before its department')
+  assert.equal(match(titleKey('Ward Nurse'), 'clinical'), null, 'every word typed must answer in the title or its department')
+  assert.equal(titleMatcher('informatics')(titleKey('Critical Care Informatics Nurs'), department), 2)
+  // A partly typed word still begins the title's word, and a shortening still fits it.
+  assert.equal(titleMatcher('clinica informatics')(titleKey('Director, Clinical Informatics')), 2)
+  assert.equal(titleMatcher('clinica informatics')(titleKey('Clin Informatics Analyst CST')), 3)
+  // A shortening has at least three letters, and is never longer than the word typed.
+  assert.equal(titleMatcher('clinical')(titleKey('Cl Lead')), null)
+  assert.equal(titleMatcher('clin')(titleKey('Clinical Lead')), 1)
+  assert.equal(titleMatcher('clin')(titleKey('Senior Clinical Lead')), 2)
+  // Keys stay as published: shortened words are matched, never written out.
+  assert.equal(titleKey('Clin Informatics Analyst CST · CST Prj Clinical Informatics'), 'clin informatic analyst cst')
+  assert.equal(titleDepartment('Director'), null)
+  assert.equal(titleDepartment('Nurse · Ward 3 · Night'), 'Ward 3 · Night')
+})
+
+test('the position index finds abbreviated and department-only titles for a search, ranked after full words', () => {
+  const titles = keyedTitles(read('index.json.gzip'))
+  const departed = titles.find((title) => title.department)
+  assert.equal(departed.departmentKey, departed.department.split(' · ').map(titleKey).join(' '))
+  const match = titleMatcher('clinical informatics')
+  const tiers = new Map(titles.map((title) => [title.label, match(title.key, title.departmentKey)]).filter(([, tier]) => tier !== null))
+  assert.equal(tiers.get('Director, Clinical Informatics'), 2)
+  assert.equal(tiers.get('Clin Informatics Analyst CST'), 3)
+  assert.equal(tiers.get('CST Collab Clin Info Lead'), 3)
+  assert.equal(tiers.get('Proj Mgr, Cln Imp Lead'), 4)
+  assert.ok(tiers.size > 4)
+})
+
 test('related titles are the titles that add to one and those it adds to, never itself', () => {
-  const titles = ['Senior Policy Analyst', 'Policy Analyst', 'Senior Policy Analyst Lead', 'Analyst', 'Nurse']
+  const titles = ['Senior Policy Analyst', 'Policy Analyst', 'Senior Policy Analyst Lead', 'Analyst', 'Nurse', 'Sr Pol Analyst Lead']
     .map((label, at) => ({ key: titleKey(label), label, rows: 10 - at, employers: 1 }))
   const { narrower, broader } = relatedTitles(titles, 'senior policy analyst')
   assert.deepEqual(narrower.map((title) => title.label), ['Senior Policy Analyst Lead'])
