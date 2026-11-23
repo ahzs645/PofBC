@@ -2445,3 +2445,14 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-about__sources { font-size: 14px; }
 .council-pay__links { margin: 0; }
 .council-pay__years .salaries-record + .salaries-record { margin-top: 8px; }
+
+/* A title's page: every year or one, and the people under the title at each employer. */
+.salaries-title-years__head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
+.salaries-title-years__head .salaries__year-title { margin: 0; }
+.salaries-title-years__head .segmented button { white-space: nowrap; }
+/* With every year shown no period is chosen, so the phone's period chooser says so. */
+.salaries-title-years[data-all] .salaries-range__label:empty::before { content: 'Every year'; }
+.salaries-title-people__ask { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.salaries-title-people__ask p { margin: 0; flex: 1 1 260px; }
+/* The employer link sits above the card's name link, which covers the card. */
+.salaries-title-people__employer { position: relative; z-index: 1; text-align: left; }
