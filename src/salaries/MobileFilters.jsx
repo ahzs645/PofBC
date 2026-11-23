@@ -56,9 +56,10 @@ export const useScrollRow = (selected) => {
     const node = row.current
     const chip = node?.querySelector('[aria-pressed="true"]')
     if (!chip || node.scrollWidth <= node.clientWidth) return
-    // The row's own scroll, not scrollIntoView: that would move the page as well.
+    // The row’s own scroll, not scrollIntoView: that would move the page as well. It stops clear of the
+    // 40px fade at the start, so the chip is shown whole.
     const left = chip.offsetLeft - node.offsetLeft
-    if (left < node.scrollLeft || left + chip.offsetWidth > node.scrollLeft + node.clientWidth - 40) node.scrollLeft = Math.max(0, left - 16)
+    if (left < node.scrollLeft || left + chip.offsetWidth > node.scrollLeft + node.clientWidth - 40) node.scrollLeft = Math.max(0, left - 48)
   }, [selected])
   return row
 }

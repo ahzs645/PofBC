@@ -24,6 +24,7 @@ import { EmployerInsights, EMPLOYER_ORDERS, employerRate, useEmployerStatistics 
 import { Select } from '../site/ui/Select.jsx'
 import { holdScrollFrom } from '../site/holdScroll.js'
 import { isJobCategory, JOB_CATEGORIES, jobCategory, jobCategoryCounts, jobCategoryLabel } from './jobCategories.js'
+import { useScrollRow } from './MobileFilters.jsx'
 
 const within = (range) => (at) => !range || (at >= range[0] && at <= range[1])
 
@@ -270,20 +271,14 @@ const TITLE_ORDERS = [
 
 /**
  * The kinds of work as chips, each with how many of the titles listed it holds; one at a time, or all.
- * Kinds with no title in the list are left out unless chosen. On a phone the row scrolls sideways.
+ * Kinds with no title in the list are left out unless chosen. Like the sectors above it, the row keeps
+ * to one line at every width and scrolls sideways, fading the end with more past it (useScrollRow).
  */
 const JobCategoryChips = ({ counts, value, onChange }) => {
-  const [row, setRow] = useState(null)
-  // A kind chosen in a shared link may sit past the edge of a phone's sideways row: bring it in.
-  useEffect(() => {
-    const chosen = row?.querySelector('[aria-pressed="true"]')
-    if (!chosen) return
-    const [outer, inner] = [row.getBoundingClientRect(), chosen.getBoundingClientRect()]
-    if (inner.left < outer.left || inner.right > outer.right) row.scrollLeft += inner.left - outer.left - 16
-  }, [row, value])
+  const row = useScrollRow(value)
   const choose = (event, next) => { holdScrollFrom(event); onChange(next) }
   return (
-    <div ref={setRow} className="salaries__chips salaries__chips--categories" role="group" aria-label="Kind of work">
+    <div ref={row} className="salaries__chips salaries__chips--scroll salaries__chips--categories" role="group" aria-label="Kind of work">
       <button type="button" aria-pressed={value === 'all'} onClick={(event) => choose(event, 'all')}>All positions <span>{counts.all.toLocaleString('en-CA')}</span></button>
       {JOB_CATEGORIES.filter((category) => counts[category.value] || category.value === value).map((category) => (
         <button key={category.value} type="button" title={category.label} aria-pressed={value === category.value} onClick={(event) => choose(event, value === category.value ? 'all' : category.value)}>
