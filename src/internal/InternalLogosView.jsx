@@ -348,8 +348,18 @@ export const InternalLogosView = () => {
         </>
       ) : selection.family ? (
         <>
-          <div className="internal-logos__intro">
-            <button className="internal-logos__back" type="button" onClick={() => { navigate(false); requestAnimationFrame(() => forestButton.current?.focus()) }}>← Internal Logos</button>
+          {/* The site's header already names the view, so the way back is an arrow beside the
+              family's name rather than "← Internal Logos" over it. */}
+          <div className="internal-logos__intro internal-logos__intro--row">
+            <button
+              className="icon-back"
+              type="button"
+              aria-label="Back to Internal Logos"
+              title="Back to Internal Logos"
+              onClick={() => { navigate(false); requestAnimationFrame(() => forestButton.current?.focus()) }}
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3.5M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </button>
             <h2 ref={title} tabIndex={-1}>Forests</h2>
           </div>
           <div className="internal-logos__designs">

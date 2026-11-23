@@ -491,6 +491,25 @@ textarea::placeholder { color: var(--ink-faint); }
   input[type='text'], select, textarea { font-size: 14px; }
 }
 
+/* ── Back arrow ────────────────────────────────────────────────────────────────────────────────
+   For a page whose way back is to the view the site's header already names: the arrow alone,
+   named for a screen reader and a tooltip. */
+.icon-back {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--mid);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  cursor: pointer;
+}
+.icon-back:hover { background: var(--hover); }
+.icon-back:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
 /* ── Segmented control ─────────────────────────────────────────────────────────────────────── */
 
 /* A grey track with the chosen segment lifted out of it, as the government view's Graph | List. */

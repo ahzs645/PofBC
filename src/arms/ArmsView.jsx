@@ -311,7 +311,10 @@ const Artwork = ({ items }) => {
 
 const Detail = ({ holder, onBack, titleRef }) => (
   <article className="arms__detail" aria-labelledby="arms-holder-name">
-    <button type="button" className="arms__back" onClick={onBack}>← Coats of Arms</button>
+    {/* The header already names the view: an arrow back, not "← Coats of Arms" again. */}
+    <button type="button" className="icon-back arms__back-icon" aria-label="Back to Coats of Arms" title="Back to Coats of Arms" onClick={onBack}>
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3.5M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>
+    </button>
     <header className="arms__header">
       <div className="arms__art arms__art--large"><HolderImage holder={holder} label={`Arms of ${holder.name}`} /></div>
       <div className="arms__header-text">

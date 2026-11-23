@@ -65,15 +65,7 @@
 .arms__card-meta { color: var(--ink-muted); font-size: 13px; }
 
 .arms__detail { display: grid; gap: var(--gap); min-width: 0; }
-.arms__back {
-  justify-self: start;
-  border: 0;
-  background: none;
-  padding: 0 4px;
-  color: var(--ink-muted);
-  font: inherit;
-  cursor: pointer;
-}
+.arms__back-icon { justify-self: start; }
 .arms__header {
   display: grid;
   grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
