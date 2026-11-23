@@ -21,6 +21,8 @@ export const readSalaryPlace = (search = '') => {
   ]))
   if (place.browse === 'council') for (const [key, param] of Object.entries(COUNCIL_PARAMETERS)) place[key] = params.get(param) ?? (key === 'councilTab' ? 'rates' : 'all')
   if (place.browse === 'workforce') place.workforcePopulation = params.get('workforce-population') ?? 'all'
+  // The kind of work the positions are narrowed to (jobCategories.js), only while positions are browsed.
+  if (place.browse === 'positions') place.category = params.get('category') ?? 'all'
   return place
 }
 
@@ -38,6 +40,8 @@ export const salaryPlaceUrl = (href, place) => {
   }
   if (place.browse === 'workforce' && place.workforcePopulation && place.workforcePopulation !== 'all') url.searchParams.set('workforce-population', place.workforcePopulation)
   else url.searchParams.delete('workforce-population')
+  if (place.browse === 'positions' && place.category && place.category !== 'all') url.searchParams.set('category', place.category)
+  else url.searchParams.delete('category')
   return url
 }
 

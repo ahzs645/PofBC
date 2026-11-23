@@ -21,6 +21,8 @@ import { Segmented } from '../site/Segmented.jsx'
 import { employerRanking, employerSnapshot } from './employerStats.js'
 import { EmployerInsights, EMPLOYER_ORDERS, employerRate, useEmployerStatistics } from './EmployerInsights.jsx'
 import { Select } from '../site/ui/Select.jsx'
+import { holdScrollFrom } from '../site/holdScroll.js'
+import { isJobCategory, JOB_CATEGORIES, jobCategory, jobCategoryCounts, jobCategoryLabel } from './jobCategories.js'
 
 const within = (range) => (at) => !range || (at >= range[0] && at <= range[1])
 
@@ -226,18 +228,49 @@ const TITLE_ORDERS = [
 ]
 
 /**
- * Every position title across employers, with its average in the last period it was disclosed; or,
- * ordered by how fast its pay moved, only the titles with enough records to say.
+ * The kinds of work as chips, each with how many of the titles listed it holds; one at a time, or all.
+ * Kinds with no title in the list are left out unless chosen. On a phone the row scrolls sideways.
  */
-export const PositionBrowse = ({ titles, years, scoped, filterKey, layout, onTitle }) => {
+const JobCategoryChips = ({ counts, value, onChange }) => {
+  const [row, setRow] = useState(null)
+  // A kind chosen in a shared link may sit past the edge of a phone's sideways row: bring it in.
+  useEffect(() => {
+    const chosen = row?.querySelector('[aria-pressed="true"]')
+    if (!chosen) return
+    const [outer, inner] = [row.getBoundingClientRect(), chosen.getBoundingClientRect()]
+    if (inner.left < outer.left || inner.right > outer.right) row.scrollLeft += inner.left - outer.left - 16
+  }, [row, value])
+  const choose = (event, next) => { holdScrollFrom(event); onChange(next) }
+  return (
+    <div ref={setRow} className="salaries__chips salaries__chips--categories" role="group" aria-label="Kind of work">
+      <button type="button" aria-pressed={value === 'all'} onClick={(event) => choose(event, 'all')}>All positions <span>{counts.all.toLocaleString('en-CA')}</span></button>
+      {JOB_CATEGORIES.filter((category) => counts[category.value] || category.value === value).map((category) => (
+        <button key={category.value} type="button" title={category.label} aria-pressed={value === category.value} onClick={(event) => choose(event, value === category.value ? 'all' : category.value)}>
+          {category.short} <span>{counts[category.value].toLocaleString('en-CA')}</span>
+        </button>
+      ))}
+    </div>
+  )
+}
+
+/**
+ * Every position title across employers, with its average in the last period it was disclosed; or,
+ * ordered by how fast its pay moved, only the titles with enough records to say. Either can be
+ * narrowed to one kind of work (jobCategories.js), read from the title alone.
+ */
+export const PositionBrowse = ({ titles, years, scoped, filterKey, layout, onTitle, category = 'all', onCategory }) => {
   const [preferredOrder, setOrder] = useState('used')
   // The published raise distribution spans all periods and sectors.
   const order = scoped && preferredOrder === 'raise' ? 'used' : preferredOrder
   const orders = scoped ? TITLE_ORDERS.filter((option) => option.value !== 'raise') : TITLE_ORDERS
-  const visible = useMemo(() => (titles ?? []).filter((title) => order === 'used' || MEASURED[order](title))
+  const kind = isJobCategory(category) ? category : 'all'
+  const ordered = useMemo(() => (titles ?? []).filter((title) => order === 'used' || MEASURED[order](title))
     .sort(order === 'used' ? (a, b) => b.employers - a.employers || b.rows - a.rows : (a, b) => b[order].rate - a[order].rate), [titles, order])
+  const counts = useMemo(() => jobCategoryCounts(ordered), [ordered])
+  const visible = useMemo(() => (kind === 'all' ? ordered : ordered.filter((title) => jobCategory(title.key) === kind)), [ordered, kind])
   const columns = useMemo(() => [
     { id: 'title', header: 'Position', accessorKey: 'label', cell: ({ row, getValue }) => <button type="button" className="salaries__link salaries-row__name" onClick={() => onTitle(row.original.key)}>{getValue()}</button> },
+    { id: 'category', header: 'Category', accessorFn: (title) => jobCategoryLabel(jobCategory(title.key)) },
     { id: 'employers', header: 'Employers', accessorKey: 'employers', meta: { kind: 'number', filter: false } },
     { id: 'rows', header: 'Records', accessorKey: 'rows', meta: { kind: 'number', filter: false }, cell: ({ getValue }) => getValue().toLocaleString('en-CA') },
     { id: 'periods', header: 'Periods', accessorFn: (title) => (title.first === title.last ? years[title.first] : `${years[title.first]}–${years[title.last]}`) },
@@ -250,7 +283,8 @@ export const PositionBrowse = ({ titles, years, scoped, filterKey, layout, onTit
   ], [years, onTitle, scoped])
 
   if (!titles) return <p className="salaries__hint" role="status">Loading the positions…</p>
-  const note = (
+  const note = (<>
+    {onCategory && <JobCategoryChips counts={counts} value={kind} onChange={onCategory} />}
     <div className="salaries__browse-bar salaries__browse-bar--position-order">
       <Segmented compact ariaLabel="Order positions" value={order} onChange={setOrder} options={orders} />
       <p className="salaries__hint salaries__hint--small salaries__order-note">
@@ -263,14 +297,14 @@ export const PositionBrowse = ({ titles, years, scoped, filterKey, layout, onTit
         {order !== 'used' && <GrowthTip id="salaries-positions-growth" />}
       </p>
     </div>
-  )
-  if (!visible.length) return <>{note}<p className="salaries__hint">No positions match these filters and ordering.</p></>
+  </>)
+  if (!visible.length) return <>{note}<p className="salaries__hint">No positions match these filters and ordering.{kind !== 'all' && <> <button type="button" className="salaries__link" onClick={() => onCategory?.('all')}>Show every kind of work</button></>}</p></>
   const sorting = [order === 'used' ? { id: 'employers', desc: true } : { id: order, desc: true }]
-  if (layout === 'table') return <>{note}<DataTable key={order} data={visible} columns={columns} sorting={sorting} label="Positions across employers" /></>
+  if (layout === 'table') return <>{note}<DataTable key={order} data={visible} columns={columns} sorting={sorting} label={kind === 'all' ? 'Positions across employers' : `${jobCategoryLabel(kind)} positions across employers`} /></>
   return (
     <>
       {note}
-      <Paged list={visible} size={24} reset={`${filterKey}|${order}`}>
+      <Paged list={visible} size={24} reset={`${filterKey}|${order}|${kind}`}>
         {(page) => <div className="salaries__grid">{page.map((title) => <TitleCard key={title.key} title={title} years={years} onOpen={onTitle} measure={order === 'used' ? null : order} />)}</div>}
       </Paged>
     </>

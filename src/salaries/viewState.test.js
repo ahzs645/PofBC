@@ -119,3 +119,17 @@ test('a shared workforce link does not borrow a council filter', () => {
   assert.equal(url.searchParams.has('council-tab'), false)
   assert.equal(url.searchParams.has('workforce-population'), false)
 })
+
+test('a positions category survives a shared link, follows a title opened from it, and is cleared elsewhere', () => {
+  const href = 'https://example.org/PofBC/?view=salaries&browse=positions&category=nursing&layout=table&salary-sector=Health+authorities'
+  const place = readSalaryPlace(new URL(href).search)
+  assert.equal(place.category, 'nursing')
+  assert.equal(place.layout, 'table')
+  assert.deepEqual(readSalaryPlace(salaryPlaceUrl(href, place).search), place)
+  assert.equal(salaryPlaceUrl(href, { ...place, title: 'registered nurse' }).searchParams.get('category'), 'nursing')
+  assert.equal(salaryPlaceUrl(href, { ...place, category: 'all' }).searchParams.has('category'), false)
+  const employers = salaryPlaceUrl(href, { ...place, browse: 'employers' })
+  assert.equal(employers.searchParams.has('category'), false)
+  assert.equal('category' in readSalaryPlace(employers.search), false)
+  assert.equal(readSalaryPlace('?view=salaries&browse=positions').category, 'all')
+})
