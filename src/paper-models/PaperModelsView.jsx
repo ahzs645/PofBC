@@ -13,7 +13,7 @@ import { writeHistory } from '../site/browserHistory.js'
 import { SiteLink } from '../site/navigation.jsx'
 import { Segmented } from '../site/Segmented.jsx'
 import { useSiteTheme } from '../site/useTheme.js'
-import { PACKCAD_EDITOR_URL, PAPER_MODELS, PAPER_MODEL_SERIES, filesOf, sheetWords } from './catalogue.js'
+import { PACKCAD_EDITOR_URL, PAPER_MODEL_SERIES, filesOf, modelById, sheetWords } from './catalogue.js'
 import { PackcadFrame, usePackcadViewer } from './PackcadFrame.jsx'
 import { STAGE_GROUND, stagesOf, viewerSrc } from './packcadFrame.js'
 import './paperModels.css'
@@ -28,10 +28,7 @@ const LAYOUTS = [
   { value: 'split', label: 'Both', title: 'The 3D model beside the flat sheet' }
 ]
 
-const readModel = () => {
-  const id = new URLSearchParams(globalThis.location?.search ?? '').get('model')
-  return PAPER_MODELS.find((model) => model.id === id) ?? PAPER_MODELS[0]
-}
+const readModel = () => modelById(new URLSearchParams(globalThis.location?.search ?? '').get('model'))
 
 const PlayIcon = ({ playing }) => (
   <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
@@ -84,7 +81,8 @@ export const PaperModelsView = () => {
     url.searchParams.set('view', 'paper-models')
     url.searchParams.set('model', next.id)
     writeHistory(url)
-    setModel(next)
+    // The picker lists the series' bare entries; the page needs the model with its series.
+    setModel(modelById(next.id))
   }
 
   const playing = Boolean(state?.playing)

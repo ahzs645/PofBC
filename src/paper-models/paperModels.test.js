@@ -2,7 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { createHash } from 'node:crypto'
 import { readFileSync } from 'node:fs'
-import { PAPER_MODELS, filesOf, sheetWords } from './catalogue.js'
+import { PAPER_MODELS, PAPER_MODEL_SERIES, filesOf, modelById, sheetWords } from './catalogue.js'
 import { STAGE_GROUND, stagesOf, viewerEvent, viewerSrc } from './packcadFrame.js'
 
 const publicFile = (path) => readFileSync(new URL(`../../public/${path}`, import.meta.url))
@@ -63,4 +63,16 @@ test('stages set the flat sheet apart from the folds', () => {
   assert.deepEqual(stagesOf([{ id: 'setup' }, { id: 'a' }, { id: 'b' }]), { setup: { id: 'setup' }, folds: [{ id: 'a' }, { id: 'b' }] })
   assert.deepEqual(stagesOf(), { setup: null, folds: [] })
   assert.equal(sheetWords([297, 199.837]), '297 × 199.8 mm')
+})
+
+test('a model picked from its series list carries its series', () => {
+  for (const series of PAPER_MODEL_SERIES) {
+    for (const entry of series.models) {
+      const model = modelById(entry.id)
+      assert.equal(model.id, entry.id)
+      assert.equal(model.series, series, entry.id)
+      assert.ok(model.series.note)
+    }
+  }
+  assert.equal(modelById('no-such-model'), PAPER_MODELS[0])
 })

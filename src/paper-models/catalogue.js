@@ -72,6 +72,12 @@ export const PAPER_MODEL_SERIES = [
 
 export const PAPER_MODELS = PAPER_MODEL_SERIES.flatMap((series) => series.models.map((model) => ({ ...model, series })))
 
+/**
+ * A model as the page shows it, with its series (for the series note), by id; the first model for
+ * an unknown id. The series lists hold the bare entries, so a pick from them is looked up here.
+ */
+export const modelById = (id) => PAPER_MODELS.find((model) => model.id === id) ?? PAPER_MODELS[0]
+
 /** A model's files, as paths under public/ (and so under the site's base URL). */
 export const filesOf = (model) => ({
   json: `paper-models/${model.dir}/${model.file}.packcad.json`,
