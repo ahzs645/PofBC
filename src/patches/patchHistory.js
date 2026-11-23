@@ -73,7 +73,6 @@ const FOREST_OVAL_LOGOS = {
   'forest-service-oval': 'forest-service',
   'forests-oval': 'forests',
   'long-ministry-oval': 'long-ministry',
-  'forest-service-yellow-sky': 'forest-service-yellow-sky',
   'forest-service-green-gold': 'forest-service-green-gold'
 }
 

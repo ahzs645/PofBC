@@ -694,12 +694,15 @@ Security shield, which takes this site's BC Hydro symbol). The British Columbia 
 lettering; its source and construction are in `vendor/patcher/library/supplied/bc-spca-roundel/`. The Lands
 Department pine-bough seal is a printed seal, not a patch, so it is left out there and kept in
 Internal Logos. The atlas's Forest Service and Wildfire Service ovals are replaced by this site's own
-Forest Ovals (Internal Logos → Forests): five cards (the tree oval, the Forests and long ministry-name
-wildlife ovals, the yellow-sky and the green-and-gold ovals), each with a variant switch for its
+Forest Ovals (Internal Logos → Forests): four cards (the tree oval, the Forests and long ministry-name
+wildlife ovals, and the green-and-gold oval), each with a variant switch for its
 colourways and its Wildfire Management, Wildfire Service, Fire Control, Airtanker and Ministry of Forests
 editions. Patcher's `supplied/pofbc-forest-ovals/capture.mjs` renders them from this site's dev server
 with the lettering outlined; an old link to an atlas id they replaced (`&patch=R22-O01`) opens its
-variant. Among
+variant. Patcher also carries a yellow-sky oval card, but that oval was printed on Forest Service
+posters, not sewn, so this site leaves it out of Patches (`src/patches/retiredPatches.js`): a link to
+it (`&patch=FO-yellow-sky`, its other variants, or the atlas ids S04-O01, S05-O01 and S54-O01) opens
+the yellow-sky oval in Internal Logos instead. Among
 them are the BC Forest Service, BC Parks, the Conservation Officer Service and
 its Fish & Game predecessors, BC Sheriff Service, BC Corrections, Highways and Motor Vehicles, BC
 Hydro's patrol patches and the universities. The atlas's logos, signs, decals and printed emblems

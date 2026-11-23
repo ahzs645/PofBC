@@ -62,6 +62,7 @@ import { NavigationContext, searchFor } from './navigation.jsx'
 import { writeHistory } from './browserHistory.js'
 import { salaryPlaceUrl } from '../salaries/viewState.js'
 import { legacyInitiativeUrl } from '../initiatives/initiativePlace.js'
+import { retiredPatchUrl } from '../patches/retiredPatches.js'
 import { SunGlyph, ThemeIcon } from './icons.jsx'
 import { useSiteTheme } from './useTheme.js'
 import { useAgentTools } from './useAgentTools.js'
@@ -160,7 +161,9 @@ const VIEW_IDS = [...VIEWS, ...HIDDEN_VIEWS].map(({ id }) => id)
 const initialView = () => {
   // Replace once before reading the view, including on Back/Forward. No navigation event or extra
   // history entry is needed, and the entry's return/focus metadata remains attached to it.
-  const migrated = globalThis.location?.href ? legacyInitiativeUrl(globalThis.location.href) : null
+  // A link to a design no longer offered as a patch opens the place that holds it now.
+  const href = globalThis.location?.href
+  const migrated = href ? legacyInitiativeUrl(href) ?? retiredPatchUrl(href) : null
   if (migrated) globalThis.history?.replaceState(globalThis.history.state, '', migrated)
   const view = new URLSearchParams(migrated?.search ?? globalThis.location?.search ?? '').get('view')
   return VIEW_IDS.includes(view) ? view : 'generator'
