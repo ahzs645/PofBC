@@ -1,4 +1,4 @@
-.schools { max-width: 1320px; width: 100%; margin: 12px auto 48px; }
+.schools { width: 100%; margin: 0 0 48px; }
 .schools__eyebrow { font-size: 11px; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-muted); margin: 0 0 10px; }
 .schools__toolbar { display: flex; align-items: end; gap: 16px; margin: 8px 0 16px; }
 .schools__toolbar label { display: flex; flex-direction: column; gap: 7px; font-size: 12px; font-weight: 600; }
@@ -96,7 +96,6 @@
   .schools__lineage-focus:before { left: -21px; }.schools__lineage-focus:after { right: -21px; }
 }
 @media (max-width: 620px) {
-  .schools { margin-top: 5px; }
   .schools__toolbar { flex-wrap: wrap; gap: 10px; margin-top: 23px; }
   .schools__search { flex-basis: 100%; min-width: 0; }
   .schools__scope { flex: 1; }
