@@ -1232,6 +1232,9 @@ input.share__url {
   border-radius: 12px; background: var(--surface, var(--card, #fff)); color: inherit; font: inherit; font-size: 15px;
 }
 .gallery__search input:focus { outline: 2px solid var(--accent, #2563eb); outline-offset: 1px; }
+/* The right padding is room for the ⌘K hint, which goes once there is a query; the browser's own
+   clear button then sits inside the padding, so without this it stood 64px in from the edge. */
+.gallery__search input:not(:placeholder-shown) { padding-right: 12px; }
 .gallery__search-key {
   position: absolute; right: 12px; top: 50%; transform: translateY(-50%); padding: 2px 7px;
   border: 1px solid var(--border); border-radius: 6px; font: 12px/1.4 inherit; color: var(--ink-muted); pointer-events: none;
