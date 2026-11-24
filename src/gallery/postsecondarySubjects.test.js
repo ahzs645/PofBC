@@ -130,3 +130,32 @@ test('CNC identity history distinguishes designation, arms and two dated specime
   assert.deepEqual(summarizePostsecondaryArtwork([{ artworkReview: { specimens: [historySpecimens[0]] } }]),
     { total: 1, held: 0, vector: 0, observedNonvector: 0, unverified: 1, shared: 0 })
 })
+
+test('BCIT extends its existing subject, not the 49-record family or the held website mark', async () => {
+  const { identitySubjectById } = await import('./identityCoverage.js')
+  const { isLogoSource } = await import('./postsecondaryArtwork.js')
+  const { default: receipt } = await import('../../research/identity/postsecondary-2026-11-24/bcit-2007-extraction-receipt.json', { with: { type: 'json' } })
+  const bcit = identitySubjectById('bcit')
+  assert.equal(bcit.family, 'institutions')
+  assert.ok(!POSTSECONDARY_SUBJECTS.some(({ id }) => id === 'bcit'))
+  assert.deepEqual(bcit.entries.map(({ id }) => id), ['source-expanded-bcit-website-logo'])
+  const { history, specimens } = bcit.artworkReview
+  assert.deepEqual(history.map(({ date }) => date), [
+    '1964', '1978', '1984-09-14', '1986', '1993-02-22', '1996-02-29', '2007-06-29', '2007-06-29', '2017'
+  ])
+  assert.deepEqual(history.map(({ specimenId }) => specimenId), specimens.map(({ id }) => id))
+  assert.ok(specimens.every(({ evidence }) => evidence === 'source-only'))
+  assert.deepEqual(specimens.slice(0, 2).map(({ format }) => format), ['raster-source', 'raster-source'])
+  assert.equal(specimens.filter(({ note }) => /research reconstruction/.test(note)).length, 2)
+  assert.deepEqual(specimens.filter((item) => !isLogoSource(item)).map(({ scope }) => scope), ['campaign', 'heraldry'])
+  assert.match(specimens.find(({ scope }) => scope === 'heraldry').note, /November 23, 1996/)
+  const vectors = specimens.filter(({ format }) => format === 'native-vector')
+  assert.deepEqual(vectors.map(({ id }) => id), receipt.variants.map(({ specimenId }) => specimenId))
+  assert.equal(receipt.status, 'source-only')
+  assert.equal(receipt.physicalPdfPage, 1)
+  assert.equal(receipt.printedPage, 12)
+  assert.ok(vectors.every(({ url, sha256 }) => url === receipt.sourceUrl && sha256 === receipt.sourceSha256))
+  assert.deepEqual(receipt.variants.map(({ outlinedSourceGlyphs }) => outlinedSourceGlyphs), [0, 36])
+  assert.ok(receipt.variants.every(({ filteredPdfMatchesOriginalCropAt8x, svgThresholdedInkIoUAt8x }) =>
+    filteredPdfMatchesOriginalCropAt8x && svgThresholdedInkIoUAt8x > 0.97))
+})

@@ -31,3 +31,5 @@ The family count classifies each subject once: verified institutional vector, ob
 No vector is manufactured from a current logo, an institutional name or an unconfirmed design description. Site publication and public access to downloads do not alone establish permission to copy, embed, or distribute the artwork. Only accept an asset into the separate held manifest after checking both identity and source-specific reuse terms.
 
 The [College of New Caledonia evidence and extraction record](./cnc-identity-history.md) identifies the precise native drawings for its two logo forms and separates those specimens from the dated heraldic grant and provincial designation.
+
+The [BCIT historical evidence and extraction record](./bcit-identity-history.md) supplements the existing BCIT gallery subject and website logo without expanding the 49-subject count. No BCIT historical artwork is added to the held manifest.

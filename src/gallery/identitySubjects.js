@@ -19,6 +19,7 @@ import { SCHOOL_IDENTITY_SUBJECTS } from '../schools/integration.js'
 import { SCHOOL_FAMILY } from '../schools/districts.js'
 
 import { POSTSECONDARY_FAMILY, POSTSECONDARY_SUBJECTS } from './postsecondarySubjects.js'
+import { postsecondaryArtworkOf } from './postsecondaryArtwork.js'
 
 export const IDENTITY_KIND_LABELS = {
   'public-college': 'Public college',
@@ -3187,6 +3188,7 @@ const CURATED_SUBJECTS = [
     "id": "bcit",
     "label": "BCIT",
     "name": "British Columbia Institute of Technology",
+    "artworkReview": postsecondaryArtworkOf('bcit'),
     "kind": "public-institute",
     "family": "institutions",
     "graphNode": "bcit",
@@ -3204,8 +3206,8 @@ const CURATED_SUBJECTS = [
         "note": "Dated signage/brand evidence; does not imply every institutional master is held."
       }
     ],
-    "nextAction": "Date earlier academic identity variants; inspect additional approved arrangements and keep heraldic, athletics and uniform material as separate asset types.",
-    "note": "Existing security patches, where present, do not establish academic-logo coverage.",
+    "nextAction": "Confirm reuse permission before adding any historical artwork. The source links document the marks without adding copies to the gallery.",
+    "note": "The gallery’s existing website logo is separate from the historical logo sources, anniversary artwork and heraldic grant below.",
     "relations": []
   },
   {
