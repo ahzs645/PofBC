@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import {
   COVERAGE_FAMILIES, COVERAGE_STATES, IDENTITY_COVERAGE, INVERSE_RELATION_LABELS, coverageSummary, familyById,
-  filterIdentityCoverage, regionOf, relationsOf, subjectsForCollection
+  filterIdentityCoverage, identitySubjectById, regionOf, relationsOf, subjectsForCollection
 } from './identityCoverage.js'
+import { COMMISSION_DIRECTORIES, COMMISSION_FAMILY, commissionById } from './commissionHistory.js'
 import { MUNICIPAL_AS_OF, MUNICIPAL_REGIONS } from './municipalSubjects.js'
 import { SiteLink } from '../site/navigation.jsx'
 import { galleryPlaceUrl, readCoverageFilters } from './galleryPlace.js'
@@ -53,6 +54,14 @@ export const IdentitySearchResults = ({ subjects, onOpen }) => subjects.length >
   </section>
 )
 
+const CommissionRegisterLink = ({ onOpenRegister }) => (
+  <a className="identity-action" href="?view=gallery&coverage=1&identity-family=commissions" onClick={(event) => {
+    if (!plainClick(event)) return
+    event.preventDefault()
+    onOpenRegister({ family: COMMISSION_FAMILY.id })
+  }}>Commissions</a>
+)
+
 export const IdentityCoverageOverview = ({ onOpenRegister }) => {
   const summary = coverageSummary()
   return (
@@ -63,6 +72,7 @@ export const IdentityCoverageOverview = ({ onOpenRegister }) => {
       <p className="identity-overview__counts" title="Regional transit, public agencies, service brands and institutions, alongside the Crown and health collections: their relationships, sources and remaining gaps.">
         <strong>{summary.subjects}</strong> subjects · <strong>{summary.held}</strong> with artwork · <strong>{summary.sources}</strong> leads
       </p>
+      <CommissionRegisterLink onOpenRegister={onOpenRegister} />
       <button type="button" className="identity-primary" onClick={() => onOpenRegister()}>Browse the register <span aria-hidden="true">→</span></button>
     </section>
   )
@@ -130,7 +140,15 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
   const subjects = filterIdentityCoverage(IDENTITY_COVERAGE, filters)
   const summary = coverageSummary(subjects)
   const family = familyById(filters.family)
-  const groups = COVERAGE_FAMILIES.map((group) => ({ ...group, subjects: subjects.filter((subject) => subject.family === group.id) })).filter((group) => group.subjects.length)
+  const commissionsSelected = filters.family === COMMISSION_FAMILY.id
+  const visibleFamilies = family ? [family] : COVERAGE_FAMILIES
+  const groups = visibleFamilies.map((group) => {
+    const members = filterIdentityCoverage(subjects, { family: group.id })
+    if (group.id === COMMISSION_FAMILY.id) {
+      members.sort((a, b) => commissionById.get(a.id).name.localeCompare(commissionById.get(b.id).name, 'en-CA'))
+    }
+    return { ...group, subjects: members }
+  }).filter((group) => group.subjects.length)
   return (
     <div className="identity-register">
       <nav className="gallery__crumbs" aria-label="Gallery"><button type="button" className="gallery__back" onClick={onHome}>← All logos</button><span aria-hidden="true">/</span><span aria-current="page">Collection register</span></nav>
@@ -155,11 +173,26 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
       </div>
       {(family?.note || family?.description) && <p className="gallery__note">{family.note || family.description}{family.id === 'municipalities' && ` Registry as of ${MUNICIPAL_AS_OF}; filter by regional district with Region.`}</p>}
       {!subjects.length && <p className="identity-empty">No subjects match these filters. Try another name or clear the filters.</p>}
+      {commissionsSelected && <details className="identity-research">
+        <summary>Where to find other commissions</summary>
+        <ul className="identity-sources">{COMMISSION_DIRECTORIES.map((entry) => <li key={entry.url}>
+          <External href={entry.url}>{entry.title}</External><p>{entry.note}</p>
+        </li>)}</ul>
+      </details>}
       {groups.map((group) => (
         <section className="identity-family" key={group.id} aria-labelledby={`identity-family-${group.id}`}>
           <h3 id={`identity-family-${group.id}`}>{group.label}<span>{group.subjects.length} subjects</span></h3>
+          {group.id === COMMISSION_FAMILY.id && !commissionsSelected && <button type="button" className="gallery__back" onClick={() => update({ family: COMMISSION_FAMILY.id })}>Browse commissions across all families →</button>}
           {group.id === 'postsecondary-history' && <PostsecondaryCounts subjects={group.subjects} />}
-          {group.id === 'municipalities' && !filters.region
+          {commissionsSelected ? (
+            <ul className="identity-sources">{group.subjects.map((subject) => {
+              const record = commissionById.get(subject.id)
+              return <li key={subject.id}>
+                <strong><SubjectLink id={subject.id} onOpen={onOpenSubject}>{record.name}</SubjectLink></strong>
+                {' · '}{record.period}<p>{record.outcome}</p>
+              </li>
+            })}</ul>
+          ) : group.id === 'municipalities' && !filters.region
             ? <MunicipalRegions subjects={group.subjects} onOpen={onOpenSubject} onRegion={(region) => update({ region })} />
             : <div className="identity-subject-links">
               {group.subjects.map((subject) => <SubjectButton key={subject.id} subject={subject} onOpen={onOpenSubject} />)}
@@ -253,6 +286,8 @@ const PostsecondaryArtworkReview = ({ review, onOpenSubject }) => {
 }
 
 export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSubject, onChooseCollection, onOpenGovernment }) => {
+  const commission = commissionById.get(subject.id)
+  const relatedCommissionSubject = commission?.next && identitySubjectById(commission.next)
   const family = familyById(subject.family)
   const groups = connectionGroups(subject)
   const connected = new Set(groups.flatMap((group) => group.relations.map((relation) => relation.subject)))
@@ -282,6 +317,7 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
         <p className="identity-hero__note">{subject.note}</p>
         <div className="identity-actions">
           <Status subject={subject} />
+          {commission && <CommissionRegisterLink onOpenRegister={onOpenRegister} />}
           {hasUnbcOrigins(subject.id) && <UnbcOriginsLink local />}
           {subject.schoolDistrict && <SiteLink className="identity-action" to={{ view: 'school-districts', district: subject.schoolDistrict }}>Connected district history <span aria-hidden="true">→</span></SiteLink>}
           {subject.graphNode && onOpenGovernment && <button type="button" className="identity-action" onClick={() => onOpenGovernment(subject.graphNode, subject.graphYear)}>Organization and salaries <span aria-hidden="true">→</span></button>}
@@ -293,6 +329,15 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
 
       <div className="identity-layout">
         <div className="identity-layout__main">
+          {commission && <section className="identity-card" aria-labelledby="commission-history">
+            <h3 id="commission-history">Commission history</h3>
+            <strong>{commission.period}</strong>
+            {subject.note !== commission.history && <p>{commission.history}</p>}
+            <p>{commission.outcome}</p>
+            {commission.later && <p>{commission.later}</p>}
+            {relatedCommissionSubject && <SubjectLink id={relatedCommissionSubject.id} onOpen={onOpenSubject}>See {relatedCommissionSubject.name} →</SubjectLink>}
+            <ul className="identity-sources">{commission.sources.map((source) => <li key={source.url}><External href={source.url}>{source.title}</External></li>)}</ul>
+          </section>}
           <section aria-labelledby="identity-artwork">
             <h3 id="identity-artwork" className="identity-heading">Artwork <span>{heldEntries.length || ''}</span></h3>
             {heldEntries.length

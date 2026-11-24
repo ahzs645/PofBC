@@ -85,3 +85,24 @@ test('aliases find the correct subject without treating an operator and service 
   assert.ok(filterIdentityCoverage(IDENTITY_COVERAGE, { scope: 'institution' }).length > 0)
   assert.ok(filterIdentityCoverage(IDENTITY_COVERAGE, { scope: 'institution' }).every((subject) => subject.scope === 'institution'))
 })
+
+test('the commissions category preserves sector membership, separates commissioners and resolves history links', async () => {
+  const { COMMISSION_HISTORIES } = await import('./commissionHistory.js')
+  const { CURRENT_BODIES } = await import('../government/currentData.js')
+  const { HISTORICAL_BODIES, SUB_AGENCIES, LOCAL_BODIES } = await import('../government/historyData.js')
+  const members = filterIdentityCoverage(IDENTITY_COVERAGE, { family: 'commissions' })
+  const ids = new Set(members.map((subject) => subject.id))
+  assert.equal(ids.size, COMMISSION_HISTORIES.length)
+  for (const body of [...CURRENT_BODIES, ...HISTORICAL_BODIES, ...SUB_AGENCIES, ...LOCAL_BODIES]) {
+    if (/\bcommission\b/i.test(body.name)) assert.ok(ids.has(body.id), body.id)
+  }
+  for (const record of COMMISSION_HISTORIES) {
+    assert.ok(record.period && record.history && record.outcome && record.sources.length, record.id)
+    for (const source of record.sources) assert.equal(new URL(source.url).protocol, 'https:')
+    if (record.next) assert.ok(identitySubjectById(record.next), record.id)
+  }
+  assert.ok(filterIdentityCoverage(members, { family: 'specialist-health' }).some((s) => s.id === 'alcohol-and-drug-commission'))
+  assert.ok(filterIdentityCoverage(members, { query: 'Housing Management Commission' }).some((s) => s.id === 'bc-housing'))
+  assert.ok(!ids.has('police-complaint-commissioner'))
+  assert.ok(!identitySubjectById('bc-police-commission').hasArtwork)
+})
