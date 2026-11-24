@@ -1480,8 +1480,10 @@ export const FOLDED_UNDER = [
   { parent: 'collected-bc-pavilion-corporation', children: ['collected-sub-bc-place', 'collected-sub-vancouver-convention-centre'] }
 ]
 
-// GameSense is a program with an initiative page of its own; its collection links there.
-GALLERY_COLLECTIONS.find((collection) => collection.id === 'collected-gamesense').initiativeId = 'gamesense'
+// Program collections link to their histories in the initiatives register.
+for (const program of ['gamesense', 'bc-youth']) {
+  GALLERY_COLLECTIONS.find((collection) => collection.id === 'collected-' + program).initiativeId = program
+}
 
 for (const { parent, children } of FOLDED_UNDER) {
   if (!GALLERY_COLLECTIONS.some((collection) => collection.id === parent)) throw new Error(`Unknown parent collection: ${parent}`)

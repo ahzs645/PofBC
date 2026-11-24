@@ -4595,6 +4595,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bc-youth-right-flag": {
+  "light": {
+   "file": "identity-display/bc-youth-right-flag.light.svg",
+   "aspect": 3.1077,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-youth-right-flag.dark.svg",
+   "aspect": 3.1077,
+   "recoloured": true
+  }
+ },
+ "bc-youth-left-flag": {
+  "light": {
+   "file": "identity-display/bc-youth-left-flag.light.svg",
+   "aspect": 1.9344,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bc-youth-left-flag.dark.svg",
+   "aspect": 1.9344,
+   "recoloured": false
+  }
+ },
  "bccf-letterhead": {
   "light": {
    "file": "identity-display/bccf-letterhead.light.svg",

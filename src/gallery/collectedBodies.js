@@ -3,6 +3,8 @@ import { EXPANDED_IDENTITY_BODIES } from './expandedIdentityData.js'
 import { MUNICIPAL_IDENTITY_BODIES } from './municipalIdentityData.js'
 import { RECOVERED_IDENTITY_BODIES } from './recoveredIdentityData.js'
 import { POSTSECONDARY_IDENTITY_BODIES } from './postsecondaryIdentityData.js'
+import { HEALTH_COUNCIL_BODIES } from './healthCouncilHistory.js'
+import { YOUTH_BODY } from './bcYouth.js'
 import { FAMILY_COUNCIL_BODY } from './councilForTheFamily.js'
 import { ALCOHOL_AND_DRUG_COMMISSION_BODY } from './alcoholAndDrugCommission.js'
 import { IUS_BODY } from './iusCollectionData.js'
@@ -10,7 +12,7 @@ import { SCHOOL_IDENTITY_BODIES } from '../schools/integration.js'
 
 const additionalBodies = [
   ...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES,
-  ...SCHOOL_IDENTITY_BODIES, ...POSTSECONDARY_IDENTITY_BODIES, IUS_BODY, FAMILY_COUNCIL_BODY, ALCOHOL_AND_DRUG_COMMISSION_BODY
+  ...SCHOOL_IDENTITY_BODIES, ...POSTSECONDARY_IDENTITY_BODIES, IUS_BODY, YOUTH_BODY, ...HEALTH_COUNCIL_BODIES, FAMILY_COUNCIL_BODY, ALCOHOL_AND_DRUG_COMMISSION_BODY
 ]
 
 export const ALL_COLLECTED_BODIES = [...COLLECTED_BODIES, ...additionalBodies]

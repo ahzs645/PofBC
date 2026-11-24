@@ -8,7 +8,7 @@ export const InitiativeLink = ({ id }) => {
   if (!initiative) return null
   return <SiteLink className="initiatives__teaser" to={{ view: 'initiatives', initiative: id }}>
     <span>Initiatives / {initiative.title}</span>
-    <strong>Explore websites, campaigns and the wider history
+    <strong>{initiative.exploreLabel ?? 'Explore websites, campaigns and the wider history'}
       <svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" strokeWidth="1.4" /></svg>
     </strong>
   </SiteLink>

@@ -3,6 +3,7 @@ import {
   COVERAGE_FAMILIES, COVERAGE_STATES, IDENTITY_COVERAGE, INVERSE_RELATION_LABELS, coverageSummary, familyById,
   filterIdentityCoverage, identitySubjectById, regionOf, relationsOf, subjectsForCollection
 } from './identityCoverage.js'
+import { initiativesForBody } from '../initiatives/initiatives.js'
 import { COMMISSION_DIRECTORIES, COMMISSION_FAMILY, commissionById } from './commissionHistory.js'
 import { MUNICIPAL_AS_OF, MUNICIPAL_REGIONS } from './municipalSubjects.js'
 import { SiteLink } from '../site/navigation.jsx'
@@ -317,6 +318,7 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
         <p className="identity-hero__note">{subject.note}</p>
         <div className="identity-actions">
           <Status subject={subject} />
+          {initiativesForBody(subject.id).map((entry) => <SiteLink key={entry.id} className="identity-action" to={{ view: 'initiatives', initiative: entry.id }}>{entry.title} initiative</SiteLink>)}
           {commission && <CommissionRegisterLink onOpenRegister={onOpenRegister} />}
           {hasUnbcOrigins(subject.id) && <UnbcOriginsLink local />}
           {subject.schoolDistrict && <SiteLink className="identity-action" to={{ view: 'school-districts', district: subject.schoolDistrict }}>Connected district history <span aria-hidden="true">→</span></SiteLink>}
