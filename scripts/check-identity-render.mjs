@@ -33,8 +33,27 @@ try {
     }
     renders++
   }
+  const renderSubject = (id) => renderToStaticMarkup(React.createElement(components.IdentitySubjectDetail, {
+    subject: model.identitySubjectById(id), theme: 'light', ...callbacks
+  }))
+  const vectorLead = renderSubject('camosun-college')
+  assert.match(vectorLead, /Open official vector source/)
+  assert.match(vectorLead, /href="https:\/\/camosun\.ca\/themes\/cam\/logo\.svg"/)
+  assert.doesNotMatch(vectorLead, /<img\b[^>]*\bsrc="https:/)
+  assert.match(vectorLead, /No separately held artwork/)
+  const shared = renderSubject('ubc-okanagan-campus')
+  assert.match(shared, /Shared branding/)
+  assert.match(shared, /subject=university-of-british-columbia/)
+  assert.match(shared, /No separately held artwork/)
+  const cover = renderSubject('vancouver-school-of-art')
+  assert.match(cover, /Publication cover, institutional status unconfirmed/)
+  assert.doesNotMatch(cover, /Open official vector source/)
   const register = renderToStaticMarkup(React.createElement(components.IdentityCoverageBrowser, { onHome() {}, onOpenSubject() {} }))
   assert.ok(register.includes(`${model.IDENTITY_COVERAGE.length} subjects`), 'register count does not render')
+  for (const wording of [
+    '0 with artwork in the gallery', '24 with verified native-vector sources',
+    '7 with observed nonvector artwork only', '18 without distinct verified logo artwork'
+  ]) assert.ok(register.includes(wording), `missing post-secondary count: ${wording}`)
   const overview = renderToStaticMarkup(React.createElement(components.IdentityCoverageOverview, callbacks))
   assert.ok(overview.includes('Browse the register'), 'register is not reachable from overview')
   const { CollectedMarkView } = await server.ssrLoadModule('/src/gallery/CollectedMarkView.jsx')

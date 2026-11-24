@@ -10,6 +10,7 @@ import { writeHistory } from '../site/browserHistory.js'
 import { tileArt } from './tileArt.js'
 import { entriesOf } from './collections.js'
 import { IDENTITY_KIND_LABELS, IDENTITY_RELATION_LABELS } from './identitySubjects.js'
+import { POSTSECONDARY_ARTWORK_FORMAT, POSTSECONDARY_ARTWORK_SCOPE, summarizePostsecondaryArtwork } from './postsecondaryArtwork.js'
 import './identityCoverage.css'
 import { Select } from '../site/ui/Select.jsx'
 import { holdScroll } from '../site/holdScroll.js'
@@ -93,6 +94,18 @@ const MunicipalRegions = ({ subjects, onOpen, onRegion }) => {
   )
 }
 
+const PostsecondaryCounts = ({ subjects }) => {
+  const { held, vector, observedNonvector, shared, unverified } = summarizePostsecondaryArtwork(subjects)
+  return (
+    <p className="identity-artwork-coverage">
+      <strong>{held} with artwork in the gallery</strong>
+      {' · '}{vector} with verified native-vector sources
+      {' · '}{observedNonvector} with observed nonvector artwork only
+      {' · '}{unverified} without distinct verified logo artwork{shared ? ` (including ${shared} shared)` : ''}
+    </p>
+  )
+}
+
 export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
   const [filters, setFilters] = useState(() => {
     const initial = readCoverageFilters()
@@ -145,6 +158,7 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
       {groups.map((group) => (
         <section className="identity-family" key={group.id} aria-labelledby={`identity-family-${group.id}`}>
           <h3 id={`identity-family-${group.id}`}>{group.label}<span>{group.subjects.length} subjects</span></h3>
+          {group.id === 'postsecondary-history' && <PostsecondaryCounts subjects={group.subjects} />}
           {group.id === 'municipalities' && !filters.region
             ? <MunicipalRegions subjects={group.subjects} onOpen={onOpenSubject} onRegion={(region) => update({ region })} />
             : <div className="identity-subject-links">
@@ -211,6 +225,33 @@ const MunicipalRecords = ({ subject }) => {
   )
 }
 
+const PostsecondaryArtworkReview = ({ review, onOpenSubject }) => {
+  const { specimens, shared } = review
+  if (!specimens.length && !shared) return null
+  const sharedSubject = shared && IDENTITY_COVERAGE.find(({ id }) => id === shared.targetSubjectId)
+  return (
+    <section className="identity-card identity-artwork-review" aria-labelledby="identity-artwork-review">
+      <h4 id="identity-artwork-review">Artwork sources and review</h4>
+      <p className="identity-muted">These links open files or pages published elsewhere. They are not copies held or hosted by this gallery.</p>
+      {shared && <div className="identity-artwork-review__shared">
+        <strong>Shared branding{sharedSubject && <> with <SubjectLink id={sharedSubject.id} onOpen={onOpenSubject}>{sharedSubject.label}</SubjectLink></>}</strong>
+        <p>{shared.note} <External href={shared.url}>{shared.label}</External></p>
+      </div>}
+      {specimens.length > 0 && <ul className="identity-sources">
+        {specimens.map((item) => (
+          <li key={item.id}>
+            <strong>{item.label}</strong>
+            <p>{[POSTSECONDARY_ARTWORK_FORMAT[item.format], POSTSECONDARY_ARTWORK_SCOPE[item.scope], item.publisher, item.publicationDate, item.locator].filter(Boolean).join(' · ')}</p>
+            <External href={item.url} className="identity-action">{item.format === 'native-vector' ? 'Open official vector source' : item.format === 'description-only' ? 'Open design reference' : 'Open artwork source'}<span className="visually-hidden">: {item.label}</span></External>
+            {item.note && <p>{item.note}</p>}
+            {item.rightsNote && <p>{item.rightsNote} {item.rightsUrl && <External href={item.rightsUrl}>See source terms</External>}</p>}
+          </li>
+        ))}
+      </ul>}
+    </section>
+  )
+}
+
 export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSubject, onChooseCollection, onOpenGovernment }) => {
   const family = familyById(subject.family)
   const groups = connectionGroups(subject)
@@ -261,7 +302,8 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
                   <span className="identity-artwork__label">{entry.label}</span><span className="identity-muted">{entry.years}</span>
                 </button>
               ))}</div>
-              : <div className="identity-empty"><strong>Still wanted.</strong> {subject.nextAction}</div>}
+              : <div className="identity-empty"><strong>{subject.artworkReview ? 'No separately held artwork.' : 'Still wanted.'}</strong> {subject.nextAction}</div>}
+            {subject.artworkReview && <PostsecondaryArtworkReview review={subject.artworkReview} onOpenSubject={onOpenSubject} />}
           </section>
 
           {(subject.sources?.length > 0 || (heldEntries.length > 0 && subject.nextAction)) && (
