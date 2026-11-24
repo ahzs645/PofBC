@@ -41,6 +41,45 @@ try {
   assert.match(vectorLead, /href="https:\/\/camosun\.ca\/themes\/cam\/logo\.svg"/)
   assert.doesNotMatch(vectorLead, /<img\b[^>]*\bsrc="https:/)
   assert.match(vectorLead, /No separately held artwork/)
+  const cnc = renderSubject('college-of-new-caledonia')
+  assert.match(cnc, /Identity history and official sources/)
+  assert.match(cnc, /<time[^>]*datetime="1978-12-01"[^>]*>December 1, 1978/i)
+  assert.match(cnc, /<time[^>]*datetime="1996-06-04"[^>]*>June 4, 1996/i)
+  assert.match(cnc, /Open signed designation order/)
+  assert.match(cnc, /Open heraldic register/)
+  assert.equal((cnc.match(/Open official vector source/g) ?? []).length, 2)
+  for (const end of ['2960_1978', 'project/616', 'cnc_iapr_2019-20.pdf#page=1', 'sfvrsn=aa5c3de8_1#page=1']) {
+    assert.equal([...cnc.matchAll(/href="([^"]+)"/g)].filter(([, href]) => href.endsWith(end)).length, 1, end)
+  }
+  assert.match(cnc, /Earlier College of New Caledonia full-name logo/)
+  assert.match(cnc, /Current red enclosed CNC initials/)
+  assert.match(cnc, /No separately held artwork/)
+  assert.doesNotMatch(cnc, /<img\b|<svg\b/)
+  const { GalleryView } = await server.ssrLoadModule('/src/gallery/GalleryView.jsx')
+  const renderGalleryLink = (search) => {
+    const previous = globalThis.location
+    try {
+      globalThis.location = new URL(`https://projects.ahmadjalil.com/PofBC/${search}`)
+      return renderToStaticMarkup(React.createElement(GalleryView, callbacks))
+    } finally {
+      if (previous) globalThis.location = previous
+      else delete globalThis.location
+    }
+  }
+  const oldBcitLink = renderGalleryLink('?view=gallery&logos=collected-bcit&mark=source-expanded-bcit-website-logo')
+  assert.match(oldBcitLink, /British Columbia Institute of Technology: Website logo/)
+  assert.match(oldBcitLink, /href="[^"]*subject=bcit"/)
+  assert.doesNotMatch(oldBcitLink, /Incoming Trade Gothic full-name lockup/)
+  const bcit = renderGalleryLink('?view=gallery&subject=bcit')
+  for (const label of ['Inaugural globe and spear emblem', 'Upright outlined BCIT acronym',
+    'BCIT 20th-anniversary emblem', 'Italic striped acronym without a swoosh', 'Striped acronym with orbital swoosh',
+    'Outgoing Eras full-name lockup', 'Incoming Trade Gothic full-name lockup', 'Early 2017 visual identity refresh'
+  ]) assert.ok(bcit.includes(label), `BCIT subject missing: ${label}`)
+  assert.match(bcit, /<time[^>]*datetime="1996-02-29"[^>]*>February 29, 1996/i)
+  assert.match(bcit, /Open heraldic register/)
+  assert.equal((bcit.match(/Open official vector source/g) ?? []).length, 2)
+  assert.match(bcit, /research reconstruction is an approximation/)
+  assert.doesNotMatch(bcit, /<(img|image|object|iframe)\b[^>]*\b(src|href|data)="https:/)
   const shared = renderSubject('ubc-okanagan-campus')
   assert.match(shared, /Shared branding/)
   assert.match(shared, /subject=university-of-british-columbia/)

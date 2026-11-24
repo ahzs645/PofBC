@@ -2,6 +2,7 @@
 import registry from '../../research/identity/postsecondary-2026-11-24/source-register.json' with { type: 'json' }
 import pdfReview from '../../research/identity/postsecondary-2026-11-24/artwork-review-candidates.json' with { type: 'json' }
 import newEvidence from '../../research/identity/postsecondary-2026-11-24/artwork-coverage-evidence.json' with { type: 'json' }
+import bcitEvidence from '../../research/identity/postsecondary-2026-11-24/bcit-artwork-evidence.json' with { type: 'json' }
 
 export const POSTSECONDARY_ARTWORK_SCOPE = {
   'institutional': 'Institutional identity',
@@ -19,6 +20,7 @@ export const POSTSECONDARY_ARTWORK_SCOPE = {
 
 export const POSTSECONDARY_ARTWORK_FORMAT = {
   'native-vector': 'Native vector source',
+  'heraldic-register': 'Official heraldic record',
   'raster-source': 'Raster source',
   'format-unverified': 'Published specimen, format unverified',
   'raster-lead': 'Raster acquisition lead',
@@ -47,20 +49,21 @@ const directLeads = registry.records.flatMap((subject) => subject.artworkCandida
   publisher: candidate.publisher, publicationDate: candidate.publicationDate,
   note: candidate.note, evidence: 'source-only'
 })))
-const specimens = [...newEvidence.specimens, ...verifiedPdf, ...directLeads]
+const specimens = [...newEvidence.specimens, ...bcitEvidence.specimens, ...verifiedPdf, ...directLeads]
 const bySubject = new Map()
 for (const item of specimens) {
   if (!bySubject.has(item.subjectId)) bySubject.set(item.subjectId, [])
   bySubject.get(item.subjectId).push(item)
 }
 const shared = new Map(newEvidence.sharedIdentities.map((item) => [item.subjectId, item]))
+const identityHistories = new Map([...newEvidence.identityHistories, bcitEvidence.identityHistory].map(({ subjectId, events }) => [subjectId, events]))
 
 // Cover art and heraldry can be useful specimens without proving a distinct graphic logo.
 export const isLogoSource = ({ format, scope }) => ['native-vector', 'raster-source', 'format-unverified', 'raster-lead'].includes(format)
   && ['institutional', 'historical', 'campus', 'retrospective'].includes(scope)
 
 export function postsecondaryArtworkOf(id) {
-  return { specimens: bySubject.get(id) ?? [], shared: shared.get(id) ?? null }
+  return { specimens: bySubject.get(id) ?? [], shared: shared.get(id) ?? null, history: identityHistories.get(id) ?? [] }
 }
 
 // The three evidence counts partition subjects; holdings are a separate count. Variants,

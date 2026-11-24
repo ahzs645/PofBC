@@ -29,3 +29,7 @@ The [artwork evidence ledger](./artwork-coverage-evidence.json) records addition
 The family count classifies each subject once: verified institutional vector, observed institutional nonvector only, or no independently verified logo artwork. A shared campus signature, athlete mark, campaign, unconfirmed cover or historic heraldic device stays labelled as such. The count of gallery holdings is separate. An artwork lead is not a native vector file, and a source-backed reconstruction would need a visible reconstruction label and clearance before inclusion.
 
 No vector is manufactured from a current logo, an institutional name or an unconfirmed design description. Site publication and public access to downloads do not alone establish permission to copy, embed, or distribute the artwork. Only accept an asset into the separate held manifest after checking both identity and source-specific reuse terms.
+
+The [College of New Caledonia evidence and extraction record](./cnc-identity-history.md) identifies the precise native drawings for its two logo forms and separates those specimens from the dated heraldic grant and provincial designation.
+
+The [BCIT historical evidence and extraction record](./bcit-identity-history.md) supplements the existing BCIT gallery subject and website logo without expanding the 49-subject count. No BCIT historical artwork is added to the held manifest.

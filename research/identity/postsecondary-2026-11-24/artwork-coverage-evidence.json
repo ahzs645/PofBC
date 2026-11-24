@@ -306,14 +306,14 @@
     {
       "id": "official-college-of-new-caledonia-vector",
       "subjectId": "college-of-new-caledonia",
-      "label": "College of New Caledonia enclosed initials mark",
+      "label": "Current red enclosed CNC initials",
       "format": "native-vector",
       "scope": "institutional",
       "url": "https://www.cnc.bc.ca/docs/public/governance/initiatives-and-reports/edib-plan-webc11b7f00c64742fcab13ad7e24a05a14.pdf?sfvrsn=aa5c3de8_1#page=1",
       "publisher": "College of New Caledonia",
       "locator": "2026–31 EDIB Strategy, PDF p. 1; 5 native paths in (496.080, 655.920, 576.891, 736.731) pt",
       "evidence": "source-only",
-      "note": "Enclosed initials mark matches the current website header PNG. It is not the older full-name primary lockup.",
+      "note": "The source-native paths match the current website header design, which is served as a PNG. The strategy establishes an observed use, not when the mark was adopted.",
       "rightsNote": "CNC brand policy §§11, 13 and 22 restrict external use and require written approval for same or very similar marks.",
       "rightsUrl": "https://www.cnc.bc.ca/docs/policies/cnc-brand.pdf?sfvrsn=e8704e30_1",
       "sha256": "25102dba2b7b242beb3cb90fd82b849cb2ad5f190d808e60a1c7459deca91c17"
@@ -581,17 +581,31 @@
     {
       "id": "cnc-2019-fullname-variant",
       "subjectId": "college-of-new-caledonia",
-      "label": "College of New Caledonia earlier full-name lockup",
+      "label": "Earlier College of New Caledonia full-name logo",
       "format": "native-vector",
       "scope": "historical",
       "url": "https://www2.gov.bc.ca/assets/gov/education/post-secondary-education/institution-resources-administration/accountability-framework/iapr/2019-20/cnc_iapr_2019-20.pdf#page=1",
       "publisher": "College of New Caledonia",
-      "locator": "PDF pp. 1 and 32, seven actual filled paths in each application",
+      "locator": "2019–20 accountability report, PDF pp. 1 and 32; seven filled paths in each application",
       "evidence": "source-only",
-      "note": "Original geometry is placed over photography; the photo is not part of the mark. Not the current website header.",
-      "rightsNote": "No permission to redistribute or embed this specimen was established.",
+      "note": "The full college name appears above the bar and initials. The photo is not part of the mark. Report use does not establish first or last use.",
+      "rightsNote": "No clearance to reproduce this variant was established. See the CNC Brand policy linked with the enclosed mark below.",
       "publicationDate": "2020",
       "sha256": "3dc3d8f18d478eef15e5b12ee6dea70d511b9565c4cf9f1b1539bbccb542955a"
+    },
+    {
+      "id": "cnc-1996-heraldic-grant",
+      "subjectId": "college-of-new-caledonia",
+      "label": "Coat of arms, supporters, flag and badge",
+      "format": "heraldic-register",
+      "scope": "heraldry",
+      "url": "https://www.gg.ca/en/heraldry/public-register/project/616",
+      "publisher": "Canadian Heraldic Authority",
+      "locator": "Public Register, vol. III, p. 99; grant of June 4, 1996",
+      "evidence": "source-only",
+      "note": "Granted to the College of New Caledonia in Prince George. The Canada Gazette notice followed on March 24, 2001; that is not the grant date. The register credits the original concept to Graham Anderson, assisted by the Authority’s heralds, and the painting to Joan Bouwmeester.",
+      "rightsNote": "The Authority requires permission from both the grantee and the Authority for reproduction. CNC Brand policy §6 also restricts use of its coat of arms and crest.",
+      "rightsUrl": "https://www.gg.ca/en/heraldry/faq"
     },
     {
       "id": "fvc-1980s-shield-ufv-retrospective",
@@ -620,6 +634,39 @@
       "publicationDate": "2002-11-29",
       "sha256": "bf5c6e66e22a537fd3d1049f315285fc2a27b17dd2fd7959a74d4b5336535938",
       "evidence": "source-only"
+    }
+  ],
+  "identityHistories": [
+    {
+      "subjectId": "college-of-new-caledonia",
+      "events": [
+        {
+          "type": "legal",
+          "date": "1978-12-01",
+          "dateLabel": "December 1, 1978",
+          "label": "College designation under provincial law",
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2960_1978",
+          "note": "Order in Council 2960/1978 was approved November 24 and took effect December 1 under the Colleges and Provincial Institutes Act, section 6(1). This is distinct from the college’s 1969 opening and 1971 vocational school amalgamation."
+        },
+        {
+          "type": "heraldic-grant",
+          "date": "1996-06-04",
+          "dateLabel": "June 4, 1996",
+          "specimenId": "cnc-1996-heraldic-grant"
+        },
+        {
+          "type": "logo-specimen",
+          "date": "2020",
+          "dateLabel": "2019–20 report",
+          "specimenId": "cnc-2019-fullname-variant"
+        },
+        {
+          "type": "logo-specimen",
+          "date": "2026",
+          "dateLabel": "2026–31 strategy",
+          "specimenId": "official-college-of-new-caledonia-vector"
+        }
+      ]
     }
   ],
   "sharedIdentities": [
