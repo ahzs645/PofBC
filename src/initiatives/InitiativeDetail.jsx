@@ -20,7 +20,9 @@ const Sources = ({ references = [], className = '', label = 'Sources' }) => {
       const source = sourceMap.get(reference.sourceId)
       if (!source) return null
       return <li key={`${reference.sourceId}-${reference.page ?? index}`}>
-        <a href={sourceUrl(source, reference)} target="_blank" rel="noreferrer">{source.shortTitle ?? source.title}<Arrow /></a>
+        {source.url || reference.url
+          ? <a href={sourceUrl(source, reference)} target="_blank" rel="noreferrer">{source.shortTitle ?? source.title}<Arrow /></a>
+          : <span>{source.title}</span>}
         {(reference.page || reference.locator) && <span>{reference.locator ?? `PDF page ${reference.page}`}</span>}
       </li>
     })}
@@ -28,6 +30,7 @@ const Sources = ({ references = [], className = '', label = 'Sources' }) => {
   )
 }
 const SPECIMEN_TYPES = {
+  'vector-reconstruction': 'Vector reconstruction',
   'native-pdf-vector-extraction': 'Native vector from publication',
   'printed-source-crop': 'Crop from the printed source',
   'original-published-image': 'Original publisher image',
@@ -101,7 +104,7 @@ const SpecimenDialog = ({ item, onClose }) => {
       {item.registrations?.length > 0 && <details className="initiative__record-details"><summary>Trademark and registration evidence</summary><ul>{item.registrations.map((entry, index) => <li key={`${entry.number}-${index}`}>{entry.territory} · {entry.type} {entry.number}{entry.page ? ` · PDF page ${entry.page}` : ''}</li>)}</ul></details>}
       <Sources references={item.sourceRefs} />
       <Links links={item.links} />
-      {image && <a className="initiative__download" href={assetUrl(fileOf(image))} download>Download {fileOf(image).endsWith('.svg') ? 'source vector' : 'source image'}<span aria-hidden="true">↓</span></a>}
+      {image && <a className="initiative__download" href={assetUrl(fileOf(image))} download>Download {fileOf(image).endsWith('.svg') ? (image.evidenceType === 'vector-reconstruction' ? 'reconstructed SVG' : 'source vector') : 'source image'}<span aria-hidden="true">↓</span></a>}
     </div>
   </dialog>
 }
@@ -112,7 +115,7 @@ const RecordCard = ({ item, onOpen, mark = false, featured = false }) => <articl
     <h3><button type="button" onClick={() => onOpen(item)}>{item.title}<Arrow /></button></h3>
     <p>{item.description}</p>
     {item.domains?.[0] && <code className="initiative__card-domain">{item.domains[0]}</code>}
-    {mark && <span className="initiative__small">{imagesOf(item).length > 1 ? `${imagesOf(item).length} published specimens` : item.artworkStatus === 'native-vector-held' ? 'Original vector paths' : 'Source and date documented'}</span>}
+    {mark && <span className="initiative__small">{item.artworkNote ?? (imagesOf(item).length > 1 ? `${imagesOf(item).length} published specimens` : item.artworkStatus === 'native-vector-held' ? 'Original vector paths' : 'Source and date documented')}</span>}
   </div>
 </article>
 
@@ -179,7 +182,7 @@ const AddressInventory = ({ inventory }) => {
 const SourceRegister = ({ section }) => {
   const { initiative } = useInitiative()
   return <>
-    <details className="initiative__source-list"><summary>Source library · {initiative.sources.length} references</summary><ol>{initiative.sources.map((source) => <li key={source.id}><a href={source.url} target="_blank" rel="noreferrer">{source.title}<Arrow /></a>{source.date && <span>{source.date}</span>}{(source.description || source.note) && <p>{source.description ?? source.note}</p>}</li>)}</ol></details>
+    <details className="initiative__source-list"><summary>Source library · {initiative.sources.length} references</summary><ol>{initiative.sources.map((source) => <li key={source.id}>{source.url ? <a href={source.url} target="_blank" rel="noreferrer">{source.title}<Arrow /></a> : <strong>{source.title}</strong>}{source.date && <span>{source.date}</span>}{(source.description || source.note || source.citation) && <p>{source.description ?? source.note ?? source.citation}</p>}</li>)}</ol></details>
     {section.inventory && <AddressInventory inventory={section.inventory} />}
   </>
 }

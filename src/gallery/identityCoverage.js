@@ -3,6 +3,7 @@
 import { IDENTITY_FAMILIES, IDENTITY_SUBJECTS } from './identitySubjects.js'
 import { GALLERY_COLLECTIONS, entriesOfNode } from './collections.js'
 import { COLLECTION_RESEARCH, nodesOf } from './collectedCollections.js'
+import { COMMISSION_FAMILY, COMMISSION_HISTORIES, commissionById } from './commissionHistory.js'
 import { COLLECTING } from './collectingData.js'
 
 export const COVERAGE_STATES = {
@@ -18,7 +19,7 @@ export const COVERAGE_STATES = {
 }
 
 export const COVERAGE_FAMILIES = [
-  ...IDENTITY_FAMILIES,
+  COMMISSION_FAMILY, ...IDENTITY_FAMILIES,
   { id: 'atlas-crowns', label: 'Other Crown corporations', note: 'The existing Crown corporation acquisition register, including historical bodies.' },
   { id: 'atlas-health', label: 'Other health bodies', note: 'The existing health-authority register, including historical boards and councils.' }
 ]
@@ -93,7 +94,18 @@ export const LEGACY_IDENTITY_SUBJECTS = COLLECTING.filter((body) => !curatedIds.
   }
 })
 
-export const IDENTITY_COVERAGE = buildIdentityCoverage([...IDENTITY_SUBJECTS, ...LEGACY_IDENTITY_SUBJECTS], GALLERY_COLLECTIONS)
+const registered = [...IDENTITY_SUBJECTS, ...LEGACY_IDENTITY_SUBJECTS]
+const registeredIds = new Set(registered.map((subject) => subject.id))
+const additionalCommissions = COMMISSION_HISTORIES.filter(({ id }) => !registeredIds.has(id)).map((record) => ({
+  id: record.id, label: record.name, name: record.name, family: COMMISSION_FAMILY.id,
+  kind: record.kind ?? 'agency', scope: 'core', priority: 3,
+  graphNode: record.atlas === false ? null : record.id, graphYear: record.graphYear,
+  aliases: [], collectionIds: [], salaryEmployers: [], relations: [], sources: [],
+  identityStatus: 'artwork-missing', note: record.history,
+  nextAction: 'Locate a dated publication bearing this commission’s own artwork.'
+}))
+
+export const IDENTITY_COVERAGE = buildIdentityCoverage([...registered, ...additionalCommissions], GALLERY_COLLECTIONS)
   .map((subject) => !subject.hasArtwork && subject.sourceLocated
     ? { ...subject, state: 'source-located', stateLabel: COVERAGE_STATES['source-located'].label }
     : subject)
@@ -107,7 +119,7 @@ export const searchIdentitySubjects = (query, subjects = IDENTITY_COVERAGE) => {
   const terms = words(query)
   if (!terms.length) return []
   return subjects.filter((subject) => {
-    const text = fold([subject.label, subject.name, ...(subject.aliases ?? [])].join(' '))
+    const text = fold([subject.label, subject.name, commissionById.get(subject.id)?.name, ...(subject.aliases ?? [])].join(' '))
     return terms.every((word) => text.includes(word))
   })
 }
@@ -125,7 +137,7 @@ export const regionOf = (subject) => subject.municipal ? subject.municipal.regio
 
 export const filterIdentityCoverage = (subjects, { query = '', family = '', state = '', scope = '', region = '' } = {}) => {
   const matches = query.trim() ? new Set(searchIdentitySubjects(query, subjects).map((subject) => subject.id)) : null
-  return subjects.filter((subject) => (!matches || matches.has(subject.id)) && (!family || subject.family === family) &&
+  return subjects.filter((subject) => (!matches || matches.has(subject.id)) && (!family || subject.family === family || (family === COMMISSION_FAMILY.id && commissionById.has(subject.id))) &&
     (!region || regionOf(subject) === region) &&
     (!scope || subject.scope === scope) && (!state || (state === 'held' ? subject.hasArtwork : state === 'missing' ? !subject.hasArtwork : subject.state === state)))
 }

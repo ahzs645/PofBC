@@ -1,5 +1,5 @@
 {
-  "_comment": "Per-logo settings for build_collected_display.py, keyed by collected asset id. facing: the share of a faint shape's edge that must meet the page for it to be redrawn (default 0.5; higher keeps more of a logo's own colours). light / dark: false keeps the file's own colours on that ground; \"plate\" shows them on a light plate of their own there. light-palette / dark-palette: {\"#source\": \"#shown\"} maps the file's colours by hand for that ground (every key must be a colour the file uses). \"all\" for light / dark redraws every colour too faint for that ground, without the test of whether it meets the page (for lettering drawn letter by letter in clipped fills). skip: true leaves the file out.",
+  "_comment": "Per-logo settings for build_collected_display.py, keyed by collected asset id. facing: the share of a faint shape's edge that must meet the page for it to be redrawn (default 0.5; higher keeps more of a logo's own colours). light / dark: false keeps the file's own colours on that ground; \"plate\" shows them on a light plate of their own there. light-palette / dark-palette: {\"#source\": \"#shown\"} maps the file's colours by hand for that ground (every key must be a colour the file uses). \"all\" for light / dark redraws every colour too faint for that ground, without the test of whether it meets the page (for lettering drawn letter by letter in clipped fills). skip: true leaves the file out. light-css / dark-css: a selector-specific rule applied to the display copy for that theme. preserve-canvas: keep the full page of a stationery specimen.",
   "historical-capital-health-region-2000-dark-grey": {
     "light": false,
     "dark-palette": {
@@ -11,16 +11,21 @@
   },
   "historical-capital-health-region-2000-dark-white": {
     "light": false,
-    "dark": "plate",
-    "note": "As the dark-grey version: the C is drawn over the weave's pale strands."
+    "dark-palette": {
+      "#231f20": "#eeeae4",
+      "#ffffff": "#79746e"
+    },
+    "note": "On the dark page the lettering uses warm white and the woven white strands use a middle grey, retaining contrast at their crossings."
   },
   "source-forest-enhancement-society-fesbc-10th-anniversary-svg": {
     "light": false,
     "note": "One colour value paints both BC in the badge and the anniversary ring, so the ring cannot be darkened without BC; kept as drawn."
   },
   "jibc-logo-reversed": {
-    "skip": true,
-    "note": "Its white field and white lettering are one colour value, so a light-page copy would black out the shield; it is shown as supplied, on a dark plate, and the on-white version stands for it on the light page."
+    "light": false,
+    "dark": false,
+    "light-css": "svg > .st0 { fill: #101010; }",
+    "note": "The root-level white paths, polygons and rectangles are lettering. White ink inside the shield group remains unchanged."
   },
   "historical-south-fraser-health-region-stacked-tagline-2001": {
     "facing": 0.08,
@@ -161,5 +166,116 @@
       "#417a3a": "#549e4b"
     },
     "note": "The dark green of the front tree and the lettering meets the dark page at 3.2:1, just above where the automatic redraw starts, so the small lettering read dimly. On the dark page it is lightened at its hue to 5:1; the pale tree already meets the page at 7.9:1 and keeps its colour, so it stays the lighter of the two."
+  },
+  "pge-map-green-livery": {
+    "light": false,
+    "dark": false,
+    "note": "The coloured field or border belongs to this specific mark. Preserve its ink on both page colours."
+  },
+  "urban-transit-authority-commons-rebuilt": {
+    "light": false,
+    "dark": false,
+    "note": "The coloured field or border belongs to this specific mark. Preserve its ink on both page colours."
+  },
+  "north-shore-health-region-annual-report-2000": {
+    "light": false,
+    "dark": false,
+    "note": "The coloured field or border belongs to this specific mark. Preserve its ink on both page colours."
+  },
+  "solutions-bc-2003-vector": {
+    "light": false,
+    "dark": false,
+    "note": "The coloured field or border belongs to this specific mark. Preserve its ink on both page colours."
+  },
+  "bc-environment-flag-years-cover-band": {
+    "light": false,
+    "dark": false,
+    "note": "The coloured field or border belongs to this specific mark. Preserve its ink on both page colours."
+  },
+  "source-recovered-bcic-2008-09": {
+    "light": false,
+    "dark": false,
+    "note": "The coloured field or border belongs to this specific mark. Preserve its ink on both page colours."
+  },
+  "north-shore-health-region-reversed-rebuilt": {
+    "light-palette": {
+      "#ffffff": "#171717"
+    },
+    "dark": false,
+    "note": "The mask defines transparent lettering and openings. On the light page only the visible white ink changes."
+  },
+  "superhost-1986-cipo": {
+    "current-color": true,
+    "dark": "all",
+    "note": "The stars use currentColor. Reverse the black stars and lettering together for the dark page."
+  },
+  "superhost-1986-colour": {
+    "current-color": true,
+    "dark": "all",
+    "note": "The stars use currentColor. Reverse the black stars and lettering together for the dark page."
+  },
+  "superhost-1986-cipo-colour": {
+    "current-color": true,
+    "dark": "all",
+    "note": "The stars use currentColor. Reverse the black stars and lettering together for the dark page."
+  },
+  "source-recovered-municipal-ashcroft-website-logo": {
+    "dark-palette": {
+      "#4b3041": "#d6b4cb"
+    },
+    "note": "Apply one legible purple to every letter, including the descender where it crosses the ribbons.",
+    "dark-css": "#b stop:last-child { stop-color: #d6b4cb; }"
+  },
+  "vancouver-richmond-health-board-original-colour-emblem": {
+    "dark-palette": {
+      "#540367": "#f0c0ff"
+    },
+    "note": "Match the colour lockup’s purple on dark. The enclosed red fruit and its white linework keep their colours."
+  },
+  "kootenay-boundary-2002-website-rebuilt": {
+    "light": false,
+    "dark": false,
+    "dark-css": "#name { fill: #cfaee8; }",
+    "note": "Only the exterior lettering changes on dark backgrounds. The children and lettering inside the medallion retain their original inks."
+  },
+  "nechako-kitamaat-website-rebuilt": {
+    "dark": false,
+    "light-palette": {
+      "#ffffff": "#292e35",
+      "#fce587": "#9a6b16"
+    },
+    "light-css": "#sunlight stop:first-child { stop-color: #dcb556; } #sunlight stop:last-child { stop-color: #ab771c; }",
+    "note": "The published white signature is a reverse mark. The light-page display uses charcoal lettering and deeper gold for contrast."
+  },
+  "ius-ius-letterhead-template": {
+    "preserve-canvas": true,
+    "note": "The top rule and vertical logo are positioned on a Letter-sized page. Empty space below the letterhead is part of the stationery layout."
+  },
+  "ius-ius-graduates-interpretive": {
+    "dark": "all",
+    "note": "The ten graduates are drawn in a single dark ink, with overlapping paths and clipping. Reverse all of their strokes and fills together."
+  },
+  "ius-interior-university-sweatshirt-interpretive": {
+    "dark-palette": {
+      "#733e4a": "#ce8a9a"
+    },
+    "note": "The arched outline and accompanying word use the same burgundy and are both lightened for the dark page."
+  },
+  "school-district-91-logo-current": {
+    "dark-palette": {
+      "#007a8a": "#43afbc",
+      "#025157": "#84c6c9"
+    },
+    "note": "The two teal inks, including the small NECHAKO LAKES line, keep distinct values on dark."
+  },
+  "bccf-handbook-grey": {
+    "light": false,
+    "dark": false,
+    "note": "White letters sit inside a printed black cover band. The emblem is visible on both themes."
+  },
+  "bccf-handbook-green": {
+    "light": false,
+    "dark": false,
+    "note": "White letters sit inside a printed black cover band. The emblem is visible on both themes."
   }
 }

@@ -8217,7 +8217,43 @@ export const RECOVERED_IDENTITY_BODIES = [
         ],
         "supplied": false,
         "reconstruction": false,
-        "observedDate": "2026-11-20"
+        "observedDate": "2026-11-20",
+        "variantOf": "ehsc-launch-1974-rebuilt",
+        "versionLabel": "Published image"
+      },
+      {
+        "publisher": "Emergency Health Services Commission advertisement in Gulf Islands Driftwood",
+        "sourcePage": "https://saltspringarchives.com/driftwood/1974/v15n24June26-1974.pdf",
+        "sourceUrl": "https://saltspringarchives.com/driftwood/1974/v15n24June26-1974.pdf",
+        "sourceDate": "1974-06-26",
+        "sourceLocator": "Gulf Islands Driftwood, Wednesday 26 June 1974, printed/PDF page 19. Government ambulance-service launch advertisement, bottom e+hS symbol and three-line Province of British Columbia / Emergency Health / Services Commission signature. The newspaper date and full advertisement are preserved on the source page.",
+        "dateNote": "Publication date 26 June 1974. The advertisement announces the 1 July ambulance-service launch; neither date is asserted as first adoption of the mark.",
+        "id": "ehsc-launch-1974-rebuilt",
+        "label": "Emergency Health Services Commission launch signature, 1974",
+        "file": "identity-recovered/emergency-health-services-commission/ehsc-launch-1974-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "reconstructionOf": "source-recovered-ehsc-launch-advertisement-1974",
+        "search": "gallery-reconstructions-2026-11-24",
+        "evidenceType": "vector-reconstruction",
+        "observedDate": "2026-11-24",
+        "sourceFile": "identity-recovered/emergency-health-services-commission/ehsc-launch-advertisement-1974.png",
+        "notes": "This signature appeared in the Commission’s advertisements for the July 1974 launch of the provincial ambulance service.",
+        "fidelity": "source compared",
+        "fidelityNote": "The monogram, cross and three lines of lettering were constructed from editable paths. Two printings of the June 26 advertisement establish the letter shapes and identify the adjoining rule as part of the advertisement border.",
+        "darkBackground": false,
+        "bytes": 8931,
+        "sha256": "65e787951d0b82f66b346eab4bb315a6b3d873c5881cf062d32349e0fae435b5",
+        "alsoSeen": [
+          {
+            "date": "1974-06-26",
+            "label": "Sunshine Coast News, June 26, 1974, p. 2A (image 14)",
+            "source": "https://iiif.library.ubc.ca/image/cdm.xcoastnews.1-0175749.0013/pct:30,82,25,14/1100,/0/default.jpg"
+          }
+        ],
+        "versionLabel": "Vector reconstruction"
       }
     ]
   },
@@ -8613,7 +8649,36 @@ export const RECOVERED_IDENTITY_BODIES = [
         "evidenceType": "official-publication-raster-extraction",
         "notes": "Native-pixel crop retains the complete named signature. Shared provincial symbol; no separate emblem or modern adoption date inferred.",
         "fidelityNote": "Original raster specimen; no tracing, redraw, interpolation or upscaling. Extracted from the checksum-pinned PDF.",
-        "darkBackground": false
+        "darkBackground": false,
+        "variantOf": "gcpe-estimate-notes-2024-rebuilt",
+        "versionLabel": "Published image"
+      },
+      {
+        "publisher": "Government Communications and Public Engagement",
+        "sourcePage": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/central-government-agencies",
+        "sourceUrl": "https://docs.openinfo.gov.bc.ca/Government_Communications_and_Public_Engagement_Estimates_Notes_2024.pdf#page=10",
+        "sourceDate": "2024-04-29",
+        "sourceLocator": "Estimate Notes, PDF page 10 footer. Full black BC symbol, divider and department title. Original image 77; image 4 on the checksum-pinned one-page excerpt. Page 9 corroborates the signature.",
+        "dateNote": "Publication or observation dates attest use, not adoption.",
+        "id": "gcpe-estimate-notes-2024-rebuilt",
+        "label": "Government Communications and Public Engagement estimate-notes footer, 2024",
+        "file": "identity-recovered/government-communications-and-public-engagement/gcpe-estimate-notes-2024-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "reconstructionOf": "source-recovered-followup-government-communications-and-public-engagement-estimate-notes-2024",
+        "search": "gallery-reconstructions-2026-11-24",
+        "evidenceType": "vector-reconstruction",
+        "observedDate": "2026-11-24",
+        "sourceFile": "identity-recovered/government-communications-and-public-engagement/estimate-notes-2024.png",
+        "notes": "The black provincial signature appears in the footer of the 2024 estimate notes for Government Communications and Public Engagement.",
+        "fidelity": "source compared",
+        "fidelityNote": "Built with the English B.C. mark generator in solid black, using its provincial symbol, divider and outlined alphabet. The line break after “Communications” follows the footer on PDF page 10.",
+        "darkBackground": false,
+        "bytes": 51241,
+        "sha256": "eed355149af305b776fbc1738af3705a85fd1d17704cfad87a848cedc153fa6f",
+        "versionLabel": "Vector reconstruction"
       }
     ]
   },

@@ -1,19 +1,23 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { existsSync, readFileSync } from 'node:fs'
-import { COLLECTED_BODIES, COLLECTED_SPECIMENS } from './collectedData.js'
-import { EXPANDED_IDENTITY_BODIES } from './expandedIdentityData.js'
-import { MUNICIPAL_IDENTITY_BODIES } from './municipalIdentityData.js'
-import { RECOVERED_IDENTITY_BODIES } from './recoveredIdentityData.js'
+import { ALL_COLLECTED_BODIES } from './collectedCollections.js'
+import { COLLECTED_SPECIMENS } from './collectedData.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
 import { collectedDisplay, logoScale } from './tileArt.js'
 
-const assets = new Map([...COLLECTED_BODIES, ...COLLECTED_SPECIMENS, ...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES]
+const assets = new Map([...ALL_COLLECTED_BODIES, ...COLLECTED_SPECIMENS]
   .flatMap((each) => each.assets ?? []).map((asset) => [asset.id, asset]))
 const publicFile = (path) => new URL(`../../public/${path}`, import.meta.url)
 
 // Drawn as vector: an SVG (Innovate BC's keeps the report's photograph in its disc) or an EPS.
 const drawable = (asset) => asset.format === 'svg' || (asset.format === 'eps' && asset.isVector)
+
+test('every collected SVG and vector EPS has a display entry', () => {
+  for (const asset of assets.values()) {
+    if (drawable(asset)) assert.ok(COLLECTED_DISPLAY[asset.id], `${asset.id} needs display artwork`)
+  }
+})
 
 test('every display copy is of a collected vector file, for both themes, and exists', () => {
   for (const [id, entry] of Object.entries(COLLECTED_DISPLAY)) {

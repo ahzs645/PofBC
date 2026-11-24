@@ -14,6 +14,8 @@ export const CollectedMarkView = ({ entry }) => entry.paletteGroup
 const SourceMarkView = ({ entry }) => {
   const [version, setVersion] = useState(() => {
     const requested = new URLSearchParams(globalThis.location?.search ?? '').get('mark')
+    // Legacy specimen links open the new drawing. Its published image is still selectable.
+    if (requested && requested === entry.asset.reconstructionOf) return entry.asset.id
     return entry.versions?.find((each) => each.id === requested)?.id ?? entry.asset.id
   })
   const asset = entry.versions?.find((each) => each.id === version) ?? entry.asset
@@ -29,11 +31,11 @@ const SourceMarkView = ({ entry }) => {
   // a palette chosen by hand for this ground (collected-display-overrides.json) is shown even so:
   // it is that version's own reverse, kept to its colours' relationships, not a guess at them.
   const copy = collectedDisplay(asset, theme)
-  const display = entry.versions && copy?.recoloured && !copy.palette ? null : copy
+  const display = entry.versions && !asset.reconstructionOf && copy?.recoloured && !copy.palette ? null : copy
   const artworkType = asset.isVector ? 'Vector artwork' : asset.format === 'svg' ? 'Contains bitmap artwork' : 'Image'
   const downloadNote = asset.reconstruction
     ? 'The download is the reconstruction, not original artwork.'
-    : 'The download is the file as published.'
+    : 'The original file is available to download as published.'
   return (
     <section className="gallery__recovered">
       <header className="gallery__head">
@@ -71,7 +73,10 @@ const SourceMarkView = ({ entry }) => {
       )}
       <p>{asset.notes}</p>
       <div className="row gallery__asset-downloads">
-        <a className="button" href={assetUrl(asset.file)} download>{asset.reconstruction ? 'Download reconstruction' : 'Download'} {asset.format.toUpperCase()}</a>
+        <a className="button" href={assetUrl(asset.file)} download>{asset.reconstruction ? 'Download reconstruction' : 'Download original'} {asset.format.toUpperCase()}</a>
+        {display && !display.plate && (
+          <a className="button button--ghost" href={assetUrl(display.file)} download>Download displayed SVG</a>
+        )}
         {(asset.downloads ?? []).map((extra) => (
           <a key={extra.file} className="button button--ghost" href={assetUrl(extra.file)} download>{extra.label}</a>
         ))}
@@ -88,7 +93,9 @@ const SourceMarkView = ({ entry }) => {
         {asset.license && <div><dt>Source licence</dt><dd>{asset.license_url ? <a href={asset.license_url} target="_blank" rel="noreferrer">{asset.license}</a> : asset.license}</dd></div>}
         {asset.previewNote && <div><dt>Preview</dt><dd>{asset.previewNote}</dd></div>}
         {display && (
-          <div><dt>Shown</dt><dd>{display.palette
+          <div><dt>Shown</dt><dd>{display.preserveCanvas
+            ? 'The full stationery page is shown with its original margins.'
+            : display.palette
             ? `Trimmed to the logo and, for the ${theme === 'dark' ? 'dark' : 'light'} page, redrawn in colours chosen for it, so each part keeps its contrast with the page and with the parts around it.`
             : display.recoloured
             ? `Trimmed to the logo and, for the ${theme === 'dark' ? 'dark' : 'light'} page, with ink that would disappear into it reversed or ${theme === 'dark' ? 'lightened' : 'darkened'}.`
@@ -97,6 +104,9 @@ const SourceMarkView = ({ entry }) => {
               : 'Trimmed to the logo, in its own colours.'} {downloadNote}</dd></div>
         )}
         {asset.sourcePage && <div><dt>Publication</dt><dd><a href={asset.sourcePage} target="_blank" rel="noreferrer">View source publication or page</a>{asset.sourceLocator ? ` · ${asset.sourceLocator}` : ''}</dd></div>}
+        {(asset.alsoSeen ?? []).filter((seen) => seen.label && seen.source).map((seen) => (
+          <div key={seen.source}><dt>Also published in</dt><dd><a href={seen.source} target="_blank" rel="noreferrer">{seen.label}</a></dd></div>
+        ))}
         {asset.sourceUrl && asset.sourceUrl !== asset.sourcePage && <div><dt>{asset.reconstruction ? 'Source reference' : 'Original file'}</dt><dd><a href={asset.sourceUrl} target="_blank" rel="noreferrer">View the source file</a></dd></div>}
       </dl>
     </section>

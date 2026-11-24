@@ -12,6 +12,11 @@
 // before an exclusive end or the last documented sighting of an untraced body. It never
 // dates a logo. Values are static to keep the atlas history out of the gallery runtime.
 
+import { HEALTH_COUNCIL_SUBJECTS } from './healthCouncilHistory.js'
+import { ADDITIONAL_COUNCIL_SUBJECTS } from './additionalCouncilSubjects.js'
+import { YOUTH_SUBJECTS } from './bcYouth.js'
+import { FAMILY_COUNCIL_SUBJECT } from './councilForTheFamily.js'
+import { ALCOHOL_AND_DRUG_COMMISSION_SUBJECT } from './alcoholAndDrugCommission.js'
 import { RECONCILED_FAMILIES, RECONCILED_SUBJECTS } from './reconciledSubjects.js'
 import { MUNICIPAL_FAMILIES, MUNICIPAL_KIND_LABELS, MUNICIPAL_SUBJECTS } from './municipalSubjects.js'
 import { RECOVERED_IDENTITY_BODIES } from './recoveredIdentityData.js'
@@ -22,7 +27,9 @@ import { POSTSECONDARY_FAMILY, POSTSECONDARY_SUBJECTS } from './postsecondarySub
 import { postsecondaryArtworkOf } from './postsecondaryArtwork.js'
 
 export const IDENTITY_KIND_LABELS = {
+  'advisory-council': 'Advisory council',
   'public-college': 'Public college',
+  'nonprofit-society': 'Nonprofit society',
   'education-predecessor': 'Educational predecessor or operation',
   'education-campus': 'Campus',
   'school-district': 'School district',
@@ -3442,7 +3449,7 @@ const CURATED_SUBJECTS = [
 // Municipalities come before the historical-research family in the register.
 export const IDENTITY_FAMILIES = [...CURATED_FAMILIES.slice(0, -1), ...RECONCILED_FAMILIES, ...MUNICIPAL_FAMILIES, SCHOOL_FAMILY, POSTSECONDARY_FAMILY, CURATED_FAMILIES.at(-1)]
 const recoveredById = new Map(RECOVERED_IDENTITY_BODIES.map((body) => [body.id, body]))
-export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS, ...SCHOOL_IDENTITY_SUBJECTS, ...POSTSECONDARY_SUBJECTS]
+export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...YOUTH_SUBJECTS, ...HEALTH_COUNCIL_SUBJECTS, ...ADDITIONAL_COUNCIL_SUBJECTS, FAMILY_COUNCIL_SUBJECT, ALCOHOL_AND_DRUG_COMMISSION_SUBJECT, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS, ...SCHOOL_IDENTITY_SUBJECTS, ...POSTSECONDARY_SUBJECTS]
   .map((subject) => recoveredById.get(subject.id)?.nextAction
     ? { ...subject, nextAction: recoveredById.get(subject.id).nextAction }
     : subject)

@@ -1,3 +1,5 @@
+import { YOUTH_PROGRAMS } from './youthProgramsIndex.js'
+
 // The index stays small: an initiative's sourced records are loaded only when it opens.
 // The index card's cover sits on a light panel, so a logo made for a dark ground is shown there as
 // the gallery's copy of its vector redrawn for a light page, not as the white file itself.
@@ -19,6 +21,15 @@ const tourismCover = {
 }
 
 export const INITIATIVES = [
+  {
+    id: 'bc-youth', title: 'BC Youth', exploreLabel: 'Explore the youth grants, newspaper marks and ministry history', subtitle: 'Ministry of Advanced Education and Job Training',
+    summary: 'Provincial youth grants, the Youth Advisory Council and the BC Youth mark that appeared in government advertisements.',
+    cover: { file: 'identity-collected/bc-youth/right-flag.svg', alt: 'BC Youth wordmark and waving flag', caption: 'Reconstruction of the mark printed in October 1989' },
+    tags: ['Youth grants', 'Logos', 'Timeline'],
+    searchTerms: ['British Columbia Youth Advisory Council', 'The Next Step', 'Stanley B. Hagen', 'Minister Responsible for Youth', 'Youth Grants Program'],
+    relatedBodyIds: ['bc-youth', 'bc-youth-advisory-council', 'ministry-of-labour-1976', 'ministry-of-advanced-education-and-job-training-1986']
+  },
+  ...YOUTH_PROGRAMS,
   {
     id: 'tourism',
     title: 'Tourism',
@@ -48,6 +59,8 @@ export const INITIATIVES = [
     relatedBodyIds: ['bclc', 'gamesense']
   }
 ]
+
+export const initiativesForBody = (id) => INITIATIVES.filter((initiative) => initiative.relatedBodyIds?.includes(id))
 
 /** Lightweight metadata for a stable initiative ID, or null when it is unknown. */
 export const initiativeById = (id) => INITIATIVES.find((initiative) => initiative.id === id) ?? null
@@ -293,6 +306,14 @@ const gamesenseDetail = () => ({
 
 // Literal imports let the bundler keep each initiative's data in its own deferred chunk.
 const LOADERS = {
+  ...Object.fromEntries(YOUTH_PROGRAMS.map((entry) => [entry.id, async () => {
+    const { youthProgramDetail } = await import('./youthPrograms.js')
+    return youthProgramDetail(entry)
+  }])),
+  'bc-youth': async () => {
+    const { bcYouthDetail } = await import('./bcYouth.js')
+    return bcYouthDetail(initiativeById('bc-youth'))
+  },
   gamesense: async () => gamesenseDetail(),
   tourism: async () => {
     const { TOURISM_COLLECTION } = await import('../gallery/tourismData.js')

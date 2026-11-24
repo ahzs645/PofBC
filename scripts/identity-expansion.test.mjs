@@ -38,7 +38,7 @@ test('follow-up accepts only attributed municipal and named institutional signat
   const recovered = new Map(RECOVERED_IDENTITY_BODIES.map((body) => [body.id, body]))
   assert.equal(recovered.get('municipality-warfield').assets.filter((asset) => asset.isVector).length, 2)
   for (const id of ['municipality-keremeos', 'municipality-lions-bay', 'liquor-control-board', 'provincial-court', 'court-of-appeal', 'supreme-court', 'office-of-the-premier', 'government-communications-and-public-engagement']) {
-    assert.equal(recovered.get(id).assets.length, 1, id)
+    assert.equal(recovered.get(id).assets.filter((asset) => !asset.reconstruction).length, 1, id)
   }
   assert.match(recovered.get('liquor-control-board').assets[0].notes, /not current LDB branding/)
   assert.match(recovered.get('provincial-court').notes, /not a claim.*distinct heraldic grant/)
