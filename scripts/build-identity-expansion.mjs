@@ -10,6 +10,7 @@ import { DOMParser } from '@xmldom/xmldom'
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 // Each manifest generates its own module; IDs must stay unique across all of them.
 const MANIFESTS = [
+  { manifest: 'research/identity/postsecondary-2026-11-24/assets-manifest.json', output: 'src/gallery/postsecondaryIdentityData.js', name: 'POSTSECONDARY_IDENTITY_BODIES', dir: 'identity-postsecondary' },
   { manifest: 'research/identity/coverage-expansion-2026-11-15/assets-manifest.json', output: 'src/gallery/expandedIdentityData.js', name: 'EXPANDED_IDENTITY_BODIES', dir: 'identity-expanded' },
   { manifest: 'research/identity/municipalities-2026-11-15/assets-manifest.json', output: 'src/gallery/municipalIdentityData.js', name: 'MUNICIPAL_IDENTITY_BODIES', dir: 'identity-municipal' },
   { manifest: 'research/identity/missing-recovery-2026-11-20/assets-manifest.json', output: 'src/gallery/recoveredIdentityData.js', name: 'RECOVERED_IDENTITY_BODIES', dir: 'identity-recovered' }

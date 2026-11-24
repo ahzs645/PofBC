@@ -4,6 +4,7 @@ import { COLLECTED_BODIES, COLLECTED_SPECIMENS } from './collectedData.js'
 import { EXPANDED_IDENTITY_BODIES } from './expandedIdentityData.js'
 import { MUNICIPAL_IDENTITY_BODIES } from './municipalIdentityData.js'
 import { RECOVERED_IDENTITY_BODIES } from './recoveredIdentityData.js'
+import { POSTSECONDARY_IDENTITY_BODIES } from './postsecondaryIdentityData.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
 import { RAILWAY_HISTORY } from './railwayHistoryData.js'
 import { COLLECTED_PALETTES } from './collectedPalettes.js'
@@ -12,7 +13,7 @@ import { SCHOOL_IDENTITY_BODIES } from '../schools/integration.js'
 
 // The historical Crown/health importer remains reproducible. Explicit identity subjects extend
 // its output without teaching that importer to mistake services or regional bodies for Crowns.
-export const ALL_COLLECTED_BODIES = [...COLLECTED_BODIES, ...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES, ...SCHOOL_IDENTITY_BODIES, IUS_BODY]
+export const ALL_COLLECTED_BODIES = [...COLLECTED_BODIES, ...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES, ...SCHOOL_IDENTITY_BODIES, ...POSTSECONDARY_IDENTITY_BODIES, IUS_BODY]
 
 /** Municipal governments, shelved apart from the provincial bodies. */
 export const isMunicipalBody = (body) => body.kind?.startsWith('municipal-') || body.kind === 'self-government-district'

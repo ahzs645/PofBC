@@ -18,7 +18,12 @@ import { RECOVERED_IDENTITY_BODIES } from './recoveredIdentityData.js'
 import { SCHOOL_IDENTITY_SUBJECTS } from '../schools/integration.js'
 import { SCHOOL_FAMILY } from '../schools/districts.js'
 
+import { POSTSECONDARY_FAMILY, POSTSECONDARY_SUBJECTS } from './postsecondarySubjects.js'
+
 export const IDENTITY_KIND_LABELS = {
+  'public-college': 'Public college',
+  'education-predecessor': 'Educational predecessor or operation',
+  'education-campus': 'Campus',
   'school-district': 'School district',
   'francophone-school-district': 'Francophone school district',
   ...MUNICIPAL_KIND_LABELS,
@@ -55,6 +60,18 @@ export const IDENTITY_KIND_LABELS = {
 }
 
 export const IDENTITY_RELATION_LABELS = {
+  'renamed-from': 'Renamed from',
+  'renamed-to': 'Renamed to',
+  'amalgamated-with': 'Amalgamated with',
+  'amalgamated-into': 'Amalgamated into',
+  'split-from': 'Split from',
+  'split-off': 'Separated into',
+  'split-into': 'Split into',
+  'absorbed': 'Absorbed',
+  'received-operations-from': 'Received operations from',
+  'transferred-operations-to': 'Operations transferred to',
+  'succeeded-at-site': 'Succeeded at site of',
+  'site-succeeded-by': 'Site succeeded by',
   'successor-of': 'Successor of',
   "related-to": "Related to",
   "part-of": "Part of",
@@ -3421,9 +3438,9 @@ const CURATED_SUBJECTS = [
 
 // The reconciled gallery owners and the municipal registry follow the curated subjects.
 // Municipalities come before the historical-research family in the register.
-export const IDENTITY_FAMILIES = [...CURATED_FAMILIES.slice(0, -1), ...RECONCILED_FAMILIES, ...MUNICIPAL_FAMILIES, SCHOOL_FAMILY, CURATED_FAMILIES.at(-1)]
+export const IDENTITY_FAMILIES = [...CURATED_FAMILIES.slice(0, -1), ...RECONCILED_FAMILIES, ...MUNICIPAL_FAMILIES, SCHOOL_FAMILY, POSTSECONDARY_FAMILY, CURATED_FAMILIES.at(-1)]
 const recoveredById = new Map(RECOVERED_IDENTITY_BODIES.map((body) => [body.id, body]))
-export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS, ...SCHOOL_IDENTITY_SUBJECTS]
+export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS, ...SCHOOL_IDENTITY_SUBJECTS, ...POSTSECONDARY_SUBJECTS]
   .map((subject) => recoveredById.get(subject.id)?.nextAction
     ? { ...subject, nextAction: recoveredById.get(subject.id).nextAction }
     : subject)
