@@ -4594,5 +4594,41 @@ export const COLLECTED_DISPLAY = {
    "aspect": 2.941,
    "recoloured": true
   }
+ },
+ "bccf-letterhead": {
+  "light": {
+   "file": "identity-display/bccf-letterhead.light.svg",
+   "aspect": 2.3499,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bccf-letterhead.dark.svg",
+   "aspect": 2.3499,
+   "recoloured": true
+  }
+ },
+ "bccf-handbook-green": {
+  "light": {
+   "file": "identity-display/bccf-handbook-green.light.svg",
+   "aspect": 3.027,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bccf-handbook-green.light.svg",
+   "aspect": 3.027,
+   "recoloured": false
+  }
+ },
+ "bccf-handbook-grey": {
+  "light": {
+   "file": "identity-display/bccf-handbook-grey.light.svg",
+   "aspect": 3.0423,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bccf-handbook-grey.light.svg",
+   "aspect": 3.0423,
+   "recoloured": false
+  }
  }
 }
