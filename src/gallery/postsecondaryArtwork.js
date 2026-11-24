@@ -19,6 +19,7 @@ export const POSTSECONDARY_ARTWORK_SCOPE = {
 
 export const POSTSECONDARY_ARTWORK_FORMAT = {
   'native-vector': 'Native vector source',
+  'heraldic-register': 'Official heraldic record',
   'raster-source': 'Raster source',
   'format-unverified': 'Published specimen, format unverified',
   'raster-lead': 'Raster acquisition lead',
@@ -54,13 +55,14 @@ for (const item of specimens) {
   bySubject.get(item.subjectId).push(item)
 }
 const shared = new Map(newEvidence.sharedIdentities.map((item) => [item.subjectId, item]))
+const identityHistories = new Map(newEvidence.identityHistories.map(({ subjectId, events }) => [subjectId, events]))
 
 // Cover art and heraldry can be useful specimens without proving a distinct graphic logo.
 export const isLogoSource = ({ format, scope }) => ['native-vector', 'raster-source', 'format-unverified', 'raster-lead'].includes(format)
   && ['institutional', 'historical', 'campus', 'retrospective'].includes(scope)
 
 export function postsecondaryArtworkOf(id) {
-  return { specimens: bySubject.get(id) ?? [], shared: shared.get(id) ?? null }
+  return { specimens: bySubject.get(id) ?? [], shared: shared.get(id) ?? null, history: identityHistories.get(id) ?? [] }
 }
 
 // The three evidence counts partition subjects; holdings are a separate count. Variants,

@@ -225,29 +225,54 @@ const MunicipalRecords = ({ subject }) => {
   )
 }
 
+const ArtworkSource = ({ item }) => {
+  const action = item.format === 'native-vector' ? 'Open official vector source'
+    : item.format === 'heraldic-register' ? 'Open heraldic register'
+    : item.format === 'description-only' ? 'Open design reference' : 'Open artwork source'
+  return <>
+    <strong>{item.label}</strong>
+    <p>{[POSTSECONDARY_ARTWORK_FORMAT[item.format], POSTSECONDARY_ARTWORK_SCOPE[item.scope], item.publisher, item.publicationDate, item.locator].filter(Boolean).join(' · ')}</p>
+    <External href={item.url} className="identity-action">{action}<span className="visually-hidden">: {item.label}</span></External>
+    {item.note && <p>{item.note}</p>}
+    {item.rightsNote && <p>{item.rightsNote} {item.rightsUrl && <External href={item.rightsUrl}>See source terms</External>}</p>}
+  </>
+}
+
 const PostsecondaryArtworkReview = ({ review, onOpenSubject }) => {
-  const { specimens, shared } = review
-  if (!specimens.length && !shared) return null
+  const { specimens, shared, history } = review
+  if (!specimens.length && !shared && !history.length) return null
   const sharedSubject = shared && IDENTITY_COVERAGE.find(({ id }) => id === shared.targetSubjectId)
+  const byId = new Map(specimens.map((item) => [item.id, item]))
+  const grouped = new Set(history.map((event) => event.specimenId))
+  const otherSpecimens = specimens.filter((item) => !grouped.has(item.id))
   return (
     <section className="identity-card identity-artwork-review" aria-labelledby="identity-artwork-review">
-      <h4 id="identity-artwork-review">Artwork sources and review</h4>
+      <h4 id="identity-artwork-review">{history.length ? 'Identity history and official sources' : 'Artwork sources and review'}</h4>
       <p className="identity-muted">These links open files or pages published elsewhere. They are not copies held or hosted by this gallery.</p>
+      {history.length > 0 && (
+        <ol className="identity-sources identity-history" role="list">
+          {history.map((event) => (
+            <li key={event.specimenId ?? event.url}>
+              <time dateTime={event.date} className="identity-history__date">{event.dateLabel}</time>
+              {event.type === 'legal' ? <>
+                <strong>{event.label}</strong>
+                <p>{event.note}</p>
+                <External href={event.url} className="identity-action">Open signed designation order</External>
+              </> : <ArtworkSource item={byId.get(event.specimenId)} />}
+            </li>
+          ))}
+        </ol>
+      )}
       {shared && <div className="identity-artwork-review__shared">
         <strong>Shared branding{sharedSubject && <> with <SubjectLink id={sharedSubject.id} onOpen={onOpenSubject}>{sharedSubject.label}</SubjectLink></>}</strong>
         <p>{shared.note} <External href={shared.url}>{shared.label}</External></p>
       </div>}
-      {specimens.length > 0 && <ul className="identity-sources">
-        {specimens.map((item) => (
-          <li key={item.id}>
-            <strong>{item.label}</strong>
-            <p>{[POSTSECONDARY_ARTWORK_FORMAT[item.format], POSTSECONDARY_ARTWORK_SCOPE[item.scope], item.publisher, item.publicationDate, item.locator].filter(Boolean).join(' · ')}</p>
-            <External href={item.url} className="identity-action">{item.format === 'native-vector' ? 'Open official vector source' : item.format === 'description-only' ? 'Open design reference' : 'Open artwork source'}<span className="visually-hidden">: {item.label}</span></External>
-            {item.note && <p>{item.note}</p>}
-            {item.rightsNote && <p>{item.rightsNote} {item.rightsUrl && <External href={item.rightsUrl}>See source terms</External>}</p>}
-          </li>
-        ))}
-      </ul>}
+      {otherSpecimens.length > 0 && <>
+        {history.length > 0 && <h5>Other artwork leads</h5>}
+        <ul className="identity-sources">
+          {otherSpecimens.map((item) => <li key={item.id}><ArtworkSource item={item} /></li>)}
+        </ul>
+      </>}
     </section>
   )
 }

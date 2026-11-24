@@ -107,3 +107,26 @@ test('a held reconstruction and a shared vector do not inflate original artwork 
   ])
   assert.deepEqual(result, { total: 3, held: 1, vector: 1, observedNonvector: 0, unverified: 2, shared: 1 })
 })
+
+test('CNC identity history distinguishes designation, arms and two dated specimens without counting arms as a logo', async () => {
+  const { identitySubjectById } = await import('./identityCoverage.js')
+  const { isLogoSource, summarizePostsecondaryArtwork } = await import('./postsecondaryArtwork.js')
+  const cnc = identitySubjectById('college-of-new-caledonia')
+  const { history, specimens } = cnc.artworkReview
+  assert.deepEqual(history.map(({ type, date }) => [type, date]), [
+    ['legal', '1978-12-01'], ['heraldic-grant', '1996-06-04'], ['logo-specimen', '2020'], ['logo-specimen', '2026']
+  ])
+  assert.match(history[0].url, /\/2960_1978$/)
+  const historySpecimens = history.slice(1).map(({ specimenId }) => specimens.find(({ id }) => id === specimenId))
+  assert.ok(historySpecimens.every((item) => item?.evidence === 'source-only'))
+  assert.deepEqual(historySpecimens.map(isLogoSource), [false, true, true])
+  assert.match(historySpecimens[0].url, /\/project\/616$/)
+  assert.match(historySpecimens[0].note, /March 24, 2001/)
+  assert.ok(historySpecimens.slice(1).every(({ format }) => format === 'native-vector'))
+  const hrefs = [history[0].url, ...historySpecimens.map(({ url }) => url)]
+  assert.equal(hrefs.length, new Set(hrefs).size)
+  assert.ok(cnc.sources.every(({ url }) => !hrefs.includes(url)))
+  assert.ok(!cnc.hasArtwork && cnc.entries.length === 0)
+  assert.deepEqual(summarizePostsecondaryArtwork([{ artworkReview: { specimens: [historySpecimens[0]] } }]),
+    { total: 1, held: 0, vector: 0, observedNonvector: 0, unverified: 1, shared: 0 })
+})
