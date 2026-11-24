@@ -68,6 +68,29 @@ try {
   assert.match(tradeHtml, /The exact typeface is not identified/)
   assert.match(tradeHtml, /The download is the reconstruction, not original artwork/)
   assert.doesNotMatch(tradeHtml, /The download is the file as published/)
+  const { findGalleryEntry } = await server.ssrLoadModule('/src/gallery/collections.js')
+  const oldLocation = globalThis.location
+  try {
+    for (const id of [
+      'source-expanded-bc-ferry-authority-2003-website-logo',
+      'historical-kootenay-boundary-health-2002-website',
+      'source-expanded-nechako-kitamaat-development-fund-website-logo',
+      'source-recovered-ehsc-launch-advertisement-1974',
+      'source-recovered-followup-government-communications-and-public-engagement-estimate-notes-2024'
+    ]) {
+      globalThis.location = { search: `?view=gallery&mark=${id}` }
+      const entry = findGalleryEntry(id)
+      assert.equal(entry.asset.reconstructionOf, id)
+      assert.ok(entry.versions.some((version) => version.id === id && !version.isVector))
+      const html = renderToStaticMarkup(React.createElement(CollectedMarkView, { entry }))
+      assert.match(html, /Download reconstruction SVG/)
+      assert.match(html, /Download displayed SVG/)
+      assert.match(html, /Published image/)
+    }
+  } finally {
+    if (oldLocation === undefined) delete globalThis.location
+    else globalThis.location = oldLocation
+  }
   const { TIMELINES } = await server.ssrLoadModule('/src/gallery/timelines.js')
   const crest = TIMELINES['bc-wildfire-service'].eras.find(({ id }) => id === 'bcws-oval-crest')
   assert.equal(crest.years, 'June 2021')

@@ -9037,7 +9037,36 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "previewWidth": 131,
         "previewHeight": 139,
-        "search": "bc-health-logo-search-2026-11-22"
+        "search": "bc-health-logo-search-2026-11-22",
+        "versionLabel": "Published image",
+        "variantOf": "kootenay-boundary-2002-website-rebuilt"
+      },
+      {
+        "publisher": "Kootenay Boundary Health (Kootenay Boundary Community Health Services Society)",
+        "sourcePage": "https://web.archive.org/web/20020719103729id_/http://www.kbchss.hnet.bc.ca:80/",
+        "sourceUrl": "https://web.archive.org/web/20020812142027id_/http://kbchss.hnet.bc.ca:80/images/nav_top/kbh_logo.gif",
+        "sourceDate": "2002-08-12",
+        "sourceLocator": "Site navigation logo (images/nav_top/kbh_logo.gif) of the society's website, kbchss.hnet.bc.ca; homepage captured 19 July 2002, image 12 August 2002",
+        "dateNote": "The Internet Archive's capture date; the homepage that shows it was last revised 21 January 2002. Neither dates the design's adoption.",
+        "id": "kootenay-boundary-2002-website-rebuilt",
+        "label": "Kootenay Boundary Health website badge, 2002",
+        "file": "identity-collected/kootenay-boundary-community-health-services-society/kootenay-boundary-2002-website-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": true,
+        "reconstructionOf": "historical-kootenay-boundary-health-2002-website",
+        "search": "gallery-reconstructions-2026-11-24",
+        "evidenceType": "vector-reconstruction",
+        "observedDate": "2026-11-24",
+        "sourceFile": "identity-collected/kootenay-boundary-community-health-services-society/kootenay-boundary-health-2002-website.gif",
+        "notes": "The 2002 website places the two figures inside a round badge, with the motto “together for health” on its lower arc.",
+        "fidelity": "source compared",
+        "fidelityNote": "The two figures, hills and circular badge were redrawn from the 131 × 139 GIF. Both inscriptions are set around arcs using fitted sans-serif outlines. The teal website panel outside the white rim is omitted. Small contours and type are approximate.",
+        "darkBackground": false,
+        "bytes": 13850,
+        "sha256": "972e7dade387c09fbb973e9b89a5f01d076126cd41d471018132a53fdc0486f6",
+        "versionLabel": "Vector reconstruction"
       }
     ]
   },

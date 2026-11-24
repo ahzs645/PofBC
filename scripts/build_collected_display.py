@@ -165,11 +165,6 @@ def facing_mask(alpha, amount, facing_share):
 
 # ── Helpers ─────────────────────────────────────────────────────────────────────────────────────
 
-def border(rgb, width=2):
-    return np.concatenate([rgb[:width].reshape(-1, 3), rgb[-width:].reshape(-1, 3),
-                           rgb[:, :width].reshape(-1, 3), rgb[:, -width:].reshape(-1, 3)])
-
-
 def trim_box(alpha, threshold=0.06):
     rows = np.where((alpha > threshold).any(axis=1))[0]
     cols = np.where((alpha > threshold).any(axis=0))[0]
@@ -252,8 +247,7 @@ def source_svg(asset, work):
 
 
 def build_vector(asset, settings, work):
-    """A trimmed, and where its ink needs it, recoloured copy of a vector file. None if the file
-    draws its own ground, which the raster route deals with."""
+    """Trim the vector and prepare a legible display copy for each gallery theme."""
     text = source_svg(asset, work)
     # Make the default black explicit, so lettering drawn with no fill can be recoloured too.
     root_tag = ROOT_TAG.search(text).group(0)
@@ -266,12 +260,16 @@ def build_vector(asset, settings, work):
     smooth = rasterize([{"src": str(staged), "out": str(work / f"{asset['id']}-aa.png"), "height": MAX_HEIGHT,
                          "maxWidth": 2400, "aspect": vw / vh}])[0]
     rgba = load(smooth["out"])
-    if (border(rgba[..., 3:4].repeat(3, axis=2))[:, 0] > 0.5).mean() > 0.6:
-        return None
+    # A badge or livery panel can cover the whole boundary. Keep that field and its
+    # internal contrasts by default, and still trim and present it on the gallery's own page.
+    edge_alpha = np.concatenate([rgba[0, :, 3], rgba[-1, :, 3], rgba[:, 0, 3], rgba[:, -1, 3]])
+    own_field = (edge_alpha > 0.5).mean() > 0.6
     left, top, right, bottom = trim_box(rgba[..., 3])
     sx, sy = vw / rgba.shape[1], vh / rgba.shape[0]
     pad = 0.5 * max(sx, sy)
     box = [vx + left * sx - pad, vy + top * sy - pad, (right - left) * sx + 2 * pad, (bottom - top) * sy + 2 * pad]
+    if settings.get("preserve-canvas"):
+        box = [vx, vy, vw, vh]
     trimmed_tag = root_tag
     for name in ("x", "y"):
         trimmed_tag = re.sub(r'\s%s\s*=\s*(["\'])[^"\']*\1' % name, "", trimmed_tag)
@@ -351,7 +349,7 @@ def build_vector(asset, settings, work):
                         last = end
                 parts.append(trimmed[last:])
                 content, recoloured = "".join(parts), True
-        elif settings.get(theme, True) is True and places:
+        elif settings.get(theme, not own_field) is True and places:
             new_colours, amounts = redraw(np.array([colour for _, _, colour in places]), theme)
             amount = np.where(place >= 0, amounts[np.maximum(place, 0)], 0)
             mask = facing_mask(alpha, amount, settings.get("facing", 0.5))
@@ -370,6 +368,12 @@ def build_vector(asset, settings, work):
                         last = end
                 parts.append(trimmed[last:])
                 content, recoloured = "".join(parts), True
+        # Some source files use the same CSS class for exposed lettering and white shield details.
+        # SVG style overrides can target the lettering without changing the underlying class.
+        if css := settings.get(f"{theme}-css"):
+            content = content.replace(trimmed_tag, trimmed_tag + f"<style>{css}</style>", 1)
+            recoloured = True
+            palettes[theme] = True
         outputs[theme] = (name, content, recoloured)
     if outputs["dark"][1] == outputs["light"][1]:
         outputs["dark"] = outputs["light"]
@@ -381,18 +385,16 @@ def build_vector(asset, settings, work):
         # in its own colours on a light plate of its own on that ground.
         if settings.get(theme) == "plate":
             entry[theme]["plate"] = True
+        if settings.get("preserve-canvas"):
+            entry[theme]["preserveCanvas"] = True
         if palettes.get(theme):
             entry[theme]["palette"] = True
     return entry
 
 
 def collected_assets():
-    script = ("Promise.all([import('./src/gallery/collectedData.js'), import('./src/gallery/expandedIdentityData.js'),"
-              " import('./src/gallery/municipalIdentityData.js'), import('./src/gallery/recoveredIdentityData.js')])"
-              ".then(([{ COLLECTED_BODIES, COLLECTED_SPECIMENS }, { EXPANDED_IDENTITY_BODIES },"
-              " { MUNICIPAL_IDENTITY_BODIES }, { RECOVERED_IDENTITY_BODIES }]) =>"
-              " console.log(JSON.stringify([...COLLECTED_BODIES, ...COLLECTED_SPECIMENS, ...EXPANDED_IDENTITY_BODIES,"
-              " ...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES].flatMap((each) => each.assets ?? []))))")
+    script = ("import { allCollectedAssets } from './src/gallery/collectedBodies.js';"
+              "console.log(JSON.stringify(allCollectedAssets()))")
     result = subprocess.run(["node", "--input-type=module", "-e", script], cwd=ROOT, capture_output=True, text=True, check=True)
     return json.loads(result.stdout)
 
@@ -423,16 +425,13 @@ def main():
             if asset["format"] not in ("svg", "eps") or settings.get("skip"):
                 continue
             entry = build_vector(asset, settings, work)
-            if entry is None:
-                print(asset["id"], "draws its own ground; left as it is")
-                continue
             manifest[asset["id"]] = entry
             print(asset["id"],
                   "light-redrawn" if entry["light"]["recoloured"] else "", "dark-redrawn" if entry["dark"]["recoloured"] else "")
     ordered = {asset["id"]: manifest[asset["id"]] for asset in assets if asset["id"] in manifest}
     manifest_path.write_text(
         "// Generated by scripts/build_collected_display.py: each collected file's display copies for the\n"
-        "// light and dark page — its ground removed, trimmed, and where its ink would disappear, redrawn.\n"
+        "// light and dark page — trimmed to the artwork and, where needed, redrawn for legibility.\n"
         f"export const COLLECTED_DISPLAY = {json.dumps(ordered, indent=1)}\n")
     keep = {Path(e[t]["file"]).name for e in ordered.values() for t in ("light", "dark")}
     for stale in (PUBLIC / OUT_DIR).iterdir():
