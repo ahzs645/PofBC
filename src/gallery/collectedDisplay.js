@@ -4630,5 +4630,17 @@ export const COLLECTED_DISPLAY = {
    "aspect": 3.0423,
    "recoloured": false
   }
+ },
+ "adc-bc-booklet-monogram": {
+  "light": {
+   "file": "identity-display/adc-bc-booklet-monogram.light.svg",
+   "aspect": 1.9141,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/adc-bc-booklet-monogram.dark.svg",
+   "aspect": 1.9141,
+   "recoloured": true
+  }
  }
 }

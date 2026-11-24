@@ -10,6 +10,8 @@ export const FAMILY_COUNCIL_SUBJECT = {
   sources: [
     { title: 'BC Council for Families, Our History', url: history },
     { title: 'BC Council for Families, legal name and society status', url: 'https://www.bccf.ca/bccf/terms-conditions/' },
+    { title: '1983 Council annual report, cover', url: 'https://archive.org/details/micro_IA40243510_1373' },
+    { title: '1984 Council annual report, cover', url: 'https://archive.org/details/micro_IA40243514_1471' },
     { title: 'Historical council signatures', citation: 'Supplied letterhead with a Parliament Buildings address and two handbook cover details, one greyscale and one green. The three crops are undated.' }
   ],
   note: 'The society, founded in 1977 and now known as the BC Council for Families, used the longer name printed on these specimens.',
@@ -32,7 +34,7 @@ export const FAMILY_COUNCIL_BODY = {
       ...shared, id: 'bccf-letterhead', label: 'Council letterhead with Parliament Buildings address',
       file: `${directory}/letterhead.svg`, sourceFile: 'Supplied letterhead detail',
       notes: 'The taller looped emblem sits above a rule, with the council name below and a right-aligned Victoria mailing address.',
-      fidelityNote: 'The silhouette and display capitals were drawn by hand. The address uses fitted Nimbus Sans outlines. The grey approximates the printed screen.'
+      fidelityNote: 'The silhouette and capitals were drawn by hand. The Council’s 1984 annual report supplied the letter widths and spacing. The address uses fitted Nimbus Sans outlines. The grey approximates the printed screen.'
     },
     {
       ...shared, id: 'bccf-handbook-green', label: 'Handbook cover with green emblem',
