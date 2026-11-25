@@ -32,6 +32,7 @@ const Sources = ({ references = [], className = '', label = 'Sources' }) => {
 const SPECIMEN_TYPES = {
   'vector-reconstruction': 'Vector reconstruction',
   'native-pdf-vector-extraction': 'Native vector from publication',
+  'mixed-pdf-artwork': 'Published outlines with an embedded image',
   'printed-source-crop': 'Crop from the printed source',
   'original-published-image': 'Original publisher image',
   'official-published-website-screenshot': 'Published website screenshot',
@@ -104,7 +105,7 @@ const SpecimenDialog = ({ item, onClose }) => {
       {item.registrations?.length > 0 && <details className="initiative__record-details"><summary>Trademark and registration evidence</summary><ul>{item.registrations.map((entry, index) => <li key={`${entry.number}-${index}`}>{entry.territory} · {entry.type} {entry.number}{entry.page ? ` · PDF page ${entry.page}` : ''}</li>)}</ul></details>}
       <Sources references={item.sourceRefs} />
       <Links links={item.links} />
-      {image && <a className="initiative__download" href={assetUrl(fileOf(image))} download>Download {fileOf(image).endsWith('.svg') ? (image.evidenceType === 'vector-reconstruction' ? 'reconstructed SVG' : 'source vector') : 'source image'}<span aria-hidden="true">↓</span></a>}
+      {image && <a className="initiative__download" href={assetUrl(fileOf(image))} download>Download {image.downloadLabel ?? (fileOf(image).endsWith('.svg') ? (image.evidenceType === 'vector-reconstruction' ? 'reconstructed SVG' : 'source vector') : 'source image')}<span aria-hidden="true">↓</span></a>}
     </div>
   </dialog>
 }

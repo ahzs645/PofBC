@@ -34,7 +34,7 @@ export const PROGRAM_ENTRY_OWNERS = {
   'vector-canada-starts-here-2012': 'pacific-gateway',
   'vector-canada-starts-here-bc-jobs-plan-2012': 'pacific-gateway',
   'best-place-on-earth': 'best-place-on-earth',
-  'bc-travel-industry-ca-1970': 'department-of-travel-industry',
+  'bc-travel-industry-ca-1970': 'department-of-travel-industry-1967',
   // Ministries' flag-years marks: owned by the ministry's node on the government map.
   'bc-environment-flag-years': 'ministry-of-environment-1988',
   'tourism-recreation-culture-1986': 'ministry-of-tourism-recreation-and-culture-1986',
@@ -54,6 +54,39 @@ const subject = ({ id, label, name = label, kind, family = 'provincial-programs'
 })
 
 export const RECONCILED_SUBJECTS = [
+  subject({
+    id: 'provincial-emergency-program',
+    name: 'Provincial Emergency Program',
+    label: 'Provincial Emergency Program',
+    kind: 'service-brand',
+    family: 'provincial-administration',
+    graphNode: null,
+    aliases: ['PEP'],
+    collectionIds: ['specimens-provincial-emergency-program'],
+    sources: [
+      { title: 'Joint Emergency Preparedness Program Guidelines, revised July 1993', url: 'https://www.publicsafety.gc.ca/lbrr/archives/ua%20929.c2%20b75%201993-eng.pdf' },
+      { title: 'Provincial compliments slip received October 16, 1997', url: 'https://docs.openinfo.gov.bc.ca/d37393013a_response_package_fnr-2013-00153.pdf#page=50' }
+    ],
+    note: 'British Columbia’s Provincial Emergency Program used the striped PEP initials and processed applications and claims for the federal Joint Emergency Preparedness Program.',
+    nextAction: 'Identify the designer and original lettering from a dated identity specification.'
+  }),
+  subject({
+    id: 'bchealthcare', label: 'BCHealthCare', kind: 'service-brand',
+    aliases: ['BC Health Care'], collectionIds: ['health-program-signatures'],
+    sources: [{ title: 'Abbotsford Hospital and Cancer Centre request for expressions of interest, January 23, 2003', url: 'https://digitalcollections.llbc.leg.bc.ca/handle/123456789/307972' }],
+    note: 'Provincial health-care communications signature. The project cover separately names the Ministry of Health Services and its partners.',
+    nextAction: 'Locate the design standard or an earlier dated use of the signature.'
+  }),
+  subject({
+    id: 'bcpharmacare', label: 'BCPharmaCare', kind: 'service-brand',
+    aliases: ['BC PharmaCare', 'Fair PharmaCare'], collectionIds: ['health-program-signatures'],
+    sources: [
+      { title: 'Your new Fair PharmaCare program, 2003', url: 'https://digitalcollections.llbc.leg.bc.ca/handle/123456789/301527' },
+      { title: 'Ministry of Health Services PharmaCare overview, February 24, 2003', url: 'https://archive.news.gov.bc.ca/releases/archive/2001-2005/2003HSER0013-000192-Attachment2.htm' }
+    ],
+    note: 'The provincial drug coverage program began in 1974. The 2003 Fair PharmaCare plan introduced income-based coverage. Its registration material carried the BCPharmaCare program signature.',
+    nextAction: 'Locate the design standard and establish when the arms-based signature first appeared.'
+  }),
   subject({
     id: 'workers-compensation-board',
     label: 'WorkSafeBC',
@@ -79,8 +112,8 @@ export const RECONCILED_SUBJECTS = [
     graphNode: 'sub-bc-timber-sales',
     aliases: ['BCTS', 'Small Business Forest Enterprise Program'],
     collectionIds: ['bcts'],
-    sources: [{ title: 'BC Timber Sales business plan 2023/24–2025/26', url: 'https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/bc-timber-sales/business-plans-performance-reports/bcts_business_plan_2023-2024_to_2025-2026_final.pdf' }],
-    nextAction: 'Find the earliest dated slab-serif wordmark and an original file for the current mark.',
+    sources: [{ title: 'BC Timber Sales brochure, 2004, Legislative Library', url: 'https://digitalcollections.llbc.leg.bc.ca/handle/123456789/308267' }, { title: 'BC Timber Sales business plan 2023/24–2025/26', url: 'https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/bc-timber-sales/business-plans-performance-reports/bcts_business_plan_2023-2024_to_2025-2026_final.pdf' }],
+    nextAction: 'Seek an introduction date or design credit for the serif acronym lockup documented in 2004, and an original file for the current mark.',
     note: 'A ministry branch with its own marks. The Small Business Forest Enterprise Program it replaced is a predecessor program, not an alias for the same artwork.'
   }),
   subject({
@@ -104,9 +137,12 @@ export const RECONCILED_SUBJECTS = [
     sources: [{
       title: 'Ministry of Forests and Lands form, photocopied',
       citation: 'A form on an assignment, with its BC Lands badge, supplied as a screenshot; title, number and date not in the picture.'
+    }, {
+      title: 'Lands Operations Division, Vancouver Island Region, fax dated February 14, 1994, PDF page 17',
+      url: 'https://docs.openinfo.gov.bc.ca/Response_Package_FIN-2016-64551.pdf#page=17'
     }],
-    nextAction: 'Find a dated BC Lands publication with the badge, and whether it began under Lands, Parks and Housing or ended with the Ministry of Crown Lands.',
-    note: 'The Crown lands side of the 1980s ministries, not a body in the atlas. Its badge is BC Parks’ with the second word changed, so it is drawn in BC Parks’ frame.'
+    nextAction: 'Identify the badge’s introduction and last documented use.',
+    note: 'The provincial crown lands administration used the flag badge on a Ministry of Forests and Lands form and on a 1994 Lands Operations Division fax under the Ministry of Environment, Lands and Parks.'
   }),
   subject({
     id: 'justice-institute',
@@ -120,8 +156,14 @@ export const RECONCILED_SUBJECTS = [
     salaryEmployers: ['justice-institute-of-bc'],
     priority: 2,
     scope: 'institution',
-    sources: [{ title: 'Justice Institute of British Columbia', url: 'https://www.jibc.ca/' }],
-    nextAction: 'Date the current logo and monogram and record earlier institutional marks.',
+    sources: [
+      { title: 'JIBC mandate and founding', url: 'https://www.jibc.ca/about-us/mandate' },
+      { title: 'Grant of arms, June 2003', url: 'https://www.gg.ca/en/heraldry/public-register/project/94' },
+      { title: 'JIBC letterhead, July 2007', url: 'https://digitalcollections.llbc.leg.bc.ca/handle/123456789/323794' },
+      { title: '2009–10 accountability report', url: 'https://digitalcollections.llbc.leg.bc.ca/handle/123456789/323806' },
+      { title: 'JIBC unveils its eagle', url: 'https://www.jibc.ca/news/article/jibc-unveils-new-brand' }
+    ],
+    nextAction: 'Find a dated specimen for the badge monogram and the first use of the griffin with its tagline.',
     note: 'Its registered arms are a separate emblem in the Coats of Arms view, not a version of the logo.'
   }),
   subject({
@@ -224,6 +266,10 @@ export const RECONCILED_SUBJECTS = [
   subject({
     id: 'department-of-travel-industry',
     label: 'Department of Travel Industry',
+    graphNode: 'department-of-travel-industry-1967',
+    entryOwner: 'department-of-travel-industry-1967',
+    graphYear: 1970,
+    collectionIds: ['specimens-travel-industry'],
     kind: 'government-branch',
     priority: 3,
     sources: [{ title: '“This is British Columbia”, published by the Department of Travel Industry, undated [about 1970]', citation: 'Print publication; no online copy recorded.' }],
@@ -305,10 +351,11 @@ export const RECONCILED_SUBJECTS = [
     sources: [
       { title: 'Department of Recreation and Conservation, Annual Report 1970', url: 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1970.pdf' },
       { title: 'Department of Recreation and Conservation, Annual Report 1971', url: 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1971.pdf' },
+      { title: 'Department of Recreation and Conservation, Annual Report 1972, Fish and Wildlife promotional activities, printed Z56', url: 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1972.pdf#page=57' },
       { title: 'Department of Recreation and Conservation, Annual Report 1973', url: 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1973.pdf' }
     ],
     nextAction: 'Find who designed the five square symbols, and any identity manual; date the 1970 oval beyond its one report.',
-    note: 'A provincial department, 1957–1976. Its 1970 oval, the five square symbols of its 1971–1973 reports and two 1973 emblems are held as reconstructions from the reports. The department is a ministry in the government atlas, not a separate agency, and its branches have no atlas bodies of their own, so their marks sit with it; the Parks Branch’s two are also on BC Parks’ timeline.'
+    note: 'A provincial department, 1957–1976. Its 1970 oval, the five square symbols of its 1971–1973 reports and the separate Fish and Wildlife oval and Parks shield are held as reconstructions from the reports. The oval also appears on the 1972–73 hunting regulations cover. The department is a ministry in the government atlas, not a separate agency, and its branches have no atlas bodies of their own, so their marks sit with it; the Parks Branch’s two are also on BC Parks’ timeline.'
   }),
   subject({
     id: 'bceid',

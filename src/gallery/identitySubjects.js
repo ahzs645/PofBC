@@ -12,9 +12,12 @@
 // before an exclusive end or the last documented sighting of an untraced body. It never
 // dates a logo. Values are static to keep the atlas history out of the gallery runtime.
 
+import { LIQUOR_BOARD_RELATIONS, LIQUOR_SUBJECTS } from './liquorHistory.js'
+import { AGRICULTURAL_PARTNER_FAMILY, AGRICULTURAL_PARTNER_SUBJECTS } from './agriculturalPartners.js'
 import { HEALTH_COUNCIL_SUBJECTS } from './healthCouncilHistory.js'
 import { ADDITIONAL_COUNCIL_SUBJECTS } from './additionalCouncilSubjects.js'
 import { YOUTH_SUBJECTS } from './bcYouth.js'
+import { FOREST_GENETICS_SUBJECTS } from './forestGenetics.js'
 import { FAMILY_COUNCIL_SUBJECT } from './councilForTheFamily.js'
 import { ALCOHOL_AND_DRUG_COMMISSION_SUBJECT } from './alcoholAndDrugCommission.js'
 import { RECONCILED_FAMILIES, RECONCILED_SUBJECTS } from './reconciledSubjects.js'
@@ -26,7 +29,10 @@ import { SCHOOL_FAMILY } from '../schools/districts.js'
 import { POSTSECONDARY_FAMILY, POSTSECONDARY_SUBJECTS } from './postsecondarySubjects.js'
 import { postsecondaryArtworkOf } from './postsecondaryArtwork.js'
 
+import { SURVEY_AND_LIBRARY_SUBJECTS } from './geologicalSurveyAndLibrary.js'
+
 export const IDENTITY_KIND_LABELS = {
+  'legislative-institution': 'Legislative institution',
   'advisory-council': 'Advisory council',
   'public-college': 'Public college',
   'nonprofit-society': 'Nonprofit society',
@@ -106,8 +112,8 @@ const CURATED_FAMILIES = [
   },
   {
     "id": "liquor-distribution",
-    "label": "Liquor and cannabis distribution",
-    "description": "The Liquor Distribution Branch, its retail and wholesale brands, and earlier identities."
+    "label": "Liquor and cannabis administration",
+    "description": "The Liquor Control Board, its commercial and regulatory successors, the appeals board, and retail and wholesale identities."
   },
   {
     "id": "creative-culture",
@@ -1164,13 +1170,13 @@ const CURATED_SUBJECTS = [
         "url": "https://www.bcldb.com/publications/annual-report"
       }
     ],
-    "nextAction": "Find source-native branch signatures and dated historical specimens, with retail and wholesale identities attributed separately.",
-    "note": "The atlas already knows the branch; its retail and wholesale identities are separate subjects.",
+    "nextAction": "Locate branch artwork before the 1998/99 annual report and date the earliest provincial-sunburst pairing.",
+    "note": "The distribution branch took over the commercial functions. Public stores and wholesale operations are documented separately from regulation.",
     "relations": [
       {
         "subject": "liquor-control-board",
-        "type": "related-to",
-        "label": "Historical liquor-administration context"
+        "type": "received-operations-from",
+        "label": "Purchasing, distribution and government stores"
       }
     ]
   },
@@ -1326,13 +1332,13 @@ const CURATED_SUBJECTS = [
     "scope": "core",
     "sources": [
       {
-        "title": "BC Archives: Liquor Control Board",
-        "url": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-liquor-board"
+        "title": "Liquor Control Board, first annual report",
+        "url": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/242418"
       }
     ],
-    "nextAction": "Locate a dated original signature or seal before claiming a distinct historical logo.",
-    "note": "Historical agency evidence is separate from current LDB branding.",
-    "relations": []
+    "nextAction": "Find additional named Board artwork around the documented 1941 letterhead.",
+    "note": "The 1941 letterhead pairs the provincial arms with the Board’s name. Its functions later passed to commercial and regulatory branches.",
+    "relations": LIQUOR_BOARD_RELATIONS
   },
   {
     "id": "creative-bc",
@@ -3447,9 +3453,9 @@ const CURATED_SUBJECTS = [
 
 // The reconciled gallery owners and the municipal registry follow the curated subjects.
 // Municipalities come before the historical-research family in the register.
-export const IDENTITY_FAMILIES = [...CURATED_FAMILIES.slice(0, -1), ...RECONCILED_FAMILIES, ...MUNICIPAL_FAMILIES, SCHOOL_FAMILY, POSTSECONDARY_FAMILY, CURATED_FAMILIES.at(-1)]
+export const IDENTITY_FAMILIES = [...CURATED_FAMILIES.slice(0, -1), ...RECONCILED_FAMILIES, ...MUNICIPAL_FAMILIES, AGRICULTURAL_PARTNER_FAMILY, SCHOOL_FAMILY, POSTSECONDARY_FAMILY, CURATED_FAMILIES.at(-1)]
 const recoveredById = new Map(RECOVERED_IDENTITY_BODIES.map((body) => [body.id, body]))
-export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...YOUTH_SUBJECTS, ...HEALTH_COUNCIL_SUBJECTS, ...ADDITIONAL_COUNCIL_SUBJECTS, FAMILY_COUNCIL_SUBJECT, ALCOHOL_AND_DRUG_COMMISSION_SUBJECT, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS, ...SCHOOL_IDENTITY_SUBJECTS, ...POSTSECONDARY_SUBJECTS]
+export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...LIQUOR_SUBJECTS, ...SURVEY_AND_LIBRARY_SUBJECTS, ...YOUTH_SUBJECTS, ...AGRICULTURAL_PARTNER_SUBJECTS, ...HEALTH_COUNCIL_SUBJECTS, ...ADDITIONAL_COUNCIL_SUBJECTS, ...FOREST_GENETICS_SUBJECTS, FAMILY_COUNCIL_SUBJECT, ALCOHOL_AND_DRUG_COMMISSION_SUBJECT, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS, ...SCHOOL_IDENTITY_SUBJECTS, ...POSTSECONDARY_SUBJECTS]
   .map((subject) => recoveredById.get(subject.id)?.nextAction
     ? { ...subject, nextAction: recoveredById.get(subject.id).nextAction }
     : subject)

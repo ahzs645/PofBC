@@ -43,7 +43,7 @@ export const searchGallery = (query, collections = GALLERY_COLLECTIONS) => {
     if (shown.has(collection.id)) continue
     for (const entry of entriesOf(collection)) {
       if (seen.has(entry.id)) continue
-      if (matches(words, entry.label, entry.note, entry.years, entry.body, entry.asset?.publisher)) {
+      if (matches(words, entry.id, entry.label, entry.note, entry.years, entry.body, entry.asset?.publisher)) {
         seen.add(entry.id)
         marks.push({ entry, collection })
       }

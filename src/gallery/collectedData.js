@@ -2544,7 +2544,7 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "One design in black and in white, as original vector artwork.",
+    "notes": "The green map and three-line name appear on both covers of the January 2004 Steps Forward report with a two-line tagline. Later specimens show the authority’s black and reversed signatures.",
     "assets": [
       {
         "id": "vector-phsa-black-source-extraction",
@@ -2596,6 +2596,59 @@ export const COLLECTED_BODIES = [
         "search": "vector-search-2026-10-30",
         "versionLabel": "White",
         "variantOf": "vector-phsa-black-source-extraction"
+      },
+      {
+        "id": "phsa-2004-with-tagline",
+        "label": "Provincial Health Services Authority · January 2004, with tagline",
+        "file": "identity-collected/provincial-health-services-authority/phsa-2004-with-tagline.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/317802",
+        "sourceUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/317802",
+        "publisher": "Provincial Health Services Authority",
+        "sourceLocator": "Steps Forward, January 2004. Both covers, PDF pages 2 and 41 including library wrapper. Extracted from back cover.",
+        "sourceDate": "January 2004",
+        "observedDate": "2026-11-25",
+        "dateNote": "Dated use in the publication. First use and retirement dates are unconfirmed.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The map of British Columbia sits above the name in three lines. Below it the two-line signature reads “Province-wide solutions. Better health.”",
+        "fidelityNote": "95 original filled paths, preserving outlined lettering and the PDF colours converted to sRGB. The publication background is excluded.",
+        "bytes": 55468,
+        "sha256": "9872d9db70909cf3e64015f83d0385f4737be0044c2d2b0dcd94f9f6800e73df",
+        "search": "annual-report-marks-2003-04",
+        "dimensions": {
+          "viewBox": "0 0 176 151"
+        },
+        "versionLabel": "Full cover signature"
+      },
+      {
+        "id": "phsa-2004-wordmark",
+        "label": "Provincial Health Services Authority · January 2004, logo detail",
+        "file": "identity-collected/provincial-health-services-authority/phsa-2004-wordmark.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/317802",
+        "sourceUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/317802",
+        "publisher": "Provincial Health Services Authority",
+        "sourceLocator": "Steps Forward, January 2004. Both covers, PDF pages 2 and 41 including library wrapper. Extracted from back cover.",
+        "sourceDate": "January 2004",
+        "observedDate": "2026-11-25",
+        "dateNote": "Dated use in the publication. First use and retirement dates are unconfirmed.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The map of British Columbia sits above the name in three lines. This detail isolates the logo from the same cover. The complete published version includes the separate two-line tagline.",
+        "fidelityNote": "59 original filled paths, preserving outlined lettering and the PDF colours converted to sRGB. The publication background is excluded.",
+        "bytes": 33408,
+        "sha256": "a66ae4ee06e2e0d882284c63d8b9365b73ebf6c54b9635685ab54b37730f31b5",
+        "search": "annual-report-marks-2003-04",
+        "dimensions": {
+          "viewBox": "0 0 176 96"
+        },
+        "variantOf": "phsa-2004-with-tagline",
+        "versionLabel": "Logo detail"
       }
     ]
   },
@@ -4532,12 +4585,19 @@ export const COLLECTED_BODIES = [
         "observedDate": "2026-11-16",
         "dateNote": "The brochure’s date, not an adoption date.",
         "evidenceType": "vector-reconstruction",
-        "notes": "“BCRIC” in a bold serif, green.",
-        "fidelityNote": "Set in Gelasio Bold outlines (an OFL face metric-compatible with Georgia), the closest of ten bold serifs tried (IoU 0.77); letter positions fitted to the scan. The original typeface is not identified, and the serifs and the R’s leg differ in detail. The green (#259d51) is sampled from the scan: an approximation.",
+        "notes": "The green BCRIC wordmark appears on pages 3 and 6 of the August 1979 shareholder brochure. The gallery drawing uses Gelasio Bold as an approximation.",
+        "fidelityNote": "Gelasio Bold led the original font study (77.49% ink overlap). A second study refitted its outlines and six historical styles to the same page 6 print. Gelasio reached 85.6%. ITC Benguiat Bold, the closest historical candidate, reached 78.0%. Page 3 gave the same ranking for these two faces. The pointed C terminals and the curved R leg remain differences, and the original face is unidentified. The green (#259d51) is sampled from the scan.",
         "sha256": "3f49b3ce2cb570f3b5737177c5672be209af4d3a8646dc24fbf797b1a3484781",
         "bytes": 5534,
         "darkBackground": false,
         "search": "historic-crowns-vector-2026-11-16",
+        "alsoSeen": [
+          {
+            "date": "1979-08",
+            "label": "Same brochure, page 3, with a clearer impression of the R",
+            "source": "https://sacda.ufv.ca/sites/default/files/2026-09/2021_03_01_03_003.pdf#page=3"
+          }
+        ],
         "versionLabel": "Vector reconstruction"
       },
       {
@@ -5379,7 +5439,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "The corporate mark as original vector artwork from the 2014 annual report; the same mark is on official PDFs of 2019 and 2021.",
+    "notes": "Section 2 of the Oil and Gas Commission Act took effect on July 31, 1998. The Commission began regulatory operations on October 23. Its reports show the OGC monogram in 2000 and 2008, followed by a green-disc wordmark by July 2009. On February 17, 2023, it continued under the name British Columbia Energy Regulator.",
     "assets": [
       {
         "id": "vector-bc-oil-gas-commission-2014",
@@ -5395,11 +5455,12 @@ export const COLLECTED_BODIES = [
         "sourceLocator": "PDF page 1",
         "sourceFile": null,
         "sourceDate": "2014 annual report, published 2015",
+        "specimenDate": "2015-07-03",
         "dateNote": "Publication/capture date or observation, not an adoption date.",
         "observedDate": "2026-10-30",
         "evidenceType": "native-pdf-vector-extraction",
-        "notes": "Exact paths from the official print version of the 2014 Water Use report; publication route lists 3 July 2015. Source is an authentic published specimen, not an issuer-supplied master. Later green/color treatments should be compared before replacing any dated 2019/2021 variant.",
-        "fidelityNote": "native-vector-extracted-from-published-pdf [object Object]",
+        "notes": "The 2014 water-use report prints the green-disc logo with black outer lettering. The regulator lists publication on July 3, 2015.",
+        "fidelityNote": "Twenty-one native paths from the cover of the print report. The dark blue shape, green disc, white lettering within the disc and black outer lettering retain their published colours.",
         "sha256": "9cc125d0da2ab3e1e8747e98b73e0a5343ab586647eabb49b2353310a757fcd9",
         "bytes": 11873,
         "darkBackground": false,
@@ -5413,9 +5474,142 @@ export const COLLECTED_BODIES = [
             "date": "2019-03-28",
             "source": "https://www.bc-er.ca/files/application-manuals/AMS-Guidance/AMS-Release-Guides/AMS-Release-Guide-March-2019.pdf"
           }
-        ]
+        ],
+        "versionLabel": "Black lettering, 2014 water-use report",
+        "variantOf": "ogc-2009-service-plan"
+      },
+      {
+        "id": "ogc-2000-monogram",
+        "label": "Oil and Gas Commission monogram",
+        "file": "identity-collected/oil-and-gas-commission/ogc-2000-monogram.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "BC Oil and Gas Commission",
+        "sourcePage": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/9900annualreport_1.pdf",
+        "sourceUrl": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/9900annualreport_1.pdf",
+        "sourceLocator": "Front cover, PDF page 1, centre.",
+        "sourceFile": "1999/2000 Annual Report",
+        "sourceDate": "2000-10-03",
+        "dateNote": "The regulator’s archive dates this publication. The artwork’s adoption date is unverified.",
+        "observedDate": "2026-11-24",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "Three joined letters sit between two horizontal rules on a rounded red panel. The 2000/01 report prints the same monogram in black, and the 2008 service plan uses red letters and black rules.",
+        "fidelityNote": "Eleven painted paths recovered from the report, including the red panel, with the cover rotation preserved. The name and report title below the emblem are cover type.",
+        "sha256": "21ef9331327f824c8aec8926bcabf1f9b4c4f01d4d1fcf280bf913b38369bd6d",
+        "bytes": 2795,
+        "darkBackground": false,
+        "designLabel": "OGC monogram between horizontal rules",
+        "versionLabel": "Red panel, 2000 annual report",
+        "alsoSeen": [
+          {
+            "date": "2001-08-18",
+            "source": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/0001annualreport_1.pdf",
+            "label": "2000/01 annual report, black monogram on the cover"
+          }
+        ],
+        "downloads": [
+          {
+            "file": "identity-collected/oil-and-gas-commission/ogc-2000-monogram.png",
+            "label": "Download transparent PNG",
+            "sha256": "ab9aa7d37b08e1c34d8f263ccc130894001e8394736236012ba4d38a85016550",
+            "bytes": 30854
+          }
+        ],
+        "search": "oil-and-gas-commission-history-2026-11-24"
+      },
+      {
+        "id": "ogc-2008-monogram",
+        "label": "OGC monogram in red and black",
+        "file": "identity-collected/oil-and-gas-commission/ogc-2008-monogram.png",
+        "format": "png",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "BC Oil and Gas Commission",
+        "sourcePage": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/ogc202008-0920sp20final_1.pdf",
+        "sourceUrl": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/ogc202008-0920sp20final_1.pdf",
+        "sourceLocator": "Front cover, PDF page 1, upper centre.",
+        "sourceFile": "2008/09–2010/11 Service Plan",
+        "sourceDate": "2008-04-07",
+        "dateNote": "The regulator’s archive dates this publication. The artwork’s adoption date is unverified.",
+        "observedDate": "2026-11-24",
+        "evidenceType": "embedded-pdf-image-extraction",
+        "notes": "The red OGC monogram sits between two black rules on white. The previous three-year service plan also carries this treatment.",
+        "fidelityNote": "The PDF’s embedded 669 × 387 indexed image was decoded at its original dimensions. The white background and original pixels are retained.",
+        "sha256": "c79824cbeba0dc114389679cdc377fc5843544f2d477af858b9f9a317d39a8fd",
+        "bytes": 12448,
+        "darkBackground": false,
+        "variantOf": "ogc-2000-monogram",
+        "versionLabel": "Red letters and black rules, 2008 service plan",
+        "alsoSeen": [
+          {
+            "date": "2007-05-02",
+            "source": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/ogc200708-091020service20plan20final_1.pdf",
+            "label": "2007/08–2009/10 service plan, cover"
+          }
+        ],
+        "search": "oil-and-gas-commission-history-2026-11-24"
+      },
+      {
+        "id": "ogc-2009-service-plan",
+        "label": "BC Oil & Gas Commission green-disc wordmark",
+        "file": "identity-collected/oil-and-gas-commission/ogc-2009-service-plan.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "BC Oil and Gas Commission",
+        "sourcePage": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/ogc202009-1020service20plan_1.pdf",
+        "sourceUrl": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/ogc202009-1020service20plan_1.pdf",
+        "sourceLocator": "Front cover, upper left. PDF page 1 in both government editions, page 2 in the Legislative Library copy.",
+        "sourceFile": "2009/10–2011/12 Service Plan Update",
+        "sourceDate": "2009-10-09",
+        "dateNote": "The regulator’s archive dates this publication. The artwork’s adoption date is unverified.",
+        "observedDate": "2026-11-24",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The Commission’s name crosses a green disc in one line. “Oil & Gas” is white and the outer lettering matches the dark blue shape at left. The lettering outside the disc is black in the 2014 water-use report.",
+        "fidelityNote": "All 21 painted paths and the source clipping path were isolated from the cover. Letter outlines, colours and the unequal horizontal and vertical scaling are retained. The source PDF and the Province’s budget copy produce identical cover-logo pixels in a 4× comparison.",
+        "sha256": "4e652ac29b5aa0973008f375a088e4f984a7c97a73dc9b8ba000fb497ade8a7b",
+        "bytes": 7324,
+        "darkBackground": false,
+        "designLabel": "BC Oil & Gas Commission green-disc wordmark",
+        "versionLabel": "Blue lettering, 2009 service plan",
+        "alsoSeen": [
+          {
+            "date": "2009-07-15",
+            "source": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/bc20oil20and20gas20commission202008200920annual20service20plan20reportprint20version_1.pdf",
+            "label": "2008/09 annual service plan report, green-disc design on cover"
+          },
+          {
+            "date": "2009",
+            "source": "https://www.bcbudget.gov.bc.ca/2009_Sept_Update/sp/pdf/agency/ogc.pdf",
+            "label": "Province of British Columbia, September 2009 budget update copy"
+          },
+          {
+            "date": "2012-07-25",
+            "source": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/bcoilandgascommissionaspr2012final.pdf",
+            "label": "2011/12 annual service plan report, front cover"
+          },
+          {
+            "date": "2013-07-23",
+            "source": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/annualreport2013final.pdf",
+            "label": "2012/13 annual service plan report, front cover"
+          }
+        ],
+        "downloads": [
+          {
+            "file": "identity-collected/oil-and-gas-commission/ogc-2009-service-plan.png",
+            "label": "Download transparent PNG",
+            "sha256": "f2fc2cbe489c26b6ae165af19425ea8a6e6551c4ef5e23b7daf9bcddf0eae5f9",
+            "bytes": 36044
+          }
+        ],
+        "search": "oil-and-gas-commission-history-2026-11-24"
       }
-    ]
+    ],
+    "eraNote": "Section 2 of the Oil and Gas Commission Act took effect on July 31, 1998. The Commission began regulatory operations on October 23. Its reports show the OGC monogram in 2000 and 2008, followed by a green-disc wordmark by July 2009. On February 17, 2023, it continued under the name British Columbia Energy Regulator."
   },
   {
     "id": "bc-assets-and-land-corporation",
@@ -9828,6 +10022,153 @@ export const COLLECTED_SPECIMENS = [
     ]
   },
   {
+    "program": "health-program-signatures",
+    "assets": [
+      {
+        "id": "bchealthcare-2003",
+        "label": "BCHealthCare",
+        "file": "identity-collected/health-program-signatures/bchealthcare-2003.svg",
+        "owner": "bchealthcare",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Partnerships British Columbia",
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/307972",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/f06cbc1a-6df9-4598-851e-2f72a69d6f0f/content",
+        "sourceLocator": "Cover of the January 23, 2003 request for expressions of interest. PDF page 2 follows the Library’s catalogue sheet.",
+        "sourceFile": "Request for expressions of interest: Abbotsford Hospital and Cancer Centre",
+        "sourceDate": "2003-01-23",
+        "specimenDate": "2003-01-23",
+        "observedDate": "2026-11-25",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "A provincial health-care signature used on the Abbotsford Hospital and Cancer Centre project, beside the project publisher’s own identity. The provincial arms and BCHealth are blue, with Care in red.",
+        "fidelityNote": "The original blue and red fills, paths of the arms and outlined lettering were separated from the publication. No typeface substitution or tracing.",
+        "sha256": "c6467af40e126c827aee4dacfde8b70adf46b7a83d95eac6206b0ee94f0e0b8f",
+        "bytes": 59937,
+        "darkBackground": false,
+        "search": "health-program-signatures"
+      },
+      {
+        "id": "bcpharmacare-2003",
+        "label": "BCPharmaCare",
+        "file": "identity-collected/health-program-signatures/bcpharmacare-2003.svg",
+        "owner": "bcpharmacare",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "British Columbia Ministry of Health Services",
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/301527",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/2d02fa36-75b7-4d3a-92df-b3fa3a67cf69/content",
+        "sourceLocator": "Front cover panel of the 2003 folded brochure, at the right of PDF page 2 after the Library’s catalogue sheet.",
+        "sourceFile": "Your new Fair PharmaCare program: fair care for everyone",
+        "sourceDate": "2003",
+        "specimenDate": "2003",
+        "observedDate": "2026-11-25",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The drug program’s signature places blue BCPharma and red Care beside the arms. In the supplied registration graphic, the frame and the invitation to register for Fair PharmaCare are part of the button. The 2003 booklet carries the signature on its own.",
+        "fidelityNote": "The original blue and red fills, paths of the arms and outlined lettering were separated from the publication. No typeface substitution or tracing.",
+        "sha256": "47c47d2a92d5d42acb23e03219fb8953ed915e2ae9dec1263552c97d10674a34",
+        "bytes": 60978,
+        "darkBackground": false,
+        "alsoSeen": [
+          {
+            "date": "2005-04-07",
+            "label": "PharmaCare Newsletter, April 7, 2005, masthead",
+            "source": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/268865"
+          }
+        ],
+        "search": "health-program-signatures"
+      }
+    ]
+  },
+  {
+    "program": "provincial-emergency-program",
+    "assets": [
+      {
+        "id": "pep-striped-ink",
+        "label": "Provincial Emergency Program, black reconstruction",
+        "designLabel": "Striped PEP monogram and wordmark",
+        "file": "identity-collected/provincial-emergency-program/pep-ink.svg",
+        "format": "svg",
+        "isVector": true,
+        "reconstruction": true,
+        "sourcePage": "https://www.nic.bc.ca/_resources/pdf/adventure-guiding-risk-guide.pdf",
+        "sourceFile": "Risk Management for Outdoor Programs: A Guide for Students",
+        "sourceLocator": "Front cover, bottom row. The title page credits PEP as a supporter and dates the guide to 2003.",
+        "sourceDate": "2003",
+        "specimenDate": "2003",
+        "publisher": "Provincial Emergency Program",
+        "evidenceType": "geometric-vector-reconstruction",
+        "fidelity": "font substitution",
+        "observedDate": "2026-11-24",
+        "notes": "The striped disc contains an open triangle and the slanted PEP initials. The three lines of lettering follow the same diagonal. This colour version follows the supplied reference.",
+        "dateNote": "The compliments slip dates the heavier lettering to at least October 1997. The 2003 guide provides the comparison artwork. The supplied colour samples are undated.",
+        "fidelityNote": "The circle, triangular opening, bands and initials were constructed geometrically. Of seven faces tested, Nimbus Sans Narrow Bold Oblique gave the closest fit after adjusting its slant, proportions and spacing. The original typeface and specified ink colours remain unverified.",
+        "sha256": "5a938553474b9399aa44096acb4f5b2e15afebaccde3734e2f80fff918d21275",
+        "bytes": 15191,
+        "alsoSeen": [
+          {
+            "label": "July 1993 JEPP guidelines, cover, with a lighter PEP wordmark",
+            "source": "https://www.publicsafety.gc.ca/lbrr/archives/ua%20929.c2%20b75%201993-eng.pdf"
+          },
+          {
+            "date": "1997-10-16",
+            "label": "Provincial compliments slip, received October 16, 1997 (PDF page 50)",
+            "source": "https://docs.openinfo.gov.bc.ca/d37393013a_response_package_fnr-2013-00153.pdf#page=50"
+          }
+        ],
+        "downloads": [
+          {
+            "file": "identity-collected/provincial-emergency-program/pep-1997-slip.png",
+            "sha256": "4d2c5e0c2fb26830c55b580ed901bf83fef65fbb2ee8b529cf93dfb701b27ded",
+            "label": "Download the 1997 printed specimen (PNG)"
+          }
+        ],
+        "search": "provincial-emergency-program",
+        "versionLabel": "Black reconstruction"
+      },
+      {
+        "id": "pep-striped-blue",
+        "label": "Provincial Emergency Program, dark blue reconstruction",
+        "designLabel": "Striped PEP monogram and wordmark",
+        "file": "identity-collected/provincial-emergency-program/pep-blue.svg",
+        "format": "svg",
+        "isVector": true,
+        "reconstruction": true,
+        "sourcePage": "https://www.nic.bc.ca/_resources/pdf/adventure-guiding-risk-guide.pdf",
+        "sourceFile": "Risk Management for Outdoor Programs: A Guide for Students",
+        "sourceLocator": "Front cover, bottom row. The title page credits PEP as a supporter and dates the guide to 2003.",
+        "sourceDate": "2003",
+        "specimenDate": "2003",
+        "publisher": "Provincial Emergency Program",
+        "evidenceType": "geometric-vector-reconstruction",
+        "fidelity": "font substitution",
+        "observedDate": "2026-11-24",
+        "notes": "The striped disc contains an open triangle and the slanted PEP initials. The three lines of lettering follow the same diagonal. This colour version follows the supplied reference.",
+        "dateNote": "The compliments slip dates the heavier lettering to at least October 1997. The 2003 guide provides the comparison artwork. The supplied colour samples are undated.",
+        "fidelityNote": "The circle, triangular opening, bands and initials were constructed geometrically. Of seven faces tested, Nimbus Sans Narrow Bold Oblique gave the closest fit after adjusting its slant, proportions and spacing. The original typeface and specified ink colours remain unverified.",
+        "sha256": "2d03b4f234cd154dc235782de70322eba0acd13ffa5de91911c44cbc7ddc4c04",
+        "bytes": 15191,
+        "alsoSeen": [
+          {
+            "label": "July 1993 JEPP guidelines, cover, with a lighter PEP wordmark",
+            "source": "https://www.publicsafety.gc.ca/lbrr/archives/ua%20929.c2%20b75%201993-eng.pdf"
+          },
+          {
+            "date": "1997-10-16",
+            "label": "Provincial compliments slip, received October 16, 1997 (PDF page 50)",
+            "source": "https://docs.openinfo.gov.bc.ca/d37393013a_response_package_fnr-2013-00153.pdf#page=50"
+          }
+        ],
+        "search": "provincial-emergency-program",
+        "versionLabel": "Dark blue reconstruction",
+        "variantOf": "pep-striped-ink"
+      }
+    ]
+  },
+  {
     "program": "travel-industry",
     "assets": [
       {
@@ -9868,7 +10209,7 @@ export const COLLECTED_SPECIMENS = [
         "supplied": true,
         "reconstruction": false,
         "publisher": "Justice Institute of British Columbia",
-        "sourcePage": "https://www.jibc.ca",
+        "sourcePage": "https://www.jibc.ca/news/article/jibc-unveils-new-brand",
         "sourceUrl": null,
         "sourceLocator": "The Institute’s current logo file (logo.svg, an Adobe Illustrator 26 export), supplied",
         "sourceFile": "logo.svg",
@@ -9880,6 +10221,7 @@ export const COLLECTED_SPECIMENS = [
         "sha256": "32e0258ada5c5f7a2a61e97e0edc840f6a0f47493f31d0b1a549a606bc8ca152",
         "bytes": 8915,
         "darkBackground": false,
+        "dateNote": "JIBC announced the eagle design in September 2022. The supplied Illustrator file and its adapted colourway have no independent file date.",
         "search": "justice-institute-2026-11-12",
         "versionLabel": "On white"
       },
@@ -9892,7 +10234,7 @@ export const COLLECTED_SPECIMENS = [
         "supplied": true,
         "reconstruction": false,
         "publisher": "Justice Institute of British Columbia",
-        "sourcePage": "https://www.jibc.ca",
+        "sourcePage": "https://www.jibc.ca/news/article/jibc-unveils-new-brand",
         "sourceUrl": null,
         "sourceLocator": "The Institute’s current logo file (logo.svg, an Adobe Illustrator 26 export), supplied",
         "sourceFile": "logo.svg",
@@ -9900,10 +10242,11 @@ export const COLLECTED_SPECIMENS = [
         "observedDate": "2026-11-12",
         "evidenceType": "supplied-original-vector",
         "notes": "The supplied file: the shield and its white field with “Justice Institute” and “BRITISH COLUMBIA” in white, for a dark ground.",
-        "fidelityNote": "The supplied file, unchanged: an Illustrator export with the shield in blue (#034EA2) and the lettering in white. When it was adopted is not established.",
+        "fidelityNote": "The supplied file, unchanged: an Illustrator export with the shield in blue (#034EA2) and the lettering in white. JIBC announced the eagle design in September 2022.",
         "sha256": "59899e0c4951ce1ceb00c655509518f7833229863e149c9ccc735bd9fa6a246f",
         "bytes": 8766,
         "darkBackground": true,
+        "dateNote": "JIBC announced the eagle design in September 2022. The supplied Illustrator file and its adapted colourway have no independent file date.",
         "search": "justice-institute-2026-11-12",
         "versionLabel": "Reversed (as supplied)",
         "variantOf": "jibc-logo"
@@ -9929,6 +10272,42 @@ export const COLLECTED_SPECIMENS = [
         "sha256": "1a45f5dbb07c53fb7450a7494106c9e44edc1671ba86008db0e8609b2c20b9b1",
         "bytes": 1778,
         "darkBackground": false,
+        "search": "justice-institute-2026-11-12"
+      },
+      {
+        "id": "jibc-griffin-2010",
+        "label": "Griffin shield with the Institute name and public safety tagline",
+        "file": "identity-collected/justice-institute/jibc-griffin-2010.svg",
+        "format": "svg",
+        "isVector": true,
+        "reconstruction": false,
+        "publisher": "Justice Institute of British Columbia",
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/323806",
+        "sourceLocator": "Institutional Accountability Plan & Report 2009–2010, front cover (page 1 of the supplied PDF, page 2 in the Legislative Library copy). The next page is a signed letter dated July 2, 2010.",
+        "sourceFile": "439390_acct_report_2009_2010.pdf",
+        "sourceDate": "2010",
+        "specimenDate": "2010",
+        "observedDate": "2026-11-24",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "A white griffin stands inside a white ring on a blue shield. Beneath it are the Institute name, a rule and the line “Canada’s leading public safety educator”. The preceding annual report also shows this design.",
+        "fidelityNote": "The cover supplies 106 painted vector paths, including the outlined lettering and rule. The blue and white fills and the original clipping path are preserved. Only the report background and surrounding page have been removed.",
+        "sha256": "b728f0614d555dfefc40444b39e09cfc37ca11cf1a1936483872ab39eda33e22",
+        "bytes": 90330,
+        "downloads": [
+          {
+            "label": "Download transparent PNG (1120 × 1056)",
+            "file": "identity-collected/justice-institute/jibc-griffin-2010.png",
+            "sha256": "3314b36bbc1ad76829518ab95f57fed126f237cff9ff523d95914a490c342cda"
+          }
+        ],
+        "alsoSeen": [
+          {
+            "date": "2008/09",
+            "locator": "Front cover after the Legislative Library wrapper",
+            "source": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/323801",
+            "label": "2008–2009 Institutional Accountability Plan & Report"
+          }
+        ],
         "search": "justice-institute-2026-11-12"
       }
     ]
@@ -10831,6 +11210,45 @@ export const COLLECTED_SPECIMENS = [
         "bytes": 82087,
         "darkBackground": false,
         "search": "superhost-vector-2026-11-22"
+      }
+    ]
+  },
+  {
+    "program": "bcts",
+    "assets": [
+      {
+        "id": "bcts-2004-brochure",
+        "label": "BC Timber Sales with the Forest Service oval",
+        "file": "identity-collected/bc-timber-sales/bcts-2004.svg",
+        "format": "svg",
+        "isVector": true,
+        "reconstruction": false,
+        "publisher": "BC Timber Sales, Ministry of Forests",
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/308267",
+        "sourceLocator": "PDF pages 2 and 15, front and back covers. Vector artwork recovered from page 15.",
+        "sourceFile": "bctsbrochure.pdf",
+        "sourceDate": "2004",
+        "specimenDate": "2004",
+        "observedDate": "2026-11-24",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The Forest Service oval sits beside green BCTS initials and a dark serif subtitle. Both covers carry this lockup and a separate provincial coat-of-arms wordmark.",
+        "fidelityNote": "The 75 painted paths from the back cover retain their geometry and embedded colours. At 1064 × 448 pixels the silhouette overlap with the PDF rendering was 99.4–99.6% across three thresholds.",
+        "sha256": "929cc5356e82fdbd8917e1599680f7da70bb34f1a1288ca36647d7e118b2175c",
+        "bytes": 32129,
+        "preview": "identity-collected/bc-timber-sales/bcts-2004.png",
+        "previewSha256": "42037aad0862d2c232973e6fff98daffa40024748e5fd48bea9b12521b1d30d0",
+        "downloads": [
+          {
+            "label": "Download transparent PNG (1064 × 448)",
+            "file": "identity-collected/bc-timber-sales/bcts-2004.png",
+            "sha256": "42037aad0862d2c232973e6fff98daffa40024748e5fd48bea9b12521b1d30d0"
+          }
+        ],
+        "rights": {
+          "status": "permitted",
+          "note": "The project maintainer confirmed rights-holder permission for PofBC to publish this extracted SVG and its transparent PNG download. Further reuse is outside that confirmation."
+        },
+        "search": "bcts"
       }
     ]
   },

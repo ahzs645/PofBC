@@ -151,7 +151,10 @@ def build(args):
     result = {'version': 1, 'reviewedAt': ledger['reviewedAt'], 'baseline': ledger['baseline'], 'method': ledger['method'], 'statusDefinitions': ledger['statusDefinitions'], 'coordinateConvention': inventory['coordinateConvention'], 'summary': {'variants':len(entries), 'cards':len(entries)-len(non_cards), 'organizations':len({p['orgId'] for p in entries}), 'sourceCrops':len(used), 'variantsWithCrops':sum(bool(p['sources']) for p in entries), 'unavailableOccurrences':sum(len(p['unavailableSources']) for p in entries), 'partialRefinements':sum(bool(p['candidateChanges']) for p in entries), 'byStatus':dict(Counter(p['status'] for p in entries)), 'byPriority':dict(Counter(p['priority'] for p in entries))}, 'patches':entries}
     (output/'index.json').write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
     # Do not silently remove unrelated or previously reviewed files.
-    stale = {p.name for p in crop_dir.glob('*.webp')} - used
+    # Preserve the published crop URLs cited by the archived reviews.
+    retired_crops = {f'{occurrence}.webp' for row in ledger.get('retiredPatches', [])
+                     for occurrence in row['inspectedOccurrences']}
+    stale = {p.name for p in crop_dir.glob('*.webp')} - used - retired_crops
     if stale:
         raise ValueError(f'Unreferenced crop files require review: {sorted(stale)}')
     print(json.dumps(result['summary'], indent=2))

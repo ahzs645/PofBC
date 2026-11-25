@@ -81,13 +81,12 @@ export const ONE_OFFS = [
     id: 'bc-lands',
     label: 'BC Lands',
     body: 'BC Lands',
-    years: 'by 1986–88',
+    years: '1986–88 ministry form and 1994 fax',
     note: 'BC Parks’ arrangement with “Lands” in place of “Parks”: the flag symbol beside “BC” in a rounded ' +
       'frame, and the second word under it at the same size, so both words are the wordmark. Unlike BC ' +
       'Parks’ badge, its letters are a regular weight, not bold, and its frame is about half as thick.',
-    caveat: 'Not drawn from BC Lands’ own artwork, which has not been found: the one picture of it is a ' +
-      'small photocopy on a form. BC Parks’ frame is thinned to the photocopy’s wall, and its type set in ' +
-      'the regular weight, so the shapes are BC Parks’ and the proportions are read off the photocopy.',
+    caveat: 'The reconstruction uses the BC Parks frame and regular-weight type, fitted by eye to the ' +
+      'photocopied form. The 1994 Lands Operations Division fax provides a second printed specimen.',
     kind: 'flag',
     // Its wall is about 18 frame units against BC Parks’ 30, and its wording sits further in.
     draw: { symbol: 'badge', ministry: 'Lands', badgeStyle: { weight: 'regular', wall: 18, inset: 0.12 } },

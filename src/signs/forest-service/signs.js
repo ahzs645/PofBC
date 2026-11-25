@@ -3,6 +3,7 @@
 // paragraph; { h }, { facts }, { note }, { palette }, { links } and { sources } are what they say. A sign
 // whose drawing has faces that change offers `variations` whose options `show` their own layers.
 
+import { FIRE_DAY } from './fireDay.js'
 import { SIGNS } from '../catalogue.js'
 
 const LOOKOUT_RELEASE = {
@@ -12,7 +13,7 @@ const LOOKOUT_RELEASE = {
 
 const MARKS_LINK = {
   label: 'The Forest Service’s marks',
-  note: 'Internal Logos · Forests: the Lands Department seal, the evergreen emblem and the ovals',
+  note: 'Departmental Logos · Forests: the Lands Department seal, the evergreen emblem and the ovals',
   to: { view: 'internal', internal: 'forests' }
 }
 const BADGES_LINK = {
@@ -280,7 +281,7 @@ export const FOREST_CLOSURE = {
       panel: {
         eyebrow: 'The emblem',
         heading: 'Forest Service oval',
-        lede: 'FOREST SERVICE over BRITISH COLUMBIA, around a sparse, tall tree. It is not the evergreen emblem, and none of the service’s ovals in Internal Logos is identified as this one.',
+        lede: 'FOREST SERVICE over BRITISH COLUMBIA, around a sparse, tall tree. It is not the evergreen emblem, and none of the service’s ovals in Departmental Logos is identified as this one.',
         blocks: [
           'Its tree, landscape and tiny lettering are simplified: the photographs show it only small.',
           { links: [MARKS_LINK] }
@@ -310,4 +311,4 @@ export const FOREST_CLOSURE = {
   order: ['overview', 'heading', 'boundary', 'zone', 'oval', 'strip', 'plate']
 }
 
-export const FOREST_SERVICE_SIGNS = { lookout: LOOKOUT, 'forest-closure': FOREST_CLOSURE }
+export const FOREST_SERVICE_SIGNS = { 'fire-day': FIRE_DAY, lookout: LOOKOUT, 'forest-closure': FOREST_CLOSURE }

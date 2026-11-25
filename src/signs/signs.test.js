@@ -14,6 +14,7 @@ import { GALLERY_COLLECTIONS } from '../gallery/collections.js'
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
 const DRAWINGS = {
+  'fire-day': read('./forest-service/fire-day.svg'),
   lookout: read('./forest-service/lookout.svg'),
   'forest-closure': read('./forest-service/forest-closure.svg'),
   'super-natural': read('./tourism/super-natural.svg'),

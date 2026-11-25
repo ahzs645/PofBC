@@ -25,12 +25,12 @@ const MINISTRY_LINK = {
 }
 const OVAL_LINK = {
   label: 'The Forest Service tree oval',
-  note: 'Internal Logos · Forests: the oval on this poster, its variants and history',
+  note: 'Departmental Logos · Forests: the oval on this poster, its variants and history',
   to: { view: 'internal', internal: 'forests', 'internal-logo': 'forest-service' }
 }
 const FORESTS_LINK = {
   label: 'The Forest Service’s other marks',
-  note: 'Internal Logos · Forests: from the Lands Department seal to the wildlife ovals',
+  note: 'Departmental Logos · Forests: from the Lands Department seal to the wildlife ovals',
   to: { view: 'internal', internal: 'forests' }
 }
 const EARLIER_EMBLEM_LINK = {
@@ -563,7 +563,7 @@ export const WILDLIFE_TREES = {
         lede: 'FOREST SERVICE over the top and BRITISH COLUMBIA under it, around a single conifer in front of mountains, with a diamond on each side.',
         blocks: [
           'The ministry signs the poster, and its Forest Service signs it again: the service kept a mark of its own inside the ministry, as it had since its evergreen emblem.',
-          'The oval is drawn from the same Forest Oval artwork as the tree oval in Internal Logos (its frame, tree and mountains), with its lettering built from the Kabel reconstruction and its separators measured. It is coloured in the poster’s one green.',
+          'The oval is drawn from the same Forest Oval artwork as the tree oval in Departmental Logos (its frame, tree and mountains), with its lettering built from the Kabel reconstruction and its separators measured. It is coloured in the poster’s one green.',
           { facts: [
             ['Lettering', 'Kabel Black reconstruction, outlined'],
             ['Separators', 'two diamonds'],

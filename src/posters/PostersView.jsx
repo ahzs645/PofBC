@@ -3,6 +3,7 @@
 import { ShelfView } from './ShelfView.jsx'
 import { FACETS, POSTERS, SERIES } from './catalogue.js'
 import coastalThumb from './coastal-forest/thumbnail.jpg'
+import ashtrayThumb from './forest-service/use-your-ashtray.svg?url'
 import dropThumb from './forest-service/dont-drop-it.svg?url'
 import gambleThumb from './forest-service/dont-gamble-with-fire.svg?url'
 import rewardThumb from './forest-service/reward-living-forest.svg?url'
@@ -28,6 +29,7 @@ const noxiousWeeds = (id) => () => import('./noxious-weeds/index.js').then((modu
 const expo86 = (id) => () => import('./expo-86/index.js').then((module) => module.loaderFor(id)())
 const LOADERS = {
   'coastal-forest': () => import('./coastal-forest/index.jsx').then((module) => module.load()),
+  'use-your-ashtray': forestService('use-your-ashtray'),
   'dont-drop-it': forestService('dont-drop-it'),
   'dont-gamble-with-fire': forestService('dont-gamble-with-fire'),
   'reward-living-forest': forestService('reward-living-forest'),
@@ -50,6 +52,7 @@ const LOADERS = {
 
 const THUMBNAILS = {
   'coastal-forest': coastalThumb,
+  'use-your-ashtray': ashtrayThumb,
   'dont-drop-it': dropThumb,
   'dont-gamble-with-fire': gambleThumb,
   'reward-living-forest': rewardThumb,

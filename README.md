@@ -147,8 +147,11 @@ adds five original employee schedules with source controls and a documented repl
 
 ## Four identities
 
-**Internal Logos** is a separate view in the title menu (`?view=internal`). It
-opens on a Forests family card. Selecting it shows the Forest Service's
+**Departmental Logos** is a separate view in the title menu (`?view=internal`). It
+opens on Forests and the Department of Travel Industry. Travel Industry opens its
+map-and-dogwood specimen from the department’s undated book *This is British Columbia*
+(about 1970). Its former link under “On the BC mark” opens the departmental page.
+Selecting Forests shows the Forest Service's
 **evergreen emblem** — the white map of the province with a dark evergreen on a
 rounded green badge, its mark before about 1973 (a working date, not yet
 confirmed by a source) — and Forest Oval's three main
@@ -670,7 +673,7 @@ series, each opening with hidden hotspots, a panel per part, a tour and export. 
 British Columbia Forest Service's triangular **LOOKOUT** sign: click the red wordmark, BRITISH
 COLUMBIA up its slopes, FOREST SERVICE along the base, or its two green frames. The wordmark's panel
 says what fire lookouts were, from the Province's 2012 release on restoring them; the service's
-links on to its marks in Internal Logos and to its posters and badges.
+links on to its marks in Departmental Logos and to its posters and badges.
 
 Posters and Signs are both shelves (`src/posters/ShelfView.jsx`): the same index, address handling,
 loading and viewer, given a catalogue. A sign is added as a poster is: its drawing and parts under
@@ -693,8 +696,8 @@ Security shield, which takes this site's BC Hydro symbol). The British Columbia 
 (S56-O38) is redrawn from a supplied photograph with concentric circles, a heavier cross and revised
 lettering; its source and construction are in `vendor/patcher/library/supplied/bc-spca-roundel/`. The Lands
 Department pine-bough seal is a printed seal, not a patch, so it is left out there and kept in
-Internal Logos. The atlas's Forest Service and Wildfire Service ovals are replaced by this site's own
-Forest Ovals (Internal Logos → Forests): four cards (the tree oval, the Forests and long ministry-name
+Departmental Logos. The atlas's Forest Service and Wildfire Service ovals are replaced by this site's own
+Forest Ovals (Departmental Logos → Forests): four cards (the tree oval, the Forests and long ministry-name
 wildlife ovals, and the green-and-gold oval), each with a variant switch for its
 colourways and its Wildfire Management, Wildfire Service, Fire Control, Airtanker and Ministry of Forests
 editions. Patcher's `supplied/pofbc-forest-ovals/capture.mjs` renders them from this site's dev server
@@ -702,7 +705,7 @@ with the lettering outlined; an old link to an atlas id they replaced (`&patch=R
 variant. The green-and-gold oval keeps its two photographed variants, Full colour and Light band.
 The yellow-sky oval was printed on Forest Service posters, not sewn, so it is not a patch: a link to
 its old patch card (`&patch=FO-yellow-sky`, its other variants, or the atlas ids S04-O01, S05-O01 and
-S54-O01) opens it in Internal Logos instead, and a link to one of the green-and-gold oval's dropped
+S54-O01) opens it in Departmental Logos instead, and a link to one of the green-and-gold oval's dropped
 black recolours opens its full-colour patch (`src/patches/retiredPatches.js`). Among
 them are the BC Forest Service, BC Parks, the Conservation Officer Service and
 its Fish & Game predecessors, BC Sheriff Service, BC Corrections, Highways and Motor Vehicles, BC
@@ -737,7 +740,7 @@ A patch's **History** comes from this site: `src/patches/patchHistory.js` matche
 it (Lands Department, Forest Service, its parks, Department or Ministry of Forests, Airtanker, Wildfire)
 to the dates the [BC Forest Service timeline](https://bcfs100.for.gov.bc.ca/bscripts/timeline.asp)
 gives for them, which bound the wording rather than date the patch, and links a Forest Oval card to
-its Internal Logos entry. The Parks Branch and BC Parks flag semicircles are constructed in Patcher
+its Departmental Logos entry. The Parks Branch and BC Parks flag semicircles are constructed in Patcher
 (a true semicircle, its field the exact inset, concentric lettering). Nothing else about the patches
 is kept here. The drawings, the organization each belongs to, and the
 digitizer are all Patcher's (see its [`library/README.md`](vendor/patcher/library/README.md)). To
@@ -997,10 +1000,10 @@ kept in the address — `?view=posters&poster=dont-drop-it&part=credit` — so a
 | British Columbia Ferries car decals | **GO B.C. FERRIES** (1960–64, from its Toll Authority wording), **Queen of Sidney** |
 
 The panels link on: the emblem on either Forest Service poster opens the evergreen emblem in
-Internal Logos (which links back), a service credit opens the department the Forest Service sat in on
+Departmental Logos (which links back), a service credit opens the department the Forest Service sat in on
 the government diagram, a decal's authority opens the Toll Authority or the Ferry Authority there and its
 flag BC Ferries' marks in Logos, and each poster links to the others in its series. Wildlife Trees' tree oval
-opens the Forest Service tree oval in Internal Logos (which lists the poster under *On the posters*), and its
+opens the Forest Service tree oval in Departmental Logos (which lists the poster under *On the posters*), and its
 arms signature opens the Ministry of Forests in 2001 on the government diagram, with its lockup. Every claim
 that is not established — a date, a typeface, an ink — is said to be so.
 

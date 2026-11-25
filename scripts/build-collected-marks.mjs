@@ -22,7 +22,7 @@ const bceid = read('research/identity/bceid-2026-11-12/source-register.json')
 const sharedServices = read('research/identity/shared-services-bc-2026-11-12/source-register.json')
 const bcCancerNow = read('research/identity/bc-cancer-current-2026-11-12/source-register.json')
 // Programs' marks held as supplied reconstructions, with no body of their own in the inventory.
-const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12', 'solutions-bc-vector-2026-11-12', 'healthlink-bc-2026-11-12', 'bc-cancer-modern-2026-11-12', 'bc-environment-vector-2026-11-22', 'tourism-recreation-culture-vector-2026-11-22', 'superhost-vector-2026-11-22']
+const PROGRAM_PACKAGES = ['health-program-signatures', 'provincial-emergency-program', 'bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12', 'solutions-bc-vector-2026-11-12', 'healthlink-bc-2026-11-12', 'bc-cancer-modern-2026-11-12', 'bc-environment-vector-2026-11-22', 'tourism-recreation-culture-vector-2026-11-22', 'superhost-vector-2026-11-22', 'bcts']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
 const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12', 'bc-housing-houses-vector-2026-11-12', 'fvhr-vector-2026-11-12', 'bc-steamship-vector-2026-11-12', 'pge-map-vector-2026-11-12', 'ocean-falls-vector-2026-11-12', 'bc-trade-vector-2026-11-13', 'bc-development-corporation-vector-2026-11-14']
@@ -34,7 +34,7 @@ for (const { register: packaged } of PACKAGES) if (packaged.body) {
 }
 // Histories of a body's earlier identities: dated pictures of a mark in use (kept as images, and
 // said to be) beside any of its vectors, with a design's other sightings as its versions.
-const HISTORIES = ['bc-assessment-history-2026-11-21', 'evidence-2026-11-21', 'bc-place-history-2026-11-21', 'bc-health-logo-search-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22']
+const HISTORIES = ['oil-and-gas-commission-history-2026-11-24', 'bc-assessment-history-2026-11-21', 'evidence-2026-11-21', 'bc-place-history-2026-11-21', 'bc-health-logo-search-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 const railway = read('research/identity/railway-history-2026-11-12/source-register.json')
 const railwayHistory = read('research/identity/railway-history-2026-11-12/history.json')
@@ -179,6 +179,8 @@ const SUPERSEDED = {
 // Another colourway of the same design: shown inside the design's entry as a version to switch
 // to, rather than as a separate mark.
 const VARIANT_OF = {
+  'vector-bc-oil-gas-commission-2014': 'ogc-2009-service-plan',
+  'pep-striped-blue': 'pep-striped-ink',
   // The April 2001 sighting of Vancouver/Richmond's colour logo, with the November 2000 one, under its original vector.
   'historical-vancouver-richmond-health-board-colour-2001': 'historical-vancouver-richmond-health-board-colour-2000-original',
   'source-northern-health-northern-health-black-tagline-svg': 'source-northern-health-northern-health-colour-tagline-svg',
@@ -211,6 +213,9 @@ const VARIANT_OF = {
 
 // What each version is called inside its design's entry.
 const VERSION_LABELS = {
+  'vector-bc-oil-gas-commission-2014': 'Black lettering, 2014 water-use report',
+  'pep-striped-ink': 'Black reconstruction',
+  'pep-striped-blue': 'Dark blue reconstruction',
   'thompson-health-region-rebuilt': 'Vector reconstruction, black (as on the letterheads)',
   'thompson-health-region-1999-letterhead': 'Image, letterhead (September 1999)',
   'vancouver-richmond-health-board-original-colour-lockup': 'Original vector (Take Care handbook, 2000)',
@@ -296,10 +301,9 @@ const BODY_NOTES = {
   'inbc': 'The logo as vector artwork from the official website.',
   'bc-council-for-international-education': 'The logo as original vector artwork from the 2022–2025 strategic plan.',
   'interior-health': 'The horizontal logo as original vector artwork, seen on a June 2004 letterhead and in a 2023 roadmap, with the stacked logo and the symbol as published images.',
-  'provincial-health-services-authority': 'One design in black and in white, as original vector artwork.',
+  'provincial-health-services-authority': 'The green map and three-line name appear on both covers of the January 2004 Steps Forward report with a two-line tagline. Later specimens show the authority’s black and reversed signatures.',
   'bc-heritage-trust': 'The boxed Trust mark as original vector artwork from the 2001/02 annual report; the same mark is on its 1989 conservation publication.',
   'forest-renewal-bc': 'One design in full colour and black, both original vector artwork from the Corporation’s 1999 and 2000 publications.',
-  'oil-and-gas-commission': 'The corporate mark as original vector artwork from the 2014 annual report; the same mark is on official PDFs of 2019 and 2021.',
   'partnerships-bc': 'The wordmark as original vector artwork from the 2012/13 annual report; the same wordmark is in the 2006 service plan.',
   'capital-health-region': 'Capital Health Region of Victoria. One design in two original vector versions from 2000 publications, the same mark as on its 1999 and 2000 letterheads and newspaper notices. Dates identify appearances, not adoption.',
   'central-vancouver-island-health-region': 'The March 2002 report The World Without Linen Bags reproduces authentic 1999 letterheads. The full logo uses original PDF vector paths and glyph outlines, not a new trace. A grayscale emblem is also preserved from an embedded source image. Letter dates are sightings; no adoption date is asserted.',
@@ -354,9 +358,9 @@ const fromRegister = (entry, search = 'vector-search-2026-10-30') => {
     observedDate: entry.retrievedDate,
     evidenceType: original ? 'official-svg-download' : 'native-pdf-vector-extraction',
     notes: entry.notes,
-    fidelityNote: original
+    fidelityNote: entry.fidelityNote ?? (original
       ? 'Published SVG retained byte for byte, checked for real geometry and no embedded images or text, and rendered. Its source is linked below.'
-      : `${entry.provenance} ${entry.method ?? ''}`.trim(),
+      : `${entry.provenance} ${entry.method ?? ''}`.trim()),
     sha256: entry.sha256,
     bytes: entry.bytes,
     darkBackground: Boolean(entry.darkBackgroundRecommended),
@@ -379,12 +383,13 @@ for (const entry of followup.assets) {
   additions.get(entry.bodyId).push(fromRegister(entry, 'vector-followup-2026-11-08'))
 }
 
-// The Department of Travel Industry's, on the Province's own timeline (gallery collection "bc-mark"),
+// The Department of Travel Industry’s logo, catalogued in Departmental Logos,
 // and the Justice Institute's, a public body outside the inventory's Crown corporations.
 for (const { search, register: packaged } of PROGRAM_PACKAGES) for (const { verification, ...asset } of packaged.assets) {
   if (!verification?.genuineVectorVerified || verification.embeddedImages !== 0 || verification.textElements !== 0) {
     throw new Error(`Not verified as pure vector: ${asset.id}`)
   }
+  for (const extra of asset.downloads ?? []) checked(extra)
   if (!additions.has(packaged.program)) additions.set(packaged.program, [])
   additions.get(packaged.program).push(checked({ ...asset, search }))
 }
@@ -440,7 +445,7 @@ for (const { search, register: history } of HISTORIES) {
 // exists, reconstructions that say so. Each file is checked here for what it claims: no embedded
 // image, no live text, no outside reference.
 const FOLDED = new Map()
-const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16', 'current-bodies-vector-2026-11-16', 'railway-marks-vector-2026-11-16', 'reversed-vectors-2026-11-21', 'traced-vectors-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22', 'greater-trail-chc-vector-2026-11-22', 'south-cariboo-vector-2026-11-22', 'gallery-reconstructions-2026-11-24', 'campbell-river-nootka-vector-2026-11-24']
+const VECTOR_SEARCHES = ['annual-report-marks-2003-04', 'health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16', 'current-bodies-vector-2026-11-16', 'railway-marks-vector-2026-11-16', 'reversed-vectors-2026-11-21', 'traced-vectors-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22', 'greater-trail-chc-vector-2026-11-22', 'south-cariboo-vector-2026-11-22', 'gallery-reconstructions-2026-11-24', 'campbell-river-nootka-vector-2026-11-24']
 const pureVector = (asset) => {
   const svg = readFileSync(new URL(`public/${asset.file}`, root), 'utf8')
   if (/<(?:\w+:)?(?:image|text|foreignObject|script)\b/i.test(svg) || /(?:xlink:)?href\s*=\s*["'](?!#)/i.test(svg)) {

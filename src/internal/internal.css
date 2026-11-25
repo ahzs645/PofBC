@@ -33,6 +33,9 @@
   font: inherit;
   cursor: pointer;
 }
+a.internal-logos__family { text-decoration: none; }
+.internal-logos__family + .internal-logos__family { margin-top: var(--gap); }
+.internal-logos__family img { width: 100%; height: 100%; object-fit: contain; }
 .internal-logos__family:hover { border-color: var(--mid); }
 .internal-logos__family .internal-logos__artwork { flex: 0 0 150px; height: 190px; border-radius: var(--radius-sm); }
 .internal-logos__family-text { display: grid; gap: 8px; }
