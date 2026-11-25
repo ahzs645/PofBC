@@ -3,6 +3,7 @@
 import { ALL_COLLECTED_BODIES } from './collectedBodies.js'
 import { COLLECTED_SPECIMENS } from './collectedData.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
+import { withLiquorHistory } from './liquorHistory.js'
 import { RAILWAY_HISTORY } from './railwayHistoryData.js'
 import { COLLECTED_PALETTES } from './collectedPalettes.js'
 
@@ -284,7 +285,7 @@ const HELD_LINES = LINES.filter((line) => line.every((id) => BODIES.get(id)?.ass
 const IN_A_LINE = new Set(HELD_LINES.flat())
 
 export const COLLECTED_COLLECTIONS = [
-  ...ALL_COLLECTED_BODIES.filter((body) => body.assets.length && !IN_A_LINE.has(body.id)).map(collectionOf),
+  ...ALL_COLLECTED_BODIES.filter((body) => body.assets.length && !IN_A_LINE.has(body.id)).map(collectionOf).map(withLiquorHistory),
   ...HELD_LINES.map(lineCollection)
 ].sort((a, b) => ALL_COLLECTED_BODIES.findIndex((body) => `collected-${body.id}` === a.id) - ALL_COLLECTED_BODIES.findIndex((body) => `collected-${body.id}` === b.id))
 
