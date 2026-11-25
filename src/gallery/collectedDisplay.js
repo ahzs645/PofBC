@@ -1418,6 +1418,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "ogc-2000-monogram": {
+  "light": {
+   "file": "identity-display/ogc-2000-monogram.light.svg",
+   "aspect": 1.7833,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/ogc-2000-monogram.light.svg",
+   "aspect": 1.7833,
+   "recoloured": false
+  }
+ },
+ "ogc-2009-service-plan": {
+  "light": {
+   "file": "identity-display/ogc-2009-service-plan.light.svg",
+   "aspect": 2.149,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/ogc-2009-service-plan.dark.svg",
+   "aspect": 2.149,
+   "recoloured": true
+  }
+ },
  "bcal-1999-letterhead-rebuilt": {
   "light": {
    "file": "identity-display/bcal-1999-letterhead-rebuilt.light.svg",

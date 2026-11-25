@@ -34,7 +34,7 @@ for (const { register: packaged } of PACKAGES) if (packaged.body) {
 }
 // Histories of a body's earlier identities: dated pictures of a mark in use (kept as images, and
 // said to be) beside any of its vectors, with a design's other sightings as its versions.
-const HISTORIES = ['bc-assessment-history-2026-11-21', 'evidence-2026-11-21', 'bc-place-history-2026-11-21', 'bc-health-logo-search-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22']
+const HISTORIES = ['oil-and-gas-commission-history-2026-11-24', 'bc-assessment-history-2026-11-21', 'evidence-2026-11-21', 'bc-place-history-2026-11-21', 'bc-health-logo-search-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 const railway = read('research/identity/railway-history-2026-11-12/source-register.json')
 const railwayHistory = read('research/identity/railway-history-2026-11-12/history.json')
@@ -179,6 +179,7 @@ const SUPERSEDED = {
 // Another colourway of the same design: shown inside the design's entry as a version to switch
 // to, rather than as a separate mark.
 const VARIANT_OF = {
+  'vector-bc-oil-gas-commission-2014': 'ogc-2009-service-plan',
   // The April 2001 sighting of Vancouver/Richmond's colour logo, with the November 2000 one, under its original vector.
   'historical-vancouver-richmond-health-board-colour-2001': 'historical-vancouver-richmond-health-board-colour-2000-original',
   'source-northern-health-northern-health-black-tagline-svg': 'source-northern-health-northern-health-colour-tagline-svg',
@@ -211,6 +212,7 @@ const VARIANT_OF = {
 
 // What each version is called inside its design's entry.
 const VERSION_LABELS = {
+  'vector-bc-oil-gas-commission-2014': 'Black lettering, 2014 water-use report',
   'thompson-health-region-rebuilt': 'Vector reconstruction, black (as on the letterheads)',
   'thompson-health-region-1999-letterhead': 'Image, letterhead (September 1999)',
   'vancouver-richmond-health-board-original-colour-lockup': 'Original vector (Take Care handbook, 2000)',
@@ -299,7 +301,6 @@ const BODY_NOTES = {
   'provincial-health-services-authority': 'One design in black and in white, as original vector artwork.',
   'bc-heritage-trust': 'The boxed Trust mark as original vector artwork from the 2001/02 annual report; the same mark is on its 1989 conservation publication.',
   'forest-renewal-bc': 'One design in full colour and black, both original vector artwork from the Corporation’s 1999 and 2000 publications.',
-  'oil-and-gas-commission': 'The corporate mark as original vector artwork from the 2014 annual report; the same mark is on official PDFs of 2019 and 2021.',
   'partnerships-bc': 'The wordmark as original vector artwork from the 2012/13 annual report; the same wordmark is in the 2006 service plan.',
   'capital-health-region': 'Capital Health Region of Victoria. One design in two original vector versions from 2000 publications, the same mark as on its 1999 and 2000 letterheads and newspaper notices. Dates identify appearances, not adoption.',
   'central-vancouver-island-health-region': 'The March 2002 report The World Without Linen Bags reproduces authentic 1999 letterheads. The full logo uses original PDF vector paths and glyph outlines, not a new trace. A grayscale emblem is also preserved from an embedded source image. Letter dates are sightings; no adoption date is asserted.',
@@ -354,9 +355,9 @@ const fromRegister = (entry, search = 'vector-search-2026-10-30') => {
     observedDate: entry.retrievedDate,
     evidenceType: original ? 'official-svg-download' : 'native-pdf-vector-extraction',
     notes: entry.notes,
-    fidelityNote: original
+    fidelityNote: entry.fidelityNote ?? (original
       ? 'Published SVG retained byte for byte, checked for real geometry and no embedded images or text, and rendered. Its source is linked below.'
-      : `${entry.provenance} ${entry.method ?? ''}`.trim(),
+      : `${entry.provenance} ${entry.method ?? ''}`.trim()),
     sha256: entry.sha256,
     bytes: entry.bytes,
     darkBackground: Boolean(entry.darkBackgroundRecommended),
