@@ -6,6 +6,7 @@ import { SIGNS, SIGN_SERIES } from './catalogue.js'
 import { FOREST_SERVICE_SIGNS } from './forest-service/signs.js'
 import { TOURISM_SIGNS } from './tourism/signs.js'
 import { PARKS_SIGNS } from './parks/signs.js'
+import fireDayThumb from './forest-service/fire-day.svg?url'
 import lookoutThumb from './forest-service/lookout.svg?url'
 import forestClosureThumb from './forest-service/forest-closure.svg?url'
 import superNaturalThumb from './tourism/super-natural.svg?url'
@@ -21,6 +22,7 @@ const tourism = fromData(TOURISM_SIGNS)
 const parks = fromData(PARKS_SIGNS)
 
 const LOADERS = {
+  'fire-day': forestService('fire-day', () => import('./forest-service/fire-day.svg?raw')),
   lookout: forestService('lookout', () => import('./forest-service/lookout.svg?raw')),
   'forest-closure': forestService('forest-closure', () => import('./forest-service/forest-closure.svg?raw')),
   'super-natural': tourism('super-natural', () => import('./tourism/super-natural.svg?raw')),
@@ -28,6 +30,7 @@ const LOADERS = {
 }
 
 const THUMBNAILS = {
+  'fire-day': fireDayThumb,
   lookout: lookoutThumb,
   'forest-closure': forestClosureThumb,
   'super-natural': superNaturalThumb,

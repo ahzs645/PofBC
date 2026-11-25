@@ -3,6 +3,7 @@
 // paragraph; { h }, { facts }, { note }, { palette }, { links } and { sources } are what they say. A sign
 // whose drawing has faces that change offers `variations` whose options `show` their own layers.
 
+import { FIRE_DAY } from './fireDay.js'
 import { SIGNS } from '../catalogue.js'
 
 const LOOKOUT_RELEASE = {
@@ -310,4 +311,4 @@ export const FOREST_CLOSURE = {
   order: ['overview', 'heading', 'boundary', 'zone', 'oval', 'strip', 'plate']
 }
 
-export const FOREST_SERVICE_SIGNS = { lookout: LOOKOUT, 'forest-closure': FOREST_CLOSURE }
+export const FOREST_SERVICE_SIGNS = { 'fire-day': FIRE_DAY, lookout: LOOKOUT, 'forest-closure': FOREST_CLOSURE }
