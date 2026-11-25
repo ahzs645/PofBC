@@ -68,7 +68,7 @@ test('post-secondary coverage counts subjects once, not their variants or visibl
   const counts = summarizePostsecondaryArtwork(subjects)
   assert.equal(counts.total, 49)
   assert.equal(counts.total, counts.vector + counts.observedNonvector + counts.unverified)
-  assert.deepEqual(counts, { total: 49, held: 0, vector: 24, observedNonvector: 7, unverified: 18, shared: 1 })
+  assert.deepEqual(counts, { total: 49, held: 0, vector: 25, observedNonvector: 7, unverified: 17, shared: 1 })
   assert.deepEqual(summarizePostsecondaryArtwork(subjects.filter((subject) => subject.priority === 1 && subject.kind === 'public-college')),
     { total: 11, held: 0, vector: 11, observedNonvector: 0, unverified: 0, shared: 0 })
 
@@ -163,4 +163,19 @@ test('BCIT extends its existing subject, not the 49-record family or the held we
   assert.deepEqual(receipt.variants.map(({ outlinedSourceGlyphs }) => outlinedSourceGlyphs), [0, 36])
   assert.ok(receipt.variants.every(({ filteredPdfMatchesOriginalCropAt8x, svgThresholdedInkIoUAt8x }) =>
     filteredPdfMatchesOriginalCropAt8x && svgThresholdedInkIoUAt8x > 0.97))
+})
+
+
+test('early Kwantlen previews link to documented vector evidence for their own name era', async () => {
+  const { identitySubjectById } = await import('./identityCoverage.js')
+  const { EDITORIAL_LOGO_SPECIMENS } = await import('./editorialLogoSpecimens.js')
+  for (const id of ['kwantlen-college', 'kwantlen-university-college']) {
+    const subject = identitySubjectById(id)
+    const [preview] = EDITORIAL_LOGO_SPECIMENS[id]
+    const source = subject.artworkReview.specimens.find(({ id }) => id === preview.id)
+    assert.equal(source.url, preview.url)
+    assert.equal(source.format, 'native-vector')
+    assert.equal(source.evidence, 'source-only')
+    assert.equal(subject.hasArtwork, false)
+  }
 })
