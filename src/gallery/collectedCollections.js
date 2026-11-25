@@ -163,7 +163,7 @@ export const specimenEntriesOf = (program, timeline) => designsOf(COLLECTED_SPEC
 
 const collectionOf = (body) => ({
   id: `collected-${body.id}`,
-  shelf: isMunicipalBody(body) ? 'municipalities' : 'bodies',
+  shelf: body.shelf ?? (isMunicipalBody(body) ? 'municipalities' : 'bodies'),
   // Service brands can have artwork without a corresponding legal organization in the atlas.
   graphNode: Object.hasOwn(body, 'graphNode') ? body.graphNode : body.id,
   fileCollection: true,
@@ -174,7 +174,7 @@ const collectionOf = (body) => ({
   // The body's own account where it has one; that its years are not its logos' is said on each card
   // (“Seen …”) and under About.
   intro: body.notes || 'Collected artwork, with its source recorded for each file.',
-  cover: coverOf(body.assets),
+  cover: body.cover ?? coverOf(body.assets),
   entries: collectedEntriesOf(body.id),
 })
 

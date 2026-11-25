@@ -1,0 +1,40 @@
+# BC agricultural program delivery partners
+
+The two signatures occur together on the funding acknowledgements page of *Summary of Water Management Resources for Agriculture in BC*. The program library dates the resource to 2021. The archived PDF carries February 2022 metadata, and its replacement cover identifies IAF as the delivery organization. The inside page preserves the earlier joint credit. [Library record](https://www.bcclimatechangeadaptation.ca/library/transferring-knowledge-about-water-management/) · [PDF pp. 1–2](https://www.bcclimatechangeadaptation.ca/app/uploads/BF01-Resource-Summary-Water-Management-Resources-Agriculture-BC-2021.pdf)
+
+## Institutional chronology
+
+| Date | Evidence |
+| --- | --- |
+| January 1984 | BC Corporate Registry records B.C. Agricultural Research & Development Corporation as a BC company, number BC0273604. Its current published credential carries active status. The original shareholders and the date the Council acquired it remain open. [Registry](https://orgbook.gov.bc.ca/api/v4/topic/279398/credential-set) |
+| October 1996 | B.C. Investment Agriculture Foundation incorporated as a nonprofit society. The audited accounts give October 31, while the registry’s converted legacy record gives October 30. Both support the month displayed in the gallery. IAF transitioned under the Societies Act in October 2018. [2023/24 audited statements, note 1](https://iafbc.ca/wp-content/uploads/2026/07/IAF-Annual-Report-2023-24.pdf) · [BC society S0036049](https://orgbook.gov.bc.ca/api/v4/topic/2156151/credential-set) |
+| 1997 | IAF funded the Central Farm Working Group to establish a new general farm organization. BC Agriculture Council emerged after the earlier federation disbanded. [Council anniversary program, PDF p. 6](https://bcac.ca/wp-content/uploads/2022/04/2022-Gala-Program.pdf) |
+| 2007 | Treasury Board’s federal inventory classified IAF as a shared-governance corporation with one federally appointed director among 15. In 2023/24 IAF reported 15 member organizations and a ten-director board. Those accounts describe different years. [Treasury Board, printed p. 146](https://publications.gc.ca/collections/collection_2008/tb-ct/BT1-15-2007E.pdf) · [IAF financial statements, printed p. 20](https://iafbc.ca/wp-content/uploads/2026/07/IAF-Annual-Report-2023-24.pdf) |
+| 2008–2011 | IAF and BCAC, through ARDCorp, began joint climate adaptation delivery in 2008. ARDCorp established its Renewable Agri-Energy Initiative in 2009. The Province explicitly identified the company as BCAC’s wholly owned subsidiary in 2011. [Program history](https://www.bcclimatechangeadaptation.ca/about-us/) · [BC Bioenergy Network](https://bcbioenergy.ca/what-we-do/capacity-building-portfolio/ardcorp/) · [Province of BC](https://news.gov.bc.ca/releases/2011AGRI0043-001537) |
+| January 2021 | IAF dates the launch of its new initialled logo to January 2021 on the back of the report for 2020. A special version marked 25 years since 1996. [2020 report, back cover](https://iafbc.ca/wp-content/uploads/2026/07/IAF-2020-AnnualReport_FINAL.pdf) · [2021 report, cover](https://iafbc.ca/wp-content/uploads/2026/07/Annual-Report-2021-Final_Web.pdf) |
+| June–December 2021 | The Council decided to focus on advocacy and recommended IAF for the Environmental Farm Plan, Beneficial Management Practices and Climate & Agriculture Initiative BC programs. The ministry agreed and the program handover finished in December. ARDCorp and IAF retained separate corporate registrations. [Council 2021 annual report, p. 18](https://bcac.ca/wp-content/uploads/2022/04/BCAC-Annual-Report-2022.pdf) · [IAF’s announcement](https://iafbc.ca/cap-efp-bmp-program-update/) |
+
+## Artwork
+
+Gallery asset records give the source URL, page or attachment, edition, SHA-256 and extraction method for each holding. ARDCorp’s two PNGs are byte-for-byte copies of its original media attachments. The 2021 Council report prints the full-colour version on p. 18.
+
+| IAF specimen | Source and extraction |
+| --- | --- |
+| Stacked leaves, 2010 | 2010 report, cover. Preserve the black and white figure paths above the name and exclude the rectangular green cover panel. [Report](https://iafbc.ca/wp-content/uploads/2026/07/IAFBC_2010_AR_English_web.pdf) |
+| Horizontal, full colour | Water guide, PDF p. 2, image object 4 (1247 × 156). Crop the single 192 × 96 signature directly from the embedded raster. The horizontal layout includes all four lines of type. [Guide](https://www.bcclimatechangeadaptation.ca/app/uploads/BF01-Resource-Summary-Water-Management-Resources-Agriculture-BC-2021.pdf) |
+| Horizontal, white | 2019 IAF report front cover. Preserve all original letter and leaf paths. This documents the layout by 2019. [Report](https://iafbc.ca/wp-content/uploads/2026/07/IAF-2019-AnnualReport_Web_Updated_compressed.pdf) |
+| Initials and wordmark | The water guide’s replacement cover has the two-green signature. The gallery preserves the 35 coloured paths from that published specimen. IAF separately provides guidelines for the current identity. [Guide](https://www.bcclimatechangeadaptation.ca/app/uploads/BF01-Resource-Summary-Water-Management-Resources-Agriculture-BC-2021.pdf) · [Logo use guidelines](https://iafbc.ca/wp-content/uploads/2026/08/IAF-Logo-Use-Guidelines.pdf) |
+| 25 years | The 2021 IAF report cover combines the white signature with an anniversary device. All 53 paths are preserved as one design. [Report](https://iafbc.ca/wp-content/uploads/2026/07/Annual-Report-2021-Final_Web.pdf) |
+| ARDCorp field furrows | Both originals are 917 × 555, with transparency. The gallery records attachment publication dates. The media library establishes a white version by November 2017 and a colour version in September 2018. The creation date and designer remain open. [Colour](https://ardcorp.ca/wp-content/uploads/2018/09/ARDCORP_Logo_CYMK.png) · [Reversed](https://ardcorp.ca/wp-content/uploads/2017/11/ARDCORP_Logo_REV.png) |
+
+## Coverage audit
+
+The audit covered the two pictured organizations, the subsidiary’s parent, its labour-services sibling and one independent education charity with a documented ministry program. At baseline commit 9f84745c, none of the five had a subject or collection in the gallery. The atlas mentions the Council under the spelling “BC Agricultural Council” in its Buy BC history. Its collecting queue selects the two kinds in `src/gallery/collectingSource.js`, Crown corporations and health authorities. Other owners enter the register through the curated records imported by `src/gallery/identitySubjects.js`. A mention in an event or a funding acknowledgement creates neither a register entry nor a logo collection.
+
+| Organization | Catalogue decision and evidence |
+| --- | --- |
+| Investment Agriculture Foundation | Independent program partner with its own public gallery and society record. [IAF accounts](https://iafbc.ca/wp-content/uploads/2026/07/IAF-Annual-Report-2023-24.pdf) |
+| ARDCorp | Industry-owned program delivery company with a separate gallery. [Sector audit, printed p. 4](https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/agriculture-and-seafood/animal-and-crops/crop-production/tree-fruit-stabilization-plan/analysis_and_audit_of_organizations.pdf) |
+| BC Agriculture Council | Related parent and research lead. Its documented roles include agricultural advocacy and a 2002 agreement to manage Buy BC. [2002 agreement](https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002AGF0019-000822.htm) |
+| Western Agriculture Labour Initiative | Related subsidiary and research lead for its own artwork. Its labour services have a distinct mandate. [BCAC legislative committee submission](https://bcac.ca/wp-content/uploads/2021/04/2020-6-26-BCAC-Submission-to-the-Select-Standing-Committee-on-Finance.pdf) |
+| BC Agriculture in the Classroom Foundation | Independent peer and research lead. The charitable society manages a provincial school fruit and vegetable program with BC ministries. [Foundation history](https://www.bcaitc.ca/our-story) |

@@ -2508,6 +2508,54 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "iaf-curled-leaves-white": {
+  "light": {
+   "file": "identity-display/iaf-curled-leaves-white.light.svg",
+   "aspect": 2.5574,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/iaf-curled-leaves-white.dark.svg",
+   "aspect": 2.5574,
+   "recoloured": false
+  }
+ },
+ "iaf-curled-leaves-stacked": {
+  "light": {
+   "file": "identity-display/iaf-curled-leaves-stacked.light.svg",
+   "aspect": 0.619,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/iaf-curled-leaves-stacked.dark.svg",
+   "aspect": 0.619,
+   "recoloured": true
+  }
+ },
+ "iaf-field-monogram": {
+  "light": {
+   "file": "identity-display/iaf-field-monogram.light.svg",
+   "aspect": 3.836,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/iaf-field-monogram.light.svg",
+   "aspect": 3.836,
+   "recoloured": false
+  }
+ },
+ "iaf-25-years": {
+  "light": {
+   "file": "identity-display/iaf-25-years.light.svg",
+   "aspect": 5.5474,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/iaf-25-years.dark.svg",
+   "aspect": 5.5474,
+   "recoloured": false
+  }
+ },
  "source-expanded-translink-website-logo": {
   "light": {
    "file": "identity-display/source-expanded-translink-website-logo.light.svg",
