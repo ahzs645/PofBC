@@ -34,7 +34,7 @@ No bitmap tracing was used anywhere.
   - The serif is not identified.
   - Colours are sampled. The grey scan shows heavier waves.
 - **BCAL 1999 letterhead:** URW Bookman Light Italic, a close fit. The letterhead's vertical rule is not drawn.
-- **BCRIC 1979 wordmark:** Gelasio Bold, the best of ten serifs tried (IoU 0.77). The face is unidentified. The green is sampled.
+- **BCRIC 1979 wordmark:** Gelasio Bold led the original study (IoU 0.77). A later comparison of six historical styles found that Gelasio also fit both printed brochure impressions more closely. The original face is unidentified. The green is sampled. [Historical specimens, scores and overlays](../bcric-wordmark-comparison/README.md)
 - **Expo 86 CIPO 1982 symbol:** rings, a bar and round-ended strokes, with true arcs. IoU 0.97.
 - **Expo 86 1986 wordmark:** capsules and rings, white for a dark ground. The ™ is omitted. IoU 0.95.
 - **Shared Services BC 2006/07 and 2015, and Solutions BC 2006 letterhead:** composed from the gallery's Best Place on Earth mark (`src/assets/oneOffMarks.js`, drawn by `src/gallery/renderOneOff.js`, so the sun glow is radial gradients).
