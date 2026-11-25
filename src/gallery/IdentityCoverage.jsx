@@ -12,6 +12,7 @@ import { writeHistory } from '../site/browserHistory.js'
 import { tileArt } from './tileArt.js'
 import { entriesOf } from './collections.js'
 import { IDENTITY_KIND_LABELS, IDENTITY_RELATION_LABELS } from './identitySubjects.js'
+import { EDITORIAL_LOGO_SPECIMENS } from './editorialLogoSpecimens.js'
 import { POSTSECONDARY_ARTWORK_FORMAT, POSTSECONDARY_ARTWORK_SCOPE, summarizePostsecondaryArtwork } from './postsecondaryArtwork.js'
 import './identityCoverage.css'
 import { Select } from '../site/ui/Select.jsx'
@@ -272,7 +273,25 @@ const ArtworkSource = ({ item }) => {
   </>
 }
 
-const PostsecondaryArtworkReview = ({ review, onOpenSubject }) => {
+const EditorialLogoSpecimens = ({ subjectId }) => {
+  const items = EDITORIAL_LOGO_SPECIMENS[subjectId]
+  if (!items) return null
+  return <div className="identity-editorial-specimens">
+    <h5>Logo details from the publications</h5>
+    <p className="identity-muted">Shown for historical comparison. PofBC is independent of the institutions; these publication excerpts are not reusable brand files.</p>
+    <div className="identity-editorial-specimens__grid">{items.map((item) => (
+      <figure key={item.id}>
+        <img src={item.src} width={item.width} height={item.height} loading="lazy" decoding="async" alt={item.alt} />
+        <figcaption>
+          <p>{item.caption}</p>
+          <External href={item.url}>{item.credit}</External>
+        </figcaption>
+      </figure>
+    ))}</div>
+  </div>
+}
+
+const PostsecondaryArtworkReview = ({ review, subjectId, onOpenSubject }) => {
   const { specimens, shared, history } = review
   if (!specimens.length && !shared && !history.length) return null
   const sharedSubject = shared && IDENTITY_COVERAGE.find(({ id }) => id === shared.targetSubjectId)
@@ -282,7 +301,8 @@ const PostsecondaryArtworkReview = ({ review, onOpenSubject }) => {
   return (
     <section className="identity-card identity-artwork-review" aria-labelledby="identity-artwork-review">
       <h4 id="identity-artwork-review">{history.length ? 'Identity history and official sources' : 'Artwork sources and review'}</h4>
-      <p className="identity-muted">These links open files or pages published elsewhere. They are not copies held or hosted by this gallery.</p>
+      <p className="identity-muted">The source links open the publishers’ original documents. Any excerpts shown here are separate from the gallery’s downloadable artwork holdings.</p>
+      <EditorialLogoSpecimens subjectId={subjectId} />
       {history.length > 0 && (
         <ol className="identity-sources identity-history" role="list">
           {history.map((event) => (
@@ -375,7 +395,7 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
                 </button>
               ))}</div>
               : <div className="identity-empty"><strong>{subject.artworkReview ? 'No separately held artwork.' : 'Still wanted.'}</strong> {subject.nextAction}</div>}
-            {subject.artworkReview && <PostsecondaryArtworkReview review={subject.artworkReview} onOpenSubject={onOpenSubject} />}
+            {subject.artworkReview && <PostsecondaryArtworkReview review={subject.artworkReview} subjectId={subject.id} onOpenSubject={onOpenSubject} />}
           </section>
 
           {(subject.sources?.length > 0 || (heldEntries.length > 0 && subject.nextAction)) && (
