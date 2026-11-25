@@ -2159,6 +2159,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "bchealthcare-2003": {
+  "light": {
+   "file": "identity-display/bchealthcare-2003.light.svg",
+   "aspect": 7.0092,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bchealthcare-2003.dark.svg",
+   "aspect": 7.0092,
+   "recoloured": true
+  }
+ },
+ "bcpharmacare-2003": {
+  "light": {
+   "file": "identity-display/bcpharmacare-2003.light.svg",
+   "aspect": 7.551,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcpharmacare-2003.dark.svg",
+   "aspect": 7.551,
+   "recoloured": true
+  }
+ },
  "pep-striped-ink": {
   "light": {
    "file": "identity-display/pep-striped-ink.light.svg",
@@ -2601,6 +2625,54 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/bceid-reversed-rebuilt.dark.svg",
    "aspect": 4.0509,
+   "recoloured": false
+  }
+ },
+ "iaf-curled-leaves-white": {
+  "light": {
+   "file": "identity-display/iaf-curled-leaves-white.light.svg",
+   "aspect": 2.5574,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/iaf-curled-leaves-white.dark.svg",
+   "aspect": 2.5574,
+   "recoloured": false
+  }
+ },
+ "iaf-curled-leaves-stacked": {
+  "light": {
+   "file": "identity-display/iaf-curled-leaves-stacked.light.svg",
+   "aspect": 0.619,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/iaf-curled-leaves-stacked.dark.svg",
+   "aspect": 0.619,
+   "recoloured": true
+  }
+ },
+ "iaf-field-monogram": {
+  "light": {
+   "file": "identity-display/iaf-field-monogram.light.svg",
+   "aspect": 3.836,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/iaf-field-monogram.light.svg",
+   "aspect": 3.836,
+   "recoloured": false
+  }
+ },
+ "iaf-25-years": {
+  "light": {
+   "file": "identity-display/iaf-25-years.light.svg",
+   "aspect": 5.5474,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/iaf-25-years.dark.svg",
+   "aspect": 5.5474,
    "recoloured": false
   }
  },
@@ -4943,78 +5015,6 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/adc-bc-booklet-monogram.dark.svg",
    "aspect": 1.9141,
    "recoloured": true
-  }
- },
- "bchealthcare-2003": {
-  "light": {
-   "file": "identity-display/bchealthcare-2003.light.svg",
-   "aspect": 7.0092,
-   "recoloured": false
-  },
-  "dark": {
-   "file": "identity-display/bchealthcare-2003.dark.svg",
-   "aspect": 7.0092,
-   "recoloured": true
-  }
- },
- "bcpharmacare-2003": {
-  "light": {
-   "file": "identity-display/bcpharmacare-2003.light.svg",
-   "aspect": 7.551,
-   "recoloured": false
-  },
-  "dark": {
-   "file": "identity-display/bcpharmacare-2003.dark.svg",
-   "aspect": 7.551,
-   "recoloured": true
-  }
- },
- "iaf-curled-leaves-white": {
-  "light": {
-   "file": "identity-display/iaf-curled-leaves-white.light.svg",
-   "aspect": 2.5574,
-   "recoloured": true
-  },
-  "dark": {
-   "file": "identity-display/iaf-curled-leaves-white.dark.svg",
-   "aspect": 2.5574,
-   "recoloured": false
-  }
- },
- "iaf-curled-leaves-stacked": {
-  "light": {
-   "file": "identity-display/iaf-curled-leaves-stacked.light.svg",
-   "aspect": 0.619,
-   "recoloured": true
-  },
-  "dark": {
-   "file": "identity-display/iaf-curled-leaves-stacked.dark.svg",
-   "aspect": 0.619,
-   "recoloured": true
-  }
- },
- "iaf-field-monogram": {
-  "light": {
-   "file": "identity-display/iaf-field-monogram.light.svg",
-   "aspect": 3.836,
-   "recoloured": false
-  },
-  "dark": {
-   "file": "identity-display/iaf-field-monogram.light.svg",
-   "aspect": 3.836,
-   "recoloured": false
-  }
- },
- "iaf-25-years": {
-  "light": {
-   "file": "identity-display/iaf-25-years.light.svg",
-   "aspect": 5.5474,
-   "recoloured": true
-  },
-  "dark": {
-   "file": "identity-display/iaf-25-years.dark.svg",
-   "aspect": 5.5474,
-   "recoloured": false
   }
  }
 }
