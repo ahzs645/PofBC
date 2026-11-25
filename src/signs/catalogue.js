@@ -8,7 +8,7 @@ export const SIGN_SERIES = [
     id: 'forest-service',
     title: 'British Columbia Forest Service',
     kind: 'Fire protection',
-    signs: ['lookout', 'forest-closure']
+    signs: ['fire-day', 'lookout', 'forest-closure']
   },
   {
     id: 'tourism',
@@ -29,6 +29,11 @@ export const SIGN_SERIES = [
 ]
 
 export const SIGNS = {
+  'fire-day': {
+    id: 'fire-day', series: 'forest-service', title: 'TO-DAY IS A FIRE DAY',
+    when: 'Photographed in Powell River, July 1938', view: { x: 0, y: 0, w: 550, h: 424 },
+    page: { w: 11, h: 8.48 }
+  },
   lookout: {
     id: 'lookout',
     series: 'forest-service',
