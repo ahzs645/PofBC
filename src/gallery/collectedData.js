@@ -9917,9 +9917,9 @@ export const COLLECTED_SPECIMENS = [
         "alsoSeen": [
           {
             "date": "2008/09",
-            "url": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/323801",
             "locator": "Front cover after the Legislative Library wrapper",
-            "title": "2008–2009 Institutional Accountability Plan & Report"
+            "source": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/323801",
+            "label": "2008–2009 Institutional Accountability Plan & Report"
           }
         ],
         "search": "justice-institute-2026-11-12"

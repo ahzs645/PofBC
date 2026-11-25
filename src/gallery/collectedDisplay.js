@@ -2146,6 +2146,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "jibc-griffin-2010": {
+  "light": {
+   "file": "identity-display/jibc-griffin-2010.light.svg",
+   "aspect": 1.0721,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/jibc-griffin-2010.dark.svg",
+   "aspect": 1.0721,
+   "recoloured": true
+  }
+ },
  "oag-bc-logo": {
   "light": {
    "file": "identity-display/oag-bc-logo.light.svg",
