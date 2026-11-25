@@ -23,7 +23,7 @@
     "sourceCrops": 191,
     "variantsWithCrops": 141,
     "unavailableOccurrences": 5,
-    "partialRefinements": 12,
+    "partialRefinements": 13,
     "byStatus": {
       "refine": 76,
       "reconstruct": 40,
@@ -4172,34 +4172,40 @@
     },
     {
       "id": "MC19-O02",
+      "reviewedAt": "2026-11-24",
       "status": "refine",
       "priority": "medium",
       "findings": [
-        "The photograph has rounded cloth ends; the reconstruction turns the inner ends into sharp points.",
-        "The current lettering is a heavier condensed substitute with more uniform spacing than the tall stitched capitals."
+        "Rounded cloth ends and a continuous U-shaped band replace the prior angular contour.",
+        "Nineteen separately constructed narrow gold capital glyphs are positioned along the lower arc; the local raster render confirms 19 disconnected gold regions.",
+        "The new drawing is visually compared with the existing source crop; exact lettering and palette remain provisional."
       ],
-      "proposedFix": [
-        "Round the end transitions without changing the U-shaped lower-rocker identity.",
-        "Rebuild the single caption as independent narrow glyphs on the observed lower arc; keep olive and green/gold editions separate."
-      ],
-      "evidenceLimitations": "Clean vector reconstruction from visible artifact references; no photograph tracing, source textures or embedded raster. Natural outlined replacement fonts approximate embroidered alphabets. Exact stitch anatomy, manufacturing dimensions and calibrated thread colors remain unverified. Whole-master source placement uses uniform scale; the photograph is not used to distort separate border or emblem components. This upward-facing U-shaped lower strip is a separate object, with a different cut from the standard upper detached rocker.",
+      "proposedFix": "Check source alignment quantitatively and validate the browser embroidery preview before marking the reconstruction complete.",
+      "evidenceLimitations": "Independent source-based reconstruction of the olive lower rocker from the 371 × 118 MC19-O02 crop. Rounded Bézier cloth outline, individually placed original narrow capitals, and approximate olive/gold palette. No traced photograph contours or raster content. Exact embroidered alphabet, calibrated thread colours, physical size and stitch structure remain unverified; visual fit is provisional. MC20-O02 remains a separately evidenced variant.",
       "inspectedOccurrences": [
         "MC19-O02"
       ],
-      "candidateNote": "not changed",
       "baselineSvgSha256": "c1f619a09060107cbcc910f5440a9805ac6bbdbcacde862c4db4f0e890bac9c2",
-      "reviewedSvgSha256": "c1f619a09060107cbcc910f5440a9805ac6bbdbcacde862c4db4f0e890bac9c2",
-      "candidateChanges": [],
+      "reviewedSvgSha256": "849d3dfbebd063b04b819932b548462959484206d6054538a2eb88fa4d050463",
+      "candidateChanges": [
+        "Constructed a rounded Bézier lower-rocker outline.",
+        "Rebuilt the caption as 19 independent narrow filled-path letters with individualized positions and tangent rotations.",
+        "Adjusted olive/gold palette visually; left MC20-O02 unchanged."
+      ],
+      "baselineFindings": [
+        "The photograph has rounded cloth ends; the reconstruction turns the inner ends into sharp points.",
+        "The current lettering is a heavier condensed substitute with more uniform spacing than the tall stitched capitals."
+      ],
       "orgId": "conservation-officer-service",
       "orgName": "Conservation Officer Service",
       "label": "Conservation Officer — separate olive lower rocker",
       "variant": "Olive",
       "group": "conservation-officer-lower-rocker",
       "medium": "Cloth rocker",
-      "svgSha256": "c1f619a09060107cbcc910f5440a9805ac6bbdbcacde862c4db4f0e890bac9c2",
-      "currentSvgSha256": "c1f619a09060107cbcc910f5440a9805ac6bbdbcacde862c4db4f0e890bac9c2",
+      "svgSha256": "849d3dfbebd063b04b819932b548462959484206d6054538a2eb88fa4d050463",
+      "currentSvgSha256": "849d3dfbebd063b04b819932b548462959484206d6054538a2eb88fa4d050463",
       "preview": "conservation-officer-service/previews/MC19-O02.webp",
-      "limitations": "Clean vector reconstruction from visible artifact references; no photograph tracing, source textures or embedded raster. Natural outlined replacement fonts approximate embroidered alphabets. Exact stitch anatomy, manufacturing dimensions and calibrated thread colors remain unverified. Whole-master source placement uses uniform scale; the photograph is not used to distort separate border or emblem components. This upward-facing U-shaped lower strip is a separate object, with a different cut from the standard upper detached rocker.",
+      "limitations": "Independent source-based reconstruction of the olive lower rocker from the 371 × 118 MC19-O02 crop. Rounded Bézier cloth outline, individually placed original narrow capitals, and approximate olive/gold palette. No traced photograph contours or raster content. Exact embroidered alphabet, calibrated thread colours, physical size and stitch structure remain unverified; visual fit is provisional. MC20-O02 remains a separately evidenced variant.",
       "sources": [
         {
           "occurrenceId": "MC19-O02",
