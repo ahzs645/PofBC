@@ -9962,6 +9962,68 @@ export const COLLECTED_SPECIMENS = [
     ]
   },
   {
+    "program": "health-program-signatures",
+    "assets": [
+      {
+        "id": "bchealthcare-2003",
+        "label": "BCHealthCare",
+        "file": "identity-collected/health-program-signatures/bchealthcare-2003.svg",
+        "owner": "bchealthcare",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "Partnerships British Columbia",
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/307972",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/f06cbc1a-6df9-4598-851e-2f72a69d6f0f/content",
+        "sourceLocator": "Cover of the January 23, 2003 request for expressions of interest. PDF page 2 follows the Library’s catalogue sheet.",
+        "sourceFile": "Request for expressions of interest: Abbotsford Hospital and Cancer Centre",
+        "sourceDate": "2003-01-23",
+        "specimenDate": "2003-01-23",
+        "observedDate": "2026-11-25",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "A provincial health-care signature used on the Abbotsford Hospital and Cancer Centre project, beside the project publisher’s own identity. The provincial arms and BCHealth are blue, with Care in red.",
+        "fidelityNote": "The original blue and red fills, paths of the arms and outlined lettering were separated from the publication. No typeface substitution or tracing.",
+        "sha256": "c6467af40e126c827aee4dacfde8b70adf46b7a83d95eac6206b0ee94f0e0b8f",
+        "bytes": 59937,
+        "darkBackground": false,
+        "search": "health-program-signatures"
+      },
+      {
+        "id": "bcpharmacare-2003",
+        "label": "BCPharmaCare",
+        "file": "identity-collected/health-program-signatures/bcpharmacare-2003.svg",
+        "owner": "bcpharmacare",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "British Columbia Ministry of Health Services",
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/301527",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/2d02fa36-75b7-4d3a-92df-b3fa3a67cf69/content",
+        "sourceLocator": "Front cover panel of the 2003 folded brochure, at the right of PDF page 2 after the Library’s catalogue sheet.",
+        "sourceFile": "Your new Fair PharmaCare program: fair care for everyone",
+        "sourceDate": "2003",
+        "specimenDate": "2003",
+        "observedDate": "2026-11-25",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The drug program’s signature places blue BCPharma and red Care beside the arms. In the supplied registration graphic, the frame and the invitation to register for Fair PharmaCare are part of the button. The 2003 booklet carries the signature on its own.",
+        "fidelityNote": "The original blue and red fills, paths of the arms and outlined lettering were separated from the publication. No typeface substitution or tracing.",
+        "sha256": "47c47d2a92d5d42acb23e03219fb8953ed915e2ae9dec1263552c97d10674a34",
+        "bytes": 60978,
+        "darkBackground": false,
+        "alsoSeen": [
+          {
+            "date": "2005-04-07",
+            "label": "PharmaCare Newsletter, April 7, 2005, masthead",
+            "source": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/268865"
+          }
+        ],
+        "search": "health-program-signatures"
+      }
+    ]
+  },
+  {
     "program": "provincial-emergency-program",
     "assets": [
       {

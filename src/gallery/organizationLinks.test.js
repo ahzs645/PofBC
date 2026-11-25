@@ -90,3 +90,15 @@ test('departmental, initiative and one-off artwork remains searchable under the 
   assert.equal(gcpe.versions.length, 2)
   assert.ok(searchGallery('GCPE').marks.some(({ collection, entry }) => collection === oneOffs && entry === gcpe))
 })
+
+test('provincial health program signatures share a shelf and retain their individual owners', () => {
+  const collection = collectionById('health-program-signatures')
+  assert.equal(collection.shelf, 'provincial-programs')
+  assert.equal(collection.relatedGenerator.era, 'crest')
+  assert.equal(collection.graphNode, 'ministry-of-health-services-2001')
+  for (const owner of ['bchealthcare', 'bcpharmacare']) {
+    assert.deepEqual(entriesOfNode(collection, owner).map((entry) => entry.id), [owner + '-2003'])
+    assert.equal(findGalleryEntry(owner + '-2003').identity.provenance, 'extracted_from_official_vector')
+  }
+  assert.equal(entriesOfNode(collection, collection.graphNode).length, 0)
+})

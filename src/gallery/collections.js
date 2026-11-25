@@ -965,6 +965,19 @@ const withSpecimens = (marks, program) => {
  */
 export const GALLERY_COLLECTIONS = [
   {
+    id: 'health-program-signatures',
+    shelf: 'provincial-programs',
+    label: 'Provincial health signatures',
+    body: 'Ministry of Health Services',
+    years: 'Seen in 2003 and 2005',
+    cover: 'bchealthcare-2003',
+    graphNode: 'ministry-of-health-services-2001',
+    graphYear: 2003,
+    relatedGenerator: { era: 'crest', label: 'Explore the provincial crest in the generator' },
+    intro: 'BCHealthCare and BCPharmaCare used blue provincial arms and a two-colour name. A January 2003 hospital project cover carries BCHealthCare. The 2003 Fair PharmaCare brochure and an April 2005 newsletter carry BCPharmaCare.',
+    entries: specimenEntriesOf('health-program-signatures').map((entry) => ({ ...entry, owner: entry.asset.owner }))
+  },
+  {
     id: 'tourism-bc-destination-bc',
     shelf: 'bodies',
     label: 'Tourism BC & Destination BC',
@@ -1364,7 +1377,7 @@ GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) => !['colle
 // Travel Industry opens in Departmental Logos and keeps its own register collection.
 // A program's published specimens belong to the body its one-off stands for (WorkBC's to WorkBC, Where
 // ideas work to the Public Service Agency), so that body's panel finds its original files too.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-bcts', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc', 'specimens-bc-environment', 'specimens-tourism-recreation-culture', 'specimens-superhost'].includes(collection.id))
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-health-program-signatures', 'specimens-worksafebc', 'specimens-bcts', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc', 'specimens-bc-environment', 'specimens-tourism-recreation-culture', 'specimens-superhost'].includes(collection.id))
   .map((collection) => {
     const node = GRAPH_NODES[collection.id.replace(/^specimens-/, '')]
     return node ? { ...collection, entries: collection.entries.map((entry) => ({ ...entry, graphNode: entry.graphNode ?? node })) } : collection

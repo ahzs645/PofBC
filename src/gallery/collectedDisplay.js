@@ -4860,5 +4860,29 @@ export const COLLECTED_DISPLAY = {
    "aspect": 1.9141,
    "recoloured": true
   }
+ },
+ "bchealthcare-2003": {
+  "light": {
+   "file": "identity-display/bchealthcare-2003.light.svg",
+   "aspect": 7.0092,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bchealthcare-2003.dark.svg",
+   "aspect": 7.0092,
+   "recoloured": true
+  }
+ },
+ "bcpharmacare-2003": {
+  "light": {
+   "file": "identity-display/bcpharmacare-2003.light.svg",
+   "aspect": 7.551,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcpharmacare-2003.dark.svg",
+   "aspect": 7.551,
+   "recoloured": true
+  }
  }
 }
