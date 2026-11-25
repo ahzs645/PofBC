@@ -2135,6 +2135,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "pep-striped-ink": {
+  "light": {
+   "file": "identity-display/pep-striped-ink.light.svg",
+   "aspect": 3.7602,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pep-striped-ink.dark.svg",
+   "aspect": 3.7602,
+   "recoloured": true
+  }
+ },
+ "pep-striped-blue": {
+  "light": {
+   "file": "identity-display/pep-striped-blue.light.svg",
+   "aspect": 3.7602,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pep-striped-blue.dark.svg",
+   "aspect": 3.7602,
+   "recoloured": true
+  }
+ },
  "bc-travel-industry-ca-1970": {
   "light": {
    "file": "identity-display/bc-travel-industry-ca-1970.light.svg",

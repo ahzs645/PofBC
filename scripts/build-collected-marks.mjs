@@ -22,7 +22,7 @@ const bceid = read('research/identity/bceid-2026-11-12/source-register.json')
 const sharedServices = read('research/identity/shared-services-bc-2026-11-12/source-register.json')
 const bcCancerNow = read('research/identity/bc-cancer-current-2026-11-12/source-register.json')
 // Programs' marks held as supplied reconstructions, with no body of their own in the inventory.
-const PROGRAM_PACKAGES = ['bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12', 'solutions-bc-vector-2026-11-12', 'healthlink-bc-2026-11-12', 'bc-cancer-modern-2026-11-12', 'bc-environment-vector-2026-11-22', 'tourism-recreation-culture-vector-2026-11-22', 'superhost-vector-2026-11-22', 'bcts']
+const PROGRAM_PACKAGES = ['provincial-emergency-program', 'bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12', 'solutions-bc-vector-2026-11-12', 'healthlink-bc-2026-11-12', 'bc-cancer-modern-2026-11-12', 'bc-environment-vector-2026-11-22', 'tourism-recreation-culture-vector-2026-11-22', 'superhost-vector-2026-11-22', 'bcts']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
 const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12', 'bc-housing-houses-vector-2026-11-12', 'fvhr-vector-2026-11-12', 'bc-steamship-vector-2026-11-12', 'pge-map-vector-2026-11-12', 'ocean-falls-vector-2026-11-12', 'bc-trade-vector-2026-11-13', 'bc-development-corporation-vector-2026-11-14']
@@ -180,6 +180,7 @@ const SUPERSEDED = {
 // to, rather than as a separate mark.
 const VARIANT_OF = {
   'vector-bc-oil-gas-commission-2014': 'ogc-2009-service-plan',
+  'pep-striped-blue': 'pep-striped-ink',
   // The April 2001 sighting of Vancouver/Richmond's colour logo, with the November 2000 one, under its original vector.
   'historical-vancouver-richmond-health-board-colour-2001': 'historical-vancouver-richmond-health-board-colour-2000-original',
   'source-northern-health-northern-health-black-tagline-svg': 'source-northern-health-northern-health-colour-tagline-svg',
@@ -213,6 +214,8 @@ const VARIANT_OF = {
 // What each version is called inside its design's entry.
 const VERSION_LABELS = {
   'vector-bc-oil-gas-commission-2014': 'Black lettering, 2014 water-use report',
+  'pep-striped-ink': 'Black reconstruction',
+  'pep-striped-blue': 'Dark blue reconstruction',
   'thompson-health-region-rebuilt': 'Vector reconstruction, black (as on the letterheads)',
   'thompson-health-region-1999-letterhead': 'Image, letterhead (September 1999)',
   'vancouver-richmond-health-board-original-colour-lockup': 'Original vector (Take Care handbook, 2000)',
