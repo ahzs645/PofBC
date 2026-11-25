@@ -26,6 +26,17 @@ const source = (title, url, locator) => ({ title, url, ...(locator ? { locator }
 
 // ── Sources shared by more than one timeline ─────────────────────────────────────────────────────
 
+const BCTS_BROCHURE = source(
+  'BC Timber Sales, Ministry of Forests, 2004',
+  'https://digitalcollections.llbc.leg.bc.ca/handle/123456789/308267',
+  'Legislative Library catalogue. PDF pages 2 and 15 show the covers. Pages 3 and 5–6 describe implementation and field offices.'
+)
+const INVERMERE_2004 = source(
+  'Invermere Timber Supply Area, Timber Supply Review 3, Data Package',
+  'https://data.nrs.gov.bc.ca/TSR_Historical/TSA/Invermere_09/TSR_2005/Data_Package/InvermereTSR3_Data_Package_v3.0.pdf',
+  'Draft v3.0, cover dated 8 March 2004'
+)
+
 const TYEE_2011 = source(
   'The Tyee, “What happened to the Best Place on Earth?”, 4 Oct 2011',
   'https://thetyee.ca/Mediacheck/2011/10/04/BC-Best-Place-On-Earth/',
@@ -1120,19 +1131,28 @@ export const COLLECTION_ERAS = {
   bcts: [
     {
       id: 'bcts-banner',
-      status: 'none',
-      years: '2003–2005',
-      label: 'A banner, not a mark',
-      note: 'BC Timber Sales was established on 20 June 2003. Its first site had its name in white type on ' +
-        'a green banner, and no mark.',
+      status: 'held',
+      years: '2003–2004',
+      label: 'From program to identity',
+      note: 'BC Timber Sales grew out of the Small Business Forest Enterprises Program and became fully operational on 1 April 2003. ' +
+        'Its May website carried white lettering on a green photographic banner. A March 2004 Invermere report paired the Forest Service oval with the name on three lines. ' +
+        'Both covers of the 2004 BCTS brochure paired the oval with large green BCTS initials and a dark serif subtitle. The provincial coat-of-arms wordmark appeared separately.',
       applicability: {
-        kind: 'first_observation',
-        years: '2003–2005',
-        note: 'Its establishment is documented to the day; the banner is seen from May 2003 to February 2005.'
+        kind: 'dated_specimen',
+        years: 'by 2004',
+        note: 'The library dates the brochure to 2004. The original vector artwork was recovered from 75 painted paths on its back cover. The designer and introduction date are unrecorded.'
       },
       sources: [
-        source('B.C. news release, 2013', 'https://news.gov.bc.ca/releases/2013FLNR0194-001483', '“established on June 20, 2003”'),
-        source('BC Timber Sales, 11 May 2003 (Wayback Machine)', wayback('20030511171328', 'http://www.for.gov.bc.ca/bcts/'))
+        BCTS_BROCHURE,
+        INVERMERE_2004,
+        source('BC Timber Sales website, 11 May 2003', wayback('20030511171328', 'http://www.for.gov.bc.ca/bcts/')),
+        source('Forests Statutes Amendment Act, 2003, c. 32', 'https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/901290379'),
+        source('B.C. Regulations Bulletin No. 21', 'https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/2003bull21', 'June 2003 commencement orders, including B.C. Reg. 242/2003'),
+        source('B.C. Reg. 243/2003', 'https://www.bclaws.gov.bc.ca/civix/document/id/lc/bcgaz2/v46n13_243-2003', '20 June 2003, establishment of the timber sales business areas'),
+        source('Arrow Timber Supply Area, 2003/04 data package', 'https://data.nrs.gov.bc.ca/TSR_Historical/TSA/Arrow_01/TSR_2005/Data_Package/Arrow_TSA_20032004_Data_Pack_v3.4.pdf', 'BCTS participated in collaborative timber supply review. The chief forester retained the allowable-cut decision.'),
+        source('Forests Statutes Amendment Act (No. 2), Bill 44', 'https://www.bclaws.gov.bc.ca/civix/document/id/lc/billsprevious/4th37th%3Agov44-3', 'The proposed joint analysis duties were separate from the June legislation establishing business areas.'),
+        source('Ministry of Forests annual report, 2004/05', 'https://www.bcbudget.gov.bc.ca/annual_reports/2004_2005/for/Ministry_Role_and_Services.htm', 'The ministry retained forest health responsibilities and deferred mandatory timber supply analysis.'),
+        source('Forest Act, Table of Legislative Changes', 'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/e4tlc96157', 'The table through 17 November 2026 lists sections 10.1–10.5 under changes not in force.')
       ]
     },
     {

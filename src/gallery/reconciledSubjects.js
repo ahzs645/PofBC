@@ -79,8 +79,8 @@ export const RECONCILED_SUBJECTS = [
     graphNode: 'sub-bc-timber-sales',
     aliases: ['BCTS', 'Small Business Forest Enterprise Program'],
     collectionIds: ['bcts'],
-    sources: [{ title: 'BC Timber Sales business plan 2023/24–2025/26', url: 'https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/bc-timber-sales/business-plans-performance-reports/bcts_business_plan_2023-2024_to_2025-2026_final.pdf' }],
-    nextAction: 'Find the earliest dated slab-serif wordmark and an original file for the current mark.',
+    sources: [{ title: 'BC Timber Sales brochure, 2004, Legislative Library', url: 'https://digitalcollections.llbc.leg.bc.ca/handle/123456789/308267' }, { title: 'BC Timber Sales business plan 2023/24–2025/26', url: 'https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/forestry/bc-timber-sales/business-plans-performance-reports/bcts_business_plan_2023-2024_to_2025-2026_final.pdf' }],
+    nextAction: 'Seek an introduction date or design credit for the serif acronym lockup documented in 2004, and an original file for the current mark.',
     note: 'A ministry branch with its own marks. The Small Business Forest Enterprise Program it replaced is a predecessor program, not an alias for the same artwork.'
   }),
   subject({

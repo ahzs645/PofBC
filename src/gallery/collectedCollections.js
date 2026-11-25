@@ -137,7 +137,7 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
         : [asset.sourceDate ? `Source-date context: ${asset.sourceDate}. This does not establish a dated specimen.` : null,
             `Collected on ${asset.observedDate}. A retrieval date does not establish when the design was adopted.`, asset.dateNote].filter(Boolean).join(' '),
     },
-    rights: {
+    rights: asset.rights ?? {
       status: 'unresolved',
       note: 'The mark belongs to its respective owner. No permission to reproduce it here has been sought or documented.',
     },
