@@ -1162,7 +1162,7 @@ export const COLLECTION_ERAS = {
       applicability: {
         kind: 'dated_specimen',
         years: 'by 2004',
-        note: 'The library dates the brochure to 2004. The back cover preserves the original vector artwork. The designer and introduction date are unrecorded.'
+        note: 'The library dates the brochure to 2004. The original vector artwork was recovered from 75 painted paths on its back cover. The designer and introduction date are unrecorded.'
       },
       sources: [
         BCTS_BROCHURE,
