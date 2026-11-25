@@ -1,7 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { searchGallery } from './gallerySearch.js'
-import { collectionById, collectionOfNode, collectionsOfNode, entriesOf, entriesOfNode, findGalleryEntry } from './collections.js'
+import { GALLERY_COLLECTIONS, collectionById, collectionOfNode, collectionsOfNode, entriesOf, entriesOfNode, findGalleryEntry } from './collections.js'
 import { logosFor } from './galleryLogos.js'
 
 test('organizations discover their own marks on shared gallery shelves in both directions', () => {
@@ -82,7 +82,9 @@ test('departmental, initiative and one-off artwork remains searchable under the 
   assert.ok(searchGallery('BC Youth').collections.some((c) => c.id === 'collected-bc-youth' && c.shelf === 'initiatives'))
   const oneOffs = collectionById('bc-mark')
   assert.ok(!oneOffs.entries.some((entry) => entry.id === travel.cover))
-  assert.equal(collectionById('collected-government-communications-and-public-engagement'), undefined)
+  const formerCollection = 'collected-government-communications-and-public-engagement'
+  assert.equal(collectionById(formerCollection), oneOffs)
+  assert.ok(!GALLERY_COLLECTIONS.some((collection) => collection.id === formerCollection))
   const gcpe = oneOffs.entries.find((entry) => entry.id === 'gcpe-estimate-notes-2024-rebuilt')
   assert.equal(gcpe.owner, 'government-communications-and-public-engagement')
   assert.equal(gcpe.versions.length, 2)

@@ -1337,8 +1337,8 @@ export const GALLERY_COLLECTIONS = [
     body: 'The Province’s one-off marks',
     years: '2005–present',
     cover: 'welcome-bc',
-    // The Office of the Premier's letterhead had a collection of its own before it was shelved here.
-    aliases: ['collected-office-of-the-premier'],
+    // Former collection IDs still resolve to the shelf that holds their respective specimens.
+    aliases: ['collected-office-of-the-premier', 'collected-government-communications-and-public-engagement'],
     intro: 'Names set beside the BC mark, each drawn once for one body, program or campaign, following ' +
       'no pattern that generalises, so they sit here rather than in the generator, which is built on ' +
       'patterns. Open one to recolour it.',
