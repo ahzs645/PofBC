@@ -301,7 +301,7 @@ const BODY_NOTES = {
   'inbc': 'The logo as vector artwork from the official website.',
   'bc-council-for-international-education': 'The logo as original vector artwork from the 2022–2025 strategic plan.',
   'interior-health': 'The horizontal logo as original vector artwork, seen on a June 2004 letterhead and in a 2023 roadmap, with the stacked logo and the symbol as published images.',
-  'provincial-health-services-authority': 'One design in black and in white, as original vector artwork.',
+  'provincial-health-services-authority': 'The green map and three-line name appear on both covers of the January 2004 Steps Forward report with a two-line tagline. Later specimens show the authority’s black and reversed signatures.',
   'bc-heritage-trust': 'The boxed Trust mark as original vector artwork from the 2001/02 annual report; the same mark is on its 1989 conservation publication.',
   'forest-renewal-bc': 'One design in full colour and black, both original vector artwork from the Corporation’s 1999 and 2000 publications.',
   'partnerships-bc': 'The wordmark as original vector artwork from the 2012/13 annual report; the same wordmark is in the 2006 service plan.',
@@ -445,7 +445,7 @@ for (const { search, register: history } of HISTORIES) {
 // exists, reconstructions that say so. Each file is checked here for what it claims: no embedded
 // image, no live text, no outside reference.
 const FOLDED = new Map()
-const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16', 'current-bodies-vector-2026-11-16', 'railway-marks-vector-2026-11-16', 'reversed-vectors-2026-11-21', 'traced-vectors-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22', 'greater-trail-chc-vector-2026-11-22', 'south-cariboo-vector-2026-11-22', 'gallery-reconstructions-2026-11-24', 'campbell-river-nootka-vector-2026-11-24']
+const VECTOR_SEARCHES = ['annual-report-marks-2003-04', 'health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16', 'current-bodies-vector-2026-11-16', 'railway-marks-vector-2026-11-16', 'reversed-vectors-2026-11-21', 'traced-vectors-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22', 'greater-trail-chc-vector-2026-11-22', 'south-cariboo-vector-2026-11-22', 'gallery-reconstructions-2026-11-24', 'campbell-river-nootka-vector-2026-11-24']
 const pureVector = (asset) => {
   const svg = readFileSync(new URL(`public/${asset.file}`, root), 'utf8')
   if (/<(?:\w+:)?(?:image|text|foreignObject|script)\b/i.test(svg) || /(?:xlink:)?href\s*=\s*["'](?!#)/i.test(svg)) {

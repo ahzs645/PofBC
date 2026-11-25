@@ -793,6 +793,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "phsa-2004-with-tagline": {
+  "light": {
+   "file": "identity-display/phsa-2004-with-tagline.light.svg",
+   "aspect": 1.1684,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/phsa-2004-with-tagline.dark.svg",
+   "aspect": 1.1684,
+   "recoloured": true
+  }
+ },
+ "phsa-2004-wordmark": {
+  "light": {
+   "file": "identity-display/phsa-2004-wordmark.light.svg",
+   "aspect": 1.8704,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/phsa-2004-wordmark.dark.svg",
+   "aspect": 1.8704,
+   "recoloured": true
+  }
+ },
  "source-vancouver-coastal-health-vancouver-coastal-health-svg": {
   "light": {
    "file": "identity-display/source-vancouver-coastal-health-vancouver-coastal-health-svg.light.svg",
@@ -4135,6 +4159,18 @@ export const COLLECTED_DISPLAY = {
    "aspect": 1.1878,
    "recoloured": true,
    "palette": true
+  }
+ },
+ "fpb-2003-colour": {
+  "light": {
+   "file": "identity-display/fpb-2003-colour.light.svg",
+   "aspect": 1.6348,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fpb-2003-colour.dark.svg",
+   "aspect": 1.6348,
+   "recoloured": true
   }
  },
  "source-recovered-forest-practices-board-2023-source-vector": {

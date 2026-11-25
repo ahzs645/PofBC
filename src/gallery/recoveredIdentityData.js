@@ -7190,6 +7190,31 @@ export const RECOVERED_IDENTITY_BODIES = [
         "observedDate": "2026-11-20"
       },
       {
+        "id": "fpb-2003-colour",
+        "label": "Forest Practices Board · 2003 report cover",
+        "file": "identity-recovered/forest-practices-board/fpb-2003-colour.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://www.bcfpb.ca/wp-content/uploads/2016/03/FPB-2003-Annual-Report_0.pdf",
+        "sourceUrl": "https://www.bcfpb.ca/wp-content/uploads/2016/03/FPB-2003-Annual-Report_0.pdf",
+        "publisher": "Forest Practices Board",
+        "sourceLocator": "2003 Annual Report, front cover (page 2 of the Legislative Library copy, page 1 of the Board copy).",
+        "sourceDate": "2003 report",
+        "observedDate": "2026-11-25",
+        "dateNote": "Dated use in the publication. First use and retirement dates are unconfirmed.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "A green treeline, a brown stroke and a blue stream sit beside the dark, three-line Forest Practices Board name.",
+        "fidelityNote": "24 original filled paths, preserving outlined lettering and the PDF colours converted to sRGB. The publication background is excluded.",
+        "bytes": 29155,
+        "sha256": "92ad15d08dc371b2cfde19ef5891bedf5488f9bc52d7b6c23fbafdf29c55ea5d",
+        "search": "annual-report-marks-2003-04",
+        "dimensions": {
+          "viewBox": "0 0 159 99"
+        }
+      },
+      {
         "id": "source-recovered-forest-practices-board-2023-source-vector",
         "label": "Forest Practices Board — colour horizontal logo",
         "file": "identity-recovered/forest-practices-board/forest-practices-board-2023-source-vector.svg",
