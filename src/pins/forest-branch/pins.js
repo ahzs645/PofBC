@@ -27,7 +27,7 @@ const CARD_LINK = {
 }
 const SEAL_LINK = {
   label: 'The Lands Department seal',
-  note: 'Internal Logos · Forests: the seal of the same years',
+  note: 'Departmental Logos · Forests: the seal of the same years',
   to: { view: 'internal', internal: 'forests', 'internal-logo': 'forest-service-lands-department' }
 }
 const DEPARTMENT_LINK = {

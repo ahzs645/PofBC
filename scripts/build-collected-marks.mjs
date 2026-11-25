@@ -379,7 +379,7 @@ for (const entry of followup.assets) {
   additions.get(entry.bodyId).push(fromRegister(entry, 'vector-followup-2026-11-08'))
 }
 
-// The Department of Travel Industry's, on the Province's own timeline (gallery collection "bc-mark"),
+// The Department of Travel Industry’s logo, catalogued in Departmental Logos,
 // and the Justice Institute's, a public body outside the inventory's Crown corporations.
 for (const { search, register: packaged } of PROGRAM_PACKAGES) for (const { verification, ...asset } of packaged.assets) {
   if (!verification?.genuineVectorVerified || verification.embeddedImages !== 0 || verification.textElements !== 0) {

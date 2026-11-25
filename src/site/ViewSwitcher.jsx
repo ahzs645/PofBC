@@ -14,7 +14,7 @@ export const VIEWS = [
   { id: 'generator', label: 'Generator', description: 'A ministry lockup in any of the four identities' },
   { id: 'gallery', label: 'Logos', description: 'BC Hydro, BC Timber Sales, BC Parks, and the Province’s one-off marks' },
   { id: 'initiatives', label: 'Initiatives', description: 'Programs, campaigns and their websites, identities and publications', badge: 'New' },
-  { id: 'internal', label: 'Internal Logos', description: 'Internal logo families and their history, starting with Forests' },
+  { id: 'internal', label: 'Departmental Logos', description: 'Logos of provincial departments and services, including Forests and Travel Industry' },
   { id: 'posters', label: 'Posters', description: 'Posters by series, every part clickable for its history' },
   { id: 'signs', label: 'Signs', description: 'Signs by series, every part clickable for its history' },
   { id: 'cards', label: 'Cards', description: 'Printed cards by series, every part clickable for its history', badge: 'New' },
