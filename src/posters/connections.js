@@ -11,6 +11,7 @@
 // one of this collection's own records (records.js), opened in place. `certainty` is one of
 // CERTAINTY's keys: what the relationship rests on, not how interesting it is.
 
+import { ASHTRAY_REGULATIONS, ASHTRAY_ROAD_MARKER } from './forest-service/ashtray.js'
 import { POSTERS } from './catalogue.js'
 
 /** The overview's sections, in the order shown. */
@@ -150,6 +151,19 @@ const BRANCH = {
 // ── The connections, by piece ───────────────────────────────────────────────────────────────────
 
 const BY_POSTER = {
+  'use-your-ashtray': [
+    {
+      group: 'issuer', rel: 'Printed publication', label: 'Fish and Game Branch',
+      note: 'The branch names itself on the adjacent cover of the 1961–62 game regulations.',
+      href: ASHTRAY_REGULATIONS.href, certainty: 'printed'
+    },
+    {
+      group: 'context', rel: 'Roadside campaign', label: 'British Columbia Forest Service',
+      note: 'The July 1962 newspaper account describes the same wording stencilled on the Victoria–Sidney Highway.',
+      href: ASHTRAY_ROAD_MARKER.href, certainty: 'documented'
+    },
+    firePiece('dont-drop-it', 'A related Forest Service badge warns smokers about discarded cigarettes.')
+  ],
   'coastal-forest': [
     {
       group: 'issuer',

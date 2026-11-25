@@ -7,6 +7,11 @@
 // here says more than they do.
 
 export const STORIES = {
+  'use-your-ashtray': {
+    overview: ['Hunters unfolding the 1961–62 game regulations found this reminder at the bottom of a page left open for notes. It sits immediately to the left of the cover naming the Fish and Game Branch.'],
+    lettering: ['The first line asks the motorist to keep B.C. green. A long horizontal dash links that appeal to a specific action on the indented line below.'],
+    frame: ['The red rule makes this short notice visible amid closely printed regulations. Other warnings on the same side of the sheet use the same red ink.']
+  },
   'coastal-forest': {
     overview: [
       'A dark sheet, a photograph of trees in mist, and four columns of small type under a swash title. The Ministry of Environment is explaining a forest, not advertising one.',
