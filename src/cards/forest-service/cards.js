@@ -26,7 +26,7 @@ const FOREST_SERVICE_TIMELINE = {
 
 const SEAL_LINK = {
   label: 'The Lands Department seal',
-  note: 'Internal Logos · Forests: the seal on its own, its colourways and history',
+  note: 'Departmental Logos · Forests: the seal on its own, its colourways and history',
   to: { view: 'internal', internal: 'forests', 'internal-logo': 'forest-service-lands-department' }
 }
 const DEPARTMENT_LINK = {

@@ -1,6 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { collectionById, collectionOfNode, collectionsOfNode, entriesOf, entriesOfNode, findGalleryEntry } from './collections.js'
+import { searchGallery } from './gallerySearch.js'
+import { GALLERY_COLLECTIONS, collectionById, collectionOfNode, collectionsOfNode, entriesOf, entriesOfNode, findGalleryEntry } from './collections.js'
 import { logosFor } from './galleryLogos.js'
 
 test('organizations discover their own marks on shared gallery shelves in both directions', () => {
@@ -71,4 +72,33 @@ test('a body panel finds the original specimens of the program its one-off stand
   assert.deepEqual(prepared.map((entry) => entry.id), ['prepared-bc'])
   // Linking it does not make the remake read as the program's own lockup.
   assert.equal(prepared[0].identity.provenance, 'synthetic_name_variant')
+})
+
+test('departmental, initiative and one-off artwork remains searchable under the correct owner', () => {
+  const travel = collectionOfNode('department-of-travel-industry-1967')
+  assert.equal(travel.shelf, 'departmental')
+  assert.equal(logosFor(travel.graphNode).entries[0].id, 'bc-travel-industry-ca-1970')
+  assert.ok(searchGallery('Travel Industry').collections.includes(travel))
+  assert.ok(searchGallery('BC Youth').collections.some((c) => c.id === 'collected-bc-youth' && c.shelf === 'initiatives'))
+  const oneOffs = collectionById('bc-mark')
+  assert.ok(!oneOffs.entries.some((entry) => entry.id === travel.cover))
+  const formerCollection = 'collected-government-communications-and-public-engagement'
+  assert.equal(collectionById(formerCollection), oneOffs)
+  assert.ok(!GALLERY_COLLECTIONS.some((collection) => collection.id === formerCollection))
+  const gcpe = oneOffs.entries.find((entry) => entry.id === 'gcpe-estimate-notes-2024-rebuilt')
+  assert.equal(gcpe.owner, 'government-communications-and-public-engagement')
+  assert.equal(gcpe.versions.length, 2)
+  assert.ok(searchGallery('GCPE').marks.some(({ collection, entry }) => collection === oneOffs && entry === gcpe))
+})
+
+test('provincial health program signatures share a shelf and retain their individual owners', () => {
+  const collection = collectionById('health-program-signatures')
+  assert.equal(collection.shelf, 'provincial-programs')
+  assert.equal(collection.relatedGenerator.era, 'crest')
+  assert.equal(collection.graphNode, 'ministry-of-health-services-2001')
+  for (const owner of ['bchealthcare', 'bcpharmacare']) {
+    assert.deepEqual(entriesOfNode(collection, owner).map((entry) => entry.id), [owner + '-2003'])
+    assert.equal(findGalleryEntry(owner + '-2003').identity.provenance, 'extracted_from_official_vector')
+  }
+  assert.equal(entriesOfNode(collection, collection.graphNode).length, 0)
 })

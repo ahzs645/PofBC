@@ -37,6 +37,8 @@ import { generatorArt, onPage, tileArt } from './tileArt.js'
 import { isSearchShortcut, searchGallery } from './gallerySearch.js'
 import { identitySubjectById, searchIdentitySubjects } from './identityCoverage.js'
 import { IdentityCollectionLinks, IdentityCoverageBrowser, IdentityCoverageOverview, IdentitySearchResults, IdentitySubjectDetail } from './IdentityCoverage.jsx'
+import { useNavigate } from '../site/navigation.jsx'
+import { movedGalleryPlace } from './movedGalleryPlaces.js'
 import { galleryPlaceUrl } from './galleryPlace.js'
 import { writeHistory } from '../site/browserHistory.js'
 
@@ -819,6 +821,8 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   const collection = collectionById(collectionId)
   const subject = identitySubjectById(subjectId)
 
+  const navigate = useNavigate()
+
   // Going back — to all the logos, or from a mark to its collection — returns to where that page was
   // scrolled to when it was left, so the card just opened is where it was. A page not yet seen this
   // visit (one reached by a link) opens at its top, or for all the logos, at the card come back from.
@@ -826,6 +830,12 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   const [arrival, setArrival] = useState(null)
   const pageKey = (collection, mark, subject, coverage) => subject ? `subject/${subject}` : coverage ? 'coverage' : `${collection ?? ''}/${mark ?? ''}`
   const go = (nextCollection, nextMark, nextSubject = null, coverage = false, filters) => {
+    const moved = movedGalleryPlace({ view: 'gallery', logos: nextCollection, mark: nextMark, subject: nextSubject, coverage })
+    if (moved) {
+      if (navigate) navigate(moved)
+      else globalThis.location.assign(`?${new URLSearchParams(moved)}`)
+      return
+    }
     scrolled.current.set(pageKey(collectionId, openId, subjectId, showCoverage), globalThis.scrollY ?? 0)
     setCollectionId(nextCollection)
     setOpenId(nextMark)
@@ -975,6 +985,15 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             ))}
           </div>
         </section>
+        <section className="gallery__shelf" aria-labelledby="shelf-partners">
+          <h2 id="shelf-partners" className="gallery__shelf-title">Program delivery partners</h2>
+          <p className="gallery__intro gallery__shelf-intro">Independent organizations that deliver publicly funded programs in British Columbia.</p>
+          <div className="gallery__collections">
+            {COLLECTIONS_ON_SHELF('partners').map((entry) => (
+              <CollectionCard key={entry.id} collection={entry} theme={theme} onOpen={() => choose(entry.id)} />
+            ))}
+          </div>
+        </section>
         {COLLECTIONS_ON_SHELF('municipalities').length > 0 && (
           <section className="gallery__shelf" aria-labelledby="shelf-municipalities">
             <h2 id="shelf-municipalities" className="gallery__shelf-title">Municipalities</h2>
@@ -997,8 +1016,13 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         <section className="gallery__shelf" aria-labelledby="shelf-grouped">
           <h2 id="shelf-grouped" className="gallery__shelf-title">Programs, services and subsidiaries</h2>
           <p className="gallery__intro gallery__shelf-intro">
-            Brands, programs and companies with logos of their own, under the organization they belong to.
+            Program identities used by ministries, public bodies and their subsidiaries.
           </p>
+          <div className="gallery__collections">
+            {COLLECTIONS_ON_SHELF('provincial-programs').map((entry) => (
+              <CollectionCard key={entry.id} collection={entry} theme={theme} onOpen={() => choose(entry.id)} />
+            ))}
+          </div>
           {FOLDED_GROUPS.map(({ parent, children }) => (
             <div key={parent.id} className="gallery__group">
               <h3 className="gallery__group-title">
@@ -1049,6 +1073,11 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         <GraphLink node={collection.graphNode} year={collection.graphYear} onOpenGovernment={onOpenGovernment} />
       </div>
       <p className="gallery__intro">{collection.intro}</p>
+      {collection.relatedGenerator && onOpenInGenerator && (
+        <button type="button" className="gallery__graph-link" onClick={() => onOpenInGenerator({ era: collection.relatedGenerator.era })}>
+          {collection.relatedGenerator.label} <span aria-hidden="true">→</span>
+        </button>
+      )}
       {collection.foldedUnder && (
         <p className="gallery__folded-under">
           <button type="button" className="gallery__group-link" onClick={() => choose(collection.foldedUnder)}>

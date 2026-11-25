@@ -47,13 +47,13 @@ test('QA 5: a commission is not a swearing-in', () => {
   assert.notEqual(find(2024, 'lieutenant-governor').head.person, 'Wendy Lisogar-Cocchia')
 })
 
-test('QA 7 and 8: the 2026 election is scheduled, with no results and no new cabinet on voting day', () => {
+test('QA 7 and 8: the September schedule and the November government have separate dates', () => {
   const stages = electionStages('2026-09-25')
   assert.ok(stages.length >= 5)
   assert.ok(stages.filter((stage) => stage.date.start > '2026-09-25').every((stage) => stage.ahead))
   const assembly = find(PRESENT_YEAR, 'legislative-assembly')
-  assert.equal(assembly.election.date, '2024-10-19', 'the Assembly still reads the last election held')
-  assert.equal(governmentIn(PRESENT_YEAR).premier.name, 'David Eby')
+  assert.equal(assembly.election.date, '2026-10-24', 'the Assembly reads the election for the 44th Parliament')
+  assert.equal(governmentIn(PRESENT_YEAR).premier.name, 'Lorne Doerkson')
 })
 
 test('QA 9: FNHA is a partner of the Ministry of Health, not its child, and its transfers stay separate', () => {

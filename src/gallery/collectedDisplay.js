@@ -793,6 +793,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "phsa-2004-with-tagline": {
+  "light": {
+   "file": "identity-display/phsa-2004-with-tagline.light.svg",
+   "aspect": 1.1684,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/phsa-2004-with-tagline.dark.svg",
+   "aspect": 1.1684,
+   "recoloured": true
+  }
+ },
+ "phsa-2004-wordmark": {
+  "light": {
+   "file": "identity-display/phsa-2004-wordmark.light.svg",
+   "aspect": 1.8704,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/phsa-2004-wordmark.dark.svg",
+   "aspect": 1.8704,
+   "recoloured": true
+  }
+ },
  "source-vancouver-coastal-health-vancouver-coastal-health-svg": {
   "light": {
    "file": "identity-display/source-vancouver-coastal-health-vancouver-coastal-health-svg.light.svg",
@@ -1418,6 +1442,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "ogc-2000-monogram": {
+  "light": {
+   "file": "identity-display/ogc-2000-monogram.light.svg",
+   "aspect": 1.7833,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/ogc-2000-monogram.light.svg",
+   "aspect": 1.7833,
+   "recoloured": false
+  }
+ },
+ "ogc-2009-service-plan": {
+  "light": {
+   "file": "identity-display/ogc-2009-service-plan.light.svg",
+   "aspect": 2.149,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/ogc-2009-service-plan.dark.svg",
+   "aspect": 2.149,
+   "recoloured": true
+  }
+ },
  "bcal-1999-letterhead-rebuilt": {
   "light": {
    "file": "identity-display/bcal-1999-letterhead-rebuilt.light.svg",
@@ -1844,6 +1892,20 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "campbell-river-nootka-chc-rebuilt": {
+  "light": {
+   "file": "identity-display/campbell-river-nootka-chc-rebuilt.light.svg",
+   "aspect": 1.0394,
+   "recoloured": false,
+   "preserveCanvas": true
+  },
+  "dark": {
+   "file": "identity-display/campbell-river-nootka-chc-rebuilt.light.svg",
+   "aspect": 1.0394,
+   "recoloured": false,
+   "preserveCanvas": true
+  }
+ },
  "coast-garibaldi-health-rebuilt": {
   "light": {
    "file": "identity-display/coast-garibaldi-health-rebuilt.light.svg",
@@ -2097,6 +2159,54 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "bchealthcare-2003": {
+  "light": {
+   "file": "identity-display/bchealthcare-2003.light.svg",
+   "aspect": 7.0092,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bchealthcare-2003.dark.svg",
+   "aspect": 7.0092,
+   "recoloured": true
+  }
+ },
+ "bcpharmacare-2003": {
+  "light": {
+   "file": "identity-display/bcpharmacare-2003.light.svg",
+   "aspect": 7.551,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcpharmacare-2003.dark.svg",
+   "aspect": 7.551,
+   "recoloured": true
+  }
+ },
+ "pep-striped-ink": {
+  "light": {
+   "file": "identity-display/pep-striped-ink.light.svg",
+   "aspect": 3.7602,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pep-striped-ink.dark.svg",
+   "aspect": 3.7602,
+   "recoloured": true
+  }
+ },
+ "pep-striped-blue": {
+  "light": {
+   "file": "identity-display/pep-striped-blue.light.svg",
+   "aspect": 3.7602,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/pep-striped-blue.dark.svg",
+   "aspect": 3.7602,
+   "recoloured": true
+  }
+ },
  "bc-travel-industry-ca-1970": {
   "light": {
    "file": "identity-display/bc-travel-industry-ca-1970.light.svg",
@@ -2143,6 +2253,18 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/jibc-monogram.dark.svg",
    "aspect": 2.3183,
+   "recoloured": true
+  }
+ },
+ "jibc-griffin-2010": {
+  "light": {
+   "file": "identity-display/jibc-griffin-2010.light.svg",
+   "aspect": 1.0721,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/jibc-griffin-2010.dark.svg",
+   "aspect": 1.0721,
    "recoloured": true
   }
  },
@@ -2482,6 +2604,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bcts-2004-brochure": {
+  "light": {
+   "file": "identity-display/bcts-2004-brochure.light.svg",
+   "aspect": 2.4676,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bcts-2004-brochure.dark.svg",
+   "aspect": 2.4676,
+   "recoloured": true
+  }
+ },
  "bceid-reversed-rebuilt": {
   "light": {
    "file": "identity-display/bceid-reversed-rebuilt.light.svg",
@@ -2491,6 +2625,102 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/bceid-reversed-rebuilt.dark.svg",
    "aspect": 4.0509,
+   "recoloured": false
+  }
+ },
+ "iaf-curled-leaves-white": {
+  "light": {
+   "file": "identity-display/iaf-curled-leaves-white.light.svg",
+   "aspect": 2.5574,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/iaf-curled-leaves-white.dark.svg",
+   "aspect": 2.5574,
+   "recoloured": false
+  }
+ },
+ "iaf-curled-leaves-stacked": {
+  "light": {
+   "file": "identity-display/iaf-curled-leaves-stacked.light.svg",
+   "aspect": 0.619,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/iaf-curled-leaves-stacked.dark.svg",
+   "aspect": 0.619,
+   "recoloured": true
+  }
+ },
+ "iaf-field-monogram": {
+  "light": {
+   "file": "identity-display/iaf-field-monogram.light.svg",
+   "aspect": 3.836,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/iaf-field-monogram.light.svg",
+   "aspect": 3.836,
+   "recoloured": false
+  }
+ },
+ "iaf-25-years": {
+  "light": {
+   "file": "identity-display/iaf-25-years.light.svg",
+   "aspect": 5.5474,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/iaf-25-years.dark.svg",
+   "aspect": 5.5474,
+   "recoloured": false
+  }
+ },
+ "fgc-horizontal-green": {
+  "light": {
+   "file": "identity-display/fgc-horizontal-green.light.svg",
+   "aspect": 11.9836,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fgc-horizontal-green.dark.svg",
+   "aspect": 11.9836,
+   "recoloured": true
+  }
+ },
+ "fgc-horizontal-white": {
+  "light": {
+   "file": "identity-display/fgc-horizontal-white.light.svg",
+   "aspect": 11.9836,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/fgc-horizontal-white.dark.svg",
+   "aspect": 11.9836,
+   "recoloured": false
+  }
+ },
+ "fgc-stacked-white": {
+  "light": {
+   "file": "identity-display/fgc-stacked-white.light.svg",
+   "aspect": 2.4917,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/fgc-stacked-white.dark.svg",
+   "aspect": 2.4917,
+   "recoloured": false
+  }
+ },
+ "fgc-1999-tictalk": {
+  "light": {
+   "file": "identity-display/fgc-1999-tictalk.light.svg",
+   "aspect": 10.1985,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fgc-1999-tictalk.light.svg",
+   "aspect": 10.1985,
    "recoloured": false
   }
  },
@@ -2542,6 +2772,90 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "liquor-bcl-1998-99": {
+  "light": {
+   "file": "identity-display/liquor-bcl-1998-99.light.svg",
+   "aspect": 1.0237,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/liquor-bcl-1998-99.dark.svg",
+   "aspect": 1.0237,
+   "recoloured": true
+  }
+ },
+ "liquor-bcl-reverse-2003": {
+  "light": {
+   "file": "identity-display/liquor-bcl-reverse-2003.light.svg",
+   "aspect": 1.0024,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/liquor-bcl-reverse-2003.dark.svg",
+   "aspect": 1.0024,
+   "recoloured": false
+  }
+ },
+ "liquor-bcl-signature-2000-01": {
+  "light": {
+   "file": "identity-display/liquor-bcl-signature-2000-01.light.svg",
+   "aspect": 5.2668,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/liquor-bcl-signature-2000-01.dark.svg",
+   "aspect": 5.2668,
+   "recoloured": true
+  }
+ },
+ "liquor-bcl-signature-green": {
+  "light": {
+   "file": "identity-display/liquor-bcl-signature-green.light.svg",
+   "aspect": 5.2694,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/liquor-bcl-signature-green.dark.svg",
+   "aspect": 5.2694,
+   "recoloured": true
+  }
+ },
+ "liquor-bcl-signature-2002": {
+  "light": {
+   "file": "identity-display/liquor-bcl-signature-2002.light.svg",
+   "aspect": 5.2775,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/liquor-bcl-signature-2002.dark.svg",
+   "aspect": 5.2775,
+   "recoloured": true
+  }
+ },
+ "liquor-stacked-2007": {
+  "light": {
+   "file": "identity-display/liquor-stacked-2007.light.svg",
+   "aspect": 3.0443,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/liquor-stacked-2007.dark.svg",
+   "aspect": 3.0443,
+   "recoloured": true
+  }
+ },
+ "liquor-sunburst-slogan-2009": {
+  "light": {
+   "file": "identity-display/liquor-sunburst-slogan-2009.light.svg",
+   "aspect": 3.6443,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/liquor-sunburst-slogan-2009.dark.svg",
+   "aspect": 3.6443,
+   "recoloured": true
+  }
+ },
  "source-expanded-liquor-distribution-branch-wholesale-site-lockup": {
   "light": {
    "file": "identity-display/source-expanded-liquor-distribution-branch-wholesale-site-lockup.light.svg",
@@ -2576,6 +2890,30 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/source-expanded-sub-bcliquor-website-logo.dark.svg",
    "aspect": 4.5925,
    "recoloured": true
+  }
+ },
+ "liquor-stores-2007": {
+  "light": {
+   "file": "identity-display/liquor-stores-2007.light.svg",
+   "aspect": 10.1669,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/liquor-stores-2007.dark.svg",
+   "aspect": 10.1669,
+   "recoloured": true
+  }
+ },
+ "liquor-stores-reverse-2008": {
+  "light": {
+   "file": "identity-display/liquor-stores-reverse-2008.light.svg",
+   "aspect": 10.2307,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/liquor-stores-reverse-2008.dark.svg",
+   "aspect": 10.2307,
+   "recoloured": false
   }
  },
  "source-expanded-bc-cannabis-wholesale-shipping-2026-black": {
@@ -3893,6 +4231,18 @@ export const COLLECTED_DISPLAY = {
    "aspect": 1.1878,
    "recoloured": true,
    "palette": true
+  }
+ },
+ "fpb-2003-colour": {
+  "light": {
+   "file": "identity-display/fpb-2003-colour.light.svg",
+   "aspect": 1.6348,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fpb-2003-colour.dark.svg",
+   "aspect": 1.6348,
+   "recoloured": true
   }
  },
  "source-recovered-forest-practices-board-2023-source-vector": {

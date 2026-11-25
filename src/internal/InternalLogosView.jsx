@@ -1,4 +1,4 @@
-import { useEffect, useId, useMemo, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { loadLetteringRuntime } from '../../vendor/forestoval/shared-primitives/live-lettering/src/runtime.ts'
 import mountainRidge from '../../vendor/forestoval/shared-primitives/bc-ministry-v5/scenes/tree-parts/mountain-ridge.svg?raw'
 import mountainBase from '../../vendor/forestoval/shared-primitives/bc-ministry-v5/scenes/tree-parts/mountain-base.svg?raw'
@@ -6,7 +6,11 @@ import { FOREST_LOGOS, variantsFor } from './forestLogos.js'
 import { SiteLink } from '../site/navigation.jsx'
 import { objectsForLogo } from '../posters/connections.js'
 import { Modal } from '../posters/ui/Modal.jsx'
+import { TRAVEL_PLACE } from '../gallery/movedGalleryPlaces.js'
+import travelSource from '../../research/identity/bc-travel-industry-2026-11-12/source-register.json'
 import './internal.css'
+
+const TravelIndustryLogo = lazy(() => import('./TravelIndustryLogo.jsx'))
 
 // Forest Oval's single-colour recreation retains both mountain edges as lines.
 // Its engine recolours the filled mountain to paper; restore the same supplied
@@ -308,6 +312,7 @@ const initialSelection = () => {
   const params = new URLSearchParams(globalThis.location?.search ?? '')
   const logoId = params.get('internal-logo')
   const logo = FOREST_LOGOS.find((entry) => entry.id === logoId)
+  if (params.get('internal') === TRAVEL_PLACE.internal || logoId === TRAVEL_PLACE['internal-logo']) return { travel: true }
   return { family: params.get('internal') === 'forests' || !!logo, logoId: logo?.id ?? null }
 }
 
@@ -336,8 +341,10 @@ export const InternalLogosView = () => {
     if (selection.family) title.current?.focus()
   }, [selection.family, selection.logoId])
 
+  if (selection.travel) return <Suspense fallback={<p role="status">Loading logo…</p>}><TravelIndustryLogo /></Suspense>
+
   return (
-    <section className="internal-logos" aria-label="Internal Logos">
+    <section className="internal-logos" aria-label="Departmental Logos">
       {current ? (
         <>
           <div className="internal-logos__intro">
@@ -378,13 +385,13 @@ export const InternalLogosView = () => {
       ) : selection.family ? (
         <>
           {/* The site's header already names the view, so the way back is an arrow beside the
-              family's name rather than "← Internal Logos" over it. */}
+              family's name rather than "← Departmental Logos" over it. */}
           <div className="internal-logos__intro internal-logos__intro--row">
             <button
               className="icon-back"
               type="button"
-              aria-label="Back to Internal Logos"
-              title="Back to Internal Logos"
+              aria-label="Back to Departmental Logos"
+              title="Back to Departmental Logos"
               onClick={() => { navigate(false); requestAnimationFrame(() => forestButton.current?.focus()) }}
             >
               <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3.5M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -415,7 +422,7 @@ export const InternalLogosView = () => {
       ) : (
         <>
           <div className="internal-logos__intro">
-            <h2>Internal Logos</h2>
+            <h2>Departmental Logos</h2>
           </div>
           <button ref={forestButton} type="button" className="internal-logos__family" onClick={() => navigate(true)}>
             <OvalLogo preset="forests" name="Forests" decorative />
@@ -424,6 +431,13 @@ export const InternalLogosView = () => {
               <span>Two early marks and five oval designs</span>
             </span>
           </button>
+          <SiteLink className="internal-logos__family" to={TRAVEL_PLACE}>
+            <span className="internal-logos__artwork"><img alt="" src={import.meta.env.BASE_URL + travelSource.assets[0].file} /></span>
+            <span className="internal-logos__family-text">
+              <span className="internal-logos__family-title">Department of Travel Industry <span aria-hidden="true">→</span></span>
+              <span>Map and dogwood, about 1970</span>
+            </span>
+          </SiteLink>
         </>
       )}
     </section>

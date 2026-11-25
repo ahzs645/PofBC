@@ -29,7 +29,7 @@ import { layoutGovernment } from './layout.js'
 import { FIRST_YEAR, governmentIn, lifeOf, lifespanOf, PRESENT_YEAR } from './snapshot.js'
 import { TimelineBar } from './TimelineBar.jsx'
 import { THEMES } from './theme.js'
-import { CURRENT_AS_OF, CURRENT_SOURCES } from './currentData.js'
+import { BODY_CHECKED, CURRENT_AS_OF, CURRENT_SOURCES } from './currentData.js'
 import { RelatedBodiesView } from './RelatedBodiesView.jsx'
 import { search } from './governmentSearch.js'
 import { relatedBodyById, relatedBodyPlace } from './relatedBodies.js'
@@ -46,8 +46,8 @@ const SOURCES_NOTE = `
   Executive Council Appointments 1871–1986 and its cabinet lists since; former Crown corporations and
   agencies, and past Speakers, officers and chief justices, from BC Archives, the Library, Orders in
   Council and Wikipedia. Which ministry answered for a body is shown where a source states it, and
-  otherwise inferred and marked so. Present-day officials as checked on ${CURRENT_AS_OF} against the
-  Province’s and each body’s own pages. Staff are 2025/26 full-time equivalents from the Public
+  otherwise inferred and marked so. Cabinet appointments and portfolio transfers were checked on ${CURRENT_AS_OF}. Other agency
+  leadership was checked on ${BODY_CHECKED}. Staff are 2025/26 full-time equivalents from the Public
   Accounts. The dates of the four identities are estimates, most of all the crest’s. Typed events
   (origins, name and logo changes, appointments, the 2026 election’s schedule) come from the BC
   government atlas research package of 25 September 2026 and the research that followed it

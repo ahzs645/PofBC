@@ -6,7 +6,7 @@ const GREEN_GOLD_PATCH = { view: 'patches', patch: 'FO-green-gold' }
 
 /**
  * Retired ids, by their own id or an atlas id once absorbed into them. The yellow-sky oval was
- * printed on Forest Service posters, not sewn, so it lives in Internal Logos; the green-and-gold
+ * printed on Forest Service posters, not sewn, so it lives in Departmental Logos; the green-and-gold
  * oval's generated black recolours were dropped, and lead to its full-colour patch.
  */
 export const RETIRED_PATCHES = {

@@ -4,6 +4,7 @@
 
 import { Suspense, lazy, useEffect, useMemo, useState } from 'react'
 import { bodyFamily, elsewhereLine, groupTitle } from './bodyFamily.js'
+import { CABINET_SOURCE, HANDOVER, mandateUrl } from './cabinet2026.js'
 import { CURRENT_AS_OF } from './currentData.js'
 import { ELECTION_RESULTS_2026 } from './atlasData.js'
 import { ElectionResultsCard } from './ElectionResultsCard.jsx'
@@ -63,7 +64,7 @@ const PartyName = ({ party }) => {
   return place ? <SiteLink to={place} title={`${party}: logos and history`}>{party}</SiteLink> : party
 }
 
-const PersonCard = ({ role, person, since, note, party, acting }) => {
+const PersonCard = ({ role, person, since, note, party, acting, mandate }) => {
   const rest = [acting && 'Acting', since && `Since ${formatDate(since)}`, note].filter(Boolean)
   return (
   <div className="gov-person">
@@ -73,6 +74,7 @@ const PersonCard = ({ role, person, since, note, party, acting }) => {
     <span>
       <span className="gov-person__name">{person ?? 'Not recorded'}</span>
       <span className="gov-person__role">{role}</span>
+      {mandate && <a className="gov-person__since" href={mandateUrl(mandate)} target="_blank" rel="noreferrer">Mandate letter (PDF)</a>}
       {(since || party || note) && (
         <span className="gov-person__since">
           {party && <PartyName party={party} />}
@@ -114,7 +116,7 @@ const MarkCard = ({ node, year, theme, onOpenInGenerator }) => {
         {identity.era === 'current'
           ? (published
               ? 'The Province’s published mark, with its wording set in the marks’ own alphabet.'
-              : 'Set in the current identity’s alphabet. This generator holds published marks only for today’s ministries, so this one is typeset.')
+              : 'Typeset in the current identity’s alphabet.')
           : `As a ${identity.label.toLowerCase()} lockup would have set it. ${identity.note}`}
         {identity.confidence === 'low' && ' When this identity was in use is only loosely known.'}
       </p>
@@ -786,7 +788,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
             <div className="gov-people">
               {node.head
                 ? <PersonCard role="Speaker" person={node.head.person} since={node.head.since} acting={node.head.acting} />
-                : <PersonCard role="Speaker" person={null} note="Vacant at the year’s end, between Legislatures" />}
+                : <PersonCard role="Speaker" person={null} note={present ? "The 44th Parliament elects its Speaker at its first meeting." : "Vacant at the year’s end, between Legislatures"} />}
               {node.clerk && <PersonCard role={node.clerk.title} person={node.clerk.person} since={node.clerk.since} acting={node.clerk.acting} />}
             </div>
           </div>
@@ -794,10 +796,13 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
 
         {node.head && node.kind !== 'assembly' && (
           <div className="gov-people">
-            <PersonCard role={node.head.title} person={node.head.person} since={node.head.since} party={node.head.party} acting={node.head.acting} />
+            <PersonCard role={node.head.title} mandate={node.mandate} person={node.head.person} since={node.head.since} party={node.head.party} acting={node.head.acting} />
             {node.deputy && <PersonCard role={node.deputy.title} person={node.deputy.person} />}
             {node.ministersOfState?.map((minister) => (
-              <PersonCard key={minister.title} role={minister.title} person={minister.person} since={minister.since} />
+              <PersonCard key={minister.title} role={minister.title} person={minister.person} since={HANDOVER} mandate={minister.mandate} />
+            ))}
+            {node.parliamentarySecretaries?.map((secretary) => (
+              <PersonCard key={secretary.title} role={secretary.title} person={secretary.person} since={HANDOVER} />
             ))}
             {node.chair && <PersonCard role="Board chair" person={node.chair} />}
           </div>
@@ -866,7 +871,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
       )}
       {isMinistry && <MarkCard node={node} year={year} theme={theme} onOpenInGenerator={onOpenInGenerator} />}
       <StaffingCard rows={node.staffing} year={year} />
-      {node.kind === 'assembly' && present && <ElectionResultsCard results={ELECTION_RESULTS_2026} snapshotDate={CURRENT_AS_OF} />}
+      {node.kind === 'assembly' && present && <ElectionResultsCard results={ELECTION_RESULTS_2026} />}
       {node.kind === 'assembly' && <ParliamentCard parliament={node.parliament} />}
       <PathToPeople node={node} government={government} onSelect={onSelect} />
       <Connections node={node} government={government} onSelect={onSelect} />
@@ -940,13 +945,7 @@ export const OverviewCard = ({ government, onSelect }) => {
         <div><dt>Seats</dt><dd>{election?.totalSeats ?? '—'}</dd></div>
         <div><dt>Parliament</dt><dd>{election ? ordinal(election.parliament) : '—'}</dd></div>
       </dl>
-      {government.dissolved && PENDING_ELECTION && (
-        <p className="gov-notice">
-          {ELECTION_RESULTS_2026
-            ? <>This office-holder snapshot predates the {formatDate(ELECTION_RESULTS_2026.electionDate)} election. <button type="button" className="gov-link-button" onClick={() => onSelect('legislative-assembly')}>See the declared election results, checked {formatDate(ELECTION_RESULTS_2026.checkedOn)} →</button></>
-            : <>The Legislature was dissolved on {formatDate(PENDING_ELECTION.dissolved)}; British Columbians vote on {formatDate(PENDING_ELECTION.date)}. Ministers stay in office until a new cabinet is sworn in.</>}
-        </p>
-      )}
+      {present && <p className="gov-links"><a href={CABINET_SOURCE.url} target="_blank" rel="noreferrer">B.C. cabinet and mandate letters</a> · <button type="button" className="gov-link-button" onClick={() => onSelect('legislative-assembly')}>Election results →</button></p>}
       {!present && <p className="gov-description gov-muted">The government as {year} ended, plus any ministry that came and went within the year.</p>}
     </section>
   )

@@ -68,7 +68,7 @@ test('post-secondary coverage counts subjects once, not their variants or visibl
   const counts = summarizePostsecondaryArtwork(subjects)
   assert.equal(counts.total, 49)
   assert.equal(counts.total, counts.vector + counts.observedNonvector + counts.unverified)
-  assert.deepEqual(counts, { total: 49, held: 0, vector: 24, observedNonvector: 7, unverified: 18, shared: 1 })
+  assert.deepEqual(counts, { total: 49, held: 0, vector: 28, observedNonvector: 7, unverified: 14, shared: 1 })
   assert.deepEqual(summarizePostsecondaryArtwork(subjects.filter((subject) => subject.priority === 1 && subject.kind === 'public-college')),
     { total: 11, held: 0, vector: 11, observedNonvector: 0, unverified: 0, shared: 0 })
 
@@ -163,4 +163,58 @@ test('BCIT extends its existing subject, not the 49-record family or the held we
   assert.deepEqual(receipt.variants.map(({ outlinedSourceGlyphs }) => outlinedSourceGlyphs), [0, 36])
   assert.ok(receipt.variants.every(({ filteredPdfMatchesOriginalCropAt8x, svgThresholdedInkIoUAt8x }) =>
     filteredPdfMatchesOriginalCropAt8x && svgThresholdedInkIoUAt8x > 0.97))
+})
+
+
+test('early Kwantlen previews link to documented vector evidence for their own name era', async () => {
+  const { identitySubjectById } = await import('./identityCoverage.js')
+  const { EDITORIAL_LOGO_SPECIMENS } = await import('./editorialLogoSpecimens.js')
+  for (const id of ['kwantlen-college', 'kwantlen-university-college']) {
+    const subject = identitySubjectById(id)
+    const [preview] = EDITORIAL_LOGO_SPECIMENS[id]
+    const source = subject.artworkReview.specimens.find(({ id }) => id === preview.id)
+    assert.equal(source.url, preview.url)
+    assert.equal(source.format, 'native-vector')
+    assert.equal(source.evidence, 'source-only')
+    assert.equal(subject.hasArtwork, false)
+  }
+})
+
+test('recovered historical previews reference matching sources without becoming artwork holdings', async () => {
+  const { identitySubjectById } = await import('./identityCoverage.js')
+  const { EDITORIAL_LOGO_SPECIMENS } = await import('./editorialLogoSpecimens.js')
+  const selected = {
+    'emily-carr-institute-of-art-and-design': ['ecuad-2002-curved-banner', 'ecuad-2004-framed-one-line'],
+    'emily-carr-university': ['ecuad-2009-horizontal-wire', 'ecuad-2018-stacked-wire'],
+    'capilano-college': ['capilano-2007-wordmark', 'capilano-2007-two-books'],
+    'capilano-university': ['capilano-2008-wordmark', 'capilano-2009-curved-emblem'],
+    'kootenay-school-of-the-arts': ['ksa-2004-cooperative', 'ksa-2009-may-selkirk-era', 'ksa-2009-august-selkirk-era'],
+    'east-kootenay-community-college': ['ekcc-1988-recruitment'],
+    'college-of-the-rockies': ['cotr-2006-monochrome', 'cotr-2016-old-letterhead'],
+    'pacific-vocational-institute': ['pvi-1980-81-directory']
+  }
+  for (const [id, ids] of Object.entries(selected)) {
+    const subject = identitySubjectById(id)
+    const previews = EDITORIAL_LOGO_SPECIMENS[id]
+    assert.deepEqual(previews.map(({ id }) => id), ids)
+    assert.equal(subject.hasArtwork, false)
+    for (const { id, url } of previews) {
+      assert.ok(subject.artworkReview.specimens.some((s) =>
+        s.id === id && s.url === url && s.evidence === 'source-only' && s.scope === 'historical'), id)
+    }
+    for (const event of subject.artworkReview.history) {
+      if (event.specimenId) assert.ok(subject.artworkReview.specimens.some(s => s.id === event.specimenId))
+    }
+  }
+
+  const ekcc = identitySubjectById('east-kootenay-community-college')
+  assert.deepEqual(ekcc.artworkReview.history.filter(x => x.type === 'legal').map(x => x.date),
+    ['1978-12-01', '1980-04-01', '1995-11-02'])
+  const rockies = identitySubjectById('college-of-the-rockies')
+  assert.match(rockies.artworkReview.history.find(x => x.date === '1995-11-02').url, /1329_1995$/)
+  assert.equal(rockies.artworkReview.specimens.find(x => x.id === 'cotr-2000-arms').scope, 'heraldry')
+
+  assert.equal(EDITORIAL_LOGO_SPECIMENS['pacific-marine-training-institute'], undefined)
+  assert.ok(registry.records.find(x => x.id === 'pacific-marine-training-institute')
+    .sources.some(x => x.title.includes('July 1994 transfer announcement')))
 })

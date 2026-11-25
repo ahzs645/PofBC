@@ -3,6 +3,7 @@
 import { ALL_COLLECTED_BODIES } from './collectedBodies.js'
 import { COLLECTED_SPECIMENS } from './collectedData.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
+import { withLiquorHistory } from './liquorHistory.js'
 import { RAILWAY_HISTORY } from './railwayHistoryData.js'
 import { COLLECTED_PALETTES } from './collectedPalettes.js'
 
@@ -137,7 +138,7 @@ const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
         : [asset.sourceDate ? `Source-date context: ${asset.sourceDate}. This does not establish a dated specimen.` : null,
             `Collected on ${asset.observedDate}. A retrieval date does not establish when the design was adopted.`, asset.dateNote].filter(Boolean).join(' '),
     },
-    rights: {
+    rights: asset.rights ?? {
       status: 'unresolved',
       note: 'The mark belongs to its respective owner. No permission to reproduce it here has been sought or documented.',
     },
@@ -163,7 +164,7 @@ export const specimenEntriesOf = (program, timeline) => designsOf(COLLECTED_SPEC
 
 const collectionOf = (body) => ({
   id: `collected-${body.id}`,
-  shelf: isMunicipalBody(body) ? 'municipalities' : 'bodies',
+  shelf: body.shelf ?? (isMunicipalBody(body) ? 'municipalities' : 'bodies'),
   // Service brands can have artwork without a corresponding legal organization in the atlas.
   graphNode: Object.hasOwn(body, 'graphNode') ? body.graphNode : body.id,
   fileCollection: true,
@@ -174,7 +175,7 @@ const collectionOf = (body) => ({
   // The body's own account where it has one; that its years are not its logos' is said on each card
   // (“Seen …”) and under About.
   intro: body.notes || 'Collected artwork, with its source recorded for each file.',
-  cover: coverOf(body.assets),
+  cover: body.cover ?? coverOf(body.assets),
   entries: collectedEntriesOf(body.id),
 })
 
@@ -211,9 +212,9 @@ const nameEra = (body, from, to, next) => {
     status: 'held',
     years,
     label: nameOf(body),
-    note: next
+    note: body.eraNote ?? (next
       ? `The body under this name, until it became ${next.name} in ${to}. Its files are below, each with its own source and date.`
-      : `The body under its present name. Its files are below, each with its own source and date.`,
+      : `The body under its present name. Its files are below, each with its own source and date.`),
     applicability: {
       kind: 'unknown',
       years,
@@ -284,7 +285,7 @@ const HELD_LINES = LINES.filter((line) => line.every((id) => BODIES.get(id)?.ass
 const IN_A_LINE = new Set(HELD_LINES.flat())
 
 export const COLLECTED_COLLECTIONS = [
-  ...ALL_COLLECTED_BODIES.filter((body) => body.assets.length && !IN_A_LINE.has(body.id)).map(collectionOf),
+  ...ALL_COLLECTED_BODIES.filter((body) => body.assets.length && !IN_A_LINE.has(body.id)).map(collectionOf).map(withLiquorHistory),
   ...HELD_LINES.map(lineCollection)
 ].sort((a, b) => ALL_COLLECTED_BODIES.findIndex((body) => `collected-${body.id}` === a.id) - ALL_COLLECTED_BODIES.findIndex((body) => `collected-${body.id}` === b.id))
 

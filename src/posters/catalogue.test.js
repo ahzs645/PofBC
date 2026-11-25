@@ -24,6 +24,7 @@ import { CERTAINTY, GROUPS, MARK_OBJECTS, connectedPosters, connectionsOf, group
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
 const DRAWINGS = {
   'coastal-forest': read('./coastal-forest/poster.svg'),
+  'use-your-ashtray': read('./forest-service/use-your-ashtray.svg'),
   'dont-drop-it': read('./forest-service/dont-drop-it.svg'),
   'dont-gamble-with-fire': read('./forest-service/dont-gamble-with-fire.svg'),
   'reward-living-forest': read('./forest-service/reward-living-forest.svg'),
@@ -365,7 +366,7 @@ test('the shelf can be filtered: every card names its issuer, subject and format
   }
   for (const { key } of FACETS) {
     const values = new Set(Object.values(POSTERS).map((meta) => meta[key]))
-    assert.ok(values.size > 1 && values.size <= 6, `${key}: ${values.size} values is no use as a filter`)
+    assert.ok(values.size > 1 && values.size <= 7, `${key}: ${values.size} values is no use as a filter`)
   }
 })
 

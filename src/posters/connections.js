@@ -11,6 +11,7 @@
 // one of this collection's own records (records.js), opened in place. `certainty` is one of
 // CERTAINTY's keys: what the relationship rests on, not how interesting it is.
 
+import { ASHTRAY_REGULATIONS, ASHTRAY_ROAD_MARKER } from './forest-service/ashtray.js'
 import { POSTERS } from './catalogue.js'
 
 /** The overview's sections, in the order shown. */
@@ -68,7 +69,7 @@ const EVERGREEN = {
   group: 'marks',
   rel: 'Uses mark',
   label: 'The evergreen emblem',
-  note: 'Internal Logos · Forests: printed beside the service’s name. When the emblem was introduced or replaced is not confirmed.',
+  note: 'Departmental Logos · Forests: printed beside the service’s name. When the emblem was introduced or replaced is not confirmed.',
   to: logo('forest-service-emblem'),
   certainty: 'printed'
 }
@@ -150,6 +151,19 @@ const BRANCH = {
 // ── The connections, by piece ───────────────────────────────────────────────────────────────────
 
 const BY_POSTER = {
+  'use-your-ashtray': [
+    {
+      group: 'issuer', rel: 'Printed publication', label: 'Fish and Game Branch',
+      note: 'The branch names itself on the adjacent cover of the 1961–62 game regulations.',
+      href: ASHTRAY_REGULATIONS.href, certainty: 'printed'
+    },
+    {
+      group: 'context', rel: 'Roadside campaign', label: 'British Columbia Forest Service',
+      note: 'The July 1962 newspaper account describes the same wording stencilled on the Victoria–Sidney Highway.',
+      href: ASHTRAY_ROAD_MARKER.href, certainty: 'documented'
+    },
+    firePiece('dont-drop-it', 'A related Forest Service badge warns smokers about discarded cigarettes.')
+  ],
   'coastal-forest': [
     {
       group: 'issuer',
@@ -346,7 +360,7 @@ const BY_POSTER = {
       group: 'marks',
       rel: 'Uses mark',
       label: 'The one-ink oval seal',
-      note: 'Internal Logos · Forests: printed bottom right, beside the headline. When the seal was introduced or replaced is not known.',
+      note: 'Departmental Logos · Forests: printed bottom right, beside the headline. When the seal was introduced or replaced is not known.',
       to: logo('forest-service-one-ink-oval'),
       certainty: 'printed'
     },
@@ -386,7 +400,7 @@ const BY_POSTER = {
       group: 'marks',
       rel: 'Uses mark',
       label: 'The Forest Service tree oval',
-      note: 'Internal Logos · Forests: printed beside the ministry’s arms signature',
+      note: 'Departmental Logos · Forests: printed beside the ministry’s arms signature',
       to: logo('forest-service'),
       certainty: 'printed'
     },
@@ -630,9 +644,9 @@ export const postersForPatch = (patchId) => connectedPosters().flatMap((posterId
   .filter((entry) => entry.to?.patch === patchId)
   .map((entry) => backLink(posterId, entry)))
 
-/** The made objects (patches, badges) that carry one of the Internal Logos. */
+/** The made objects (patches, badges) that carry one of the Departmental Logos. */
 export const objectsForLogo = (logoId) => MARK_OBJECTS.filter((object) => object.logo === logoId)
 
-/** The printed pieces that use one of the Internal Logos. */
+/** The printed pieces that use one of the Departmental Logos. */
 export const postersForLogo = (logoId) => connectedPosters().filter((posterId) => (BY_POSTER[posterId] ?? [])
   .some((entry) => entry.group === 'marks' && sameLogo(entry.to, logoId)))

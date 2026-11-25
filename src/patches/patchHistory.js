@@ -3,8 +3,8 @@
 // don't date the patch itself. Matched on the patch's label, so a Forest Oval variant picks up its
 // own wording (Ministry of Forests, Airtanker Operations, Wildfire Service).
 //
-// Forest Oval cards and patches carrying the evergreen emblem link to PofBC's Internal Logos
-// (Internal Logos → Forests), which keep their research there. Sharing an emblem does not date
+// Forest Oval cards and patches carrying the evergreen emblem link to PofBC's Departmental Logos
+// (Departmental Logos → Forests), which keep their research there. Sharing an emblem does not date
 // either cloth specimen or combine separate patch records.
 
 import { FOREST_LOGOS } from '../internal/forestLogos.js'
@@ -68,7 +68,7 @@ const NOTES = [
   }
 ]
 
-/** Forest Oval cards (Patcher's consolidated variant groups) and the Internal Logos entry each one is. */
+/** Forest Oval cards (Patcher's consolidated variant groups) and the Departmental Logos entry each one is. */
 const FOREST_OVAL_LOGOS = {
   'forest-service-oval': 'forest-service',
   'forests-oval': 'forests',
@@ -83,7 +83,7 @@ const FOREST_EMBLEM_PATCH_LOGOS = {
 }
 
 /**
- * A patch's context: the timeline notes its wording matches, and the related Internal Logos
+ * A patch's context: the timeline notes its wording matches, and the related Departmental Logos
  * entry with its evidence line. An emblem link adds no specimen-date claim.
  * @returns {{ notes: {id: string, era: string, text: string}[], logo: {id: string, name: string, evidence: string} | null }}
  */

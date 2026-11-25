@@ -22,6 +22,22 @@ const tourismCover = {
 
 export const INITIATIVES = [
   {
+    id: 'jepp', title: 'Joint Emergency Preparedness Program', subtitle: 'Federal–provincial cost sharing · 1980–2013',
+    summary: 'JEPP helped provinces, territories and local governments fund emergency planning, training and equipment. British Columbia’s Provincial Emergency Program handled applications and claims.',
+    cover: { file: 'initiatives/jepp/jepp-1993-cover.png', alt: 'Blue JEPP initials inside a screened square frame', caption: 'Cover of British Columbia’s revised July 1993 guidelines' },
+    exploreLabel: 'Explore the 1993 guidelines and the two program marks',
+    tags: ['Emergency preparedness', 'Program funding', 'Logos'],
+    searchTerms: ['JEPP', 'PEP', 'Provincial Emergency Program', 'Emergency Preparedness Canada', 'Ministry of Attorney General']
+  },
+  {
+    id: 'dfam', title: 'Defined Forest Area Management', subtitle: 'Ministry of Forests · documented in 2003',
+    summary: 'The Ministry proposed joint forest health and timber supply work by licence holders and BC Timber Sales. Its April 2003 technical sheet carries a five-tree DFAM emblem.',
+    cover: { file: 'initiatives/dfam/dfam.svg', alt: 'One conifer within the D and four above FAM, all inside a rounded green frame', caption: 'Reconstruction from the April 2003 technical sheet' },
+    exploreLabel: 'Explore the DFAM emblem and the timber supply work',
+    tags: ['Forestry', 'Timber supply', 'Forest health'], searchTerms: ['DFAM', 'BC Timber Sales', 'BCTS', 'bark beetle'],
+    relatedBodyIds: ['sub-bc-timber-sales']
+  },
+  {
     id: 'bc-youth', title: 'BC Youth', exploreLabel: 'Explore the youth grants, newspaper marks and ministry history', subtitle: 'Ministry of Advanced Education and Job Training',
     summary: 'Provincial youth grants, the Youth Advisory Council and the BC Youth mark that appeared in government advertisements.',
     cover: { file: 'identity-collected/bc-youth/right-flag.svg', alt: 'BC Youth wordmark and waving flag', caption: 'Reconstruction of the mark printed in October 1989' },
@@ -30,6 +46,13 @@ export const INITIATIVES = [
     relatedBodyIds: ['bc-youth', 'bc-youth-advisory-council', 'ministry-of-labour-1976', 'ministry-of-advanced-education-and-job-training-1986']
   },
   ...YOUTH_PROGRAMS,
+  {
+    id: 'spirit-of-2010', title: 'Spirit of 2010', subtitle: 'Government of British Columbia',
+    summary: 'British Columbia promoted tourism, trade and investment ahead of the Vancouver 2010 Olympic and Paralympic Winter Games. A framed Spirit of 2010 emblem appears in provincial and federal publications.',
+    cover: { file: 'initiatives/spirit-of-2010/spirit-of-2010.svg', alt: 'Spirit of 2010 square campaign emblem', caption: 'Vector reconstruction of the colour emblem on the 2004 provincial resort strategy' },
+    tags: ['Olympics', 'Logos', 'Tourism'],
+    searchTerms: ['British Columbia. Be Here.', 'Spirit of 2010 Business Summit', 'Vancouver 2010', 'Olympic and Paralympic Winter Games Secretariat']
+  },
   {
     id: 'tourism',
     title: 'Tourism',
@@ -47,6 +70,16 @@ export const INITIATIVES = [
       'Sun, sea and mountain', 'British Columbia Insider’s Guide'
     ],
     relatedBodyIds: ['tourism-bc', 'destination-bc']
+  },
+  {
+    id: 'achieve-bc',
+    title: 'Achieve BC',
+    subtitle: 'Office of the Premier',
+    summary: 'Achieve BC brought education, training and career advice together in 2003. Its website, guides and travelling exhibition used a family of marks built around the V in ACHIEVE.',
+    cover: { file: 'initiatives/achieve-bc/bringing-out-the-best-2004.gif', alt: 'Achieve BC sunburst with the words Bringing Out the Best', caption: 'Colour signature from a February 2004 Ministry of Education release' },
+    tags: ['Education', 'Employment', 'Logos', 'Timeline'],
+    searchTerms: ['AchieveBC', 'Bringing Out the Best', 'Skills & Learning', 'Jobs & Opportunities', 'A Celebration of Excellence', 'Gordon Campbell', 'Deceive BC'],
+    relatedBodyIds: ['office-of-the-premier', 'premier', 'ministry-of-education-1998', 'ministry-of-advanced-education-2001']
   },
   {
     id: 'gamesense',
@@ -306,6 +339,14 @@ const gamesenseDetail = () => ({
 
 // Literal imports let the bundler keep each initiative's data in its own deferred chunk.
 const LOADERS = {
+  jepp: async () => {
+    const { jeppDetail } = await import('./jepp.js')
+    return jeppDetail(initiativeById('jepp'))
+  },
+  dfam: async () => {
+    const { dfamDetail } = await import('./dfam.js')
+    return dfamDetail(initiativeById('dfam'))
+  },
   ...Object.fromEntries(YOUTH_PROGRAMS.map((entry) => [entry.id, async () => {
     const { youthProgramDetail } = await import('./youthPrograms.js')
     return youthProgramDetail(entry)
@@ -314,10 +355,18 @@ const LOADERS = {
     const { bcYouthDetail } = await import('./bcYouth.js')
     return bcYouthDetail(initiativeById('bc-youth'))
   },
+  'spirit-of-2010': async () => {
+    const { spiritOf2010Detail } = await import('./spiritOf2010.js')
+    return spiritOf2010Detail(initiativeById('spirit-of-2010'))
+  },
   gamesense: async () => gamesenseDetail(),
   tourism: async () => {
     const { TOURISM_COLLECTION } = await import('../gallery/tourismData.js')
     return tourismDetail(TOURISM_COLLECTION)
+  },
+  'achieve-bc': async () => {
+    const { achieveBCDetail } = await import('./achieveBC.js')
+    return achieveBCDetail(initiativeById('achieve-bc'))
   }
 }
 

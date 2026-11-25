@@ -3,9 +3,9 @@
   "electionDate": "2026-10-24",
   "parliament": 44,
   "publishedOn": "2026-11-09",
-  "checkedOn": "2026-11-12",
+  "checkedOn": "2026-11-25",
   "totalSeats": 93,
-  "status": "declared_results_subject_to_judicial_recounts",
+  "status": "judicial_recounts_complete",
   "source": {
     "url": "https://elections.bc.ca/news/final-results-for-the-2026-provincial-general-election-now-available/",
     "title": "Elections BC — Final Results for the 2026 Provincial General Election Now Available",
@@ -18,7 +18,7 @@
     "checkedOn": "2026-11-12",
     "note": "The Assembly says 44th Parliament member information will be available upon receipt of certified results on November 18, 2026."
   },
-  "note": "The November 9 final count declares 93 candidates elected. Kelowna Centre and Ladysmith-Oceanside are subject to automatic judicial recounts. These results do not establish swearing-in, current caucus affiliation, the Speaker or a new cabinet. Other government office-holder data retains its own review date.",
+  "note": "The two judicial recounts confirmed the November 9 final-count winners.",
   "normalization": "Conservative party in the Vancouver-Langara row is normalized to the summary table's Conservative Party; its original spelling is retained. Asterisks are stored as recount flags.",
   "parties": {
     "BC Green Party": 2,
@@ -677,5 +677,10 @@
       "partyAsPrinted": "BC Green Party",
       "judicialRecountRequired": false
     }
-  ]
+  ],
+  "recountSource": {
+    "url": "https://elections.bc.ca/news/ladysmith-oceanside-and-kelowna-centre-judicial-recounts-complete/",
+    "title": "Elections BC — Ladysmith-Oceanside and Kelowna Centre Judicial Recounts Complete",
+    "publishedOn": "2026-11-24"
+  }
 }

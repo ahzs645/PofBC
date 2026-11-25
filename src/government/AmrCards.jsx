@@ -11,7 +11,7 @@ import { SourceLink } from './AtlasCards.jsx'
 import { useAmr } from './useAmr.js'
 
 const dateOf = (value) => formatEventDate({ start: String(value) })
-const month = (value) => (value === 'current' ? 'now' : dateOf(value))
+const month = (value) => (value === 'current' ? 'latest archived' : dateOf(value))
 
 /** A boundary as the evidence allows: a dated order, two listings it fell between, or before coverage. */
 const Boundary = ({ boundary, isDated, start }) => {
@@ -30,14 +30,14 @@ const Run = ({ run, amr, ministry }) => (
     {ministry}{run.ministerTitle}
     {run.scope === 'partial' && <span className="gov-muted"> · part of the Act</span>}
     <span className="gov-muted"> · from <Boundary boundary={run.effectiveFrom} isDated={amr.isDated} start /></span>
-    <span className="gov-muted"> · {amr.isCurrent(run) ? 'to now' : <>to <Boundary boundary={run.effectiveTo} isDated={amr.isDated} />{!run.effectiveTo && ` the ${month(run.seenIn.last)} listing`}</>}</span>
+    <span className="gov-muted"> · {amr.isCurrent(run) ? 'in the latest archived listing' : <>to <Boundary boundary={run.effectiveTo} isDated={amr.isDated} />{!run.effectiveTo && ` the ${month(run.seenIn.last)} listing`}</>}</span>
     {run.scope === 'partial' && run.detailsRaw && <span className="gov-events__note">{run.detailsRaw}</span>}
   </span>
 )
 
 const Attribution = ({ amr }) => (
   <p className="gov-muted">
-    From <SourceLink source={{ url: amr.AMR_SOURCE.url, title: 'BC Laws: Acts and Ministers’ Responsibilities' }} />, listings from December 2015.
+    From <SourceLink source={{ url: amr.AMR_SOURCE.url, title: 'BC Laws: Acts and Ministers’ Responsibilities' }} />, listings collected through {dateOf(amr.AMR_SOURCE.fetched)}.
     Derived under the <SourceLink source={{ url: amr.AMR_SOURCE.licenceUrl, title: 'King’s Printer Licence' }} />; not an official version.
   </p>
 )
@@ -63,14 +63,14 @@ export const ActsAdministeredCard = ({ node, onOpenInstrument }) => {
     <section className="gov-card">
       <h2 className="gov-card__heading">Acts administered <span className="gov-muted">{acts.length}</span></h2>
       <Attribution amr={amr} />
-      {current.length > 0 && current.length < acts.length && !open && <p className="gov-muted">{current.length} in the current listing; {acts.length - current.length} listed earlier.</p>}
+      {current.length > 0 && current.length < acts.length && !open && <p className="gov-muted">{current.length} in the latest archived listing; {acts.length - current.length} listed earlier.</p>}
       <ul className="gov-events">
         {shown.map((act) => {
           const page = pages.get(amr.actKey(act.title))
           const title = `${act.title} Act`.replace(/ Act Act$/, ' Act')
           return (
             <li key={act.key} className="gov-events__item">
-              <span className="gov-events__date">{act.current ? 'Now' : 'Earlier'}</span>
+              <span className="gov-events__date">{act.current ? 'Last listed' : 'Earlier'}</span>
               <span className="gov-events__body">
                 <span className="gov-events__title">
                   {page && onOpenInstrument
@@ -115,7 +115,7 @@ export const AdministeredByCard = ({ instrument, onGo }) => {
           const ministry = run.episodeId ? lifeOf(run.episodeId)?.name : null
           return (
             <li key={index} className="gov-events__item">
-              <span className="gov-events__date">{amr.isCurrent(run) ? 'Now' : 'Earlier'}</span>
+              <span className="gov-events__date">{amr.isCurrent(run) ? 'Last listed' : 'Earlier'}</span>
               <span className="gov-events__body">
                 <span className="gov-events__title">
                   {ministry && onGo
