@@ -1,0 +1,11 @@
+# The Justice Institute’s griffin
+
+The Justice Institute of British Columbia dates its founding by order in council to April 1978. Its founding mandate included training across police, corrections, courts, sheriffs and fire services. [Institute mandate](https://www.jibc.ca/about-us/mandate)
+
+On June 20, 2003 the Canadian Heraldic Authority granted the Institute arms with a silver griffin in a silver ring on a blue field. The grant associates the griffin with justice and its eagle-and-lion form with collaboration across agencies. The circle also represents community and restorative justice. The grant dates the shield. The typography and tagline have separate documentary evidence. [Public Register, volume IV, page 289](https://www.gg.ca/en/heraldry/public-register/project/94)
+
+A letter dated July 13, 2007 carries the blue shield and Institute name. Both the 2008–09 and 2009–10 accountability report covers carry the shield above the name, rule and public safety tagline. The 2009–10 report includes a transmittal letter dated July 2, 2010. The first use of the complete design remains open. [2007 letter](https://digitalcollections.llbc.leg.bc.ca/handle/123456789/323794) · [2008–09 report](https://digitalcollections.llbc.leg.bc.ca/handle/123456789/323801) · [2009–10 report](https://digitalcollections.llbc.leg.bc.ca/handle/123456789/323806)
+
+In September 2022 JIBC announced a stylized eagle inside a shoulder-patch shape. The Institute described retiring the griffin as part of its work toward decolonization, and linked the eagle to teaching and the shoulder patch to the professions its graduates enter. The supplied modern eagle artwork and the badge monogram have their own gallery entries. [JIBC announcement](https://www.jibc.ca/news/article/jibc-unveils-new-brand) · [Contemporary republication](https://educationnewscanada.com/article/education/level/colleges/2/980570/jibc-unveils-new-brand.html)
+
+The downloadable SVG retains the cover’s 106 painted paths in their original blue and white. The transparent PNG is 1120 × 1056 pixels. At that size, foreground-mask overlap against the supplied PDF was 99.5–99.7% across RGB-distance thresholds of 15, 30 and 60 on the source’s tan background. The library download adds a catalogue cover sheet.

@@ -120,8 +120,14 @@ export const RECONCILED_SUBJECTS = [
     salaryEmployers: ['justice-institute-of-bc'],
     priority: 2,
     scope: 'institution',
-    sources: [{ title: 'Justice Institute of British Columbia', url: 'https://www.jibc.ca/' }],
-    nextAction: 'Date the current logo and monogram and record earlier institutional marks.',
+    sources: [
+      { title: 'JIBC mandate and founding', url: 'https://www.jibc.ca/about-us/mandate' },
+      { title: 'Grant of arms, June 2003', url: 'https://www.gg.ca/en/heraldry/public-register/project/94' },
+      { title: 'JIBC letterhead, July 2007', url: 'https://digitalcollections.llbc.leg.bc.ca/handle/123456789/323794' },
+      { title: '2009–10 accountability report', url: 'https://digitalcollections.llbc.leg.bc.ca/handle/123456789/323806' },
+      { title: 'JIBC unveils its eagle', url: 'https://www.jibc.ca/news/article/jibc-unveils-new-brand' }
+    ],
+    nextAction: 'Find a dated specimen for the badge monogram and the first use of the griffin with its tagline.',
     note: 'Its registered arms are a separate emblem in the Coats of Arms view, not a version of the logo.'
   }),
   subject({
