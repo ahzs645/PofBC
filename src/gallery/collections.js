@@ -1320,6 +1320,17 @@ export const GALLERY_COLLECTIONS = [
     })
   },
   {
+    id: 'specimens-travel-industry',
+    shelf: 'departmental',
+    label: 'Department of Travel Industry',
+    body: 'Departmental logo',
+    years: 'Seen about 1970',
+    intro: 'The map and dogwood in the department’s book This is British Columbia.',
+    graphNode: 'department-of-travel-industry-1967',
+    cover: 'bc-travel-industry-ca-1970',
+    entries: specimenEntriesOf('travel-industry')
+  },
+  {
     id: 'bc-mark',
     shelf: 'bc-mark',
     label: 'On the BC mark',
@@ -1333,8 +1344,7 @@ export const GALLERY_COLLECTIONS = [
       'patterns. Open one to recolour it.',
     entries: [
       ...ONE_OFFS.filter((entry) => !PARKS_ONE_OFFS.includes(entry.id) && !LANDS_ONE_OFFS.includes(entry.id)).map(provincial),
-      // Before the crest: a department's own mark, on the BC mark's timeline.
-      ...specimenEntriesOf('travel-industry', 'bc-mark'),
+      ...collectedEntriesOf('government-communications-and-public-engagement'),
       // A service wordmark in the BC mark's Garamond, held as published.
       ...specimenEntriesOf('bceid'),
       // A service on the BC mark, as its website serves it.
@@ -1349,10 +1359,10 @@ export const GALLERY_COLLECTIONS = [
 // Collections recovered by the acquisition pass use source files directly. Existing researched
 // histories remain authoritative for bodies that already have a collection.
 // The Office of the Premier's letterhead is shelved with the one-off marks (collection "bc-mark").
-GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) => candidate.id !== 'collected-office-of-the-premier' &&
+GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) => !['collected-office-of-the-premier', 'collected-government-communications-and-public-engagement'].includes(candidate.id) &&
   !GALLERY_COLLECTIONS.some((held) => nodesOf(held).includes(candidate.graphNode))))
 // WorkSafeBC's specimens are folded into its collection above; the one-off programs keep theirs.
-// The Department of Travel Industry's is folded into the BC mark collection.
+// Travel Industry opens in Departmental Logos and keeps its own register collection.
 // A program's published specimens belong to the body its one-off stands for (WorkBC's to WorkBC, Where
 // ideas work to the Public Service Agency), so that body's panel finds its original files too.
 GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc', 'specimens-bc-environment', 'specimens-tourism-recreation-culture', 'specimens-superhost'].includes(collection.id))
@@ -1484,6 +1494,8 @@ export const FOLDED_UNDER = [
 for (const program of ['gamesense', 'bc-youth']) {
   GALLERY_COLLECTIONS.find((collection) => collection.id === 'collected-' + program).initiativeId = program
 }
+
+GALLERY_COLLECTIONS.find((collection) => collection.id === 'collected-bc-youth').shelf = 'initiatives'
 
 for (const { parent, children } of FOLDED_UNDER) {
   if (!GALLERY_COLLECTIONS.some((collection) => collection.id === parent)) throw new Error(`Unknown parent collection: ${parent}`)

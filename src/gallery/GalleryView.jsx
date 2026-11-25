@@ -37,6 +37,8 @@ import { generatorArt, onPage, tileArt } from './tileArt.js'
 import { isSearchShortcut, searchGallery } from './gallerySearch.js'
 import { identitySubjectById, searchIdentitySubjects } from './identityCoverage.js'
 import { IdentityCollectionLinks, IdentityCoverageBrowser, IdentityCoverageOverview, IdentitySearchResults, IdentitySubjectDetail } from './IdentityCoverage.jsx'
+import { useNavigate } from '../site/navigation.jsx'
+import { movedGalleryPlace } from './movedGalleryPlaces.js'
 import { galleryPlaceUrl } from './galleryPlace.js'
 import { writeHistory } from '../site/browserHistory.js'
 
@@ -819,6 +821,8 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   const collection = collectionById(collectionId)
   const subject = identitySubjectById(subjectId)
 
+  const navigate = useNavigate()
+
   // Going back — to all the logos, or from a mark to its collection — returns to where that page was
   // scrolled to when it was left, so the card just opened is where it was. A page not yet seen this
   // visit (one reached by a link) opens at its top, or for all the logos, at the card come back from.
@@ -826,6 +830,12 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   const [arrival, setArrival] = useState(null)
   const pageKey = (collection, mark, subject, coverage) => subject ? `subject/${subject}` : coverage ? 'coverage' : `${collection ?? ''}/${mark ?? ''}`
   const go = (nextCollection, nextMark, nextSubject = null, coverage = false, filters) => {
+    const moved = movedGalleryPlace({ view: 'gallery', logos: nextCollection, mark: nextMark, subject: nextSubject, coverage })
+    if (moved) {
+      if (navigate) navigate(moved)
+      else globalThis.location.assign(`?${new URLSearchParams(moved)}`)
+      return
+    }
     scrolled.current.set(pageKey(collectionId, openId, subjectId, showCoverage), globalThis.scrollY ?? 0)
     setCollectionId(nextCollection)
     setOpenId(nextMark)

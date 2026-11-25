@@ -12,7 +12,7 @@ const LOOKOUT_RELEASE = {
 
 const MARKS_LINK = {
   label: 'The Forest Service’s marks',
-  note: 'Internal Logos · Forests: the Lands Department seal, the evergreen emblem and the ovals',
+  note: 'Departmental Logos · Forests: the Lands Department seal, the evergreen emblem and the ovals',
   to: { view: 'internal', internal: 'forests' }
 }
 const BADGES_LINK = {
@@ -280,7 +280,7 @@ export const FOREST_CLOSURE = {
       panel: {
         eyebrow: 'The emblem',
         heading: 'Forest Service oval',
-        lede: 'FOREST SERVICE over BRITISH COLUMBIA, around a sparse, tall tree. It is not the evergreen emblem, and none of the service’s ovals in Internal Logos is identified as this one.',
+        lede: 'FOREST SERVICE over BRITISH COLUMBIA, around a sparse, tall tree. It is not the evergreen emblem, and none of the service’s ovals in Departmental Logos is identified as this one.',
         blocks: [
           'Its tree, landscape and tiny lettering are simplified: the photographs show it only small.',
           { links: [MARKS_LINK] }

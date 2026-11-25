@@ -34,7 +34,7 @@ export const PROGRAM_ENTRY_OWNERS = {
   'vector-canada-starts-here-2012': 'pacific-gateway',
   'vector-canada-starts-here-bc-jobs-plan-2012': 'pacific-gateway',
   'best-place-on-earth': 'best-place-on-earth',
-  'bc-travel-industry-ca-1970': 'department-of-travel-industry',
+  'bc-travel-industry-ca-1970': 'department-of-travel-industry-1967',
   // Ministries' flag-years marks: owned by the ministry's node on the government map.
   'bc-environment-flag-years': 'ministry-of-environment-1988',
   'tourism-recreation-culture-1986': 'ministry-of-tourism-recreation-and-culture-1986',
@@ -224,6 +224,10 @@ export const RECONCILED_SUBJECTS = [
   subject({
     id: 'department-of-travel-industry',
     label: 'Department of Travel Industry',
+    graphNode: 'department-of-travel-industry-1967',
+    entryOwner: 'department-of-travel-industry-1967',
+    graphYear: 1970,
+    collectionIds: ['specimens-travel-industry'],
     kind: 'government-branch',
     priority: 3,
     sources: [{ title: '“This is British Columbia”, published by the Department of Travel Industry, undated [about 1970]', citation: 'Print publication; no online copy recorded.' }],

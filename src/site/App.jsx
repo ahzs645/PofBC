@@ -62,6 +62,7 @@ import { NavigationContext, searchFor } from './navigation.jsx'
 import { writeHistory } from './browserHistory.js'
 import { salaryPlaceUrl } from '../salaries/viewState.js'
 import { legacyInitiativeUrl } from '../initiatives/initiativePlace.js'
+import { movedGalleryPlace, movedGalleryUrl } from '../gallery/movedGalleryPlaces.js'
 import { retiredPatchUrl } from '../patches/retiredPatches.js'
 import { SunGlyph, ThemeIcon } from './icons.jsx'
 import { useSiteTheme } from './useTheme.js'
@@ -163,7 +164,7 @@ const initialView = () => {
   // history entry is needed, and the entry's return/focus metadata remains attached to it.
   // A link to a design no longer offered as a patch opens the place that holds it now.
   const href = globalThis.location?.href
-  const migrated = href ? legacyInitiativeUrl(href) ?? retiredPatchUrl(href) : null
+  const migrated = href ? movedGalleryUrl(href) ?? legacyInitiativeUrl(href) ?? retiredPatchUrl(href) : null
   if (migrated) globalThis.history?.replaceState(globalThis.history.state, '', migrated)
   const view = new URLSearchParams(migrated?.search ?? globalThis.location?.search ?? '').get('view')
   return VIEW_IDS.includes(view) ? view : 'generator'
@@ -228,7 +229,8 @@ export const App = () => {
   }
   // A link from one view to a place in another: the posters to the emblem they carry, the emblem to
   // the posters, either to the body in the government diagram.
-  const navigate = (params) => {
+  const navigate = (requested) => {
+    const params = movedGalleryPlace(requested) ?? requested
     const next = VIEW_IDS.includes(params.view) ? params.view : 'generator'
     const url = new URL(globalThis.location.href)
     url.search = searchFor({ ...params, view: next === 'generator' ? null : next })
@@ -331,7 +333,7 @@ export const App = () => {
       </header>
 
       {view === 'internal' && (
-        <Suspense fallback={<p className="gallery__intro" role="status">Loading the oval logos…</p>}>
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading departmental logos…</p>}>
           <InternalLogosView key={visit} />
         </Suspense>
       )}

@@ -1,7 +1,6 @@
 import { YOUTH_BODY, YOUTH_SOURCES } from '../gallery/bcYouth.js'
 
 const refs = (...ids) => ids.map((sourceId) => ({ sourceId }))
-const gallery = { view: 'gallery', logos: 'collected-bc-youth' }
 const sources = Object.entries(YOUTH_SOURCES).map(([id, source]) => ({ id, ...source }))
 const [right, left] = YOUTH_BODY.assets
 
@@ -20,7 +19,7 @@ export const bcYouthDetail = (entry) => ({
   hero: { title: entry.title, eyebrow: 'Provincial youth programs', description: entry.summary, image: entry.cover, caption: entry.cover.caption },
   sources,
   relatedLinks: [
-    { label: 'BC Youth logo gallery', to: gallery },
+    { label: 'BC Youth identity register', to: { view: 'gallery', subject: 'bc-youth' } },
     { label: 'Challenge ’89 summer employment program', to: { view: 'initiatives', initiative: 'challenge-89' } },
     { label: 'Passport to Apprenticeship', to: { view: 'initiatives', initiative: 'passport-to-apprenticeship' } },
     { label: 'Environment Youth Corps', to: { view: 'initiatives', initiative: 'environment-youth-corps' } },

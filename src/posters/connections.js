@@ -68,7 +68,7 @@ const EVERGREEN = {
   group: 'marks',
   rel: 'Uses mark',
   label: 'The evergreen emblem',
-  note: 'Internal Logos · Forests: printed beside the service’s name. When the emblem was introduced or replaced is not confirmed.',
+  note: 'Departmental Logos · Forests: printed beside the service’s name. When the emblem was introduced or replaced is not confirmed.',
   to: logo('forest-service-emblem'),
   certainty: 'printed'
 }
@@ -346,7 +346,7 @@ const BY_POSTER = {
       group: 'marks',
       rel: 'Uses mark',
       label: 'The one-ink oval seal',
-      note: 'Internal Logos · Forests: printed bottom right, beside the headline. When the seal was introduced or replaced is not known.',
+      note: 'Departmental Logos · Forests: printed bottom right, beside the headline. When the seal was introduced or replaced is not known.',
       to: logo('forest-service-one-ink-oval'),
       certainty: 'printed'
     },
@@ -386,7 +386,7 @@ const BY_POSTER = {
       group: 'marks',
       rel: 'Uses mark',
       label: 'The Forest Service tree oval',
-      note: 'Internal Logos · Forests: printed beside the ministry’s arms signature',
+      note: 'Departmental Logos · Forests: printed beside the ministry’s arms signature',
       to: logo('forest-service'),
       certainty: 'printed'
     },
@@ -630,9 +630,9 @@ export const postersForPatch = (patchId) => connectedPosters().flatMap((posterId
   .filter((entry) => entry.to?.patch === patchId)
   .map((entry) => backLink(posterId, entry)))
 
-/** The made objects (patches, badges) that carry one of the Internal Logos. */
+/** The made objects (patches, badges) that carry one of the Departmental Logos. */
 export const objectsForLogo = (logoId) => MARK_OBJECTS.filter((object) => object.logo === logoId)
 
-/** The printed pieces that use one of the Internal Logos. */
+/** The printed pieces that use one of the Departmental Logos. */
 export const postersForLogo = (logoId) => connectedPosters().filter((posterId) => (BY_POSTER[posterId] ?? [])
   .some((entry) => entry.group === 'marks' && sameLogo(entry.to, logoId)))

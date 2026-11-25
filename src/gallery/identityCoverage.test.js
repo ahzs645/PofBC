@@ -56,7 +56,7 @@ test('the expanded register retains every earlier Crown and health target once',
   for (const body of COLLECTING) assert.ok(ids.has(body.id), body.id)
   for (const subject of IDENTITY_COVERAGE) {
     for (const entry of subject.entries) {
-      assert.ok(subject.collections.some((collection) => entriesOfNode(collection, subject.id).includes(entry)), `${subject.id}: ${entry.id}`)
+      assert.ok(subject.collections.some((collection) => entriesOfNode(collection, subject.entryOwner ?? subject.id).includes(entry)), `${subject.id}: ${entry.id}`)
     }
   }
 })

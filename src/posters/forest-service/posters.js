@@ -24,7 +24,7 @@ import { withStories } from '../stories.js'
 
 const EMBLEM_LINK = {
   label: 'The evergreen emblem',
-  note: 'Internal Logos · Forests: its colourways, history and the other posters it is on',
+  note: 'Departmental Logos · Forests: its colourways, history and the other posters it is on',
   to: { view: 'internal', internal: 'forests', 'internal-logo': 'forest-service-emblem' }
 }
 const EMBLEM_PATCH_LINK = {
@@ -34,7 +34,7 @@ const EMBLEM_PATCH_LINK = {
 }
 const OVALS_LINK = {
   label: 'The Forest Service’s later marks',
-  note: 'Internal Logos · Forests: the tree oval and the wildlife ovals',
+  note: 'Departmental Logos · Forests: the tree oval and the wildlife ovals',
   to: { view: 'internal', internal: 'forests' }
 }
 const DEPARTMENT_LINK = {
@@ -1075,12 +1075,12 @@ export const PREVENT_FOREST_FIRES = {
 
 const ONE_INK_OVAL_LINK = {
   label: 'The one-ink oval seal',
-  note: 'Internal Logos · Forests: the seal on its own, with its colourways',
+  note: 'Departmental Logos · Forests: the seal on its own, with its colourways',
   to: { view: 'internal', internal: 'forests', 'internal-logo': 'forest-service-one-ink-oval' }
 }
 const YELLOW_SKY_LINK = {
   label: 'The yellow-sky oval',
-  note: 'Internal Logos · Forests: the same words round a lone conifer, with dots between them and a sans-serif face',
+  note: 'Departmental Logos · Forests: the same words round a lone conifer, with dots between them and a sans-serif face',
   to: { view: 'internal', internal: 'forests', 'internal-logo': 'forest-service-yellow-sky' }
 }
 const DEPARTMENT_1967_LINK = {

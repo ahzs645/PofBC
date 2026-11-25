@@ -39,7 +39,7 @@ export function PatchHistory({ patch }) {
       )}
       {logo && (
         <p className="patch__source">
-          {logo.evidence}. <SiteLink to={{ view: 'internal', internal: 'forests', 'internal-logo': logo.id }}>{logo.name} in Internal Logos</SiteLink> has
+          {logo.evidence}. <SiteLink to={{ view: 'internal', internal: 'forests', 'internal-logo': logo.id }}>{logo.name} in Departmental Logos</SiteLink> has
           its dated research.
         </p>
       )}
