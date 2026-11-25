@@ -9,6 +9,8 @@ The Province used this emblem ahead of the Vancouver 2010 Olympic and Paralympic
 | [2006 Playmaker’s Guide](https://publications.gc.ca/collections/collection_2023/isde-ised/iu4/Iu4-374-2006-eng.pdf#page=2) | PDF page 2, acknowledgements. Image object 3 contains a 2543 × 3245 monochrome scan. The native crop uses the half-open pixel rectangle (2055, 1916) to (2256, 2115). |
 | Archived summit JPG | The supplied historic government JPG URL returned no capture from the Wayback availability service for May 2004. The three documents above provide independently accessible artwork. |
 
+The [July 7, 2004 Trade-marks Journal](https://publications.gc.ca/collections/Collection/RG42-2-51-2593.pdf#page=274) records the Vancouver organizing committee’s adoption and use of the words SPIRIT OF 2010 as an official mark. The [June 18, 2014 Journal](https://cipo-opic.ic.gc.ca/opic-cipo/tmj/fra/18Jun2014.pdf?edition=06-18&year=2014#page=192) reports its withdrawal. The two notices print the name in plain capitals. The provincial sources above document the illustrated emblem.
+
 ## Reconstruction
 
 The working coordinates follow the 200 × 201 square-cover image. The rectangular frame, two rules and twelve letters and numerals are individually editable. The second I and the second zero repeat their partner’s geometry at their own placements. The open P bowl, R leg, italic f descender, curved diagonal of the 2, and thin tops and bottoms of both zeros are drawn as Bézier outlines. No font install is required. The ink colours approximate the JPEG interiors. Compression and the absence of a colour standard limit their precision.
