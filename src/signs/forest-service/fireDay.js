@@ -11,7 +11,10 @@ export const FIRE_DAY = {
       eyebrow: 'British Columbia Forest Service · fire prevention', heading: 'TO-DAY IS A FIRE DAY',
       lede: 'This sign stood at Second Street and Ocean View in Powell River. The July 1938 Digester said it had been up for ten days during a prolonged dry spell.',
       blocks: ['The Forest Service displayed the panel on days of extreme fire danger. The two columns address campfires and cigarettes, and the lower notice explains why the sign was up.',
-        { note: 'The drawing follows a black-and-white photograph. Its tones and outlined letterforms are interpretations. The original paint colours, typeface, dimensions and first issue date are unknown.' }, { sources: [source] }]
+        { h: 'Matching the lettering' },
+        'The straight sides of the headline O and D, the short middle bars of E and F, and the two-loop g in the notice guided the reconstruction. All 189 characters were fitted to the registered photograph. Use Original or Overlay to inspect them.',
+        { facts: [['Headline ink overlap', '33.5% before, 88.4% after'], ['All lettering', '24.1% before, 84.6% after']] },
+        { note: 'Overlap measures the shared ink area divided by the combined ink area. The original typeface, paint colours, dimensions and first issue date remain unidentified.' }, { sources: [source] }]
     } },
     warnings: { label: 'Two warnings', layer: '#warnings', box: { x: 28, y: 96, w: 504, h: 145 }, pad: 0.04, panel: {
       heading: 'Campfires and cigarettes', lede: 'The left column asks readers to avoid lighting campfires. The right column asks them to put all cigarette stubs out.', blocks: [{ sources: [source] }]

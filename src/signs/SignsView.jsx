@@ -6,23 +6,28 @@ import { SIGNS, SIGN_SERIES } from './catalogue.js'
 import { FOREST_SERVICE_SIGNS } from './forest-service/signs.js'
 import { TOURISM_SIGNS } from './tourism/signs.js'
 import { PARKS_SIGNS } from './parks/signs.js'
+import fireDayReference from './forest-service/fire-day.reference.png?url'
 import fireDayThumb from './forest-service/fire-day.svg?url'
 import lookoutThumb from './forest-service/lookout.svg?url'
 import forestClosureThumb from './forest-service/forest-closure.svg?url'
 import superNaturalThumb from './tourism/super-natural.svg?url'
 import parkSymbolsThumb from './parks/proposed-park-symbols.svg?url'
 
-const fromData = (signs) => (id, drawing) => async () => {
+const fromData = (signs) => (id, drawing, reference) => async () => {
   const { default: svgRaw } = await drawing()
   const { parts, order, regions, spotlight, variations } = signs[id]
-  return { svgRaw, parts, order, regions, spotlight, variations }
+  return { svgRaw, parts, order, regions, spotlight, variations, reference }
 }
 const forestService = fromData(FOREST_SERVICE_SIGNS)
 const tourism = fromData(TOURISM_SIGNS)
 const parks = fromData(PARKS_SIGNS)
 
 const LOADERS = {
-  'fire-day': forestService('fire-day', () => import('./forest-service/fire-day.svg?raw')),
+  'fire-day': forestService('fire-day', () => import('./forest-service/fire-day.svg?raw'), {
+    src: fireDayReference,
+    box: SIGNS['fire-day'].view,
+    caption: 'Powell River Digester, July 1938. The four corners of the photographed panel are aligned to the drawing.'
+  }),
   lookout: forestService('lookout', () => import('./forest-service/lookout.svg?raw')),
   'forest-closure': forestService('forest-closure', () => import('./forest-service/forest-closure.svg?raw')),
   'super-natural': tourism('super-natural', () => import('./tourism/super-natural.svg?raw')),
