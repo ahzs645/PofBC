@@ -31,6 +31,16 @@ export const INITIATIVES = [
   },
   ...YOUTH_PROGRAMS,
   {
+    id: 'achieve-bc',
+    title: 'Achieve BC',
+    subtitle: 'Office of the Premier',
+    summary: 'Achieve BC brought education, training and career advice together in 2003. Its website, guides and travelling exhibition used a family of marks built around the V in ACHIEVE.',
+    cover: { file: 'initiatives/achieve-bc/bringing-out-the-best-2004.gif', alt: 'Achieve BC sunburst with the words Bringing Out the Best', caption: 'Colour signature from a February 2004 Ministry of Education release' },
+    tags: ['Education', 'Employment', 'Logos', 'Timeline'],
+    searchTerms: ['AchieveBC', 'Bringing Out the Best', 'Skills & Learning', 'Jobs & Opportunities', 'A Celebration of Excellence', 'Gordon Campbell', 'Deceive BC'],
+    relatedBodyIds: ['office-of-the-premier', 'premier', 'ministry-of-education-1998', 'ministry-of-advanced-education-2001']
+  },
+  {
     id: 'tourism',
     title: 'Tourism',
     subtitle: 'Tourism BC · Destination BC',
@@ -313,6 +323,10 @@ const LOADERS = {
   'bc-youth': async () => {
     const { bcYouthDetail } = await import('./bcYouth.js')
     return bcYouthDetail(initiativeById('bc-youth'))
+  },
+  'achieve-bc': async () => {
+    const { achieveBCDetail } = await import('./achieveBC.js')
+    return achieveBCDetail(initiativeById('achieve-bc'))
   },
   gamesense: async () => gamesenseDetail(),
   tourism: async () => {
