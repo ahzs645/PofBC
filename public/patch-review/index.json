@@ -17,23 +17,23 @@
   },
   "coordinateConvention": "Native pixels [x0,y0,x1,y1]; approximate bounding rectangles, not traced contours. PDF rectangles use rendered page width 1080px.",
   "summary": {
-    "variants": 154,
-    "cards": 126,
-    "organizations": 21,
-    "sourceCrops": 191,
-    "variantsWithCrops": 141,
+    "variants": 151,
+    "cards": 127,
+    "organizations": 22,
+    "sourceCrops": 188,
+    "variantsWithCrops": 138,
     "unavailableOccurrences": 5,
-    "partialRefinements": 12,
+    "partialRefinements": 22,
     "byStatus": {
-      "refine": 76,
-      "reconstruct": 40,
+      "refine": 74,
+      "reconstruct": 39,
       "retain": 14,
-      "interpretation": 12,
-      "source-limited": 12
+      "interpretation": 10,
+      "source-limited": 14
     },
     "byPriority": {
-      "medium": 59,
-      "high": 66,
+      "medium": 57,
+      "high": 65,
       "low": 29
     }
   },
@@ -980,60 +980,6 @@
       "unavailableSources": []
     },
     {
-      "id": "FO-green-gold-black",
-      "status": "interpretation",
-      "priority": "low",
-      "findings": [
-        "No separate source occurrence is linked to this generated colourway.",
-        "Its geometry can be assessed as a design interpretation, but this colour combination is not established here as an issued specimen."
-      ],
-      "proposedFix": "Keep the colourway explicitly labelled as an interpretation and link its parent drawing; add a specimen only if one is found.",
-      "evidenceLimitations": "Visual comparison preserves the source reference proportions. Perspective, cloth deformation, exact stitch structure and calibrated thread colours are not established by these references.",
-      "inspectedOccurrences": [],
-      "baselineSvgSha256": "d31e5f8416f5918032e6b20772e25d65c2d8caac6764a68990f588411db25e53",
-      "reviewedSvgSha256": "d31e5f8416f5918032e6b20772e25d65c2d8caac6764a68990f588411db25e53",
-      "candidateChanges": [],
-      "orgId": "bc-forest-service",
-      "orgName": "BC Forest Service",
-      "label": "Forest Service / British Columbia — green and gold oval · Black & white",
-      "variant": "Black & white",
-      "group": "forest-service-green-gold",
-      "medium": "Cloth patch",
-      "svgSha256": "d31e5f8416f5918032e6b20772e25d65c2d8caac6764a68990f588411db25e53",
-      "currentSvgSha256": "d31e5f8416f5918032e6b20772e25d65c2d8caac6764a68990f588411db25e53",
-      "preview": "bc-forest-service/previews/FO-green-gold-black.webp",
-      "limitations": "PofBC's reconstruction of this oval (Internal Logos → Forests), copied or recoloured by drawings.mjs. A reference-based reconstruction, not authenticated issue artwork; colours are approximated from photographs and the typeface is interpreted. This colourway is a generated recolour, not seen in a photograph.",
-      "sources": [],
-      "unavailableSources": []
-    },
-    {
-      "id": "FO-green-gold-black-gold",
-      "status": "interpretation",
-      "priority": "low",
-      "findings": [
-        "No separate source occurrence is linked to this generated colourway.",
-        "Its geometry can be assessed as a design interpretation, but this colour combination is not established here as an issued specimen."
-      ],
-      "proposedFix": "Keep the colourway explicitly labelled as an interpretation and link its parent drawing; add a specimen only if one is found.",
-      "evidenceLimitations": "Visual comparison preserves the source reference proportions. Perspective, cloth deformation, exact stitch structure and calibrated thread colours are not established by these references.",
-      "inspectedOccurrences": [],
-      "baselineSvgSha256": "9bd94b549db613d8336e1daf59950f310f64d847c60a283046f6c96af83a6164",
-      "reviewedSvgSha256": "9bd94b549db613d8336e1daf59950f310f64d847c60a283046f6c96af83a6164",
-      "candidateChanges": [],
-      "orgId": "bc-forest-service",
-      "orgName": "BC Forest Service",
-      "label": "Forest Service / British Columbia — green and gold oval · Black & gold",
-      "variant": "Black & gold",
-      "group": "forest-service-green-gold",
-      "medium": "Cloth patch",
-      "svgSha256": "9bd94b549db613d8336e1daf59950f310f64d847c60a283046f6c96af83a6164",
-      "currentSvgSha256": "9bd94b549db613d8336e1daf59950f310f64d847c60a283046f6c96af83a6164",
-      "preview": "bc-forest-service/previews/FO-green-gold-black-gold.webp",
-      "limitations": "PofBC's reconstruction of this oval (Internal Logos → Forests), copied or recoloured by drawings.mjs. A reference-based reconstruction, not authenticated issue artwork; colours are approximated from photographs and the typeface is interpreted. This colourway is a generated recolour, not seen in a photograph.",
-      "sources": [],
-      "unavailableSources": []
-    },
-    {
       "id": "FO-green-gold-light-band",
       "status": "reconstruct",
       "priority": "high",
@@ -1642,180 +1588,6 @@
       "unavailableSources": []
     },
     {
-      "id": "FO-yellow-sky",
-      "status": "refine",
-      "priority": "medium",
-      "findings": [
-        "The source conifer has irregular fine branch tiers; the reconstruction has conspicuous evenly separated umbrella-like tiers.",
-        "The broad scene and lettering arrangement are recognisable, but the conifer needs more natural silhouette construction."
-      ],
-      "proposedFix": "Redraw the conifer as a coherent branching silhouette using the source, retaining the established oval and landscape.",
-      "evidenceLimitations": "Visual comparison preserves the source reference proportions. Perspective, cloth deformation, exact stitch structure and calibrated thread colours are not established by these references.",
-      "inspectedOccurrences": [
-        "S05-O01"
-      ],
-      "baselineSvgSha256": "9106a425b2a103bd0e0ae2ab2ec199d5795bcb986ff5a1fbe7e23ef4cc38c5e8",
-      "reviewedSvgSha256": "9106a425b2a103bd0e0ae2ab2ec199d5795bcb986ff5a1fbe7e23ef4cc38c5e8",
-      "candidateChanges": [],
-      "orgId": "bc-forest-service",
-      "orgName": "BC Forest Service",
-      "label": "Forest Service / British Columbia — yellow-sky oval · Green",
-      "variant": "Green",
-      "group": "forest-service-yellow-sky",
-      "medium": "Printed emblem",
-      "svgSha256": "9106a425b2a103bd0e0ae2ab2ec199d5795bcb986ff5a1fbe7e23ef4cc38c5e8",
-      "currentSvgSha256": "9106a425b2a103bd0e0ae2ab2ec199d5795bcb986ff5a1fbe7e23ef4cc38c5e8",
-      "preview": "bc-forest-service/previews/FO-yellow-sky.webp",
-      "limitations": "PofBC's reconstruction of this oval (Internal Logos → Forests), copied or recoloured by drawings.mjs. A reference-based reconstruction, not authenticated issue artwork; colours are approximated from photographs and the typeface is interpreted.",
-      "sources": [
-        {
-          "occurrenceId": "S05-O01",
-          "sourceId": "S05",
-          "url": "https://drive.google.com/file/d/1ee0wDpU4wk-0a7PTeSXcPHH9ZniuB6ad/view",
-          "cropUrl": "patch-review/crops/S05-O01.webp",
-          "width": 178,
-          "height": 210,
-          "displayPixels": [
-            178,
-            210
-          ],
-          "sourceKind": "scan",
-          "medium": "Printed emblem",
-          "page": null,
-          "bbox": [
-            1038,
-            1068,
-            1216,
-            1278
-          ],
-          "sourceDimensions": [
-            1440,
-            1440
-          ],
-          "sourceFileSha256": "f97251ea51b8277fc7d0ed2b3a8c9861289ae7da624864b37b7823b9e9697c8b",
-          "cropSha256": "7de349812f188db424c274a9783e1c87714c5d34a9232d9bb52644435e09ed6d",
-          "note": "Green band, yellow field, detailed tree and mountains; printed variant."
-        }
-      ],
-      "unavailableSources": []
-    },
-    {
-      "id": "FO-yellow-sky-cream",
-      "status": "refine",
-      "priority": "medium",
-      "findings": [
-        "The source tree has a narrower, less regular branch structure than the clean tiered conifer.",
-        "The upper FOREST SERVICE letters in the current drawing are thinner and more mechanical than the source."
-      ],
-      "proposedFix": "Refine the conifer and alphabet together for this cream edition; do not copy its colour into unrelated tree silhouettes.",
-      "evidenceLimitations": "Visual comparison preserves the source reference proportions. Perspective, cloth deformation, exact stitch structure and calibrated thread colours are not established by these references.",
-      "inspectedOccurrences": [
-        "S54-O01"
-      ],
-      "baselineSvgSha256": "808463db540331cd37eff73844f6034a1b3a16c4d616f39fb1538fefcf187f19",
-      "reviewedSvgSha256": "808463db540331cd37eff73844f6034a1b3a16c4d616f39fb1538fefcf187f19",
-      "candidateChanges": [],
-      "orgId": "bc-forest-service",
-      "orgName": "BC Forest Service",
-      "label": "Forest Service / British Columbia — yellow-sky oval · Cream",
-      "variant": "Cream",
-      "group": "forest-service-yellow-sky",
-      "medium": "Printed emblem",
-      "svgSha256": "808463db540331cd37eff73844f6034a1b3a16c4d616f39fb1538fefcf187f19",
-      "currentSvgSha256": "808463db540331cd37eff73844f6034a1b3a16c4d616f39fb1538fefcf187f19",
-      "preview": "bc-forest-service/previews/FO-yellow-sky-cream.webp",
-      "limitations": "PofBC's reconstruction of this oval (Internal Logos → Forests), copied or recoloured by drawings.mjs. A reference-based reconstruction, not authenticated issue artwork; colours are approximated from photographs and the typeface is interpreted.",
-      "sources": [
-        {
-          "occurrenceId": "S54-O01",
-          "sourceId": "S54",
-          "url": "https://drive.google.com/file/d/1ZWqXpHDedzqd2chZtdvHt5UYlju8GZzH/view",
-          "cropUrl": "patch-review/crops/S54-O01.webp",
-          "width": 236,
-          "height": 302,
-          "displayPixels": [
-            236,
-            302
-          ],
-          "sourceKind": "scan",
-          "medium": "Printed emblem",
-          "page": null,
-          "bbox": [
-            1112,
-            916,
-            1348,
-            1218
-          ],
-          "sourceDimensions": [
-            2048,
-            1384
-          ],
-          "sourceFileSha256": "138b1f2a7a0f675f9a7ad14593bea9899b42eaf6b48f6f72b4dd8a889db04aa2",
-          "cropSha256": "e0ebc4db6a9592e819f2a64acddd20e1223a5e958f5784c3b2d5f8e9a330000d",
-          "note": "Right-hand poster only. Left Campers/Picnickers poster has lettering but no separate patch/emblem."
-        }
-      ],
-      "unavailableSources": []
-    },
-    {
-      "id": "FO-yellow-sky-dark",
-      "status": "reconstruct",
-      "priority": "high",
-      "findings": [
-        "The dark source has a dense nearly solid tree and a flat striped horizon; the current drawing recolours the tiered tree and detailed snowy landscape.",
-        "A colour switch does not account for these different central shapes."
-      ],
-      "proposedFix": "Create a separate dark-edition tree and horizon based on S04; retain uncertainty in small caption details.",
-      "evidenceLimitations": "Visual comparison preserves the source reference proportions. Perspective, cloth deformation, exact stitch structure and calibrated thread colours are not established by these references.",
-      "inspectedOccurrences": [
-        "S04-O01"
-      ],
-      "baselineSvgSha256": "7f8c0e023cc94f3a837c50f503375ea5bd9f236a8525dfcf79ddfcda49452ac7",
-      "reviewedSvgSha256": "7f8c0e023cc94f3a837c50f503375ea5bd9f236a8525dfcf79ddfcda49452ac7",
-      "candidateChanges": [],
-      "orgId": "bc-forest-service",
-      "orgName": "BC Forest Service",
-      "label": "Forest Service / British Columbia — yellow-sky oval · Dark",
-      "variant": "Dark",
-      "group": "forest-service-yellow-sky",
-      "medium": "Printed emblem",
-      "svgSha256": "7f8c0e023cc94f3a837c50f503375ea5bd9f236a8525dfcf79ddfcda49452ac7",
-      "currentSvgSha256": "a6efe5811b1d3d75222f41e21222692eb899c79607c7d5017007952d802d606e",
-      "preview": "bc-forest-service/previews/FO-yellow-sky-dark.webp",
-      "limitations": "PofBC's reconstruction of this oval (Internal Logos → Forests), copied or recoloured by drawings.mjs. A reference-based reconstruction, not authenticated issue artwork; colours are approximated from photographs and the typeface is interpreted. The dark ring, dense conifer, amber sky and horizontal bands are reconstructed from the S04 poster.",
-      "sources": [
-        {
-          "occurrenceId": "S04-O01",
-          "sourceId": "S04",
-          "url": "https://drive.google.com/file/d/1UvMWn8c55A9BkUhXxEpD4N9Uo0iFvTH_/view",
-          "cropUrl": "patch-review/crops/S04-O01.webp",
-          "width": 156,
-          "height": 201,
-          "displayPixels": [
-            156,
-            201
-          ],
-          "sourceKind": "scan",
-          "medium": "Printed emblem",
-          "page": null,
-          "bbox": [
-            1064,
-            1136,
-            1220,
-            1337
-          ],
-          "sourceDimensions": [
-            1440,
-            1440
-          ],
-          "sourceFileSha256": "1c340dd25f1a3cc6b8f19e371b6e64c8dfebd5db5589822ff42cadb03a16238f",
-          "cropSha256": "376fb47b079c61bb2444c3b955db875701cfb4ecd6b6eb953452cad6d00cc7fb",
-          "note": "Black/orange silhouette treatment; no cloth specimen."
-        }
-      ],
-      "unavailableSources": []
-    },
-    {
       "id": "S44-O01",
       "status": "refine",
       "priority": "medium",
@@ -2016,27 +1788,34 @@
       "status": "refine",
       "priority": "medium",
       "findings": [
-        "The source Fire Control rocker has rounded end transitions and a deeper curved band than the sharp-ended current construction.",
-        "Caption weight and spacing need adjustment after the outline is corrected."
+        "The Fire Control photograph supports a deeper title arc and a distinct gap between FIRE and CONTROL.",
+        "The browser digitizer rendered the revised caption and border."
       ],
-      "proposedFix": "Build a common rounded rocker cut with independent title spacing, then fit this specimen without tracing loose threads.",
+      "proposedFix": "Revisit exact letterforms and edge proportions if a sharper, square-on photograph becomes available.",
       "evidenceLimitations": "Visual comparison preserves the source reference proportions. Perspective, cloth deformation, exact stitch structure and calibrated thread colours are not established by these references.",
       "inspectedOccurrences": [
         "S49-O01"
       ],
       "baselineSvgSha256": "8b06615cc1524f80a6f1685d8cc58f29139a9fbc1b8791602490f7f4a1eaaf21",
-      "reviewedSvgSha256": "8b06615cc1524f80a6f1685d8cc58f29139a9fbc1b8791602490f7f4a1eaaf21",
-      "candidateChanges": [],
+      "reviewedSvgSha256": "19a899f30ab3d051964f06d40b4ca2177118b684fe73a4b0f0210899d2826259",
+      "candidateChanges": [
+        "The Fire Control photograph supports a deeper title arc and a distinct gap between FIRE and CONTROL."
+      ],
+      "reviewedAt": "2026-11-24",
+      "baselineFindings": [
+        "The source Fire Control rocker has rounded end transitions and a deeper curved band than the sharp-ended current construction.",
+        "Caption weight and spacing need adjustment after the outline is corrected."
+      ],
       "orgId": "bc-forest-service",
       "orgName": "BC Forest Service",
       "label": "Fire Control — detached rocker",
       "variant": null,
       "group": null,
       "medium": "Cloth rocker",
-      "svgSha256": "8b06615cc1524f80a6f1685d8cc58f29139a9fbc1b8791602490f7f4a1eaaf21",
-      "currentSvgSha256": "4daf698f7cee21c755e90078722318fe8229c158536303858c841e026671479c",
+      "svgSha256": "19a899f30ab3d051964f06d40b4ca2177118b684fe73a4b0f0210899d2826259",
+      "currentSvgSha256": "19a899f30ab3d051964f06d40b4ca2177118b684fe73a4b0f0210899d2826259",
       "preview": "bc-forest-service/previews/S49-O01.webp",
-      "limitations": "Clean geometry is interpreted from the supplied source; it is not an authenticated production master. Replacement outlined fonts approximate stitched/painted lettering; camera perspective, stitch texture and uncertain fine detail are not reproduced. Colors are selected from visual reference, without color calibration. The canonical shared rocker omits the photographed tilt and asymmetric camera skew. Native source crop dimensions remain unchanged. The arched cloth band has rounded end transitions and a deeper outer curve in the photographs.",
+      "limitations": "Clean geometry is interpreted from the supplied source; it is not an authenticated production master. Replacement outlined fonts approximate stitched/painted lettering; camera perspective, stitch texture and uncertain fine detail are not reproduced. Colors are selected from visual reference, without color calibration. The canonical shared rocker omits the photographed tilt and asymmetric camera skew. Native source crop dimensions remain unchanged. The Fire Control photograph supports a deeper title arc and a distinct gap between FIRE and CONTROL.",
       "sources": [
         {
           "occurrenceId": "S49-O01",
@@ -2419,27 +2198,34 @@
       "status": "refine",
       "priority": "medium",
       "findings": [
-        "The source rocker has rounded cloth ends; the vector forms sharp corners and a flatter band.",
-        "PARKS BRANCH is taller and more tightly packed in the drawing than in the photographed strip."
+        "The single-line Parks rocker uses rounded ends, a fuller band and a wider word space, visible most clearly in S25-O02.",
+        "The browser digitizer rendered the revised caption and border."
       ],
-      "proposedFix": "Refine the rounded rocker outline, caption cap height and end margins.",
+      "proposedFix": "Revisit exact letterforms and edge proportions if a sharper, square-on photograph becomes available.",
       "evidenceLimitations": "Visual comparison preserves the source reference proportions. Perspective, cloth deformation, exact stitch structure and calibrated thread colours are not established by these references.",
       "inspectedOccurrences": [
         "S25-O02"
       ],
       "baselineSvgSha256": "b77130e0f22494139783f6204e9058e3fff8efa282d1a9265d8dbde98e692ad0",
-      "reviewedSvgSha256": "b77130e0f22494139783f6204e9058e3fff8efa282d1a9265d8dbde98e692ad0",
-      "candidateChanges": [],
+      "reviewedSvgSha256": "9062d419a7410ba5d2dffaf19ad6b1b3aa46b90a0b2a93d660764d8ec7db8fcf",
+      "candidateChanges": [
+        "The single-line Parks rocker uses rounded ends, a fuller band and a wider word space, visible most clearly in S25-O02."
+      ],
+      "reviewedAt": "2026-11-24",
+      "baselineFindings": [
+        "The source rocker has rounded cloth ends; the vector forms sharp corners and a flatter band.",
+        "PARKS BRANCH is taller and more tightly packed in the drawing than in the photographed strip."
+      ],
       "orgId": "bc-parks",
       "orgName": "BC Parks",
       "label": "Parks Branch — detached rocker",
       "variant": null,
       "group": null,
       "medium": "Cloth rocker",
-      "svgSha256": "b77130e0f22494139783f6204e9058e3fff8efa282d1a9265d8dbde98e692ad0",
-      "currentSvgSha256": "653af61ddafea4a6c4d2608d2093a70d3f44c508275833eba8eb9d680a72f661",
+      "svgSha256": "9062d419a7410ba5d2dffaf19ad6b1b3aa46b90a0b2a93d660764d8ec7db8fcf",
+      "currentSvgSha256": "9062d419a7410ba5d2dffaf19ad6b1b3aa46b90a0b2a93d660764d8ec7db8fcf",
       "preview": "bc-parks/previews/S25-O02.webp",
-      "limitations": "Issue geometry is inferred from matching clear source designs, not authenticated manufacturing drawings. Exact thread colours, font identity and fine embroidered details remain approximate. Source aspect alignment is separate from the fixed master geometry. The arched cloth band has rounded end transitions and a deeper outer curve in the photographs.",
+      "limitations": "Issue geometry is inferred from matching clear source designs, not authenticated manufacturing drawings. Exact thread colours, font identity and fine embroidered details remain approximate. Source aspect alignment is separate from the fixed master geometry. The single-line Parks rocker uses rounded ends, a fuller band and a wider word space, visible most clearly in S25-O02.",
       "sources": [
         {
           "occurrenceId": "S25-O02",
@@ -2591,27 +2377,34 @@
       "status": "refine",
       "priority": "medium",
       "findings": [
-        "The photographed two-line rocker has rounded ends and a more compact relation between PARKS and OUTDOOR RECREATION.",
-        "The current outer cut is angular and the lower line approaches the ends differently."
+        "The two-line Parks rocker has a rounded edge, compact row spacing and a deeper lower caption arc, based on S25-O04.",
+        "The browser digitizer rendered the revised caption and border."
       ],
-      "proposedFix": "Refine rocker corners/curvature and lay out both rows separately within the observed margins.",
+      "proposedFix": "Revisit exact letterforms and edge proportions if a sharper, square-on photograph becomes available.",
       "evidenceLimitations": "Visual comparison preserves the source reference proportions. Perspective, cloth deformation, exact stitch structure and calibrated thread colours are not established by these references.",
       "inspectedOccurrences": [
         "S25-O04"
       ],
       "baselineSvgSha256": "e3fcc8cc7f8906d0e3aae15614bcc357d01f72778233e6687b1a8e560c8f1aa8",
-      "reviewedSvgSha256": "e3fcc8cc7f8906d0e3aae15614bcc357d01f72778233e6687b1a8e560c8f1aa8",
-      "candidateChanges": [],
+      "reviewedSvgSha256": "11e1f54b43be0acc1eaa5d519a27782ce51a451b553646bbce3174ffac5f229d",
+      "candidateChanges": [
+        "The two-line Parks rocker has a rounded edge, compact row spacing and a deeper lower caption arc, based on S25-O04."
+      ],
+      "reviewedAt": "2026-11-24",
+      "baselineFindings": [
+        "The photographed two-line rocker has rounded ends and a more compact relation between PARKS and OUTDOOR RECREATION.",
+        "The current outer cut is angular and the lower line approaches the ends differently."
+      ],
       "orgId": "bc-parks",
       "orgName": "BC Parks",
       "label": "Parks / Outdoor Recreation — detached rocker",
       "variant": null,
       "group": null,
       "medium": "Cloth rocker",
-      "svgSha256": "e3fcc8cc7f8906d0e3aae15614bcc357d01f72778233e6687b1a8e560c8f1aa8",
-      "currentSvgSha256": "60a01fea69dd0ed153703bff795e15f662327fa5a3ccc82401de2b501cb41fdf",
+      "svgSha256": "11e1f54b43be0acc1eaa5d519a27782ce51a451b553646bbce3174ffac5f229d",
+      "currentSvgSha256": "11e1f54b43be0acc1eaa5d519a27782ce51a451b553646bbce3174ffac5f229d",
       "preview": "bc-parks/previews/S25-O04.webp",
-      "limitations": "Issue geometry is inferred from matching clear source designs, not authenticated manufacturing drawings. Exact thread colours, font identity and fine embroidered details remain approximate. Source aspect alignment is separate from the fixed master geometry. Rounded ends and the fuller lower edge follow the two-line Parks rocker.",
+      "limitations": "Issue geometry is inferred from matching clear source designs, not authenticated manufacturing drawings. Exact thread colours, font identity and fine embroidered details remain approximate. Source aspect alignment is separate from the fixed master geometry. The two-line Parks rocker has a rounded edge, compact row spacing and a deeper lower caption arc, based on S25-O04.",
       "sources": [
         {
           "occurrenceId": "S25-O04",
@@ -4001,27 +3794,34 @@
       "status": "source-limited",
       "priority": "medium",
       "findings": [
-        "The tiny collector-board crop supports the text and rocker identity, but not a separate exact alphabet or edge contour.",
-        "The current angular rocker can be refined against the larger related Parks specimens; this occurrence should remain separately identified."
+        "The two-line Parks rocker has a rounded edge, compact row spacing and a deeper lower caption arc, based on S25-O04.",
+        "The browser digitizer rendered the revised caption and border."
       ],
-      "proposedFix": "Use the clearer S25 rocker family to improve shared construction, retaining uncertainty about this particular small specimen.",
+      "proposedFix": "Revisit exact letterforms and edge proportions if a sharper, square-on photograph becomes available.",
       "evidenceLimitations": "Visual comparison preserves the source reference proportions. Perspective, cloth deformation, exact stitch structure and calibrated thread colours are not established by these references.",
       "inspectedOccurrences": [
         "S56-O54"
       ],
       "baselineSvgSha256": "e5a9a32a1aa8bf3fe1190739462b46c476f60655adcc2f86eb04e5bed6a57e5c",
-      "reviewedSvgSha256": "e5a9a32a1aa8bf3fe1190739462b46c476f60655adcc2f86eb04e5bed6a57e5c",
-      "candidateChanges": [],
+      "reviewedSvgSha256": "741b9b56ee1d5a6188ad032f225e35783695e05fa2969f3692338cb0f80433da",
+      "candidateChanges": [
+        "The two-line Parks rocker has a rounded edge, compact row spacing and a deeper lower caption arc, based on S25-O04."
+      ],
+      "reviewedAt": "2026-11-24",
+      "baselineFindings": [
+        "The tiny collector-board crop supports the text and rocker identity, but not a separate exact alphabet or edge contour.",
+        "The current angular rocker can be refined against the larger related Parks specimens; this occurrence should remain separately identified."
+      ],
       "orgId": "bc-parks",
       "orgName": "BC Parks",
       "label": "Parks / Outdoor Recreation — white rocker",
       "variant": null,
       "group": null,
       "medium": "Cloth rocker",
-      "svgSha256": "e5a9a32a1aa8bf3fe1190739462b46c476f60655adcc2f86eb04e5bed6a57e5c",
-      "currentSvgSha256": "8f2b2254bccf27c353fa22e441aee523d94a8ec3335a57c86babad7f55dae6b8",
+      "svgSha256": "741b9b56ee1d5a6188ad032f225e35783695e05fa2969f3692338cb0f80433da",
+      "currentSvgSha256": "741b9b56ee1d5a6188ad032f225e35783695e05fa2969f3692338cb0f80433da",
       "preview": "bc-parks/previews/S56-O54.webp",
-      "limitations": "The geometry is standardized to its shared construction master, removing photographic perspective/crop distortion. Readable source wording and colour edition are retained. Exact embroidered alphabet, thread colour and fine heraldic detail remain unverified. Rounded ends and the fuller lower edge follow the two-line Parks rocker.",
+      "limitations": "The geometry is standardized to its shared construction master, removing photographic perspective/crop distortion. Readable source wording and colour edition are retained. Exact embroidered alphabet, thread colour and fine heraldic detail remain unverified. The two-line Parks rocker has a rounded edge, compact row spacing and a deeper lower caption arc, based on S25-O04.",
       "sources": [
         {
           "occurrenceId": "S56-O54",
@@ -4059,27 +3859,34 @@
       "status": "source-limited",
       "priority": "medium",
       "findings": [
-        "The tiny collector-board crop supports the text and rocker identity, but not a separate exact alphabet or edge contour.",
-        "The current angular rocker can be refined against the larger related Parks specimens; this occurrence should remain separately identified."
+        "The single-line Parks rocker uses rounded ends, a fuller band and a wider word space, visible most clearly in S25-O02.",
+        "The browser digitizer rendered the revised caption and border."
       ],
-      "proposedFix": "Use the clearer S25 rocker family to improve shared construction, retaining uncertainty about this particular small specimen.",
+      "proposedFix": "Revisit exact letterforms and edge proportions if a sharper, square-on photograph becomes available.",
       "evidenceLimitations": "Visual comparison preserves the source reference proportions. Perspective, cloth deformation, exact stitch structure and calibrated thread colours are not established by these references.",
       "inspectedOccurrences": [
         "S56-O55"
       ],
       "baselineSvgSha256": "55e9dbce899c193b21a83932276f5f123b43d8953ce0f7807452c7cfc1b2d915",
-      "reviewedSvgSha256": "55e9dbce899c193b21a83932276f5f123b43d8953ce0f7807452c7cfc1b2d915",
-      "candidateChanges": [],
+      "reviewedSvgSha256": "3c2cb41412dbe6a412a6111669b3067377645c8302cea0f4541d511a4ec1a977",
+      "candidateChanges": [
+        "The single-line Parks rocker uses rounded ends, a fuller band and a wider word space, visible most clearly in S25-O02."
+      ],
+      "reviewedAt": "2026-11-24",
+      "baselineFindings": [
+        "The tiny collector-board crop supports the text and rocker identity, but not a separate exact alphabet or edge contour.",
+        "The current angular rocker can be refined against the larger related Parks specimens; this occurrence should remain separately identified."
+      ],
       "orgId": "bc-parks",
       "orgName": "BC Parks",
       "label": "Parks Branch — white rocker",
       "variant": null,
       "group": null,
       "medium": "Cloth rocker",
-      "svgSha256": "55e9dbce899c193b21a83932276f5f123b43d8953ce0f7807452c7cfc1b2d915",
-      "currentSvgSha256": "d171ad1a2168d2e1a2f671a29463faac597a7a6a4ccc0d2533a5bd8d8b5b3092",
+      "svgSha256": "3c2cb41412dbe6a412a6111669b3067377645c8302cea0f4541d511a4ec1a977",
+      "currentSvgSha256": "3c2cb41412dbe6a412a6111669b3067377645c8302cea0f4541d511a4ec1a977",
       "preview": "bc-parks/previews/S56-O55.webp",
-      "limitations": "The geometry is standardized to its shared construction master, removing photographic perspective/crop distortion. Readable source wording and colour edition are retained. Exact embroidered alphabet, thread colour and fine heraldic detail remain unverified. The arched cloth band has rounded end transitions and a deeper outer curve in the photographs.",
+      "limitations": "The geometry is standardized to its shared construction master, removing photographic perspective/crop distortion. Readable source wording and colour edition are retained. Exact embroidered alphabet, thread colour and fine heraldic detail remain unverified. The single-line Parks rocker uses rounded ends, a fuller band and a wider word space, visible most clearly in S25-O02.",
       "sources": [
         {
           "occurrenceId": "S56-O55",
@@ -4172,34 +3979,38 @@
     },
     {
       "id": "MC19-O02",
+      "reviewedAt": "2026-11-24",
       "status": "refine",
       "priority": "medium",
       "findings": [
-        "The photograph has rounded cloth ends; the reconstruction turns the inner ends into sharp points.",
-        "The current lettering is a heavier condensed substitute with more uniform spacing than the tall stitched capitals."
+        "Rounded lower cut with a plain olive edge follows the MC19-O02 photograph.",
+        "Nineteen individually fitted capitals follow the photographed line, including its word space and terminal letters."
       ],
-      "proposedFix": [
-        "Round the end transitions without changing the U-shaped lower-rocker identity.",
-        "Rebuild the single caption as independent narrow glyphs on the observed lower arc; keep olive and green/gold editions separate."
-      ],
-      "evidenceLimitations": "Clean vector reconstruction from visible artifact references; no photograph tracing, source textures or embedded raster. Natural outlined replacement fonts approximate embroidered alphabets. Exact stitch anatomy, manufacturing dimensions and calibrated thread colors remain unverified. Whole-master source placement uses uniform scale; the photograph is not used to distort separate border or emblem components. This upward-facing U-shaped lower strip is a separate object, with a different cut from the standard upper detached rocker.",
+      "proposedFix": "Compare physical size, thread and stitch construction with an original specimen when available.",
+      "evidenceLimitations": "Reconstruction from the MC19-O02 photograph. The cloth cut, edge, thread colours, and individual letter placements are approximate. The source does not establish physical dimensions or exact stitch structure.",
       "inspectedOccurrences": [
         "MC19-O02"
       ],
-      "candidateNote": "not changed",
       "baselineSvgSha256": "c1f619a09060107cbcc910f5440a9805ac6bbdbcacde862c4db4f0e890bac9c2",
-      "reviewedSvgSha256": "c1f619a09060107cbcc910f5440a9805ac6bbdbcacde862c4db4f0e890bac9c2",
-      "candidateChanges": [],
+      "reviewedSvgSha256": "379022aac5168137c92b7cbbf4e22aa5187bb7319838f1141f7475d2db4b9d7c",
+      "candidateChanges": [
+        "Fitted the caption to MC19-O02 and registered a specimen-specific cloth and edge profile.",
+        "Rounded lower cut with a plain olive edge."
+      ],
+      "baselineFindings": [
+        "The photograph has rounded cloth ends; the reconstruction turns the inner ends into sharp points.",
+        "The current lettering is a heavier condensed substitute with more uniform spacing than the tall stitched capitals."
+      ],
       "orgId": "conservation-officer-service",
       "orgName": "Conservation Officer Service",
       "label": "Conservation Officer — separate olive lower rocker",
       "variant": "Olive",
       "group": "conservation-officer-lower-rocker",
       "medium": "Cloth rocker",
-      "svgSha256": "c1f619a09060107cbcc910f5440a9805ac6bbdbcacde862c4db4f0e890bac9c2",
-      "currentSvgSha256": "c1f619a09060107cbcc910f5440a9805ac6bbdbcacde862c4db4f0e890bac9c2",
+      "svgSha256": "379022aac5168137c92b7cbbf4e22aa5187bb7319838f1141f7475d2db4b9d7c",
+      "currentSvgSha256": "379022aac5168137c92b7cbbf4e22aa5187bb7319838f1141f7475d2db4b9d7c",
       "preview": "conservation-officer-service/previews/MC19-O02.webp",
-      "limitations": "Clean vector reconstruction from visible artifact references; no photograph tracing, source textures or embedded raster. Natural outlined replacement fonts approximate embroidered alphabets. Exact stitch anatomy, manufacturing dimensions and calibrated thread colors remain unverified. Whole-master source placement uses uniform scale; the photograph is not used to distort separate border or emblem components. This upward-facing U-shaped lower strip is a separate object, with a different cut from the standard upper detached rocker.",
+      "limitations": "Reconstruction from the MC19-O02 photograph. The cloth cut, edge, thread colours, and individual letter placements are approximate. The source does not establish physical dimensions or exact stitch structure.",
       "sources": [
         {
           "occurrenceId": "MC19-O02",
@@ -4237,31 +4048,35 @@
       "status": "refine",
       "priority": "medium",
       "findings": [
-        "The photograph has rounded cloth ends; the reconstruction turns the inner ends into sharp points.",
-        "The current lettering is a heavier condensed substitute with more uniform spacing than the tall stitched capitals."
+        "Deep green lower band with broad gold edging follows the MC20-O02 photograph.",
+        "Nineteen individually fitted capitals follow the photographed line, including its word space and terminal letters."
       ],
-      "proposedFix": [
-        "Round the end transitions without changing the U-shaped lower-rocker identity.",
-        "Rebuild the single caption as independent narrow glyphs on the observed lower arc; keep olive and green/gold editions separate."
-      ],
-      "evidenceLimitations": "Clean vector reconstruction from visible artifact references; no photograph tracing, source textures or embedded raster. Natural outlined replacement fonts approximate embroidered alphabets. Exact stitch anatomy, manufacturing dimensions and calibrated thread colors remain unverified. Whole-master source placement uses uniform scale; the photograph is not used to distort separate border or emblem components. This upward-facing U-shaped lower strip is a separate object, with a different cut from the standard upper detached rocker.",
+      "proposedFix": "Compare physical size, thread and stitch construction with an original specimen when available.",
+      "evidenceLimitations": "Reconstruction from the MC20-O02 photograph. The cloth cut, edge, thread colours, and individual letter placements are approximate. The source does not establish physical dimensions or exact stitch structure.",
       "inspectedOccurrences": [
         "MC20-O02"
       ],
-      "candidateNote": "not changed",
       "baselineSvgSha256": "42c35e09369680a995f8eabb8d91a62304821a9f15c5cd083aaab518848de395",
-      "reviewedSvgSha256": "42c35e09369680a995f8eabb8d91a62304821a9f15c5cd083aaab518848de395",
-      "candidateChanges": [],
+      "reviewedSvgSha256": "168eefad96888a7580f8b50d132c15782278bf38163d84fe35365ee2d18d57b6",
+      "candidateChanges": [
+        "Fitted the caption to MC20-O02 and registered a specimen-specific cloth and edge profile.",
+        "Deep green lower band with broad gold edging."
+      ],
+      "reviewedAt": "2026-11-24",
+      "baselineFindings": [
+        "The photograph has rounded cloth ends; the reconstruction turns the inner ends into sharp points.",
+        "The current lettering is a heavier condensed substitute with more uniform spacing than the tall stitched capitals."
+      ],
       "orgId": "conservation-officer-service",
       "orgName": "Conservation Officer Service",
       "label": "Conservation Officer — separate green/gold lower rocker",
       "variant": "Green and gold",
       "group": "conservation-officer-lower-rocker",
       "medium": "Cloth rocker",
-      "svgSha256": "42c35e09369680a995f8eabb8d91a62304821a9f15c5cd083aaab518848de395",
-      "currentSvgSha256": "42c35e09369680a995f8eabb8d91a62304821a9f15c5cd083aaab518848de395",
+      "svgSha256": "168eefad96888a7580f8b50d132c15782278bf38163d84fe35365ee2d18d57b6",
+      "currentSvgSha256": "168eefad96888a7580f8b50d132c15782278bf38163d84fe35365ee2d18d57b6",
       "preview": "conservation-officer-service/previews/MC20-O02.webp",
-      "limitations": "Clean vector reconstruction from visible artifact references; no photograph tracing, source textures or embedded raster. Natural outlined replacement fonts approximate embroidered alphabets. Exact stitch anatomy, manufacturing dimensions and calibrated thread colors remain unverified. Whole-master source placement uses uniform scale; the photograph is not used to distort separate border or emblem components. This upward-facing U-shaped lower strip is a separate object, with a different cut from the standard upper detached rocker.",
+      "limitations": "Reconstruction from the MC20-O02 photograph. The cloth cut, edge, thread colours, and individual letter placements are approximate. The source does not establish physical dimensions or exact stitch structure.",
       "sources": [
         {
           "occurrenceId": "MC20-O02",
@@ -5613,32 +5428,36 @@
       "status": "refine",
       "priority": "medium",
       "findings": [
-        "The current rocker uses generic regular uppercase, while the clearer MC26 source has taller, narrower, uneven stitched capitals.",
-        "The merrow-like rounded ends are reduced to an angular inset frame."
+        "Dark upper arch with a pale bound edge follows the MC26-O01 photograph.",
+        "Nineteen individually fitted capitals follow the photographed line, including its word space and terminal letters."
       ],
-      "proposedFix": [
-        "Use MC26-O01 as the main comparison reference rather than the tiny 81 × 23 board crop.",
-        "Refine the curve, rounded ends and caption weight as a separate upper rocker, retaining all sightings."
-      ],
-      "evidenceLimitations": "The geometry is standardized to its shared construction master, removing photographic perspective/crop distortion. Readable source wording and colour edition are retained. Exact embroidered alphabet, thread colour and fine heraldic detail remain unverified.",
+      "proposedFix": "Compare physical size, thread and stitch construction with an original specimen when available.",
+      "evidenceLimitations": "Reconstruction from the MC26-O01 photograph. The cloth cut, edge, thread colours, and individual letter placements are approximate. The source does not establish physical dimensions or exact stitch structure.",
       "inspectedOccurrences": [
         "S56-O40",
         "MC26-O01"
       ],
-      "candidateNote": "not changed",
       "baselineSvgSha256": "742ebe938980006d273fd98455d77d09ed663a47f5a1029c5ef0316571fc6d1d",
-      "reviewedSvgSha256": "742ebe938980006d273fd98455d77d09ed663a47f5a1029c5ef0316571fc6d1d",
-      "candidateChanges": [],
+      "reviewedSvgSha256": "4c0308655eb4369bd4d00942a41d5a7ccea9ef9469d8064151ffc465f9330742",
+      "candidateChanges": [
+        "Fitted the caption to MC26-O01 and registered a specimen-specific cloth and edge profile.",
+        "Dark upper arch with a pale bound edge."
+      ],
+      "reviewedAt": "2026-11-24",
+      "baselineFindings": [
+        "The current rocker uses generic regular uppercase, while the clearer MC26 source has taller, narrower, uneven stitched capitals.",
+        "The merrow-like rounded ends are reduced to an angular inset frame."
+      ],
       "orgId": "conservation-officer-service",
       "orgName": "Conservation Officer Service",
       "label": "Conservation Officer — white rocker",
       "variant": null,
       "group": null,
       "medium": "Cloth rocker",
-      "svgSha256": "742ebe938980006d273fd98455d77d09ed663a47f5a1029c5ef0316571fc6d1d",
-      "currentSvgSha256": "742ebe938980006d273fd98455d77d09ed663a47f5a1029c5ef0316571fc6d1d",
+      "svgSha256": "4c0308655eb4369bd4d00942a41d5a7ccea9ef9469d8064151ffc465f9330742",
+      "currentSvgSha256": "4c0308655eb4369bd4d00942a41d5a7ccea9ef9469d8064151ffc465f9330742",
       "preview": "conservation-officer-service/previews/S56-O40.webp",
-      "limitations": "The geometry is standardized to its shared construction master, removing photographic perspective/crop distortion. Readable source wording and colour edition are retained. Exact embroidered alphabet, thread colour and fine heraldic detail remain unverified.",
+      "limitations": "Reconstruction from the MC26-O01 photograph. The cloth cut, edge, thread colours, and individual letter placements are approximate. The source does not establish physical dimensions or exact stitch structure.",
       "sources": [
         {
           "occurrenceId": "MC26-O01",
@@ -7604,27 +7423,34 @@
       "status": "refine",
       "priority": "medium",
       "findings": [
-        "The source title is denser and more condensed than the current evenly spaced sans lettering.",
-        "The smooth construction captures the rocker, but source end angles and border thickness are only approximate."
+        "The paired collector-board titles show compact lettering set into the dark field with clearance at each end. Fine stitch and edge details are unresolved.",
+        "The browser digitizer rendered the revised caption and border."
       ],
-      "proposedFix": "Refine the title weight and tracking against the crop; retain a clean symmetric rocker rather than tracing cloth irregularities.",
+      "proposedFix": "Revisit exact letterforms and edge proportions if a sharper, square-on photograph becomes available.",
       "evidenceLimitations": "Collector-board crop from a 480 × 640 image; blur, perspective, thread texture and uncalibrated colours limit exact contour, alphabet and heraldic-detail claims.",
       "inspectedOccurrences": [
         "S56-O06"
       ],
       "baselineSvgSha256": "368f391c01ff501edfe83c0f87450671e69964b62761ee1b74ef0c6bb7fa291f",
-      "reviewedSvgSha256": "368f391c01ff501edfe83c0f87450671e69964b62761ee1b74ef0c6bb7fa291f",
-      "candidateChanges": [],
+      "reviewedSvgSha256": "952dbd0d3cefc0a5d49e9e0ebcc68cd175e92c6305b491f632f627dbbd8a3a50",
+      "candidateChanges": [
+        "The paired collector-board titles show compact lettering set into the dark field with clearance at each end. Fine stitch and edge details are unresolved."
+      ],
+      "reviewedAt": "2026-11-24",
+      "baselineFindings": [
+        "The source title is denser and more condensed than the current evenly spaced sans lettering.",
+        "The smooth construction captures the rocker, but source end angles and border thickness are only approximate."
+      ],
       "orgId": "bc-sheriff-service",
       "orgName": "BC Sheriff Service",
       "label": "Deputy Sheriff — white rocker",
       "variant": null,
       "group": null,
       "medium": "Cloth rocker",
-      "svgSha256": "368f391c01ff501edfe83c0f87450671e69964b62761ee1b74ef0c6bb7fa291f",
-      "currentSvgSha256": "368f391c01ff501edfe83c0f87450671e69964b62761ee1b74ef0c6bb7fa291f",
+      "svgSha256": "952dbd0d3cefc0a5d49e9e0ebcc68cd175e92c6305b491f632f627dbbd8a3a50",
+      "currentSvgSha256": "952dbd0d3cefc0a5d49e9e0ebcc68cd175e92c6305b491f632f627dbbd8a3a50",
       "preview": "bc-sheriff-service/previews/S56-O06.webp",
-      "limitations": "The geometry is standardized to its shared construction master, removing photographic perspective/crop distortion. Readable source wording and colour edition are retained. Exact embroidered alphabet, thread colour and fine heraldic detail remain unverified.",
+      "limitations": "The geometry is standardized to its shared construction master, removing photographic perspective/crop distortion. Readable source wording and colour edition are retained. Exact embroidered alphabet, thread colour and fine heraldic detail remain unverified. The paired collector-board titles show compact lettering set into the dark field with clearance at each end. Fine stitch and edge details are unresolved.",
       "sources": [
         {
           "occurrenceId": "S56-O06",
@@ -7662,27 +7488,34 @@
       "status": "refine",
       "priority": "medium",
       "findings": [
-        "The source gold title is tall and condensed; current letters are broader and more open.",
-        "The current flat gold border is a cleaner and thinner interpretation of the source stitched edging."
+        "The paired collector-board titles show compact lettering set into the dark field with clearance at each end. Fine stitch and edge details are unresolved.",
+        "The browser digitizer rendered the revised caption and border."
       ],
-      "proposedFix": "Refit lettering first; preserve uncertainty in exact border thickness at 75 × 22 pixels.",
+      "proposedFix": "Revisit exact letterforms and edge proportions if a sharper, square-on photograph becomes available.",
       "evidenceLimitations": "Collector-board crop from a 480 × 640 image; blur, perspective, thread texture and uncalibrated colours limit exact contour, alphabet and heraldic-detail claims.",
       "inspectedOccurrences": [
         "S56-O08"
       ],
       "baselineSvgSha256": "985f9f3a8e54c28ad47c0320b6921de5a598e22000c0dbc4cf9a25554684b66d",
-      "reviewedSvgSha256": "985f9f3a8e54c28ad47c0320b6921de5a598e22000c0dbc4cf9a25554684b66d",
-      "candidateChanges": [],
+      "reviewedSvgSha256": "4ce9dd3720999a3de1d3cf1efec9f238340ed41d0cba290880714f1f011be01c",
+      "candidateChanges": [
+        "The paired collector-board titles show compact lettering set into the dark field with clearance at each end. Fine stitch and edge details are unresolved."
+      ],
+      "reviewedAt": "2026-11-24",
+      "baselineFindings": [
+        "The source gold title is tall and condensed; current letters are broader and more open.",
+        "The current flat gold border is a cleaner and thinner interpretation of the source stitched edging."
+      ],
       "orgId": "bc-sheriff-service",
       "orgName": "BC Sheriff Service",
       "label": "Deputy Sheriff — gold rocker",
       "variant": null,
       "group": null,
       "medium": "Cloth rocker",
-      "svgSha256": "985f9f3a8e54c28ad47c0320b6921de5a598e22000c0dbc4cf9a25554684b66d",
-      "currentSvgSha256": "985f9f3a8e54c28ad47c0320b6921de5a598e22000c0dbc4cf9a25554684b66d",
+      "svgSha256": "4ce9dd3720999a3de1d3cf1efec9f238340ed41d0cba290880714f1f011be01c",
+      "currentSvgSha256": "4ce9dd3720999a3de1d3cf1efec9f238340ed41d0cba290880714f1f011be01c",
       "preview": "bc-sheriff-service/previews/S56-O08.webp",
-      "limitations": "The geometry is standardized to its shared construction master, removing photographic perspective/crop distortion. Readable source wording and colour edition are retained. Exact embroidered alphabet, thread colour and fine heraldic detail remain unverified.",
+      "limitations": "The geometry is standardized to its shared construction master, removing photographic perspective/crop distortion. Readable source wording and colour edition are retained. Exact embroidered alphabet, thread colour and fine heraldic detail remain unverified. The paired collector-board titles show compact lettering set into the dark field with clearance at each end. Fine stitch and edge details are unresolved.",
       "sources": [
         {
           "occurrenceId": "S56-O08",
@@ -7710,64 +7543,6 @@
           ],
           "sourceFileSha256": "d5a93bd7ee25b0e42f2ac0ffb3dad333d4b73b5751b30119aab4ed711caccbf3",
           "cropSha256": "aa795aa41bdaaabf0a52b07c6e238a986b8fcced2110546eb9247bcb84c1e92c",
-          "note": "480 × 640 px mixed-agency collector board. Rockers are recorded separately where a seam/gap is visible. Transcription and affiliation are provisional at this resolution; no issue date or physical dimensions inferred."
-        }
-      ],
-      "unavailableSources": []
-    },
-    {
-      "id": "S56-O37",
-      "status": "refine",
-      "priority": "medium",
-      "findings": [
-        "The drawing uses light, widely separated upper lettering while the source caption appears much denser around the rim.",
-        "SHERIFFS is placed very low in the current semicircle compared with the more compact photographed stack."
-      ],
-      "proposedFix": "Use heavier condensed upper letters and raise/rebalance the lower line inside the arch.",
-      "evidenceLimitations": "Collector-board crop from a 480 × 640 image; blur, perspective, thread texture and uncalibrated colours limit exact contour, alphabet and heraldic-detail claims.",
-      "inspectedOccurrences": [
-        "S56-O37"
-      ],
-      "baselineSvgSha256": "b67ce75da9a5e6cc232c517aa3bcc35e3f4707ebaacd5d32b847e830783be553",
-      "reviewedSvgSha256": "b67ce75da9a5e6cc232c517aa3bcc35e3f4707ebaacd5d32b847e830783be553",
-      "candidateChanges": [],
-      "orgId": "bc-sheriff-service",
-      "orgName": "BC Sheriff Service",
-      "label": "British Columbia / Sheriffs — gold arch",
-      "variant": null,
-      "group": null,
-      "medium": "Cloth patch",
-      "svgSha256": "b67ce75da9a5e6cc232c517aa3bcc35e3f4707ebaacd5d32b847e830783be553",
-      "currentSvgSha256": "b67ce75da9a5e6cc232c517aa3bcc35e3f4707ebaacd5d32b847e830783be553",
-      "preview": "bc-sheriff-service/previews/S56-O37.webp",
-      "limitations": "Low-resolution collector board: exact typefaces, calibrated colours and fine centre-art details remain interpreted. No issue size or manufacturing master is asserted.",
-      "sources": [
-        {
-          "occurrenceId": "S56-O37",
-          "sourceId": "S56",
-          "url": "https://drive.google.com/file/d/1ptQyL4EWkBbEo74gaC7jHaIzm6NCXbwY/view",
-          "cropUrl": "patch-review/crops/S56-O37.webp",
-          "width": 72,
-          "height": 33,
-          "displayPixels": [
-            72,
-            33
-          ],
-          "sourceKind": "photo",
-          "medium": "Cloth patch",
-          "page": null,
-          "bbox": [
-            200,
-            546,
-            272,
-            579
-          ],
-          "sourceDimensions": [
-            480,
-            640
-          ],
-          "sourceFileSha256": "d5a93bd7ee25b0e42f2ac0ffb3dad333d4b73b5751b30119aab4ed711caccbf3",
-          "cropSha256": "ac8885519711285f81a4bbdbbfed72e3009ab1cd8494105a4f1ee002671f88e1",
           "note": "480 × 640 px mixed-agency collector board. Rockers are recorded separately where a seam/gap is visible. Transcription and affiliation are provisional at this resolution; no issue date or physical dimensions inferred."
         }
       ],
@@ -7847,6 +7622,7 @@
       "baselineSvgSha256": "e1363764102ff47ae142dd8660cac335db56b9e8c66c9a6a80c7032e99b0932a",
       "reviewedSvgSha256": "e1363764102ff47ae142dd8660cac335db56b9e8c66c9a6a80c7032e99b0932a",
       "candidateChanges": [],
+      "reviewedAt": "2026-11-24",
       "orgId": "bc-corrections",
       "orgName": "BC Corrections",
       "label": "Corrections — white rocker",
@@ -7963,6 +7739,7 @@
       "baselineSvgSha256": "10230e0d2c43cae74ba45f27dd300ad9f80e847abd33853edf9384d6c68fbb9a",
       "reviewedSvgSha256": "10230e0d2c43cae74ba45f27dd300ad9f80e847abd33853edf9384d6c68fbb9a",
       "candidateChanges": [],
+      "reviewedAt": "2026-11-24",
       "orgId": "bc-corrections",
       "orgName": "BC Corrections",
       "label": "Corrections — gold rocker",
@@ -8195,6 +7972,7 @@
       "baselineSvgSha256": "eeae32f55a4ecd6275bef66f285f0a86064fec8544770f8f22de7542adda76f7",
       "reviewedSvgSha256": "eeae32f55a4ecd6275bef66f285f0a86064fec8544770f8f22de7542adda76f7",
       "candidateChanges": [],
+      "reviewedAt": "2026-11-24",
       "orgId": "bc-corrections",
       "orgName": "BC Corrections",
       "label": "Corrections — separate green/gold rocker above Attorney General shield",
@@ -8260,9 +8038,9 @@
       "group": null,
       "medium": "Cloth patch",
       "svgSha256": "46e8da540f6c9848f4024a664ed121cfb375d6a2e0e0a1a0cc3278f4a9ccbd91",
-      "currentSvgSha256": "46e8da540f6c9848f4024a664ed121cfb375d6a2e0e0a1a0cc3278f4a9ccbd91",
+      "currentSvgSha256": "5572839461658e30572c9008fcbeeb986161c430dafd3fd7c29e6427ff1fbd7a",
       "preview": "bcgs/previews/S56-O33.webp",
-      "limitations": "Low-resolution collector board: exact typefaces, calibrated colours and fine centre-art details remain interpreted. No issue size or manufacturing master is asserted. Curved legend corrected from Volunteer to the visibly lettered Alouette River; transcription remains provisional. Small tan material below the bottom border is an occlusion/mounting detail, excluded from the design outline.",
+      "limitations": "The geometry is the Parks Branch semicircles' (bc-parks-semicircles/compose.mjs): a true semicircle, its field the exact inset by the border width, the upper wording on a concentric arc and the lower on straight baselines, each an even clearance inside the field. The atlas drew this arch flatter and freehand; its letter outlines and colours are kept. ALOUETTE RIVER keeps the atlas's span; UNIT sits above B.C.G.S. at the atlas's line spacing. The exact embroidered alphabet and thread colours remain unverified, from a collector-board crop about 70 × 32 pixels.",
       "sources": [
         {
           "occurrenceId": "S56-O33",
@@ -8318,9 +8096,9 @@
       "group": null,
       "medium": "Cloth patch",
       "svgSha256": "69dfc2d3d8c9eb9b9ac03c03372f2b0d3b820a63efb80f124b3857d8c46498ef",
-      "currentSvgSha256": "69dfc2d3d8c9eb9b9ac03c03372f2b0d3b820a63efb80f124b3857d8c46498ef",
+      "currentSvgSha256": "4be62912231d4ba54d9a9f52a18830ee380b1cb0a720e18f0b92e9081b655c5b",
       "preview": "bcgs/previews/S56-O34.webp",
-      "limitations": "Low-resolution collector board: exact typefaces, calibrated colours and fine centre-art details remain interpreted. No issue size or manufacturing master is asserted. Slightly concave lower border and vertical side ends reconstructed from source; central tan mounting/occlusion detail excluded.",
+      "limitations": "The geometry is the Parks Branch semicircles' (bc-parks-semicircles/compose.mjs): a true semicircle, its field the exact inset by the border width, the upper wording on a concentric arc and the lower on straight baselines, each an even clearance inside the field. The atlas drew this arch flatter and freehand; its letter outlines and colours are kept. The atlas bunched B.C.G.S. at the top of the arc; it is set 1.4 times larger over about ±42°, as the photograph shows it. The exact embroidered alphabet and thread colours remain unverified, from a collector-board crop about 70 × 32 pixels.",
       "sources": [
         {
           "occurrenceId": "S56-O34",
@@ -8952,25 +8730,24 @@
       "status": "refine",
       "priority": "high",
       "findings": [
-        "The wording is corrected: the photograph reads british columbia / police college in lower case, not TRAFFIC OFFICERS, and the patch is filed under the Justice Institute of British Columbia.",
-        "The centre remains the atlas's coarse light-blue and navy figure; the 60 × 57 photograph is insufficient to draw it."
+        "The current drawing has two custom lower-case inscriptions and a two-colour centre emblem. The supplied construction record identifies a 500 × 666 photograph as its reference.",
+        "The 60 × 57 collector-board crop supports the wording and circular layout. It cannot resolve the joins obscured in the larger photograph."
       ],
-      "proposedFix": "Find a larger BC Police College roundel to resolve the centre figure and identify the geometric lower-case typeface.",
-      "evidenceLimitations": "Collector-board crop from a 480 × 640 image; blur, perspective, thread texture and uncalibrated colours limit exact contour, alphabet and heraldic-detail claims.",
+      "proposedFix": "Check the centre emblem against an unobstructed photograph.",
+      "evidenceLimitations": "Constructed concentric rings, 28 individually placed custom lower-case letter outlines and two overlapping Bézier emblem shapes follow a supplied 500 × 666 photograph of the patch. No automatic trace, embedded image or font is used. The photograph's watermark crosses part of the centre, so obscured joins are interpreted from the visible contours. Cloth distortion is regularized and the flat colours approximate photographed thread. The original alphabet, thread colours, dimensions, issue date and the emblem's meaning remain unverified. See supplied/bc-police-college/README.md. The atlas read the lower caption as TRAFFIC OFFICERS and filed it with Highways and Motor Vehicles. The photograph reads british columbia / police college in lower case; the BC Police College became part of the Justice Institute of British Columbia (now its Police Academy).",
       "inspectedOccurrences": [
         "S56-O47"
       ],
       "baselineSvgSha256": "0c4dd02b2a3da99307889c79e0e178b51cd9cd421e6aed84e43673f47f576ea1",
-      "reviewedSvgSha256": "6845f778a9bedf54365fbad65e12a34f625cf743fe3d0fb8243c73693f63609c",
+      "reviewedSvgSha256": "6874e6b6e5ece5a487651356bf79e867f0de3c5f40b43bfa4505583b56a4c3a3",
       "candidateChanges": [
-        "Reset both captions in lower case (Poppins SemiBold as a stand-in for the unidentified geometric face).",
-        "Relabelled British Columbia / Police College and moved from Highways and Motor Vehicles to the Justice Institute."
+        "Patcher replaced the interim caption correction with a complete Police College roundel. The catalogue retains the original atlas ID."
       ],
       "baselineFindings": [
         "The current centre is a coarse geometric figure composed of a few angular blocks.",
         "The 60 × 57 photograph shows a more complex light/dark centre but is insufficient to identify its fine contours reliably."
       ],
-      "reviewedAt": "2026-11-14",
+      "reviewedAt": "2026-11-24",
       "identificationProvenance": {
         "basis": "User identification in the 2026-11-14 correction request",
         "recordedAt": "2026-11-14",
@@ -8982,10 +8759,10 @@
       "variant": null,
       "group": null,
       "medium": "Cloth patch",
-      "svgSha256": "6845f778a9bedf54365fbad65e12a34f625cf743fe3d0fb8243c73693f63609c",
-      "currentSvgSha256": "6845f778a9bedf54365fbad65e12a34f625cf743fe3d0fb8243c73693f63609c",
+      "svgSha256": "6874e6b6e5ece5a487651356bf79e867f0de3c5f40b43bfa4505583b56a4c3a3",
+      "currentSvgSha256": "6874e6b6e5ece5a487651356bf79e867f0de3c5f40b43bfa4505583b56a4c3a3",
       "preview": "justice-institute/previews/S56-O47.webp",
-      "limitations": "The cream rim, navy ring, grey disc and centre figure are the atlas's reconstruction from a 60 × 57 collector-board crop; the centre remains a coarse interpretation. compose.mjs resets both captions in lower case as the photograph shows them (british columbia, police college) in Poppins SemiBold, a stand-in for the unidentified geometric face. Thread colours are interpreted. The atlas read the lower caption as TRAFFIC OFFICERS and filed it with Highways and Motor Vehicles. The photograph reads british columbia / police college in lower case; the BC Police College became part of the Justice Institute of British Columbia (now its Police Academy).",
+      "limitations": "Constructed concentric rings, 28 individually placed custom lower-case letter outlines and two overlapping Bézier emblem shapes follow a supplied 500 × 666 photograph of the patch. No automatic trace, embedded image or font is used. The photograph's watermark crosses part of the centre, so obscured joins are interpreted from the visible contours. Cloth distortion is regularized and the flat colours approximate photographed thread. The original alphabet, thread colours, dimensions, issue date and the emblem's meaning remain unverified. See supplied/bc-police-college/README.md. The atlas read the lower caption as TRAFFIC OFFICERS and filed it with Highways and Motor Vehicles. The photograph reads british columbia / police college in lower case; the BC Police College became part of the Justice Institute of British Columbia (now its Police Academy).",
       "sources": [
         {
           "occurrenceId": "S56-O47",
@@ -9092,6 +8869,7 @@
       "baselineSvgSha256": "d29bca3ec39cf40e6a66a670a62a97c61f4a7795959f7037b251aed963fc94f1",
       "reviewedSvgSha256": "d29bca3ec39cf40e6a66a670a62a97c61f4a7795959f7037b251aed963fc94f1",
       "candidateChanges": [],
+      "reviewedAt": "2026-11-24",
       "orgId": "highways-and-motor-vehicles",
       "orgName": "Highways and Motor Vehicles",
       "label": "Highway Patrol — white rocker",
@@ -9208,6 +8986,7 @@
       "baselineSvgSha256": "0a2cbbaa55ca0347e2e9154463b40ecb98a2210d894fa4711a72a9bb412e8aba",
       "reviewedSvgSha256": "0a2cbbaa55ca0347e2e9154463b40ecb98a2210d894fa4711a72a9bb412e8aba",
       "candidateChanges": [],
+      "reviewedAt": "2026-11-24",
       "orgId": "highways-and-motor-vehicles",
       "orgName": "Highways and Motor Vehicles",
       "label": "M.V. Inspector — white rocker",
@@ -9324,6 +9103,7 @@
       "baselineSvgSha256": "d228b9302a88146787c09c9d339b50bb7e4e0eb88e36adbd8e8cac9c16ddb589",
       "reviewedSvgSha256": "d228b9302a88146787c09c9d339b50bb7e4e0eb88e36adbd8e8cac9c16ddb589",
       "candidateChanges": [],
+      "reviewedAt": "2026-11-24",
       "orgId": "highways-and-motor-vehicles",
       "orgName": "Highways and Motor Vehicles",
       "label": "Weighmaster — white rocker",
@@ -9535,6 +9315,64 @@
           ],
           "sourceFileSha256": "d5a93bd7ee25b0e42f2ac0ffb3dad333d4b73b5751b30119aab4ed711caccbf3",
           "cropSha256": "249d7bb00a3bb49ff2be5f9cf55ab26eb8cefb1e77a9eedc8b407aced5930d2c",
+          "note": "480 × 640 px mixed-agency collector board. Rockers are recorded separately where a seam/gap is visible. Transcription and affiliation are provisional at this resolution; no issue date or physical dimensions inferred."
+        }
+      ],
+      "unavailableSources": []
+    },
+    {
+      "id": "S56-O37",
+      "status": "refine",
+      "priority": "medium",
+      "findings": [
+        "The drawing uses light, widely separated upper lettering while the source caption appears much denser around the rim.",
+        "SHERIFFS is placed very low in the current semicircle compared with the more compact photographed stack."
+      ],
+      "proposedFix": "Use heavier condensed upper letters and raise/rebalance the lower line inside the arch.",
+      "evidenceLimitations": "Collector-board crop from a 480 × 640 image; blur, perspective, thread texture and uncalibrated colours limit exact contour, alphabet and heraldic-detail claims.",
+      "inspectedOccurrences": [
+        "S56-O37"
+      ],
+      "baselineSvgSha256": "b67ce75da9a5e6cc232c517aa3bcc35e3f4707ebaacd5d32b847e830783be553",
+      "reviewedSvgSha256": "b67ce75da9a5e6cc232c517aa3bcc35e3f4707ebaacd5d32b847e830783be553",
+      "candidateChanges": [],
+      "orgId": "bc-ferries",
+      "orgName": "BC Ferries",
+      "label": "British Columbia / Ferries — gold arch",
+      "variant": null,
+      "group": null,
+      "medium": "Cloth patch",
+      "svgSha256": "b67ce75da9a5e6cc232c517aa3bcc35e3f4707ebaacd5d32b847e830783be553",
+      "currentSvgSha256": "5585542db3c54afa05d1751366e452aff842e6eeee2583533eb832d4f03070c0",
+      "preview": "bc-ferries/previews/S56-O37.webp",
+      "limitations": "The geometry is the Parks Branch semicircles' (bc-parks-semicircles/compose.mjs): a true semicircle, its field the exact inset by the border width, the upper wording on a concentric arc and the lower on straight baselines, each an even clearance inside the field. The atlas drew this arch flatter and freehand; its letter outlines and colours are kept. The atlas read the lower line as SHERIFFS; the photograph reads FERRIES, set from the atlas's own SHERIFFS letter outlines with the same spacing. BRITISH COLUMBIA is set about a quarter larger over about ±62°, as the photograph shows it. The exact embroidered alphabet and thread colours remain unverified, from a collector-board crop about 70 × 32 pixels. The atlas read the lower line as SHERIFFS and filed the arch with the BC Sheriff Service. The photograph reads BRITISH COLUMBIA / FERRIES.",
+      "sources": [
+        {
+          "occurrenceId": "S56-O37",
+          "sourceId": "S56",
+          "url": "https://drive.google.com/file/d/1ptQyL4EWkBbEo74gaC7jHaIzm6NCXbwY/view",
+          "cropUrl": "patch-review/crops/S56-O37.webp",
+          "width": 72,
+          "height": 33,
+          "displayPixels": [
+            72,
+            33
+          ],
+          "sourceKind": "photo",
+          "medium": "Cloth patch",
+          "page": null,
+          "bbox": [
+            200,
+            546,
+            272,
+            579
+          ],
+          "sourceDimensions": [
+            480,
+            640
+          ],
+          "sourceFileSha256": "d5a93bd7ee25b0e42f2ac0ffb3dad333d4b73b5751b30119aab4ed711caccbf3",
+          "cropSha256": "ac8885519711285f81a4bbdbbfed72e3009ab1cd8494105a4f1ee002671f88e1",
           "note": "480 × 640 px mixed-agency collector board. Rockers are recorded separately where a seam/gap is visible. Transcription and affiliation are provisional at this resolution; no issue date or physical dimensions inferred."
         }
       ],
@@ -10312,6 +10150,60 @@
           "note": "Enlarged reconstruction review identifies the lower SPCA caption. Earlier unresolved label corrected; no issue date inferred."
         }
       ],
+      "unavailableSources": []
+    },
+    {
+      "id": "fish-game-canada",
+      "reviewedAt": "2026-11-25",
+      "status": "source-limited",
+      "priority": "low",
+      "findings": [
+        "The monochrome sleeve photograph shows a flower, a light perimeter, a curved upper legend and Canada in script. GAME is completed where the cloth turns away. The flattened outline, partly obscured lettering, flower detail and script are interpreted. Issuer, dates and thread colours are unverified."
+      ],
+      "proposedFix": "Seek a labelled uniform or a provenance record for the original specimen.",
+      "evidenceLimitations": "Contributor photograph, reviewed in the conversation. No independently identified public image, issue date or size.",
+      "inspectedOccurrences": [],
+      "baselineSvgSha256": null,
+      "reviewedSvgSha256": "6dc827f25571d7a05f61b07621801ee0e681e4e67bebf99e38d0b74fdd2e1145",
+      "candidateChanges": [],
+      "orgId": "unconfirmed",
+      "orgName": "Unconfirmed",
+      "label": "B.C. Fish & Game / Canada — flower shoulder patch",
+      "variant": null,
+      "group": null,
+      "medium": "Cloth patch",
+      "svgSha256": "6dc827f25571d7a05f61b07621801ee0e681e4e67bebf99e38d0b74fdd2e1145",
+      "currentSvgSha256": "6dc827f25571d7a05f61b07621801ee0e681e4e67bebf99e38d0b74fdd2e1145",
+      "preview": "unconfirmed/previews/fish-game-canada.webp",
+      "limitations": "The monochrome sleeve photograph shows a flower, a light perimeter, a curved upper legend and Canada in script. GAME is completed where the cloth turns away. The flattened outline, partly obscured lettering, flower detail and script are interpreted. Issuer, dates and thread colours are unverified.",
+      "sources": [],
+      "unavailableSources": []
+    },
+    {
+      "id": "regional-supervisor",
+      "reviewedAt": "2026-11-25",
+      "status": "source-limited",
+      "priority": "low",
+      "findings": [
+        "The supplied colour photograph shows the two-line role title, a green merrowed edge and an inset gold rule. It gives no agency name, issue date or location. Colours and letterforms are approximate."
+      ],
+      "proposedFix": "Seek a labelled uniform or a provenance record for the original specimen.",
+      "evidenceLimitations": "Contributor photograph, reviewed in the conversation. No independently identified public image, issue date or size.",
+      "inspectedOccurrences": [],
+      "baselineSvgSha256": null,
+      "reviewedSvgSha256": "93f8535b48a6f79877462c83be0bede91fd614ba1624e38bb3b3ea2b180c94c0",
+      "candidateChanges": [],
+      "orgId": "unconfirmed",
+      "orgName": "Unconfirmed",
+      "label": "Regional Supervisor — green and gold title tab",
+      "variant": null,
+      "group": null,
+      "medium": "Cloth patch",
+      "svgSha256": "93f8535b48a6f79877462c83be0bede91fd614ba1624e38bb3b3ea2b180c94c0",
+      "currentSvgSha256": "93f8535b48a6f79877462c83be0bede91fd614ba1624e38bb3b3ea2b180c94c0",
+      "preview": "unconfirmed/previews/regional-supervisor.webp",
+      "limitations": "The supplied colour photograph shows the two-line role title, a green merrowed edge and an inset gold rule. It gives no agency name, issue date or location. Colours and letterforms are approximate.",
+      "sources": [],
       "unavailableSources": []
     },
     {
