@@ -862,9 +862,9 @@ const DRC_SQUARES = {
 }
 
 /** One of the department's other emblems, as a single black master. */
-const drcEmblem = (id, label, years, note, fidelityNote) => supplied({
+const drcEmblem = (id, label, years, note, fidelityNote, dateNote = `Printed in the department’s annual report for ${years}.`) => supplied({
   ...RECONSTRUCTED(fidelityNote),
-  applicability: DATED_BY_TIMELINE('dated_specimen', years, `Printed in the department’s annual report for ${years}.`),
+  applicability: DATED_BY_TIMELINE('dated_specimen', years, dateNote),
   rights: DRC_RIGHTS
 })({ id, label, years, note })
 
@@ -873,10 +873,11 @@ const DRC_EMBLEMS = {
     'An engraved dogwood in a dark oval, BRITISH COLUMBIA arched above it and the department’s name below.',
     'Redrawn from the 1970 report’s scan. The engraving’s hatching is interpreted rather than recovered, and the ' +
       'small lettering is a close outlined sans, not the original face.'),
-  fwOval: drcEmblem('drc-fw-oval-1973', 'Fish and Wildlife emblem', '1973',
-    'A narrow dark emblem over “F&W”, on the 1973 report’s Fish and Wildlife dividers.',
+  fwOval: drcEmblem('drc-fw-oval-1973', 'Fish and Wildlife emblem', '1972–73 synopsis and 1973 report',
+    'A narrow dark emblem over F&W on the 1972–73 hunting regulations cover and the 1973 Fish and Wildlife dividers.',
     'The silhouette, frame and letters redrawn by hand from the 1973 report’s scan; the ampersand is a close ' +
-      'outlined Bookman, not the original.'),
+      'outlined Bookman, not the original.',
+    'The 1972–73 hunting synopsis shows this arrangement. The 1973 report supplies the artwork for this reconstruction.'),
   fwLockup: drcEmblem('drc-fw-lockup-1973', 'Fish and Wildlife emblem and name', '1973',
     'The emblem beside a panel reading British Columbia Fish & Wildlife Branch.',
     'The emblem as drawn for it alone; the panel’s wording is set in an outlined substitute serif, not an ' +
@@ -1249,13 +1250,13 @@ export const GALLERY_COLLECTIONS = [
     id: 'bc-lands',
     shelf: 'bodies',
     label: 'BC Lands',
-    body: 'Crown lands · Ministry of Forests and Lands',
-    years: 'by 1986–88',
+    body: 'Provincial crown lands administration',
+    years: '1986–88 ministry form and 1994 fax',
     cover: 'bc-lands',
     intro: 'BC Lands’ badge from the flag years: the flag symbol in a rounded frame with “Lands” set at ' +
       'the size of “BC”, the arrangement of BC Parks’ badge, but lighter, in regular letters and a thinner ' +
-      'frame. Known here from one photocopied form, so it is set from BC Parks’ badge to the photocopy’s ' +
-      'proportions rather than redrawn from its own artwork. Open it to recolour.',
+      'frame. The reconstruction follows the proportions of a photocopied ministry form. A 1994 Lands Operations ' +
+      'Division fax also shows the badge beside a band of provincial silhouettes.',
     eras: withMarks(COLLECTION_ERAS['bc-lands'], {
       'lands-badge': ONE_OFFS.filter((entry) => LANDS_ONE_OFFS.includes(entry.id)).map(provincial)
     })
