@@ -2580,6 +2580,54 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "fgc-horizontal-green": {
+  "light": {
+   "file": "identity-display/fgc-horizontal-green.light.svg",
+   "aspect": 11.9836,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fgc-horizontal-green.dark.svg",
+   "aspect": 11.9836,
+   "recoloured": true
+  }
+ },
+ "fgc-horizontal-white": {
+  "light": {
+   "file": "identity-display/fgc-horizontal-white.light.svg",
+   "aspect": 11.9836,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/fgc-horizontal-white.dark.svg",
+   "aspect": 11.9836,
+   "recoloured": false
+  }
+ },
+ "fgc-stacked-white": {
+  "light": {
+   "file": "identity-display/fgc-stacked-white.light.svg",
+   "aspect": 2.4917,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/fgc-stacked-white.dark.svg",
+   "aspect": 2.4917,
+   "recoloured": false
+  }
+ },
+ "fgc-1999-tictalk": {
+  "light": {
+   "file": "identity-display/fgc-1999-tictalk.light.svg",
+   "aspect": 10.1985,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fgc-1999-tictalk.light.svg",
+   "aspect": 10.1985,
+   "recoloured": false
+  }
+ },
  "source-expanded-translink-website-logo": {
   "light": {
    "file": "identity-display/source-expanded-translink-website-logo.light.svg",

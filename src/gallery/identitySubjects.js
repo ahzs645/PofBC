@@ -16,6 +16,7 @@ import { LIQUOR_BOARD_RELATIONS, LIQUOR_SUBJECTS } from './liquorHistory.js'
 import { HEALTH_COUNCIL_SUBJECTS } from './healthCouncilHistory.js'
 import { ADDITIONAL_COUNCIL_SUBJECTS } from './additionalCouncilSubjects.js'
 import { YOUTH_SUBJECTS } from './bcYouth.js'
+import { FOREST_GENETICS_SUBJECTS } from './forestGenetics.js'
 import { FAMILY_COUNCIL_SUBJECT } from './councilForTheFamily.js'
 import { ALCOHOL_AND_DRUG_COMMISSION_SUBJECT } from './alcoholAndDrugCommission.js'
 import { RECONCILED_FAMILIES, RECONCILED_SUBJECTS } from './reconciledSubjects.js'
@@ -3453,7 +3454,7 @@ const CURATED_SUBJECTS = [
 // Municipalities come before the historical-research family in the register.
 export const IDENTITY_FAMILIES = [...CURATED_FAMILIES.slice(0, -1), ...RECONCILED_FAMILIES, ...MUNICIPAL_FAMILIES, SCHOOL_FAMILY, POSTSECONDARY_FAMILY, CURATED_FAMILIES.at(-1)]
 const recoveredById = new Map(RECOVERED_IDENTITY_BODIES.map((body) => [body.id, body]))
-export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...LIQUOR_SUBJECTS, ...SURVEY_AND_LIBRARY_SUBJECTS, ...YOUTH_SUBJECTS, ...HEALTH_COUNCIL_SUBJECTS, ...ADDITIONAL_COUNCIL_SUBJECTS, FAMILY_COUNCIL_SUBJECT, ALCOHOL_AND_DRUG_COMMISSION_SUBJECT, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS, ...SCHOOL_IDENTITY_SUBJECTS, ...POSTSECONDARY_SUBJECTS]
+export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...LIQUOR_SUBJECTS, ...SURVEY_AND_LIBRARY_SUBJECTS, ...YOUTH_SUBJECTS, ...HEALTH_COUNCIL_SUBJECTS, ...ADDITIONAL_COUNCIL_SUBJECTS, ...FOREST_GENETICS_SUBJECTS, FAMILY_COUNCIL_SUBJECT, ALCOHOL_AND_DRUG_COMMISSION_SUBJECT, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS, ...SCHOOL_IDENTITY_SUBJECTS, ...POSTSECONDARY_SUBJECTS]
   .map((subject) => recoveredById.get(subject.id)?.nextAction
     ? { ...subject, nextAction: recoveredById.get(subject.id).nextAction }
     : subject)
