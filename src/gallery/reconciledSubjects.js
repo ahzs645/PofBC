@@ -55,6 +55,23 @@ const subject = ({ id, label, name = label, kind, family = 'provincial-programs'
 
 export const RECONCILED_SUBJECTS = [
   subject({
+    id: 'bchealthcare', label: 'BCHealthCare', kind: 'service-brand',
+    aliases: ['BC Health Care'], collectionIds: ['health-program-signatures'],
+    sources: [{ title: 'Abbotsford Hospital and Cancer Centre request for expressions of interest, January 23, 2003', url: 'https://digitalcollections.llbc.leg.bc.ca/handle/123456789/307972' }],
+    note: 'Provincial health-care communications signature. The project cover separately names the Ministry of Health Services and its partners.',
+    nextAction: 'Locate the design standard or an earlier dated use of the signature.'
+  }),
+  subject({
+    id: 'bcpharmacare', label: 'BCPharmaCare', kind: 'service-brand',
+    aliases: ['BC PharmaCare', 'Fair PharmaCare'], collectionIds: ['health-program-signatures'],
+    sources: [
+      { title: 'Your new Fair PharmaCare program, 2003', url: 'https://digitalcollections.llbc.leg.bc.ca/handle/123456789/301527' },
+      { title: 'Ministry of Health Services PharmaCare overview, February 24, 2003', url: 'https://archive.news.gov.bc.ca/releases/archive/2001-2005/2003HSER0013-000192-Attachment2.htm' }
+    ],
+    note: 'The provincial drug coverage program began in 1974. The 2003 Fair PharmaCare plan introduced income-based coverage. Its registration material carried the BCPharmaCare program signature.',
+    nextAction: 'Locate the design standard and establish when the arms-based signature first appeared.'
+  }),
+  subject({
     id: 'workers-compensation-board',
     label: 'WorkSafeBC',
     name: 'Workers’ Compensation Board of British Columbia',

@@ -2111,6 +2111,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "bchealthcare-2003": {
+  "light": {
+   "file": "identity-display/bchealthcare-2003.light.svg",
+   "aspect": 7.0092,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bchealthcare-2003.dark.svg",
+   "aspect": 7.0092,
+   "recoloured": true
+  }
+ },
+ "bcpharmacare-2003": {
+  "light": {
+   "file": "identity-display/bcpharmacare-2003.light.svg",
+   "aspect": 7.551,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcpharmacare-2003.dark.svg",
+   "aspect": 7.551,
+   "recoloured": true
+  }
+ },
  "bc-travel-industry-ca-1970": {
   "light": {
    "file": "identity-display/bc-travel-industry-ca-1970.light.svg",
