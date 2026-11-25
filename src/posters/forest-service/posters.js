@@ -17,6 +17,7 @@
 // it is. Each other one swaps colours ([from, to] pairs) on the stage and in the export, and says
 // plainly what it is.
 
+import { ASHTRAY_PANEL } from './ashtray.js'
 import { POSTERS } from '../catalogue.js'
 import { withStories } from '../stories.js'
 
@@ -1290,5 +1291,5 @@ export const MATCHES_NOT_FOR_CHILDREN = {
 }
 
 // Each with its story (../stories.js) attached to its parts.
-export const FOREST_SERVICE_POSTERS = Object.fromEntries([DONT_DROP_IT, DONT_GAMBLE, REWARD, ENJOY_PROTECT, BE_CAREFUL, COONS_AGE, PREVENT_FOREST_FIRES, MATCHES_NOT_FOR_CHILDREN]
+export const FOREST_SERVICE_POSTERS = Object.fromEntries([DONT_DROP_IT, DONT_GAMBLE, REWARD, ENJOY_PROTECT, BE_CAREFUL, COONS_AGE, PREVENT_FOREST_FIRES, MATCHES_NOT_FOR_CHILDREN, ASHTRAY_PANEL]
   .map((poster) => [poster.id, { ...poster, parts: withStories(poster.id, poster.parts) }]))

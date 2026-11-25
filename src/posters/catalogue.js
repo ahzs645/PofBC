@@ -19,7 +19,7 @@ export const SERIES = [
     id: 'forest-service',
     title: 'British Columbia Forest Service',
     kind: 'Campaign posters, signs and advertising',
-    posters: ['reward-living-forest', 'enjoy-protect-forests', 'prevent-forest-fires', 'matches-not-for-children', 'coons-age']
+    posters: ['reward-living-forest', 'enjoy-protect-forests', 'prevent-forest-fires', 'matches-not-for-children', 'use-your-ashtray', 'coons-age']
   },
   {
     id: 'fire-prevention',
@@ -163,6 +163,19 @@ export const POSTERS = {
     made: 'vector',
     view: { x: 0, y: 0, w: 1233, h: 1233 },
     page: { w: 12, h: 12 }
+  },
+  'use-your-ashtray': {
+    id: 'use-your-ashtray',
+    issuer: 'Fish and Game Branch',
+    subject: 'Fire prevention',
+    format: 'Printed notice',
+    blurb: 'A reminder to motorists printed in the notes panel of the provincial game regulations.',
+    series: 'forest-service',
+    title: 'Keep B.C. Green— Use Your Ashtray.',
+    when: '1961–62 game regulations',
+    made: 'vector',
+    view: { x: 0, y: 0, w: 754, h: 227 },
+    page: { w: 2.5133, h: 0.7567 }
   },
   'coons-age': {
     id: 'coons-age',
