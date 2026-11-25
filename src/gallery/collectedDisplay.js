@@ -2628,6 +2628,90 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "liquor-bcl-1998-99": {
+  "light": {
+   "file": "identity-display/liquor-bcl-1998-99.light.svg",
+   "aspect": 1.0237,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/liquor-bcl-1998-99.dark.svg",
+   "aspect": 1.0237,
+   "recoloured": true
+  }
+ },
+ "liquor-bcl-reverse-2003": {
+  "light": {
+   "file": "identity-display/liquor-bcl-reverse-2003.light.svg",
+   "aspect": 1.0024,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/liquor-bcl-reverse-2003.dark.svg",
+   "aspect": 1.0024,
+   "recoloured": false
+  }
+ },
+ "liquor-bcl-signature-2000-01": {
+  "light": {
+   "file": "identity-display/liquor-bcl-signature-2000-01.light.svg",
+   "aspect": 5.2668,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/liquor-bcl-signature-2000-01.dark.svg",
+   "aspect": 5.2668,
+   "recoloured": true
+  }
+ },
+ "liquor-bcl-signature-green": {
+  "light": {
+   "file": "identity-display/liquor-bcl-signature-green.light.svg",
+   "aspect": 5.2694,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/liquor-bcl-signature-green.dark.svg",
+   "aspect": 5.2694,
+   "recoloured": true
+  }
+ },
+ "liquor-bcl-signature-2002": {
+  "light": {
+   "file": "identity-display/liquor-bcl-signature-2002.light.svg",
+   "aspect": 5.2775,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/liquor-bcl-signature-2002.dark.svg",
+   "aspect": 5.2775,
+   "recoloured": true
+  }
+ },
+ "liquor-stacked-2007": {
+  "light": {
+   "file": "identity-display/liquor-stacked-2007.light.svg",
+   "aspect": 3.0443,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/liquor-stacked-2007.dark.svg",
+   "aspect": 3.0443,
+   "recoloured": true
+  }
+ },
+ "liquor-sunburst-slogan-2009": {
+  "light": {
+   "file": "identity-display/liquor-sunburst-slogan-2009.light.svg",
+   "aspect": 3.6443,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/liquor-sunburst-slogan-2009.dark.svg",
+   "aspect": 3.6443,
+   "recoloured": true
+  }
+ },
  "source-expanded-liquor-distribution-branch-wholesale-site-lockup": {
   "light": {
    "file": "identity-display/source-expanded-liquor-distribution-branch-wholesale-site-lockup.light.svg",
@@ -2662,6 +2746,30 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/source-expanded-sub-bcliquor-website-logo.dark.svg",
    "aspect": 4.5925,
    "recoloured": true
+  }
+ },
+ "liquor-stores-2007": {
+  "light": {
+   "file": "identity-display/liquor-stores-2007.light.svg",
+   "aspect": 10.1669,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/liquor-stores-2007.dark.svg",
+   "aspect": 10.1669,
+   "recoloured": true
+  }
+ },
+ "liquor-stores-reverse-2008": {
+  "light": {
+   "file": "identity-display/liquor-stores-reverse-2008.light.svg",
+   "aspect": 10.2307,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/liquor-stores-reverse-2008.dark.svg",
+   "aspect": 10.2307,
+   "recoloured": false
   }
  },
  "source-expanded-bc-cannabis-wholesale-shipping-2026-black": {

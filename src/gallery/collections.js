@@ -1491,7 +1491,7 @@ export const FOLDED_UNDER = [
   { parent: 'bc-transit', children: ['collected-umo'] },
   { parent: 'bc-hydro', children: ['collected-power-smart', 'collected-sub-powerex'] },
   { parent: 'bclc', children: ['collected-gamesense', 'collected-sub-playnow'] },
-  { parent: 'collected-liquor-distribution-branch', children: ['collected-sub-bcliquor', 'collected-sub-bc-cannabis-stores', 'collected-bc-cannabis-wholesale', 'collected-ldb-wholesale'] },
+  { parent: 'collected-liquor-distribution-branch', children: ['collected-sub-bcliquor', 'collected-bc-signature-liquor-store', 'collected-sub-bc-cannabis-stores', 'collected-bc-cannabis-wholesale', 'collected-ldb-wholesale'] },
   { parent: 'collected-land-title-and-survey-authority', children: ['collected-landsure-systems'] },
   { parent: 'collected-metro-vancouver', children: ['collected-metro-vancouver-regional-parks'] },
   {
