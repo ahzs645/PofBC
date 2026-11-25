@@ -1089,10 +1089,8 @@ export const GALLERY_COLLECTIONS = [
     years: '2003–present',
     graphNode: 'sub-bc-timber-sales',
     cover: 'bcts',
-    intro: 'BC Timber Sales’ marks since it was established in 2003: its initials over its name, first on ' +
-      'their own, then beside a ministry crest, then beside the BC mark. The initials have been published ' +
-      'in two greens (forest on white, teal reversed), and every mark here starts from either. Open one ' +
-      'to recolour it.',
+    intro: 'The first BCTS website banner and two different printed identities overlapped. Its 2004 brochure shows the Forest Service oval beside green BCTS initials. ' +
+      'It describes 12 business areas, a presence in 33 locations and a small headquarters in Victoria. Later publications pair the initials with a ministry crest or the provincial BC mark.',
     eras: withMarks(COLLECTION_ERAS.bcts, {
       'bcts-earlier': BCTS_ENTRIES.earlier.map(withIdentity),
       'bcts-current': BCTS_ENTRIES.current.map(withIdentity)
