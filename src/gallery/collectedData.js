@@ -2544,7 +2544,7 @@ export const COLLECTED_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "One design in black and in white, as original vector artwork.",
+    "notes": "The green map and three-line name appear on both covers of the January 2004 Steps Forward report with a two-line tagline. Later specimens show the authority’s black and reversed signatures.",
     "assets": [
       {
         "id": "vector-phsa-black-source-extraction",
@@ -2596,6 +2596,59 @@ export const COLLECTED_BODIES = [
         "search": "vector-search-2026-10-30",
         "versionLabel": "White",
         "variantOf": "vector-phsa-black-source-extraction"
+      },
+      {
+        "id": "phsa-2004-with-tagline",
+        "label": "Provincial Health Services Authority · January 2004, with tagline",
+        "file": "identity-collected/provincial-health-services-authority/phsa-2004-with-tagline.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/317802",
+        "sourceUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/317802",
+        "publisher": "Provincial Health Services Authority",
+        "sourceLocator": "Steps Forward, January 2004. Both covers, PDF pages 2 and 41 including library wrapper. Extracted from back cover.",
+        "sourceDate": "January 2004",
+        "observedDate": "2026-11-25",
+        "dateNote": "Dated use in the publication. First use and retirement dates are unconfirmed.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The map of British Columbia sits above the name in three lines. Below it the two-line signature reads “Province-wide solutions. Better health.”",
+        "fidelityNote": "95 original filled paths, preserving outlined lettering and the PDF colours converted to sRGB. The publication background is excluded.",
+        "bytes": 55468,
+        "sha256": "9872d9db70909cf3e64015f83d0385f4737be0044c2d2b0dcd94f9f6800e73df",
+        "search": "annual-report-marks-2003-04",
+        "dimensions": {
+          "viewBox": "0 0 176 151"
+        },
+        "versionLabel": "Full cover signature"
+      },
+      {
+        "id": "phsa-2004-wordmark",
+        "label": "Provincial Health Services Authority · January 2004, logo detail",
+        "file": "identity-collected/provincial-health-services-authority/phsa-2004-wordmark.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/317802",
+        "sourceUrl": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/317802",
+        "publisher": "Provincial Health Services Authority",
+        "sourceLocator": "Steps Forward, January 2004. Both covers, PDF pages 2 and 41 including library wrapper. Extracted from back cover.",
+        "sourceDate": "January 2004",
+        "observedDate": "2026-11-25",
+        "dateNote": "Dated use in the publication. First use and retirement dates are unconfirmed.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The map of British Columbia sits above the name in three lines. This detail isolates the logo from the same cover. The complete published version includes the separate two-line tagline.",
+        "fidelityNote": "59 original filled paths, preserving outlined lettering and the PDF colours converted to sRGB. The publication background is excluded.",
+        "bytes": 33408,
+        "sha256": "a66ae4ee06e2e0d882284c63d8b9365b73ebf6c54b9635685ab54b37730f31b5",
+        "search": "annual-report-marks-2003-04",
+        "dimensions": {
+          "viewBox": "0 0 176 96"
+        },
+        "variantOf": "phsa-2004-with-tagline",
+        "versionLabel": "Logo detail"
       }
     ]
   },
