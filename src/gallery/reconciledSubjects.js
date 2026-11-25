@@ -55,6 +55,22 @@ const subject = ({ id, label, name = label, kind, family = 'provincial-programs'
 
 export const RECONCILED_SUBJECTS = [
   subject({
+    id: 'provincial-emergency-program',
+    name: 'Provincial Emergency Program',
+    label: 'Provincial Emergency Program',
+    kind: 'service-brand',
+    family: 'provincial-administration',
+    graphNode: null,
+    aliases: ['PEP'],
+    collectionIds: ['specimens-provincial-emergency-program'],
+    sources: [
+      { title: 'Joint Emergency Preparedness Program Guidelines, revised July 1993', url: 'https://www.publicsafety.gc.ca/lbrr/archives/ua%20929.c2%20b75%201993-eng.pdf' },
+      { title: 'Provincial compliments slip received October 16, 1997', url: 'https://docs.openinfo.gov.bc.ca/d37393013a_response_package_fnr-2013-00153.pdf#page=50' }
+    ],
+    note: 'British Columbia’s Provincial Emergency Program used the striped PEP initials and processed applications and claims for the federal Joint Emergency Preparedness Program.',
+    nextAction: 'Identify the designer and original lettering from a dated identity specification.'
+  }),
+  subject({
     id: 'workers-compensation-board',
     label: 'WorkSafeBC',
     name: 'Workers’ Compensation Board of British Columbia',

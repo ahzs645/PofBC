@@ -1371,7 +1371,7 @@ Object.assign(pepCollection, {
   cover: 'pep-striped-ink',
   initiativeId: 'jepp',
   intro: 'British Columbia’s Provincial Emergency Program processed applications and claims for JEPP. Its striped monogram appears on the 1993 guidelines. A provincial compliments slip received in October 1997 and a 2003 student safety guide show the heavier three-line lettering reconstructed here.',
-  entries: specimenEntriesOf('provincial-emergency-program')
+  entries: specimenEntriesOf('provincial-emergency-program').map((entry) => ({ ...entry, owner: 'provincial-emergency-program' }))
 })
 
 // Public bodies outside the Crown corporations and health authorities the shelf collects for — a
