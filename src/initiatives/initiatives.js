@@ -31,6 +31,13 @@ export const INITIATIVES = [
   },
   ...YOUTH_PROGRAMS,
   {
+    id: 'spirit-of-2010', title: 'Spirit of 2010', subtitle: 'Government of British Columbia',
+    summary: 'British Columbia promoted tourism, trade and investment ahead of the Vancouver 2010 Olympic and Paralympic Winter Games. A framed Spirit of 2010 emblem appears in provincial and federal publications.',
+    cover: { file: 'initiatives/spirit-of-2010/spirit-of-2010.svg', alt: 'Spirit of 2010 square campaign emblem', caption: 'Vector reconstruction of the colour emblem on the 2004 provincial resort strategy' },
+    tags: ['Olympics', 'Logos', 'Tourism'],
+    searchTerms: ['British Columbia. Be Here.', 'Spirit of 2010 Business Summit', 'Vancouver 2010', 'Olympic and Paralympic Winter Games Secretariat']
+  },
+  {
     id: 'tourism',
     title: 'Tourism',
     subtitle: 'Tourism BC · Destination BC',
@@ -313,6 +320,10 @@ const LOADERS = {
   'bc-youth': async () => {
     const { bcYouthDetail } = await import('./bcYouth.js')
     return bcYouthDetail(initiativeById('bc-youth'))
+  },
+  'spirit-of-2010': async () => {
+    const { spiritOf2010Detail } = await import('./spiritOf2010.js')
+    return spiritOf2010Detail(initiativeById('spirit-of-2010'))
   },
   gamesense: async () => gamesenseDetail(),
   tourism: async () => {
