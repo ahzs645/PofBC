@@ -1369,7 +1369,7 @@ const PLACED = {
     body: 'Current public post-secondary institute',
     years: '1978–present',
     intro: 'The Justice Institute of British Columbia, established in 1978 to train police, corrections, sheriffs, ' +
-      'paramedics, firefighters and emergency managers. Its earlier monogram is also the centre of its patches.'
+      'paramedics, firefighters and emergency managers. Its blue griffin shield appears on letterhead in 2007 and on its 2008–09 and 2009–10 accountability reports. JIBC unveiled the eagle in September 2022. Its badge monogram also appears on shoulder patches.'
   },
   'sub-bc-online': {
     label: 'BC OnLine',

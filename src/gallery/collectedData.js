@@ -9823,7 +9823,7 @@ export const COLLECTED_SPECIMENS = [
         "supplied": true,
         "reconstruction": false,
         "publisher": "Justice Institute of British Columbia",
-        "sourcePage": "https://www.jibc.ca",
+        "sourcePage": "https://www.jibc.ca/news/article/jibc-unveils-new-brand",
         "sourceUrl": null,
         "sourceLocator": "The Institute’s current logo file (logo.svg, an Adobe Illustrator 26 export), supplied",
         "sourceFile": "logo.svg",
@@ -9835,6 +9835,7 @@ export const COLLECTED_SPECIMENS = [
         "sha256": "32e0258ada5c5f7a2a61e97e0edc840f6a0f47493f31d0b1a549a606bc8ca152",
         "bytes": 8915,
         "darkBackground": false,
+        "dateNote": "JIBC announced the eagle design in September 2022. The supplied Illustrator file and its adapted colourway have no independent file date.",
         "search": "justice-institute-2026-11-12",
         "versionLabel": "On white"
       },
@@ -9847,7 +9848,7 @@ export const COLLECTED_SPECIMENS = [
         "supplied": true,
         "reconstruction": false,
         "publisher": "Justice Institute of British Columbia",
-        "sourcePage": "https://www.jibc.ca",
+        "sourcePage": "https://www.jibc.ca/news/article/jibc-unveils-new-brand",
         "sourceUrl": null,
         "sourceLocator": "The Institute’s current logo file (logo.svg, an Adobe Illustrator 26 export), supplied",
         "sourceFile": "logo.svg",
@@ -9855,10 +9856,11 @@ export const COLLECTED_SPECIMENS = [
         "observedDate": "2026-11-12",
         "evidenceType": "supplied-original-vector",
         "notes": "The supplied file: the shield and its white field with “Justice Institute” and “BRITISH COLUMBIA” in white, for a dark ground.",
-        "fidelityNote": "The supplied file, unchanged: an Illustrator export with the shield in blue (#034EA2) and the lettering in white. When it was adopted is not established.",
+        "fidelityNote": "The supplied file, unchanged: an Illustrator export with the shield in blue (#034EA2) and the lettering in white. JIBC announced the eagle design in September 2022.",
         "sha256": "59899e0c4951ce1ceb00c655509518f7833229863e149c9ccc735bd9fa6a246f",
         "bytes": 8766,
         "darkBackground": true,
+        "dateNote": "JIBC announced the eagle design in September 2022. The supplied Illustrator file and its adapted colourway have no independent file date.",
         "search": "justice-institute-2026-11-12",
         "versionLabel": "Reversed (as supplied)",
         "variantOf": "jibc-logo"
@@ -9884,6 +9886,42 @@ export const COLLECTED_SPECIMENS = [
         "sha256": "1a45f5dbb07c53fb7450a7494106c9e44edc1671ba86008db0e8609b2c20b9b1",
         "bytes": 1778,
         "darkBackground": false,
+        "search": "justice-institute-2026-11-12"
+      },
+      {
+        "id": "jibc-griffin-2010",
+        "label": "Griffin shield with the Institute name and public safety tagline",
+        "file": "identity-collected/justice-institute/jibc-griffin-2010.svg",
+        "format": "svg",
+        "isVector": true,
+        "reconstruction": false,
+        "publisher": "Justice Institute of British Columbia",
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/323806",
+        "sourceLocator": "Institutional Accountability Plan & Report 2009–2010, front cover (page 1 of the supplied PDF, page 2 in the Legislative Library copy). The next page is a signed letter dated July 2, 2010.",
+        "sourceFile": "439390_acct_report_2009_2010.pdf",
+        "sourceDate": "2010",
+        "specimenDate": "2010",
+        "observedDate": "2026-11-24",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "A white griffin stands inside a white ring on a blue shield. Beneath it are the Institute name, a rule and the line “Canada’s leading public safety educator”. The preceding annual report also shows this design.",
+        "fidelityNote": "The cover supplies 106 painted vector paths, including the outlined lettering and rule. The blue and white fills and the original clipping path are preserved. Only the report background and surrounding page have been removed.",
+        "sha256": "b728f0614d555dfefc40444b39e09cfc37ca11cf1a1936483872ab39eda33e22",
+        "bytes": 90330,
+        "downloads": [
+          {
+            "label": "Download transparent PNG (1120 × 1056)",
+            "file": "identity-collected/justice-institute/jibc-griffin-2010.png",
+            "sha256": "3314b36bbc1ad76829518ab95f57fed126f237cff9ff523d95914a490c342cda"
+          }
+        ],
+        "alsoSeen": [
+          {
+            "date": "2008/09",
+            "url": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/323801",
+            "locator": "Front cover after the Legislative Library wrapper",
+            "title": "2008–2009 Institutional Accountability Plan & Report"
+          }
+        ],
         "search": "justice-institute-2026-11-12"
       }
     ]
