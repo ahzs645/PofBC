@@ -56,6 +56,9 @@ const TAGLINE_YEARS = 'The Best Place on Earth tagline was launched in 2005 and 
 const DRC_1970 = 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1970.pdf'
 const DRC_1971 = 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1971.pdf'
 const DRC_1972 = 'https://rbcm.ca/wp-content/uploads/2025/07/annual_report_1972.pdf'
+const DRC_1972_MINISTRY = 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1972.pdf'
+const HUNTING_1972_73 = 'https://a100.gov.bc.ca/pub/acat/documents/r22560/1972-73_regs_1349111839194_5a23440a481368d43a30699894a1f67aae06e99a8899d701e8aa3ef3a088fe81.pdf#page=1'
+const LANDS_FAX_1994 = 'https://docs.openinfo.gov.bc.ca/Response_Package_FIN-2016-64551.pdf#page=17'
 const DRC_1973 = 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1973.pdf'
 const DRC_REPORT = (year, url, page, locator) =>
   source(`Department of Recreation and Conservation, Annual Report ${year}, PDF page ${page}`, `${url}#page=${page}`, locator)
@@ -916,26 +919,35 @@ export const COLLECTION_ERAS = {
         DRC_REPORT(1971, DRC_1971, 98, 'Provincial Museum divider'),
         DRC_REPORT(1971, DRC_1971, 126, 'Commercial Fisheries Branch divider'),
         source('Department of Recreation and Conservation, Annual Report 1972 (colour copy, Royal BC Museum)', DRC_1972),
-        source('Department of Recreation and Conservation, Annual Report 1973', DRC_1973)
+        DRC_REPORT(1973, DRC_1973, 22, 'Department symbol beside the Fish and Wildlife Branch divider'),
+        DRC_REPORT(1973, DRC_1973, 78, 'Provincial Parks Branch divider'),
+        DRC_REPORT(1973, DRC_1973, 112, 'Provincial Museum divider'),
+        DRC_REPORT(1973, DRC_1973, 144, 'Marine Resources (Commercial Fisheries) divider'),
+        DRC_REPORT(1973, DRC_1973, 162, 'Back cover with the earlier deer and fish square')
       ]
     },
     {
       id: 'drc-1973-emblems',
       status: 'held',
-      years: '1973',
+      years: '1972–73 synopsis and 1973 report',
       label: 'Fish and Wildlife’s oval, and the Parks shield',
-      note: 'Two further designs in the 1973 report. Fish and Wildlife’s dividers trade the square for a narrow ' +
+      note: 'The 1972–73 hunting regulations cover shows the oval above F&W. The 1972 annual report records a new ' +
+        'insignia used to identify vehicles, offices and field installations. This suggests a connection with the oval. ' +
+        'The paragraph leaves the design and designer unidentified. In the 1973 report, Fish and Wildlife’s dividers use a narrow ' +
         'dark emblem over “F&W”, beside a panel naming the branch; the Parks Branch’s organization chart ' +
         'carries a shield with a dogwood over the province, PARKS above and BRITISH COLUMBIA below. Neither ' +
         'replaced the squares outright: the same report keeps the old Fish and Wildlife square on its back ' +
         'cover, and the spirals on the Parks divider.',
       applicability: {
         kind: 'dated_specimen',
-        years: '1973',
-        note: 'Printed in the annual report for 1973. The report also mentions a logo proposal for the Parks ' +
+        years: '1972–73 synopsis and 1973 report',
+        note: 'The synopsis cover dates the oval. The 1973 annual report dates both the paired panels and the shield. ' +
+          'The report also mentions a logo proposal for the Parks ' +
           'Branch (PDF page 106) without showing it, so the shield is not assumed to be that proposal.'
       },
       sources: [
+        source('British Columbia Hunting Regulations, Synopsis 1972–1973, cover', HUNTING_1972_73),
+        DRC_REPORT(1972, DRC_1972_MINISTRY, 57, 'Fish and Wildlife Branch promotional activities, printed Z56'),
         DRC_REPORT(1973, DRC_1973, 22, 'Fish and Wildlife Branch divider'),
         DRC_REPORT(1973, DRC_1973, 80, 'Parks Branch organization chart')
       ]
@@ -945,11 +957,12 @@ export const COLLECTION_ERAS = {
     {
       id: 'lands-badge',
       status: 'held',
-      years: 'by 1986–88',
+      years: '1986–88 ministry form and 1994 fax',
       label: 'The flag badge',
       note: 'The flag symbol in a rounded frame, with “BC” and “Lands” set alike: BC Parks’ arrangement, ' +
         'in regular letters and a thinner frame. Seen in the corner of a photocopied form whose text names ' +
-        'the Ministry of Forests and Lands.',
+        'the Ministry of Forests and Lands. A Lands Operations Division fax dated February 14, 1994 shows the badge ' +
+        'beside a band of repeated provincial silhouettes.',
       applicability: {
         kind: 'first_observation',
         years: 'by 1986–88',
@@ -962,7 +975,8 @@ export const COLLECTION_ERAS = {
           title: 'A photocopied Ministry of Forests and Lands form on an assignment, with a checklist of items ' +
             'required, supplied as a screenshot; its title, number and date are not in the picture',
           print: true
-        }
+        },
+        source('Ministry of Environment, Lands and Parks, Lands Operations Division fax, February 14, 1994, PDF page 17', LANDS_FAX_1994)
       ]
     }
   ],

@@ -104,9 +104,12 @@ export const RECONCILED_SUBJECTS = [
     sources: [{
       title: 'Ministry of Forests and Lands form, photocopied',
       citation: 'A form on an assignment, with its BC Lands badge, supplied as a screenshot; title, number and date not in the picture.'
+    }, {
+      title: 'Lands Operations Division, Vancouver Island Region, fax dated February 14, 1994, PDF page 17',
+      url: 'https://docs.openinfo.gov.bc.ca/Response_Package_FIN-2016-64551.pdf#page=17'
     }],
-    nextAction: 'Find a dated BC Lands publication with the badge, and whether it began under Lands, Parks and Housing or ended with the Ministry of Crown Lands.',
-    note: 'The Crown lands side of the 1980s ministries, not a body in the atlas. Its badge is BC Parks’ with the second word changed, so it is drawn in BC Parks’ frame.'
+    nextAction: 'Identify the badge’s introduction and last documented use.',
+    note: 'The provincial crown lands administration used the flag badge on a Ministry of Forests and Lands form and on a 1994 Lands Operations Division fax under the Ministry of Environment, Lands and Parks.'
   }),
   subject({
     id: 'justice-institute',
@@ -305,10 +308,11 @@ export const RECONCILED_SUBJECTS = [
     sources: [
       { title: 'Department of Recreation and Conservation, Annual Report 1970', url: 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1970.pdf' },
       { title: 'Department of Recreation and Conservation, Annual Report 1971', url: 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1971.pdf' },
+      { title: 'Department of Recreation and Conservation, Annual Report 1972, Fish and Wildlife promotional activities, printed Z56', url: 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1972.pdf#page=57' },
       { title: 'Department of Recreation and Conservation, Annual Report 1973', url: 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1973.pdf' }
     ],
     nextAction: 'Find who designed the five square symbols, and any identity manual; date the 1970 oval beyond its one report.',
-    note: 'A provincial department, 1957–1976. Its 1970 oval, the five square symbols of its 1971–1973 reports and two 1973 emblems are held as reconstructions from the reports. The department is a ministry in the government atlas, not a separate agency, and its branches have no atlas bodies of their own, so their marks sit with it; the Parks Branch’s two are also on BC Parks’ timeline.'
+    note: 'A provincial department, 1957–1976. Its 1970 oval, the five square symbols of its 1971–1973 reports and the separate Fish and Wildlife oval and Parks shield are held as reconstructions from the reports. The oval also appears on the 1972–73 hunting regulations cover. The department is a ministry in the government atlas, not a separate agency, and its branches have no atlas bodies of their own, so their marks sit with it; the Parks Branch’s two are also on BC Parks’ timeline.'
   }),
   subject({
     id: 'bceid',
