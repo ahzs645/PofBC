@@ -4,6 +4,7 @@ import { MUNICIPAL_IDENTITY_BODIES } from './municipalIdentityData.js'
 import { RECOVERED_IDENTITY_BODIES } from './recoveredIdentityData.js'
 import { POSTSECONDARY_IDENTITY_BODIES } from './postsecondaryIdentityData.js'
 import { HEALTH_COUNCIL_BODIES } from './healthCouncilHistory.js'
+import { AGRICULTURAL_PARTNER_BODIES } from './agriculturalPartners.js'
 import { YOUTH_BODY } from './bcYouth.js'
 import { FAMILY_COUNCIL_BODY } from './councilForTheFamily.js'
 import { ALCOHOL_AND_DRUG_COMMISSION_BODY } from './alcoholAndDrugCommission.js'
@@ -14,6 +15,7 @@ import { SURVEY_AND_LIBRARY_BODIES } from './geologicalSurveyAndLibrary.js'
 import { FOREST_GENETICS_BODIES } from './forestGenetics.js'
 
 const additionalBodies = [
+  ...AGRICULTURAL_PARTNER_BODIES,
   ...FOREST_GENETICS_BODIES,
   ...SURVEY_AND_LIBRARY_BODIES,
   ...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES,

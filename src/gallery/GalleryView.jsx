@@ -985,6 +985,15 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             ))}
           </div>
         </section>
+        <section className="gallery__shelf" aria-labelledby="shelf-partners">
+          <h2 id="shelf-partners" className="gallery__shelf-title">Program delivery partners</h2>
+          <p className="gallery__intro gallery__shelf-intro">Independent organizations that deliver publicly funded programs in British Columbia.</p>
+          <div className="gallery__collections">
+            {COLLECTIONS_ON_SHELF('partners').map((entry) => (
+              <CollectionCard key={entry.id} collection={entry} theme={theme} onOpen={() => choose(entry.id)} />
+            ))}
+          </div>
+        </section>
         {COLLECTIONS_ON_SHELF('municipalities').length > 0 && (
           <section className="gallery__shelf" aria-labelledby="shelf-municipalities">
             <h2 id="shelf-municipalities" className="gallery__shelf-title">Municipalities</h2>

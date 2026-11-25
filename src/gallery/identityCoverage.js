@@ -147,6 +147,8 @@ export const filterIdentityCoverage = (subjects, { query = '', family = '', stat
 export const INVERSE_RELATION_LABELS = {
   'related-to': 'Related to',
   'part-of': 'Includes',
+  'received-operations-from': 'Operations transferred to',
+  'transferred-operations-to': 'Received operations from',
   'service-of': 'Provides the service',
   'owned-by': 'Owns',
   'shareholder-of': 'Voting share held by',
