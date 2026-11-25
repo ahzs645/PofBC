@@ -134,3 +134,21 @@ test('municipal mottoes are split from the register’s gloss', () => {
   assert.match(kinnaird.note, /^The motto appears in the Lyon Register/)
   for (const holder of HOLDERS) assert.doesNotMatch(holder.motto?.text ?? '', /This Latin phrase/, holder.id)
 })
+
+test('the two flag-derived shields are credited vector supplements, not new lead arms', () => {
+  for (const [holderId, original, author] of [
+    ['city-of-dawson-creek', 'cha-1370-arms-1', 'Cookieman1.1.1'],
+    ['city-of-kimberley', 'cha-925-arms-1', 'Jack Ryan Morris']
+  ]) {
+    const holder = holderById(holderId)
+    assert.equal(holder.image.artwork, original)
+    const entries = holder.artwork.filter(({ kind, file }) => kind === 'shield' && file)
+    assert.equal(entries.length, 1)
+    const [entry] = entries
+    assert.ok(entry.vector)
+    assert.ok(entry.author.includes(author))
+    assert.match(entry.page, /^https:\/\/commons\.wikimedia\.org\/wiki\/File:Flag_of_/)
+    assert.equal(entry.licenceUrl, 'https://creativecommons.org/licenses/by-sa/4.0/')
+    assert.ok(existsSync(`${imagesDir}${entry.file}`))
+  }
+})

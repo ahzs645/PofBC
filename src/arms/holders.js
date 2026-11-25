@@ -225,6 +225,33 @@ const fileUnder = (name) => name.replace(/^(City|District|Town|Township|Village|
 
 const entryByUrl = new Map(entries.map((entry) => [entry.register_url, entry]))
 
+// Independent, openly licensed drawings extracted from flags. They are supplemental specimens;
+// the Canadian Heraldic Authority artwork stays first and remains the holder image.
+const MUNICIPAL_SHIELD_SOURCES = {
+  'city-of-dawson-creek': {
+    place: 'Dawson Creek', file: 'dawson-creek-shield.svg', year: '2008', author: 'Cookieman1.1.1'
+  },
+  'city-of-kimberley': {
+    place: 'Kimberley', file: 'kimberley-shield.svg', year: '2005', author: 'Jack Ryan Morris (vector), António Martins-Tuválkin (flag reference)'
+  }
+}
+
+const municipalShield = (id) => {
+  const source = MUNICIPAL_SHIELD_SOURCES[id]
+  return source ? [{
+    id: `${id}-shield-from-flag`,
+    file: source.file,
+    title: 'Independent shield illustration, extracted from a flag SVG',
+    kind: 'shield',
+    date: `${source.year} grant · later drawing`,
+    vector: true,
+    author: `${source.author} · Wikimedia Commons`,
+    licence: 'CC BY-SA 4.0',
+    licenceUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    page: `https://commons.wikimedia.org/wiki/File:Flag_of_${source.place.replaceAll(' ', '_')},_British_Columbia.svg`
+  }] : []
+}
+
 /**
  * A local government's page: the acquisition groups its register entries (a district's grant and
  * the city's confirmation, or a later flag), and the newest leads, as the register's current record.
@@ -238,6 +265,7 @@ const municipalHolder = (held) => {
     ...base,
     id: held.id,
     name: held.name,
+    artwork: [...base.artwork, ...municipalShield(held.id)],
     year: String(Math.min(...records.map(firstYear))),
     related: records.filter((entry) => entry !== main).map((entry) => ({
       title: `${placeName(entry.name)}: ${entry.letters_patent}, ${longDate(entry.date)}`,
