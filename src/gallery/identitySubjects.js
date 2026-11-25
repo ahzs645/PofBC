@@ -1327,8 +1327,8 @@ const CURATED_SUBJECTS = [
     "scope": "core",
     "sources": [
       {
-        "title": "BC Archives: Liquor Control Board",
-        "url": "https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-liquor-board"
+        "title": "Liquor Control Board, first annual report",
+        "url": "https://digitalcollections.llbc.leg.bc.ca/handle/123456789/242418"
       }
     ],
     "nextAction": "Find additional named Board artwork around the documented 1941 letterhead.",
