@@ -45,7 +45,8 @@ export const PREMIERS = [
   {"name": "Gordon Campbell", "party": "Liberal", "from": "2001-06-05", "to": "2011-03-14"},
   {"name": "Christy Clark", "party": "Liberal", "from": "2011-03-14", "to": "2017-07-18"},
   {"name": "John Horgan", "party": "NDP", "from": "2017-07-18", "to": "2022-11-18"},
-  {"name": "David Eby", "party": "NDP", "from": "2022-11-18", "to": null}
+  {"name": "David Eby", "party": "NDP", "from": "2022-11-18", "to": "2026-11-20"},
+  {"name": "Lorne Doerkson", "party": "Conservative", "from": "2026-11-20", "to": null}
 ]
 
 /** Every Lieutenant Governor since Confederation, in order. */
@@ -129,11 +130,12 @@ export const ELECTIONS = [
   {"date": "2013-05-14", "parliament": 40, "winner": "Liberal", "seats": {"Liberal": 49, "NDP": 34, "Green": 1, "Other": 1}, "totalSeats": 85},
   {"date": "2017-05-09", "parliament": 41, "winner": "Liberal", "seats": {"Liberal": 43, "NDP": 41, "Green": 3}, "totalSeats": 87},
   {"date": "2020-10-24", "parliament": 42, "winner": "NDP", "seats": {"NDP": 57, "Liberal": 28, "Green": 2}, "totalSeats": 87},
-  {"date": "2024-10-19", "parliament": 43, "winner": "NDP", "seats": {"NDP": 47, "Conservative": 44, "Green": 2}, "totalSeats": 93}
+  {"date": "2024-10-19", "parliament": 43, "winner": "NDP", "seats": {"NDP": 47, "Conservative": 44, "Green": 2}, "totalSeats": 93},
+  {"date": "2026-10-24", "parliament": 44, "winner": "Conservative", "seats": {"Conservative": 64, "NDP": 27, "Green": 2}, "totalSeats": 93}
 ]
 
-/** The election under way as this was written: called when the 43rd Legislature was dissolved. */
-export const PENDING_ELECTION = {"date": "2026-10-24", "parliament": 44, "called": "2026-09-22", "dissolved": "2026-09-22", "totalSeats": 93}
+/** An election that has been called and has yet to be held. */
+export const PENDING_ELECTION = null
 
 /**
  * When each of the generator's four identities was the Province's, as far as it can be dated.

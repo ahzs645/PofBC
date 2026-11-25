@@ -3,7 +3,7 @@ import { SiteLink } from '../site/navigation.jsx'
 import { partyPlaceFor } from '../parties/partyLinks.js'
 
 /** New election evidence can be displayed without relabelling an older government snapshot. */
-export const ElectionResultsCard = ({ results, snapshotDate }) => {
+export const ElectionResultsCard = ({ results }) => {
   const [expanded, setExpanded] = useState(false)
   if (!results) return null
   const recounts = results.candidates.filter((candidate) => candidate.judicialRecountRequired)
@@ -18,14 +18,13 @@ export const ElectionResultsCard = ({ results, snapshotDate }) => {
           return <li key={party}><strong>{count}</strong> {place ? <SiteLink to={place}>{party}</SiteLink> : party}</li>
         })}
       </ul>
-      <p>{results.totalSeats} candidates declared elected on Elections BC’s final-count list. Kelowna Centre and Ladysmith-Oceanside are subject to judicial recounts.</p>
-      <p className="gov-muted">Government offices shown in this view were checked on {snapshotDate}. These election results do not establish appointments or swearing-in dates.</p>
-      <h3 className="gov-card__subheading">{expanded ? 'Declared elected candidates' : 'Districts requiring recounts'}</h3>
+      <p>Judicial recounts confirmed both district winners on {results.recountSource.publishedOn}. The final count returned {results.totalSeats} members.</p>
+      <h3 className="gov-card__subheading">{expanded ? 'Declared elected candidates' : 'Recounted districts'}</h3>
       <ul className="gov-seats-list">
         {shown.map((candidate) => (
           <li key={candidate.district}>
             <span className="gov-seats-list__who"><strong>{candidate.candidate}</strong> · {candidate.district}</span>
-            <span className="gov-muted">{candidate.party}{candidate.judicialRecountRequired ? ' · Judicial recount required' : ''}</span>
+            <span className="gov-muted">{candidate.party}{candidate.judicialRecountRequired ? ' · Confirmed by recount' : ''}</span>
           </li>
         ))}
       </ul>
@@ -33,7 +32,7 @@ export const ElectionResultsCard = ({ results, snapshotDate }) => {
         {expanded ? 'Show recount districts' : `Show all ${results.totalSeats} declared candidates`}
       </button>
       <p className="gov-links"><a href={results.source.url} target="_blank" rel="noreferrer">Elections BC final-count source</a></p>
-      <p className="gov-muted">{results.assemblySource.note} <a href={results.assemblySource.url} target="_blank" rel="noreferrer">Assembly source</a></p>
+      <p className="gov-links"><a href={results.recountSource.url} target="_blank" rel="noreferrer">Elections BC judicial recount results</a></p>
     </section>
   )
 }

@@ -7,10 +7,11 @@
 // since wound up included. The present adds what only the present records: deputy ministers,
 // ministers of state, chief executives and staffing.
 
-import { CURRENT_BODIES, CURRENT_MINISTERS, CURRENT_AS_OF, CURRENT_SOURCES } from './currentData.js'
+import { CURRENT_BODIES, CONTINUING_MINISTRIES, CURRENT_AS_OF, BODY_CHECKED } from './currentData.js'
+import { APPOINTMENTS, BODY_TRANSFERS, CABINET, DEPUTIES, HANDOVER, REORGANIZED, TRANSFERS } from './cabinet2026.js'
 import { EVENT_SOURCES, eventsFor, operatingNameIn } from './events.js'
 import { LIEUTENANT_GOVERNORS_OFFICIAL, PARLIAMENT_43, STAFFING } from './atlasData.js'
-import { CURRENT_MINISTRIES, episodesIn, fold, forerunnerIn, MINISTRY_EPISODES, predecessorsOf, slugify, successorsOf } from './episodes.js'
+import { episodesIn, fold, forerunnerIn, MINISTRY_EPISODES, predecessorsOf, slugify, successorsOf } from './episodes.js'
 import { ELECTIONS, LIEUTENANT_GOVERNORS, PENDING_ELECTION, PREMIERS } from './timelineData.js'
 import { CROWN_CATEGORY_SOURCES, crownCategoryOf } from './crownCategories.js'
 import { monarchOn } from './monarchs.js'
@@ -25,7 +26,9 @@ const ARCHIVES_DIAGRAM = {
   url: 'https://bcarchives.ca/wp-content/uploads/sites/2/2026/01/BC-Government-Ministry-History-Diagram.pdf'
 }
 const historySource = (index) => (index === null || index === undefined ? null : { url: HISTORY_SOURCES[index], title: null })
-const TODAY_SOURCE = { title: CURRENT_SOURCES[0]?.title ?? 'Government of British Columbia', url: CURRENT_SOURCES[0]?.url ?? null }
+// Parent labels in the September inventory refer to these episodes, including for historical inference.
+const preHandoverEpisodes = episodesIn(2025)
+const previousMinistries = new Map(preHandoverEpisodes.map((episode) => [fold(episode.name), episode.id]))
 
 export const FIRST_YEAR = 1871
 export const PRESENT_YEAR = Number(CURRENT_AS_OF.slice(0, 4))
@@ -278,7 +281,7 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
   // The sovereign the Lieutenant Governor represents: a Queen or a King, by the year.
   const monarch = monarchOn(day)
   const election = electionBefore(day)
-  const dissolved = present && PENDING_ELECTION && PENDING_ELECTION.dissolved <= day && PENDING_ELECTION.date > day
+  const dissolved = Boolean(present && PENDING_ELECTION && PENDING_ELECTION.dissolved <= day && PENDING_ELECTION.date > day)
 
   const nodes = []
   const edges = []
@@ -351,6 +354,7 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
     ring: 'inner',
     name: 'Premier of British Columbia',
     head: premier ? { title: 'Premier', person: premier.name, party: premier.party, since: premier.from } : null,
+    evidence: premier?.from === HANDOVER ? [claim('Appointed Premier on ' + HANDOVER, APPOINTMENTS)] : [],
     description: 'Head of the government. Chooses the ministers of the Executive Council, who are appointed by the Lieutenant Governor on the Premier’s advice, and decides how the ministries are organised.'
   })
   link(crown.id, premierNode.id, 'appoints')
@@ -360,8 +364,8 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
   // from the present record, which also has its deputy and staffing.
   const standing = episodesIn(year)
   for (const episode of standing) {
-    const today = present && CURRENT_MINISTRIES.some((name) => fold(name) === fold(episode.name))
-    const current = today ? CURRENT_MINISTERS[slugify(episode.name)] : null
+    const current = present ? CABINET[episode.name] : null
+    const continuing = current ? CONTINUING_MINISTRIES[slugify(episode.name)] : null
     add({
       id: episode.id,
       kind: 'ministry',
@@ -369,20 +373,24 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
       ring: 'cabinet',
       name: episode.name,
       episode,
-      head: current?.minister ?? ministerOn(episode.id, day),
+      head: ministerOn(episode.id, day),
       ministers: ministersOf(episode.id),
-      deputy: current?.deputy ?? null,
+      deputy: current ? { person: current.deputy, title: current.deputyTitle ?? 'Deputy Minister' } : null,
+      mandate: current?.mandate,
+      parliamentarySecretaries: current?.parliamentarySecretaries ?? [],
       ministersOfState: current?.ministersOfState ?? [],
-      employees: current?.employees ?? staffingOf(episode.id).find((row) => row.basis === 'actual' && Number(row.fiscalYear.slice(0, 4)) === year)?.value ?? null,
+      employees: continuing?.employees ?? staffingOf(episode.id).find((row) => row.basis === 'actual' && Number(row.fiscalYear.slice(0, 4)) === year)?.value ?? null,
       staffing: staffingOf(episode.id),
       officialUrl: current?.officialUrl ?? null,
-      description: current?.description ?? null,
+      description: continuing?.description ?? null,
       predecessors: predecessorsOf(episode.id),
       successors: successorsOf(episode.id),
       events: eventsFor([episode.id]),
       evidence: [
-        claim(`${episode.name}, ${episode.from}–${episode.to ?? ''}`, ARCHIVES_DIAGRAM, episode.inferredEnd ? { note: 'End year inferred from what it became.' } : {}),
-        current ? claim(`${current.minister.person}, ${current.minister.title}; ${current.deputy?.person ?? 'deputy not recorded'}, ${current.deputy?.title ?? 'Deputy Minister'}`, TODAY_SOURCE, { checked: CURRENT_AS_OF }) : null,
+        claim(REORGANIZED[episode.id] ? `${episode.name}, from ${episode.from}` : `${episode.name}, ${episode.from}–${episode.to ?? ''}`, episode.date === HANDOVER ? TRANSFERS : ARCHIVES_DIAGRAM, episode.inferredEnd ? { note: 'End year inferred from what it became.' } : {}),
+        REORGANIZED[episode.id] ? claim('Reorganized on ' + HANDOVER, TRANSFERS, { note: 'Appendix A' }) : null,
+        current ? claim(`${current.minister}, ${current.title ?? episode.name.replace('Ministry of', 'Minister of')}`, APPOINTMENTS, { checked: CURRENT_AS_OF }) : null,
+        current ? claim(`${current.deputy}, ${current.deputyTitle ?? 'Deputy Minister'}`, DEPUTIES, { note: 'Schedule 2', checked: CURRENT_AS_OF }) : null,
         ...(!current ? (ministerOn(episode.id, day)?.corroboratingEvidence ?? []).map((e) => claim('Corroborating appointment evidence', e.source, { note: e.locator, checked: e.reviewed })) : []),
         !current && ministerOn(episode.id, day) ? claim(`${ministerOn(episode.id, day).person}, ${ministerOn(episode.id, day).title}`, ministerOn(episode.id, day).source) : null
       ].filter(Boolean)
@@ -397,8 +405,17 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
   // Which ministry answered for a body is known where a source states it for that period. Where it
   // is not, a body that still exists (or became one that does) is placed beside the forerunner of
   // the ministry that answers for it today, and carries `inferredGroup` so the view can say so.
-  const todays = new Map(MINISTRY_EPISODES.filter((episode) => episode.to === null).map((episode) => [fold(episode.name), episode.id]))
   const standingByKey = new Map(standing.map((episode) => [ministryKey(episode.name), episode.id]))
+  // A named transfer takes precedence over all pre-handover placements. Other functions
+  // of a reorganized ministry follow its continuation or the residual transfer in Appendix A.
+  const transferFor = (bodyId, previousParent) => {
+    if (!present) return null
+    const assignment = BODY_TRANSFERS[bodyId]
+    const portfolio = assignment?.[0] ?? REORGANIZED[previousParent]?.[0]
+    if (!portfolio) return null
+    const id = portfolio === 'Premier' ? 'premier' : standingByKey.get(ministryKey(portfolio))
+    return { id, evidence: claim(`Assigned to ${portfolio} from ${HANDOVER}`, assignment?.[2] ?? TRANSFERS, { note: assignment?.[1] ?? 'Appendix A, continuation or transfer of functions' }) }
+  }
   const research = new Map(HISTORICAL_BODIES.map((body) => [body.id, body]))
   const currentById = new Map(CURRENT_BODIES.map((body) => [body.id, body]))
   const stands = (established, ended) => {
@@ -433,7 +450,7 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
     return presentOf(research.get(record.became), seen)
   }
   const inferredGroup = (body) => {
-    const todaysMinistry = body?.responsibleMinistry ? todays.get(fold(body.responsibleMinistry)) : body?.group
+    const todaysMinistry = body?.responsibleMinistry ? previousMinistries.get(fold(body.responsibleMinistry)) : body?.group
     if (!todaysMinistry) return null
     return present ? todaysMinistry : forerunnerIn(todaysMinistry, year)?.id ?? null
   }
@@ -445,16 +462,20 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
   })
   const placed = new Set()
   const place = (body, record, { uncertain = false } = {}) => {
-    const stated = statedGroup(record)
+    const priorName = statedPeriod(record)?.[0]
+    const previousParent = previousMinistries.get(fold(priorName)) ?? previousMinistries.get(fold(body.responsibleMinistry))
+    const transfer = transferFor(body.id, previousParent)
+    const stated = transfer ? null : statedGroup(record)
     const period = stated ? statedPeriod(record) : null
     // FNHA is governed by First Nations, not by a ministry: it is a partner, never a child.
     const partnerOnly = PARTNERS.some((partner) => partner.body === body.id)
-    const group = partnerOnly ? null : stated ?? (present && currentById.has(body.id) ? inferredGroup(body) : inferredGroup(presentOf(record ?? body)))
+    const group = partnerOnly ? null : transfer?.id ?? stated ?? (present && currentById.has(body.id) ? inferredGroup(body) : inferredGroup(presentOf(record ?? body)))
     const family = lineage(body.id)
     const subjects = [body.id, ...family.cameFrom.map((entry) => entry.id), family.became?.id].filter(Boolean)
     const operating = operatingNameIn(body.id, year)
     const node = add({
       ...body,
+      ...(transfer && { responsibleMinistry: standing.find((episode) => episode.id === transfer.id)?.name }),
       ...(operating ? { shortName: operating.name, operatingName: operating } : {}),
       group,
       inferredGroup: !present && Boolean(group) && !stated,
@@ -487,15 +508,16 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
         record?.firstSeen && !record.established
           ? claim(`Shown to exist by ${record.firstSeen[0]}; its start is unknown`, historySource(record.firstSeen[1]), record.firstSeen[2] ? { note: record.firstSeen[2] } : {})
           : null,
+        transfer?.evidence,
         period ? claim(`Answered to the ${period[0]}${period[1] ? ` from ${period[1]}` : ''}${period[2] ? ` to ${period[2]}` : ''}`, historySource(period[3]), [period[4], period[5]].filter(Boolean).length ? { note: [period[4], period[5]].filter(Boolean).join('. ') } : {}) : null,
-        present && body.head?.person ? claim(`${body.head.person}, ${body.head.title}`, TODAY_SOURCE, { checked: CURRENT_AS_OF }) : null,
+        present && body.head?.person ? claim(`${body.head.person}, ${body.head.title}`, { title: body.name, url: body.officialUrl }, { checked: BODY_CHECKED }) : null,
         !present && body.head?.source ? claim(`${body.head.person}, ${body.head.title}`, body.head.source) : null
       ].filter(Boolean)
     })
     placed.add(body.id)
     if (group) link(group, node.id, 'responsible')
     if (body.kind === 'officer') link(assembly.id, node.id, 'appoints')
-    if (body.kind === 'central-agency') link(premierNode.id, node.id, 'responsible')
+    if (body.kind === 'central-agency' && !group) link(premierNode.id, node.id, 'responsible')
     return node
   }
 
@@ -644,7 +666,11 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
     const datedParents = (entry.parents ?? []).some((row) => row.coverage !== 'observation_only' && row.from)
     let parentId = null
     let placement = null
-    if (statedId && drawn.has(statedId)) {
+    const transfer = transferFor(entry.id, entry.parent)
+    if (transfer) {
+      parentId = transfer.id
+      placement = 'transfer'
+    } else if (statedId && drawn.has(statedId)) {
       parentId = statedId
       placement = 'stated'
     } else if (present && entry.parent && drawn.has(entry.parent)) {
@@ -677,6 +703,7 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
     const decided = (field) => (entry.decisions ?? []).find((decision) => decision.field === field)
     const decisionNote = (field) => decided(field) ? { note: `Decided ${decided(field).decided}: ${decided(field).reason}` } : {}
     const evidence = [
+      transfer?.evidence,
       claimOf('Began', entry.establishedClaim, decisionNote('established')),
       !entry.establishedClaim && entry.established
         ? claim(`${entry.name}, from ${entry.established}`, joint?.from === entry.established ? { title: 'Columbia Power statement of financial information', url: joint.source } : historySource(entry.establishedSource ?? entry.source), reconcile ? { note: 'Collected, not confirmed: the review left this start unresolved.' } : {})
@@ -687,7 +714,7 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
       nameRow && renamed ? claim(`Known as ${name}${nameRow.coverage === 'observation_only' ? ` in ${nameRow.observedOn}` : ` from ${nameRow.from ?? '?'}${nameRow.to ? ` to ${nameRow.to}` : ''}`}`, historySource(nameRow.source), nameRow.locator ? { note: nameRow.locator } : {}) : null,
       placement === 'stated'
         ? claim(`${statedRow.relation === 'subsidiary_of' ? 'A subsidiary of' : 'Part of'} ${statedRow.name}${statedRow.coverage === 'observation_only' ? ` (observed ${statedRow.observedOn})` : statedRow.from ? ` from ${statedRow.from}` : ''}`, historySource(statedRow.source), statedRow.locator ? { note: statedRow.locator } : {})
-        : placement === 'today' && !joint ? claim(`${entry.name}, part of the ${parent.name}`, historySource(entry.source), { checked: CURRENT_AS_OF }) : null,
+        : placement === 'today' && !joint ? claim(`${entry.name}, part of the ${parent.name}`, historySource(entry.source), { checked: BODY_CHECKED }) : null,
       ownershipShown ? claim(`Joint ownership: ${joint.shares.map((row) => `${row.name} ${row.percent}%`).join('; ')}`, { title: 'Columbia Power statement of financial information', url: joint.source }, { note: `${joint.locator}; ${joint.from ? `effective ${joint.from}; ` : ''}observed ${joint.observedOn}. Equal board representation; decisions require unanimity.` }) : null,
       ...(ownershipShown ? joint.shares.filter((row) => row.directHolder && (present || !row.holderObservedOn || yearOf(row.holderObservedOn) === year)).map((row) => claim(`Direct shareholder for ${row.name}: ${row.directHolder}`, { title: 'Shareholder financial statements', url: row.holderSource }, { note: row.holderLocator })) : []),
       ownershipShown && (present || year === 2025) ? claim('Columbia Power manages the shared generating assets under shareholder agreements and contracts; management is separate from ownership.', { title: 'Columbia Power asset management policy', url: 'https://columbiapower.org/wp-content/uploads/2025/05/2025_Asset-Management-Policy_FINAL.pdf' }, { note: 'Policy dated March 10, 2025.' }) : null,
@@ -702,7 +729,7 @@ export const governmentIn = (year, { includeUndated = false, includeLocal = fals
       subType: entry.type,
       inferredParent: !joint && placement === 'inferred' && Boolean(parent),
       jointOwnership: ownershipShown ? joint : null,
-      parentToday: entry.parent ?? null,
+      parentToday: transfer?.id ?? entry.parent ?? null,
       // Not shown by any source to exist by this year.
       uncertain: presence === 'unconfirmed' || pastLastSeen,
       presence,

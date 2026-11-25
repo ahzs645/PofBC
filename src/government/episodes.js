@@ -14,6 +14,7 @@
 // below are this view's reading of it, each with where it came from, and the history after the
 // source's last revision (2024-12-16) is added the same way.
 
+import { CABINET, HANDOVER, REORGANIZED } from './cabinet2026.js'
 import { EPISODES, RENAMES } from '../ministries/history.js'
 
 /**
@@ -66,31 +67,7 @@ const SPELLING = {
 }
 
 /** The ministries in office today, which are the only episodes that may stay open. */
-export const CURRENT_MINISTRIES = [
-  'Ministry of Agriculture and Food',
-  'Ministry of Attorney General',
-  'Ministry of Children and Family Development',
-  'Ministry of Citizens’ Services',
-  'Ministry of Education and Child Care',
-  'Ministry of Emergency Management and Climate Readiness',
-  'Ministry of Energy and Climate Solutions',
-  'Ministry of Environment and Parks',
-  'Ministry of Finance',
-  'Ministry of Forests',
-  'Ministry of Health',
-  'Ministry of Housing and Municipal Affairs',
-  'Ministry of Indigenous Relations and Reconciliation',
-  'Ministry of Infrastructure',
-  'Ministry of Jobs and Economic Growth',
-  'Ministry of Labour',
-  'Ministry of Mining and Critical Minerals',
-  'Ministry of Post-Secondary Education and Future Skills',
-  'Ministry of Public Safety and Solicitor General',
-  'Ministry of Social Development and Poverty Reduction',
-  'Ministry of Tourism, Arts, Culture and Sport',
-  'Ministry of Transportation and Transit',
-  'Ministry of Water, Land and Resource Stewardship'
-]
+export const CURRENT_MINISTRIES = Object.keys(CABINET)
 
 const folded = new Map()
 // Remembered, because names are compared pairwise all through the diagram (every ministry against
@@ -121,17 +98,20 @@ const spell = (name) => SPELLING[name] ?? name
  * the episode it was renamed into; `inferredEnd` marks those, so the view can say so.
  */
 const buildEpisodes = () => {
+  const newNames = [...new Set(Object.values(REORGANIZED).flat())]
+    .filter((name) => name !== 'Public Safety and Solicitor General')
+    .map((name) => ({ name: `Ministry of ${name}`, from: 2026, to: null, date: HANDOVER }))
   const current = new Set(CURRENT_MINISTRIES.map(fold))
   const renames = [...RENAMES, ...LATER_RENAMES].map(([from, to]) => [spell(from), spell(to)])
 
-  const base = [...EPISODES.map((episode) => ({ ...episode, source: true })), ...LATER].map((episode) => {
+  const base = [...EPISODES.map((episode) => ({ ...episode, source: true })), ...LATER, ...newNames].map((episode) => {
     const name = spell(episode.name)
     // Only the source's own open ends are closed; an episode added here says its own end.
     const closed = episode.source ? CLOSED[episode.name] ?? CLOSED[name] : undefined
     return {
       name,
       from: episode.from,
-      to: episode.to ?? closed ?? null,
+      to: episode.to ?? closed ?? (REORGANIZED[`${slugify(name)}-${episode.from}`] ? 2026 : null),
       date: episode.date ?? null
     }
   })
@@ -197,6 +177,16 @@ const buildLinks = () => {
       if (best && !links.some((link) => link.from === best.from && link.to === best.to)) {
         links.push({ from: best.from, to: best.to })
       }
+    }
+  }
+  // Bind the 2026 order to specific episodes. Some names also belonged to earlier ministries.
+  for (const [from, portfolios] of Object.entries(REORGANIZED)) {
+    for (const portfolio of portfolios) {
+      const successor = MINISTRY_EPISODES.find((episode) => episode.from === 2026 && episode.name === `Ministry of ${portfolio}`)
+      // A transfer into an existing portfolio is not the origin of that older ministry.
+      if (!successor) continue
+      const to = successor.id
+      if (!links.some((link) => link.from === from && link.to === to)) links.push({ from, to })
     }
   }
   return links

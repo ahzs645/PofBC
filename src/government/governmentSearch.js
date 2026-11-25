@@ -16,7 +16,8 @@ const LOCAL_KINDS = new Set(['regional-hospital-district', 'hospital-improvement
 
 /** Builds the index. Exported for the tests; the view uses `search`. */
 export const buildSearchIndex = () => {
-  const today = governmentIn(PRESENT_YEAR).nodes
+  const nodes = governmentIn(PRESENT_YEAR).nodes
+  const today = nodes
     .filter((node) => node.kind !== 'ministry')
     .map((node) => ({ id: node.id, name: node.name, alias: node.shortName, year: PRESENT_YEAR, detail: node.head?.person }))
   const episodes = MINISTRY_EPISODES.map((episode) => ({
@@ -44,8 +45,13 @@ export const buildSearchIndex = () => {
   const ministers = Object.entries(MINISTERS).flatMap(([episodeId, rows]) => rows.map(([person, from, to, title]) => {
     const episode = MINISTRY_EPISODES.find((entry) => entry.id === episodeId)
     const start = Math.max(Number(String(from).slice(0, 4)), episode?.from ?? 0)
-    return { id: episodeId, name: person, alias: title, year: start, detail: `${title}, ${String(from).slice(0, 4)}–${to ? String(to).slice(0, 4) : ''}`, minister: true }
+    return { id: episodeId, name: person, alias: title, year: episode?.to && start >= episode.to ? Math.max(episode.from, episode.to - 1) : start, detail: `${title}, ${String(from).slice(0, 4)}–${to ? String(to).slice(0, 4) : ''}`, minister: true }
   }))
+  for (const node of nodes.filter((entry) => entry.kind === 'ministry')) {
+    for (const official of [node.deputy, ...node.ministersOfState, ...node.parliamentarySecretaries].filter(Boolean)) {
+      ministers.push({ id: node.id, name: official.person, year: PRESENT_YEAR, detail: `${official.title} · ${node.name}`, minister: true })
+    }
+  }
   const related = RELATED_BODIES.map((body) => ({
     id: body.id, name: body.name, alias: [body.shortName, ...body.aliases].join(' '),
     year: PRESENT_YEAR, detail: RELATED_BODY_KINDS[body.kind], related: true
@@ -82,7 +88,7 @@ export const buildSearchIndex = () => {
 let index = null
 const searchIndex = () => (index ??= buildSearchIndex())
 
-export const normal = (text) => String(text ?? '').toLowerCase().normalize('NFD').replace(/[^a-z0-9 ]+/g, ' ')
+export const normal = (text) => String(text ?? '').toLowerCase().normalize('NFD').replace(/\p{M}/gu, '').replace(/[^a-z0-9 ]+/g, ' ')
 
 /** Up to ten matches for every word of `query`: bodies before people, the most recent first. */
 export const search = (query) => {
