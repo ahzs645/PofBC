@@ -30,6 +30,14 @@ export const INITIATIVES = [
     searchTerms: ['JEPP', 'PEP', 'Provincial Emergency Program', 'Emergency Preparedness Canada', 'Ministry of Attorney General']
   },
   {
+    id: 'dfam', title: 'Defined Forest Area Management', subtitle: 'Ministry of Forests · documented in 2003',
+    summary: 'The Ministry proposed joint forest health and timber supply work by licence holders and BC Timber Sales. Its April 2003 technical sheet carries a five-tree DFAM emblem.',
+    cover: { file: 'initiatives/dfam/dfam.svg', alt: 'One conifer within the D and four above FAM, all inside a rounded green frame', caption: 'Reconstruction from the April 2003 technical sheet' },
+    exploreLabel: 'Explore the DFAM emblem and the timber supply work',
+    tags: ['Forestry', 'Timber supply', 'Forest health'], searchTerms: ['DFAM', 'BC Timber Sales', 'BCTS', 'bark beetle'],
+    relatedBodyIds: ['sub-bc-timber-sales']
+  },
+  {
     id: 'bc-youth', title: 'BC Youth', exploreLabel: 'Explore the youth grants, newspaper marks and ministry history', subtitle: 'Ministry of Advanced Education and Job Training',
     summary: 'Provincial youth grants, the Youth Advisory Council and the BC Youth mark that appeared in government advertisements.',
     cover: { file: 'identity-collected/bc-youth/right-flag.svg', alt: 'BC Youth wordmark and waving flag', caption: 'Reconstruction of the mark printed in October 1989' },
@@ -324,6 +332,10 @@ const LOADERS = {
   jepp: async () => {
     const { jeppDetail } = await import('./jepp.js')
     return jeppDetail(initiativeById('jepp'))
+  },
+  dfam: async () => {
+    const { dfamDetail } = await import('./dfam.js')
+    return dfamDetail(initiativeById('dfam'))
   },
   ...Object.fromEntries(YOUTH_PROGRAMS.map((entry) => [entry.id, async () => {
     const { youthProgramDetail } = await import('./youthPrograms.js')

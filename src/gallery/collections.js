@@ -1101,6 +1101,7 @@ export const GALLERY_COLLECTIONS = [
     body: 'Program · Ministry of Forests',
     years: '2003–present',
     graphNode: 'sub-bc-timber-sales',
+    initiativeId: 'dfam',
     cover: 'bcts',
     intro: 'The first BCTS website banner and two different printed identities overlapped. Its 2004 brochure shows the Forest Service oval beside green BCTS initials. ' +
       'It describes 12 business areas, a presence in 33 locations and a small headquarters in Victoria. Later publications pair the initials with a ministry crest or the provincial BC mark.',
