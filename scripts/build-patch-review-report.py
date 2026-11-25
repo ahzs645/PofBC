@@ -239,6 +239,7 @@ def build(args):
         raise ValueError('Every report entry must have an explicit supported review status.')
     patcher = args.patcher.resolve()
     baseline_ref = index['baseline']['patcher']
+    current_ref = subprocess.check_output(['git', '-C', str(patcher), 'rev-parse', 'HEAD'], text=True).strip()
     baseline_manifest = json.loads(git_bytes(patcher, baseline_ref, 'library/manifest.json'))
     current_manifest = read_json(patcher / 'library/manifest.json')
     old = {p['id']: p for o in baseline_manifest['orgs'] for p in o['patches']}
@@ -254,11 +255,16 @@ def build(args):
     review_date = date.fromisoformat(index['reviewedAt'])
     for row in entries:
         patch_id = row['id']
-        baseline_patch = old[patch_id]
+        added_after_baseline = patch_id not in old
+        drawing_ref = current_ref if added_after_baseline else baseline_ref
+        drawing = current[patch_id] if added_after_baseline else old[patch_id]
+        drawing_title = 'Reviewed drawing' if added_after_baseline else 'Baseline drawing'
+        drawing_note = ('First catalogued after the baseline review.' if added_after_baseline
+                        else 'Vector artwork preview from the pinned baseline. Its aspect ratio is preserved.')
         baseline_hash = row.get('baselineSvgSha256') or row['reviewedSvgSha256']
-        if baseline_patch['sha256'] != baseline_hash:
-            raise ValueError(f'{patch_id}: baseline SVG hash does not match the pinned manifest.')
-        baseline_preview = assets.add(git_bytes(patcher, baseline_ref, 'library/' + baseline_patch['preview']))
+        if drawing['sha256'] != baseline_hash:
+            raise ValueError(f'{patch_id}: reviewed SVG hash does not match the pinned manifest.')
+        baseline_preview = assets.add(git_bytes(patcher, drawing_ref, 'library/' + drawing['preview']))
         candidate = None
         if row.get('candidateChanges'):
             candidate_count += 1
@@ -307,9 +313,9 @@ def build(args):
             source_caption = '<p>Generated colourways and missing references cannot be accepted as specimen matches from the drawing alone.</p>'
         source_panel = f'<figure class="comparison source-panel"><div class="comparison-title"><span>Source reference</span><span class="revision">{len(sources)} available</span></div>{selector}{source_art}<figcaption>{source_caption}</figcaption></figure>'
         baseline_panel = (
-            '<figure class="comparison baseline-panel"><div class="comparison-title"><span>Baseline drawing</span>'
-            f'<span class="revision">{baseline_ref[:8]}</span></div>{art(baseline_preview, row["label"] + ", baseline drawing")}'
-            '<figcaption><p>Vector artwork preview from the pinned baseline. Its aspect ratio is preserved.</p>'
+            f'<figure class="comparison baseline-panel"><div class="comparison-title"><span>{drawing_title}</span>'
+            f'<span class="revision">{drawing_ref[:8]}</span></div>{art(baseline_preview, row["label"] + ", " + drawing_title.lower())}'
+            f'<figcaption><p>{drawing_note}</p>'
             f'<p class="digest">SVG SHA-256: {esc(baseline_hash)}</p></figcaption></figure>'
         )
         candidate_panel = ''
@@ -345,7 +351,7 @@ def build(args):
                 page = f' · page {s["page"]}' if s.get('page') else ''
                 bits.append(f'<li><strong>{esc(s["occurrenceId"])}</strong>{esc(page)} — {esc(s["reason"])}. {link(s.get("url"), "Source record ↗")}</li>')
             unavailable = '<details><summary>Linked occurrences without an available crop</summary><ul class="unavailable-list">' + ''.join(bits) + '</ul></details>'
-        artwork_url = f'https://github.com/ahzs645/patcher/blob/{baseline_ref}/library/{quote(baseline_patch["svg"], safe="/")}'
+        artwork_url = f'https://github.com/ahzs645/patcher/blob/{drawing_ref}/library/{quote(drawing["svg"], safe="/")}'
         live_url = 'https://projects.ahmadjalil.com/PofBC/?view=patches&patch=' + quote(patch_id, safe='')
         articles.append(
             f'<article class="patch-entry" id="patch-{esc(patch_id)}" data-id="{esc(patch_id)}" data-org="{esc(row["orgId"])}" data-status="{esc(status)}">'
@@ -355,7 +361,7 @@ def build(args):
             f'<div class="entry-review"><section><h4>Review findings</h4>{list_html(row["findings"])}{changes}</section>'
             f'<section class="next-step"><h4>Next refinement</h4>{list_html(row["proposedFix"])}</section></div>'
             f'<footer class="entry-footer"><details><summary>Evidence and artwork limitations</summary><p>{esc(row["evidenceLimitations"])}</p><p>{esc(row["limitations"])}</p></details>'
-            f'{baseline_notes}{gallery}{unavailable}<div class="entry-links">{link(live_url, "Open gallery entry ↗")}{link(artwork_url, "Pinned baseline artwork ↗")}</div></footer></article>'
+            f'{baseline_notes}{gallery}{unavailable}<div class="entry-links">{link(live_url, "Open gallery entry ↗")}{link(artwork_url, drawing_title + " ↗")}</div></footer></article>'
         )
     summary = index['summary']
     actual = {'variants': len(entries), 'cards': len(card_ids), 'organizations': len(organizations), 'sourceCrops': len(source_ids), 'partialRefinements': candidate_count}
