@@ -8,7 +8,7 @@ The booklet’s front and back covers, PDF pages 2 and 15, show the oval Forest 
 
 The back-cover lockup survives as original vector artwork. Its SVG export contains 75 painted paths, including the outlined lettering. The embedded colours include green `#008450`, charcoal `#231F20`, sky blue `#6DC9EF`, blue `#0091C4`, brown `#4B3216` and white. These are file colours. A local transparent render at 1064 × 448 was composited on white and compared with the same PDF rectangle (172, 524 to 305, 580 points, measured from the top left). At thresholds of 128, 200 and 245 on the darkest RGB channel, silhouette intersection over union was 99.59%, 99.42% and 99.58% respectively. Antialiasing and the threshold affect the comparison.
 
-The collection links to the library’s copy. Its item metadata does not give a redistribution licence, and the library’s collection terms reserve rights to the copyright holders. [Item record](https://digitalcollections.llbc.leg.bc.ca/handle/123456789/308267) · [Library collection terms](https://www.leg.bc.ca/learn/legislative-library/library-collections-terms)
+The project maintainer confirmed rights-holder permission to publish the extracted SVG and its transparent PNG download in PofBC. The library supplies the source publication and catalogue record. The permission applies to these two downloads. [Item record](https://digitalcollections.llbc.leg.bc.ca/handle/123456789/308267) · [Library collection terms](https://www.leg.bc.ca/learn/legislative-library/library-collections-terms)
 
 ## Organization and legislation
 

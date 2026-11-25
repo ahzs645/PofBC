@@ -22,8 +22,13 @@ test('every entry has a complete identity record, in the gallery’s own vocabul
   }
 })
 
-test('no entry claims its rights are cleared, since none has documented permission', () => {
+test('permission for the BCTS downloads is confined to the recovered brochure artwork', () => {
   for (const { id, identity } of everyEntry) {
+    if (id === 'bcts-2004-brochure') {
+      assert.equal(identity.rights.status, 'permitted')
+      assert.match(identity.rights.note, /SVG.*PNG/)
+      continue
+    }
     assert.notEqual(identity.rights.status, 'permitted', `${id} claims permission`)
     assert.match(identity.rights.note, /No permission/, `${id} does not say plainly that there is none`)
   }
@@ -53,5 +58,5 @@ test('a mark dated by where it was seen says so, rather than claiming an adoptio
   const earlier = everyEntry.find((entry) => entry.id === 'bcts-wordmark-earlier')
   assert.equal(earlier.identity.applicability.kind, 'first_observation')
   const bcts = GALLERY_COLLECTIONS.find((collection) => collection.id === 'bcts')
-  assert.deepEqual(bcts.eras.map((era) => era.entries.length > 0), [false, true, false, true])
+  assert.deepEqual(bcts.eras.map((era) => era.entries.length > 0), [true, true, false, true])
 })

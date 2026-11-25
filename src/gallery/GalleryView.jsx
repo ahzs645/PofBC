@@ -520,7 +520,6 @@ const Timeline = ({ eras, current, onPick }) => (
 const STATUS_COUNT = {
   held: (count) => `${count} ${count === 1 ? 'mark' : 'marks'}`,
   generator: () => 'In the generator',
-  documented: () => 'Published specimen',
   sought: () => 'No artwork yet',
   none: () => 'No mark of its own'
 }
@@ -562,9 +561,7 @@ const EmptyEra = ({ era, theme, onOpenInGenerator }) => {
           dangerouslySetInnerHTML={{ __html: art }}
         />
         )
-      : era.specimen
-        ? <a className="gallery__graph-link" href={era.specimen.url} target="_blank" rel="noreferrer">{era.specimen.label}</a>
-        : <div className="gallery__wanted-slot" data-status={eraStatus(era)}>{EMPTY_SLOT[eraStatus(era)]}</div>}
+      : <div className="gallery__wanted-slot" data-status={eraStatus(era)}>{EMPTY_SLOT[eraStatus(era)]}</div>}
     {era.generator && onOpenInGenerator && (
       <button type="button" className="gallery__graph-link" onClick={() => onOpenInGenerator(era.generator)}>
         Open in the generator <span aria-hidden="true">→</span>

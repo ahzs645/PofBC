@@ -7,10 +7,9 @@
 // mark the gallery does not hold is still on it, as a gap, not left out (QA_CASES 19: an
 // uncatalogued logo is not "no logo").
 //
-// An era records how its artwork can be viewed:
+// An era is one of four things:
 //   held      — the gallery has its mark (`marks` names the one-offs, by id);
 //   generator — the generator draws its mark, and `generator` is the patch that opens it there;
-//   documented — the cited publication holds the original artwork and can be opened directly;
 //   sought    — the body had a mark of its own then, which the gallery has not obtained;
 //   none      — the body used the Province's or its ministry's marks, and had none of its own.
 //
@@ -1152,13 +1151,12 @@ export const COLLECTION_ERAS = {
   bcts: [
     {
       id: 'bcts-banner',
-      status: 'documented',
+      status: 'held',
       years: '2003–2004',
       label: 'From program to identity',
       note: 'BC Timber Sales grew out of the Small Business Forest Enterprises Program and became fully operational on 1 April 2003. ' +
         'Its May website carried white lettering on a green photographic banner. A March 2004 Invermere report paired the Forest Service oval with the name on three lines. ' +
         'Both covers of the 2004 BCTS brochure paired the oval with large green BCTS initials and a dark serif subtitle. The provincial coat-of-arms wordmark appeared separately.',
-      specimen: { label: 'Open the 2004 brochure at the Legislative Library', url: BCTS_BROCHURE.url },
       applicability: {
         kind: 'dated_specimen',
         years: 'by 2004',

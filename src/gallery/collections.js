@@ -54,8 +54,7 @@ export const APPLICABILITY = {
 }
 
 /**
- * Whether the gallery may show a mark. None has documented permission, so nothing here is
- * 'permitted'; the value exists so that a mark cleared later can say so without a new field.
+ * A permission record applies only to the files and uses named in its note.
  */
 export const RIGHTS = {
   unresolved: 'Rights unresolved',
@@ -1092,6 +1091,7 @@ export const GALLERY_COLLECTIONS = [
     intro: 'The first BCTS website banner and two different printed identities overlapped. Its 2004 brochure shows the Forest Service oval beside green BCTS initials. ' +
       'It describes 12 business areas, a presence in 33 locations and a small headquarters in Victoria. Later publications pair the initials with a ministry crest or the provincial BC mark.',
     eras: withMarks(COLLECTION_ERAS.bcts, {
+      'bcts-banner': specimenEntriesOf('bcts'),
       'bcts-earlier': BCTS_ENTRIES.earlier.map(withIdentity),
       'bcts-current': BCTS_ENTRIES.current.map(withIdentity)
     })
@@ -1353,7 +1353,7 @@ GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) => candidat
 // The Department of Travel Industry's is folded into the BC mark collection.
 // A program's published specimens belong to the body its one-off stands for (WorkBC's to WorkBC, Where
 // ideas work to the Public Service Agency), so that body's panel finds its original files too.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc', 'specimens-bc-environment', 'specimens-tourism-recreation-culture', 'specimens-superhost'].includes(collection.id))
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-worksafebc', 'specimens-bcts', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc', 'specimens-bc-environment', 'specimens-tourism-recreation-culture', 'specimens-superhost'].includes(collection.id))
   .map((collection) => {
     const node = GRAPH_NODES[collection.id.replace(/^specimens-/, '')]
     return node ? { ...collection, entries: collection.entries.map((entry) => ({ ...entry, graphNode: entry.graphNode ?? node })) } : collection

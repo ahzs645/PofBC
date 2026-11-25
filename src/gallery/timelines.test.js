@@ -13,7 +13,7 @@ test('every era says what it is, what its dates rest on, and where they come fro
   for (const { key, era } of everyEra) {
     const where = `${key}/${era.id}`
     for (const field of ['id', 'years', 'label', 'note']) assert.ok(era[field]?.trim(), `${where}: no ${field}`)
-    assert.ok(['held', 'generator', 'documented', 'sought', 'none'].includes(era.status), `${where}: status ${era.status}`)
+    assert.ok(['held', 'generator', 'sought', 'none'].includes(era.status), `${where}: status ${era.status}`)
     assert.ok(era.applicability?.kind in APPLICABILITY, `${where}: applicability ${era.applicability?.kind}`)
     assert.ok(era.applicability.years?.trim() && era.applicability.note?.trim(), `${where}: dates unexplained`)
     assert.ok(era.sources?.length > 0, `${where}: no source`)
@@ -24,10 +24,6 @@ test('every era says what it is, what its dates rest on, and where they come fro
       else assert.match(url, /^https:\/\//, `${where}: ${url}`)
     }
     for (const url of era.seenAt ?? []) assert.match(url, /^https:\/\//, `${where}: ${url}`)
-    if (era.status === 'documented') {
-      assert.match(era.specimen?.url ?? '', /^https:\/\//, where)
-      assert.ok(era.specimen.label, where)
-    }
     assert.equal(era.status === 'generator', Boolean(era.generator), `${where}: a generator era says how to open it, and only one does`)
   }
 })
