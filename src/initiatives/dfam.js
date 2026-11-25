@@ -1,6 +1,6 @@
 const sources = [
   { id: 'sheet', title: 'DFAM Forest Health Technical Information Sheet', publisher: 'B.C. Ministry of Forests', date: 'April 2003', url: 'https://digitalcollections.llbc.leg.bc.ca/handle/123456789/302306' },
-  { id: 'bill', title: 'Forest (Revitalization) Amendment Act, 2003, section 2', publisher: 'Legislative Assembly of British Columbia', url: 'https://www.bclaws.gov.bc.ca/civix/document/id/lc/billsprevious/4th37th%3Agov44-3' },
+  { id: 'bill', title: 'Forests Statutes Amendment Act (No. 2), 2003, section 2', publisher: 'Legislative Assembly of British Columbia', url: 'https://www.bclaws.gov.bc.ca/civix/document/id/lc/billsprevious/4th37th%3Agov44-3' },
   { id: 'table', title: 'Forest Act, Table of Legislative Changes', publisher: 'BC Laws', url: 'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/e4tlc96157' },
   { id: 'arrow', title: 'Arrow Timber Supply Area timber supply review data package', publisher: 'Arrow TSA DFAM Group', date: 'February 2004, finalized March 4', url: 'https://data.nrs.gov.bc.ca/TSR_Historical/TSA/Arrow_01/TSR_2005/Data_Package/Arrow_TSA_20032004_Data_Pack_v3.4.pdf' },
   { id: 'report', title: '2004/05 annual service plan report', publisher: 'B.C. Ministry of Forests', url: 'https://www.bcbudget.gov.bc.ca/annual_reports/2004_2005/for/Ministry_Role_and_Services.htm' }
