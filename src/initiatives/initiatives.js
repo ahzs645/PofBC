@@ -24,7 +24,7 @@ export const INITIATIVES = [
   {
     id: 'dfam', title: 'Defined Forest Area Management', subtitle: 'Ministry of Forests · documented in 2003',
     summary: 'The Ministry proposed joint forest health and timber supply work by licence holders and BC Timber Sales. Its April 2003 technical sheet carries a five-tree DFAM emblem.',
-    cover: { file: 'initiatives/dfam/dfam.svg', alt: 'Five trees within a large D, beside the letters FAM', caption: 'Reconstruction from the April 2003 technical sheet' },
+    cover: { file: 'initiatives/dfam/dfam.svg', alt: 'One conifer within the D and four above FAM, all inside a rounded green frame', caption: 'Reconstruction from the April 2003 technical sheet' },
     exploreLabel: 'Explore the DFAM emblem and the timber supply work',
     tags: ['Forestry', 'Timber supply', 'Forest health'], searchTerms: ['DFAM', 'BC Timber Sales', 'BCTS', 'bark beetle'],
     relatedBodyIds: ['sub-bc-timber-sales']

@@ -13,7 +13,7 @@ export const dfamDetail = (entry) => ({
   sections: [
     { id: 'marks', label: 'Logo', type: 'records', layout: 'marks', title: 'The DFAM emblem', records: [
       { id: 'five-trees', title: 'Defined Forest Area Management', kind: 'program-identity',
-        description: 'The outlined D frames five trees. The original appears on the same cover as the separate Forest Service emblem. The published artwork consists of raster strips. The supplied reconstruction provides editable paths.',
+        description: 'The rounded frame joins the lower curve of the D. One conifer shares its upright stroke and four smaller trees stand above FAM. The original appears on the same cover as the separate Forest Service emblem. The published artwork consists of raster strips. The supplied reconstruction provides editable paths.',
         image: { ...entry.cover, sourceId: 'sheet', sourcePage: 2, date: '2003-04', evidenceType: 'vector-reconstruction' },
         specimens: [{ file: 'initiatives/dfam/april-2003.png', alt: 'DFAM mark as printed in April 2003', caption: 'Published cover detail', sourceId: 'sheet', sourcePage: 2, evidenceType: 'printed-source-crop' }],
         links: [{label: 'Compare the drawing with the printed emblem', url: 'initiatives/dfam/comparison.png', note: 'Grey shows shared ink, rust the publication alone and blue the reconstruction alone. After aligning the foreground bounds, the two ink masks overlap by 92.3% of their union at a darkest-channel threshold of 160.'}],
