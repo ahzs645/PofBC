@@ -5379,7 +5379,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "The corporate mark as original vector artwork from the 2014 annual report; the same mark is on official PDFs of 2019 and 2021.",
+    "notes": "Section 2 of the Oil and Gas Commission Act took effect on July 31, 1998. The Commission began regulatory operations on October 23. Its reports show the OGC monogram in 2000 and 2008, followed by a green-disc wordmark by July 2009. On February 17, 2023, it continued under the name British Columbia Energy Regulator.",
     "assets": [
       {
         "id": "vector-bc-oil-gas-commission-2014",
@@ -5395,11 +5395,12 @@ export const COLLECTED_BODIES = [
         "sourceLocator": "PDF page 1",
         "sourceFile": null,
         "sourceDate": "2014 annual report, published 2015",
+        "specimenDate": "2015-07-03",
         "dateNote": "Publication/capture date or observation, not an adoption date.",
         "observedDate": "2026-10-30",
         "evidenceType": "native-pdf-vector-extraction",
-        "notes": "Exact paths from the official print version of the 2014 Water Use report; publication route lists 3 July 2015. Source is an authentic published specimen, not an issuer-supplied master. Later green/color treatments should be compared before replacing any dated 2019/2021 variant.",
-        "fidelityNote": "native-vector-extracted-from-published-pdf [object Object]",
+        "notes": "The 2014 water-use report prints the green-disc logo with black outer lettering. The regulator lists publication on July 3, 2015.",
+        "fidelityNote": "Twenty-one native paths from the cover of the print report. The dark blue shape, green disc, white lettering within the disc and black outer lettering retain their published colours.",
         "sha256": "9cc125d0da2ab3e1e8747e98b73e0a5343ab586647eabb49b2353310a757fcd9",
         "bytes": 11873,
         "darkBackground": false,
@@ -5413,9 +5414,142 @@ export const COLLECTED_BODIES = [
             "date": "2019-03-28",
             "source": "https://www.bc-er.ca/files/application-manuals/AMS-Guidance/AMS-Release-Guides/AMS-Release-Guide-March-2019.pdf"
           }
-        ]
+        ],
+        "versionLabel": "Black lettering, 2014 water-use report",
+        "variantOf": "ogc-2009-service-plan"
+      },
+      {
+        "id": "ogc-2000-monogram",
+        "label": "Oil and Gas Commission monogram",
+        "file": "identity-collected/oil-and-gas-commission/ogc-2000-monogram.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "BC Oil and Gas Commission",
+        "sourcePage": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/9900annualreport_1.pdf",
+        "sourceUrl": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/9900annualreport_1.pdf",
+        "sourceLocator": "Front cover, PDF page 1, centre.",
+        "sourceFile": "1999/2000 Annual Report",
+        "sourceDate": "2000-10-03",
+        "dateNote": "The regulator’s archive dates this publication. The artwork’s adoption date is unverified.",
+        "observedDate": "2026-11-24",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "Three joined letters sit between two horizontal rules on a rounded red panel. The 2000/01 report prints the same monogram in black, and the 2008 service plan uses red letters and black rules.",
+        "fidelityNote": "Eleven painted paths recovered from the report, including the red panel, with the cover rotation preserved. The name and report title below the emblem are cover type.",
+        "sha256": "21ef9331327f824c8aec8926bcabf1f9b4c4f01d4d1fcf280bf913b38369bd6d",
+        "bytes": 2795,
+        "darkBackground": false,
+        "designLabel": "OGC monogram between horizontal rules",
+        "versionLabel": "Red panel, 2000 annual report",
+        "alsoSeen": [
+          {
+            "date": "2001-08-18",
+            "source": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/0001annualreport_1.pdf",
+            "label": "2000/01 annual report, black monogram on the cover"
+          }
+        ],
+        "downloads": [
+          {
+            "file": "identity-collected/oil-and-gas-commission/ogc-2000-monogram.png",
+            "label": "Download transparent PNG",
+            "sha256": "ab9aa7d37b08e1c34d8f263ccc130894001e8394736236012ba4d38a85016550",
+            "bytes": 30854
+          }
+        ],
+        "search": "oil-and-gas-commission-history-2026-11-24"
+      },
+      {
+        "id": "ogc-2008-monogram",
+        "label": "OGC monogram in red and black",
+        "file": "identity-collected/oil-and-gas-commission/ogc-2008-monogram.png",
+        "format": "png",
+        "isVector": false,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "BC Oil and Gas Commission",
+        "sourcePage": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/ogc202008-0920sp20final_1.pdf",
+        "sourceUrl": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/ogc202008-0920sp20final_1.pdf",
+        "sourceLocator": "Front cover, PDF page 1, upper centre.",
+        "sourceFile": "2008/09–2010/11 Service Plan",
+        "sourceDate": "2008-04-07",
+        "dateNote": "The regulator’s archive dates this publication. The artwork’s adoption date is unverified.",
+        "observedDate": "2026-11-24",
+        "evidenceType": "embedded-pdf-image-extraction",
+        "notes": "The red OGC monogram sits between two black rules on white. The previous three-year service plan also carries this treatment.",
+        "fidelityNote": "The PDF’s embedded 669 × 387 indexed image was decoded at its original dimensions. The white background and original pixels are retained.",
+        "sha256": "c79824cbeba0dc114389679cdc377fc5843544f2d477af858b9f9a317d39a8fd",
+        "bytes": 12448,
+        "darkBackground": false,
+        "variantOf": "ogc-2000-monogram",
+        "versionLabel": "Red letters and black rules, 2008 service plan",
+        "alsoSeen": [
+          {
+            "date": "2007-05-02",
+            "source": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/ogc200708-091020service20plan20final_1.pdf",
+            "label": "2007/08–2009/10 service plan, cover"
+          }
+        ],
+        "search": "oil-and-gas-commission-history-2026-11-24"
+      },
+      {
+        "id": "ogc-2009-service-plan",
+        "label": "BC Oil & Gas Commission green-disc wordmark",
+        "file": "identity-collected/oil-and-gas-commission/ogc-2009-service-plan.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "BC Oil and Gas Commission",
+        "sourcePage": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/ogc202009-1020service20plan_1.pdf",
+        "sourceUrl": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/ogc202009-1020service20plan_1.pdf",
+        "sourceLocator": "Front cover, upper left. PDF page 1 in both government editions, page 2 in the Legislative Library copy.",
+        "sourceFile": "2009/10–2011/12 Service Plan Update",
+        "sourceDate": "2009-10-09",
+        "dateNote": "The regulator’s archive dates this publication. The artwork’s adoption date is unverified.",
+        "observedDate": "2026-11-24",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The Commission’s name crosses a green disc in one line. “Oil & Gas” is white and the outer lettering matches the dark blue shape at left. The lettering outside the disc is black in the 2014 water-use report.",
+        "fidelityNote": "All 21 painted paths and the source clipping path were isolated from the cover. Letter outlines, colours and the unequal horizontal and vertical scaling are retained. The source PDF and the Province’s budget copy produce identical cover-logo pixels in a 4× comparison.",
+        "sha256": "4e652ac29b5aa0973008f375a088e4f984a7c97a73dc9b8ba000fb497ade8a7b",
+        "bytes": 7324,
+        "darkBackground": false,
+        "designLabel": "BC Oil & Gas Commission green-disc wordmark",
+        "versionLabel": "Blue lettering, 2009 service plan",
+        "alsoSeen": [
+          {
+            "date": "2009-07-15",
+            "source": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/bc20oil20and20gas20commission202008200920annual20service20plan20reportprint20version_1.pdf",
+            "label": "2008/09 annual service plan report, green-disc design on cover"
+          },
+          {
+            "date": "2009",
+            "source": "https://www.bcbudget.gov.bc.ca/2009_Sept_Update/sp/pdf/agency/ogc.pdf",
+            "label": "Province of British Columbia, September 2009 budget update copy"
+          },
+          {
+            "date": "2012-07-25",
+            "source": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/bcoilandgascommissionaspr2012final.pdf",
+            "label": "2011/12 annual service plan report, front cover"
+          },
+          {
+            "date": "2013-07-23",
+            "source": "https://www.bc-er.ca/files/reports/Annual-Service-Plans-and-Reports/annualreport2013final.pdf",
+            "label": "2012/13 annual service plan report, front cover"
+          }
+        ],
+        "downloads": [
+          {
+            "file": "identity-collected/oil-and-gas-commission/ogc-2009-service-plan.png",
+            "label": "Download transparent PNG",
+            "sha256": "f2fc2cbe489c26b6ae165af19425ea8a6e6551c4ef5e23b7daf9bcddf0eae5f9",
+            "bytes": 36044
+          }
+        ],
+        "search": "oil-and-gas-commission-history-2026-11-24"
       }
-    ]
+    ],
+    "eraNote": "Section 2 of the Oil and Gas Commission Act took effect on July 31, 1998. The Commission began regulatory operations on October 23. Its reports show the OGC monogram in 2000 and 2008, followed by a green-disc wordmark by July 2009. On February 17, 2023, it continued under the name British Columbia Energy Regulator."
   },
   {
     "id": "bc-assets-and-land-corporation",

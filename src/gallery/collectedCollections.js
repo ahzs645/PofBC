@@ -211,9 +211,9 @@ const nameEra = (body, from, to, next) => {
     status: 'held',
     years,
     label: nameOf(body),
-    note: next
+    note: body.eraNote ?? (next
       ? `The body under this name, until it became ${next.name} in ${to}. Its files are below, each with its own source and date.`
-      : `The body under its present name. Its files are below, each with its own source and date.`,
+      : `The body under its present name. Its files are below, each with its own source and date.`),
     applicability: {
       kind: 'unknown',
       years,
