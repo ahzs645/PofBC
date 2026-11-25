@@ -1844,6 +1844,20 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "campbell-river-nootka-chc-rebuilt": {
+  "light": {
+   "file": "identity-display/campbell-river-nootka-chc-rebuilt.light.svg",
+   "aspect": 1.0394,
+   "recoloured": false,
+   "preserveCanvas": true
+  },
+  "dark": {
+   "file": "identity-display/campbell-river-nootka-chc-rebuilt.light.svg",
+   "aspect": 1.0394,
+   "recoloured": false,
+   "preserveCanvas": true
+  }
+ },
  "coast-garibaldi-health-rebuilt": {
   "light": {
    "file": "identity-display/coast-garibaldi-health-rebuilt.light.svg",

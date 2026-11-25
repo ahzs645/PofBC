@@ -8722,7 +8722,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-31",
-    "notes": "Original full-colour emblem recovered from the council’s archived 2000 website, alongside the later grayscale festival-program specimen. Both are raster source images.",
+    "notes": "Colour website specimens from 2000 and 2002 accompany an editable reconstruction of the larger 2002 GIF. An April 2002 festival programme reproduces the emblem in grayscale.",
     "assets": [
       {
         "id": "source-campbell-river-nootka-community-health-council-campbell-river-nootka-health-council-2002-png",
@@ -8783,7 +8783,7 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "previewWidth": 527,
         "previewHeight": 507,
-        "variantOf": "historical-campbell-river-nootka-2000-color-web",
+        "variantOf": "campbell-river-nootka-chc-rebuilt",
         "versionLabel": "Larger JPEG, 2002",
         "search": "bc-health-logo-search-2026-11-22"
       },
@@ -8811,9 +8811,52 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "previewWidth": 527,
         "previewHeight": 507,
-        "variantOf": "historical-campbell-river-nootka-2000-color-web",
+        "variantOf": "campbell-river-nootka-chc-rebuilt",
         "versionLabel": "Larger GIF, 2002",
         "search": "bc-health-logo-search-2026-11-22"
+      },
+      {
+        "id": "campbell-river-nootka-chc-rebuilt",
+        "label": "CR/N CHC emblem over Vancouver Island, vector reconstruction",
+        "file": "identity-collected/campbell-river-nootka-community-health-council/campbell-river-nootka-chc-rebuilt.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "reconstructionOf": "historical-campbell-river-nootka-2002-website-large-gif",
+        "publisher": "Campbell River/Nootka Community Health Council",
+        "sourcePage": "https://web.archive.org/web/20020527212227id_/http://209.52.239.53:80/",
+        "sourceUrl": "https://web.archive.org/web/20020422014408id_/http://209.52.239.53:80/crnchc/images/gif_logo_june_00%5b1%5d.gif",
+        "sourceLocator": "Council website GIF, 527 × 507 pixels. The reconstruction study and the archived specimen contain the same source bytes.",
+        "sourceFile": "identity-collected/campbell-river-nootka-community-health-council/campbell-river-nootka-2002-website-large.gif",
+        "sourceDate": "2002-04-22",
+        "observedDate": "2026-11-24",
+        "dateNote": "22 April 2002 dates the archived GIF. The editable reconstruction was completed in November 2026.",
+        "evidenceType": "vector-reconstruction",
+        "notes": "Editable emblem with the CR/N CHC initials, a turquoise disc and a map of Vancouver Island. The study includes five revisions, the source GIF, an interactive comparison, and the overlap measurements.",
+        "fidelityNote": "The figure uses 55 named paths. The teeth and fin openings are individually drawn, and the three Cs share one glyph. At the original resolution the figure’s ink footprint has 95.2% intersection over union with the GIF. The thin cream ring of the lower fluke reaches 55.6%. The white service area and solid colours are approximate.",
+        "bytes": 46688,
+        "sha256": "ff8b09624d27bb09317e57e3cbc61978ebd642a23567dc7a6d8efc17ae7f2649",
+        "darkBackground": false,
+        "search": "campbell-river-nootka-vector-2026-11-24",
+        "downloads": [
+          {
+            "label": "Download interactive overlap viewer (HTML)",
+            "file": "identity-collected/campbell-river-nootka-community-health-council/campbell-river-nootka-overlap-review.html",
+            "sha256": "4a56fb299436d5d7691ffc2a605e010a91e36c6ddefd6acff15d3994f71109b4"
+          },
+          {
+            "label": "Download comparison plate (PNG)",
+            "file": "identity-collected/campbell-river-nootka-community-health-council/campbell-river-nootka-overlap-plate.png",
+            "sha256": "7e3bd887173b6a8d3d7f2cd41498586a09bb1384eca2f71ec87e6806a5f1bbfb"
+          },
+          {
+            "label": "Download all five revisions and overlap audit (ZIP)",
+            "file": "identity-collected/campbell-river-nootka-community-health-council/campbell-river-nootka-vector-study.zip",
+            "sha256": "ec8a2fb713b6794bbb01cd22dc03054119d59b016074829c58cdb6afce063899"
+          }
+        ],
+        "versionLabel": "Vector reconstruction"
       },
       {
         "isVector": false,
@@ -8839,7 +8882,9 @@ export const COLLECTED_BODIES = [
         "sourceFile": null,
         "previewWidth": 345,
         "previewHeight": 328,
-        "search": "historical-vector-followup-2026-10-30"
+        "search": "historical-vector-followup-2026-10-30",
+        "versionLabel": "Published image",
+        "variantOf": "campbell-river-nootka-chc-rebuilt"
       }
     ]
   },

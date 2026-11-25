@@ -271,6 +271,7 @@ const VERSION_LABELS = {
 
 // Shorter accounts where a body's or file's own record is about a file no longer shown.
 const BODY_NOTES = {
+  'campbell-river-nootka-community-health-council': 'Colour website specimens from 2000 and 2002 accompany an editable reconstruction of the larger 2002 GIF. An April 2002 festival programme reproduces the emblem in grayscale.',
   'fraser-valley-health-region': 'The region’s flower of blue and green petals around a white cross, from a September 2000 project report it shared with the BC Cancer Agency, and a printed header with its slogan, “Integrating Health Care”. Leads for its original artwork: recruitment advertisements in Canadian Nurse, June 1998 and May 2000 (vol. 96, no. 5, pp. 46 and 49). Amalgamated into the Fraser Health Authority in December 2001.',
   'provincial-rental-housing-corporation': 'No separate PRHC logo or readable seal has been found. Incorporated in 1961 as Pemco Holdings Ltd., renamed British Columbia Housing Corporation and then, in December 1976, Provincial Rental Housing Corporation. It holds land and has no staff; BC Housing acts for it, and its correspondence and signage carry BC Housing’s identity. Its own reports use plain name headings. Leads: BC Housing’s PRHC land files and CMHC’s British Columbia files at Library and Archives Canada.',
   'bc-petroleum-corporation': 'The Crown corporation that bought and sold the province’s natural gas from 1973. Its curled-flame emblem, alone and over its four-line name, from its 1982/83 and 1991/92 annual reports.',
@@ -439,7 +440,7 @@ for (const { search, register: history } of HISTORIES) {
 // exists, reconstructions that say so. Each file is checked here for what it claims: no embedded
 // image, no live text, no outside reference.
 const FOLDED = new Map()
-const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16', 'current-bodies-vector-2026-11-16', 'railway-marks-vector-2026-11-16', 'reversed-vectors-2026-11-21', 'traced-vectors-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22', 'greater-trail-chc-vector-2026-11-22', 'south-cariboo-vector-2026-11-22', 'gallery-reconstructions-2026-11-24']
+const VECTOR_SEARCHES = ['health-bodies-vector-2026-11-16', 'health-regions-lower-mainland-vector-2026-11-16', 'historic-crowns-vector-2026-11-16', 'current-bodies-vector-2026-11-16', 'railway-marks-vector-2026-11-16', 'reversed-vectors-2026-11-21', 'traced-vectors-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22', 'greater-trail-chc-vector-2026-11-22', 'south-cariboo-vector-2026-11-22', 'gallery-reconstructions-2026-11-24', 'campbell-river-nootka-vector-2026-11-24']
 const pureVector = (asset) => {
   const svg = readFileSync(new URL(`public/${asset.file}`, root), 'utf8')
   if (/<(?:\w+:)?(?:image|text|foreignObject|script)\b/i.test(svg) || /(?:xlink:)?href\s*=\s*["'](?!#)/i.test(svg)) {
