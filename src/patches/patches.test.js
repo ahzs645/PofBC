@@ -162,3 +162,14 @@ test('corrected uniform identities are filed with their source organizations', {
     assert.equal(patch.medium, 'Cloth patch')
   }
 })
+
+
+test('Police College preserves the four intentional artwork colours through its embroidery profile', { skip: !manifest }, () => {
+  const profile = JSON.parse(read('profiles.json'))['S56-O47'];
+  const palette = ['#28316f', '#bac0b8', '#dbd9c0', '#8bb9c9'];
+  assert.deepEqual(profile.params.fixedPalette.map(hex => hex.toLowerCase()), palette);
+  assert.equal(profile.params.groundColor.toLowerCase(), palette[0]);
+  assert.equal(profile.params.borderColor.toLowerCase(), palette[2]);
+  const drawing = read('justice-institute/S56-O47.svg').toLowerCase();
+  for (const colour of palette) assert.ok(drawing.includes(colour), `Missing artwork colour ${colour}`);
+});
