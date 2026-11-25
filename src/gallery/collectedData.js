@@ -9803,7 +9803,7 @@ export const COLLECTED_SPECIMENS = [
         "fidelity": "font substitution",
         "observedDate": "2026-11-24",
         "notes": "The striped disc contains an open triangle and the slanted PEP initials. The three lines of lettering follow the same diagonal. This colour version follows the supplied reference.",
-        "dateNote": "The 2003 guide dates the heavier lettering. The two supplied colour samples are undated.",
+        "dateNote": "The compliments slip dates the heavier lettering to at least October 1997. The 2003 guide provides the comparison artwork. The supplied colour samples are undated.",
         "fidelityNote": "The circle, triangular opening, bands and initials were constructed geometrically. Of seven faces tested, Nimbus Sans Narrow Bold Oblique gave the closest fit after adjusting its slant, proportions and spacing. The original typeface and specified ink colours remain unverified.",
         "sha256": "5a938553474b9399aa44096acb4f5b2e15afebaccde3734e2f80fff918d21275",
         "bytes": 15191,
@@ -9811,6 +9811,18 @@ export const COLLECTED_SPECIMENS = [
           {
             "label": "July 1993 JEPP guidelines, cover, with a lighter PEP wordmark",
             "source": "https://www.publicsafety.gc.ca/lbrr/archives/ua%20929.c2%20b75%201993-eng.pdf"
+          },
+          {
+            "date": "1997-10-16",
+            "label": "Provincial compliments slip, received October 16, 1997 (PDF page 50)",
+            "source": "https://docs.openinfo.gov.bc.ca/d37393013a_response_package_fnr-2013-00153.pdf#page=50"
+          }
+        ],
+        "downloads": [
+          {
+            "file": "identity-collected/provincial-emergency-program/pep-1997-slip.png",
+            "sha256": "4d2c5e0c2fb26830c55b580ed901bf83fef65fbb2ee8b529cf93dfb701b27ded",
+            "label": "Download the 1997 printed specimen (PNG)"
           }
         ],
         "search": "provincial-emergency-program",
@@ -9834,7 +9846,7 @@ export const COLLECTED_SPECIMENS = [
         "fidelity": "font substitution",
         "observedDate": "2026-11-24",
         "notes": "The striped disc contains an open triangle and the slanted PEP initials. The three lines of lettering follow the same diagonal. This colour version follows the supplied reference.",
-        "dateNote": "The 2003 guide dates the heavier lettering. The two supplied colour samples are undated.",
+        "dateNote": "The compliments slip dates the heavier lettering to at least October 1997. The 2003 guide provides the comparison artwork. The supplied colour samples are undated.",
         "fidelityNote": "The circle, triangular opening, bands and initials were constructed geometrically. Of seven faces tested, Nimbus Sans Narrow Bold Oblique gave the closest fit after adjusting its slant, proportions and spacing. The original typeface and specified ink colours remain unverified.",
         "sha256": "2d03b4f234cd154dc235782de70322eba0acd13ffa5de91911c44cbc7ddc4c04",
         "bytes": 15191,
@@ -9842,6 +9854,11 @@ export const COLLECTED_SPECIMENS = [
           {
             "label": "July 1993 JEPP guidelines, cover, with a lighter PEP wordmark",
             "source": "https://www.publicsafety.gc.ca/lbrr/archives/ua%20929.c2%20b75%201993-eng.pdf"
+          },
+          {
+            "date": "1997-10-16",
+            "label": "Provincial compliments slip, received October 16, 1997 (PDF page 50)",
+            "source": "https://docs.openinfo.gov.bc.ca/d37393013a_response_package_fnr-2013-00153.pdf#page=50"
           }
         ],
         "search": "provincial-emergency-program",

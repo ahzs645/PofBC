@@ -1367,10 +1367,10 @@ Object.assign(pepCollection, {
   shelf: 'bodies',
   label: 'Provincial Emergency Program',
   body: 'Provincial emergency preparedness and response',
-  years: 'Logo documented in 1993 and 2003',
+  years: 'Logo documented in 1993, 1997 and 2003',
   cover: 'pep-striped-ink',
   initiativeId: 'jepp',
-  intro: 'British Columbia’s Provincial Emergency Program processed applications and claims for JEPP. Its striped monogram appears on the 1993 guidelines. A 2003 student safety guide shows the heavier three-line lettering reconstructed here.',
+  intro: 'British Columbia’s Provincial Emergency Program processed applications and claims for JEPP. Its striped monogram appears on the 1993 guidelines. A provincial compliments slip received in October 1997 and a 2003 student safety guide show the heavier three-line lettering reconstructed here.',
   entries: specimenEntriesOf('provincial-emergency-program')
 })
 
