@@ -2482,6 +2482,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bcts-2004-brochure": {
+  "light": {
+   "file": "identity-display/bcts-2004-brochure.light.svg",
+   "aspect": 2.4676,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bcts-2004-brochure.dark.svg",
+   "aspect": 2.4676,
+   "recoloured": true
+  }
+ },
  "bceid-reversed-rebuilt": {
   "light": {
    "file": "identity-display/bceid-reversed-rebuilt.light.svg",
