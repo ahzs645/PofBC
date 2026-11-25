@@ -1088,6 +1088,7 @@ export const GALLERY_COLLECTIONS = [
     body: 'Program · Ministry of Forests',
     years: '2003–present',
     graphNode: 'sub-bc-timber-sales',
+    initiativeId: 'dfam',
     cover: 'bcts',
     intro: 'BC Timber Sales’ marks since it was established in 2003: its initials over its name, first on ' +
       'their own, then beside a ministry crest, then beside the BC mark. The initials have been published ' +
