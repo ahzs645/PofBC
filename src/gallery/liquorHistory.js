@@ -35,9 +35,9 @@ const addition = (id, name, kind, details) => ({
 export const LIQUOR_SUBJECTS = [
   addition(licensing, 'Liquor Control and Licensing Branch', 'government-branch', {
     aliases: ['LCLB'], identityStatus: 'shared-identity',
-    sources: [licensingAct, hansard, rename, oldDirective],
+    sources: [licensingAct, order(3490), hansard, rename, oldDirective],
     relations: [relation(board, 'received-operations-from', 'Regulatory succession'), relation(regulator, 'renamed-to', 'Name changed by July 5, 2018')],
-    note: 'Section 2 of the 1975 Act created the licensing branch. It administered licences and enforcement, while the distribution branch ran the stores. A December 2018 directive still pairs the earlier branch heading with a provincial signature.',
+    note: 'Section 2 of the 1975 Act created the licensing branch on December 31, 1976. It administered licences and enforcement, while the distribution branch ran the stores. A December 2018 directive still pairs the earlier branch heading with a provincial signature.',
     nextAction: 'Find dated regulator stationery from before the provincial sunburst.'
   }),
   addition(regulator, 'Liquor and Cannabis Regulation Branch', 'government-branch', {
@@ -86,8 +86,8 @@ const histories = {
       sources: [source('Order in Council 1609/1941', 'https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1609_1941#page=2'), library('Thirtieth annual report, 1950/51', '242417')], marks: ['source-recovered-followup-liquor-control-board-letterhead-1941']
     }, {
       id: 'lcb-succession', years: '1973–1977', label: 'Stores, licensing and appeals',
-      note: 'In 1973, the Province transferred Board powers to a general manager and established the British Columbia Liquor Board for appeals. The 1975 distribution and licensing Acts both received assent on June 26. The Government Liquor Act was repealed on December 31, 1976. Purchasing and the government stores continued under the Liquor Distribution Branch. Licensing and enforcement passed to the Liquor Control and Licensing Branch. Their budgets separated on April 1, 1977.',
-      sources: [law1973, licensingAct, distributionAct, order(3493), order(3494), hansard, centenary], marks: []
+      note: 'In 1973, the Province transferred Board powers to a general manager and established the British Columbia Liquor Board for appeals. The 1975 distribution and licensing Acts both received assent on June 26. Section 2 of each new Act came into force and the Government Liquor Act was repealed on December 31, 1976. Purchasing and the government stores continued under the Liquor Distribution Branch. Licensing and enforcement passed to the Liquor Control and Licensing Branch. Their budgets separated on April 1, 1977.',
+      sources: [law1973, licensingAct, distributionAct, order(3490), order(3493), order(3494), hansard, centenary], marks: []
     }
   ],
   'collected-liquor-distribution-branch': [
