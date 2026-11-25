@@ -22,6 +22,14 @@ const tourismCover = {
 
 export const INITIATIVES = [
   {
+    id: 'jepp', title: 'Joint Emergency Preparedness Program', subtitle: 'Federal–provincial cost sharing · 1980–2013',
+    summary: 'JEPP helped provinces, territories and local governments fund emergency planning, training and equipment. British Columbia’s Provincial Emergency Program handled applications and claims.',
+    cover: { file: 'initiatives/jepp/jepp-1993-cover.png', alt: 'Blue JEPP initials inside a screened square frame', caption: 'Cover of British Columbia’s revised July 1993 guidelines' },
+    exploreLabel: 'Explore the 1993 guidelines and the two program marks',
+    tags: ['Emergency preparedness', 'Program funding', 'Logos'],
+    searchTerms: ['JEPP', 'PEP', 'Provincial Emergency Program', 'Emergency Preparedness Canada', 'Ministry of Attorney General']
+  },
+  {
     id: 'bc-youth', title: 'BC Youth', exploreLabel: 'Explore the youth grants, newspaper marks and ministry history', subtitle: 'Ministry of Advanced Education and Job Training',
     summary: 'Provincial youth grants, the Youth Advisory Council and the BC Youth mark that appeared in government advertisements.',
     cover: { file: 'identity-collected/bc-youth/right-flag.svg', alt: 'BC Youth wordmark and waving flag', caption: 'Reconstruction of the mark printed in October 1989' },
@@ -306,6 +314,10 @@ const gamesenseDetail = () => ({
 
 // Literal imports let the bundler keep each initiative's data in its own deferred chunk.
 const LOADERS = {
+  jepp: async () => {
+    const { jeppDetail } = await import('./jepp.js')
+    return jeppDetail(initiativeById('jepp'))
+  },
   ...Object.fromEntries(YOUTH_PROGRAMS.map((entry) => [entry.id, async () => {
     const { youthProgramDetail } = await import('./youthPrograms.js')
     return youthProgramDetail(entry)

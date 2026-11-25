@@ -1361,6 +1361,19 @@ GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['speci
     return node ? { ...collection, entries: collection.entries.map((entry) => ({ ...entry, graphNode: entry.graphNode ?? node })) } : collection
   }))
 
+// PEP had its own provincial identity and administered federal JEPP funding in B.C.
+const pepCollection = GALLERY_COLLECTIONS.find(({ id }) => id === 'specimens-provincial-emergency-program')
+Object.assign(pepCollection, {
+  shelf: 'bodies',
+  label: 'Provincial Emergency Program',
+  body: 'Provincial emergency preparedness and response',
+  years: 'Logo documented in 1993 and 2003',
+  cover: 'pep-striped-ink',
+  initiativeId: 'jepp',
+  intro: 'British Columbia’s Provincial Emergency Program processed applications and claims for JEPP. Its striped monogram appears on the 1993 guidelines. A 2003 student safety guide shows the heavier three-line lettering reconstructed here.',
+  entries: specimenEntriesOf('provincial-emergency-program')
+})
+
 // Public bodies outside the Crown corporations and health authorities the shelf collects for — a
 // post-secondary institute and an officer of the Legislature — whose collections are placed there by hand.
 const PLACED = {
