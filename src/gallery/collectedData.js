@@ -4532,12 +4532,19 @@ export const COLLECTED_BODIES = [
         "observedDate": "2026-11-16",
         "dateNote": "The brochure’s date, not an adoption date.",
         "evidenceType": "vector-reconstruction",
-        "notes": "“BCRIC” in a bold serif, green.",
-        "fidelityNote": "Set in Gelasio Bold outlines (an OFL face metric-compatible with Georgia), the closest of ten bold serifs tried (IoU 0.77); letter positions fitted to the scan. The original typeface is not identified, and the serifs and the R’s leg differ in detail. The green (#259d51) is sampled from the scan: an approximation.",
+        "notes": "The green BCRIC wordmark appears on pages 3 and 6 of the August 1979 shareholder brochure. The gallery drawing uses Gelasio Bold as an approximation.",
+        "fidelityNote": "Gelasio Bold led the original font study (77.49% ink overlap). A second study refitted its outlines and six historical styles to the same page 6 print. Gelasio reached 85.6%. ITC Benguiat Bold, the closest historical candidate, reached 78.0%. Page 3 gave the same ranking for these two faces. The pointed C terminals and the curved R leg remain differences, and the original face is unidentified. The green (#259d51) is sampled from the scan.",
         "sha256": "3f49b3ce2cb570f3b5737177c5672be209af4d3a8646dc24fbf797b1a3484781",
         "bytes": 5534,
         "darkBackground": false,
         "search": "historic-crowns-vector-2026-11-16",
+        "alsoSeen": [
+          {
+            "date": "1979-08",
+            "label": "Same brochure, page 3, with a clearer impression of the R",
+            "source": "https://sacda.ufv.ca/sites/default/files/2026-09/2021_03_01_03_003.pdf#page=3"
+          }
+        ],
         "versionLabel": "Vector reconstruction"
       },
       {
