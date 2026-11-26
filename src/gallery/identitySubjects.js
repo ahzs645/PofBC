@@ -12,11 +12,16 @@
 // before an exclusive end or the last documented sighting of an untraced body. It never
 // dates a logo. Values are static to keep the atlas history out of the gallery runtime.
 
+import { RURAL_HEALTH_SUBJECTS } from './ruralHealth.js'
+import { ASI_SUBJECT } from './advancedSystemsInstitute.js'
+import { PARKS_FOUNDATION_SUBJECT } from './bcParksFoundation.js'
 import { LIQUOR_BOARD_RELATIONS, LIQUOR_SUBJECTS } from './liquorHistory.js'
 import { AGRICULTURAL_PARTNER_FAMILY, AGRICULTURAL_PARTNER_SUBJECTS } from './agriculturalPartners.js'
+import { TOURISM_PARTNER_FAMILY, TOURISM_PARTNER_SUBJECTS } from './tourismPartners.js'
 import { HEALTH_COUNCIL_SUBJECTS } from './healthCouncilHistory.js'
 import { ADDITIONAL_COUNCIL_SUBJECTS } from './additionalCouncilSubjects.js'
 import { YOUTH_SUBJECTS } from './bcYouth.js'
+import { FORREX_SUBJECT, SIFERP_SUBJECT } from './forrex.js'
 import { FOREST_GENETICS_SUBJECTS } from './forestGenetics.js'
 import { FAMILY_COUNCIL_SUBJECT } from './councilForTheFamily.js'
 import { ALCOHOL_AND_DRUG_COMMISSION_SUBJECT } from './alcoholAndDrugCommission.js'
@@ -25,14 +30,28 @@ import { MUNICIPAL_FAMILIES, MUNICIPAL_KIND_LABELS, MUNICIPAL_SUBJECTS } from '.
 import { RECOVERED_IDENTITY_BODIES } from './recoveredIdentityData.js'
 import { SCHOOL_IDENTITY_SUBJECTS } from '../schools/integration.js'
 import { SCHOOL_FAMILY } from '../schools/districts.js'
+import { AIRPORT_IDENTITY_FAMILY, AIRPORT_IDENTITY_SUBJECTS } from '../airports/airportArtwork.js'
 
 import { POSTSECONDARY_FAMILY, POSTSECONDARY_SUBJECTS } from './postsecondarySubjects.js'
 import { postsecondaryArtworkOf } from './postsecondaryArtwork.js'
 
 import { SURVEY_AND_LIBRARY_SUBJECTS } from './geologicalSurveyAndLibrary.js'
+import { ENDORSED_2019_SUBJECT } from './endorsed2019.js'
+import { CLEANBC_SUBJECT } from './cleanbc.js'
+import { LEGISLATIVE_ASSEMBLY_SUBJECT } from './legislativeAssembly.js'
 
 export const IDENTITY_KIND_LABELS = {
+  ministry: 'Ministry',
+  airport: 'Airport',
+  'identity-guide': 'Identity guide',
+  'tourism-association': 'Tourism association',
+  'tourism-region': 'Tourism region',
+  'tourism-collaboration': 'Tourism collaboration',
+  'tourism-enterprise': 'Tourism enterprise',
+  'tourism-initiative': 'Tourism initiative',
   'legislative-institution': 'Legislative institution',
+  'joint-committee': 'Joint committee',
+  'professional-association': 'Professional association',
   'advisory-council': 'Advisory council',
   'public-college': 'Public college',
   'nonprofit-society': 'Nonprofit society',
@@ -74,6 +93,8 @@ export const IDENTITY_KIND_LABELS = {
 }
 
 export const IDENTITY_RELATION_LABELS = {
+  'co-publisher-with': 'Co-publisher with',
+  'charitable-partner-of': 'Official charitable partner of',
   'renamed-from': 'Renamed from',
   'renamed-to': 'Renamed to',
   'amalgamated-with': 'Amalgamated with',
@@ -93,6 +114,7 @@ export const IDENTITY_RELATION_LABELS = {
   "owned-by": "Owned by",
   "shareholder-of": "Holds the voting share of",
   "operated-by": "Operated by",
+  "listed-by": "Listed by",
   "used-by": "Used by",
   "predecessor-of": "Predecessor of",
   "campaigned-for": "Campaigned for",
@@ -1784,8 +1806,8 @@ const CURATED_SUBJECTS = [
         "note": "Documents the BC Safety Authority name change; current artwork is not evidence of the older mark."
       }
     ],
-    "nextAction": "Find dated original BCSA artwork independently of the current TSBC identity.",
-    "note": "The renaming bulletin establishes a relationship, not visual equivalence of historical and current marks.",
+    "nextAction": "Identify the designers and adoption dates of the brushstroke and single-sweep wordmarks.",
+    "note": "The authority’s 2004 business plan, 2008 safety report and 2010 bulletin document the brushstroke design. Its summer 2010 newsletter shows the single green sweep.",
     "relations": [
       {
         "subject": "technical-safety-bc",
@@ -1819,8 +1841,8 @@ const CURATED_SUBJECTS = [
         "note": "Documents the BC Safety Authority name change; current artwork is not evidence of the older mark."
       }
     ],
-    "nextAction": "Date the current identity through published specimens and collect the earlier BCSA era separately.",
-    "note": "Already represented in the atlas; it is eligible for identity collection without being reclassified as a Crown.",
+    "nextAction": "Compare the September 2017 launch artwork with subsequent Technical Safety BC specimens.",
+    "note": "The British Columbia Safety Authority adopted Technical Safety BC as its operating name on September 20, 2017.",
     "relations": []
   },
   {
@@ -2570,7 +2592,7 @@ const CURATED_SUBJECTS = [
       }
     ],
     "nextAction": "Preserve current artwork while adding separately dated predecessor identities.",
-    "note": "Current artwork cannot establish historical Science Council or Innovation Council marks.",
+    "note": "Innovate BC is the provincial Crown agency continued under its present name in March 2018. Its immediate predecessor was the BC Innovation Council.",
     "relations": []
   },
   {
@@ -2591,21 +2613,16 @@ const CURATED_SUBJECTS = [
     "scope": "core",
     "sources": [
       {
-        "title": "Innovate BC",
-        "url": "https://www.innovatebc.ca/"
+        "title": "BC Innovation Council service plan, 2006/07",
+        "url": "https://www.bcbudget.gov.bc.ca/2006/sp/crownagency/bcic.pdf"
       }
     ],
-    "nextAction": "Find dated BCIC original artwork and record the supported identity period.",
-    "note": "A historical atlas record exists; successor artwork is not evidence of its mark.",
+    "nextAction": "Locate the adoption dates for the short-name and full-name signatures.",
+    "note": "The BC Innovation Council launched in October 2004 after the merger of the Innovation and Science Council of British Columbia and the Advanced Systems Institute of BC. It became Innovate BC in 2018.",
     "relations": [
       {
         "subject": "innovate-bc",
         "type": "predecessor-of"
-      },
-      {
-        "subject": "science-council-of-bc",
-        "type": "related-to",
-        "label": "Earlier institutional history"
       }
     ]
   },
@@ -2619,7 +2636,9 @@ const CURATED_SUBJECTS = [
     "graphYear": 2003,
     "aliases": [
       "Science Council of British Columbia",
-      "SCBC"
+      "SCBC",
+      "Innovation and Science Council of British Columbia",
+      "ISCBC"
     ],
     "collectionIds": [],
     "salaryEmployers": [],
@@ -2631,8 +2650,8 @@ const CURATED_SUBJECTS = [
         "url": "https://www.bcbudget.gov.bc.ca/2003/sp/crowncorps/scbc.pdf"
       }
     ],
-    "nextAction": "Inspect dated official publications for a corporate specimen.",
-    "note": "Do not confuse this historical council with Science World.",
+    "nextAction": "Locate dated evidence of when the council introduced the five-part emblem.",
+    "note": "This provincial Crown agency was established in 1978. It became the Innovation and Science Council of British Columbia in March 2003, retaining its emblem. In 2004 it merged with the Advanced Systems Institute of BC to form the BC Innovation Council.",
     "relations": [
       {
         "subject": "bc-innovation-council",
@@ -2688,14 +2707,117 @@ const CURATED_SUBJECTS = [
         "url": "https://skilledtradesbc.ca/"
       }
     ],
-    "nextAction": "Collect dated ITA artwork and distinguish legal and operating-name history.",
-    "note": "Current SkilledTradesBC artwork is not a substitute for the ITA identity.",
+    "nextAction": "Compare earlier ITA artwork with the 2009/10 service plan.",
+    "note": "The Industry Training Authority succeeded ITAC in 2004 and continued as SkilledTradesBC in 2022.",
     "relations": [
       {
         "subject": "skilledtradesbc",
-        "type": "predecessor-of"
+        "type": "renamed-to"
       }
     ]
+  },
+  {
+    "id": "provincial-apprenticeship-board",
+    "label": "Provincial Apprenticeship Board",
+    "name": "Provincial Apprenticeship Board",
+    "kind": "agency",
+    "family": "innovation-training",
+    "graphNode": "provincial-apprenticeship-board",
+    "aliases": [],
+    "collectionIds": [],
+    "salaryEmployers": [],
+    "priority": 3,
+    "scope": "core",
+    "sources": [
+      {
+        "title": "Apprenticeship and Training Development Act (1977), section 10",
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/2054057487"
+      },
+      {
+        "title": "Apprenticeship Act (1996), sections 9–10",
+        "url": "https://www.bclaws.gov.bc.ca/civix/document/id/rs/rs/96016_01"
+      },
+      {
+        "title": "Auditor General, Exhibit 4",
+        "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-2008-11-01-major-renovation-trades-training-british-columbia.pdf#page=33"
+      },
+      {
+        "title": "BC Ombudsperson, history of the Act, printed page 173",
+        "url": "https://bcombudsperson.ca/assets/media/Public-Report-No-51-In-The-Public-Interest-Protecting-Students-Through-Effective-Oversight-of-Private-Career-Training-Institutions.pdf#page=179"
+      }
+    ],
+    "nextAction": "Locate a dated board certificate or annual report.",
+    "note": "The 1977 Act provided for the Provincial Apprenticeship Board and came into force in 1978. The 1996 Apprenticeship Act continued the board. ITAC succeeded it in 1997.",
+    "relations": [
+      {
+        "subject": "industry-training-and-apprenticeship-commission",
+        "type": "predecessor-of"
+      }
+    ],
+    "graphYear": 1996
+  },
+  {
+    "id": "ministry-of-advanced-education-2001",
+    "label": "Ministry of Advanced Education (2001–2008)",
+    "name": "Ministry of Advanced Education (2001–2008)",
+    "kind": "ministry",
+    "family": "innovation-training",
+    "graphNode": "ministry-of-advanced-education-2001",
+    "aliases": [
+      "Industry Training Branch"
+    ],
+    "collectionIds": [],
+    "salaryEmployers": [],
+    "priority": 3,
+    "scope": "core",
+    "sources": [
+      {
+        "title": "Ministry of Advanced Education, 2001/02 annual report",
+        "url": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/aved.pdf"
+      },
+      {
+        "title": "Auditor General, Exhibit 4",
+        "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-2008-11-01-major-renovation-trades-training-british-columbia.pdf#page=33"
+      }
+    ],
+    "nextAction": "Locate a ministry or Industry Training Branch publication from the transition.",
+    "note": "The ministry managed trades training during the 2002–2004 transition. Its Industry Training Branch worked with ITAC on the wind-up.",
+    "relations": [
+      {
+        "subject": "industry-training-authority",
+        "type": "transferred-operations-to",
+        "label": "Trades training passed in 2004 to"
+      }
+    ],
+    "graphYear": 2003
+  },
+  {
+    "id": "centre-for-curriculum-transfer-and-technology",
+    "label": "Centre for Curriculum, Transfer and Technology",
+    "name": "Centre for Curriculum, Transfer and Technology",
+    "kind": "nonprofit-society",
+    "family": "innovation-training",
+    "graphNode": null,
+    "aliases": [
+      "C2T2"
+    ],
+    "collectionIds": [],
+    "salaryEmployers": [],
+    "priority": 3,
+    "scope": "core",
+    "sources": [
+      {
+        "title": "BCcampus, Trades Access Common Core preface",
+        "url": "https://pressbooks.bccampus.ca/tradesaccesscommoncorelinea/front-matter/preface/"
+      },
+      {
+        "title": "Ministry of Advanced Education, 2001/02 annual report",
+        "url": "https://www.bcbudget.gov.bc.ca/Annual_Reports/2001_2002/aved.pdf"
+      }
+    ],
+    "nextAction": "Locate the production artwork for the original modules, ISBN 0-7718-9573-9.",
+    "note": "C2T2 and ITAC co-published the Trades Common Core modules between 2000 and 2002.",
+    "relations": []
   },
   {
     "id": "industry-training-and-apprenticeship-commission",
@@ -2716,17 +2838,61 @@ const CURATED_SUBJECTS = [
       {
         "title": "Industry Training and Apprenticeship Commission announcement",
         "url": "https://archive.news.gov.bc.ca/releases/archive/pre2001/1997/0614.asp"
+      },
+      {
+        "title": "BCcampus, publication history of the Trades Common Core modules",
+        "url": "https://pressbooks.bccampus.ca/tradesaccesscommoncorelinea/front-matter/preface/"
+      },
+      {
+        "title": "Vancouver Public Library, ITAC annual reports (1999–2001)",
+        "url": "https://vpl.bibliocommons.com/v2/record/S38C205539"
+      },
+      {
+        "title": "ITAC final financial statements, notes 1 and 2",
+        "url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf#page=7"
+      },
+      {
+        "title": "Auditor General, trades training governance, Exhibit 4",
+        "url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-2008-11-01-major-renovation-trades-training-british-columbia.pdf#page=33"
+      },
+      {
+        "title": "Canadian national bibliography, Trades Common Core",
+        "url": "https://publications.gc.ca/Collection/SN2-11-2001-02.pdf"
+      },
+      {
+        "title": "Douglas College, Made in B.C., annual report Microlog references",
+        "url": "https://files.eric.ed.gov/fulltext/ED532003.pdf"
+      },
+      {
+        "title": "Legislative Library, ITAC Annual Report 2000/2001",
+        "url": "https://digitalcollections.llbc.leg.bc.ca/items/6a3174c9-94a5-4e8c-a709-ffa64c4dcfdd"
+      },
+      {
+        "title": "Balanced Books, Balanced Lives?, joint publication, June 2001",
+        "url": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/73015073-064f-447f-baf2-2555892cdc3f/content#page=2"
       }
     ],
-    "nextAction": "Find a dated Commission specimen before asserting a distinct logo.",
-    "note": "Keep the unresolved artwork question separate from the existing historical organization record.",
+    "nextAction": "Seek production artwork for the spiral letterhead.",
+    "note": "ITAC’s government website used a gold emblem in 2000. Its 2000/01 annual report and a June 2001 joint publication document the spiral in print before the 2003 and 2004 letterheads.",
     "relations": [
       {
         "subject": "industry-training-authority",
         "type": "predecessor-of"
+      },
+      {
+        "subject": "ministry-of-advanced-education-2001",
+        "type": "transferred-operations-to",
+        "label": "Trades training administered in 2002–2004 by"
+      },
+      {
+        "subject": "centre-for-curriculum-transfer-and-technology",
+        "type": "co-publisher-with"
+      },
+      {
+        "subject": "science-council-of-bc",
+        "type": "co-publisher-with"
       }
-    ],
-    "identityStatus": "distinct-unconfirmed"
+    ]
   },
   {
     "id": "chief-electoral-officer",
@@ -3276,6 +3442,69 @@ const CURATED_SUBJECTS = [
     "relations": []
   },
   {
+    "id": "sub-bc-housing-licensing-and-consumer-services",
+    "label": "Homeowner Protection Office (BC Housing branch)",
+    "name": "Licensing and Consumer Services",
+    "kind": "government-branch",
+    "family": "historical-research",
+    "graphNode": "sub-bc-housing-licensing-and-consumer-services",
+    "aliases": ["HPO", "BC Housing Licensing and Consumer Services"],
+    "collectionIds": ["collected-sub-bc-housing-licensing-and-consumer-services"],
+    "salaryEmployers": [],
+    "priority": 3,
+    "scope": "core",
+    "sources": [
+      {
+        "title": "Consumer Guide to High Performance Homes, 2016",
+        "url": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/b7f0a190-6053-4fb4-ba71-33727e3e63f3/content#page=2",
+        "note": "The cover shows the full Homeowner Protection Office signature with the Branch of BC Housing endorsement."
+      },
+      {
+        "title": "BC Housing 2017/18–2019/20 Service Plan",
+        "url": "https://www.bchousing.org/sites/default/files/media/documents/service-plan-2017-20.pdf#page=2",
+        "note": "The February 2017 plan calls it Licensing and Consumer Services, formerly the Homeowner Protection Office."
+      },
+      {
+        "title": "BC Housing Licensing & Consumer Services",
+        "url": "https://www.bchousing.org/licensing-consumer-services"
+      }
+    ],
+    "nextAction": "Look for a dated branch brand guide or an earlier use of the same endorsed signature.",
+    "note": "BC Housing took on builder licensing, owner-builder authorization, and research and education on April 1, 2010. Its branch monitored compliance with new-home warranty requirements and provided information to builders and consumers. The 2016 guide carries the branch’s Homeowner Protection Office branding.",
+    "relations": [
+      { "subject": "bc-housing", "type": "part-of" },
+      { "subject": "homeowner-protection-office", "type": "received-operations-from" }
+    ]
+  },
+  {
+    "id": "homeowner-protection-office",
+    "label": "Homeowner Protection Office (1998–2010)",
+    "name": "Homeowner Protection Office",
+    "kind": "agency",
+    "family": "historical-research",
+    "graphNode": "homeowner-protection-office",
+    "graphYear": 2009,
+    "aliases": ["HPO"],
+    "collectionIds": [],
+    "salaryEmployers": [],
+    "priority": 3,
+    "scope": "core",
+    "sources": [
+      {
+        "title": "Homeowner Protection Office 2003–2006 Service Plan",
+        "url": "https://www.bcbudget.gov.bc.ca/2003/sp/crowncorps/hpo.pdf#page=1",
+        "note": "The cover shows a black Homeowner Protection Office signature from before the transfer."
+      },
+      {
+        "title": "Province of British Columbia, 2010 transfer of responsibilities",
+        "url": "https://archive.news.gov.bc.ca/releases/news_releases_2009-2013/2010HSD0024-000212.htm"
+      }
+    ],
+    "nextAction": "Verify an original vector of the office’s pre-transfer signature.",
+    "note": "The provincial office began in 1998 to improve residential construction and protect new-home buyers. In April 2010 its licensing, authorization, research, and education functions moved to BC Housing, and administration of its Reconstruction Program moved to the Ministry of Finance.",
+    "relations": []
+  },
+  {
     "id": "provincial-rental-housing-corporation",
     "label": "Provincial Rental Housing Corporation",
     "name": "Provincial Rental Housing Corporation",
@@ -3453,9 +3682,9 @@ const CURATED_SUBJECTS = [
 
 // The reconciled gallery owners and the municipal registry follow the curated subjects.
 // Municipalities come before the historical-research family in the register.
-export const IDENTITY_FAMILIES = [...CURATED_FAMILIES.slice(0, -1), ...RECONCILED_FAMILIES, ...MUNICIPAL_FAMILIES, AGRICULTURAL_PARTNER_FAMILY, SCHOOL_FAMILY, POSTSECONDARY_FAMILY, CURATED_FAMILIES.at(-1)]
+export const IDENTITY_FAMILIES = [...CURATED_FAMILIES.slice(0, -1), ...RECONCILED_FAMILIES, ...MUNICIPAL_FAMILIES, AGRICULTURAL_PARTNER_FAMILY, TOURISM_PARTNER_FAMILY, AIRPORT_IDENTITY_FAMILY, SCHOOL_FAMILY, POSTSECONDARY_FAMILY, CURATED_FAMILIES.at(-1)]
 const recoveredById = new Map(RECOVERED_IDENTITY_BODIES.map((body) => [body.id, body]))
-export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...LIQUOR_SUBJECTS, ...SURVEY_AND_LIBRARY_SUBJECTS, ...YOUTH_SUBJECTS, ...AGRICULTURAL_PARTNER_SUBJECTS, ...HEALTH_COUNCIL_SUBJECTS, ...ADDITIONAL_COUNCIL_SUBJECTS, ...FOREST_GENETICS_SUBJECTS, FAMILY_COUNCIL_SUBJECT, ALCOHOL_AND_DRUG_COMMISSION_SUBJECT, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS, ...SCHOOL_IDENTITY_SUBJECTS, ...POSTSECONDARY_SUBJECTS]
+export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...RURAL_HEALTH_SUBJECTS, ENDORSED_2019_SUBJECT, ASI_SUBJECT, ...LIQUOR_SUBJECTS, ...SURVEY_AND_LIBRARY_SUBJECTS, CLEANBC_SUBJECT, LEGISLATIVE_ASSEMBLY_SUBJECT, ...YOUTH_SUBJECTS, ...AGRICULTURAL_PARTNER_SUBJECTS, ...TOURISM_PARTNER_SUBJECTS, ...AIRPORT_IDENTITY_SUBJECTS, ...HEALTH_COUNCIL_SUBJECTS, ...ADDITIONAL_COUNCIL_SUBJECTS, ...FOREST_GENETICS_SUBJECTS, SIFERP_SUBJECT, FORREX_SUBJECT, FAMILY_COUNCIL_SUBJECT, ALCOHOL_AND_DRUG_COMMISSION_SUBJECT, PARKS_FOUNDATION_SUBJECT, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS, ...SCHOOL_IDENTITY_SUBJECTS, ...POSTSECONDARY_SUBJECTS]
   .map((subject) => recoveredById.get(subject.id)?.nextAction
     ? { ...subject, nextAction: recoveredById.get(subject.id).nextAction }
     : subject)

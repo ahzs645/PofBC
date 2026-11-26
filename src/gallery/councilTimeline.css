@@ -1,0 +1,21 @@
+.council-timeline ol { list-style: none; padding: 0; margin: 1rem 0; }
+.council-timeline li {
+  display: grid;
+  grid-template-columns: minmax(8rem, 10rem) minmax(0, 1fr);
+  gap: 1rem;
+  border-top: 1px solid var(--line);
+  padding: .85rem 0;
+}
+.council-timeline h3, .council-timeline p { margin: 0 0 .35rem; }
+.council-timeline h3 { font-size: 1rem; }
+.council-timeline p { max-width: 76ch; }
+.council-timeline__date { font-weight: 600; }
+.council-timeline__links, .council-timeline__marks { display: flex; flex-wrap: wrap; gap: .35rem 1.25rem; }
+.council-timeline__links { font-size: .85rem; }
+.council-timeline__marks { margin: .5rem 0 .75rem; }
+.council-timeline__marks a { display: grid; gap: .3rem; max-width: 16rem; font-size: .9rem; }
+.council-timeline__marks a > span { display: flex; align-items: center; height: 4rem; }
+.council-timeline__marks a img { max-width: 12rem; max-height: 4rem; width: auto; height: auto; object-fit: contain; }
+@media (max-width: 620px) {
+  .council-timeline li { grid-template-columns: minmax(0, 1fr); gap: .25rem; }
+}

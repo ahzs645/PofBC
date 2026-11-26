@@ -7,6 +7,7 @@
 // Every preset keeps its own settings while you move between them, and a linked vehicle pair moves
 // together.
 
+import { PreviewBackground } from '../gallery/PreviewBackground.jsx'
 import { useMemo, useRef, useState } from 'react'
 import { ColourField } from '../site/ColourField.jsx'
 import { Segmented } from '../site/Segmented.jsx'
@@ -277,14 +278,16 @@ export const HydroStudio = ({ initialPreset = 'standard', onClose }) => {
 
       <div className="layout">
         <section className="stage" aria-label="Preview">
-          <div
-            className="stage__frame"
-            data-backdrop={shownOn}
-            data-transparent={transparent || undefined}
-            role="img"
-            aria-label={`${HYDRO_PRESETS[active].name}, ${HYDRO_MODES[mode]}`}
-            dangerouslySetInnerHTML={{ __html: preview.svg }}
-          />
+          <PreviewBackground white={backdrop === 'light'} onToggle={() => setBackdrop(backdrop === 'light' ? 'auto' : 'light')}>
+            <div
+              className="stage__frame"
+              data-backdrop={shownOn}
+              data-transparent={transparent || undefined}
+              role="img"
+              aria-label={`${HYDRO_PRESETS[active].name}, ${HYDRO_MODES[mode]}`}
+              dangerouslySetInnerHTML={{ __html: preview.svg }}
+            />
+          </PreviewBackground>
 
           <div className="stage__bar">
             {isSign && (

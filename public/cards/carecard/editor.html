@@ -1,0 +1,69 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>CareCard specimen editor</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f5f2ec;color:#252829;font:16px 'Helvetica Neue',Arial,sans-serif}main{max-width:1150px;margin:0 auto;padding:clamp(24px,4vw,60px)}h1{font:normal clamp(34px,4.2vw,58px)/1.1 Georgia,serif;letter-spacing:-.045em;margin:0 0 30px}section{display:grid;grid-template-columns:minmax(260px,.86fr) minmax(0,1.7fr);gap:clamp(24px,4vw,60px);align-items:start}form{display:grid;gap:13px}label{display:grid;gap:6px;font-size:14px;font-weight:600}input,select,button{font:inherit;color:inherit}input,select{width:100%;background:#fffefb;border:1px solid #aaa79e;border-radius:5px;padding:9px 11px}details{border-top:1px solid #c8c4bb;padding-top:14px}summary{cursor:pointer;font-weight:600;font-size:14px}details label{margin-top:12px}figure{margin:0}#card svg{display:block;width:100%;height:auto;filter:drop-shadow(0 4px 9px #3b302622)}figcaption{margin-top:14px;color:#565856;font-size:14px}.actions{display:flex;gap:8px;margin-top:17px;flex-wrap:wrap}button{border:1px solid #252829;background:#252829;color:white;border-radius:5px;padding:9px 13px;cursor:pointer}button.secondary{background:transparent;color:#252829}input:focus-visible,select:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #797da7;outline-offset:2px}button:disabled{opacity:.5;cursor:default}@media(max-width:760px){section{grid-template-columns:1fr}figure{grid-row:1}}@page{margin:15mm}@media print{html,body,main,section,figure{background:white;margin:0;padding:0;display:block}h1,form,figcaption,.actions{display:none!important}#card,#card svg{width:85.60mm!important;height:53.98mm!important;filter:none}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style><main><h1>CareCard specimen editor</h1><section><form id="fields" autocomplete="off">
+<label>Design<select id="kind"><option value="standard">Standard CareCard</option><option value="gold">Gold CareCard</option></select></label>
+<label>Sample name<input id="nameField" maxlength="44" required value="LOUISE SMITH"></label>
+<label>Birth date (MM/DD/YY)<input id="dateField" maxlength="8" required pattern="[0-9]{2}/[0-9]{2}/[0-9]{2}" value="00/00/00"></label>
+<label>Sample number<input id="numField" inputmode="numeric" required pattern="[0-9]{4} ?[0-9]{3} ?[0-9]{3}" value="9020 512 706"></label>
+<details><summary>Field labels</summary><label>Number label<input id="numLabel" value="PERSONAL HEALTH NO." maxlength="32" required></label><label>Date label<input id="dateLabel" value="BIRTH DATE M/D/Y" maxlength="30" required></label></details>
+</form><figure><div id="card"></div><figcaption>85.60 × 53.98 mm. Print at 100% or Actual size.</figcaption><div class="actions"><button id="download">Save SVG</button><button id="print" class="secondary">Print card</button></div></figure></section></main>
+
+<script type="module">
+const byId=id=>document.getElementById(id);
+const fields=['nameField','dateField','numField','numLabel','dateLabel'];
+const state={standard:{},gold:{}};
+let kind='standard';
+for(const key of Object.keys(state))for(const id of fields)state[key][id]=byId(id).value;
+state.gold.numField='0000 548 321';
+function fitText(el){
+  el.removeAttribute('textLength'); el.removeAttribute('lengthAdjust');
+  const max=Number(el.dataset.maxWidth);
+  if(max && el.getComputedTextLength()>max){el.setAttribute('textLength',max);el.setAttribute('lengthAdjust','spacingAndGlyphs')}
+}
+function update(){
+  const svg=byId('card').firstElementChild;
+  for(const [id,target] of [['nameField','sample-name'],['dateField','birth-date'],['numLabel','number-label'],['dateLabel','date-label']]){
+    const el=svg.querySelector('#'+target);el.textContent=byId(id).value;fitText(el);
+  }
+  const s=byId('numField').value.replace(/\s/g,''),group=svg.querySelector('#sample-number');
+  group.replaceChildren();group.setAttribute('aria-label',byId('numField').value);
+  Array.from(s).slice(0,10).forEach((ch,j)=>{
+    if(!/[0-9]/.test(ch))return;
+    const el=document.createElementNS('http://www.w3.org/2000/svg','use');
+    el.setAttributeNS('http://www.w3.org/1999/xlink','xlink:href','#digit-'+ch);
+    const start=j<4?0:j<7?56.2:102.3, i=j<4?j:j<7?j-4:j-7;
+    el.setAttribute('x',start+i*9.84);group.append(el);
+  });
+  for(const id of fields)state[kind][id]=byId(id).value;
+}
+function mount(){
+  kind=byId('kind').value;
+  for(const id of fields)byId(id).value=state[kind][id];
+  byId('card').replaceChildren(drawings[kind].cloneNode(true)); update();
+}
+const drawings = {};
+try {
+  await Promise.all(Object.keys(state).map(async (variant) => {
+    const response = await fetch('./' + variant + '-card.svg');
+    if (!response.ok) throw new Error(response.statusText);
+    const xml = new DOMParser().parseFromString(await response.text(), 'image/svg+xml');
+    if (xml.documentElement.localName !== 'svg') throw new Error('Invalid card drawing');
+    drawings[variant] = xml.documentElement;
+  }));
+} catch (error) {
+  byId('card').textContent = 'The card drawings could not be loaded. Reload the page to try again.';
+  throw error;
+}
+byId('kind').value = location.hash === '#gold' ? 'gold' : 'standard';
+byId('kind').addEventListener('change',mount);
+for(const id of fields)byId(id).addEventListener('input',update);
+byId('fields').addEventListener('submit',e=>e.preventDefault());
+byId('print').onclick=()=>{if(byId('fields').reportValidity())window.print()};
+byId('download').onclick=()=>{
+  if(!byId('fields').reportValidity())return;
+  const svg=byId('card').firstElementChild;
+  const url=URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(svg)],{type:'image/svg+xml'}));
+  const a=document.createElement('a'); a.href=url;a.download=kind+'-carecard-specimen.svg';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);
+};
+mount();
+</script></html>

@@ -190,7 +190,7 @@
    "current": true,
    "status": "asset-collected",
    "observedDate": "2026-11-16",
-   "notes": "The City of Coquitlam’s logo in white, from its website masthead. A positive version is not held. Its adoption date and earlier versions are not established.",
+   "notes": "The City of Coquitlam’s stylized-Q wordmark is held in blue and green, solid blue, and white. The Province’s Bear Smart brochure documents the blue-and-green version, which also appears in the City’s graphic standards.",
    "assets": [
     {
      "id": "source-municipal-coquitlam-website-logo",
@@ -220,6 +220,49 @@
      "notes": "Source-native website logo, archived byte-for-byte. White artwork for the website’s dark masthead. The same bytes were recorded by the 15 November 2026 audit.",
      "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
      "darkBackground": true
+    },
+    {
+     "id": "municipal-coquitlam-bear-smart-blue-green",
+     "label": "Coquitlam: Blue and green wordmark",
+     "file": "identity-municipal/coquitlam/bear-smart-blue-green.svg",
+     "format": "svg",
+     "isVector": true,
+     "sha256": "e870b27e2bea9aa1158823b9d1b79a6c44b93a3f6465d70249d803083bb63605",
+     "bytes": 6948,
+     "dimensions": {
+      "viewBox": "0 0 102 29"
+     },
+     "contentType": "image/svg+xml",
+     "supplied": false,
+     "reconstruction": false,
+     "publisher": "British Columbia Conservation Officer Service",
+     "sourceUrl": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf",
+     "sourcePage": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf#page=3",
+     "resolvedSourceUrl": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf",
+     "sourceLocator": "Page 3, bottom centre (PDF figure MCID 193).",
+     "sourceFile": "identity-municipal/coquitlam/bear-smart-blue-green.svg",
+     "originalDocumentSha256": "903b02d29e96d3b4bb0db4fcaec1b170c9f6ed0c94fc71bb7ac34ea668ecb169",
+     "sourceDate": "Bear Smart Communities, PDF revised February 2019",
+     "specimenDate": "2019-02",
+     "dateNote": "February 2019 is the PDF revision date in its metadata, not a logo adoption date.",
+     "observedDate": "2026-11-25",
+     "evidenceType": "native-pdf-vector-extraction",
+     "notes": "The blue-and-green wordmark gives the stylized Q and its wave their own colour. The City’s graphic standards also document this colour treatment.",
+     "fidelityNote": "Isolated the tagged PDF figure with pikepdf and converted its native paths and clipping paths to SVG with Poppler/Cairo.",
+     "darkBackground": false,
+     "extraction": {
+      "method": "Isolated the tagged PDF figure with pikepdf and converted its native paths and clipping paths to SVG with Poppler/Cairo.",
+      "figure": 193,
+      "page": 3
+     },
+     "variantOf": "municipal-coquitlam-treasury-report-2025-white",
+     "versionLabel": "Blue and green · brochure SVG",
+     "alsoSeen": [
+      {
+       "label": "City of Coquitlam Graphic Standards Manual",
+       "source": "https://www.coquitlam.ca/DocumentCenter/View/12865/24-009-Appendix-D"
+      }
+     ]
     }
    ]
   },
@@ -326,7 +369,7 @@
    "current": true,
    "status": "asset-collected",
    "observedDate": "2026-11-16",
-   "notes": "The City of Kamloops’ logo with “Canada’s Tournament Capital”, as served by its website, where it sits on a dark header. The city’s event guidelines name the Tournament Capital logo and say how to request it. Its adoption date is not established.",
+   "notes": "The City of Kamloops’ Tournament Capital logo is held in black-tagline and white-tagline versions. The Bear Smart brochure shows the black-tagline version and the municipal website uses white lettering on its dark header.",
    "assets": [
     {
      "id": "source-municipal-kamloops-website-logo",
@@ -356,6 +399,50 @@
      "notes": "Source-native website logo, archived byte-for-byte. The line “Canada’s Tournament Capital” is white, for a dark header. The same bytes were recorded by the 15 November 2026 audit.",
      "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
      "darkBackground": true
+    },
+    {
+     "id": "municipal-kamloops-bear-smart-black-tagline",
+     "label": "Kamloops: Tournament Capital with black tagline",
+     "file": "identity-municipal/kamloops/bear-smart-black-tagline.svg",
+     "format": "svg",
+     "isVector": true,
+     "sha256": "d76b374783bfe0b705df249446a631f4b844f6b3f34f30a26d9ddb6862d2675c",
+     "bytes": 657466,
+     "dimensions": {
+      "viewBox": "0 0 123 69"
+     },
+     "contentType": "image/svg+xml",
+     "supplied": false,
+     "reconstruction": false,
+     "publisher": "British Columbia Conservation Officer Service",
+     "sourceUrl": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf",
+     "sourcePage": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf#page=3",
+     "resolvedSourceUrl": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf",
+     "sourceLocator": "Page 3, middle right (PDF figure MCID 190).",
+     "sourceFile": "identity-municipal/kamloops/bear-smart-black-tagline.svg",
+     "originalDocumentSha256": "903b02d29e96d3b4bb0db4fcaec1b170c9f6ed0c94fc71bb7ac34ea668ecb169",
+     "sourceDate": "Bear Smart Communities, PDF revised February 2019",
+     "specimenDate": "2019-02",
+     "dateNote": "February 2019 is the PDF revision date in its metadata, not a logo adoption date.",
+     "observedDate": "2026-11-25",
+     "evidenceType": "native-pdf-vector-extraction",
+     "notes": "The landscape, lettering and maple-leaf medallion are the Tournament Capital design already held. This version prints the tagline in black.",
+     "fidelityNote": "Isolated the tagged PDF figure with pikepdf and converted its native paths and clipping paths to SVG with Poppler/Cairo. The converter retained all 27 PDF axial shading operations as SVG linear gradients.",
+     "darkBackground": false,
+     "extraction": {
+      "method": "Isolated the tagged PDF figure with pikepdf and converted its native paths and clipping paths to SVG with Poppler/Cairo. The converter retained all 27 PDF axial shading operations as SVG linear gradients.",
+      "figure": 190,
+      "page": 3
+     },
+     "variantOf": "municipal-kamloops-annual-report-2025",
+     "versionLabel": "Black tagline · brochure SVG",
+     "alsoSeen": [
+      {
+       "label": "Corporate Services and Community Safety 2016 Annual Report, cover (PDF created March 2017)",
+       "source": "https://www.kamloops.ca/sites/default/files/docs/city-services/16-cscs-annualreport.pdf#page=1",
+       "date": "2017-03"
+      }
+     ]
     }
    ]
   },
@@ -458,7 +545,7 @@
    "current": true,
    "status": "asset-collected",
    "observedDate": "2026-11-16",
-   "notes": "The City of Prince George’s logo as refreshed in 2024. The city’s 2024 annual report (printed page 14) says the new brand launched in May and kept the fraise and the confluence. The earlier version is not held.",
+   "notes": "The City of Prince George’s 2024 refresh retained the fraise and confluence, as documented on page 14 of its annual report. The 2015 Northern British Columbia Travel Guide preserves the earlier blue emblem and black lettering.",
    "assets": [
     {
      "id": "source-municipal-prince-george-website-logo",

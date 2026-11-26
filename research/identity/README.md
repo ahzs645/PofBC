@@ -9,6 +9,11 @@ Researched 2026-09-26, mostly from Wayback Machine captures of each body's site,
 release archive, and the covers of its published plans and reports. Nothing was downloaded into the
 repo during that original pass.
 
+## Tourism and Expo 86
+
+The [ResWest research record](reswest/README.md) documents the provincewide reservations service,
+its use in Expo 86’s 1985 brochures and the colour badge in a supplied advertisement.
+
 ## Historic document arms
 
 The [14 November source-identification follow-up](document-arms-2026-11-14/README.md)

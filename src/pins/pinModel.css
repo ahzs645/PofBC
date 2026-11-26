@@ -5,6 +5,7 @@
   --surface: var(--bg-2);
   --outline: var(--line);
   --ink: var(--text);
+  --ink-2: var(--text);
   --ink-muted: var(--muted);
   --ink-faint: var(--muted);
   --track: rgba(0, 0, 0, 0.35);
@@ -16,7 +17,6 @@
   min-height: 0;
 }
 .pin-model .segmented button[aria-pressed='true'] { color: var(--bg); }
-.pin-model .segmented button { white-space: nowrap; }
 .pin-model .badge-stage {
   position: relative;
   display: block;

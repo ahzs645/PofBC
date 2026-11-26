@@ -171,7 +171,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
   const regionList = useMemo(() => regions.map((id) => ({ id, ...parts[id] })), [regions, parts])
 
   const targets = [
-    posterTarget({ meta, noun, getSvg: () => posterSvgString(svg, meta), tag: extras.posterTag ?? (variation && variation !== variations.options[0] ? variation.id : null), ...(variation?.changed && !extras.posterTag ? { changed: variation.changed } : {}) }),
+    posterTarget({ meta, noun, printPdf: variation?.printPdf, getSvg: () => posterSvgString(svg, meta), tag: extras.posterTag ?? (variation && variation !== variations.options[0] ? variation.id : null), ...(variation?.changed && !extras.posterTag ? { changed: variation.changed } : {}) }),
     ...(extras.targets ?? [])
   ]
 
@@ -188,7 +188,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
         onLeave={() => tell(false)}
       />
     )
-    : extras.content ?? <DataPanel partId={current} parts={parts} order={order} onSelect={select} tour={tour} story={canTell ? () => tell(true) : null} poster={meta.id} variation={variationControl} compare={compareControl} pages={pagesControl} figures={figures} noun={noun} />
+    : extras.content ?? <DataPanel partId={current} parts={parts} order={order} onSelect={select} tour={tour} story={canTell ? () => tell(true) : null} poster={meta.id} variation={variations?.toolbar ? null : variationControl} compare={compareControl} pages={pagesControl} figures={figures} noun={noun} />
 
   const dismiss = () => {
     if (current !== 'overview') select('overview')
@@ -249,7 +249,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
 
         <header className="pv-top">
           {/* The way back sits in the title itself: "← All posters │ REWARD: A Living Forest". */}
-          <nav className="pv-top-start pv-crumb" aria-label={`${meta.title}, in ${backLabel.toLowerCase()}`}>
+          <nav className="pv-crumb" aria-label={`${meta.title}, in ${backLabel.toLowerCase()}`}>
             <button type="button" className="pv-back" data-initial-focus onClick={onExit} title={`All ${backLabel.toLowerCase()} (Esc from the whole ${noun})`} aria-label={`Back to all ${backLabel.toLowerCase()}`}>
               <span aria-hidden="true">←</span> <span className="pv-back-label">All {backLabel.toLowerCase()}</span>
             </button>
@@ -259,6 +259,12 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
             </button>
           </nav>
           <div className="pv-top-actions">
+            {variations?.toolbar && (
+              <Select className="pv-edition" aria-label={variations.label} value={variation.id} onChange={setVariationId}>
+                {variations.options.map(({ id, label, note }) => <option key={id} value={id} title={note}>{label}</option>)}
+              </Select>
+            )}
+            {module.editorHref && <a className="pv-ghost" href={module.editorHref}>Edit template</a>}
             {shelf && shelf.list.length > 1 && (
               <div className="pv-switch" role="group" aria-label={`Other ${backLabel.toLowerCase()}`}>
                 <button type="button" className="pv-switch-step" disabled={!previous} onClick={previous?.open} title={previous ? `Previous: ${previous.title} ([)` : undefined} aria-label={previous ? `Previous ${noun}: ${previous.title}` : `No previous ${noun}`}>‹</button>

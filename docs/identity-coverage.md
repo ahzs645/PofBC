@@ -4,6 +4,10 @@ The gallery's original automatic acquisition list selected only Crown corporatio
 
 This change introduces an explicit identity-subject register, accepts source artwork where it can be inspected, and connects the collection to organization and salary records. Research leads remain visible when artwork is still missing. The register is a declared research scope, not a census of every institution in British Columbia.
 
+## BC Parks Foundation
+
+BC Parks Foundation has its own identity collection and register entry under Affiliated organizations. Its official charitable partnership links both collections. The [Foundation’s media kit](https://bcparksfoundation.ca/press-room/) supplies the seven current signature colourways. The white mark on [printed page 10 of *Connecting with Place*](https://nrs.objectstore.gov.bc.ca/kuwyyf/connecting_with_place_973426eb63.pdf#page=11) documents an earlier use in 2019. All eight downloadable signatures preserve the publisher’s native vector paths. The two gallery diagrams interpret the clear-space and colour-proportion pages shown in the [2025 launch](https://bcparksfoundation.ca/updates/bc-parks-foundation-launches-a-bold-new-visual-identity/).
+
 ## 20 November 2026 acquisition update
 
 The [missing-artwork recovery](../research/identity/missing-recovery-2026-11-20/README.md)

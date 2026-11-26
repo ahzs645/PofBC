@@ -1,5 +1,157 @@
 {
   "_comment": "Per-logo settings for build_collected_display.py, keyed by collected asset id. facing: the share of a faint shape's edge that must meet the page for it to be redrawn (default 0.5; higher keeps more of a logo's own colours). light / dark: false keeps the file's own colours on that ground; \"plate\" shows them on a light plate of their own there. light-palette / dark-palette: {\"#source\": \"#shown\"} maps the file's colours by hand for that ground (every key must be a colour the file uses). \"all\" for light / dark redraws every colour too faint for that ground, without the test of whether it meets the page (for lettering drawn letter by letter in clipped fills). skip: true leaves the file out. light-css / dark-css: a selector-specific rule applied to the display copy for that theme. preserve-canvas: keep the full page of a stationery specimen.",
+  "airport-cyqq-signature-vector": {
+    "light": false,
+    "dark-palette": { "#008a9b": "#45adbd" }
+  },
+  "airport-cyqq-green-and-teal-2015": { "light": false, "dark": false },
+  "airport-cyka-horizontal": { "light": false, "dark": "plate" },
+  "airport-cycd-pride": { "light": false, "dark": "plate" },
+  "airport-cyvr-signature": { "light": false, "dark": "plate" },
+  "nbcta-map-red-2012": {
+    "light-css": "path[fill=\"#ffffff\"]{stroke:#888178;stroke-width:.7;paint-order:stroke fill}",
+    "note": "Outline the pale regions on the light page while preserving their original fill."
+  },
+  "bc-canada-sunrise-positive-2012": {
+    "dark-palette": { "#0019c4": "#9aabff" },
+    "note": "Lighten the blue lettering and artwork on the dark page."
+  },
+  "ecosystems-at-risk-badge": { "dark": "plate" },
+  "ecosystems-at-risk-garry-oak-1993": { "dark": "plate" },
+  "rrdfp-forum-2017": { "dark": "all" },
+  "bc-150-years": { "light": false, "dark": "all" },
+  "source-recovered-bcic-2008-09": { "light": false, "dark": false },
+  "source-recovered-bcic-2008-09-transparent": { "light-palette": { "#ffffff": "#21607d" } },
+  "bcic-horizontal-2011": { "light": false, "dark": false },
+  "bcic-horizontal-2011-transparent": { "light-palette": { "#ffffff": "#21607d" } },
+  "ogc-2000-monogram": { "light": false, "dark": false },
+  "quickpass-2009-black-vector-colour": {
+    "dark-palette": { "#5f6062": "#c8c6c2", "#0061ac": "#66ade6" },
+    "note": "Lighten the sampled handout inks on the dark page."
+  },
+  "shared-services-bc-2015-brochure-vector": { "light": false, "dark": false },
+  "shared-services-bc-2015-brochure-vector-transparent": {
+    "light-css": "path[fill=\"rgb(100%, 100%, 100%)\"]{fill:#213f5c}g[clip-path=\"url(#clip-1)\"]>path,g[clip-path=\"url(#clip-10)\"]>path,g[clip-path=\"url(#clip-11)\"]>path{fill:#805a04}",
+    "note": "Darken the lettering and divider on the light page. Keep the original sun gradient and mountain colours."
+  },
+  "urban-transit-authority-commons-rebuilt": { "light": false, "dark": false },
+  "urban-transit-authority-commons-rebuilt-transparent": { "light-palette": { "#ffffff": "#a43b0c" } },
+  "solutions-bc-2003-vector": { "light": false, "dark": false },
+  "solutions-bc-2003-vector-transparent": { "light-palette": { "#b3a9a7": "#665e5b", "#ffffff": "#1f565e" } },
+  "school-district-38-strategic-plan-reverse": { "light": false, "dark": false },
+  "school-district-38-strategic-plan-reverse-transparent": { "light-palette": { "#ffffff": "#0063a8" } },
+  "historical-bc-heritage-trust-2002": { "light": false, "dark": false },
+  "historical-bc-heritage-trust-2002-transparent": {
+    "dark-palette": { "#262626": "#d9d9d9", "#000000": "#ffffff" },
+    "note": "Restore the original silver and white inks on the dark page, while keeping the bevel visible."
+  },
+  "school-district-41-strategic-plan-white-on-blue": { "light": false, "dark": false },
+  "school-district-41-strategic-plan-blue": { "light": false, "dark": false },
+  "school-district-41-strategic-plan-white-on-blue-transparent": {
+    "light-palette": { "#ffffff": "#21607d" },
+    "note": "Show the transparent white download in dark blue ink on the light page."
+  },
+  "destination-vancouver-wordmark": {
+    "dark-css": "svg{color:#ede9e2}",
+    "note": "The website wordmark draws its lettering in currentColor and its compass details in fixed teal."
+  },
+  "krt-horizontal-vector": {
+    "dark-palette": { "#000000": "#ede9e2", "#757575": "#bdb9b3" },
+    "note": "Lighten the mountains and the small grey lettering for the dark gallery. Keep the source river blue."
+  },
+  "drc-dogwood-oval-1970": {
+    "light": false,
+    "dark": false,
+    "dark-css": "ellipse[fill=\"#1B5032\"]{stroke:#F1F1E6;stroke-width:7;paint-order:stroke fill}",
+    "preserve-canvas": true
+  },
+  "drc-fw-oval-1973": {
+    "light": false,
+    "dark-palette": { "#000000": "#ffffff" },
+    "preserve-canvas": true
+  },
+  "drc-fw-lockup-1973": {
+    "light": false,
+    "dark-palette": { "#000000": "#ffffff" },
+    "preserve-canvas": true
+  },
+  "education-province-wordmark": { "dark-palette": { "#edeff7": "#aebfed" } },
+  "homeowner-protection-office-2016": {
+    "dark-palette": { "#174a7c": "#5e91c8", "#008576": "#34b7a2" },
+    "note": "Lighten the blue and teal across the emblem and small lettering for the dark gallery."
+  },
+  "rtvs-hummingbird-horizontal": { "dark-palette": { "#1a6c96": "#9dd3e9" } },
+  "rtvs-hummingbird-vertical": { "dark-palette": { "#1a6c96": "#9dd3e9" } },
+  "rtvs-hybrid-health-network": { "dark-palette": { "#007ea5": "#83c9e3" } },
+  "rccbc-original-horizontal-vector": {
+    "dark-palette": { "#33669a": "#a6ccee", "#256d9e": "#74b8df", "#577743": "#aed397", "#959799": "#c0c1c2", "#ffffff": "#211e1a" }
+  },
+  "rccbc-original-stacked": {
+    "dark-palette": { "#33669a": "#a6ccee", "#256d9e": "#74b8df", "#577743": "#aed397", "#959799": "#c0c1c2", "#ffffff": "#211e1a" }
+  },
+  "rccbc-grey-mountain-landscape-vector": {
+    "dark-palette": { "#1896c6": "#70c6e4" }
+  },
+  "rccbc-grey-mountain-tagline": {
+    "dark-palette": { "#0096c4": "#70c6e4", "#72bf44": "#a0d978" }
+  },
+  "source-expanded-island-coastal-economic-trust-five-paddle-website-colours": {
+    "light": false,
+    "dark-palette": { "#0c4a61": "#8ac9d7", "#1e728c": "#4097ae" },
+    "note": "On dark, lighter teal lettering and shafts keep the website design readable on the transparent canvas."
+  },
+  "icet-lowercase-report": {
+    "light": "all",
+    "note": "The cover uses white lettering throughout. Redraw all of it together on light."
+  },
+  "source-expanded-island-coastal-economic-trust-five-paddle-reversed": {
+    "light": false,
+    "dark": false,
+    "light-css": ".wordmark{fill:#0d4a61}.shafts{fill:#1e728c}.aqua{fill:#4fbecf}.blades{fill:url(#website-blades)}",
+    "note": "Website colourway matched to the Trust’s Board Charter header. The report’s reversed inks are retained on dark."
+  },
+  "bcpf-study-type-specimen": { "preserve-canvas": true, "light": false, "dark": false },
+  "bcpf-study-type-hierarchy": { "preserve-canvas": true, "light": false, "dark": false },
+  "bcpf-study-glass-panel": { "preserve-canvas": true, "light": false, "dark": false },
+  "bcpf-study-section-divider": { "preserve-canvas": true, "light": false, "dark": false },
+  "bcpf-study-signature-pairings": { "preserve-canvas": true, "light": false, "dark": false },
+  "bcpf-study-poster-protect": { "preserve-canvas": true, "light": false, "dark": false },
+  "bcpf-study-poster-parks": { "preserve-canvas": true, "light": false, "dark": false },
+  "bcpf-study-card-contact": { "preserve-canvas": true, "light": false, "dark": false },
+  "bcpf-study-card-inlet": { "preserve-canvas": true, "light": false, "dark": false },
+  "bcpf-study-card-valley": { "preserve-canvas": true, "light": false, "dark": false },
+  "bcpf-study-aurora-landscape": { "preserve-canvas": true, "light": false, "dark": false },
+  "bcpf-study-wildlife-graphic": { "preserve-canvas": true, "light": false, "dark": false },
+  "bcpf-study-wildlife-overlay": { "preserve-canvas": true, "light": false, "dark": false },
+  "firesmart-bc-ember-front": {
+    "dark": false,
+    "dark-css": "path[fill=\"rgb(0.392151%, 0.392151%, 0.392151%)\"],path[fill=\"rgb(14.117432%, 12.156677%, 12.940979%)\"]{stroke:#90877a;stroke-width:.65;stroke-linejoin:round;paint-order:stroke fill}",
+    "note": "Keep Ember\u2019s published fur and neckerchief colours. A fine edge separates the dark ink from the dark gallery surface."
+  },
+  "firesmart-bc-ember-side": {
+    "dark": false,
+    "dark-css": "path[fill=\"rgb(13.725281%, 12.156677%, 12.548828%)\"],path[fill=\"rgb(14.117432%, 12.156677%, 12.940979%)\"]{stroke:#90877a;stroke-width:.65;stroke-linejoin:round;paint-order:stroke fill}",
+    "note": "Keep Ember\u2019s published fur and neckerchief colours. A fine edge separates the dark ink from the dark gallery surface."
+  },
+  "firesmart-bc-ember-sitting": {
+    "dark": false,
+    "dark-css": "path[fill=\"rgb(13.725281%, 12.156677%, 12.548828%)\"],path[fill=\"rgb(14.117432%, 12.156677%, 12.940979%)\"]{stroke:#90877a;stroke-width:.65;stroke-linejoin:round;paint-order:stroke fill}",
+    "note": "Keep Ember\u2019s published fur and neckerchief colours. A fine edge separates the dark ink from the dark gallery surface."
+  },
+  "firesmart-bc-ember-standing": {
+    "dark": false,
+    "dark-css": "path[fill=\"rgb(13.725281%, 12.156677%, 12.548828%)\"],path[fill=\"rgb(14.117432%, 12.156677%, 12.940979%)\"]{stroke:#90877a;stroke-width:.65;stroke-linejoin:round;paint-order:stroke fill}",
+    "note": "Keep Ember\u2019s published fur and neckerchief colours. A fine edge separates the dark ink from the dark gallery surface."
+  },
+  "bc-online-2011-logo": {
+    "light-palette": { "#000000": "#333B97" },
+    "dark-palette": { "#000000": "#7486e9" },
+    "note": "Use the 2005 emblem’s purple and its dark-theme display ink across the complete 2011 logo. The letterhead reconstruction is black."
+  },
+  "bc-ambulance-service-circular-badge-rebuilt": {
+    "dark": false,
+    "note": "The white badge face provides contrast for both navy rings. Keep the source ink on both rings in dark mode."
+  },
   "historical-capital-health-region-2000-dark-grey": {
     "light": false,
     "dark-palette": {
@@ -20,6 +172,30 @@
   "source-forest-enhancement-society-fesbc-10th-anniversary-svg": {
     "light": false,
     "note": "One colour value paints both BC in the badge and the anniversary ring, so the ring cannot be darkened without BC; kept as drawn."
+  },
+  "iaf-curled-leaves": {
+    "light": false,
+    "note": "Keep the published pale sage leaf on light so it stays distinct from the dark leaf."
+  },
+  "legislative-assembly-dome-signature": {
+    "light": false,
+    "dark-palette": {
+      "#0b8d93": "#53bdc3",
+      "#7e7d83": "#b7b5be"
+    },
+    "note": "The light gallery uses the report’s teal and grey. Lighter teal and grey keep the small lettering legible on dark."
+  },
+  "legislative-assembly-website-signature-rebuilt": {
+    "light": "all",
+    "note": "Every path in the website signature is white in the download."
+  },
+  "legislative-library-digital-collections-rebuilt": {
+    "light": "all",
+    "note": "Every path in the Digital Collections header is near white in the download."
+  },
+  "selectseed-pinecone-rebuilt": {
+    "dark": "all",
+    "note": "The blue fills and strokes form a single ink, so they all lighten together on dark."
   },
   "jibc-logo-reversed": {
     "light": false,
@@ -150,6 +326,13 @@
   "thompson-health-region-rebuilt": {
     "dark": "all",
     "note": "One black ink with no ground of its own; on the dark page the whole mark takes the redraw's reversal, and the path and cut-outs stay open."
+  },
+  "bc-enterprise-corporation-rebuilt-bw": {
+    "dark-palette": {
+      "#202020": "#ede9e2",
+      "#ffffff": "#211e1a"
+    },
+    "note": "Reverse the lettering and the triangle together on the dark page. The white channels take the page colour and remain visible through the triangle."
   },
   "superhost-1986": {
     "dark": "all",
@@ -283,5 +466,30 @@
     "light": false,
     "dark": false,
     "note": "White letters sit inside a printed black cover band. The emblem is visible on both themes."
+  },
+  "municipal-north-vancouver-city-logo-quicksheet": {
+    "dark-palette": {
+      "#0086b7": "#54b8db",
+      "#231f20": "#e7e3de"
+    },
+    "note": "Preserve the blue city lettering and make the two-line name legible on dark."
+  },
+  "municipal-pitt-meadows-strategic-plan-2023": {
+    "dark": "plate",
+    "note": "The white heron and dark blue-grey field retain their original contrast."
+  },
+  "municipal-esquimalt-annual-report-2009": {
+    "dark-palette": {
+      "#005596": "#80bcec",
+      "#009ddc": "#4fc5f0"
+    },
+    "note": "Both blue inks remain distinct and legible on dark."
+  },
+  "school-district-36-strategic-plan-2023": {
+    "dark-palette": {
+      "#44215d": "#ae7fc8",
+      "#808285": "#bec0c3"
+    },
+    "note": "Lighten the purple feather and the small grey motto on dark."
   }
 }

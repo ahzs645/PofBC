@@ -45,6 +45,10 @@ export const SERIES = [
     kind: 'Car decals',
     posters: ['go-bc-ferries', 'queen-of-sidney']
   },
+  {
+    id: 'health', title: 'Ministry of Health', kind: 'Public health advertising',
+    posters: ['new-carecard']
+  },
   // Unlisted: left off the shelf, but each address opens its poster (?view=posters&poster=expo-86-davidson),
   // and the three step among themselves.
   {
@@ -67,6 +71,13 @@ export const SERIES = [
  * words each; `blurb` is one line on what the piece asks or says, shown on its card.
  */
 export const POSTERS = {
+  'new-carecard': {
+    id: 'new-carecard', series: 'health', issuer: 'Ministry of Health',
+    subject: 'Health care', format: 'Newspaper ad', made: 'mixed',
+    title: 'BC’s New CareCard.', when: '2 August 1989, Gulf Islands Driftwood',
+    blurb: 'The Standard and Gold CareCards introduced to British Columbians.',
+    view: { x: 0, y: 0, w: 891, h: 1215 }, page: { w: 11, h: 15 }
+  },
   'coastal-forest': {
     id: 'coastal-forest',
     issuer: 'Ministry of Environment',

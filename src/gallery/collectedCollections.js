@@ -1,8 +1,8 @@
 // Downloaded artwork and supplied originals retain their own format and source.
 // A date on a report is a sighting, never an inferred logo adoption date.
-import { ALL_COLLECTED_BODIES } from './collectedBodies.js'
-import { COLLECTED_SPECIMENS } from './collectedData.js'
+import { ALL_COLLECTED_BODIES, ALL_COLLECTED_SPECIMENS } from './collectedBodies.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
+import { withScienceCouncilHistory } from './scienceCouncilHistory.js'
 import { withLiquorHistory } from './liquorHistory.js'
 import { RAILWAY_HISTORY } from './railwayHistoryData.js'
 import { COLLECTED_PALETTES } from './collectedPalettes.js'
@@ -19,12 +19,15 @@ export const isMunicipalBody = (body) => body.kind?.startsWith('municipal-') || 
  */
 const coverOf = (all) => {
   const assets = all.filter((asset) => !asset.variantOf)
-  return (assets.find((asset) => COLLECTED_DISPLAY[asset.id] && !COLLECTED_DISPLAY[asset.id].light.recoloured) ??
-    assets.find((asset) => COLLECTED_DISPLAY[asset.id]) ?? assets[0])?.id
+  const displayOf = (asset) => COLLECTED_DISPLAY[asset.preferredVector ?? asset.preferredReconstruction ?? asset.id]
+  return (assets.find((asset) => displayOf(asset)?.light.recoloured === false) ??
+    assets.find((asset) => displayOf(asset)) ?? assets[0])?.id
 }
 
 export const assetUrl = (path, base = import.meta.env?.BASE_URL ?? '/') =>
   `${base.replace(/\/?$/, '/')}${path.replace(/^\//, '')}`
+
+const specimenMonths = 'January|February|March|April|May|June|July|August|September|October|November|December'.split('|')
 
 /**
  * Only an explicit specimen date can date artwork. A sentence containing a year may describe a
@@ -54,13 +57,54 @@ export const parseSpecimenDate = (value) => {
   const range = label.match(/^(\d{4})\s*[–—-]\s*(\d{4})$/)
   if (range) return Number(range[2]) >= Number(range[1])
     ? { label, firstYear: Number(range[1]), lastYear: Number(range[2]) } : null
-  const months = 'January|February|March|April|May|June|July|August|September|October|November|December'
+  const months = specimenMonths.join('|')
   const named = label.match(new RegExp(`^(?:(?:c\\.\\s*|about\\s+)|(?:(?:${months})(?:[–—-](?:${months}))?|Spring|Summer|Autumn|Fall|Winter)\\s+)(\\d{4})$`, 'i'))
   return named ? { label, firstYear: Number(named[1]), lastYear: Number(named[1]) } : null
 }
 
 const datesOf = (asset) => [asset.specimenDate ?? asset.sourceDate, ...(asset.alsoSeen ?? []).map((seen) => seen.date)]
   .map(parseSpecimenDate).filter(Boolean)
+
+const dateOrder = ({ label, lastYear }) => {
+  const [, month, day = '0'] = label.match(/^\d{4}-(\d{2})(?:-(\d{2}))?$/) ?? []
+  const namedMonth = label.match(/([A-Za-z]+)\s+\d{4}$/)?.[1]
+  const monthOrder = Number(month ?? specimenMonths.findIndex((name) => name.toLowerCase() === namedMonth?.toLowerCase()) + 1)
+  return lastYear * 10000 + monthOrder * 100 + Number(day)
+}
+
+const isUndatedWebsiteLogo = (asset) =>
+  /^(official-website-|official-inline-)/.test(asset.evidenceType ?? '') &&
+  !asset.sourcePage?.includes('web.archive.org/') && !parseSpecimenDate(asset.specimenDate ?? asset.sourceDate)
+
+/** Current-use evidence leads. Publication dates compare actual sightings of the design. */
+const latestLogo = (entries) => entries.map((entry) => {
+  const evidence = (entry.versions ?? [entry.asset]).filter((asset) => !asset.sourceReproduction && asset.role !== 'historical')
+  const current = evidence.some((asset) => asset.role === 'current') ? 2 : Number(evidence.some(isUndatedWebsiteLogo))
+  const latest = Math.max(0, ...evidence.flatMap(datesOf).map(dateOrder))
+  const display = COLLECTED_DISPLAY[entry.asset.id]
+  const preview = display?.light.recoloured === false ? 2 : Number(Boolean(display))
+  return { id: entry.id, current, latest, preview }
+}).filter(({ current, latest }) => current || latest)
+  .sort((a, b) => b.current - a.current || b.latest - a.latest || b.preview - a.preview)[0]?.id
+
+/** Put the cover first on an active collection's overview. Histories keep their own order. */
+export const coverFirst = (entries, cover) => {
+  const featured = entries.find(({ id }) => id === cover)
+  return featured ? [featured, ...entries.filter((entry) => entry !== featured)] : entries
+}
+
+// These sources establish the active signature even when a later date belongs to a different
+// layout, a standalone symbol, or an older design reproduced in a newer publication.
+const VERIFIED_CURRENT_COVERS = {
+  'bc-assessment': 'bc-assessment-svg',
+  'bc-housing': 'vector-bc-housing-corporate-component-source-vector',
+  'bc-infrastructure-benefits': 'source-bc-infrastructure-benefits-bcib-building-opportunity-here-reverse-png',
+  'bc-railway-company': 'bcrc-website-wordmark-rebuilt',
+  'first-nations-health-authority': 'vector-fnha-logo-colour',
+  'interior-health': 'vector-interior-health-blue-horizontal-source-extraction',
+  'municipality-fort-st-james': 'source-recovered-municipal-fort-st-james-website-logo',
+  'northern-development-initiative-trust': 'source-expanded-northern-development-2023-stacked-reversed'
+}
 
 /** One or two sightings as given; more as their full year span. Retrieval dates are never used. */
 const seenDates = (versions) => {
@@ -101,49 +145,58 @@ const paletteMaster = (asset, versions) => {
  * A collected file as a gallery entry; `timeline` places a program's specimen on its timeline, and
  * `owner` is the body it was collected for, kept when its collection holds a body's successors too.
  */
-const collectedEntry = (asset, timeline, owner, versions = [asset]) => ({
-  id: asset.id,
-  kind: 'collected',
-  ...(timeline ? { timeline } : {}),
-  ...(owner ? { owner } : {}),
-  // A design seen in several places is named for the design where its record names one, else for
-  // its publisher, when its versions are colourways; one whose other version is the image it was
-  // redrawn or found in place of keeps its own name. A single file keeps its own label.
-  label: COLLECTED_PALETTES[asset.id]?.label ??
-    (versions.length > 1 && !versions.some((version) => version.versionLabel === 'Published image') ? asset.designLabel ?? asset.publisher : asset.label),
-  // A card says what the mark is in a sentence; its full account, versions and sources are on its page.
-  note: firstSentence(asset.notes),
-  // A publication reproducing historical artwork is dated as such, beside the use it records.
-  years: asset.sourceReproduction && asset.historicalDateLabel && parseSpecimenDate(asset.specimenDate ?? asset.sourceDate)
-    ? `${asset.historicalDateLabel} · reproduced ${parseSpecimenDate(asset.specimenDate ?? asset.sourceDate).label}`
-    : seenDates(versions) ? `Seen ${seenDates(versions)}` : 'Logo dates unestablished',
-  // A design can retain an EPS source ID while using its original SVG for the web viewer.
-  // Palette choices share this geometry; the other source files remain available as evidence.
-  asset: paletteMaster(asset, versions),
-  ...(COLLECTED_PALETTES[asset.id] ? { paletteGroup: COLLECTED_PALETTES[asset.id] } : {}),
-  ...(versions.length > 1 ? { versions } : {}),
-  identity: {
-    provenance: asset.reconstruction ? 'third_party_reconstruction' : asset.supplied ? 'original_supplied'
-      : asset.isVector && ['native-pdf-vector-extraction', 'native-pdf-vector-extraction-with-converted-gradients', 'official-vector-master-conversion', 'official-inline-vector-extraction'].includes(asset.evidenceType)
-        ? 'extracted_from_official_vector' : asset.isVector ? 'published_vector' : 'published_raster',
-    fidelity: asset.fidelity ?? 'source compared',
-    fidelityNote: asset.fidelityNote,
-    applicability: {
-      kind: seenDates(versions) ? 'dated_specimen' : 'unknown',
-      years: seenDates(versions) || 'undated',
-      note: seenDates(versions)
-        ? (asset.sourceReproduction
-            ? 'This dates the publication reproducing the historical artwork. The historical use is described separately; the reproduction date does not date the design’s adoption. '
-            : 'This is the date of the cited specimen, not a verified first use or adoption date. ') + (asset.dateNote || '')
-        : [asset.sourceDate ? `Source-date context: ${asset.sourceDate}. This does not establish a dated specimen.` : null,
-            `Collected on ${asset.observedDate}. A retrieval date does not establish when the design was adopted.`, asset.dateNote].filter(Boolean).join(' '),
+const collectedEntry = (design, timeline, owner, versions = [design]) => {
+  // An explicitly matched source vector can represent the design without changing its URL.
+  const preferredVector = versions.find((version) =>
+    version.id === design.preferredVector && version.variantOf === design.id && version.isVector && !version.reconstruction)
+  const preferred = preferredVector ?? versions.find((version) =>
+    version.id === design.preferredReconstruction && version.variantOf === design.id && version.reconstruction)
+  const asset = preferred ?? design
+  const orderedVersions = preferred ? [preferred, ...versions.filter((version) => version !== preferred)] : versions
+  return {
+    id: design.designId ?? design.id,
+    kind: 'collected',
+    ...(timeline ? { timeline } : {}),
+    ...(owner ? { owner } : {}),
+    // A design seen in several places is named for the design where its record names one, else for
+    // its publisher, when its versions are colourways; one whose other version is the image it was
+    // redrawn or found in place of keeps its own name. A single file keeps its own label.
+    label: COLLECTED_PALETTES[design.id]?.label ??
+      (versions.length > 1 && !versions.some((version) => version.versionLabel === 'Published image') ? design.designLabel ?? design.publisher : design.label),
+    // A card says what the mark is in a sentence; its full account, versions and sources are on its page.
+    note: firstSentence(asset.notes),
+    // A publication reproducing historical artwork is dated as such, beside the use it records.
+    years: asset.sourceReproduction && asset.historicalDateLabel && parseSpecimenDate(asset.specimenDate ?? asset.sourceDate)
+      ? `${asset.historicalDateLabel} · reproduced ${parseSpecimenDate(asset.specimenDate ?? asset.sourceDate).label}`
+      : seenDates(versions) ? `Seen ${seenDates(versions)}` : 'Logo dates unestablished',
+    // A design can retain an EPS source ID while using its original SVG for the web viewer.
+    // Palette choices share this geometry; the other source files remain available as evidence.
+    asset: preferred ?? paletteMaster(design, versions),
+    ...(COLLECTED_PALETTES[design.id] ? { paletteGroup: COLLECTED_PALETTES[design.id] } : {}),
+    ...(versions.length > 1 ? { versions: orderedVersions } : {}),
+    identity: {
+      provenance: asset.reconstruction ? (asset.provenance ?? 'third_party_reconstruction') : asset.supplied ? 'original_supplied'
+        : asset.isVector && ['native-pdf-vector-extraction', 'native-pdf-vector-extraction-with-converted-gradients', 'website-colours-on-source-vector', 'publication-colours-on-source-vector', 'official-vector-master-conversion', 'official-inline-vector-extraction', 'adaptation-of-source-vector'].includes(asset.evidenceType)
+          ? 'extracted_from_official_vector' : asset.isVector ? 'published_vector' : 'published_raster',
+      fidelity: asset.fidelity ?? 'source compared',
+      fidelityNote: asset.fidelityNote,
+      applicability: {
+        kind: seenDates(versions) ? 'dated_specimen' : 'unknown',
+        years: seenDates(versions) || 'undated',
+        note: seenDates(versions)
+          ? (asset.sourceReproduction
+              ? 'This dates the publication reproducing the historical artwork. The historical use is described separately; the reproduction date does not date the design’s adoption. '
+              : 'This is the date of the cited specimen, not a verified first use or adoption date. ') + (asset.dateNote || '')
+          : [asset.sourceDate ? `Source-date context: ${asset.sourceDate}. This does not establish a dated specimen.` : null,
+              `Collected on ${asset.observedDate}. A retrieval date does not establish when the design was adopted.`, asset.dateNote].filter(Boolean).join(' '),
+      },
+      rights: asset.rights ?? {
+        status: 'unresolved',
+        note: 'The mark belongs to its respective owner. No permission to reproduce it here has been sought or documented.',
+      },
     },
-    rights: asset.rights ?? {
-      status: 'unresolved',
-      note: 'The mark belongs to its respective owner. No permission to reproduce it here has been sought or documented.',
-    },
-  },
-})
+  }
+}
 
 const BODIES = new Map(ALL_COLLECTED_BODIES.map((body) => [body.id, body]))
 const kindOf = (body) => ({
@@ -159,25 +212,37 @@ export const collectedEntriesOf = (bodyId) => designsOf(BODIES.get(bodyId)?.asse
   .map(({ asset, versions }) => collectedEntry(asset, undefined, bodyId, versions))
 
 /** Published specimens folded into a researched collection rather than a one-off timeline. */
-export const specimenEntriesOf = (program, timeline) => designsOf(COLLECTED_SPECIMENS.find((each) => each.program === program)?.assets ?? [])
+export const specimenEntriesOf = (program, timeline) => designsOf(ALL_COLLECTED_SPECIMENS.find((each) => each.program === program)?.assets ?? [])
   .map(({ asset, versions }) => collectedEntry(asset, timeline, undefined, versions))
 
-const collectionOf = (body) => ({
-  id: `collected-${body.id}`,
-  shelf: body.shelf ?? (isMunicipalBody(body) ? 'municipalities' : 'bodies'),
-  // Service brands can have artwork without a corresponding legal organization in the atlas.
-  graphNode: Object.hasOwn(body, 'graphNode') ? body.graphNode : body.id,
-  fileCollection: true,
-  label: body.shortName || body.name,
-  // Its years already end in "present", so only a former body says what it was.
-  body: body.current ? kindOf(body).replace(/^./, (letter) => letter.toUpperCase()) : `Former ${kindOf(body)}`,
-  years: body.from == null && body.to == null ? 'Dates unestablished' : `${body.from ?? '?'}–${body.current ? 'present' : body.to ?? '?'}`,
-  // The body's own account where it has one; that its years are not its logos' is said on each card
-  // (“Seen …”) and under About.
-  intro: body.notes || 'Collected artwork, with its source recorded for each file.',
-  cover: body.cover ?? coverOf(body.assets),
-  entries: collectedEntriesOf(body.id),
-})
+const collectionOf = (body) => {
+  const entries = collectedEntriesOf(body.id)
+  const currentCover = body.current ? VERIFIED_CURRENT_COVERS[body.id] ?? latestLogo(entries) : undefined
+  const cover = body.cover ?? currentCover ?? coverOf(body.assets)
+  const artworkSections = body.artworkSections?.map(({ marks, ...section }) => ({
+    ...section, entries: marks.map((mark) => entries.find(({ id }) => id === mark)).filter(Boolean)
+  }))
+  return {
+    id: `collected-${body.id}`,
+    shelf: body.shelf ?? (isMunicipalBody(body) ? 'municipalities' : 'bodies'),
+    // Service brands can have artwork without a corresponding legal organization in the atlas.
+    graphNode: Object.hasOwn(body, 'graphNode') ? body.graphNode : body.id,
+    fileCollection: true,
+    ...(body.initiativeId ? { initiativeId: body.initiativeId } : {}),
+    label: body.shortName || body.name,
+    body: body.publicationDate ? 'Identity guide' : body.current ? kindOf(body).replace(/^./, (letter) => letter.toUpperCase()) : `Former ${kindOf(body)}`,
+    years: body.publicationDate ?? (body.from == null && body.to == null ? 'Dates unestablished' : `${body.from ?? '?'}–${body.current ? 'present' : body.to ?? '?'}`),
+    intro: body.notes || 'Collected artwork, with its source recorded for each file.',
+    cover,
+    ...(body.historyId ? { historyId: body.historyId } : {}),
+    ...(body.fundingHistory ? { fundingHistory: body.fundingHistory } : {}),
+    ...(body.eras ? { eras: body.eras.map(({ marks, ...era }) => ({
+      ...era, entries: entries.filter((entry) => marks.includes(entry.id))
+    })) } : {}),
+    ...(artworkSections ? { artworkSections } : {}),
+    entries: body.current ? coverFirst(entries, cover) : entries
+  }
+}
 
 /**
  * Bodies that carried on as another under a new name, each with the body it became, as the
@@ -240,7 +305,6 @@ const lineCollection = (line) => {
     intro: `One body under ${['', 'one', 'two', 'three', 'four'][bodies.length] ?? bodies.length} names: ${bodies.map((body) => body.name).join(', then ')}. ` +
       'Each name is an era below, with the artwork collected under it and its source recorded for each file. ' +
       'The years are the body’s, not its logos’.',
-    cover: coverOf(bodies.flatMap((body) => body.assets).reverse()) ?? last.assets[0]?.id,
     entries: undefined,
     eras
   }
@@ -285,7 +349,7 @@ const HELD_LINES = LINES.filter((line) => line.every((id) => BODIES.get(id)?.ass
 const IN_A_LINE = new Set(HELD_LINES.flat())
 
 export const COLLECTED_COLLECTIONS = [
-  ...ALL_COLLECTED_BODIES.filter((body) => body.assets.length && !IN_A_LINE.has(body.id)).map(collectionOf).map(withLiquorHistory),
+  ...ALL_COLLECTED_BODIES.filter((body) => body.assets.length && !IN_A_LINE.has(body.id)).map(collectionOf).map(withLiquorHistory).map(withScienceCouncilHistory),
   ...HELD_LINES.map(lineCollection)
 ].sort((a, b) => ALL_COLLECTED_BODIES.findIndex((body) => `collected-${body.id}` === a.id) - ALL_COLLECTED_BODIES.findIndex((body) => `collected-${body.id}` === b.id))
 
@@ -295,7 +359,7 @@ export const nodesOf = (collection) => collection.graphNodes ?? (collection.grap
 // The one-off programs' published specimens (WorkBC, WelcomeBC, StrongerBC, Canada Starts Here, Where
 // ideas work). They are not bodies of the inventory: each program's collection is not shelved, and
 // its files are reached from the eras of its timeline (timelines.js), which they keep in view.
-export const SPECIMEN_COLLECTIONS = COLLECTED_SPECIMENS.map(({ program, assets }) => ({
+export const SPECIMEN_COLLECTIONS = ALL_COLLECTED_SPECIMENS.map(({ program, assets }) => ({
   id: `specimens-${program}`,
   shelf: 'specimens',
   fileCollection: true,

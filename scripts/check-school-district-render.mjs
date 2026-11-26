@@ -14,9 +14,10 @@ const server = await createServer({ root, configFile: false, plugins: [react()],
 const previousLocation = globalThis.location
 try {
   const { SchoolDistrictsView } = await server.ssrLoadModule('/src/schools/SchoolDistrictsView.jsx')
-  const { SCHOOL_DISTRICTS, CURRENT_DISTRICTS } = await server.ssrLoadModule('/src/schools/districts.js')
+  const { SCHOOL_DISTRICTS, CURRENT_DISTRICTS, primaryDistrictDesign, primaryDistrictLogo } = await server.ssrLoadModule('/src/schools/districts.js')
   const { CollectedMarkView } = await server.ssrLoadModule('/src/gallery/CollectedMarkView.jsx')
-  const { collectedEntriesOf } = await server.ssrLoadModule('/src/gallery/collectedCollections.js')
+  const { COLLECTED_COLLECTIONS, collectedEntriesOf } = await server.ssrLoadModule('/src/gallery/collectedCollections.js')
+  const { collectedDisplay } = await server.ssrLoadModule('/src/gallery/tileArt.js')
   const render = (params) => {
     globalThis.location = new URL(`https://example.test/PofBC/?${new URLSearchParams({ view: 'school-districts', ...params })}`)
     return renderToStaticMarkup(React.createElement(SchoolDistrictsView))
@@ -34,11 +35,15 @@ try {
     if (district.current) {
       assert.ok(html.includes(`employer=${district.employerSlug}`), district.id)
       assert.ok(html.includes(`logos=collected-${district.id}`), district.id)
+      const collection = COLLECTED_COLLECTIONS.find(({ id }) => id === `collected-${district.id}`)
+      assert.equal(collection.cover, primaryDistrictDesign(district).id)
+      assert.equal(collection.entries[0].asset.id, primaryDistrictLogo(district).id)
+      assert.ok(html.includes(`src="/PofBC/${primaryDistrictLogo(district).file}"`), district.id)
     }
     for (const entry of collectedEntriesOf(district.id)) {
       const mark = renderToStaticMarkup(React.createElement(CollectedMarkView, { entry }))
-      assert.ok(mark.includes(`Download ${entry.asset.format.toUpperCase()}`), entry.id)
-      if (entry.asset.darkBackground) assert.ok(mark.includes('data-dark="true"'), entry.id)
+      assert.ok(mark.includes(`href="/PofBC/${entry.asset.file}" download`), entry.id)
+      if (entry.asset.darkBackground && !collectedDisplay(entry.asset)) assert.ok(mark.includes('data-dark="true"'), entry.id)
     }
   }
   assert.match(render({ district: 'school-district-70' }), /Institutional origin/)

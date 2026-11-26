@@ -34,6 +34,7 @@ export const EVENT_TYPES = {
   executive_appointment: { label: 'Chief executive appointed', kind: 'people' },
   commission_issued: { label: 'Commission issued', kind: 'people' },
   sworn_into_office: { label: 'Sworn into office', kind: 'people' },
+  funding_announced: { label: 'Funding announced', kind: 'relationship' },
   agreement_signed: { label: 'Agreement signed', kind: 'relationship' },
   functions_transferred: { label: 'Functions transferred', kind: 'relationship' },
   election_called: { label: 'Election called', kind: 'election' },

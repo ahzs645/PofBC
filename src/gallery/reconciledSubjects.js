@@ -1,3 +1,7 @@
+import { fireSmartGuide } from './fireSmart.js'
+import { strongerBCGuide, strongerBCMatrix } from './strongerBC.js'
+import { buyBCStandards } from './buyBC.js'
+
 // Owners for artwork the gallery already held without a register subject (the 15 November 2026
 // gallery audit: 53 entries in 12 collections plus BC Cancer Foundation's two marks).
 //
@@ -7,6 +11,10 @@
 // PROGRAM_ENTRY_OWNERS gives the entries that had no owner at all an explicit one.
 
 export const RECONCILED_FAMILIES = [
+  {
+    id: 'affiliated-organizations', label: 'Affiliated organizations',
+    description: 'Independent organizations with a documented formal relationship to a provincial body.'
+  },
   {
     id: 'provincial-programs',
     label: 'Provincial branches, services and programs',
@@ -25,9 +33,8 @@ export const PROGRAM_ENTRY_OWNERS = {
   'environmental-lab-bc': 'environmental-lab-bc',
   'stronger-bc': 'stronger-bc',
   'vector-BCID_StrongerBC_RGB_pos': 'stronger-bc',
-  'vector-BCID_StrongerBC_RGB_rev': 'stronger-bc',
-  'vector-BCID_StrongerBC_Solid_pos': 'stronger-bc',
-  'vector-BCID_StrongerBC_Solid_rev': 'stronger-bc',
+  'strongerbc-for-everyone-endorsed': 'stronger-bc',
+  'strongerbc-for-everyone-wordmark': 'stronger-bc',
   'vector-StrongerBC_RGB_pos': 'stronger-bc',
   'vector-StrongerBC_Solid_pos': 'stronger-bc',
   'pacific-gateway': 'pacific-gateway',
@@ -54,6 +61,20 @@ const subject = ({ id, label, name = label, kind, family = 'provincial-programs'
 })
 
 export const RECONCILED_SUBJECTS = [
+  subject({
+    id: 'firesmart-bc', label: 'FireSmart BC', kind: 'service-brand',
+    collectionIds: ['specimens-firesmart-bc'], aliases: ['BC FireSmart Committee', 'Ember the FireSmart Fox'],
+    sources: [{ title: 'FireSmart BC Brand Guidelines, July 2025', url: fireSmartGuide }],
+    note: 'The BC FireSmart Committee directs the provincial program. Its guide documents the provincial signature, four sub-brands and Ember the FireSmart Fox.',
+    nextAction: 'Locate publisher artwork for the black and white options mentioned on page 5 of the July 2025 guide.'
+  }),
+  subject({
+    id: 'sub-buy-bc', label: 'Buy BC', kind: 'service-brand', graphNode: 'sub-buy-bc',
+    aliases: ['buyBC', 'Buy BC Partnership Program'], collectionIds: ['specimens-buy-bc'],
+    sources: [{ title: 'Buy BC Graphic Standards', url: buyBCStandards }],
+    note: 'The provincial food and beverage marketing program licenses its landscape emblem for use on packaging and in stores.',
+    nextAction: 'Locate a dated example of the graphics licensed to BC Agriculture Council in 2002.'
+  }),
   subject({
     id: 'provincial-emergency-program',
     name: 'Provincial Emergency Program',
@@ -215,7 +236,6 @@ export const RECONCILED_SUBJECTS = [
     label: 'WorkBC',
     kind: 'service-brand',
     graphNode: 'sub-workbc',
-    collectionIds: ['specimens-work-bc'],
     sources: [{ title: 'WorkBC logo, as served by workbc.ca', url: 'https://www.workbc.ca/themes/custom/workbc/logo.svg' }],
     nextAction: 'Date the first WorkBC lockup on the BC mark from a primary specimen.',
     note: 'A provincial employment service; its own marks and its lockup on the BC mark are separate entries.'
@@ -224,7 +244,6 @@ export const RECONCILED_SUBJECTS = [
     id: 'welcome-bc',
     label: 'WelcomeBC',
     kind: 'service-brand',
-    collectionIds: ['specimens-welcome-bc'],
     sources: [{ title: 'WelcomeBC logo, as served by welcomebc.ca', url: 'https://www.welcomebc.ca/getmedia/ce0988e3-03e0-4fed-a743-8ace3a34d1ce/WelcomeBC_cmyk_pos_Print.svg' }],
     nextAction: 'Find dated specimens from before 2016.',
     note: 'An immigration and settlement program brand of the Province. It is not an atlas body, so it has no organization link.'
@@ -233,13 +252,15 @@ export const RECONCILED_SUBJECTS = [
     id: 'stronger-bc',
     label: 'StrongerBC',
     kind: 'campaign',
-    collectionIds: ['specimens-stronger-bc'],
     sources: [
       { title: 'BC visual identity: download marks', url: 'https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/bc-visual-identity/download-marks' },
-      { title: 'Use of the StrongerBC marks (January 2021)', url: 'https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/policies-procedures-standards/corporate-identity-assets/visid-pdfs/bcid_use_of_strongerbc.pdf' }
+      { title: 'StrongerBC graphic identity standards, March 2024', url: strongerBCGuide },
+      { title: 'StrongerBC brand matrix, May 2022', url: strongerBCMatrix }
     ],
-    nextAction: 'Record when the StrongerBC marks were retired, if they have been.',
-    note: 'A provincial economic-recovery plan and campaign identity, published as endorsed and standalone marks.'
+    aliases: ['StrongerBC for everyone'],
+    relations: ['sub-cleanbc', 'sub-workbc', 'sub-buy-bc'].map((id) => ({ subject: id, type: 'related-to', label: 'Program named in the StrongerBC brand matrix' })),
+    nextAction: 'Find a surviving copy of the January 2021 guide to verify the earliest colourways.',
+    note: 'The economic plan uses both the plain StrongerBC name and a government-only “for everyone” signature. The brand matrix distinguishes economic-plan messaging from the specific work of CleanBC, WorkBC, ChildCareBC and Buy BC.'
   }),
   subject({
     id: 'pacific-gateway',
@@ -444,7 +465,6 @@ export const RECONCILED_SUBJECTS = [
     kind: 'central-agency',
     graphNode: 'bc-public-service-agency',
     aliases: ['Where ideas work'],
-    collectionIds: ['specimens-public-service'],
     priority: 2,
     sources: [{ title: 'BC Public Service corporate plan (2023)', url: 'https://www2.gov.bc.ca/assets/gov/careers/about-the-bc-public-service/corporate-digital/corporateplan_2023.pdf' }],
     nextAction: 'Find the earliest “Where ideas work” specimen.',

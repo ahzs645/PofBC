@@ -3,6 +3,8 @@
 // without a browser. Adding a sign is a drawing and its parts (see forest-service/, tourism/ and parks/), an entry here,
 // and a loader in SignsView.jsx.
 
+import { ENTRY_CARDS } from './entering-bc/signs.js'
+
 export const SIGN_SERIES = [
   {
     id: 'forest-service',
@@ -11,10 +13,22 @@ export const SIGN_SERIES = [
     signs: ['fire-day', 'lookout', 'forest-closure']
   },
   {
+    id: 'entering-bc',
+    title: 'Entering British Columbia',
+    kind: 'Highway information signs',
+    signs: Object.keys(ENTRY_CARDS)
+  },
+  {
     id: 'tourism',
     title: 'Province of British Columbia',
     kind: 'Welcome signs',
-    signs: ['super-natural']
+    signs: ['super-natural', 'super-natural-bordered']
+  },
+  {
+    id: 'fish-wildlife',
+    title: 'British Columbia Fish & Wildlife Branch',
+    kind: 'Angling notices',
+    signs: ['cheakamus-notice-to-anglers']
   },
   {
     id: 'parks',
@@ -29,6 +43,7 @@ export const SIGN_SERIES = [
 ]
 
 export const SIGNS = {
+  ...ENTRY_CARDS,
   'fire-day': {
     id: 'fire-day', series: 'forest-service', title: 'TO-DAY IS A FIRE DAY',
     when: 'Photographed in Powell River, July 1938', view: { x: 0, y: 0, w: 550, h: 424 },
@@ -57,6 +72,22 @@ export const SIGNS = {
     when: 'Flag era, about 1983–2001',
     view: { x: 0, y: 0, w: 1200, h: 1150 },
     page: { w: 12, h: 11.5 }
+  },
+  'super-natural-bordered': {
+    id: 'super-natural-bordered',
+    series: 'tourism',
+    title: 'Super, Natural British Columbia · blue-bordered sign',
+    when: 'Undated · photographic reconstruction',
+    view: { x: 0, y: 0, w: 814, h: 440 },
+    page: { w: 10, h: 5.405 }
+  },
+  'cheakamus-notice-to-anglers': {
+    id: 'cheakamus-notice-to-anglers',
+    series: 'fish-wildlife',
+    title: 'Notice to Anglers, Cheakamus River',
+    when: 'Undated · photographic reconstruction',
+    view: { x: 0, y: 0, w: 1060, h: 720 },
+    page: { w: 10.6, h: 7.2 }
   },
   'proposed-park-symbols': {
     id: 'proposed-park-symbols',

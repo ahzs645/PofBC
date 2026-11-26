@@ -28,9 +28,11 @@ export const searchInitiatives = (query, initiatives) => {
 /** A record-only link finds its section; an unknown section falls back to the first one. */
 export const resolveInitiativeSelection = (initiative, place = {}) => {
   const sections = initiative.sections ?? []
+  const matchesRecord = (record) => record.id === place.record ||
+    Boolean(place.record && record.images?.some((image) => image.formerRecordId === place.record))
   const recordSection = sections.find((section) => ['records', 'publications'].includes(section.type) &&
-    section.records?.some((record) => record.id === place.record))
+    section.records?.some(matchesRecord))
   const section = recordSection ?? sections.find((entry) => entry.id === place.section) ?? sections[0]
-  const record = recordSection?.records.find((entry) => entry.id === place.record) ?? null
+  const record = recordSection?.records.find(matchesRecord) ?? null
   return { section, record, missingRecord: Boolean(place.record && !record) }
 }

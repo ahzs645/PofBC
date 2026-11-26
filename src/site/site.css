@@ -352,22 +352,13 @@ a { color: inherit; text-underline-offset: 2px; }
 
 .panel > h2 + .panel__hint { margin-top: 0; }
 
-/* A segment's label stays on one line, so every segment in a row shares a height; a row too long
-   for its panel wraps whole segments instead of breaking their words. */
-:is(.controls, .gallery__controls) .segmented { flex-wrap: wrap; }
-:is(.controls, .gallery__controls) .segmented button { white-space: nowrap; }
-.gallery__controls .segmented button { flex: 1 1 auto; }
 /* Four starting colourways do not fit one row of the mark's control column; they sit two by two. */
 .gallery__controls .segmented:has(> button:nth-child(4)) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
 /* Original references remain separate from the exported vector study. */
-/* Five identities share a row: each button takes its label's width, so none breaks onto two lines. */
-.segmented[aria-label='Identity'] button { flex: 1 1 auto; white-space: nowrap; padding-inline: 6px; }
+.segmented[aria-label='Identity'] button { padding-inline: 6px; }
 /* The four headings are too long for one row, even in the desktop panel, so they sit two by two. */
 .document-arms-panel > .field:first-of-type .segmented { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.document-arms-panel .segmented { flex-wrap: wrap; }
-.export-panel .segmented { flex-wrap: wrap; }
-.segmented[aria-label='Identity'] { flex-wrap: wrap; }
 .document-arms-reference { margin: 16px 4px 0; color: var(--ink-muted); font-size: 13px; line-height: 1.5; }
 .document-arms-reference__status { color: var(--ink); font-weight: 600; margin-bottom: 4px; }
 .document-arms-reference summary, .document-arms-evidence summary { cursor: pointer; color: var(--ink); }
@@ -552,6 +543,9 @@ h1, h2, h3, .gallery__collection-title { text-wrap: balance; }
 /* A grey track with the chosen segment lifted out of it, as the government view's Graph | List. */
 .segmented {
   display: flex;
+  flex-wrap: wrap;
+  min-inline-size: 0;
+  max-inline-size: 100%;
   gap: 2px;
   min-height: var(--control);
   padding: 3px;
@@ -560,13 +554,18 @@ h1, h2, h3, .gallery__collection-title { text-wrap: balance; }
 }
 
 .segmented button {
-  flex: 1;
+  /* Wrap whole choices first, then wrap a label if it is wider than the track. */
+  flex: 1 1 auto;
+  min-inline-size: 0;
+  max-inline-size: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
   min-height: 30px;
   padding: 4px 8px;
   border: 0;
   border-radius: 9px;
   background: transparent;
-  color: var(--ink-faint);
+  color: var(--ink-2);
   font: inherit;
   font-size: 14px;
   font-weight: 500;
@@ -1094,11 +1093,17 @@ input.share__url {
   align-items: start;
 }
 
+.gallery__artwork-sections { display: grid; gap: var(--gap); }
+
 /* Two to a row, the cards in a row as tall as each other, each mark's button filling its card
    rather than keeping the cap it needs when a card spans the page. */
 @media (min-width: 1000px) {
   .gallery__list { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }
   .gallery__list .gallery__pick { max-width: none; }
+  .gallery__artwork-sections { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery__artwork-sections > section { grid-column: 1 / -1; }
+  .gallery__artwork-sections > [data-single] { grid-column: auto; grid-template-rows: auto 1fr; }
+  .gallery__artwork-sections > [data-single] > .gallery__list { grid-template-columns: minmax(0, 1fr); }
 }
 
 .gallery__entry { margin: 0; }
@@ -1200,7 +1205,7 @@ input.share__url {
 @media (min-width: 760px) {
   .gallery__editor { grid-template-columns: minmax(0, 1fr) 320px; align-items: start; }
   /* The controls run long; the mark stays in view beside them while they are worked through. */
-  .gallery__editor > .gallery__art--large { position: sticky; top: 16px; }
+  .gallery__editor > .gallery-preview { position: sticky; top: 16px; }
 }
 
 .gallery__art--large { min-height: 260px; padding: 16px; }
@@ -1277,30 +1282,56 @@ input.share__url {
 
 /* ── The gallery's shelves and collections ────────────────────────────────────────────────── */
 
-/* The first page: a shelf of bodies with identities of their own, then the Province's one-offs.
-   Each collection is one card — its cover mark, whose it is, how much it holds. */
 .gallery__shelf { display: grid; gap: 10px; }
 
-/* The gallery's search, above its shelves; the shortcut is shown only where there is a keyboard. */
-/* The search stays at the top of the window as the shelves scroll under it, so a search is never
-   more than a tap away down a long page. A square of page colour behind it (not a ring, whose
-   rounded corners let the cards show through) keeps them from showing at its edges as they pass. */
-.gallery__search {
+/* Keep both controls visible while the shelves scroll beneath them. */
+.gallery__toolbar {
   position: sticky;
   top: 8px;
   z-index: 5;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px;
 }
-.gallery__search::before {
+.gallery__toolbar::before {
   content: '';
   position: absolute;
   inset: -8px -8px -6px;
   z-index: -1;
   background: var(--page);
 }
+.gallery__search { position: relative; }
 .gallery__search input {
   width: 100%; box-sizing: border-box; padding: 12px 64px 12px 16px; border: 1px solid var(--border);
   border-radius: 12px; background: var(--surface, var(--card, #fff)); color: inherit; font: inherit; font-size: 15px;
 }
+.gallery__filters { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 3px; }
+.gallery__filter-row {
+  position: relative;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  padding: 3px;
+}
+.gallery__filter-chip, .gallery__filter-arrow {
+  min-height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.gallery__filter-chip { flex: none; max-inline-size: 100%; padding: 5px 12px; line-height: 1.2; }
+.gallery__filter-arrow { display: grid; place-items: center; width: 36px; padding: 0; }
+.gallery__filter-chip:hover, .gallery__filter-arrow:hover:not([aria-disabled='true']) { border-color: var(--mid); background: var(--hover); }
+.gallery__filter-chip[aria-pressed='true'] { border-color: var(--ink); background: var(--ink); color: var(--page); }
+.gallery__filter-arrow[aria-disabled='true'] { opacity: .35; cursor: default; }
+.gallery__filter-chip:focus-visible, .gallery__filter-arrow:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+@media (max-width: 600px) { .gallery__search input { font-size: 16px; } }
 .gallery__search input:focus { outline: 2px solid var(--accent, #2563eb); outline-offset: 1px; }
 /* The browser's own clear button is drawn in its accent blue (Chrome) or not at all (Firefox): the
    site draws its own in the page's ink, in the place the ⌘K hint holds before there is a query. */
@@ -1318,8 +1349,33 @@ input.share__url {
   border: 1px solid var(--border); border-radius: 6px; font: 12px/1.4 inherit; color: var(--ink-muted); pointer-events: none;
 }
 /* No keyboard shortcut to show on a touch screen, nor room for one beside the placeholder on a narrow one. */
-@media (hover: none), (pointer: coarse), (max-width: 639px) { .gallery__search-key { display: none; } }
+@media (hover: none), (pointer: coarse), (max-width: 639px) {
+  .gallery__search-key { display: none; }
+  .gallery__search input:placeholder-shown { padding-right: 16px; }
+}
 .gallery__search-none { margin: 4px; }
+.gallery__category { border-top: 1px solid var(--border); padding-top: 16px; }
+.gallery__category + .gallery__category { margin-top: 12px; }
+.gallery__category-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.gallery__category-title { margin: 0 4px; font-size: clamp(17px, 2.3vw, 22px); font-weight: 650; line-height: 1.25; }
+.gallery__category-records-link {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 36px;
+  min-height: 36px;
+  padding-inline: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 12px;
+  text-decoration: none;
+}
+.gallery__category-records-link:hover { border-color: var(--mid); background: var(--hover); }
+.gallery__category-records-link:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 /* The page's own gap is the only space above a shelf's title, as between any two of its blocks:
    a margin here (and the register's own, above it) made the first one stand 42px off. */
 .gallery__shelf-title { margin: 0 4px; font-size: 14px; font-weight: 600; color: var(--ink-muted); }
@@ -1327,8 +1383,45 @@ input.share__url {
 .gallery__group-title { margin: 6px 4px 0; font-size: 15px; font-weight: 600; }
 .gallery__group-link { padding: 0; border: 0; background: none; color: var(--ink); font: inherit; cursor: pointer; }
 .gallery__group-link:hover { text-decoration: underline; }
-.gallery__folded-under { margin: 0 4px; font-size: 14px; }
 .gallery__children { margin-top: var(--gap); }
+.gallery__relationships { display: grid; gap: var(--gap); }
+.gallery__relationships[data-previews] {
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+}
+.gallery__history-cards {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+}
+.gallery__history-cards .gallery__collection {
+  width: 100%;
+  min-height: 110px;
+  grid-template: auto / clamp(72px, 28%, 132px) minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  text-decoration: none;
+}
+.gallery__history-cards .gallery__collection .gallery__art--cover {
+  min-height: 0;
+  height: 74px;
+  aspect-ratio: auto;
+  padding: 4px;
+}
+.gallery__history-cards .gallery__collection .gallery__art--cover :is(svg, .gallery__collected-image) {
+  max-height: 66px;
+}
+.gallery__history-cards .gallery__collection-title { font-size: 15px; overflow-wrap: anywhere; }
+.gallery__history-cards .gallery__collection-text { text-align: start; }
+.gallery__history-preview { display: grid; grid-template-rows: 1fr auto; gap: 8px; }
+.gallery__history-records { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.gallery__history-records > li { padding: 10px 12px; background: var(--surface); border-radius: var(--radius-sm); }
+.gallery__history-records > li > a { font-weight: 600; }
+.gallery__relationship-evidence { display: grid; gap: 4px; margin: 4px 0 0; overflow-wrap: anywhere; }
+.gallery__history-preview > .gallery__relationship-evidence { padding-inline: 4px; }
+.gallery__relationships a { color: inherit; text-underline-offset: 3px; }
+.gallery__relationships details .gallery__history-records { margin-top: 10px; }
 
 .gallery__collections {
   display: grid;
@@ -1392,12 +1485,29 @@ input.share__url {
   border-radius: 0;
 }
 .gallery__art--cover .gallery__collected-image--clean { --logo-max: 112px; height: calc(var(--logo-max) * var(--logo-scale, 1)); }
-.gallery__collected-image--clean[data-plate], .gallery__recovered-preview--clean img[data-plate] {
+.gallery__collected-image--clean[data-plate], .gallery__recovered-preview--clean img[data-preview-ground] {
   box-sizing: content-box;
   padding: 10px 14px;
   background: #f4f2ee;
   border-radius: var(--radius-sm);
 }
+/* Reserve room above the artwork for the preview-only control, even on narrow screens. */
+.gallery-preview { position: relative; min-width: 0; }
+.gallery-preview__background {
+  position: absolute; top: 8px; right: 8px; z-index: 1;
+  display: grid; place-items: center; width: 32px; height: 32px; padding: 0;
+  background: transparent; border: 0; border-radius: var(--radius-sm); cursor: pointer;
+}
+.gallery-preview__background span { display: grid; place-items: center; width: 16px; height: 16px; border-radius: 3px; background: white; border: 1px solid #767676; }
+.gallery-preview__background[aria-pressed=true] span::after {
+  content: ''; display: block; width: 4px; height: 8px; margin-bottom: 2px;
+  border: solid #211e1a; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg);
+}
+.gallery-preview__background:focus-visible { outline: 2px solid #2970c8; outline-offset: -5px; }
+.gallery-preview > :is(.stage__frame, .gallery__art--large, .gallery__recovered-preview) { padding-top: max(44px, 4vw); }
+.gallery-preview[data-white] > :is(.stage__frame, .gallery__art--large, .gallery__recovered-preview) { background: #fff; }
+.gallery-preview[data-white] > .gallery__recovered-preview { color: #211e1a; }
+.gallery-preview[data-white] img[data-preview-ground=dark] { background: #243449; }
 .gallery__recovered { display: grid; gap: 16px; }
 /* On the page's own ground the track is the page's colour and vanishes, leaving the chosen
    segment as a lone white pill and the others as loose text: give it the toolbar's track, sized
@@ -1406,10 +1516,8 @@ input.share__url {
   --track: var(--mid);
   --segment: var(--surface);
   justify-self: start;
-  max-width: 100%;
-  flex-wrap: wrap;
 }
-.gallery__recovered > .segmented button { flex: 0 1 auto; padding-inline: 14px; white-space: nowrap; }
+.gallery__recovered > .segmented button { padding-inline: 14px; }
 .gallery__recovered h2, .gallery__recovered p { margin: 0; }
 .gallery__recovered-preview {
   display: grid;
@@ -1420,20 +1528,37 @@ input.share__url {
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
+.gallery__reference-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: var(--gap); }
+.gallery__reference-pair figure { margin: 0; min-width: 0; }
+.gallery__reference-pair figcaption { margin-bottom: .4rem; color: var(--muted); }
+.gallery__reference-pair a.gallery__recovered-preview img { max-height: min(300px, 60vw); }
 .gallery__recovered-preview[data-dark] { background: #243449; }
 /* Every mark sits on a panel, so it reads as one object with an edge, whichever way it was
    collected: a display copy (made for this page's ground) on the surface colour, a file shown as
    published on white, as above. */
 .gallery__recovered-preview--clean { background: var(--surface); }
+/* Keep a selected colourway's contrasting ground local to its artwork. */
+.gallery__recovered-preview--clean img[data-preview-ground] { box-sizing: border-box; }
+.gallery__recovered-preview--clean img[data-preview-ground='dark'] { background: #243449; }
 .gallery__recovered-preview--clean img { width: auto; height: min(300px, 40vw); max-height: none; }
 .gallery__recovered-preview img { max-width: 100%; width: auto; max-height: 420px; object-fit: contain; }
+.gallery-preview:not([data-white]) .gallery__recovered-preview[data-transparent] {
+  background: transparent;
+  border-color: transparent;
+}
+.gallery__recovered-preview[data-transparent] img[data-preview-ground] {
+  background: transparent;
+  padding: 0;
+}
+.gallery__recovered-preview[data-transparent] img[data-preview-ground='dark'] {
+  filter: drop-shadow(0 0 1px #444);
+}
 .gallery__asset-format { font-size: 13px; color: var(--ink-muted); }
 .gallery__asset-downloads { flex-wrap: wrap; }
-.gallery__palette-choices button { white-space: nowrap; }
 /* Four choices do not fit one row on a phone ("White lettering" broke onto two lines and the
    buttons came out uneven), so there they sit two by two, like the layout picker. */
 @media (max-width: 560px) {
-  .gallery__palette-choices:has(> :nth-child(4)) { display: grid; grid-template-columns: repeat(2, 1fr); }
+  .gallery__palette-choices:has(> :nth-child(4)) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 .gallery__palette-sources summary { cursor: pointer; font-weight: 600; }
 .gallery__palette-sources p, .gallery__palette-sources ul { margin-top: 12px; }
@@ -1608,13 +1733,13 @@ input.share__url {
 .gallery__timeline ol {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(150px, 1fr);
+  grid-auto-columns: minmax(0, 1fr);
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.gallery__timeline li { position: relative; }
+.gallery__timeline li { position: relative; display: grid; }
 
 /* The line runs through every dot, and stops at the first and the last. */
 .gallery__timeline li::before {
@@ -1628,9 +1753,10 @@ input.share__url {
 .gallery__timeline li:first-child::before { left: 16px; }
 .gallery__timeline li:last-child::before { right: calc(100% - 16px); }
 
-.gallery__timeline button {
+.gallery__timeline .gallery__timeline-link {
   position: relative;
   display: grid;
+  align-content: start;
   gap: 2px;
   width: 100%;
   padding: 26px 12px 10px;
@@ -1643,7 +1769,7 @@ input.share__url {
   cursor: pointer;
 }
 
-.gallery__timeline button::before {
+.gallery__timeline .gallery__timeline-link::before {
   content: '';
   position: absolute;
   top: 3px;
@@ -1655,27 +1781,27 @@ input.share__url {
   background: var(--ink-muted);
 }
 
-.gallery__timeline li[data-status='sought'] button::before { border-style: dashed; background: var(--page); }
-.gallery__timeline li[data-status='none'] button::before { border-color: var(--mid); background: var(--page); }
-.gallery__timeline li[data-status='generator'] button::before { background: var(--page); }
-.gallery__timeline button:hover { background: var(--hover); }
-.gallery__timeline button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
-.gallery__timeline button[aria-current='step']::before { border-color: var(--ink); background: var(--ink); box-shadow: 0 0 0 4px var(--hover); }
-.gallery__timeline button[aria-current='step'] .gallery__timeline-label { text-decoration: underline; text-underline-offset: 3px; }
+.gallery__timeline li[data-status='sought'] .gallery__timeline-link::before { border-style: dashed; background: var(--page); }
+.gallery__timeline li[data-status='none'] .gallery__timeline-link::before { border-color: var(--mid); background: var(--page); }
+.gallery__timeline li[data-status='generator'] .gallery__timeline-link::before { background: var(--page); }
+.gallery__timeline .gallery__timeline-link:hover { background: var(--hover); }
+.gallery__timeline .gallery__timeline-link:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.gallery__timeline .gallery__timeline-link[aria-current='step']::before { border-color: var(--ink); background: var(--ink); box-shadow: 0 0 0 4px var(--hover); }
 
+.gallery__timeline .gallery__timeline-link { text-decoration: none; }
 .gallery__timeline-years { font-size: 12.5px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
-.gallery__timeline-label { font-size: 14px; font-weight: 600; line-height: 1.3; }
+.gallery__timeline-label { font-size: 14px; font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
 .gallery__timeline-count { font-size: 12.5px; color: var(--ink-muted); }
 .gallery__timeline li:is([data-status='sought'], [data-status='none']) .gallery__timeline-count { font-style: italic; }
 
 @media (max-width: 600px) {
   .gallery__timeline { overflow-x: visible; padding: 0; }
-  .gallery__timeline ol { grid-auto-flow: row; grid-auto-columns: auto; }
+  .gallery__timeline ol { grid-auto-flow: row; grid-auto-columns: auto; grid-auto-rows: 1fr; }
   .gallery__timeline li::before { top: 0; bottom: 0; left: 16px; right: auto; border-top: 0; border-left: 2px solid var(--mid); }
   .gallery__timeline li:first-child::before { top: 19px; left: 16px; }
   .gallery__timeline li:last-child::before { bottom: calc(100% - 19px); right: auto; }
   .gallery__timeline li:only-child::before { display: none; }
-  .gallery__timeline button {
+  .gallery__timeline .gallery__timeline-link {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -1683,8 +1809,22 @@ input.share__url {
     row-gap: 0;
     padding: 8px 12px 8px 34px;
   }
-  .gallery__timeline button::before { top: 12px; }
+  .gallery__timeline .gallery__timeline-link::before { top: 12px; }
 }
+
+.gallery__timeline-index { border: 1px solid var(--border); border-radius: var(--radius-sm); }
+.gallery__timeline-index > summary { cursor: pointer; padding: 12px; font-weight: 600; }
+.gallery__timeline-index > summary span { margin-inline-start: 8px; color: var(--ink-muted); font-size: 13px; font-weight: 400; }
+.gallery__timeline-index ol {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 185px), 1fr));
+  grid-auto-flow: row;
+  grid-auto-rows: 1fr;
+}
+.gallery__timeline-index li::before { display: none; }
+@media (max-width: 600px) {
+  .gallery__timeline-index ol { grid-template-columns: minmax(0, 1fr); }
+}
+.gallery__era[id] { scroll-margin-block-start: 18px; }
 
 /* A card's mark sits on the card itself — the one ground every mark in the gallery shares, drawn in
    the version that ground calls for (src/gallery/pageColours.js). Only a mark that is defined by
@@ -1888,7 +2028,7 @@ button.gallery__collecting-status, .gallery__collecting-graph {
    The panel's card style from the government view: a title with its figure to the right, then a
    grid of bordered cards, each led by a person's head and shoulders. */
 
-.salaries { --salaries-ink: #2f5f9e; display: grid; gap: 16px; }
+.salaries { --salaries-ink: #2f5f9e; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
 /* The period chooser also opens inside the government view, which has no salaries page around it. */
 .salaries-range { --salaries-ink: #2f5f9e; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme='light']) :is(.salaries, .salaries-range) { --salaries-ink: #6d97e0; } }
@@ -2022,7 +2162,6 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__browse-bar > .field { margin: 0; width: auto; max-width: 100%; }
 .salaries__browse-bar > .field:first-child:not(.field--compact) { flex: 1 1 320px; max-width: 520px; }
 .salaries__browse-bar .segmented { --track: var(--mid); --segment: var(--surface); }
-.salaries__browse-bar .segmented button { white-space: nowrap; }
 .salaries__intro .salaries__tiles { margin-top: 12px; }
 /* The sections (CompanionShell.jsx's BrowseBar): the three ways through the payment records as one
    control, then, past a rule, the other collections as plainer links; the layout switch at the end. */
@@ -2208,7 +2347,7 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__heading-link { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 .salaries__heading-link:hover { color: var(--salaries-ink); }
 .salaries__heading-link:focus-visible { outline: 2px solid var(--salaries-ink); outline-offset: 4px; }
-.salaries__person { display: grid; gap: 8px; padding: 20px; border-radius: var(--radius); background: var(--surface); }
+.salaries__person { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 20px; border-radius: var(--radius); background: var(--surface); }
 .salaries__person .salaries__card { background: var(--surface); }
 .salaries__link { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-align: inherit; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
 .salaries__nowrap { white-space: nowrap; }
@@ -2327,12 +2466,11 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 
 /* An employer's records: how they are set out (the site's Segmented control), the search within them,
    and their order, stacked with the same space between. */
-.salaries__records { display: grid; gap: 10px; }
+.salaries__records { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
 .salaries__records .salaries__head, .salaries__records .salaries__search--one { margin: 0; }
 .salaries__records > .field { margin: 0; width: 100%; max-width: 520px; }
 .salaries__records > .field--compact { justify-self: start; width: auto; max-width: 100%; }
 .salaries__records .segmented { --track: var(--mid); --segment: var(--surface); }
-.salaries__records .segmented button { white-space: nowrap; }
 .salaries__grid--spaced { margin-top: 10px; }
 /* A range of pay is two figures: a size smaller than a tile's one, and free to wrap. */
 .salaries__tiles dd.salaries__range { font-size: 15px; line-height: 1.3; overflow-wrap: anywhere; }
@@ -2527,7 +2665,6 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 /* A title's page: every year or one, and the people under the title at each employer. */
 .salaries-title-years__head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
 .salaries-title-years__head .salaries__year-title { margin: 0; }
-.salaries-title-years__head .segmented button { white-space: nowrap; }
 /* With every year shown no period is chosen, so the phone's period chooser says so. */
 .salaries-title-years[data-all] .salaries-range__label:empty::before { content: 'Every year'; }
 .salaries-title-people__ask { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }

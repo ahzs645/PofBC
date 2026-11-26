@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { SiteLink } from '../site/navigation.jsx'
 import { writeHistory } from '../site/browserHistory.js'
 import { documentTitle, setDocumentMeta } from '../site/documentMeta.js'
-import { CURRENT_DISTRICTS, SCHOOL_DIRECTORY_SOURCE, SCHOOL_DISTRICTS_AS_OF, DISTRICT_COUNTS, districtById, districtPlace, searchDistricts, connectionsOf, districtHistory, districtSources, formatHistoryDate, establishmentLabel } from './districts.js'
+import { CURRENT_DISTRICTS, SCHOOL_DIRECTORY_SOURCE, SCHOOL_DISTRICTS_AS_OF, DISTRICT_COUNTS, districtById, districtPlace, searchDistricts, connectionsOf, districtHistory, districtSources, formatHistoryDate, establishmentLabel, primaryDistrictLogo } from './districts.js'
 import './schools.css'
 
 const assetUrl = (file) => `${import.meta.env.BASE_URL}${file.replace(/^\//, '')}`
@@ -14,7 +14,7 @@ const readPlace = () => {
 const preserved = (place) => ({ ...(place.query ? { 'school-query': place.query } : {}), ...(place.scope !== 'current' ? { 'school-scope': place.scope } : {}) })
 const sourceLink = (event) => event.sourceUrl && <External href={event.sourceUrl}>{event.sourceTitle ?? 'Source'}{event.locator ? ` · ${event.locator}` : ''}</External>
 const Logo = ({ district, className = '' }) => {
-  const asset = district.assets.find((item) => !item.variantOf) ?? district.assets[0]
+  const asset = primaryDistrictLogo(district)
   return <div className={`schools__logo ${className}`} data-dark={asset?.darkBackground || asset?.displayBackground || undefined} data-empty={asset ? undefined : ''}>
     {asset ? <img src={assetUrl(asset.previewFile ?? asset.file)} alt={`${district.name} logo`} loading="lazy" /> : <span className="schools__number" aria-label="Logo not yet collected">SD<span>{district.number}</span></span>}
   </div>
@@ -93,7 +93,7 @@ const DistrictLogos = ({ district }) => <section className="schools__section" id
       <div className="schools__artwork-links"><a href={assetUrl(asset.file)} download>Download {asset.format.toUpperCase()}</a><External href={asset.sourcePage ?? asset.sourceUrl}>{asset.sourceKind === 'district-recruitment-profile' ? 'District employer profile' : 'Official source'}</External></div>
     </figcaption>
   </figure>)}</div> : <p className="schools__empty">{district.logoNotes || 'An original logo or seal has not yet been collected for this district.'}</p>}
-  <p className="schools__caption">Each file is as published. A website capture dates when it was seen; an introduction date is given only where a source states one.</p>
+  <p className="schools__caption">Each file links to its source. Website capture dates record when artwork was observed. Introduction dates come from published evidence.</p>
 </section>
 
 const DistrictDetail = ({ district, place }) => <article className="schools__detail">

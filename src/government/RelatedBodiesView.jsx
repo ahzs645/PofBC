@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { SiteLink } from '../site/navigation.jsx'
 import { ViewSwitcher } from '../site/ViewSwitcher.jsx'
 import { SunGlyph, ThemeIcon } from '../site/icons.jsx'
+import { FundingHistory, SupportProvided } from './FundingHistory.jsx'
 import { LogoCard } from './LogoCard.jsx'
 import {
   RELATED_BODIES, RELATED_BODIES_AS_OF, RELATED_BODY_KINDS, groupRelatedBodies, relatedBodyById, relatedBodyPlace, searchRelatedBodies
@@ -105,25 +106,27 @@ export const RelatedBodiesView = ({ selectedId, onChangeView, themeName, onToggl
         {selected ? <>
           <section className="gov-card gov-related__record" aria-labelledby="related-body-title">
             <SiteLink className="gov-related__back" to={LIST_PLACE}>← All related bodies</SiteLink>
-            <p className="gov-eyebrow">{RELATED_BODY_KINDS[selected.kind]} · current record</p>
+            <p className="gov-eyebrow">{RELATED_BODY_KINDS[selected.kind]} · {selected.historical ? 'historical record' : 'current record'}</p>
             <h1 className="gov-title" id="related-body-title">{selected.name}</h1>
             {selected.shortName !== selected.name && <p className="gov-muted">{selected.shortName}</p>}
             <p className="gov-description">{selected.description}</p>
             {selected.historyNote && <p className="gov-muted">{selected.historyNote}</p>}
             {selected.schoolDistrict && <p className="gov-links"><SiteLink to={{ view: 'school-districts', district: selected.schoolDistrict }}>District history, predecessor connections and logos →</SiteLink></p>}
-            <p className="gov-links"><a href={selected.officialUrl} target="_blank" rel="noreferrer">Official website ↗</a></p>
+            {selected.officialUrl && <p className="gov-links"><a href={selected.officialUrl} target="_blank" rel="noreferrer">Official website ↗</a></p>}
           </section>
 
+          <SupportProvided id={selected.id} />
+          {selected.fundingHistory && <FundingHistory rows={selected.fundingHistory} />}
           <LogoCard node={selected} theme={themeName} />
 
           {selected.relationships.length > 0 && <section className="gov-card" aria-labelledby="related-connections">
             <h2 className="gov-card__heading" id="related-connections">Connections</h2>
             <ul className="gov-related__connections">
-              {selected.relationships.map((connection) => <li key={connection.id}>
+              {selected.relationships.map((connection) => <li key={connection.id + (connection.period ?? '')}>
                 {relatedBodyById(connection.id)
                   ? <SiteLink to={relatedBodyPlace(connection.id)}>{connection.label}</SiteLink>
                   : <SiteLink to={{ view: 'government', node: connection.id, year: connection.year, mode: connection.mode }}>{connection.label}</SiteLink>}
-                <span className="gov-muted">{connection.description}</span>
+                <span className="gov-muted">{connection.period && connection.period + ' · '}{connection.description} {connection.source && <a href={connection.source.url} target="_blank" rel="noreferrer">{connection.source.title}</a>}</span>
               </li>)}
             </ul>
           </section>}

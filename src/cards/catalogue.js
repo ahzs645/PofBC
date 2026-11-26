@@ -6,16 +6,45 @@
 // `view` is the drawing's own viewBox; `page` is the export page in inches; `made` words the
 // exports. A drawing too large to fetch on spec says `prefetch: false`.
 
+export const CARECARD_ISSUER = { view: 'government', year: 1989, node: 'ministry-of-health-1976' }
+const careCardFormat = {
+  series: 'carecard',
+  format: 'Reconstructed card',
+  when: 'Introduced 1989',
+  made: 'vector',
+  view: { x: 3, y: 3.06588785, w: 244, h: 153.86822430 },
+  page: { w: 85.6 / 25.4, h: 53.98 / 25.4 },
+  issuer: CARECARD_ISSUER
+}
+
 export const CARD_SERIES = [
   {
     id: 'forest-service',
     title: 'British Columbia Forest Service',
     kind: 'Fire-prevention cards',
     cards: ['england-expects']
+  },
+  {
+    id: 'carecard',
+    title: 'Ministry of Health',
+    kind: 'Medical Services Plan',
+    cards: ['standard-carecard', 'gold-carecard']
   }
 ]
 
 export const CARDS = {
+  'standard-carecard': {
+    ...careCardFormat,
+    id: 'standard-carecard',
+    title: 'Standard CareCard',
+    blurb: 'The two-colour CareCard wordmark above the provincial flag and rising sun.'
+  },
+  'gold-carecard': {
+    ...careCardFormat,
+    id: 'gold-carecard',
+    title: 'Gold CareCard',
+    blurb: 'The seniors’ edition pairs a pale wordmark with a gold field and flag.'
+  },
   'england-expects': {
     id: 'england-expects',
     series: 'forest-service',

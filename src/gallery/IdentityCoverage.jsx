@@ -8,11 +8,14 @@ import { COMMISSION_DIRECTORIES, COMMISSION_FAMILY, commissionById } from './com
 import { MUNICIPAL_AS_OF, MUNICIPAL_REGIONS } from './municipalSubjects.js'
 import { SiteLink } from '../site/navigation.jsx'
 import { galleryPlaceUrl, readCoverageFilters } from './galleryPlace.js'
+import { galleryCategoryRecords } from './gallerySearch.js'
 import { writeHistory } from '../site/browserHistory.js'
 import { tileArt } from './tileArt.js'
 import { entriesOf } from './collections.js'
+import { assetUrl } from './collectedCollections.js'
 import { IDENTITY_KIND_LABELS, IDENTITY_RELATION_LABELS } from './identitySubjects.js'
 import { EDITORIAL_LOGO_SPECIMENS } from './editorialLogoSpecimens.js'
+import { CNC_BRAND_RESOURCES, CNC_CURRENT_MARKS, CNC_HISTORICAL_MARKS, CNC_SUBJECT, cncCover } from './cncIdentity.js'
 import { POSTSECONDARY_ARTWORK_FORMAT, POSTSECONDARY_ARTWORK_SCOPE, summarizePostsecondaryArtwork } from './postsecondaryArtwork.js'
 import './identityCoverage.css'
 import { Select } from '../site/ui/Select.jsx'
@@ -47,14 +50,39 @@ const SubjectButton = ({ subject, onOpen }) => (
   </SubjectLink>
 )
 
-export const IdentitySearchResults = ({ subjects, onOpen }) => subjects.length > 0 && (
-  <section className="gallery__shelf" aria-labelledby="search-identities">
-    <h2 id="search-identities" className="gallery__shelf-title">{subjects.length} identity {subjects.length === 1 ? 'subject' : 'subjects'}</h2>
-    <div className="identity-subject-links">
-      {subjects.map((subject) => <SubjectButton key={subject.id} subject={subject} onOpen={onOpen} />)}
-    </div>
-  </section>
+const IdentitySubjectLinks = ({ subjects, onOpen }) => (
+  <div className="identity-subject-links">
+    {subjects.map((subject) => <SubjectButton key={subject.id} subject={subject} onOpen={onOpen} />)}
+  </div>
 )
+
+export const CncIdentityCard = ({ subject, onOpen, theme }) => {
+  const cover = cncCover(theme)
+  return (
+    <SubjectLink id={subject.id} onOpen={onOpen} className="gallery__collection">
+      <span className="gallery__art gallery__art--cover identity-editorial-cover">
+        <img src={assetUrl(cover.file)} width={cover.width} height={cover.height} alt="" loading="lazy" decoding="async" />
+      </span>
+      <span className="gallery__collection-text">
+        <span className="gallery__collection-title">{subject.label}</span>
+        <span className="gallery__note">Current brand and historical specimens</span>
+      </span>
+    </SubjectLink>
+  )
+}
+
+export const IdentitySearchResults = ({ subjects, onOpen, theme }) => {
+  if (!subjects.length) return null
+  const cnc = subjects.find(({ id }) => id === CNC_SUBJECT)
+  const otherSubjects = subjects.filter(({ id }) => id !== CNC_SUBJECT)
+  return (
+    <section className="gallery__shelf" aria-labelledby="search-identities">
+      <h2 id="search-identities" className="gallery__shelf-title">{subjects.length} identity {subjects.length === 1 ? 'subject' : 'subjects'}</h2>
+      {cnc && <div className="gallery__collections"><CncIdentityCard subject={cnc} onOpen={onOpen} theme={theme} /></div>}
+      {otherSubjects.length > 0 && <IdentitySubjectLinks subjects={otherSubjects} onOpen={onOpen} />}
+    </section>
+  )
+}
 
 const CommissionRegisterLink = ({ onOpenRegister }) => (
   <a className="identity-action" href="?view=gallery&coverage=1&identity-family=commissions" onClick={(event) => {
@@ -67,16 +95,16 @@ const CommissionRegisterLink = ({ onOpenRegister }) => (
 export const IdentityCoverageOverview = ({ onOpenRegister }) => {
   const summary = coverageSummary()
   return (
-    // One line above the shelves: the marks are what the page is for, so the register is a way in
-    // from it, not a banner over it.
-    <section className="identity-overview" aria-labelledby="identity-overview-heading">
-      <h2 id="identity-overview-heading" className="identity-overview__title">Collection register</h2>
-      <p className="identity-overview__counts" title="Regional transit, public agencies, service brands and institutions, alongside the Crown and health collections: their relationships, sources and remaining gaps.">
-        <strong>{summary.subjects}</strong> subjects · <strong>{summary.held}</strong> with artwork · <strong>{summary.sources}</strong> leads
+    <div className="identity-overview">
+      <p className="identity-overview__counts">
+        <strong>{summary.subjects}</strong> subjects · <strong>{summary.held}</strong>{' '}
+        <span className="identity-overview__wide">with artwork</span><span className="identity-overview__compact">held</span>
+        {' · '}<strong>{summary.sources}</strong> leads
       </p>
-      <CommissionRegisterLink onOpenRegister={onOpenRegister} />
-      <button type="button" className="identity-primary" onClick={() => onOpenRegister()}>Browse the register <span aria-hidden="true">→</span></button>
-    </section>
+      <button type="button" className="identity-primary" aria-label="Browse the register" onClick={() => onOpenRegister()}>
+        <span>Browse<span className="identity-overview__wide"> the register</span></span><span aria-hidden="true">→</span>
+      </button>
+    </div>
   )
 }
 
@@ -122,6 +150,7 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
   const [filters, setFilters] = useState(() => {
     const initial = readCoverageFilters()
     return {
+      category: galleryCategoryRecords(initial.category) ? initial.category : '',
       query: initial.query,
       family: COVERAGE_FAMILIES.some((family) => family.id === initial.family) ? initial.family : '',
       state: ['held', 'missing', ...Object.keys(COVERAGE_STATES)].includes(initial.state) ? initial.state : '',
@@ -138,11 +167,14 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
     if (globalThis.location) writeHistory(galleryPlaceUrl(globalThis.location.href, { coverage: true, filters: next }), { replace: true })
   }
   const [filtersOpen, setFiltersOpen] = useState(false)
-  const chosenFilters = ['family', 'state', 'region', 'scope'].filter((key) => filters[key]).length
-  const subjects = filterIdentityCoverage(IDENTITY_COVERAGE, filters)
+  const { category, ...recordFilters } = filters
+  const section = galleryCategoryRecords(category)
+  const title = section?.label ?? 'Collection register'
+  const chosenFilters = ['family', 'state', 'region', 'scope'].filter((key) => recordFilters[key]).length
+  const subjects = filterIdentityCoverage(section?.records ?? IDENTITY_COVERAGE, recordFilters)
   const summary = coverageSummary(subjects)
   const family = familyById(filters.family)
-  const commissionsSelected = filters.family === COMMISSION_FAMILY.id
+  const commissionsSelected = filters.family === COMMISSION_FAMILY.id || category === COMMISSION_FAMILY.id
   const visibleFamilies = family ? [family] : COVERAGE_FAMILIES
   const groups = visibleFamilies.map((group) => {
     const members = filterIdentityCoverage(subjects, { family: group.id })
@@ -153,10 +185,10 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
   }).filter((group) => group.subjects.length)
   return (
     <div className="identity-register">
-      <nav className="gallery__crumbs" aria-label="Gallery"><button type="button" className="gallery__back" onClick={onHome}>← All logos</button><span aria-hidden="true">/</span><span aria-current="page">Collection register</span></nav>
+      <nav className="gallery__crumbs" aria-label="Gallery"><button type="button" className="gallery__back" onClick={onHome}>← All logos</button><span aria-hidden="true">/</span><span aria-current="page">{title}</span></nav>
       <header className="identity-register__head">
-        <p className="identity-eyebrow">Coverage and acquisition</p>
-        <h2>Collection register</h2>
+        <p className="identity-eyebrow">{section ? 'Identity records' : 'Coverage and acquisition'}</p>
+        <h2>{title}</h2>
       </header>
       {/* On a phone the four choices fold behind one button, so the list starts on the first screen. */}
       <div className="identity-filters" role="search" aria-label="Filter identity subjects" data-open={filtersOpen || undefined}>
@@ -171,7 +203,7 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
       </div>
       <div className="identity-register__result-heading">
         <p role="status">{summary.subjects} subjects · {summary.held} with artwork · {summary.sources} source leads</p>
-        {Object.values(filters).some(Boolean) && <button type="button" className="gallery__back" onClick={(event) => { holdScroll(event.currentTarget.parentElement); update({ query: '', family: '', state: '', scope: '', region: '' }) }}>Clear filters</button>}
+        {Object.values(recordFilters).some(Boolean) && <button type="button" className="gallery__back" onClick={(event) => { holdScroll(event.currentTarget.parentElement); update({ query: '', family: '', state: '', scope: '', region: '' }) }}>Clear filters</button>}
       </div>
       {(family?.note || family?.description) && <p className="gallery__note">{family.note || family.description}{family.id === 'municipalities' && ` Registry as of ${MUNICIPAL_AS_OF}; filter by regional district with Region.`}</p>}
       {!subjects.length && <p className="identity-empty">No subjects match these filters. Try another name or clear the filters.</p>}
@@ -196,9 +228,7 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
             })}</ul>
           ) : group.id === 'municipalities' && !filters.region
             ? <MunicipalRegions subjects={group.subjects} onOpen={onOpenSubject} onRegion={(region) => update({ region })} />
-            : <div className="identity-subject-links">
-              {group.subjects.map((subject) => <SubjectButton key={subject.id} subject={subject} onOpen={onOpenSubject} />)}
-            </div>}
+            : <IdentitySubjectLinks subjects={group.subjects} onOpen={onOpenSubject} />}
         </section>
       ))}
       <details className="identity-method"><summary>What the register measures</summary>
@@ -273,23 +303,46 @@ const ArtworkSource = ({ item }) => {
   </>
 }
 
+const PublicationSpecimens = ({ items }) => (
+  <div className="identity-editorial-specimens__grid">{items.map((item) => (
+    <figure key={item.id ?? item.file}>
+      <img src={item.src ?? assetUrl(item.file)} width={item.width} height={item.height} loading="lazy" decoding="async" alt={item.alt} />
+      <figcaption>
+        {item.label && <strong>{item.label}</strong>}
+        {item.caption && <p>{item.caption}</p>}
+        {item.format && <p className="identity-muted">{item.format}</p>}
+        <External href={item.url}>{item.credit}</External>
+      </figcaption>
+    </figure>
+  ))}</div>
+)
+
 const EditorialLogoSpecimens = ({ subjectId }) => {
   const items = EDITORIAL_LOGO_SPECIMENS[subjectId]
   if (!items) return null
   return <div className="identity-editorial-specimens">
     <h5>Logo details from the publications</h5>
     <p className="identity-muted">Shown for historical comparison. PofBC is independent of the institutions; these publication excerpts are not reusable brand files.</p>
-    <div className="identity-editorial-specimens__grid">{items.map((item) => (
-      <figure key={item.id}>
-        <img src={item.src} width={item.width} height={item.height} loading="lazy" decoding="async" alt={item.alt} />
-        <figcaption>
-          <p>{item.caption}</p>
-          <External href={item.url}>{item.credit}</External>
-        </figcaption>
-      </figure>
-    ))}</div>
+    <PublicationSpecimens items={items} />
   </div>
 }
+
+const CncIdentitySpecimens = () => (
+  <div className="identity-editorial-specimens">
+    <h5>Current identity</h5>
+    <p>CNC unveiled its visual identity in March 2019. The full name appears in stacked and horizontal signatures. The enclosed initials still appear on the current website and the 2026–31 strategy.</p>
+    <PublicationSpecimens items={CNC_CURRENT_MARKS} />
+    <h5>Brand guidance and media artwork</h5>
+    <ul className="identity-sources">{CNC_BRAND_RESOURCES.map(({ label, url }) => (
+      <li key={url}><External href={url}>{label}</External></li>
+    ))}</ul>
+    <h5>Historical logos and other marks</h5>
+    <p>The early covers pair the geometric CNC monogram with the full name. The 1978–79 cover also shows a shield and the description “College, Technical and Vocational Institute.” The date and status of the calendar shield remain unconfirmed.</p>
+    <p>The bold calendar lettering appears in several editions around 2000. Later publications show an interlocking monogram, and the 2019 anniversary lockup pairs the new signature with a commemorative wordmark.</p>
+    <PublicationSpecimens items={CNC_HISTORICAL_MARKS} />
+    <p><SiteLink className="identity-action" to={{ view: 'arms', holder: CNC_SUBJECT }}>View the 1996 heraldic grant and artwork</SiteLink></p>
+  </div>
+)
 
 const PostsecondaryArtworkReview = ({ review, subjectId, onOpenSubject }) => {
   const { specimens, shared, history } = review
@@ -301,8 +354,8 @@ const PostsecondaryArtworkReview = ({ review, subjectId, onOpenSubject }) => {
   return (
     <section className="identity-card identity-artwork-review" aria-labelledby="identity-artwork-review">
       <h4 id="identity-artwork-review">{history.length ? 'Identity history and official sources' : 'Artwork sources and review'}</h4>
-      <p className="identity-muted">The source links open the publishers’ original documents. Any excerpts shown here are separate from the gallery’s downloadable artwork holdings.</p>
-      <EditorialLogoSpecimens subjectId={subjectId} />
+      {subjectId !== CNC_SUBJECT && <p className="identity-muted">The source links open the publishers’ original documents. Any excerpts shown here are separate from the gallery’s downloadable artwork holdings.</p>}
+      {subjectId === CNC_SUBJECT ? <CncIdentitySpecimens /> : <EditorialLogoSpecimens subjectId={subjectId} />}
       {history.length > 0 && (
         <ol className="identity-sources identity-history" role="list">
           {history.map((event) => (
@@ -331,7 +384,7 @@ const PostsecondaryArtworkReview = ({ review, subjectId, onOpenSubject }) => {
   )
 }
 
-export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSubject, onChooseCollection, onOpenGovernment }) => {
+export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSubject, onChooseCollection, onOpenGovernment, children }) => {
   const commission = commissionById.get(subject.id)
   const relatedCommissionSubject = commission?.next && identitySubjectById(commission.next)
   const family = familyById(subject.family)
@@ -374,6 +427,7 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
         </div>
       </header>
 
+      {children}
       <div className="identity-layout">
         <div className="identity-layout__main">
           {commission && <section className="identity-card" aria-labelledby="commission-history">
@@ -394,7 +448,7 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
                   <span className="identity-artwork__label">{entry.label}</span><span className="identity-muted">{entry.years}</span>
                 </button>
               ))}</div>
-              : <div className="identity-empty"><strong>{subject.artworkReview ? 'No separately held artwork.' : 'Still wanted.'}</strong> {subject.nextAction}</div>}
+              : subject.id !== CNC_SUBJECT && <div className="identity-empty"><strong>{subject.artworkReview ? 'No separately held artwork.' : 'Still wanted.'}</strong> {subject.nextAction}</div>}
             {subject.artworkReview && <PostsecondaryArtworkReview review={subject.artworkReview} subjectId={subject.id} onOpenSubject={onOpenSubject} />}
           </section>
 
@@ -446,7 +500,7 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
  * only the mark's own owner is listed; an organization link already shown on the page is not
  * repeated.
  */
-export const IdentityCollectionLinks = ({ collectionId, entryId, graphShown, onOpenSubject, onOpenGovernment }) => {
+export const IdentityCollectionLinks = ({ collectionId, entryId, graphShown, history, onOpenSubject, onOpenCollection, onOpenGovernment }) => {
   const all = subjectsForCollection(collectionId)
   const owners = entryId ? all.filter((subject) => subject.entries.some((entry) => entry.id === entryId)) : []
   const subjects = owners.length ? owners : all
@@ -457,8 +511,11 @@ export const IdentityCollectionLinks = ({ collectionId, entryId, graphShown, onO
   // A subject's defined ties (shareholder of, part of, operated by, and the reverse), as links to the
   // subjects they name, so a mark's page leads to the bodies it belongs with. A bare "related to" is
   // left to the register page, which explains it.
+  const historicalTargets = new Set(history ? [...history.predecessors, ...history.successors].map(({ id }) => id) : [])
+  const historyTypes = new Set(['successor-of', 'predecessor-of', 'renamed-from', 'renamed-to', 'amalgamated-into'])
   const tiesOf = (subject) => connectionGroups(subject)
     .flatMap(({ label, relations }) => relations.filter((relation) => relation.type !== 'related-to').map((relation) => ({ label, relation })))
+    .filter(({ relation }) => !(historyTypes.has(relation.type) && historicalTargets.has(relation.target.id)))
     .slice(0, 4)
   const registerShown = !(graphShown && subjects.every((subject) => subject.graphNode === graphShown))
   const rows = subjects.map((subject) => ({ subject, ties: tiesOf(subject) })).filter(({ ties }) => registerShown || ties.length)
@@ -466,8 +523,14 @@ export const IdentityCollectionLinks = ({ collectionId, entryId, graphShown, onO
   return <section className="identity-collection-links" aria-label="Identity context">{rows.map(({ subject, ties }) => <div key={subject.id}>
     {registerShown && <SubjectLink id={subject.id} onOpen={onOpenSubject} className="gallery__graph-link">{subject.label} in the register →</SubjectLink>}
     {registerShown && subject.graphNode && subject.graphNode !== graphShown && onOpenGovernment && <button type="button" className="gallery__graph-link" onClick={() => onOpenGovernment(subject.graphNode, subject.graphYear)}>Organization and salary links →</button>}
-    {ties.map(({ label, relation }) => (
-      <SubjectLink key={`${relation.type}:${relation.target.id}`} id={relation.target.id} onOpen={onOpenSubject} className="gallery__graph-link">{label} {relation.target.label} →</SubjectLink>
-    ))}
+    {ties.map(({ label, relation }) => relation.type === 'charitable-partner-of' && relation.target.collectionIds?.length === 1
+      ? <a key={relation.target.id} className="gallery__graph-link" href={`?view=gallery&logos=${encodeURIComponent(relation.target.collectionIds[0])}`} onClick={(event) => {
+          if (onOpenCollection && plainClick(event)) {
+            event.preventDefault()
+            onOpenCollection(relation.target.collectionIds[0])
+          }
+        }}>{label} {relation.target.label} →</a>
+      : <SubjectLink key={`${relation.type}:${relation.target.id}`} id={relation.target.id} onOpen={onOpenSubject} className="gallery__graph-link">{label} {relation.target.label} →</SubjectLink>
+    )}
   </div>)}</section>
 }

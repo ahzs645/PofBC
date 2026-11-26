@@ -8,6 +8,7 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { basename } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createHash } from 'node:crypto'
+import { collectedVectorVariants } from './collected-vector-variants.mjs'
 
 const root = new URL('../', import.meta.url)
 const read = (path) => JSON.parse(readFileSync(new URL(path, root), 'utf8'))
@@ -22,10 +23,10 @@ const bceid = read('research/identity/bceid-2026-11-12/source-register.json')
 const sharedServices = read('research/identity/shared-services-bc-2026-11-12/source-register.json')
 const bcCancerNow = read('research/identity/bc-cancer-current-2026-11-12/source-register.json')
 // Programs' marks held as supplied reconstructions, with no body of their own in the inventory.
-const PROGRAM_PACKAGES = ['health-program-signatures', 'provincial-emergency-program', 'bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12', 'solutions-bc-vector-2026-11-12', 'healthlink-bc-2026-11-12', 'bc-cancer-modern-2026-11-12', 'bc-environment-vector-2026-11-22', 'tourism-recreation-culture-vector-2026-11-22', 'superhost-vector-2026-11-22', 'bcts']
+const PROGRAM_PACKAGES = ['health-program-signatures', 'provincial-emergency-program', 'bc-travel-industry-2026-11-12', 'justice-institute-2026-11-12', 'auditor-general-2026-11-12', 'bc-online-2026-11-12', 'bc-cancer-agency-2026-11-12', 'solutions-bc-vector-2026-11-12', 'healthlink-bc-2026-11-12', 'bc-cancer-modern-2026-11-12', 'bc-environment-vector-2026-11-22', 'tourism-recreation-culture-vector-2026-11-22', 'superhost-vector-2026-11-22', 'bcts', 'bc-150-years']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // Supplied packages that add a vector to a body, each read with the search it came from.
-const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12', 'bc-housing-houses-vector-2026-11-12', 'fvhr-vector-2026-11-12', 'bc-steamship-vector-2026-11-12', 'pge-map-vector-2026-11-12', 'ocean-falls-vector-2026-11-12', 'bc-trade-vector-2026-11-13', 'bc-development-corporation-vector-2026-11-14']
+const PACKAGES = ['bc-assessment-vector-2026-11-12', 'bc-power-commission-vector-2026-11-12', 'bc-place-vector-2026-11-12', 'bc-railway-vector-2026-11-12', 'bc-railway-dogwood-vector-2026-11-12', 'bc-systems-vector-2026-11-12', 'bc-housing-1978-vector-2026-11-12', 'bc-petroleum-vector-2026-11-12', 'bc-housing-houses-vector-2026-11-12', 'fvhr-vector-2026-11-12', 'bc-steamship-vector-2026-11-12', 'pge-map-vector-2026-11-12', 'ocean-falls-vector-2026-11-12', 'bc-trade-vector-2026-11-13', 'bc-development-corporation-vector-2026-11-14', 'homeowner-protection-office-2026-11-25']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 // A package may bring the body it is for, when the inventory never searched for that body.
 for (const { register: packaged } of PACKAGES) if (packaged.body) {
@@ -284,7 +285,7 @@ const BODY_NOTES = {
   'bc-railway-company': 'Its wordmark is the BCRC acrostic (British Columbia Railway Company stepped down on four lines, with the initials in red), seen in three letterings: the heavier one on its website, and the wide Eurostile of the 2024 report’s cover and the Verdana of its letterhead.',
   'okanagan-similkameen-health-region': 'Marks recovered from published documents, and one traced vector. The traced logo is a reconstruction from a supplied image, labelled as such, with the June 1999 health services plan\u2019s cover kept beside it as the published sighting. Dates identify source sightings, not first use.',
   'bc-place-ltd': 'The Crown company that built BC Place Stadium (opened 1983) on the False Creek lands that later held Expo 86. Legislation renamed it BC Enterprise Corporation with effect from 31 March 1987. BCEC ceased operations in 1989 and transferred certain assets and liabilities to the Province and the separately incorporated PavCo.',
-  'bc-enterprise-corporation': 'BC Place Ltd. renamed with effect from 31 March 1987, with BC Development Corporation assets and liabilities transferred into it. BCEC ceased operations on 30 September 1989 and transferred certain assets and liabilities to the Province and PavCo. It remained a distinct company until statutory dissolution on 13 March 2023. Its held mark comes from a dated 1988 land-sale prospectus.',
+  'bc-enterprise-corporation': 'BC Place Ltd. renamed with effect from 31 March 1987, with BC Development Corporation assets and liabilities transferred into it. BCEC ceased operations on 30 September 1989 and transferred certain assets and liabilities to the Province and PavCo. It remained a distinct company until statutory dissolution on 13 March 2023. The gallery holds a colour specimen from a 1988 land-sale prospectus and a monochrome vector reconstruction from a separate print scan.',
   'bc-development-corporation': 'The Crown corporation the Province set up in 1973 to develop industrial land and lend to and invest in B.C. business: industrial parks around the province and the waterfront redevelopments of Lonsdale Quay in North Vancouver and, through its subsidiary First Capital City Development Company (1977), Westminster Quay in New Westminster. Three identities are held: four prisms beside its four-line name, in its advertisements by September 1975; four squares and “The Development Corporation”, registered from 1980; and the Province’s BC-and-flag mark over its name in its 1984–86 annual reports. Its assets passed to BC Enterprise Corporation on 31 March 1987.',
   'bc-power-commission': 'The public utility that brought power to communities outside BC Electric’s territory from 1945, and one of BC Hydro’s two predecessors (established 1962, amalgamated 1965). Its emblem was on the commission’s red service trucks.',
   'bc-steamship-company': 'The Crown company that ran the Princess Marguerite between Victoria and Seattle from 1975. It sold its ships in 1988 and was renamed Victoria Line Ltd. in 1994.',
@@ -479,7 +480,7 @@ for (const { bodyId, verification, ...asset } of historical.assets) {
   if (!additions.has(bodyId)) additions.set(bodyId, [])
   // A superseded file is not shown, so its file need not be held.
   const record = { ...asset, search: 'historical-vector-followup-2026-10-30' }
-  additions.get(bodyId).push(SUPERSEDED[asset.id] ? record : checked(record))
+  additions.get(bodyId).push(SUPERSEDED[asset.id] ? record : checked(record), ...collectedVectorVariants(record))
 }
 for (const bodyId of Object.keys(historical.bodyUpdates)) {
   if (!bodyIds.has(bodyId)) throw new Error(`Unknown historical body update: ${bodyId}`)

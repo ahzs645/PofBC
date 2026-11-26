@@ -4,6 +4,7 @@ import { readFileSync, existsSync } from 'node:fs'
 import { createHash } from 'node:crypto'
 import { COLLECTING } from './collectingData.js'
 import { COLLECTED_BODIES } from './collectedData.js'
+import { ACQUIRED_VECTORS } from './acquiredVectorData.js'
 import { COLLECTED_COLLECTIONS, CONTINUATIONS, assetUrl, collectedEntriesOf, nodesOf, parseSpecimenDate, researchLabel } from './collectedCollections.js'
 import { GALLERY_COLLECTIONS, collectionById, collectionOfNode, entriesOf, entriesOfNode, findGalleryEntry } from './collections.js'
 import { COLLECTED_PALETTES, paletteFor } from './collectedPalettes.js'
@@ -12,7 +13,8 @@ import { HISTORICAL_BODIES } from '../government/historyData.js'
 const root = new URL('../../', import.meta.url)
 
 test('every requested body is accounted for without inventing collected artwork', () => {
-  assert.deepEqual(COLLECTED_BODIES.map((body) => body.id).sort(), COLLECTING.map((body) => body.id).sort())
+  const supplemental = ['sub-bc-housing-licensing-and-consumer-services']
+  assert.deepEqual(COLLECTED_BODIES.map((body) => body.id).sort(), [...COLLECTING.map((body) => body.id), ...supplemental].sort())
   assert.equal(new Set(COLLECTED_BODIES.map((body) => body.id)).size, COLLECTED_BODIES.length)
   for (const body of COLLECTED_BODIES) {
     if (body.status !== 'asset-collected') assert.equal(body.assets.length, 0, body.id)
@@ -53,7 +55,7 @@ test('collected entries date sightings rather than claiming logo adoption', () =
   for (const entry of entries) {
     assert.equal(entry.kind, 'collected')
     assert.ok(['unknown', 'dated_specimen'].includes(entry.identity.applicability.kind), entry.id)
-    if (entry.asset.reconstruction) assert.equal(entry.identity.provenance, 'third_party_reconstruction')
+    if (entry.asset.reconstruction) assert.ok(['reconstructed', 'third_party_reconstruction'].includes(entry.identity.provenance))
     // A supplied file is dated only by the sightings of its design it stands for.
     if (entry.asset.supplied && !entry.asset.sourceDate && !entry.asset.alsoSeen?.length) assert.equal(entry.identity.applicability.kind, 'unknown')
   }
@@ -68,6 +70,81 @@ test('an event year mentioned inside an undated report cannot date its logo', ()
     assert.equal(entry.identity.applicability.years, 'undated', entry.id)
     assert.match(entry.identity.applicability.note, /does not establish a dated specimen/)
     assert.doesNotMatch(entry.identity.applicability.note, /This is the date of the cited specimen/)
+  }
+})
+
+test('a matched source vector opens as the default under the existing design link', () => {
+  const matches = [
+    ['geoscience-bc-three-colours', 'geoscience-bc-three-colours-vector'],
+    ['bcgs-anniversary-2020', 'bcgs-anniversary-vector-2020'],
+    ['bcgs-founding-year-seal', 'bcgs-founding-year-vector-2022']
+  ]
+  for (const [designId, vectorId] of matches) {
+    const entry = findGalleryEntry(designId)
+    assert.equal(entry.id, designId)
+    assert.equal(findGalleryEntry(vectorId), entry)
+    assert.equal(entry.asset.id, vectorId)
+    assert.equal(entry.identity.provenance, 'extracted_from_official_vector')
+    assert.equal(entry.versions[0], entry.asset)
+    assert.ok(entry.versions.some((version) => version.id === designId && !version.isVector))
+  }
+  assert.equal(findGalleryEntry('bcgs-survey-seal').asset.format, 'png')
+})
+
+test('active collections lead with their current or latest documented logo', () => {
+  const covers = {
+    'collected-geoscience-bc': 'geoscience-bc-three-colours',
+    'collected-sub-british-columbia-geological-survey': 'bcgs-founding-year-seal',
+    'collected-legislative-library-bc': 'legislative-library-digital-collections',
+    'collected-legislative-assembly': 'legislative-assembly-website-signature',
+    'collected-bc-assessment': 'bc-assessment-svg',
+    'collected-municipality-fort-st-john': 'source-municipal-fort-st-john-website-logo',
+    'collected-sub-bc-cancer': 'bc-cancer-phsa',
+    'tourism-bc-destination-bc': 'source-destination-bc-destination-bc-svg'
+  }
+  for (const [collectionId, cover] of Object.entries(covers)) {
+    const collection = collectionById(collectionId)
+    assert.equal(collection.cover, cover, collectionId)
+    assert.equal(entriesOf(collection)[0].id, cover, collectionId)
+  }
+  const geoscience = entriesOf(collectionById('collected-geoscience-bc'))
+  assert.deepEqual(geoscience.map(({ id }) => id), ['geoscience-bc-three-colours', 'geoscience-bc-green-ridges'])
+  assert.equal(geoscience[0].asset.id, 'geoscience-bc-three-colours-vector')
+
+  const regulator = collectionById('collected-bc-energy-regulator')
+  assert.equal(findGalleryEntry(regulator.cover).owner, 'bc-energy-regulator')
+  assert.equal(regulator.eras[0].entries[0].owner, 'oil-and-gas-commission')
+})
+
+test('the Survey separates its current and earlier seals from anniversary artwork', () => {
+  const survey = collectionById('collected-sub-british-columbia-geological-survey')
+  const sections = survey.artworkSections.map(({ label, entries }) => [label, entries.map(({ id }) => id)])
+  assert.deepEqual(sections, [
+    ['Current seal', [survey.cover]],
+    ['Earlier seal', ['bcgs-survey-seal']],
+    ['Anniversary variants', ['bcgs-anniversary-2020', 'bcgs-centennial-1995']]
+  ])
+  assert.deepEqual(sections.flatMap(([, ids]) => ids).sort(), entriesOf(survey).map(({ id }) => id).sort())
+  assert.equal(findGalleryEntry('bcgs-anniversary-2020').identity.provenance, 'extracted_from_official_vector')
+  assert.equal(findGalleryEntry('bcgs-centennial-1995').asset.format, 'png')
+  assert.match(findGalleryEntry(survey.cover).years, /2026/)
+})
+
+test('publication vectors keep existing design links, source files and colourways', () => {
+  for (const [id, { asset, prefer }] of Object.entries(ACQUIRED_VECTORS)) {
+    const entry = findGalleryEntry(id)
+    assert.equal(entry.id, id)
+    assert.equal(findGalleryEntry(asset.id), entry)
+    assert.ok(entry.versions.some((version) => version.id === asset.id && version.isVector), asset.id)
+    assert.ok(entry.versions.some((version) => !version.isVector), id)
+    const vectorDefault = prefer || entry.asset.derivedFrom === asset.id
+    assert.equal(entry.asset.isVector, vectorDefault, id)
+    if (vectorDefault) assert.equal(entry.identity.provenance, 'extracted_from_official_vector', id)
+    assert.match(asset.sourcePage, new RegExp('#page=' + asset.extraction.page + '$'), asset.id)
+
+    const svg = readFileSync(new URL(`public/${asset.file}`, root))
+    assert.equal(createHash('sha256').update(svg).digest('hex'), asset.sha256, asset.file)
+    assert.doesNotMatch(svg.toString(), /<(?:\w+:)?(?:image|script|foreignObject)\b|data:image/i, asset.file)
   }
 })
 
@@ -101,6 +178,19 @@ test('BCEC asset transfers do not fold its logos into PavCo as a former name', (
   assert.deepEqual(nodesOf(bcec), ['bc-enterprise-corporation'])
   assert.deepEqual(nodesOf(pavco), ['bc-pavilion-corporation'])
   assert.ok(!CONTINUATIONS.some(([from, to]) => from === 'bc-enterprise-corporation' && to === 'bc-pavilion-corporation'))
+})
+
+test('the BCEC prospectus link leads to the fixed-spacing reconstruction with the published image kept as a version', () => {
+  const published = 'source-bc-enterprise-corporation-bc-enterprise-1988-logo-png'
+  const vector = 'bc-enterprise-corporation-rebuilt-bw'
+  const collection = collectionById('collected-bc-enterprise-corporation')
+  const entry = findGalleryEntry(published)
+  assert.equal(collection.cover, vector)
+  assert.deepEqual(entriesOf(collection), [entry])
+  assert.equal(entry.id, vector)
+  assert.equal(entry.asset.reconstructionOf, published)
+  assert.equal(entry.identity.provenance, 'third_party_reconstruction')
+  assert.deepEqual(entry.versions.map(({ id, format }) => [id, format]), [[vector, 'svg'], [published, 'png']])
 })
 
 test('asset links respect both root and project deployments; leads stay uncollected', () => {

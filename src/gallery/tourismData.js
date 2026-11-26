@@ -4456,6 +4456,239 @@ export const TOURISM_COLLECTION = {
         }
       ],
       "dateNote": "Listed in the 2013 transfer source; no adoption date or current registration status is inferred."
+    },
+    {
+      "id": "super-natural-stacked-2021",
+      "title": "Super, Natural British Columbia Canada, 2021 cover",
+      "kind": "destination-identity",
+      "description": "White, woodcut-style lettering spells out the province’s name in four stacked lines. A red maple leaf sits beside CANADA at the foot of the mark.",
+      "sourceRefs": [
+        {
+          "sourceId": "destination-bc-our-brand-2021",
+          "page": 1,
+          "locator": "Cover, December 2021"
+        }
+      ],
+      "links": [
+        {
+          "url": "?view=initiatives&initiative=tourism&section=publications&record=our-brand-2021",
+          "label": "View the December 2021 brand guide"
+        }
+      ],
+      "images": [
+        {
+          "id": "super-natural-canada-cover-2021",
+          "file": "tourism/marks/super-natural-canada-cover-2021.svg",
+          "title": "Super, Natural British Columbia Canada",
+          "label": "White lettering and red maple leaf",
+          "alt": "Super, Natural British Columbia Canada",
+          "width": 144,
+          "height": 170,
+          "caption": "Stacked lettering and maple leaf from the forest photograph on the cover.",
+          "evidenceType": "native-pdf-vector-extraction",
+          "isVector": true,
+          "format": "svg",
+          "date": "2021-12",
+          "dateLabel": "publication edition",
+          "sourceId": "destination-bc-our-brand-2021",
+          "sourceUrl": "https://www.destinationbc.ca/content/uploads/2022/01/OurBrand_V5.0-POSTED122021-1.pdf",
+          "sourcePage": 1,
+          "sourceLocator": "PDF page 1",
+          "extractionNotes": "PyMuPDF exported the native PDF paths within the recorded top-left page bounds. The cover photograph was removed before export.",
+          "sha256": "40bc1e6827c34eb30eb1dc25589d2184b43f1530b621d305f92c974dccf99d53",
+          "manifest": "research/identity/tourism-asset-transfer-2013/our-brand-2021-manifest.json",
+          "darkBackground": true
+        }
+      ],
+      "image": {
+        "id": "super-natural-canada-cover-2021",
+        "file": "tourism/marks/super-natural-canada-cover-2021.svg",
+        "title": "Super, Natural British Columbia Canada",
+        "label": "White lettering and red maple leaf",
+        "alt": "Super, Natural British Columbia Canada",
+        "width": 144,
+        "height": 170,
+        "caption": "Stacked lettering and maple leaf from the forest photograph on the cover.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "isVector": true,
+        "format": "svg",
+        "date": "2021-12",
+        "dateLabel": "publication edition",
+        "sourceId": "destination-bc-our-brand-2021",
+        "sourceUrl": "https://www.destinationbc.ca/content/uploads/2022/01/OurBrand_V5.0-POSTED122021-1.pdf",
+        "sourcePage": 1,
+        "sourceLocator": "PDF page 1",
+        "extractionNotes": "PyMuPDF exported the native PDF paths within the recorded top-left page bounds. The cover photograph was removed before export.",
+        "sha256": "40bc1e6827c34eb30eb1dc25589d2184b43f1530b621d305f92c974dccf99d53",
+        "manifest": "research/identity/tourism-asset-transfer-2013/our-brand-2021-manifest.json",
+        "darkBackground": true
+      },
+      "variants": [
+        {
+          "id": "super-natural-canada-cover-2021",
+          "file": "tourism/marks/super-natural-canada-cover-2021.svg",
+          "title": "Super, Natural British Columbia Canada",
+          "label": "White lettering and red maple leaf",
+          "alt": "Super, Natural British Columbia Canada",
+          "width": 144,
+          "height": 170,
+          "caption": "Stacked lettering and maple leaf from the forest photograph on the cover.",
+          "evidenceType": "native-pdf-vector-extraction",
+          "isVector": true,
+          "format": "svg",
+          "date": "2021-12",
+          "dateLabel": "publication edition",
+          "sourceId": "destination-bc-our-brand-2021",
+          "sourceUrl": "https://www.destinationbc.ca/content/uploads/2022/01/OurBrand_V5.0-POSTED122021-1.pdf",
+          "sourcePage": 1,
+          "sourceLocator": "PDF page 1",
+          "extractionNotes": "PyMuPDF exported the native PDF paths within the recorded top-left page bounds. The cover photograph was removed before export.",
+          "sha256": "40bc1e6827c34eb30eb1dc25589d2184b43f1530b621d305f92c974dccf99d53",
+          "manifest": "research/identity/tourism-asset-transfer-2013/our-brand-2021-manifest.json",
+          "darkBackground": true
+        }
+      ],
+      "artworkStatus": "native-vector-held",
+      "status": "native-vector",
+      "statusLabel": "Native vector from publication"
+    },
+    {
+      "id": "super-natural-web-tile-2021",
+      "title": "Explore Super, Natural British Columbia web tile",
+      "kind": "website-identity",
+      "description": "Tourism businesses and communities could use this vertical tile on their websites. The guide shows two colourways and specifies sizes of 100 × 140 and 150 × 211 pixels.",
+      "sourceRefs": [
+        {
+          "sourceId": "destination-bc-our-brand-2021",
+          "page": 74,
+          "locator": "Web tile · size, colour and placement"
+        }
+      ],
+      "links": [
+        {
+          "url": "?view=initiatives&initiative=tourism&section=publications&record=our-brand-2021",
+          "label": "View the December 2021 brand guide"
+        }
+      ],
+      "images": [
+        {
+          "id": "super-natural-web-tile-positive-2021",
+          "file": "tourism/marks/super-natural-web-tile-positive-2021.svg",
+          "title": "Explore Super, Natural British Columbia Canada",
+          "label": "Black on white",
+          "alt": "Explore Super, Natural British Columbia Canada",
+          "width": 83.195,
+          "height": 116.353,
+          "caption": "The black on white industry web tile on page 74, including its border and maple leaf.",
+          "evidenceType": "native-pdf-vector-extraction",
+          "isVector": true,
+          "format": "svg",
+          "date": "2021-12",
+          "dateLabel": "publication edition",
+          "sourceId": "destination-bc-our-brand-2021",
+          "sourceUrl": "https://www.destinationbc.ca/content/uploads/2022/01/OurBrand_V5.0-POSTED122021-1.pdf",
+          "sourcePage": 74,
+          "sourceLocator": "PDF page 74",
+          "extractionNotes": "PyMuPDF exported the native PDF paths within the recorded top-left page bounds. The tile retains its printed background.",
+          "sha256": "68fa8c6d141648a9fc6d97631fcc9cd376071a85bcb1e0a94373898b5b14b0e1",
+          "manifest": "research/identity/tourism-asset-transfer-2013/our-brand-2021-manifest.json"
+        },
+        {
+          "id": "super-natural-web-tile-reverse-2021",
+          "file": "tourism/marks/super-natural-web-tile-reverse-2021.svg",
+          "title": "Explore Super, Natural British Columbia Canada",
+          "label": "White on black",
+          "alt": "Explore Super, Natural British Columbia Canada",
+          "width": 84.196,
+          "height": 117.354,
+          "caption": "The white on black industry web tile on page 74, including its border and maple leaf.",
+          "evidenceType": "native-pdf-vector-extraction",
+          "isVector": true,
+          "format": "svg",
+          "date": "2021-12",
+          "dateLabel": "publication edition",
+          "sourceId": "destination-bc-our-brand-2021",
+          "sourceUrl": "https://www.destinationbc.ca/content/uploads/2022/01/OurBrand_V5.0-POSTED122021-1.pdf",
+          "sourcePage": 74,
+          "sourceLocator": "PDF page 74",
+          "extractionNotes": "PyMuPDF exported the native PDF paths within the recorded top-left page bounds. The tile retains its printed background.",
+          "sha256": "f50a03c8b0bf3deff8a5250797657282920d3f0f666fccd96eefb5597e9f8c95",
+          "manifest": "research/identity/tourism-asset-transfer-2013/our-brand-2021-manifest.json",
+          "darkBackground": true
+        }
+      ],
+      "image": {
+        "id": "super-natural-web-tile-positive-2021",
+        "file": "tourism/marks/super-natural-web-tile-positive-2021.svg",
+        "title": "Explore Super, Natural British Columbia Canada",
+        "label": "Black on white",
+        "alt": "Explore Super, Natural British Columbia Canada",
+        "width": 83.195,
+        "height": 116.353,
+        "caption": "The black on white industry web tile on page 74, including its border and maple leaf.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "isVector": true,
+        "format": "svg",
+        "date": "2021-12",
+        "dateLabel": "publication edition",
+        "sourceId": "destination-bc-our-brand-2021",
+        "sourceUrl": "https://www.destinationbc.ca/content/uploads/2022/01/OurBrand_V5.0-POSTED122021-1.pdf",
+        "sourcePage": 74,
+        "sourceLocator": "PDF page 74",
+        "extractionNotes": "PyMuPDF exported the native PDF paths within the recorded top-left page bounds. The tile retains its printed background.",
+        "sha256": "68fa8c6d141648a9fc6d97631fcc9cd376071a85bcb1e0a94373898b5b14b0e1",
+        "manifest": "research/identity/tourism-asset-transfer-2013/our-brand-2021-manifest.json"
+      },
+      "variants": [
+        {
+          "id": "super-natural-web-tile-positive-2021",
+          "file": "tourism/marks/super-natural-web-tile-positive-2021.svg",
+          "title": "Explore Super, Natural British Columbia Canada",
+          "label": "Black on white",
+          "alt": "Explore Super, Natural British Columbia Canada",
+          "width": 83.195,
+          "height": 116.353,
+          "caption": "The black on white industry web tile on page 74, including its border and maple leaf.",
+          "evidenceType": "native-pdf-vector-extraction",
+          "isVector": true,
+          "format": "svg",
+          "date": "2021-12",
+          "dateLabel": "publication edition",
+          "sourceId": "destination-bc-our-brand-2021",
+          "sourceUrl": "https://www.destinationbc.ca/content/uploads/2022/01/OurBrand_V5.0-POSTED122021-1.pdf",
+          "sourcePage": 74,
+          "sourceLocator": "PDF page 74",
+          "extractionNotes": "PyMuPDF exported the native PDF paths within the recorded top-left page bounds. The tile retains its printed background.",
+          "sha256": "68fa8c6d141648a9fc6d97631fcc9cd376071a85bcb1e0a94373898b5b14b0e1",
+          "manifest": "research/identity/tourism-asset-transfer-2013/our-brand-2021-manifest.json"
+        },
+        {
+          "id": "super-natural-web-tile-reverse-2021",
+          "file": "tourism/marks/super-natural-web-tile-reverse-2021.svg",
+          "title": "Explore Super, Natural British Columbia Canada",
+          "label": "White on black",
+          "alt": "Explore Super, Natural British Columbia Canada",
+          "width": 84.196,
+          "height": 117.354,
+          "caption": "The white on black industry web tile on page 74, including its border and maple leaf.",
+          "evidenceType": "native-pdf-vector-extraction",
+          "isVector": true,
+          "format": "svg",
+          "date": "2021-12",
+          "dateLabel": "publication edition",
+          "sourceId": "destination-bc-our-brand-2021",
+          "sourceUrl": "https://www.destinationbc.ca/content/uploads/2022/01/OurBrand_V5.0-POSTED122021-1.pdf",
+          "sourcePage": 74,
+          "sourceLocator": "PDF page 74",
+          "extractionNotes": "PyMuPDF exported the native PDF paths within the recorded top-left page bounds. The tile retains its printed background.",
+          "sha256": "f50a03c8b0bf3deff8a5250797657282920d3f0f666fccd96eefb5597e9f8c95",
+          "manifest": "research/identity/tourism-asset-transfer-2013/our-brand-2021-manifest.json",
+          "darkBackground": true
+        }
+      ],
+      "artworkStatus": "native-vector-held",
+      "status": "native-vector",
+      "statusLabel": "Native vector from publication"
     }
   ],
   "timeline": [
@@ -4631,6 +4864,20 @@ export const TOURISM_COLLECTION = {
       ]
     },
     {
+      "id": "our-brand-v5-published",
+      "date": "2021-12",
+      "dateRole": "publication edition",
+      "title": "Destination BC updates Our Brand",
+      "description": "Version 5.0 revises the typography and tone of voice guidance for Super, Natural British Columbia.",
+      "sourceRefs": [
+        {
+          "sourceId": "destination-bc-our-brand-2021",
+          "page": 3,
+          "locator": "Edition note below the contents"
+        }
+      ]
+    },
+    {
       "id": "supernaturalbc-launch",
       "date": "2025-09-10",
       "title": "SupernaturalBC.com launches",
@@ -4665,6 +4912,109 @@ export const TOURISM_COLLECTION = {
         }
       ],
       "relatedIds": []
+    },
+    {
+      "id": "our-brand-2021",
+      "title": "Our Brand, December 2021 (V5.0)",
+      "description": "Destination BC’s guide to Super, Natural British Columbia pairs Great Forest display lettering with Brandon Grotesque for longer text. It documents the use of photography, a landscape-inspired colour palette, the brand’s tone of voice and a web tile for tourism partners.",
+      "kind": "brand guide",
+      "status": "source-held",
+      "statusLabel": "Publication located",
+      "sourceRefs": [
+        {
+          "sourceId": "destination-bc-our-brand-2021",
+          "page": 3,
+          "locator": "Contents and edition changes"
+        },
+        {
+          "sourceId": "destination-bc-our-brand-2021",
+          "page": 58,
+          "locator": "Typefaces"
+        },
+        {
+          "sourceId": "destination-bc-our-brand-2021",
+          "page": 64,
+          "locator": "Colour palette"
+        },
+        {
+          "sourceId": "destination-bc-our-brand-2021",
+          "page": 69,
+          "locator": "Tone of voice"
+        },
+        {
+          "sourceId": "destination-bc-our-brand-2021",
+          "page": 74,
+          "locator": "Industry web tile"
+        }
+      ],
+      "links": [
+        {
+          "label": "Explore all 75 pages by topic",
+          "url": "?view=initiatives&initiative=tourism&section=brand-guide"
+        },
+        {
+          "label": "Read the full guide (PDF)",
+          "url": "https://www.destinationbc.ca/content/uploads/2022/01/OurBrand_V5.0-POSTED122021-1.pdf"
+        },
+        {
+          "url": "?view=initiatives&initiative=tourism&section=marks&record=super-natural-stacked-2021",
+          "label": "Explore the cover wordmark"
+        },
+        {
+          "url": "?view=initiatives&initiative=tourism&section=marks&record=super-natural-web-tile-2021",
+          "label": "Explore the two web tiles"
+        },
+        {
+          "label": "Rainforest to Rockies destination brand",
+          "url": "?view=initiatives&initiative=rainforest-to-rockies"
+        }
+      ],
+      "images": [
+        {
+          "id": "our-brand-2021-cover",
+          "file": "tourism/publications/our-brand-2021.jpg",
+          "title": "Our Brand, December 2021",
+          "label": "Guide cover",
+          "alt": "Two hikers in a mossy forest beneath the Super, Natural British Columbia Canada wordmark",
+          "width": 792,
+          "height": 612,
+          "caption": "The December 2021 cover places the destination wordmark over a photograph of two hikers in a forest.",
+          "evidenceType": "publication-page-render",
+          "isVector": false,
+          "format": "jpg",
+          "date": "2021-12",
+          "dateLabel": "publication edition",
+          "sourceId": "destination-bc-our-brand-2021",
+          "sourceUrl": "https://www.destinationbc.ca/content/uploads/2022/01/OurBrand_V5.0-POSTED122021-1.pdf",
+          "sourcePage": 1,
+          "sourceLocator": "PDF page 1",
+          "extractionNotes": "Rendered the complete first page with Poppler pdftoppm at 72 dpi.",
+          "sha256": "3e2db18f4644dba512aa12e4faace2a9b7714c87405b70916623ad0384fb7c8f",
+          "manifest": "research/identity/tourism-asset-transfer-2013/our-brand-2021-manifest.json"
+        }
+      ],
+      "image": {
+        "id": "our-brand-2021-cover",
+        "file": "tourism/publications/our-brand-2021.jpg",
+        "title": "Our Brand, December 2021",
+        "label": "Guide cover",
+        "alt": "Two hikers in a mossy forest beneath the Super, Natural British Columbia Canada wordmark",
+        "width": 792,
+        "height": 612,
+        "caption": "The December 2021 cover places the destination wordmark over a photograph of two hikers in a forest.",
+        "evidenceType": "publication-page-render",
+        "isVector": false,
+        "format": "jpg",
+        "date": "2021-12",
+        "dateLabel": "publication edition",
+        "sourceId": "destination-bc-our-brand-2021",
+        "sourceUrl": "https://www.destinationbc.ca/content/uploads/2022/01/OurBrand_V5.0-POSTED122021-1.pdf",
+        "sourcePage": 1,
+        "sourceLocator": "PDF page 1",
+        "extractionNotes": "Rendered the complete first page with Poppler pdftoppm at 72 dpi.",
+        "sha256": "3e2db18f4644dba512aa12e4faace2a9b7714c87405b70916623ad0384fb7c8f",
+        "manifest": "research/identity/tourism-asset-transfer-2013/our-brand-2021-manifest.json"
+      }
     },
     {
       "id": "approved-accommodation-guide",
@@ -5250,6 +5600,18 @@ export const TOURISM_COLLECTION = {
       "dateRole": "publication edition",
       "kind": "primary-publication",
       "note": "Month printed on the guide's cover; the reproduced website's capture date is not specified."
+    },
+    {
+      "id": "destination-bc-our-brand-2021",
+      "title": "Our Brand, December 2021 (V5.0)",
+      "shortTitle": "Our Brand, V5.0",
+      "publisher": "Destination BC",
+      "date": "2021-12",
+      "dateRole": "publication edition",
+      "kind": "primary-publication",
+      "url": "https://www.destinationbc.ca/content/uploads/2022/01/OurBrand_V5.0-POSTED122021-1.pdf",
+      "sha256": "a7100fd6221199d889282ca6428d63d672a8d8d0e0472fb4b2a1343e7346a2a0",
+      "note": "The 75-page edition updates the typography and tone of voice sections. The supplied PDF matches the publisher’s copy."
     }
   ],
   "domains": [
@@ -7962,19 +8324,19 @@ export const TOURISM_COLLECTION = {
   "domainCountMeaning": "Entries listed in source table cells, including subdomains and email addresses; not a count of distinct working websites.",
   "stats": {
     "digitalRecords": 9,
-    "marks": 21,
-    "timelineEvents": 13,
-    "publications": 7,
+    "marks": 23,
+    "timelineEvents": 14,
+    "publications": 8,
     "programAreas": 16,
-    "sources": 15,
+    "sources": 16,
     "listedAddresses": 193,
     "distinctAddresses": 191,
     "domainEntries": 178,
     "subdomainEntries": 8,
     "emailEntries": 7,
     "duplicateEntries": 2,
-    "visualSpecimens": 58,
-    "nativeVectors": 15,
+    "visualSpecimens": 62,
+    "nativeVectors": 18,
     "sourceCrops": 20,
     "sourceImages": 20,
     "websiteImages": 3

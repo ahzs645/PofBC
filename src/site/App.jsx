@@ -1,3 +1,4 @@
+import { PreviewBackground } from '../gallery/PreviewBackground.jsx'
 import { Suspense, lazy, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { BcLockup } from '../logo/BcLockup.jsx'
 import { CrestLockup } from '../crest/CrestLockup.jsx'
@@ -15,6 +16,7 @@ const CurrentControls = lazy(() => loadCurrentControls().then((module) => ({ def
 // Every other view is loaded when it is opened (viewLoaders.js says why each is its own chunk).
 const lazyView = (id, name) => lazy(() => VIEW_LOADERS[id]().then((module) => ({ default: module[name] })))
 const GalleryView = lazyView('gallery', 'GalleryView')
+const AirportsView = lazyView('airports', 'AirportsView')
 const InitiativesView = lazyView('initiatives', 'InitiativesView')
 const SchoolDistrictsView = lazyView('school-districts', 'SchoolDistrictsView')
 const PartiesView = lazyView('parties', 'PartiesView')
@@ -23,6 +25,8 @@ const InternalLogosView = lazyView('internal', 'InternalLogosView')
 const PostersView = lazyView('posters', 'PostersView')
 const SignsView = lazyView('signs', 'SignsView')
 const CardsView = lazyView('cards', 'CardsView')
+const CertificatesView = lazyView('certificates', 'CertificatesView')
+const StickersView = lazyView('stickers', 'StickersView')
 const PinsView = lazyView('pins', 'PinsView')
 const PatchesView = lazyView('patches', 'PatchesView')
 const PlatesView = lazyView('plates', 'PlatesView')
@@ -63,6 +67,7 @@ import { writeHistory } from './browserHistory.js'
 import { salaryPlaceUrl } from '../salaries/viewState.js'
 import { legacyInitiativeUrl } from '../initiatives/initiativePlace.js'
 import { movedGalleryPlace, movedGalleryUrl } from '../gallery/movedGalleryPlaces.js'
+import { GALLERY_PLACE_KEYS } from '../gallery/galleryPlace.js'
 import { retiredPatchUrl } from '../patches/retiredPatches.js'
 import { SunGlyph, ThemeIcon } from './icons.jsx'
 import { useSiteTheme } from './useTheme.js'
@@ -176,7 +181,7 @@ const initialView = () => {
  */
 const writeView = (view) => {
   const url = salaryPlaceUrl(globalThis.location.href, {})
-  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', 'logos', 'mark', 'subject', 'coverage', 'identity-family', 'identity-state', 'identity-scope', 'identity-query', 'internal', 'internal-logo', 'poster', 'sign', 'card', 'pin', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'plate', 'area', 'chapter', 'story', 'holder', 'initiative', 'section', 'record', 'district', 'school-query', 'school-scope', 'party', 'party-query', 'party-scope', 'party-design']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', ...GALLERY_PLACE_KEYS, 'internal', 'internal-logo', 'poster', 'sign', 'card', 'sticker', 'pin', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'plate', 'area', 'chapter', 'story', 'holder', 'initiative', 'section', 'record', 'district', 'school-query', 'school-scope', 'party', 'party-query', 'party-scope', 'party-design']) url.searchParams.delete(key)
   if (/^#tourism-/.test(url.hash)) url.hash = ''
   if (view !== 'generator') url.searchParams.set('view', view)
   writeHistory(url)
@@ -344,6 +349,12 @@ export const App = () => {
         </Suspense>
       )}
 
+      {view === 'airports' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the airports…</p>}>
+          <AirportsView key={visit} />
+        </Suspense>
+      )}
+
       {view === 'school-districts' && (
         <Suspense fallback={<p className="gallery__intro" role="status">Loading the school districts…</p>}>
           <SchoolDistrictsView key={visit} />
@@ -359,6 +370,18 @@ export const App = () => {
       {view === 'cards' && (
         <Suspense fallback={<p className="gallery__intro" role="status">Loading the cards…</p>}>
           <CardsView key={visit} />
+        </Suspense>
+      )}
+
+      {view === 'certificates' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the certificates…</p>}>
+          <CertificatesView key={visit} />
+        </Suspense>
+      )}
+
+      {view === 'stickers' && (
+        <Suspense fallback={<p className="gallery__intro" role="status">Loading the stickers…</p>}>
+          <StickersView key={visit} />
         </Suspense>
       )}
 
@@ -450,62 +473,64 @@ export const App = () => {
       {view === 'generator' && (
       <div className="layout">
         <section className="stage" aria-label="Preview">
-          <div
-            ref={stageFrame}
-            className="stage__frame"
-            data-backdrop={backdrop}
-            data-transparent={isTransparent || undefined}
-            style={stageHeight.current ? { '--stage-held': `${Math.round(stageHeight.current)}px` } : undefined}
-          >
-            {isDocument ? (
-              <Suspense fallback={<p role="status" className="stage__loading">Loading the historical arms study…</p>}>
-                <DocumentArmsPreview lockup={lockup} />
-              </Suspense>
-            ) : isCurrent ? (
-              <Suspense fallback={<p role="status" className="stage__loading">Loading the current mark…</p>}>
-                <CurrentLockup
-                  text={state.currentName}
-                  language={state.language}
-                  variant={state.currentVariant}
-                  background={state.currentBackground}
+          <PreviewBackground white={state.backdrop === 'light'} onToggle={() => update({ backdrop: state.backdrop === 'light' ? 'auto' : 'light' })}>
+            <div
+              ref={stageFrame}
+              className="stage__frame"
+              data-backdrop={backdrop}
+              data-transparent={isTransparent || undefined}
+              style={stageHeight.current ? { '--stage-held': `${Math.round(stageHeight.current)}px` } : undefined}
+            >
+              {isDocument ? (
+                <Suspense fallback={<p role="status" className="stage__loading">Loading the historical arms study…</p>}>
+                  <DocumentArmsPreview lockup={lockup} />
+                </Suspense>
+              ) : isCurrent ? (
+                <Suspense fallback={<p role="status" className="stage__loading">Loading the current mark…</p>}>
+                  <CurrentLockup
+                    text={state.currentName}
+                    language={state.language}
+                    variant={state.currentVariant}
+                    background={state.currentBackground}
+                    clearSpaceFactor={lockup.clearSpaceFactor}
+                    title="Province of British Columbia ministry mark"
+                  />
+                </Suspense>
+              ) : isCrest ? (
+                <CrestLockup
+                  arrangement={state.crestArrangement}
+                  placement={state.crestPlacement}
+                  ministry={lockup.ministry}
+                  extra={state.crestExtra}
+                  bold={state.crestBold}
+                  align={state.crestAlign}
+                  ministrySize={state.crestMinistrySize}
+                  extraStep={state.crestExtraStep}
+                  markColor={state.crestMarkColor}
+                  textColor={state.linkColors ? state.crestMarkColor : state.crestTextColor}
+                  background={state.crestBackground}
                   clearSpaceFactor={lockup.clearSpaceFactor}
-                  title="Province of British Columbia ministry mark"
+                  title="British Columbia coat of arms lockup"
                 />
-              </Suspense>
-            ) : isCrest ? (
-              <CrestLockup
-                arrangement={state.crestArrangement}
-                placement={state.crestPlacement}
-                ministry={lockup.ministry}
-                extra={state.crestExtra}
-                bold={state.crestBold}
-                align={state.crestAlign}
-                ministrySize={state.crestMinistrySize}
-                extraStep={state.crestExtraStep}
-                markColor={state.crestMarkColor}
-                textColor={state.linkColors ? state.crestMarkColor : state.crestTextColor}
-                background={state.crestBackground}
-                clearSpaceFactor={lockup.clearSpaceFactor}
-                title="British Columbia coat of arms lockup"
-              />
-            ) : isFlag ? (
-              <FlagLockup
-                ministry={lockup.ministry}
-                letterColor={state.flagMarkColor}
-                textColor={state.linkColors ? state.flagMarkColor : state.flagTextColor}
-                symbol={state.flagSymbol}
-                placement={state.flagPlacement}
-                province={state.flagProvince}
-                extra={state.flagExtra}
-                flagPalette={state.flagPalette}
-                background={state.flagBackground}
-                clearSpaceFactor={lockup.clearSpaceFactor}
-                title="British Columbia flag lockup"
-              />
-            ) : (
-              <BcLockup {...artwork} />
-            )}
-          </div>
+              ) : isFlag ? (
+                <FlagLockup
+                  ministry={lockup.ministry}
+                  letterColor={state.flagMarkColor}
+                  textColor={state.linkColors ? state.flagMarkColor : state.flagTextColor}
+                  symbol={state.flagSymbol}
+                  placement={state.flagPlacement}
+                  province={state.flagProvince}
+                  extra={state.flagExtra}
+                  flagPalette={state.flagPalette}
+                  background={state.flagBackground}
+                  clearSpaceFactor={lockup.clearSpaceFactor}
+                  title="British Columbia flag lockup"
+                />
+              ) : (
+                <BcLockup {...artwork} />
+              )}
+            </div>
+          </PreviewBackground>
           {isDocument && (
             <Suspense fallback={null}>
               <DocumentArmsReference key={state.documentLayout} layout={state.documentLayout} />
@@ -559,6 +584,11 @@ export const App = () => {
                 onChange={(value) => update({ clearSpace: value })}
                 hint="Margin around the mark. The background colour fills it."
               />
+              <p className="gallery__note">Check program mark placement in the gallery.{' '}
+                <a href="?view=gallery&logos=collected-sub-cleanbc&mark=cleanbc-base-endorsed#placement">CleanBC</a> ·{' '}
+                <a href="?view=gallery&logos=bc-mark&mark=vector-BCID_StrongerBC_RGB_pos#placement">StrongerBC</a> ·{' '}
+                <a href="?view=gallery&logos=collected-endorsed-marks-2019&mark=endorsed-2019-lockup#placement">2019 endorsed marks</a>
+              </p>
             </section>
           )}
 

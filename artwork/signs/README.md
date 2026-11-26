@@ -17,3 +17,40 @@ not authenticated masters, and imply no affiliation with or rights in the histor
 The Super, Natural sign is assembled from this repository's own parts (the Spirit of BC flag in
 `src/assets/flagMark.js` and the Termes outlines in `src/hydro/serif.js`), so its build script
 reads them from here rather than from copies.
+
+The [Cheakamus River notice](cheakamus/polished.svg) is the supplied polished reconstruction
+from `cheakamus-refinement/artwork/cheakamus-notice-to-anglers.svg`. The Signs viewer pairs the
+rectified photograph with a typeset edition. Run
+`uv run --with fonttools scripts/build_cheakamus_sign.py` to rebuild it. The script takes the
+headline, river name, mile marker, barred J, end date and footer outlines from the supplied SVG.
+It sets the main notice in the repository’s TeX Gyre Heros Regular, using a common baseline grid,
+and groups each line and word for editing. The build fits the
+[gallery’s F&W reconstruction](../../public/identity-recreation-conservation/drc-fw-oval-1973.svg)
+to the supplied sign’s gold backing and uses the sign’s dark ink.
+
+The five [Entering British Columbia signs](../../src/signs/entering-bc) come from the
+B.C. Ministry of Transportation and Highways’ [September 2000 manual, printed page 6.12 (PDF page 162)](https://www2.gov.bc.ca/assets/gov/driving-and-transportation/transportation-infrastructure/engineering-standards-and-guidelines/traffic-engineering-and-safety/traffic-engineering/traffic-signs-and-pavement-markings/manual_signs_pavement_marking.pdf#page=162).
+Each SVG retains the individual plate’s native vector paths, colours and illustrated proportions.
+The I-180X and I-180B greetings use the PDF’s named Times New Roman Bold Italic face, supplied
+locally during Poppler SVG conversion and outlined at the PDF’s glyph positions. The white page
+behind the I-180 panels is included in each drawing. The catalogue reports the printed sign
+dimensions separately from the proportions of the illustrations, particularly for I-180B.
+
+The [blue-bordered Super, Natural welcome sign](super-natural-bordered/) uses the supplied
+297 × 224 screenshot. Its date, location and physical dimensions are unknown. Four board
+corners, estimated by extending the visible edges, anchor one projective transform.
+The 814 × 440 front view uses an approximate 1.85 board aspect ratio, consistent with
+the two vanishing points assuming a centred camera with square pixels. A cropped image
+or different corner estimates could give other proportions.
+
+The three lines are typeset in [TeX Gyre Termes Bold](https://ctan.org/pkg/tex-gyre)
+at 99 drawing units, with the font’s standard advances, kerning and word spaces.
+Each complete line is centred on the board at its photographed baseline before its
+glyphs are exported as outlines. The original typeface is unidentified. The bundled
+font carries the [GUST Font License](super-natural-bordered/GUST-FONT-LICENSE.txt).
+
+Run `node artwork/signs/super-natural-bordered/build.mjs` and then
+`python3 artwork/signs/super-natural-bordered/measure.py` (Pillow and NumPy). The latter
+projects the delivered SVG back into the camera frame, averages coverage over each original
+pixel, and measures lettering intersection over union and centre-spacing error there.
+The About panel lets the reader fade the pink projected lettering over the original scene.

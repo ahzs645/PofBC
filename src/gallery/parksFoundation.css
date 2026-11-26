@@ -1,0 +1,13 @@
+.foundation-history { display: grid; gap: 2rem; }
+.foundation-history section { min-width: 0; }
+.foundation-history p, .foundation-history dd { max-width: 78ch; line-height: 1.55; }
+.foundation-history h2 { margin-block: 0 .5rem; }
+.foundation-history h3, .foundation-history h4 { margin-block: 1rem .25rem; }
+.foundation-history p { margin-block: .35rem 1rem; }
+.foundation-figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 1.25rem; }
+.foundation-figures figure { margin: 0; }
+.foundation-figures img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
+.foundation-figures figure > img { aspect-ratio: 16 / 10; background: white; object-fit: contain; }
+.foundation-history dt { margin-top: 1rem; font-weight: 650; }
+.foundation-history dd { margin: .25rem 0; }
+.foundation-programs { display: flex; flex-wrap: wrap; gap: .6rem 1.25rem; list-style: none; padding: 0; }

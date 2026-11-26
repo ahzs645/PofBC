@@ -17,11 +17,12 @@
     },
     {
       "target": "source-expanded-etsi-bc-website-logo",
-      "result": "found vector of the full-name horizontal lockup; the stacked short-name lockup of the website file was not found as vector",
+      "result": "Found vectors of the horizontal full-name logo. A 2026-11-25 follow-up found native vectors for the stacked colour logo and the 20th anniversary logo.",
       "sources": [
         {"url": "https://www.etsi-bc.ca/wp-content/uploads/2026/07/ETSI-BC-Bylaw-and-Board-Policy-Manual-with-AI-and-Cybersecurity-2026.pdf", "outcome": "used (colour)", "locator": "PDF page 1, rect (60,58)-(360,140) pt", "sha256": "cbe564eaaf42ac1c6a0374e21a15726305aba8b2f56d907deb95e02eb12f65e6", "pdfCreated": "2026-06-12"},
         {"url": "https://www.etsi-bc.ca/wp-content/uploads/2024/09/ETSI-BC-Columbia-Kootenay-RAC-Terms-of-Reference-Amended-2024_06_14.pdf", "outcome": "used (reversed)", "locator": "PDF page 1, rect (60,58)-(360,140) pt", "sha256": "cd31464fd8c0e0f0abfcd3b30deb508155ee7d7e83c940b4c299eee5feaee582", "pdfCreated": "2024-09-21"},
-        {"url": "https://www.etsi-bc.ca/wp-content/uploads/2026/07/ETSIBC-Annual-Report-2026-WEB-EMAIL.pdf", "outcome": "not used", "detail": "Cover carries the 20th-anniversary variant."},
+        {"url": "https://www.etsi-bc.ca/wp-content/uploads/2024/08/ETSI-BC-Annual-Report-2024-web-small.pdf", "outcome": "used (stacked colour)", "locator": "PDF page 1, rect (575,48)-(750,160) pt", "sha256": "b3bb5c8e806b8e4ef04ee92d31a72513f0c1350cfb6a068ba9c48fb0ed730991", "pdfCreated": "2024-08-02"},
+        {"url": "https://www.etsi-bc.ca/wp-content/uploads/2026/07/ETSIBC-Annual-Report-2026-WEB-EMAIL.pdf", "outcome": "used (20th anniversary)", "locator": "PDF page 1, rect (59,23)-(296,121) pt", "sha256": "71165bf036c8a4e80c242b28f454998f4eea07e89fcb41f2dfac30f2b2958f77", "pdfCreated": "2026-07-28"},
         {"url": "https://www.etsi-bc.ca/wp-content/uploads/2026/03/FINAL-ETSI-BC-Legislative-Review-Committee-Report-2026_03_27.pdf", "outcome": "raster-only"},
         {"url": "https://www.etsi-bc.ca/wp-content/uploads/2021/05/Legislative-Review-2021.pdf", "outcome": "no-logo"},
         {"url": "https://www.etsi-bc.ca/wp-content/uploads/2021/03/ETSI-BC-Personal-Information-Protection-Policy-2021_03_31.pdf", "outcome": "no-logo"},
@@ -171,9 +172,11 @@
     },
     {
       "target": "source-expanded-island-coastal-economic-trust-website-logo",
-      "result": "not done: symbol is raster in every source; wordmark alone is vector",
+      "result": "Verified 2026-11-25: complete five-paddle horizontal logo in the report’s reversed colourway.",
       "sources": [
-        {"url": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/2026-Impact-Report-1.pdf", "outcome": "raster-only (symbol)", "detail": "Cover p1: wordmark as white vector paths, paddle symbol as a 97 x 59 image; same on p63."},
+        {"url": "https://islandcoastaltrust.ca/wp-content/uploads/2026/06/d4d8083503d108ed87541dd95a430bf2ab761c7c-2-e1782763482184.webp", "outcome": "website colour reference", "detail": "Median RGB samples from the archived WebP supply the lettering, paddle shafts, aqua details and blade gradient of the website-colour SVG. Its geometry comes from the report."},
+        {"url": "https://islandcoastaltrust.ca/wp-content/uploads/2026/09/Board-Charter.pdf", "outcome": "colour reference", "detail": "Page 1 header. Confirms the teal website colourway."},
+        {"url": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/2026-Impact-Report-1.pdf", "outcome": "native vector", "detail": "Page 1, placed graphic ICET_ExtHorizLogo_FullColourRev. The small image reported by MuPDF is its rendering of a PDF Type 2 axial shading clipped to the blade paths. The isolated graphic has no image XObjects."},
         {"url": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/Island-Coastal-Strategic-Plan-2024-2027.pdf", "outcome": "raster-only", "detail": "Quartz PDF of page images."},
         {"url": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/Island-Coastal-Economic-Trust-2023-24-Impact-Report-Web.pdf", "outcome": "not used", "detail": "Earlier text-only identity."},
         {"url": "https://islandcoastaltrust.ca/wp-json/wp/v2/media?search=logo", "outcome": "WebP/PNG only"},

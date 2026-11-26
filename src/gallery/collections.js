@@ -17,9 +17,11 @@
 
 import { BCTS_ENTRIES, ONE_OFFS } from './oneOffs.js'
 import { COLLECTION_ERAS, TIMELINES, timelineKeyOf } from './timelines.js'
-import { CURRENT_VARIANT_ORDER, CURRENT_VARIANTS } from '../hydro/hydroMarks.js'
+import { CURRENT_VARIANTS } from '../hydro/hydroMarks.js'
 import { PROGRAM_ENTRY_OWNERS } from './reconciledSubjects.js'
-import { COLLECTED_COLLECTIONS, SPECIMEN_COLLECTIONS, collectedEntriesOf, specimenEntriesOf, nodesOf } from './collectedCollections.js'
+import { COLLECTED_COLLECTIONS, SPECIMEN_COLLECTIONS, collectedEntriesOf, specimenEntriesOf, coverFirst, nodesOf } from './collectedCollections.js'
+import { LIQUOR_DISTRIBUTION_COLLECTION } from './liquorHistory.js'
+import { ENDORSED_2019 } from './endorsed2019.js'
 
 // ── The identity record ──────────────────────────────────────────────────────────────────────────
 
@@ -818,8 +820,8 @@ const BCP_2023 = (id, label, note, reverse) => supplied({
 
 // ── The Department of Recreation and Conservation, 1970–1973 ──────────────────────────────────────
 //
-// From a reconstruction package (research/identity/recreation-conservation-2026-11-21): every mark
-// redrawn by hand from the department's printed annual reports, with its lettering as outlines.
+// The annual-report reconstructions are documented in research/identity/recreation-conservation-2026-11-21.
+// The dogwood oval also has a reconstruction fitted to a supplied green-and-cream image.
 // The square symbols come in black, the reports' dark and pale greens, and white, all the same paths.
 
 const DRC_RIGHTS = {
@@ -869,19 +871,35 @@ const drcEmblem = (id, label, years, note, fidelityNote, dateNote = `Printed in 
 })({ id, label, years, note })
 
 const DRC_EMBLEMS = {
-  oval: drcEmblem('drc-dogwood-oval-1970', 'Dogwood oval', '1970',
-    'An engraved dogwood in a dark oval, BRITISH COLUMBIA arched above it and the department’s name below.',
-    'Redrawn from the 1970 report’s scan. The engraving’s hatching is interpreted rather than recovered, and the ' +
-      'small lettering is a close outlined sans, not the original face.'),
-  fwOval: drcEmblem('drc-fw-oval-1973', 'Fish and Wildlife emblem', '1972–73 synopsis and 1973 report',
-    'A narrow dark emblem over F&W on the 1972–73 hunting regulations cover and the 1973 Fish and Wildlife dividers.',
-    'The silhouette, frame and letters redrawn by hand from the 1973 report’s scan; the ampersand is a close ' +
-      'outlined Bookman, not the original.',
-    'The 1972–73 hunting synopsis shows this arrangement. The 1973 report supplies the artwork for this reconstruction.'),
-  fwLockup: drcEmblem('drc-fw-lockup-1973', 'Fish and Wildlife emblem and name', '1973',
-    'The emblem beside a panel reading British Columbia Fish & Wildlife Branch.',
-    'The emblem as drawn for it alone; the panel’s wording is set in an outlined substitute serif, not an ' +
-      'identification of the original face.'),
+  oval: {
+    ...drcEmblem('drc-dogwood-oval-1970', 'Dogwood oval', '1970',
+      'An engraved dogwood in a dark oval, BRITISH COLUMBIA arched above it and the department’s name below.',
+      'The dogwood, lettering and ring were drawn as vector outlines and fitted to a supplied green-and-cream image. ' +
+        'The lower edge was completed from the visible oval. The period typeface and the source of the green-and-cream image remain unverified.'),
+    themedPreview: true,
+    darkPreviewNote: 'The dark preview has a thin cream outline for contrast.'
+  },
+  fwOval: {
+    ...drcEmblem('drc-fw-oval-1973', 'Fish and Wildlife emblem', '1972–73 synopsis and 1973 report',
+      'A framed oval above F&W on the 1972–73 hunting regulations cover and the 1973 Fish and Wildlife dividers.',
+      'The supplied reconstruction uses one set of Bézier paths for the oval, frame and lettering. ' +
+        'The bear’s eye follows the colour reference. Its exact original outline remains uncertain.',
+      'The hunting synopsis and the annual report show the emblem in print.'),
+    themedPreview: true,
+    darkPreviewNote: 'The dark preview uses white ink. Choose White to download that version.',
+    markLabel: 'Black',
+    alternates: [
+      { mark: 'drc-fw-oval-1973-white', label: 'White' },
+      { mark: 'drc-fw-oval-1973-orange', label: 'Cream on orange' }
+    ]
+  },
+  fwLockup: {
+    ...drcEmblem('drc-fw-lockup-1973', 'Fish and Wildlife emblem and name', '1973',
+      'The emblem beside a panel reading British Columbia Fish & Wildlife Branch.',
+      'The left panel uses the standalone emblem’s reconstructed paths. The right panel’s lettering uses an outlined Bookman substitute.'),
+    themedPreview: true,
+    darkPreviewNote: 'The dark preview uses white ink.'
+  },
   parksShield: drcEmblem('drc-parks-shield-1973', 'Parks dogwood shield', '1973',
     'A dogwood over the province in a shield, PARKS above and BRITISH COLUMBIA below.',
     'Shield, province, islands and bracts redrawn by hand from the 1973 report’s organization chart; the small ' +
@@ -909,6 +927,8 @@ const GRAPH_NODES = {
   'bc-parks-banner': 'sub-bc-parks',
   'bc-parks-best-place': 'sub-bc-parks',
   'work-bc': 'sub-workbc',
+  'vector-workbc-2016': 'sub-workbc',
+  'vector-workbc-current': 'sub-workbc',
   'bc-stats': 'sub-bc-stats',
   'bc-wildfire-service': 'sub-bc-wildfire-service',
   'bc-wildfire-service-one-line': 'sub-bc-wildfire-service',
@@ -916,6 +936,7 @@ const GRAPH_NODES = {
   'bc-online': 'sub-bc-online',
   'bc-bid': 'sub-bc-bid',
   'public-service': 'bc-public-service-agency',
+  'vector-bc-public-service-where-ideas-work-2023-reverse': 'bc-public-service-agency',
   // A remake, not the program's own lockup: its card keeps that label wherever it is reached from.
   'prepared-bc': 'sub-preparedbc',
   gcpe: 'government-communications-and-public-engagement',
@@ -926,6 +947,18 @@ const GRAPH_NODES = {
 const PARKS_ONE_OFFS = ['bc-parks', 'bc-parks-banner', 'bc-parks-best-place']
 /** BC Lands' badge, held by its own collection likewise. */
 const LANDS_ONE_OFFS = ['bc-lands']
+const BC_MARK_SPECIMEN_PROGRAMS = new Map(['public-service', 'welcome-bc', 'work-bc', 'stronger-bc']
+  .map((program) => [program, `specimens-${program}`]))
+const BC_MARK_GUIDE_SECTION = {
+  id: ENDORSED_2019.id,
+  label: ENDORSED_2019.name,
+  entries: collectedEntriesOf(ENDORSED_2019.id)
+}
+const BC_MARK_COLLECTED_ALIASES = [
+  'collected-office-of-the-premier',
+  'collected-government-communications-and-public-engagement',
+  `collected-${ENDORSED_2019.id}`
+]
 
 const withNode = (entry) => (GRAPH_NODES[entry.id] ? { ...entry, graphNode: GRAPH_NODES[entry.id] } : entry)
 
@@ -986,11 +1019,11 @@ export const GALLERY_COLLECTIONS = [
     graphNode: 'destination-bc',
     graphNodes: ['tourism-bc', 'destination-bc'],
     aliases: ['collected-tourism-bc', 'collected-destination-bc'],
-    cover: 'source-tourism-bc-tourism-british-columbia-2005-svg',
+    cover: 'source-destination-bc-destination-bc-svg',
     intro: 'The corporate identities of Tourism BC and Destination BC, with each organization’s own artwork and history. Their websites, campaigns and publications are connected in the Tourism initiative.',
     initiativeId: 'tourism',
     // Related custodians, not one corporation renamed: retain each body's own identity record.
-    entries: [...collectedEntriesOf('tourism-bc'), ...collectedEntriesOf('destination-bc')]
+    entries: [...collectedEntriesOf('destination-bc'), ...collectedEntriesOf('tourism-bc')]
   },
   {
     id: 'bc-hydro',
@@ -1053,7 +1086,8 @@ export const GALLERY_COLLECTIONS = [
             years: '1990–2016',
             label: 'BC hydro',
             note: 'From the supplied Illustrator artwork. Any part can be recoloured.'
-          }
+          },
+          ...collectedEntriesOf('bc-hydro').filter(({ id }) => id === 'bc-hydro-for-generations-2012')
         ]
       }),
       era({
@@ -1082,14 +1116,21 @@ export const GALLERY_COLLECTIONS = [
               `reproduce it here. ${NO_PERMISSION}`
           }
         },
-        entries: CURRENT_VARIANT_ORDER.map((variant) => ({
-          id: `bc-hydro-current-${variant}`,
+        entries: [
+          ['Signature with Power smart', ['colour', 'black', 'reverse']],
+          ['Without tagline', ['signage']],
+          ['Symbol', ['symbol', 'symbol-border']]
+        ].map(([label, variants]) => ({
+          id: `bc-hydro-current-${variants[0]}`,
           kind: 'hydro-mark',
           mark: 'current',
-          variant,
+          variant: variants[0],
+          label,
           years: '2016–present',
-          label: CURRENT_VARIANTS[variant].label,
-          note: CURRENT_VARIANTS[variant].hint
+          note: CURRENT_VARIANTS[variants[0]].hint,
+          editorVersions: variants.map((variant) => ({
+            id: `bc-hydro-current-${variant}`, variant, label: CURRENT_VARIANTS[variant].label
+          }))
         }))
       })
     ]
@@ -1122,7 +1163,10 @@ export const GALLERY_COLLECTIONS = [
     intro: 'The Insurance Corporation of British Columbia’s marks: a registry emblem of 1974, a half-disc ' +
       'beside its name by 1989, then the road badge: in a serif, a heavier sans, and since 2008 with ' +
       'rounded corners.',
-    eras: withMarks(COLLECTION_ERAS.icbc, ICBC_ENTRIES)
+    eras: withMarks(COLLECTION_ERAS.icbc, {
+      ...ICBC_ENTRIES,
+      'icbc-rounded': [{ ...ICBC_ENTRIES['icbc-rounded'][0], label: 'Rounded ICBC badge', editorVersions: ICBC_ENTRIES['icbc-rounded'] }]
+    })
   },
   {
     id: 'bclc',
@@ -1231,7 +1275,8 @@ export const GALLERY_COLLECTIONS = [
     intro: 'The Department of Recreation and Conservation’s marks, from its annual reports: an engraved dogwood ' +
       'oval in 1970; then, from 1971 to 1973, five square symbols, one for the department and one each for ' +
       'Fish and Wildlife, Provincial Parks, the Provincial Museum and Commercial Fisheries; and two emblems ' +
-      'that join them in 1973. All are reconstructions, redrawn from the reports’ scans. The squares open in ' +
+      'that join them in 1973. The dogwood oval opens in a green-and-cream reconstruction. The Fish and Wildlife ' +
+      'oval opens in the supplied reconstruction, with white and cream-on-orange versions. The squares open in ' +
       'black, the reports’ two greens and white. The package’s report dividers, cover blocks, handbook panels ' +
       'and the 22 park signs proposed in 1971 are kept with it in artwork/recreation-conservation.',
     eras: withMarks(COLLECTION_ERAS['recreation-conservation'], {
@@ -1350,13 +1395,17 @@ export const GALLERY_COLLECTIONS = [
     body: 'The Province’s one-off marks',
     years: '2005–present',
     cover: 'welcome-bc',
-    // Former collection IDs still resolve to the shelf that holds their respective specimens.
-    aliases: ['collected-office-of-the-premier', 'collected-government-communications-and-public-engagement'],
-    intro: 'Names set beside the BC mark, each drawn once for one body, program or campaign, following ' +
-      'no pattern that generalises, so they sit here rather than in the generator, which is built on ' +
-      'patterns. Open one to recolour it.',
+    aliases: [...BC_MARK_COLLECTED_ALIASES, ...BC_MARK_SPECIMEN_PROGRAMS.values()],
+    intro: 'The June 2019 guidelines show how to pair program wordmarks with the BC mark. ' +
+      'The collection also holds signatures created for individual bodies, programs and campaigns.',
+    artworkSections: [BC_MARK_GUIDE_SECTION],
     entries: [
-      ...ONE_OFFS.filter((entry) => !PARKS_ONE_OFFS.includes(entry.id) && !LANDS_ONE_OFFS.includes(entry.id)).map(provincial),
+      ...BC_MARK_GUIDE_SECTION.entries,
+      ...ONE_OFFS.filter((entry) => !PARKS_ONE_OFFS.includes(entry.id) && !LANDS_ONE_OFFS.includes(entry.id))
+        .flatMap((entry) => BC_MARK_SPECIMEN_PROGRAMS.has(entry.id)
+          ? [provincial(entry), ...specimenEntriesOf(entry.id, entry.id).map(withNode)]
+          : [provincial(entry)]),
+      ...specimenEntriesOf('bc-150-years'),
       ...collectedEntriesOf('government-communications-and-public-engagement'),
       // A service wordmark in the BC mark's Garamond, held as published.
       ...specimenEntriesOf('bceid'),
@@ -1371,15 +1420,36 @@ export const GALLERY_COLLECTIONS = [
 
 // Collections recovered by the acquisition pass use source files directly. Existing researched
 // histories remain authoritative for bodies that already have a collection.
-// The Office of the Premier's letterhead is shelved with the one-off marks (collection "bc-mark").
-GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) => !['collected-office-of-the-premier', 'collected-government-communications-and-public-engagement'].includes(candidate.id) &&
+GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) => !BC_MARK_COLLECTED_ALIASES.includes(candidate.id) &&
   !GALLERY_COLLECTIONS.some((held) => nodesOf(held).includes(candidate.graphNode))))
 // WorkSafeBC's specimens are folded into its collection above; the one-off programs keep theirs.
 // Travel Industry opens in Departmental Logos and keeps its own register collection.
-// A program's published specimens belong to the body its one-off stands for (WorkBC's to WorkBC, Where
-// ideas work to the Public Service Agency), so that body's panel finds its original files too.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-health-program-signatures', 'specimens-worksafebc', 'specimens-bcts', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc', 'specimens-bc-environment', 'specimens-tourism-recreation-culture', 'specimens-superhost'].includes(collection.id))
+// A program's published specimens belong to the body its one-off stands for, so the body's panel
+// finds the original files too.
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-health-program-signatures', 'specimens-worksafebc', 'specimens-bcts', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc', 'specimens-bc-environment', 'specimens-tourism-recreation-culture', 'specimens-superhost', 'specimens-bc-150-years', ...BC_MARK_SPECIMEN_PROGRAMS.values()].includes(collection.id))
   .map((collection) => {
+    if (collection.id === 'specimens-ecosystems-at-risk') {
+      return { ...collection, label: 'Ecosystems at Risk', shelf: 'provincial-programs',
+        body: 'B.C. Conservation Data Centre brochure series',
+        cover: 'ecosystems-at-risk-badge', years: 'Seen in 1993 and 2006',
+        intro: 'The B.C. Conservation Data Centre used this tilted badge on public brochures about threatened habitats. The brochures explained where each ecosystem occurs, what lives there, why it is vulnerable and how people can help protect it. The badge appears on Garry Oak Ecosystems in October 1993 and Estuaries in British Columbia in March 2006.' }
+    }
+    if (collection.id === 'specimens-firesmart-bc') {
+      return { ...collection, label: 'FireSmart BC', fileCollection: false, shelf: 'initiatives', initiativeId: 'firesmart-bc',
+        entries: collection.entries.map((entry) => ({ ...entry, owner: 'firesmart-bc' })),
+        cover: 'firesmart-bc-signature', years: 'Artwork documented in July 2025',
+        body: 'BC FireSmart Committee',
+        intro: 'The provincial signature, four program and event identities, and Ember the FireSmart Fox, from the second edition of the FireSmart BC Brand Guidelines.' }
+    }
+    if (collection.id === 'specimens-buy-bc') {
+      return { ...collection, label: 'Buy BC', fileCollection: false, graphNode: 'sub-buy-bc', body: 'Provincial food and beverage marketing program',
+        shelf: 'initiatives', initiativeId: 'buy-bc', cover: 'buy-bc-vertical-colour',
+        years: 'Artwork documented in 2023',
+        intro: 'The Buy BC graphic standards show the program name below or beside its landscape emblem. The emblem also appears on its own as a digital icon.' }
+    }
+    if (collection.id === 'specimens-pacific-gateway') {
+      return { ...collection, shelf: 'initiatives', initiativeId: 'pacific-gateway', showInGalleryIndex: false }
+    }
     const node = GRAPH_NODES[collection.id.replace(/^specimens-/, '')]
     return node ? { ...collection, entries: collection.entries.map((entry) => ({ ...entry, graphNode: entry.graphNode ?? node })) } : collection
   }))
@@ -1404,6 +1474,7 @@ const PLACED = {
     label: 'JIBC',
     body: 'Current public post-secondary institute',
     years: '1978–present',
+    cover: 'jibc-logo',
     intro: 'The Justice Institute of British Columbia, established in 1978 to train police, corrections, sheriffs, ' +
       'paramedics, firefighters and emergency managers. Its blue griffin shield appears on letterhead in 2007 and on its 2008–09 and 2009–10 accountability reports. JIBC unveiled the eagle in September 2022. Its badge monogram also appears on shoulder patches.'
   },
@@ -1411,6 +1482,7 @@ const PLACED = {
     label: 'BC OnLine',
     body: 'The Province’s online registry access service',
     years: '1989–present',
+    cover: 'bc-online-2011-logo',
     intro: 'BC OnLine, created in July 1989 and run at first by BC Systems, gives professional users online access to ' +
       'land titles, personal property, company and other registries. Its earlier logo (a hand reaching through a ' +
       'screen) is here; its later logo on the BC mark is under “On the BC mark”.'
@@ -1420,6 +1492,7 @@ const PLACED = {
     label: 'Shared Services BC',
     body: 'The government’s shared-services organization, as Solutions BC and Shared Services BC',
     years: '2003–?',
+    cover: 'shared-services-bc-2015-rebuilt',
     intro: 'Solutions BC, launched on 1 April 2003 in the Ministry of Management Services, gathered the government’s ' +
       'common IT, payroll, accounting and procurement services. It was Shared Services BC by February 2006, and took in ' +
       'the former BC Buildings Corporation’s accommodation services that April. The name is last seen in 2015.'
@@ -1428,6 +1501,7 @@ const PLACED = {
     label: 'BC Cancer',
     body: 'Agency of the Provincial Health Services Authority',
     years: '1974–present',
+    cover: 'bc-cancer-phsa',
     intro: 'The BC Cancer Agency’s circular emblem and logo, seen from 2000 to 2015, and the stacked BC / CAN / CER of ' +
       'its identity as BC Cancer since November 2017: for BC Cancer, its Research Centre and Institute, and the BC Cancer ' +
       'Foundation, its fundraising charity, which shares the identity and has a newer logo of its own.'
@@ -1450,15 +1524,16 @@ const ENTRY_OWNERS = {
 for (const [node, place] of Object.entries(PLACED)) {
   const held = SPECIMEN_COLLECTIONS.find((collection) => collection.id === `specimens-${node}`)
   if (!held) continue
+  const cover = place.cover ?? held.entries[0]?.id
   GALLERY_COLLECTIONS.push({
     ...held,
     ...place,
     id: `collected-${node}`,
     shelf: 'bodies',
     graphNode: place.graphNode === undefined ? node : place.graphNode,
-    cover: held.entries[0]?.id,
+    cover,
     // A body's files, not a program's: they sit on no timeline.
-    entries: held.entries.map(({ timeline, ...entry }) => ({ ...entry, owner: ENTRY_OWNERS[entry.id] ?? node }))
+    entries: coverFirst(held.entries, cover).map(({ timeline, ...entry }) => ({ ...entry, owner: ENTRY_OWNERS[entry.id] ?? node }))
   })
 }
 
@@ -1486,7 +1561,7 @@ export const collectionById = (id) => GALLERY_COLLECTIONS.find((collection) => c
 export const entriesOfNode = (collection, node) => entriesOf(collection)
   .filter((entry) => (entry.owner ?? entry.graphNode ?? collection.graphNode) === node)
 
-// ── Programs, services and subsidiaries, under their organization ─────────────────────────────────
+// ── Related collections, under an organization's page ────────────────────────────────────────────
 //
 // A service brand, program or subsidiary with logos of its own keeps its own collection, but is
 // shelved under the organization it belongs to rather than beside it as a body of its own: the
@@ -1504,11 +1579,18 @@ export const FOLDED_UNDER = [
       'collected-british-columbia-rapid-transit-company', 'collected-west-coast-express', 'collected-metro-vancouver-transit-police']
   },
   { parent: 'bc-transit', children: ['collected-umo'] },
+  { parent: 'bc-ferries', children: ['collected-bc-ferries-travel'] },
   { parent: 'bc-hydro', children: ['collected-power-smart', 'collected-sub-powerex'] },
+  { parent: 'collected-bc-housing', children: ['collected-sub-bc-housing-licensing-and-consumer-services'] },
   { parent: 'bclc', children: ['collected-gamesense', 'collected-sub-playnow'] },
-  { parent: 'collected-liquor-distribution-branch', children: ['collected-sub-bcliquor', 'collected-bc-signature-liquor-store', 'collected-sub-bc-cannabis-stores', 'collected-bc-cannabis-wholesale', 'collected-ldb-wholesale'] },
+  {
+    parent: LIQUOR_DISTRIBUTION_COLLECTION,
+    children: ['collected-sub-bcliquor', 'collected-bc-signature-liquor-store',
+      'collected-sub-bc-cannabis-stores', 'collected-bc-cannabis-wholesale', 'collected-ldb-wholesale']
+  },
   { parent: 'collected-land-title-and-survey-authority', children: ['collected-landsure-systems'] },
   { parent: 'collected-metro-vancouver', children: ['collected-metro-vancouver-regional-parks'] },
+  { parent: 'collected-sub-british-columbia-geological-survey', children: ['collected-bcgs-mapplace', 'collected-bcgs-minfile'] },
   {
     parent: 'collected-provincial-health-services-authority',
     children: ['collected-sub-bc-childrens-hospital', 'collected-sub-bc-womens-hospital', 'collected-sub-bc-centre-for-disease-control', 'collected-sub-bc-cancer', 'collected-bc-emergency-health-services']
@@ -1563,6 +1645,7 @@ export const findGalleryEntry = (id) => GALLERY_COLLECTIONS
   .flatMap(entriesOf)
   .find((entry) => entry.id === id || entry.aliases?.includes(id) ||
     entry.versions?.some((version) => version.id === id) ||
+    entry.editorVersions?.some((version) => version.id === id) ||
     entry.paletteGroup?.palettes.some((palette) => palette.sourceIds?.includes(id)))
 
 /**

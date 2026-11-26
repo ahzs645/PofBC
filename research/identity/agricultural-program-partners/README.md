@@ -16,16 +16,16 @@ The two signatures occur together on the funding acknowledgements page of *Summa
 
 ## Artwork
 
-Gallery asset records give the source URL, page or attachment, edition, SHA-256 and extraction method for each holding. ARDCorp’s two PNGs are byte-for-byte copies of its original media attachments. The 2021 Council report prints the full-colour version on p. 18.
+Both gallery covers use full-colour vector paths from the funding acknowledgements on PDF p. 2 of the BC Forage Council’s *A Guide to On-Farm Demonstration Research*, case study 1. The PDF metadata dates the specimens to 2017. The gallery keeps the PNG specimens as selectable versions. [Case study](https://bcforagecouncil.ca/wp-content/uploads/2017/11/fi03-on-farm-demonstration-research-case-study-1.pdf#page=2)
 
 | IAF specimen | Source and extraction |
 | --- | --- |
 | Stacked leaves, 2010 | 2010 report, cover. Preserve the black and white figure paths above the name and exclude the rectangular green cover panel. [Report](https://iafbc.ca/wp-content/uploads/2026/07/IAFBC_2010_AR_English_web.pdf) |
-| Horizontal, full colour | Water guide, PDF p. 2, image object 4 (1247 × 156). Crop the single 192 × 96 signature directly from the embedded raster. The horizontal layout includes all four lines of type. [Guide](https://www.bcclimatechangeadaptation.ca/app/uploads/BF01-Resource-Summary-Water-Management-Resources-Agriculture-BC-2021.pdf) |
+| Horizontal, full colour | Isolate the 52 native vector paths from the 2017 case study. The 2021 water guide specimen is a 192 × 96 crop from embedded image object 4 on PDF p. 2. Both include all four lines of type. [Case study](https://bcforagecouncil.ca/wp-content/uploads/2017/11/fi03-on-farm-demonstration-research-case-study-1.pdf#page=2) · [Water guide](https://www.bcclimatechangeadaptation.ca/app/uploads/BF01-Resource-Summary-Water-Management-Resources-Agriculture-BC-2021.pdf) |
 | Horizontal, white | 2019 IAF report front cover. Preserve all original letter and leaf paths. This documents the layout by 2019. [Report](https://iafbc.ca/wp-content/uploads/2026/07/IAF-2019-AnnualReport_Web_Updated_compressed.pdf) |
 | Initials and wordmark | The water guide’s replacement cover has the two-green signature. The gallery preserves the 35 coloured paths from that published specimen. IAF separately provides guidelines for the current identity. [Guide](https://www.bcclimatechangeadaptation.ca/app/uploads/BF01-Resource-Summary-Water-Management-Resources-Agriculture-BC-2021.pdf) · [Logo use guidelines](https://iafbc.ca/wp-content/uploads/2026/08/IAF-Logo-Use-Guidelines.pdf) |
 | 25 years | The 2021 IAF report cover combines the white signature with an anniversary device. All 53 paths are preserved as one design. [Report](https://iafbc.ca/wp-content/uploads/2026/07/Annual-Report-2021-Final_Web.pdf) |
-| ARDCorp field furrows | Both originals are 917 × 555, with transparency. The gallery records attachment publication dates. The media library establishes a white version by November 2017 and a colour version in September 2018. The creation date and designer remain open. [Colour](https://ardcorp.ca/wp-content/uploads/2018/09/ARDCORP_Logo_CYMK.png) · [Reversed](https://ardcorp.ca/wp-content/uploads/2017/11/ARDCORP_Logo_REV.png) |
+| ARDCorp field furrows | Isolate the 54 native vector paths from the 2017 case study. Both 917 × 555 PNGs are byte-for-byte copies of ARDCorp’s transparent media attachments. The full-colour mark also appears on p. 18 of the Council’s 2021 report. The creation date and designer remain open. [Case study](https://bcforagecouncil.ca/wp-content/uploads/2017/11/fi03-on-farm-demonstration-research-case-study-1.pdf#page=2) · [Colour attachment](https://ardcorp.ca/wp-content/uploads/2018/09/ARDCORP_Logo_CYMK.png) · [Reversed attachment](https://ardcorp.ca/wp-content/uploads/2017/11/ARDCORP_Logo_REV.png) |
 
 ## Coverage audit
 

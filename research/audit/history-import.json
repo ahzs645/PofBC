@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 2552,
+    "accepted": 2553,
     "unresolved_unmapped": 168,
     "intentionally_excluded": 4,
     "conflicting": 1
@@ -23703,6 +23703,30 @@
       }
     },
     {
+      "origin": "bodies.json#provincial-apprenticeship-board",
+      "disposition": "accepted",
+      "input": {
+        "id": "provincial-apprenticeship-board",
+        "name": "Provincial Apprenticeship Board",
+        "kind": "agency",
+        "established": "1978",
+        "ended": "1997-11-28",
+        "endedMeaning": "The Industry Training and Apprenticeship Act replaced the Apprenticeship Act.",
+        "becameId": "industry-training-and-apprenticeship-commission",
+        "predecessorIds": [],
+        "responsible": [],
+        "description": "The 1977 legislation provided for a provincial board to oversee apprenticeship. Its responsibilities included training standards and certification. ITAC replaced the board in 1997.",
+        "source": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-2008-11-01-major-renovation-trades-training-british-columbia.pdf#page=33",
+        "otherSources": [
+          "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/2054057487",
+          "https://www.bclaws.gov.bc.ca/civix/document/id/rs/rs/96016_01"
+        ],
+        "establishedSource": "https://bcombudsperson.ca/assets/media/Public-Report-No-51-In-The-Public-Interest-Protecting-Students-Through-Effective-Oversight-of-Private-Career-Training-Institutions.pdf#page=179",
+        "establishedLocator": "Printed page 173 (PDF page 179), 1977–1990.",
+        "establishedMeaning": "Year the 1977 Apprenticeship and Training Development Act came into force. Section 10 provided for appointment of the board."
+      }
+    },
+    {
       "origin": "bodies.json#industry-training-and-apprenticeship-commission",
       "disposition": "accepted",
       "input": {
@@ -23710,16 +23734,27 @@
         "name": "Industry Training and Apprenticeship Commission",
         "shortName": "ITAC",
         "kind": "agency",
-        "established": "1997-06-23",
-        "ended": "2003",
+        "established": "1997-11-28",
+        "ended": "2004-01-02",
         "becameId": "industry-training-authority",
-        "predecessorIds": [],
+        "predecessorIds": [
+          "provincial-apprenticeship-board"
+        ],
         "responsible": [],
-        "description": "Arm's-length commission of business, labour, education and government, announced 23 June 1997 to govern industry training and apprenticeship; dissolved in 2003.",
+        "description": "Announced June 23, 1997 and established November 28, ITAC replaced the Provincial Apprenticeship Board. The Province announced its wind-up on January 17, 2002. Advanced Education managed trades training during the transition. The transitional board signed the final accounts on April 8, 2004.",
         "source": "https://archive.news.gov.bc.ca/releases/archive/pre2001/1997/0614.asp",
         "otherSources": [
-          "https://en.wikipedia.org/wiki/SkilledTradesBC"
-        ]
+          "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf#page=7"
+        ],
+        "establishedSource": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf#page=7",
+        "establishedLocator": "Note 1, The Commission",
+        "endedMeaning": "Statutory repeal effective January 2, 2004. The final accounting period ended January 1.",
+        "operationalEnd": {
+          "date": "2002",
+          "meaning": "The Ministry of Advanced Education took over management of trades training during the transition to the Industry Training Authority.",
+          "source": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-2008-11-01-major-renovation-trades-training-british-columbia.pdf#page=33",
+          "locator": "Exhibit 4"
+        }
       }
     },
     {
@@ -24044,15 +24079,18 @@
         "name": "Industry Training Authority",
         "shortName": "ITA",
         "kind": "agency",
-        "established": "2004",
-        "ended": "2022-12",
+        "established": "2004-01-02",
+        "ended": "2022-12-01",
         "becameId": "skilledtradesbc",
         "predecessorIds": [
           "industry-training-and-apprenticeship-commission"
         ],
         "responsible": [],
         "description": "Agency established in 2004 to replace ITAC after mandatory trades certification was abolished in 2003; renamed SkilledTradesBC in December 2022.",
-        "source": "https://en.wikipedia.org/wiki/SkilledTradesBC"
+        "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf#page=7",
+        "otherSources": [
+          "https://news.gov.bc.ca/releases/2022AEST0074-001775"
+        ]
       }
     },
     {
@@ -24377,7 +24415,7 @@
         "id": "skilledtradesbc",
         "name": "SkilledTradesBC",
         "kind": "agency",
-        "established": "2022-12",
+        "established": "2022-12-01",
         "ended": null,
         "becameId": null,
         "predecessorIds": [
@@ -24385,7 +24423,7 @@
         ],
         "responsible": [],
         "description": "The Industry Training Authority renamed in December 2022 as the government reintroduced mandatory skilled-trades certification.",
-        "source": "https://en.wikipedia.org/wiki/SkilledTradesBC"
+        "source": "https://news.gov.bc.ca/releases/2022AEST0074-001775"
       }
     },
     {
@@ -35276,7 +35314,7 @@
       "disposition": "accepted",
       "input": {
         "ministry": "Ministry of Education, Skills and Training",
-        "from": "1997-06-23",
+        "from": "1997-11-28",
         "to": "1998-02-18",
         "source": "https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1272_1997",
         "note": "Commission appointments 1272/1997 and chair 0090/1998 were recommended by the Minister of Education, Skills and Training."
@@ -60603,28 +60641,117 @@
         "official_url": "https://www2.gov.bc.ca/gov/content/industry/mineral-exploration-mining/british-columbia-geological-survey",
         "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/mining",
         "description": "Provides geoscience data, surveys and mineral and coal resource information for B.C.",
-        "established": null,
+        "established": {
+          "date": "1895-02-21",
+          "precision": "day",
+          "meaning": "The Bureau of Mines Act, 1895 established the Bureau, the predecessor from which the Survey dates its history. Section 6 provided for a Provincial Mineralogist to lead it.",
+          "evidence": "statute",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1221491311",
+          "locator": "Bureau of Mines Act, 1895, S.B.C. 1895, c. 3, ss. 3–7.",
+          "checked": "2026-11-25"
+        },
         "ended": null,
         "first_observed": {
-          "date": "2010",
+          "date": "1989",
           "precision": "year",
-          "meaning": "Named survey produces accessible geological data. Geoscience BC is mentioned separately and must not be conflated.",
-          "evidence": "service_plan",
-          "source_id": "R3F-DOC-063",
-          "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/empr.pdf",
-          "locator": "PDF p. 5 (one-based)",
-          "checked": "2026-10-21"
+          "meaning": "The full name British Columbia Geological Survey encircles the seal. The same page gives the administrative name Geological Survey Branch.",
+          "evidence": "annual_report",
+          "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/InformationCircular/BCGS_IC1989-01.pdf",
+          "locator": "Information Circular 1989-1, PDF page 1.",
+          "checked": "2026-11-25"
         },
-        "names": [],
+        "names": [
+          {
+            "name": "Provincial Bureau of Mines",
+            "observed_on": "1896-06",
+            "coverage": "observation_only",
+            "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/Bulletin/BCGS_B1896-1.pdf",
+            "locator": "Bulletin No. 1, title page, June 1896."
+          },
+          {
+            "name": "Mineralogical Branch",
+            "observed_on": "1939",
+            "coverage": "observation_only",
+            "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/Miscellaneous/BCGS_MP-77.pdf",
+            "locator": "Chapter 7, printed pp. 49–50, on centralization in Victoria."
+          },
+          {
+            "name": "Geological Division",
+            "observed_on": "1973",
+            "coverage": "observation_only",
+            "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1973.pdf#page=58",
+            "locator": "1973 annual report, printed page A58, describing the renaming."
+          },
+          {
+            "name": "Geological Branch",
+            "observed_on": "1981-12-31",
+            "coverage": "observation_only",
+            "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1981.pdf#page=6",
+            "locator": "Organization chart dated December 31, 1981, PDF page 6."
+          },
+          {
+            "name": "Geological Survey Branch",
+            "observed_on": "1986",
+            "coverage": "observation_only",
+            "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/Miscellaneous/BCGS_MP-77.pdf",
+            "locator": "Chapter 9, printed p. 95, explicitly dating the renaming."
+          }
+        ],
         "parents": [],
         "relations": [],
-        "research_events": [],
+        "research_events": [
+          {
+            "type": "operational",
+            "date": "1896-01",
+            "precision": "month",
+            "summary": "Carlyle and Carmichael began organizing the Bureau of Mines.",
+            "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1896.pdf",
+            "locator": "Bureau of Mines report, opening paragraph.",
+            "checked": "2026-11-25"
+          },
+          {
+            "type": "enacted",
+            "date": "1917",
+            "precision": "year",
+            "summary": "The Mineral Survey and Development Act provided for a survey in six districts alongside the Bureau.",
+            "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1088300592",
+            "locator": "Part I, sections 4–6.",
+            "checked": "2026-11-25"
+          },
+          {
+            "type": "in_force",
+            "date": "1938-04-01",
+            "precision": "day",
+            "summary": "The Department of Mines Act took effect and repealed the earlier district survey legislation.",
+            "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/527244410",
+            "locator": "S.B.C. 1937, c. 47, sections 17–18.",
+            "checked": "2026-11-25"
+          },
+          {
+            "type": "renamed",
+            "date": "1986",
+            "precision": "year",
+            "summary": "The Geological Branch took the name Geological Survey Branch.",
+            "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/Miscellaneous/BCGS_MP-77.pdf",
+            "locator": "Chapter 9, printed page 95.",
+            "checked": "2026-11-25"
+          },
+          {
+            "type": "renamed",
+            "date": "1973",
+            "precision": "year",
+            "summary": "The department renamed its Mineralogical Branch the Geological Division.",
+            "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1973.pdf#page=58",
+            "locator": "1973 annual report, page A58.",
+            "checked": "2026-11-25"
+          }
+        ],
         "date_claims": [],
         "legal_basis": null,
         "evidence_status": "documented_partial",
-        "note": "Additive research; held dates are not removed. Automated searches are logged separately from source passages actually reviewed.",
+        "note": "The Bureau of Mines is the founding predecessor. Departmental annual reporting began in 1874. The 1917 Mineral Survey operated alongside the Bureau. The 1973 annual report records the renaming of the Mineralogical Branch. The 1980 report still names the Geological Division and the December 1981 chart shows the Geological Branch. The precise date of the latter change remains open.",
         "review": {
-          "checked": "2026-10-21",
+          "checked": "2026-11-25",
           "sources_checked": [
             {
               "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/empr.pdf",
@@ -60641,12 +60768,11 @@
             }
           ],
           "unresolved_fields": [
-            "established",
             "complete_name_history",
             "complete_parent_history",
             "legal_basis"
           ],
-          "scope": "340 official service-plan and annual-report PDFs plus targeted primary sources; prior Estimates checkpoint package excluded as new work.",
+          "scope": "340 official service-plan and annual-report PDFs plus targeted primary sources; prior Estimates checkpoint package excluded as new work. Supplemented with the founding acts, Survey publications and the centennial history on 2026-11-25.",
           "by": "OpenAI research assistant",
           "full_history_complete": false
         }

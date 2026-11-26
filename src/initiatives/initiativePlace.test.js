@@ -59,3 +59,10 @@ test('record names use query encoding without carrying hash escapes into the ID'
   assert.equal(readInitiativePlace(url.href).record, 'hello bc')
   assert.equal(url.searchParams.get('record'), 'hello bc')
 })
+
+test('a shared guide page survives a direct visit and is cleared when leaving the reader', () => {
+  const base = 'https://example.org/PofBC/'
+  const url = initiativePlaceUrl(base, { initiative: 'tourism', section: 'brand-guide', page: 64 })
+  assert.equal(readInitiativePlace(url.href).page, '64')
+  assert.equal(initiativePlaceUrl(url, { initiative: 'tourism', section: 'marks' }).searchParams.has('page'), false)
+})

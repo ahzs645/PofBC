@@ -180,7 +180,7 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
             </label>
           ))}
           <p className="shelf-tools__count" role="status">
-            {narrowed ? `${found.length} of ${order.length}` : order.length} {found.length === 1 && narrowed ? noun : `${noun}s`}
+            {narrowed ? `${found.length} of ${order.length}` : order.length} {found.length === 1 ? noun : `${noun}s`}
             {narrowed && <> · <button type="button" className="shelf-tools__clear" onClick={clear}>Clear filters</button></>}
           </p>
         </div>

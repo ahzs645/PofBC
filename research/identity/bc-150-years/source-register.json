@@ -1,0 +1,43 @@
+{
+  "researchDate": "2026-11-25",
+  "program": "bc-150-years",
+  "summary": "The blue-and-gold 2008 anniversary mark with pale gold rays and the provincial tagline, extracted from the original back-cover vectors.",
+  "assets": [
+    {
+      "id": "bc-150-years",
+      "label": "BC 150 Years",
+      "file": "identity-collected/bc-150-years/bc-150-years.svg",
+      "format": "svg",
+      "isVector": true,
+      "publisher": "Ministry of Energy, Mines and Petroleum Resources, Province of British Columbia",
+      "sourcePage": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/electricity-alternative-energy/energy-efficiency/eebs-2008-web.pdf#page=28",
+      "sourceUrl": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/electricity-alternative-energy/energy-efficiency/eebs-2008-web.pdf#page=28",
+      "sourceLocator": "Back cover, above the contact block at lower left, PDF page 28 (page 29 in the Legislative Library copy)",
+      "sourceFile": "Energy Efficient Buildings Strategy: More Action, Less Energy",
+      "sourceDate": "2008",
+      "observedDate": "2026-11-25",
+      "role": "historical",
+      "evidenceType": "native-pdf-vector-extraction",
+      "notes": "The 2008 anniversary mark sets “BC” and “YEARS” in blue around a gold “150”, with a pale gold sunburst and “The Best Place on Earth” below.",
+      "fidelityNote": "The SVG retains the back cover’s original lettering, numerals and sunburst paths in their published blue and gold inks. The mark lies over a separate green image on the cover.",
+      "extraction": {
+        "pdfPage": 28,
+        "pdfBounds": [31.8, 188.494, 192.05, 259.8],
+        "method": "Isolated the 102 filled paths in the back cover’s placed graphic using pikepdf. Converted the PDF path commands directly to SVG with the original paint order, winding and cubic control points. Used the embedded sRGB fills, rounded to 8-bit RGB. The PDF content-stream instructions for this graphic are identical in the Legislative Library and ministry copies."
+      },
+      "alsoSeen": [
+        {
+          "label": "Balanced Budget 2008 Highlights, front cover",
+          "source": "https://www.bcbudget.gov.bc.ca/2008/highlights/2008_Highlights.pdf"
+        }
+      ],
+      "sha256": "6b6b1f0f7529a7da9d60c792cb25656a148b0d8bfb6269f55304001f8733f562",
+      "bytes": 77583,
+      "verification": {
+        "genuineVectorVerified": true,
+        "embeddedImages": 0,
+        "textElements": 0
+      }
+    }
+  ]
+}

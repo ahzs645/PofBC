@@ -145,6 +145,10 @@ export const filterIdentityCoverage = (subjects, { query = '', family = '', stat
 // A relation is recorded once, on the subject it describes. Its other end shows the inverse, so a
 // parent lists what points to it. Membership of a family is browsing context, not a relation.
 export const INVERSE_RELATION_LABELS = {
+  'co-publisher-with': 'Co-publisher with',
+  'renamed-to': 'Renamed from',
+  'amalgamated-into': 'Amalgamated with',
+  'charitable-partner-of': 'Official charitable partner ·',
   'related-to': 'Related to',
   'part-of': 'Includes',
   'received-operations-from': 'Operations transferred to',
@@ -153,6 +157,7 @@ export const INVERSE_RELATION_LABELS = {
   'owned-by': 'Owns',
   'shareholder-of': 'Voting share held by',
   'operated-by': 'Operates',
+  'listed-by': '2024–25 sector roster',
   'used-by': 'Uses',
   'predecessor-of': 'Successor of',
   'campaigned-for': 'Campaign led by',

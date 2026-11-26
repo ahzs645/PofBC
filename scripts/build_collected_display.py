@@ -381,6 +381,9 @@ def build_vector(asset, settings, work):
     for theme, (name, content, recoloured) in outputs.items():
         (PUBLIC / OUT_DIR / name).write_text(content, encoding="utf-8")
         entry[theme] = {"file": f"{OUT_DIR}/{name}", "aspect": round(aspect, 4), "recoloured": recoloured}
+        if asset.get("placement"):
+            # Placement measures ink height before the half-pixel anti-aliasing border.
+            entry[theme]["inkInset"] = round(pad / box[3], 8)
         # A logo whose parts lie over one another so that no recolouring keeps them apart is shown
         # in its own colours on a light plate of its own on that ground.
         if settings.get(theme) == "plate":
@@ -393,8 +396,8 @@ def build_vector(asset, settings, work):
 
 
 def collected_assets():
-    script = ("import { allCollectedAssets } from './src/gallery/collectedBodies.js';"
-              "console.log(JSON.stringify(allCollectedAssets()))")
+    script = ("import { allCollectedDisplayAssets } from './src/gallery/collectedBodies.js';"
+              "console.log(JSON.stringify(allCollectedDisplayAssets()))")
     result = subprocess.run(["node", "--input-type=module", "-e", script], cwd=ROOT, capture_output=True, text=True, check=True)
     return json.loads(result.stdout)
 
@@ -406,6 +409,9 @@ def main():
     global DEBUG
     DEBUG = "--debug" in sys.argv
     only = set(sys.argv[1:]) - {"--debug"}
+    if not only or any(asset_id.startswith("cleanbc-") for asset_id in only):
+        subprocess.run(["node", str(ROOT / "scripts/build-cleanbc-artwork.mjs")], cwd=ROOT, check=True)
+    subprocess.run(["node", str(ROOT / "scripts/build-gallery-vector-variants.mjs")], cwd=ROOT, check=True)
     assets = collected_assets()
     unknown = set(OVERRIDES) - {a["id"] for a in assets} - {"_comment"}
     if unknown:
@@ -421,6 +427,10 @@ def main():
             if only and asset["id"] not in only:
                 continue
             settings = OVERRIDES.get(asset["id"], {})
+            # A publisher may supply distinct artwork for each ground. Keep the source inks
+            # intact on their intended ground while allowing per-file overrides.
+            if ground := asset.get("sourceGround"):
+                settings = {ground: False, **settings}
             # Every SVG and EPS, including an SVG that embeds a photograph (Innovate BC's disc).
             if asset["format"] not in ("svg", "eps") or settings.get("skip"):
                 continue

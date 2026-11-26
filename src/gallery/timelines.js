@@ -1,3 +1,7 @@
+import { fireSmartGuide, fireSmartDesigns } from './fireSmart.js'
+import { strongerBCGuide, strongerBCMatrix } from './strongerBC.js'
+import { buyBCStandards } from './buyBC.js'
+
 // The history around each of the Province's one-off marks.
 //
 // A one-off is one mark, but the body or campaign it names seldom had only one. WorkBC was a
@@ -466,8 +470,39 @@ export const TIMELINES = {
     ]
   },
 
+  'firesmart-bc': {
+    label: 'FireSmart BC', initiativeId: 'firesmart-bc',
+    eras: [{
+      id: 'firesmart-bc-2025-guide', status: 'held', years: 'July 2025', label: 'The FireSmart BC brand family',
+      marks: fireSmartDesigns.map(({ key }) => 'firesmart-bc-' + key),
+      note: 'The guide shows Ember in four poses and pairs positive and reverse artwork for the provincial signature and each of the four sub-brands.',
+      applicability: { kind: 'dated_specimen', years: 'July 2025', note: 'The date identifies this edition of the guide. The individual marks have their own histories.' },
+      sources: [source('FireSmart BC Brand Guidelines', fireSmartGuide, 'PDF pages 5, 13, 16–17, 19–20 and 22')]
+    }]
+  },
+
+  'buy-bc': {
+    label: 'Buy BC', initiativeId: 'buy-bc',
+    eras: [
+      {
+        id: 'buy-bc-early-graphics', status: 'sought', years: '2002', label: 'Graphics licensed to the BC Agriculture Council',
+        note: 'The handover agreement identifies Buy BC graphics. A dated specimen would establish the lettering and layout used at the time.',
+        applicability: { kind: 'first_observation', years: '2002', note: 'The date belongs to the licensing announcement.' },
+        sources: [source('Ministry of Agriculture, Food and Fisheries, September 21, 2002', 'https://archive.news.gov.bc.ca/releases/archive/2001-2005/2002AGF0019-000822.htm', 'Five-year licence for the Buy BC graphics')]
+      },
+      {
+        id: 'buy-bc-standards', status: 'held', years: 'Documented in 2023', label: 'The landscape emblem and buyBC wordmark',
+        marks: ['buy-bc-vertical-colour', 'buy-bc-horizontal-colour', 'buy-bc-icon-colour'],
+        note: 'The guide places the lettering below or beside the emblem. For small digital icons it uses the emblem alone.',
+        applicability: { kind: 'dated_specimen', years: '2023', note: 'The PDF creation date documents this copy of the graphic standards. The design’s first use remains undated.' },
+        sources: [source('Buy BC Graphic Standards', buyBCStandards, 'PDF pages 3–4 and 8')]
+      }
+    ]
+  },
+
   'pacific-gateway': {
     label: 'Canada’s Pacific Gateway',
+    initiativeId: 'pacific-gateway',
     eras: [
       {
         id: 'gateway-2008',
@@ -536,20 +571,20 @@ export const TIMELINES = {
         id: 'strongerbc-2022',
         status: 'held',
         marks: [
-          'vector-BCID_StrongerBC_RGB_pos', 'vector-BCID_StrongerBC_RGB_rev', 'vector-BCID_StrongerBC_Solid_pos', 'vector-BCID_StrongerBC_Solid_rev',
-          'vector-StrongerBC_RGB_pos', 'vector-StrongerBC_Solid_pos'
+          'vector-BCID_StrongerBC_RGB_pos', 'vector-StrongerBC_RGB_pos', 'vector-StrongerBC_Solid_pos',
+          'strongerbc-for-everyone-endorsed', 'strongerbc-for-everyone-wordmark'
         ],
         years: '2022–present',
         label: 'StrongerBC, the core brand',
-        note: 'With the StrongerBC Economic Plan of February 2022 the name became “a core brand of the ' +
-          'Government of B.C.”, with guidelines and a brand package of its own by 2023, and an endorsed ' +
-          'mark and a wordmark issued in 2024.',
+        note: 'The 2022 economic plan and brand matrix place CleanBC, WorkBC, ChildCareBC and Buy BC in the wider StrongerBC campaign. The March 2024 guide shows the plain and “for everyone” layouts side by side. It reserves the latter for provincial government use.',
         applicability: {
           kind: 'documented_adoption',
           years: '2022–present',
-          note: 'The plan and the brand matrix are dated; the 2024 files are dated by their downloads.'
+          note: 'The plan and brand matrix date to 2022. The guide documents these layouts in March 2024.'
         },
         sources: [
+          source('StrongerBC graphic identity standards, March 2024', strongerBCGuide, 'pp. 1–5'),
+          source('StrongerBC brand matrix, May 2022', strongerBCMatrix),
           source('B.C. news release, 17 Feb 2022', 'https://news.gov.bc.ca/releases/2022JERI0004-000230'),
           source('Download the BC marks', 'https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/bc-visual-identity/download-marks',
             'StrongerBC endorsed mark and wordmark: the packages the gallery’s eight SVG files come from')

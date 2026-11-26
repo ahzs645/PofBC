@@ -1,6 +1,6 @@
 # Liquor and cannabis administration
 
-The institutional timeline appears on the Liquor Control Board and Liquor Distribution Branch gallery pages. Both link to the identity register. The family retains the stable URL parameter `identity-family=liquor-distribution`.
+The Liquor Distribution Branch gallery page links to the Liquor Control Board under Historical predecessor. The Board’s gallery page holds the 1941 letterhead and the timeline from prohibition to the division of its functions. The identity register describes both successor branches in the `identity-family=liquor-distribution` family.
 
 ## Institutions and functions
 

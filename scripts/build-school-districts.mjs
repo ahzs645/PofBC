@@ -3,6 +3,7 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { currentDistrictId, formerDistrictId } from '../src/schools/districtIds.js'
+import { collectedVectorVariants } from './collected-vector-variants.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const area = resolve(root, 'research/education/school-districts')
@@ -28,7 +29,10 @@ const districts = roster.districts.map((row) => {
     events: [...(record.events ?? []), ...(art.events ?? [])],
     notes: record.notes ?? [],
     sources: record.sources ?? [],
-    assets: (art.assets ?? []).map((asset) => ({ ...asset, darkBackground: Boolean(asset.darkBackground || asset.displayBackground) })),
+    assets: (art.assets ?? []).flatMap((asset) => [
+      { ...asset, darkBackground: Boolean(asset.darkBackground || asset.displayBackground) },
+      ...collectedVectorVariants(asset, { check: process.argv.includes('--check') })
+    ]),
     logoStatus: art.status ?? 'not-reviewed',
     logoNotes: art.notes ?? '',
     logoSources: art.sources ?? []
@@ -38,7 +42,13 @@ for (const row of districts) {
   if (!row.employerSlug) throw new Error(`SD${row.number} has no existing employer link`)
   if (row.established?.date && !row.established.sourceUrl) throw new Error(`SD${row.number} has an unsourced establishment date`)
   for (const event of row.events) if (!event.sourceUrl) throw new Error(`SD${row.number} has an unsourced history event`)
-  for (const asset of row.assets) if (!asset.file || !asset.sourceUrl || !asset.sha256) throw new Error(`SD${row.number} has an incomplete asset record`)
+  for (const asset of row.assets) {
+    if (!asset.file || !asset.sourceUrl || !asset.sha256) throw new Error(`SD${row.number} has an incomplete asset record`)
+    if (asset.preferredVector && !row.assets.some((version) => version.id === asset.preferredVector &&
+      version.variantOf === asset.id && version.isVector && !version.containsRaster && !version.reconstruction)) {
+      throw new Error(`SD${row.number} has an invalid preferred vector for ${asset.id}`)
+    }
+  }
 }
 const list = (value) => value ? Array.isArray(value) ? value : [value] : []
 const historical = new Map((history.historical ?? []).map((row) => [formerDistrictId(row), {

@@ -3,9 +3,9 @@ import { test } from 'node:test'
 import { EDITORIAL_LOGO_SPECIMENS } from './editorialLogoSpecimens.js'
 
 test('editorial logo specimens are small, attributed WebP excerpts', () => {
-  assert.deepEqual(Object.keys(EDITORIAL_LOGO_SPECIMENS).sort(), ['bcit', 'capilano-college', 'capilano-university', 'college-of-new-caledonia', 'college-of-the-rockies', 'east-kootenay-community-college', 'emily-carr-institute-of-art-and-design', 'emily-carr-university', 'kootenay-school-of-the-arts', 'kwantlen-college', 'kwantlen-university-college', 'pacific-vocational-institute'])
+  assert.deepEqual(Object.keys(EDITORIAL_LOGO_SPECIMENS).sort(), ['bcit', 'capilano-college', 'capilano-university', 'college-of-the-rockies', 'east-kootenay-community-college', 'emily-carr-institute-of-art-and-design', 'emily-carr-university', 'kootenay-school-of-the-arts', 'kwantlen-college', 'kwantlen-university-college', 'pacific-vocational-institute'])
   const specimens = Object.values(EDITORIAL_LOGO_SPECIMENS).flat()
-  assert.equal(specimens.length, 21)
+  assert.equal(specimens.length, 18)
   assert.equal(new Set(specimens.map((item) => item.id)).size, specimens.length)
   for (const item of specimens) {
     assert.match(item.url, /^https:\/\/.+#page=[1-9]\d*$/)

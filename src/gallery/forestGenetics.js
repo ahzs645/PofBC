@@ -9,7 +9,10 @@ const earlyReport = home + 'wp-content/uploads/2020/07/FGCAR_2001_02_Abbr.pdf'
 const terms = home + 'wp-content/uploads/2022/06/Terms-of-Reference-for-the-Forest-Genetics-Council-May-12-2022.pdf'
 const governance = home + 'wp-content/uploads/2020/08/FGC-Genetics-Society-SelectSeed-Governance-Dec-2019-v3.pdf'
 const companySite = 'https://www.selectseed.ca/'
+const companyLogo = companySite + 'wp-content/uploads/2020/09/select-seed-logo-1.png'
+const companyMark = 'selectseed-pinecone'
 const folder = 'identity-collected/'
+const companyArtwork = folder + company + '/'
 const source = { title: 'Office of the Chief Forester, May 2022 terms of reference', url: terms }
 const councilNote = 'The Chief Forester appoints this advisory council. The coastal and interior tree improvement councils were brought together in 1997. The Chief Forester endorsed the permanent council’s name and plans in July 1998. Its spring 1999 newsletter already carries the FGC initials and seven trees.'
 const companyNote = 'SelectSeed was established in 1999. The BC Forest Genetics Society is its sole shareholder. The company helps supply seed for reforestation and provides program management to the Forest Genetics Council.'
@@ -28,7 +31,7 @@ export const FOREST_GENETICS_SUBJECTS = [
   { ...subject, id: company, name: companyName, label: 'SelectSeed', kind: 'corporate-subsidiary',
     aliases: ['Select Seed', 'Select Seed Co. Ltd.'], collectionIds: ['collected-' + company],
     sources: [source, { title: 'SelectSeed company profile', url: companySite }, { title: 'Governance paper, December 2019, PDF page 2', url: governance + '#page=2' }],
-    relations: [{ type: 'owned-by', subject: society }], note: companyNote, nextAction: 'Find the first dated use of the pine-cone wordmark.' },
+    relations: [{ type: 'owned-by', subject: society }], note: companyNote, nextAction: 'Locate the original vector and the first dated use of the pine-cone wordmark.' },
   { ...subject, id: 'forest-and-range-practices-advisory-council', name: 'Forest and Range Practices Advisory Council', label: 'Forest and Range Practices Advisory Council',
     kind: 'advisory-council', scope: 'core', aliases: ['Forest Practices Advisory Council'], identityStatus: 'distinct-unconfirmed',
     sources: [{ title: 'Forest and Range Practices Act, section 170', url: 'https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/02069_01#section170' }],
@@ -65,12 +68,24 @@ export const FOREST_GENETICS_BODIES = [
     ] },
   { id: company, name: companyName, shortName: 'SelectSeed', from: 1999, current: true, kind: 'nonprofit-company', graphNode: null, status: 'asset-collected', notes: companyNote,
     assets: [
-      { ...shared, id: 'selectseed-pinecone', label: 'SelectSeed pine-cone wordmark', designLabel: 'SelectSeed pine-cone wordmark', versionLabel: 'Published transparent PNG',
-        file: folder + company + '/website.png', format: 'png', isVector: false, publisher: companyName, sourcePage: companySite, sourceUrl: companySite + 'wp-content/uploads/2020/09/select-seed-logo-1.png',
+      { ...shared, id: companyMark, label: 'SelectSeed pine-cone wordmark', designLabel: 'SelectSeed pine-cone wordmark', versionLabel: 'Published transparent PNG',
+        file: companyArtwork + 'website.png', format: 'png', isVector: false, publisher: companyName, sourcePage: companySite, sourceUrl: companyLogo,
         evidenceType: 'published-raster', notes: 'The company’s blue wordmark ends in a stylized pine cone.', fidelityNote: 'Original 600 × 158 pixel transparent PNG served by the company.' },
-      { ...shared, id: 'selectseed-2019-print', label: 'SelectSeed on the 2019 governance paper', versionLabel: 'December 2019 letterhead', variantOf: 'selectseed-pinecone',
-        file: folder + company + '/letterhead-2019.jpg', format: 'jpg', isVector: false, specimenDate: '2019-12-08', publisher: 'Forest Genetics Council of BC',
+      { ...shared, id: 'selectseed-2019-print', label: 'SelectSeed on the 2019 governance paper', versionLabel: 'December 2019 letterhead', variantOf: companyMark,
+        file: companyArtwork + 'letterhead-2019.jpg', format: 'jpg', isVector: false, specimenDate: '2019-12-08', publisher: 'Forest Genetics Council of BC',
         sourcePage: governance, sourceLocator: 'Draft v3, PDF page 2, upper-right letterhead.', evidenceType: 'published-raster',
-        notes: 'The governance paper prints the company’s pine cone beside the Council’s separate FGC mark.', fidelityNote: 'The source PDF embeds the logo as a 333 × 83 pixel JPEG. The original JPEG stream is preserved.' }
+        notes: 'The governance paper prints the company’s pine cone beside the Council’s separate FGC mark.', fidelityNote: 'The source PDF embeds the logo as a 333 × 83 pixel JPEG. The original JPEG stream is preserved.' },
+      { ...shared, id: `${companyMark}-rebuilt`, variantOf: companyMark, reconstructionOf: companyMark,
+        label: 'SelectSeed pine-cone wordmark', versionLabel: 'Vector reconstruction',
+        file: companyArtwork + 'pinecone-wordmark-rebuilt.svg', format: 'svg', isVector: true, reconstruction: true,
+        sha256: 'aa0747c6c62276dad38b0db05c300c2312bc4fb289182fdb37cd1c95b1339f89', evidenceType: 'vector-reconstruction',
+        publisher: 'User-supplied artwork', sourceFile: 'selectseed-vector-package.zip / selectseed.svg',
+        sourcePage: companySite, sourceUrl: companyLogo,
+        notes: 'The reconstruction follows the blue lettering and pine-cone layout of the company’s website logo.',
+        fidelityNote: 'The lettering and pine cone were redrawn with editable paths against the website PNG. The exact typeface and some details of the pine-cone scales remain unverified.',
+        downloads: [
+          { label: 'Download reconstructed lettering (SVG)', file: companyArtwork + 'wordmark-rebuilt.svg' },
+          { label: 'Download reconstructed pine cone (SVG)', file: companyArtwork + 'pinecone-rebuilt.svg' }
+        ] }
     ] }
 ]

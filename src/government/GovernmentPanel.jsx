@@ -13,6 +13,7 @@ import { currentMarkFor, identityFor, renderEraMark } from './eraMark.js'
 import { KINDS, RELATIONS } from './GovernmentGraph.jsx'
 import { CROWN_CATEGORIES, CROWN_CATEGORY_SOURCES } from './crownCategories.js'
 import { Card, CardSection, KindIcon } from './PanelCards.jsx'
+import { SupportProvided, RuralHealthConnections } from './FundingHistory.jsx'
 import { LogoCard } from './LogoCard.jsx'
 import { StoryText } from './StoryText.jsx'
 import { lifespanOf, ministryAt, officeHoldersTo, pathToPeople, periodsOf, PRESENT_YEAR } from './snapshot.js'
@@ -23,6 +24,7 @@ import { electionStages, eventsInYear, formatEventDate, typeOf } from './events.
 import { PENDING_ELECTION, PREMIERS } from './timelineData.js'
 import { partyColour } from './theme.js'
 import { initiativesForBody } from '../initiatives/initiatives.js'
+import { CARDS } from '../cards/catalogue.js'
 import { SiteLink } from '../site/navigation.jsx'
 import { partyPlaceFor } from '../parties/partyLinks.js'
 import { areaById, healthMapLink } from '../health/healthStoryData.js'
@@ -708,6 +710,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
   const holders = ['officer', 'court', 'assembly'].includes(node.kind) ? officeHoldersTo(officeId, day) : []
   const isMinistry = node.kind === 'ministry'
   const initiatives = initiativesForBody(node.id)
+  const cards = Object.values(CARDS).filter((card) => card.issuer?.node === node.id && card.issuer.year <= year)
   const family = useMemo(() => (isBody ? bodyFamily(node.id) : { formedFrom: [], wentTo: [] }), [isBody, node.id])
   // A local body is drawn in the executive's sector for room, but is not part of the executive.
   const breadcrumb = node.local ? 'Local' : node.branch ? BRANCH_LABELS[node.branch] : 'Everyone'
@@ -851,12 +854,20 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
         {node.kind === 'premier' && <PremierList year={year} />}
       </section>
 
+      {cards.length > 0 && <section className="gov-card">
+        <h2 className="gov-card__heading">Cards</h2>
+        <ul>{cards.map((card) => <li key={card.id}>
+          <SiteLink to={{ view: 'cards', card: card.id }}>{card.title}</SiteLink>
+        </li>)}</ul>
+      </section>}
       {initiatives.length > 0 && <section className="gov-card">
         <h2 className="gov-card__heading">Related initiatives</h2>
         <ul>{initiatives.map((entry) => <li key={entry.id}>
           <SiteLink to={{ view: 'initiatives', initiative: entry.id }}>{entry.title}</SiteLink>
         </li>)}</ul>
       </section>}
+      <SupportProvided id={node.id} />
+      <RuralHealthConnections id={node.id} />
       {(isBody || node.kind === 'ministry') && <LogoCard node={node} theme={theme} />}
       <Suspense fallback={null}><Salaries key={node.id} node={node} year={year} /></Suspense>
       <EventsCard events={node.events} day={day} />

@@ -164,6 +164,11 @@ const BY_POSTER = {
     },
     firePiece('dont-drop-it', 'A related Forest Service badge warns smokers about discarded cigarettes.')
   ],
+  'new-carecard': [{
+    group: 'issuer', rel: 'Issued by', label: 'Ministry of Health',
+    note: 'The ministry signs the advertisement beneath the Gold CareCard.',
+    to: body('ministry-of-health-1976', 1989), certainty: 'printed'
+  }],
   'coastal-forest': [
     {
       group: 'issuer',

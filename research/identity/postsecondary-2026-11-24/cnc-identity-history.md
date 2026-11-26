@@ -14,3 +14,40 @@ Drawing indices are zero-based in PyMuPDF `page.get_drawings()`; coordinates are
 - **Provincial designation:** [signed OIC 2960/1978](https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/2960_1978), approved November 24 and effective December 1, 1978; Colleges and Provincial Institutes Act s. 6(1). This is separate from the college's 1969 opening and the 1971 amalgamation.
 - **Heraldry:** [Canadian Heraldic Authority, vol. III, p. 99](https://www.gg.ca/en/heraldry/public-register/project/616) records the grant of arms, supporters, flag and badge to the college on June 4, 1996; the Canada Gazette announced the letters patent on March 24, 2001 (vol. 135, p. 936). The official record credits concept Graham Anderson with the Authority's heralds and painting Joan Bouwmeester. The armorial grant is not the college's graphic logo or a grant to its vocational predecessor. No native vector source for the arms was verified here.
 - **Reuse:** [CNC Brand Policy AD-CO-4.12](https://www.cnc.bc.ca/docs/policies/cnc-brand.pdf?sfvrsn=e8704e30_1), approved October 29, 2024, reserves the arms and crest for specified offices (§6), requires approval for external use in the circumstances it describes (§§11, 13), and requires written approval for same or very similar marks (§22). The [Canadian Heraldic Authority FAQ §4](https://www.gg.ca/en/heraldry/faq) requires reproduction permission from both the grantee and the Authority. A publisher link does not grant either permission.
+
+## Gallery publication specimens, November 25, 2026
+
+CNC's [current brand hub](https://www.cnc.bc.ca/about/brand) offers the enclosed red mark as a PNG for media coverage. Its [print and social media guidelines v1.5](https://cnc.bc.ca/docs/internal/marketing-and-events/college-of-new-caledonia-_brand-guidelines_v1-5.pdf) and [digital design-system guide](https://www.cnc.bc.ca/design-system-guide) both redirect to sign-in. The public brand policy and the PDF specimens provide sources for the gallery's historical account. CNC reported the 2019 website launch as part of its visual identity project, and [CASE recorded the 2020 Grand Crystal Award for the rebrand](https://www.case.org/awards/2020/2020-virginia-carter-smith-grand-crystal-award).
+
+The [1973–74 calendar, PDF p. 2](https://www.cnc.bc.ca/docs/calendars/academiccalendar-1973-1974.pdf?sfvrsn=ca4762cc_1#page=2) describes the institution that resulted from the July 1971 merger as the College of New Caledonia, College, Technical and Vocational Institute. The gallery records that period wording and links B.C. Vocational School (Prince George) as the amalgamating institution. The broad CNC monogram appears on the 1970–71 calendar and continues at least through the 1986–87 cover. The 1978–79 shield has a divided field with trees and shares the motto with the later full arms. The revised arms with the open book and pall are documented by the 1996 grant. The early shield's origin and grant status are open research questions.
+
+The bold C-shaped lettering is documented as cover typography on the 1997–98, 1998–99, 1999–2000, 2000–01, 2003–05 and 2005–07 calendars. The interlocking mark appears on the 2009–10 cover and in later publications. The 2019 50th anniversary signature was a commemorative application. Dates in this list identify observations and publication editions.
+
+### Vector source and display record
+
+College of New Caledonia is the publisher of every source below. The current cover uses the two published examples of the stacked design for light and dark mode. The excerpts retain original path geometry, paint order and publication colours. Each figure links to the original publisher document. The 2017 example places the white paths over a burgundy display ground sampled from the cover. The editorial files sit outside the downloadable holdings manifest.
+
+| SVG excerpt | Publisher source, PDF p. 1 | Drawing indices | Source SHA-256 |
+| --- | --- | --- | --- |
+| Stacked | [2019–20 course calendar](https://www.cnc.bc.ca/docs/calendars/academiccalendar-2019-2020.pdf?sfvrsn=5df38d8d_1#page=1) | 2–8 on the cover's pale green | `dab6c8b65b9e820675bf0ef2ffb1fa20df9bb98ea34c3b0fb3d20cdc6e1c25e0` |
+| Stacked reverse | [2020–21 course calendar](https://www.cnc.bc.ca/docs/calendars/academiccalendar-2020-2021.pdf?sfvrsn=e87fafaf_1#page=1) | 2–8 on the cover's charcoal | `3d8462b9193832dd02c82020c5a9a3ead7ae6fdbb94cb1f3b58707a02c795720` |
+| Enclosed red | [2026–31 EDIB Strategy](https://www.cnc.bc.ca/docs/public/governance/initiatives-and-reports/edib-plan-webc11b7f00c64742fcab13ad7e24a05a14.pdf?sfvrsn=aa5c3de8_1#page=1) | 9–13 on the cover's white | `25102dba2b7b242beb3cb90fd82b849cb2ad5f190d808e60a1c7459deca91c17` |
+| Enclosed white | [2026–27 course calendar](https://www.cnc.bc.ca/docs/calendars/academiccalendar-2026-2027.pdf?sfvrsn=a1e410a2_1#page=1) | 3, compound knockout path from `get_svg_image()` on the cover's teal | `497a6df8f58d4f16e7eab1e32c1722e164c1e091f65f071f110a5169951e9c4a` |
+| Interlocking, stacked | [2016–17 accountability report, college-hosted edition](https://www.cnc.bc.ca/docs/public/governance/accountability-reports/accountability-report-2016-2017.pdf?sfvrsn=fd66ef46_3#page=1) | 3–39 on sampled burgundy | `1224c181d7bfe20411a66be105539a4d660948ea64af993df7d3d5d0b2edec9a` |
+| Interlocking, horizontal | [2018–19 course calendar](https://www.cnc.bc.ca/docs/calendars/academiccalendar-2018-2019.pdf?sfvrsn=555cc94c_1#page=1) | 1–37 on the cover's green | `5901f613115ecab5a905bb31798cf3d618e2c7ae4f18a5e63bf41477675b235a` |
+
+Drawing indices are zero-based. Export used PyMuPDF's original filled line and cubic segments with each PDF's fill rule and the union of selected bounds plus 10 pt padding. The 2026–27 knockout retained the original compound SVG path and its transform. PDF page renders were inspected alongside the SVG renders.
+
+### Raster excerpts and remaining leads
+
+The illustrated early monograms, early shield and bold calendar wordmarks are small WebP crops of the college's scanned calendar covers. The [March 11, 2025 Education Council agenda](https://collegeofnewcaledonia.civicweb.net/document/127737/#page=1) contains the modern horizontal mark as raster object 769 on PDF p. 1, at `(157.8, 72, 457.8, 162)` pt. The [50th anniversary announcement](https://www.cnc.bc.ca/news/article/2019/09/04/cnc-welcomes-students-back-for-milestone-50th-year) publishes the 50th lockup as a PNG. Matching native vectors for those raster specimens and the early marks remain open leads.
+
+| Raster excerpt | Source location | Source SHA-256 |
+| --- | --- | --- |
+| Early white monogram | [1970–71 calendar, p. 1](https://www.cnc.bc.ca/docs/calendars/academiccalendar-1970-1971.pdf?sfvrsn=9faebca7_1#page=1) | `d1c8744ce5e67a4bb2fea3efbd50a114cab640d673c62b28cdbd7ee6e65a2fbf` |
+| Early shield and institutional wording | [1978–79 calendar, p. 1](https://www.cnc.bc.ca/docs/calendars/academiccalendar-1978-1979.pdf?sfvrsn=316e7b7c_1#page=1) | `e6d66107ffc31dfdbded343795ca5fdc8a23756aabbdada2ec05e1ba6ad788e3` |
+| Early orange monogram | [1981–82 calendar, p. 1](https://www.cnc.bc.ca/docs/calendars/academiccalendar-1981-1982.pdf?sfvrsn=3da5e70e_1#page=1) | `a2e4337688e9c5d6f58c6d67801c70ecb67bdd68d34776d0a18570d9cffc417d` |
+| Green calendar wordmark | [1998–99 calendar, p. 1](https://www.cnc.bc.ca/docs/calendars/academiccalendar-1998-1999.pdf?sfvrsn=24ef1519_1#page=1) | `1d3fe7facee6ffa7ec0f2c02cd6ea2ab4350cbf3feb1a0d5131cdf38864d394c` |
+| Red calendar wordmark | [2000–01 calendar, p. 1](https://www.cnc.bc.ca/docs/calendars/academiccalendar-2000-2001.pdf?sfvrsn=2285fefb_1#page=1) | `220390959dfae74f2d7a354846f27930683402a1cd220fe4147e6097bd2fbea5` |
+| Current horizontal | Education Council agenda, link above | `740c1ecfee6792f24d70106975ddbbe6bb81143dca719dbdee3f550bd98fda6b` |
+| 50th anniversary | [Announcement image](https://cnc.bc.ca/images/content/news/cnc_primary-logo_colour_cmyk_50th-background-tmb-1000px.png?sfvrsn=1ad69cb7_1) | `e661f04241ff4f9d4280cfc69fda200c6eefc195b5b662a4d18c80ec369876db` |

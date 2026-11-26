@@ -1,0 +1,13 @@
+.program-placement { border-block: 1px solid var(--line, #8886); padding-block: .75rem; }
+.program-placement summary { cursor: pointer; font-weight: 650; }
+.program-placement__body { display: grid; gap: .85rem; padding-top: 1rem; }
+.program-placement__fields { display: flex; gap: .7rem 1rem; flex-wrap: wrap; align-items: end; }
+.program-placement label { display: grid; gap: .3rem; font-size: .9rem; max-width: 100%; }
+.program-placement input, .program-placement select { font: inherit; max-width: 100%; }
+.program-placement input[type=number] { width: 9rem; }
+.program-placement input[type=color] { width: 3.5rem; height: 2rem; }
+.program-placement__diagram { display: block; max-width: 100%; width: auto; height: 8rem; border: 1px solid #8888; }
+.program-placement__results p, .program-placement__body p { margin: 0; }
+.program-placement__results { display: grid; gap: .3rem; }
+.program-placement__diagram { justify-self: start; }
+.program-placement__member { overflow-wrap: anywhere; }

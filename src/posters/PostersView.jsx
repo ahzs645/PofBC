@@ -2,6 +2,7 @@
 
 import { ShelfView } from './ShelfView.jsx'
 import { FACETS, POSTERS, SERIES } from './catalogue.js'
+import careCardThumb from './carecard/thumbnail.jpg'
 import coastalThumb from './coastal-forest/thumbnail.jpg'
 import ashtrayThumb from './forest-service/use-your-ashtray.svg?url'
 import dropThumb from './forest-service/dont-drop-it.svg?url'
@@ -28,6 +29,7 @@ const bcFerries = (id) => () => import('./bc-ferries/index.js').then((module) =>
 const noxiousWeeds = (id) => () => import('./noxious-weeds/index.js').then((module) => module.loaderFor(id)())
 const expo86 = (id) => () => import('./expo-86/index.js').then((module) => module.loaderFor(id)())
 const LOADERS = {
+  'new-carecard': () => import('./carecard/index.js').then((module) => module.load()),
   'coastal-forest': () => import('./coastal-forest/index.jsx').then((module) => module.load()),
   'use-your-ashtray': forestService('use-your-ashtray'),
   'dont-drop-it': forestService('dont-drop-it'),
@@ -51,6 +53,7 @@ const LOADERS = {
 }
 
 const THUMBNAILS = {
+  'new-carecard': careCardThumb,
   'coastal-forest': coastalThumb,
   'use-your-ashtray': ashtrayThumb,
   'dont-drop-it': dropThumb,

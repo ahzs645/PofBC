@@ -114,7 +114,7 @@ test('CNC identity history distinguishes designation, arms and three dated speci
   const cnc = identitySubjectById('college-of-new-caledonia')
   const { history, specimens } = cnc.artworkReview
   assert.deepEqual(history.map(({ type, date }) => [type, date]), [
-    ['legal', '1978-12-01'], ['heraldic-grant', '1996-06-04'], ['logo-specimen', '2017-07'], ['logo-specimen', '2020'], ['logo-specimen', '2026']
+    ['legal', '1978-12-01'], ['heraldic-grant', '1996-06-04'], ['logo-specimen', '2017-07'], ['logo-specimen', '2019'], ['logo-specimen', '2026']
   ])
   assert.match(history[0].url, /\/2960_1978$/)
   const historySpecimens = history.slice(1).map(({ specimenId }) => specimens.find(({ id }) => id === specimenId))

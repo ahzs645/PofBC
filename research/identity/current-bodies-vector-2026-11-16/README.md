@@ -24,7 +24,7 @@ searched for the logo as vector artwork. Every URL tried, with its outcome, is i
 | Compass C symbol (website) | Reconstruction: same geometry, colours swapped | `identity-expanded/compass/c-symbol-rebuilt.svg` |
 | Coast Mountain Bus Company | Not done. Raster everywhere checked; translink.ca's `cmbc_logo.svg` URL serves a 695 × 216 PNG (a better raster than the held one). | — |
 | West Coast Express | Not done. Raster everywhere checked; `wce_logo.svg` URL serves a 2114 × 419 PNG. | — |
-| Island Coastal Economic Trust | Not done. The 2026 Impact Report has the wordmark as vector but the paddle symbol as a 97 × 59 image; the symbol is too detailed to rebuild honestly from the website WebP. | — |
+| Island Coastal Economic Trust | Follow-up on 2026-11-25 verified the five paddles, two-line lettering and clipped vector gradient on the 2025–26 Impact Report cover. | `identity-expanded/island-coastal-economic-trust/five-paddle-reversed.svg` |
 | Nechako-Kitamaat Development Fund | Not done. Every annual report and business plan from 1999 to 2026 (Word/PowerPoint exports) carries the logo as an image; the sun and script letters are too detailed to rebuild honestly. | — |
 | BC Ferries Commissioner | Not done. Raster in every source; the seal holds the full-colour arms. | — |
 | B.C. Ferry Authority | Not done. The website image is the name set in an unidentified bold serif; the Authority's reports set the name as live text in TheSerif, a different design. | — |

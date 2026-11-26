@@ -52,7 +52,15 @@ function verifySvg(data, asset) {
   assert(!/<(?:script|foreignObject|iframe|object|embed)\b/i.test(svg), `Active SVG content: ${asset.file}`)
   assert(!/\son\w+\s*=/.test(svg), `SVG event attribute: ${asset.file}`)
   assert(!/<!ENTITY\b/i.test(svg), `SVG entity declaration: ${asset.file}`)
+  const embeddedPngs = new Set()
+  for (const image of Array.from(document.getElementsByTagNameNS('*', 'image'))) {
+    const ref = image.getAttribute('href') || image.getAttribute('xlink:href')
+    assert(!asset.isVector && /^data:image\/png;base64,iVBORw0KGgo[A-Za-z0-9+/]*={0,2}$/.test(ref), `Expected an embedded PNG in a bitmap-containing SVG: ${asset.file}`)
+    embeddedPngs.add(ref)
+  }
+  assert(asset.isVector || embeddedPngs.size > 0, `Missing bitmap in mixed artwork: ${asset.file}`)
   for (const [, ref] of svg.matchAll(/(?:xlink:)?href\s*=\s*["']([^"']+)["']/g)) {
+    if (embeddedPngs.has(ref)) continue
     assert(ref.startsWith('#'), `External or embedded SVG reference in ${asset.file}: ${ref.slice(0, 80)}`)
     assert(ids.get(ref.slice(1)) === 1, `Unresolved or ambiguous SVG reference ${ref}: ${asset.file}`)
   }
@@ -76,7 +84,6 @@ function verifySvg(data, asset) {
     assert(ids.get(ref.slice(1)) === 1, `Unresolved or ambiguous SVG definition ${ref}: ${asset.file}`)
   }
   assert(!/@import\b|javascript\s*:/i.test(svg), `External or active SVG style: ${asset.file}`)
-  assert(!/<image\b/i.test(svg), `Raster content cannot be marked as native vector: ${asset.file}`)
   assert(!/<text\b/i.test(svg), `Font-dependent text in acquired logo: ${asset.file}`)
   assert(/<(?:path|polygon|polyline|circle|ellipse|rect|use)\b/i.test(svg), `Empty SVG: ${asset.file}`)
 }
@@ -137,9 +144,11 @@ for (const { manifest: manifestFile, output, name, dir } of MANIFESTS) {
       seenAssets.add(asset.id)
       assert(asset.sourceUrl?.startsWith('https://') && asset.sourcePage?.startsWith('https://'), `Source attribution missing: ${asset.id}`)
       assert(asset.publisher && asset.sourceLocator && asset.fidelityNote && asset.observedDate, `Incomplete evidence: ${asset.id}`)
-      // A vector search may add a reconstruction, which must say so; nothing else is rebuilt.
-      assert(asset.supplied === false && (asset.reconstruction === false || (asset.search && asset.evidenceType === 'vector-reconstruction')), `Unexpected artwork category: ${asset.id}`)
-      assert(asset.isVector === (asset.format === 'svg'), `Inconsistent vector label: ${asset.id}`)
+      const mixedReconstruction = asset.reconstruction === true && asset.evidenceType === 'mixed-media-reconstruction' && asset.format === 'svg'
+      const linkedReconstruction = asset.reconstruction === true && asset.format === 'svg' &&
+        asset.evidenceType === 'vector-reconstruction' && body.assets.some((design) => design.id === asset.variantOf && !design.reconstruction)
+      assert((typeof asset.supplied === 'boolean' && linkedReconstruction) || (asset.supplied === false && (asset.reconstruction === false || mixedReconstruction || (asset.search && asset.evidenceType === 'vector-reconstruction'))), `Unexpected artwork category: ${asset.id}`)
+      assert(asset.isVector === (asset.format === 'svg' && !mixedReconstruction), `Inconsistent vector label: ${asset.id}`)
       const data = verifyFile(asset)
       assert(asset.search || checkedFiles.has(asset.sourceFile), `Archived source is missing from the manifest: ${asset.id}`)
       for (const source of [asset.sourcePageFile, ...(asset.supportingSourceFiles ?? [])].filter(Boolean)) {

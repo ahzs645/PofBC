@@ -1291,20 +1291,51 @@
       ]
     },
     {
+      "id": "provincial-apprenticeship-board",
+      "name": "Provincial Apprenticeship Board",
+      "kind": "agency",
+      "established": "1978",
+      "ended": "1997-11-28",
+      "endedMeaning": "The Industry Training and Apprenticeship Act replaced the Apprenticeship Act.",
+      "becameId": "industry-training-and-apprenticeship-commission",
+      "predecessorIds": [],
+      "responsible": [],
+      "description": "The 1977 legislation provided for a provincial board to oversee apprenticeship. Its responsibilities included training standards and certification. ITAC replaced the board in 1997.",
+      "source": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-2008-11-01-major-renovation-trades-training-british-columbia.pdf#page=33",
+      "otherSources": [
+        "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/2054057487",
+        "https://www.bclaws.gov.bc.ca/civix/document/id/rs/rs/96016_01"
+      ],
+      "establishedSource": "https://bcombudsperson.ca/assets/media/Public-Report-No-51-In-The-Public-Interest-Protecting-Students-Through-Effective-Oversight-of-Private-Career-Training-Institutions.pdf#page=179",
+      "establishedLocator": "Printed page 173 (PDF page 179), 1977–1990.",
+      "establishedMeaning": "Year the 1977 Apprenticeship and Training Development Act came into force. Section 10 provided for appointment of the board."
+    },
+    {
       "id": "industry-training-and-apprenticeship-commission",
       "name": "Industry Training and Apprenticeship Commission",
       "shortName": "ITAC",
       "kind": "agency",
-      "established": "1997-06-23",
-      "ended": "2003",
+      "established": "1997-11-28",
+      "ended": "2004-01-02",
       "becameId": "industry-training-authority",
-      "predecessorIds": [],
+      "predecessorIds": [
+        "provincial-apprenticeship-board"
+      ],
       "responsible": [],
-      "description": "Arm's-length commission of business, labour, education and government, announced 23 June 1997 to govern industry training and apprenticeship; dissolved in 2003.",
+      "description": "Announced June 23, 1997 and established November 28, ITAC replaced the Provincial Apprenticeship Board. The Province announced its wind-up on January 17, 2002. Advanced Education managed trades training during the transition. The transitional board signed the final accounts on April 8, 2004.",
       "source": "https://archive.news.gov.bc.ca/releases/archive/pre2001/1997/0614.asp",
       "otherSources": [
-        "https://en.wikipedia.org/wiki/SkilledTradesBC"
-      ]
+        "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf#page=7"
+      ],
+      "establishedSource": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf#page=7",
+      "establishedLocator": "Note 1, The Commission",
+      "endedMeaning": "Statutory repeal effective January 2, 2004. The final accounting period ended January 1.",
+      "operationalEnd": {
+        "date": "2002",
+        "meaning": "The Ministry of Advanced Education took over management of trades training during the transition to the Industry Training Authority.",
+        "source": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-2008-11-01-major-renovation-trades-training-british-columbia.pdf#page=33",
+        "locator": "Exhibit 4"
+      }
     },
     {
       "id": "bc-assets-and-land-corporation",
@@ -1559,15 +1590,18 @@
       "name": "Industry Training Authority",
       "shortName": "ITA",
       "kind": "agency",
-      "established": "2004",
-      "ended": "2022-12",
+      "established": "2004-01-02",
+      "ended": "2022-12-01",
       "becameId": "skilledtradesbc",
       "predecessorIds": [
         "industry-training-and-apprenticeship-commission"
       ],
       "responsible": [],
       "description": "Agency established in 2004 to replace ITAC after mandatory trades certification was abolished in 2003; renamed SkilledTradesBC in December 2022.",
-      "source": "https://en.wikipedia.org/wiki/SkilledTradesBC"
+      "source": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf#page=7",
+      "otherSources": [
+        "https://news.gov.bc.ca/releases/2022AEST0074-001775"
+      ]
     },
     {
       "id": "bc-innovation-council",
@@ -1819,7 +1853,7 @@
       "id": "skilledtradesbc",
       "name": "SkilledTradesBC",
       "kind": "agency",
-      "established": "2022-12",
+      "established": "2022-12-01",
       "ended": null,
       "becameId": null,
       "predecessorIds": [
@@ -1827,7 +1861,7 @@
       ],
       "responsible": [],
       "description": "The Industry Training Authority renamed in December 2022 as the government reintroduced mandatory skilled-trades certification.",
-      "source": "https://en.wikipedia.org/wiki/SkilledTradesBC"
+      "source": "https://news.gov.bc.ca/releases/2022AEST0074-001775"
     },
     {
       "id": "bc-energy-regulator",

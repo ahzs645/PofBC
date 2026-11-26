@@ -5,6 +5,7 @@
 // generator draws (src/assets/flagMark.js) and the Termes outlines the BC Hydro signatures are set
 // in (src/hydro/serif.js). Its source package is artwork/signs/super-natural/.
 
+import { BORDERED_WELCOME } from './borderedWelcome.js'
 import { SIGNS } from '../catalogue.js'
 
 const DESTINATION_BC = {
@@ -38,6 +39,15 @@ const FLAG_LINKS = [
     note: 'Logos · BC Transit: the provincial flag angled above the name on its service plans',
     to: { view: 'gallery', logos: 'bc-transit' }
   }
+]
+
+const BRAND_GUIDES = [
+  { label: 'Destination British Columbia rebranding', note: 'The design team’s illustrated portfolio, published in 2016',
+    to: { view: 'initiatives', initiative: 'tourism', section: 'rebranding' } },
+  { label: 'Super, Natural British Columbia brand guide', note: 'Destination BC’s 2021 treatment of the slogan on this earlier sign',
+    to: { view: 'initiatives', initiative: 'tourism', section: 'brand-guide', page: 10 } },
+  { label: 'Rainforest to Rockies brand guide', note: 'How the route fits the provincial brand family in 2024',
+    to: { view: 'initiatives', initiative: 'rainforest-to-rockies', section: 'publications', page: 5 } }
 ]
 
 const TOURISM_LINKS = [
@@ -85,6 +95,8 @@ export const SUPER_NATURAL = {
             { name: 'Board', value: '#FFFFFF' }
           ] },
           { note: 'This is a reconstruction, not an original master. The photograph does not settle the sign’s typeface, the exact cut of the board, its size, or its paint: the colours are the navy, red and gold the flag artwork was supplied in, not a sign specification, and the lettering is a stand-in serif fitted to the photograph. No part of it was traced.' },
+          { h: 'The destination brand in later use' },
+          { links: BRAND_GUIDES },
           { h: 'Where the parts come from' },
           { links: [...FLAG_LINKS, {
             label: 'Another sign',
@@ -163,7 +175,7 @@ export const SUPER_NATURAL = {
             ['p', 'its descender shortened to half']
           ] },
           { h: 'Who carried it' },
-          { links: TOURISM_LINKS },
+          { links: [...TOURISM_LINKS, ...BRAND_GUIDES] },
           { sources: [BC_BUSINESS, DESTINATION_BC, BRAND_FAMILY, BEST_PLACE] }
         ]
       }
@@ -244,4 +256,4 @@ export const SUPER_NATURAL = {
   order: ['overview', 'flag', 'stripes', 'slogan', 'province', 'welcome', 'panel']
 }
 
-export const TOURISM_SIGNS = { 'super-natural': SUPER_NATURAL }
+export const TOURISM_SIGNS = { 'super-natural': SUPER_NATURAL, [BORDERED_WELCOME.id]: BORDERED_WELCOME }

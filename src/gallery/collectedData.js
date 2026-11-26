@@ -1312,12 +1312,12 @@ export const COLLECTED_BODIES = [
     "id": "skilledtradesbc",
     "name": "SkilledTradesBC",
     "kind": "crown-corporation",
-    "from": 2004,
+    "from": 2022,
     "to": null,
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "Artwork retrieved from official public website/brand kit. Current observation is not an adoption-date claim.",
+    "notes": "The Industry Training Authority continued under the name SkilledTradesBC on December 1, 2022.",
     "assets": [
       {
         "id": "source-skilledtradesbc-skilledtradesbc-svg",
@@ -4471,6 +4471,9 @@ export const COLLECTED_BODIES = [
       {
         "id": "historical-bc-heritage-trust-2002",
         "label": "Boxed mark, 2001/02 annual report",
+        "designLabel": "BC Heritage Trust wordmark",
+        "versionLabel": "Boxed original",
+        "preferredVector": "historical-bc-heritage-trust-2002-transparent",
         "file": "identity-collected/bc-heritage-trust/bc-heritage-trust-2002.svg",
         "format": "svg",
         "isVector": true,
@@ -4497,6 +4500,53 @@ export const COLLECTED_BODIES = [
             "source": "https://heritagebc.ca/learning-centre/heritage-place-conservation/tips-tools-publications-guides/"
           }
         ]
+      },
+      {
+        "id": "historical-bc-heritage-trust-2002-transparent",
+        "label": "British Columbia Heritage Trust — Greyscale · transparent",
+        "versionLabel": "Greyscale · transparent",
+        "variantOf": "historical-bc-heritage-trust-2002",
+        "derivedFrom": "historical-bc-heritage-trust-2002",
+        "file": "identity-collected/bc-heritage-trust/bc-heritage-trust-2002-transparent.svg",
+        "format": "svg",
+        "isVector": true,
+        "containsRaster": false,
+        "darkBackground": false,
+        "publisher": "British Columbia Heritage Trust",
+        "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/sup-e/bc-heritage-trust-fs-2001-02.pdf",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/sup-e/bc-heritage-trust-fs-2001-02.pdf",
+        "sourceLocator": "2001/2002 Annual Report, PDF page 1",
+        "sourceDate": "2002",
+        "observedDate": "2026-10-30",
+        "evidenceType": "adaptation-of-source-vector",
+        "notes": "Positive greyscale version of the annual-report lettering on a transparent canvas.",
+        "fidelityNote": "Removed the black rectangle behind the lettering. Retained the original vector outlines and clipping.",
+        "bytes": 49315,
+        "sha256": "c8aad8e785d6213660bc88f2c6c3d335752bc2eee91d400c919ef275a02a5c44"
+      },
+      {
+        "id": "historical-bc-heritage-trust-2002-black",
+        "label": "British Columbia Heritage Trust — Black · transparent",
+        "versionLabel": "Black · transparent",
+        "variantOf": "historical-bc-heritage-trust-2002",
+        "derivedFrom": "historical-bc-heritage-trust-2002",
+        "file": "identity-collected/bc-heritage-trust/bc-heritage-trust-2002-black.svg",
+        "format": "svg",
+        "isVector": true,
+        "containsRaster": false,
+        "darkBackground": false,
+        "sourceGround": "light",
+        "publisher": "British Columbia Heritage Trust",
+        "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/sup-e/bc-heritage-trust-fs-2001-02.pdf",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2001-02/sup-e/bc-heritage-trust-fs-2001-02.pdf",
+        "sourceLocator": "2001/2002 Annual Report, PDF page 1",
+        "sourceDate": "2002",
+        "observedDate": "2026-10-30",
+        "evidenceType": "adaptation-of-source-vector",
+        "notes": "Solid black version of the annual-report lettering on a transparent canvas.",
+        "fidelityNote": "Removed the black rectangle behind the lettering. Retained the original vector outlines and clipping.",
+        "bytes": 49308,
+        "sha256": "8302cbc3b3213335e50d8e65c4e44e06f6f71dd8ddacf34cf8dfe3565a5895ae"
       }
     ]
   },
@@ -5289,7 +5339,7 @@ export const COLLECTED_BODIES = [
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-10-22",
-    "notes": "BC Place Ltd. renamed with effect from 31 March 1987, with BC Development Corporation assets and liabilities transferred into it. BCEC ceased operations on 30 September 1989 and transferred certain assets and liabilities to the Province and PavCo. It remained a distinct company until statutory dissolution on 13 March 2023. Its held mark comes from a dated 1988 land-sale prospectus.",
+    "notes": "BC Place Ltd. renamed with effect from 31 March 1987, with BC Development Corporation assets and liabilities transferred into it. BCEC ceased operations on 30 September 1989 and transferred certain assets and liabilities to the Province and PavCo. It remained a distinct company until statutory dissolution on 13 March 2023. The gallery holds a colour specimen from a 1988 land-sale prospectus and a monochrome vector reconstruction from a separate print scan.",
     "assets": [
       {
         "id": "source-bc-enterprise-corporation-bc-enterprise-1988-logo-png",
@@ -5314,7 +5364,33 @@ export const COLLECTED_BODIES = [
         "darkBackground": false,
         "dateNote": "A dated sighting is not a complete usage period.",
         "previewWidth": 528,
-        "previewHeight": 237
+        "previewHeight": 237,
+        "versionLabel": "Published image",
+        "variantOf": "bc-enterprise-corporation-rebuilt-bw"
+      },
+      {
+        "id": "bc-enterprise-corporation-rebuilt-bw",
+        "label": "British Columbia Enterprise Corporation",
+        "file": "identity-collected/bc-enterprise-corporation/bc-enterprise-corporation-rebuilt-bw.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "reconstructionOf": "source-bc-enterprise-corporation-bc-enterprise-1988-logo-png",
+        "publisher": "Supplied BCEC monochrome reconstruction study",
+        "sourceFile": "BCEC_BW_Libertine_per_letter_fixed_spacing.svg",
+        "sourceDate": "1988-05-01",
+        "dateNote": "May 1, 1988 dates the colour prospectus specimen. The monochrome SVG was reconstructed from a separate, undated print scan.",
+        "observedDate": "2026-11-25",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The fixed-spacing reconstruction pairs a hand-drawn monochrome triangle with individually fitted Linux Libertine lettering. The colour version is the published crop from the May 1988 land-sale prospectus.",
+        "fidelity": "font substitution",
+        "fidelityNote": "The supplied study compared the reconstruction with a monochrome print scan. It adjusted individual Linux Libertine glyph widths while preserving the gaps from the previous fit. The historical typeface is unidentified.",
+        "darkBackground": false,
+        "bytes": 38263,
+        "sha256": "41ceade91d4b11764515d06eb3c3b6a5b511923172a9335221a40277a7ffa2de",
+        "search": "gallery-reconstructions-2026-11-24",
+        "versionLabel": "Vector reconstruction"
       }
     ]
   },
@@ -9531,6 +9607,54 @@ export const COLLECTED_BODIES = [
         "search": "bc-trade-vector-2026-11-13"
       }
     ]
+  },
+  {
+    "id": "sub-bc-housing-licensing-and-consumer-services",
+    "name": "Licensing and Consumer Services",
+    "shortName": "Homeowner Protection Office",
+    "kind": "branch",
+    "from": 2010,
+    "to": null,
+    "current": true,
+    "observedDate": "2026-11-25",
+    "notes": "BC Housing’s Homeowner Protection Office branch took on builder licensing, owner-builder authorization, and research and education on April 1, 2010. Its work included monitoring mandatory home warranty insurance and helping protect new-home buyers. BC Housing was using the name Licensing and Consumer Services by February 2017.",
+    "assets": [
+      {
+        "id": "homeowner-protection-office-2016",
+        "label": "Homeowner Protection Office — Branch of BC Housing",
+        "file": "identity-collected/sub-bc-housing-licensing-and-consumer-services/homeowner-protection-office-2016.svg",
+        "format": "svg",
+        "isVector": true,
+        "supplied": false,
+        "reconstruction": false,
+        "role": "historical",
+        "publisher": "Homeowner Protection Office, Branch of BC Housing",
+        "sourcePage": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/b7f0a190-6053-4fb4-ba71-33727e3e63f3/content#page=2",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/b7f0a190-6053-4fb4-ba71-33727e3e63f3/content",
+        "sourceLocator": "Front cover, PDF page 2, lower right. The same lockup appears on the final page.",
+        "sourceFile": "Consumer Guide to High Performance Homes (Legislative Library of British Columbia copy)",
+        "sourceDate": "2016",
+        "dateNote": "The year assigned to the guide by the Legislative Library of British Columbia. The logo’s first use is unverified.",
+        "observedDate": "2026-11-25",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The 2016 cover shows a teal roofline interlocking with blue and teal diamonds above the branch name and endorsement. The branch licensed residential builders and building envelope renovators, authorized owner-builders, monitored home warranty requirements, and provided research and education. BC Housing’s February 2017 service plan uses the name Licensing and Consumer Services.",
+        "fidelityNote": "Extracted with PyMuPDF from the original PDF paths for the emblem, outlined lettering, and divider. The SVG preserves their order, positions and colours on a transparent background, with the cover photograph removed.",
+        "extraction": {
+          "method": "PyMuPDF PDF-to-SVG conversion with native path selection and a viewBox trimmed to the lockup",
+          "pdfBounds": [
+            408.42,
+            625.04,
+            516.94,
+            703.76
+          ]
+        },
+        "sha256": "3ccd39e649637ecceabf2226cc7e1bdc73880fc81db835bff5bee6333122b9cd",
+        "bytes": 15549,
+        "darkBackground": false,
+        "search": "homeowner-protection-office-2026-11-25"
+      }
+    ],
+    "status": "asset-collected"
   }
 ]
 // Published vector specimens of the one-off programs, by the timeline each belongs to.
@@ -10385,7 +10509,7 @@ export const COLLECTED_SPECIMENS = [
         "sourceLocator": "Website use terms and conditions, April 2011, page 1 letterhead (a 672 × 145 image)",
         "sourceDate": "April 2011",
         "dateNote": "The document’s date, not an adoption date.",
-        "notes": "“BC OnLine” in broad, slightly inclined capitals, beside the hand-and-screen emblem, in black: the service’s letterhead logo.",
+        "notes": "The gallery shows the BC OnLine wordmark and hand-and-screen emblem in the purple of the 2005 emblem. The April 2011 letterhead prints the complete logo in black.",
         "fidelityNote": "A supplied reconstruction: eight hand-drawn letter outlines and the emblem redrawn at the letterhead’s lighter weight, after the document’s image (no automatic tracing). The typeface is not identified.",
         "sha256": "4a92b948f0c5d5e159465659d2703d049daa6d8f31c86e173991825be9cd6bc7",
         "bytes": 12964,
@@ -10872,7 +10996,7 @@ export const COLLECTED_SPECIMENS = [
         "dateNote": "The brochure’s date, not an adoption date.",
         "evidenceType": "vector-reconstruction",
         "notes": "The BC mark without its tagline, a gold divider and “Shared / ServicesBC” in white with “BC” in gold, for a dark ground (the brochure’s navy is not part of the mark).",
-        "fidelityNote": "Put together from the gallery’s Best Place on Earth mark (src/assets/oneOffMarks.js, drawn with the gallery’s own one-off renderer) and letters of the Province’s Garamond lifted from the gallery’s one-offs — BC Wildfire Service’s S, e, r, v, i, c and d, BC Stats’ a and s, the tagline’s h, WelcomeBC’s B and C — each scaled by its source’s x-height and placed where the brochure (810 × 267 crop) prints it. The brochure’s own artwork is vector but its sun rays are bitmaps, which is why it was not extracted. Mountain blue (#496da6) sampled from the brochure.",
+        "fidelityNote": "Put together from the gallery’s Best Place on Earth mark (src/assets/oneOffMarks.js, drawn with the gallery’s own one-off renderer) and letters of the Province’s Garamond lifted from the gallery’s one-offs — BC Wildfire Service’s S, e, r, v, i, c and d, BC Stats’ a and s, the tagline’s h, WelcomeBC’s B and C — each scaled by its source’s x-height and placed where the brochure (810 × 267 crop) prints it. This reconstruction predates recovery of the brochure’s native artwork, including the sun shading. Mountain blue (#496da6) sampled from the brochure.",
         "sha256": "d47504e9c10284bb049127d1bb751fa55b69c228abc60785158432a8a7b96be4",
         "bytes": 36415,
         "darkBackground": true,
@@ -11249,6 +11373,48 @@ export const COLLECTED_SPECIMENS = [
           "note": "The project maintainer confirmed rights-holder permission for PofBC to publish this extracted SVG and its transparent PNG download. Further reuse is outside that confirmation."
         },
         "search": "bcts"
+      }
+    ]
+  },
+  {
+    "program": "bc-150-years",
+    "assets": [
+      {
+        "id": "bc-150-years",
+        "label": "BC 150 Years",
+        "file": "identity-collected/bc-150-years/bc-150-years.svg",
+        "format": "svg",
+        "isVector": true,
+        "publisher": "Ministry of Energy, Mines and Petroleum Resources, Province of British Columbia",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/electricity-alternative-energy/energy-efficiency/eebs-2008-web.pdf#page=28",
+        "sourceUrl": "https://www2.gov.bc.ca/assets/gov/farming-natural-resources-and-industry/electricity-alternative-energy/energy-efficiency/eebs-2008-web.pdf#page=28",
+        "sourceLocator": "Back cover, above the contact block at lower left, PDF page 28 (page 29 in the Legislative Library copy)",
+        "sourceFile": "Energy Efficient Buildings Strategy: More Action, Less Energy",
+        "sourceDate": "2008",
+        "observedDate": "2026-11-25",
+        "role": "historical",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The 2008 anniversary mark sets “BC” and “YEARS” in blue around a gold “150”, with a pale gold sunburst and “The Best Place on Earth” below.",
+        "fidelityNote": "The SVG retains the back cover’s original lettering, numerals and sunburst paths in their published blue and gold inks. The mark lies over a separate green image on the cover.",
+        "extraction": {
+          "pdfPage": 28,
+          "pdfBounds": [
+            31.8,
+            188.494,
+            192.05,
+            259.8
+          ],
+          "method": "Isolated the 102 filled paths in the back cover’s placed graphic using pikepdf. Converted the PDF path commands directly to SVG with the original paint order, winding and cubic control points. Used the embedded sRGB fills, rounded to 8-bit RGB. The PDF content-stream instructions for this graphic are identical in the Legislative Library and ministry copies."
+        },
+        "alsoSeen": [
+          {
+            "label": "Balanced Budget 2008 Highlights, front cover",
+            "source": "https://www.bcbudget.gov.bc.ca/2008/highlights/2008_Highlights.pdf"
+          }
+        ],
+        "sha256": "6b6b1f0f7529a7da9d60c792cb25656a148b0d8bfb6269f55304001f8733f562",
+        "bytes": 77583,
+        "search": "bc-150-years"
       }
     ]
   },

@@ -7,6 +7,7 @@
 export const VIEW_LOADERS = {
   // The gallery's marks are drawn from their own artwork and renderers, which the generator never needs.
   gallery: () => import('../gallery/GalleryView.jsx'),
+  airports: () => import('../airports/AirportsView.jsx'),
   initiatives: () => import('../initiatives/InitiativesView.jsx'),
   'school-districts': () => import('../schools/SchoolDistrictsView.jsx'),
   parties: () => import('../parties/PartiesView.jsx'),
@@ -17,6 +18,8 @@ export const VIEW_LOADERS = {
   posters: () => import('../posters/PostersView.jsx'),
   signs: () => import('../signs/SignsView.jsx'),
   cards: () => import('../cards/CardsView.jsx'),
+  certificates: () => import('../certificates/CertificatesView.jsx'),
+  stickers: () => import('../stickers/StickersView.jsx'),
   pins: () => import('../pins/PinsView.jsx'),
   // The patch library and digitizer come from the Patcher submodule (vendor/patcher).
   patches: () => import('../patches/PatchesView.jsx'),

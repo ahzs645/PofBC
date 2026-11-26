@@ -64,5 +64,10 @@ test('the gallery lists BC Hydro’s three eras, and every entry opens', () => {
   const hydro = GALLERY_COLLECTIONS.find((collection) => collection.id === 'bc-hydro')
   assert.deepEqual(hydro.eras.map((era) => era.years), ['1961–1990', '1990–2016', '2016–present'])
   for (const entry of entriesOf(hydro)) assert.equal(findGalleryEntry(entry.id), entry)
-  assert.equal(hydro.eras[2].entries.length, Object.keys(CURRENT_VARIANTS).length)
+  const designs = hydro.eras[2].entries
+  assert.equal(designs.length, 3)
+  assert.deepEqual(designs.flatMap((entry) => entry.editorVersions.map((v) => v.variant)), Object.keys(CURRENT_VARIANTS))
+  for (const design of designs) {
+    for (const version of design.editorVersions) assert.equal(findGalleryEntry(version.id), design)
+  }
 })

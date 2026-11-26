@@ -42,6 +42,24 @@ const Sources = ({ sources }) => (
   </Item>
 )
 
+const PhotoOverlay = ({ photo, overlay, alt, caption }) => {
+  const [opacity, setOpacity] = useState(60)
+  return (
+    <Item as="figure" className="pv-figure">
+      <a className="pv-photo-overlay" href={overlay} target="_blank" rel="noopener noreferrer" aria-label="Open the full overlay">
+        <img src={photo} alt={alt} />
+        <img src={overlay} alt="" style={{ opacity: opacity / 100 }} />
+      </a>
+      <label className="pv-range">
+        <span>Overlay opacity</span>
+        <Slider value={opacity} onChange={setOpacity} aria-label="Overlay opacity on the original photograph" />
+        <span>{opacity}%</span>
+      </label>
+      <figcaption>{caption}</figcaption>
+    </Item>
+  )
+}
+
 const Block = ({ block, figures, brief }) => {
   if (typeof block === 'string') return <Item as="p">{block}</Item>
   if (block.h) return <Item as="h3">{block.h}</Item>
@@ -54,6 +72,9 @@ const Block = ({ block, figures, brief }) => {
     // The picture itself is attached by the poster's loader; the data only names it.
     const src = figures?.[block.figure]
     if (!src) return null
+    if (block.basePhoto && figures[block.basePhoto]) return (
+      <PhotoOverlay photo={figures[block.basePhoto]} overlay={src} alt={block.alt} caption={block.caption} />
+    )
     return (
       <Item as="figure" className="pv-figure">
         <a href={src} target="_blank" rel="noopener noreferrer"><img src={src} alt={block.alt} loading="lazy" /></a>

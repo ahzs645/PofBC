@@ -99,15 +99,29 @@ const record = (owner, file, fields) => ({
 const vector = { evidenceType: 'native-pdf-vector-extraction', publisher: iafName }
 const annual = 'https://iafbc.ca/reports/'
 const water2021 = { date: '2021', label: '2021 water-management guide, PDF p. 2. Joint funding acknowledgements', source: waterGuide }
+const forageCaseStudy = 'https://bcforagecouncil.ca/wp-content/uploads/2017/11/fi03-on-farm-demonstration-research-case-study-1.pdf'
+const forageAcknowledgements = {
+  evidenceType: 'native-pdf-vector-extraction', publisher: 'BC Forage Council',
+  sourcePage: forageCaseStudy, sourceUrl: forageCaseStudy,
+  sourceLocator: 'A Guide to On-Farm Demonstration Research, case study 1, PDF p. 2', specimenDate: '2017'
+}
 const ardAssets = 'https://ardcorp.ca/wp-content/uploads/'
 export const AGRICULTURAL_PARTNER_BODIES = [
   {
     id: iaf, name: iafName, shortName: 'Investment Agriculture Foundation', kind: 'nonprofit-society',
-    shelf: 'partners', cover: 'iaf-curled-leaves', graphNode: null, current: true, from: 1996, notes: iafHistory, status: 'asset-collected',
+    shelf: 'partners', cover: 'iaf-field-monogram', graphNode: null, current: true, from: 1996, notes: iafHistory, status: 'asset-collected',
     assets: [
-      record(iaf, 'curled-leaves-horizontal.png', {
+      record(iaf, 'curled-leaves-horizontal.svg', {
+        ...forageAcknowledgements,
         id: 'iaf-curled-leaves', label: 'Curled leaves and stacked name', designLabel: 'Curled leaves and stacked name',
-        versionLabel: 'Sage and black', publisher: 'BC Climate Change Adaptation Program',
+        versionLabel: 'Sage and black · SVG',
+        sha256: '558e7b5785c843e8a3d196210f40dce887c577c79b6c55706c65fa47cb8ed397',
+        notes: 'Two curled leaves form a circle beside three lines of lettering and the italic “of British Columbia”. The same signature appears in the 2021 water-management guide.',
+        fidelityNote: 'All 52 native vector paths isolated from the funding acknowledgements. The PDF metadata dates the specimen to 2017.'
+      }),
+      record(iaf, 'curled-leaves-horizontal.png', {
+        id: 'iaf-curled-leaves-water-guide', variantOf: 'iaf-curled-leaves', label: 'Curled leaves and stacked name in the water guide',
+        versionLabel: 'Water guide · PNG', publisher: 'BC Climate Change Adaptation Program',
         sourcePage: waterPage, sourceUrl: waterGuide, sourceLocator: 'Funding acknowledgements, PDF p. 2', specimenDate: '2021',
         sha256: '3c72c6f9e373cb59b3d93d3bcc559b147e364b2416f8ab5081696b5cb27782e5',
         notes: 'Two curled leaves form a circle beside three lines of lettering and the italic “of British Columbia”. The guide identifies IAF and ARDCorp as joint administrators of the project funding.',
@@ -148,8 +162,15 @@ export const AGRICULTURAL_PARTNER_BODIES = [
     id: ard, name: ardName, shortName: 'ARDCorp', kind: 'corporate-subsidiary',
     shelf: 'partners', graphNode: null, current: true, from: 1984, notes: ardHistory, status: 'asset-collected',
     assets: [
+      record(ard, 'field-furrows.svg', {
+        ...forageAcknowledgements,
+        id: 'ardcorp-field-furrows', label: 'ARDCorp field furrows', designLabel: 'ARDCorp field furrows', versionLabel: 'Full colour · SVG',
+        sha256: 'e5c5bddcac8d18749c1b797e5a4ff05e0a9a95ae9f0ed7ad60919b81af2a0f56',
+        notes: 'Three green furrows sweep beneath the grey lowercase name. The small lettering identifies the BC Agricultural Research & Development Corporation.',
+        fidelityNote: 'All 54 native vector paths isolated from the funding acknowledgements. The PDF metadata dates the specimen to 2017.'
+      }),
       record(ard, 'field-furrows.png', {
-        id: 'ardcorp-field-furrows', label: 'ARDCorp field furrows', designLabel: 'ARDCorp field furrows', versionLabel: 'Full colour',
+        id: 'ardcorp-field-furrows-media', variantOf: 'ardcorp-field-furrows', label: 'ARDCorp field furrows media attachment', versionLabel: 'Full colour · PNG',
         publisher: ardName, sourcePage: 'https://ardcorp.ca/ardcorp_logo_cymk/', sourceUrl: ardAssets + '2018/09/ARDCORP_Logo_CYMK.png', sourceDate: '2018-09-21',
         alsoSeen: [water2021, { date: '2021', label: 'BC Agriculture Council, Annual Report 2021, p. 18', source: councilReport }],
         sha256: '36f02345fd80e9ed56d9f9f9cbb579c4db2b6e73481d476d4d0ccf7e5ded9c7a',

@@ -188,6 +188,27 @@
       "originalDocumentBytes": 12006425,
       "sourcePageNumber": 49,
       "archivingNote": "One complete source page preserved as a PDF; page content is retained, PDF container rewritten by PyMuPDF. The full report is byte-identical to the copy on the trust's website."
+    },
+    {
+      "file": "identity-expanded/island-coastal-economic-trust/five-paddle-reversed.pdf",
+      "sha256": "6628b682fe0da24a5496438178e656ab3c5f5d6781098987d0b31373e31d15b5",
+      "bytes": 15953,
+      "sourceUrl": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/2026-Impact-Report-1.pdf",
+      "sourcePageNumber": 1,
+      "observedDate": "2026-11-25",
+      "originalDocumentSha256": "d1e3e9e6bc336a19fe09e39ab1a7d4a981503b666a36a31ab1dcfbc3e15e591e",
+      "archivingNote": "Isolated the cover logo’s PDF drawing operators and Type 2 axial shading with pikepdf. Converted the isolated PDF to SVG with Poppler pdftocairo."
+    },
+    {
+      "file": "identity-expanded/island-coastal-economic-trust/lowercase-icet-2020-21.svg",
+      "bytes": 7749,
+      "sha256": "a7e53c41088470cfa0121b6f4dafc806c039cfaf60b6f73f49b72a5986d573be",
+      "sourceUrl": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/ICET-2020-21-Annual-Report.pdf",
+      "sourcePage": "https://islandcoastaltrust.ca/impact-report/",
+      "observedDate": "2026-11-25",
+      "sourcePageNumber": 1,
+      "originalDocumentSha256": "63de907ce83453c8c8bf1504700828aadbb4780ca226c8ca861986099e91a0fc",
+      "archivingNote": "Selected the 30 white filled paths on the cover from MuPDF SVG output. The four initials and 26 small letters retain their native outlines, transforms and relative positions."
     }
   ],
   "extractions": [
@@ -385,10 +406,41 @@
       "pageIndex": 0
     },
     {
-      "assetId": "source-expanded-bc-arts-council-provincial-lockup",
+      "assetId": "source-expanded-bc-arts-council-arts-council-signature",
       "sourceFile": "identity-expanded/_sources/bc-arts-council-provincial-lockup.pdf",
-      "method": "pdf-vector-page",
-      "pageIndex": 0
+      "method": "pdf-vector-paths",
+      "pageIndex": 0,
+      "pathIndices": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "bounds": [
+        28,
+        21,
+        418,
+        101
+      ]
     },
     {
       "assetId": "source-expanded-science-world-black-wordmark",
@@ -1612,7 +1664,158 @@
           "evidenceType": "official-website-raster",
           "notes": "Source-native website logo, archived byte-for-byte.",
           "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-          "darkBackground": false
+          "darkBackground": false,
+          "designLabel": "Five-paddle logo",
+          "versionLabel": "Website colours · WebP",
+          "preferredVector": "source-expanded-island-coastal-economic-trust-five-paddle-website-colours"
+        },
+        {
+          "id": "source-expanded-island-coastal-economic-trust-five-paddle-website-colours",
+          "variantOf": "source-expanded-island-coastal-economic-trust-website-logo",
+          "label": "Island Coastal Economic Trust — five-paddle logo",
+          "versionLabel": "Website colours · SVG",
+          "file": "identity-expanded/island-coastal-economic-trust/five-paddle-website-colours.svg",
+          "sha256": "8b73bf0a3086be2f7ed637d66544264ae498e744b501a6e8e44c7ce3d0e51142",
+          "bytes": 54484,
+          "format": "svg",
+          "isVector": true,
+          "supplied": false,
+          "reconstruction": false,
+          "publisher": "Island Coastal Economic Trust",
+          "sourcePage": "https://islandcoastaltrust.ca/impact-report/",
+          "sourceUrl": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/2026-Impact-Report-1.pdf",
+          "sourceLocator": "2025–2026 Impact Report, PDF page 1, upper-left logo. Placed graphic ICET_ExtHorizLogo_FullColourRev. Bounds in points from top left [36, 54, 432, 162.551].",
+          "sourceFile": "identity-expanded/island-coastal-economic-trust/five-paddle-reversed.pdf",
+          "sourceDate": "2026-08",
+          "specimenDate": "2026-08",
+          "observedDate": "2026-11-25",
+          "evidenceType": "website-colours-on-source-vector",
+          "extraction": {
+            "method": "Isolated the cover logo’s PDF drawing operators and Type 2 axial shading with pikepdf. Converted the isolated PDF to SVG with Poppler pdftocairo. Matched each fill and gradient stop to median RGB samples from the corresponding area of the registered website WebP."
+          },
+          "notes": "The report’s five-paddle logo in the colours of the Trust’s website. The SVG retains the original outlines for the paddles and both lines of lettering.",
+          "fidelityNote": "Each fill was sampled from opaque interior pixels of the archived website WebP. The paddle blades use a vector gradient sampled along the original gradient axis. All path data and clipping geometry match the extracted report artwork.",
+          "colourReferenceUrl": "https://islandcoastaltrust.ca/wp-content/uploads/2026/06/d4d8083503d108ed87541dd95a430bf2ab761c7c-2-e1782763482184.webp",
+          "darkBackground": false,
+          "contentType": "image/svg+xml",
+          "dimensions": {
+            "viewBox": "0 0 398 111"
+          },
+          "alsoSeen": [
+            {
+              "label": "Website logo used for the colour match",
+              "source": "https://islandcoastaltrust.ca/wp-content/uploads/2026/06/d4d8083503d108ed87541dd95a430bf2ab761c7c-2-e1782763482184.webp"
+            }
+          ]
+        },
+        {
+          "id": "source-expanded-island-coastal-economic-trust-five-paddle-reversed",
+          "variantOf": "source-expanded-island-coastal-economic-trust-website-logo",
+          "label": "Island Coastal Economic Trust — five-paddle logo",
+          "versionLabel": "Reversed · report vector",
+          "file": "identity-expanded/island-coastal-economic-trust/five-paddle-reversed.svg",
+          "sha256": "e662d773bbe3803c21b246ae0d7baab95f1833478f13925c8ba1296038614c2f",
+          "bytes": 70795,
+          "format": "svg",
+          "isVector": true,
+          "supplied": false,
+          "reconstruction": false,
+          "publisher": "Island Coastal Economic Trust",
+          "sourcePage": "https://islandcoastaltrust.ca/impact-report/",
+          "sourceUrl": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/2026-Impact-Report-1.pdf",
+          "sourceLocator": "2025–2026 Impact Report, PDF page 1, upper-left logo. Placed graphic ICET_ExtHorizLogo_FullColourRev. Bounds in points from top left [36, 54, 432, 162.551].",
+          "sourceFile": "identity-expanded/island-coastal-economic-trust/five-paddle-reversed.pdf",
+          "sourceDate": "2026-08",
+          "specimenDate": "2026-08",
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction-with-converted-gradients",
+          "extraction": {
+            "method": "Isolated the cover logo’s PDF drawing operators and Type 2 axial shading with pikepdf. Converted the isolated PDF to SVG with Poppler pdftocairo."
+          },
+          "notes": "Five paddles beside the two-line name in the report’s white-lettered colourway.",
+          "fidelityNote": "Original outlines for the paddles and all 26 letters, with the paddle-blade shading converted to an SVG linear gradient. The light display uses RGB inks and blade gradient stops matched to the Trust’s Board Charter header (page 1) and compared with the website WebP.",
+          "colourReferenceUrl": "https://islandcoastaltrust.ca/wp-content/uploads/2026/09/Board-Charter.pdf",
+          "sourceGround": "dark",
+          "darkBackground": true,
+          "contentType": "image/svg+xml",
+          "dimensions": {
+            "viewBox": "0 0 398 111"
+          },
+          "downloads": [
+            {
+              "file": "identity-expanded/island-coastal-economic-trust/five-paddle-reversed.pdf",
+              "sha256": "6628b682fe0da24a5496438178e656ab3c5f5d6781098987d0b31373e31d15b5",
+              "bytes": 15953,
+              "label": "Download report artwork (vector PDF)",
+              "format": "pdf"
+            }
+          ]
+        },
+        {
+          "id": "icet-lowercase-report",
+          "label": "Lowercase icet with stacked name",
+          "designLabel": "Lowercase icet with stacked name",
+          "versionLabel": "White lettering · report SVG",
+          "file": "identity-expanded/island-coastal-economic-trust/lowercase-icet-2020-21.svg",
+          "bytes": 7749,
+          "sha256": "a7e53c41088470cfa0121b6f4dafc806c039cfaf60b6f73f49b72a5986d573be",
+          "sourceUrl": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/ICET-2020-21-Annual-Report.pdf",
+          "sourcePage": "https://islandcoastaltrust.ca/impact-report/",
+          "observedDate": "2026-11-25",
+          "sourceFile": "identity-expanded/island-coastal-economic-trust/lowercase-icet-2020-21.svg",
+          "publisher": "Island Coastal Economic Trust",
+          "format": "svg",
+          "isVector": true,
+          "supplied": false,
+          "reconstruction": false,
+          "sourceLocator": "2020–2021 Annual Report, PDF page 1, lower left.",
+          "specimenDate": "2020/21",
+          "dateNote": "The report period dates the white specimen.",
+          "notes": "The lowercase icet initials sit beside the same four-line name that appears on its own on the 2022–23 and 2023–24 impact report covers.",
+          "fidelityNote": "Selected the 30 white filled paths on the cover from MuPDF SVG output. The four initials and 26 small letters retain their native outlines, transforms and relative positions.",
+          "extraction": {
+            "method": "Selected the 30 white filled paths on the cover from MuPDF SVG output. The four initials and 26 small letters retain their native outlines, transforms and relative positions.",
+            "pdfBounds": [
+              39,
+              674.9,
+              188,
+              723.3
+            ],
+            "page": 1
+          },
+          "sourceGround": "dark",
+          "darkBackground": true,
+          "evidenceType": "native-pdf-vector-extraction",
+          "alsoSeen": [
+            {
+              "date": "2018/19",
+              "label": "2018–19 annual report, cover",
+              "source": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/ICET-Annual-Report-2018-19-final-web-v2.pdf#page=1"
+            },
+            {
+              "date": "2021/22",
+              "label": "2021–22 annual report, cover",
+              "source": "https://islandcoastaltrust.ca/wp-content/uploads/2026/08/ICET-Annual-Report-2021-2022.pdf#page=1"
+            }
+          ]
+        }
+      ],
+      "cover": "source-expanded-island-coastal-economic-trust-website-logo",
+      "artworkSections": [
+        {
+          "id": "icet-paddle-identity",
+          "label": "Five-paddle identity",
+          "marks": [
+            "source-expanded-island-coastal-economic-trust-website-logo"
+          ]
+        },
+        {
+          "id": "icet-stacked-name",
+          "label": "Four-line name",
+          "marks": [
+            "icet-lowercase-report",
+            "source-expanded-island-coastal-economic-trust-2023-24-wordmark"
+          ]
         }
       ]
     },
@@ -1625,13 +1828,17 @@
       "from": null,
       "to": null,
       "current": true,
+      "cover": "source-expanded-etsi-bc-bylaws-2026-full-name-colour",
       "status": "asset-collected",
       "observedDate": "2026-11-15",
       "notes": "Officially published identity artwork. Source publication and capture dates are recorded separately from logo adoption dates.",
       "assets": [
         {
           "id": "source-expanded-etsi-bc-website-logo",
-          "label": "Economic Trust of the Southern Interior: Website logo",
+          "label": "Stacked logo",
+          "designLabel": "Stacked logo",
+          "versionLabel": "Reversed · published PNG",
+          "preferredVector": "source-expanded-etsi-bc-annual-report-2024-stacked",
           "file": "identity-expanded/etsi-bc/website-logo.png",
           "format": "png",
           "isVector": false,
@@ -2603,11 +2810,11 @@
       "notes": "Officially published identity artwork. Source publication and capture dates are recorded separately from logo adoption dates.",
       "assets": [
         {
-          "id": "source-expanded-bc-arts-council-provincial-lockup",
-          "label": "BC Arts Council: Provincial funding lockup",
-          "file": "identity-expanded/bc-arts-council/provincial-lockup.svg",
-          "sha256": "90b64d3f2892124ca7595f7361ea9a00ad75fe60e75aa1d748b60894fa77e9cb",
-          "bytes": 58888,
+          "id": "source-expanded-bc-arts-council-arts-council-signature",
+          "label": "BC Arts Council signature",
+          "file": "identity-expanded/bc-arts-council/arts-council-signature.svg",
+          "sha256": "a2ecac35dd7e557bd19200e82a6bef2c84d7e42f4c718575971c6236238eddc9",
+          "bytes": 25962,
           "format": "svg",
           "isVector": true,
           "supplied": false,
@@ -2615,26 +2822,28 @@
           "publisher": "BC Arts Council",
           "sourcePage": "https://www.bcartscouncil.ca/funding/logo-and-acknowledgement/",
           "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/policies-procedures-standards/web-content-development-guides/corporate-identity-assets/visid-files/bc_ac_lockup_tagline.zip?forcedownload=true",
-          "sourceLocator": "Official logo archive; BCID lock up w tagline/ArtsCouncil-BCID-lockup-rgb-pos.pdf",
+          "sourceLocator": "Official logo archive; BCID lock up w tagline/ArtsCouncil-BCID-lockup-rgb-pos.pdf, page 1, left of the divider",
           "sourceFile": "identity-expanded/_sources/bc-arts-council-provincial-lockup.pdf",
           "sourceDate": "Undated source observed 2026-11-15",
           "dateNote": "Publication, archive or observation date only; not a logo adoption date.",
           "observedDate": "2026-11-15",
-          "evidenceType": "official-vector-master-conversion",
-          "notes": "Complete official Arts Council / British Columbia funding lockup with its supplied acknowledgement tagline.",
-          "fidelityNote": "Native vector master converted to SVG for browser display using PyMuPDF. Original source file retained as a download. No tracing, type recreation or manual recolouring; PDF colour-space conversion may affect screen colour.",
+          "evidenceType": "native-pdf-vector-extraction",
+          "notes": "The orange symbol and two-line British Columbia Arts Council name from the funding lockup.",
+          "fidelityNote": "Extracted from page 1 of the official RGB funding lockup with PyMuPDF. The SVG retains the selected paths, transforms and source colours.",
           "darkBackground": false,
-          "downloads": [
-            {
-              "file": "identity-expanded/_sources/bc-arts-council-provincial-lockup.pdf",
-              "sha256": "9f8a03aaad575b26886958dfa863a459dd1b684c2b261fd3fd133f4d5af5a1ce",
-              "bytes": 138727,
-              "label": "Original source file",
-              "format": "pdf"
-            }
-          ]
+          "extraction": {
+            "method": "pdf-vector-paths",
+            "pdfBounds": [
+              28,
+              21,
+              418,
+              101
+            ]
+          },
+          "sourceGround": "light"
         }
-      ]
+      ],
+      "cover": "source-expanded-bc-arts-council-arts-council-signature"
     },
     {
       "id": "science-world",

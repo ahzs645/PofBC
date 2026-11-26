@@ -710,24 +710,16 @@
 
 /* Graph | List, bottom right, as the model's Graph | Power map. */
 .gov-segmented {
-  display: inline-flex;
-  height: 36px;
-  border-radius: 12px;
-  overflow: hidden;
-  background: var(--gov-mid);
+  --track: var(--gov-mid);
+  --segment: var(--gov-surface);
+  --ink: var(--gov-ink);
+  --ink-2: var(--gov-ink-2);
+  min-height: 36px;
 }
 
 .gov-segmented button {
-  padding: 0 16px;
-  border: 0;
-  background: none;
-  color: var(--gov-ink-4);
-  font: 500 14px/1 inherit;
-  font-family: inherit;
-  cursor: pointer;
+  padding-inline: clamp(6px, 2vw, 16px);
 }
-
-.gov-segmented button[aria-pressed='true'] { background: var(--gov-surface); color: var(--gov-ink); border-radius: 12px; }
 
 /* The list view: the year's bodies in reading order, in the diagram's place. */
 .gov__graph[data-mode='list'] { place-items: stretch; }

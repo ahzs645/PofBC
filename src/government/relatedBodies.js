@@ -2,7 +2,10 @@
 // chronology. These are current, sourced catalogue records; they are never projected backwards
 // into a ministry's historical responsibility or drawn as members of the provincial executive.
 
+import { RURAL_HEALTH_BODIES, ruralConnectionsOf } from './ruralHealth.js'
+import { FORREX_RELATED_BODY } from './forrex.js'
 import { SCHOOL_RELATED_BODIES } from '../schools/integration.js'
+import { TOURISM_RELATED_BODIES } from '../gallery/tourismPartners.js'
 
 export const RELATED_BODIES_AS_OF = '2026-11-15'
 
@@ -21,6 +24,11 @@ const UNBC_ACT = source('University of Northern British Columbia Act, SBC 1990, 
 
 export const RELATED_BODY_KINDS = {
   'school-district': 'School district',
+  'tourism-association': 'Tourism association',
+  'tourism-region': 'Tourism region',
+  'tourism-collaboration': 'Tourism collaboration',
+  'tourism-enterprise': 'Tourism enterprise',
+  'tourism-initiative': 'Tourism initiative',
   'francophone-school-district': 'Francophone school district',
   'regional-transportation-authority': 'Regional transportation authority',
   'transit-company': 'Transit operating company',
@@ -32,6 +40,12 @@ export const RELATED_BODY_KINDS = {
   'independent-regulator': 'Independent regulator',
   'development-trust': 'Economic development trust',
   'development-society': 'Economic development society',
+  'nonprofit-society': 'Nonprofit society',
+  'joint-committee': 'Joint committee',
+  'professional-association': 'Professional association',
+  'medical-division': 'Division of family practice',
+  'clinical-network': 'Clinical network',
+  'health-research-network': 'Health research network',
   'public-university': 'Public university',
   'public-institute': 'Public institute',
   'charitable-society': 'Charitable society',
@@ -47,7 +61,9 @@ export const RELATED_BODY_GROUPS = [
   { id: 'school-districts', label: 'School districts', kinds: ['school-district', 'francophone-school-district'] },
   { id: 'transit', label: 'Transit in Metro Vancouver', kinds: ['regional-transportation-authority', 'transit-company', 'transit-police'] },
   { id: 'services', label: 'Regional and public services', kinds: ['regional-federation', 'ferry-authority', 'emergency-communications', 'statutory-authority', 'independent-regulator', 'corporate-subsidiary'] },
+  { id: 'tourism', label: 'Tourism and destination management', kinds: ['tourism-association', 'tourism-region', 'tourism-collaboration', 'tourism-enterprise', 'tourism-initiative'] },
   { id: 'development', label: 'Economic development', kinds: ['development-trust', 'development-society'] },
+  { id: 'rural-health', label: 'Rural health and medical practice', kinds: ['nonprofit-society', 'joint-committee', 'professional-association', 'medical-division', 'clinical-network', 'health-research-network'] },
   { id: 'learning', label: 'Education and science', kinds: ['public-university', 'public-institute', 'charitable-society'] }
 ]
 
@@ -70,6 +86,9 @@ const university = (id, name, shortName, officialUrl, slug) => ({
 
 export const RELATED_BODIES = [
   ...SCHOOL_RELATED_BODIES,
+  ...TOURISM_RELATED_BODIES,
+  FORREX_RELATED_BODY,
+  ...RURAL_HEALTH_BODIES,
   {
     id: 'translink', name: 'South Coast British Columbia Transportation Authority', shortName: 'TransLink',
     aliases: ['TransLink', 'Greater Vancouver Transportation Authority', 'GVTA', 'SCBCTA'],
@@ -209,7 +228,7 @@ export const RELATED_BODIES = [
     description: 'BCIT is a public post-secondary institute in British Columbia. Its institutional identity and disclosed employer records are connected here.',
     sources: [POSTSECONDARY], salaryEmployers: [employer('bcit', 'BCIT')], relationships: []
   }
-].map((body) => ({ ...body, checked: body.checked ?? RELATED_BODIES_AS_OF, chronology: 'current-catalogue' }))
+].map((body) => ({ ...body, relationships: [...(body.relationships ?? []), ...ruralConnectionsOf(body.id)], checked: body.checked ?? RELATED_BODIES_AS_OF, chronology: 'current-catalogue' }))
 
 const BY_ID = new Map(RELATED_BODIES.map((body) => [body.id, body]))
 export const relatedBodyById = (id) => BY_ID.get(id) ?? null

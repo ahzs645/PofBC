@@ -6,6 +6,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 const ROOT = fileURLToPath(new URL('../', import.meta.url))
 const FOLDER = 'research/identity/tourism-asset-transfer-2013'
 const OUTPUT = 'src/gallery/tourismData.js'
+export const TOURISM_MANIFESTS = ['artwork-manifest.json', 'website-manifest.json', 'our-brand-2021-manifest.json']
 const SOURCE_ARRAYS = ['digitalRecords', 'marks', 'timeline', 'publications', 'leads']
 const REQUIRED_DIGITAL = ['hellobc', 'worldhost', 'near-me-bc', 'bc-escapes', 'bc-magazine', 'share-your-bc']
 const readJson = (root, file) => JSON.parse(readFileSync(resolve(root, file), 'utf8'))
@@ -79,7 +80,7 @@ export const validateTourismData = (catalogue, register, domainDocument) => {
 
 const manifestAssets = (root) => {
   const assets = new Map()
-  for (const name of ['artwork-manifest.json', 'website-manifest.json']) {
+  for (const name of TOURISM_MANIFESTS) {
     const file = `${FOLDER}/${name}`
     if (!existsSync(resolve(root, file))) continue
     const manifest = readJson(root, file)
@@ -94,7 +95,7 @@ const manifestAssets = (root) => {
 
 const imageOf = (root, asset, sources) => {
   const file = (asset.path ?? asset.file ?? (asset.filename ? `tourism/websites/${asset.filename}` : '')).replace(/^public\//, '')
-  if (!/^tourism\/(?:marks|websites)\/[a-zA-Z0-9._/-]+$/.test(file) || file.includes('..')) fail(`invalid asset path: ${file}`)
+  if (!/^tourism\/(?:marks|websites|publications)\/[a-zA-Z0-9._/-]+$/.test(file) || file.includes('..')) fail(`invalid asset path: ${file}`)
   const disk = resolve(root, 'public', file)
   if (!existsSync(disk)) fail(`missing image file: ${file}`)
   const bytes = readFileSync(disk)

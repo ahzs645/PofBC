@@ -102,13 +102,19 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
 /* Lettering found by its ink and the gaps between: each clone's wide edge counts, painted or not. */
 .pv-stage .pv-hs-letters { pointer-events: all; stroke-linejoin: round; stroke-linecap: round; }
 
-/* The spotlight: everything but the hovered layer settles back. */
+/* Animate the spotlight's input so Chromium paints the SVG together under perspective. */
+@property --pv-spotlight-opacity {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 1;
+}
+.pv-stage { --pv-spotlight-transition: --pv-spotlight-opacity 180ms ease; }
+
 .pv-sheet > svg > g { transition: opacity 180ms ease; }
 
 .pv-chip {
   position: absolute;
-  /* `translate`, not `transform`, so the chip's entrance animation (which sets transform) keeps it. */
-  translate: 16px 18px;
+  inset: 0 auto auto 0;
   pointer-events: none;
   background: rgba(10, 12, 10, 0.82);
   backdrop-filter: blur(12px);
@@ -120,9 +126,6 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
   max-width: 240px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
-.pv-chip.pv-chip-up { translate: 16px calc(-100% - 12px); }
-.pv-chip.pv-chip-left { translate: calc(-100% - 12px) 18px; }
-.pv-chip.pv-chip-up.pv-chip-left { translate: calc(-100% - 12px) calc(-100% - 12px); }
 .pv-chip span { font-family: var(--display); font-weight: 600; font-size: 14px; letter-spacing: -0.01em; }
 .pv-chip small { color: var(--muted); font-size: 12px; line-height: 1.3; }
 
@@ -144,13 +147,14 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
   left: 0; right: 0;
   top: env(safe-area-inset-top, 0px);
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   padding: 14px 20px;
   pointer-events: none;
   z-index: 6;
 }
 .pv-top > * { pointer-events: auto; }
+.pv-crumb, .pv-top-actions > :is(.pv-switch, .pv-look, .pv-ghost) { border-radius: 14px; }
 .pv-brand {
   text-align: left;
   display: grid;
@@ -167,7 +171,6 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
   align-items: stretch;
   min-width: 0;
   border: 1px solid var(--line-2);
-  border-radius: 14px;
   background: rgba(10, 12, 10, 0.55);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
@@ -195,7 +198,6 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
   display: flex;
   align-items: stretch;
   border: 1px solid var(--line-2);
-  border-radius: 999px;
   background: rgba(10, 12, 10, 0.55);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
@@ -244,9 +246,18 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
 .pv-brand b, .pv-brand span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .pv-brand b { font-family: var(--display); font-weight: 600; font-size: 17px; letter-spacing: -0.015em; font-variation-settings: 'opsz' 48; }
 .pv-brand span { font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
-.pv-top-start { display: flex; align-items: center; gap: 14px; min-width: 0; }
 .pv-top { gap: 10px; }
-.pv-top-actions { display: flex; align-items: center; gap: 6px; flex: none; }
+.pv-top-actions { display: flex; align-items: stretch; gap: 6px; flex: none; }
+.pv-edition {
+  width: auto;
+  flex: none;
+  padding: 0 10px;
+  font-size: 13px;
+  border: 1px solid var(--line-2);
+  border-radius: 14px;
+  background: rgba(10, 12, 10, 0.72);
+  color: var(--text);
+}
 
 .pv-ghost {
   border: 1px solid var(--line-2);
@@ -452,6 +463,8 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
 
 .pv-figure { margin: 16px 0 6px; }
 .pv-figure img { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line); }
+.pv-photo-overlay { display: block; position: relative; }
+.pv-photo-overlay img + img { position: absolute; inset: 0; }
 .pv-figure figcaption { font-size: 12.5px; color: var(--muted); margin-top: 8px; }
 
 .pv-toggle { display: flex; align-items: center; gap: 10px; margin: 6px 0 14px; font-weight: 500; cursor: pointer; font-size: 14px; }
@@ -514,11 +527,9 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
 .pv-layout-btn[aria-pressed="true"] { border-color: var(--amber); color: var(--text); box-shadow: 0 0 0 1px var(--amber); }
 .pv-layout-thumb { display: grid; place-items: center; height: 54px; background: var(--poster-black); border-radius: 6px; padding: 6px; }
 .pv-layout-thumb svg { max-width: 100%; max-height: 100%; width: auto; height: auto; }
-.pv-seg { display: inline-flex; padding: 3px; gap: 2px; background: rgba(0, 0, 0, 0.35); border-radius: 999px; }
+.pv-seg { display: inline-flex; flex-wrap: wrap; min-inline-size: 0; max-inline-size: 100%; padding: 3px; gap: 2px; background: rgba(0, 0, 0, 0.35); border-radius: 12px; }
 .pv-seg.pv-wide { display: flex; margin: 0 0 14px; }
-.pv-seg.pv-wide button { flex: 1; }
-.pv-seg.pv-wrap { flex-wrap: wrap; border-radius: 12px; }
-.pv-seg button { border: none; background: none; border-radius: 999px; padding: 5px 12px; font-size: 13px; font-weight: 500; color: var(--muted); transition: background 150ms, color 150ms; }
+.pv-seg button { flex: 1 1 auto; min-inline-size: 0; max-inline-size: 100%; overflow-wrap: anywhere; border: none; background: none; border-radius: 9px; padding: 5px 12px; font-size: 13px; font-weight: 500; color: var(--muted); transition: background 150ms, color 150ms; }
 .pv-seg.pv-caps button { text-transform: capitalize; }
 .pv-seg button:hover { color: var(--text); }
 .pv-seg button[aria-pressed="true"] { background: var(--text); color: var(--bg); font-weight: 600; }
@@ -613,13 +624,13 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
   .pv-switch-pick { padding: 0 9px; letter-spacing: -0.04em; }
   .pv-switch-noun { display: none; }
   .pv-switch-pick .ui-select__chevron { display: none; }
-  .pv-top-start { gap: 8px; }
   /* A long title takes two short lines rather than being cut to its first word. */
   .pv-brand b { font-size: 14px; line-height: 1.2; white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .pv-app { animation: none; }
+  .pv-stage { --pv-spotlight-transition: none; }
   .pv-stage .pv-hs, .pv-stage #title path, .pv-stage #slogan path, .pv-stage #copy > g, .pv-copy-text > div, .pv-sheet > svg > g, .pv-contents button, .pv-layout-btn, .pv-swatch { transition: none; animation: none; }
 }
 

@@ -7,7 +7,7 @@ const round = (value) => Math.round(value / 100) * 100
  * The poster itself, at its own page size. `meta` is its catalogue card; `tag` names a change made
  * on the stage (a swapped logo, say), which goes into the label and the file name.
  */
-export const posterTarget = ({ meta, getSvg, tag, noun = 'poster', changed = 'with the swapped logo' }) => {
+export const posterTarget = ({ meta, getSvg, printPdf, tag, noun = 'poster', changed = 'with the swapped logo' }) => {
   const { page } = meta
   const widths = [...new Set(DPI.map((dpi) => round(page.w * dpi)))]
   // What the file holds follows what the drawing is made of (the card's `made`), not which poster it is.
@@ -16,6 +16,7 @@ export const posterTarget = ({ meta, getSvg, tag, noun = 'poster', changed = 'wi
     id: 'poster',
     label: tag ? `The ${noun}, ${changed}` : `The ${noun}`,
     getSvg,
+    printPdf,
     inches: page,
     dpiBase: page.w,
     widths,

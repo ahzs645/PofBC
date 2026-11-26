@@ -398,7 +398,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
             />
             {/* Under the diagram, the list or the comparison, each its own height: the switch stays
                 under the finger as the one above it is replaced (holdScroll.js). */}
-            <div className="gov-segmented" role="group" aria-label="Show as">
+            <div className="segmented gov-segmented" role="group" aria-label="Show as">
               <button type="button" aria-pressed={mode === 'graph'} onClick={(event) => showAs(event, 'graph')}>Graph</button>
               <button type="button" aria-pressed={mode === 'list'} onClick={(event) => showAs(event, 'list')}>List</button>
               <button type="button" aria-pressed={mode === 'compare'} onClick={(event) => showAs(event, 'compare')}>Compare</button>

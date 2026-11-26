@@ -21,9 +21,8 @@
 /* Reverse artwork (a white logo) is shown on the dark ground it was made for. */
 .initiative__hero-art--dark { background: #23211d; }
 .initiative__hero-art--dark span { color: #b9b4a8; }
-.initiative__tabs { display: flex; gap: 25px; overflow-x: auto; border-bottom: 1px solid var(--mid); margin: 24px 0 0; scrollbar-width: thin; }
-.initiative__tabs button { border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--ink-muted); padding: 16px 0; flex-shrink: 0; cursor: pointer; font-size: 16px; font-weight: 500; min-height: 48px; }
-.initiative__tabs button[aria-selected='true'] { color: var(--ink); border-bottom-color: var(--ink); }
+.initiative__hero-art[data-themed] { background: var(--surface); }
+.initiative__hero-art[data-themed] span { color: var(--ink-muted); }
 .initiative__panel { padding: 29px 0 0; }
 .initiative__section-heading { display: flex; justify-content: space-between; gap: 20px; margin-bottom: 21px; }
 .initiative__section-heading .initiative__eyebrow { color: var(--ink-muted); margin-bottom: 8px; }
@@ -50,6 +49,7 @@
 .initiative__card--featured + .initiative__card .initiative__visual img, .initiative__card--featured + .initiative__card .initiative__unrecovered { height: 242px; }
 .initiative__card--mark .initiative__visual { background: #fff; }
 .initiative__card--mark .initiative__visual img { height: 180px; padding: 28px; }
+.initiative__visual[data-themed], .initiative__card--mark .initiative__visual[data-themed] { background: var(--surface); }
 .initiative__visual--dark { background: #20231e !important; }
 .initiative__unrecovered { height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; color: #7b7b6e; background: #f3f2ec; padding: 20px; text-align: center; }
 .initiative__unrecovered svg { margin-bottom: 4px; opacity: .65; }
@@ -140,7 +140,6 @@
   .initiative__card--featured .initiative__visual img, .initiative__card--featured + .initiative__card .initiative__visual img, .initiative__card--featured .initiative__unrecovered, .initiative__card--featured + .initiative__card .initiative__unrecovered { height: 180px; padding: 12px; }
   .initiative__hero { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); }
   .initiative__hero-art { padding: 20px; }
-  .initiative__tabs { gap: 22px; }
 }
 @media (max-width: 560px) {
   .initiative__hero { grid-template-columns: 1fr; border-radius: 12px; }
@@ -153,8 +152,6 @@
   .initiative__hero-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-top: 16px; gap: 12px; }
   .initiative__hero-stats strong { font-size: 19px; }
   .initiative__hero-stats span { font-size: 12px; }
-  .initiative__tabs { margin-top: 13px; gap: 21px; }
-  .initiative__tabs button { font-size: 14px; }
   .initiative__panel { padding-top: 23px; }
   .initiative__section-heading h3 { font-size: 22px; }
   .initiative__cards, .initiative__publication-grid { grid-template-columns: minmax(0, 1fr); }

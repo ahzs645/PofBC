@@ -163,8 +163,7 @@
 .patch__panel .field--compact { justify-content: space-between; }
 .patch__variants .field { margin: 0; }
 .patch__variants .field__label { font-size: 12px; font-weight: 500; color: var(--ink-muted); }
-.patch__variants .segmented { flex-wrap: wrap; }
-.patch__variants .segmented button { flex: 1 1 auto; min-height: 26px; padding: 3px 10px; font-size: 12px; white-space: nowrap; }
+.patch__variants .segmented button { min-height: 26px; padding: 3px 10px; font-size: 12px; }
 /* A finger needs more than a 26px chip. */
 @media (pointer: coarse) { .patch__variants .segmented button { min-height: 36px; font-size: 13px; } }
 .patch__light { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 12px; font-weight: 500; color: var(--ink-muted); }
@@ -219,14 +218,6 @@
 .badge-relief__turn input { width: clamp(70px, 18vw, 150px); min-height: 32px; }
 .badge-relief__turn output { min-width: 4ch; font-variant-numeric: tabular-nums; }
 
-.patch-stage__tools .segmented button { white-space: nowrap; }
-@media (max-width: 600px) {
-  /* The views stay one row of tabs, scrolled sideways rather than wrapped into two. */
-  .patch-stage__tools { max-width: 100%; }
-  .patch-stage__tools .segmented { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
-  .patch-stage__tools .segmented::-webkit-scrollbar { display: none; }
-  .patch-stage__tools .segmented button { flex: none; }
-}
 .patch__stage--overlay { flex-direction: column; gap: 12px; min-width: 0; }
 .patch__stage--overlay p { margin: 0; text-align: center; color: var(--ink-muted); font-size: 13px; }
 .source-overlay__frame {

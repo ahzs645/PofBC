@@ -4,8 +4,11 @@ import { InitiativeDetail } from './InitiativeDetail.jsx'
 import { initiativePlaceUrl, readInitiativePlace } from './initiativePlace.js'
 import { searchInitiatives } from './initiativeModel.js'
 import { writeHistory } from '../site/browserHistory.js'
+import { SiteLink } from '../site/navigation.jsx'
 import { documentTitle, setDocumentMeta } from '../site/documentMeta.js'
 import { useCatalogueIndex } from '../site/useCatalogueIndex.js'
+import { useSiteTheme } from '../site/useTheme.js'
+import { COLLECTED_DISPLAY } from '../gallery/collectedDisplay.js'
 import './initiatives.css'
 
 const plainClick = (event) => event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey
@@ -18,8 +21,10 @@ export const InitiativesView = () => {
   const [detail, setDetail] = useState(null)
   const [error, setError] = useState(false)
   const [attempt, setAttempt] = useState(0)
+  const { name: theme } = useSiteTheme()
   const { cards, query, setQuery, openCard, closeCard } = useCatalogueIndex('initiatives')
   const initiative = initiativeById(place.initiative)
+  const parent = initiativeById(initiative?.parentId)
 
   useLayoutEffect(() => {
     const saved = globalThis.history?.state?.catalogueIndex
@@ -67,18 +72,20 @@ export const InitiativesView = () => {
     })
   }
 
-  const changeSection = (section, record = null) => {
-    writeHistory(initiativePlaceUrl(location.href, { initiative: initiative.id, section, record }), { replace: true })
+  const changeSection = (section, record = null, page = null) => {
+    writeHistory(initiativePlaceUrl(location.href, { initiative: initiative.id, section, record, page }), { replace: true })
     setPlace(readInitiativePlace())
   }
 
   if (place.initiative) return <main className="initiatives">
     <nav className="initiatives__breadcrumbs" aria-label="Initiative breadcrumb">
-      <a href="?view=initiatives" onClick={back}>All initiatives</a><span aria-hidden="true">/</span><span aria-current="page">{initiative?.title ?? 'Unknown initiative'}</span>
+      <a href="?view=initiatives" onClick={back}>All initiatives</a><span aria-hidden="true">/</span>
+      {parent && <><SiteLink to={{ view: 'initiatives', initiative: parent.id }}>{parent.title}</SiteLink><span aria-hidden="true">/</span></>}
+      <span aria-current="page">{initiative?.title ?? 'Unknown initiative'}</span>
     </nav>
     {!initiative ? <div className="initiatives__empty"><h2>Initiative not found</h2><p>This initiative is not in the catalogue. Browse the available initiatives using the link above.</p></div>
       : error ? <div className="initiatives__empty" role="alert"><h2>The initiative could not load</h2><p>Please try again.</p><button type="button" onClick={() => setAttempt((value) => value + 1)}>Try again</button></div>
-        : detail?.id === initiative.id ? <InitiativeDetail key={detail.id} initiative={detail} place={place} onChange={changeSection} />
+        : detail?.id === initiative.id ? <InitiativeDetail key={detail.id} initiative={detail} subInitiatives={INITIATIVES.filter((entry) => entry.parentId === detail.id)} place={place} onChange={changeSection} />
           : <p className="initiatives__loading" role="status">Loading {initiative.title}…</p>}
   </main>
 
@@ -95,7 +102,10 @@ export const InitiativesView = () => {
           {entry.tags?.length > 0 && <ul className="initiatives__tags" aria-label="Available material">{entry.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>}
           <span className="initiatives__explore">Explore initiative <Forward /></span>
         </div>
-        {entry.cover && <figure className="initiatives__cover"><img src={coverUrl(entry.cover.file)} alt={entry.cover.alt} /><figcaption>{entry.cover.caption}</figcaption></figure>}
+        {entry.cover && <figure className="initiatives__cover" data-themed={entry.cover.displayId ? true : undefined}>
+          <img src={coverUrl(COLLECTED_DISPLAY[entry.cover.displayId]?.[theme]?.file ?? entry.cover.file)} alt={entry.cover.alt} />
+          <figcaption>{entry.cover.caption}</figcaption>
+        </figure>}
       </a>)}
     </div>
     {!results.length && <div className="initiatives__empty"><h3>No matching initiatives</h3><p>Try a program, campaign or organization name.</p><button type="button" onClick={() => setQuery('')}>Show all initiatives</button></div>}

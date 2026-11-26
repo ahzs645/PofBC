@@ -23,6 +23,41 @@ import { collectedPreviewFile } from './collectedPalettes.js'
  */
 export const collectedDisplay = (asset, theme = 'light') => COLLECTED_DISPLAY[asset.id]?.[theme === 'dark' ? 'dark' : 'light'] ?? null
 
+export const suppliedPreviewFile = (entry, version, theme) => {
+  if (!entry.themedPreview || version !== entry.mark) return undefined
+  const display = COLLECTED_DISPLAY[version]?.[theme]
+  return display?.preserveCanvas ? assetUrl(display.file) : undefined
+}
+
+// A design and each of its poses follow the page theme. An explicitly chosen ink can
+// need its published ground, in which case only the artwork gets that backing.
+export const collectedDetailPreview = (asset, theme, sourceVersionSelected = false) => {
+  const chosenSource = sourceVersionSelected && !asset.pose && !asset.reconstructionOf && !asset.reconstruction
+  const sourceGround = asset.sourceGround ?? (asset.darkBackground ? 'dark' : 'light')
+  const themeCopy = collectedDisplay(asset, theme)
+  const keepSourceColour = chosenSource && sourceGround !== theme &&
+    (asset.sourceGround || (themeCopy?.recoloured && !themeCopy.palette))
+  const copy = keepSourceColour ? collectedDisplay(asset, sourceGround) : themeCopy
+  const showOriginal = chosenSource && copy?.recoloured && !copy.palette
+  const display = showOriginal ? null : copy
+  const ground = keepSourceColour ? sourceGround : display?.plate ? 'light' : undefined
+  return { file: display?.file ?? collectedPreviewFile(asset), display, ground, themed: Boolean(themeCopy) }
+}
+
+// A reconstruction of the default file can supply the on-page preview. The mark page still
+// opens the published artwork and offers the reconstruction as a selectable version.
+export const defaultCollectedAsset = (entry, theme) =>
+  (theme === 'dark' && entry.asset.darkVariant && entry.versions?.find((version) => version.id === entry.asset.darkVariant)) || entry.asset
+
+const tileAsset = (entry, theme) => {
+  if (entry.asset.darkVariant) return defaultCollectedAsset(entry, theme)
+  if (COLLECTED_DISPLAY[entry.asset.id]) return entry.asset
+  return entry.versions?.find((version) => {
+    const display = COLLECTED_DISPLAY[version.id]
+    return version.reconstructionOf === entry.asset.id && version.isVector && display && !display.light.plate && !display.dark.plate
+  }) ?? entry.asset
+}
+
 /**
  * How tall a trimmed logo is drawn, as a share of its tile's height, so that a long wordmark and a
  * square emblem look about the same size: equal area, rather than equal height, with a floor so a
@@ -40,9 +75,11 @@ export const logoScale = (aspect) => Math.round(Math.min(1, Math.max(0.42, Math.
 export const tileArt = (entry, theme = 'light', { cover = false } = {}) => {
   if (entry.kind === 'collected') {
     const escape = (value) => String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    const display = collectedDisplay(entry.asset, theme)
+    const asset = tileAsset(entry, theme)
+    const display = collectedDisplay(asset, theme)
     if (display) {
       return `<img class="gallery__collected-image gallery__collected-image--clean" src="${escape(assetUrl(display.file))}" alt="${escape(entry.label)}" loading="lazy"` +
+        (asset !== entry.asset && asset.reconstruction ? ' title="Vector reconstruction"' : '') +
         ` style="--logo-scale: ${logoScale(display.aspect)}"${display.plate ? ' data-plate="true"' : ''} />`
     }
     return `<img class="gallery__collected-image" src="${escape(assetUrl(collectedPreviewFile(entry.asset)))}" alt="${escape(entry.label)}" loading="lazy" data-dark="${entry.asset.darkBackground ? 'true' : 'false'}" />`
@@ -57,7 +94,7 @@ export const tileArt = (entry, theme = 'light', { cover = false } = {}) => {
     const dark = theme === 'dark'
     const id = dark && entry.reverse ? entry.reverse : entry.mark
     const inks = dark && !entry.reverse ? darkPageInks(id, entry.onDark) : null
-    return renderSuppliedSvg({ id, inks, clearSpace: 0.02 }).svg
+    return renderSuppliedSvg({ id, inks, previewFile: suppliedPreviewFile(entry, id, theme), clearSpace: 0.02 }).svg
   }
   // Remade in the current identity: drawn by the generator's current era, reversed on dark.
   if (entry.kind === 'current') {
@@ -108,5 +145,5 @@ export const generatorArt = (generator, theme = 'light') => {
 }
 
 /** Whether a card draws on the page's ground, or keeps a ground of its own. */
-export const onPage = (entry) => (entry.kind === 'collected' && Boolean(COLLECTED_DISPLAY[entry.asset.id])) || entry.kind === 'artwork' || entry.kind === 'current' || entry.kind === 'flag' || entry.kind === 'supplied' || entry.mark === '1990' ||
+export const onPage = (entry) => (entry.kind === 'collected' && Boolean(COLLECTED_DISPLAY[tileAsset(entry).id])) || entry.kind === 'artwork' || entry.kind === 'current' || entry.kind === 'flag' || entry.kind === 'supplied' || entry.mark === '1990' ||
   (entry.kind === 'hydro' && HYDRO_PRESETS[entry.preset]?.group === 'signature')

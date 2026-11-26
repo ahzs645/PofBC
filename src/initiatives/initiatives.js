@@ -1,4 +1,6 @@
+import { FIRE_SMART_INITIATIVES } from './fireSmartIndex.js'
 import { YOUTH_PROGRAMS } from './youthProgramsIndex.js'
+import { educationProvinceId, educationProvinceTitle, educationProvinceWordmark } from './educationProvinceArtwork.js'
 
 // The index stays small: an initiative's sourced records are loaded only when it opens.
 // The index card's cover sits on a light panel, so a logo made for a dark ground is shown there as
@@ -21,6 +23,16 @@ const tourismCover = {
 }
 
 export const INITIATIVES = [
+  ...FIRE_SMART_INITIATIVES,
+  {
+    id: 'buy-bc', title: 'Buy BC', subtitle: 'British Columbia’s food and beverage marketing program',
+    summary: 'British Columbia launched Buy BC in 1993 to help shoppers find local food and beverages. Producers use its sun, land and water emblem on packaging, and retailers use it on shelves to identify B.C. products.',
+    cover: { file: 'identity-display/buy-bc-vertical-colour.light.svg', alt: 'Yellow sun over green land and blue water above the red buyBC name', caption: 'Vertical logo from the Buy BC Graphic Standards' },
+    tags: ['Agriculture', 'Food and seafood', 'Logos', 'Timeline'],
+    searchTerms: ['buyBC', 'Buy BC Partnership Program', 'Eat Drink Local', 'BC Agriculture Council', 'Investment Agriculture Foundation'],
+    exploreLabel: 'Explore the Buy BC logos and program history',
+    relatedBodyIds: ['sub-buy-bc', 'bc-agriculture-council', 'investment-agriculture-foundation']
+  },
   {
     id: 'jepp', title: 'Joint Emergency Preparedness Program', subtitle: 'Federal–provincial cost sharing · 1980–2013',
     summary: 'JEPP helped provinces, territories and local governments fund emergency planning, training and equipment. British Columbia’s Provincial Emergency Program handled applications and claims.',
@@ -54,6 +66,16 @@ export const INITIATIVES = [
     searchTerms: ['British Columbia. Be Here.', 'Spirit of 2010 Business Summit', 'Vancouver 2010', 'Olympic and Paralympic Winter Games Secretariat']
   },
   {
+    id: 'pacific-gateway', title: 'Canada’s Pacific Gateway', subtitle: 'Provincial trade and investment campaign',
+    summary: 'British Columbia promoted itself as Canada’s Pacific Gateway before introducing “Canada Starts Here” in 2011. The BC Jobs Plan preserves two versions of the shipping-container logo.',
+    cover: {
+      file: 'identity-display/vector-canada-starts-here-2012.light.svg', alt: 'Canada Starts Here shipping-container logo',
+      caption: 'Canada Starts Here artwork from the 2012 BC Jobs Plan'
+    },
+    tags: ['Trade and investment', 'Logos', 'Timeline'],
+    searchTerms: ['Pacific Gateway', 'Canada Starts Here', 'BC Jobs Plan', 'Prince Rupert']
+  },
+  {
     id: 'tourism',
     title: 'Tourism',
     subtitle: 'Tourism BC · Destination BC',
@@ -67,9 +89,47 @@ export const INITIATIVES = [
       'British Columbia Magazine', 'Share Your BC', 'Canada’s West',
       'Canada’s West Marketplace', 'Visitor Centre', 'Approved Accommodation',
       '100BCMoments', 'British Columbia Moments', 'Discover Camping',
-      'Sun, sea and mountain', 'British Columbia Insider’s Guide'
+      'Sun, sea and mountain', 'British Columbia Insider’s Guide',
+      'Our Brand', 'Great Forest', 'Brandon Grotesque', '2021 destination brand guide',
+      'Destination British Columbia Rebranding', 'Gabriel Lefebvre', 'studio ethos', 'Behance',
+      'The Tourism Brief', 'go2HR', 'Propel', 'Professional Cook', 'LinkBC', 'Tourism Online Resource Centre',
+      'Study Tourism in BC', 'Hire BC’s BEST', 'Student-Industry Rendezvous', 'Tourism Educators Conference',
+      'Student Case Competition', 'Welcome the World', 'DiscoverOurBC', 'Team 2010', '2010 Legacies Now',
+      'Hosting BC', 'BC Sport Tourism Events Marketplace', 'Tourism 2010 Resource Centre',
+      'Thompson Okanagan Tourism Association', 'Destination Osoyoos', 'Indigenous Tourism BC',
+      'Research & Planning', 'Visitor Services', 'Travel Media Relations', 'Tourism BC Industry Programs'
     ],
     relatedBodyIds: ['tourism-bc', 'destination-bc']
+  },
+  {
+    id: 'rainforest-to-rockies',
+    parentId: 'tourism',
+    title: 'Rainforest to Rockies',
+    subtitle: 'Tourism · Super, Natural British Columbia',
+    summary: 'Destination BC’s Rainforest to Rockies brand connects routes from Vancouver’s Pacific coast to the Canadian Rockies. Its 2024 industry guide pairs a rainforest tree with a mountain peak in a symbol called the Wander Mark.',
+    cover: {
+      file: 'initiatives/rainforest-to-rockies/partner-canopy-green-toolkit.png',
+      alt: 'Rainforest to Rockies with a tree and mountain symbol above the words British Columbia, Canada',
+      caption: 'Partner logo from the March 2024 industry toolkit'
+    },
+    tags: ['Destination brand', 'Logos', 'Brand guidelines'],
+    searchTerms: ['Invest in Iconics', 'Wander Mark', 'R2R'],
+    exploreLabel: 'Explore the Rainforest to Rockies route and its 2024 logos',
+    relatedBodyIds: ['destination-bc']
+  },
+  {
+    id: educationProvinceId,
+    title: educationProvinceTitle,
+    subtitle: 'Provincial education campaign · documented 1998–2001',
+    summary: 'British Columbia used the slogan to promote affordable post-secondary education, expanded access and opportunities for young people. The campaign appears in newspaper advertising and the Ministry of Advanced Education, Training and Technology’s 1999/2000 annual report.',
+    cover: {
+      file: educationProvinceWordmark.file, displayId: educationProvinceWordmark.id,
+      alt: 'BC — The Education Province horizontal wordmark',
+      caption: 'Watermark from the ministry’s 1999/2000 annual report'
+    },
+    tags: ['Education', 'Youth', 'Logos', 'Timeline'],
+    searchTerms: ['Premier’s Youth Office', 'Advanced Education, Training and Technology', 'Charting a New Course', 'Tuition Fee Freeze', 'Options for Youth', 'Access to Education Act'],
+    relatedBodyIds: ['ministry-of-advanced-education-training-and-technology-1998']
   },
   {
     id: 'achieve-bc',
@@ -98,7 +158,8 @@ export const initiativesForBody = (id) => INITIATIVES.filter((initiative) => ini
 /** Lightweight metadata for a stable initiative ID, or null when it is unknown. */
 export const initiativeById = (id) => INITIATIVES.find((initiative) => initiative.id === id) ?? null
 
-const tourismDetail = (data) => {
+const tourismDetail = (data, guide, rebranding, brief) => {
+  const sources = [...data.sources, ...rebranding.tourismRebrandingSources, ...brief.tourismBriefSources]
   const heroImage = data.marks.flatMap((record) => record.images ?? [])
     .find((image) => image.id === 'super-natural-canada-stacked-spot-2005')
   return {
@@ -116,12 +177,24 @@ const tourismDetail = (data) => {
       { value: data.marks.length, label: 'identity records' },
       { value: data.domains.length, label: 'listed addresses' }
     ],
-    sources: data.sources,
+    sources,
     domainNote: 'A listed address documents the name held in 2013; it does not establish a separate website or its launch date.',
     relatedLinks: [
       {
         label: 'Tourism BC & Destination BC corporate identities',
         to: { view: 'gallery', logos: 'tourism-bc-destination-bc' }
+      },
+      {
+        label: 'Northern BC travel-guide logos',
+        to: { view: 'gallery', logos: 'collected-northern-bc-tourism' }
+      },
+      {
+        label: 'Super, Natural BC in the 2012–15 guides',
+        to: { view: 'gallery', logos: 'collected-destination-brand' }
+      },
+      {
+        label: 'Visitor Centre network marks',
+        to: { view: 'gallery', logos: 'collected-visitor-centre' }
       },
       {
         label: 'Super, Natural welcome sign',
@@ -144,10 +217,11 @@ const tourismDetail = (data) => {
         eyebrow: 'Digital collection',
         title: 'Websites, apps & campaigns',
         description: 'How British Columbia welcomed visitors online. Open a record for its specimens, dates and sources.',
-        records: data.digitalRecords,
+        records: data.digitalRecords.map(brief.addTourismBriefContext),
         featuredId: 'hellobc',
         searchable: true
       },
+      brief.tourismProgramsSection,
       {
         id: 'marks',
         label: 'Logos & signs',
@@ -168,6 +242,10 @@ const tourismDetail = (data) => {
         description: 'Website launches, published specimens and organizational changes are different kinds of dates.',
         records: data.timeline
       },
+      rebranding.tourismRebrandingSection,
+      {
+        id: 'brand-guide', label: 'Our Brand', type: 'brand-guide', title: 'Our Brand · December 2021', guide
+      },
       {
         id: 'publications',
         label: 'Publications',
@@ -175,7 +253,7 @@ const tourismDetail = (data) => {
         eyebrow: 'Printed & moving images',
         title: 'Publications and creative work',
         description: 'Standards, guides and commissioning records connect the digital collection to its printed history.',
-        records: data.publications,
+        records: [...data.publications, brief.tourismBriefPublication],
         leads: data.leads
       },
       {
@@ -185,7 +263,7 @@ const tourismDetail = (data) => {
         eyebrow: 'The evidence',
         title: 'A source for every record',
         description: 'The 2013 transfer order anchors this collection; later sources document the services and their changing appearance.',
-        records: data.sources,
+        records: sources,
         inventory: {
           title: 'The 2013 address inventory',
           description: `${data.domains.length} listed entries, including aliases, technical hosts, duplicates and email addresses.`,
@@ -339,6 +417,14 @@ const gamesenseDetail = () => ({
 
 // Literal imports let the bundler keep each initiative's data in its own deferred chunk.
 const LOADERS = {
+  ...Object.fromEntries(FIRE_SMART_INITIATIVES.map((entry) => [entry.id, async () => {
+    const { fireSmartDetail } = await import('./fireSmart.js')
+    return fireSmartDetail(entry)
+  }])),
+  'buy-bc': async () => {
+    const { buyBCDetail } = await import('./buyBC.js')
+    return buyBCDetail(initiativeById('buy-bc'))
+  },
   jepp: async () => {
     const { jeppDetail } = await import('./jepp.js')
     return jeppDetail(initiativeById('jepp'))
@@ -359,10 +445,24 @@ const LOADERS = {
     const { spiritOf2010Detail } = await import('./spiritOf2010.js')
     return spiritOf2010Detail(initiativeById('spirit-of-2010'))
   },
+  'pacific-gateway': async () => {
+    const { pacificGatewayDetail } = await import('./pacificGateway.js')
+    return pacificGatewayDetail(initiativeById('pacific-gateway'))
+  },
   gamesense: async () => gamesenseDetail(),
   tourism: async () => {
-    const { TOURISM_COLLECTION } = await import('../gallery/tourismData.js')
-    return tourismDetail(TOURISM_COLLECTION)
+    const [{ TOURISM_COLLECTION }, { ourBrandGuide }, rebranding, brief] = await Promise.all([
+      import('../gallery/tourismData.js'), import('./tourismBrandGuides.js'), import('./tourismRebranding.js'), import('./tourismBrief.js')
+    ])
+    return tourismDetail(TOURISM_COLLECTION, ourBrandGuide, rebranding, brief)
+  },
+  'rainforest-to-rockies': async () => {
+    const { rainforestToRockiesDetail } = await import('./rainforestToRockies.js')
+    return rainforestToRockiesDetail(initiativeById('rainforest-to-rockies'))
+  },
+  [educationProvinceId]: async () => {
+    const { educationProvinceDetail } = await import('./educationProvince.js')
+    return educationProvinceDetail(initiativeById(educationProvinceId))
   },
   'achieve-bc': async () => {
     const { achieveBCDetail } = await import('./achieveBC.js')

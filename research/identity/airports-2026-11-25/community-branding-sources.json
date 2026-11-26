@@ -1,0 +1,752 @@
+{
+  "checkedDate": "2026-11-25",
+  "scope": "Additional land airports and selected floatplane terminals and heliports. The main branding register covers the priority land airports.",
+  "method": "Checked airport, operator and local government pages, downloaded candidate artwork where accessible and inspected the visible marks and file contents.",
+  "statusDefinitions": {
+    "verified-vector": "Native vector geometry verified in the terminal or airport publisher's asset.",
+    "verified-raster": "Airport-specific signature verified in the publisher's raster asset.",
+    "documented-raster-lead": "Documented signature whose standalone artwork remains to be recovered.",
+    "documented-raster-composite": "Verified branding integrated into a banner or background image.",
+    "shared-identity": "The facility is presented as part of another airport or airpark.",
+    "carrier-brand-only": "The checked material shows a carrier's identity.",
+    "operator-brand-only": "The checked material shows the operator or owner's identity.",
+    "no-separate-mark-found": "No separate airport identity verified in the checked sources."
+  },
+  "airports": [
+    {
+      "locationIdentifier": "CAV3",
+      "icao": null,
+      "tcLid": "CAV3",
+      "iata": null,
+      "name": "100 Mile House Municipal Airport",
+      "publisher": "District of 100 Mile House",
+      "sourcePageUrl": "https://100milehouse.com/district-services/airport",
+      "brandingStatus": "operator-brand-only",
+      "notes": "District airport page and published master plan use District branding. Separate from South Cariboo Regional Airport near 108 Mile Ranch.",
+      "artwork": [],
+      "supportingSources": [
+        "https://www.100milehouse.com/sites/default/files/2025-03/2025_Mar_11_Agenda_PKG_1.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CYAL",
+      "icao": "CYAL",
+      "tcLid": null,
+      "iata": "YAL",
+      "name": "Alert Bay Airport (H.J. Pickup Airport)",
+      "publisher": "Village of Alert Bay",
+      "sourcePageUrl": "https://www.alertbay.ca/accommodations-attractions",
+      "brandingStatus": "no-separate-mark-found",
+      "notes": "The Village lists the airstrip and maintains a 2026–2041 Airport Master Plan. Inspect master plan cover and airport entry signage for a facility signature.",
+      "artwork": [],
+      "supportingSources": [
+        "https://www.alertbay.ca/documents"
+      ]
+    },
+    {
+      "locationIdentifier": "CYSQ",
+      "icao": "CYSQ",
+      "tcLid": null,
+      "iata": null,
+      "name": "Atlin Airport (Peterson Field)",
+      "publisher": "Atlin District Airport Association",
+      "sourcePageUrl": "https://atlinairport.ca/",
+      "brandingStatus": "verified-raster",
+      "notes": "300 × 97 transparent official site signature. The association and the publisher credited at the bottom of the airport website are leads for an original vector.",
+      "artwork": [
+        {
+          "label": "Atlin Airport website lockup",
+          "format": "png",
+          "url": "https://atlinairport.ca/wp-content/uploads/2022/07/cysq-logo.png",
+          "locator": "Full-size source in the header logo srcset"
+        }
+      ],
+      "supportingSources": [
+        "https://atlinairport.ca/about-atlin-airport/"
+      ]
+    },
+    {
+      "locationIdentifier": "69S",
+      "icao": null,
+      "tcLid": null,
+      "iata": null,
+      "name": "Avey Field State Airport",
+      "publisher": "Washington State Department of Transportation",
+      "sourcePageUrl": "https://wsdot.wa.gov/travel/aviation/airports-list/avey-field",
+      "brandingStatus": "no-separate-mark-found",
+      "notes": "Cross-border record. WSDOT identifies the facility near Laurier, Washington. The state guide and airport page carry state-agency branding.",
+      "artwork": [],
+      "faaLid": "69S",
+      "supportingSources": [
+        "https://www.wsdot.wa.gov/publications/manuals/fulltext/M3049/AveyField.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CYPZ",
+      "icao": "CYPZ",
+      "tcLid": null,
+      "iata": "YPZ",
+      "name": "Burns Lake Airport",
+      "publisher": "Lakes District Airport Society",
+      "sourcePageUrl": "https://burnslakeairport.com/",
+      "brandingStatus": "documented-raster-composite",
+      "notes": "1800 × 450 official illustrated banner with uppercase airport name, airplane and helicopter. Useful as a branding specimen. Search the Airport Society's publications and terminal signage for a standalone mark.",
+      "artwork": [
+        {
+          "label": "Illustrated Burns Lake Airport web banner",
+          "format": "jpg",
+          "url": "https://burnslakeairport.com/LakesDistrictAirport_WebsiteBanner_091525.jpg",
+          "locator": "Original image path referenced by the homepage Next.js banner"
+        }
+      ]
+    },
+    {
+      "locationIdentifier": "CYCQ",
+      "icao": "CYCQ",
+      "tcLid": null,
+      "iata": "YCQ",
+      "name": "Chetwynd Municipal Airport",
+      "publisher": "District of Chetwynd",
+      "sourcePageUrl": "https://www.gochetwynd.com/municipal-office/departments/public-works/airport/",
+      "brandingStatus": "no-separate-mark-found",
+      "notes": "The official municipal page names the airport and shows webcam images. District airport documents and terminal signage are further leads.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CAH3",
+      "icao": null,
+      "tcLid": "CAH3",
+      "iata": "YCA",
+      "name": "Courtenay Airpark",
+      "publisher": "Courtenay Airpark Association",
+      "sourcePageUrl": "https://courtenayairpark.com/",
+      "brandingStatus": "verified-raster",
+      "notes": "The association’s standalone roundel survives in an archived copy of the official website. The September 2024 anniversary article shows the same mark over a photograph of the airpark.",
+      "artwork": [
+        {
+          "label": "Standalone full-colour roundel",
+          "format": "jpg",
+          "url": "https://web.archive.org/web/20240122181055id_/https://courtenayairpark.com/resources/Pictures/Courtenay%20Airpark%20final%20logo%20JPG.jpg",
+          "locator": "Homepage logo JPEG, captured by Internet Archive on January 22, 2024",
+          "verification": "The archived 1831 × 1187 JPEG is held as published."
+        },
+        {
+          "label": "Roundel in Totem Times",
+          "format": "pdf-raster",
+          "url": "https://cfmws.ca/CFMWS/media/Comox/PSP/Totem%20Times/TT-10Sep24.pdf",
+          "locator": "Page 3, roundel on the anniversary photograph",
+          "verification": "The roundel is on the anniversary article’s composite photograph."
+        }
+      ],
+      "supportingSources": [
+        "https://cfmws.ca/CFMWS/media/Comox/PSP/Totem%20Times/TT-10Sep24.pdf",
+        "https://courtenayairpark.com/Buy-Sell-Trade"
+      ]
+    },
+    {
+      "locationIdentifier": "CBG9",
+      "icao": null,
+      "tcLid": "CBG9",
+      "iata": null,
+      "name": "Courtenay Airpark Water Aerodrome",
+      "publisher": "Courtenay Airpark Association",
+      "sourcePageUrl": "https://courtenayairpark.com/page-18109",
+      "brandingStatus": "shared-identity",
+      "notes": "The association describes the land runway and floatplane ramp together. The Courtenay Airpark roundel is the lead for shared branding.",
+      "artwork": [],
+      "relatedLocationIdentifier": "CAH3"
+    },
+    {
+      "locationIdentifier": "CAJ3",
+      "icao": null,
+      "tcLid": "CAJ3",
+      "iata": "CFQ",
+      "name": "Creston Valley Regional Airport",
+      "publisher": "Creston Valley Regional Airport Society",
+      "sourcePageUrl": "https://crestonairport.ca/",
+      "brandingStatus": "verified-raster",
+      "notes": "Server returned PNG bytes despite the WebP URL. The 255 × 95 mark includes mountains, a sun, aircraft, CAJ3, and railway-track lettering. The Town's 2025 master plan uses the consultant's logo. The Airport Society is the lead for artwork in a larger or vector format.",
+      "artwork": [
+        {
+          "label": "Illustrated Creston Valley airport signature",
+          "format": "png",
+          "url": "https://tim3cca5e83a86b-pfmjb.wordpress.com/wp-content/uploads/2026/03/logo.webp?w=255",
+          "locator": "Homepage masthead, wp-image-169"
+        }
+      ]
+    },
+    {
+      "locationIdentifier": "CYDL",
+      "icao": "CYDL",
+      "tcLid": null,
+      "iata": "YDL",
+      "name": "Dease Lake Airport",
+      "publisher": "Stikine Airport Society",
+      "sourcePageUrl": "https://www.deaseairport.ca/",
+      "brandingStatus": "verified-raster",
+      "notes": "250 × 150 transparent YDL signature with coloured arcs. Airport Improvement Project posters also carry the 250 × 150 raster. The Stikine Airport Society and TNDC are leads for the master artwork.",
+      "artwork": [
+        {
+          "label": "YDL signature with coloured arcs",
+          "format": "png",
+          "url": "https://static.wixstatic.com/media/60c92a_65540c84a39e4f8ba617a072d226d476~mv2.png",
+          "locator": "Header, Wix asset YDL-03-1.png"
+        }
+      ],
+      "supportingSources": [
+        "https://www.deaseairport.ca/airport-improvement-project",
+        "https://www.tndc.ca/who-we-are/divisions/aviation/"
+      ]
+    },
+    {
+      "locationIdentifier": "CAK3",
+      "icao": null,
+      "tcLid": "CAK3",
+      "iata": null,
+      "name": "Delta Heritage Airpark",
+      "publisher": "Delta Heritage Airpark",
+      "sourcePageUrl": "https://www.deltaheritageairpark.org/index.php",
+      "brandingStatus": "documented-raster-composite",
+      "notes": "960 × 300 photo composite with an arched name and airplane emblem. The management committee and Recreational Aircraft Association Chapter 85 are leads for a detached master.",
+      "artwork": [
+        {
+          "label": "Delta Heritage Airpark website header",
+          "format": "jpg",
+          "url": "https://www.deltaheritageairpark.org/www_img/deltaheritageairpark_header.jpg",
+          "locator": "Homepage header with alt Delta Heritage Airpark - CAK3"
+        }
+      ]
+    },
+    {
+      "locationIdentifier": "CYJQ",
+      "icao": "CYJQ",
+      "tcLid": null,
+      "iata": null,
+      "name": "Denny Island Aerodrome",
+      "publisher": "Central Coast Regional District",
+      "sourcePageUrl": "https://www.ccrd.ca/governance/commissions-and-committees/denny-island-airport-commission/",
+      "brandingStatus": "no-separate-mark-found",
+      "notes": "The District hosts the Airport Commission's page. The Shearwater Resort and nearby water aerodromes have separate contexts.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CAM3",
+      "icao": null,
+      "tcLid": "CAM3",
+      "iata": "DUQ",
+      "name": "Duncan Airport",
+      "publisher": "Duncan Flying Club",
+      "sourcePageUrl": "https://duncanflyingclub.com/",
+      "brandingStatus": "no-separate-mark-found",
+      "notes": "The operating club's official site identifies the airfield. Check club publications and entry signage for an airport signature.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CYSW",
+      "icao": "CYSW",
+      "tcLid": null,
+      "iata": null,
+      "name": "Elk Valley Regional Airport",
+      "publisher": "Regional District of East Kootenay",
+      "sourcePageUrl": "https://www.rdek.bc.ca/departments/environmentalservices/elkvalleyairport",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The regional district website and budget report identify the facility under district branding. Check the master plan or existing airfield signage for a distinct mark.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CYCZ",
+      "icao": "CYCZ",
+      "tcLid": null,
+      "iata": "YCZ",
+      "name": "Fairmont Hot Springs Airport",
+      "publisher": "Columbia Valley Airport Society",
+      "sourcePageUrl": "https://columbiavalleyairport.com/",
+      "brandingStatus": "verified-raster",
+      "notes": "150 × 150 transparent airport signature with a maple leaf, aircraft and CYCZ script. The airport society's November 2025 letterhead is a vector lead. The agenda PDF was visible in indexed material and returned HTTP 403 to direct retrieval.",
+      "artwork": [
+        {
+          "label": "CYCZ script with maple leaf and aircraft",
+          "format": "png",
+          "url": "https://columbiavalleyairport.com/wp-content/uploads/2026/07/CYCZ-op-CVAS-square-2-web.png",
+          "locator": "Uncropped WordPress source for the homepage custom logo"
+        }
+      ],
+      "supportingSources": [
+        "https://pub-rdek.escribemeetings.com/filestream.ashx?DocumentId=37187"
+      ]
+    },
+    {
+      "locationIdentifier": "CBQ2",
+      "icao": null,
+      "tcLid": "CBQ2",
+      "iata": null,
+      "name": "Fort Langley Airport",
+      "publisher": "Fort Langley Airport Ltd.",
+      "sourcePageUrl": "https://www.fortlangleyairport.com/",
+      "brandingStatus": "verified-vector",
+      "notes": "Official airport signature with an orange floatplane and navy lettering. The source SVG rendered as published and contains 55 paths and 17 polygons with no image elements.",
+      "artwork": [
+        {
+          "label": "Orange floatplane and navy Fort Langley Airport lettering",
+          "format": "svg",
+          "url": "https://www.fortlangleyairport.com/assets/images/logo.svg",
+          "locator": "Official site header",
+          "verification": "Native SVG geometry, visually checked after rendering."
+        }
+      ]
+    },
+    {
+      "locationIdentifier": "CAS4",
+      "icao": null,
+      "tcLid": "CAS4",
+      "iata": null,
+      "name": "Fort Langley Water Aerodrome",
+      "publisher": "Fort Langley Airport Ltd.",
+      "sourcePageUrl": "https://www.fortlangleyairport.com/",
+      "brandingStatus": "shared-identity",
+      "notes": "The airport owner presents floatplane docks and water access under its Fort Langley Airport identity. The provincial inventory lists land and water separately.",
+      "artwork": [],
+      "relatedLocationIdentifier": "CBQ2"
+    },
+    {
+      "locationIdentifier": "CYJM",
+      "icao": "CYJM",
+      "tcLid": null,
+      "iata": "YJM",
+      "name": "Fort St. James Perison Airport",
+      "publisher": "District of Fort St. James",
+      "sourcePageUrl": "https://www.fortstjames.ca/visit/perison-airport",
+      "brandingStatus": "no-separate-mark-found",
+      "notes": "The District's airport page links its 2024 master plan. Terminal and dedication signage are further leads.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CYHE",
+      "icao": "CYHE",
+      "tcLid": null,
+      "iata": "YHE",
+      "name": "Fraser Valley Regional Airpark (Hope)",
+      "publisher": "Fraser Valley Regional District",
+      "sourcePageUrl": "https://www.fvrd.ca/EN/main/services/airpark.html",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The district's airport page carries the FVRD logo. Airpark building signage and district facility brochures are further leads.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CAX6",
+      "icao": null,
+      "tcLid": "CAX6",
+      "iata": "YGG",
+      "name": "Ganges Water Aerodrome",
+      "publisher": "Harbour Air",
+      "sourcePageUrl": "https://harbourair.com/locations/",
+      "brandingStatus": "carrier-brand-only",
+      "notes": "Harbour Air markets this as a Salt Spring terminal. BC Air Access identifies a separate facility project in the Outer Harbour. Verify which dock and operator a specimen depicts.",
+      "artwork": [],
+      "supportingSources": [
+        "https://archive.news.gov.bc.ca/releases/news_releases_2024-2028/2026TT0048-000601.htm"
+      ]
+    },
+    {
+      "locationIdentifier": "CYGE",
+      "icao": "CYGE",
+      "tcLid": null,
+      "iata": "YGE",
+      "name": "Golden Municipal Airport",
+      "publisher": "Town of Golden",
+      "sourcePageUrl": "https://www.golden.ca/town-services/golden-municipal-airport-cyge",
+      "brandingStatus": "operator-brand-only",
+      "notes": "Municipal information page and linked airport assessment provide leads for facility signage.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CZGF",
+      "icao": "CZGF",
+      "tcLid": null,
+      "iata": "ZGF",
+      "name": "Grand Forks Airport",
+      "publisher": "City of Grand Forks",
+      "sourcePageUrl": "https://www.grandforks.ca/wp-content/uploads/Airport_Operations_Manual.pdf",
+      "brandingStatus": "no-separate-mark-found",
+      "notes": "Municipal airport operations manual confirms the designator. Current terminal photographs and City aviation materials remain open leads.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CBR2",
+      "icao": null,
+      "tcLid": "CBR2",
+      "iata": null,
+      "name": "Kaslo Aerodrome",
+      "publisher": "Village of Kaslo",
+      "sourcePageUrl": "https://kaslo.ca/p/aerodrome",
+      "brandingStatus": "operator-brand-only",
+      "notes": "Village identifies the registered aerodrome on its official page. Community signage and operators are the next sources.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CBW2",
+      "icao": null,
+      "tcLid": "CBW2",
+      "iata": null,
+      "name": "Kitimat Airpark",
+      "publisher": "Kitimat Flying Club",
+      "sourcePageUrl": "https://www.kitimat-flying-club.ca/",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The volunteer operator uses a winged badge with the club's name. Standalone airpark identity remains unverified.",
+      "artwork": [
+        {
+          "label": "Kitimat Flying Club operator emblem",
+          "format": "pdf-unverified",
+          "url": "https://docs.kitimat.ca/docs/2026-06-01reg-agenda.pdf#page=87",
+          "locator": "June 1, 2026 council agenda, printed page 87, Attachment B, Kitimat Flying Club letterhead"
+        }
+      ]
+    },
+    {
+      "locationIdentifier": "CAX5",
+      "icao": null,
+      "tcLid": "CAX5",
+      "iata": null,
+      "name": "Likely Airstrip",
+      "publisher": "Cariboo Regional District",
+      "sourcePageUrl": "https://www.cariboord.ca/business-and-development/airports/",
+      "brandingStatus": "no-separate-mark-found",
+      "notes": "District documents the community airstrip. Site signage remains an open lead.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CYZY",
+      "icao": "CYZY",
+      "tcLid": null,
+      "iata": "YZY",
+      "name": "Mackenzie Airport",
+      "publisher": "District of Mackenzie",
+      "sourcePageUrl": "https://districtofmackenzie.ca/public-services/airport/",
+      "brandingStatus": "operator-brand-only",
+      "notes": "District's airport page and industrial subdivision material identify the airport. The marketing package carries the District's logo.",
+      "artwork": [],
+      "supportingSources": [
+        "https://districtofmackenzie.ca/wp-content/uploads/2024/12/Land_Marketing_Lot2_WEB.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CAV4",
+      "icao": null,
+      "tcLid": "CAV4",
+      "iata": null,
+      "name": "McBride Airport (Charlie Leake Field)",
+      "publisher": "Village of McBride",
+      "sourcePageUrl": "https://mcbride.ca/municipal-services/mcbride-airport",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The official site shows the Village masthead and an airport photograph. Look for separately branded dedication or airport signage.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CAD5",
+      "icao": null,
+      "tcLid": "CAD5",
+      "iata": "YMB",
+      "name": "Merritt Municipal Airport (Saunder’s Field)",
+      "publisher": "City of Merritt",
+      "sourcePageUrl": "https://www.merritt.ca/airport/",
+      "brandingStatus": "operator-brand-only",
+      "notes": "City airport page uses Merritt's municipal identity and an airfield photograph. The development plan and terminal signs are further sources.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CAQ5",
+      "icao": null,
+      "tcLid": "CAQ5",
+      "iata": null,
+      "name": "Nakusp Airport",
+      "publisher": "Village of Nakusp",
+      "sourcePageUrl": "https://www.nakusp.com/airport",
+      "brandingStatus": "no-separate-mark-found",
+      "notes": "The Village links the airport master plan it adopted in 2024. Check the plan artwork and signs.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CDH5",
+      "icao": null,
+      "tcLid": null,
+      "iata": null,
+      "name": "Nanaimo Harbour Heliport",
+      "publisher": "Helijet",
+      "sourcePageUrl": "https://helijet.com/charter-flights/our-locations/",
+      "brandingStatus": "carrier-brand-only",
+      "notes": "Helijet locates this heliport at the Cruise Ship Welcome Centre. The designator comes from the OurAirports supplement. Resolve the nearby provincial Macmillan Bloedel point separately.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CAC8",
+      "icao": null,
+      "tcLid": "CAC8",
+      "iata": "ZNA",
+      "name": "Nanaimo Harbour Water Airport",
+      "publisher": "Harbour Air",
+      "sourcePageUrl": "https://harbourair.com/locations/",
+      "brandingStatus": "carrier-brand-only",
+      "notes": "Harbour Air's terminal listing gives carrier branding. The provincial layer also contains named operator-dock points. Keep the physical facility distinct from YCD and the separate Harbour heliport.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CAU3",
+      "icao": null,
+      "tcLid": "CAU3",
+      "iata": null,
+      "name": "Oliver Municipal Airport",
+      "publisher": "Town of Oliver",
+      "sourcePageUrl": "https://www.oliver.ca/town-services/airport",
+      "brandingStatus": "operator-brand-only",
+      "notes": "Town manages airport and publishes operations manual and master plan. The South Okanagan Flying Club is a tenant and maintenance partner.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CBB9",
+      "icao": null,
+      "tcLid": "CBB9",
+      "iata": null,
+      "name": "Osoyoos Airport",
+      "publisher": "Town of Osoyoos",
+      "sourcePageUrl": "https://www.osoyoos.ca/services/airport",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The master plan uses the consultant's logo. The Airport Development Society's own publications are a lead for facility branding.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CYPS",
+      "icao": "CYPS",
+      "tcLid": null,
+      "iata": null,
+      "name": "Pemberton Regional Airport",
+      "publisher": "Village of Pemberton",
+      "sourcePageUrl": "https://www.pemberton.ca/municipal-services/roads-transportation/pemberton-regional-airport",
+      "brandingStatus": "no-separate-mark-found",
+      "notes": "The Village provides the airport information page and names Pemberton Hangar Holdings as the terminal operator. Terminal signs and Village airport documents are leads.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CAJ8",
+      "icao": null,
+      "tcLid": "CAJ8",
+      "iata": null,
+      "name": "Pitt Meadows Water Aerodrome",
+      "publisher": "Pitt Meadows Airport Society",
+      "sourcePageUrl": "https://www.flyypk.ca/s/FLY-YPK-Good-Neighbour-Program-UPDATED.pdf",
+      "brandingStatus": "shared-identity",
+      "notes": "Airport society's Good Neighbour Program includes the land runways and water aerodrome under Fly YPK.",
+      "artwork": [],
+      "relatedLocationIdentifier": "CYPK"
+    },
+    {
+      "locationIdentifier": "CZSW",
+      "icao": "CZSW",
+      "tcLid": null,
+      "iata": "ZSW",
+      "name": "Prince Rupert/Seal Cove Water Airport",
+      "publisher": "Prince Rupert Airport Authority",
+      "sourcePageUrl": "https://ypr.ca/travellers/private-aircraft-charters/",
+      "brandingStatus": "no-separate-mark-found",
+      "notes": "The Prince Rupert Airport website describes the separate Seal Cove base and identifies Inland Air as a carrier. The Seal Cove Airport Society is a lead for facility artwork.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CYDC",
+      "icao": "CYDC",
+      "tcLid": null,
+      "iata": null,
+      "name": "Princeton Regional Airport",
+      "publisher": "Town of Princeton",
+      "sourcePageUrl": "https://princeton.ca/p/regional-airport",
+      "brandingStatus": "no-separate-mark-found",
+      "notes": "The Town's airport page identifies the Airport Committee. Committee documents and terminal signs are leads.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CYRV",
+      "icao": "CYRV",
+      "tcLid": null,
+      "iata": "YRV",
+      "name": "Revelstoke Airport",
+      "publisher": "Columbia Shuswap Regional District",
+      "sourcePageUrl": "https://www.csrd.bc.ca/234/Revelstoke-Airport",
+      "brandingStatus": "operator-brand-only",
+      "notes": "Regional district manages the facility. The 2022 development plan cover displays the consultant's HM logo. Check terminal signage for a separate airport design.",
+      "artwork": [],
+      "supportingSources": [
+        "https://www.csrd.bc.ca/DocumentCenter/View/2971/CYRV-2022-Final-Airport-Development-Planpdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CAP3",
+      "icao": null,
+      "tcLid": "CAP3",
+      "iata": "YHS",
+      "name": "Sechelt Airport",
+      "publisher": "District of Sechelt",
+      "sourcePageUrl": "https://www.sechelt.ca/living-here/airport/",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The district airport page uses municipal branding. Keep land airport distinct from Sechelt's Porpoise Bay terminals.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CZML",
+      "icao": "CZML",
+      "tcLid": null,
+      "iata": "ZMH",
+      "name": "South Cariboo Regional Airport",
+      "publisher": "Cariboo Regional District",
+      "sourcePageUrl": "https://www.cariboord.ca/business-and-development/airports/",
+      "brandingStatus": "operator-brand-only",
+      "notes": "Airport is at 108 Mile Ranch. District publishes airport information. Airport Commission and terminal signage are further leads.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CYSE",
+      "icao": "CYSE",
+      "tcLid": null,
+      "iata": "YSE",
+      "name": "Squamish Municipal Airport (Don Patrick Field)",
+      "publisher": "District of Squamish",
+      "sourcePageUrl": "https://squamish.ca/transportation-parking-and-mobility/airport/",
+      "brandingStatus": "operator-brand-only",
+      "notes": "District airport page and strategic plan document municipal identity. The approved sign-replacement program is a lead for facility lettering.",
+      "artwork": [],
+      "supportingSources": [
+        "https://squamish.ca/assets/Airport-/Squamish-Airport-Strategic-Plan-Spring-2023-Interim-Recommendations-Update-Endorsed.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CYGB",
+      "icao": "CYGB",
+      "tcLid": null,
+      "iata": "YGB",
+      "name": "Texada/Gillies Bay Airport",
+      "publisher": "qathet Regional District",
+      "sourcePageUrl": "https://qathet.ca/services/transportation/texada-island-airport/",
+      "brandingStatus": "operator-brand-only",
+      "notes": "Regional district facility page and airport plan use district identity. Treat Texada Aviation Museum and event marks as separate subjects.",
+      "artwork": [],
+      "supportingSources": [
+        "https://qathet.ca/wp-content/uploads/2022/12/Texada-Gilles-Bay-Airport-Master-Development-Plan-FINAL.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CAB4",
+      "icao": null,
+      "tcLid": "CAB4",
+      "iata": "YTP",
+      "name": "Tofino Harbour Water Aerodrome",
+      "publisher": "Harbour Air",
+      "sourcePageUrl": "https://harbourair.com/locations/",
+      "brandingStatus": "carrier-brand-only",
+      "notes": "Harbour Air documents its harbour terminal separately from the land airport YAZ.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CBC7",
+      "icao": null,
+      "tcLid": "CBC7",
+      "iata": null,
+      "name": "Vancouver Harbour Heliport",
+      "publisher": "Pacific Heliport Services",
+      "sourcePageUrl": "https://helijet.com/charter-flights/our-locations/",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The operator's 2022 press release carries its own branding. Vancouver Harbour Flight Centre is the separate floatplane terminal.",
+      "artwork": [
+        {
+          "label": "Pacific Heliport Services operator letterhead",
+          "format": "pdf-unverified",
+          "url": "https://helijet.com/wp-content/uploads/2022/08/2022Aug10_PHS-BCAAP-VANCOUVER-HARBOUR-HELIPORT-UPGRADES.pdf",
+          "locator": "PDF page 1, upper right"
+        }
+      ]
+    },
+    {
+      "locationIdentifier": "CYHC",
+      "icao": "CYHC",
+      "tcLid": null,
+      "iata": "CXH",
+      "name": "Vancouver Harbour Water Airport",
+      "publisher": "Vancouver Harbour Flight Centre",
+      "sourcePageUrl": "https://www.vhfc.ca/",
+      "brandingStatus": "verified-vector",
+      "notes": "Native white terminal signature. Downloaded SVG contains 32 paths and a rectangle, with no bitmap image elements. The signature identifies the passenger terminal at CXH. Look for the corresponding positive colourway before building the light preview.",
+      "artwork": [
+        {
+          "label": "White Vancouver Harbour Flight Centre terminal wordmark",
+          "format": "svg",
+          "url": "https://s7d9.scene7.com/is/content/ledcor/vhfc_white?ts=1710966504455&dpr=off",
+          "locator": "Homepage header, image alt Vancouver Harbour Flight Centre"
+        }
+      ]
+    },
+    {
+      "locationIdentifier": "CAM9",
+      "icao": null,
+      "tcLid": "CAM9",
+      "iata": null,
+      "name": "Vancouver International Water Airport",
+      "publisher": "Vancouver Airport Authority",
+      "sourcePageUrl": "https://www.yvr.ca/en/passengers/transportation/airport-south/airport-south",
+      "brandingStatus": "shared-identity",
+      "notes": "YVR presents the public Floatplane Facility as part of Airport South. YVR and the individual airlines have published branding.",
+      "artwork": [],
+      "relatedLocationIdentifier": "CYVR"
+    },
+    {
+      "locationIdentifier": "CAU4",
+      "icao": null,
+      "tcLid": "CAU4",
+      "iata": null,
+      "name": "Vanderhoof Airport",
+      "publisher": "District of Vanderhoof",
+      "sourcePageUrl": "https://vanderhoof.ca/residents/airport/",
+      "brandingStatus": "operator-brand-only",
+      "notes": "District airport page provides official facility context. The airport's awards and flying club should be treated as separate branding evidence.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CBF7",
+      "icao": null,
+      "tcLid": "CBF7",
+      "iata": null,
+      "name": "Victoria Harbour (Camel Point) Heliport",
+      "publisher": "Helijet",
+      "sourcePageUrl": "https://helijet.com/charter-flights/our-locations/",
+      "brandingStatus": "operator-brand-only",
+      "notes": "Carrier-branded location evidence. Pacific Heliport Services has its own operator identity, shown in the letterhead for the separate Vancouver Harbour heliport.",
+      "artwork": [],
+      "supportingSources": [
+        "https://helijet.com/wp-content/uploads/2022/08/2022Aug10_PHS-BCAAP-VANCOUVER-HARBOUR-HELIPORT-UPGRADES.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CYWH",
+      "icao": "CYWH",
+      "tcLid": null,
+      "iata": "YWH",
+      "name": "Victoria Harbour Water Airport",
+      "publisher": "Transport Canada",
+      "sourcePageUrl": "https://tc.canada.ca/en/marine-transportation/ports-harbours-anchorages/port-victoria",
+      "brandingStatus": "operator-brand-only",
+      "notes": "Federal airport and carrier terminal have separate roles. Current federal and Harbour Air pages show their respective organization branding. Check official water-airport or terminal sign artwork for a facility-specific signature.",
+      "artwork": [],
+      "supportingSources": [
+        "https://harbourair.com/locations/victoria-harbour/"
+      ]
+    },
+    {
+      "locationIdentifier": "CAE5",
+      "icao": null,
+      "tcLid": "CAE5",
+      "iata": "YWS",
+      "name": "Whistler/Green Lake Water Aerodrome",
+      "publisher": "Harbour Air",
+      "sourcePageUrl": "https://harbourair.com/locations/whistler/",
+      "brandingStatus": "carrier-brand-only",
+      "notes": "Green Lake terminal is branded by Harbour Air. Look for earlier Whistler Air signage if documenting the operator history.",
+      "artwork": []
+    }
+  ]
+}

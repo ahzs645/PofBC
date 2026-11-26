@@ -1,7 +1,6 @@
 // A labelled row of mutually exclusive choices.
 //
-// Buttons rather than radios: these all sit on one line, the options are short, and every one of
-// them is a live preview change rather than a form value waiting to be submitted.
+// Each button applies its choice immediately. The group can wrap when space is limited.
 //
 // A choice changes what is below the control, never where the reader is: the control stays put on
 // screen while the page under it grows or shrinks (holdScroll.js).

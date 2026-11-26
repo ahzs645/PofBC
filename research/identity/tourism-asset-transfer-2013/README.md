@@ -64,7 +64,7 @@ source IDs to publications, dates and URLs. `domains.json` preserves the origina
 page, column and row of every listed address, its printed case and a lowercase
 matching value.
 
-`artwork-manifest.json` and `website-manifest.json` record the acquired visual
+`artwork-manifest.json`, `website-manifest.json` and `our-brand-2021-manifest.json` record the acquired visual
 specimens, their exact source locations, methods, dimensions and SHA-256 checksums.
 The builder resolves each record’s `assetIds` against these manifests and checks
 the files under `public/tourism/` before writing the runtime module.

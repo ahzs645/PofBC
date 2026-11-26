@@ -1,13 +1,16 @@
 import { motion } from 'motion/react'
 
+// Cursor movement and the entrance animation share a transform so the label moves as one layer.
+const placeChip = (_, transform) => `translate3d(var(--pv-chip-x), var(--pv-chip-y), 0) ${transform}`
+
 /**
- * A small label that sits beside the pointer. Position in px relative to the parent; `up` and
- * `left` put it above or to the left of the pointer instead of below and to the right.
+ * A small label beside the pointer. Motion values position it without relaying out the stage.
  */
-export const Chip = ({ x, y, up = false, left = false, title, hint }) => (
+export const Chip = ({ x, y, title, hint }) => (
   <motion.div
-    className={`pv-chip${up ? ' pv-chip-up' : ''}${left ? ' pv-chip-left' : ''}`}
-    style={{ left: x, top: y }}
+    className="pv-chip"
+    style={{ '--pv-chip-x': x, '--pv-chip-y': y }}
+    transformTemplate={placeChip}
     initial={{ opacity: 0, y: 6, scale: 0.96 }}
     animate={{ opacity: 1, y: 0, scale: 1 }}
     exit={{ opacity: 0, y: 4, scale: 0.98 }}

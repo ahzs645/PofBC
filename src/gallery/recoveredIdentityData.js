@@ -2800,7 +2800,7 @@ export const RECOVERED_IDENTITY_BODIES = [
     "status": "asset-collected",
     "observedDate": "2026-11-20",
     "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-    "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+    "nextAction": "Consult the Village’s design records for original artwork and dates of use for the wooden oval badge.",
     "assets": [
       {
         "id": "source-recovered-municipal-new-denver-website-logo",
@@ -2830,6 +2830,43 @@ export const RECOVERED_IDENTITY_BODIES = [
         "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged.",
         "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
         "darkBackground": false
+      },
+      {
+        "id": "municipal-new-denver-bear-smart-wooden-oval",
+        "label": "New Denver: Wooden oval badge",
+        "file": "identity-recovered/municipalities/new-denver/bear-smart-wooden-oval.png",
+        "format": "png",
+        "isVector": false,
+        "sha256": "5e3a3c439cbfecb7158615f2003017ada8f0d8097d7e8995227e46b883e78e58",
+        "bytes": 24224,
+        "dimensions": {
+          "width": 151,
+          "height": 87
+        },
+        "contentType": "image/png",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "British Columbia Conservation Officer Service",
+        "sourceUrl": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf#page=3",
+        "resolvedSourceUrl": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf",
+        "sourceLocator": "Page 3, top left (PDF figure MCID 194).",
+        "sourceFile": "identity-recovered/municipalities/new-denver/bear-smart-wooden-oval.png",
+        "originalDocumentSha256": "903b02d29e96d3b4bb0db4fcaec1b170c9f6ed0c94fc71bb7ac34ea668ecb169",
+        "sourceDate": "Bear Smart Communities, PDF revised February 2019",
+        "specimenDate": "2019-02",
+        "dateNote": "February 2019 is the PDF revision date in its metadata, not a logo adoption date.",
+        "observedDate": "2026-11-25",
+        "evidenceType": "official-publication-raster",
+        "notes": "The earlier brochure shows a wood-grain oval with the village and province names. The website uses a script signature with mountains and water.",
+        "fidelityNote": "Rendered the isolated 150 × 88 embedded JPEG and its original PDF clipping path to PNG at the source image’s sampling density.",
+        "darkBackground": false,
+        "extraction": {
+          "method": "Rendered the isolated 150 × 88 embedded JPEG and its original PDF clipping path to PNG at the source image’s sampling density.",
+          "figure": 194,
+          "page": 3
+        },
+        "role": "historical"
       }
     ]
   },
@@ -4577,6 +4614,49 @@ export const RECOVERED_IDENTITY_BODIES = [
         "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged.",
         "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
         "darkBackground": false
+      },
+      {
+        "id": "municipal-squamish-bear-smart-tagline",
+        "label": "Squamish: Hardwired for Adventure",
+        "file": "identity-recovered/municipalities/squamish/bear-smart-tagline.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "547aa855445c5b0c1916abf99798ac675da5f3c613ae62fd434c11a6b3eae11b",
+        "bytes": 63576,
+        "dimensions": {
+          "viewBox": "0 0 111 56"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "British Columbia Conservation Officer Service",
+        "sourceUrl": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf#page=3",
+        "resolvedSourceUrl": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf",
+        "sourceLocator": "Page 3, top right (PDF figure MCID 195).",
+        "sourceFile": "identity-recovered/municipalities/squamish/bear-smart-tagline.svg",
+        "originalDocumentSha256": "903b02d29e96d3b4bb0db4fcaec1b170c9f6ed0c94fc71bb7ac34ea668ecb169",
+        "sourceDate": "Bear Smart Communities, PDF revised February 2019",
+        "specimenDate": "2019-02",
+        "dateNote": "February 2019 is the PDF revision date in its metadata, not a logo adoption date.",
+        "observedDate": "2026-11-25",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The stacked eye and wordmark carry the Hardwired for Adventure tagline. The District documents this lockup in its 2015 community partner standards.",
+        "fidelityNote": "Isolated the tagged PDF figure with pikepdf and converted its native paths and clipping paths to SVG with Poppler/Cairo.",
+        "darkBackground": false,
+        "extraction": {
+          "method": "Isolated the tagged PDF figure with pikepdf and converted its native paths and clipping paths to SVG with Poppler/Cairo.",
+          "figure": 195,
+          "page": 3
+        },
+        "role": "historical",
+        "alsoSeen": [
+          {
+            "label": "Squamish Brand Standards Guide, p. 11",
+            "source": "https://squamish.ca/assets/Brand-and-logo/f8a78984af/Squamish-Branding-Guidelines-COMMUNITY-PARTNERS.pdf#page=11",
+            "date": "2015-02"
+          }
+        ]
       }
     ]
   },
@@ -5301,6 +5381,49 @@ export const RECOVERED_IDENTITY_BODIES = [
         "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged.",
         "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
         "darkBackground": false
+      },
+      {
+        "id": "municipal-whistler-bear-smart-stacked",
+        "label": "Whistler: Standalone mountain signature",
+        "file": "identity-recovered/municipalities/whistler/bear-smart-stacked.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "fec3f2e166e50cbccfa1f808c0d08b7fba97e9d6e52460ce23f508e012e47fe0",
+        "bytes": 8259,
+        "dimensions": {
+          "viewBox": "0 0 103 75"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "British Columbia Conservation Officer Service",
+        "sourceUrl": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf#page=3",
+        "resolvedSourceUrl": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf",
+        "sourceLocator": "Page 3, middle left (PDF figure MCID 192).",
+        "sourceFile": "identity-recovered/municipalities/whistler/bear-smart-stacked.svg",
+        "originalDocumentSha256": "903b02d29e96d3b4bb0db4fcaec1b170c9f6ed0c94fc71bb7ac34ea668ecb169",
+        "sourceDate": "Bear Smart Communities, PDF revised February 2019",
+        "specimenDate": "2019-02",
+        "dateNote": "February 2019 is the PDF revision date in its metadata, not a logo adoption date.",
+        "observedDate": "2026-11-25",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The standalone mountain and WHISTLER lettering appear without the full municipality name used in the website masthead.",
+        "fidelityNote": "Isolated the tagged PDF figure with pikepdf and converted its native paths and clipping paths to SVG with Poppler/Cairo.",
+        "darkBackground": false,
+        "extraction": {
+          "method": "Isolated the tagged PDF figure with pikepdf and converted its native paths and clipping paths to SVG with Poppler/Cairo.",
+          "figure": 192,
+          "page": 3
+        },
+        "role": "historical",
+        "alsoSeen": [
+          {
+            "label": "Squamish and Whistler EV charging presentation, final slide",
+            "source": "https://pluginbc.ca/wp/wp-content/uploads/2022/10/1_2022-DOS-RMOW-Slide_20221024.pdf",
+            "date": "2022-10"
+          }
+        ]
       }
     ]
   },
@@ -6119,6 +6242,42 @@ export const RECOVERED_IDENTITY_BODIES = [
         "fidelityNote": "Visually reviewed in publication context. Source raster pixels retained; no tracing, text replacement, recolouring or upscaling.",
         "darkBackground": false,
         "sourceSha256": "328c946ba90a0f92118808a320abd5c73c97100a1226bb2553cf08b937787ec9"
+      },
+      {
+        "id": "municipal-port-alberni-bear-smart-serif",
+        "label": "Port Alberni: Serif city signature",
+        "file": "identity-recovered/municipalities/port-alberni/bear-smart-serif.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "d0173ce5463cff29eb927c4bd4299a17bfd02f01e36b4b0a54b90c283027fc22",
+        "bytes": 49380,
+        "dimensions": {
+          "viewBox": "0 0 95 49"
+        },
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "British Columbia Conservation Officer Service",
+        "sourceUrl": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf#page=3",
+        "resolvedSourceUrl": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf",
+        "sourceLocator": "Page 3, bottom left (PDF figure MCID 189).",
+        "sourceFile": "identity-recovered/municipalities/port-alberni/bear-smart-serif.svg",
+        "originalDocumentSha256": "903b02d29e96d3b4bb0db4fcaec1b170c9f6ed0c94fc71bb7ac34ea668ecb169",
+        "sourceDate": "Bear Smart Communities, PDF revised February 2019",
+        "specimenDate": "2019-02",
+        "dateNote": "February 2019 is the PDF revision date in its metadata, not a logo adoption date.",
+        "observedDate": "2026-11-25",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The four-trees emblem sits over the right end of the black serif signature. The later specimen uses centred green capitals.",
+        "fidelityNote": "Isolated the tagged PDF figure with pikepdf and converted its native paths and clipping paths to SVG with Poppler/Cairo.",
+        "darkBackground": false,
+        "extraction": {
+          "method": "Isolated the tagged PDF figure with pikepdf and converted its native paths and clipping paths to SVG with Poppler/Cairo.",
+          "figure": 189,
+          "page": 3
+        },
+        "role": "historical"
       }
     ]
   },
@@ -7265,8 +7424,8 @@ export const RECOVERED_IDENTITY_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-11-20",
-    "notes": "Accepted original source artwork. Its publication and collection dates do not establish when the identity was adopted.",
-    "nextAction": "Compare dated historical variants and seek original master files where only a publication or website specimen is held.",
+    "notes": "The circular BC Ambulance Service badge carries the provincial coat of arms between two lines of blue lettering.",
+    "nextAction": "Seek a publisher vector master for this circular badge from BCEHS Communications.",
     "assets": [
       {
         "id": "source-recovered-bc-ambulance-service",
@@ -7293,7 +7452,33 @@ export const RECOVERED_IDENTITY_BODIES = [
         },
         "supplied": false,
         "reconstruction": false,
-        "observedDate": "2026-11-20"
+        "observedDate": "2026-11-20",
+        "versionLabel": "Published image",
+        "preferredReconstruction": "bc-ambulance-service-circular-badge-rebuilt"
+      },
+      {
+        "id": "bc-ambulance-service-circular-badge-rebuilt",
+        "variantOf": "source-recovered-bc-ambulance-service",
+        "reconstructionOf": "source-recovered-bc-ambulance-service",
+        "label": "British Columbia Ambulance Service — circular arms badge",
+        "versionLabel": "Vector surround · raster arms",
+        "file": "identity-recovered/bc-ambulance-service/circular-badge.svg",
+        "sha256": "23a07fbbfea37f97a1f093f3fca874a184d449ce9b2aee8e6d96d14101753943",
+        "bytes": 570811,
+        "sourceFile": "identity-recovered/_sources/institutions/bcas-badge-supplied.png",
+        "sourcePage": "https://www.bcehs.ca/about/who-we-are/bc-ambulance-service",
+        "sourceUrl": "https://www.bcehs.ca/our-services-site/PublishingImages/bcas-logo-rgb-pos-sml-sqr.png",
+        "publisher": "BC Ambulance Service",
+        "sourceLocator": "Supplied 813 × 810 px badge, compared with the 407 × 405 px PNG on the BCEHS service page.",
+        "format": "svg",
+        "isVector": false,
+        "reconstruction": true,
+        "supplied": false,
+        "evidenceType": "mixed-media-reconstruction",
+        "observedDate": "2026-11-25",
+        "notes": "Two navy rings frame the provincial arms. Both arcs of lettering follow the supplied badge.",
+        "fidelityNote": "The rings are fitted circles and the lettering is traced to Bézier paths. The central coat of arms is embedded as a lossless PNG at the supplied resolution.",
+        "dateNote": "Current website specimen; badge adoption date unknown. This is BCAS’s own badge, distinct from the BCEHS corporate wordmark."
       }
     ]
   },
@@ -7471,9 +7656,167 @@ export const RECOVERED_IDENTITY_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-11-20",
-    "notes": "Accepted original source artwork. Its publication and collection dates do not establish when the identity was adopted.",
+    "notes": "The office’s dogwood identity in dated reports and on its website, from the Ombudsman wordmark to the current Ombudsperson logo.",
     "nextAction": "Compare dated historical variants and seek original master files where only a publication or website specimen is held.",
+    "eras": [
+      {
+        "id": "bc-ombudsman-dogwood",
+        "label": "Ombudsman dogwood wordmark",
+        "shortLabel": "Ombudsman dogwood",
+        "years": "Seen May 2007",
+        "note": "The dogwood forms the O in Ombudsman on the cover of Winning Fair and Square. The title page uses a blue-and-grey version of the same design.",
+        "marks": [
+          "source-recovered-bc-ombudsman-2007-dogwood"
+        ],
+        "sources": [
+          {
+            "title": "Winning Fair and Square, May 2007",
+            "url": "https://bcombudsperson.ca/investigative_report/winning-fair-and-square-a-report-on-the-british-columbia-lottery-corporations-prize-payout-process/"
+          }
+        ]
+      },
+      {
+        "id": "bc-ombudsperson-renamed-wordmark",
+        "label": "Ombudsperson name with the original emblem",
+        "shortLabel": "Ombudsperson rename",
+        "years": "2009–2018",
+        "note": "The office became the Ombudsperson on October 29, 2009. Its December 2009 report shows the new name with the same dogwood emblem and tagline. The 2017/18 annual report still uses that emblem as the initial O.",
+        "marks": [],
+        "sources": [
+          {
+            "title": "Ombudsman Amendment Act, effective October 29, 2009",
+            "url": "https://www.bclaws.gov.bc.ca/civix/document/id/lc/statreg/96340_pit"
+          },
+          {
+            "title": "The Best of Care, December 2009 cover",
+            "url": "https://bcombudsperson.ca/wp-content/uploads/2025/08/Public-Report-No-46-The-Best-of-Care-Getting-it-Right-for-Seniors-in-B.C.pdf#page=1"
+          },
+          {
+            "title": "2017/18 annual report cover, July 2018",
+            "url": "https://bcombudsperson.ca/wp-content/uploads/2025/08/2017-2018-Annual-Report-of-the-Ombudsperson.pdf#page=1"
+          }
+        ]
+      },
+      {
+        "id": "bc-ombudsperson-standalone-dogwood",
+        "label": "Standalone dogwood and office name",
+        "shortLabel": "Standalone dogwood",
+        "years": "2019–February 2020",
+        "note": "Reports show the dogwood as a separate symbol alongside or above the office name. The cover of the February 2020 Holding Pattern update still uses this treatment.",
+        "marks": [],
+        "sources": [
+          {
+            "title": "2018/19 annual report cover, July 2019",
+            "url": "https://bcombudsperson.ca/wp-content/uploads/2025/08/OMBD-AR-2018-2019-web.pdf#page=1"
+          },
+          {
+            "title": "Looking Ahead, November 2019 cover",
+            "url": "https://bcombudsperson.ca/wp-content/uploads/2025/08/Looking-Ahead-Symposium-Report.pdf#page=1"
+          },
+          {
+            "title": "Holding Pattern monitoring update, February 2020 cover",
+            "url": "https://bcombudsperson.ca/wp-content/uploads/2025/08/OMB-HoldingPattern-MonitoringUpdate-WEB.pdf#page=1"
+          }
+        ]
+      },
+      {
+        "id": "bc-ombudsperson-circular-dogwood",
+        "label": "Circular dogwood and British Columbia wordmark",
+        "shortLabel": "Current website logo",
+        "years": "Seen March 2020",
+        "note": "The redesigned website launched in March 2020. Its header shows the white dogwood in a blue circle beside the uppercase Ombudsperson British Columbia wordmark used on the current site.",
+        "marks": [
+          "source-recovered-ombudsperson-website-logo-white"
+        ],
+        "sources": [
+          {
+            "title": "2019/20 annual report, website launch and screenshots on page 29",
+            "url": "https://bcombudsperson.ca/wp-content/uploads/2025/08/OMB-AR-2019-2020-final-1.pdf#page=33"
+          },
+          {
+            "title": "Current BC Ombudsperson website",
+            "url": "https://bcombudsperson.ca/"
+          }
+        ]
+      }
+    ],
     "assets": [
+      {
+        "id": "source-recovered-bc-ombudsman-2007-dogwood",
+        "label": "BC Ombudsman: 2007 dogwood and tagline (full-colour cover)",
+        "designLabel": "BC Ombudsman: 2007 dogwood and tagline",
+        "versionLabel": "Full-colour cover",
+        "file": "identity-recovered/ombudsperson/ombudsman-2007-cover-colour.svg",
+        "sha256": "5902186d5dbb9dc4c8a66dfdf09462292c43d6a33b4ff23eac62b15da7c96b50",
+        "bytes": 53097,
+        "format": "svg",
+        "isVector": true,
+        "sourceFile": "identity-recovered/_sources/institutions/ombudsman-winning-fair-and-square-2007-page-1.pdf",
+        "sourcePage": "https://bcombudsperson.ca/investigative_report/winning-fair-and-square-a-report-on-the-british-columbia-lottery-corporations-prize-payout-process/",
+        "sourceUrl": "https://bcombudsperson.ca/wp-content/uploads/2025/08/Special-Report-No-31-Winning-Fair-and-Square-A-Report-on-the-BC-lotter-Corp.s-Prize-Payout-Process.pdf#page=1",
+        "publisher": "Office of the Ombudsman, British Columbia",
+        "sourceLocator": "Winning Fair and Square, Special Report No. 31, publisher PDF page 1, front cover, lower left.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "sourceDate": "2007-05-29",
+        "dateNote": "The office records May 29, 2007 as the report release date.",
+        "notes": "The dogwood forms the O in the Ombudsman wordmark, with the tagline “B.C.’s Independent Voice For Fairness”. The front cover prints a dark green centre field and tagline with a yellow flower centre.",
+        "fidelityNote": "Original PDF vector shapes, outlined lettering, colours and strokes. The SVG isolates the logo from the report background and other cover artwork.",
+        "extraction": {
+          "method": "Exported the PDF page with Poppler pdftocairo -svg, retained SVG root children 3 through 53 (zero-based) and the ring clip path, then set the viewBox around the logo.",
+          "pdfBounds": [
+            47.5,
+            584.4,
+            576.5,
+            756.8
+          ]
+        },
+        "dimensions": {
+          "viewBox": "47.5 584.4 529 172.4"
+        },
+        "sourceGround": "light",
+        "role": "historical",
+        "supplied": false,
+        "reconstruction": false,
+        "observedDate": "2026-11-25"
+      },
+      {
+        "id": "source-recovered-bc-ombudsman-2007-dogwood-blue-grey",
+        "label": "BC Ombudsman: 2007 dogwood and tagline (blue and grey title page)",
+        "variantOf": "source-recovered-bc-ombudsman-2007-dogwood",
+        "versionLabel": "Blue and grey title page",
+        "file": "identity-recovered/ombudsperson/ombudsman-2007-interior-blue-grey.svg",
+        "sha256": "21eb9a95d45d518df34cfb3b281c6319c5e332639beaf032107970f90c285bac",
+        "bytes": 53374,
+        "format": "svg",
+        "isVector": true,
+        "sourceFile": "identity-recovered/_sources/institutions/ombudsman-winning-fair-and-square-2007-page-3.pdf",
+        "sourcePage": "https://bcombudsperson.ca/investigative_report/winning-fair-and-square-a-report-on-the-british-columbia-lottery-corporations-prize-payout-process/",
+        "sourceUrl": "https://bcombudsperson.ca/wp-content/uploads/2025/08/Special-Report-No-31-Winning-Fair-and-Square-A-Report-on-the-BC-lotter-Corp.s-Prize-Payout-Process.pdf#page=3",
+        "publisher": "Office of the Ombudsman, British Columbia",
+        "sourceLocator": "Winning Fair and Square, Special Report No. 31, publisher PDF page 3, interior title page, lower left.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "sourceDate": "2007-05-29",
+        "dateNote": "The office records May 29, 2007 as the report release date.",
+        "notes": "The title page uses the same logo outlines, with a grey centre field and tagline and a pale grey flower centre.",
+        "fidelityNote": "Original PDF vector shapes, outlined lettering, colours and strokes. The SVG isolates the logo from the report background and other cover artwork.",
+        "extraction": {
+          "method": "Exported the PDF page with Poppler pdftocairo -svg, retained SVG root children 3 through 53 (zero-based) and the ring clip path, then set the viewBox around the logo.",
+          "pdfBounds": [
+            47.5,
+            584.4,
+            576.5,
+            756.8
+          ]
+        },
+        "dimensions": {
+          "viewBox": "47.5 584.4 529 172.4"
+        },
+        "sourceGround": "light",
+        "role": "historical",
+        "supplied": false,
+        "reconstruction": false,
+        "observedDate": "2026-11-25"
+      },
       {
         "id": "source-recovered-ombudsperson-website-logo-white",
         "label": "BC Ombudsperson: White website logo",
@@ -7641,21 +7984,21 @@ export const RECOVERED_IDENTITY_BODIES = [
   },
   {
     "id": "science-council-of-bc",
-    "name": "Science Council of BC",
-    "shortName": "Science Council of BC",
+    "name": "Science Council of British Columbia",
+    "shortName": "Science Council of British Columbia",
     "kind": "agency",
     "graphNode": "science-council-of-bc",
-    "from": null,
-    "to": null,
+    "from": 1978,
+    "to": 2004,
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-11-20",
-    "notes": "Accepted original source artwork. Its publication and collection dates do not establish when the identity was adopted.",
-    "nextAction": "Compare dated historical variants and seek original master files where only a publication or website specimen is held.",
+    "notes": "Founded in 1978, the Science Council funded research, supported science education and helped bring technology to market. It took the name Innovation and Science Council of British Columbia in March 2003. Its merger with the Advanced Systems Institute of BC led to the October 2004 launch of the BC Innovation Council, renamed Innovate BC in 2018.",
+    "nextAction": "Locate dated evidence of when the council introduced the five-part emblem.",
     "assets": [
       {
         "id": "source-recovered-science-council-2003",
-        "label": "Science Council of BC: publication signature",
+        "label": "Science Council with “Turning Ideas Into Solutions”",
         "file": "identity-recovered/science-council-of-bc/science-council-2003.svg",
         "sha256": "2aa92ec0a666fe55fbaff92c29b1f187d1da3a6d8cdc4b721248b8ff15604c19",
         "bytes": 23089,
@@ -7668,7 +8011,7 @@ export const RECOVERED_IDENTITY_BODIES = [
         "sourceLocator": "service-plan-2003.pdf, PDF page 1; exact selected source outlines recorded in the extraction recipe.",
         "sourceDate": "2003/04",
         "evidenceType": "native-pdf-vector-extraction",
-        "notes": "The signature is extracted from original publication geometry, retaining the original lettering and colour. It is an extracted component, not an independently issued logo master.",
+        "notes": "The five-part emblem sits beside the council’s name and the tagline “Turning Ideas Into Solutions” on its 2003/04 service-plan cover. The council became the Innovation and Science Council of British Columbia in March 2003. Its next plan kept the emblem and introduced the longer name. After the 2004 merger with the Advanced Systems Institute of BC, the organization operated as the BC Innovation Council and became Innovate BC in 2018.",
         "dateNote": "The cited publication or plan period dates this specimen only; no adoption date is inferred.",
         "fidelityNote": "Native source paths and embedded glyph outlines retained without tracing or retypesetting. Other page content is excluded; conversion from PDF colour spaces may affect on-screen colour.",
         "darkBackground": true,
@@ -7689,9 +8032,172 @@ export const RECOVERED_IDENTITY_BODIES = [
         ],
         "supplied": false,
         "reconstruction": false,
-        "observedDate": "2026-11-20"
+        "observedDate": "2026-11-20",
+        "versionLabel": "White cover logo",
+        "sourceGround": "dark",
+        "preferredVector": "scbc-2003-colour",
+        "designLabel": "Science Council with “Turning Ideas Into Solutions”",
+        "extraction": {
+          "page": 1,
+          "pdfBounds": [
+            280,
+            637,
+            549,
+            711
+          ]
+        }
+      },
+      {
+        "id": "scbc-2003-colour",
+        "label": "Science Council with “Turning Ideas Into Solutions”",
+        "file": "identity-recovered/science-council-of-bc/scbc-2003-colour.svg",
+        "sha256": "2fffd35f448e9dd0f28bd22ba99adcdcc2e74a220a2e3a7b36af32de9437d1e4",
+        "bytes": 22386,
+        "format": "svg",
+        "isVector": true,
+        "sourceFile": "identity-recovered/_sources/offices/scbc-2003-colour-page-3.pdf",
+        "sourcePage": "https://www.bcbudget.gov.bc.ca/2003/sp/crowncorps/scbc.pdf#page=3",
+        "sourceUrl": "https://www.bcbudget.gov.bc.ca/2003/sp/crowncorps/scbc.pdf",
+        "publisher": "Science Council of BC",
+        "sourceLocator": "2003/04–2005/06 Service Plan, PDF page 3, above the copyright line",
+        "sourceDate": "2003/04",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The five-part emblem sits beside the council’s name and the tagline “Turning Ideas Into Solutions” on its 2003/04 service-plan cover. The council became the Innovation and Science Council of British Columbia in March 2003. Its next plan kept the emblem and introduced the longer name. After the 2004 merger with the Advanced Systems Institute of BC, the organization operated as the BC Innovation Council and became Innovate BC in 2018.",
+        "dateNote": "The cited publication or plan period dates this specimen only; no adoption date is inferred.",
+        "fidelityNote": "MuPDF extracted all 32 native paths for the emblem, lettering and tagline in their published colours.",
+        "darkBackground": false,
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/offices/scbc-2003-colour-page-3.pdf",
+            "sha256": "29dd3fda4540652402483f0453448f09cdc788954500d76a480f4a47e67d7d20",
+            "bytes": 87689,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://www.bcbudget.gov.bc.ca/2003/sp/crowncorps/scbc.pdf",
+            "sourcePageNumber": 3,
+            "originalFile": "service-plan-2003.pdf",
+            "originalDocumentSha256": "eeb9f92713c26eca4a661df0c2a80b543d9498ad30ec25404eec238666a03db0",
+            "originalDocumentBytes": 472310,
+            "archivingNote": "Complete source page retained as a rewritten PDF container; original document hash retained separately.",
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "supplied": false,
+        "reconstruction": false,
+        "observedDate": "2026-11-25",
+        "versionLabel": "Teal and taupe",
+        "sourceGround": "light",
+        "extraction": {
+          "page": 3,
+          "pdfBounds": [
+            282,
+            692,
+            485,
+            746
+          ]
+        },
+        "variantOf": "source-recovered-science-council-2003",
+        "darkVariant": "source-recovered-science-council-2003"
+      },
+      {
+        "id": "iscbc-2004",
+        "label": "Innovation and Science Council with the five-part emblem",
+        "file": "identity-recovered/science-council-of-bc/iscbc-2004-colour.svg",
+        "sha256": "ebaed992112775fd5a50f893399289e5a17fb95214e1a8b87e92268144947bfe",
+        "bytes": 29700,
+        "format": "svg",
+        "isVector": true,
+        "sourceFile": "identity-recovered/_sources/offices/iscbc-2004-colour-page-2.pdf",
+        "sourceUrl": "https://www.bcbudget.gov.bc.ca/2004/sp/crownagency/iscbc.pdf",
+        "sourcePage": "https://www.bcbudget.gov.bc.ca/2004/sp/crownagency/iscbc.pdf#page=2",
+        "publisher": "Innovation and Science Council of British Columbia",
+        "sourceLocator": "2004/05–2006/07 Service Plan, PDF page 2, above the copyright line",
+        "sourceDate": "2004/05",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The council retained its five-part emblem after the 2003 name change. Its 2004/05 service plan uses the longer name on two lines and omits the earlier tagline.",
+        "fidelityNote": "MuPDF extracted the 49 original paths for the emblem and outlined lettering in their published colours.",
+        "extraction": {
+          "page": 2,
+          "pdfBounds": [
+            282,
+            692,
+            486,
+            740
+          ]
+        },
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/offices/iscbc-2004-colour-page-2.pdf",
+            "sha256": "50ef8d5fdd3d3774922d3a82492bd8bd1cfde78bb0de95beb8fc0f804825749f",
+            "bytes": 52029,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://www.bcbudget.gov.bc.ca/2004/sp/crownagency/iscbc.pdf",
+            "sourcePageNumber": 2,
+            "originalFile": "iscbc.pdf",
+            "originalDocumentSha256": "96de207860f1f5a0e7ca7219b980d4e969e952ac6aafd1c16a8bfbde458fb2c5",
+            "originalDocumentBytes": 436336,
+            "archivingNote": "Source page preserved with native vector artwork.",
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "supplied": false,
+        "reconstruction": false,
+        "observedDate": "2026-11-25",
+        "designLabel": "Innovation and Science Council with the five-part emblem",
+        "versionLabel": "Teal and taupe",
+        "sourceGround": "light",
+        "darkVariant": "iscbc-2004-white"
+      },
+      {
+        "id": "iscbc-2004-white",
+        "label": "Innovation and Science Council with the five-part emblem",
+        "file": "identity-recovered/science-council-of-bc/iscbc-2004-white.svg",
+        "sha256": "051b4585ac5a0a245da52cebbf6f07d8b7579d1d95821af08dba81279dda8148",
+        "bytes": 31270,
+        "format": "svg",
+        "isVector": true,
+        "sourceFile": "identity-recovered/_sources/offices/iscbc-2004-white-page-1.pdf",
+        "sourceUrl": "https://www.bcbudget.gov.bc.ca/2004/sp/crownagency/iscbc.pdf",
+        "sourcePage": "https://www.bcbudget.gov.bc.ca/2004/sp/crownagency/iscbc.pdf#page=1",
+        "publisher": "Innovation and Science Council of British Columbia",
+        "sourceLocator": "2004/05–2006/07 Service Plan, PDF page 1, lower-right cover signature",
+        "sourceDate": "2004/05",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The council retained its five-part emblem after the 2003 name change. Its 2004/05 service plan uses the longer name on two lines and omits the earlier tagline.",
+        "fidelityNote": "MuPDF extracted the 49 original paths for the emblem and outlined lettering in their published colours.",
+        "extraction": {
+          "page": 1,
+          "pdfBounds": [
+            281,
+            638,
+            546,
+            699
+          ]
+        },
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/offices/iscbc-2004-white-page-1.pdf",
+            "sha256": "2105a0134f68b857866237df0e1af3022ce40e5463fd66c5e365b00ca21dc036",
+            "bytes": 110190,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://www.bcbudget.gov.bc.ca/2004/sp/crownagency/iscbc.pdf",
+            "sourcePageNumber": 1,
+            "originalFile": "iscbc.pdf",
+            "originalDocumentSha256": "96de207860f1f5a0e7ca7219b980d4e969e952ac6aafd1c16a8bfbde458fb2c5",
+            "originalDocumentBytes": 436336,
+            "archivingNote": "Source page preserved with native vector artwork.",
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "supplied": false,
+        "reconstruction": false,
+        "observedDate": "2026-11-25",
+        "variantOf": "iscbc-2004",
+        "versionLabel": "White cover logo",
+        "sourceGround": "dark",
+        "darkBackground": true
       }
-    ]
+    ],
+    "cover": "iscbc-2004"
   },
   {
     "id": "bc-innovation-council",
@@ -7699,17 +8205,115 @@ export const RECOVERED_IDENTITY_BODIES = [
     "shortName": "BC Innovation Council",
     "kind": "agency",
     "graphNode": "bc-innovation-council",
-    "from": null,
-    "to": null,
+    "from": 2004,
+    "to": 2018,
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-11-20",
-    "notes": "Accepted original source artwork. Its publication and collection dates do not establish when the identity was adopted.",
-    "nextAction": "Compare dated historical variants and seek original master files where only a publication or website specimen is held.",
+    "notes": "The Innovation and Science Council of British Columbia and the Advanced Systems Institute of BC merged and publicly launched the BC Innovation Council in October 2004. The statutory name followed in March 2006. The Province renamed the council Innovate BC in March 2018.",
+    "nextAction": "Locate the adoption dates for the short-name and full-name signatures.",
     "assets": [
       {
+        "id": "bcic-orbit",
+        "label": "BC Innovation Council with the three-loop emblem",
+        "file": "identity-recovered/bc-innovation-council/bcic-orbit-colour.svg",
+        "sha256": "3c9ab456156cc1289096b55fc4a46b7df6dcd188380c0caec10ccab16d918f36",
+        "bytes": 10991,
+        "format": "svg",
+        "isVector": true,
+        "sourceFile": "identity-recovered/_sources/offices/bcic-orbit-colour-page-2.pdf",
+        "sourceUrl": "https://www.bcbudget.gov.bc.ca/2007/sp/pdf/agency/bcic.pdf",
+        "sourcePage": "https://www.bcbudget.gov.bc.ca/2007/sp/pdf/agency/bcic.pdf#page=2",
+        "publisher": "BC Innovation Council",
+        "sourceLocator": "2007/08–2009/10 Service Plan, PDF page 2, to the left of the provincial signature",
+        "sourceDate": "2007/08",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The short-name design stacks BC above INNOVATION and COUNCIL. The blue, green and orange loops overlap the middle line.",
+        "fidelityNote": "MuPDF extracted the 28 original paths for the emblem and outlined lettering in their published colours.",
+        "extraction": {
+          "page": 2,
+          "pdfBounds": [
+            61,
+            158,
+            172,
+            219
+          ]
+        },
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/offices/bcic-orbit-colour-page-2.pdf",
+            "sha256": "630d242eedccc84cab6e3f069f46298fa24f1947cffd3dcd90d1bbf54c417a5a",
+            "bytes": 53006,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://www.bcbudget.gov.bc.ca/2007/sp/pdf/agency/bcic.pdf",
+            "sourcePageNumber": 2,
+            "originalFile": "bcic.pdf",
+            "originalDocumentSha256": "71ffbfa643a3e90885d7062be42069b6a1b59017ac8d99acca799177b2c64d14",
+            "originalDocumentBytes": 780401,
+            "archivingNote": "Source page preserved with native vector artwork.",
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "supplied": false,
+        "reconstruction": false,
+        "observedDate": "2026-11-25",
+        "designLabel": "BC Innovation Council with the three-loop emblem",
+        "versionLabel": "Full colour · 2007/08",
+        "sourceGround": "light",
+        "darkVariant": "bcic-orbit-2006-white"
+      },
+      {
+        "id": "bcic-orbit-2006-white",
+        "label": "BC Innovation Council with the three-loop emblem",
+        "file": "identity-recovered/bc-innovation-council/bcic-orbit-2006-white.svg",
+        "sha256": "dd056e074421cbe84712b31284c2939be1b0d291ebee205010c3e6e73e3fcaa3",
+        "bytes": 11305,
+        "format": "svg",
+        "isVector": true,
+        "sourceFile": "identity-recovered/_sources/offices/bcic-orbit-2006-white-page-23.pdf",
+        "sourceUrl": "https://www.bcbudget.gov.bc.ca/2006/sp/crownagency/bcic.pdf",
+        "sourcePage": "https://www.bcbudget.gov.bc.ca/2006/sp/crownagency/bcic.pdf#page=23",
+        "publisher": "BC Innovation Council",
+        "sourceLocator": "2006/07–2008/09 Service Plan, PDF page 23, contact information panel. The same white signature appears on the front cover.",
+        "sourceDate": "2006/07",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The 2006/07 service plan prints the short-name logo in white on blue. The contact page shows the same logo as the cover, clear of the cover photograph and border.",
+        "fidelityNote": "MuPDF extracted the 28 original paths for the emblem and outlined lettering in their published colours.",
+        "extraction": {
+          "page": 23,
+          "pdfBounds": [
+            201,
+            192,
+            355,
+            276
+          ]
+        },
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/offices/bcic-orbit-2006-white-page-23.pdf",
+            "sha256": "b508576c3e82af822a3962f1f8f68d4f3257463739524e14e4248fdc4047a61b",
+            "bytes": 76515,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://www.bcbudget.gov.bc.ca/2006/sp/crownagency/bcic.pdf",
+            "sourcePageNumber": 23,
+            "originalFile": "bcic.pdf",
+            "originalDocumentSha256": "bf06c83ed144a586147ad6240ef314841f7e5348a01d55ddc2015e37ff2a635e",
+            "originalDocumentBytes": 1394966,
+            "archivingNote": "Source page preserved with native vector artwork.",
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "supplied": false,
+        "reconstruction": false,
+        "observedDate": "2026-11-25",
+        "variantOf": "bcic-orbit",
+        "versionLabel": "White · 2006/07",
+        "sourceGround": "dark",
+        "darkBackground": true
+      },
+      {
         "id": "source-recovered-bcic-2008-09",
-        "label": "BC Innovation Council: publication signature",
+        "label": "British Columbia Innovation Council on a blue panel",
         "file": "identity-recovered/bc-innovation-council/bcic-2008-09.svg",
         "sha256": "22cb03f1d36237c646d94d8ab916bca2af5b1317e07ad810f2f4251873fa7c59",
         "bytes": 9902,
@@ -7722,7 +8326,7 @@ export const RECOVERED_IDENTITY_BODIES = [
         "sourceLocator": "service-plan-2009.pdf, PDF page 2; exact selected source outlines recorded in the extraction recipe.",
         "sourceDate": "2008/09",
         "evidenceType": "native-pdf-vector-extraction",
-        "notes": "The signature is extracted from original publication geometry, retaining the original lettering and colour. It is an extracted component, not an independently issued logo master.",
+        "notes": "The 2008/09 plan spells out British Columbia above INNOVATION COUNCIL in a blue rectangle. The earlier three-line design used the initials BC.",
         "dateNote": "The cover says 2008/09–2010/11 although the file is hosted under Budget 2009. The cover period is retained as specimen context; the hosting path is not an adoption date.",
         "fidelityNote": "Native source paths and embedded glyph outlines retained without tracing or retypesetting. Other page content is excluded; conversion from PDF colour spaces may affect on-screen colour.",
         "darkBackground": false,
@@ -7744,8 +8348,115 @@ export const RECOVERED_IDENTITY_BODIES = [
         "supplied": false,
         "reconstruction": false,
         "observedDate": "2026-11-20"
+      },
+      {
+        "id": "bcic-horizontal-2011",
+        "label": "BCIC initials on a blue panel",
+        "file": "identity-recovered/bc-innovation-council/bcic-horizontal-2011.svg",
+        "bytes": 2573,
+        "sha256": "265ee64a3057a9fec2cfd03a03e7d39ee16169c815bf23df3ee572b8a3780a12",
+        "format": "svg",
+        "isVector": true,
+        "sourceFile": "identity-recovered/_sources/offices/bcic-horizontal-2011-page-2.pdf",
+        "sourcePage": "https://www.bcbudget.gov.bc.ca/2011/sp/pdf/agency/bcic.pdf#page=2",
+        "sourceUrl": "https://www.bcbudget.gov.bc.ca/2011/sp/pdf/agency/bcic.pdf",
+        "publisher": "BC Innovation Council",
+        "sourceLocator": "2011/12 service plan, PDF page 2, publication information panel",
+        "sourceDate": "2011/12",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The three-loop emblem moves to the left of four bold initials. The horizontal blue panel appears opposite the provincial signature.",
+        "fidelityNote": "MuPDF isolated 8 original paths for this signature from the service plan.",
+        "extraction": {
+          "page": 2,
+          "pdfBounds": [
+            63,
+            147.6,
+            207,
+            217.31
+          ]
+        },
+        "alsoSeen": [
+          {
+            "label": "2012/13 service plan",
+            "date": "2012/13",
+            "source": "https://www.bcbudget.gov.bc.ca/2012/sp/pdf/agency/bcic.pdf#page=2"
+          }
+        ],
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/offices/bcic-horizontal-2011-page-2.pdf",
+            "bytes": 60133,
+            "sha256": "b8e10dfcd9bdd50565a2fac0f5aa18d483e06f33b9768527ec60884cc8668575",
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://www.bcbudget.gov.bc.ca/2011/sp/pdf/agency/bcic.pdf",
+            "sourcePageNumber": 2,
+            "originalFile": "bcic.pdf",
+            "originalDocumentSha256": "5d5543ba78b7665b6a848fea320c436af309b4d79fb2bb2d3e329d371141d2bf",
+            "originalDocumentBytes": 591662,
+            "archivingNote": "Source page preserved with its native vector artwork.",
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "observedDate": "2026-11-25",
+        "supplied": false,
+        "reconstruction": false,
+        "sourceGround": "light"
+      },
+      {
+        "id": "bcic-lightbulb-2013",
+        "label": "BCIC light-bulb logo",
+        "file": "identity-recovered/bc-innovation-council/bcic-lightbulb-2013.svg",
+        "bytes": 49098,
+        "sha256": "f60b31859cbb384f7923bdf5a0b78878a829d0ad745645d7437ebf519b622acc",
+        "format": "svg",
+        "isVector": true,
+        "sourceFile": "identity-recovered/_sources/offices/bcic-lightbulb-2013-page-1.pdf",
+        "sourcePage": "https://www.bcbudget.gov.bc.ca/2013/sp/pdf/agency/bcic.pdf#page=1",
+        "sourceUrl": "https://www.bcbudget.gov.bc.ca/2013/sp/pdf/agency/bcic.pdf",
+        "publisher": "BC Innovation Council",
+        "sourceLocator": "2013/14 service plan, PDF page 1, upper left of the cover",
+        "sourceDate": "2013/14",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "Green BC lettering sits beside a framework shaped like IC. A green light bulb tops the I, and the council’s name appears below.",
+        "fidelityNote": "MuPDF isolated 34 original paths for this signature from the service plan.",
+        "extraction": {
+          "page": 1,
+          "pdfBounds": [
+            45,
+            27,
+            154,
+            112
+          ]
+        },
+        "alsoSeen": [
+          {
+            "label": "2017/18 service plan",
+            "date": "2017/18",
+            "source": "https://www.bcbudget.gov.bc.ca/2017/sp/pdf/agency/bcic.pdf#page=1"
+          }
+        ],
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/offices/bcic-lightbulb-2013-page-1.pdf",
+            "bytes": 78828,
+            "sha256": "c46c49e5e551741e6065ee48332f0f7eda23670deb44a920985609a1fe038ed2",
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://www.bcbudget.gov.bc.ca/2013/sp/pdf/agency/bcic.pdf",
+            "sourcePageNumber": 1,
+            "originalFile": "bcic.pdf",
+            "originalDocumentSha256": "ee0bbb93e2fd277d0833adc16b9d8ea704c92a18186ca60f879ad81e6e4d3e4a",
+            "originalDocumentBytes": 1198399,
+            "archivingNote": "Source page preserved with its native vector artwork.",
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "observedDate": "2026-11-25",
+        "supplied": false,
+        "reconstruction": false,
+        "sourceGround": "light"
       }
-    ]
+    ],
+    "cover": "bcic-lightbulb-2013"
   },
   {
     "id": "industry-training-authority",
@@ -7753,8 +8464,8 @@ export const RECOVERED_IDENTITY_BODIES = [
     "shortName": "Industry Training Authority",
     "kind": "agency",
     "graphNode": "industry-training-authority",
-    "from": null,
-    "to": null,
+    "from": 2004,
+    "to": 2022,
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-11-20",
@@ -8017,14 +8728,295 @@ export const RECOVERED_IDENTITY_BODIES = [
     "shortName": "BC Safety Authority",
     "kind": "independent-regulator",
     "graphNode": "bc-safety-authority",
-    "from": null,
-    "to": null,
+    "from": 2004,
+    "to": 2017,
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-11-20",
-    "notes": "Accepted original source artwork. Its publication and collection dates do not establish when the identity was adopted.",
-    "nextAction": "Compare dated historical variants and seek original master files where only a publication or website specimen is held.",
+    "notes": "The British Columbia Safety Authority began delivering provincial safety services in 2004. It adopted Technical Safety BC as its operating name in 2017.",
+    "nextAction": "Identify the designers and adoption dates for the brushstroke and single-sweep wordmarks.",
     "assets": [
+      {
+        "id": "bcsa-2010-brushstrokes",
+        "label": "Safety Authority with two brushstrokes",
+        "file": "identity-recovered/bc-safety-authority/bcsa-2010-brushstrokes.png",
+        "sha256": "c0ff03e12b011f70d6ea02521cc7348cdcd582ca4856d5e8c80f8603fc5c7969",
+        "bytes": 52544,
+        "format": "png",
+        "isVector": false,
+        "sourceFile": "identity-recovered/_sources/historical/bcsa-power-engineers-2010.pdf",
+        "sourcePage": "https://assets.contentstack.io/v3/assets/bltdec2ded849740f4d/blt480d1feb466db986/63326e89db043b5366ce2af6/Changes_to_Power_Engineers....pdf#page=1",
+        "sourceUrl": "https://assets.contentstack.io/v3/assets/bltdec2ded849740f4d/blt480d1feb466db986/63326e89db043b5366ce2af6/Changes_to_Power_Engineers....pdf",
+        "publisher": "BC Safety Authority",
+        "sourceLocator": "March 8, 2010 power engineers bulletin, page 1, upper left.",
+        "sourceDate": "2010-03-08",
+        "notes": "The green serif lettering sits above black capitals and two brushstrokes.",
+        "fidelityNote": "The bulletin embeds the colour logo as a 263 × 134 pixel image.",
+        "evidenceType": "embedded-raster-extraction",
+        "supplied": false,
+        "reconstruction": false,
+        "observedDate": "2026-11-25",
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/bcsa-power-engineers-2010.pdf",
+            "sourceUrl": "https://assets.contentstack.io/v3/assets/bltdec2ded849740f4d/blt480d1feb466db986/63326e89db043b5366ce2af6/Changes_to_Power_Engineers....pdf",
+            "observedDate": "2026-11-25",
+            "archivingNote": "Complete original bulletin or notice as published.",
+            "sha256": "a945d9cc0329cc56d0ccecbed24bf3e130c0effd15a8410a3d5bec9ea1998bcb",
+            "bytes": 177245,
+            "label": "Download source publication (PDF)"
+          }
+        ],
+        "versionLabel": "2010 bulletin (PNG)",
+        "designLabel": "Safety Authority with two brushstrokes",
+        "preferredVector": "bcsa-2008-brushstrokes-colour",
+        "alsoSeen": [
+          {
+            "label": "Interim Board business plan for April–December 2004, front cover",
+            "source": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/c0fc255d-a199-4916-98f1-543a808bb828/content#page=2"
+          }
+        ]
+      },
+      {
+        "id": "bcsa-2008-brushstrokes-colour",
+        "label": "Safety Authority with two brushstrokes",
+        "file": "identity-recovered/bc-safety-authority/bcsa-2008-brushstrokes-colour.svg",
+        "sha256": "9af646d05a99aeffa0d86133455d08b7691cc7721619c5f8e03f012148cc856a",
+        "bytes": 22370,
+        "format": "svg",
+        "isVector": true,
+        "sourceFile": "identity-recovered/_sources/historical/bcsa-2008-brushstrokes-colour-page-2.pdf",
+        "sourcePage": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/f8fb494a-a5a5-4064-9b17-866241bcc819/content#page=2",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/f8fb494a-a5a5-4064-9b17-866241bcc819/content",
+        "publisher": "BC Safety Authority",
+        "sourceLocator": "State of Safety Report 2008, front cover, lower left. The library title sheet precedes the cover.",
+        "sourceDate": "2008",
+        "notes": "The small “British Columbia” inscription sits above the right half of “Safety.” The broad blue and green strokes in the colour edition also appear in single-ink printings.",
+        "fidelityNote": "PyMuPDF extracted the 54 filled paths for the three lines of lettering and the two brushstrokes, excluding the cover background.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "supplied": false,
+        "reconstruction": false,
+        "observedDate": "2026-11-25",
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/bcsa-2008-brushstrokes-colour-page-2.pdf",
+            "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/f8fb494a-a5a5-4064-9b17-866241bcc819/content",
+            "observedDate": "2026-11-25",
+            "sourcePageNumber": 2,
+            "originalFile": "State_of_Safety_Report_2008.pdf",
+            "originalDocumentSha256": "4de6f304fa2852517b9f624cff88011ecabe4e5c9051ce1a70647feee85a0ab3",
+            "originalDocumentBytes": 3293182,
+            "archivingNote": "Complete source page extracted with pdfseparate from the Legislative Library copy.",
+            "sha256": "a1308521389f5cdc1f1621caaa35af75d5959b2e20dcc908d60b52b6d95592db",
+            "bytes": 134342,
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "sourceGround": "light",
+        "darkBackground": false,
+        "variantOf": "bcsa-2010-brushstrokes",
+        "versionLabel": "Green and blue",
+        "extraction": {
+          "page": 2,
+          "pdfBounds": [
+            27,
+            720,
+            117,
+            764
+          ]
+        }
+      },
+      {
+        "id": "bcsa-2008-brushstrokes-white",
+        "label": "Safety Authority with two brushstrokes",
+        "file": "identity-recovered/bc-safety-authority/bcsa-2008-brushstrokes-white.svg",
+        "sha256": "e5f01dcbc7d931aee2381a09087033e86aca1823ddb2cb685550dbb2d181a442",
+        "bytes": 22636,
+        "format": "svg",
+        "isVector": true,
+        "sourceFile": "identity-recovered/_sources/historical/bcsa-2008-brushstrokes-white-page-53.pdf",
+        "sourcePage": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/f8fb494a-a5a5-4064-9b17-866241bcc819/content#page=53",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/f8fb494a-a5a5-4064-9b17-866241bcc819/content",
+        "publisher": "BC Safety Authority",
+        "sourceLocator": "State of Safety Report 2008, back cover above the corporate address.",
+        "sourceDate": "2008",
+        "notes": "The small “British Columbia” inscription sits above the right half of “Safety.” The broad blue and green strokes in the colour edition also appear in single-ink printings.",
+        "fidelityNote": "PyMuPDF extracted the 54 filled paths for the three lines of lettering and the two brushstrokes, excluding the cover background.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "supplied": false,
+        "reconstruction": false,
+        "observedDate": "2026-11-25",
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/bcsa-2008-brushstrokes-white-page-53.pdf",
+            "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/f8fb494a-a5a5-4064-9b17-866241bcc819/content",
+            "observedDate": "2026-11-25",
+            "sourcePageNumber": 53,
+            "originalFile": "State_of_Safety_Report_2008.pdf",
+            "originalDocumentSha256": "4de6f304fa2852517b9f624cff88011ecabe4e5c9051ce1a70647feee85a0ab3",
+            "originalDocumentBytes": 3293182,
+            "archivingNote": "Complete source page extracted with pdfseparate from the Legislative Library copy.",
+            "sha256": "5f954ec56cb200b8fed5cd8425b929c04bfc653f7f145017e79d77de6a6900f1",
+            "bytes": 115434,
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "sourceGround": "dark",
+        "darkBackground": true,
+        "variantOf": "bcsa-2010-brushstrokes",
+        "versionLabel": "White",
+        "extraction": {
+          "page": 53,
+          "pdfBounds": [
+            59,
+            457,
+            133,
+            494
+          ]
+        }
+      },
+      {
+        "id": "bcsa-2008-brushstrokes-black",
+        "label": "Safety Authority with two brushstrokes",
+        "file": "identity-recovered/bc-safety-authority/bcsa-2008-brushstrokes-black.svg",
+        "sha256": "29e73520b491c297dac881235824404cd0bfb9716d22904fde07c5805724939b",
+        "bytes": 22635,
+        "format": "svg",
+        "isVector": true,
+        "sourceFile": "identity-recovered/_sources/historical/bcsa-2008-brushstrokes-black-page-49.pdf",
+        "sourcePage": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/ebd84112-52ec-4a95-8a5b-8bbbcd7157f5/content#page=49",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/ebd84112-52ec-4a95-8a5b-8bbbcd7157f5/content",
+        "publisher": "BC Safety Authority",
+        "sourceLocator": "2008 Annual Report, back cover above the corporate address.",
+        "sourceDate": "2008",
+        "notes": "The small “British Columbia” inscription sits above the right half of “Safety.” The broad blue and green strokes in the colour edition also appear in single-ink printings.",
+        "fidelityNote": "PyMuPDF extracted the 54 filled paths for the three lines of lettering and the two brushstrokes, excluding the cover background.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "supplied": false,
+        "reconstruction": false,
+        "observedDate": "2026-11-25",
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/bcsa-2008-brushstrokes-black-page-49.pdf",
+            "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/ebd84112-52ec-4a95-8a5b-8bbbcd7157f5/content",
+            "observedDate": "2026-11-25",
+            "sourcePageNumber": 49,
+            "originalFile": "BCSA_AR2008.pdf",
+            "originalDocumentSha256": "172bd60b06f69f483f44fe37cc5d3610bf542b1a76e8d0b026f0822b362ab5e0",
+            "originalDocumentBytes": 2404469,
+            "archivingNote": "Complete source page extracted with pdfseparate from the Legislative Library copy.",
+            "sha256": "e21cbc7d43534da7dababf08e3c8dc04234bf03c2114121bf31225ff0bf38347",
+            "bytes": 103862,
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "sourceGround": "light",
+        "darkBackground": false,
+        "variantOf": "bcsa-2010-brushstrokes",
+        "versionLabel": "Black",
+        "extraction": {
+          "page": 49,
+          "pdfBounds": [
+            59,
+            457,
+            133,
+            494
+          ]
+        }
+      },
+      {
+        "id": "bcsa-2011-tagline",
+        "label": "Safety Authority with “Do it right. Stay safe.”",
+        "file": "identity-recovered/bc-safety-authority/bcsa-2011-tagline.png",
+        "sha256": "812cdaf06065ed71b96eba8baf780d6feda95fe1327bbdc6e4fdff341993a5ef",
+        "bytes": 121710,
+        "format": "png",
+        "isVector": false,
+        "sourceFile": "identity-recovered/_sources/historical/bcsa-postal-strike-2011.pdf",
+        "sourcePage": "https://www.bconline.gov.bc.ca/pdf/PUBLIC_NOTICE_POSTAL_STRIKE.pdf#page=1",
+        "sourceUrl": "https://www.bconline.gov.bc.ca/pdf/PUBLIC_NOTICE_POSTAL_STRIKE.pdf",
+        "publisher": "BC Safety Authority",
+        "sourceLocator": "Your Options during a Postal Strike, page 1. BC OnLine lists the notice on May 31, 2011.",
+        "sourceDate": "2011-05-31",
+        "notes": "BC OnLine published this version with its permit-payment notice on May 31, 2011.",
+        "fidelityNote": "The notice embeds the complete wordmark and tagline as a 683 × 388 pixel image.",
+        "evidenceType": "embedded-raster-extraction",
+        "supplied": false,
+        "reconstruction": false,
+        "observedDate": "2026-11-25",
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/bcsa-postal-strike-2011.pdf",
+            "sourceUrl": "https://www.bconline.gov.bc.ca/pdf/PUBLIC_NOTICE_POSTAL_STRIKE.pdf",
+            "observedDate": "2026-11-25",
+            "archivingNote": "Complete original bulletin or notice as published.",
+            "sha256": "85bbdf1f24ac9b4ec336fd8db83a476c26db1ad035aedf7b47ab81a42b0dfe68",
+            "bytes": 91591,
+            "label": "Download source publication (PDF)"
+          }
+        ],
+        "preferredVector": "bcsa-2013-tagline-vector",
+        "versionLabel": "2011 notice (PNG)",
+        "designLabel": "Safety Authority with “Do it right. Stay safe.”"
+      },
+      {
+        "id": "bcsa-2013-tagline-vector",
+        "label": "Safety Authority with “Do it right. Stay safe.”",
+        "file": "identity-recovered/bc-safety-authority/bcsa-2013-tagline-vector.svg",
+        "sha256": "65f916321cd9443b016517c2e2dfc0ea7f65d38ef12f05bab10f3de9fcb63ce4",
+        "bytes": 23608,
+        "format": "svg",
+        "isVector": true,
+        "sourceFile": "identity-recovered/_sources/historical/bcsa-class-a-2013-page-117.pdf",
+        "sourcePage": "https://assets.contentstack.io/v3/assets/bltdec2ded849740f4d/bltf06abc50c39a658b/62faba910f15291330338478/class_a-web-fin.pdf#page=117",
+        "sourceUrl": "https://assets.contentstack.io/v3/assets/bltdec2ded849740f4d/bltf06abc50c39a658b/62faba910f15291330338478/class_a-web-fin.pdf",
+        "publisher": "BC Safety Authority",
+        "sourceLocator": "Class A Elevating Devices Mechanic Program Outline, back cover, upper left.",
+        "sourceDate": "2013",
+        "notes": "The blue tagline continues to the right of the green sweep. The same arrangement appears on BC OnLine notices in 2011.",
+        "fidelityNote": "PyMuPDF retained the 35 native filled paths for the lettering, sweep and tagline in their published positions.",
+        "evidenceType": "native-pdf-vector-extraction",
+        "supplied": false,
+        "reconstruction": false,
+        "observedDate": "2026-11-25",
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/bcsa-class-a-2013-page-117.pdf",
+            "sha256": "9af8fc5dc5fd29cdbdff9c21541279600dffb38565815489affbd227c94c105f",
+            "bytes": 138021,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://assets.contentstack.io/v3/assets/bltdec2ded849740f4d/bltf06abc50c39a658b/62faba910f15291330338478/class_a-web-fin.pdf",
+            "sourcePageNumber": 117,
+            "originalFile": "class_a-web-fin.pdf",
+            "originalDocumentSha256": "d9453cb5c3df7716bcf57ae68f5e2a15172ab3ad988492c22c878c34b3f784b0",
+            "originalDocumentBytes": 1706470,
+            "archivingNote": "Complete back cover extracted with pdfseparate.",
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "variantOf": "bcsa-2011-tagline",
+        "versionLabel": "2013 program outline (SVG)",
+        "sourceGround": "light",
+        "extraction": {
+          "page": 117,
+          "pdfBounds": [
+            60,
+            25,
+            176,
+            95
+          ]
+        },
+        "alsoSeen": [
+          {
+            "label": "BC OnLine notice archive, May 31, 2011",
+            "source": "https://www.bconline.gov.bc.ca/news/BCSA-news.html"
+          },
+          {
+            "label": "Notice to clients, October 5, 2011",
+            "source": "https://www.bconline.gov.bc.ca/pdf/BCSA-System-Changes.pdf"
+          }
+        ]
+      },
       {
         "id": "source-recovered-bc-safety-authority-2016",
         "label": "BC Safety Authority — green and blue wordmark",
@@ -8063,9 +9055,68 @@ export const RECOVERED_IDENTITY_BODIES = [
         "sourceDate": "2016-02-29",
         "supplied": false,
         "reconstruction": false,
-        "observedDate": "2026-11-20"
+        "observedDate": "2026-11-20",
+        "preferredVector": "bcsa-2013-wordmark",
+        "versionLabel": "2016 bulletin (PNG)",
+        "designLabel": "BC Safety Authority — green and blue wordmark"
+      },
+      {
+        "id": "bcsa-2013-wordmark",
+        "label": "BC Safety Authority — green and blue wordmark",
+        "variantOf": "source-recovered-bc-safety-authority-2016",
+        "versionLabel": "2013 program outline (SVG)",
+        "file": "identity-recovered/bc-safety-authority/bcsa-2013-wordmark.svg",
+        "sha256": "5c102e3e04dcb7700752a8e0d4be72f39b88ac676b41035823dc9017695a6972",
+        "bytes": 8107,
+        "format": "svg",
+        "isVector": true,
+        "sourceFile": "identity-recovered/_sources/historical/bcsa-class-a-2013-page-117.pdf",
+        "sourceUrl": "https://assets.contentstack.io/v3/assets/bltdec2ded849740f4d/bltf06abc50c39a658b/62faba910f15291330338478/class_a-web-fin.pdf",
+        "sourcePage": "https://assets.contentstack.io/v3/assets/bltdec2ded849740f4d/bltf06abc50c39a658b/62faba910f15291330338478/class_a-web-fin.pdf#page=117",
+        "publisher": "BC Safety Authority",
+        "sourceLocator": "Class A Elevating Devices Mechanic Program Outline, PDF page 117 (back cover), upper left above the tagline.",
+        "sourceDate": "2013",
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The green “Safety” lettering and curved underline frame the smaller blue “Authority” lettering. The authority used this wordmark in its 2013 program outline and its 2016 inspection bulletin.",
+        "fidelityNote": "PyMuPDF extracted the 16 native filled paths for the two lines of lettering and the green sweep. The separate “Do it right. Stay safe.” tagline on the back cover is outside the 2016 bulletin design.",
+        "sourceGround": "light",
+        "darkBackground": false,
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/bcsa-class-a-2013-page-117.pdf",
+            "sha256": "9af8fc5dc5fd29cdbdff9c21541279600dffb38565815489affbd227c94c105f",
+            "bytes": 138021,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://assets.contentstack.io/v3/assets/bltdec2ded849740f4d/bltf06abc50c39a658b/62faba910f15291330338478/class_a-web-fin.pdf",
+            "sourcePageNumber": 117,
+            "originalFile": "class_a-web-fin.pdf",
+            "originalDocumentSha256": "d9453cb5c3df7716bcf57ae68f5e2a15172ab3ad988492c22c878c34b3f784b0",
+            "originalDocumentBytes": 1706470,
+            "archivingNote": "Complete back cover extracted with pdfseparate.",
+            "label": "Download preserved back cover (PDF)"
+          }
+        ],
+        "supplied": false,
+        "reconstruction": false,
+        "observedDate": "2026-11-25",
+        "extraction": {
+          "page": 117,
+          "pdfBounds": [
+            60,
+            25,
+            164,
+            82
+          ]
+        },
+        "alsoSeen": [
+          {
+            "label": "BCSA Today, summer 2010, front cover",
+            "source": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/bb936d09-290c-49a2-9eb6-b68e74ce6fe7/content#page=2"
+          }
+        ]
       }
-    ]
+    ],
+    "cover": "source-recovered-bc-safety-authority-2016"
   },
   {
     "id": "bc-film-commission",
@@ -8079,52 +9130,174 @@ export const RECOVERED_IDENTITY_BODIES = [
     "status": "asset-collected",
     "observedDate": "2026-11-20",
     "notes": "Accepted original source artwork. Its publication and collection dates do not establish when the identity was adopted.",
-    "nextAction": "Compare dated historical variants and seek original master files where only a publication or website specimen is held.",
+    "nextAction": "For the original full-colour production file, ask Creative BC’s brand team at brand@creativebc.com for the pre-merger ministry-endorsed signature.",
     "assets": [
       {
-        "id": "source-recovered-bc-film-commission-2013",
-        "label": "British Columbia Film Commission — ministry-endorsed email specimen",
-        "file": "identity-recovered/bc-film-commission/bc-film-commission-2013.png",
-        "sha256": "c41165264407b7e73793af05ab564792a02a0f26539fceac94be4c3a1dd60098",
-        "bytes": 18904,
-        "sourceFile": "identity-recovered/_sources/historical/bcfc-foi-pages41-42.pdf",
-        "sourcePage": "https://docs.openinfo.gov.bc.ca/d18485213a_response_package_gcp-2013-00024.pdf",
-        "sourceUrl": "https://docs.openinfo.gov.bc.ca/d18485213a_response_package_gcp-2013-00024.pdf",
-        "publisher": "Government of British Columbia FOI release",
-        "sourceLocator": "Government FOI release GCP-2013-00024, original PDF page 42, first embedded image (original xref 176, 688 × 128). Email header on page 41 establishes 21 January 2013 at 10:28 AM. Source excerpt retains both pages.",
-        "format": "png",
-        "isVector": false,
-        "dateNote": "Signature belongs to a BC Film Commission email dated 21 January 2013, continued from page 41 to page 42. The quoted 18 January email below it is a different message. No adoption date inferred.",
-        "notes": "Lossless pixel crop [14,5,223,64) from original 688 × 128 email-signature raster; retains the logo and Ministry of Community, Sport & Cultural Development endorsement, excludes contact details and disclaimer. No tracing, recolouring or enlargement. Small 209 × 59 pixel historical email specimen; a standalone vector master remains uncollected.",
-        "fidelityNote": "Lossless pixel crop [14,5,223,64) from original 688 × 128 email-signature raster; retains the logo and Ministry of Community, Sport & Cultural Development endorsement, excludes contact details and disclaimer. No tracing, recolouring or enlargement.",
-        "observedAtUtc": "2026-11-21T00:39:00.370713+00:00",
-        "darkBackground": false,
-        "evidenceType": "embedded-raster-extraction",
-        "downloads": [
-          {
-            "file": "identity-recovered/_sources/historical/bcfc-foi-pages41-42.pdf",
-            "sha256": "447b8318572f9e71fa4d29c62c51776aa43ef185a8374684566d4b89bfe79863",
-            "bytes": 551813,
-            "observedDate": "2026-11-20",
-            "sourceUrl": "https://docs.openinfo.gov.bc.ca/d18485213a_response_package_gcp-2013-00024.pdf",
-            "observedAtUtc": "2026-11-21T00:39:00.370713+00:00",
-            "originalFile": "bcfc-foi-2013.pdf",
-            "originalDocumentSha256": "f7b5b88ced4e654540548d0458932cd5e472cbd88af661b6b62f91efb7ae1c07",
-            "originalDocumentBytes": 995720,
-            "archivingNote": "Complete original source pages preserved in a rewritten PDF container; full-document and retained-page hashes are distinct.",
-            "label": "Download preserved source pages (PDF)"
-          }
-        ],
-        "dimensions": {
-          "width": 209,
-          "height": 59
-        },
-        "sourceDate": "2013-01-21",
+        "id": "bcfc-ministry-endorsement-colour",
+        "label": "British Columbia Film Commission with ministry endorsement",
+        "versionLabel": "Restored publication colours (SVG)",
+        "file": "identity-recovered/bc-film-commission/bcfc-ministry-endorsement-colour.svg",
+        "sha256": "b9e6a8a0871dc87419564271b884c83c8e9f9d39c11843e0cd20bd340c99d4cd",
+        "bytes": 19518,
+        "format": "svg",
+        "isVector": true,
+        "publisher": "British Columbia Film Commission",
+        "sourcePage": "https://web.archive.org/web/20110815023049id_/http://www.bcfilmcommission.com/database/rte/files/BCFCProductionGuide2011.pdf#page=1",
+        "sourceUrl": "https://web.archive.org/web/20110815023049id_/http://www.bcfilmcommission.com/database/rte/files/BCFCProductionGuide2011.pdf",
+        "sourceFile": "identity-recovered/_sources/historical/bcfc-production-guide-2011-cover.pdf",
+        "sourceLocator": "Production Guide (2011), front cover, white signature over the landscape photograph.",
+        "sourceDate": "2011",
+        "observedDate": "2026-11-25",
         "supplied": false,
         "reconstruction": false,
-        "observedDate": "2026-11-20"
+        "sourceGround": "light",
+        "darkBackground": false,
+        "evidenceType": "publication-colours-on-source-vector",
+        "notes": "The original print outlines carry the blue, orange, green and grey sampled from the Commission’s Production Statistics 2011 cover.",
+        "fidelityNote": "PyMuPDF exported the 80 white filled paths from the guide cover, preserving their Bézier curves and positions. The colour treatment was reconstructed from the statistics cover. Only the fills differ from the white version.",
+        "extraction": {
+          "page": 1,
+          "pdfBounds": [
+            199,
+            645,
+            399,
+            690
+          ],
+          "method": "Retained all 80 white logo paths from the PyMuPDF page SVG and excluded the photograph and cover furniture.",
+          "colourSource": "Cover image 4034 (686 × 152 pixels), decoded by Poppler pdfimages. Median RGB in half-open pixel rectangles measured from the upper left.",
+          "sampleBounds": {
+            "blue": [
+              5,
+              15,
+              12,
+              32
+            ],
+            "orange": [
+              13,
+              61,
+              32,
+              69
+            ],
+            "green": [
+              19,
+              99,
+              87,
+              111
+            ],
+            "grey": [
+              216,
+              73,
+              222,
+              109
+            ]
+          },
+          "fills": {
+            "blue": "#4684b9",
+            "orange": "#ba5a12",
+            "green": "#5b882b",
+            "grey": "#6b737b"
+          }
+        },
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/bcfc-production-guide-2011-cover.pdf",
+            "sha256": "60e825b6ed5e05f88d640b643a0934814d42850fe7a38b6693b6b31421c4e44c",
+            "bytes": 222706,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://web.archive.org/web/20110815023049id_/http://www.bcfilmcommission.com/database/rte/files/BCFCProductionGuide2011.pdf",
+            "sourcePageNumber": 1,
+            "originalFile": "BCFCProductionGuide2011.pdf",
+            "originalDocumentSha256": "7ad646536d48df4740f7daf14b17611ac0ac7799fce704f4df84c273e5dd5c77",
+            "originalDocumentBytes": 5958385,
+            "archivingNote": "Cover page retained with PyMuPDF. Full-document checksum recorded separately.",
+            "label": "Download production guide cover (PDF)"
+          },
+          {
+            "file": "identity-recovered/_sources/historical/bcfc-production-statistics-2011-cover.pdf",
+            "sha256": "c04516935adfca6b296e585be2ef70bb8b4c01952789cf37a606b3f93ad0b03f",
+            "bytes": 36519,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://web.archive.org/web/20120515213203id_/http://www.bcfilmcommission.com/database/rte/files/2011FinalStats-Package.pdf",
+            "sourcePageNumber": 1,
+            "originalFile": "2011FinalStats-Package.pdf",
+            "originalDocumentSha256": "a90f20d74380877d317bb3d7057cd23977a47347ac0ff497d82c26a2a2c664cc",
+            "originalDocumentBytes": 427091,
+            "archivingNote": "Cover page retained with PyMuPDF. Full-document checksum recorded separately.",
+            "label": "Download colour reference cover (PDF)"
+          }
+        ],
+        "darkVariant": "bcfc-ministry-endorsement-white",
+        "supportingSourceFiles": [
+          "identity-recovered/_sources/historical/bcfc-production-statistics-2011-cover.pdf"
+        ],
+        "alsoSeen": [
+          {
+            "label": "Production Statistics 2011, full-colour cover",
+            "source": "https://web.archive.org/web/20120515213203id_/http://www.bcfilmcommission.com/database/rte/files/2011FinalStats-Package.pdf#page=1"
+          },
+          {
+            "label": "January 21, 2013 correspondence, page 42",
+            "date": "2013-01-21",
+            "source": "https://docs.openinfo.gov.bc.ca/d18485213a_response_package_gcp-2013-00024.pdf#page=42"
+          }
+        ],
+        "designId": "source-recovered-bc-film-commission-2013",
+        "designLabel": "British Columbia Film Commission with ministry endorsement",
+        "previewBackground": "transparent"
+      },
+      {
+        "id": "bcfc-ministry-endorsement-white",
+        "label": "British Columbia Film Commission with ministry endorsement",
+        "variantOf": "bcfc-ministry-endorsement-colour",
+        "versionLabel": "White guide cover (SVG)",
+        "file": "identity-recovered/bc-film-commission/bcfc-ministry-endorsement-white.svg",
+        "sha256": "585f190c1c4eac12e3e01ccc6bf2563a95fb5e5e41b07d4b71470ab01ad8686e",
+        "bytes": 19495,
+        "format": "svg",
+        "isVector": true,
+        "publisher": "British Columbia Film Commission",
+        "sourcePage": "https://web.archive.org/web/20110815023049id_/http://www.bcfilmcommission.com/database/rte/files/BCFCProductionGuide2011.pdf#page=1",
+        "sourceUrl": "https://web.archive.org/web/20110815023049id_/http://www.bcfilmcommission.com/database/rte/files/BCFCProductionGuide2011.pdf",
+        "sourceFile": "identity-recovered/_sources/historical/bcfc-production-guide-2011-cover.pdf",
+        "sourceLocator": "Production Guide (2011), front cover, white signature over the landscape photograph.",
+        "sourceDate": "2011",
+        "observedDate": "2026-11-25",
+        "supplied": false,
+        "reconstruction": false,
+        "sourceGround": "dark",
+        "darkBackground": true,
+        "evidenceType": "native-pdf-vector-extraction",
+        "notes": "The Commission printed this white signature on the cover of its 2011 Production Guide. The star, both lines of the name and the ministry endorsement are all outlined.",
+        "fidelityNote": "PyMuPDF exported the 80 white filled paths from the guide cover, preserving their Bézier curves and positions.",
+        "extraction": {
+          "page": 1,
+          "pdfBounds": [
+            199,
+            645,
+            399,
+            690
+          ],
+          "method": "Retained all 80 white logo paths from the PyMuPDF page SVG and excluded the photograph and cover furniture."
+        },
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/bcfc-production-guide-2011-cover.pdf",
+            "sha256": "60e825b6ed5e05f88d640b643a0934814d42850fe7a38b6693b6b31421c4e44c",
+            "bytes": 222706,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://web.archive.org/web/20110815023049id_/http://www.bcfilmcommission.com/database/rte/files/BCFCProductionGuide2011.pdf",
+            "sourcePageNumber": 1,
+            "originalFile": "BCFCProductionGuide2011.pdf",
+            "originalDocumentSha256": "7ad646536d48df4740f7daf14b17611ac0ac7799fce704f4df84c273e5dd5c77",
+            "originalDocumentBytes": 5958385,
+            "archivingNote": "Cover page retained with PyMuPDF. Full-document checksum recorded separately.",
+            "label": "Download production guide cover (PDF)"
+          }
+        ],
+        "previewBackground": "transparent"
       }
-    ]
+    ],
+    "cover": "source-recovered-bc-film-commission-2013"
   },
   {
     "id": "industry-training-and-apprenticeship-commission",
@@ -8132,13 +9305,13 @@ export const RECOVERED_IDENTITY_BODIES = [
     "shortName": "Industry Training and Apprenticeship Commission",
     "kind": "agency",
     "graphNode": "industry-training-and-apprenticeship-commission",
-    "from": null,
-    "to": null,
+    "from": 1997,
+    "to": 2004,
     "current": false,
     "status": "asset-collected",
     "observedDate": "2026-11-20",
-    "notes": "Accepted original source artwork. Its publication and collection dates do not establish when the identity was adopted.",
-    "nextAction": "Compare dated historical variants and seek original master files where only a publication or website specimen is held.",
+    "notes": "The Provincial Apprenticeship Board governed trades training before ITAC. The commission took over in November 1997. The Ministry of Advanced Education ran the system during the 2002–2004 transition to the Industry Training Authority.",
+    "nextAction": "Seek original production files for Trades Common Core (ISBN 0-7718-9573-9) and the 1998/99, 1999/00 and 2001/02 annual reports.",
     "assets": [
       {
         "id": "source-recovered-itac-letterhead-2003",
@@ -8182,9 +9355,416 @@ export const RECOVERED_IDENTITY_BODIES = [
         ],
         "supplied": false,
         "reconstruction": false,
-        "observedDate": "2026-11-20"
+        "observedDate": "2026-11-20",
+        "versionLabel": "Black · 2003 letterhead",
+        "extraction": {
+          "method": "pdf-raster-region"
+        },
+        "designLabel": "Spiral letterhead",
+        "preferredReconstruction": "itac-spiral-black-reconstruction"
+      },
+      {
+        "id": "itac-letterhead-blue-2004",
+        "label": "Spiral letterhead in blue and black",
+        "versionLabel": "Blue and black · 2004 letterhead",
+        "variantOf": "source-recovered-itac-letterhead-2003",
+        "file": "identity-recovered/industry-training-and-apprenticeship-commission/itac-letterhead-blue-2004.png",
+        "sha256": "a9460bb1b304a039a39f2ed4a5aa061fe728f5e38085820f67ec0ca8b1f6e8d9",
+        "bytes": 57813,
+        "sourceFile": "identity-recovered/_sources/historical/itac-financial-statements-2004-page-2.pdf",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf#page=2",
+        "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf",
+        "archive": "Province of British Columbia Public Accounts",
+        "sourceLocator": "Financial statements for April 1, 2003 to January 1, 2004, PDF page 2. Upper-left letterhead on the transitional board member’s April 8, 2004 statement.",
+        "format": "png",
+        "isVector": false,
+        "sourceDate": "2004-04-08",
+        "fidelityNote": "Cropped the scanned page at 300 dpi with Poppler (x 164, y 150, width 435, height 414 pixels). The blue spiral and black lettering retain the scan’s original alignment.",
+        "dimensions": {
+          "width": 435,
+          "height": 414
+        },
+        "evidenceType": "rasterized-scanned-publication",
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/itac-financial-statements-2004-page-2.pdf",
+            "sha256": "430177fca53f51fdc7c9d171d8b96de6efec664e484e22790071a51aa990f355",
+            "bytes": 57731,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf",
+            "originalFile": "industry-training-apprenticeship-commission-fs-2003-04.pdf",
+            "originalDocumentSha256": "0d24e96a22a2622d831bd2bc03e4395a1d639fbb1258e98265811a6de9d5dbcf",
+            "originalDocumentBytes": 1064466,
+            "archivingNote": "PDF page 2 extracted with Poppler pdfseparate.",
+            "label": "Download preserved source page (PDF)"
+          }
+        ],
+        "publisher": "Industry Training and Apprenticeship Commission",
+        "observedDate": "2026-11-25",
+        "supplied": false,
+        "reconstruction": false,
+        "extraction": {
+          "method": "pdf-raster-region",
+          "sourcePageNumber": 2,
+          "dpi": 300,
+          "pixelCrop": [
+            164,
+            150,
+            435,
+            414
+          ]
+        },
+        "notes": "The transitional board used this blue-and-black letterhead to sign ITAC’s final accounts after the commission’s wind-up.",
+        "dateNote": "The transitional board signed the final accounts on April 8, 2004 for the period ending January 1. The date records post-wind-up use of the stationery."
+      },
+      {
+        "id": "itac-gold-emblem-2000",
+        "label": "Gold geometric emblem",
+        "file": "identity-recovered/industry-training-and-apprenticeship-commission/gold-emblem-2000.svg",
+        "sha256": "f3f0e58c3dc48c8c0619e0dc3cae415ecc514faf5c944af50f5d1f84e5b92f6b",
+        "bytes": 6887,
+        "sourceFile": "identity-recovered/_sources/historical/itac-intro-2000.swf",
+        "sourcePage": "https://web.archive.org/web/19991014000421/http://www.itac.gov.bc.ca/flashsite/intro.htm",
+        "sourceUrl": "https://web.archive.org/web/20000817042650id_/http://www.itac.gov.bc.ca/flashsite/intro.swf",
+        "archive": "Internet Archive Wayback Machine",
+        "sourceLocator": "ITAC website introduction, August 17, 2000 capture. DefineShape character 1 is the standalone emblem above “Loading” in frame 1. In the same movie, text character 23 credits the Industry Training and Apprenticeship Commission by its full name, © 1998.",
+        "format": "svg",
+        "isVector": true,
+        "sourceDate": "2000-08-17",
+        "dateNote": "Date of the surviving Flash capture.",
+        "fidelityNote": "Exported character 1 with JPEXS Free Flash Decompiler 26.5.0 and added the matching SVG viewBox. The thirteen native paths retain their gradient fills and white outlines.",
+        "evidenceType": "official-vector-master-conversion",
+        "sourceGround": "dark",
+        "publisher": "Industry Training and Apprenticeship Commission",
+        "observedDate": "2026-11-25",
+        "supplied": false,
+        "reconstruction": false,
+        "extraction": {
+          "method": "swf-shape-to-svg",
+          "characterId": 1,
+          "converter": "JPEXS Free Flash Decompiler 26.5.0"
+        },
+        "notes": "ITAC displayed this emblem above the loading message on its website. The August 2000 archive capture preserves the original drawing."
+      },
+      {
+        "id": "itac-spiral-black-reconstruction",
+        "variantOf": "source-recovered-itac-letterhead-2003",
+        "label": "Black spiral letterhead reconstruction",
+        "versionLabel": "Black · reconstruction",
+        "file": "identity-recovered/industry-training-and-apprenticeship-commission/itac-2003-black.svg",
+        "bytes": 28374,
+        "sha256": "a504910d12b273e91b3863fc112a3928240bbe581dd637a534cc39def335add5",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "reconstructionDate": "2026-11-25",
+        "publisher": "Supplied ITAC reconstruction study",
+        "sourceFile": "identity-recovered/industry-training-and-apprenticeship-commission/itac-letterhead-2003.png",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/sup-e/industry-training-apprenticeship-commission-fs-2002-03.pdf#page=1",
+        "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/sup-e/industry-training-apprenticeship-commission-fs-2002-03.pdf",
+        "sourceLocator": "Financial statements for year ended 31 March 2003, PDF page 1, chair’s letter dated 10 June 2003, top-left ITAC spiral / itac / full-name signature.",
+        "sourceDate": "2003-06-10",
+        "observedDate": "2026-11-25",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The supplied 2026 study fitted six elliptical bands to a reduced image of the 2003 letterhead and redrew the lowercase initials.",
+        "fidelityNote": "The study fitted the geometry on a 149 × 138 pixel reference. The small lettering uses outlined Lato Black as an approximation.",
+        "downloads": [
+          {
+            "file": "identity-recovered/industry-training-and-apprenticeship-commission/itac-emblem-black.svg",
+            "bytes": 3266,
+            "sha256": "121ed667d2943619e0d8a1f2b33d4686b3a6bb8e0499b866dc9bbf0508e34f14",
+            "label": "Download reconstructed emblem only (SVG)"
+          }
+        ]
+      },
+      {
+        "id": "itac-spiral-blue-reconstruction",
+        "variantOf": "source-recovered-itac-letterhead-2003",
+        "label": "Blue and black spiral letterhead reconstruction",
+        "versionLabel": "Blue and black · reconstruction",
+        "file": "identity-recovered/industry-training-and-apprenticeship-commission/itac-2004-blue.svg",
+        "bytes": 28374,
+        "sha256": "061ff57a4ea27a403ed5c4f85081cf0e5a468bdea6dbff29e29de51729789159",
+        "format": "svg",
+        "isVector": true,
+        "supplied": true,
+        "reconstruction": true,
+        "reconstructionDate": "2026-11-25",
+        "publisher": "Supplied ITAC reconstruction study",
+        "sourceFile": "identity-recovered/industry-training-and-apprenticeship-commission/itac-letterhead-blue-2004.png",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf#page=2",
+        "sourceUrl": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf",
+        "sourceLocator": "Financial statements for April 1, 2003 to January 1, 2004, PDF page 2. Upper-left letterhead on the transitional board member’s April 8, 2004 statement.",
+        "sourceDate": "2004-04-08",
+        "observedDate": "2026-11-25",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The supplied 2026 study fitted six elliptical bands to a reduced image of the 2003 letterhead and redrew the lowercase initials.",
+        "fidelityNote": "The study fitted the geometry on a 149 × 138 pixel reference. The small lettering uses outlined Lato Black as an approximation. The blue version reuses the black geometry and an estimated blue (#477DB5).",
+        "downloads": [
+          {
+            "file": "identity-recovered/industry-training-and-apprenticeship-commission/itac-emblem-blue.svg",
+            "bytes": 3266,
+            "sha256": "692d02c035134a85b6932d9e424036af34d429be44d8819c7e4662ea3c4239dd",
+            "label": "Download reconstructed emblem only (SVG)"
+          }
+        ]
+      },
+      {
+        "id": "itac-annual-report-cover-2000-01",
+        "label": "Annual report cover · stacked name",
+        "file": "identity-recovered/industry-training-and-apprenticeship-commission/itac-annual-report-cover-2000-01.png",
+        "sha256": "0fab620e8f5c576cedd837ecb6c25388e9542f0422574c1367553923c68ad9c2",
+        "bytes": 23121,
+        "sourceFile": "identity-recovered/_sources/historical/itac-annual-report-2000-01.pdf",
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/items/6a3174c9-94a5-4e8c-a709-ffa64c4dcfdd",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/0500a8ee-94d6-4eab-b60b-89a12a101d00/content",
+        "archive": "Legislative Library of British Columbia",
+        "publisher": "Industry Training and Apprenticeship Commission",
+        "sourceLocator": "Annual Report 2000/2001, PDF page 2 (including the library title sheet).",
+        "sourceDate": "2000/01",
+        "format": "png",
+        "isVector": false,
+        "observedDate": "2026-11-25",
+        "supplied": false,
+        "reconstruction": false,
+        "evidenceType": "official-publication-raster",
+        "extraction": {
+          "method": "pdf-raster-region",
+          "sourcePageNumber": 2,
+          "pdfBounds": [
+            42,
+            521,
+            135,
+            699
+          ],
+          "imageXref": 203,
+          "dpi": 216
+        },
+        "dimensions": {
+          "width": 279,
+          "height": 534
+        },
+        "notes": "The cover prints the spiral, lowercase initials and four-line commission name in PANTONE 281 CVU.",
+        "fidelityNote": "Rendered the PDF region at 216 dpi. The PDF places a 63 × 81 pixel spot-colour JPEG alongside live text for the full name. The downloadable report preserves both.",
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/itac-annual-report-2000-01.pdf",
+            "sha256": "7a16d5bddfc04f17c39a765d9a9921c9399f4d98ac13a215c8047f2904cd4bca",
+            "bytes": 569529,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/0500a8ee-94d6-4eab-b60b-89a12a101d00/content",
+            "originalFile": "itac_ar_2000_01.pdf",
+            "archivingNote": "Complete supplied Legislative Library copy, including the repository title sheet.",
+            "label": "Download annual report (PDF)"
+          }
+        ]
+      },
+      {
+        "id": "itac-annual-report-name-left-2000-01",
+        "label": "Annual report · name at left",
+        "preferredReconstruction": "itac-annual-report-name-left-reconstruction",
+        "file": "identity-recovered/industry-training-and-apprenticeship-commission/itac-annual-report-name-left-2000-01.png",
+        "sha256": "f1896f4a8c7a0c878ca751a4d0692f31a2194fd1f0fe15533e34e1673ae62dc8",
+        "bytes": 23625,
+        "sourceFile": "identity-recovered/_sources/historical/itac-annual-report-2000-01.pdf",
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/items/6a3174c9-94a5-4e8c-a709-ffa64c4dcfdd",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/0500a8ee-94d6-4eab-b60b-89a12a101d00/content",
+        "archive": "Legislative Library of British Columbia",
+        "publisher": "Industry Training and Apprenticeship Commission",
+        "sourceLocator": "Annual Report 2000/2001, PDF page 4 (including the library title sheet).",
+        "sourceDate": "2000/01",
+        "format": "png",
+        "isVector": false,
+        "observedDate": "2026-11-25",
+        "supplied": false,
+        "reconstruction": false,
+        "evidenceType": "official-publication-raster",
+        "extraction": {
+          "method": "pdf-raster-region",
+          "sourcePageNumber": 4,
+          "pdfBounds": [
+            290,
+            607,
+            460,
+            692
+          ],
+          "imageXref": 9,
+          "dpi": 216
+        },
+        "dimensions": {
+          "width": 510,
+          "height": 255
+        },
+        "notes": "The contents page places the name in PANTONE Warm Gray 10 CVU beside the spiral and initials in PANTONE 281 CVU.",
+        "fidelityNote": "Rendered the PDF region at 216 dpi. The PDF places a 63 × 81 pixel spot-colour JPEG alongside live text for the full name. The downloadable report preserves both.",
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/itac-annual-report-2000-01.pdf",
+            "sha256": "7a16d5bddfc04f17c39a765d9a9921c9399f4d98ac13a215c8047f2904cd4bca",
+            "bytes": 569529,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/0500a8ee-94d6-4eab-b60b-89a12a101d00/content",
+            "originalFile": "itac_ar_2000_01.pdf",
+            "archivingNote": "Complete supplied Legislative Library copy, including the repository title sheet.",
+            "label": "Download annual report (PDF)"
+          }
+        ],
+        "versionLabel": "Published image"
+      },
+      {
+        "id": "itac-annual-report-name-right-2000-01",
+        "label": "Annual report · name at right",
+        "file": "identity-recovered/industry-training-and-apprenticeship-commission/itac-annual-report-name-right-2000-01.png",
+        "sha256": "21d439c4aa400fc3a0c13693e5dfb5c816dd4f122dc0e84addca0c57efdad136",
+        "bytes": 22008,
+        "sourceFile": "identity-recovered/_sources/historical/itac-annual-report-2000-01.pdf",
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/items/6a3174c9-94a5-4e8c-a709-ffa64c4dcfdd",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/0500a8ee-94d6-4eab-b60b-89a12a101d00/content",
+        "archive": "Legislative Library of British Columbia",
+        "publisher": "Industry Training and Apprenticeship Commission",
+        "sourceLocator": "Annual Report 2000/2001, PDF page 19 (including the library title sheet).",
+        "sourceDate": "2000/01",
+        "format": "png",
+        "isVector": false,
+        "observedDate": "2026-11-25",
+        "supplied": false,
+        "reconstruction": false,
+        "evidenceType": "official-publication-raster",
+        "extraction": {
+          "method": "pdf-raster-region",
+          "sourcePageNumber": 19,
+          "pdfBounds": [
+            123,
+            91,
+            289,
+            177
+          ],
+          "imageXref": 83,
+          "dpi": 216
+        },
+        "dimensions": {
+          "width": 498,
+          "height": 258
+        },
+        "notes": "The financial reporting page prints both the symbol and the name in PANTONE Warm Gray 10 CVU.",
+        "fidelityNote": "Rendered the PDF region at 216 dpi. The PDF places a 63 × 81 pixel spot-colour JPEG alongside live text for the full name. The downloadable report preserves both.",
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/itac-annual-report-2000-01.pdf",
+            "sha256": "7a16d5bddfc04f17c39a765d9a9921c9399f4d98ac13a215c8047f2904cd4bca",
+            "bytes": 569529,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/0500a8ee-94d6-4eab-b60b-89a12a101d00/content",
+            "originalFile": "itac_ar_2000_01.pdf",
+            "archivingNote": "Complete supplied Legislative Library copy, including the repository title sheet.",
+            "label": "Download annual report (PDF)"
+          }
+        ]
+      },
+      {
+        "id": "itac-letterhead-navy-2001",
+        "label": "Spiral letterhead in navy",
+        "variantOf": "source-recovered-itac-letterhead-2003",
+        "versionLabel": "Navy · June 2001 report",
+        "file": "identity-recovered/industry-training-and-apprenticeship-commission/itac-letterhead-navy-2001.png",
+        "sha256": "e191a604720760095eb41e1be61156b3a120546e1848edb2430ba16f45d65c7e",
+        "bytes": 117768,
+        "sourceFile": "identity-recovered/_sources/historical/itac-science-council-june-2001-title.pdf",
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/items/b3052fe4-30b5-4b4b-bc36-da03b61a50e2",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/73015073-064f-447f-baf2-2555892cdc3f/content",
+        "archive": "Legislative Library of British Columbia",
+        "publisher": "Industry Training and Apprenticeship Commission and Science Council of British Columbia",
+        "sourceLocator": "Balanced Books, Balanced Lives?, June 2001, title page (PDF page 2), right of the Science Council logo.",
+        "sourceDate": "June 2001",
+        "format": "png",
+        "isVector": false,
+        "observedDate": "2026-11-25",
+        "supplied": false,
+        "reconstruction": false,
+        "evidenceType": "official-publication-raster",
+        "extraction": {
+          "method": "pdf-image-extraction",
+          "sourcePageNumber": 2,
+          "imageXref": 172
+        },
+        "dimensions": {
+          "width": 306,
+          "height": 295
+        },
+        "notes": "ITAC and the Science Council of British Columbia jointly published this report in June 2001. Its title page shows the full spiral letterhead design in navy.",
+        "fidelityNote": "Extracted the embedded 306 × 295 pixel RGB JPEG and flipped it vertically to match its placement on the page. The PNG preserves the decoded pixels.",
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/itac-science-council-june-2001-title.pdf",
+            "sha256": "9c048b8a04237e8c34f34144985576c971b9283825b8383e820d46f7495d0df9",
+            "bytes": 63408,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/73015073-064f-447f-baf2-2555892cdc3f/content",
+            "originalFile": "balanced_books_balanced_lives.pdf",
+            "archivingNote": "Title page (PDF page 2) retained with PyMuPDF.",
+            "originalDocumentSha256": "d26bb161754c8f2893ad4460d78cb06af951451f1b8f31f75e79dbf9db64574e",
+            "originalDocumentBytes": 178913,
+            "sourcePageNumber": 2,
+            "label": "Download report title page (PDF)"
+          }
+        ]
+      },
+      {
+        "sourceFile": "identity-recovered/_sources/historical/itac-annual-report-2000-01.pdf",
+        "sourcePage": "https://digitalcollections.llbc.leg.bc.ca/items/6a3174c9-94a5-4e8c-a709-ffa64c4dcfdd",
+        "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/0500a8ee-94d6-4eab-b60b-89a12a101d00/content",
+        "sourceDate": "2000/01",
+        "archive": "Legislative Library of British Columbia",
+        "downloads": [
+          {
+            "file": "identity-recovered/_sources/historical/itac-annual-report-2000-01.pdf",
+            "sha256": "7a16d5bddfc04f17c39a765d9a9921c9399f4d98ac13a215c8047f2904cd4bca",
+            "bytes": 569529,
+            "observedDate": "2026-11-25",
+            "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/0500a8ee-94d6-4eab-b60b-89a12a101d00/content",
+            "originalFile": "itac_ar_2000_01.pdf",
+            "archivingNote": "Complete supplied Legislative Library copy, including the repository title sheet.",
+            "label": "Download annual report (PDF)"
+          }
+        ],
+        "id": "itac-annual-report-name-left-reconstruction",
+        "variantOf": "itac-annual-report-name-left-2000-01",
+        "provenance": "reconstructed",
+        "label": "Annual report · navy and warm gray reconstruction",
+        "versionLabel": "Navy and warm gray · SVG reconstruction",
+        "file": "identity-recovered/industry-training-and-apprenticeship-commission/itac-annual-report-navy-warm-gray.svg",
+        "format": "svg",
+        "bytes": 22716,
+        "sha256": "2efd7d4a7d3938ac9772715da5aab9dcb3ca61e7836b9d13c64fb239126122dd",
+        "publisher": "PofBC reconstruction from the Industry Training and Apprenticeship Commission annual report",
+        "supportingSourceFiles": [
+          "identity-recovered/industry-training-and-apprenticeship-commission/itac-2003-black.svg"
+        ],
+        "sourceLocator": "Annual Report 2000/2001, contents page (printed page 1, PDF page 4), lower right. The commission name is set in Myriad. Image object 9 contains the spiral and initials.",
+        "observedDate": "2026-11-25",
+        "reconstructionDate": "2026-11-25",
+        "reconstruction": true,
+        "isVector": true,
+        "supplied": false,
+        "sourceGround": "light",
+        "evidenceType": "vector-reconstruction",
+        "notes": "The four lines of warm gray lettering follow the report’s original glyph outlines and spacing. The navy spiral and lowercase itac use the supplied reconstruction.",
+        "fidelityNote": "Converted the embedded Myriad lettering to paths with PyMuPDF. Scaled the reconstructed bands and initials separately to the upper and lower ink bounds of the 63 × 81 pixel image. The SVG uses the report’s rendered RGB equivalents of PANTONE 281 CVU (#1B3C77) and PANTONE Warm Gray 10 CVU (#988A77).",
+        "extraction": {
+          "method": "pdf-glyph-outlines-and-reconstructed-emblem",
+          "sourcePageNumber": 4,
+          "pdfBounds": [
+            290,
+            607,
+            460,
+            692
+          ],
+          "imageXref": 9
+        }
       }
-    ]
+    ],
+    "cover": "source-recovered-itac-letterhead-2003"
   },
   {
     "id": "emergency-health-services-commission",
@@ -8414,7 +9994,7 @@ export const RECOVERED_IDENTITY_BODIES = [
     "status": "asset-collected",
     "observedDate": "2026-11-21",
     "notes": "The complete Village signature includes its name and the flag-derived emblem. The bare flag was not accepted as a logo.",
-    "nextAction": "Seek dated historical variants and an original master where only a publication or website specimen is held.",
+    "nextAction": "Seek the Village’s original vector of the flag and two-line municipal name used in the Bear Smart brochure.",
     "assets": [
       {
         "id": "source-recovered-followup-municipality-lions-bay-council-agenda-2025",
@@ -8445,6 +10025,43 @@ export const RECOVERED_IDENTITY_BODIES = [
         "notes": "Original raster specimen; no tracing, redraw, interpolation or upscaling. Extracted from the checksum-pinned PDF.",
         "fidelityNote": "Original raster specimen; no tracing, redraw, interpolation or upscaling. Extracted from the checksum-pinned PDF.",
         "darkBackground": false
+      },
+      {
+        "id": "municipal-lions-bay-bear-smart-stacked",
+        "label": "Lions Bay: Stacked flag and municipal name",
+        "file": "identity-recovered/municipalities/lions-bay/bear-smart-stacked.png",
+        "format": "png",
+        "isVector": false,
+        "sha256": "303e50b0c955bee04f7fceed1e3a77a60060368b9128cc21f6c03a2332408895",
+        "bytes": 69326,
+        "dimensions": {
+          "width": 620,
+          "height": 295
+        },
+        "contentType": "image/png",
+        "supplied": false,
+        "reconstruction": false,
+        "publisher": "British Columbia Conservation Officer Service",
+        "sourceUrl": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf",
+        "sourcePage": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf#page=3",
+        "resolvedSourceUrl": "https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/conservation-officer-service/bearsmart_brchr.pdf",
+        "sourceLocator": "Page 3, bottom right (PDF figure MCID 188).",
+        "sourceFile": "identity-recovered/municipalities/lions-bay/bear-smart-stacked.png",
+        "originalDocumentSha256": "903b02d29e96d3b4bb0db4fcaec1b170c9f6ed0c94fc71bb7ac34ea668ecb169",
+        "sourceDate": "Bear Smart Communities, PDF revised February 2019",
+        "specimenDate": "2019-02",
+        "dateNote": "February 2019 is the PDF revision date in its metadata, not a logo adoption date.",
+        "observedDate": "2026-11-25",
+        "evidenceType": "official-publication-raster",
+        "notes": "The flag sits above a two-line municipal name. The later council agenda places it at the left of a shorter name.",
+        "fidelityNote": "Isolated the original PDF figure, retaining its image clip and outlined lettering in a transparent PNG rendered at 360 dpi. The flag itself is a 248 × 135 bitmap.",
+        "darkBackground": false,
+        "extraction": {
+          "method": "Isolated the original PDF figure, retaining its image clip and outlined lettering in a transparent PNG rendered at 360 dpi. The flag itself is a 248 × 135 bitmap.",
+          "figure": 188,
+          "page": 3
+        },
+        "role": "historical"
       }
     ]
   },

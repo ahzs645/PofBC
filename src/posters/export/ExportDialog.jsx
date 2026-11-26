@@ -52,10 +52,17 @@ export function ExportDialog({ open, onClose, targets, target, onTarget, dpiBase
     setBusy(true)
     setStatus(null)
     try {
-      const svg = await t.getSvg({ background })
-      const inches = typeof t.inches === 'function' ? t.inches(aspectOf(svg)) : t.inches
-      const bg = background ?? (spec.alpha ? null : '#ffffff')
-      const blob = await exportSvg(svg, { format, width, inches, background: bg })
+      let blob
+      if (format === 'pdf' && t.printPdf) {
+        const response = await fetch(t.printPdf)
+        if (!response.ok) throw new Error('The print PDF could not be loaded.')
+        blob = await response.blob()
+      } else {
+        const svg = await t.getSvg({ background })
+        const inches = typeof t.inches === 'function' ? t.inches(aspectOf(svg)) : t.inches
+        const bg = background ?? (spec.alpha ? null : '#ffffff')
+        blob = await exportSvg(svg, { format, width, inches, background: bg })
+      }
       downloadBlob(blob, fileName)
       setStatus({ ok: true, text: `Saved ${fileName} (${formatBytes(blob.size)}).` })
     } catch (error) {
@@ -124,7 +131,7 @@ export function ExportDialog({ open, onClose, targets, target, onTarget, dpiBase
           {custom && <p className="pv-dialog-note">Any width from {MIN_WIDTH} to {widest} px{widest < MAX_WIDTH ? '; this sheet is tall, so its whole canvas sets the limit' : ''}.</p>}
           {t.largeNote && width >= t.largeNote.from && <p className="pv-dialog-note">{t.largeNote.text}</p>}
           {t.backgrounds && (
-            <Segmented wrap label="Background" value={background} onChange={setBackground} style={{ marginTop: 8 }} options={t.backgrounds.map((b) => ({
+            <Segmented label="Background" value={background} onChange={setBackground} style={{ marginTop: 8 }} options={t.backgrounds.map((b) => ({
               value: b.value, label: b.name, disabled: b.value === null && !spec.alpha
             }))} />
           )}

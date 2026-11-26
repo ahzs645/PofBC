@@ -26,6 +26,15 @@ const signatureStores = 'bc-signature-liquor-store'
 const retail = 'sub-bcliquor'
 const relation = (subject, type, label) => ({ subject, type, label })
 
+export const LIQUOR_BOARD_COLLECTION = `collected-${board}`
+export const LIQUOR_DISTRIBUTION_COLLECTION = `collected-${distribution}`
+
+export const LIQUOR_SUCCESSION = [
+  { from: board, to: distribution, type: 'services', date: '1976-12-31', note: 'Purchasing, distribution and government stores.', source: order(3494) },
+  { from: board, to: licensing, type: 'services', date: '1976-12-31', note: 'Licensing and enforcement.', source: order(3490) },
+  { from: licensing, to: regulator, type: 'renamed', date: '2018-07-05', note: 'The Province announced the new name and the addition of private cannabis retail licensing.', source: rename }
+]
+
 const addition = (id, name, kind, details) => ({
   id, name, label: name, kind, family: 'liquor-distribution',
   graphNode: null, aliases: [], collectionIds: [], salaryEmployers: [], priority: 2, scope: 'core',
@@ -75,14 +84,14 @@ export const LIQUOR_BOARD_RELATIONS = [
 ]
 
 const histories = {
-  'collected-liquor-control-board': [
+  [LIQUOR_BOARD_COLLECTION]: [
     {
       id: 'lcb-formation', years: '1917–1922', label: 'From prohibition to government stores',
       note: 'Prohibition began on October 1, 1917. On October 20, 1920, voters chose government sale. The Government Liquor Act received assent on April 2, 1921. Nine government stores opened on June 15. The Board’s first annual report covers that opening through March 31, 1922. Its title page bears the provincial arms above the printer’s imprint.',
       sources: [source('Legislative Assembly, prohibition referendum', 'https://www.leg.bc.ca/learn/discover-your-legislature/1917-prohibition-begins-by-referendum'), law1921, centenary, library('First annual report, 1921/22', '242418')], marks: []
     }, {
       id: 'lcb-letterhead', years: '1941', label: 'The Board’s letterhead',
-      note: 'The Board’s name and provincial arms appear together on correspondence dated November 14, 1941. The file comes from page 2 of the order, with a second impression on page 3. Its 1950/51 report also carries the provincial arms at the printer’s imprint.',
+      note: 'The Board’s name and provincial coat of arms appear together on official letterhead dated November 14, 1941. The specimen comes from page 2 of the order, with a second impression on page 3. The Board’s 1950/51 report uses the provincial arms above the printer’s imprint.',
       sources: [source('Order in Council 1609/1941', 'https://www.bclaws.gov.bc.ca/civix/document/id/oic/arc_oic/1609_1941#page=2'), library('Thirtieth annual report, 1950/51', '242417')], marks: ['source-recovered-followup-liquor-control-board-letterhead-1941']
     }, {
       id: 'lcb-succession', years: '1973–1977', label: 'Stores, licensing and appeals',
@@ -90,14 +99,14 @@ const histories = {
       sources: [law1973, licensingAct, distributionAct, order(3490), order(3493), order(3494), hansard, centenary], marks: []
     }
   ],
-  'collected-liquor-distribution-branch': [
+  [LIQUOR_DISTRIBUTION_COLLECTION]: [
     {
-      id: 'ldb-establishment', years: '1973–1990s', label: 'The commercial branch',
-      note: 'The Liquor Administration Branch carried on the former Board’s store operations after the 1973 reforms. Section 2 of the Liquor Distribution Act established the distribution branch when it came into force on December 31, 1976. Its purchasing, warehouse and retail functions followed a different line from licensing. Branch artwork between commencement and the 1998/99 report is still unverified.',
-      sources: [law1973, distributionAct, order(3494), hansard, centenary], marks: []
+      id: 'ldb-establishment', years: '1973–1977', label: 'From the Board to two branches',
+      note: 'After the 1973 reforms, the Liquor Administration Branch kept the government stores running and the British Columbia Liquor Board heard appeals. The distribution and licensing Acts received royal assent on June 26, 1975. Their provisions establishing the two branches took effect on December 31, 1976. The Liquor Distribution Branch took over purchasing, distribution and the stores. The Liquor Control and Licensing Branch took over licensing and enforcement. Their budgets separated on April 1, 1977.',
+      sources: [law1973, distributionAct, licensingAct, order(3494), order(3490), hansard, centenary], marks: []
     }, {
       id: 'ldb-script', years: '1998/99–2007', label: 'BCL script monogram',
-      note: 'The 1998/99 annual report preserves the emblem in black and magenta. Later reports place it beside the full branch name. The 2004 cover carries a red-L raster variant. A February 20, 2007 letter still uses the monogram during the year the stacked wordmark appeared in the service plan.',
+      note: 'The earliest verified LDB artwork in this collection is the black-and-magenta script monogram in the 1998/99 annual report. Later reports place it beside the full branch name. The 2004 cover carries a red-L raster variant. A February 20, 2007 letter still uses the monogram during the year the stacked wordmark appeared in the service plan.',
       sources: [library('1998/99 annual report', '274295'), library('2001/02 annual report', '274302'), source('2004 service plan', 'https://www.bcbudget.gov.bc.ca/2004/sp/crownagency/bcldb.pdf'), source('February 2007 letter, FOI package p. 15', 'https://docs.openinfo.gov.bc.ca/Response_Package_JAG-2015-50638.pdf#page=15')], marks: ['liquor-bcl-1998-99','liquor-bcl-signature-2000-01']
     }, {
       id: 'ldb-stacked', years: '2007–2008', label: 'Corporate and retail names on one cover',
@@ -109,8 +118,8 @@ const histories = {
       sources: [source('2009 service plan', 'https://www.bcbudget.gov.bc.ca/2009/sp/pdf/agency/bcldb.pdf'), library('2011/12 statements of financial information','309901')], marks: ['liquor-sunburst-slogan-2009']
     }, {
       id: 'ldb-divisions', years: '2015–2026', label: 'Retail, wholesale and cannabis',
-      note: 'On April 1, 2015, the LDB separated its retail and wholesale operations under a common wholesale price. Its cannabis division began operations on October 17, 2018, with a Kamloops store, online sales and wholesale distribution. A May 7, 2026 FAQ shows the provincial sunburst and stacked branch name without the earlier slogan.',
-      sources: [retail2015, cannabis, source('May 2026 refreshment beverage FAQ','https://www.bcldb.com/sites/default/files/2026-05/RegulatoryFAQ_RefreshmentBeverageDirectDelivery_7May2026.pdf')], marks: ['source-expanded-liquor-distribution-branch-wholesale-site-lockup']
+      note: 'On April 1, 2015, the LDB separated its retail and wholesale operations under a common wholesale price. In 2018, the licensing branch became the Liquor and Cannabis Regulation Branch and took on private non-medical cannabis retail licensing. The LDB began cannabis wholesale and retail operations on October 17, 2018, opening a Kamloops store and launching online sales. A May 7, 2026 FAQ shows the provincial sunburst and stacked branch name without the earlier slogan.',
+      sources: [retail2015, rename, cannabis, source('May 2026 refreshment beverage FAQ','https://www.bcldb.com/sites/default/files/2026-05/RegulatoryFAQ_RefreshmentBeverageDirectDelivery_7May2026.pdf')], marks: ['source-expanded-liquor-distribution-branch-wholesale-site-lockup']
     }
   ]
 }
@@ -127,5 +136,9 @@ export function withLiquorHistory(collection) {
     id: 'liquor-additional-specimens', label: 'Additional specimens', years: '',
     note: 'Each specimen records its own source and date.', entries: additional
   })
-  return { ...collection, eras }
+  if (collection.id === LIQUOR_BOARD_COLLECTION) return { ...collection, eras, showInGalleryIndex: false }
+  return {
+    ...collection, eras,
+    intro: 'The Liquor Control Board opened British Columbia’s first nine government liquor stores in 1921. When the Province divided the Board’s former responsibilities, the Liquor Distribution Branch inherited purchasing, distribution and the stores. Licensing and enforcement went to a separate branch. The artwork dates below show when each design was documented.'
+  }
 }

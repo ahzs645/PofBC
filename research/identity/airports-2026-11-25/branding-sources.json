@@ -1,0 +1,1078 @@
+{
+  "checkedDate": "2026-11-25",
+  "scope": "British Columbia certified airport priority records within the province and Masset Municipal Airport. This register records artwork findings alongside the separate provincial facility inventory.",
+  "method": "Checked current official airport and operator sites, official publications and named corroborating sources. SVG structures were parsed for geometric artwork and embedded images. PDF marks were located on rendered pages and checked against drawing and image object geometry. PDF page references are one-based physical pages unless otherwise specified. Artwork remains at source.",
+  "statusDefinitions": {
+    "verified-vector": "At least one airport signature verified as native geometry in a source SVG or publication.",
+    "verified-raster": "Airport signature verified from its airport or municipal publisher, with raster artwork presently identified.",
+    "documented-raster-lead": "Airport signature documented in a specific publication, with current use or original artwork pending.",
+    "documented-vector-lead": "Specific vector source lead identified, with geometry or direct access pending.",
+    "operator-brand-only": "The checked official sources use an operator or government mark. A separate airport logo remains unverified.",
+    "no-separate-mark-found": "Named facility checked, with no separate logo in the reviewed sources.",
+    "branding-in-development": "The operator has publicly documented a branding project, with released artwork still to verify."
+  },
+  "airports": [
+    {
+      "locationIdentifier": "CYXX",
+      "icao": "CYXX",
+      "tcLid": null,
+      "iata": "YXX",
+      "name": "Abbotsford International Airport",
+      "publisher": "Abbotsford International Airport / City of Abbotsford",
+      "sourcePageUrl": "https://www.abbotsfordairport.ca/",
+      "brandingStatus": "verified-raster",
+      "notes": "Airport header and current city news use the grey mountain/flight trail and orange YXX. The 2019 source shows an orange Abbotsford wordmark as a separate historical colourway. Checked the 2024 accessibility plan, 2025 news release and 2026 parking map for native paths. All three embed the current lockup as an image. Ask the airport for source vectors.",
+      "artwork": [
+        {
+          "label": "Grey and orange YXX lockup",
+          "format": "png",
+          "url": "https://www.abbotsfordairport.ca/sites/2/files/airport-logo-2x.png",
+          "locator": "Primary website header",
+          "verification": "372 × 160 PNG."
+        },
+        {
+          "label": "Grey and orange YXX parking-map signature",
+          "format": "pdf-raster",
+          "url": "https://www.abbotsfordairport.ca/media/216",
+          "locator": "PDF page 1, upper right in landscape display",
+          "verification": "Separate 417 × 871 raster object, displayed in landscape orientation via page rotation. It provides a higher-resolution source than the homepage PNG."
+        },
+        {
+          "label": "Grey and orange YXX publication lockup",
+          "format": "pdf-raster",
+          "url": "https://www.abbotsfordairport.ca/sites/abbotsfordairport.ca/files/2024-05/YXX%20Accessibility%20Plan%20and%20Feedback%20Process%20-%20June%202024.pdf",
+          "locator": "PDF page 1, top center",
+          "verification": "Logo is embedded separately as a bitmap."
+        },
+        {
+          "label": "Orange Abbotsford lockup",
+          "format": "pdf-raster",
+          "url": "https://www.abbotsfordairport.ca/media/29",
+          "locator": "PDF page 1, upper left",
+          "verification": "Logo is embedded separately as a bitmap."
+        }
+      ],
+      "supportingSources": [
+        "https://www.abbotsford.ca/sites/default/files/2025-01/2025-01-22%20-%20YXX%20celebrates%20back-to-back%20million-passenger%20years.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CBS8",
+      "icao": null,
+      "tcLid": "CBS8",
+      "iata": "YPB",
+      "name": "Alberni Valley Regional Airport",
+      "publisher": "Alberni-Clayoquot Regional District",
+      "sourcePageUrl": "https://www.acrd.bc.ca/avra",
+      "brandingStatus": "verified-raster",
+      "notes": "The current airport service page uses a green AVRA monogram with a small yellow aircraft. The 2026 update and 2021 survey supply alternate treatments. A separate landscape emblem with the airport name appears in the financial plan. Preserve both designs as separate entries.",
+      "artwork": [
+        {
+          "label": "Green AVRA with yellow aircraft",
+          "format": "gif",
+          "url": "https://www.acrd.bc.ca/cms/wpimages/wpID169imgID232.gif",
+          "locator": "Airport site masthead",
+          "verification": "146 × 23 GIF."
+        },
+        {
+          "label": "AVRA specimen in agency update",
+          "format": "pdf-raster",
+          "url": "https://www.acrd.bc.ca/dms/documents/community/airports/2026/avra_at_a_glance.pdf",
+          "locator": "PDF page 1, masthead to right of district lockup",
+          "verification": "The airport logo is embedded separately as a bitmap."
+        },
+        {
+          "label": "Green AVRA with yellow aircraft",
+          "format": "pdf-raster",
+          "url": "https://www.acrd.bc.ca/dms/documents/agendas/2021-misc-agendas/mar_23_avra_committee_agenda.pdf",
+          "locator": "PDF page 66, upper left beneath district logo",
+          "verification": "Logo is embedded separately as a bitmap."
+        },
+        {
+          "label": "Landscape and airport name",
+          "format": "pdf-raster",
+          "url": "https://www.acrd.bc.ca/dms/documents/finance/2024/2024-28_financial_plan_adopted.pdf",
+          "locator": "PDF page 98, upper left",
+          "verification": "Logo is embedded separately as a bitmap."
+        }
+      ]
+    },
+    {
+      "locationIdentifier": "CAJ4",
+      "icao": null,
+      "tcLid": "CAJ4",
+      "iata": "YAA",
+      "name": "Anahim Lake Airport",
+      "publisher": "Cariboo Regional District",
+      "sourcePageUrl": "https://www.cariboord.ca/business-and-development/airports/",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The Cariboo Regional District service page identifies the airport, district owner, contract operator and airport commission. The checked service listing uses district branding. The airport commission and safety management documentation are follow-up leads for an independent mark.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CBBC",
+      "icao": null,
+      "tcLid": "CBBC",
+      "iata": "ZEL",
+      "name": "Bella Bella (Campbell Island) Airport",
+      "publisher": "Heiltsuk Economic Development Corporation",
+      "sourcePageUrl": "https://www.heiltsukdevco.com/corporate-structure",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The operator lists the airport under its Tourism and Retail Operating Board. The Heiltsuk Nation terminal funding notice also uses organization identity. A separate airport mark was not verified in those sources.",
+      "artwork": [],
+      "supportingSources": [
+        "https://www.heiltsuk.ca/index.html",
+        "https://www.ccrd.ca/services/airports/"
+      ]
+    },
+    {
+      "locationIdentifier": "CYBD",
+      "icao": "CYBD",
+      "tcLid": null,
+      "iata": "QBC",
+      "name": "Bella Coola Airport",
+      "publisher": "Central Coast Regional District",
+      "sourcePageUrl": "https://www.ccrd.ca/services/airports/",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The service page identifies district operation and displays the CCRD identity. The district area service poster is an additional airport-specific documentation lead.",
+      "artwork": [],
+      "supportingSources": [
+        "https://www.ccrd.ca/wp-content/uploads/2026/01/2026-Area-service-posters-CDE.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CZBB",
+      "icao": "CZBB",
+      "tcLid": null,
+      "iata": "YDT",
+      "name": "Boundary Bay Airport",
+      "publisher": "Boundary Bay Airport / Alpha Aviation",
+      "sourcePageUrl": "https://czbb.com/about-us-2/",
+      "brandingStatus": "verified-raster",
+      "notes": "Logo has the aircraft and elliptical sweep around a stacked Boundary Bay Airport Vancouver wordmark. The website SVG in the FBO section represents Effective FBO. The airport header has only low-resolution raster sources in this pass.",
+      "artwork": [
+        {
+          "label": "White airport signature",
+          "format": "png",
+          "url": "https://czbb.com/wp-content/uploads/2020/06/boundary-bay-airport-logo.png",
+          "locator": "Site header and footer",
+          "verification": "148 × 82 PNG."
+        },
+        {
+          "label": "Airport signature on dark background",
+          "format": "jpg",
+          "url": "https://czbb.com/wp-content/uploads/2020/06/boundary-bay-airport-logo.jpg",
+          "locator": "Site header"
+        }
+      ]
+    },
+    {
+      "locationIdentifier": "CYBL",
+      "icao": "CYBL",
+      "tcLid": null,
+      "iata": "YBL",
+      "name": "Campbell River Airport",
+      "publisher": "Campbell River Airport / City of Campbell River",
+      "sourcePageUrl": "https://crairport.ca/",
+      "brandingStatus": "verified-raster",
+      "notes": "The airport site uses matching positive and reverse versions of its bird-and-waves emblem, vertical YBL and airport wordmark. The City strategic-plan cover logo was checked and is also a bitmap. Request the source vector from airport communications or Boleyn Media.",
+      "artwork": [
+        {
+          "label": "Primary colour airport signature",
+          "format": "png",
+          "url": "https://crairport.ca/wp-content/uploads/2022/09/YBL-Logo-Primary-Coloured.png",
+          "locator": "Official WordPress media library YBL logo entry",
+          "verification": "1500 × 337 PNG, visually matches the 2024–2029 plan."
+        },
+        {
+          "label": "Primary white airport signature",
+          "format": "png",
+          "url": "https://crairport.ca/wp-content/uploads/2022/08/YBL-Logo-Primary-White.png",
+          "locator": "Official homepage header",
+          "verification": "1500 × 337 PNG."
+        },
+        {
+          "label": "Primary colour signature, strategic plan",
+          "format": "pdf-raster",
+          "url": "https://www.campbellriver.ca/media/file/ybl-strategic-plan-draft-public-engagement",
+          "locator": "PDF page 1, top",
+          "verification": "Logo is embedded separately as a bitmap."
+        }
+      ]
+    },
+    {
+      "locationIdentifier": "CYXC",
+      "icao": "CYXC",
+      "tcLid": null,
+      "iata": "YXC",
+      "name": "Canadian Rockies International Airport",
+      "publisher": "Canadian Rockies International Airport / City of Cranbrook",
+      "sourcePageUrl": "https://flycanadianrockies.com/",
+      "brandingStatus": "verified-raster",
+      "notes": "The official airport homepage uses four colored squares spelling YXC with a bird, and a separate footer signature with airport name and bird. Preserve the layouts independently. The city advertising PDF embeds the four-panel mark as a bitmap. Ask the airport for originals.",
+      "artwork": [
+        {
+          "label": "Four-panel YXC signature",
+          "format": "png",
+          "url": "https://flycanadianrockies.com/wp-content/uploads/2026/05/flyyxc-logo-sized.png",
+          "locator": "Homepage header",
+          "verification": "400 × 113 PNG."
+        },
+        {
+          "label": "Bird and airport-name signature",
+          "format": "png",
+          "url": "https://flycanadianrockies.com/wp-content/uploads/2026/05/cria_feature_logo.png",
+          "locator": "Homepage footer",
+          "verification": "380 × 200 PNG."
+        },
+        {
+          "label": "Four-panel advertising specimen",
+          "format": "pdf-raster",
+          "url": "https://docs.cranbrook.ca/downloads/airport/YXC-Current-Advertising-Opportunities.pdf",
+          "locator": "PDF page 1, upper right",
+          "verification": "Logo is embedded separately as a bitmap."
+        }
+      ],
+      "supportingSources": [
+        "https://cranbrook.ca/news/continued-improvements-and-growth-at-yxc-focused-on-connectivity-passenger-experience"
+      ]
+    },
+    {
+      "locationIdentifier": "CYCW",
+      "icao": "CYCW",
+      "tcLid": null,
+      "iata": "YCW",
+      "name": "Chilliwack Airport",
+      "publisher": "Chilliwack Airport",
+      "sourcePageUrl": "https://www.chilliwackairport.ca/",
+      "brandingStatus": "verified-raster",
+      "notes": "The official airport homepage has a green mountain, blue water and CYCW signature. The historic aerospace guide shows another treatment of the CYCW mountain and water identity. Retain verified source treatments as separate variants.",
+      "artwork": [
+        {
+          "label": "Current mountains, water and CYCW signature",
+          "format": "png",
+          "url": "https://www.chilliwackairport.ca/assets/images/layout/top-logo.png",
+          "locator": "Official homepage masthead",
+          "verification": "422 × 225 PNG."
+        },
+        {
+          "label": "Earlier mountains, water and CYCW signature",
+          "format": "pdf-raster",
+          "url": "https://bcaerospacecareers.ca/wp-content/uploads/2023/03/BC-Aerospace-Capabilities-Guide_Web_Spreads.pdf",
+          "locator": "PDF page 39, lower left, Chilliwack Airport listing",
+          "verification": "Logo is embedded separately as a bitmap.",
+          "publisher": "Aerospace Industries Association of Canada"
+        }
+      ],
+      "supportingSources": [
+        "https://www.chilliwack.com/main/page.cfm?id=34"
+      ]
+    },
+    {
+      "locationIdentifier": "CYQQ",
+      "icao": "CYQQ",
+      "tcLid": null,
+      "iata": "YQQ",
+      "name": "Comox Valley Airport",
+      "publisher": "Comox Valley Airport Commission",
+      "sourcePageUrl": "https://www.comoxairport.com/",
+      "brandingStatus": "verified-vector",
+      "notes": "Current teal and blue overlapping-block airport signature matches the homepage. The 2024 report cover provides isolated native paths in the lower left. The 2015 report records the earlier green, cyan and teal colourway. Keep civil terminal brand distinct from military CFB Comox.",
+      "artwork": [
+        {
+          "label": "Teal and blue signature",
+          "format": "pdf-vector",
+          "url": "https://www.comoxairport.com/dms/documents/accountability-reports/2024_accountability_report.pdf",
+          "locator": "PDF page 1, lower-left mark",
+          "verification": "Native shape and letter paths in the mark area, with the photographic raster elsewhere on the cover. Crop the logo paths and preserve source fills."
+        },
+        {
+          "label": "Teal and blue website signature",
+          "format": "png",
+          "url": "https://www.comoxairport.com/vimages/logo.png",
+          "locator": "Official homepage header",
+          "verification": "250 × 199 PNG."
+        },
+        {
+          "label": "Historic green and teal signature",
+          "format": "pdf-vector",
+          "url": "https://www.comoxairport.com/dms/documents/accountability-reports/2015_accountability_report.pdf",
+          "locator": "PDF page 1, lower right",
+          "verification": "Native paths in the mark area, with imagery outside the logo."
+        }
+      ],
+      "supportingSources": [
+        "https://www.comoxairport.com/publications"
+      ]
+    },
+    {
+      "locationIdentifier": "CYDQ",
+      "icao": "CYDQ",
+      "tcLid": null,
+      "iata": "YDQ",
+      "name": "Dawson Creek Regional Airport",
+      "publisher": "City of Dawson Creek",
+      "sourcePageUrl": "https://www.dawsoncreek.ca/business-development/community-profile/industry-sectors/transportation-sector/",
+      "brandingStatus": "branding-in-development",
+      "notes": "The City transportation page and 2024 profile show municipal branding and terminal lettering. City Council approved moving forward with an Airport Brand and Website project July 27, 2026. No released airport artwork was verified in those sources.",
+      "artwork": [],
+      "supportingSources": [
+        "https://www.dawsoncreek.ca/news/posts/council-meeting-highlights-july-27-2026/",
+        "https://www.dawsoncreek.ca/media/nr4fvuix/community-profile-2024.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CYKA",
+      "icao": "CYKA",
+      "tcLid": null,
+      "iata": "YKA",
+      "name": "Kamloops Airport",
+      "publisher": "Kamloops Airport",
+      "sourcePageUrl": "https://kamloopsairport.com/",
+      "brandingStatus": "verified-vector",
+      "notes": "The official homepage offers native vector logos with code and airport name. The positive horizontal and reverse stacked layouts are distinct variants.",
+      "artwork": [
+        {
+          "label": "Colour horizontal YKA signature",
+          "format": "svg",
+          "url": "https://kamloopsairport.com/wp-content/uploads/Logo.svg",
+          "locator": "Official site header",
+          "verification": "26 paths and no raster image elements."
+        },
+        {
+          "label": "White stacked YKA signature",
+          "format": "svg",
+          "url": "https://kamloopsairport.com/wp-content/uploads/Logo-white.svg",
+          "locator": "Official site footer",
+          "verification": "21 paths and no raster image elements."
+        }
+      ],
+      "supportingSources": [
+        "https://kamloopsairport.com/wp-content/uploads/Kamloops-Airport-Accessibility-Plan-Progress-Report-V1.0-2026-Final-for-publishing.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CYLW",
+      "icao": "CYLW",
+      "tcLid": null,
+      "iata": "YLW",
+      "name": "Kelowna International Airport",
+      "publisher": "City of Kelowna / Kelowna International Airport",
+      "sourcePageUrl": "https://ylw.kelowna.ca/",
+      "brandingStatus": "verified-vector",
+      "notes": "The 2025 City of Kelowna brand guide documents three rosette layouts and three wordmarks. The stacked, horizontal and vertical rosette layouts each appear in full colour, black and reversed. The current stacked signature also survives as native vector artwork on the airport’s 2024 financial statements.",
+      "artwork": [
+        {
+          "label": "Colour rosette and YLW with airport name",
+          "format": "pdf-vector",
+          "url": "https://cofk-drupal-ylw-fbbdaub8fwhqfbdr.a01.azurefd.net/sites/default/files/docs/related/YLW%20Financial%20Statements%202024%20_vFINAL.pdf",
+          "locator": "PDF page 1, lower left",
+          "verification": "Native rosette and lettering paths, over the background photo. Isolate the logo drawings from the page backdrop."
+        },
+        {
+          "label": "Official website YLW signature",
+          "format": "png",
+          "url": "https://cofk-drupal-ylw-fbbdaub8fwhqfbdr.a01.azurefd.net/themes/custom/ylwtheme/images/logo-ylw.png",
+          "locator": "Airport website masthead",
+          "verification": "356 × 150 PNG on the publicly indexed airport-site hostname."
+        },
+        {
+          "label": "Stacked colour signature",
+          "format": "pdf-raster",
+          "url": "https://web.archive.org/web/20250405012450id_/https://www.kelowna.ca/sites/files/1/docs/city-hall/brand/city_of_kelowna_visual_identity_guide_2025_v6.1.pdf",
+          "locator": "2025 edition v6.1, page 11, first airport logo under Stacked Logo, PDF image object 652",
+          "verification": "Embedded raster image extracted at native size with its opacity mask."
+        },
+        {
+          "label": "Stacked black signature",
+          "format": "pdf-raster",
+          "url": "https://web.archive.org/web/20250405012450id_/https://www.kelowna.ca/sites/files/1/docs/city-hall/brand/city_of_kelowna_visual_identity_guide_2025_v6.1.pdf",
+          "locator": "2025 edition v6.1, page 15, stacked black example in upper left, PDF image object 133",
+          "verification": "Embedded raster image extracted at native size with its opacity mask."
+        },
+        {
+          "label": "Stacked reversed signature",
+          "format": "pdf-raster",
+          "url": "https://web.archive.org/web/20250405012450id_/https://www.kelowna.ca/sites/files/1/docs/city-hall/brand/city_of_kelowna_visual_identity_guide_2025_v6.1.pdf",
+          "locator": "2025 edition v6.1, page 15, stacked reversed example in upper left, PDF image object 137",
+          "verification": "Embedded raster image extracted at native size with its opacity mask."
+        },
+        {
+          "label": "Horizontal rosette signature",
+          "format": "pdf-raster",
+          "url": "https://web.archive.org/web/20250405012450id_/https://www.kelowna.ca/sites/files/1/docs/city-hall/brand/city_of_kelowna_visual_identity_guide_2025_v6.1.pdf",
+          "locator": "2025 edition v6.1, page 11, airport logo under Horizontal Logo, PDF image object 46",
+          "verification": "Embedded raster image extracted at native size with its opacity mask."
+        },
+        {
+          "label": "Horizontal black signature",
+          "format": "pdf-raster",
+          "url": "https://web.archive.org/web/20250405012450id_/https://www.kelowna.ca/sites/files/1/docs/city-hall/brand/city_of_kelowna_visual_identity_guide_2025_v6.1.pdf",
+          "locator": "2025 edition v6.1, page 15, middle example in the horizontal logo group, PDF image object 141",
+          "verification": "Embedded raster image extracted at native size with its opacity mask."
+        },
+        {
+          "label": "Horizontal reversed signature",
+          "format": "pdf-raster",
+          "url": "https://web.archive.org/web/20250405012450id_/https://www.kelowna.ca/sites/files/1/docs/city-hall/brand/city_of_kelowna_visual_identity_guide_2025_v6.1.pdf",
+          "locator": "2025 edition v6.1, page 15, bottom example in the horizontal logo group, PDF image object 143",
+          "verification": "Embedded raster image extracted at native size with its opacity mask."
+        },
+        {
+          "label": "Vertical rosette signature",
+          "format": "pdf-raster",
+          "url": "https://web.archive.org/web/20250405012450id_/https://www.kelowna.ca/sites/files/1/docs/city-hall/brand/city_of_kelowna_visual_identity_guide_2025_v6.1.pdf",
+          "locator": "2025 edition v6.1, page 11, airport logo under Vertical Logo, PDF image object 48",
+          "verification": "Embedded raster image extracted at native size with its opacity mask."
+        },
+        {
+          "label": "Vertical black signature",
+          "format": "pdf-raster",
+          "url": "https://web.archive.org/web/20250405012450id_/https://www.kelowna.ca/sites/files/1/docs/city-hall/brand/city_of_kelowna_visual_identity_guide_2025_v6.1.pdf",
+          "locator": "2025 edition v6.1, page 15, middle example in the vertical logo group, PDF image object 147",
+          "verification": "Embedded raster image extracted at native size with its opacity mask."
+        },
+        {
+          "label": "Vertical reversed signature",
+          "format": "pdf-raster",
+          "url": "https://web.archive.org/web/20250405012450id_/https://www.kelowna.ca/sites/files/1/docs/city-hall/brand/city_of_kelowna_visual_identity_guide_2025_v6.1.pdf",
+          "locator": "2025 edition v6.1, page 15, right example in the vertical logo group, PDF image object 149",
+          "verification": "Embedded raster image extracted at native size with its opacity mask."
+        },
+        {
+          "label": "Horizontal wordmark",
+          "format": "pdf-raster",
+          "url": "https://web.archive.org/web/20250405012450id_/https://www.kelowna.ca/sites/files/1/docs/city-hall/brand/city_of_kelowna_visual_identity_guide_2025_v6.1.pdf",
+          "locator": "2025 edition v6.1, page 11, first example under Wordmarks, PDF image object 655",
+          "verification": "Embedded raster image extracted at native size with its opacity mask."
+        },
+        {
+          "label": "Stacked wordmark",
+          "format": "pdf-raster",
+          "url": "https://web.archive.org/web/20250405012450id_/https://www.kelowna.ca/sites/files/1/docs/city-hall/brand/city_of_kelowna_visual_identity_guide_2025_v6.1.pdf",
+          "locator": "2025 edition v6.1, page 11, second example under Wordmarks, PDF image object 656",
+          "verification": "Embedded raster image extracted at native size with its opacity mask."
+        },
+        {
+          "label": "YLW initials wordmark",
+          "format": "pdf-raster",
+          "url": "https://web.archive.org/web/20250405012450id_/https://www.kelowna.ca/sites/files/1/docs/city-hall/brand/city_of_kelowna_visual_identity_guide_2025_v6.1.pdf",
+          "locator": "2025 edition v6.1, page 11, third example under Wordmarks, PDF image object 50",
+          "verification": "Embedded raster image extracted at native size with its opacity mask."
+        }
+      ],
+      "supportingSources": [
+        "https://ylw.kelowna.ca/sites/default/files/docs/related/YLW%20Financial%20Statements%202024%20_vFINAL.pdf",
+        "https://cofk-drupal-ylw-fbbdaub8fwhqfbdr.a01.azurefd.net/about-ylw/volunteer-ylw",
+        "https://www.national.ca/en/expertise/portfolio/detail/your-link-to-the-world/"
+      ]
+    },
+    {
+      "locationIdentifier": "CYZP",
+      "icao": "CYZP",
+      "tcLid": null,
+      "iata": "YZP",
+      "name": "K’il Kun Xidgwangs Daanaay Airport",
+      "publisher": "Transport Canada",
+      "sourcePageUrl": "https://tc.canada.ca/en/aviation/operating-airports-aerodromes/list-airports-owned-transport-canada/kil-kun-xidgwangs-daanaay-airport",
+      "brandingStatus": "operator-brand-only",
+      "notes": "Formerly Sandspit Airport. The current operator page gives the current name, previous name and 2024 renaming ceremony. The page uses federal identity and documents the Council of the Haida Nation flag at the ceremony. Keep those organization identities distinct from the airport.",
+      "artwork": [],
+      "supportingSources": [
+        "https://parks.canada.ca/pn-np/bc/gwaiihaanas/visit/directions"
+      ]
+    },
+    {
+      "locationIdentifier": "CYNJ",
+      "icao": "CYNJ",
+      "tcLid": null,
+      "iata": null,
+      "name": "Langley Regional Airport",
+      "publisher": "Township of Langley",
+      "sourcePageUrl": "https://www.tol.ca/en/ynj.aspx",
+      "brandingStatus": "verified-vector",
+      "notes": "The airport uses YNJ as its brand identifier. The Township supplies matching blue/green and white native SVGs. Large open-house posters show the white signature next to separate Township branding.",
+      "artwork": [
+        {
+          "label": "Blue and green YNJ signature",
+          "format": "svg",
+          "url": "https://www.tol.ca/en/resourcesGeneral/landing/struture/logo-ynj-print.svg",
+          "locator": "Airport site print masthead",
+          "verification": "28 paths and a rectangle, with no raster image elements."
+        },
+        {
+          "label": "White YNJ signature",
+          "format": "svg",
+          "url": "https://www.tol.ca/en/resourcesGeneral/landing/struture/logo-ynj.svg",
+          "locator": "Airport site masthead",
+          "verification": "28 paths and a rectangle, with no raster image elements."
+        },
+        {
+          "label": "White YNJ publication signature",
+          "format": "pdf-vector",
+          "url": "https://www.tol.ca/en/ynj/Resources/General-Images/Langley-Airport---Strategic-Land-Use-Plan-Final.pdf",
+          "locator": "PDF page 64, first mark in blue poster footer",
+          "verification": "No image objects on page 64. Airport mark is present in native paths. Page is rotated for landscape display."
+        }
+      ],
+      "supportingSources": [
+        "https://www.tol.ca/en/discover-ynj.aspx",
+        "https://www.tol.ca/en/connect/resources/news-events-media/press-releases/Document-Feed-2016/2016-03-31-RELEASE-Airport-Website.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CZMT",
+      "icao": "CZMT",
+      "tcLid": null,
+      "iata": "ZMT",
+      "name": "Masset Municipal Airport",
+      "publisher": "Village of Masset",
+      "sourcePageUrl": "https://www.masset.ca/services/airport",
+      "brandingStatus": "operator-brand-only",
+      "notes": "Both current and previous village airport pages use municipal branding. A facility-specific identity may be present on terminal signage or airport publications.",
+      "artwork": [],
+      "supportingSources": [
+        "https://massetbc.com/airport/"
+      ]
+    },
+    {
+      "locationIdentifier": "CYCD",
+      "icao": "CYCD",
+      "tcLid": null,
+      "iata": "YCD",
+      "name": "Nanaimo Airport",
+      "publisher": "Nanaimo Airport Commission",
+      "sourcePageUrl": "https://ycd.ca/nanaimo-airport-unveils-new-logo/",
+      "brandingStatus": "verified-vector",
+      "notes": "The airport introduced the current blue-and-green YCD paper-plane mark in June 2022. The colour website asset is raster. The 2024 annual report cover and 2025 annual report back cover place the matching reverse lockup in native paths. The 2025 front cover contains the matching colour lockup as mixed bitmap and vector artwork. The 2022 report documents the reverse, Pride, and circa 1990, 2003, 2010 and 2014 historical identities.",
+      "artwork": [
+        {
+          "label": "2022 colour YCD signature",
+          "format": "png",
+          "url": "https://ycd.ca/wp-content/uploads/2022/10/logo-retina.png",
+          "locator": "Official homepage masthead",
+          "verification": "500 × 220 PNG."
+        },
+        {
+          "label": "2022 reverse YCD signature",
+          "format": "pdf-vector",
+          "url": "https://ycd.ca/wp-content/uploads/2025/06/2024-YCD-Annual-Report-Final.pdf",
+          "locator": "PDF page 1, inside blue panel at lower right",
+          "verification": "Three native drawings describe the lockup above the report title. Extract those paths to avoid the background raster."
+        },
+        {
+          "label": "2022 colour YCD signature, annual report",
+          "format": "pdf-mixed",
+          "url": "https://ycd.ca/wp-content/uploads/2026/06/2025-YCD-Annual-Report-Final.pdf",
+          "locator": "PDF page 1, lower-right white panel",
+          "verification": "Bitmap art and a native drawing overlap the logo area."
+        },
+        {
+          "label": "Branding chronology and variants",
+          "format": "pdf-mixed",
+          "url": "https://ycd.ca/wp-content/uploads/2023/06/2022-Annual-Report.pdf",
+          "locator": "PDF page 10, printed page 19, lower right",
+          "verification": "The historical row contains embedded bitmaps. The main 2022 colour signature is a source-vector candidate pending isolation."
+        }
+      ],
+      "supportingSources": [
+        "https://ycd.ca/news-and-publications/annual-reports/"
+      ]
+    },
+    {
+      "locationIdentifier": "CYXJ",
+      "icao": "CYXJ",
+      "tcLid": null,
+      "iata": "YXJ",
+      "name": "North Peace Regional Airport",
+      "publisher": "North Peace Regional Airport",
+      "sourcePageUrl": "https://yxj.ca/",
+      "brandingStatus": "verified-raster",
+      "notes": "The asset named NPAS-logo.png visually contains the swashes and North Peace Regional Airport lettering. The airport’s 2021 plan differentiates this from a separate four-letter North Peace Airport Services logo at the bottom. The plan embeds the airport lockup as a bitmap.",
+      "artwork": [
+        {
+          "label": "Primary North Peace Regional Airport signature",
+          "format": "png",
+          "url": "https://yxj.ca/wp-content/uploads/2024/02/NPAS-logo.png",
+          "locator": "Official homepage masthead, original upload",
+          "verification": "2000 × 505 PNG, with two aircraft in blue and green circles."
+        },
+        {
+          "label": "Primary airport lockup in 2021 plan",
+          "format": "pdf-raster",
+          "url": "https://yxj.ca/wp-content/uploads/2024/09/Airport-Security-Awareness-Program-V3-30-April-2021.pdf",
+          "locator": "PDF page 1, upper left",
+          "verification": "Bitmap. Exclude separate NPAS contractor logo at page bottom."
+        }
+      ],
+      "supportingSources": [
+        "https://www.vantagegroup.com/location-profiles/north-peace-regional-airport/"
+      ]
+    },
+    {
+      "locationIdentifier": "CYYE",
+      "icao": "CYYE",
+      "tcLid": null,
+      "iata": "YYE",
+      "name": "Northern Rockies Regional Airport",
+      "publisher": "Northern Rockies Regional Municipality",
+      "sourcePageUrl": "https://www.northernrockies.ca/our-government/contact/northern-rockies-regional-airport-yye",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The municipal airport contact lists YYE under the Northern Rockies Regional Municipality logo. Check the operator’s aviation publications and signage for a facility-only mark.",
+      "artwork": [],
+      "supportingSources": [
+        "https://www.northernrockies.ca/resident-services/roads-transportation/regional-airport"
+      ]
+    },
+    {
+      "locationIdentifier": "CYXT",
+      "icao": "CYXT",
+      "tcLid": null,
+      "iata": "YXT",
+      "name": "Northwest Regional Airport Terrace–Kitimat",
+      "publisher": "Terrace–Kitimat Airport Society",
+      "sourcePageUrl": "https://yxt.ca/",
+      "brandingStatus": "verified-vector",
+      "notes": "The official website currently uses a raster with white glow around a red/orange symbol and blue name. The 2024 advertising sheet has separately recoverable native airport paths with a white wordmark on a navy background. The 2026 apron-plan cover records the non-glow positive layout as a bitmap.",
+      "artwork": [
+        {
+          "label": "Symbol and blue wordmark with website keyline",
+          "format": "png",
+          "url": "https://yxt.ca/wp-content/uploads/2024/06/nwra-transparent-with-white-glow.png",
+          "locator": "Official homepage masthead",
+          "verification": "864 × 144 PNG."
+        },
+        {
+          "label": "Symbol and white wordmark",
+          "format": "pdf-vector",
+          "url": "https://yxt.ca/wp-content/uploads/2024/10/NWRA-AD-PRICING-.pdf",
+          "locator": "PDF page 1, lower blue banner, airport mark at left",
+          "verification": "Native paths for the red symbol and white wordmark. The dark rectangle is the surrounding layout."
+        },
+        {
+          "label": "Positive airport mark in apron plan",
+          "format": "pdf-raster",
+          "url": "https://yxt.ca/wp-content/uploads/2026/10/NWRA-Apron-Management-Plan-Amend-01-2026-30-Sep-26-Electronic-Distribution-Copy.pdf",
+          "locator": "PDF page 1, top left",
+          "verification": "Logo is embedded separately as a bitmap."
+        }
+      ]
+    },
+    {
+      "locationIdentifier": "CYYF",
+      "icao": "CYYF",
+      "tcLid": null,
+      "iata": "YYF",
+      "name": "Penticton Airport",
+      "publisher": "City of Penticton",
+      "sourcePageUrl": "https://yyf.penticton.ca/",
+      "brandingStatus": "verified-raster",
+      "notes": "The City of Penticton launched the airport microsite in 2021. It shows a distinct black map-pin, YYF and Penticton Airport wordmark. The separate Transport Canada operator site uses federal identity. Check the City communications office for original airport artwork.",
+      "artwork": [
+        {
+          "label": "Black YYF Penticton Airport signature",
+          "format": "png",
+          "url": "https://yyf.penticton.ca/sites/yyf.penticton.ca/files/yyf-logo%402x.png",
+          "locator": "Official City-managed airport site masthead",
+          "verification": "577 × 80 PNG."
+        }
+      ],
+      "supportingSources": [
+        "https://www.penticton.ca/city-hall/news-alerts/city-launches-new-yyf-penticton-airport-website-and-social-media-channels",
+        "https://tc.canada.ca/en/aviation/operating-airports-aerodromes/list-airports-owned-transport-canada/penticton-airport"
+      ]
+    },
+    {
+      "locationIdentifier": "CYPK",
+      "icao": "CYPK",
+      "tcLid": null,
+      "iata": "YPK",
+      "name": "Pitt Meadows Regional Airport",
+      "publisher": "Pitt Meadows Airport Society",
+      "sourcePageUrl": "https://www.flyypk.ca/",
+      "brandingStatus": "verified-raster",
+      "notes": "The website uses a stacked white YPK monogram, and official documents use the multicolour stacked airport-name lockup. Checked the 2022 presentation and 2024 release: both embed the marks as bitmap artwork.",
+      "artwork": [
+        {
+          "label": "White vertical YPK monogram",
+          "format": "webp",
+          "url": "https://images.squarespace-cdn.com/content/v1/620d54959e8b0e07c740c89f/f7649189-586b-4320-999e-f94642c8b34c/ypk-logo.png",
+          "locator": "Official site header",
+          "verification": "392 × 820 WebP delivered by the CDN at this URL."
+        },
+        {
+          "label": "Colour vertical airport-name lockup",
+          "format": "webp",
+          "url": "https://static1.squarespace.com/static/620d54959e8b0e07c740c89f/t/669fe10977e2cb2826912369/1721753865789/Pitt+Meadows_RGB_logo-COLOUR.jpg?format=1500w",
+          "locator": "Official website metadata image",
+          "verification": "1275 × 1650 WebP delivered by the CDN at this URL. The image includes white backing."
+        },
+        {
+          "label": "Colour vertical airport-name lockup",
+          "format": "pdf-raster",
+          "url": "https://static1.squarespace.com/static/620d54959e8b0e07c740c89f/t/6748e8853cf6693604be3557/1732831365670/Press%2BRelease%2B-%2B11.27.24%2B-%2BCMOF.pdf",
+          "locator": "PDF page 1, upper left",
+          "verification": "Logo is a segmented embedded raster."
+        }
+      ],
+      "supportingSources": [
+        "https://www.markayting.com/fly-ypk",
+        "https://static1.squarespace.com/static/620d54959e8b0e07c740c89f/t/631a53556f7b7e79272e813f/1744650813936/Website%2B-%2BAirport%2BUpdate%2B-%2BACBC%2B2022.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CYZT",
+      "icao": "CYZT",
+      "tcLid": null,
+      "iata": "YZT",
+      "name": "Port Hardy Airport",
+      "publisher": "Transport Canada",
+      "sourcePageUrl": "https://tc.canada.ca/en/aviation/operating-airports-aerodromes/list-airports-owned-transport-canada/port-hardy-airport",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The Transport Canada airport page uses federal identity. The photographed community slogan and Kwak’wala greeting are documented as terminal signage and did not establish a distinct airport logo.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CYPW",
+      "icao": "CYPW",
+      "tcLid": null,
+      "iata": "YPW",
+      "name": "Powell River Airport",
+      "publisher": "City of Powell River",
+      "sourcePageUrl": "https://powellriver.ca/pages/airport",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The official airport service page displays municipal identity and airport information. Inspect airport documentation and terminal signage for a separate mark.",
+      "artwork": []
+    },
+    {
+      "locationIdentifier": "CYXS",
+      "icao": "CYXS",
+      "tcLid": null,
+      "iata": "YXS",
+      "name": "Prince George Airport",
+      "publisher": "Prince George Airport Authority",
+      "sourcePageUrl": "https://www.pgairport.ca/business-information/media/",
+      "brandingStatus": "verified-vector",
+      "notes": "The airport authority publishes full-colour and black-and-white PNG downloads and provides a contact for vector files and logo-use approval. The homepage already serves native white paths of the matching lockup. The 2025 annual report uses a 387 × 182 raster for the colour lockup, smaller than the media download.",
+      "artwork": [
+        {
+          "label": "White airport authority signature",
+          "format": "svg",
+          "url": "https://www.pgairport.ca/wp-content/uploads/2025/07/logo-pgaa-white.svg",
+          "locator": "Official homepage masthead and footer",
+          "verification": "43 paths and two polygons, with no raster image elements."
+        },
+        {
+          "label": "Colour airport authority signature",
+          "format": "png",
+          "url": "https://www.pgairport.ca/wp-content/uploads/2016/01/yxs_logo_Colour-01.png",
+          "locator": "Official media kit full-colour download",
+          "verification": "401 × 191 PNG."
+        },
+        {
+          "label": "Black-and-white airport authority signature",
+          "format": "png",
+          "url": "https://www.pgairport.ca/wp-content/uploads/2016/01/yxs_logo_black-01.png",
+          "locator": "Official media kit black-and-white download"
+        }
+      ],
+      "supportingSources": [
+        "https://www.pgairport.ca/",
+        "https://www.pgairport.ca/wp-content/uploads/2026/05/YXS_Annual_Report_Accessible_web.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CYPR",
+      "icao": "CYPR",
+      "tcLid": null,
+      "iata": "YPR",
+      "name": "Prince Rupert Airport",
+      "publisher": "Prince Rupert Airport Authority",
+      "sourcePageUrl": "https://ypr.ca/",
+      "brandingStatus": "verified-raster",
+      "notes": "The blue YPR monogram with grey aircraft has plain and round site treatments. The airport’s 2021 promotion uses the same monogram as embedded images.",
+      "artwork": [
+        {
+          "label": "Plain blue YPR monogram",
+          "format": "png",
+          "url": "https://ypr.ca/wp-content/themes/ypr/foundation/assets/img/YPR_Logo.png",
+          "locator": "Official homepage masthead",
+          "verification": "345 × 199 PNG."
+        },
+        {
+          "label": "Round blue YPR site mark",
+          "format": "png",
+          "url": "https://ypr.ca/wp-content/themes/ypr/foundation/assets/img/YPR_LogoCircle.png",
+          "locator": "Official homepage section logo",
+          "verification": "320 × 264 PNG."
+        },
+        {
+          "label": "YPR publication monogram",
+          "format": "pdf-raster",
+          "url": "https://ypr.ca/wp-content/uploads/2021/05/ypr-ad.pdf",
+          "locator": "PDF page 1, upper left",
+          "verification": "Separately embedded bitmap."
+        }
+      ]
+    },
+    {
+      "locationIdentifier": "CAT4",
+      "icao": null,
+      "tcLid": "CAT4",
+      "iata": "XQU",
+      "name": "Qualicum Beach Airport",
+      "publisher": "Town of Qualicum Beach",
+      "sourcePageUrl": "https://qualicumbeach.com/airport",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The official airport site uses Town of Qualicum Beach branding. The Fly CAT4 program and consultation material are relevant follow-up sources. Qualicum Beach Flying Club branding belongs to the club.",
+      "artwork": [],
+      "supportingSources": [
+        "https://qualicumbeach.com/airport-consultation/",
+        "https://qbflyingclub.com/resources"
+      ]
+    },
+    {
+      "locationIdentifier": "CYQZ",
+      "icao": "CYQZ",
+      "tcLid": null,
+      "iata": "YQZ",
+      "name": "Quesnel Regional Airport",
+      "publisher": "City of Quesnel",
+      "sourcePageUrl": "https://www.quesnel.ca/municipal-services/airport/airport-information",
+      "brandingStatus": "documented-raster-lead",
+      "notes": "The current City airport page uses municipal branding. The 2015 City council package documents a green-and-gold YQZ lockup with aircraft and flight path. Its current use and any original vector remain open.",
+      "artwork": [
+        {
+          "label": "Green and gold YQZ airport signature",
+          "format": "pdf-raster",
+          "url": "https://quesnel.civicweb.net/document/61125/",
+          "locator": "PDF page 29, upper right, and page 30, lower right",
+          "verification": "Airport logo is a separately embedded bitmap."
+        }
+      ]
+    },
+    {
+      "locationIdentifier": "CZAM",
+      "icao": "CZAM",
+      "tcLid": null,
+      "iata": "YSN",
+      "name": "Shuswap Regional Airport",
+      "publisher": "City of Salmon Arm",
+      "sourcePageUrl": "https://www.salmonarm.ca/228/Shuswap-Regional-Airport-CZAM",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The airport page is presented under the City of Salmon Arm identity. The field’s flying club is separately branded. Inspect the 2015 development plan and airport management materials for distinct artwork.",
+      "artwork": [],
+      "supportingSources": [
+        "https://salmonarmflyingclub.com/",
+        "https://www.bcaviationcouncil.org/request-for-proposal-airport-management-and-maintenance-services-shuswap-regional-airport-salmon-arm/"
+      ]
+    },
+    {
+      "locationIdentifier": "CYYD",
+      "icao": "CYYD",
+      "tcLid": null,
+      "iata": "YYD",
+      "name": "Smithers Regional Airport",
+      "publisher": "Town of Smithers",
+      "sourcePageUrl": "https://www.smithers.ca/airport",
+      "brandingStatus": "verified-raster",
+      "notes": "The distinct airport brand uses a red symmetrical mountain-and-wing symbol and the tagline Your way up. The 2025 public tender has the full lockup as one embedded bitmap. The 2017 Town annual report documents the same symbol on a different entrance sign layout.",
+      "artwork": [
+        {
+          "label": "Your way up airport lockup",
+          "format": "pdf-raster",
+          "url": "https://www.smithers.ca/sites/default/files/2025-01/RFP_Airport_Cafe%202025.pdf",
+          "locator": "PDF page 1, top center",
+          "verification": "Logo is embedded separately as a bitmap."
+        },
+        {
+          "label": "Airport mark on site hero image",
+          "format": "png",
+          "url": "https://www.smithers.ca/sites/default/files/2022-07/Airport%20Banner_Final.png",
+          "locator": "Upper left of official airport banner",
+          "verification": "Airport logo is composited into the photograph."
+        }
+      ],
+      "supportingSources": [
+        "https://www.smithers.ca/sites/default/files/2022-03/2017_Annual_Report_.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CYAZ",
+      "icao": "CYAZ",
+      "tcLid": null,
+      "iata": "YAZ",
+      "name": "Tofino–Long Beach Airport",
+      "publisher": "Alberni-Clayoquot Regional District",
+      "sourcePageUrl": "https://www.tofinoairport.com/",
+      "brandingStatus": "no-separate-mark-found",
+      "notes": "The airport website presents the airport name as text. The regional district page and current plan materials use district or consultant logos. Historic wooden airport signs establish the name in use. A separate airport artwork source remains open.",
+      "artwork": [],
+      "supportingSources": [
+        "https://www.acrd.bc.ca/cyaz",
+        "https://www.acrd.bc.ca/dms/documents/2024-agendas/feb_28_avia_ng_presentation.pdf",
+        "https://www.acrd.bc.ca/events/attachments/evID5599evattID1030.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CAD4",
+      "icao": null,
+      "tcLid": "CAD4",
+      "iata": "YZZ",
+      "name": "Trail Regional Airport",
+      "publisher": "City of Trail",
+      "sourcePageUrl": "https://trail.ca/services/trail-regional-airport/",
+      "brandingStatus": "documented-raster-lead",
+      "notes": "The current municipal page and latest master-plan request use City of Trail branding. A distinct blue aircraft with Trail Regional Airport lettering is documented in a local destination guide. Confirm continued use and ask airport administration for original artwork.",
+      "artwork": [
+        {
+          "label": "Blue aircraft and Trail Regional Airport wordmark",
+          "format": "pdf-raster",
+          "url": "https://www.kootenayrockies.com/wp-content/uploads/2025/12/Rossland-Escape-Guide-2024-web-compressed.pdf",
+          "locator": "PDF page 55, lower right in airport advertisement",
+          "verification": "Separate image object at the logo position.",
+          "publisher": "Tourism Rossland / Kootenay Rockies Tourism"
+        }
+      ],
+      "supportingSources": [
+        "https://trail.ca/wp-content/uploads/2026/11/Request-for-Proposals-Trail-Regional-Airport-Master-Plan.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CYVR",
+      "icao": "CYVR",
+      "tcLid": null,
+      "iata": "YVR",
+      "name": "Vancouver International Airport",
+      "publisher": "Vancouver Airport Authority",
+      "sourcePageUrl": "https://news.yvr.ca/media-assets/",
+      "brandingStatus": "verified-vector",
+      "notes": "Website asset is the stand-alone tricolour YVR symbol. The authority’s 2019 code of ethics has vector paths for the matching tricolour symbol plus the airport-name lockup. The 2021 policy uses an embedded bitmap with a tagline. Distinguish airport and authority lockups.",
+      "artwork": [
+        {
+          "label": "Tricolour YVR and airport-name lockup",
+          "format": "pdf-vector",
+          "url": "https://www.yvr.ca/-/media/files/yvr_code-of-ethics_external-version_june2019_v7.pdf",
+          "locator": "PDF page 1, centered in white strip at bottom",
+          "verification": "Native filled paths separate from the airport cover photograph and remaining cover elements."
+        },
+        {
+          "label": "Tricolour standalone YVR symbol",
+          "format": "jpg",
+          "url": "https://www.yvr.ca/-/media/yvr/logos/yvrlogo_rgb.jpg?mw=260&sc=0.5&hash=2409CD9D64B802FD1A2904175216C6D5",
+          "locator": "Media website masthead",
+          "verification": "154 × 94 JPEG."
+        },
+        {
+          "label": "Airport name and Beyond, Every Day tagline",
+          "format": "pdf-raster",
+          "url": "https://www.yvr.ca/-/media/yvr/documents/bod-documents/2021/t02c-board-diversity-and-inclusion-policy-feb-2021.pdf",
+          "locator": "PDF page 1, upper left",
+          "verification": "Embedded bitmap."
+        }
+      ],
+      "supportingSources": [
+        "https://carterhales.com/work/vancouver-international-airport/"
+      ]
+    },
+    {
+      "locationIdentifier": "CYVK",
+      "icao": "CYVK",
+      "tcLid": null,
+      "iata": "YVE",
+      "name": "Vernon Regional Airport",
+      "publisher": "City of Vernon",
+      "sourcePageUrl": "https://www.vernon.ca/roads-transportation/airport",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The official airport pages and municipal draft master-plan branding use the City of Vernon identity. The airport icon in the 2021 infrastructure report is a service category graphic. Terminal and operator materials are the remaining leads.",
+      "artwork": [],
+      "supportingSources": [
+        "https://www.vernon.ca/government-services/contact-directory/vernon-regional-airport",
+        "https://www.vernon.ca/sites/default/files/docs/building-planning/permits-applications/draft-vernon-regional-airport-maste-plan_151210.pdf"
+      ]
+    },
+    {
+      "locationIdentifier": "CYYJ",
+      "icao": "CYYJ",
+      "tcLid": null,
+      "iata": "YYJ",
+      "name": "Victoria International Airport",
+      "publisher": "Victoria Airport Authority",
+      "sourcePageUrl": "https://yyj.ca/en/",
+      "brandingStatus": "verified-vector",
+      "notes": "Airport website assets carry the intersecting-runway symbol and YYJ. The agency identifies the 2017 rebrand. The website uses separate colour and lime/white treatments and standalone symbols.",
+      "artwork": [
+        {
+          "label": "Colour airport signature",
+          "format": "svg",
+          "url": "https://yyj.ca/wp-content/themes/eclipse360/assets/logos/logo-menu.svg",
+          "locator": "Official site navigation",
+          "verification": "8 native paths, with no raster image elements."
+        },
+        {
+          "label": "Lime and white airport signature",
+          "format": "svg",
+          "url": "https://yyj.ca/wp-content/themes/eclipse360/assets/logos/yyj-logo.svg",
+          "locator": "Official site header",
+          "verification": "10 native paths, with no raster image elements."
+        },
+        {
+          "label": "Full-colour airport symbol",
+          "format": "svg",
+          "url": "https://yyj.ca/wp-content/themes/eclipse360/assets/logos/icon-yyj.svg",
+          "locator": "Official site navigation",
+          "verification": "5 native paths, with no raster image elements."
+        },
+        {
+          "label": "Lime airport symbol",
+          "format": "svg",
+          "url": "https://yyj.ca/wp-content/themes/eclipse360/assets/logos/logo-footer.svg",
+          "locator": "Official site footer",
+          "verification": "7 native paths, with no raster image elements."
+        }
+      ],
+      "supportingSources": [
+        "https://eclipse3sixty.com/portfolio/victoria-international-airport/"
+      ]
+    },
+    {
+      "locationIdentifier": "CYCG",
+      "icao": "CYCG",
+      "tcLid": null,
+      "iata": "YCG",
+      "name": "West Kootenay Regional Airport",
+      "publisher": "West Kootenay Regional Airport / City of Castlegar",
+      "sourcePageUrl": "https://www.wkrairport.ca/",
+      "brandingStatus": "verified-vector",
+      "notes": "The SVG in the footer uses a four-loop emblem and stacked name. The official header has a different horizontal airport-name layout, as a white bitmap. Treat the stacked and horizontal marks as different designs.",
+      "artwork": [
+        {
+          "label": "White four-loop stacked airport signature",
+          "format": "svg",
+          "url": "https://www.wkrairport.ca/assets/images/logo.svg",
+          "locator": "Official site footer",
+          "verification": "33 native paths, with no raster image elements."
+        },
+        {
+          "label": "White horizontal airport-name signature",
+          "format": "png",
+          "url": "https://www.wkrairport.ca/assets/images/logo-wkrairport-white.png",
+          "locator": "Official site header",
+          "verification": "537 × 85 PNG."
+        }
+      ]
+    },
+    {
+      "locationIdentifier": "CYWL",
+      "icao": "CYWL",
+      "tcLid": null,
+      "iata": "YWL",
+      "name": "Williams Lake Regional Airport",
+      "publisher": "City of Williams Lake",
+      "sourcePageUrl": "https://williamslake.ca/195/Airport",
+      "brandingStatus": "operator-brand-only",
+      "notes": "The City airport page has a municipal logo plus separate exterior and airport sign images. Check the supplied sign photograph and Airport Department materials for a separate source mark.",
+      "artwork": []
+    }
+  ]
+}

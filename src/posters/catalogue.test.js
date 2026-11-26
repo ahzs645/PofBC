@@ -21,8 +21,11 @@ import { CARDS } from '../cards/catalogue.js'
 import { PINS } from '../pins/catalogue.js'
 import { CERTAINTY, GROUPS, MARK_OBJECTS, connectedPosters, connectionsOf, groupedConnections, objectsForLogo, postersForLogo, postersForPatch } from './connections.js'
 
+import { CARECARD_POSTER } from './carecard/poster.js'
+
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
 const DRAWINGS = {
+  'new-carecard': read('./carecard/new-carecard.svg'),
   'coastal-forest': read('./coastal-forest/poster.svg'),
   'use-your-ashtray': read('./forest-service/use-your-ashtray.svg'),
   'dont-drop-it': read('./forest-service/dont-drop-it.svg'),
@@ -84,6 +87,7 @@ const assertPlace = (to, where) => {
 // Every poster as the viewer sees it: its parts, the order they are stepped through, and which of
 // them are hotspots.
 const DEFINITIONS = {
+  'new-carecard': CARECARD_POSTER,
   'coastal-forest': { parts: COASTAL_PARTS, order: COASTAL_ORDER, regions: COASTAL_REGIONS.map(({ id }) => id) },
   ...FOREST_SERVICE_POSTERS,
   ...BC_FERRIES_POSTERS,
@@ -92,7 +96,7 @@ const DEFINITIONS = {
   ...EXPO_86_POSTERS
 }
 // The posters whose panels are data.
-const DATA_POSTERS = { ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
+const DATA_POSTERS = { 'new-carecard': CARECARD_POSTER, ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
 
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
 const partsIn = (selector) => [...selector.matchAll(/\[data-part="([\w-]+)"\]/g)].map((m) => m[1])
@@ -365,7 +369,7 @@ test('the shelf can be filtered: every card names its issuer, subject and format
     assert.ok(meta.blurb?.length > 20 && meta.blurb.length < 110, `${id}: blurb`)
   }
   for (const { key } of FACETS) {
-    const values = new Set(Object.values(POSTERS).map((meta) => meta[key]))
+    const values = new Set(listedPosterIds().map((id) => POSTERS[id][key]))
     assert.ok(values.size > 1 && values.size <= 7, `${key}: ${values.size} values is no use as a filter`)
   }
 })

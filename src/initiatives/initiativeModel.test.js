@@ -5,7 +5,10 @@ import { createHash } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 import { fileOf, imagesOf, resolveInitiativeSelection, searchInitiatives } from './initiativeModel.js'
 import { INITIATIVES, loadInitiative } from './initiatives.js'
+import { tourismRebrandingSection, tourismRebrandingSources } from './tourismRebranding.js'
+import { tourismBriefPublication, tourismBriefSources, tourismProgramsSection } from './tourismBrief.js'
 import { TOURISM_COLLECTION } from '../gallery/tourismData.js'
+import { TOURISM_MANIFESTS } from '../../scripts/build-tourism-collection.mjs'
 
 // Deliberately unrelated to tourism: no domain inventory, marketing labels,
 // tourism section IDs, cover image, registration list, or related-page links.
@@ -47,6 +50,39 @@ test('initiative search finds a second subject without relying on tourism tags o
   assert.deepEqual(searchInitiatives('classroom plans', initiatives).map((item) => item.id), ['school-design'])
   assert.equal(searchInitiatives('classrooms HelloBC', initiatives).length, 0, 'words must match the same initiative')
   assert.deepEqual(searchInitiatives('  ', initiatives), initiatives)
+})
+
+test('Pacific Gateway opens both 2012 specimens in Initiatives with their publication and original vectors', async () => {
+  const [entry] = searchInitiatives('Canada Starts Here', INITIATIVES)
+  assert.equal(entry.id, 'pacific-gateway')
+  const detail = await loadInitiative(entry.id)
+  const { section } = resolveInitiativeSelection(detail)
+  assert.deepEqual(section.records.map(({ id }) => id), ['vector-canada-starts-here-2012', 'vector-canada-starts-here-bc-jobs-plan-2012'])
+  for (const item of section.records) {
+    assert.equal(resolveInitiativeSelection(detail, { record: item.id }).record, item)
+    assert.equal(item.image.sourcePage, 24)
+    assert.ok(detail.sources.some(({ id }) => id === item.image.sourceId))
+    const artwork = await readFile(new URL('../../public/' + item.image.file, import.meta.url), 'utf8')
+    assert.match(artwork, /<svg\b/)
+  }
+  assert.ok(detail.relatedLinks.some(({ to }) => to.logos === 'bc-mark' && to.mark === 'pacific-gateway'))
+})
+
+test('Rainforest to Rockies opens under Tourism with the published primary and partner logos', async () => {
+  const [entry] = searchInitiatives('Wander Mark', INITIATIVES)
+  assert.equal(entry.parentId, 'tourism')
+  const detail = await loadInitiative(entry.id)
+  const primary = resolveInitiativeSelection(detail, { record: 'primary-logo' }).record
+  const partner = resolveInitiativeSelection(detail, { record: 'partner-lockup' }).record
+  assert.deepEqual(imagesOf(primary).map((image) => image.sourcePage), [5, 19])
+  assert.deepEqual(imagesOf(partner).map((image) => [image.sourcePage, image.darkBackground]), [[5, false], [20, false], [5, true], [20, true]])
+  assert.equal(entry.cover.file, imagesOf(partner)[0].file)
+  for (const image of [...imagesOf(primary), ...imagesOf(partner)]) {
+    assert.ok(detail.sources.some(({ id }) => id === image.sourceId))
+    const bytes = await readFile(new URL('../../public/' + image.file, import.meta.url))
+    assert.equal(bytes.toString('hex', 0, 8), '89504e470d0a1a0a')
+  }
+  assert.ok(detail.relatedLinks.some(({ to }) => to.initiative === entry.parentId && to.record === 'our-brand-2021'))
 })
 
 test('bookmarks select custom record and publication sections and recover safely from stale IDs', () => {
@@ -91,9 +127,10 @@ test('the tourism adapter preserves the complete sourced collection and research
   const actualIds = detail.sections.filter((section) => ['records', 'publications', 'timeline'].includes(section.type))
     .flatMap((section) => section.records.map((record) => record.id)).sort()
   const expectedIds = [...TOURISM_COLLECTION.digitalRecords, ...TOURISM_COLLECTION.marks,
-    ...TOURISM_COLLECTION.timeline, ...TOURISM_COLLECTION.publications].map((record) => record.id).sort()
+    ...TOURISM_COLLECTION.timeline, ...TOURISM_COLLECTION.publications, ...tourismRebrandingSection.records,
+    ...tourismProgramsSection.records, tourismBriefPublication].map((record) => record.id).sort()
   assert.deepEqual(actualIds, expectedIds, 'moving the explorer must not omit a sourced record')
-  assert.deepEqual(detail.sources, TOURISM_COLLECTION.sources, 'the complete source library survives the move')
+  assert.deepEqual(detail.sources, [...TOURISM_COLLECTION.sources, ...tourismRebrandingSources, ...tourismBriefSources], 'the complete source library survives the move')
   assert.deepEqual(detail.sections.flatMap((section) => section.leads ?? []), TOURISM_COLLECTION.leads)
   const inventories = detail.sections.filter((section) => section.inventory).map((section) => section.inventory)
   assert.equal(inventories.length, 1)
@@ -101,13 +138,39 @@ test('the tourism adapter preserves the complete sourced collection and research
   assert.equal(await loadInitiative('unknown-initiative'), null)
 })
 
+test('Tourism Brief records open from bookmarks and connect the historical and current training providers', async () => {
+  const detail = await loadInitiative('tourism')
+  assert.deepEqual(searchInitiatives('go2HR', INITIATIVES).map(({ id }) => id), ['tourism'])
+  const go2 = resolveInitiativeSelection(detail, { record: 'go2hr' })
+  assert.equal(go2.section.id, 'programs')
+  assert.match(go2.record.current, /independent society/)
+  assert.ok(go2.record.links.some(({ url }) => url === 'https://www.go2hr.ca/'))
+  assert.ok(go2.record.sourceRefs.some(({ page, url }) => page === 9 && url.endsWith('#page=9')))
+
+  const worldhost = resolveInitiativeSelection(detail, { record: 'worldhost' })
+  assert.equal(worldhost.section.id, 'websites')
+  assert.match(worldhost.record.description, /2017/)
+  assert.deepEqual(imagesOf(worldhost.record), imagesOf(TOURISM_COLLECTION.digitalRecords.find(({ id }) => id === 'worldhost')))
+
+  for (const record of tourismProgramsSection.records) {
+    assert.ok(record.current, `${record.id}: current status`)
+    assert.ok(record.sourceRefs.some(({ sourceId, page }) => sourceId === 'tourism-brief-2009-05' && page >= 2 && page <= 12), record.id)
+    for (const { url } of record.links ?? []) {
+      const params = new URL(url, 'https://example.org/').searchParams
+      if (params.get('initiative') === 'tourism' && params.has('record')) {
+        assert.ok(resolveInitiativeSelection(detail, { record: params.get('record') }).record, url)
+      }
+    }
+  }
+})
+
 test('every acquired specimen remains reachable with its own source, date and exact file', async () => {
   const detail = await loadInitiative('tourism')
   const sourceIds = new Set(detail.sources.map((source) => source.id))
   const records = detail.sections.filter((section) => ['records', 'publications'].includes(section.type)).flatMap((section) => section.records)
-  const specimens = records.flatMap(imagesOf)
+  const specimens = records.flatMap(imagesOf).filter((image) => image.manifest?.includes('/tourism-asset-transfer-2013/'))
   const byId = new Map(specimens.map((image) => [image.id, image]))
-  const manifests = await Promise.all(['artwork-manifest.json', 'website-manifest.json'].map(async (filename) =>
+  const manifests = await Promise.all(TOURISM_MANIFESTS.map(async (filename) =>
     JSON.parse(await readFile(new URL(`../../research/identity/tourism-asset-transfer-2013/${filename}`, import.meta.url), 'utf8'))))
   const acquired = manifests.flatMap((manifest) => manifest.assets)
   assert.deepEqual(new Set(byId.keys()), new Set(acquired.map((asset) => asset.id)), 'all acquired specimens are browsable, without substitute images')

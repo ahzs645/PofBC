@@ -1,4 +1,4 @@
-/* The site's shared form controls: Select, Checkbox and Slider (src/site/ui).
+/* The site's shared controls (src/site/ui).
  *
  * Every colour is a custom property with the site's own token behind it, so the controls look like
  * the generator by default and any view can restyle them by setting the properties on its root:
@@ -12,6 +12,43 @@
  * The rules for the closed select sit in :where(), with no weight, so a view's own rule for its
  * fields (`.patches__filter .ui-select`) wins without a fight.
  */
+
+.ui-tabs {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--mid);
+  margin-top: 24px;
+  scrollbar-width: thin;
+}
+
+.ui-tabs > button[role='tab'] {
+  flex-shrink: 0;
+  min-height: 48px;
+  padding: 16px 0;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: var(--ink-muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ui-tabs > button[role='tab'][aria-selected='true'] {
+  color: var(--ink);
+  border-bottom-color: currentColor;
+}
+
+.ui-tabs > button[role='tab']:focus-visible { outline-offset: -3px; }
+
+@media (max-width: 800px) { .ui-tabs { gap: 22px; } }
+
+@media (max-width: 560px) {
+  .ui-tabs { margin-top: 13px; gap: 21px; }
+  .ui-tabs > button[role='tab'] { font-size: 14px; }
+}
 
 /* ── Select: the button ──────────────────────────────────────────────────────────────────────── */
 

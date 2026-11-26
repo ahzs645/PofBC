@@ -2,8 +2,8 @@
  * A segmented control. `options` is [{ value, label, disabled, title, extra }]; `extra` renders
  * as a small suffix (a dpi figure, say).
  */
-export const Segmented = ({ options, value, onChange, label, wide = false, wrap = false, className = '', ...rest }) => (
-  <div className={`pv-seg ${wide ? 'pv-wide' : ''} ${wrap ? 'pv-wrap' : ''} ${className}`} role="group" aria-label={label} {...rest}>
+export const Segmented = ({ options, value, onChange, label, wide = false, className = '', ...rest }) => (
+  <div className={`pv-seg ${wide ? 'pv-wide' : ''} ${className}`} role="group" aria-label={label} {...rest}>
     {options.map((o) => (
       <button
         key={String(o.value)}

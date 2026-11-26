@@ -1,0 +1,149 @@
+.certificates__header {
+  padding-top: clamp(8px, 2vw, 24px);
+}
+
+.certificates__header h2 {
+  margin: 0;
+  font-size: clamp(24px, 4vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.certificates__header p {
+  margin: 8px 0 0;
+  color: var(--ink-muted);
+}
+
+.certificates__panel {
+  margin-top: var(--gap);
+}
+
+.certificates__layout {
+  display: grid;
+  align-items: start;
+  gap: var(--gap);
+}
+
+@media (min-width: 820px) {
+  .certificates__layout {
+    grid-template-columns: minmax(0, 1fr) minmax(315px, 28%);
+  }
+}
+
+.certificates__figure {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: clamp(8px, 2vw, 24px);
+}
+
+.certificates__plate {
+  display: grid;
+  place-items: center;
+  width: min(100%, 722px);
+  aspect-ratio: 722 / 550;
+  background: #f5f3dd;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 12%);
+}
+
+.certificates__plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.certificates__plate--border img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+
+.certificates__plate--border:not([data-shape='frame']) {
+  padding: clamp(14px, 4vw, 48px);
+}
+
+.certificates__figure figcaption {
+  width: min(100%, 722px);
+  color: var(--ink-muted);
+  font-size: 13px;
+}
+
+.certificates__study > img,
+.certificates__study > figcaption {
+  width: min(100%, 510px);
+}
+
+.certificates__study > img {
+  height: auto;
+}
+
+.certificates__details {
+  margin: 0;
+}
+
+.certificates__details h3 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.certificates__details dl {
+  margin: 14px 0 0;
+}
+
+.certificates__details dt {
+  margin-top: 12px;
+  color: var(--ink-muted);
+  font-size: 13px;
+}
+
+.certificates__details dd {
+  margin: 2px 0 0;
+}
+
+.certificates__density,
+.certificates__ink {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 4px 12px;
+}
+
+.certificates__density > label,
+.certificates__ink > label {
+  margin-bottom: 0;
+}
+
+.certificates__density output {
+  color: var(--ink-muted);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+
+.certificates__density input {
+  grid-column: 1 / -1;
+}
+
+.certificates__ink input {
+  cursor: pointer;
+}
+
+.certificates__actions {
+  display: grid;
+  gap: 8px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.certificates__actions .button {
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+}
+
+.certificates__actions a:not(.button) {
+  padding-block: 6px;
+  font-size: 13px;
+}

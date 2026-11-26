@@ -25,9 +25,10 @@ const round = (value) => Math.round(value * 1000) / 1000
  * @param {string} [options.title]            A title to carry, for a download.
  * @param {Record<string, string>} [options.inks]  Inks to draw in another colour, for a dark page
  *   (see darkPageInks); a value of 'surface' takes the page's own card colour.
+ * @param {string} [options.previewFile]      Gallery display copy with the same canvas as the mark.
  * @returns {{svg: string, view: {x: number, y: number, width: number, height: number}}}
  */
-export const renderSuppliedSvg = ({ id, background = TRANSPARENT, clearSpace = 0, width, title, inks } = {}) => {
+export const renderSuppliedSvg = ({ id, background = TRANSPARENT, clearSpace = 0, width, title, inks, previewFile } = {}) => {
   const mark = CROWN_MARKS[id]
   if (!mark) throw new Error(`no supplied mark called ${id}`)
   const [x, y, w, h] = mark.viewBox
@@ -36,12 +37,15 @@ export const renderSuppliedSvg = ({ id, background = TRANSPARENT, clearSpace = 0
   const ground = resolveColor(background, TRANSPARENT)
   const size = width ? ` width="${width}" height="${Math.max(1, Math.round(width * view.height / view.width))}"` : ''
 
+  const artwork = previewFile
+    ? `<image href="${escapeXml(previewFile)}" x="${x}" y="${y}" width="${w}" height="${h}"/>`
+    : inks ? reink(mark.body, inks) : mark.body
   const svg = `<svg xmlns="http://www.w3.org/2000/svg"${size} viewBox="${[view.x, view.y, view.width, view.height].map(round).join(' ')}">` +
     (title ? `<title>${escapeXml(title)}</title>` : '') +
     (ground && ground !== TRANSPARENT
       ? `<rect x="${round(view.x)}" y="${round(view.y)}" width="${round(view.width)}" height="${round(view.height)}" fill="${escapeXml(ground)}"/>`
       : '') +
-    (inks ? reink(mark.body, inks) : mark.body) +
+    artwork +
     '</svg>'
 
   return { svg, view }

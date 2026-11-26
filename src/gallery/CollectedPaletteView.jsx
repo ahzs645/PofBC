@@ -4,19 +4,30 @@ import { useEffect, useMemo, useState } from 'react'
 import { assetUrl } from './collectedCollections.js'
 import { paletteFor, renderCollectedPalette } from './collectedPalettes.js'
 import { holdScrollFrom } from '../site/holdScroll.js'
+import { PreviewBackground } from './PreviewBackground.jsx'
+import { ProgramPlacement } from './ProgramPlacement.jsx'
+import { useSiteTheme } from '../site/useTheme.js'
 
-const paletteFromLocation = (group) => {
+const paletteFromLocation = (entry) => {
   const params = new URLSearchParams(globalThis.location?.search ?? '')
-  return paletteFor(group, { paletteId: params.get('colour'), sourceId: params.get('mark') }).id
+  const mark = params.get('mark')
+  if (!params.has('colour') && (!mark || mark === entry.id)) return null
+  return paletteFor(entry.paletteGroup, { paletteId: params.get('colour'), sourceId: mark }).id
 }
 
 export const CollectedPaletteView = ({ entry }) => {
   const group = entry.paletteGroup
   const master = entry.asset
-  const [paletteId, setPaletteId] = useState(() => paletteFromLocation(group))
+  const [paletteId, setPaletteId] = useState(() => paletteFromLocation(entry))
   const [loaded, setLoaded] = useState(null)
   const [attempt, setAttempt] = useState(0)
-  const palette = paletteFor(group, { paletteId })
+  const { name: siteTheme } = useSiteTheme()
+  const [white, setWhite] = useState(false)
+  const theme = white ? 'light' : siteTheme
+  const darkPalette = group.palettes.find((choice) => choice.darkBackground)
+  const palette = paletteFor(group, { paletteId: paletteId ?? (theme === 'dark' ? darkPalette?.id : undefined) })
+  const paletteGround = palette.darkBackground ? 'dark' : 'light'
+  const sourceVersion = entry.versions?.find((source) => palette.sourceIds?.includes(source.id))
 
   useEffect(() => {
     const controller = new AbortController()
@@ -35,10 +46,10 @@ export const CollectedPaletteView = ({ entry }) => {
   }, [master.file, attempt])
 
   useEffect(() => {
-    const restore = () => setPaletteId(paletteFromLocation(group))
+    const restore = () => setPaletteId(paletteFromLocation(entry))
     globalThis.addEventListener?.('popstate', restore)
     return () => globalThis.removeEventListener?.('popstate', restore)
-  }, [group])
+  }, [entry])
 
   const rendered = useMemo(() => {
     if (loaded?.file !== master.file || !loaded.text) return null
@@ -80,22 +91,28 @@ export const CollectedPaletteView = ({ entry }) => {
             }}>{choice.label}</button>
         ))}
       </div>
-      <div className="gallery__recovered-preview" data-dark={palette.darkBackground || undefined}
-        aria-busy={!loaded}>
-        {rendered?.url
-          ? <img src={rendered.url} alt={`${entry.label}, ${palette.label}`} />
-          : failed
-            ? <p role="alert">The vector preview could not be loaded. <button type="button" className="button button--ghost"
-                onClick={() => setAttempt((value) => value + 1)}>Try again</button></p>
-            : <p role="status">Loading vector artwork…</p>}
-      </div>
+      <PreviewBackground white={white} onToggle={() => setWhite(!white)}>
+        <div className="gallery__recovered-preview gallery__recovered-preview--clean"
+          aria-busy={!loaded}>
+          {rendered?.url
+            ? <img src={rendered.url} alt={`${entry.label}, ${palette.label}`} data-preview-ground={paletteGround !== theme ? paletteGround : undefined} />
+            : failed
+              ? <p role="alert">The vector preview could not be loaded. <button type="button" className="button button--ghost"
+                  onClick={() => setAttempt((value) => value + 1)}>Try again</button></p>
+              : <p role="status">Loading vector artwork…</p>}
+        </div>
+      </PreviewBackground>
       <p className="gallery__note">The SVG download uses the colour version shown.</p>
       <div className="row gallery__asset-downloads">
         {rendered?.url
           ? <a className="button" href={rendered.url} download={fileName}>Download SVG</a>
           : <button className="button" type="button" disabled>Download SVG</button>}
         {failed && <a className="button button--ghost" href={assetUrl(master.file)} download>Download source SVG</a>}
+        {sourceVersion?.downloads?.map((extra) => (
+          <a className="button button--ghost" key={extra.file} href={assetUrl(extra.file)} download>{extra.label}</a>
+        ))}
       </div>
+      <ProgramPlacement asset={sourceVersion ?? master} />
       <p>{group.note}</p>
       <dl className="gallery__asset-source">
         <div><dt>Source</dt><dd>{master.publisher}{master.sourceFile ? ` · ${master.sourceFile}` : ''}</dd></div>

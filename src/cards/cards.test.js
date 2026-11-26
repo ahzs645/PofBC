@@ -6,14 +6,19 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { CARDS, CARD_SERIES, cardIds } from './catalogue.js'
+import { CARECARDS } from './carecard/cards.js'
 import { FOREST_SERVICE_CARDS } from './forest-service/cards.js'
 import { POSTERS } from '../posters/catalogue.js'
 import { SIGNS } from '../signs/catalogue.js'
 import { FOREST_LOGOS } from '../internal/forestLogos.js'
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
-const DRAWINGS = { 'england-expects': read('./forest-service/england-expects.svg') }
-const ALL_CARDS = { ...FOREST_SERVICE_CARDS }
+const DRAWINGS = {
+  'england-expects': read('./forest-service/england-expects.svg'),
+  'standard-carecard': read('../../public/cards/carecard/standard-card.svg'),
+  'gold-carecard': read('../../public/cards/carecard/gold-card.svg')
+}
+const ALL_CARDS = { ...FOREST_SERVICE_CARDS, ...CARECARDS }
 const GOVERNMENT = read('../government/historyData.js')
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
 // A sentence ends at a stop after a lowercase letter or a figure, so initials (H. R.) and

@@ -31,7 +31,7 @@ export const bcYouthDetail = (entry) => ({
     { id: 'marks', label: 'Logos', type: 'records', layout: 'marks', title: 'Two printed arrangements', records: [
       { id: right.id, title: right.label, kind: 'program-identity', artworkNote: 'Reconstructed SVG and two newspaper printings', description: 'The figure forms the Y. BC sits above the other letters and the flag extends to the right. Two newspapers printed this arrangement in the Youth Grants Program advertisement in October 1989.',
         images: [
-          { ...artwork(right, 'hashilthsa', 'Reconstructed from the two October 1989 printings'), shortLabel: 'Reconstructed SVG' },
+          { ...artwork(right, 'hashilthsa', 'Reconstructed from the two October 1989 printings'), displayId: right.id, shortLabel: 'Reconstructed SVG' },
           printSpecimen('Gulf Islands Driftwood', 'driftwood-specimen.png', 'driftwood', '1989-10-04'),
           printSpecimen('Ha-Shilth-Sa', 'ha-shilth-sa-specimen.png', 'hashilthsa', '1989-10-24')
         ], sourceRefs: refs('driftwood','hashilthsa') },

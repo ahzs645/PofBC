@@ -16857,28 +16857,117 @@
       "official_url": "https://www2.gov.bc.ca/gov/content/industry/mineral-exploration-mining/british-columbia-geological-survey",
       "source_today": "https://www2.gov.bc.ca/gov/content/governments/organizational-structure/ministries-organizations/ministries/mining",
       "description": "Provides geoscience data, surveys and mineral and coal resource information for B.C.",
-      "established": null,
+      "established": {
+        "date": "1895-02-21",
+        "precision": "day",
+        "meaning": "The Bureau of Mines Act, 1895 established the Bureau, the predecessor from which the Survey dates its history. Section 6 provided for a Provincial Mineralogist to lead it.",
+        "evidence": "statute",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1221491311",
+        "locator": "Bureau of Mines Act, 1895, S.B.C. 1895, c. 3, ss. 3–7.",
+        "checked": "2026-11-25"
+      },
       "ended": null,
       "first_observed": {
-        "date": "2010",
+        "date": "1989",
         "precision": "year",
-        "meaning": "Named survey produces accessible geological data. Geoscience BC is mentioned separately and must not be conflated.",
-        "evidence": "service_plan",
-        "source_id": "R3F-DOC-063",
-        "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/empr.pdf",
-        "locator": "PDF p. 5 (one-based)",
-        "checked": "2026-10-21"
+        "meaning": "The full name British Columbia Geological Survey encircles the seal. The same page gives the administrative name Geological Survey Branch.",
+        "evidence": "annual_report",
+        "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/InformationCircular/BCGS_IC1989-01.pdf",
+        "locator": "Information Circular 1989-1, PDF page 1.",
+        "checked": "2026-11-25"
       },
-      "names": [],
+      "names": [
+        {
+          "name": "Provincial Bureau of Mines",
+          "observed_on": "1896-06",
+          "coverage": "observation_only",
+          "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/Bulletin/BCGS_B1896-1.pdf",
+          "locator": "Bulletin No. 1, title page, June 1896."
+        },
+        {
+          "name": "Mineralogical Branch",
+          "observed_on": "1939",
+          "coverage": "observation_only",
+          "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/Miscellaneous/BCGS_MP-77.pdf",
+          "locator": "Chapter 7, printed pp. 49–50, on centralization in Victoria."
+        },
+        {
+          "name": "Geological Division",
+          "observed_on": "1973",
+          "coverage": "observation_only",
+          "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1973.pdf#page=58",
+          "locator": "1973 annual report, printed page A58, describing the renaming."
+        },
+        {
+          "name": "Geological Branch",
+          "observed_on": "1981-12-31",
+          "coverage": "observation_only",
+          "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1981.pdf#page=6",
+          "locator": "Organization chart dated December 31, 1981, PDF page 6."
+        },
+        {
+          "name": "Geological Survey Branch",
+          "observed_on": "1986",
+          "coverage": "observation_only",
+          "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/Miscellaneous/BCGS_MP-77.pdf",
+          "locator": "Chapter 9, printed p. 95, explicitly dating the renaming."
+        }
+      ],
       "parents": [],
       "relations": [],
-      "research_events": [],
+      "research_events": [
+        {
+          "type": "operational",
+          "date": "1896-01",
+          "precision": "month",
+          "summary": "Carlyle and Carmichael began organizing the Bureau of Mines.",
+          "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1896.pdf",
+          "locator": "Bureau of Mines report, opening paragraph.",
+          "checked": "2026-11-25"
+        },
+        {
+          "type": "enacted",
+          "date": "1917",
+          "precision": "year",
+          "summary": "The Mineral Survey and Development Act provided for a survey in six districts alongside the Bureau.",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1088300592",
+          "locator": "Part I, sections 4–6.",
+          "checked": "2026-11-25"
+        },
+        {
+          "type": "in_force",
+          "date": "1938-04-01",
+          "precision": "day",
+          "summary": "The Department of Mines Act took effect and repealed the earlier district survey legislation.",
+          "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/527244410",
+          "locator": "S.B.C. 1937, c. 47, sections 17–18.",
+          "checked": "2026-11-25"
+        },
+        {
+          "type": "renamed",
+          "date": "1986",
+          "precision": "year",
+          "summary": "The Geological Branch took the name Geological Survey Branch.",
+          "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/Miscellaneous/BCGS_MP-77.pdf",
+          "locator": "Chapter 9, printed page 95.",
+          "checked": "2026-11-25"
+        },
+        {
+          "type": "renamed",
+          "date": "1973",
+          "precision": "year",
+          "summary": "The department renamed its Mineralogical Branch the Geological Division.",
+          "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1973.pdf#page=58",
+          "locator": "1973 annual report, page A58.",
+          "checked": "2026-11-25"
+        }
+      ],
       "date_claims": [],
       "legal_basis": null,
       "evidence_status": "documented_partial",
-      "note": "Additive research; held dates are not removed. Automated searches are logged separately from source passages actually reviewed.",
+      "note": "The Bureau of Mines is the founding predecessor. Departmental annual reporting began in 1874. The 1917 Mineral Survey operated alongside the Bureau. The 1973 annual report records the renaming of the Mineralogical Branch. The 1980 report still names the Geological Division and the December 1981 chart shows the Geological Branch. The precise date of the latter change remains open.",
       "review": {
-        "checked": "2026-10-21",
+        "checked": "2026-11-25",
         "sources_checked": [
           {
             "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/empr.pdf",
@@ -16895,12 +16984,11 @@
           }
         ],
         "unresolved_fields": [
-          "established",
           "complete_name_history",
           "complete_parent_history",
           "legal_basis"
         ],
-        "scope": "340 official service-plan and annual-report PDFs plus targeted primary sources; prior Estimates checkpoint package excluded as new work.",
+        "scope": "340 official service-plan and annual-report PDFs plus targeted primary sources; prior Estimates checkpoint package excluded as new work. Supplemented with the founding acts, Survey publications and the centennial history on 2026-11-25.",
         "by": "OpenAI research assistant",
         "full_history_complete": false
       }

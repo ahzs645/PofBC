@@ -1,17 +1,41 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { searchGallery } from './gallerySearch.js'
-import { GALLERY_COLLECTIONS, collectionById, collectionOfNode, collectionsOfNode, entriesOf, entriesOfNode, findGalleryEntry } from './collections.js'
+import { GALLERY_COLLECTIONS, childCollectionsOf, collectionById, collectionOfNode, collectionsOfNode, entriesOf, entriesOfNode, findGalleryEntry, timelineOf } from './collections.js'
 import { logosFor } from './galleryLogos.js'
+import { identitySubjectById, relationsOf } from './identityCoverage.js'
+
+test('BC Housing’s Homeowner Protection Office branding leads to the branch and its institutional history', () => {
+  const node = 'sub-bc-housing-licensing-and-consumer-services'
+  const previous = 'homeowner-protection-office'
+  const collection = collectionOfNode(node)
+  const mark = findGalleryEntry('homeowner-protection-office-2016')
+  assert.ok(childCollectionsOf('collected-bc-housing').includes(collection))
+  assert.equal(collection.cover, mark.id)
+  assert.equal(mark.owner, node)
+  assert.equal(mark.years, 'Seen 2016')
+  assert.equal(mark.identity.provenance, 'extracted_from_official_vector')
+  assert.equal(logosFor(previous), null)
+  for (const theme of ['light', 'dark']) {
+    const [logo] = logosFor(node, theme).entries
+    assert.equal(logo.collection, collection.id)
+    assert.ok(logo.html.includes(`${mark.id}.${theme}.svg`))
+  }
+  const branch = identitySubjectById(node)
+  assert.deepEqual(relationsOf(branch).outgoing.map(({ type, target }) => [type, target.id]), [
+    ['part-of', 'bc-housing'], ['received-operations-from', previous]
+  ])
+  assert.ok(relationsOf(identitySubjectById(previous)).incoming.some(({ target }) => target === branch))
+})
 
 test('organizations discover their own marks on shared gallery shelves in both directions', () => {
   for (const [node, ids] of [
-    ['sub-workbc', ['work-bc']],
+    ['sub-workbc', ['work-bc', 'vector-workbc-2016', 'vector-workbc-current']],
     ['sub-bc-stats', ['bc-stats']],
     ['sub-bc-wildfire-service', ['bc-wildfire-service', 'bc-wildfire-service-one-line']],
     ['sub-bc-coroners-service', ['coroners-service']],
     ['sub-bc-bid', ['bc-bid']],
-    ['bc-public-service-agency', ['public-service']],
+    ['bc-public-service-agency', ['public-service', 'vector-bc-public-service-where-ideas-work-2023-reverse']],
     ['sub-healthlink-bc', ['healthlink-bc-logo']]
   ]) {
     const collection = collectionOfNode(node)
@@ -19,9 +43,7 @@ test('organizations discover their own marks on shared gallery shelves in both d
     assert.deepEqual(entriesOfNode(collection, node).map((entry) => entry.id).sort(), [...ids].sort(), node)
     for (const id of ids) assert.equal(findGalleryEntry(id).graphNode, node, id)
     const logos = logosFor(node)
-    // The program's published originals are found beside its one-off, from their specimen collection.
-    const originals = { 'sub-workbc': ['vector-workbc-2016', 'vector-workbc-current'], 'bc-public-service-agency': ['vector-bc-public-service-where-ideas-work-2023-reverse'] }[node] ?? []
-    assert.deepEqual(logos.entries.map((entry) => entry.id).sort(), [...ids, ...originals].sort(), node)
+    assert.deepEqual(logos.entries.map((entry) => entry.id).sort(), [...ids].sort(), node)
     for (const entry of logos.entries) assert.ok(entriesOf(collectionById(entry.collection)).some((candidate) => candidate.id === entry.id))
   }
 })
@@ -89,6 +111,10 @@ test('departmental, initiative and one-off artwork remains searchable under the 
   assert.equal(gcpe.owner, 'government-communications-and-public-engagement')
   assert.equal(gcpe.versions.length, 2)
   assert.ok(searchGallery('GCPE').marks.some(({ collection, entry }) => collection === oneOffs && entry === gcpe))
+  const publicService = searchGallery('where ideas work 2023').marks.find(({ entry }) => entry.id === 'vector-bc-public-service-where-ideas-work-2023-reverse')
+  assert.equal(publicService?.collection, oneOffs)
+  assert.equal(publicService.entry.timeline, 'public-service')
+  assert.ok(!GALLERY_COLLECTIONS.some(({ id }) => id === 'specimens-public-service'))
 })
 
 test('provincial health program signatures share a shelf and retain their individual owners', () => {
@@ -101,4 +127,19 @@ test('provincial health program signatures share a shelf and retain their indivi
     assert.equal(findGalleryEntry(owner + '-2003').identity.provenance, 'extracted_from_official_vector')
   }
   assert.equal(entriesOfNode(collection, collection.graphNode).length, 0)
+})
+
+test('program specimens sit next to their original BC marks and retain their program history', () => {
+  const shelf = collectionById('bc-mark')
+  for (const [program, owner, count] of [['welcome-bc', 'welcome-bc', 2], ['work-bc', 'sub-workbc', 2], ['stronger-bc', 'stronger-bc', 5]]) {
+    assert.equal(collectionById(`specimens-${program}`), shelf)
+    assert.ok(!GALLERY_COLLECTIONS.some(({ id }) => id === `specimens-${program}`))
+    const original = findGalleryEntry(program)
+    const specimens = entriesOfNode(shelf, owner).filter((entry) => entry.kind === 'collected')
+    assert.equal(specimens.length, count)
+    const start = entriesOf(shelf).indexOf(original) + 1
+    assert.deepEqual(entriesOf(shelf).slice(start, start + count), specimens)
+    const timelineEntries = timelineOf(original).eras.flatMap(({ entries }) => entries)
+    assert.ok(specimens.every((specimen) => timelineEntries.includes(specimen) && specimen.timeline === program))
+  }
 })

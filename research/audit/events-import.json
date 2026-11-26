@@ -1,7 +1,7 @@
 {
   "schema": "import-accounting/1",
   "counts": {
-    "accepted": 1082,
+    "accepted": 1098,
     "corroborating_duplicate": 14,
     "unresolved_unmapped": 26
   },
@@ -7351,7 +7351,7 @@
         "subject_id": "industry-training-and-apprenticeship-commission",
         "subject_key": "industry-training-and-apprenticeship-commission",
         "event_type": "enabling_statute_assented",
-        "title": "Industry Training and Apprenticeship Act assented (Commission established)",
+        "title": "Industry Training and Apprenticeship Act receives royal assent",
         "date": {
           "start": "1997-07-30",
           "end": null,
@@ -7366,8 +7366,8 @@
           "quote": "The Industry Training and Apprenticeship Commission is established as a corporation",
           "publisher": "BC Laws (King's Printer) historical statute scan"
         },
-        "interpretation_notes": "In force by regulation. CONFLICT: local start 1997-06-23 precedes assent.",
-        "reviewed_on": "2026-09-25",
+        "interpretation_notes": "The June 23 announcement preceded assent. ITAC’s final financial statements date its establishment to November 28, 1997.",
+        "reviewed_on": "2026-11-25",
         "integration_status": "needs_local_id_mapping_and_review"
       },
       "output_id": "atlas:itac-act-assent-1997"
@@ -7380,7 +7380,7 @@
         "subject_id": "industry-training-authority",
         "subject_key": "industry-training-authority",
         "event_type": "enabling_statute_assented",
-        "title": "Industry Training Authority Act assented (Authority established; ITAC programs continued)",
+        "title": "Industry Training Authority Act receives royal assent",
         "date": {
           "start": "2003-05-29",
           "end": null,
@@ -7395,8 +7395,8 @@
           "quote": "The Industry Training Authority is established as a corporation ... apprenticeship agreements registered with the commission are continued as industry training agreements registered with the authority",
           "publisher": "BC Laws (King's Printer) historical statute scan"
         },
-        "interpretation_notes": "In force by regulation; date not found (local 2004).",
-        "reviewed_on": "2026-09-25",
+        "interpretation_notes": "The Act took effect January 2, 2004, according to note 2 of ITAC’s final accounts.",
+        "reviewed_on": "2026-11-25",
         "integration_status": "needs_local_id_mapping_and_review",
         "related_subjects": [
           "industry-training-and-apprenticeship-commission"
@@ -22802,6 +22802,230 @@
       "output_id": "atlas:subs-swan-amalgamated-1978"
     },
     {
+      "origin": "atlas/events-support-for-bc-parks.json#atlas:bc-parks-foundation-board",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bc-parks-foundation-board",
+        "subject_id": "sub-bc-parks",
+        "event_type": "organizational_milestone",
+        "title": "Province names the first BC Parks Foundation board",
+        "date": {
+          "start": "2017-03-28",
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://archive.news.gov.bc.ca/releases/news_releases_2013-2017/2017ENV0028-000886.htm",
+          "source_title": "Introducing the board of the new BC Parks Foundation",
+          "locator": "Board list and initial endowment paragraph"
+        },
+        "interpretation_notes": "The Province announced an initial $10 million in February. The independent Foundation had ten board members, chaired by Karla Rockwell.",
+        "reviewed_on": "2026-11-25"
+      },
+      "output_id": "atlas:bc-parks-foundation-board"
+    },
+    {
+      "origin": "atlas/events-support-for-bc-parks.json#atlas:bc-parks-foundation-agreement",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bc-parks-foundation-agreement",
+        "subject_id": "sub-bc-parks",
+        "event_type": "agreement_signed",
+        "title": "Province and BC Parks Foundation sign a collaborative agreement",
+        "date": {
+          "start": "2018-05",
+          "precision": "month"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://docs.openinfo.gov.bc.ca/Environment_and_Parks_Estimates_Notes_2025.pdf#page=89",
+          "source_title": "Ministry of Environment and Parks estimates notes, 2025",
+          "locator": "PDF page 89, BC Parks Foundation"
+        },
+        "interpretation_notes": "The agreement guides the independent charity’s relationship with BC Parks. The estimates notes give the month of signing.",
+        "reviewed_on": "2026-11-25"
+      },
+      "output_id": "atlas:bc-parks-foundation-agreement"
+    },
+    {
+      "origin": "atlas/events-support-for-bc-parks.json#atlas:bc-parks-foundation-endowment",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:bc-parks-foundation-endowment",
+        "subject_id": "sub-bc-parks",
+        "event_type": "funding_announced",
+        "title": "Province announces a further $10 million for BC Parks Foundation",
+        "date": {
+          "start": "2023-06-01",
+          "precision": "day"
+        },
+        "temporal_status": "source_reported_past",
+        "evidence": {
+          "source_url": "https://archive.news.gov.bc.ca/releases/news_releases_2020-2024/2023ENV0036-000857.pdf",
+          "source_title": "Province strengthens parks protection, nature conservation",
+          "locator": "News release dated June 1, 2023"
+        },
+        "interpretation_notes": "The contribution supports the Foundation’s long-term work for parks.",
+        "reviewed_on": "2026-11-25"
+      },
+      "output_id": "atlas:bc-parks-foundation-endowment"
+    },
+    {
+      "origin": "atlas/events-trades-training-2026-11-25.json#atlas:itac-announced-1997",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:itac-announced-1997",
+        "subject_id": "industry-training-and-apprenticeship-commission",
+        "related_subject_ids": [],
+        "event_type": "policy_announced",
+        "title": "Education and Labour ministers announce the Industry Training and Apprenticeship Commission",
+        "date": {
+          "start": "1997-06-23",
+          "precision": "day"
+        },
+        "evidence": {
+          "source_url": "https://archive.news.gov.bc.ca/releases/archive/pre2001/1997/0614.asp",
+          "locator": "Provincial announcement, June 23, 1997"
+        },
+        "reviewed_on": "2026-11-25"
+      },
+      "output_id": "atlas:itac-announced-1997"
+    },
+    {
+      "origin": "atlas/events-trades-training-2026-11-25.json#atlas:itac-established-1997",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:itac-established-1997",
+        "subject_id": "industry-training-and-apprenticeship-commission",
+        "related_subject_ids": [
+          "provincial-apprenticeship-board"
+        ],
+        "event_type": "legal_establishment",
+        "title": "ITAC established under the Industry Training and Apprenticeship Act, succeeding the Provincial Apprenticeship Board",
+        "date": {
+          "start": "1997-11-28",
+          "precision": "day"
+        },
+        "evidence": {
+          "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf#page=7",
+          "locator": "Note 1, The Commission. For board succession see the Auditor General’s 2008 report, Exhibit 4."
+        },
+        "reviewed_on": "2026-11-25"
+      },
+      "output_id": "atlas:itac-established-1997"
+    },
+    {
+      "origin": "atlas/events-trades-training-2026-11-25.json#atlas:itac-wind-up-announced-2002",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:itac-wind-up-announced-2002",
+        "subject_id": "industry-training-and-apprenticeship-commission",
+        "related_subject_ids": [],
+        "event_type": "policy_announced",
+        "title": "Province announces the wind-up of ITAC",
+        "date": {
+          "start": "2002-01-17",
+          "precision": "day"
+        },
+        "evidence": {
+          "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf#page=7",
+          "locator": "Note 2, Wind Up of Commission Operations"
+        },
+        "reviewed_on": "2026-11-25"
+      },
+      "output_id": "atlas:itac-wind-up-announced-2002"
+    },
+    {
+      "origin": "atlas/events-trades-training-2026-11-25.json#atlas:itac-interim-administration-2002",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:itac-interim-administration-2002",
+        "subject_id": "industry-training-and-apprenticeship-commission",
+        "related_subject_ids": [
+          "ministry-of-advanced-education-2001"
+        ],
+        "event_type": "operations_transferred",
+        "title": "Ministry of Advanced Education takes over management of trades training during the transition",
+        "date": {
+          "start": "2002",
+          "precision": "year"
+        },
+        "evidence": {
+          "source_url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-2008-11-01-major-renovation-trades-training-british-columbia.pdf#page=33",
+          "locator": "Exhibit 4, The evolution of trades training in British Columbia"
+        },
+        "reviewed_on": "2026-11-25"
+      },
+      "output_id": "atlas:itac-interim-administration-2002"
+    },
+    {
+      "origin": "atlas/events-trades-training-2026-11-25.json#atlas:ita-established-2004",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:ita-established-2004",
+        "subject_id": "industry-training-authority",
+        "related_subject_ids": [
+          "industry-training-and-apprenticeship-commission"
+        ],
+        "event_type": "legal_establishment",
+        "title": "Industry Training Authority Act takes effect following ITAC’s final reporting day",
+        "date": {
+          "start": "2004-01-02",
+          "precision": "day"
+        },
+        "evidence": {
+          "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf#page=7",
+          "locator": "Note 2, Wind Up of Commission Operations"
+        },
+        "reviewed_on": "2026-11-25"
+      },
+      "output_id": "atlas:ita-established-2004"
+    },
+    {
+      "origin": "atlas/events-trades-training-2026-11-25.json#atlas:ita-trades-administration-2004",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:ita-trades-administration-2004",
+        "subject_id": "industry-training-authority",
+        "related_subject_ids": [
+          "ministry-of-advanced-education-2001"
+        ],
+        "event_type": "operations_transferred",
+        "title": "Industry Training Authority takes over administration of trades training from the ministry",
+        "date": {
+          "start": "2004",
+          "precision": "year"
+        },
+        "evidence": {
+          "source_url": "https://www.oag.bc.ca/app/uploads/sites/963/2024/08/OAGBC-2008-11-01-major-renovation-trades-training-british-columbia.pdf#page=33",
+          "locator": "Exhibit 4, The evolution of trades training in British Columbia"
+        },
+        "reviewed_on": "2026-11-25"
+      },
+      "output_id": "atlas:ita-trades-administration-2004"
+    },
+    {
+      "origin": "atlas/events-trades-training-2026-11-25.json#atlas:itac-final-letterhead-2004",
+      "disposition": "accepted",
+      "input": {
+        "id": "atlas:itac-final-letterhead-2004",
+        "subject_id": "industry-training-and-apprenticeship-commission",
+        "related_subject_ids": [],
+        "event_type": "logo_observed",
+        "title": "Transitional board signs ITAC’s final accounts on blue spiral letterhead",
+        "date": {
+          "start": "2004-04-08",
+          "precision": "day"
+        },
+        "evidence": {
+          "source_url": "https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/industry-training-apprenticeship-commission-fs-2003-04.pdf#page=2",
+          "locator": "Management’s responsibility for financial reporting, signed by Philip Steenkamp for the period ending January 1, 2004"
+        },
+        "reviewed_on": "2026-11-25"
+      },
+      "output_id": "atlas:itac-final-letterhead-2004"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#bc-farm-industry-review-board/established",
       "disposition": "accepted",
       "input": {
@@ -26985,19 +27209,102 @@
       "output_id": "sub:employers-advisers-office:first-observed"
     },
     {
+      "origin": "history/sub-agencies-researched.json#british-columbia-geological-survey/established",
+      "disposition": "accepted",
+      "input": {
+        "date": "1895-02-21",
+        "precision": "day",
+        "meaning": "The Bureau of Mines Act, 1895 established the Bureau, the predecessor from which the Survey dates its history. Section 6 provided for a Provincial Mineralogist to lead it.",
+        "evidence": "statute",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1221491311",
+        "locator": "Bureau of Mines Act, 1895, S.B.C. 1895, c. 3, ss. 3–7.",
+        "checked": "2026-11-25"
+      },
+      "output_id": "sub:british-columbia-geological-survey:established"
+    },
+    {
       "origin": "history/sub-agencies-researched.json#british-columbia-geological-survey/first-observed",
       "disposition": "accepted",
       "input": {
-        "date": "2010",
+        "date": "1989",
         "precision": "year",
-        "meaning": "Named survey produces accessible geological data. Geoscience BC is mentioned separately and must not be conflated.",
-        "evidence": "service_plan",
-        "source_id": "R3F-DOC-063",
-        "source": "https://www.bcbudget.gov.bc.ca/2010/sp/pdf/ministry/empr.pdf",
-        "locator": "PDF p. 5 (one-based)",
-        "checked": "2026-10-21"
+        "meaning": "The full name British Columbia Geological Survey encircles the seal. The same page gives the administrative name Geological Survey Branch.",
+        "evidence": "annual_report",
+        "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/InformationCircular/BCGS_IC1989-01.pdf",
+        "locator": "Information Circular 1989-1, PDF page 1.",
+        "checked": "2026-11-25"
       },
       "output_id": "sub:british-columbia-geological-survey:first-observed"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#british-columbia-geological-survey/event-0",
+      "disposition": "accepted",
+      "input": {
+        "type": "operational",
+        "date": "1896-01",
+        "precision": "month",
+        "summary": "Carlyle and Carmichael began organizing the Bureau of Mines.",
+        "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1896.pdf",
+        "locator": "Bureau of Mines report, opening paragraph.",
+        "checked": "2026-11-25"
+      },
+      "output_id": "sub:british-columbia-geological-survey:event-0"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#british-columbia-geological-survey/event-1",
+      "disposition": "accepted",
+      "input": {
+        "type": "enacted",
+        "date": "1917",
+        "precision": "year",
+        "summary": "The Mineral Survey and Development Act provided for a survey in six districts alongside the Bureau.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/1088300592",
+        "locator": "Part I, sections 4–6.",
+        "checked": "2026-11-25"
+      },
+      "output_id": "sub:british-columbia-geological-survey:event-1"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#british-columbia-geological-survey/event-2",
+      "disposition": "accepted",
+      "input": {
+        "type": "in_force",
+        "date": "1938-04-01",
+        "precision": "day",
+        "summary": "The Department of Mines Act took effect and repealed the earlier district survey legislation.",
+        "source": "https://www.bclaws.gov.bc.ca/civix/document/id/hstats/hstats/527244410",
+        "locator": "S.B.C. 1937, c. 47, sections 17–18.",
+        "checked": "2026-11-25"
+      },
+      "output_id": "sub:british-columbia-geological-survey:event-2"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#british-columbia-geological-survey/event-3",
+      "disposition": "accepted",
+      "input": {
+        "type": "renamed",
+        "date": "1986",
+        "precision": "year",
+        "summary": "The Geological Branch took the name Geological Survey Branch.",
+        "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/Miscellaneous/BCGS_MP-77.pdf",
+        "locator": "Chapter 9, printed page 95.",
+        "checked": "2026-11-25"
+      },
+      "output_id": "sub:british-columbia-geological-survey:event-3"
+    },
+    {
+      "origin": "history/sub-agencies-researched.json#british-columbia-geological-survey/event-4",
+      "disposition": "accepted",
+      "input": {
+        "type": "renamed",
+        "date": "1973",
+        "precision": "year",
+        "summary": "The department renamed its Mineralogical Branch the Geological Division.",
+        "source": "https://cmscontent.nrs.gov.bc.ca/geoscience/PublicationCatalogue/AnnualReport/BCGS_AR1973.pdf#page=58",
+        "locator": "1973 annual report, page A58.",
+        "checked": "2026-11-25"
+      },
+      "output_id": "sub:british-columbia-geological-survey:event-4"
     },
     {
       "origin": "history/sub-agencies-researched.json#mineral-development-office/first-observed",

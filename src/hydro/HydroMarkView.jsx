@@ -5,6 +5,7 @@
 // guidelines allow only the variations they give — so those are what it offers, drawn from BC
 // Hydro's own artwork, with the background and clear space the only choices left.
 
+import { PreviewBackground } from '../gallery/PreviewBackground.jsx'
 import { useMemo, useState } from 'react'
 import { ColourField } from '../site/ColourField.jsx'
 import { Segmented } from '../site/Segmented.jsx'
@@ -55,15 +56,17 @@ const Frame = ({ years, title, note, onClose, svg, label, transparent, lightInk,
 
       <div className="layout">
         <section className="stage" aria-label="Preview">
-          <div
-            className="stage__frame"
-            data-backdrop={shownOn}
-            data-transparent={transparent || undefined}
-            role="img"
-            aria-label={label}
-            // Built by this project's own renderer from the supplied artwork; values are escaped.
-            dangerouslySetInnerHTML={{ __html: svg }}
-          />
+          <PreviewBackground white={backdrop === 'light'} onToggle={() => setBackdrop(backdrop === 'light' ? 'auto' : 'light')}>
+            <div
+              className="stage__frame"
+              data-backdrop={shownOn}
+              data-transparent={transparent || undefined}
+              role="img"
+              aria-label={label}
+              // Built by this project's own renderer from the supplied artwork; values are escaped.
+              dangerouslySetInnerHTML={{ __html: svg }}
+            />
+          </PreviewBackground>
           <div className="stage__bar">
             <Segmented compact label="Preview on" options={BACKDROP_OPTIONS} value={backdrop} onChange={setBackdrop} />
           </div>
@@ -77,7 +80,7 @@ const Frame = ({ years, title, note, onClose, svg, label, transparent, lightInk,
 }
 
 /** The current logo: its variations, and where it is put. */
-const CurrentView = ({ initialVariant = 'colour', onClose }) => {
+const CurrentView = ({ initialVariant = 'colour', options = CURRENT_VARIANT_ORDER, onClose }) => {
   const [variant, setVariant] = useState(CURRENT_VARIANTS[initialVariant] ? initialVariant : 'colour')
   const [background, setBackground] = useState(CURRENT_VARIANTS[variant].background)
   const [clearSpace, setClearSpace] = useState('symbol')
@@ -129,7 +132,7 @@ const CurrentView = ({ initialVariant = 'colour', onClose }) => {
       <section className="panel">
         <h2>Logo</h2>
         <div className="layouts hydro__picker" role="group" aria-label="Variation">
-          {CURRENT_VARIANT_ORDER.map((id) => (
+          {options.map((id) => (
             <button key={id} type="button" aria-pressed={id === variant} onClick={(event) => pick(event, id)} title={CURRENT_VARIANTS[id].hint}>
               <span
                 aria-hidden="true"
@@ -225,6 +228,6 @@ const View1990 = ({ onClose }) => {
  * @param {string} [props.variant]  For the current logo: the variation to open on.
  * @param {() => void} props.onClose
  */
-export const HydroMarkView = ({ mark, variant, onClose }) => mark === '1990'
+export const HydroMarkView = ({ mark, variant, options, onClose }) => mark === '1990'
   ? <View1990 onClose={onClose} />
-  : <CurrentView initialVariant={variant} onClose={onClose} />
+  : <CurrentView initialVariant={variant} options={options} onClose={onClose} />

@@ -5,13 +5,16 @@
 // reversed version too, which of the two. What the file says of itself is shown beside it, since
 // the packages' files each say whether they are supplied paths, a recolour or a reconstruction.
 
+import { PreviewBackground } from '../gallery/PreviewBackground.jsx'
 import { useMemo, useState } from 'react'
 import { ColourField } from '../site/ColourField.jsx'
 import { Segmented } from '../site/Segmented.jsx'
 import { TRANSPARENT } from '../logo/logoColors.js'
+import { useSiteTheme } from '../site/useTheme.js'
 import { HydroDownload } from '../hydro/HydroDownload.jsx'
 import { CROWN_MARKS } from '../assets/crownMarks.js'
 import { isReversed, renderSuppliedSvg } from './renderSupplied.js'
+import { suppliedPreviewFile } from './tileArt.js'
 
 const BACKDROP_OPTIONS = [
   { value: 'auto', label: 'Auto', title: 'Dark when the mark would otherwise vanish' },
@@ -40,17 +43,24 @@ const GROUND_SWATCHES = [
  * @param {object} props
  * @param {object} props.entry  A gallery entry of kind 'supplied'.
  */
-export const SuppliedMarkView = ({ entry }) => {
-  const [version, setVersion] = useState(entry.mark)
+export const SuppliedMarkView = ({ entry, family, onChooseVersion }) => {
+  const { name: theme } = useSiteTheme()
+  const [chosenVersion, setVersion] = useState(null)
   const [background, setBackground] = useState(TRANSPARENT)
   const [clearSpace, setClearSpace] = useState(0.25)
   const [backdrop, setBackdrop] = useState('auto')
+  const version = chosenVersion ?? (theme === 'dark' && backdrop !== 'light' && entry.reverse ? entry.reverse : entry.mark)
   const mark = CROWN_MARKS[version]
 
-  const draw = (width) => renderSuppliedSvg({ id: version, background, clearSpace, width, title: `${entry.label}: ${mark.title}` })
-  const { svg } = useMemo(() => draw(1200), [version, background, clearSpace])
   const transparent = background === TRANSPARENT
-  const shownOn = backdrop !== 'auto' ? backdrop : transparent && isReversed(version) ? 'dark' : 'light'
+  const followsTheme = entry.themedPreview && version === entry.mark
+  const shownOn = backdrop !== 'auto' ? backdrop
+    : transparent && (version === entry.reverse || isReversed(version) || (followsTheme && theme === 'dark')) ? 'dark' : 'light'
+  const previewFile = transparent ? suppliedPreviewFile(entry, version, shownOn) : undefined
+  const draw = (width, displayFile) => renderSuppliedSvg({
+    id: version, background, clearSpace, width, title: `${entry.label}: ${mark.title}`, previewFile: displayFile
+  })
+  const { svg } = useMemo(() => draw(1200, previewFile), [version, background, clearSpace, previewFile])
 
   // A mark supplied in other inks too (the Recreation and Conservation symbols' report greens)
   // offers each as a version: the same paths, in a colour the package itself supplied.
@@ -65,37 +75,46 @@ export const SuppliedMarkView = ({ entry }) => {
     <div className="hydro">
       <div className="gallery__head hydro__head">
         <div>
-          <h2>{entry.label} <span className="gallery__years">{entry.years}</span></h2>
+          <h2>{family?.label ?? entry.label} <span className="gallery__years">{entry.years}</span></h2>
           <p className="gallery__note">{entry.note}</p>
         </div>
       </div>
 
       <div className="layout">
         <section className="stage" aria-label="Preview">
-          <div
-            className="stage__frame"
-            data-backdrop={shownOn}
-            data-transparent={transparent || undefined}
-            role="img"
-            aria-label={entry.label}
-            // Built by this project's own renderer from the supplied artwork; values are escaped.
-            dangerouslySetInnerHTML={{ __html: svg }}
-          />
+          <PreviewBackground white={backdrop === 'light'} onToggle={() => setBackdrop(backdrop === 'light' ? 'auto' : 'light')}>
+            <div
+              className="stage__frame"
+              data-backdrop={shownOn}
+              data-transparent={transparent || undefined}
+              role="img"
+              aria-label={entry.label}
+              // Built by this project's own renderer from the supplied artwork; values are escaped.
+              dangerouslySetInnerHTML={{ __html: svg }}
+            />
+          </PreviewBackground>
           <div className="stage__bar">
             <Segmented compact label="Preview on" options={BACKDROP_OPTIONS} value={backdrop} onChange={setBackdrop} />
           </div>
           <div className="contrast-list hydro__rules" aria-live="polite">
             <p className="contrast" data-level="pass">
-              <span className="contrast__surface">As supplied</span>
+              <span className="contrast__surface">{followsTheme ? 'Reconstruction' : 'As supplied'}</span>
               <span className="contrast__message">
-                Drawn exactly as the research package’s file has it, so it is not recoloured here. The file
-                calls itself “{mark.title}”. {mark.description}
+                {followsTheme
+                  ? <>{mark.description} {previewFile && shownOn === 'dark' && entry.darkPreviewNote}</>
+                  : <>Drawn exactly as the research package’s file has it, so it is not recoloured here. The file
+                    calls itself “{mark.title}”. {mark.description}</>}
               </span>
             </p>
           </div>
         </section>
 
         <div className="controls">
+          {family?.editorVersions && <section className="panel">
+            <h2>Version</h2>
+            <Segmented label="Version" options={family.editorVersions.map(({ id, label }) => ({ value: id, label }))}
+              value={entry.id} onChange={onChooseVersion} />
+          </section>}
           {versions && (
             <section className="panel">
               <h2>Version</h2>

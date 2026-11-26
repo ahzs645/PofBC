@@ -6,21 +6,27 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { SIGNS, SIGN_SERIES, signIds } from './catalogue.js'
 import { FOREST_SERVICE_SIGNS } from './forest-service/signs.js'
+import { FISH_WILDLIFE_SIGNS } from './fish-wildlife/signs.js'
+import { ENTRY_SIGNS } from './entering-bc/signs.js'
 import { TOURISM_SIGNS } from './tourism/signs.js'
 import { PARKS_SIGNS } from './parks/signs.js'
+import { loadInitiative } from '../initiatives/initiatives.js'
 import { POSTERS } from '../posters/catalogue.js'
 import { FOREST_SERVICE_POSTERS } from '../posters/forest-service/posters.js'
 import { GALLERY_COLLECTIONS } from '../gallery/collections.js'
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
 const DRAWINGS = {
+  ...Object.fromEntries(Object.keys(ENTRY_SIGNS).map((id) => [id, read(`./entering-bc/${id}.svg`)])),
   'fire-day': read('./forest-service/fire-day.svg'),
+  'cheakamus-notice-to-anglers': read('./fish-wildlife/cheakamus.svg'),
   lookout: read('./forest-service/lookout.svg'),
   'forest-closure': read('./forest-service/forest-closure.svg'),
+  'super-natural-bordered': read('./tourism/super-natural-bordered.svg'),
   'super-natural': read('./tourism/super-natural.svg'),
   'proposed-park-symbols': read('./parks/proposed-park-symbols.svg')
 }
-const ALL_SIGNS = { ...FOREST_SERVICE_SIGNS, ...TOURISM_SIGNS, ...PARKS_SIGNS }
+const ALL_SIGNS = { ...ENTRY_SIGNS, ...FOREST_SERVICE_SIGNS, ...TOURISM_SIGNS, ...FISH_WILDLIFE_SIGNS, ...PARKS_SIGNS }
 const GOVERNMENT = read('../government/historyData.js')
 const GALLERIES = new Set(GALLERY_COLLECTIONS.map(({ id }) => id))
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
@@ -50,7 +56,7 @@ test('every part sits on its drawing and names layers the drawing has', () => {
   }
 })
 
-test('every link lands somewhere that exists, and no text has an em dash', () => {
+test('every link lands somewhere that exists, and no text has an em dash', async () => {
   for (const [id, { parts }] of Object.entries(ALL_SIGNS)) {
     for (const [partId, { panel }] of Object.entries(parts)) {
       const words = [panel.eyebrow, panel.heading, panel.em, panel.lede, ...(panel.blocks ?? []).filter((b) => typeof b === 'string')]
@@ -64,6 +70,11 @@ test('every link lands somewhere that exists, and no text has an em dash', () =>
             assert.ok(SIGNS[to.sign] && to.sign !== id, `${id}/${partId}: no other sign ${to.sign}`)
           } else if (to.view === 'gallery') {
             assert.ok(GALLERIES.has(to.logos), `${id}/${partId}: no logo collection ${to.logos}`)
+          } else if (to.view === 'initiatives') {
+            const initiative = await loadInitiative(to.initiative)
+            const section = initiative?.sections.find((entry) => entry.id === to.section)
+            assert.ok(section, `${id}/${partId}: no initiative section ${to.section}`)
+            if (to.page) assert.ok(section.guide?.chapters.flatMap((entry) => entry.pages)[to.page - 1], `no guide page ${to.page}`)
           } else if (to.view === 'government') {
             assert.ok(GOVERNMENT.includes(`"${to.node}"`), `${id}/${partId}: no body ${to.node}`)
           } else assert.ok(['internal', 'generator'].includes(to.view), `${id}/${partId}: unexpected view ${to.view}`)
@@ -86,6 +97,35 @@ test('the welcome sign keeps the flag the generator draws, path for path', async
   assert.deepEqual(paths, FLAG.shapes.map(({ d, fill }) => ({ d, fill })))
   // Its ids are prefixed, so it can sit on a page beside another drawing without a collision.
   for (const generic of ['id="title"', 'id="desc"', 'id="above-baseline"', 'id="below-baseline"']) assert.ok(!drawing.includes(generic), generic)
+})
+
+test('the Cheakamus sign draws the gallery’s Fish and Wildlife paths in sign colours', () => {
+  const master = read('../../public/identity-recreation-conservation/drc-fw-oval-1973.svg')
+  const sign = DRAWINGS['cheakamus-notice-to-anglers']
+  const emblem = sign.split('id="ck-fw-emblem"')[1].split('id="ck-red-header"')[0]
+  const paths = (svg) => [...svg.matchAll(/<path\b[^>]*\sd="([^"]+)"[^>]*fill-rule="([^"]+)"/g)]
+    .map(([, d, fillRule]) => ({ d: d.replace(/\s+/g, ' ').trim(), fillRule }))
+  assert.ok(paths(master).length > 0)
+  assert.deepEqual(paths(emblem), paths(master))
+  assert.match(emblem, /fill="#E5B641"/)
+  assert.match(emblem, /fill="#252D23"/)
+})
+
+test('the blue-bordered sign uses the font’s kerning and advances for each complete line', async () => {
+  const { default: opentype } = await import('opentype.js')
+  const file = new URL('../../artwork/signs/super-natural-bordered/texgyretermes-bold.otf', import.meta.url)
+  const bytes = readFileSync(file)
+  const font = opentype.parse(bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength))
+  const drawing = DRAWINGS['super-natural-bordered']
+  const size = 99
+  for (const [line, baseline] of [['Super, Natural', 127], ['British Columbia', 266], ['welcomes you', 377]]) {
+    const start = (SIGNS['super-natural-bordered'].view.w - font.getAdvanceWidth(line, size)) / 2
+    const expected = font.getPath(line, start, baseline, size, { kerning: true })
+    const group = drawing.split(`aria-label="${line}"`)[1].split('</g>')[0]
+    assert.doesNotMatch(group, /transform=/)
+    const actual = [...group.matchAll(/<path d="([^"]+)"/g)].map(([, path]) => path).join('')
+    assert.equal(actual, expected.toPathData({ flipY: false, decimalPlaces: 3 }), line)
+  }
 })
 
 test('the closure sign is the package’s two faces in one drawing, one strip showing at a time', () => {

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {{width}} {{height}}">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: {{leafGreen}};
+      }
+
+{{reverseWhiteRule}}      .cls-{{firClass}}, .cls-{{shadePathClass}} {
+        fill: {{firGreen}};
+      }
+
+      .cls-{{isolationClass}} {
+        isolation: isolate;
+      }
+
+      .cls-{{shadePathClass}}, .cls-{{shadeGroupClass}} {
+        mix-blend-mode: multiply;
+        opacity: .5;
+      }
+{{positiveBlueRule}}
+      .cls-7 {
+        fill: {{skyBlue}};
+      }
+
+      .cls-8 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g class="cls-{{isolationClass}}">
+    <g id="Layer_1" data-name="Layer 1">
+      <g>
+        <g>
+          <path class="cls-7" d="{{capital-b}}"/>
+          <path class="cls-1" d="{{lowercase-e}}"/>
+          <path class="cls-1" d="{{lowercase-l}}"/>
+          <path class="cls-1" d="{{lowercase-a}}"/>
+          <g class="cls-{{shadeGroupClass}}">
+            <path class="cls-{{firClass}}" d="{{a-shade}}"/>
+            <path class="cls-{{firClass}}" d="{{e-shade}}"/>
+          </g>
+          <path class="cls-7" d="{{capital-c}}"/>
+          <path class="cls-1" d="{{right-leaf}}"/>
+          <path class="cls-7" d="{{left-leaf}}"/>
+          <path class="cls-1" d="{{lowercase-n}}"/>
+          <path class="cls-{{shadePathClass}}" d="{{lowercase-n}}"/>
+          <path class="cls-1" d="{{lowercase-c}}"/>
+        </g>
+        <g>
+          <path class="cls-{{descriptorClass}}" d="{{better-B}}"/>
+          <path class="cls-{{descriptorClass}}" d="{{better-E-1}}"/>
+          <path class="cls-{{descriptorClass}}" d="{{better-T-1}}"/>
+          <path class="cls-{{descriptorClass}}" d="{{better-T-2}}"/>
+          <path class="cls-{{descriptorClass}}" d="{{better-E-2}}"/>
+          <path class="cls-{{descriptorClass}}" d="{{better-R}}"/>
+          <path class="cls-{{descriptorClass}}" d="{{buildings-B}}"/>
+          <path class="cls-{{descriptorClass}}" d="{{buildings-U}}"/>
+          <path class="cls-{{descriptorClass}}" d="{{buildings-I-1}}"/>
+          <path class="cls-{{descriptorClass}}" d="{{buildings-L}}"/>
+          <path class="cls-{{descriptorClass}}" d="{{buildings-D}}"/>
+          <path class="cls-{{descriptorClass}}" d="{{buildings-I-2}}"/>
+          <path class="cls-{{descriptorClass}}" d="{{buildings-N}}"/>
+          <path class="cls-{{descriptorClass}}" d="{{buildings-G}}"/>
+          <path class="cls-{{descriptorClass}}" d="{{buildings-S}}"/>
+        </g>
+      </g>
+      <rect class="cls-8" width="{{width}}" height="{{height}}"/>
+    </g>
+  </g>
+</svg>

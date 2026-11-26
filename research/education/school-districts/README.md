@@ -2,7 +2,7 @@
 
 This collection connects the **60 current British Columbia public school districts** to their formation evidence, historical predecessors, names, logos, and existing salary-employer records. The current roster is grounded in the [provincial district directory](https://studentsuccess.gov.bc.ca/all/school-districts); the reviewed snapshot is dated **22 November 2026**.
 
-Start with the [illustrated catalogue](CATALOGUE.md), the [historical research notes](HISTORY-NOTES.md), or the [current-logo contact sheet](current-logos.jpg). The application exposes the collection through `?view=school-districts`, with connected district detail, history, logo, source, and salary links.
+Start with the [illustrated catalogue](CATALOGUE.md), the [November 25 vector review](VECTOR-REVIEW.md), or the [historical research notes](HISTORY-NOTES.md). The [original contact sheet](current-logos.jpg) shows the November 22 holdings. The application exposes the collection through `?view=school-districts`, with connected district detail, history, logo, source, and salary links.
 
 ## Coverage
 
@@ -14,13 +14,13 @@ Start with the [illustrated catalogue](CATALOGUE.md), the [historical research n
 | Original-OIC-supported 1996 amalgamations | 15, creating 31 predecessor-to-successor connections |
 | Historical predecessor records | 31 immediate predecessors abolished by those orders |
 | Original 1946 archival district index | 74 numbered districts with original names and Gazette page locators |
-| Current primary logos | 60: 12 vector and 48 raster |
-| Additional logo assets | 4 historical logos and 3 current variants |
-| Total logo files | 67 |
+| Current primary logos | 60: 29 vector and 31 raster |
+| Additional logo assets | 6 earlier designs and 30 alternate files |
+| Total logo files | 96 |
 | Brand-history events | 12 sourced events in the logo research records |
 | Recruitment-profile logo fallbacks | 2, explicitly labelled for SD50 and SD85 |
 
-These figures are derived from [history.json](history.json), [logos.json](logos.json), and the [generated catalogue](../../../public/education/school-districts/catalogue.json). The 31 predecessor records establish the immediate 1996 lineage; earlier rural, municipal, and numbered-district histories still require further research. The four historical logo files document earlier marks used by current districts, rather than a complete logo collection for all predecessor entities.
+These figures are derived from [history.json](history.json), [logos.json](logos.json), and the [generated catalogue](../../../public/education/school-districts/catalogue.json). The 31 predecessor records establish the immediate 1996 lineage. The earlier logo files document marks used by current districts, and the predecessor artwork remains open.
 
 ## Reading a formation date
 
@@ -58,9 +58,9 @@ The 74-entry index is a transcription aid for the original Gazette roster. It do
 
 Every current district has a captured primary logo with its source URL, publisher or context, observation date, format, fidelity notes, and file hash. Where adoption evidence exists, it is recorded separately from the date on which a website or document was observed.
 
-Of the **60 primary current logos**, 57 come from district websites, one from a district-issued document, and two from the district's **Make a Future recruitment profile**: SD50 Haida Gwaii and SD85 Vancouver Island North. Those two fallbacks remain labelled in the data and catalogue. Their availability does not establish an adoption date or a vector master.
+The selected current logos include 40 website captures, 18 based on district publications and two from **Make a Future** recruitment profiles for SD50 Haida Gwaii and SD85 Vancouver Island North. Those two fallbacks are identified in the data and catalogue.
 
-The collection contains **12 vector primary marks and 48 raster primary marks**. Classification follows the retained artwork, not the filename extension: an SVG containing a raster image is still classified as raster. Extraction and conversion notes identify the exact source and method. The additional assets comprise **four historical logos** and **three current variants**, for **67 files** in total. The **12 brand-history events** retain their source and distinguish announcements, adoption, observed use, and related name changes.
+The collection contains **29 vector primary marks and 31 raster primary marks**. An SVG that contains only bitmap artwork is classified as raster. Extracted source vectors preserve their native geometry. The data records each publication, page, extraction bounds and method. The gallery keeps the existing design links and provides the published images and source colourways through the version selector. The **12 brand-history events** retain their source and distinguish announcements, adoption, observed use, and related name changes.
 
 White artwork is shown on a dark background in the application. The Markdown catalogue labels those marks so they remain identifiable when a document viewer uses a white canvas.
 
@@ -72,6 +72,7 @@ White artwork is shown on a dark background in the application. The Markdown cat
 | [employers.json](employers.json) | Mapping to existing salary-employer slugs |
 | [history.json](history.json) | Formation claims, source qualifications, timeline events, and immediate predecessors |
 | [logos.json](logos.json) | Artwork provenance, assets, variants, and brand-history events |
+| [VECTOR-REVIEW.md](VECTOR-REVIEW.md) | Vector coverage and remaining leads for all 60 districts |
 | [gazette-1946-district-index.json](gazette-1946-district-index.json) | Original 74-district Gazette roster and page locators |
 | [CATALOGUE.md](CATALOGUE.md) | Human-readable date, logo, and merger tables |
 | [HISTORY-NOTES.md](HISTORY-NOTES.md) | Historical evidence, disagreements, and remaining research scope |

@@ -7,16 +7,18 @@ const LEGACY_TOURISM_COLLECTIONS = new Set([
 /** An initiative, its section and an open record can each be shared in the address. */
 export const readInitiativePlace = (href = globalThis.location?.href ?? 'http://localhost/') => {
   const params = new URL(href).searchParams
-  return Object.fromEntries(['initiative', 'section', 'record'].map((key) => [key, params.get(key) || null]))
+  const place = Object.fromEntries(['initiative', 'section', 'record'].map((key) => [key, params.get(key) || null]))
+  if (params.has('page')) place.page = params.get('page')
+  return place
 }
 
 /** Start a fresh initiative address while retaining the site's deployment path. */
-export const initiativePlaceUrl = (href, { initiative, section, record } = {}) => {
+export const initiativePlaceUrl = (href, { initiative, section, record, page } = {}) => {
   const url = new URL(href)
   url.search = ''
   url.hash = ''
   url.searchParams.set('view', 'initiatives')
-  for (const [key, value] of Object.entries({ initiative, section, record })) {
+  for (const [key, value] of Object.entries({ initiative, section, record, page })) {
     if (value !== null && value !== undefined && value !== '') url.searchParams.set(key, value)
   }
   return url

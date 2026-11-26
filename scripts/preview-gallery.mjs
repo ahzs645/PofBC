@@ -7,10 +7,12 @@ import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { build, createServer } from 'vite'
 import react from '@vitejs/plugin-react'
+import { buildCleanbcArtwork } from './build-cleanbc-artwork.mjs'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const args = process.argv.slice(2)
 const option = (key, fallback) => args.includes(key) ? args[args.indexOf(key) + 1] : fallback
+buildCleanbcArtwork()
 const temp = mkdtempSync(join(root, '.gallery-preview-'))
 const cleanup = () => rmSync(temp, { recursive: true, force: true })
 process.on('exit', cleanup)

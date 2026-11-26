@@ -2,6 +2,7 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { CURRENT_BODIES } from './currentData.js'
 import { HISTORICAL_BODIES, LOCAL_BODIES, SUB_AGENCIES } from './historyData.js'
+import { MINISTRY_EPISODES } from './episodes.js'
 import { readGovernmentPlace } from './governmentPlace.js'
 import { governmentIn, PRESENT_YEAR } from './snapshot.js'
 import {
@@ -10,7 +11,7 @@ import {
 } from './relatedBodies.js'
 import { writeHistory } from '../site/browserHistory.js'
 
-const atlasBodies = [...CURRENT_BODIES, ...HISTORICAL_BODIES, ...SUB_AGENCIES, ...LOCAL_BODIES]
+const atlasBodies = [...MINISTRY_EPISODES, ...CURRENT_BODIES, ...HISTORICAL_BODIES, ...SUB_AGENCIES, ...LOCAL_BODIES]
 const atlasIds = new Set(atlasBodies.map((body) => body.id))
 const freeze = (value) => {
   if (value && typeof value === 'object') {

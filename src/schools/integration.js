@@ -1,6 +1,6 @@
 // Small adapters connect one district catalogue to the existing gallery, organization directory
 // and salary employers. The source observations and payroll files are left intact.
-import { CURRENT_DISTRICTS, SCHOOL_DISTRICTS, SCHOOL_FAMILY, SCHOOL_ACT_SOURCE, SCHOOL_DISTRICTS_AS_OF, connectionsOf, districtSources, formatHistoryDate, establishmentLabel } from './districts.js'
+import { CURRENT_DISTRICTS, SCHOOL_DISTRICTS, SCHOOL_FAMILY, SCHOOL_ACT_SOURCE, SCHOOL_DISTRICTS_AS_OF, connectionsOf, districtSources, formatHistoryDate, establishmentLabel, primaryDistrictDesign } from './districts.js'
 
 export const SCHOOL_IDENTITY_BODIES = SCHOOL_DISTRICTS.map((district) => ({
   id: district.id, name: district.name, shortName: district.title, kind: district.kind,
@@ -8,6 +8,7 @@ export const SCHOOL_IDENTITY_BODIES = SCHOOL_DISTRICTS.map((district) => ({
   from: district.established?.date ? Number(district.established.date.slice(0, 4)) : null,
   to: district.ended?.date ? Number(district.ended.date.slice(0, 4)) : null, current: district.current,
   status: district.assets.length ? 'asset-collected' : 'source-found',
+  cover: district.current ? primaryDistrictDesign(district)?.id : undefined,
   notes: `School district history and original identity specimens. ${district.established?.date ? `${establishmentLabel(district)}: ${formatHistoryDate(district.established.date)}. ` : ''}Each logo has its own source; a district's establishment does not date its artwork.`,
   assets: district.assets
 }))

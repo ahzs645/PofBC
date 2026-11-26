@@ -6,8 +6,8 @@
 // Layer-specific effects (glyph reveals, logo swaps, dimming) are hooks the caller runs on the
 // <svg> element handed back through `onReady`.
 
-import { useEffect, useRef, useState } from 'react'
-import { AnimatePresence, motion } from 'motion/react'
+import { useEffect, useRef } from 'react'
+import { AnimatePresence, motion, useMotionValue } from 'motion/react'
 import { useInlineSvg } from './useInlineSvg.js'
 import { useHotspots } from './useHotspots.js'
 import { useViewBoxZoom } from './useViewBoxZoom.js'
@@ -30,7 +30,8 @@ export function Poster({
 }) {
   const stageRef = useRef(null)
   const hostRef = useRef(null)
-  const [cursor, setCursor] = useState({ x: 0, y: 0, up: false, left: false })
+  const chipX = useMotionValue('16px')
+  const chipY = useMotionValue('18px')
 
   const svg = useInlineSvg(hostRef, svgRaw, { prepare })
   useReadyOnce(svg, onReady)
@@ -46,7 +47,8 @@ export function Poster({
     const y = e.clientY - rect.top
     // The chip sits below and right of the pointer, unless that would run it under the dock along
     // the foot or a panel down the side: then above, or to the left.
-    setCursor({ x, y, up: y + CHIP.h > rect.height - inset.bottom, left: x + CHIP.w > rect.width - inset.right })
+    chipX.set(x + CHIP.w > rect.width - inset.right ? `calc(${x - 12}px - 100%)` : `${x + 16}px`)
+    chipY.set(y + CHIP.h > rect.height - inset.bottom ? `calc(${y - 12}px - 100%)` : `${y + 18}px`)
     tilt.move(e, rect)
   }
 
@@ -62,7 +64,7 @@ export function Poster({
       <motion.div ref={hostRef} className="pv-sheet" style={{ rotateX: tilt.rx, rotateY: tilt.ry }} />
       <AnimatePresence>
         {region && region.id !== current && (
-          <Chip key={region.id} x={cursor.x} y={cursor.y} up={cursor.up} left={cursor.left} title={region.label} hint={region.hint} />
+          <Chip key={region.id} x={chipX} y={chipY} title={region.label} hint={region.hint} />
         )}
       </AnimatePresence>
       {children}

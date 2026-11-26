@@ -23,6 +23,12 @@ export const HISTORICAL_DISTRICTS = (SCHOOL_DISTRICT_DATA.historical ?? []).map(
 }))
 export const DISTRICT_CONNECTIONS = SCHOOL_DISTRICT_DATA.connections ?? []
 export const SCHOOL_DISTRICTS = [...CURRENT_DISTRICTS, ...HISTORICAL_DISTRICTS]
+export const primaryDistrictDesign = (record) => record.assets.find((asset) => asset.role === 'current' && !asset.variantOf) ??
+  record.assets.find((asset) => !asset.variantOf)
+export const primaryDistrictLogo = (record) => {
+  const design = primaryDistrictDesign(record)
+  return record.assets.find((asset) => asset.id === design?.preferredVector) ?? design
+}
 const byId = new Map(SCHOOL_DISTRICTS.map((record) => [record.id, record]))
 export const districtById = (id) => byId.get(String(id)) ?? (/^\d+$/.test(String(id)) ? byId.get(currentDistrictId(id)) : null) ?? null
 export const districtForEmployer = (slug) => CURRENT_DISTRICTS.find((record) => record.employerSlug === slug) ?? null

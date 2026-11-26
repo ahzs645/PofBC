@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { spotlightWalk } from './spotlight.js'
 
 const SVG_NS = 'http://www.w3.org/2000/svg'
+const SPOTLIGHT_OPACITY = '--pv-spotlight-opacity'
 
 /** The transform from an element's parent to the root <svg>, read from the transform attributes. */
 const parentMatrix = (svg, element) => {
@@ -73,6 +74,7 @@ export const useHotspots = (svg, regions, { onSelect, active, margin = 0.08, spo
   const [hover, setHover] = useState(null)
   const dimmed = useRef(new Set())
   const litNow = useRef([])
+  const artworkOpacity = useRef(new WeakMap())
 
   useEffect(() => {
     if (!svg) return
@@ -158,21 +160,29 @@ export const useHotspots = (svg, regions, { onSelect, active, margin = 0.08, spo
   // lit layer, and descending into the ones that hold one. Nothing inside a lit layer is touched.
   useEffect(() => {
     if (!svg || !spotlight) return
-    for (const el of dimmed.current) el.style.opacity = ''
-    dimmed.current.clear()
-    for (const el of litNow.current) el.classList.remove('pv-lit')
-    litNow.current = []
     const region = regions.find((r) => r.id === (hover ?? active))
-    if (!region?.layer) return
-    const lit = [...svg.querySelectorAll(region.layer)]
-    if (!lit.length) return
+    const lit = region?.layer ? [...svg.querySelectorAll(region.layer)] : []
+    const layers = new Set()
+    if (lit.length) {
+      spotlightWalk(svg, lit, new Set(spotlight.keep ?? []), (child) => {
+        if (!artworkOpacity.current.has(child)) artworkOpacity.current.set(child, getComputedStyle(child).opacity)
+        layers.add(child)
+      })
+    }
+    for (const el of litNow.current) el.classList.remove('pv-lit')
     for (const el of lit) el.classList.add('pv-lit')
     litNow.current = lit
-    spotlightWalk(svg, lit, new Set(spotlight.keep ?? []), (child) => {
-      child.style.transition = 'opacity 180ms ease'
-      child.style.opacity = String(spotlight.dim ?? 0.32)
-      dimmed.current.add(child)
-    })
+    // Layers that stay dim keep their transition while the pointer moves between hotspots.
+    for (const el of dimmed.current) {
+      if (!layers.has(el)) el.style.removeProperty(SPOTLIGHT_OPACITY)
+    }
+    const opacity = String(spotlight.dim ?? 0.32)
+    for (const child of layers) {
+      child.style.transition = 'var(--pv-spotlight-transition)'
+      child.style.opacity = `calc(${artworkOpacity.current.get(child)} * var(${SPOTLIGHT_OPACITY}, 1))`
+      child.style.setProperty(SPOTLIGHT_OPACITY, opacity)
+    }
+    dimmed.current = layers
   }, [svg, hover, active, regions, spotlight])
 
   return hover
