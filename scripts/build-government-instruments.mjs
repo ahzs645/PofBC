@@ -169,7 +169,8 @@ for (const body of HISTORICAL_BODIES.filter((entry) => entry.establishedMeaning 
     for (const entry of decision.instruments ?? []) {
       const from = entry.from === undefined ? String(body.established) : entry.from
       decided(entry, `body#${body.id}`).relations.push({ body: body.id, relation: entry.relation, provisions: entry.provisions ?? [], from, to: null,
-        precision: from ? precisionOf(from) : null, citation: body.establishedMeaning, source: historySource(body.establishedSource ?? body.source), locator: null,
+        precision: from ? precisionOf(from) : null, citation: body.establishedMeaning,
+        source: entry.source ?? historySource(body.establishedSource ?? body.source), locator: entry.locator ?? null,
         ...(entry.note ? { note: entry.note } : {}) })
     }
     continue

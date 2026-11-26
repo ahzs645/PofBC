@@ -59,3 +59,6 @@ export const ecosystemsAtRiskSpecimens = {
     }
   ]
 }
+
+export const ecosystemsAtRiskSources = ecosystemsAtRiskSpecimens.assets
+  .map(({ versionLabel, sourcePage, sourceLocator }) => ({ title: versionLabel, url: sourcePage, locator: sourceLocator }))

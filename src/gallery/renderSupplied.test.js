@@ -41,7 +41,7 @@ test('the drawing is the file’s own, placed rather than changed', () => {
   assert.doesNotMatch(plain, /<rect /)
 })
 
-test('only the marks supplied reversed are white alone', () => {
+test('white-only supplied and reconstructed marks use the reversed treatment', () => {
   assert.deepEqual(ids.filter(isReversed), ['bclc-legacy-reversed', 'bcf-toll-condensed-white', 'bcf-toll-stacked-white', 'bcf-toll-regular-white', 'bcf-wave-white',
-    'drc-department-white', 'drc-fish-wildlife-white', 'drc-parks-white', 'drc-museum-white', 'drc-fisheries-white'])
+    'drc-department-white', 'drc-fish-wildlife-white', 'drc-parks-white', 'drc-museum-white', 'drc-fisheries-white', 'drc-fw-oval-1973-white'])
 })

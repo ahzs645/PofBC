@@ -1,6 +1,7 @@
 import { fireSmartGuide, fireSmartDesigns } from './fireSmart.js'
 import { strongerBCGuide, strongerBCMatrix } from './strongerBC.js'
 import { buyBCStandards } from './buyBC.js'
+import { ecosystemsAtRiskSources } from './ecosystemsAtRisk.js'
 
 // The history around each of the Province's one-off marks.
 //
@@ -468,6 +469,17 @@ export const TIMELINES = {
         ]
       }
     ]
+  },
+
+  'ecosystems-at-risk': {
+    label: 'Ecosystems at Risk',
+    eras: [{
+      id: 'ecosystems-at-risk-brochures', status: 'held', years: '1993 and 2006', label: 'The brochure-series badge',
+      marks: ['ecosystems-at-risk-badge'],
+      note: 'The tilted badge appears on the Garry Oak Ecosystems and Estuaries in British Columbia covers, with differences in its tilt and ink colours.',
+      applicability: { kind: 'dated_specimen', years: '1993 and 2006', note: 'October 1993 and March 2006 are the publication dates of the two held specimens.' },
+      sources: ecosystemsAtRiskSources
+    }]
   },
 
   'firesmart-bc': {

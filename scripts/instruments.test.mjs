@@ -40,15 +40,32 @@ test('every relationship names a body and rests on a source or citation; ids are
   for (const entry of INSTRUMENTS) for (const relation of entry.relations) assert.ok(relation.body && (relation.source?.url || relation.citation), entry.id)
 })
 
-test('policy events have a policy category and lead to their implementation, not to bodies they do not name', () => {
-  const announced = EVENTS.filter((event) => event.type === 'policy_announced')
-  assert.equal(announced.length, 2)
-  for (const event of announced) {
-    assert.equal(typeOf(event).kind, 'policy')
-    assert.equal(event.relatedEvents.length, 1)
-    assert.equal(event.related, undefined)
+test('health and trades policy announcements link to the events that carried them out', () => {
+  const implementations = [
+    ['atlas:health-lineage-new-directions', 'atlas:health-lineage-act-1993'],
+    ['atlas:health-lineage-better-teamwork', 'atlas:health-lineage-devolution-1997'],
+    ['atlas:itac-announced-1997', 'atlas:itac-established-1997'],
+    ['atlas:itac-wind-up-announced-2002', 'atlas:itac-interim-administration-2002']
+  ]
+  for (const [announcement, implementation] of implementations) {
+    const event = EVENTS.find(({ id }) => id === announcement)
+    assert.equal(event?.type, 'policy_announced', announcement)
+    assert.equal(typeOf(event).kind, 'policy', announcement)
+    assert.deepEqual(event.relatedEvents, [implementation], announcement)
+    assert.equal(event.related, undefined, announcement)
+    assert.ok(EVENTS.some(({ id }) => id === implementation), implementation)
   }
   assert.equal(byId('policy-better-teamwork-better-care-1996').type, 'policy')
+})
+
+test('the 1977 Apprenticeship and Training Development Act established the board on commencement', () => {
+  const act = byId('act-apprenticeship-and-training-development-act')
+  assert.deepEqual(act?.citations, ['SBC 1977, c. 65'])
+  const founding = act.relations.find(({ body }) => body === 'provincial-apprenticeship-board')
+  assert.equal(founding?.relation, 'established_by')
+  assert.deepEqual(founding.provisions, ['s. 10(1)'])
+  assert.equal(founding.from, '1978')
+  assert.equal(founding.precision, 'year')
 })
 
 test('the development corporations retain their different commencement histories and the transfer of assets', () => {

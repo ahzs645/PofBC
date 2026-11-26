@@ -1,6 +1,7 @@
 import { fireSmartGuide } from './fireSmart.js'
 import { strongerBCGuide, strongerBCMatrix } from './strongerBC.js'
 import { buyBCStandards } from './buyBC.js'
+import { ecosystemsAtRiskSources } from './ecosystemsAtRisk.js'
 
 // Owners for artwork the gallery already held without a register subject (the 15 November 2026
 // gallery audit: 53 entries in 12 collections plus BC Cancer Foundation's two marks).
@@ -41,6 +42,8 @@ export const PROGRAM_ENTRY_OWNERS = {
   'vector-canada-starts-here-2012': 'pacific-gateway',
   'vector-canada-starts-here-bc-jobs-plan-2012': 'pacific-gateway',
   'best-place-on-earth': 'best-place-on-earth',
+  'bc-150-years': 'bc-150-years',
+  'ecosystems-at-risk-badge': 'ecosystems-at-risk',
   'bc-travel-industry-ca-1970': 'department-of-travel-industry-1967',
   // Ministries' flag-years marks: owned by the ministry's node on the government map.
   'bc-environment-flag-years': 'ministry-of-environment-1988',
@@ -61,6 +64,19 @@ const subject = ({ id, label, name = label, kind, family = 'provincial-programs'
 })
 
 export const RECONCILED_SUBJECTS = [
+  subject({
+    id: 'bc-150-years', label: 'BC 150 Years', kind: 'service-brand',
+    collectionIds: ['bc-mark'],
+    sources: [{ title: 'Balanced Budget 2008 Highlights, front cover', url: 'https://www.bcbudget.gov.bc.ca/2008/highlights/2008_Highlights.pdf' }],
+    note: 'The Province’s 2008 anniversary campaign used a blue-and-gold mark with a sunburst and the Best Place on Earth tagline.',
+    nextAction: 'Locate the campaign’s original artwork package or graphic standards.'
+  }),
+  subject({
+    id: 'ecosystems-at-risk', label: 'Ecosystems at Risk', name: 'Ecosystems in British Columbia at Risk', kind: 'service-brand',
+    collectionIds: ['specimens-ecosystems-at-risk'], sources: ecosystemsAtRiskSources,
+    note: 'The B.C. Conservation Data Centre used this badge on public brochures about threatened habitats.',
+    nextAction: 'Check other dated brochures in the series for additional uses of the badge.'
+  }),
   subject({
     id: 'firesmart-bc', label: 'FireSmart BC', kind: 'service-brand',
     collectionIds: ['specimens-firesmart-bc'], aliases: ['BC FireSmart Committee', 'Ember the FireSmart Fox'],
