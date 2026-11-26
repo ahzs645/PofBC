@@ -3,6 +3,7 @@
 import { ShelfView } from './ShelfView.jsx'
 import { FACETS, POSTERS, SERIES } from './catalogue.js'
 import careCardThumb from './carecard/thumbnail.jpg'
+import springThumb from './super-natural-spring/thumbnail.jpg'
 import coastalThumb from './coastal-forest/thumbnail.jpg'
 import ashtrayThumb from './forest-service/use-your-ashtray.svg?url'
 import dropThumb from './forest-service/dont-drop-it.svg?url'
@@ -29,6 +30,7 @@ const bcFerries = (id) => () => import('./bc-ferries/index.js').then((module) =>
 const noxiousWeeds = (id) => () => import('./noxious-weeds/index.js').then((module) => module.loaderFor(id)())
 const expo86 = (id) => () => import('./expo-86/index.js').then((module) => module.loaderFor(id)())
 const LOADERS = {
+  'super-natural-spring': () => import('./super-natural-spring/index.js').then((module) => module.load()),
   'new-carecard': () => import('./carecard/index.js').then((module) => module.load()),
   'coastal-forest': () => import('./coastal-forest/index.jsx').then((module) => module.load()),
   'use-your-ashtray': forestService('use-your-ashtray'),
@@ -46,13 +48,13 @@ const LOADERS = {
   'explosion-in-slow-motion': noxiousWeeds('explosion-in-slow-motion'),
   'go-bc-ferries': bcFerries('go-bc-ferries'),
   'queen-of-sidney': bcFerries('queen-of-sidney'),
-  // Unlisted (catalogue.js): opened from their addresses, and from one another.
   'expo-86-davidson': expo86('expo-86-davidson'),
   'expo-86-fiorucci': expo86('expo-86-fiorucci'),
   'our-british-columbia': expo86('our-british-columbia')
 }
 
 const THUMBNAILS = {
+  'super-natural-spring': springThumb,
   'new-carecard': careCardThumb,
   'coastal-forest': coastalThumb,
   'use-your-ashtray': ashtrayThumb,

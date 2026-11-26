@@ -22,9 +22,11 @@ import { PINS } from '../pins/catalogue.js'
 import { CERTAINTY, GROUPS, MARK_OBJECTS, connectedPosters, connectionsOf, groupedConnections, objectsForLogo, postersForLogo, postersForPatch } from './connections.js'
 
 import { CARECARD_POSTER } from './carecard/poster.js'
+import { SPRING_POSTER } from './super-natural-spring/poster.js'
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
 const DRAWINGS = {
+  'super-natural-spring': read('./super-natural-spring/spring-visitors.svg'),
   'new-carecard': read('./carecard/new-carecard.svg'),
   'coastal-forest': read('./coastal-forest/poster.svg'),
   'use-your-ashtray': read('./forest-service/use-your-ashtray.svg'),
@@ -87,6 +89,7 @@ const assertPlace = (to, where) => {
 // Every poster as the viewer sees it: its parts, the order they are stepped through, and which of
 // them are hotspots.
 const DEFINITIONS = {
+  'super-natural-spring': SPRING_POSTER,
   'new-carecard': CARECARD_POSTER,
   'coastal-forest': { parts: COASTAL_PARTS, order: COASTAL_ORDER, regions: COASTAL_REGIONS.map(({ id }) => id) },
   ...FOREST_SERVICE_POSTERS,
@@ -96,7 +99,7 @@ const DEFINITIONS = {
   ...EXPO_86_POSTERS
 }
 // The posters whose panels are data.
-const DATA_POSTERS = { 'new-carecard': CARECARD_POSTER, ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
+const DATA_POSTERS = { 'super-natural-spring': SPRING_POSTER, 'new-carecard': CARECARD_POSTER, ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
 
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
 const partsIn = (selector) => [...selector.matchAll(/\[data-part="([\w-]+)"\]/g)].map((m) => m[1])
@@ -121,19 +124,11 @@ test('every series lists posters that exist, and every poster is in the series i
   for (const id of listed) assert.equal(seriesOf(id).id, POSTERS[id].series)
 })
 
-test('an unlisted poster is off the shelf and out of the stepping order, but still a poster', () => {
-  const unlisted = [...SERIES.filter((series) => series.unlisted).flatMap((series) => series.posters), ...Object.keys(POSTERS).filter((id) => POSTERS[id].unlisted)]
-  assert.deepEqual(unlisted.sort(), ['beware-these-alien-invaders', 'expo-86-davidson', 'expo-86-fiorucci', 'our-british-columbia'])
-  for (const id of unlisted) {
-    assert.ok(POSTERS[id], `${id} has no card, so its address would not open it`)
-    assert.ok(!listedPosterIds().includes(id), `${id} is on the shelf`)
-  }
-  // A poster unlisted alone stands alone; an unlisted series steps among its own.
-  assert.deepEqual(neighbours('beware-these-alien-invaders'), { previous: null, next: null })
-  assert.deepEqual(neighbours('expo-86-davidson'), { previous: null, next: 'expo-86-fiorucci' })
-  assert.deepEqual(neighbours('expo-86-fiorucci'), { previous: 'expo-86-davidson', next: 'our-british-columbia' })
-  assert.deepEqual(neighbours('our-british-columbia'), { previous: 'expo-86-fiorucci', next: null })
-  for (const id of listedPosterIds()) for (const near of Object.values(neighbours(id))) assert.ok(!unlisted.includes(near), `${id} steps to an unlisted poster`)
+test('the shelf lists every poster except the unlisted leaflet', () => {
+  const unlisted = 'beware-these-alien-invaders'
+  assert.ok(POSTERS[unlisted])
+  assert.deepEqual(listedPosterIds(), posterIds().filter((id) => id !== unlisted))
+  assert.deepEqual(neighbours(unlisted), { previous: null, next: null })
 })
 
 test('every poster has a drawing whose viewBox is the catalogue’s', () => {
@@ -370,7 +365,7 @@ test('the shelf can be filtered: every card names its issuer, subject and format
   }
   for (const { key } of FACETS) {
     const values = new Set(listedPosterIds().map((id) => POSTERS[id][key]))
-    assert.ok(values.size > 1 && values.size <= 7, `${key}: ${values.size} values is no use as a filter`)
+    assert.ok(values.size > 1 && values.size <= 9, `${key}: ${values.size} values is no use as a filter`)
   }
 })
 
@@ -399,8 +394,9 @@ test('Wildlife Trees has the original to compare with, in the drawing’s shape'
 
 test('neighbours step through the posters in catalogue order', () => {
   const ids = listedPosterIds()
-  assert.deepEqual(neighbours(ids[0]), { previous: null, next: ids[1] })
-  assert.deepEqual(neighbours(ids.at(-1)), { previous: ids.at(-2), next: null })
+  for (const [i, id] of ids.entries()) {
+    assert.deepEqual(neighbours(id), { previous: ids[i - 1] ?? null, next: ids[i + 1] ?? null })
+  }
 })
 
 // The pieces imported from supplied packages: the 1960 decal, the 1971 advertisement, the

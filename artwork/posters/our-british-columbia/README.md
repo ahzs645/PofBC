@@ -128,5 +128,4 @@ parser does not draw them otherwise), the Inkscape layer labels kept as `data-la
 dropped, the title and description reworded and the em dashes in the emblems' own titles made
 commas. The white paper moves out of the first layer, and the fine print out of the billing layer,
 each to a layer of its own in the same place, so the Posters view can dim each layer as one; drawn,
-nothing changes. The shelf card is `our-british-columbia.thumb.jpg`, 480 × 696. The poster is
-unlisted, with the other Expo 86 posters.
+nothing changes. The shelf card is `our-british-columbia.thumb.jpg`, 480 × 696.
