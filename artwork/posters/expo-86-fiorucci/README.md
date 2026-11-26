@@ -157,5 +157,4 @@ The Posters view (`?view=posters&poster=expo-86-fiorucci`) shows
 `web_copy.py`: every id prefixed `fio-`, the Inkscape layer labels kept as `data-label`, the
 metadata dropped, the size given in user units, and the title and description reworded. Rendered in
 Chromium at 1500 wide, it does not differ from the master by a pixel. The shelf card is
-`expo-86-fiorucci.thumb.jpg`, 480 × 696, made from that render. The poster is unlisted, with the
-other Expo 86 posters.
+`expo-86-fiorucci.thumb.jpg`, 480 × 696, made from that render.

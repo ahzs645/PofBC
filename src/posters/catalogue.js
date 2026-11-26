@@ -55,13 +55,10 @@ export const SERIES = [
     kind: 'Tourism advertising',
     posters: ['super-natural-spring']
   },
-  // Unlisted: left off the shelf, but each address opens its poster (?view=posters&poster=expo-86-davidson),
-  // and the three step among themselves.
   {
     id: 'expo-86',
     title: 'Expo 86',
-    kind: 'Art posters and a pavilion film poster · unlisted',
-    unlisted: true,
+    kind: 'Art posters and a pavilion film poster',
     posters: ['expo-86-davidson', 'expo-86-fiorucci', 'our-british-columbia']
   }
 ]

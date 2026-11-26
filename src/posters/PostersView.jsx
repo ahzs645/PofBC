@@ -48,7 +48,6 @@ const LOADERS = {
   'explosion-in-slow-motion': noxiousWeeds('explosion-in-slow-motion'),
   'go-bc-ferries': bcFerries('go-bc-ferries'),
   'queen-of-sidney': bcFerries('queen-of-sidney'),
-  // Unlisted (catalogue.js): opened from their addresses, and from one another.
   'expo-86-davidson': expo86('expo-86-davidson'),
   'expo-86-fiorucci': expo86('expo-86-fiorucci'),
   'our-british-columbia': expo86('our-british-columbia')

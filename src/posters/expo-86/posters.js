@@ -4,9 +4,7 @@
 // ./index.js — as for the Forest Service posters (see ../forest-service/posters.js for the shape of
 // a part and a panel).
 //
-// Unlisted: the posters are not on the shelf (their series says `unlisted`), but their addresses
-// open them (?view=posters&poster=expo-86-davidson), and they step among themselves. Boxes are in
-// each drawing's own units, measured from its named groups in Chromium.
+// Boxes are in each drawing's own units, measured from its named groups in Chromium.
 
 import { POSTERS } from '../catalogue.js'
 import { withStories } from '../stories.js'
@@ -67,7 +65,7 @@ export const EXPO_86_DAVIDSON = {
             { name: 'Red', value: '#C9231D' },
             { name: 'Blue-grey', value: '#88ACB3' }
           ] },
-          { note: 'A vector reconstruction, not the printing artwork: the colours are flat values read from photographs, the sheet size is a working size rather than a measured one, and the type is a Helvetica-style substitute for a face not identified. Kept unlisted on the shelf; the artwork is Robert Davidson’s and remains under copyright.' },
+          { note: 'A vector reconstruction, not the printing artwork: the colours are flat values read from photographs, the sheet size is a working size rather than a measured one, and the type is a Helvetica-style substitute for a face not identified. The artwork is Robert Davidson’s and remains under copyright.' },
           { links: [EXPO_LOGOS_LINK, EXPO_CORPORATION_LINK, poster('expo-86-fiorucci', 'Posters · another of the fair’s art posters, with the same mark and event text'), poster('our-british-columbia', 'Posters · the British Columbia Pavilion’s poster for its film')] }
         ]
       }
@@ -215,7 +213,7 @@ export const EXPO_86_FIORUCCI = {
             { name: 'Ink', value: '#171716' }
           ] },
           'Read as a picture, the four forms are both passenger aircraft and fish, and their windows and alternating directions a playful image of travel and exchange, in keeping with the fair’s theme of transportation and communication. That reading is this site’s: no statement from the artist about the poster has been found.',
-          { note: 'A vector reconstruction, not the printing artwork: the colours are flat values estimated from an uncalibrated photograph, the page size is a dealer’s catalogue measurement rather than one of this print, and a little of the design may continue under the frame. Kept unlisted on the shelf; the artwork is Vittorio Fiorucci’s and remains under copyright.' },
+          { note: 'A vector reconstruction, not the printing artwork: the colours are flat values estimated from an uncalibrated photograph, the page size is a dealer’s catalogue measurement rather than one of this print, and a little of the design may continue under the frame. The artwork is Vittorio Fiorucci’s and remains under copyright.' },
           { links: [EXPO_LOGOS_LINK, EXPO_CORPORATION_LINK, poster('expo-86-davidson', 'Posters · another of the fair’s art posters, with the same mark and event text')] }
         ]
       }
