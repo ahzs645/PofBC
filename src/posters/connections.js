@@ -151,6 +151,38 @@ const BRANCH = {
 // ── The connections, by piece ───────────────────────────────────────────────────────────────────
 
 const BY_POSTER = {
+  'super-natural-spring': [
+    {
+      group: 'issuer', rel: 'Advertises', label: 'Province of British Columbia',
+      note: 'Concordia University’s account identifies the advertisement with the Province’s Super, Natural tourism campaign.',
+      href: 'https://www.concordia.ca/cunews/offices/advancement/2021/12/02/-concordia-very-formative--in-lives-of-ad-agency-founder-and-chi.html',
+      certainty: 'documented'
+    },
+    {
+      group: 'marks', rel: 'Campaign identity', label: 'Super, Natural British Columbia',
+      note: 'Logos · the wider tourism identity collection. This 1984 signature is not identified as one of its later source-vector marks.',
+      to: { view: 'gallery', logos: 'tourism-bc-destination-bc' },
+      certainty: 'printed'
+    },
+    {
+      group: 'objects', rel: 'Related tourism wording', label: 'Super, Natural British Columbia welcomes you',
+      note: 'Signs · the tourism phrase on a provincial welcome sign, in a different arrangement.',
+      to: { view: 'signs', sign: 'super-natural' },
+      certainty: 'thematic'
+    },
+    {
+      group: 'context', rel: 'Date and creative credits', label: 'McKim Advertising Vancouver, 1984',
+      note: 'BCBusiness credits copywriter Alvin Wasserman and art director Bill Cozens and dates the whale advertisement to 1984.',
+      href: 'https://bcbusiness.ca/lifestyle/tourism/the-bcbusiness-2018-tourism-status-report-branding/',
+      certainty: 'documented'
+    },
+    {
+      group: 'context', rel: 'Award and full credits', label: 'ADCC Gold, Consumer Magazine Ad, 1985',
+      note: 'The award archive names client Tourism B.C., company McKim Advertising, writer and creative director Alvin Wasserman, designer and art director Bill Cozens, and original photographer Peter Thomas. The award year is distinct from the ad’s reported 1984 appearance.',
+      href: 'https://theadcc.ca/archive/so-many-of-our-visitors_1985_gold_consumer-magazine-ad',
+      certainty: 'documented'
+    }
+  ],
   'use-your-ashtray': [
     {
       group: 'issuer', rel: 'Printed publication', label: 'Fish and Game Branch',

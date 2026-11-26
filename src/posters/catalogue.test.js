@@ -22,9 +22,11 @@ import { PINS } from '../pins/catalogue.js'
 import { CERTAINTY, GROUPS, MARK_OBJECTS, connectedPosters, connectionsOf, groupedConnections, objectsForLogo, postersForLogo, postersForPatch } from './connections.js'
 
 import { CARECARD_POSTER } from './carecard/poster.js'
+import { SPRING_POSTER } from './super-natural-spring/poster.js'
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
 const DRAWINGS = {
+  'super-natural-spring': read('./super-natural-spring/spring-visitors.svg'),
   'new-carecard': read('./carecard/new-carecard.svg'),
   'coastal-forest': read('./coastal-forest/poster.svg'),
   'use-your-ashtray': read('./forest-service/use-your-ashtray.svg'),
@@ -87,6 +89,7 @@ const assertPlace = (to, where) => {
 // Every poster as the viewer sees it: its parts, the order they are stepped through, and which of
 // them are hotspots.
 const DEFINITIONS = {
+  'super-natural-spring': SPRING_POSTER,
   'new-carecard': CARECARD_POSTER,
   'coastal-forest': { parts: COASTAL_PARTS, order: COASTAL_ORDER, regions: COASTAL_REGIONS.map(({ id }) => id) },
   ...FOREST_SERVICE_POSTERS,
@@ -96,7 +99,7 @@ const DEFINITIONS = {
   ...EXPO_86_POSTERS
 }
 // The posters whose panels are data.
-const DATA_POSTERS = { 'new-carecard': CARECARD_POSTER, ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
+const DATA_POSTERS = { 'super-natural-spring': SPRING_POSTER, 'new-carecard': CARECARD_POSTER, ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
 
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
 const partsIn = (selector) => [...selector.matchAll(/\[data-part="([\w-]+)"\]/g)].map((m) => m[1])

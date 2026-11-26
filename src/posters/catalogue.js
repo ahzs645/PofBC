@@ -49,6 +49,12 @@ export const SERIES = [
     id: 'health', title: 'Ministry of Health', kind: 'Public health advertising',
     posters: ['new-carecard']
   },
+  {
+    id: 'tourism',
+    title: 'Super, Natural British Columbia',
+    kind: 'Tourism advertising',
+    posters: ['super-natural-spring']
+  },
   // Unlisted: left off the shelf, but each address opens its poster (?view=posters&poster=expo-86-davidson),
   // and the three step among themselves.
   {
@@ -71,6 +77,16 @@ export const SERIES = [
  * words each; `blurb` is one line on what the piece asks or says, shown on its card.
  */
 export const POSTERS = {
+  'super-natural-spring': {
+    id: 'super-natural-spring', series: 'tourism', issuer: 'Province of British Columbia',
+    subject: 'Coastal travel', format: 'Magazine ad', made: 'mixed',
+    title: 'So many of our visitors return in Spring.', when: '1984, from the creators’ published account',
+    blurb: 'Returning orcas introduce a spring invitation to British Columbia.',
+    view: { x: 0, y: 0, w: 620, h: 418 },
+    // An export size in the supplied reference’s proportions, not a measurement of the original.
+    page: { w: 12.4, h: 8.36 },
+    prefetch: false
+  },
   'new-carecard': {
     id: 'new-carecard', series: 'health', issuer: 'Ministry of Health',
     subject: 'Health care', format: 'Newspaper ad', made: 'mixed',
