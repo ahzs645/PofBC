@@ -3883,6 +3883,102 @@ export const COLLECTED_DISPLAY = {
    "plate": true
   }
  },
+ "airport-cycd-mountain-aircraft-2005-colour": {
+  "light": {
+   "file": "identity-display/airport-cycd-mountain-aircraft-2005-colour.light.svg",
+   "aspect": 2.9021,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/airport-cycd-mountain-aircraft-2005-colour.dark.svg",
+   "aspect": 2.9021,
+   "recoloured": true
+  }
+ },
+ "airport-cycd-flight-path-2010-colour": {
+  "light": {
+   "file": "identity-display/airport-cycd-flight-path-2010-colour.light.svg",
+   "aspect": 2.6029,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/airport-cycd-flight-path-2010-colour.dark.svg",
+   "aspect": 2.6029,
+   "recoloured": true
+  }
+ },
+ "airport-cycd-flight-path-2010-reverse": {
+  "light": {
+   "file": "identity-display/airport-cycd-flight-path-2010-reverse.light.svg",
+   "aspect": 2.6029,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/airport-cycd-flight-path-2010-reverse.dark.svg",
+   "aspect": 2.6029,
+   "recoloured": false
+  }
+ },
+ "airport-cycd-flight-path-2012-white": {
+  "light": {
+   "file": "identity-display/airport-cycd-flight-path-2012-white.light.svg",
+   "aspect": 2.6122,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/airport-cycd-flight-path-2012-white.dark.svg",
+   "aspect": 2.6122,
+   "recoloured": false
+  }
+ },
+ "airport-cycd-flight-path-2013-black": {
+  "light": {
+   "file": "identity-display/airport-cycd-flight-path-2013-black.light.svg",
+   "aspect": 2.6122,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/airport-cycd-flight-path-2013-black.dark.svg",
+   "aspect": 2.6122,
+   "recoloured": true
+  }
+ },
+ "airport-cycd-flight-path-2014-alternate-tagline": {
+  "light": {
+   "file": "identity-display/airport-cycd-flight-path-2014-alternate-tagline.light.svg",
+   "aspect": 3.3947,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/airport-cycd-flight-path-2014-alternate-tagline.dark.svg",
+   "aspect": 3.3947,
+   "recoloured": true
+  }
+ },
+ "airport-cycd-flight-path-2015-alternate-tagline": {
+  "light": {
+   "file": "identity-display/airport-cycd-flight-path-2015-alternate-tagline.light.svg",
+   "aspect": 2.5276,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/airport-cycd-flight-path-2015-alternate-tagline.dark.svg",
+   "aspect": 2.5276,
+   "recoloured": true
+  }
+ },
+ "airport-cycd-signature-2023-black": {
+  "light": {
+   "file": "identity-display/airport-cycd-signature-2023-black.light.svg",
+   "aspect": 2.226,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/airport-cycd-signature-2023-black.dark.svg",
+   "aspect": 2.226,
+   "recoloured": true
+  }
+ },
  "airport-cyxt-reverse": {
   "light": {
    "file": "identity-display/airport-cyxt-reverse.light.svg",
@@ -3931,6 +4027,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "airport-cbc7-phs-operator-emblem-2016-blue": {
+  "light": {
+   "file": "identity-display/airport-cbc7-phs-operator-emblem-2016-blue.light.svg",
+   "aspect": 1.5785,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/airport-cbc7-phs-operator-emblem-2016-blue.dark.svg",
+   "aspect": 1.5785,
+   "recoloured": true
+  }
+ },
  "airport-cyhc-signature": {
   "light": {
    "file": "identity-display/airport-cyhc-signature.light.svg",
@@ -3954,6 +4062,18 @@ export const COLLECTED_DISPLAY = {
    "aspect": 3.5824,
    "recoloured": false,
    "plate": true
+  }
+ },
+ "airport-cyvr-yvr-beyond-every-day-2007-white": {
+  "light": {
+   "file": "identity-display/airport-cyvr-yvr-beyond-every-day-2007-white.light.svg",
+   "aspect": 1.4715,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/airport-cyvr-yvr-beyond-every-day-2007-white.dark.svg",
+   "aspect": 1.4715,
+   "recoloured": false
   }
  },
  "airport-cyyj-signature": {
@@ -5155,6 +5275,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "source-vector-translink-2022-white": {
+  "light": {
+   "file": "identity-display/source-vector-translink-2022-white.light.svg",
+   "aspect": 2.2246,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-vector-translink-2022-white.dark.svg",
+   "aspect": 2.2246,
+   "recoloured": false
+  }
+ },
  "source-expanded-metro-vancouver-transit-police-community-report-2025-reversed": {
   "light": {
    "file": "identity-display/source-expanded-metro-vancouver-transit-police-community-report-2025-reversed.light.svg",
@@ -5812,6 +5944,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "source-vector-skytrain-2022-white": {
+  "light": {
+   "file": "identity-display/source-vector-skytrain-2022-white.light.svg",
+   "aspect": 4.3031,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-vector-skytrain-2022-white.dark.svg",
+   "aspect": 4.3031,
+   "recoloured": false
+  }
+ },
  "source-expanded-handydart-customer-first-logo": {
   "light": {
    "file": "identity-display/source-expanded-handydart-customer-first-logo.light.svg",
@@ -5845,6 +5989,30 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/rebuild-expanded-handydart-1985-brochure-paper-model-red.light.svg",
    "aspect": 1.6482,
+   "recoloured": false
+  }
+ },
+ "source-vector-coast-mountain-bus-company-2022-white": {
+  "light": {
+   "file": "identity-display/source-vector-coast-mountain-bus-company-2022-white.light.svg",
+   "aspect": 3.0996,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-vector-coast-mountain-bus-company-2022-white.dark.svg",
+   "aspect": 3.0996,
+   "recoloured": false
+  }
+ },
+ "source-vector-west-coast-express-2022-white": {
+  "light": {
+   "file": "identity-display/source-vector-west-coast-express-2022-white.light.svg",
+   "aspect": 3.1917,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-vector-west-coast-express-2022-white.dark.svg",
+   "aspect": 3.1917,
    "recoloured": false
   }
  },
@@ -6423,6 +6591,30 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/rd-qathet-website.dark.svg",
    "aspect": 3.9804,
+   "recoloured": true
+  }
+ },
+ "source-vector-slrd-2016-horizontal-colour": {
+  "light": {
+   "file": "identity-display/source-vector-slrd-2016-horizontal-colour.light.svg",
+   "aspect": 8.7796,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-vector-slrd-2016-horizontal-colour.dark.svg",
+   "aspect": 8.7796,
+   "recoloured": true
+  }
+ },
+ "source-vector-slrd-2018-horizontal-black": {
+  "light": {
+   "file": "identity-display/source-vector-slrd-2018-horizontal-black.light.svg",
+   "aspect": 8.8189,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-vector-slrd-2018-horizontal-black.dark.svg",
+   "aspect": 8.8189,
    "recoloured": true
   }
  },
@@ -7377,6 +7569,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "recovered-colwood-charcoal-wayfinding-2022": {
+  "light": {
+   "file": "identity-display/recovered-colwood-charcoal-wayfinding-2022.light.svg",
+   "aspect": 2.6853,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-colwood-charcoal-wayfinding-2022.dark.svg",
+   "aspect": 2.6853,
+   "recoloured": true
+  }
+ },
  "municipal-comox-annual-report-2021-ship-navy": {
   "light": {
    "file": "identity-display/municipal-comox-annual-report-2021-ship-navy.light.svg",
@@ -7764,6 +7968,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "recovered-nakusp-stacked-colour-2023": {
+  "light": {
+   "file": "identity-display/recovered-nakusp-stacked-colour-2023.light.svg",
+   "aspect": 1.2634,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-nakusp-stacked-colour-2023.dark.svg",
+   "aspect": 1.2634,
+   "recoloured": true
+  }
+ },
+ "recovered-nakusp-horizontal-black-2023": {
+  "light": {
+   "file": "identity-display/recovered-nakusp-horizontal-black-2023.light.svg",
+   "aspect": 4.2276,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-nakusp-horizontal-black-2023.dark.svg",
+   "aspect": 4.2276,
+   "recoloured": true
+  }
+ },
  "source-recovered-municipal-nelson-website-logo": {
   "light": {
    "file": "identity-display/source-recovered-municipal-nelson-website-logo.light.svg",
@@ -7773,6 +8001,30 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/source-recovered-municipal-nelson-website-logo.dark.svg",
    "aspect": 2.2645,
+   "recoloured": true
+  }
+ },
+ "recovered-north-cowichan-colour": {
+  "light": {
+   "file": "identity-display/recovered-north-cowichan-colour.light.svg",
+   "aspect": 2.5684,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-north-cowichan-colour.dark.svg",
+   "aspect": 2.5684,
+   "recoloured": true
+  }
+ },
+ "recovered-north-cowichan-150-anniversary-2023": {
+  "light": {
+   "file": "identity-display/recovered-north-cowichan-150-anniversary-2023.light.svg",
+   "aspect": 1.8036,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-north-cowichan-150-anniversary-2023.dark.svg",
+   "aspect": 1.8036,
    "recoloured": true
   }
  },
@@ -7875,6 +8127,78 @@ export const COLLECTED_DISPLAY = {
    "palette": true
   }
  },
+ "recovered-radium-wonderland-colour-2012": {
+  "light": {
+   "file": "identity-display/recovered-radium-wonderland-colour-2012.light.svg",
+   "aspect": 3.0306,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-radium-wonderland-colour-2012.dark.svg",
+   "aspect": 3.0306,
+   "recoloured": true
+  }
+ },
+ "recovered-radium-wonderland-black-2012": {
+  "light": {
+   "file": "identity-display/recovered-radium-wonderland-black-2012.light.svg",
+   "aspect": 3.0333,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-radium-wonderland-black-2012.dark.svg",
+   "aspect": 3.0333,
+   "recoloured": true
+  }
+ },
+ "recovered-radium-wonderland-white-2012": {
+  "light": {
+   "file": "identity-display/recovered-radium-wonderland-white-2012.light.svg",
+   "aspect": 3.0333,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-radium-wonderland-white-2012.dark.svg",
+   "aspect": 3.0333,
+   "recoloured": false
+  }
+ },
+ "recovered-radium-community-colour-2012": {
+  "light": {
+   "file": "identity-display/recovered-radium-community-colour-2012.light.svg",
+   "aspect": 2.8568,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-radium-community-colour-2012.dark.svg",
+   "aspect": 2.8568,
+   "recoloured": true
+  }
+ },
+ "recovered-radium-community-black-2012": {
+  "light": {
+   "file": "identity-display/recovered-radium-community-black-2012.light.svg",
+   "aspect": 2.9004,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-radium-community-black-2012.dark.svg",
+   "aspect": 2.9004,
+   "recoloured": true
+  }
+ },
+ "recovered-radium-community-white-2012": {
+  "light": {
+   "file": "identity-display/recovered-radium-community-white-2012.light.svg",
+   "aspect": 2.9004,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-radium-community-white-2012.dark.svg",
+   "aspect": 2.9004,
+   "recoloured": false
+  }
+ },
  "source-recovered-municipal-revelstoke-website-logo": {
   "light": {
    "file": "identity-display/source-recovered-municipal-revelstoke-website-logo.light.svg",
@@ -7920,6 +8244,114 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/source-recovered-municipal-sicamous-website-logo.dark.svg",
    "aspect": 2.3206,
+   "recoloured": true
+  }
+ },
+ "recovered-sooke-primary-horizontal-pantone": {
+  "light": {
+   "file": "identity-display/recovered-sooke-primary-horizontal-pantone.light.svg",
+   "aspect": 2.6008,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-sooke-primary-horizontal-pantone.dark.svg",
+   "aspect": 2.6008,
+   "recoloured": true
+  }
+ },
+ "recovered-sparwood-unbounded-charcoal": {
+  "light": {
+   "file": "identity-display/recovered-sparwood-unbounded-charcoal.light.svg",
+   "aspect": 4.311,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-sparwood-unbounded-charcoal.dark.svg",
+   "aspect": 4.311,
+   "recoloured": true
+  }
+ },
+ "recovered-sparwood-bounded-yours-and-mine-charcoal": {
+  "light": {
+   "file": "identity-display/recovered-sparwood-bounded-yours-and-mine-charcoal.light.svg",
+   "aspect": 2.9344,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-sparwood-bounded-yours-and-mine-charcoal.dark.svg",
+   "aspect": 2.9344,
+   "recoloured": true
+  }
+ },
+ "recovered-sparwood-bounded-other-side-of-bc-charcoal": {
+  "light": {
+   "file": "identity-display/recovered-sparwood-bounded-other-side-of-bc-charcoal.light.svg",
+   "aspect": 2.9344,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-sparwood-bounded-other-side-of-bc-charcoal.dark.svg",
+   "aspect": 2.9344,
+   "recoloured": true
+  }
+ },
+ "recovered-sparwood-unbounded-white": {
+  "light": {
+   "file": "identity-display/recovered-sparwood-unbounded-white.light.svg",
+   "aspect": 4.3042,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-sparwood-unbounded-white.dark.svg",
+   "aspect": 4.3042,
+   "recoloured": false
+  }
+ },
+ "recovered-sparwood-bounded-yours-and-mine-white": {
+  "light": {
+   "file": "identity-display/recovered-sparwood-bounded-yours-and-mine-white.light.svg",
+   "aspect": 2.9314,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-sparwood-bounded-yours-and-mine-white.dark.svg",
+   "aspect": 2.9314,
+   "recoloured": false
+  }
+ },
+ "recovered-sparwood-unbounded-metallic": {
+  "light": {
+   "file": "identity-display/recovered-sparwood-unbounded-metallic.light.svg",
+   "aspect": 4.2983,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-sparwood-unbounded-metallic.dark.svg",
+   "aspect": 4.2983,
+   "recoloured": true
+  }
+ },
+ "recovered-sparwood-unbounded-blue": {
+  "light": {
+   "file": "identity-display/recovered-sparwood-unbounded-blue.light.svg",
+   "aspect": 4.2983,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-sparwood-unbounded-blue.dark.svg",
+   "aspect": 4.2983,
+   "recoloured": true
+  }
+ },
+ "recovered-sparwood-unbounded-green": {
+  "light": {
+   "file": "identity-display/recovered-sparwood-unbounded-green.light.svg",
+   "aspect": 4.2983,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-sparwood-unbounded-green.dark.svg",
+   "aspect": 4.2983,
    "recoloured": true
   }
  },
@@ -8163,6 +8595,78 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/kitimat-tourism-script-2013.dark.svg",
    "aspect": 4.507,
    "recoloured": false
+  }
+ },
+ "recovered-tofino-stacked-colour": {
+  "light": {
+   "file": "identity-display/recovered-tofino-stacked-colour.light.svg",
+   "aspect": 0.7522,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-tofino-stacked-colour.dark.svg",
+   "aspect": 0.7522,
+   "recoloured": true
+  }
+ },
+ "recovered-tofino-horizontal-colour": {
+  "light": {
+   "file": "identity-display/recovered-tofino-horizontal-colour.light.svg",
+   "aspect": 2.4,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-tofino-horizontal-colour.dark.svg",
+   "aspect": 2.4,
+   "recoloured": true
+  }
+ },
+ "recovered-tofino-wordmark": {
+  "light": {
+   "file": "identity-display/recovered-tofino-wordmark.light.svg",
+   "aspect": 2.288,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-tofino-wordmark.dark.svg",
+   "aspect": 2.288,
+   "recoloured": true
+  }
+ },
+ "recovered-tofino-stacked-semi-reverse": {
+  "light": {
+   "file": "identity-display/recovered-tofino-stacked-semi-reverse.light.svg",
+   "aspect": 0.7485,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-tofino-stacked-semi-reverse.dark.svg",
+   "aspect": 0.7485,
+   "recoloured": false
+  }
+ },
+ "recovered-tofino-stacked-reverse": {
+  "light": {
+   "file": "identity-display/recovered-tofino-stacked-reverse.light.svg",
+   "aspect": 0.7485,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-tofino-stacked-reverse.dark.svg",
+   "aspect": 0.7485,
+   "recoloured": false
+  }
+ },
+ "recovered-tofino-stacked-black": {
+  "light": {
+   "file": "identity-display/recovered-tofino-stacked-black.light.svg",
+   "aspect": 0.7485,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-tofino-stacked-black.dark.svg",
+   "aspect": 0.7485,
+   "recoloured": true
   }
  },
  "municipal-port-alberni-bear-smart-serif": {
@@ -9892,6 +10396,810 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/adc-bc-booklet-monogram.dark.svg",
    "aspect": 1.9141,
    "recoloured": true
+  }
+ },
+ "recovered-official-camosun-college-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-camosun-college-vector.light.svg",
+   "aspect": 2.5551,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-camosun-college-vector.dark.svg",
+   "aspect": 2.5551,
+   "recoloured": true
+  }
+ },
+ "recovered-official-douglas-college-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-douglas-college-vector.light.svg",
+   "aspect": 1.8847,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-douglas-college-vector.dark.svg",
+   "aspect": 1.8847,
+   "recoloured": true
+  }
+ },
+ "recovered-official-langara-college-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-langara-college-vector.light.svg",
+   "aspect": 3.0453,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-langara-college-vector.dark.svg",
+   "aspect": 3.0453,
+   "recoloured": true
+  }
+ },
+ "recovered-official-north-island-college-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-north-island-college-vector.light.svg",
+   "aspect": 2.4592,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-north-island-college-vector.dark.svg",
+   "aspect": 2.4592,
+   "recoloured": false
+  }
+ },
+ "recovered-official-northern-lights-college-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-northern-lights-college-vector.light.svg",
+   "aspect": 4.8676,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-northern-lights-college-vector.dark.svg",
+   "aspect": 4.8676,
+   "recoloured": true
+  }
+ },
+ "recovered-official-okanagan-college-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-okanagan-college-vector.light.svg",
+   "aspect": 5.5261,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-okanagan-college-vector.light.svg",
+   "aspect": 5.5261,
+   "recoloured": false
+  }
+ },
+ "recovered-official-selkirk-college-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-selkirk-college-vector.light.svg",
+   "aspect": 4.1959,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-selkirk-college-vector.dark.svg",
+   "aspect": 4.1959,
+   "recoloured": true
+  }
+ },
+ "recovered-selkirk-guide-colour-2025": {
+  "light": {
+   "file": "identity-display/recovered-selkirk-guide-colour-2025.light.svg",
+   "aspect": 2.4775,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-selkirk-guide-colour-2025.dark.svg",
+   "aspect": 2.4775,
+   "recoloured": true
+  }
+ },
+ "recovered-selkirk-guide-black-2025": {
+  "light": {
+   "file": "identity-display/recovered-selkirk-guide-black-2025.light.svg",
+   "aspect": 2.4791,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-selkirk-guide-black-2025.dark.svg",
+   "aspect": 2.4791,
+   "recoloured": true
+  }
+ },
+ "recovered-selkirk-guide-reverse-2025": {
+  "light": {
+   "file": "identity-display/recovered-selkirk-guide-reverse-2025.light.svg",
+   "aspect": 2.4791,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-selkirk-guide-reverse-2025.dark.svg",
+   "aspect": 2.4791,
+   "recoloured": false
+  }
+ },
+ "recovered-official-vancouver-community-college-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-vancouver-community-college-vector.light.svg",
+   "aspect": 3.3638,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-vancouver-community-college-vector.light.svg",
+   "aspect": 3.3638,
+   "recoloured": false
+  }
+ },
+ "recovered-vcc-official-darkgreen": {
+  "light": {
+   "file": "identity-display/recovered-vcc-official-darkgreen.light.svg",
+   "aspect": 1.3997,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-vcc-official-darkgreen.light.svg",
+   "aspect": 1.3997,
+   "recoloured": false
+  }
+ },
+ "recovered-official-capilano-university-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-capilano-university-vector.light.svg",
+   "aspect": 4.2506,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-capilano-university-vector.dark.svg",
+   "aspect": 4.2506,
+   "recoloured": true
+  }
+ },
+ "recovered-capilano-2008-wordmark": {
+  "light": {
+   "file": "identity-display/recovered-capilano-2008-wordmark.light.svg",
+   "aspect": 8.7335,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-capilano-2008-wordmark.dark.svg",
+   "aspect": 8.7335,
+   "recoloured": false
+  }
+ },
+ "recovered-official-kwantlen-polytechnic-university-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-kwantlen-polytechnic-university-vector.light.svg",
+   "aspect": 1.0902,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-kwantlen-polytechnic-university-vector.dark.svg",
+   "aspect": 1.0902,
+   "recoloured": true
+  }
+ },
+ "recovered-kpu-fullname-iapr-cover": {
+  "light": {
+   "file": "identity-display/recovered-kpu-fullname-iapr-cover.light.svg",
+   "aspect": 2.4429,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-kpu-fullname-iapr-cover.dark.svg",
+   "aspect": 2.4429,
+   "recoloured": false
+  }
+ },
+ "recovered-official-royal-roads-university-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-royal-roads-university-vector.light.svg",
+   "aspect": 5.1291,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-royal-roads-university-vector.dark.svg",
+   "aspect": 5.1291,
+   "recoloured": true
+  }
+ },
+ "recovered-official-coast-mountain-college-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-coast-mountain-college-vector.light.svg",
+   "aspect": 0.9843,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-coast-mountain-college-vector.light.svg",
+   "aspect": 0.9843,
+   "recoloured": false
+  }
+ },
+ "recovered-official-college-of-new-caledonia-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-college-of-new-caledonia-vector.light.svg",
+   "aspect": 1.0006,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-college-of-new-caledonia-vector.light.svg",
+   "aspect": 1.0006,
+   "recoloured": false
+  }
+ },
+ "recovered-cnc-2017-geometric-monogram": {
+  "light": {
+   "file": "identity-display/recovered-cnc-2017-geometric-monogram.light.svg",
+   "aspect": 1.1618,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-cnc-2017-geometric-monogram.dark.svg",
+   "aspect": 1.1618,
+   "recoloured": false
+  }
+ },
+ "recovered-cnc-2019-fullname-variant": {
+  "light": {
+   "file": "identity-display/recovered-cnc-2019-fullname-variant.light.svg",
+   "aspect": 1.109,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-cnc-2019-fullname-variant.dark.svg",
+   "aspect": 1.109,
+   "recoloured": true
+  }
+ },
+ "recovered-official-college-of-the-rockies-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-college-of-the-rockies-vector.light.svg",
+   "aspect": 1.039,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-college-of-the-rockies-vector.dark.svg",
+   "aspect": 1.039,
+   "recoloured": true
+  }
+ },
+ "recovered-ecuad-2024-guide-primary": {
+  "light": {
+   "file": "identity-display/recovered-ecuad-2024-guide-primary.light.svg",
+   "aspect": 3.0624,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ecuad-2024-guide-primary.dark.svg",
+   "aspect": 3.0624,
+   "recoloured": true
+  }
+ },
+ "recovered-ecuad-2024-guide-primary-reverse": {
+  "light": {
+   "file": "identity-display/recovered-ecuad-2024-guide-primary-reverse.light.svg",
+   "aspect": 3.0624,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-ecuad-2024-guide-primary-reverse.dark.svg",
+   "aspect": 3.0624,
+   "recoloured": false
+  }
+ },
+ "recovered-official-university-of-the-fraser-valley-vector": {
+  "light": {
+   "file": "identity-display/recovered-official-university-of-the-fraser-valley-vector.light.svg",
+   "aspect": 4.1153,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-official-university-of-the-fraser-valley-vector.dark.svg",
+   "aspect": 4.1153,
+   "recoloured": true
+  }
+ },
+ "recovered-historical-kwantlen-college-1994-minutes": {
+  "light": {
+   "file": "identity-display/recovered-historical-kwantlen-college-1994-minutes.light.svg",
+   "aspect": 5.0436,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-historical-kwantlen-college-1994-minutes.dark.svg",
+   "aspect": 5.0436,
+   "recoloured": true
+  }
+ },
+ "recovered-historical-kwantlen-university-college-1995-minutes": {
+  "light": {
+   "file": "identity-display/recovered-historical-kwantlen-university-college-1995-minutes.light.svg",
+   "aspect": 3.1458,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-historical-kwantlen-university-college-1995-minutes.dark.svg",
+   "aspect": 3.1458,
+   "recoloured": true
+  }
+ },
+ "recovered-historical-kwantlen-uc-2005-cover": {
+  "light": {
+   "file": "identity-display/recovered-historical-kwantlen-uc-2005-cover.light.svg",
+   "aspect": 0.784,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-historical-kwantlen-uc-2005-cover.dark.svg",
+   "aspect": 0.784,
+   "recoloured": true
+  }
+ },
+ "recovered-ucc-fact-book-campaign-2003": {
+  "light": {
+   "file": "identity-display/recovered-ucc-fact-book-campaign-2003.light.svg",
+   "aspect": 0.8567,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ucc-fact-book-campaign-2003.light.svg",
+   "aspect": 0.8567,
+   "recoloured": false
+  }
+ },
+ "recovered-ucc-fact-book-shield-2003": {
+  "light": {
+   "file": "identity-display/recovered-ucc-fact-book-shield-2003.light.svg",
+   "aspect": 1.0311,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ucc-fact-book-shield-2003.light.svg",
+   "aspect": 1.0311,
+   "recoloured": false
+  }
+ },
+ "recovered-ucc-bridges-native-2011": {
+  "light": {
+   "file": "identity-display/recovered-ucc-bridges-native-2011.light.svg",
+   "aspect": 0.6565,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ucc-bridges-native-2011.light.svg",
+   "aspect": 0.6565,
+   "recoloured": false
+  }
+ },
+ "recovered-fvc-1980s-shield-ufv-retrospective": {
+  "light": {
+   "file": "identity-display/recovered-fvc-1980s-shield-ufv-retrospective.light.svg",
+   "aspect": 0.7975,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-fvc-1980s-shield-ufv-retrospective.light.svg",
+   "aspect": 0.7975,
+   "recoloured": false
+  }
+ },
+ "recovered-ucfv-2007-calendar-vector": {
+  "light": {
+   "file": "identity-display/recovered-ucfv-2007-calendar-vector.light.svg",
+   "aspect": 3.1964,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ucfv-2007-calendar-vector.dark.svg",
+   "aspect": 3.1964,
+   "recoloured": true
+  }
+ },
+ "recovered-ecuad-2004-framed-one-line": {
+  "light": {
+   "file": "identity-display/recovered-ecuad-2004-framed-one-line.light.svg",
+   "aspect": 5.4121,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ecuad-2004-framed-one-line.dark.svg",
+   "aspect": 5.4121,
+   "recoloured": true
+  }
+ },
+ "recovered-capilano-2007-wordmark": {
+  "light": {
+   "file": "identity-display/recovered-capilano-2007-wordmark.light.svg",
+   "aspect": 7.7069,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-capilano-2007-wordmark.dark.svg",
+   "aspect": 7.7069,
+   "recoloured": true
+  }
+ },
+ "recovered-ksa-2004-cooperative": {
+  "light": {
+   "file": "identity-display/recovered-ksa-2004-cooperative.light.svg",
+   "aspect": 0.6093,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ksa-2004-cooperative.dark.svg",
+   "aspect": 0.6093,
+   "recoloured": true
+  }
+ },
+ "recovered-ksa-2009-may-selkirk-era": {
+  "light": {
+   "file": "identity-display/recovered-ksa-2009-may-selkirk-era.light.svg",
+   "aspect": 13.1575,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-ksa-2009-may-selkirk-era.dark.svg",
+   "aspect": 13.1575,
+   "recoloured": false
+  }
+ },
+ "recovered-ksa-2009-august-selkirk-era": {
+  "light": {
+   "file": "identity-display/recovered-ksa-2009-august-selkirk-era.light.svg",
+   "aspect": 7.1632,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ksa-2009-august-selkirk-era.light.svg",
+   "aspect": 7.1632,
+   "recoloured": false
+  }
+ },
+ "recovered-cariboo-black-wheel-retrospective-2011": {
+  "light": {
+   "file": "identity-display/recovered-cariboo-black-wheel-retrospective-2011.light.svg",
+   "aspect": 0.9979,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-cariboo-black-wheel-retrospective-2011.light.svg",
+   "aspect": 0.9979,
+   "recoloured": false
+  }
+ },
+ "recovered-cariboo-orange-wheel-retrospective-2011": {
+  "light": {
+   "file": "identity-display/recovered-cariboo-orange-wheel-retrospective-2011.light.svg",
+   "aspect": 0.9998,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-cariboo-orange-wheel-retrospective-2011.light.svg",
+   "aspect": 0.9998,
+   "recoloured": false
+  }
+ },
+ "recovered-cariboo-colour-rings-retrospective-2011": {
+  "light": {
+   "file": "identity-display/recovered-cariboo-colour-rings-retrospective-2011.light.svg",
+   "aspect": 1.0002,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-cariboo-colour-rings-retrospective-2011.light.svg",
+   "aspect": 1.0002,
+   "recoloured": false
+  }
+ },
+ "recovered-tru-official-primary": {
+  "light": {
+   "file": "identity-display/recovered-tru-official-primary.light.svg",
+   "aspect": 2.6987,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-tru-official-primary.dark.svg",
+   "aspect": 2.6987,
+   "recoloured": true
+  }
+ },
+ "recovered-2024-rgb-viu-black-logo": {
+  "light": {
+   "file": "identity-display/recovered-2024-rgb-viu-black-logo.light.svg",
+   "aspect": 2.2696,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-2024-rgb-viu-black-logo.dark.svg",
+   "aspect": 2.2696,
+   "recoloured": true
+  }
+ },
+ "recovered-2024-rgb-viu-dark-blue-logo": {
+  "light": {
+   "file": "identity-display/recovered-2024-rgb-viu-dark-blue-logo.light.svg",
+   "aspect": 2.2696,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-2024-rgb-viu-dark-blue-logo.dark.svg",
+   "aspect": 2.2696,
+   "recoloured": true
+  }
+ },
+ "recovered-2024-rgb-viu-full-colour-logo": {
+  "light": {
+   "file": "identity-display/recovered-2024-rgb-viu-full-colour-logo.light.svg",
+   "aspect": 2.2696,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-2024-rgb-viu-full-colour-logo.dark.svg",
+   "aspect": 2.2696,
+   "recoloured": true
+  }
+ },
+ "recovered-2024-rgb-viu-white-logo": {
+  "light": {
+   "file": "identity-display/recovered-2024-rgb-viu-white-logo.light.svg",
+   "aspect": 2.2696,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-2024-rgb-viu-white-logo.dark.svg",
+   "aspect": 2.2696,
+   "recoloured": false
+  }
+ },
+ "recovered-ubc-logo-2018-ok-campus-short-white-rgb": {
+  "light": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-short-white-rgb.light.svg",
+   "aspect": 11.6949,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-short-white-rgb.dark.svg",
+   "aspect": 11.6949,
+   "recoloured": false
+  }
+ },
+ "recovered-ubc-logo-2018-ok-campus-short-blue282rgb": {
+  "light": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-short-blue282rgb.light.svg",
+   "aspect": 11.6949,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-short-blue282rgb.dark.svg",
+   "aspect": 11.6949,
+   "recoloured": true
+  }
+ },
+ "recovered-ubc-logo-2018-ok-campus-short-black-rgb": {
+  "light": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-short-black-rgb.light.svg",
+   "aspect": 11.6949,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-short-black-rgb.dark.svg",
+   "aspect": 11.6949,
+   "recoloured": true
+  }
+ },
+ "recovered-ubc-logo-2018-ok-campus-narrow-white-rgb": {
+  "light": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-narrow-white-rgb.light.svg",
+   "aspect": 3.7514,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-narrow-white-rgb.dark.svg",
+   "aspect": 3.7514,
+   "recoloured": false
+  }
+ },
+ "recovered-ubc-logo-2018-ok-campus-narrow-blue282rgb": {
+  "light": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-narrow-blue282rgb.light.svg",
+   "aspect": 3.7514,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-narrow-blue282rgb.dark.svg",
+   "aspect": 3.7514,
+   "recoloured": true
+  }
+ },
+ "recovered-ubc-logo-2018-ok-campus-narrow-black-rgb": {
+  "light": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-narrow-black-rgb.light.svg",
+   "aspect": 3.7514,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-narrow-black-rgb.dark.svg",
+   "aspect": 3.7514,
+   "recoloured": true
+  }
+ },
+ "recovered-ubc-logo-2018-ok-campus-promo-white-rgb": {
+  "light": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-promo-white-rgb.light.svg",
+   "aspect": 7.3887,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-promo-white-rgb.dark.svg",
+   "aspect": 7.3887,
+   "recoloured": false
+  }
+ },
+ "recovered-ubc-logo-2018-ok-campus-promo-blue282rgb": {
+  "light": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-promo-blue282rgb.light.svg",
+   "aspect": 7.3887,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-promo-blue282rgb.dark.svg",
+   "aspect": 7.3887,
+   "recoloured": true
+  }
+ },
+ "recovered-ubc-logo-2018-ok-campus-promo-black-rgb": {
+  "light": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-promo-black-rgb.light.svg",
+   "aspect": 7.3887,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-promo-black-rgb.dark.svg",
+   "aspect": 7.3887,
+   "recoloured": true
+  }
+ },
+ "recovered-ubc-logo-2018-ok-campus-standard-white-rgb": {
+  "light": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-standard-white-rgb.light.svg",
+   "aspect": 7.6005,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-standard-white-rgb.dark.svg",
+   "aspect": 7.6005,
+   "recoloured": false
+  }
+ },
+ "recovered-ubc-logo-2018-ok-campus-standard-blue282rgb": {
+  "light": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-standard-blue282rgb.light.svg",
+   "aspect": 7.6005,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-standard-blue282rgb.dark.svg",
+   "aspect": 7.6005,
+   "recoloured": true
+  }
+ },
+ "recovered-ubc-logo-2018-ok-campus-standard-black-rgb": {
+  "light": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-standard-black-rgb.light.svg",
+   "aspect": 7.6005,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ubc-logo-2018-ok-campus-standard-black-rgb.dark.svg",
+   "aspect": 7.6005,
+   "recoloured": true
+  }
+ },
+ "recovered-ouc-audit-cover-2007": {
+  "light": {
+   "file": "identity-display/recovered-ouc-audit-cover-2007.light.svg",
+   "aspect": 2.128,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-ouc-audit-cover-2007.dark.svg",
+   "aspect": 2.128,
+   "recoloured": true
+  }
+ },
+ "source-vector-alc-green-emblem-2026": {
+  "light": {
+   "file": "identity-display/source-vector-alc-green-emblem-2026.light.svg",
+   "aspect": 1.5325,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-vector-alc-green-emblem-2026.dark.svg",
+   "aspect": 1.5325,
+   "recoloured": true
+  }
+ },
+ "source-vector-alc-white-full-name-2026": {
+  "light": {
+   "file": "identity-display/source-vector-alc-white-full-name-2026.light.svg",
+   "aspect": 3.9287,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/source-vector-alc-white-full-name-2026.dark.svg",
+   "aspect": 3.9287,
+   "recoloured": false
+  }
+ },
+ "source-vector-forest-appeals-2021": {
+  "light": {
+   "file": "identity-display/source-vector-forest-appeals-2021.light.svg",
+   "aspect": 3.8666,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-vector-forest-appeals-2021.dark.svg",
+   "aspect": 3.8666,
+   "recoloured": true
+  }
+ },
+ "source-vector-doctors-of-bc-official-inline-2026": {
+  "light": {
+   "file": "identity-display/source-vector-doctors-of-bc-official-inline-2026.light.svg",
+   "aspect": 2.4544,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-vector-doctors-of-bc-official-inline-2026.dark.svg",
+   "aspect": 2.4544,
+   "recoloured": true
+  }
+ },
+ "source-vector-electoral-boundaries-2023": {
+  "light": {
+   "file": "identity-display/source-vector-electoral-boundaries-2023.light.svg",
+   "aspect": 2.0004,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-vector-electoral-boundaries-2023.dark.svg",
+   "aspect": 2.0004,
+   "recoloured": true
+  }
+ },
+ "recovered-bc-treaty-official-white": {
+  "light": {
+   "file": "identity-display/recovered-bc-treaty-official-white.light.svg",
+   "aspect": 4.1203,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-bc-treaty-official-white.dark.svg",
+   "aspect": 4.1203,
+   "recoloured": false
+  }
+ },
+ "recovered-bctreaty-stacked-gold-proceedings": {
+  "light": {
+   "file": "identity-display/recovered-bctreaty-stacked-gold-proceedings.light.svg",
+   "aspect": 2.9461,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/recovered-bctreaty-stacked-gold-proceedings.dark.svg",
+   "aspect": 2.9461,
+   "recoloured": true
+  }
+ },
+ "recovered-bctreaty-right-stacked-white-2018": {
+  "light": {
+   "file": "identity-display/recovered-bctreaty-right-stacked-white-2018.light.svg",
+   "aspect": 1.5098,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/recovered-bctreaty-right-stacked-white-2018.dark.svg",
+   "aspect": 1.5098,
+   "recoloured": false
   }
  },
  "vector-bc-public-service-where-ideas-work-2023-reverse": {

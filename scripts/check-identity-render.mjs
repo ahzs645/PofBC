@@ -45,7 +45,8 @@ try {
   assert.match(vectorLead, /Open official vector source/)
   assert.match(vectorLead, /href="https:\/\/camosun\.ca\/themes\/cam\/logo\.svg"/)
   assert.doesNotMatch(vectorLead, /<img\b[^>]*\bsrc="https:/)
-  assert.match(vectorLead, /No separately held artwork/)
+  assert.doesNotMatch(vectorLead, /No separately held artwork/)
+  assert.match(vectorLead, /recovered-official-camosun-college-vector/)
   const cnc = renderSubject('college-of-new-caledonia')
   assert.match(cnc, /Identity history and official sources/)
   assert.match(cnc, /<time[^>]*datetime="1978-12-01"[^>]*>December 1, 1978/i)
@@ -58,7 +59,7 @@ try {
   }
   assert.match(cnc, /Pre-redesign geometric monogram and serif name/)
   assert.match(cnc, /Secondary lockup: enclosed CNC initials/)
-  assert.doesNotMatch(cnc, /class="identity-artwork__image"/)
+  assert.match(cnc, /class="identity-artwork__image"/)
   assert.match(cnc, /Amalgamated with/)
   assert.doesNotMatch(cnc, /Amalgamated into/i)
   for (const item of [...CNC_CURRENT_MARKS, ...CNC_HISTORICAL_MARKS]) {
@@ -101,7 +102,8 @@ try {
   const shared = renderSubject('ubc-okanagan-campus')
   assert.match(shared, /Shared branding/)
   assert.match(shared, /subject=university-of-british-columbia/)
-  assert.match(shared, /No separately held artwork/)
+  assert.doesNotMatch(shared, /No separately held artwork/)
+  assert.match(shared, /recovered-ubc-logo-2018-ok-campus-standard-blue282rgb/)
   const cover = renderSubject('vancouver-school-of-art')
   assert.match(cover, /Publication cover, institutional status unconfirmed/)
   assert.doesNotMatch(cover, /Open official vector source/)

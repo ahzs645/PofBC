@@ -1,0 +1,1357 @@
+{
+  "observedDate": "2026-11-26",
+  "scope": "Focused follow-up on all 22 original wholly raster-only airport collections; distinct source-verified layouts and historical colourways preserved. Initial 13-file findings.json is unchanged.",
+  "counts": {
+    "newAirportAssets": 3,
+    "newAirportNativeVectors": 1,
+    "newAirportRasters": 2,
+    "rasterOnlyAirportCollectionsSearched": 22,
+    "previouslyRasterOnlyCollectionsGainingNativeVector": 1,
+    "combinedAirportDeliverablesIncludingInitialHandoff": 16,
+    "combinedAirportNativeVectors": 10,
+    "combinedAirportRasters": 6,
+    "supplementalUnregisteredPortNativeVectors": 1
+  },
+  "recoveries": [
+    {
+      "subjectId": "CBC7",
+      "subjectName": "Vancouver Harbour Heliport",
+      "status": "verified-native-vector",
+      "localPath": "unbundled/research-airports/phs-operator-emblem-2016-blue.svg",
+      "sourcePdf": "unbundled/research-airports/phs-expansion-2016.pdf",
+      "originalPageUrl": "https://helijet.com/nanaimo-port-authority-pacific-heliport-services-complete-heliport-expansio/",
+      "sourceUrl": "https://helijet.com/wp-content/uploads/2016/11/NPA-PHS_Expansion_Announcement.pdf",
+      "format": "svg",
+      "isVector": true,
+      "currentVsHistorical": "historical",
+      "verification": {
+        "nativePdfDrawings": 56,
+        "svgPathElements": 56,
+        "rasterImages": 0,
+        "liveText": 0,
+        "sourceCrop": "unbundled/research-airports/phs-operator-emblem-2016-blue-source.png",
+        "render": "unbundled/research-airports/phs-operator-emblem-2016-blue.png",
+        "visualReview": "Source and SVG inspected side by side at 8×. Geometry and wording match; mean absolute difference is under 0.30 per RGB channel on a 0–255 scale.",
+        "comparison": {
+          "alignedRenderScale": 8,
+          "meanAbsoluteDifferencePerRGBChannel": [
+            0.2996349358511379,
+            0.011037281191317251,
+            0.29371686955303716
+          ],
+          "maximumRGBDifference": [
+            [
+              0,
+              17
+            ],
+            [
+              0,
+              14
+            ],
+            [
+              0,
+              9
+            ]
+          ]
+        }
+      },
+      "notes": "Mountain, city and helipad-H emblem with Pacific Heliport Services Ltd. and A Helijet International Company. Same geometry/layout as the existing 2022 operator raster, but a distinct source blue; retained separately, with no preferred-vector claim. This is the shared operator identity, not a location-specific heliport logo.",
+      "proposedAsset": {
+        "id": "airport-cbc7-phs-operator-emblem-2016-blue",
+        "label": "Pacific Heliport Services emblem — 2016 blue",
+        "format": "svg",
+        "file": "identity-airports/cbc7/phs-operator-emblem-2016-blue.svg",
+        "isVector": true,
+        "publisher": "Pacific Heliport Services Ltd. / Helijet International",
+        "sourcePage": "https://helijet.com/nanaimo-port-authority-pacific-heliport-services-complete-heliport-expansio/",
+        "sourceUrl": "https://helijet.com/wp-content/uploads/2016/11/NPA-PHS_Expansion_Announcement.pdf",
+        "sourceLocator": "PDF page 1, upper-right operator logo",
+        "notes": "Mountain, city and helipad-H emblem with Pacific Heliport Services Ltd. and A Helijet International Company. Same geometry/layout as the existing 2022 operator raster, but a distinct source blue; retained separately, with no preferred-vector claim. This is the shared operator identity, not a location-specific heliport logo.",
+        "fidelityNote": "56 complete original filled PDF paths exported to SVG, preserving shape, fill rule, stacking order and source blue. All lettering is already outlined. No tracing or font substitution.",
+        "sha256": "5eaedd62cfbc17ab029cc076c165b27240b3c7510ba26282c8cad261d150d897",
+        "observedDate": "2026-11-26",
+        "evidenceType": "native-pdf-vector-extraction",
+        "role": "historical",
+        "specimenDate": "2016",
+        "designLabel": "Pacific Heliport Services emblem — 2016 blue",
+        "versionLabel": "Pacific Heliport Services emblem — 2016 blue",
+        "extraction": {
+          "method": "56 complete original filled PDF paths exported to SVG, preserving shape, fill rule, stacking order and source blue. All lettering is already outlined. No tracing or font substitution.",
+          "pdfPage": 1,
+          "sourceSha256": "1a463bb3427157fbc19c9b98c914d285a783cc3b81c62c30d11f7acf365ccda6",
+          "script": "unbundled/research-airports/extract-extra.py",
+          "bbox": [
+            439.40234375,
+            13.956489562988281,
+            544.6602783203125,
+            81.59091186523438
+          ]
+        },
+        "variantOf": "airport-cbc7-operator-emblem"
+      }
+    },
+    {
+      "subjectId": "CYBL",
+      "subjectName": "Campbell River Airport",
+      "status": "verified-distinct-raster",
+      "localPath": "unbundled/research-airports/ybl-stacked-2024.png",
+      "sourcePdf": "unbundled/research-airports/ybl-lease-2024.pdf",
+      "originalPageUrl": "https://crairport.ca/",
+      "sourceUrl": "https://crairport.ca/wp-content/uploads/2024/03/Airport-Land-Lease-Template.pdf",
+      "format": "png",
+      "isVector": false,
+      "currentVsHistorical": "current",
+      "verification": {
+        "width": 750,
+        "height": 462,
+        "imageXref": 17,
+        "softMaskXref": 16,
+        "nativeVector": false,
+        "visualReview": "Original PDF cover and extracted transparent bitmap inspected."
+      },
+      "notes": "Distinct stacked arrangement of the bird-and-waves emblem, horizontal YBL, Campbell River and Airport. The original 750 × 462 bitmap and transparency are preserved; this is not vector artwork.",
+      "proposedAsset": {
+        "id": "airport-cybl-ybl-stacked-2024",
+        "label": "Stacked bird-and-waves signature — 2024 land lease",
+        "format": "png",
+        "file": "identity-airports/cybl/ybl-stacked-2024.png",
+        "isVector": false,
+        "publisher": "Campbell River Airport / City of Campbell River",
+        "sourcePage": "https://crairport.ca/",
+        "sourceUrl": "https://crairport.ca/wp-content/uploads/2024/03/Airport-Land-Lease-Template.pdf",
+        "sourceLocator": "PDF page 1, centred cover logo; image xref 17 with alpha mask 16",
+        "notes": "Distinct stacked arrangement of the bird-and-waves emblem, horizontal YBL, Campbell River and Airport. The original 750 × 462 bitmap and transparency are preserved; this is not vector artwork.",
+        "fidelityNote": "Original PDF image and native alpha soft mask combined without resampling.",
+        "sha256": "09408f0d1943beb954d9a8ea4646ea441df619104999288cb2a3c7584aaf6b4d",
+        "observedDate": "2026-11-26",
+        "evidenceType": "published-pdf-raster",
+        "role": "current",
+        "specimenDate": "2024",
+        "designLabel": "Stacked bird-and-waves signature — 2024 land lease",
+        "versionLabel": "Stacked bird-and-waves signature — 2024 land lease",
+        "extraction": {
+          "method": "Original PDF image and native alpha soft mask combined without resampling.",
+          "pdfPage": 1,
+          "sourceSha256": "bdb0032544932c4f4656bb99220b3818c14c47403d04b3c2bfafc1ecc62edf97",
+          "script": "unbundled/research-airports/extract-extra.py",
+          "imageXref": 17,
+          "softMaskXref": 16
+        }
+      }
+    },
+    {
+      "subjectId": "CYCZ",
+      "subjectName": "Fairmont Hot Springs Airport",
+      "status": "verified-distinct-raster",
+      "localPath": "unbundled/research-airports/cycz-wing-script-2023.png",
+      "sourcePdf": "unbundled/research-airports/cycz-masterplan-2023.pdf",
+      "originalPageUrl": "https://columbiavalleyairport.com/2023-cycz-airport-master-plan/",
+      "sourceUrl": "https://columbiavalleyairport.com/wp-content/uploads/2024/04/CYCZ-Airport-Master-Plan-Final-2023.11.01.pdf",
+      "format": "png",
+      "isVector": false,
+      "currentVsHistorical": "historical",
+      "verification": {
+        "width": 400,
+        "height": 237,
+        "imageXref": 5692,
+        "softMaskXref": 5693,
+        "nativeVector": false,
+        "originalImage": "unbundled/research-airports/cycz-wing-script-2023-original.jpeg",
+        "visualReview": "PDF page 76 and extracted logo inspected; map-sheet repeats of this design were not duplicated."
+      },
+      "notes": "Earlier Columbia Valley Airport lockup with red maple leaf, gold airport/location wording, blue winged CYCZ script and aircraft. Retains Fairmont Hot Springs / British Columbia / Canada. The 2023 master plan documents this layout; its adoption date is not inferred. Original JPEG retained beside PNG with its published soft mask.",
+      "proposedAsset": {
+        "id": "airport-cycz-cycz-wing-script-2023",
+        "label": "Columbia Valley Airport wing-and-script lockup — 2023",
+        "format": "png",
+        "file": "identity-airports/cycz/cycz-wing-script-2023.png",
+        "isVector": false,
+        "publisher": "Columbia Valley Airport Society",
+        "sourcePage": "https://columbiavalleyairport.com/2023-cycz-airport-master-plan/",
+        "sourceUrl": "https://columbiavalleyairport.com/wp-content/uploads/2024/04/CYCZ-Airport-Master-Plan-Final-2023.11.01.pdf",
+        "sourceLocator": "PDF page 76, master-plan survey header; image xref 5692 with alpha mask 5693",
+        "notes": "Earlier Columbia Valley Airport lockup with red maple leaf, gold airport/location wording, blue winged CYCZ script and aircraft. Retains Fairmont Hot Springs / British Columbia / Canada. The 2023 master plan documents this layout; its adoption date is not inferred. Original JPEG retained beside PNG with its published soft mask.",
+        "fidelityNote": "Original JPEG image and native alpha soft mask combined without resampling.",
+        "sha256": "52a9cb640ca80ddc1e866c3234ef9cd3c142e2468bf3024c77205804facf30f7",
+        "observedDate": "2026-11-26",
+        "evidenceType": "published-pdf-raster",
+        "role": "historical",
+        "specimenDate": "2023",
+        "designLabel": "Columbia Valley Airport wing-and-script lockup — 2023",
+        "versionLabel": "Columbia Valley Airport wing-and-script lockup — 2023",
+        "extraction": {
+          "method": "Original JPEG image and native alpha soft mask combined without resampling.",
+          "pdfPage": 76,
+          "sourceSha256": "8b62d1a6d6a87592d4e9fe52f900bac06e9eb1f0069c41d4c678aca1668252b2",
+          "script": "unbundled/research-airports/extract-extra.py",
+          "imageXref": 5692,
+          "softMaskXref": 5693
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "subjectId": "CYXX",
+      "name": "Abbotsford International Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official homepage PNG; previously examined accessibility/news PDFs remain baseline evidence. No new native logo source found.",
+      "homepageCheck": {
+        "url": "https://www.abbotsfordairport.ca/",
+        "status": 200,
+        "path": "unbundled/research-airports/CYXX-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Official header, advertising, investment and logo-search pages use PNG. Newly downloaded 2011 expansion release (2 pages) and 2016 aerospace-cluster release (2 pages) embed airport-logo bitmaps. BCAC 2018 guide p39 and 2023 Silver Wings sponsor slide p70 also use bitmaps. Existing 2024/2026 PDF findings remain baseline. Academic redesign portfolios were excluded as unadopted.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CYXX-home.html",
+        "unbundled/research-airports/yxx-advertising.html",
+        "unbundled/research-airports/yxx-development.html",
+        "unbundled/research-airports/yxx-logo-search.html",
+        "unbundled/research-airports/yxx-expansion-2011.pdf",
+        "unbundled/research-airports/yxx-cluster-2016.pdf",
+        "unbundled/research-airports/bcac-2018-guide.pdf",
+        "unbundled/research-airports/bcac-silver-2023.pdf"
+      ],
+      "baselineSources": [
+        "https://www.abbotsfordairport.ca/sites/2/files/airport-logo-2x.png",
+        "https://www.abbotsfordairport.ca/media/216",
+        "https://www.abbotsfordairport.ca/sites/abbotsfordairport.ca/files/2024-05/YXX%20Accessibility%20Plan%20and%20Feedback%20Process%20-%20June%202024.pdf",
+        "https://www.abbotsfordairport.ca/media/29"
+      ]
+    },
+    {
+      "subjectId": "CBS8",
+      "name": "Alberni Valley Regional Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Downloaded airport strategic plan and March 2025 update. Logos are embedded images, including 123×33 AVRA image in the update.",
+      "homepageCheck": {
+        "url": "https://www.acrd.bc.ca/avra",
+        "status": 200,
+        "path": "unbundled/research-airports/CBS8-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Official header and airport documents checked. Downloaded strategic plan, March 2025 update and 2020 Asset Management Plan. AVRA branding remains bitmap; 2020 plan cover uses the regional district brand, not a separate airport vector. The 2024 financial-plan landscape emblem was already raster-verified in baseline.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CBS8-home.html",
+        "unbundled/research-airports/cbs8-strategy.pdf",
+        "unbundled/research-airports/cbs8-march-2025.pdf",
+        "unbundled/research-airports/cbs8-assets-2020.pdf"
+      ],
+      "baselineSources": [
+        "https://www.acrd.bc.ca/cms/wpimages/wpID169imgID232.gif",
+        "https://www.acrd.bc.ca/dms/documents/community/airports/2026/avra_at_a_glance.pdf",
+        "https://www.acrd.bc.ca/dms/documents/agendas/2021-misc-agendas/mar_23_avra_committee_agenda.pdf",
+        "https://www.acrd.bc.ca/dms/documents/finance/2024/2024-28_financial_plan_adopted.pdf"
+      ]
+    },
+    {
+      "subjectId": "CYSQ",
+      "name": "Atlin Airport (Peterson Field)",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official atlinairport.ca returned HTTP 406. No independently verified new artwork.",
+      "homepageCheck": {
+        "url": "https://atlinairport.ca/",
+        "error": "HTTP Error 406: Not Acceptable"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-source-unavailable",
+      "finding": "Official homepage and public logo media query returned HTTP 406. Targeted airport/association and publication searches did not locate a verifiable guide, report, SVG or EPS. Existing official PNG remains baseline evidence; source bytes for potential additional originals were unavailable.",
+      "evidenceFiles": [],
+      "baselineSources": [
+        "https://atlinairport.ca/wp-content/uploads/2022/07/cysq-logo.png"
+      ]
+    },
+    {
+      "subjectId": "CZBB",
+      "name": "Boundary Bay Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official newsletter and AVOP document links checked through search. Newsletter is PNG; AAP/manual PDFs show raster Alpha Aviation operator marks, not a Boundary Bay vector.",
+      "homepageCheck": {
+        "url": "https://czbb.com/about-us-2/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Official site fetch returned 403. Search located airport newsletter, accessibility plan, rules/manual and event forms. Downloaded AAP and rules PDFs show raster Alpha Aviation operator marks; newsletter is PNG. Effective FBO SVG and airshow/vendor logos are not the airport signature.",
+      "evidenceFiles": [
+        "unbundled/research-airports/czbb-aap-2026.pdf",
+        "unbundled/research-airports/czbb-rules-2021.pdf"
+      ],
+      "baselineSources": [
+        "https://czbb.com/wp-content/uploads/2020/06/boundary-bay-airport-logo.png",
+        "https://czbb.com/wp-content/uploads/2020/06/boundary-bay-airport-logo.jpg"
+      ]
+    },
+    {
+      "subjectId": "CYPZ",
+      "name": "Burns Lake Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Homepage uses an illustrated raster banner. No new vector located.",
+      "homepageCheck": {
+        "url": "https://burnslakeairport.com/",
+        "status": 200,
+        "path": "unbundled/research-airports/CYPZ-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Official homepage inspected: illustrated JPEG airport banner; inline SVGs are UI icons. Targeted society/airport publication searches found no separate source-native airport mark. Recent village lease material uses municipal branding.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CYPZ-home.html"
+      ],
+      "baselineSources": [
+        "https://burnslakeairport.com/LakesDistrictAirport_WebsiteBanner_091525.jpg"
+      ]
+    },
+    {
+      "subjectId": "CYBL",
+      "name": "Campbell River Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "2017 development guide provides a distinct historical raster eagle logo; current website remains raster.",
+      "homepageCheck": {
+        "url": "https://crairport.ca/",
+        "status": 200,
+        "path": "unbundled/research-airports/CYBL-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-new-raster",
+      "finding": "Official home/about pages and public WordPress logo/PDF media results inspected. Five logo results are PNG. Newly downloaded 2025 fees, 2024 groundside pilot-lounge sheet and 2024 land lease use bitmaps. Stacked 2024 layout extracted separately. Earlier 2017 eagle raster already delivered. Boleyn portfolio is a source lead, not a verified native logo pack.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CYBL-home.html",
+        "unbundled/research-airports/ybl-about.html",
+        "unbundled/research-airports/ybl-media.json",
+        "unbundled/research-airports/ybl-media-pdfs.json",
+        "unbundled/research-airports/ybl-fees-2025.pdf",
+        "unbundled/research-airports/ybl-groundside-2024.pdf",
+        "unbundled/research-airports/ybl-lease-2024.pdf"
+      ],
+      "baselineSources": [
+        "https://crairport.ca/wp-content/uploads/2022/09/YBL-Logo-Primary-Coloured.png",
+        "https://crairport.ca/wp-content/uploads/2022/08/YBL-Logo-Primary-White.png",
+        "https://www.campbellriver.ca/media/file/ybl-strategic-plan-draft-public-engagement"
+      ]
+    },
+    {
+      "subjectId": "CYXC",
+      "name": "Canadian Rockies International Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Direct site blocked; 2020 Cranbrook investment brochure p8 contains 209×59 raster YXC logo. No native vector.",
+      "homepageCheck": {
+        "url": "https://flycanadianrockies.com/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-source-partly-unavailable",
+      "finding": "Official homepage returned 403. Downloaded 2020 Cranbrook investment brochure p8 has a 209 × 59 airport bitmap. Search located 2007 city annual report and June 2024 airport advertising guide; both direct URLs returned 404. Existing city advertising source is raster-verified in baseline. New designer credit is Genex Marketing; no source logo pack verified.",
+      "evidenceFiles": [
+        "unbundled/research-airports/cyxc-investment-2020.pdf",
+        "unbundled/research-airports/focused-downloads-1.json",
+        "unbundled/research-airports/focused-downloads-3.json"
+      ],
+      "baselineSources": [
+        "https://flycanadianrockies.com/wp-content/uploads/2026/05/flyyxc-logo-sized.png",
+        "https://flycanadianrockies.com/wp-content/uploads/2026/05/cria_feature_logo.png",
+        "https://docs.cranbrook.ca/downloads/airport/YXC-Current-Advertising-Opportunities.pdf"
+      ]
+    },
+    {
+      "subjectId": "CYCW",
+      "name": "Chilliwack Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Safari pinned-tab SVG is a generic landing-plane icon, not the airport mountain logo. Community-engagement PDF p1 logo is a bitmap.",
+      "homepageCheck": {
+        "url": "https://www.chilliwackairport.ca/",
+        "status": 200,
+        "path": "unbundled/research-airports/CYCW-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Official home and document leads inspected. Community-engagement PDF contains bitmap mountain/CYCW logo. Safari pinned-tab SVG is a generic landing-plane favicon, visually unlike the airport mark, and was rejected. BCAC 2018 guide p39 repeats an airport bitmap.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CYCW-home.html",
+        "unbundled/research-airports/cycw-community.pdf",
+        "unbundled/research-airports/cycw-pinned.svg",
+        "unbundled/research-airports/bcac-2018-guide.pdf"
+      ],
+      "baselineSources": [
+        "https://www.chilliwackairport.ca/assets/images/layout/top-logo.png",
+        "https://bcaerospacecareers.ca/wp-content/uploads/2023/03/BC-Aerospace-Capabilities-Guide_Web_Spreads.pdf"
+      ]
+    },
+    {
+      "subjectId": "CYQQ",
+      "name": "Comox Valley Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official homepage checked and 2004 annual report downloaded; report is scanned raster. Existing native logo variants retained.",
+      "wasWhollyRasterAtStart": false,
+      "searchStatus": "searched-in-initial-pass",
+      "result": "existing-vector-collection",
+      "finding": "Official homepage checked and 2004 annual report downloaded; report is scanned raster. Existing native logo variants retained."
+    },
+    {
+      "subjectId": "CAH3",
+      "name": "Courtenay Airpark",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official homepage and merchandise pages checked. Roundel remains raster; no vector source verified.",
+      "homepageCheck": {
+        "url": "https://courtenayairpark.com/",
+        "status": 200,
+        "path": "unbundled/research-airports/CAH3-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Official home, merchandise and pilot pages inspected; roundel is Courtenay Airpark final logo JPG.jpg. Targeted plan/association searches locate municipal lease agendas, with no verified native airpark branding. No available brand-guide/source-vector link found.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CAH3-home.html",
+        "unbundled/research-airports/courtenay-pilot.html"
+      ],
+      "baselineSources": [
+        "https://web.archive.org/web/20240122181055id_/https://courtenayairpark.com/resources/Pictures/Courtenay%20Airpark%20final%20logo%20JPG.jpg",
+        "https://cfmws.ca/CFMWS/media/Comox/PSP/Totem%20Times/TT-10Sep24.pdf"
+      ]
+    },
+    {
+      "subjectId": "CAJ3",
+      "name": "Creston Valley Regional Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official homepage logo.webp is a bitmap. No verified new vector.",
+      "homepageCheck": {
+        "url": "https://crestonairport.ca/",
+        "status": 200,
+        "path": "unbundled/research-airports/CAJ3-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Official homepage source uses raster logo.webp. Public WordPress media request returned 401 and was not pursued. Downloaded 2024 airport economic-viability RFP uses town branding. Baseline 2025 master plan uses consultant branding. No independent native airport signature found.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CAJ3-home.html",
+        "unbundled/research-airports/creston-rfp-2024.pdf",
+        "unbundled/research-airports/focused-media-search.json"
+      ],
+      "baselineSources": [
+        "https://tim3cca5e83a86b-pfmjb.wordpress.com/wp-content/uploads/2026/03/logo.webp?w=255"
+      ]
+    },
+    {
+      "subjectId": "CYDL",
+      "name": "Dease Lake Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official site checked; YDL logo remains PNG. No verified new vector.",
+      "homepageCheck": {
+        "url": "https://www.deaseairport.ca/",
+        "status": 200,
+        "path": "unbundled/research-airports/CYDL-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Official home and business page source inspected. Airport signature is PNG within Wix; inline SVG/UI assets are not the signature. Targeted airport/pilot publication searches returned operational-chart leads, not a verified logo master.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CYDL-home.html",
+        "unbundled/research-airports/dease-business.html"
+      ],
+      "baselineSources": [
+        "https://static.wixstatic.com/media/60c92a_65540c84a39e4f8ba617a072d226d476~mv2.png"
+      ]
+    },
+    {
+      "subjectId": "CAK3",
+      "name": "Delta Heritage Airpark",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "2020 operations update has a distinct illustrated raster mark. 1998–99 newsletter is full-page raster scans.",
+      "homepageCheck": {
+        "url": "https://www.deltaheritageairpark.org/index.php",
+        "status": 200,
+        "path": "unbundled/research-airports/CAK3-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Official site and operational/newsletter publication leads inspected. Downloaded 2020 update yields the historical illustrated bitmap already delivered. 1998–99 newsletter is full-page raster scans, not native artwork.",
+      "evidenceFiles": [
+        "unbundled/research-airports/cak3-news-1998.pdf"
+      ],
+      "baselineSources": [
+        "https://www.deltaheritageairpark.org/www_img/deltaheritageairpark_header.jpg"
+      ]
+    },
+    {
+      "subjectId": "CYCZ",
+      "name": "Fairmont Hot Springs Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Airport website and official 2024 funding request checked. Letter has society name text and photos, not a native standalone airport logo.",
+      "homepageCheck": {
+        "url": "https://columbiavalleyairport.com/",
+        "status": 200,
+        "path": "unbundled/research-airports/CYCZ-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-new-raster",
+      "finding": "Official airport page, 2024 funding request and 2023 master-plan landing page inspected. Downloaded entire 80-page 2023 plan and inspected its logo image objects. HM consultant art is distinct; actual airport mark on maps and survey p76 is bitmap. The earlier 400 × 237 wing/script lockup is delivered separately. November 2025 letterhead remains a source lead not retrieved.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CYCZ-home.html",
+        "unbundled/research-airports/cycz-funding-2024.pdf",
+        "unbundled/research-airports/fairmont-masterplan.html",
+        "unbundled/research-airports/cycz-masterplan-2023.pdf",
+        "unbundled/research-airports/cycz-masterplan-images.png"
+      ],
+      "baselineSources": [
+        "https://columbiavalleyairport.com/wp-content/uploads/2026/07/CYCZ-op-CVAS-square-2-web.png"
+      ]
+    },
+    {
+      "subjectId": "CBQ2",
+      "name": "Fort Langley Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": true,
+      "initialPassFinding": "Existing gallery metadata reviewed. No additional official source independently downloaded or inspected in this pass.",
+      "wasWhollyRasterAtStart": false,
+      "searchStatus": "baseline-only",
+      "result": "existing-vector-collection",
+      "finding": "Existing gallery metadata reviewed. No additional official source independently downloaded or inspected in this pass."
+    },
+    {
+      "subjectId": "CYKA",
+      "name": "Kamloops Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": true,
+      "initialPassFinding": "Existing gallery metadata reviewed. No additional official source independently downloaded or inspected in this pass.",
+      "wasWhollyRasterAtStart": false,
+      "searchStatus": "baseline-only",
+      "result": "existing-vector-collection",
+      "finding": "Existing gallery metadata reviewed. No additional official source independently downloaded or inspected in this pass."
+    },
+    {
+      "subjectId": "CYLW",
+      "name": "Kelowna International Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official homepage/guide direct fetches blocked. Baseline already inspected 2025 v6.1 guide p11/15 and found 12 embedded bitmaps; not rescanned here.",
+      "wasWhollyRasterAtStart": false,
+      "searchStatus": "searched-in-initial-pass",
+      "result": "existing-vector-collection",
+      "finding": "Official homepage/guide direct fetches blocked. Baseline already inspected 2025 v6.1 guide p11/15 and found 12 embedded bitmaps; not rescanned here."
+    },
+    {
+      "subjectId": "CBW2",
+      "name": "Kitimat Airpark",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official flying-club site checked. Existing badge is operator identity; no independent airport vector verified.",
+      "homepageCheck": {
+        "url": "https://www.kitimat-flying-club.ca/",
+        "status": 200,
+        "path": "unbundled/research-airports/CBW2-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Flying-club official site inspected. Targeted club/airport publication search returns the 2026 Kitimat council agenda carrying the same club badge already raster-verified in baseline. This is operator identity; no standalone native airport mark verified.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CBW2-home.html"
+      ],
+      "baselineSources": [
+        "https://docs.kitimat.ca/docs/2026-06-01reg-agenda.pdf#page=87"
+      ]
+    },
+    {
+      "subjectId": "CYNJ",
+      "name": "Langley Regional Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": true,
+      "initialPassFinding": "Existing gallery metadata reviewed. No additional official source independently downloaded or inspected in this pass.",
+      "wasWhollyRasterAtStart": false,
+      "searchStatus": "baseline-only",
+      "result": "existing-vector-collection",
+      "finding": "Existing gallery metadata reviewed. No additional official source independently downloaded or inspected in this pass."
+    },
+    {
+      "subjectId": "CYCD",
+      "name": "Nanaimo Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official annual-report index and reports 2003–2010, 2012–2017, 2023 inspected. Eight native SVG additions and one blue historical raster extracted. 2018–2021 reports were not downloaded in this pass; 2022/2024/2025 source findings are from baseline.",
+      "wasWhollyRasterAtStart": false,
+      "searchStatus": "searched-in-initial-pass",
+      "result": "existing-vector-collection",
+      "finding": "Official annual-report index and reports 2003–2010, 2012–2017, 2023 inspected. Eight native SVG additions and one blue historical raster extracted. 2018–2021 reports were not downloaded in this pass; 2022/2024/2025 source findings are from baseline."
+    },
+    {
+      "subjectId": "CYXJ",
+      "name": "North Peace Regional Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "2021 Vantage ESG p32 has 290×74 bitmap; 2021 AVOP cover has 429×108 bitmap; 2026 Vantage profile has no airport logo. No verified vector.",
+      "homepageCheck": {
+        "url": "https://yxj.ca/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Downloaded Vantage ESG 2021 report p32: airport logo 290 × 74 bitmap. AVOP 2021 p1: 429 × 108 bitmap. Vantage location profile has no airport logo. Council-hosted transition letter carries a distinct Airport Society bitmap, not native geometry; its printed 2027 date is not evidence of a historical airport rebrand. Official primary signature remains PNG.",
+      "evidenceFiles": [
+        "unbundled/research-airports/cyxj-vantage-2021.pdf",
+        "unbundled/research-airports/cyxj-avop-2021.pdf",
+        "unbundled/research-airports/cyxj-vantage-2026.pdf",
+        "unbundled/research-airports/cyxj-transition.pdf"
+      ],
+      "baselineSources": [
+        "https://yxj.ca/wp-content/uploads/2024/02/NPAS-logo.png",
+        "https://yxj.ca/wp-content/uploads/2024/09/Airport-Security-Awareness-Program-V3-30-April-2021.pdf"
+      ]
+    },
+    {
+      "subjectId": "CYXT",
+      "name": "Northwest Regional Airport Terrace–Kitimat",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official homepage direct fetch blocked. Baseline vector/rasters retained; no additional source bytes inspected.",
+      "wasWhollyRasterAtStart": false,
+      "searchStatus": "searched-in-initial-pass",
+      "result": "existing-vector-collection",
+      "finding": "Official homepage direct fetch blocked. Baseline vector/rasters retained; no additional source bytes inspected."
+    },
+    {
+      "subjectId": "CYYF",
+      "name": "Penticton Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official YYF site checked; pin logo is raster. No verified new vector.",
+      "homepageCheck": {
+        "url": "https://yyf.penticton.ca/",
+        "status": 200,
+        "path": "unbundled/research-airports/CYYF-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Official microsite home, business and pilot page sources inspected; YYF map-pin signature is PNG. Both published December 2020 pilot and site maps were downloaded and inspected: thousands of native CAD paths, but federal identification and no YYF logo. Transport Canada page uses federal identity. No native pin/YYF logo master found.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CYYF-home.html",
+        "unbundled/research-airports/penticton-business.html",
+        "unbundled/research-airports/penticton-pilot.html",
+        "unbundled/research-airports/penticton-pilot-2020.pdf",
+        "unbundled/research-airports/penticton-site-2020.pdf"
+      ],
+      "baselineSources": [
+        "https://yyf.penticton.ca/sites/yyf.penticton.ca/files/yyf-logo%402x.png"
+      ]
+    },
+    {
+      "subjectId": "CYPK",
+      "name": "Pitt Meadows Regional Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official site checked; airport logo remains bitmap. Existing PDF raster findings retained.",
+      "homepageCheck": {
+        "url": "https://www.flyypk.ca/",
+        "status": 200,
+        "path": "unbundled/research-airports/CYPK-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Official airport homepage source inspected. Targeted branding/publication search returns the 2022 ACBC presentation and 2024 press material already raster-verified in baseline. City airport page points to presentation material. No new native logo pack or matching SVG located.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CYPK-home.html"
+      ],
+      "baselineSources": [
+        "https://static1.squarespace.com/static/620d54959e8b0e07c740c89f/t/669fe10977e2cb2826912369/1721753865789/Pitt+Meadows_RGB_logo-COLOUR.jpg?format=1500w",
+        "https://images.squarespace-cdn.com/content/v1/620d54959e8b0e07c740c89f/f7649189-586b-4320-999e-f94642c8b34c/ypk-logo.png",
+        "https://static1.squarespace.com/static/620d54959e8b0e07c740c89f/t/6748e8853cf6693604be3557/1732831365670/Press%2BRelease%2B-%2B11.27.24%2B-%2BCMOF.pdf"
+      ]
+    },
+    {
+      "subjectId": "CYXS",
+      "name": "Prince George Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official media page says vector artwork is available by request. 2024 annual report downloaded: full-colour cover logo is 185×87 raster. No messages sent.",
+      "wasWhollyRasterAtStart": false,
+      "searchStatus": "searched-in-initial-pass",
+      "result": "existing-vector-collection",
+      "finding": "Official media page says vector artwork is available by request. 2024 annual report downloaded: full-colour cover logo is 185×87 raster. No messages sent."
+    },
+    {
+      "subjectId": "CYPR",
+      "name": "Prince Rupert Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official homepage checked; existing ad PDF remains raster in baseline. No new vector verified.",
+      "homepageCheck": {
+        "url": "https://ypr.ca/",
+        "status": 200,
+        "path": "unbundled/research-airports/CYPR-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Official home, authority, history and fees pages inspected; all use YPR_Logo.png. Public logo media search returned no results. Baseline advertising PDF remains raster evidence. No source-native file or brand guide verified.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CYPR-home.html",
+        "unbundled/research-airports/ypr-authority.html",
+        "unbundled/research-airports/ypr-history.html",
+        "unbundled/research-airports/ypr-fees-real.html",
+        "unbundled/research-airports/ypr-media.json"
+      ],
+      "baselineSources": [
+        "https://ypr.ca/wp-content/themes/ypr/foundation/assets/img/YPR_Logo.png",
+        "https://ypr.ca/wp-content/themes/ypr/foundation/assets/img/YPR_LogoCircle.png",
+        "https://ypr.ca/wp-content/uploads/2021/05/ypr-ad.pdf"
+      ]
+    },
+    {
+      "subjectId": "CYQZ",
+      "name": "Quesnel Regional Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official airport page checked; existing business-plan raster remains best verified source.",
+      "homepageCheck": {
+        "url": "https://www.quesnel.ca/municipal-services/airport/airport-information",
+        "status": 200,
+        "path": "unbundled/research-airports/CYQZ-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Official airport page and targeted plan/brand search checked. 2015 business-plan/council PDF is the same raster source retained in baseline. No new standalone vector source or official vector download verified.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CYQZ-home.html"
+      ],
+      "baselineSources": [
+        "https://quesnel.civicweb.net/document/61125/"
+      ]
+    },
+    {
+      "subjectId": "CYYD",
+      "name": "Smithers Regional Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "2014 investment brochure yields historical alphorn logo raster; 2026 development brochure has bitmap red-wing airport logo (800×647 / 468×305), not vector.",
+      "homepageCheck": {
+        "url": "https://www.smithers.ca/airport",
+        "status": 200,
+        "path": "unbundled/research-airports/CYYD-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Downloaded 2014 investment brochure and 2026 development flyer. 2014 alphorn raster already delivered; 2026 airport mark is embedded at 800 × 647 and 468 × 305, not native geometry. Official source and search did not yield a logo master.",
+      "evidenceFiles": [
+        "unbundled/research-airports/cyyd-development-2026.pdf"
+      ],
+      "baselineSources": [
+        "https://www.smithers.ca/sites/default/files/2025-01/RFP_Airport_Cafe%202025.pdf",
+        "https://www.smithers.ca/sites/default/files/2022-07/Airport%20Banner_Final.png"
+      ]
+    },
+    {
+      "subjectId": "CAD4",
+      "name": "Trail Regional Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official city airport page checked. No new standalone vector verified.",
+      "homepageCheck": {
+        "url": "https://trail.ca/services/trail-regional-airport/",
+        "status": 200,
+        "path": "unbundled/research-airports/CAD4-home.html"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-no-vector",
+      "finding": "Official city airport page and publication search checked. Downloaded 46-page November 2026 airport master-plan RFP: city Explore your TRAIL brand, not the distinct aircraft/airport signature. Existing 2024 destination-guide airport artwork remains raster evidence; no native airport source located.",
+      "evidenceFiles": [
+        "unbundled/research-airports/CAD4-home.html",
+        "unbundled/research-airports/trail-rfp-2026.pdf"
+      ],
+      "baselineSources": [
+        "https://www.kootenayrockies.com/wp-content/uploads/2025/12/Rossland-Escape-Guide-2024-web-compressed.pdf"
+      ]
+    },
+    {
+      "subjectId": "CBC7",
+      "name": "Vancouver Harbour Heliport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Helijet location and Pacific Heliport Services site fetches blocked; no new vector verified. Existing operator-brand distinction retained.",
+      "homepageCheck": {
+        "url": "https://helijet.com/charter-flights/our-locations/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      "wasWhollyRasterAtStart": true,
+      "searchStatus": "searched",
+      "result": "searched-native-vector-recovered",
+      "finding": "Official PHS page fetch blocked, but public operator media results exposed 2016 and 2022 releases. Downloaded both: 2022 emblem is a 541 × 358 bitmap; 2016 identical layout is entirely native and yielded 56 outlined paths. Source blue differs, preserved as a separate 2016 colourway. Operator mark also serves other heliports.",
+      "evidenceFiles": [
+        "unbundled/research-airports/phs-media-logo.json",
+        "unbundled/research-airports/helijet-media-phs.json",
+        "unbundled/research-airports/phs-expansion-2016.pdf",
+        "unbundled/research-airports/phs-2022.pdf"
+      ],
+      "baselineSources": [
+        "https://helijet.com/wp-content/uploads/2022/08/2022Aug10_PHS-BCAAP-VANCOUVER-HARBOUR-HELIPORT-UPGRADES.pdf"
+      ]
+    },
+    {
+      "subjectId": "CYHC",
+      "name": "Vancouver Harbour Water Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": true,
+      "initialPassFinding": "Existing gallery metadata reviewed. No additional official source independently downloaded or inspected in this pass.",
+      "wasWhollyRasterAtStart": false,
+      "searchStatus": "baseline-only",
+      "result": "existing-vector-collection",
+      "finding": "Existing gallery metadata reviewed. No additional official source independently downloaded or inspected in this pass."
+    },
+    {
+      "subjectId": "CYVR",
+      "name": "Vancouver International Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": false,
+      "initialPassFinding": "Official 2007 and 2014 reports downloaded; 2007 back cover gives native white Beyond, Every Day lockup. 2014 report cover is raster. Other baseline vector retained.",
+      "wasWhollyRasterAtStart": false,
+      "searchStatus": "searched-in-initial-pass",
+      "result": "existing-vector-collection",
+      "finding": "Official 2007 and 2014 reports downloaded; 2007 back cover gives native white Beyond, Every Day lockup. 2014 report cover is raster. Other baseline vector retained."
+    },
+    {
+      "subjectId": "CYYJ",
+      "name": "Victoria International Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": true,
+      "initialPassFinding": "Existing gallery metadata reviewed. No additional official source independently downloaded or inspected in this pass.",
+      "wasWhollyRasterAtStart": false,
+      "searchStatus": "baseline-only",
+      "result": "existing-vector-collection",
+      "finding": "Existing gallery metadata reviewed. No additional official source independently downloaded or inspected in this pass."
+    },
+    {
+      "subjectId": "CYCG",
+      "name": "West Kootenay Regional Airport",
+      "inOriginalGallery": true,
+      "baselineOnly": true,
+      "initialPassFinding": "Existing gallery metadata reviewed. No additional official source independently downloaded or inspected in this pass.",
+      "wasWhollyRasterAtStart": false,
+      "searchStatus": "baseline-only",
+      "result": "existing-vector-collection",
+      "finding": "Existing gallery metadata reviewed. No additional official source independently downloaded or inspected in this pass."
+    }
+  ],
+  "additionalInventoryCoverage": [
+    {
+      "subjectId": "CAJ4",
+      "name": "Anahim Lake Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.cariboord.ca/business-and-development/airports/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CBBC",
+      "name": "Bella Bella (Campbell Island) Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.heiltsukdevco.com/corporate-structure",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYBD",
+      "name": "Bella Coola Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.ccrd.ca/services/airports/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYDQ",
+      "name": "Dawson Creek Regional Airport",
+      "searchStatus": "searched",
+      "baselineBrandingStatus": "branding-in-development",
+      "sourcePage": "https://www.dawsoncreek.ca/business-development/community-profile/industry-sectors/transportation-sector/",
+      "finding": "Official city transport page/homepage inspected. YDQ text and municipal branding are present; baseline unreleased-brand project is not treated as an adopted identity."
+    },
+    {
+      "subjectId": "CYZP",
+      "name": "K’il Kun Xidgwangs Daanaay Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://tc.canada.ca/en/aviation/operating-airports-aerodromes/list-airports-owned-transport-canada/kil-kun-xidgwangs-daanaay-airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CZMT",
+      "name": "Masset Municipal Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.masset.ca/services/airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYYE",
+      "name": "Northern Rockies Regional Airport",
+      "searchStatus": "searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.northernrockies.ca/our-government/contact/northern-rockies-regional-airport-yye",
+      "finding": "Official homepage unavailable in direct retrieval; Rhubarb portfolio inspected and previews are raster. No source-native airport logo recovered."
+    },
+    {
+      "subjectId": "CYZT",
+      "name": "Port Hardy Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://tc.canada.ca/en/aviation/operating-airports-aerodromes/list-airports-owned-transport-canada/port-hardy-airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYPW",
+      "name": "Powell River Airport",
+      "searchStatus": "searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://powellriver.ca/pages/airport",
+      "finding": "Official city airport page and 2013 asset-management-plan search evidence reviewed. It uses the City of Powell River identity; no separate native airport logo verified. No new airport artwork proposed."
+    },
+    {
+      "subjectId": "CAT4",
+      "name": "Qualicum Beach Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://qualicumbeach.com/airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CZAM",
+      "name": "Shuswap Regional Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.salmonarm.ca/228/Shuswap-Regional-Airport-CZAM",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYAZ",
+      "name": "Tofino–Long Beach Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "no-separate-mark-found",
+      "sourcePage": "https://www.tofinoairport.com/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYVK",
+      "name": "Vernon Regional Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.vernon.ca/roads-transportation/airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYWL",
+      "name": "Williams Lake Regional Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://williamslake.ca/195/Airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAV3",
+      "name": "100 Mile House Municipal Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://100milehouse.com/district-services/airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYAL",
+      "name": "Alert Bay Airport (H.J. Pickup Airport)",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "no-separate-mark-found",
+      "sourcePage": "https://www.alertbay.ca/accommodations-attractions",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "69S",
+      "name": "Avey Field State Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "no-separate-mark-found",
+      "sourcePage": "https://wsdot.wa.gov/travel/aviation/airports-list/avey-field",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYCQ",
+      "name": "Chetwynd Municipal Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "no-separate-mark-found",
+      "sourcePage": "https://www.gochetwynd.com/municipal-office/departments/public-works/airport/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CBG9",
+      "name": "Courtenay Airpark Water Aerodrome",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "shared-identity",
+      "sourcePage": "https://courtenayairpark.com/page-18109",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYJQ",
+      "name": "Denny Island Aerodrome",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "no-separate-mark-found",
+      "sourcePage": "https://www.ccrd.ca/governance/commissions-and-committees/denny-island-airport-commission/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAM3",
+      "name": "Duncan Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "no-separate-mark-found",
+      "sourcePage": "https://duncanflyingclub.com/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYSW",
+      "name": "Elk Valley Regional Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.rdek.bc.ca/departments/environmentalservices/elkvalleyairport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAS4",
+      "name": "Fort Langley Water Aerodrome",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "shared-identity",
+      "sourcePage": "https://www.fortlangleyairport.com/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYJM",
+      "name": "Fort St. James Perison Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "no-separate-mark-found",
+      "sourcePage": "https://www.fortstjames.ca/visit/perison-airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYHE",
+      "name": "Fraser Valley Regional Airpark (Hope)",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.fvrd.ca/EN/main/services/airpark.html",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAX6",
+      "name": "Ganges Water Aerodrome",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "carrier-brand-only",
+      "sourcePage": "https://harbourair.com/locations/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYGE",
+      "name": "Golden Municipal Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.golden.ca/town-services/golden-municipal-airport-cyge",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CZGF",
+      "name": "Grand Forks Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "no-separate-mark-found",
+      "sourcePage": "https://www.grandforks.ca/wp-content/uploads/Airport_Operations_Manual.pdf",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CBR2",
+      "name": "Kaslo Aerodrome",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://kaslo.ca/p/aerodrome",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAX5",
+      "name": "Likely Airstrip",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "no-separate-mark-found",
+      "sourcePage": "https://www.cariboord.ca/business-and-development/airports/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYZY",
+      "name": "Mackenzie Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://districtofmackenzie.ca/public-services/airport/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAV4",
+      "name": "McBride Airport (Charlie Leake Field)",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://mcbride.ca/municipal-services/mcbride-airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAD5",
+      "name": "Merritt Municipal Airport (Saunder’s Field)",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.merritt.ca/airport/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAQ5",
+      "name": "Nakusp Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "no-separate-mark-found",
+      "sourcePage": "https://www.nakusp.com/airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CDH5",
+      "name": "Nanaimo Harbour Heliport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "carrier-brand-only",
+      "sourcePage": "https://helijet.com/charter-flights/our-locations/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAC8",
+      "name": "Nanaimo Harbour Water Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "carrier-brand-only",
+      "sourcePage": "https://harbourair.com/locations/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAU3",
+      "name": "Oliver Municipal Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.oliver.ca/town-services/airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CBB9",
+      "name": "Osoyoos Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.osoyoos.ca/services/airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYPS",
+      "name": "Pemberton Regional Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "no-separate-mark-found",
+      "sourcePage": "https://www.pemberton.ca/municipal-services/roads-transportation/pemberton-regional-airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAJ8",
+      "name": "Pitt Meadows Water Aerodrome",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "shared-identity",
+      "sourcePage": "https://www.flyypk.ca/s/FLY-YPK-Good-Neighbour-Program-UPDATED.pdf",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CZSW",
+      "name": "Prince Rupert/Seal Cove Water Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "no-separate-mark-found",
+      "sourcePage": "https://ypr.ca/travellers/private-aircraft-charters/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYDC",
+      "name": "Princeton Regional Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "no-separate-mark-found",
+      "sourcePage": "https://princeton.ca/p/regional-airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYRV",
+      "name": "Revelstoke Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.csrd.bc.ca/234/Revelstoke-Airport",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAP3",
+      "name": "Sechelt Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.sechelt.ca/living-here/airport/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CZML",
+      "name": "South Cariboo Regional Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://www.cariboord.ca/business-and-development/airports/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYSE",
+      "name": "Squamish Municipal Airport (Don Patrick Field)",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://squamish.ca/transportation-parking-and-mobility/airport/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYGB",
+      "name": "Texada/Gillies Bay Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://qathet.ca/services/transportation/texada-island-airport/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAB4",
+      "name": "Tofino Harbour Water Aerodrome",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "carrier-brand-only",
+      "sourcePage": "https://harbourair.com/locations/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAM9",
+      "name": "Vancouver International Water Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "shared-identity",
+      "sourcePage": "https://www.yvr.ca/en/passengers/transportation/airport-south/airport-south",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAU4",
+      "name": "Vanderhoof Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://vanderhoof.ca/residents/airport/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CBF7",
+      "name": "Victoria Harbour (Camel Point) Heliport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://helijet.com/charter-flights/our-locations/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CYWH",
+      "name": "Victoria Harbour Water Airport",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "operator-brand-only",
+      "sourcePage": "https://tc.canada.ca/en/marine-transportation/ports-harbours-anchorages/port-victoria",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    },
+    {
+      "subjectId": "CAE5",
+      "name": "Whistler/Green Lake Water Aerodrome",
+      "searchStatus": "not-independently-searched",
+      "baselineBrandingStatus": "carrier-brand-only",
+      "sourcePage": "https://harbourair.com/locations/whistler/",
+      "finding": "Existing repository research read; no independent source search or byte inspection in this pass."
+    }
+  ],
+  "supplementalRecoveries": [
+    {
+      "subjectName": "Nanaimo Port Authority",
+      "subjectId": null,
+      "registrationStatus": "No matching Nanaimo Port Authority / Port of Nanaimo registered gallery subject found in checkout.",
+      "localPath": "unbundled/research-airports/nanaimo-port-authority-2016-blue.svg",
+      "sourcePdf": "unbundled/research-airports/phs-expansion-2016.pdf",
+      "sourceUrl": "https://helijet.com/wp-content/uploads/2016/11/NPA-PHS_Expansion_Announcement.pdf",
+      "originalPageUrl": "https://helijet.com/nanaimo-port-authority-pacific-heliport-services-complete-heliport-expansio/",
+      "format": "svg",
+      "isVector": true,
+      "specimenDate": "2016",
+      "publisher": "Nanaimo Port Authority",
+      "label": "Sail emblem and Nanaimo Port Authority wordmark — 2016 blue",
+      "role": "historical",
+      "sha256": "fbf8b46a28feb32e16e6c0234856175f0582a255342c2127c3c3d4eb5728f70f",
+      "extraction": {
+        "file": "nanaimo-port-authority-2016-blue.svg",
+        "pdf": "phs-expansion-2016.pdf",
+        "page": 1,
+        "roi": [
+          55,
+          10,
+          225,
+          90
+        ],
+        "bbox": [
+          61.61510467529297,
+          15.445487976074219,
+          218.43222045898438,
+          75.86125946044922
+        ],
+        "pathCount": 29,
+        "imageCount": 0,
+        "liveTextCount": 0,
+        "sha256": "fbf8b46a28feb32e16e6c0234856175f0582a255342c2127c3c3d4eb5728f70f",
+        "sourceSha256": "1a463bb3427157fbc19c9b98c914d285a783cc3b81c62c30d11f7acf365ccda6",
+        "subjectRegistration": "No matching Nanaimo Port Authority / Port of Nanaimo registered gallery subject found in checkout."
+      },
+      "notes": "Original 29 native filled paths, including outlined lettering. Preserved separately as supplemental source artwork; not counted as an airport recovery and not assigned to a municipal or airport subject."
+    }
+  ],
+  "evidenceFiles": [
+    "extra-extraction-manifest.json",
+    "extract-extra.py",
+    "focused-downloads-1.json",
+    "focused-downloads-2.json",
+    "focused-downloads-3.json",
+    "focused-downloads-4.json",
+    "focused-downloads-5.json",
+    "focused-pages.json",
+    "focused-pages-2.json",
+    "focused-media-search.json",
+    "focused-media-search-2.json"
+  ],
+  "limits": [
+    "A negative search result is not proof that an original vector does not exist.",
+    "No raster images were traced; native CAD paths elsewhere in a document are not counted as logo vectors.",
+    "No permission-dependent source request or email was sent.",
+    "All 22 original raster-only collections received a source or targeted-publication search; Atlin source retrieval remained unavailable.",
+    "Of the 53 additional subjects in the 87-facility research inventory, three received a fresh search and 50 were baseline review only.",
+    "Nanaimo Port Authority was not found as a registered gallery subject in the checkout. Supplemental vector is preserved without assigning it to an unrelated subject."
+  ]
+}
