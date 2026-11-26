@@ -1,0 +1,76 @@
+{
+  "asOf": "2026-11-26",
+  "unitTests": {
+    "command": "node --test src/gallery/vectorRecovery.test.js src/gallery/identityCoverage.test.js src/gallery/collectedCollections.test.js src/gallery/postsecondarySubjects.test.js",
+    "passed": 48,
+    "failed": 0
+  },
+  "gallery": {
+    "subjectRenders": 120,
+    "detailRenders": 260,
+    "verifiedSourceDownloads": 130,
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "sourceDownloadValidation": "HTTP 200 and SHA256 equality to acquisition manifest",
+    "initialIssues": [
+      {
+        "file": "public/identity-display/municipal-colwood-annual-report-2023-reverse.dark.svg",
+        "type": "Baseline file absent from sparse checkout",
+        "resolution": "Restored bytes from baseline commit and verified Git blob SHA1 e8ef36eac5b5df48d34a35d1130aca9c6105a137"
+      },
+      {
+        "file": "public/identity-display/airport-cycd-reverse.dark.svg",
+        "type": "Baseline file absent from sparse checkout",
+        "resolution": "Restored bytes from baseline commit and verified Git blob SHA1 f4c41bfbfb043005e97351800185eba7957fc0af"
+      }
+    ],
+    "followup": {
+      "subjects": [
+        "municipality-colwood",
+        "airport-cycd"
+      ],
+      "subjectRenders": 4,
+      "detailRenders": 20,
+      "verifiedDownloads": 10,
+      "failures": []
+    },
+    "unresolvedIssues": [],
+    "visualInspection": [
+      "NVIT collection and 1989 rider detail",
+      "College of New Caledonia current and historical designs",
+      "UBC Okanagan collection",
+      "Nanaimo Airport collection and historical mountain design",
+      "Sooke horizontal design",
+      "Okanagan University College blue panel",
+      "Sparwood collection",
+      "BC Treaty Commission collection"
+    ]
+  },
+  "offlineBundle": {
+    "artworkImagesDecoded": 130,
+    "localLinksChecked": 269,
+    "missingFiles": 0,
+    "searchAndFormatFilters": "passed",
+    "gapRecordFilters": {
+      "subjects": 453,
+      "designs": 550,
+      "rasterMatchingFollowups": 88
+    },
+    "mobileWidth": 390,
+    "horizontalOverflow": false
+  },
+  "review": {
+    "baselineBodiesPreserved": 697,
+    "baselineAssetRecordsPreserved": 1432,
+    "baselineDesignIdsPreserved": 1083,
+    "existingDisplayRecordsChanged": 0,
+    "resolvedFinding": "VIU sourceLocator now identifies each colourway own exact PDF member; byte hashes and source artwork unchanged.",
+    "whitespaceCheck": {
+      "codeAndMetadata": "passed",
+      "sourceWhitespaceRetained": "Six trailing-whitespace lines in the byte-original Selkirk SVG and its two generated display copies; source bytes intentionally preserved. No other staged whitespace issues."
+    }
+  },
+  "scope": "Targeted source, model and actual gallery validation for this recovery. A full application production build and all unrelated repository tests were not run."
+}

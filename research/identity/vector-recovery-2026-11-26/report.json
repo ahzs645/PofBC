@@ -1,0 +1,2119 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-11-26",
+  "baselineCommit": "279cba21ce0afd2a6d21e082019f2a736932d0cb",
+  "title": "PofBC source-vector recovery: inventory audit and remaining gaps",
+  "definitions": {
+    "subject": "A registered identity subject; ownership is separate from gallery placement.",
+    "design": "A unique gallery-entry ID, potentially with several source files/colourways.",
+    "nativeVector": "Metadata declares vector, with no reconstruction or containsRaster flag. Existing files not all independently revalidated.",
+    "freshResearch": "Documented fresh source discovery, retrieval attempt, targeted search or source inspection. A record is not a claim of comprehensive historical or artwork review.",
+    "countLimit": "Asset counts, design counts and subject counts measure different things."
+  },
+  "inputs": [
+    {
+      "file": "research/identity/vector-recovery-2026-11-26/baseline.json",
+      "sha256": "250966c01755b4827a110da85f453d479599799db3fddfcaaaaf97e86bd3b90a"
+    },
+    {
+      "file": "research/identity/vector-recovery-2026-11-26/acquisitions.json",
+      "sha256": "d321bbcadc68d73ba3d347d1b88694dd2ac3bff5403ef50cb040d5a158f1576a"
+    },
+    {
+      "file": "src/gallery/vectorRecoveryData.json",
+      "sha256": "afa260255bf1d6eaa973eee4d1ad7efc5bec330b3e393660d31be4456a0d63fc"
+    },
+    {
+      "file": "src/gallery/identityCoverage.js",
+      "sha256": "46258fb190d06bd196ab669e47cc236036f2ec78606399db9b8536a311b419f5"
+    },
+    {
+      "file": "src/gallery/collections.js",
+      "sha256": "18d28c89e8576e592725a556ed13fd0fff1d5b849993db1bb5b239f21678460f"
+    },
+    {
+      "file": "research/identity/vector-recovery-2026-11-26/source-ledgers/research-activity.json",
+      "sha256": "93870fb841575d2d4fa3f3d10b63df7790ce2d85348c773551fa1a2e9e9db758"
+    }
+  ],
+  "before": {
+    "subjects": 851,
+    "subjectsWithArtwork": 595,
+    "subjectsWithNativeVector": 354,
+    "subjectsWithoutNativeVector": 497,
+    "subjectStates": {
+      "native-vector": 354,
+      "raster-held": 214,
+      "source-located": 87,
+      "distinct-unconfirmed": 30,
+      "reconstruction": 22,
+      "shared-identity": 5,
+      "artwork-held": 5,
+      "artwork-missing": 134
+    },
+    "galleryCollections": 568,
+    "galleryDesigns": 1083,
+    "designsWithSourceVector": 543,
+    "designsWithoutSourceVector": 540
+  },
+  "after": {
+    "subjects": 851,
+    "subjectsWithArtwork": 636,
+    "subjectsWithNativeVector": 398,
+    "subjectsWithoutNativeVector": 453,
+    "subjectStates": {
+      "raster-held": 211,
+      "native-vector": 398,
+      "artwork-missing": 124,
+      "reconstruction": 22,
+      "distinct-unconfirmed": 30,
+      "source-located": 57,
+      "artwork-held": 5,
+      "shared-identity": 4
+    },
+    "galleryCollections": 609,
+    "galleryDesigns": 1168,
+    "designsWithSourceVector": 618,
+    "designsWithoutSourceVector": 550
+  },
+  "delta": {
+    "subjects": 0,
+    "subjectsWithArtwork": 41,
+    "subjectsWithNativeVector": 44,
+    "subjectsWithoutNativeVector": -44,
+    "galleryCollections": 41,
+    "galleryDesigns": 85,
+    "designsWithSourceVector": 75,
+    "designsWithoutSourceVector": 10
+  },
+  "acquisitionSummary": {
+    "acceptedAssets": 130,
+    "nativeSvgAssets": 109,
+    "rasterAssets": 21,
+    "subjectsReceivingAssets": 60,
+    "artworkBodyRecordsAdded": 41,
+    "formatCounts": {
+      "svg": 109,
+      "png": 18,
+      "jpg": 3
+    },
+    "acceptedBySubject": [
+      {
+        "id": "bc-human-rights-commission",
+        "name": "British Columbia Human Rights Commission",
+        "family": "commissions",
+        "assets": 1,
+        "nativeSvg": 0,
+        "raster": 1,
+        "assetIds": [
+          "historical-source-human-rights-2001-lockup"
+        ]
+      },
+      {
+        "id": "bc-treaty-commission",
+        "name": "British Columbia Treaty Commission",
+        "family": "commissions",
+        "assets": 3,
+        "nativeSvg": 3,
+        "raster": 0,
+        "assetIds": [
+          "recovered-bc-treaty-official-white",
+          "recovered-bctreaty-stacked-gold-proceedings",
+          "recovered-bctreaty-right-stacked-white-2018"
+        ]
+      },
+      {
+        "id": "bc-utilities-commission",
+        "name": "British Columbia Utilities Commission",
+        "family": "commissions",
+        "assets": 1,
+        "nativeSvg": 0,
+        "raster": 1,
+        "assetIds": [
+          "official-raster-bcuc-2023-colour-lockup"
+        ]
+      },
+      {
+        "id": "bc-vegetable-marketing-commission",
+        "name": "British Columbia Vegetable Marketing Commission",
+        "family": "commissions",
+        "assets": 2,
+        "nativeSvg": 0,
+        "raster": 2,
+        "assetIds": [
+          "official-raster-vegetable-marketing-2024-colour-lockup",
+          "official-raster-bc-vegetable-current"
+        ]
+      },
+      {
+        "id": "camosun-college",
+        "name": "Camosun College",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-camosun-college-vector"
+        ]
+      },
+      {
+        "id": "airport-cybl",
+        "name": "Campbell River Airport",
+        "family": "airport-identities",
+        "assets": 2,
+        "nativeSvg": 0,
+        "raster": 2,
+        "assetIds": [
+          "airport-cybl-campbell-river-eagle-2017",
+          "airport-cybl-ybl-stacked-2024"
+        ]
+      },
+      {
+        "id": "capilano-college",
+        "name": "Capilano College",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-capilano-2007-wordmark"
+        ]
+      },
+      {
+        "id": "capilano-university",
+        "name": "Capilano University",
+        "family": "postsecondary-history",
+        "assets": 2,
+        "nativeSvg": 2,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-capilano-university-vector",
+          "recovered-capilano-2008-wordmark"
+        ]
+      },
+      {
+        "id": "cariboo-college",
+        "name": "Cariboo College",
+        "family": "postsecondary-history",
+        "assets": 3,
+        "nativeSvg": 3,
+        "raster": 0,
+        "assetIds": [
+          "recovered-cariboo-black-wheel-retrospective-2011",
+          "recovered-cariboo-orange-wheel-retrospective-2011",
+          "recovered-cariboo-colour-rings-retrospective-2011"
+        ]
+      },
+      {
+        "id": "coast-mountain-bus-company",
+        "name": "Coast Mountain Bus Company",
+        "family": "transit",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "source-vector-coast-mountain-bus-company-2022-white"
+        ]
+      },
+      {
+        "id": "coast-mountain-college",
+        "name": "Coast Mountain College",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-coast-mountain-college-vector"
+        ]
+      },
+      {
+        "id": "college-of-new-caledonia",
+        "name": "College of New Caledonia",
+        "family": "postsecondary-history",
+        "assets": 3,
+        "nativeSvg": 3,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-college-of-new-caledonia-vector",
+          "recovered-cnc-2017-geometric-monogram",
+          "recovered-cnc-2019-fullname-variant"
+        ]
+      },
+      {
+        "id": "college-of-the-rockies",
+        "name": "College of the Rockies",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-college-of-the-rockies-vector"
+        ]
+      },
+      {
+        "id": "municipality-colwood",
+        "name": "Colwood",
+        "family": "municipalities",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-colwood-charcoal-wayfinding-2022"
+        ]
+      },
+      {
+        "id": "airport-cak3",
+        "name": "Delta Heritage Airpark",
+        "family": "airport-identities",
+        "assets": 1,
+        "nativeSvg": 0,
+        "raster": 1,
+        "assetIds": [
+          "airport-cak3-delta-heritage-2020-wordmark"
+        ]
+      },
+      {
+        "id": "doctors-of-bc",
+        "name": "Doctors of BC",
+        "family": "specialist-health",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "source-vector-doctors-of-bc-official-inline-2026"
+        ]
+      },
+      {
+        "id": "douglas-college",
+        "name": "Douglas College",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-douglas-college-vector"
+        ]
+      },
+      {
+        "id": "electoral-boundaries-commission",
+        "name": "Electoral Boundaries Commission",
+        "family": "commissions",
+        "assets": 3,
+        "nativeSvg": 1,
+        "raster": 2,
+        "assetIds": [
+          "source-vector-electoral-boundaries-2023",
+          "historical-source-electoral-boundaries-2015-compass",
+          "historical-source-electoral-boundaries-2008-province-map"
+        ]
+      },
+      {
+        "id": "emily-carr-institute-of-art-and-design",
+        "name": "Emily Carr Institute of Art and Design",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-ecuad-2004-framed-one-line"
+        ]
+      },
+      {
+        "id": "emily-carr-university",
+        "name": "Emily Carr University of Art + Design",
+        "family": "postsecondary-history",
+        "assets": 2,
+        "nativeSvg": 2,
+        "raster": 0,
+        "assetIds": [
+          "recovered-ecuad-2024-guide-primary",
+          "recovered-ecuad-2024-guide-primary-reverse"
+        ]
+      },
+      {
+        "id": "airport-cycz",
+        "name": "Fairmont Hot Springs Airport",
+        "family": "airport-identities",
+        "assets": 1,
+        "nativeSvg": 0,
+        "raster": 1,
+        "assetIds": [
+          "airport-cycz-cycz-wing-script-2023"
+        ]
+      },
+      {
+        "id": "financial-institutions-commission",
+        "name": "Financial Institutions Commission",
+        "family": "commissions",
+        "assets": 1,
+        "nativeSvg": 0,
+        "raster": 1,
+        "assetIds": [
+          "historical-source-financial-institutions-2003-colour-lockup"
+        ]
+      },
+      {
+        "id": "sub-forest-appeals-commission",
+        "name": "Forest Appeals Commission",
+        "family": "commissions",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "source-vector-forest-appeals-2021"
+        ]
+      },
+      {
+        "id": "fraser-valley-college",
+        "name": "Fraser Valley College",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-fvc-1980s-shield-ufv-retrospective"
+        ]
+      },
+      {
+        "id": "kootenay-school-of-the-arts",
+        "name": "Kootenay School of the Arts",
+        "family": "postsecondary-history",
+        "assets": 3,
+        "nativeSvg": 3,
+        "raster": 0,
+        "assetIds": [
+          "recovered-ksa-2004-cooperative",
+          "recovered-ksa-2009-may-selkirk-era",
+          "recovered-ksa-2009-august-selkirk-era"
+        ]
+      },
+      {
+        "id": "kwantlen-college",
+        "name": "Kwantlen College",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-historical-kwantlen-college-1994-minutes"
+        ]
+      },
+      {
+        "id": "kwantlen-polytechnic-university",
+        "name": "Kwantlen Polytechnic University",
+        "family": "postsecondary-history",
+        "assets": 2,
+        "nativeSvg": 2,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-kwantlen-polytechnic-university-vector",
+          "recovered-kpu-fullname-iapr-cover"
+        ]
+      },
+      {
+        "id": "kwantlen-university-college",
+        "name": "Kwantlen University College",
+        "family": "postsecondary-history",
+        "assets": 2,
+        "nativeSvg": 2,
+        "raster": 0,
+        "assetIds": [
+          "recovered-historical-kwantlen-university-college-1995-minutes",
+          "recovered-historical-kwantlen-uc-2005-cover"
+        ]
+      },
+      {
+        "id": "langara-college",
+        "name": "Langara College",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-langara-college-vector"
+        ]
+      },
+      {
+        "id": "sub-medical-services-commission",
+        "name": "Medical Services Commission",
+        "family": "commissions",
+        "assets": 1,
+        "nativeSvg": 0,
+        "raster": 1,
+        "assetIds": [
+          "historical-source-medical-services-1972-seal"
+        ]
+      },
+      {
+        "id": "municipality-nakusp",
+        "name": "Nakusp",
+        "family": "municipalities",
+        "assets": 2,
+        "nativeSvg": 2,
+        "raster": 0,
+        "assetIds": [
+          "recovered-nakusp-stacked-colour-2023",
+          "recovered-nakusp-horizontal-black-2023"
+        ]
+      },
+      {
+        "id": "airport-cycd",
+        "name": "Nanaimo Airport",
+        "family": "airport-identities",
+        "assets": 9,
+        "nativeSvg": 8,
+        "raster": 1,
+        "assetIds": [
+          "airport-cycd-mountain-aircraft-2005-colour",
+          "airport-cycd-flight-path-2010-colour",
+          "airport-cycd-flight-path-2010-reverse",
+          "airport-cycd-flight-path-2012-white",
+          "airport-cycd-flight-path-2013-black",
+          "airport-cycd-flight-path-2014-alternate-tagline",
+          "airport-cycd-flight-path-2015-alternate-tagline",
+          "airport-cycd-signature-2023-black",
+          "airport-cycd-nanaimo-mountain-2004-blue"
+        ]
+      },
+      {
+        "id": "nicola-valley-institute-of-technology",
+        "name": "Nicola Valley Institute of Technology",
+        "family": "postsecondary-history",
+        "assets": 5,
+        "nativeSvg": 0,
+        "raster": 5,
+        "assetIds": [
+          "recovered-nvit-rider-circle-1989",
+          "recovered-nvit-rider-initials-1999",
+          "recovered-nvit-eagle-monochrome-2006",
+          "recovered-nvit-eagle-colour-2012-report",
+          "recovered-nvit-eagle-fullname-colour"
+        ]
+      },
+      {
+        "id": "municipality-north-cowichan",
+        "name": "North Cowichan",
+        "family": "municipalities",
+        "assets": 2,
+        "nativeSvg": 2,
+        "raster": 0,
+        "assetIds": [
+          "recovered-north-cowichan-colour",
+          "recovered-north-cowichan-150-anniversary-2023"
+        ]
+      },
+      {
+        "id": "north-island-college",
+        "name": "North Island College",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-north-island-college-vector"
+        ]
+      },
+      {
+        "id": "northern-lights-college",
+        "name": "Northern Lights College",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-northern-lights-college-vector"
+        ]
+      },
+      {
+        "id": "okanagan-college",
+        "name": "Okanagan College",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-okanagan-college-vector"
+        ]
+      },
+      {
+        "id": "okanagan-university-college",
+        "name": "Okanagan University College",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-ouc-audit-cover-2007"
+        ]
+      },
+      {
+        "id": "agricultural-land-commission",
+        "name": "Provincial Agricultural Land Commission",
+        "family": "commissions",
+        "assets": 2,
+        "nativeSvg": 2,
+        "raster": 0,
+        "assetIds": [
+          "source-vector-alc-green-emblem-2026",
+          "source-vector-alc-white-full-name-2026"
+        ]
+      },
+      {
+        "id": "provincial-capital-commission",
+        "name": "Provincial Capital Commission",
+        "family": "commissions",
+        "assets": 2,
+        "nativeSvg": 0,
+        "raster": 2,
+        "assetIds": [
+          "historical-source-provincial-capital-2014-grey",
+          "historical-source-provincial-capital-2011-gold-purple"
+        ]
+      },
+      {
+        "id": "municipality-radium-hot-springs",
+        "name": "Radium Hot Springs",
+        "family": "municipalities",
+        "assets": 6,
+        "nativeSvg": 6,
+        "raster": 0,
+        "assetIds": [
+          "recovered-radium-wonderland-colour-2012",
+          "recovered-radium-wonderland-black-2012",
+          "recovered-radium-wonderland-white-2012",
+          "recovered-radium-community-colour-2012",
+          "recovered-radium-community-black-2012",
+          "recovered-radium-community-white-2012"
+        ]
+      },
+      {
+        "id": "royal-roads-university",
+        "name": "Royal Roads University",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-royal-roads-university-vector"
+        ]
+      },
+      {
+        "id": "selkirk-college",
+        "name": "Selkirk College",
+        "family": "postsecondary-history",
+        "assets": 4,
+        "nativeSvg": 4,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-selkirk-college-vector",
+          "recovered-selkirk-guide-colour-2025",
+          "recovered-selkirk-guide-black-2025",
+          "recovered-selkirk-guide-reverse-2025"
+        ]
+      },
+      {
+        "id": "skytrain",
+        "name": "SkyTrain",
+        "family": "transit",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "source-vector-skytrain-2022-white"
+        ]
+      },
+      {
+        "id": "airport-cyyd",
+        "name": "Smithers Regional Airport",
+        "family": "airport-identities",
+        "assets": 1,
+        "nativeSvg": 0,
+        "raster": 1,
+        "assetIds": [
+          "airport-cyyd-smithers-alphorn-2014-back"
+        ]
+      },
+      {
+        "id": "municipality-sooke",
+        "name": "Sooke",
+        "family": "municipalities",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-sooke-primary-horizontal-pantone"
+        ]
+      },
+      {
+        "id": "municipality-sparwood",
+        "name": "Sparwood",
+        "family": "municipalities",
+        "assets": 8,
+        "nativeSvg": 8,
+        "raster": 0,
+        "assetIds": [
+          "recovered-sparwood-unbounded-charcoal",
+          "recovered-sparwood-bounded-yours-and-mine-charcoal",
+          "recovered-sparwood-bounded-other-side-of-bc-charcoal",
+          "recovered-sparwood-unbounded-white",
+          "recovered-sparwood-bounded-yours-and-mine-white",
+          "recovered-sparwood-unbounded-metallic",
+          "recovered-sparwood-unbounded-blue",
+          "recovered-sparwood-unbounded-green"
+        ]
+      },
+      {
+        "id": "regional-district-squamish-lillooet",
+        "name": "Squamish-Lillooet Regional District",
+        "family": "regional-districts",
+        "assets": 2,
+        "nativeSvg": 2,
+        "raster": 0,
+        "assetIds": [
+          "source-vector-slrd-2016-horizontal-colour",
+          "source-vector-slrd-2018-horizontal-black"
+        ]
+      },
+      {
+        "id": "thompson-rivers-university",
+        "name": "Thompson Rivers University",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-tru-official-primary"
+        ]
+      },
+      {
+        "id": "municipality-tofino",
+        "name": "Tofino",
+        "family": "municipalities",
+        "assets": 6,
+        "nativeSvg": 6,
+        "raster": 0,
+        "assetIds": [
+          "recovered-tofino-stacked-colour",
+          "recovered-tofino-horizontal-colour",
+          "recovered-tofino-wordmark",
+          "recovered-tofino-stacked-semi-reverse",
+          "recovered-tofino-stacked-reverse",
+          "recovered-tofino-stacked-black"
+        ]
+      },
+      {
+        "id": "translink",
+        "name": "TransLink",
+        "family": "transit",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "source-vector-translink-2022-white"
+        ]
+      },
+      {
+        "id": "ubc-okanagan-campus",
+        "name": "UBC Okanagan",
+        "family": "postsecondary-history",
+        "assets": 12,
+        "nativeSvg": 12,
+        "raster": 0,
+        "assetIds": [
+          "recovered-ubc-logo-2018-ok-campus-short-white-rgb",
+          "recovered-ubc-logo-2018-ok-campus-short-blue282rgb",
+          "recovered-ubc-logo-2018-ok-campus-short-black-rgb",
+          "recovered-ubc-logo-2018-ok-campus-narrow-white-rgb",
+          "recovered-ubc-logo-2018-ok-campus-narrow-blue282rgb",
+          "recovered-ubc-logo-2018-ok-campus-narrow-black-rgb",
+          "recovered-ubc-logo-2018-ok-campus-promo-white-rgb",
+          "recovered-ubc-logo-2018-ok-campus-promo-blue282rgb",
+          "recovered-ubc-logo-2018-ok-campus-promo-black-rgb",
+          "recovered-ubc-logo-2018-ok-campus-standard-white-rgb",
+          "recovered-ubc-logo-2018-ok-campus-standard-blue282rgb",
+          "recovered-ubc-logo-2018-ok-campus-standard-black-rgb"
+        ]
+      },
+      {
+        "id": "university-college-of-the-cariboo",
+        "name": "University College of the Cariboo",
+        "family": "postsecondary-history",
+        "assets": 3,
+        "nativeSvg": 3,
+        "raster": 0,
+        "assetIds": [
+          "recovered-ucc-fact-book-campaign-2003",
+          "recovered-ucc-fact-book-shield-2003",
+          "recovered-ucc-bridges-native-2011"
+        ]
+      },
+      {
+        "id": "university-college-of-the-fraser-valley",
+        "name": "University College of the Fraser Valley",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-ucfv-2007-calendar-vector"
+        ]
+      },
+      {
+        "id": "university-of-the-fraser-valley",
+        "name": "University of the Fraser Valley",
+        "family": "postsecondary-history",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-university-of-the-fraser-valley-vector"
+        ]
+      },
+      {
+        "id": "vancouver-community-college",
+        "name": "Vancouver Community College",
+        "family": "postsecondary-history",
+        "assets": 2,
+        "nativeSvg": 2,
+        "raster": 0,
+        "assetIds": [
+          "recovered-official-vancouver-community-college-vector",
+          "recovered-vcc-official-darkgreen"
+        ]
+      },
+      {
+        "id": "airport-cbc7",
+        "name": "Vancouver Harbour Heliport",
+        "family": "airport-identities",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "airport-cbc7-phs-operator-emblem-2016-blue"
+        ]
+      },
+      {
+        "id": "airport-cyvr",
+        "name": "Vancouver International Airport",
+        "family": "airport-identities",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "airport-cyvr-yvr-beyond-every-day-2007-white"
+        ]
+      },
+      {
+        "id": "vancouver-island-university",
+        "name": "Vancouver Island University",
+        "family": "postsecondary-history",
+        "assets": 4,
+        "nativeSvg": 4,
+        "raster": 0,
+        "assetIds": [
+          "recovered-2024-rgb-viu-black-logo",
+          "recovered-2024-rgb-viu-dark-blue-logo",
+          "recovered-2024-rgb-viu-full-colour-logo",
+          "recovered-2024-rgb-viu-white-logo"
+        ]
+      },
+      {
+        "id": "west-coast-express",
+        "name": "West Coast Express",
+        "family": "transit",
+        "assets": 1,
+        "nativeSvg": 1,
+        "raster": 0,
+        "assetIds": [
+          "source-vector-west-coast-express-2022-white"
+        ]
+      }
+    ]
+  },
+  "coverageChanges": {
+    "changedSubjects": [
+      {
+        "id": "bc-human-rights-commission",
+        "name": "British Columbia Human Rights Commission",
+        "family": "commissions",
+        "before": "artwork-missing",
+        "after": "raster-held",
+        "acceptedAssetIds": [
+          "historical-source-human-rights-2001-lockup"
+        ]
+      },
+      {
+        "id": "bc-treaty-commission",
+        "name": "British Columbia Treaty Commission",
+        "family": "commissions",
+        "before": "artwork-missing",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-bc-treaty-official-white",
+          "recovered-bctreaty-stacked-gold-proceedings",
+          "recovered-bctreaty-right-stacked-white-2018"
+        ]
+      },
+      {
+        "id": "bc-utilities-commission",
+        "name": "British Columbia Utilities Commission",
+        "family": "commissions",
+        "before": "artwork-missing",
+        "after": "raster-held",
+        "acceptedAssetIds": [
+          "official-raster-bcuc-2023-colour-lockup"
+        ]
+      },
+      {
+        "id": "bc-vegetable-marketing-commission",
+        "name": "British Columbia Vegetable Marketing Commission",
+        "family": "commissions",
+        "before": "artwork-missing",
+        "after": "raster-held",
+        "acceptedAssetIds": [
+          "official-raster-vegetable-marketing-2024-colour-lockup",
+          "official-raster-bc-vegetable-current"
+        ]
+      },
+      {
+        "id": "camosun-college",
+        "name": "Camosun College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-camosun-college-vector"
+        ]
+      },
+      {
+        "id": "capilano-college",
+        "name": "Capilano College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-capilano-2007-wordmark"
+        ]
+      },
+      {
+        "id": "capilano-university",
+        "name": "Capilano University",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-capilano-university-vector",
+          "recovered-capilano-2008-wordmark"
+        ]
+      },
+      {
+        "id": "cariboo-college",
+        "name": "Cariboo College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-cariboo-black-wheel-retrospective-2011",
+          "recovered-cariboo-orange-wheel-retrospective-2011",
+          "recovered-cariboo-colour-rings-retrospective-2011"
+        ]
+      },
+      {
+        "id": "coast-mountain-bus-company",
+        "name": "Coast Mountain Bus Company",
+        "family": "transit",
+        "before": "raster-held",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "source-vector-coast-mountain-bus-company-2022-white"
+        ]
+      },
+      {
+        "id": "coast-mountain-college",
+        "name": "Coast Mountain College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-coast-mountain-college-vector"
+        ]
+      },
+      {
+        "id": "college-of-new-caledonia",
+        "name": "College of New Caledonia",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-college-of-new-caledonia-vector",
+          "recovered-cnc-2017-geometric-monogram",
+          "recovered-cnc-2019-fullname-variant"
+        ]
+      },
+      {
+        "id": "college-of-the-rockies",
+        "name": "College of the Rockies",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-college-of-the-rockies-vector"
+        ]
+      },
+      {
+        "id": "doctors-of-bc",
+        "name": "Doctors of BC",
+        "family": "specialist-health",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "source-vector-doctors-of-bc-official-inline-2026"
+        ]
+      },
+      {
+        "id": "douglas-college",
+        "name": "Douglas College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-douglas-college-vector"
+        ]
+      },
+      {
+        "id": "electoral-boundaries-commission",
+        "name": "Electoral Boundaries Commission",
+        "family": "commissions",
+        "before": "artwork-missing",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "source-vector-electoral-boundaries-2023",
+          "historical-source-electoral-boundaries-2015-compass",
+          "historical-source-electoral-boundaries-2008-province-map"
+        ]
+      },
+      {
+        "id": "emily-carr-institute-of-art-and-design",
+        "name": "Emily Carr Institute of Art and Design",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-ecuad-2004-framed-one-line"
+        ]
+      },
+      {
+        "id": "emily-carr-university",
+        "name": "Emily Carr University of Art + Design",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-ecuad-2024-guide-primary",
+          "recovered-ecuad-2024-guide-primary-reverse"
+        ]
+      },
+      {
+        "id": "financial-institutions-commission",
+        "name": "Financial Institutions Commission",
+        "family": "commissions",
+        "before": "artwork-missing",
+        "after": "raster-held",
+        "acceptedAssetIds": [
+          "historical-source-financial-institutions-2003-colour-lockup"
+        ]
+      },
+      {
+        "id": "sub-forest-appeals-commission",
+        "name": "Forest Appeals Commission",
+        "family": "commissions",
+        "before": "artwork-missing",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "source-vector-forest-appeals-2021"
+        ]
+      },
+      {
+        "id": "fraser-valley-college",
+        "name": "Fraser Valley College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-fvc-1980s-shield-ufv-retrospective"
+        ]
+      },
+      {
+        "id": "kootenay-school-of-the-arts",
+        "name": "Kootenay School of the Arts",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-ksa-2004-cooperative",
+          "recovered-ksa-2009-may-selkirk-era",
+          "recovered-ksa-2009-august-selkirk-era"
+        ]
+      },
+      {
+        "id": "kwantlen-college",
+        "name": "Kwantlen College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-historical-kwantlen-college-1994-minutes"
+        ]
+      },
+      {
+        "id": "kwantlen-polytechnic-university",
+        "name": "Kwantlen Polytechnic University",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-kwantlen-polytechnic-university-vector",
+          "recovered-kpu-fullname-iapr-cover"
+        ]
+      },
+      {
+        "id": "kwantlen-university-college",
+        "name": "Kwantlen University College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-historical-kwantlen-university-college-1995-minutes",
+          "recovered-historical-kwantlen-uc-2005-cover"
+        ]
+      },
+      {
+        "id": "langara-college",
+        "name": "Langara College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-langara-college-vector"
+        ]
+      },
+      {
+        "id": "sub-medical-services-commission",
+        "name": "Medical Services Commission",
+        "family": "commissions",
+        "before": "artwork-missing",
+        "after": "raster-held",
+        "acceptedAssetIds": [
+          "historical-source-medical-services-1972-seal"
+        ]
+      },
+      {
+        "id": "municipality-nakusp",
+        "name": "Village of Nakusp",
+        "family": "municipalities",
+        "before": "raster-held",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-nakusp-stacked-colour-2023",
+          "recovered-nakusp-horizontal-black-2023"
+        ]
+      },
+      {
+        "id": "nicola-valley-institute-of-technology",
+        "name": "Nicola Valley Institute of Technology",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "raster-held",
+        "acceptedAssetIds": [
+          "recovered-nvit-rider-circle-1989",
+          "recovered-nvit-rider-initials-1999",
+          "recovered-nvit-eagle-monochrome-2006",
+          "recovered-nvit-eagle-colour-2012-report",
+          "recovered-nvit-eagle-fullname-colour"
+        ]
+      },
+      {
+        "id": "municipality-north-cowichan",
+        "name": "The Corporation of the District of North Cowichan",
+        "family": "municipalities",
+        "before": "raster-held",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-north-cowichan-colour",
+          "recovered-north-cowichan-150-anniversary-2023"
+        ]
+      },
+      {
+        "id": "north-island-college",
+        "name": "North Island College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-north-island-college-vector"
+        ]
+      },
+      {
+        "id": "northern-lights-college",
+        "name": "Northern Lights College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-northern-lights-college-vector"
+        ]
+      },
+      {
+        "id": "okanagan-college",
+        "name": "Okanagan College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-okanagan-college-vector"
+        ]
+      },
+      {
+        "id": "okanagan-university-college",
+        "name": "Okanagan University College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-ouc-audit-cover-2007"
+        ]
+      },
+      {
+        "id": "agricultural-land-commission",
+        "name": "Provincial Agricultural Land Commission",
+        "family": "commissions",
+        "before": "artwork-missing",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "source-vector-alc-green-emblem-2026",
+          "source-vector-alc-white-full-name-2026"
+        ]
+      },
+      {
+        "id": "provincial-capital-commission",
+        "name": "Provincial Capital Commission",
+        "family": "commissions",
+        "before": "artwork-missing",
+        "after": "raster-held",
+        "acceptedAssetIds": [
+          "historical-source-provincial-capital-2014-grey",
+          "historical-source-provincial-capital-2011-gold-purple"
+        ]
+      },
+      {
+        "id": "municipality-radium-hot-springs",
+        "name": "Village of Radium Hot Springs",
+        "family": "municipalities",
+        "before": "raster-held",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-radium-wonderland-colour-2012",
+          "recovered-radium-wonderland-black-2012",
+          "recovered-radium-wonderland-white-2012",
+          "recovered-radium-community-colour-2012",
+          "recovered-radium-community-black-2012",
+          "recovered-radium-community-white-2012"
+        ]
+      },
+      {
+        "id": "royal-roads-university",
+        "name": "Royal Roads University",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-royal-roads-university-vector"
+        ]
+      },
+      {
+        "id": "selkirk-college",
+        "name": "Selkirk College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-selkirk-college-vector",
+          "recovered-selkirk-guide-colour-2025",
+          "recovered-selkirk-guide-black-2025",
+          "recovered-selkirk-guide-reverse-2025"
+        ]
+      },
+      {
+        "id": "municipality-sooke",
+        "name": "District of Sooke",
+        "family": "municipalities",
+        "before": "raster-held",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-sooke-primary-horizontal-pantone"
+        ]
+      },
+      {
+        "id": "municipality-sparwood",
+        "name": "District of Sparwood",
+        "family": "municipalities",
+        "before": "raster-held",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-sparwood-unbounded-charcoal",
+          "recovered-sparwood-bounded-yours-and-mine-charcoal",
+          "recovered-sparwood-bounded-other-side-of-bc-charcoal",
+          "recovered-sparwood-unbounded-white",
+          "recovered-sparwood-bounded-yours-and-mine-white",
+          "recovered-sparwood-unbounded-metallic",
+          "recovered-sparwood-unbounded-blue",
+          "recovered-sparwood-unbounded-green"
+        ]
+      },
+      {
+        "id": "regional-district-squamish-lillooet",
+        "name": "Squamish-Lillooet Regional District",
+        "family": "regional-districts",
+        "before": "raster-held",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "source-vector-slrd-2016-horizontal-colour",
+          "source-vector-slrd-2018-horizontal-black"
+        ]
+      },
+      {
+        "id": "thompson-rivers-university",
+        "name": "Thompson Rivers University",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-tru-official-primary"
+        ]
+      },
+      {
+        "id": "municipality-tofino",
+        "name": "Corporation of the Village of Tofino",
+        "family": "municipalities",
+        "before": "raster-held",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-tofino-stacked-colour",
+          "recovered-tofino-horizontal-colour",
+          "recovered-tofino-wordmark",
+          "recovered-tofino-stacked-semi-reverse",
+          "recovered-tofino-stacked-reverse",
+          "recovered-tofino-stacked-black"
+        ]
+      },
+      {
+        "id": "ubc-okanagan-campus",
+        "name": "UBC Okanagan",
+        "family": "postsecondary-history",
+        "before": "shared-identity",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-ubc-logo-2018-ok-campus-short-white-rgb",
+          "recovered-ubc-logo-2018-ok-campus-short-blue282rgb",
+          "recovered-ubc-logo-2018-ok-campus-short-black-rgb",
+          "recovered-ubc-logo-2018-ok-campus-narrow-white-rgb",
+          "recovered-ubc-logo-2018-ok-campus-narrow-blue282rgb",
+          "recovered-ubc-logo-2018-ok-campus-narrow-black-rgb",
+          "recovered-ubc-logo-2018-ok-campus-promo-white-rgb",
+          "recovered-ubc-logo-2018-ok-campus-promo-blue282rgb",
+          "recovered-ubc-logo-2018-ok-campus-promo-black-rgb",
+          "recovered-ubc-logo-2018-ok-campus-standard-white-rgb",
+          "recovered-ubc-logo-2018-ok-campus-standard-blue282rgb",
+          "recovered-ubc-logo-2018-ok-campus-standard-black-rgb"
+        ]
+      },
+      {
+        "id": "university-college-of-the-cariboo",
+        "name": "University College of the Cariboo",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-ucc-fact-book-campaign-2003",
+          "recovered-ucc-fact-book-shield-2003",
+          "recovered-ucc-bridges-native-2011"
+        ]
+      },
+      {
+        "id": "university-college-of-the-fraser-valley",
+        "name": "University College of the Fraser Valley",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-ucfv-2007-calendar-vector"
+        ]
+      },
+      {
+        "id": "university-of-the-fraser-valley",
+        "name": "University of the Fraser Valley",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-university-of-the-fraser-valley-vector"
+        ]
+      },
+      {
+        "id": "vancouver-community-college",
+        "name": "Vancouver Community College",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-official-vancouver-community-college-vector",
+          "recovered-vcc-official-darkgreen"
+        ]
+      },
+      {
+        "id": "airport-cbc7",
+        "name": "Vancouver Harbour Heliport",
+        "family": "airport-identities",
+        "before": "raster-held",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "airport-cbc7-phs-operator-emblem-2016-blue"
+        ]
+      },
+      {
+        "id": "vancouver-island-university",
+        "name": "Vancouver Island University",
+        "family": "postsecondary-history",
+        "before": "source-located",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "recovered-2024-rgb-viu-black-logo",
+          "recovered-2024-rgb-viu-dark-blue-logo",
+          "recovered-2024-rgb-viu-full-colour-logo",
+          "recovered-2024-rgb-viu-white-logo"
+        ]
+      },
+      {
+        "id": "west-coast-express",
+        "name": "West Coast Express",
+        "family": "transit",
+        "before": "raster-held",
+        "after": "native-vector",
+        "acceptedAssetIds": [
+          "source-vector-west-coast-express-2022-white"
+        ]
+      }
+    ],
+    "existingDesignsGainedNative": [
+      {
+        "id": "source-recovered-municipal-sooke-website-logo",
+        "label": "District of Sooke",
+        "subjectIds": [
+          "municipality-sooke"
+        ]
+      },
+      {
+        "id": "source-recovered-municipal-sparwood-website-logo",
+        "label": "District of Sparwood",
+        "subjectIds": [
+          "municipality-sparwood"
+        ]
+      },
+      {
+        "id": "source-recovered-municipal-tofino-publication-logo",
+        "label": "District of Tofino",
+        "subjectIds": [
+          "municipality-tofino"
+        ]
+      },
+      {
+        "id": "airport-cycd-flight-path",
+        "label": "Historic flight path signature",
+        "subjectIds": [
+          "airport-cycd"
+        ]
+      },
+      {
+        "id": "airport-cycd-mountain-wordmark",
+        "label": "Historic mountain and aircraft wordmark",
+        "subjectIds": [
+          "airport-cycd"
+        ]
+      },
+      {
+        "id": "rd-squamish-lillooet-website",
+        "label": "Horizontal mountains signature",
+        "subjectIds": [
+          "regional-district-squamish-lillooet"
+        ]
+      },
+      {
+        "id": "airport-cbc7-operator-emblem",
+        "label": "Pacific Heliport Services operator letterhead",
+        "subjectIds": [
+          "airport-cbc7"
+        ]
+      },
+      {
+        "id": "source-recovered-municipal-north-cowichan-website-logo",
+        "label": "The Corporation of the District of North Cowichan",
+        "subjectIds": [
+          "municipality-north-cowichan"
+        ]
+      },
+      {
+        "id": "source-expanded-coast-mountain-bus-company-route-map-logo",
+        "label": "TransLink",
+        "subjectIds": [
+          "coast-mountain-bus-company"
+        ]
+      },
+      {
+        "id": "source-expanded-west-coast-express-performance-report-logo",
+        "label": "TransLink",
+        "subjectIds": [
+          "west-coast-express"
+        ]
+      }
+    ],
+    "newlyCataloguedDesigns": {
+      "total": 85,
+      "native": 65,
+      "withoutNative": 20,
+      "ids": [
+        "airport-cyyd-smithers-alphorn-2014-back",
+        "airport-cycd-flight-path-2015-alternate-tagline",
+        "airport-cycd-flight-path-2014-alternate-tagline",
+        "recovered-bc-treaty-official-white",
+        "recovered-bctreaty-stacked-gold-proceedings",
+        "recovered-bctreaty-right-stacked-white-2018",
+        "historical-source-human-rights-2001-lockup",
+        "official-raster-bcuc-2023-colour-lockup",
+        "official-raster-vegetable-marketing-2024-colour-lockup",
+        "official-raster-bc-vegetable-current",
+        "recovered-official-camosun-college-vector",
+        "recovered-capilano-2007-wordmark",
+        "recovered-official-capilano-university-vector",
+        "recovered-capilano-2008-wordmark",
+        "recovered-official-coast-mountain-college-vector",
+        "recovered-official-college-of-the-rockies-vector",
+        "recovered-nvit-eagle-colour-2012-report",
+        "recovered-nvit-eagle-fullname-colour",
+        "airport-cycz-cycz-wing-script-2023",
+        "airport-cak3-delta-heritage-2020-wordmark",
+        "source-vector-doctors-of-bc-official-inline-2026",
+        "recovered-official-douglas-college-vector",
+        "recovered-nvit-eagle-monochrome-2006",
+        "historical-source-electoral-boundaries-2015-compass",
+        "source-vector-electoral-boundaries-2023",
+        "historical-source-electoral-boundaries-2008-province-map",
+        "recovered-ecuad-2004-framed-one-line",
+        "recovered-ecuad-2024-guide-primary",
+        "historical-source-financial-institutions-2003-colour-lockup",
+        "airport-cybl-campbell-river-eagle-2017",
+        "source-vector-forest-appeals-2021",
+        "recovered-fvc-1980s-shield-ufv-retrospective",
+        "recovered-ksa-2004-cooperative",
+        "recovered-ksa-2009-august-selkirk-era",
+        "recovered-ksa-2009-may-selkirk-era",
+        "recovered-official-kwantlen-polytechnic-university-vector",
+        "recovered-kpu-fullname-iapr-cover",
+        "recovered-historical-kwantlen-college-1994-minutes",
+        "recovered-historical-kwantlen-uc-2005-cover",
+        "recovered-historical-kwantlen-university-college-1995-minutes",
+        "recovered-official-langara-college-vector",
+        "historical-source-medical-services-1972-seal",
+        "recovered-nvit-rider-initials-1999",
+        "recovered-nvit-rider-circle-1989",
+        "recovered-nakusp-horizontal-black-2023",
+        "recovered-nakusp-stacked-colour-2023",
+        "recovered-north-cowichan-150-anniversary-2023",
+        "recovered-official-north-island-college-vector",
+        "recovered-official-northern-lights-college-vector",
+        "recovered-official-okanagan-college-vector",
+        "recovered-ouc-audit-cover-2007",
+        "recovered-cnc-2017-geometric-monogram",
+        "recovered-cnc-2019-fullname-variant",
+        "source-vector-alc-green-emblem-2026",
+        "source-vector-alc-white-full-name-2026",
+        "historical-source-provincial-capital-2011-gold-purple",
+        "historical-source-provincial-capital-2014-grey",
+        "recovered-radium-wonderland-colour-2012",
+        "recovered-radium-community-colour-2012",
+        "recovered-official-royal-roads-university-vector",
+        "recovered-official-college-of-new-caledonia-vector",
+        "recovered-selkirk-guide-colour-2025",
+        "recovered-official-selkirk-college-vector",
+        "recovered-sparwood-bounded-other-side-of-bc-charcoal",
+        "recovered-sparwood-bounded-yours-and-mine-charcoal",
+        "airport-cybl-ybl-stacked-2024",
+        "recovered-tru-official-primary",
+        "recovered-cariboo-black-wheel-retrospective-2011",
+        "recovered-cariboo-colour-rings-retrospective-2011",
+        "recovered-cariboo-orange-wheel-retrospective-2011",
+        "recovered-tofino-horizontal-colour",
+        "recovered-tofino-wordmark",
+        "recovered-ubc-logo-2018-ok-campus-narrow-blue282rgb",
+        "recovered-ubc-logo-2018-ok-campus-promo-blue282rgb",
+        "recovered-ubc-logo-2018-ok-campus-short-blue282rgb",
+        "recovered-ubc-logo-2018-ok-campus-standard-blue282rgb",
+        "recovered-ucc-fact-book-campaign-2003",
+        "recovered-ucc-bridges-native-2011",
+        "recovered-ucc-fact-book-shield-2003",
+        "recovered-ucfv-2007-calendar-vector",
+        "recovered-official-university-of-the-fraser-valley-vector",
+        "recovered-vcc-official-darkgreen",
+        "recovered-official-vancouver-community-college-vector",
+        "recovered-2024-rgb-viu-full-colour-logo",
+        "airport-cyvr-yvr-beyond-every-day-2007-white"
+      ]
+    },
+    "baselineDesignsPreserved": 1083
+  },
+  "perFamily": [
+    {
+      "id": "affiliated-organizations",
+      "label": "Affiliated organizations",
+      "subjectsBefore": 1,
+      "subjectsAfter": 1,
+      "nativeBefore": 1,
+      "nativeAfter": 1,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 0,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "agricultural-partners",
+      "label": "Agricultural program partners",
+      "subjectsBefore": 5,
+      "subjectsAfter": 5,
+      "nativeBefore": 2,
+      "nativeAfter": 2,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 3,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "airport-identities",
+      "label": "Airports",
+      "subjectsBefore": 34,
+      "subjectsAfter": 34,
+      "nativeBefore": 12,
+      "nativeAfter": 13,
+      "nativeChange": 1,
+      "subjectsWithoutNativeAfter": 21,
+      "freshResearchActivitySubjects": 28
+    },
+    {
+      "id": "hydro",
+      "label": "BC Hydro and related identities",
+      "subjectsBefore": 4,
+      "subjectsAfter": 4,
+      "nativeBefore": 3,
+      "nativeAfter": 3,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 1,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "gaming",
+      "label": "BCLC and its programs",
+      "subjectsBefore": 3,
+      "subjectsAfter": 3,
+      "nativeBefore": 3,
+      "nativeAfter": 3,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 0,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "commissions",
+      "label": "Commissions",
+      "subjectsBefore": 26,
+      "subjectsAfter": 26,
+      "nativeBefore": 0,
+      "nativeAfter": 4,
+      "nativeChange": 4,
+      "subjectsWithoutNativeAfter": 22,
+      "freshResearchActivitySubjects": 12
+    },
+    {
+      "id": "courts",
+      "label": "Courts",
+      "subjectsBefore": 3,
+      "subjectsAfter": 3,
+      "nativeBefore": 0,
+      "nativeAfter": 0,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 3,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "creative-culture",
+      "label": "Creative industries and arts",
+      "subjectsBefore": 4,
+      "subjectsAfter": 4,
+      "nativeBefore": 4,
+      "nativeAfter": 4,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 0,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "historical-research",
+      "label": "Existing historical research",
+      "subjectsBefore": 13,
+      "subjectsAfter": 13,
+      "nativeBefore": 5,
+      "nativeAfter": 5,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 8,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "ferries",
+      "label": "Ferries and governance",
+      "subjectsBefore": 4,
+      "subjectsAfter": 4,
+      "nativeBefore": 1,
+      "nativeAfter": 1,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 3,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "independent-offices",
+      "label": "Independent offices",
+      "subjectsBefore": 8,
+      "subjectsAfter": 8,
+      "nativeBefore": 8,
+      "nativeAfter": 8,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 0,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "innovation-training",
+      "label": "Innovation and trades training",
+      "subjectsBefore": 10,
+      "subjectsAfter": 10,
+      "nativeBefore": 7,
+      "nativeAfter": 7,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 3,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "liquor-distribution",
+      "label": "Liquor and cannabis administration",
+      "subjectsBefore": 11,
+      "subjectsAfter": 11,
+      "nativeBefore": 4,
+      "nativeAfter": 4,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 7,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "municipalities",
+      "label": "Municipalities",
+      "subjectsBefore": 162,
+      "subjectsAfter": 162,
+      "nativeBefore": 89,
+      "nativeAfter": 95,
+      "nativeChange": 6,
+      "subjectsWithoutNativeAfter": 67,
+      "freshResearchActivitySubjects": 99
+    },
+    {
+      "id": "museum-archives",
+      "label": "Museum and archives",
+      "subjectsBefore": 2,
+      "subjectsAfter": 2,
+      "nativeBefore": 1,
+      "nativeAfter": 1,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 1,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "atlas-crowns",
+      "label": "Other Crown corporations",
+      "subjectsBefore": 51,
+      "subjectsAfter": 51,
+      "nativeBefore": 31,
+      "nativeAfter": 31,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 20,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "atlas-health",
+      "label": "Other health bodies",
+      "subjectsBefore": 120,
+      "subjectsAfter": 120,
+      "nativeBefore": 13,
+      "nativeAfter": 13,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 107,
+      "freshResearchActivitySubjects": 2
+    },
+    {
+      "id": "venues",
+      "label": "PavCo and venues",
+      "subjectsBefore": 4,
+      "subjectsAfter": 4,
+      "nativeBefore": 3,
+      "nativeAfter": 3,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 1,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "provincial-administration",
+      "label": "Provincial administration",
+      "subjectsBefore": 6,
+      "subjectsAfter": 6,
+      "nativeBefore": 0,
+      "nativeAfter": 0,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 6,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "provincial-programs",
+      "label": "Provincial branches, services and programs",
+      "subjectsBefore": 43,
+      "subjectsAfter": 43,
+      "nativeBefore": 17,
+      "nativeAfter": 17,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 26,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "postsecondary-history",
+      "label": "Public colleges and post-secondary history",
+      "subjectsBefore": 49,
+      "subjectsAfter": 49,
+      "nativeBefore": 0,
+      "nativeAfter": 29,
+      "nativeChange": 29,
+      "subjectsWithoutNativeAfter": 20,
+      "freshResearchActivitySubjects": 30
+    },
+    {
+      "id": "public-safety",
+      "label": "Public safety",
+      "subjectsBefore": 1,
+      "subjectsAfter": 1,
+      "nativeBefore": 1,
+      "nativeAfter": 1,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 0,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "regional-development",
+      "label": "Regional development trusts",
+      "subjectsBefore": 4,
+      "subjectsAfter": 4,
+      "nativeBefore": 3,
+      "nativeAfter": 3,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 1,
+      "freshResearchActivitySubjects": 1
+    },
+    {
+      "id": "regional-districts",
+      "label": "Regional districts",
+      "subjectsBefore": 28,
+      "subjectsAfter": 28,
+      "nativeBefore": 22,
+      "nativeAfter": 23,
+      "nativeChange": 1,
+      "subjectsWithoutNativeAfter": 5,
+      "freshResearchActivitySubjects": 6
+    },
+    {
+      "id": "regional-government",
+      "label": "Regional government",
+      "subjectsBefore": 1,
+      "subjectsAfter": 1,
+      "nativeBefore": 1,
+      "nativeAfter": 1,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 0,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "regulators-administration",
+      "label": "Regulators and public administration",
+      "subjectsBefore": 9,
+      "subjectsAfter": 9,
+      "nativeBefore": 8,
+      "nativeAfter": 8,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 1,
+      "freshResearchActivitySubjects": 0
+    },
+    {
+      "id": "school-districts",
+      "label": "School districts",
+      "subjectsBefore": 91,
+      "subjectsAfter": 91,
+      "nativeBefore": 34,
+      "nativeAfter": 34,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 57,
+      "freshResearchActivitySubjects": 26
+    },
+    {
+      "id": "specialist-health",
+      "label": "Specialist health services",
+      "subjectsBefore": 21,
+      "subjectsAfter": 21,
+      "nativeBefore": 11,
+      "nativeAfter": 12,
+      "nativeChange": 1,
+      "subjectsWithoutNativeAfter": 9,
+      "freshResearchActivitySubjects": 2
+    },
+    {
+      "id": "tourism-destination-management",
+      "label": "Tourism and destination management",
+      "subjectsBefore": 92,
+      "subjectsAfter": 92,
+      "nativeBefore": 46,
+      "nativeAfter": 46,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 46,
+      "freshResearchActivitySubjects": 32
+    },
+    {
+      "id": "transit",
+      "label": "Transit and fare systems",
+      "subjectsBefore": 25,
+      "subjectsAfter": 25,
+      "nativeBefore": 13,
+      "nativeAfter": 15,
+      "nativeChange": 2,
+      "subjectsWithoutNativeAfter": 10,
+      "freshResearchActivitySubjects": 5
+    },
+    {
+      "id": "institutions",
+      "label": "Universities and public institutions",
+      "subjectsBefore": 16,
+      "subjectsAfter": 16,
+      "nativeBefore": 11,
+      "nativeAfter": 11,
+      "nativeChange": 0,
+      "subjectsWithoutNativeAfter": 5,
+      "freshResearchActivitySubjects": 0
+    }
+  ],
+  "researchCoverage": {
+    "registeredInventoryAudited": 851,
+    "registeredSubjectsWithDocumentedFreshActivity": 243,
+    "registeredSubjectsWithoutDocumentedFreshActivity": 608,
+    "additionalUnregisteredResearchSubjects": [
+      "airport-cydq",
+      "airport-cypw",
+      "airport-cyye"
+    ],
+    "workstreamsOverlap": true,
+    "uniqueRegisteredSubjectsByWorkstream": {
+      "airports": 28,
+      "historic-public-bodies": 22,
+      "municipal": 103,
+      "municipal-bounded-treaty-followup": 1,
+      "regional-districts": 6,
+      "root-final-followup": 1,
+      "root-postsecondary": 30,
+      "root-source-sweep": 63
+    },
+    "activityLedger": "source-ledgers/research-activity.json",
+    "municipalSummary": {
+      "freshSubjectsTotal": 103,
+      "freshMunicipalitySubjects": 99,
+      "freshSchoolSubjects": 4,
+      "municipalHomepageFetchAttempts": 96,
+      "municipalHomepageHTTP200": 94,
+      "municipalHomepageFailures": 2,
+      "reportBrandLandingPageRecords": 56,
+      "reportBrandLandingPageSubjects": 43,
+      "newMunicipalNativeAssets": 26,
+      "newMunicipalNativeAssetSubjects": 7,
+      "researchOnlyProposedTourismVariants": 3,
+      "finalTargetedChecks": 5,
+      "finalTargetedNewNativeAssets": 0,
+      "baselineOnlyPrioritySubjects": 3,
+      "subjectsWithCandidateSourceBytesInspected": 35
+    }
+  },
+  "airportSummary": {
+    "gallerySubjects": 34,
+    "nativeSubjectsBefore": 12,
+    "nativeSubjectsAfter": 13,
+    "acceptedAssets": 16,
+    "acceptedNativeSvg": 10,
+    "acceptedRasters": 6,
+    "remainingWithoutNative": 21,
+    "remainingSubjectIds": [
+      "airport-cyxx",
+      "airport-cbs8",
+      "airport-cysq",
+      "airport-czbb",
+      "airport-cypz",
+      "airport-cybl",
+      "airport-cyxc",
+      "airport-cycw",
+      "airport-cah3",
+      "airport-caj3",
+      "airport-cydl",
+      "airport-cak3",
+      "airport-cycz",
+      "airport-cbw2",
+      "airport-cyxj",
+      "airport-cyyf",
+      "airport-cypk",
+      "airport-cypr",
+      "airport-cyqz",
+      "airport-cyyd",
+      "airport-cad4"
+    ],
+    "freshGallerySubjects": 28,
+    "originalRasterOnlySubjectsSearched": 22,
+    "broaderInventoryFacilities": 87,
+    "additionalFacilities": 53,
+    "additionalFacilitiesFreshlySearched": 3,
+    "additionalFacilitiesNotFreshlySearched": 50
+  },
+  "researchOnly": {
+    "proposedTourismVariants": [
+      {
+        "id": "radium-tourism-colour-2012",
+        "name": "Tourism Radium, 2012 colour",
+        "subjectId": "municipality-radium-hot-springs",
+        "sourceUrl": "https://radiumhotsprings.civicweb.net/document/21166/Regular%20Council%20-%2009%20Mar%202026.pdf?handle=330B9A0C11AE44B1BC8A1A751D62F5E6",
+        "sourceLocator": "2012 Radium Visual Identity Guide, guide page 5, as reproduced at PDF page 48 of the 9 March 2026 Regular Council agenda. Village Brand Discussion memo on pp42–43 explicitly dates guide to2012.",
+        "sourceDate": "2012 visual identity guide, republished in official Council agenda2026-03-09.",
+        "file": "research/identity/vector-recovery-2026-11-26/related-proposals/radium-tourism-colour-2012.svg",
+        "status": "Guide proposal; independent use not established. Kept as research evidence, not municipal artwork."
+      },
+      {
+        "id": "radium-tourism-black-2012",
+        "name": "Tourism Radium, 2012 black",
+        "subjectId": "municipality-radium-hot-springs",
+        "sourceUrl": "https://radiumhotsprings.civicweb.net/document/21166/Regular%20Council%20-%2009%20Mar%202026.pdf?handle=330B9A0C11AE44B1BC8A1A751D62F5E6",
+        "sourceLocator": "2012 Radium Visual Identity Guide, guide page 5, as reproduced at PDF page 48 of the 9 March 2026 Regular Council agenda. Village Brand Discussion memo on pp42–43 explicitly dates guide to2012.",
+        "sourceDate": "2012 visual identity guide, republished in official Council agenda2026-03-09.",
+        "file": "research/identity/vector-recovery-2026-11-26/related-proposals/radium-tourism-black-2012.svg",
+        "status": "Guide proposal; independent use not established. Kept as research evidence, not municipal artwork."
+      },
+      {
+        "id": "radium-tourism-white-2012",
+        "name": "Tourism Radium, 2012 white",
+        "subjectId": "municipality-radium-hot-springs",
+        "sourceUrl": "https://radiumhotsprings.civicweb.net/document/21166/Regular%20Council%20-%2009%20Mar%202026.pdf?handle=330B9A0C11AE44B1BC8A1A751D62F5E6",
+        "sourceLocator": "2012 Radium Visual Identity Guide, guide page 5, as reproduced at PDF page 48 of the 9 March 2026 Regular Council agenda. Village Brand Discussion memo on pp42–43 explicitly dates guide to2012.",
+        "sourceDate": "2012 visual identity guide, republished in official Council agenda2026-03-09.",
+        "file": "research/identity/vector-recovery-2026-11-26/related-proposals/radium-tourism-white-2012.svg",
+        "status": "Guide proposal; independent use not established. Kept as research evidence, not municipal artwork."
+      }
+    ],
+    "unregisteredPortArtwork": [
+      {
+        "subjectName": "Nanaimo Port Authority",
+        "subjectId": null,
+        "registrationStatus": "No matching Nanaimo Port Authority / Port of Nanaimo registered gallery subject found in checkout.",
+        "sourceUrl": "https://helijet.com/wp-content/uploads/2016/11/NPA-PHS_Expansion_Announcement.pdf",
+        "originalPageUrl": "https://helijet.com/nanaimo-port-authority-pacific-heliport-services-complete-heliport-expansio/",
+        "format": "svg",
+        "isVector": true,
+        "specimenDate": "2016",
+        "publisher": "Nanaimo Port Authority",
+        "label": "Sail emblem and Nanaimo Port Authority wordmark — 2016 blue",
+        "role": "historical",
+        "sha256": "fbf8b46a28feb32e16e6c0234856175f0582a255342c2127c3c3d4eb5728f70f",
+        "extraction": {
+          "file": "nanaimo-port-authority-2016-blue.svg",
+          "pdf": "phs-expansion-2016.pdf",
+          "page": 1,
+          "roi": [
+            55,
+            10,
+            225,
+            90
+          ],
+          "bbox": [
+            61.61510467529297,
+            15.445487976074219,
+            218.43222045898438,
+            75.86125946044922
+          ],
+          "pathCount": 29,
+          "imageCount": 0,
+          "liveTextCount": 0,
+          "sha256": "fbf8b46a28feb32e16e6c0234856175f0582a255342c2127c3c3d4eb5728f70f",
+          "sourceSha256": "1a463bb3427157fbc19c9b98c914d285a783cc3b81c62c30d11f7acf365ccda6",
+          "subjectRegistration": "No matching Nanaimo Port Authority / Port of Nanaimo registered gallery subject found in checkout."
+        },
+        "notes": "Original 29 native filled paths, including outlined lettering. Preserved separately as supplemental source artwork; not counted as an airport recovery and not assigned to a municipal or airport subject.",
+        "file": "research/identity/vector-recovery-2026-11-26/related-artwork/nanaimo-port-authority-2016-blue.svg"
+      }
+    ],
+    "excludedFromAcceptedAssetCounts": 4
+  },
+  "alsoSeen": [
+    {
+      "subjectId": "metro-vancouver-transit-police",
+      "existingAssetId": "source-expanded-metro-vancouver-transit-police-community-report-2025-reversed",
+      "sourceDate": "2022-03-24",
+      "sourceUrl": "https://www.translink.ca/-/media/translink/documents/about-translink/governance-and-board/board-of-directors/board-minutes-and-reports/2022/march/2022_03_24_board_meeting_slide_deck.pdf",
+      "sourceLocator": "TransLink Quarterly Board Meeting, March 24, 2022, PDF page 51 footer; source rectangle [1005, 820, 1098, 876] pt.",
+      "researchFile": "research/identity/vector-recovery-2026-11-26/corroborating-sources/metro-vancouver-transit-police-2022-white.svg",
+      "treatment": "alsoSeen-only; no additional gallery artwork",
+      "dateLimit": "Earlier documented appearance, not an adoption date. No byte-exact or path-exact identity claim."
+    }
+  ],
+  "gapRegister": {
+    "file": "remaining-gaps.json",
+    "subjectsWithoutNative": 453,
+    "designsWithoutNative": 550,
+    "rasterVersionsInNativeDesignsWithoutExplicitExactMatch": 88
+  },
+  "validation": {
+    "acceptedFiles": 130,
+    "missingFiles": [],
+    "hashMismatches": [],
+    "invalidNativeSvg": [],
+    "nativeSvgFilesChecked": 109,
+    "rasterFilesChecked": 21,
+    "pendingVisualReviewReceipts": [],
+    "unspecifiedVisualReviewReceipts": [],
+    "unintegratedAcceptedAssetIds": [],
+    "integratedAssetIdsMissingFromAcquisitions": [],
+    "preservation": {
+      "missingBaselineDesignIds": [],
+      "nativeCoverageRegressions": [],
+      "subjectNativeDisagreements": []
+    },
+    "scope": "File existence/hash checks and native-SVG structure for newly accepted assets only. Original-logo fidelity uses the source receipts; legacy holdings and gallery UI are not independently revalidated by this script."
+  },
+  "limitations": [
+    "The complete registered inventory was compared mechanically. It is not a claim that all 851 subjects received fresh source searches.",
+    "A source-native flag for one gallery design/colourway does not complete all of that subject’s designs, colourways or historical eras.",
+    "Legacy native-vector classifications are inherited from repository metadata and provenance; every old file was not independently revalidated in this pass.",
+    "Fresh research activity includes homepage discovery, targeted search and failed retrieval as well as inspection of source artwork. The bundled ledgers preserve those differences.",
+    "A missing vector or unsuccessful retrieval is an open gap, not proof that an original logo/vector never existed.",
+    "Source specimens retain their publication/observation dates. Adoption, retirement and exclusive periods of use are not inferred from the upload directory or first located specimen.",
+    "Raster originals, mixed raster/vector treatments and reconstructions are not promoted to native-vector artwork. No raster tracing or invented geometry was used for the new native acquisitions.",
+    "Parent, municipal, shared operator and proposed tourism identities are not automatically substituted for a different registered subject.",
+    "Most unresolved municipal records received discovery-level work; 35 municipal/school subjects had candidate source bytes inspected by that workstream.",
+    "Only 28 of the 34 airport gallery subjects received fresh research. All 22 originally wholly raster-only collections were searched; six already-vector-covered airport collections remained baseline review only.",
+    "Of the 53 additional facilities in the earlier 87-facility airport inventory, three received fresh searches and 50 were not independently searched here.",
+    "This audit does not claim a complete historical-era search. Unseen or uncatalogued designs do not become counted gaps until identified."
+  ]
+}

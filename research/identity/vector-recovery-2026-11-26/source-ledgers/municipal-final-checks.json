@@ -1,0 +1,165 @@
+{
+  "asOf": "2026-11-26",
+  "status": "final-targeted-follow-up",
+  "scope": "Only five assigned concrete leads: Daajing Giids designer case study, SD20 strategic plan, SD49 strategic plan, SD81 two strategic-plan links and actual linked PDF, QSD69 inline2597d52bc087e197.svg. No open-ended expansion.",
+  "summary": {
+    "subjectsChecked": 5,
+    "newVerifiedNativeLogoAssets": 0,
+    "pdfCandidatesCheckedCompletely": 3,
+    "wrongOrganizationSvgRejected": 1,
+    "designerCaseStudyNoLinkedNativeLogo": 1
+  },
+  "assets": [],
+  "checks": [
+    {
+      "subjectId": "municipality-daajing-giids",
+      "name": "Village of Daajing Giids designer case study",
+      "status": "checked-no-native-logo-download",
+      "sourcePage": "https://cinnamontoast.ca/work/village-of-daajing-giids",
+      "sources": [
+        {
+          "file": "unbundled/research-municipal/final-followup/sources/daajing-designer.html",
+          "url": "https://cinnamontoast.ca/work/village-of-daajing-giids",
+          "status": 200,
+          "finalUrl": "https://cinnamontoast.ca/work/village-of-daajing-giids",
+          "contentType": "text/html; charset=UTF-8",
+          "bytes": 118051,
+          "sha256": "31a41b9bc077e2763859fe3073b47aadc1040aad9b8df57aa9400254ed4bc476"
+        }
+      ],
+      "scope": "Downloaded public case-study HTML; inspected all linked image/video/native-file URLs and20 inline SVGs, including three duplicate-class squiggle SVGs that initially failed XML parsing.",
+      "result": "The village work is illustrated by six JPEG applications and six MP4 videos. No linked SVG/PDF/EPS/AI/ZIP village artwork found. All20 inline SVGs are Cinnamon Toast anniversary type, decorative squiggles, plus or close UI icons; linked SVGs are the agency identity, social icons, favicon and arrow.",
+      "nativeLogoGeometryVerified": false,
+      "currentOrHistoricalNote": "Designer dates the identity project March–July2026. This documents the project and design, not an independently verified municipal adoption date.",
+      "rejectedCandidates": "Agency native vectors are not the village logo; videos and JPEG applications are raster.",
+      "nextStep": "Obtain the public brand guideline/master pack from the village or designer if published; no contact was sent.",
+      "inspectionFiles": [
+        "unbundled/research-municipal/final-followup/daajing-inline-svg-checks.json",
+        "unbundled/research-municipal/final-followup/daajing-inline-svg-contact.jpg"
+      ],
+      "nativeCandidatesInLinkedPage": 0
+    },
+    {
+      "subjectId": "school-district-20",
+      "name": "Kootenay-Columbia School District20",
+      "status": "checked-logo-raster-only-in-candidate",
+      "sourcePage": "https://www.sd20.bc.ca/",
+      "sources": [
+        {
+          "file": "unbundled/research-municipal/final-followup/sources/sd20-strategic-plan-2025-2030.pdf",
+          "url": "https://22.files.edl.io/850c/09/03/25/155259-206ff6f6-0d16-479f-846f-da36fd07a673.pdf",
+          "status": 200,
+          "finalUrl": "https://22.files.edl.io/850c/09/03/25/155259-206ff6f6-0d16-479f-846f-da36fd07a673.pdf",
+          "contentType": "application/pdf",
+          "bytes": 18144006,
+          "sha256": "023b415554d7f82cacb597b459c333a1d0061e0f36d0565307fd8483e66761b2"
+        }
+      ],
+      "scope": "Reviewed all16 pages and image/path inventories, including all visible district-logo occurrences.",
+      "result": "The mountain/sun/book district logo is an embedded raster image: cover xref28 is346×252px. Same raster design repeats on pages7,10,12,14,16. Native paths elsewhere are publication text, trees, rules, diagrams and other illustration; no native own-logo paths identified.",
+      "nativeLogoGeometryVerified": false,
+      "sourceDate": "2025–2030 strategic plan; official superintendent introduction dated August2025.",
+      "rejectedCandidates": "The SD20 homepage inline SVGs from the sweep are Edlio provider marks; they are outside the district identity.",
+      "inspectionFiles": [
+        "unbundled/research-municipal/final-followup/sd20-strategic-plan-2025-2030-contact.jpg",
+        "unbundled/research-municipal/final-followup/sd20-strategic-plan-2025-2030-logo.png"
+      ],
+      "vectorGapRemaining": true
+    },
+    {
+      "subjectId": "school-district-49",
+      "name": "School District49 Central Coast",
+      "status": "checked-logo-raster-only-in-candidate",
+      "sourcePage": "https://www.sd49.bc.ca/",
+      "sources": [
+        {
+          "file": "unbundled/research-municipal/final-followup/sources/sd49-strategic-plan-2021.pdf",
+          "url": "https://www.sd49.bc.ca/wp-content/uploads/2024/10/Strategic_Plan_District2021-09-28.pdf",
+          "status": 200,
+          "finalUrl": "https://www.sd49.bc.ca/wp-content/uploads/2024/10/Strategic_Plan_District2021-09-28.pdf",
+          "contentType": "application/pdf",
+          "bytes": 466362,
+          "sha256": "f154c0c04c6f4f2648f75f326b8fe09fbf86de0e6508a8a13d85368d09617ed5"
+        }
+      ],
+      "scope": "Reviewed all11 pages and image/path inventories.",
+      "result": "Cover district badge is xref18, a358×336px JPEG. Remaining native paths are document rules and shapes; the district badge was not native geometry.",
+      "nativeLogoGeometryVerified": false,
+      "sourceDate": "Strategic Plan2021–2026; source filename dated2021-09-28, hosted in2024/10. No adoption date inferred.",
+      "inspectionFiles": [
+        "unbundled/research-municipal/final-followup/sd49-strategic-plan-2021-contact.jpg",
+        "unbundled/research-municipal/final-followup/sd49-strategic-plan-2021-logo.jpeg"
+      ],
+      "vectorGapRemaining": true
+    },
+    {
+      "subjectId": "school-district-81",
+      "name": "School District81 Fort Nelson",
+      "status": "checked-logo-raster-only-in-candidate",
+      "sourcePage": "https://sd81.bc.ca/board-of-education/strategic-planning/",
+      "sources": [
+        {
+          "file": "unbundled/research-municipal/final-followup/sources/sd81-strategic-plan.pdf",
+          "url": "https://sd81.bc.ca/document/sd81-strategic-plan.pdf",
+          "status": 200,
+          "finalUrl": "https://sd81.bc.ca/document/sd81-strategic-plan.pdf",
+          "contentType": "text/html; charset=UTF-8",
+          "bytes": 311665,
+          "sha256": "1323ff2e1b6469d879f5d76bdb227fd9123065b880c56ff8cac6c22e1e2ad298"
+        },
+        {
+          "file": "unbundled/research-municipal/final-followup/sources/sd81-strategic-plan-alt.pdf",
+          "url": "https://sd81.bc.ca/document/strategic-plan.pdf",
+          "status": 200,
+          "finalUrl": "https://sd81.bc.ca/board-of-education/strategic-planning/",
+          "contentType": "text/html; charset=UTF-8",
+          "bytes": 339037,
+          "sha256": "08ead32c64b74f35d52e143a2fc9ff2f13ef8470640a0097057461621c594bb5"
+        },
+        {
+          "url": "https://sd81.bc.ca/wp-content/uploads/2025/08/SD81-Strategic-Plan.pdf",
+          "status": 200,
+          "contentType": "application/pdf",
+          "file": "unbundled/research-municipal/final-followup/sources/sd81-native-strategic-plan.pdf",
+          "bytes": 5568354,
+          "sha256": "7057db040810d1b6ebf942b0d55aa9d27ffb530cfa83a53a941e91e1269f998b"
+        }
+      ],
+      "scope": "Followed first candidate HTML document wrapper to its actual iframe PDF; second candidate redirects to the strategic-planning page. Reviewed all8 pages of actual PDF and image/path inventories.",
+      "result": "Actual PDF is https://sd81.bc.ca/wp-content/uploads/2025/08/SD81-Strategic-Plan.pdf. Cover circular oil-derrick/tree district badge is xref277, a300×300px raster image. No native district-logo occurrence found in eight pages.",
+      "nativeLogoGeometryVerified": false,
+      "sourceDate": "Strategic Plan2024–2027, hosted August2025. No adoption date inferred.",
+      "inspectionFiles": [
+        "unbundled/research-municipal/final-followup/sd81-native-strategic-plan-contact.jpg",
+        "unbundled/research-municipal/final-followup/sd81-cover-logo.png",
+        "unbundled/research-municipal/final-followup/sd81-geometry.json"
+      ],
+      "vectorGapRemaining": true
+    },
+    {
+      "subjectId": "school-district-69",
+      "name": "Qualicum School District69",
+      "status": "rejected-wrong-organization",
+      "sourcePage": "https://www.qsdlearns.ca/",
+      "sources": [
+        {
+          "file": "unbundled/research-root/inline/2597d52bc087e197.svg",
+          "sha256": "ff3c5e75ddc9040ef8168428fc6fecffd73b0b890f58b8444df8c7527ac2608e",
+          "bytes": 1689,
+          "sourceType": "inline SVG extracted by root source sweep"
+        }
+      ],
+      "scope": "Parsed all six paths and rendered SVG on a dark backdrop. The source HTML parser lowercased viewBox; the preview restores attribute case only for rendering, without changing the source file.",
+      "result": "The six-path white logo says rally and is a website provider/agency mark. It is not the Qualicum circular sun/tree/water district emblem or district wordmark.",
+      "nativeLogoGeometryVerified": false,
+      "candidateHasNativeGeometry": true,
+      "candidateBelongsToSubject": false,
+      "inspectionFiles": [
+        "unbundled/research-municipal/final-followup/qsd69-inline-preview-dark.png"
+      ],
+      "vectorGapRemaining": true
+    }
+  ],
+  "limitations": "No vector recovered from these candidates does not establish that the organization has no native master elsewhere. Raster logo previews and PDFs are research evidence only, not new gallery deliverables.",
+  "noSharedChanges": true
+}

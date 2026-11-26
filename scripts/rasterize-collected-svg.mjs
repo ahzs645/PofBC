@@ -15,7 +15,9 @@ try {
 }
 
 const jobs = JSON.parse(readFileSync(0, 'utf8'))
-const browser = await playwright.chromium.launch()
+// Reuse an installed Chromium when the build environment has no Playwright browser bundle.
+const browser = await playwright.chromium.launch(process.env.CHROMIUM_EXECUTABLE_PATH
+  ? { executablePath: process.env.CHROMIUM_EXECUTABLE_PATH } : {})
 const page = await browser.newPage()
 const results = []
 for (const job of jobs) {

@@ -1,0 +1,4075 @@
+{
+  "asOf": "2026-11-26",
+  "preparedBy": "municipal_vectors",
+  "summary": {
+    "freshSubjectsTotal": 103,
+    "freshMunicipalitySubjects": 99,
+    "freshSchoolSubjects": 4,
+    "municipalHomepageFetchAttempts": 96,
+    "municipalHomepageHTTP200": 94,
+    "municipalHomepageFailures": 2,
+    "reportBrandLandingPageRecords": 56,
+    "reportBrandLandingPageSubjects": 43,
+    "newMunicipalNativeAssets": 26,
+    "newMunicipalNativeAssetSubjects": 7,
+    "researchOnlyProposedTourismVariants": 3,
+    "finalTargetedChecks": 5,
+    "finalTargetedNewNativeAssets": 0,
+    "baselineOnlyPrioritySubjects": 3,
+    "subjectsWithCandidateSourceBytesInspected": 35
+  },
+  "baselineInventory": {
+    "file": "baseline.json",
+    "municipalitySubjects": 162,
+    "nativeVectorSubjects": 89,
+    "rasterOnlySubjects": 71,
+    "noArtworkSubjects": 2,
+    "canonicalGapSubjectIds": [
+      "municipality-armstrong",
+      "municipality-cache-creek",
+      "municipality-clearwater",
+      "municipality-daajing-giids",
+      "municipality-enderby",
+      "municipality-fraser-lake",
+      "municipality-fruitvale",
+      "municipality-gibsons",
+      "municipality-gold-river",
+      "municipality-golden",
+      "municipality-granisle",
+      "municipality-greenwood",
+      "municipality-harrison-hot-springs",
+      "municipality-hazelton",
+      "municipality-highlands",
+      "municipality-invermere",
+      "municipality-kaslo",
+      "municipality-kelowna",
+      "municipality-kent",
+      "municipality-keremeos",
+      "municipality-lake-country",
+      "municipality-lake-cowichan",
+      "municipality-lillooet",
+      "municipality-lions-bay",
+      "municipality-lumby",
+      "municipality-lytton",
+      "municipality-masset",
+      "municipality-mcbride",
+      "municipality-metchosin",
+      "municipality-midway",
+      "municipality-mission",
+      "municipality-montrose",
+      "municipality-nakusp",
+      "municipality-new-denver",
+      "municipality-new-hazelton",
+      "municipality-new-westminster",
+      "municipality-north-cowichan",
+      "municipality-north-saanich",
+      "municipality-oak-bay",
+      "municipality-okanagan-falls",
+      "municipality-oliver",
+      "municipality-osoyoos",
+      "municipality-peachland",
+      "municipality-pemberton",
+      "municipality-port-clements",
+      "municipality-port-coquitlam",
+      "municipality-port-edward",
+      "municipality-port-mcneill",
+      "municipality-pouce-coupe",
+      "municipality-powell-river",
+      "municipality-princeton",
+      "municipality-qualicum-beach",
+      "municipality-radium-hot-springs",
+      "municipality-rossland",
+      "municipality-salmo",
+      "municipality-sayward",
+      "municipality-shishalh-nation-government-district",
+      "municipality-sidney",
+      "municipality-silverton",
+      "municipality-slocan",
+      "municipality-sooke",
+      "municipality-spallumcheen",
+      "municipality-sparwood",
+      "municipality-summerland",
+      "municipality-sun-peaks",
+      "municipality-tahsis",
+      "municipality-telkwa",
+      "municipality-tofino",
+      "municipality-trail",
+      "municipality-valemount",
+      "municipality-vancouver",
+      "municipality-wells",
+      "municipality-zeballos"
+    ],
+    "municipalSubjectIdsNotFreshlyResearchedByThisAgent": [
+      "municipality-abbotsford",
+      "municipality-alert-bay",
+      "municipality-anmore",
+      "municipality-ashcroft",
+      "municipality-belcarra",
+      "municipality-bowen-island",
+      "municipality-burnaby",
+      "municipality-burns-lake",
+      "municipality-campbell-river",
+      "municipality-central-saanich",
+      "municipality-chase",
+      "municipality-chetwynd",
+      "municipality-chilliwack",
+      "municipality-clinton",
+      "municipality-coldstream",
+      "municipality-comox",
+      "municipality-coquitlam",
+      "municipality-cranbrook",
+      "municipality-cumberland",
+      "municipality-dawson-creek",
+      "municipality-elkford",
+      "municipality-fernie",
+      "municipality-fort-st-john",
+      "municipality-grand-forks",
+      "municipality-hope",
+      "municipality-hudson-s-hope",
+      "municipality-kamloops",
+      "municipality-kimberley",
+      "municipality-kitimat",
+      "municipality-langford",
+      "municipality-langley-township",
+      "municipality-lantzville",
+      "municipality-logan-lake",
+      "municipality-mackenzie",
+      "municipality-merritt",
+      "municipality-nanaimo",
+      "municipality-nelson",
+      "municipality-north-vancouver-district",
+      "municipality-northern-rockies",
+      "municipality-parksville",
+      "municipality-port-alberni",
+      "municipality-port-alice",
+      "municipality-port-hardy",
+      "municipality-prince-george",
+      "municipality-prince-rupert",
+      "municipality-quesnel",
+      "municipality-revelstoke",
+      "municipality-richmond",
+      "municipality-saanich",
+      "municipality-salmon-arm",
+      "municipality-sicamous",
+      "municipality-smithers",
+      "municipality-squamish",
+      "municipality-stewart",
+      "municipality-surrey",
+      "municipality-terrace",
+      "municipality-ucluelet",
+      "municipality-vanderhoof",
+      "municipality-victoria",
+      "municipality-view-royal",
+      "municipality-warfield",
+      "municipality-whistler",
+      "municipality-williams-lake"
+    ],
+    "note": "The162-subject canonical baseline was inventoried. The earlier160-subject inventory.json/gaps.json omitted acquiredVectorData and must not be treated as the canonical gap denominator. Fresh work is explicitly enumerated below; baseline presence is not a fresh search."
+  },
+  "freshlyResearchedMunicipalitySubjectIds": [
+    "municipality-100-mile-house",
+    "municipality-armstrong",
+    "municipality-barriere",
+    "municipality-cache-creek",
+    "municipality-canal-flats",
+    "municipality-castlegar",
+    "municipality-clearwater",
+    "municipality-colwood",
+    "municipality-courtenay",
+    "municipality-creston",
+    "municipality-daajing-giids",
+    "municipality-delta",
+    "municipality-duncan",
+    "municipality-enderby",
+    "municipality-esquimalt",
+    "municipality-fort-st-james",
+    "municipality-fraser-lake",
+    "municipality-fruitvale",
+    "municipality-gibsons",
+    "municipality-gold-river",
+    "municipality-golden",
+    "municipality-granisle",
+    "municipality-greenwood",
+    "municipality-harrison-hot-springs",
+    "municipality-hazelton",
+    "municipality-highlands",
+    "municipality-houston",
+    "municipality-invermere",
+    "municipality-kaslo",
+    "municipality-kelowna",
+    "municipality-kent",
+    "municipality-keremeos",
+    "municipality-ladysmith",
+    "municipality-lake-country",
+    "municipality-lake-cowichan",
+    "municipality-langley-city",
+    "municipality-lillooet",
+    "municipality-lions-bay",
+    "municipality-lumby",
+    "municipality-lytton",
+    "municipality-maple-ridge",
+    "municipality-masset",
+    "municipality-mcbride",
+    "municipality-metchosin",
+    "municipality-midway",
+    "municipality-mission",
+    "municipality-montrose",
+    "municipality-nakusp",
+    "municipality-new-denver",
+    "municipality-new-hazelton",
+    "municipality-new-westminster",
+    "municipality-north-cowichan",
+    "municipality-north-saanich",
+    "municipality-north-vancouver-city",
+    "municipality-oak-bay",
+    "municipality-okanagan-falls",
+    "municipality-oliver",
+    "municipality-osoyoos",
+    "municipality-peachland",
+    "municipality-pemberton",
+    "municipality-penticton",
+    "municipality-pitt-meadows",
+    "municipality-port-clements",
+    "municipality-port-coquitlam",
+    "municipality-port-edward",
+    "municipality-port-mcneill",
+    "municipality-port-moody",
+    "municipality-pouce-coupe",
+    "municipality-powell-river",
+    "municipality-princeton",
+    "municipality-qualicum-beach",
+    "municipality-radium-hot-springs",
+    "municipality-rossland",
+    "municipality-salmo",
+    "municipality-sayward",
+    "municipality-sechelt",
+    "municipality-shishalh-nation-government-district",
+    "municipality-sidney",
+    "municipality-silverton",
+    "municipality-slocan",
+    "municipality-sooke",
+    "municipality-spallumcheen",
+    "municipality-sparwood",
+    "municipality-summerland",
+    "municipality-sun-peaks",
+    "municipality-tahsis",
+    "municipality-taylor",
+    "municipality-telkwa",
+    "municipality-tofino",
+    "municipality-trail",
+    "municipality-tumbler-ridge",
+    "municipality-valemount",
+    "municipality-vancouver",
+    "municipality-vernon",
+    "municipality-wells",
+    "municipality-west-kelowna",
+    "municipality-west-vancouver",
+    "municipality-white-rock",
+    "municipality-zeballos"
+  ],
+  "freshlyResearchedSchoolSubjectIds": [
+    "school-district-20",
+    "school-district-49",
+    "school-district-69",
+    "school-district-81"
+  ],
+  "subjects": [
+    {
+      "subjectId": "municipality-100-mile-house",
+      "name": "District of 100 Mile House",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.100milehouse.com",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/0"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.100milehouse.com/government-bylaws/reports-documents/annual-municipal-report",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-100-mile-house-reportlinks-88.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/0"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-armstrong",
+      "name": "City of Armstrong",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.cityofarmstrong.bc.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/81"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://armstrong.civicweb.net/document/48397/",
+          "result": "Official graphic standards manual9 pages: every page is a scan with1 image,0 paths.",
+          "pagesInspected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "evidenceFile": "unbundled/research-municipal/armstrong-graphic-standards.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/14"
+        },
+        {
+          "type": "source-file-type-or-duplicate-check",
+          "status": "source-bytes-inspected",
+          "url": "https://armstrong.civicweb.net/document/48397/",
+          "result": "Nine-page graphic standards manual is scanned: every page has one image, zero native drawings.",
+          "evidenceFile": "unbundled/research-municipal/armstrong-graphic-standards.pdf",
+          "recordLocator": "unbundled/research-municipal/findings.json#/rejected/3"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-barriere",
+      "name": "District of Barriere",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.barriere.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/1"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-cache-creek",
+      "name": "Village of Cache Creek",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://cachecreek.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/82"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-canal-flats",
+      "name": "Village of Canal Flats",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.canalflats.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/2"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-castlegar",
+      "name": "City of Castlegar",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://castlegar.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/3"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://castlegar.ca/government/reports-plans-publications/annual-reports/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-castlegar-reportlinks-74.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/1"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://castlegar.ca/government/reports-plans-publications/financial-reporting/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-castlegar-reportlinks-79.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/2"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-clearwater",
+      "name": "District of Clearwater",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.districtofclearwater.com/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/87"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-colwood",
+      "name": "City of Colwood",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.colwood.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/4"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.colwood.ca/city-hall/plans-reports/annual-municipal-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-colwood-reportlinks-71.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/3"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.colwood.ca/media/file/colwood-wayfinding-sign-strategy",
+          "result": "Native source-vector artwork recovered; see findings.json for exact source design/variant and extraction.",
+          "pagesInspected": [
+            15
+          ],
+          "evidenceFile": "unbundled/research-municipal/colwood-wayfinding.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/2"
+        },
+        {
+          "type": "source-file-type-or-duplicate-check",
+          "status": "check-recorded-see-evidence",
+          "url": null,
+          "result": "Existing acquired colour/reverse designs. Different official source is extra provenance only.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/findings.json#/duplicateVerifiedNotNew/1"
+        }
+      ],
+      "newNativeAssetIds": [
+        "colwood-charcoal-wayfinding-2022"
+      ],
+      "result": "new-source-native-variants-verified",
+      "inspectionLevels": [
+        "check-recorded-see-evidence",
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-courtenay",
+      "name": "The Corporation of the City of Courtenay",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.courtenay.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/5"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.courtenay.ca/city-hall/corporate-information/annual-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-courtenay-reportlinks-71.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/4"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-creston",
+      "name": "Town of Creston",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.creston.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/6"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.creston.ca/annual-report",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-creston-reportlinks-36.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/5"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-daajing-giids",
+      "name": "Village of Daajing Giids",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://daajinggiids.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/7"
+        },
+        {
+          "type": "source-candidate",
+          "status": "search-or-webpage-text-only",
+          "url": "https://cinnamontoast.ca/work/village-of-daajing-giids",
+          "result": "Primary designer case study documents new identity project March–July2026. New design lead, master files/geometry not inspected; historical/interim Queen Charlotte/Daajing Giids variants not replaced.",
+          "pagesInspected": null,
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/24"
+        },
+        {
+          "type": "final-targeted-check",
+          "status": "source-bytes-inspected",
+          "result": "The village work is illustrated by six JPEG applications and six MP4 videos. No linked SVG/PDF/EPS/AI/ZIP village artwork found. All20 inline SVGs are Cinnamon Toast anniversary type, decorative squiggles, plus or close UI icons; linked SVGs are the agency identity, social icons, favicon and arrow.",
+          "sourcePage": "https://cinnamontoast.ca/work/village-of-daajing-giids",
+          "sourceURLs": [
+            "https://cinnamontoast.ca/work/village-of-daajing-giids"
+          ],
+          "evidenceFiles": [
+            "unbundled/research-municipal/final-followup/sources/daajing-designer.html",
+            "unbundled/research-municipal/final-followup/daajing-inline-svg-checks.json",
+            "unbundled/research-municipal/final-followup/daajing-inline-svg-contact.jpg"
+          ],
+          "scope": "Downloaded public case-study HTML; inspected all linked image/video/native-file URLs and20 inline SVGs, including three duplicate-class squiggle SVGs that initially failed XML parsing.",
+          "recordLocator": "source-ledgers/municipal-final-checks.json#/checks/0"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "search-or-webpage-text-only",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-delta",
+      "name": "City of Delta",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.delta.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/8"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.delta.ca/city-hall/municipal-information/branding-coat-arms",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-delta-reportlinks-71.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/6"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-duncan",
+      "name": "The Corporation of the City of Duncan",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://duncan.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/9"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-enderby",
+      "name": "The Corporation of the City of Enderby",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "retrieval-unavailable",
+          "url": "https://www.cityofenderby.com",
+          "httpStatus": "error",
+          "error": "HTTP Error 406: Not Acceptable",
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/10"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-unavailable-or-not-fully-inspected",
+          "url": "https://www.cityofenderby.com/wp-content/uploads/2025/05/2024-Annual-Report.pdf",
+          "result": "Direct official report request returned HTTP406; no bytes/geometry validated.",
+          "pagesInspected": null,
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/7"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.spallumcheentwp.bc.ca/docs/rdno-guide_plans_for_sale-revised_-_see_plans.pdf",
+          "result": "Enderby logo in merged regional logo-strip raster; page1 has3 images,0 drawings.",
+          "pagesInspected": [
+            1
+          ],
+          "evidenceFile": "unbundled/research-municipal/rdno-housing-guide.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/8"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "retrieval-unavailable",
+        "source-bytes-inspected",
+        "source-unavailable-or-not-fully-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-esquimalt",
+      "name": "Corporation of the Township of Esquimalt",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.esquimalt.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/11"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.esquimalt.ca/government-bylaws/finance/past-financial-reports-and-documents",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-esquimalt-reportlinks-87.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/7"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.esquimalt.ca/government-bylaws/reports-publications/annual-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-esquimalt-reportlinks-78.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/8"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-fort-st-james",
+      "name": "District of Fort St James",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.rdbn.bc.ca/application/files/6015/4526/1393/RDBN_FortStJames_WEB.pdf",
+          "result": "Whole Fort St James wordmark153x95 embedded raster on cover/end; other vectors are RDBN identity/document elements.",
+          "pagesInspected": [
+            1,
+            54
+          ],
+          "evidenceFile": "unbundled/research-municipal/fsj-profile.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/11"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.fortstjames.ca/sites/default/files/2025-01/RFP25-03%20Street%20Paving.pdf",
+          "result": "Whole logo on page1 is756x494 raster; native table paths do not make the logo vector.",
+          "pagesInspected": [
+            1
+          ],
+          "evidenceFile": "unbundled/research-municipal/fsj-paving.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/12"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.fortstjames.ca/sites/default/files/2024-12/Regular%20Council%20Meeting%20No.%202024-22%20-%20Agenda%20-%20Pdf.pdf",
+          "result": "Housing report cover whole reverse logo is462x287 embedded raster.",
+          "pagesInspected": [
+            19
+          ],
+          "evidenceFile": "unbundled/research-municipal/fsj-housing-agenda.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/13"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-fraser-lake",
+      "name": "Village of Fraser Lake",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.fraserlake.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/12"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.fraserlake.ca/sites/26/files/2025-07/2024%20Annual%20Report%20Final.pdf",
+          "result": "Current landscape logo on cover is embedded1377x573 raster; older seal near report end also raster.",
+          "pagesInspected": [
+            1,
+            86
+          ],
+          "evidenceFile": "unbundled/research-municipal/fraser-lake-annual-2024.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/9"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.fraserlake.ca/media/427",
+          "result": "Strategic plan cover old identity is raster; no source vector recovered.",
+          "pagesInspected": [
+            1
+          ],
+          "evidenceFile": "unbundled/research-municipal/fraser-lake-strategic-2024.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/10"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-fruitvale",
+      "name": "The Corporation of the Village of Fruitvale",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://fruitvale.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/13"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-gibsons",
+      "name": "Town of Gibsons",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://gibsons.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/83"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://gibsons.ca/town-hall/documents-and-publications/annual-reports/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-gibsons-reportlinks-71.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/51"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://gibsons.ca/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-brands-400.woff2",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-gibsons-reportlinks-109.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/52"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://gibsons.ca/wp-content/uploads/2022/10/Town-of-Gibsons-2025-Annual-Report-for-adoption.pdf",
+          "result": "First/last-page artwork inspected. No native municipality logo recovered in those inspected occurrences; table/financial paths elsewhere do not establish logo geometry.",
+          "pagesInspected": [
+            1,
+            75
+          ],
+          "evidenceFile": "unbundled/research-municipal/reports/municipality-gibsons.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/35"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://gibsons.ca/wp-content/uploads/2018/01/2013-annual-report-WEBSITE.pdf",
+          "result": "First/last-page artwork inspected. No native municipality logo recovered in those inspected occurrences; table/financial paths elsewhere do not establish logo geometry.",
+          "pagesInspected": [
+            1,
+            80
+          ],
+          "evidenceFile": "unbundled/research-municipal/reports/municipality-gibsons-2013.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/38"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-gold-river",
+      "name": "Village of Gold River",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://goldriver.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/14"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://goldriver.ca/wp-content/uploads/2026/06/2025-Annual-Report.pdf",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-gold-river-reportlinks-70.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/9"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://goldriver.ca/wp-content/uploads/2026/06/2025-Annual-Report.pdf",
+          "result": "First/last-page artwork inspected. No native municipality logo recovered in those inspected occurrences; table/financial paths elsewhere do not establish logo geometry.",
+          "pagesInspected": [
+            1,
+            33
+          ],
+          "evidenceFile": "unbundled/research-municipal/reports/municipality-gold-river.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/37"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-golden",
+      "name": "Town of Golden",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.golden.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/15"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.golden.ca/town-hall/community-planning/annual-report",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-golden-reportlinks-64.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/10"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.golden.ca/sites/default/files/2025-05/2024%20Annual%20Report%20WEB.pdf",
+          "result": "Cover logo is raster. Financial pages contain native tables, not evidence of native municipal logo.",
+          "pagesInspected": [
+            1,
+            2,
+            3
+          ],
+          "evidenceFile": "unbundled/research-municipal/golden-annual-2024.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/15"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-granisle",
+      "name": "Village of Granisle",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.rdbn.bc.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/93"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-greenwood",
+      "name": "City of Greenwood",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.greenwoodcity.com",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/16"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-harrison-hot-springs",
+      "name": "Village of Harrison Hot Springs",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.harrisonhotsprings.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/17"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-hazelton",
+      "name": "The Corporation of the Village of Hazelton",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://hazelton.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/90"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://hazelton.ca/village-office/annual-reports/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-hazelton-reportlinks-50.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/53"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-highlands",
+      "name": "District of Highlands",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.highlands.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/18"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.highlands.ca/annual-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-highlands-reportlinks-39.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/11"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.highlands.ca/sites/31/files/2026-07/2025%20Annual%20Report%20with%20Financial%20Statements%20FINAL.pdf",
+          "result": "First/last-page artwork inspected. No native municipality logo recovered in those inspected occurrences; table/financial paths elsewhere do not establish logo geometry.",
+          "pagesInspected": [
+            1,
+            73
+          ],
+          "evidenceFile": "unbundled/research-municipal/reports/municipality-highlands.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/27"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-houston",
+      "name": "District of Houston",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://houston.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/19"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-invermere",
+      "name": "District of Invermere",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://invermere.net/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/20"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://invermere.net/2026/2025-annual-report-now-available/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-invermere-reportlinks-60.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/12"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://invermere.net/wp-content/uploads/2026/06/district-of-invermere-registration-17577-wwtp-annual-report-2025.pdf",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-invermere-reportlinks-117.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/13"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-kaslo",
+      "name": "Village of Kaslo",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.kaslo.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/88"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-kelowna",
+      "name": "City of Kelowna",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.kelowna.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/21"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-unavailable-or-not-fully-inspected",
+          "url": "https://www.kelowna.ca/sites/files/1/city_of_kelowna_visual_identity_guide.pdf",
+          "result": "Search-indexed older guide returned HTTP404 on direct download; geometry unverified.",
+          "pagesInspected": null,
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/19"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-unavailable-or-not-fully-inspected",
+          "url": "https://www.kelowna.ca/sites/files/1/docs/city-hall/brand/city_of_kelowna_visual_identity_guide_2025_v6.1.pdf",
+          "result": "Search-indexed2025 guide returned HTTP404 on direct download. Airport sibling/root already has separate2025 guide evidence; do not infer municipality geometry from file extension.",
+          "pagesInspected": null,
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/20"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "candidate-geometry-unverified; retrieval-or-size-limit",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-unavailable-or-not-fully-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-kent",
+      "name": "District of Kent",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.kentbc.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/22"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-keremeos",
+      "name": "Village of Keremeos",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://keremeos.civicweb.net/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/94"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-ladysmith",
+      "name": "Town of Ladysmith",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.ladysmith.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/23"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-lake-country",
+      "name": "District of Lake Country",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.lakecountry.bc.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/24"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-unavailable-or-not-fully-inspected",
+          "url": "https://www.lakecountry.bc.ca/sites/default/files/2024-06/DLC-Municipal-Profile-2023-FINAL.pdf",
+          "result": "Official source verified by web tool but direct binary fetch HTTP403; geometry unverified.",
+          "pagesInspected": null,
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/22"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "candidate-geometry-unverified; retrieval-or-size-limit",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-unavailable-or-not-fully-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-lake-cowichan",
+      "name": "Town of Lake Cowichan",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.town.lakecowichan.bc.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/84"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-langley-city",
+      "name": "City of Langley",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.langleycity.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/25"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.langleycity.ca/cityhall/reports-plans/annual-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-langley-city-reportlinks-64.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/14"
+        },
+        {
+          "type": "source-file-type-or-duplicate-check",
+          "status": "source-bytes-inspected",
+          "url": null,
+          "result": "Already acquired as municipal-langley-city-annual-report-colour, same 2017 report p4.",
+          "evidenceFile": "unbundled/research-municipal/verified/langley-city-horizontal-colour.svg",
+          "recordLocator": "unbundled/research-municipal/findings.json#/duplicateVerifiedNotNew/0"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-lillooet",
+      "name": "District of Lillooet",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.lillooet.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/26"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-lions-bay",
+      "name": "Village of Lions Bay",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.lionsbay.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/95"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.lionsbay.ca/municipal-services/finance/financial-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-lions-bay-reportlinks-68.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/54"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.lionsbay.ca/services/reports-documents-library/annual-drinking-water-quality-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-lions-bay-reportlinks-96.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/55"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.lionsbay.ca/sites/2/files/2026-08/2025%20Annual%20Report%20-%20Final%20v2.pdf",
+          "result": "First/last-page artwork inspected. No native municipality logo recovered in those inspected occurrences; table/financial paths elsewhere do not establish logo geometry.",
+          "pagesInspected": [
+            1,
+            67
+          ],
+          "evidenceFile": "unbundled/research-municipal/reports/municipality-lions-bay.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/36"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-lumby",
+      "name": "The Corporation of the Village of Lumby",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://lumby.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/27"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-lytton",
+      "name": "Village of Lytton",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.lytton.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/28"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-maple-ridge",
+      "name": "City of Maple Ridge",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.mapleridge.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/29"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.mapleridge.ca/explore-maple-ridge/about-maple-ridge/maple-ridge-brand-story",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-maple-ridge-reportlinks-87.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/15"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.mapleridge.ca/your-government/reports-publications/annual-report",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-maple-ridge-reportlinks-76.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/16"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-masset",
+      "name": "Village of Masset",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://massetbc.com/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/85"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-mcbride",
+      "name": "The Corporation of the Village of McBride",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.mcbride.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/30"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.mcbride.ca/government-bylaws/annual-report",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-mcbride-reportlinks-54.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/17"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-metchosin",
+      "name": "District of Metchosin",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.metchosin.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/31"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.metchosin.ca/council/annual-report",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-metchosin-reportlinks-46.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/18"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-unavailable-or-not-fully-inspected",
+          "url": "https://www.metchosin.ca/sites/7/files/2026-06/Metchosin%20Annual%20Report%20-%202025%20-%20Final_Optimized.pdf",
+          "result": "Candidate source not fully inspected: Over40MB",
+          "pagesInspected": null,
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/28"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "candidate-geometry-unverified; retrieval-or-size-limit",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-unavailable-or-not-fully-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-midway",
+      "name": "Village of Midway",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.midwaybc.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/32"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://midwaybc.ca/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-midway-reportlinks-102.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/19"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-mission",
+      "name": "City of Mission",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.mission.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/33"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-montrose",
+      "name": "Village of Montrose",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.montrose.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/34"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.montrose.ca/document-category/annual-reports/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-montrose-reportlinks-57.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/20"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.montrose.ca/wp-content/uploads/2026/04/2024-Annual-Report.pdf",
+          "result": "First/last-page artwork inspected. No native municipality logo recovered in those inspected occurrences; table/financial paths elsewhere do not establish logo geometry.",
+          "pagesInspected": [
+            1,
+            43
+          ],
+          "evidenceFile": "unbundled/research-municipal/reports/municipality-montrose.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/29"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-nakusp",
+      "name": "Village of Nakusp",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.nakusp.com",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/35"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.nakusp.com/sites/5/files/2025-07/Nakusp-Wayfinding-Signage-Final-Report-2023.pdf",
+          "result": "Native source-vector artwork recovered; see findings.json for exact source design/variant and extraction.",
+          "pagesInspected": [
+            11
+          ],
+          "evidenceFile": "unbundled/research-municipal/nakusp-wayfinding-2023.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/5"
+        }
+      ],
+      "newNativeAssetIds": [
+        "nakusp-stacked-colour-2023",
+        "nakusp-horizontal-black-2023"
+      ],
+      "result": "new-source-native-variants-verified",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-new-denver",
+      "name": "Village of New Denver",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://newdenver.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/36"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-new-hazelton",
+      "name": "District of New Hazelton",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://newhazelton.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/37"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://newhazelton.ca/annual-reports/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-new-hazelton-reportlinks-38.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/21"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://newhazelton.ca/water-system-annual-report/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-new-hazelton-reportlinks-50.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/22"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://newhazelton.ca/wp-content/uploads/2026/05/FINAL-2026-Annual-Report.pdf",
+          "result": "First/last-page artwork inspected. No native municipality logo recovered in those inspected occurrences; table/financial paths elsewhere do not establish logo geometry.",
+          "pagesInspected": [
+            1,
+            54
+          ],
+          "evidenceFile": "unbundled/research-municipal/reports/municipality-new-hazelton.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/30"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-new-westminster",
+      "name": "City of New Westminster",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.newwestcity.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/38"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.newwestcity.ca/city-hall/about-new-westminster/our-brand",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-new-westminster-reportlinks-68.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/23"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.newwestcity.ca/city-hall/finance-taxes-budgets/annual-report",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-new-westminster-reportlinks-72.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/24"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-north-cowichan",
+      "name": "The Corporation of the District of North Cowichan",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.northcowichan.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/39"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.northcowichan.ca/municipal-hall/finances/financial-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-north-cowichan-reportlinks-70.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/25"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.northcowichan.ca/sites/default/files/2024-06/MNC_2023AnnualReport_Spreads_FINAL.pdf",
+          "result": "Native source-vector artwork recovered; see findings.json for exact source design/variant and extraction.",
+          "pagesInspected": [
+            1
+          ],
+          "evidenceFile": "unbundled/research-municipal/reports/municipality-north-cowichan.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/4"
+        }
+      ],
+      "newNativeAssetIds": [
+        "north-cowichan-colour",
+        "north-cowichan-150-anniversary-2023"
+      ],
+      "result": "new-source-native-variants-verified",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-north-saanich",
+      "name": "District of North Saanich",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.northsaanich.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/40"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-north-vancouver-city",
+      "name": "City of North Vancouver",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.cnv.org",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/41"
+        },
+        {
+          "type": "source-file-type-or-duplicate-check",
+          "status": "source-bytes-inspected",
+          "url": null,
+          "result": "SVG wrapper: one embedded image, zero native paths.",
+          "evidenceFile": "unbundled/research-municipal/north-vancouver-mobile.svg",
+          "recordLocator": "unbundled/research-municipal/findings.json#/rejected/1"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-oak-bay",
+      "name": "The Corporation of the District of Oak Bay",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.oakbay.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/42"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.oakbay.ca/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-oak-bay-reportlinks-104.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/26"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-okanagan-falls",
+      "name": "District of Okanagan Falls",
+      "baselineState": "artwork-missing",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "source-candidate",
+          "status": "search-or-webpage-text-only",
+          "url": "https://infonews.ca/news/7974212/a-new-town-is-being-born-in-the-okanagan-heres-how-they-made-it/",
+          "result": "Secondary local reporting dated2026-11-04 says newly incorporated district had no logo yet and website unfinished. No official vector lead identified; not proof no logo exists after this date.",
+          "pagesInspected": null,
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/26"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "search-or-web-text-lead-only; no-source-artwork-bytes-inspected",
+      "inspectionLevels": [
+        "search-or-webpage-text-only"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-oliver",
+      "name": "Town of Oliver",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.oliver.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/43"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.oliver.ca/our-community/our-brand",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-oliver-reportlinks-45.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/27"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.oliver.ca/sites/oliver.ca/files/2025-06/2024%20Annual%20Report%20Final%20-%20TOC.pdf",
+          "result": "Cover/back artwork is a whole-page1545x2000 raster with zero native paths; no logo vector recovered.",
+          "pagesInspected": [
+            1,
+            96
+          ],
+          "evidenceFile": "unbundled/research-municipal/oliver-annual-2024.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/17"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-osoyoos",
+      "name": "Town of Osoyoos",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.osoyoos.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/44"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.osoyoos.ca/annual-report",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-osoyoos-reportlinks-36.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/28"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.osoyoos.ca/sites/5/files/2026-06/2025%20DRAFT%20Annual%20Report%20Compressed.pdf",
+          "result": "First/last-page artwork inspected. No native municipality logo recovered in those inspected occurrences; table/financial paths elsewhere do not establish logo geometry.",
+          "pagesInspected": [
+            1,
+            62
+          ],
+          "evidenceFile": "unbundled/research-municipal/reports/municipality-osoyoos.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/31"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-peachland",
+      "name": "The Corporation of the District of Peachland",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.peachland.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/45"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.peachland.ca/departments/finance/annual-report",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-peachland-reportlinks-58.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/29"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.peachland.ca/media/file/peachland-community-handbook",
+          "result": "2024 handbook cover logo is one of5 images (4 photographs plus logo); no native cover logo.",
+          "pagesInspected": [
+            1,
+            24
+          ],
+          "evidenceFile": "unbundled/research-municipal/peachland-handbook.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/23"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-pemberton",
+      "name": "Village of Pemberton",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.pemberton.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/46"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://pub-pemberton.escribemeetings.com/filestream.ashx?DocumentId=2602",
+          "result": "Logo is embedded in full-width1414x195 header raster on page1.",
+          "pagesInspected": [
+            1
+          ],
+          "evidenceFile": "unbundled/research-municipal/pemberton-caoreport-2025.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/18"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-penticton",
+      "name": "The Corporation of the City of Penticton",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.penticton.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/47"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.penticton.ca/city-hall/reports-plans/annual-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-penticton-reportlinks-63.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/30"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-pitt-meadows",
+      "name": "City of Pitt Meadows",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.pittmeadows.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/48"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.pittmeadows.ca/city-hall/reports-and-policies/annual-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-pitt-meadows-reportlinks-72.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/31"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-port-clements",
+      "name": "Village of Port Clements",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://portclements.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/49"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://portclements.ca/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-brands-400.woff2",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-port-clements-reportlinks-114.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/32"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-port-coquitlam",
+      "name": "City of Port Coquitlam",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.portcoquitlam.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/50"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.portcoquitlam.ca/our-government/reports-plans-publications/annual-report",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-port-coquitlam-reportlinks-84.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/33"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-port-edward",
+      "name": "District of Port Edward",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.portedward.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/51"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-port-mcneill",
+      "name": "Town of Port McNeill",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://portmcneill.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/86"
+        },
+        {
+          "type": "source-file-type-or-duplicate-check",
+          "status": "check-recorded-see-evidence",
+          "url": null,
+          "result": "Official homepage inline SVG has one embedded image, zero native paths.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/findings.json#/rejected/2"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "check-recorded-see-evidence",
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-port-moody",
+      "name": "City of Port Moody",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.portmoody.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/52"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-pouce-coupe",
+      "name": "The Corporation of the Village of Pouce Coupe",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.poucecoupe.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/53"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-powell-river",
+      "name": "City of Powell River",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://powellriver.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/54"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-princeton",
+      "name": "Town of Princeton",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.princeton.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/55"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.princeton.ca/p/town-of-princeton-annual-report-2022",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-princeton-reportlinks-63.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/34"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://princeton.municipalwebsites.ca/UploadFiles/Docs/2024AnnualReport_SWQkn2.pdf",
+          "result": "First/last-page artwork inspected. No native municipality logo recovered in those inspected occurrences; table/financial paths elsewhere do not establish logo geometry.",
+          "pagesInspected": [
+            1,
+            94
+          ],
+          "evidenceFile": "unbundled/research-municipal/reports/municipality-princeton.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/32"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-qualicum-beach",
+      "name": "Town of Qualicum Beach",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://qualicumbeach.com/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/56"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://qualicumbeach.com/financial-reports/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-qualicum-beach-reportlinks-44.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/35"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-radium-hot-springs",
+      "name": "Village of Radium Hot Springs",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://radiumhotsprings.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/57"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://radiumhotsprings.civicweb.net/document/21166/Regular%20Council%20-%2009%20Mar%202026.pdf?handle=330B9A0C11AE44B1BC8A1A751D62F5E6",
+          "result": "Native source-vector artwork recovered; see findings.json for exact source design/variant and extraction.",
+          "pagesInspected": [
+            47
+          ],
+          "evidenceFile": "unbundled/research-municipal/radium-agenda-march9-2026.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/6"
+        }
+      ],
+      "newNativeAssetIds": [
+        "radium-wonderland-colour-2012",
+        "radium-wonderland-black-2012",
+        "radium-wonderland-white-2012",
+        "radium-community-colour-2012",
+        "radium-community-black-2012",
+        "radium-community-white-2012"
+      ],
+      "result": "new-source-native-variants-verified",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-rossland",
+      "name": "City of Rossland",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://rossland.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/58"
+        },
+        {
+          "type": "source-file-type-or-duplicate-check",
+          "status": "source-bytes-inspected",
+          "url": "https://rossland.ca/wp-content/uploads/2021/10/Group-309.svg",
+          "result": "Native SVG is a newspaper UI icon, not the municipal logo.",
+          "evidenceFile": "unbundled/research-municipal/rossland-group309.svg",
+          "recordLocator": "unbundled/research-municipal/findings.json#/rejected/5"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-salmo",
+      "name": "The Corporation of the Village of Salmo",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "retrieval-unavailable",
+          "url": "https://salmo.ca/",
+          "httpStatus": "error",
+          "error": "The read operation timed out",
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/59"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "retrieval-unavailable; no-new-source-verified-asset",
+      "inspectionLevels": [
+        "retrieval-unavailable"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-sayward",
+      "name": "Village of Sayward",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.sayward.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/60"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-sechelt",
+      "name": "District of Sechelt",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.sechelt.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/61"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-shishalh-nation-government-district",
+      "name": "shíshálh Nation Government District",
+      "baselineState": "artwork-missing",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "source-candidate",
+          "status": "search-or-webpage-text-only",
+          "url": "https://shishalh.com/",
+          "result": "Official nation site explains district function. Separate district-specific native artwork not identified; avoid treating nation logo as district logo without evidence.",
+          "pagesInspected": null,
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/25"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "search-or-web-text-lead-only; no-source-artwork-bytes-inspected",
+      "inspectionLevels": [
+        "search-or-webpage-text-only"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-sidney",
+      "name": "Town of Sidney",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.sidney.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/62"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.sidney.ca/government/financial-accountability/annual-report/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-sidney-reportlinks-72.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/36"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://www.sidney.ca/wp-content/uploads/Sidney-2025-Annual-Report.-Approved.pdf",
+          "result": "Current2023 identity is189x58 raster on cover and202x61 raster on back cover.",
+          "pagesInspected": [
+            1,
+            92
+          ],
+          "evidenceFile": "unbundled/research-municipal/sidney-annual-2025.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/16"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-silverton",
+      "name": "The Corporation of the Village of Silverton",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://silverton.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/63"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-slocan",
+      "name": "Village of Slocan",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.slocancity.com/wp-json/wp/v2/media?search=logo&per_page=100",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/91"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-sooke",
+      "name": "District of Sooke",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.sooke.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/64"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.sooke.ca/municipal-hall/branding-and-logo/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-sooke-reportlinks-54.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/37"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://media-002-ca.cdn.govstack.com/sooke-012-ca/media/gygnqat1/district-of-sooke-logo-primary-horizontal-pantone.eps",
+          "result": "Native source-vector artwork recovered; see findings.json for exact source design/variant and extraction.",
+          "pagesInspected": [
+            null
+          ],
+          "evidenceFile": "unbundled/research-municipal/verified/sooke-primary-horizontal-pantone.eps",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/1"
+        },
+        {
+          "type": "source-file-type-or-duplicate-check",
+          "status": "source-bytes-inspected",
+          "url": "https://media-002-ca.cdn.govstack.com/sooke-012-ca/media/u0yg123r/district-of-sooke-logo-primary-vertical-pantone.eps",
+          "result": "Despite official EPS name and Vector label, bytes begin JPEG FF D8 FF E2 ICC_PROFILE. Raster image, not native vector.",
+          "evidenceFile": "unbundled/research-municipal/verified/sooke-primary-vertical-pantone.eps",
+          "recordLocator": "unbundled/research-municipal/findings.json#/rejected/0"
+        }
+      ],
+      "newNativeAssetIds": [
+        "sooke-primary-horizontal-pantone"
+      ],
+      "result": "new-source-native-variants-verified",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-spallumcheen",
+      "name": "The Corporation of the Township of Spallumcheen",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.spallumcheentwp.bc.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/65"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.spallumcheentwp.bc.ca/annual_reports.htm",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-spallumcheen-reportlinks-52.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/38"
+        },
+        {
+          "type": "source-file-type-or-duplicate-check",
+          "status": "source-bytes-inspected",
+          "url": "https://www.spallumcheentwp.bc.ca/safari-pinned-tab.svg",
+          "result": "HTTP response contains a SiteCM403;2 HTML block page, not SVG artwork.",
+          "evidenceFile": "unbundled/research-municipal/spallumcheen-pinned.svg",
+          "recordLocator": "unbundled/research-municipal/findings.json#/rejected/4"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-sparwood",
+      "name": "District of Sparwood",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.sparwood.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/66"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://sparwood.civicweb.net/document/50576/",
+          "result": "Native source-vector artwork recovered; see findings.json for exact source design/variant and extraction.",
+          "pagesInspected": [
+            11
+          ],
+          "evidenceFile": "unbundled/research-municipal/sparwood-brandbook.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/0"
+        }
+      ],
+      "newNativeAssetIds": [
+        "sparwood-unbounded-charcoal",
+        "sparwood-bounded-yours-and-mine-charcoal",
+        "sparwood-bounded-other-side-of-bc-charcoal",
+        "sparwood-unbounded-white",
+        "sparwood-bounded-yours-and-mine-white",
+        "sparwood-unbounded-metallic",
+        "sparwood-unbounded-blue",
+        "sparwood-unbounded-green"
+      ],
+      "result": "new-source-native-variants-verified",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-summerland",
+      "name": "The Corporation of the District of Summerland",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.summerland.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/67"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-sun-peaks",
+      "name": "Sun Peaks Mountain Resort Municipality",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://sunpeaksmunicipality.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/68"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-tahsis",
+      "name": "Village of Tahsis",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://villageoftahsis.com/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/69"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-taylor",
+      "name": "District of Taylor",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://districtoftaylor.com/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/70"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://districtoftaylor.com/2021-district-of-taylor-annual-report-and-consolidated-financial-statements/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-taylor-reportlinks-105.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/39"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://districtoftaylor.com/2022-district-of-taylor-annual-report-and-consolidated-financial-statements/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-taylor-reportlinks-105.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/40"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-telkwa",
+      "name": "The Corporation of the Village of Telkwa",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.telkwa.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/71"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-tofino",
+      "name": "Corporation of the Village of Tofino",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://tofino.ca/your-government/reports-plans/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/92"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://tofino.civicweb.net/document/143363/",
+          "result": "Native source-vector artwork recovered; see findings.json for exact source design/variant and extraction.",
+          "pagesInspected": [
+            1
+          ],
+          "evidenceFile": "unbundled/research-municipal/tofino-quick-guide.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/3"
+        }
+      ],
+      "newNativeAssetIds": [
+        "tofino-stacked-colour",
+        "tofino-horizontal-colour",
+        "tofino-wordmark",
+        "tofino-stacked-semi-reverse",
+        "tofino-stacked-reverse",
+        "tofino-stacked-black"
+      ],
+      "result": "new-source-native-variants-verified",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-trail",
+      "name": "City of Trail",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://trail.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/72"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://trail.ca/city-hall/budgets-finance/annual-reports/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-trail-reportlinks-58.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/41"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://trail.ca/wp-content/themes/Avada/includes/lib/assets/fonts/fontawesome/webfonts/fa-brands-400.woff2",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-trail-reportlinks-107.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/42"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://trail.ca/wp-content/uploads/2026/07/2025-Annual-Report-Final.pdf",
+          "result": "First/last-page artwork inspected. No native municipality logo recovered in those inspected occurrences; table/financial paths elsewhere do not establish logo geometry.",
+          "pagesInspected": [
+            1,
+            58
+          ],
+          "evidenceFile": "unbundled/research-municipal/reports/municipality-trail.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/33"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-tumbler-ridge",
+      "name": "District of Tumbler Ridge",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.districtoftumblerridge.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/89"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-valemount",
+      "name": "Village of Valemount",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://valemount.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/73"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://valemount.ca/village-office/documents-publications/annual-reports/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-valemount-reportlinks-74.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/43"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://valemount.ca/village-office/documents-publications/financial-reports/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-valemount-reportlinks-77.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/44"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-bytes-inspected",
+          "url": "https://valemount.ca/wp-content/uploads/2026/06/FINAL-2025-Valemount-Annual-Report.pdf",
+          "result": "First/last-page artwork inspected. No native municipality logo recovered in those inspected occurrences; table/financial paths elsewhere do not establish logo geometry.",
+          "pagesInspected": [
+            1,
+            65
+          ],
+          "evidenceFile": "unbundled/research-municipal/reports/municipality-valemount.pdf",
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/34"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-vancouver",
+      "name": "City of Vancouver",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://vancouver.ca/",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/74"
+        },
+        {
+          "type": "source-candidate",
+          "status": "source-unavailable-or-not-fully-inspected",
+          "url": "https://vancouver.ca/files/cov/2025-annual-financial-report.pdf",
+          "result": "Official source verified by web tool but direct binary fetch HTTP403; geometry unverified.",
+          "pagesInspected": null,
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/search-coverage.json#/allDetailedChecks/21"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "candidate-geometry-unverified; retrieval-or-size-limit",
+      "inspectionLevels": [
+        "html-bytes-inspected",
+        "source-unavailable-or-not-fully-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-vernon",
+      "name": "The Corporation of the City of Vernon",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.vernon.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/75"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.vernon.ca/government-services/departments/financial-services/financial-statements-annual-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-vernon-reportlinks-108.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/45"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-wells",
+      "name": "District of Wells",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.wells.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/76"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.wells.ca/district-wells/financial-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-wells-reportlinks-53.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/46"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.wells.ca/district-wells/reports/annual-community-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-wells-reportlinks-68.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/47"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-west-kelowna",
+      "name": "City of West Kelowna",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.westkelownacity.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/77"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.westkelownacity.ca/city-hall/annual-report-and-financial-statements/",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-west-kelowna-reportlinks-80.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/48"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-west-vancouver",
+      "name": "District Municipality of West Vancouver",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.westvancouver.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/78"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.westvancouver.ca/government-administration/strategies-reports/reports/annual-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-west-vancouver-reportlinks-96.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/49"
+        },
+        {
+          "type": "report-or-brand-landing-page",
+          "status": "html-bytes-inspected",
+          "url": "https://www.westvancouver.ca/government-administration/strategies-reports/reports/quarterly-financial-reports",
+          "error": null,
+          "scope": "Landing-page source and linked document discovery only.",
+          "evidenceFile": "unbundled/research-municipal/municipality-west-vancouver-reportlinks-109.html",
+          "recordLocator": "unbundled/research-municipal/reportlinks.json#/50"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-white-rock",
+      "name": "City of White Rock",
+      "baselineState": "native-vector",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.whiterockcity.ca",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/79"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "municipality-zeballos",
+      "name": "The Corporation of the Village of Zeballos",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "homepage-discovery",
+          "status": "html-bytes-inspected",
+          "url": "https://www.zeballos.com",
+          "httpStatus": 200,
+          "error": null,
+          "scope": "Homepage source and linked SVG/PDF/brand candidate discovery only; not a complete asset or historical publication search.",
+          "evidenceFile": null,
+          "recordLocator": "unbundled/research-municipal/homepage-discovery.json#/80"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "homepage-or-landing-page-discovery-only; no-new-verified-native-asset",
+      "inspectionLevels": [
+        "html-bytes-inspected"
+      ],
+      "evidenceIndex": "unbundled/research-municipal/search-coverage.json"
+    },
+    {
+      "subjectId": "school-district-20",
+      "name": "Kootenay Columbia",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "final-targeted-check",
+          "status": "source-bytes-inspected",
+          "result": "The mountain/sun/book district logo is an embedded raster image: cover xref28 is346×252px. Same raster design repeats on pages7,10,12,14,16. Native paths elsewhere are publication text, trees, rules, diagrams and other illustration; no native own-logo paths identified.",
+          "sourcePage": "https://www.sd20.bc.ca/",
+          "sourceURLs": [
+            "https://22.files.edl.io/850c/09/03/25/155259-206ff6f6-0d16-479f-846f-da36fd07a673.pdf"
+          ],
+          "evidenceFiles": [
+            "unbundled/research-municipal/final-followup/sources/sd20-strategic-plan-2025-2030.pdf",
+            "unbundled/research-municipal/final-followup/sd20-strategic-plan-2025-2030-contact.jpg",
+            "unbundled/research-municipal/final-followup/sd20-strategic-plan-2025-2030-logo.png"
+          ],
+          "scope": "Reviewed all16 pages and image/path inventories, including all visible district-logo occurrences.",
+          "recordLocator": "source-ledgers/municipal-final-checks.json#/checks/1"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "source-ledgers/municipal-final-checks.json"
+    },
+    {
+      "subjectId": "school-district-49",
+      "name": "Central Coast",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "final-targeted-check",
+          "status": "source-bytes-inspected",
+          "result": "Cover district badge is xref18, a358×336px JPEG. Remaining native paths are document rules and shapes; the district badge was not native geometry.",
+          "sourcePage": "https://www.sd49.bc.ca/",
+          "sourceURLs": [
+            "https://www.sd49.bc.ca/wp-content/uploads/2024/10/Strategic_Plan_District2021-09-28.pdf"
+          ],
+          "evidenceFiles": [
+            "unbundled/research-municipal/final-followup/sources/sd49-strategic-plan-2021.pdf",
+            "unbundled/research-municipal/final-followup/sd49-strategic-plan-2021-contact.jpg",
+            "unbundled/research-municipal/final-followup/sd49-strategic-plan-2021-logo.jpeg"
+          ],
+          "scope": "Reviewed all11 pages and image/path inventories.",
+          "recordLocator": "source-ledgers/municipal-final-checks.json#/checks/2"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "source-ledgers/municipal-final-checks.json"
+    },
+    {
+      "subjectId": "school-district-69",
+      "name": "Qualicum",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "final-targeted-check",
+          "status": "source-bytes-inspected",
+          "result": "The six-path white logo says rally and is a website provider/agency mark. It is not the Qualicum circular sun/tree/water district emblem or district wordmark.",
+          "sourcePage": "https://www.qsdlearns.ca/",
+          "sourceURLs": [],
+          "evidenceFiles": [
+            "unbundled/research-root/inline/2597d52bc087e197.svg",
+            "unbundled/research-municipal/final-followup/qsd69-inline-preview-dark.png"
+          ],
+          "scope": "Parsed all six paths and rendered SVG on a dark backdrop. The source HTML parser lowercased viewBox; the preview restores attribute case only for rendering, without changing the source file.",
+          "recordLocator": "source-ledgers/municipal-final-checks.json#/checks/4"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "candidate-is-native-agency-mark-not-subject-logo",
+      "inspectionLevels": [
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "source-ledgers/municipal-final-checks.json"
+    },
+    {
+      "subjectId": "school-district-81",
+      "name": "Fort Nelson",
+      "baselineState": "raster-held",
+      "freshResearch": true,
+      "checks": [
+        {
+          "type": "final-targeted-check",
+          "status": "source-bytes-inspected",
+          "result": "Actual PDF is https://sd81.bc.ca/wp-content/uploads/2025/08/SD81-Strategic-Plan.pdf. Cover circular oil-derrick/tree district badge is xref277, a300×300px raster image. No native district-logo occurrence found in eight pages.",
+          "sourcePage": "https://sd81.bc.ca/board-of-education/strategic-planning/",
+          "sourceURLs": [
+            "https://sd81.bc.ca/document/sd81-strategic-plan.pdf",
+            "https://sd81.bc.ca/document/strategic-plan.pdf",
+            "https://sd81.bc.ca/wp-content/uploads/2025/08/SD81-Strategic-Plan.pdf"
+          ],
+          "evidenceFiles": [
+            "unbundled/research-municipal/final-followup/sources/sd81-strategic-plan.pdf",
+            "unbundled/research-municipal/final-followup/sources/sd81-strategic-plan-alt.pdf",
+            "unbundled/research-municipal/final-followup/sources/sd81-native-strategic-plan.pdf",
+            "unbundled/research-municipal/final-followup/sd81-native-strategic-plan-contact.jpg",
+            "unbundled/research-municipal/final-followup/sd81-cover-logo.png",
+            "unbundled/research-municipal/final-followup/sd81-geometry.json"
+          ],
+          "scope": "Followed first candidate HTML document wrapper to its actual iframe PDF; second candidate redirects to the strategic-planning page. Reviewed all8 pages of actual PDF and image/path inventories.",
+          "recordLocator": "source-ledgers/municipal-final-checks.json#/checks/3"
+        }
+      ],
+      "newNativeAssetIds": [],
+      "result": "inspected-candidates-no-new-native-logo; existing-native-duplicates-or-unresolved-design-gaps",
+      "inspectionLevels": [
+        "source-bytes-inspected"
+      ],
+      "evidenceIndex": "source-ledgers/municipal-final-checks.json"
+    }
+  ],
+  "baselineOnlyNamedPriorities": [
+    {
+      "subjectId": "municipality-clinton",
+      "freshResearch": false,
+      "status": "baseline-design-inventory-reviewed-only",
+      "existingNativeDesignIds": [
+        "source-recovered-municipal-clinton-website-logo",
+        "municipal-clinton-walking-tour-2021-title-lockup",
+        "municipal-clinton-community-profile-2022-investment",
+        "municipal-clinton-walking-tour-2021-slogan"
+      ],
+      "remainingDesignIds": [],
+      "evidenceLocator": "unbundled/research-municipal/search-coverage.json#/priorityDesignStatus"
+    },
+    {
+      "subjectId": "municipality-chetwynd",
+      "freshResearch": false,
+      "status": "baseline-design-inventory-reviewed-only",
+      "existingNativeDesignIds": [
+        "municipal-chetwynd-tour-map-landscape",
+        "chetwynd-community-script-2012",
+        "chetwynd-community-caps-2013",
+        "municipal-chetwynd-tour-map-carved-by-success"
+      ],
+      "remainingDesignIds": [
+        "go-chetwynd-2015",
+        "chetwynd-destination-2015",
+        "source-recovered-municipal-chetwynd-website-logo"
+      ],
+      "evidenceLocator": "unbundled/research-municipal/search-coverage.json#/priorityDesignStatus"
+    },
+    {
+      "subjectId": "municipality-williams-lake",
+      "freshResearch": false,
+      "status": "baseline-design-inventory-reviewed-only",
+      "existingNativeDesignIds": [
+        "municipal-williams-lake-annual-report-2011-coat-of-arms"
+      ],
+      "remainingDesignIds": [
+        "source-municipal-williams-lake-website-logo",
+        "municipal-williams-lake-place-badge-2014"
+      ],
+      "evidenceLocator": "unbundled/research-municipal/search-coverage.json#/priorityDesignStatus"
+    }
+  ],
+  "nativeAdditions": [
+    {
+      "subjectId": "municipality-colwood",
+      "assetCount": 1,
+      "assetIds": [
+        "colwood-charcoal-wayfinding-2022"
+      ],
+      "sourceURLs": [
+        "https://www.colwood.ca/media/file/colwood-wayfinding-sign-strategy"
+      ],
+      "evidenceFiles": [
+        "unbundled/research-municipal/colwood-wayfinding.pdf"
+      ],
+      "manifest": "unbundled/research-municipal/findings.json",
+      "sourceGeometryVerified": true,
+      "currentLayoutResolved": false,
+      "note": "Colwood supplements existing native coverage. Nakusp and Radium are distinct documented layouts/historical variants, not replacements for current website layouts."
+    },
+    {
+      "subjectId": "municipality-nakusp",
+      "assetCount": 2,
+      "assetIds": [
+        "nakusp-stacked-colour-2023",
+        "nakusp-horizontal-black-2023"
+      ],
+      "sourceURLs": [
+        "https://www.nakusp.com/sites/5/files/2025-07/Nakusp-Wayfinding-Signage-Final-Report-2023.pdf"
+      ],
+      "evidenceFiles": [
+        "unbundled/research-municipal/nakusp-wayfinding-2023.pdf"
+      ],
+      "manifest": "unbundled/research-municipal/findings.json",
+      "sourceGeometryVerified": true,
+      "currentLayoutResolved": false,
+      "note": "Colwood supplements existing native coverage. Nakusp and Radium are distinct documented layouts/historical variants, not replacements for current website layouts."
+    },
+    {
+      "subjectId": "municipality-north-cowichan",
+      "assetCount": 2,
+      "assetIds": [
+        "north-cowichan-colour",
+        "north-cowichan-150-anniversary-2023"
+      ],
+      "sourceURLs": [
+        "https://www.northcowichan.ca/sites/default/files/2024-06/MNC_2023AnnualReport_Spreads_FINAL.pdf"
+      ],
+      "evidenceFiles": [
+        "unbundled/research-municipal/reports/municipality-north-cowichan.pdf"
+      ],
+      "manifest": "unbundled/research-municipal/findings.json",
+      "sourceGeometryVerified": true,
+      "currentLayoutResolved": true,
+      "note": null
+    },
+    {
+      "subjectId": "municipality-radium-hot-springs",
+      "assetCount": 6,
+      "assetIds": [
+        "radium-wonderland-colour-2012",
+        "radium-wonderland-black-2012",
+        "radium-wonderland-white-2012",
+        "radium-community-colour-2012",
+        "radium-community-black-2012",
+        "radium-community-white-2012"
+      ],
+      "sourceURLs": [
+        "https://radiumhotsprings.civicweb.net/document/21166/Regular%20Council%20-%2009%20Mar%202026.pdf?handle=330B9A0C11AE44B1BC8A1A751D62F5E6"
+      ],
+      "evidenceFiles": [
+        "unbundled/research-municipal/radium-agenda-march9-2026.pdf"
+      ],
+      "manifest": "unbundled/research-municipal/findings.json",
+      "sourceGeometryVerified": true,
+      "currentLayoutResolved": false,
+      "note": "Colwood supplements existing native coverage. Nakusp and Radium are distinct documented layouts/historical variants, not replacements for current website layouts."
+    },
+    {
+      "subjectId": "municipality-sooke",
+      "assetCount": 1,
+      "assetIds": [
+        "sooke-primary-horizontal-pantone"
+      ],
+      "sourceURLs": [
+        "https://media-002-ca.cdn.govstack.com/sooke-012-ca/media/gygnqat1/district-of-sooke-logo-primary-horizontal-pantone.eps"
+      ],
+      "evidenceFiles": [
+        "unbundled/research-municipal/verified/sooke-primary-horizontal-pantone.eps"
+      ],
+      "manifest": "unbundled/research-municipal/findings.json",
+      "sourceGeometryVerified": true,
+      "currentLayoutResolved": true,
+      "note": null
+    },
+    {
+      "subjectId": "municipality-sparwood",
+      "assetCount": 8,
+      "assetIds": [
+        "sparwood-unbounded-charcoal",
+        "sparwood-bounded-yours-and-mine-charcoal",
+        "sparwood-bounded-other-side-of-bc-charcoal",
+        "sparwood-unbounded-white",
+        "sparwood-bounded-yours-and-mine-white",
+        "sparwood-unbounded-metallic",
+        "sparwood-unbounded-blue",
+        "sparwood-unbounded-green"
+      ],
+      "sourceURLs": [
+        "https://sparwood.civicweb.net/document/50576/"
+      ],
+      "evidenceFiles": [
+        "unbundled/research-municipal/sparwood-brandbook.pdf"
+      ],
+      "manifest": "unbundled/research-municipal/findings.json",
+      "sourceGeometryVerified": true,
+      "currentLayoutResolved": true,
+      "note": null
+    },
+    {
+      "subjectId": "municipality-tofino",
+      "assetCount": 6,
+      "assetIds": [
+        "tofino-stacked-colour",
+        "tofino-horizontal-colour",
+        "tofino-wordmark",
+        "tofino-stacked-semi-reverse",
+        "tofino-stacked-reverse",
+        "tofino-stacked-black"
+      ],
+      "sourceURLs": [
+        "https://tofino.civicweb.net/document/143363/"
+      ],
+      "evidenceFiles": [
+        "unbundled/research-municipal/tofino-quick-guide.pdf"
+      ],
+      "manifest": "unbundled/research-municipal/findings.json",
+      "sourceGeometryVerified": true,
+      "currentLayoutResolved": true,
+      "note": null
+    }
+  ],
+  "researchOnlyProposedTourismVariants": [
+    {
+      "id": "radium-tourism-colour-2012",
+      "subjectId": "municipality-radium-hot-springs",
+      "status": "research-only-native-proposed-tourism-variant",
+      "sourceUrl": "https://radiumhotsprings.civicweb.net/document/21166/Regular%20Council%20-%2009%20Mar%202026.pdf?handle=330B9A0C11AE44B1BC8A1A751D62F5E6",
+      "sourceLocator": "2012 Radium Visual Identity Guide, guide page 5, as reproduced at PDF page 48 of the 9 March 2026 Regular Council agenda. Village Brand Discussion memo on pp42–43 explicitly dates guide to2012.",
+      "file": "unbundled/research-municipal/verified/radium-tourism-colour-2012.svg",
+      "nativeSourceFile": "unbundled/research-municipal/radium-agenda-march9-2026.pdf",
+      "note": "2012 guide labels a suggested Tourism organizational logo. Native geometry verified, but no municipal/current adoption or Tourism Radium adoption established. Keep out of municipal gallery additions."
+    },
+    {
+      "id": "radium-tourism-black-2012",
+      "subjectId": "municipality-radium-hot-springs",
+      "status": "research-only-native-proposed-tourism-variant",
+      "sourceUrl": "https://radiumhotsprings.civicweb.net/document/21166/Regular%20Council%20-%2009%20Mar%202026.pdf?handle=330B9A0C11AE44B1BC8A1A751D62F5E6",
+      "sourceLocator": "2012 Radium Visual Identity Guide, guide page 5, as reproduced at PDF page 48 of the 9 March 2026 Regular Council agenda. Village Brand Discussion memo on pp42–43 explicitly dates guide to2012.",
+      "file": "unbundled/research-municipal/verified/radium-tourism-black-2012.svg",
+      "nativeSourceFile": "unbundled/research-municipal/radium-agenda-march9-2026.pdf",
+      "note": "2012 guide labels a suggested Tourism organizational logo. Native geometry verified, but no municipal/current adoption or Tourism Radium adoption established. Keep out of municipal gallery additions."
+    },
+    {
+      "id": "radium-tourism-white-2012",
+      "subjectId": "municipality-radium-hot-springs",
+      "status": "research-only-native-proposed-tourism-variant",
+      "sourceUrl": "https://radiumhotsprings.civicweb.net/document/21166/Regular%20Council%20-%2009%20Mar%202026.pdf?handle=330B9A0C11AE44B1BC8A1A751D62F5E6",
+      "sourceLocator": "2012 Radium Visual Identity Guide, guide page 5, as reproduced at PDF page 48 of the 9 March 2026 Regular Council agenda. Village Brand Discussion memo on pp42–43 explicitly dates guide to2012.",
+      "file": "unbundled/research-municipal/verified/radium-tourism-white-2012.svg",
+      "nativeSourceFile": "unbundled/research-municipal/radium-agenda-march9-2026.pdf",
+      "note": "2012 guide labels a suggested Tourism organizational logo. Native geometry verified, but no municipal/current adoption or Tourism Radium adoption established. Keep out of municipal gallery additions."
+    }
+  ],
+  "scopeLimits": [
+    "Most unresolved municipalities received homepage discovery only; those have not received a full historical-publication sweep.",
+    "Only specifically listed PDF pages/logo occurrences were inspected except the Armstrong scanned guide, which was checked all9 pages.",
+    "HTTP403/404/406, timeouts and download-size limits are access/inspection gaps, not proof artwork is raster or absent.",
+    "Native variants for Nakusp and Radium do not resolve the existing horizontal-colour/current-layout website designs.",
+    "No messages or master-file requests were sent to municipalities or designers.",
+    "Fresh municipal coverage includes96 homepage attempts plus separate actual searches for Fort St James, Okanagan Falls and shishalh district. Most homepage-only subjects did not receive deeper historical publication inspection.",
+    "Final targeted follow-up covered Daajing Giids plus four schools, with all35 pages of three school PDFs inspected. QSD69 candidate is an agency SVG; Daajing case-study visuals are JPEG/MP4, no native village download.",
+    "Root college/university extraction QA is a separate review of59 supplied assets and is not counted as municipal fresh source-search coverage.",
+    "No native master files were requested by email or other messages. A blocked source or no vector in inspected occurrences is not proof that no native master exists elsewhere."
+  ],
+  "evidenceFiles": [
+    "unbundled/research-municipal/search-coverage.json",
+    "unbundled/research-municipal/homepage-discovery.json",
+    "unbundled/research-municipal/reportlinks.json",
+    "unbundled/research-municipal/report-downloads.json",
+    "unbundled/research-municipal/report-geometry.json",
+    "unbundled/research-municipal/findings.json",
+    "source-ledgers/municipal-final-checks.json"
+  ]
+}

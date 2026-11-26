@@ -1,0 +1,58 @@
+[
+  {
+    "subjectId": "skytrain",
+    "newAssetId": "source-vector-skytrain-2022-white",
+    "existingAssetId": "source-expanded-skytrain-toolkit-wordmark",
+    "action": "add-colourway",
+    "reason": "Existing toolkit SVG has 11 visible paths filled #00174 D. The 2022 SVG has 11 visible paths filled #FFFFFF. Same symbol and wordmark layout, distinct official white colourway.",
+    "preferredVector": null,
+    "suggestedVariantOf": "source-expanded-skytrain-toolkit-wordmark",
+    "versionLabel": "Official white colourway (2022)"
+  },
+  {
+    "subjectId": "metro-vancouver-transit-police",
+    "newAssetId": "source-vector-metro-vancouver-transit-police-2022-white",
+    "existingAssetId": "source-expanded-metro-vancouver-transit-police-community-report-2025-reversed",
+    "action": "alsoSeen-only",
+    "reason": "Same white crest/name arrangement. Existing source has 334 visible paths;2022 source has 299 and a roughly 2.4% taller placement. Aspect-normalized render IoU 0.946, with small crest/export differences. No separately intended design evidenced. Add dated 2022 source citation, retain extraction in research rather than duplicating gallery artwork.",
+    "preferredVector": null,
+    "alsoSeen": {
+      "publisher": "TransLink",
+      "sourceUrl": "https://www.translink.ca/-/media/translink/documents/about-translink/governance-and-board/board-of-directors/board-minutes-and-reports/2022/march/2022_03_24_board_meeting_slide_deck.pdf",
+      "sourceLocator": "TransLink Quarterly Board Meeting, March 24, 2022, PDF page 51 footer; source rectangle [1005, 820, 1098, 876] pt.",
+      "sourceDate": "2022-03-24",
+      "observedDate": "2026-11-26",
+      "evidenceType": "native-pdf-vector-extraction"
+    }
+  },
+  {
+    "subjectId": "translink",
+    "newAssetId": "source-vector-translink-2022-white",
+    "existingAssetId": "source-expanded-translink-website-logo",
+    "action": "add-colourway",
+    "reason": "Official 2022 white Leaper/name lockup; current default is blue. Retain white as a source colourway without overriding blue default.",
+    "preferredVector": null,
+    "suggestedVariantOf": "source-expanded-translink-website-logo",
+    "versionLabel": "Official white colourway (2022)"
+  },
+  {
+    "subjectId": "coast-mountain-bus-company",
+    "newAssetId": "source-vector-coast-mountain-bus-company-2022-white",
+    "existingAssetId": "source-expanded-coast-mountain-bus-company-route-map-logo",
+    "action": "add-colourway",
+    "reason": "Existing 2017 route-map raster has blue/gold landscape emblem and blue full name. 2022 native SVG is the documented white reverse treatment; same layout, with white outlined-circle treatment. It is not a matching colour replacement.",
+    "preferredVector": null,
+    "suggestedVariantOf": "source-expanded-coast-mountain-bus-company-route-map-logo",
+    "versionLabel": "Official white colourway (2022)"
+  },
+  {
+    "subjectId": "west-coast-express",
+    "newAssetId": "source-vector-west-coast-express-2022-white",
+    "existingAssetId": "source-expanded-west-coast-express-performance-report-logo",
+    "action": "add-colourway",
+    "reason": "Existing 2024 raster is dark navy with alpha, not the purple/gold contents-page application. 2022 white vector preserves same train/mountains and italic wordmark arrangement; normalized alpha-mask IoU 0.969. Distinct official white colourway, not a matching colour replacement.",
+    "preferredVector": null,
+    "suggestedVariantOf": "source-expanded-west-coast-express-performance-report-logo",
+    "versionLabel": "Official white colourway (2022)"
+  }
+]

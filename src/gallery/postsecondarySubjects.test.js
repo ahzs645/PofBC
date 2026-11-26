@@ -26,7 +26,7 @@ test('splits, amalgamations and operations transfers are not one-to-one renames'
   assert.equal(targets('royal-roads-military-college', 'renamed-to').length, 0)
 })
 
-test('review-only PDF specimens have precise provenance and do not become gallery holdings', async () => {
+test('the original source-only review ledger retains precise provenance independently of accepted derivatives', async () => {
   const { default: review } = await import('../../research/identity/postsecondary-2026-11-24/artwork-review-candidates.json', { with: { type: 'json' } })
   const { POSTSECONDARY_IDENTITY_BODIES } = await import('./postsecondaryIdentityData.js')
   const subjectIds = new Set(registry.records.map(record => record.id))
@@ -68,9 +68,9 @@ test('post-secondary coverage counts subjects once, not their variants or visibl
   const counts = summarizePostsecondaryArtwork(subjects)
   assert.equal(counts.total, 49)
   assert.equal(counts.total, counts.vector + counts.observedNonvector + counts.unverified)
-  assert.deepEqual(counts, { total: 49, held: 0, vector: 28, observedNonvector: 7, unverified: 14, shared: 1 })
+  assert.deepEqual(counts, { total: 49, held: 30, vector: 28, observedNonvector: 7, unverified: 14, shared: 1 })
   assert.deepEqual(summarizePostsecondaryArtwork(subjects.filter((subject) => subject.priority === 1 && subject.kind === 'public-college')),
-    { total: 11, held: 0, vector: 11, observedNonvector: 0, unverified: 0, shared: 0 })
+    { total: 11, held: 11, vector: 11, observedNonvector: 0, unverified: 0, shared: 0 })
 
   const ids = subjects.flatMap(({ artworkReview }) => artworkReview.specimens.map(({ id }) => id))
   assert.equal(ids.length, new Set(ids).size)
@@ -83,16 +83,17 @@ test('post-secondary coverage counts subjects once, not their variants or visibl
     if (item.sha256) assert.match(item.sha256, /^[a-f0-9]{64}$/)
   }
   const campus = identitySubjectById('ubc-okanagan-campus')
-  assert.equal(campus.state, 'shared-identity')
+  assert.equal(campus.state, 'native-vector')
   assert.equal(campus.artworkReview.shared.targetSubjectId, 'university-of-british-columbia')
   assert.ok(campus.artworkReview.specimens.some(({ format, scope }) => format === 'native-vector' && scope === 'campus'))
-  assert.ok(!campus.hasArtwork && campus.entries.length === 0)
+  assert.ok(campus.hasArtwork && campus.entries.length === 4)
+  assert.ok(campus.entries.every(({ owner }) => owner === 'ubc-okanagan-campus'))
 
   const [school] = searchIdentitySubjects('Vancouver School of Decorative and Applied Arts', subjects)
   assert.equal(school.id, 'vancouver-school-of-art')
   assert.equal(school.state, 'distinct-unconfirmed')
   assert.equal(school.artworkReview.specimens[0].scope, 'cover-art')
-  assert.ok(subjects.every(({ hasArtwork }) => !hasArtwork))
+  assert.equal(subjects.filter(({ hasArtwork }) => hasArtwork).length, 30)
 })
 
 
@@ -131,7 +132,8 @@ test('CNC identity history distinguishes designation, arms and three dated speci
   const hrefs = [history[0].url, ...historySpecimens.map(({ url }) => url)]
   assert.equal(hrefs.length, new Set(hrefs).size)
   assert.ok(cnc.sources.every(({ url }) => !hrefs.includes(url)))
-  assert.ok(!cnc.hasArtwork && cnc.entries.length === 0)
+  assert.ok(cnc.hasArtwork && cnc.entries.length === 3)
+  assert.ok(cnc.entries.every(({ asset }) => asset.isVector && !asset.reconstruction))
   assert.deepEqual(summarizePostsecondaryArtwork([{ artworkReview: { specimens: [historySpecimens[0]] } }]),
     { total: 1, held: 0, vector: 0, observedNonvector: 0, unverified: 1, shared: 0 })
 })
@@ -176,11 +178,12 @@ test('early Kwantlen previews link to documented vector evidence for their own n
     assert.equal(source.url, preview.url)
     assert.equal(source.format, 'native-vector')
     assert.equal(source.evidence, 'source-only')
-    assert.equal(subject.hasArtwork, false)
+    assert.equal(subject.state, 'native-vector')
+    assert.ok(subject.entries.some(({ asset }) => asset.sourceUrl === source.url.split('#')[0]))
   }
 })
 
-test('recovered historical previews reference matching sources without becoming artwork holdings', async () => {
+test('historical editorial previews keep matching sources independently of newly acquired artwork', async () => {
   const { identitySubjectById } = await import('./identityCoverage.js')
   const { EDITORIAL_LOGO_SPECIMENS } = await import('./editorialLogoSpecimens.js')
   const selected = {
@@ -197,7 +200,7 @@ test('recovered historical previews reference matching sources without becoming 
     const subject = identitySubjectById(id)
     const previews = EDITORIAL_LOGO_SPECIMENS[id]
     assert.deepEqual(previews.map(({ id }) => id), ids)
-    assert.equal(subject.hasArtwork, false)
+    assert.equal(subject.hasArtwork, !['east-kootenay-community-college', 'pacific-vocational-institute'].includes(id))
     for (const { id, url } of previews) {
       assert.ok(subject.artworkReview.specimens.some((s) =>
         s.id === id && s.url === url && s.evidence === 'source-only' && s.scope === 'historical'), id)
