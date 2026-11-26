@@ -55,7 +55,9 @@ test('organization types narrow both collection and identity matches for the sam
 test('type-only browsing includes held artwork and records still awaiting their own collection', () => {
   const { collections, subjects } = browseGallery('', 'postsecondary')
   assert.ok(collections.some(({ id }) => id === 'collected-university-of-northern-bc'))
-  assert.ok(subjects.some(({ id, hasArtwork }) => id === 'douglas-college' && !hasArtwork))
+  assert.ok(collections.some(({ id }) => id === 'collected-douglas-college'))
+  assert.ok(!subjects.some(({ id }) => id === 'douglas-college'))
+  assert.ok(subjects.some(({ id, hasArtwork }) => id === 'pacific-vocational-institute' && !hasArtwork))
   assert.ok(browseGallery('', 'crowns').collections.some(({ id }) => id === 'bc-hydro'))
   assert.deepEqual(browseGallery('BC Hydro', 'postsecondary'), { collections: [], marks: [], subjects: [] })
 })
