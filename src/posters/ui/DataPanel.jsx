@@ -22,6 +22,18 @@ const Links = ({ links, brief }) => (
   </Item>
 )
 
+const Downloads = ({ files }) => (
+  <Item as="ul" className="pv-links">
+    {files.map(({ label, file }) => (
+      <li key={file}>
+        <a href={`${import.meta.env.BASE_URL}${file}`} className="pv-link-card" download>
+          <b>{label} <span aria-hidden="true">↓</span></b>
+        </a>
+      </li>
+    ))}
+  </Item>
+)
+
 const Palette = ({ colours }) => (
   <Item as="ul" className="pv-palette" aria-label="Colours">
     {colours.map(({ name, value }) => (
@@ -67,6 +79,7 @@ const Block = ({ block, figures, brief }) => {
   if (block.note) return <Item as="div" className="pv-note"><p>{block.note}</p></Item>
   if (block.palette) return <Palette colours={block.palette} />
   if (block.links) return <Links links={block.links} brief={brief} />
+  if (block.downloads) return <Downloads files={block.downloads} />
   if (block.sources) return <Sources sources={block.sources} />
   if (block.figure) {
     // The picture itself is attached by the poster's loader; the data only names it.

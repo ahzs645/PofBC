@@ -65,7 +65,10 @@ A = [
          publisher="City of Fort St John", sourcePage="https://www.fortstjohn.ca/ocp",
          sourceUrl="https://www.fortstjohn.ca/media/file/official-community-plan-bylaw",
          locator="PDF page 1 (cover)", sourceDate="Official Community Plan bylaw; PDF created 17 December 2025",
-         notes="The same logo and colours as the website, in the stacked lockup (arcs above the name). The website file is the horizontal lockup; no vector copy of it was found."),
+         specimenDate="2025",
+         notes="The stacked colour signature places the arc symbol above the name and tagline. It shares the city identity shown in the horizontal website logo and in the black signature in the 2012 travel guide.",
+         extraction={"pdfPage": 1, "pdfBounds": [476, 668, 587, 744],
+                     "method": "Isolated the logo’s native PDF paths with PyMuPDF."}),
     dict(target="source-municipal-kamloops-website-logo", body="municipality-kamloops", id="municipal-kamloops-annual-report-2025",
          label="Kamloops — Logo, 2025 Annual Report", file="kamloops/annual-report-2025-logo.svg", publisher="City of Kamloops",
          sourcePage="https://www.kamloops.ca/city-hall/governance-finance/annual-reports",
@@ -88,12 +91,6 @@ A = [
          sourceUrl="https://www.nanaimo.ca/docs/your-government/budget-and-finance/2025-annual-report-web.pdf",
          locator="PDF page 1 (cover)", sourceDate="2025 Annual Report; PDF created 23 June 2026",
          notes="The same design as the website logo. The print colours are brighter process blues than the website file’s, and the waves carry thin black keylines, as printed."),
-    dict(target="source-municipal-prince-george-website-logo", body="municipality-prince-george", id="municipal-prince-george-annual-report-2025-horizontal",
-         label="Prince George — Logo, horizontal, 2025 Annual Report", file="prince-george/annual-report-2025-logo-horizontal.svg",
-         publisher="City of Prince George", sourcePage="https://www.princegeorge.ca/city-hall/finance/annual-report-corporate-plan",
-         sourceUrl="https://www.princegeorge.ca/sites/default/files/2026-06/Prince%20George%20Annual%20Report%202025%20-%20FINAL%20reduced%20size.pdf",
-         locator="PDF page 1 (cover)", sourceDate="2025 Annual Report; PDF created 23 June 2026",
-         notes="The same logo and colour as the website, in the horizontal lockup (symbol beside the name). The website file is the stacked lockup; no vector copy of it was found."),
     dict(target="source-municipal-prince-rupert-website-logo", body="municipality-prince-rupert", id="municipal-prince-rupert-community-assessment-2024",
          label="Prince Rupert — Logo, Complete Community Assessment 2024", file="prince-rupert/community-assessment-2024-logo.svg",
          publisher="City of Prince Rupert", sourcePage="https://www.princerupert.ca",
@@ -155,6 +152,10 @@ for a in A:
     }
     if a.get("variantOf"):
         asset["variantOf"] = a["variantOf"]
+    if a.get("specimenDate"):
+        asset["specimenDate"] = a["specimenDate"]
+    if a.get("extraction"):
+        asset["extraction"] = a["extraction"]
     asset["search"] = SEARCH
     records.append({"targetAssetId": a["target"], "dataFile": "municipalIdentityData.js", "bodyId": a["body"], "asset": asset})
 

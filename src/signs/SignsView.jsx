@@ -1,13 +1,14 @@
 // The signs: a shelf (see src/posters/ShelfView.jsx) over the sign catalogue, so a sign opens on the
 // same stage as a poster, with the same hotspots, panels and export.
 
+import { bearAwareWindowId, bearAwareWindowScan } from '../initiatives/bearAwareArtwork.js'
 import { ShelfView } from '../posters/ShelfView.jsx'
 import { SIGNS, SIGN_SERIES } from './catalogue.js'
 import { FOREST_SERVICE_SIGNS } from './forest-service/signs.js'
 import { FISH_WILDLIFE_SIGNS } from './fish-wildlife/signs.js'
 import cheakamusThumb from './fish-wildlife/cheakamus.svg?url'
 import cheakamusReference from './fish-wildlife/cheakamus.reference.png?url'
-import { ENTRY_SIGNS } from './entering-bc/signs.js'
+import { ENTRY_SIGNS, entryReconstructionFile } from './entering-bc/signs.js'
 import { TOURISM_SIGNS } from './tourism/signs.js'
 import { PARKS_SIGNS } from './parks/signs.js'
 import fireDayReference from './forest-service/fire-day.reference.png?url'
@@ -33,10 +34,10 @@ const parks = fromData(PARKS_SIGNS)
 
 const entryDrawing = fromData(ENTRY_SIGNS)
 const entryRaw = import.meta.glob('./entering-bc/*.svg', { query: '?raw' })
-const entryUrls = import.meta.glob('./entering-bc/*.svg', { eager: true, query: '?url', import: 'default' })
 const entryFiles = Object.keys(ENTRY_SIGNS).map((id) => [id, `./entering-bc/${id}.svg`])
 
 const LOADERS = {
+  [bearAwareWindowId]: () => import('./bearAwareWindow.js').then(({ loadBearAwareWindow }) => loadBearAwareWindow()),
   ...Object.fromEntries(entryFiles.map(([id, file]) => [id, entryDrawing(id, entryRaw[file])])),
   'fire-day': forestService('fire-day', () => import('./forest-service/fire-day.svg?raw'), {
     src: fireDayReference,
@@ -60,7 +61,8 @@ const LOADERS = {
 }
 
 const THUMBNAILS = {
-  ...Object.fromEntries(entryFiles.map(([id, file]) => [id, entryUrls[file]])),
+  [bearAwareWindowId]: import.meta.env.BASE_URL + bearAwareWindowScan,
+  ...Object.fromEntries(entryFiles.map(([id]) => [id, `${import.meta.env.BASE_URL}${entryReconstructionFile(id)}`])),
   'fire-day': fireDayThumb,
   lookout: lookoutThumb,
   'forest-closure': forestClosureThumb,

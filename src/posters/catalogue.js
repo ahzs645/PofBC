@@ -8,7 +8,10 @@
 //
 // Nothing here imports a drawing, so the catalogue can be read and tested without a browser.
 
+import { bearAwareId, bearAwareTitle, bearAwareWindowId, bearAwareWindowMeta } from '../initiatives/bearAwareArtwork.js'
+
 export const SERIES = [
+  { id: bearAwareId, title: bearAwareTitle, kind: 'Wildlife education · 1997', posters: [bearAwareWindowId] },
   {
     id: 'environment',
     title: 'Ministry of Environment',
@@ -74,6 +77,11 @@ export const SERIES = [
  * words each; `blurb` is one line on what the piece asks or says, shown on its card.
  */
 export const POSTERS = {
+  [bearAwareWindowId]: {
+    ...bearAwareWindowMeta, id: bearAwareWindowId, series: bearAwareId,
+    issuer: bearAwareTitle, subject: 'Bear awareness',
+    blurb: 'Revelstoke residents and businesses could earn this sign by completing a Bear Aware checklist.'
+  },
   'super-natural-spring': {
     id: 'super-natural-spring', series: 'tourism', issuer: 'Province of British Columbia',
     subject: 'Coastal travel', format: 'Magazine ad', made: 'mixed',
@@ -243,8 +251,6 @@ export const POSTERS = {
   },
   'beware-these-alien-invaders': {
     id: 'beware-these-alien-invaders',
-    // Unlisted: left off the shelf, but its address and the links to it still open it.
-    unlisted: true,
     issuer: 'Ministry of Forests',
     subject: 'Invasive plants',
     format: 'Screen leaflet',

@@ -27,7 +27,7 @@ test('VCM keeps its earlier society and Destination BC operation distinct', () =
   }
 })
 
-test('the Co-op roster links its 15 sector covers and keeps the operators separately searchable', () => {
+test('the Co-op roster preserves its 15 sector specimens and keeps the operators separately searchable', () => {
   const program = identitySubjectById('destination-bc-co-op-marketing')
   const roster = relationsOf(program).incoming.filter(({ type }) => type === 'listed-by')
   const { collections } = browseGallery('', 'tourism')
@@ -38,9 +38,10 @@ test('the Co-op roster links its 15 sector covers and keeps the operators separa
     const record = TOURISM_SECTOR_RECORDS.find(({ id }) => id === target.id)
     const collection = collections.find(({ id }) => id === `collected-${target.id}`)
     const cover = collection.entries.find(({ id }) => id === collection.cover)
-    assert.equal(cover.id, record.cover)
+    const guidelineDesign = collection.entries.find(({ id }) => id === record.cover)
+    if (cover.id !== guidelineDesign.id) assert.ok(cover.asset.isVector && !cover.asset.reconstruction)
     assert.ok(relatedBodyById(target.id).relationships.some(({ id }) => id === program.id))
-    assert.ok((cover.versions ?? [cover.asset]).some(({ versionLabel }) => versionLabel === '2024–25 guidelines · raster'))
+    assert.ok((guidelineDesign.versions ?? [guidelineDesign.asset]).some(({ versionLabel }) => versionLabel === '2024–25 guidelines · raster'))
   }
 
   const birdTrail = identitySubjectById('bc-bird-trail')

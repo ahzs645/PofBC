@@ -30,16 +30,19 @@ The search went in this order:
 | Kamloops | vector (with gradients) | Annual Report 2025 (p. 142) | Same artwork, with the tagline in white as on the website. See below. |
 | Mackenzie | vector | Brand Book V2, Nov 2018 (p. 2) | same design and colours |
 | Nanaimo | vector | 2025 Annual Report (p. 1) | Same design. The print colours are brighter process blues and the waves have thin black keylines. |
-| Prince George | vector, **different lockup** | 2025 Annual Report (p. 1) | Same 2024 logo and colour, but **horizontal**. The website PNG is stacked. Every vector instance found is horizontal. |
+| Prince George | blue and white vectors | 2025 Annual Report (PDF pp. 1 and 114) | Horizontal versions of the refreshed signature. The matching stacked website vector remains open. The City’s [May 6, 2024 agenda](https://www.princegeorge.ca/city-hall/mayor-council/meetings-agendas-minutes/regular-council-meeting-157) links the presentation, and the staff report identifies a separate brand guide. |
+| Prince George, earlier signatures | source vectors | 2024 Annual Report (PDF p. 14), 2020 Climate Change Mitigation Plan (PDF p. 58), 2026–2030 Capital Projects Summary (PDF p. 1) | Earlier stacked signature in blue and black and in white, plus a separate single-line header using the earlier fraise. |
 | Prince Rupert | vector, **different lockup** | Complete Community Assessment & Plan 2024 (p. 1) | This is the full logo: the red arch over "The City of Prince Rupert". The website PNG is a wider wordmark-only arrangement, which was not found as a vector. |
 | Quesnel (×2 targets) | vector ×2 | Brand Guidelines v02, Dec 2016 (p. 7) | Same design. The website PNGs draw "Quesnel" and the wave taller relative to "City of", so the proportions differ. |
 | Richmond | vector | Council Strategic Plan term highlights, Jul 2026 (p. 1) | same design and colours |
 | Smithers | vector ×2 | New Resident Guide 2026: stacked with a slate name (p. 2); horizontal with a white name and tagline (p. 1) | The website PNG is stacked with a white name and the tagline. Neither PDF version has that exact combination. |
-| Terrace | **not done** | — | Every colour copy found is an embedded image (annual reports 2022–2025, budget, climate plan). The only vector copy is a one-colour newspaper-notice version built from hairline-outlined paths and clips. A plain path extraction does not reproduce it, and it is not the colour logo. |
+| Terrace | blue-and-white vector | 2016 Parks and Recreation Master Plan (PDF p. 1, original 114-page file) | The supplied cover crop preserves the bear, semicircle and lettering as paths. The full-colour logo is isolated from the blue page field. The City’s reduced PDF contains a raster logo. |
 | Victoria | vector | 2025 property tax information sheet (p. 4) | Same design. The blue is slightly lighter and the lettering pure black. The annual-report covers carry only the white and black versions. |
-| Williams Lake | **not done** | — | The badge is an embedded image in every PDF checked. The Strategic Plan is an InDesign file but places the logo as an image, and the OCP engagement PDFs are flattened. No reconstruction was made: the badge uses gradients, and an official vector should exist. |
+| Williams Lake | vector coat of arms | 2011 Annual Report (PDF p. 1) | The arms are drawn with native paths and axial and radial shadings. The separate blue and yellow website badge is an embedded image in the Strategic Plan and the OCP engagement PDFs. |
 
 All 19 SVGs are in `public/identity-municipal/<body>/` beside the PNGs.
+
+The [2012 Northern British Columbia Travel Guide](https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/a30e5117-4e75-43f6-b52e-017cdba837e7/content#page=34) also documents the Fort St. John horizontal signature in black. The city’s [Promotional Marketing and Giveaways Policy](https://www.fortstjohn.ca/media/file/27-promotional-marketing-and-giveaways-policy#page=1) identifies the city’s Graphics Standard Manual as available on request. The manual is an open lead for the horizontal colour artwork.
 
 ## Method
 

@@ -35,6 +35,8 @@ The I-180X and I-180B greetings use the PDF’s named Times New Roman Bold Itali
 locally during Poppler SVG conversion and outlined at the PDF’s glyph positions. The white page
 behind the I-180 panels is included in each drawing. The catalogue reports the printed sign
 dimensions separately from the proportions of the illustrations, particularly for I-180B.
+The [lettering editions](entering-bc/) pair re-typeset outlines with editable SVGs. Each sign’s
+About panel offers both downloads and cites the published illustration.
 
 The [blue-bordered Super, Natural welcome sign](super-natural-bordered/) uses the supplied
 297 × 224 screenshot. Its date, location and physical dimensions are unknown. Four board

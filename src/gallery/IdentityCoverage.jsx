@@ -6,6 +6,7 @@ import {
 import { initiativesForBody } from '../initiatives/initiatives.js'
 import { COMMISSION_DIRECTORIES, COMMISSION_FAMILY, commissionById } from './commissionHistory.js'
 import { MUNICIPAL_AS_OF, MUNICIPAL_REGIONS } from './municipalSubjects.js'
+import { regionalDistrictOf } from './regionalDistricts.js'
 import { SiteLink } from '../site/navigation.jsx'
 import { galleryPlaceUrl, readCoverageFilters } from './galleryPlace.js'
 import { galleryCategoryRecords } from './gallerySearch.js'
@@ -265,14 +266,36 @@ const connectionGroups = (subject) => {
 const External = ({ href, children, className }) => <a className={className} href={href} target="_blank" rel="noopener noreferrer">{children} <span aria-hidden="true">↗</span></a>
 
 /** A municipality's facts, its arms registrations and the site's records about it, compactly. */
-const MunicipalRecords = ({ subject }) => {
+export const RegionalDistrictMembers = ({ subject, onOpenSubject }) => {
+  if (!subject?.regionalDistrict?.current) return null
+  const members = IDENTITY_COVERAGE.filter(({ municipal }) => municipal?.regionalDistrict === subject.name)
+  const municipalities = members.filter(({ municipal }) => municipal.inProvincialLayer)
+  const otherMembers = members.filter(({ municipal }) => !municipal.inProvincialLayer)
+  return (
+    <section className="identity-card gallery__shelf" aria-labelledby="regional-district-members">
+      <h3 id="regional-district-members">Member municipalities{municipalities.length > 0 && ` (${municipalities.length})`}</h3>
+      {municipalities.length > 0
+        ? <div className="identity-chips">{municipalities.map((member) => <SubjectChip key={member.id} subject={member} onOpen={onOpenSubject} />)}</div>
+        : <p className="identity-muted">This regional district has no incorporated municipal members.</p>}
+      {otherMembers.length > 0 && <>
+        <h4>Self-government district with board representation</h4>
+        <div className="identity-chips">{otherMembers.map((member) => <SubjectChip key={member.id} subject={member} onOpen={onOpenSubject} />)}</div>
+      </>}
+    </section>
+  )
+}
+
+const MunicipalRecords = ({ subject, onOpenSubject }) => {
   const { municipal } = subject
+  const district = regionalDistrictOf(municipal)
   return (
     <section className="identity-card" aria-labelledby="identity-municipal">
       <h3 id="identity-municipal">Municipal records</h3>
       <dl className="identity-facts">
         <div><dt>Type</dt><dd>{municipal.classification}</dd></div>
-        <div><dt>Regional district</dt><dd>{municipal.regionalDistrict ?? 'None'}</dd></div>
+        <div><dt>Regional district</dt><dd>{district
+          ? <SubjectLink id={district.id} onOpen={onOpenSubject}>{district.name}</SubjectLink>
+          : municipal.regionalDistrict ?? 'None'}</dd></div>
         <div><dt>{municipal.inProvincialLayer ? 'Provincial ID' : 'Registry ID'}</dt><dd><code>{municipal.provincialId}</code></dd></div>
         {municipal.historicalNames.length > 0 && <div><dt>Earlier name</dt><dd>{municipal.historicalNames.join(', ')}</dd></div>}
       </dl>
@@ -402,7 +425,7 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
   const story = useUnbcOriginsRequested()
   return (
     <article className="identity-detail">
-      <nav className="gallery__crumbs" aria-label="Gallery"><button type="button" className="gallery__back" onClick={() => onOpenRegister()}>← Collection register</button><span aria-hidden="true">/</span><span aria-current="page">{subject.label}</span></nav>
+      <nav className="gallery__crumbs" aria-label="Gallery"><button type="button" className="gallery__back" onClick={() => onOpenRegister(subject.regionalDistrict ? { family: subject.family } : undefined)}>← {subject.regionalDistrict ? 'Regional districts register' : 'Collection register'}</button><span aria-hidden="true">/</span><span aria-current="page">{subject.label}</span></nav>
 
       <header className="identity-hero">
         <p className="identity-eyebrow">{family?.label ?? 'Identity subject'} · {kind}</p>
@@ -467,7 +490,8 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
         </div>
 
         <aside className="identity-layout__side">
-          {municipal && <MunicipalRecords subject={subject} />}
+          {municipal && <MunicipalRecords subject={subject} onOpenSubject={onOpenSubject} />}
+          <RegionalDistrictMembers subject={subject} onOpenSubject={onOpenSubject} />
           {groups.length > 0 && (
             <section className="identity-card" aria-labelledby="identity-relationships">
               <h3 id="identity-relationships">Connections</h3>

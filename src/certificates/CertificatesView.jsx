@@ -36,11 +36,11 @@ const CertificateArtwork = ({ reconstruction = false }) => (
     <figure className="panel certificates__figure">
       <div className="certificates__plate">
         <img src={reconstruction ? reconstructedCertificate : specimen} width="722" height="550" alt={reconstruction
-          ? 'Reconstructed Certificate of Training with fitted lettering and a green guilloché border'
+          ? 'Reconstructed Certificate of Training with fitted lettering, a green guilloché border, and an oval dogwood seal at lower left'
           : 'Certificate of Training with a green guilloché border and the department’s oval dogwood seal'} />
       </div>
       <figcaption>{reconstruction
-        ? 'The rebuilt guilloché frame surrounds the fitted lettering. The seal and ministerial signature appear in the specimen.'
+        ? 'The gallery’s dogwood oval is scaled and coloured to match the seal on the 1961 specimen.'
         : 'Supplied reference image of the 1961 certificate.'}</figcaption>
     </figure>
     <section className="panel certificates__details" aria-labelledby="certificate-details">
@@ -57,7 +57,7 @@ const CertificateArtwork = ({ reconstruction = false }) => (
         {reconstruction
           ? <a href={reconstructedCertificate} download className="button button--primary">Download reconstruction SVG</a>
           : <a href={specimen} download className="button">Download specimen PNG</a>}
-        <SiteLink to={{ view: 'gallery', logos: 'recreation-conservation' }}>Recreation and Conservation logos</SiteLink>
+        <SiteLink to={{ view: 'gallery', logos: 'recreation-conservation', mark: 'drc-dogwood-oval-1970' }}>View the dogwood oval in the gallery</SiteLink>
       </div>
     </section>
   </div>

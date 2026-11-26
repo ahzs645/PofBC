@@ -6,6 +6,7 @@ import { RURAL_HEALTH_BODIES, ruralConnectionsOf } from './ruralHealth.js'
 import { FORREX_RELATED_BODY } from './forrex.js'
 import { SCHOOL_RELATED_BODIES } from '../schools/integration.js'
 import { TOURISM_RELATED_BODIES } from '../gallery/tourismPartners.js'
+import { REGIONAL_DISTRICT_RELATED_BODIES } from '../gallery/regionalDistricts.js'
 
 export const RELATED_BODIES_AS_OF = '2026-11-15'
 
@@ -87,6 +88,7 @@ const university = (id, name, shortName, officialUrl, slug) => ({
 export const RELATED_BODIES = [
   ...SCHOOL_RELATED_BODIES,
   ...TOURISM_RELATED_BODIES,
+  ...REGIONAL_DISTRICT_RELATED_BODIES,
   FORREX_RELATED_BODY,
   ...RURAL_HEALTH_BODIES,
   {

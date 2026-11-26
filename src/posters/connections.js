@@ -12,6 +12,7 @@
 // CERTAINTY's keys: what the relationship rests on, not how interesting it is.
 
 import { ASHTRAY_REGULATIONS, ASHTRAY_ROAD_MARKER } from './forest-service/ashtray.js'
+import { bearAwareGalleryId, bearAwareId, bearAwareMarkId, bearAwareTitle, bearAwareWindowId } from '../initiatives/bearAwareArtwork.js'
 import { POSTERS } from './catalogue.js'
 
 /** The overview's sections, in the order shown. */
@@ -151,6 +152,20 @@ const BRANCH = {
 // ── The connections, by piece ───────────────────────────────────────────────────────────────────
 
 const BY_POSTER = {
+  [bearAwareWindowId]: [
+    {
+      group: 'issuer', rel: 'Campaign', label: bearAwareTitle,
+      note: 'The program awarded the sign to participants who met the Bear Aware checklist criteria.',
+      to: { view: 'initiatives', initiative: bearAwareId, section: 'sign-and-checklists', record: bearAwareWindowId },
+      certainty: 'documented'
+    },
+    {
+      group: 'marks', rel: 'Related campaign mark', label: 'Be Bear Aware paw lockup',
+      note: 'The checklist combines the paw with stacked campaign lettering.',
+      to: { view: 'gallery', logos: bearAwareGalleryId, mark: bearAwareMarkId },
+      certainty: 'documented'
+    }
+  ],
   'super-natural-spring': [
     {
       group: 'issuer', rel: 'Advertises', label: 'Province of British Columbia',

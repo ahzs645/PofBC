@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto'
 import { COLLECTING } from './collectingData.js'
 import { COLLECTED_BODIES } from './collectedData.js'
 import { ACQUIRED_VECTORS } from './acquiredVectorData.js'
+import { LOGO_BRAND_GUIDELINES } from './logoBrandGuidelines.js'
 import { COLLECTED_COLLECTIONS, CONTINUATIONS, assetUrl, collectedEntriesOf, nodesOf, parseSpecimenDate, researchLabel } from './collectedCollections.js'
 import { GALLERY_COLLECTIONS, collectionById, collectionOfNode, entriesOf, entriesOfNode, findGalleryEntry } from './collections.js'
 import { COLLECTED_PALETTES, paletteFor } from './collectedPalettes.js'
@@ -91,14 +92,16 @@ test('a matched source vector opens as the default under the existing design lin
   assert.equal(findGalleryEntry('bcgs-survey-seal').asset.format, 'png')
 })
 
-test('active collections lead with their current or latest documented logo', () => {
+test('active collection covers prefer verified vectors of the current identity', () => {
   const covers = {
     'collected-geoscience-bc': 'geoscience-bc-three-colours',
     'collected-sub-british-columbia-geological-survey': 'bcgs-founding-year-seal',
     'collected-legislative-library-bc': 'legislative-library-digital-collections',
-    'collected-legislative-assembly': 'legislative-assembly-website-signature',
+    'collected-legislative-assembly': 'legislative-assembly-dome-signature',
     'collected-bc-assessment': 'bc-assessment-svg',
-    'collected-municipality-fort-st-john': 'source-municipal-fort-st-john-website-logo',
+    'collected-municipality-fort-st-john': 'municipal-fort-st-john-ocp-2025-stacked',
+    'collected-municipality-prince-george': 'municipal-prince-george-annual-report-2025-horizontal',
+    'collected-municipality-prince-rupert': 'municipal-prince-rupert-community-assessment-2024',
     'collected-sub-bc-cancer': 'bc-cancer-phsa',
     'tourism-bc-destination-bc': 'source-destination-bc-destination-bc-svg'
   }
@@ -116,6 +119,34 @@ test('active collections lead with their current or latest documented logo', () 
   assert.equal(regulator.eras[0].entries[0].owner, 'oil-and-gas-commission')
 })
 
+test('Prince George keeps the two horizontal colourways under the same vector cover', () => {
+  const collection = collectionById('collected-municipality-prince-george')
+  const [cover] = entriesOf(collection)
+  assert.equal(collection.cover, cover.id)
+  assert.equal(cover.years, 'Seen June 2026')
+  assert.deepEqual(cover.versions.map(({ id }) => id), [
+    cover.id, 'municipal-prince-george-annual-report-2025-horizontal-white'
+  ])
+  assert.ok(cover.versions.every(({ isVector }) => isVector))
+  assert.equal(findGalleryEntry(cover.versions[1].id), cover)
+  assert.equal(findGalleryEntry('source-municipal-prince-george-website-logo').asset.format, 'png')
+})
+
+test('Fort St. John features the stacked vector and preserves each documented specimen', () => {
+  const collection = collectionById('collected-municipality-fort-st-john')
+  const specimens = entriesOf(collection)
+  assert.deepEqual(specimens.map(({ id, asset, years }) => [id, asset.format, years]), [
+    ['municipal-fort-st-john-ocp-2025-stacked', 'svg', 'Seen 2025'],
+    ['fort-st-john-energetic-black-2012', 'svg', 'Seen 2012'],
+    ['fort-st-john-compass-2013', 'png', 'Seen 2013'],
+    ['source-municipal-fort-st-john-website-logo', 'png', 'Logo dates unestablished']
+  ])
+  for (const entry of specimens) {
+    assert.equal(findGalleryEntry(entry.id), entry)
+    assert.equal(entry.versions, undefined)
+  }
+})
+
 test('the Survey separates its current and earlier seals from anniversary artwork', () => {
   const survey = collectionById('collected-sub-british-columbia-geological-survey')
   const sections = survey.artworkSections.map(({ label, entries }) => [label, entries.map(({ id }) => id)])
@@ -131,20 +162,34 @@ test('the Survey separates its current and earlier seals from anniversary artwor
 })
 
 test('publication vectors keep existing design links, source files and colourways', () => {
-  for (const [id, { asset, prefer }] of Object.entries(ACQUIRED_VECTORS)) {
+  for (const [id, { asset, alternates = [], prefer }] of Object.entries(ACQUIRED_VECTORS)) {
     const entry = findGalleryEntry(id)
     assert.equal(entry.id, id)
-    assert.equal(findGalleryEntry(asset.id), entry)
-    assert.ok(entry.versions.some((version) => version.id === asset.id && version.isVector), asset.id)
     assert.ok(entry.versions.some((version) => !version.isVector), id)
     const vectorDefault = prefer || entry.asset.derivedFrom === asset.id
     assert.equal(entry.asset.isVector, vectorDefault, id)
     if (vectorDefault) assert.equal(entry.identity.provenance, 'extracted_from_official_vector', id)
-    assert.match(asset.sourcePage, new RegExp('#page=' + asset.extraction.page + '$'), asset.id)
 
-    const svg = readFileSync(new URL(`public/${asset.file}`, root))
-    assert.equal(createHash('sha256').update(svg).digest('hex'), asset.sha256, asset.file)
-    assert.doesNotMatch(svg.toString(), /<(?:\w+:)?(?:image|script|foreignObject)\b|data:image/i, asset.file)
+    for (const version of [asset, ...alternates]) {
+      assert.equal(findGalleryEntry(version.id), entry)
+      assert.ok(entry.versions.some((item) => item.id === version.id && item.isVector), version.id)
+      if (version.extraction.page) assert.equal(new URL(version.sourcePage).hash, `#page=${version.extraction.page}`, version.id)
+      assert.ok(version.publisher && version.sourceLocator && version.extraction.method, version.id)
+
+      const svg = readFileSync(new URL(`public/${version.file}`, root))
+      assert.equal(createHash('sha256').update(svg).digest('hex'), version.sha256, version.file)
+      assert.doesNotMatch(svg.toString(), /<(?:\w+:)?(?:image|script|foreignObject)\b|data:image/i, version.file)
+    }
+  }
+})
+
+test('brand guidelines link to the design across its artwork versions', () => {
+  for (const [id, guide] of Object.entries(LOGO_BRAND_GUIDELINES)) {
+    const entry = findGalleryEntry(id)
+    assert.equal(entry.id, id)
+    assert.deepEqual(entry.brandGuidelines, guide)
+    assert.match(guide.url, /^https:\/\//)
+    for (const version of entry.versions ?? []) assert.equal(findGalleryEntry(version.id).brandGuidelines, guide)
   }
 })
 

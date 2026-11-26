@@ -93,7 +93,7 @@ test('municipal links point at existing salary, council-pay and register records
   assert.deepEqual(abbotsford.filter((grant) => grant.relation === 'predecessor').map((grant) => grant.recipient).sort(), ['District of Abbotsford', 'District of Matsqui'])
 })
 
-test('collected municipal logos are official website files, verified against the audit where it recorded them', () => {
+test('municipal artwork retains the audited official website file and attributes other versions to their sources', () => {
   assert.equal(MUNICIPAL_IDENTITY_BODIES.length, 21)
   const registry = json('../../research/identity/municipalities-2026-11-15/municipalities.json').municipalities
   for (const body of MUNICIPAL_IDENTITY_BODIES) {
@@ -105,12 +105,19 @@ test('collected municipal logos are official website files, verified against the
     const audited = body.assets.find((asset) => asset.sourceUrl === lead.asset)
     assert.ok(audited, `${body.id}: the audit's located file is not among the collected ones`)
     assert.equal(audited.sha256, lead.sha256, `${body.id}: bytes differ from the audit's record`)
+    assert.match(audited.evidenceType, /^official-website-(vector|raster)$/)
+    assert.equal(audited.reconstruction, false)
+    assert.match(audited.dateNote, /not (?:a logo|an) adoption date/)
     for (const asset of body.assets) {
-      // Website files and native vector artwork from attributable PDFs.
-      assert.match(asset.evidenceType, asset.search || asset.extraction?.page
-        ? /^native-pdf-vector-extraction/ : /^official-website-(vector|raster)$/)
-      assert.equal(asset.reconstruction, false)
-      assert.match(asset.dateNote, /not (?:a logo|an) adoption date/)
+      assert.match(asset.sourceUrl, /^https:\/\//, asset.id)
+      if (asset.reconstruction) {
+        assert.equal(asset.evidenceType, 'vector-reconstruction', asset.id)
+        assert.ok(body.assets.some(({ id, reconstruction }) => id === asset.reconstructionOf && !reconstruction), asset.id)
+      } else if (asset.search || asset.extraction?.page) {
+        assert.match(asset.evidenceType, /^(native-pdf-vector-extraction(?:-with-converted-gradients)?|official-publication-raster-extraction)$/, asset.id)
+      } else {
+        assert.match(asset.evidenceType, /^official-website-(vector|raster)$/, asset.id)
+      }
     }
   }
   // Previously blocked or guide-only leads can advance only when their own file is accepted.

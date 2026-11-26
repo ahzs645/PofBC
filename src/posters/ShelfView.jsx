@@ -29,7 +29,8 @@ import { holdScroll } from '../site/holdScroll.js'
  *                                   among themselves. A piece whose card says `unlisted` is left off
  *                                   the same way, alone.
  * @param {Function} props.itemsOf   A series' piece ids, in order.
- * @param {object} props.items       Each piece's catalogue card, by id.
+ * @param {object} props.items       Each piece's catalogue card, by id. `variantOf` points to a card in the same series.
+ *                                   Members of that group have a `variantLabel` for the viewer's picker.
  * @param {object} props.loaders     Each piece's loader: resolves to its drawing and parts.
  * @param {object} props.thumbnails  Each piece's card image URL.
  * @param {Array}  [props.facets]    [{ key, label }]: card fields the shelf can be filtered by.
@@ -52,10 +53,11 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
   const [filters, setFilters] = useState(() => savedShelf?.view === view ? savedShelf.filters ?? {} : {})
   const parentNavigate = useNavigate()
   // The shelf's own series and pieces; an unlisted one is reached only by its address.
-  const shelved = (entry) => itemsOf(entry).filter((id) => !items[id].unlisted)
+  const shelved = (entry) => itemsOf(entry).filter((id) => !items[id].unlisted && !items[id].variantOf)
   const listed = series.filter((entry) => !entry.unlisted && shelved(entry).length)
   const order = listed.flatMap(shelved)
   const seriesOf = (id) => series.find((entry) => itemsOf(entry).includes(id)) ?? null
+  const cardIdOf = useCallback((id) => items[id]?.variantOf ?? id, [items])
   // The pieces stepped through from one: the shelf's, or an unlisted series' own, among themselves.
   const runOf = (id) => {
     const own = seriesOf(id)
@@ -71,9 +73,9 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
     if (id && part && part !== 'overview') url.searchParams.set('part', part)
     else url.searchParams.delete('part')
     if (!id) { url.searchParams.delete('story'); url.searchParams.delete('3d') }
-    if (entering) openCard(url, id, { layout, filters })
+    if (entering) openCard(url, cardIdOf(id), { layout, filters })
     else writeHistory(url, { replace: true })
-  }, [openCard, view, param, layout, filters])
+  }, [openCard, cardIdOf, view, param, layout, filters])
 
   // Load the open piece's drawing; keep it while only the part changes. Moving from one piece to
   // another keeps the last one on screen until the next is ready, so the switch doesn't flash a
@@ -87,7 +89,7 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
         if (gone) return
         setModule({ id: place.id, ...loaded })
         const run = runOf(place.id)
-        const at = run.indexOf(place.id)
+        const at = run.indexOf(cardIdOf(place.id))
         // A heavy drawing (`prefetch: false` in its card) is left until it is asked for.
         for (const id of at < 0 ? [] : [run[at - 1], run[at + 1]]) if (id && items[id].prefetch !== false) loaders[id]().catch(() => {})
       })
@@ -105,18 +107,23 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
   }, [go, parentNavigate, view, param, items, place.id])
 
   const exit = useCallback(() => {
-    closeCard(place.id, () => go({ id: null, part: 'overview' }))
-  }, [closeCard, go, place.id])
+    closeCard(cardIdOf(place.id), () => go({ id: null, part: 'overview' }))
+  }, [closeCard, go, cardIdOf, place.id])
 
   const meta = place.id ? items[place.id] : null
   // What's on screen: the piece asked for once it has loaded, until then the one before it.
   const shown = meta && module ? items[module.id] : null
   const switching = Boolean(shown && shown.id !== meta.id)
   const run = shown ? runOf(shown.id) : order
-  const index = shown ? run.indexOf(shown.id) : -1
+  const shownSeries = shown ? seriesOf(shown.id) : null
+  const cardId = shown ? cardIdOf(shown.id) : null
+  const index = run.indexOf(cardId)
   const step = (id) => id && { title: items[id].title, open: () => go({ id, part: 'overview' }) }
   // A piece unlisted alone stands alone: no stepping to the shelf's pieces either side of it.
-  const shelf = index < 0 ? null : { list: run.map((id) => ({ id, title: items[id].title })), index, open: (id) => go({ id, part: 'overview' }) }
+  const shelf = index < 0 ? null : { list: run.map((id) => ({ id, title: items[id].title })), index, value: cardId, open: (id) => go({ id, part: 'overview' }) }
+  const variants = shown?.variantLabel ? itemsOf(shownSeries)
+    .filter((id) => cardIdOf(id) === cardId)
+    .map((id) => ({ value: id, label: items[id].variantLabel })) : []
 
   // While a piece is open over the shelf, the shelf cannot be tabbed into or read from behind it.
   useEffect(() => {
@@ -214,7 +221,7 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
           <PosterViewer
             key={shown.id}
             meta={shown}
-            series={seriesOf(shown.id)}
+            series={shownSeries}
             module={module}
             part={switching ? 'overview' : place.part}
             onPart={(part) => go({ id: shown.id, part })}
@@ -224,6 +231,8 @@ export const ShelfView = ({ view, param, title, intro, noun, series, itemsOf, it
             previous={index < 0 ? null : step(run[index - 1])}
             next={index < 0 ? null : step(run[index + 1])}
             shelf={shelf}
+            variants={variants.length > 1 ? variants : undefined}
+            onVariant={(id) => go({ id, part: 'overview' })}
           />
         </div>
       )}

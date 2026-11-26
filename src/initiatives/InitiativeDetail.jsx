@@ -83,6 +83,13 @@ const Links = ({ links = [] }) => links.length > 0 && <ul className="initiative_
   <li key={`${link.url}-${index}`}><a href={link.url} target={link.url.startsWith('#') || link.url.startsWith('?') ? undefined : '_blank'} rel="noreferrer">{link.label}<Arrow /></a>{link.note && <small>{link.note}</small>}</li>
 )}</ul>
 
+const SpecimenDownload = ({ image }) => (
+  <a className="initiative__download" href={assetUrl(fileOf(image))} download>
+    Download {image.downloadLabel ?? (fileOf(image).endsWith('.svg') ? (image.evidenceType === 'vector-reconstruction' ? 'reconstructed SVG' : 'source vector') : 'source image')}
+    <span aria-hidden="true">↓</span>
+  </a>
+)
+
 const SpecimenDialog = ({ item, requestedRecord, onClose, textOnly }) => {
   const { initiative } = useInitiative()
   const dialog = useRef(null)
@@ -99,16 +106,30 @@ const SpecimenDialog = ({ item, requestedRecord, onClose, textOnly }) => {
     return () => { if (element?.open) element.close() }
   }, [])
   const image = images[selected] ?? images[0]
+  const compare = item.compareSpecimens && !textOnly && images.length === 2
   return <dialog ref={dialog} className="initiative__dialog" aria-labelledby="initiative-dialog-title" onCancel={onClose}
     onClick={(event) => { if (event.target === event.currentTarget) onClose() }}>
     <div className="initiative__dialog-inner">
       <header className="initiative__dialog-head"><div><p className="initiative__eyebrow">{initiative.title} initiative</p><h2 id="initiative-dialog-title">{item.title}</h2></div><button type="button" className="initiative__close" onClick={onClose} aria-label="Close record">×</button></header>
       <Status item={item} textOnly={textOnly} />
-      {!textOnly && <Visual item={item} image={image} large />}
-      <SpecimenProvenance image={image} />
-      {images.length > 1 && <div className="initiative__specimen-picker" role="group" aria-label="Choose a specimen">{images.map((specimen, index) =>
-        <button key={fileOf(specimen)} type="button" aria-pressed={selected === index} title={specimen.title ?? specimen.label} onClick={() => setSelected(index)}>{specimen.shortLabel ?? (specimen.label ?? specimen.title ?? specimen.date ?? `Specimen ${index + 1}`).slice(commonPrefix.length)}</button>
-      )}</div>}
+      {compare ? (
+        <div className="initiative__comparison">
+          {images.map((specimen) => (
+            <section key={fileOf(specimen)}>
+              <h3>{specimen.label}</h3>
+              <Visual item={item} image={specimen} large />
+              <SpecimenProvenance image={specimen} />
+              <SpecimenDownload image={specimen} />
+            </section>
+          ))}
+        </div>
+      ) : <>
+        {!textOnly && <Visual item={item} image={image} large />}
+        <SpecimenProvenance image={image} />
+        {images.length > 1 && <div className="initiative__specimen-picker" role="group" aria-label="Choose a specimen">{images.map((specimen, index) =>
+          <button key={fileOf(specimen)} type="button" aria-pressed={selected === index} title={specimen.title ?? specimen.label} onClick={() => setSelected(index)}>{specimen.shortLabel ?? (specimen.label ?? specimen.title ?? specimen.date ?? `Specimen ${index + 1}`).slice(commonPrefix.length)}</button>
+        )}</div>}
+      </>}
       <p className="initiative__dialog-description">{item.description}</p>
       {item.current && <section><h3>Current status</h3><p className="initiative__date-note">{item.current}</p></section>}
       {item.dateNote && <p className="initiative__date-note">{item.dateNote}</p>}
@@ -117,7 +138,7 @@ const SpecimenDialog = ({ item, requestedRecord, onClose, textOnly }) => {
       {textOnly && <Links links={item.links} />}
       <Sources references={item.sourceRefs} />
       {!textOnly && <Links links={item.links} />}
-      {image && <a className="initiative__download" href={assetUrl(fileOf(image))} download>Download {image.downloadLabel ?? (fileOf(image).endsWith('.svg') ? (image.evidenceType === 'vector-reconstruction' ? 'reconstructed SVG' : 'source vector') : 'source image')}<span aria-hidden="true">↓</span></a>}
+      {!compare && image && <SpecimenDownload image={image} />}
     </div>
   </dialog>
 }

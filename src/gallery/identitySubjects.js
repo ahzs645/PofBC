@@ -27,6 +27,7 @@ import { FAMILY_COUNCIL_SUBJECT } from './councilForTheFamily.js'
 import { ALCOHOL_AND_DRUG_COMMISSION_SUBJECT } from './alcoholAndDrugCommission.js'
 import { RECONCILED_FAMILIES, RECONCILED_SUBJECTS } from './reconciledSubjects.js'
 import { MUNICIPAL_FAMILIES, MUNICIPAL_KIND_LABELS, MUNICIPAL_SUBJECTS } from './municipalSubjects.js'
+import { REGIONAL_DISTRICT_FAMILY, REGIONAL_DISTRICT_SUBJECTS } from './regionalDistricts.js'
 import { RECOVERED_IDENTITY_BODIES } from './recoveredIdentityData.js'
 import { SCHOOL_IDENTITY_SUBJECTS } from '../schools/integration.js'
 import { SCHOOL_FAMILY } from '../schools/districts.js'
@@ -69,6 +70,7 @@ export const IDENTITY_KIND_LABELS = {
   "municipal-service": "Municipal service",
   "crown-corporation": "Crown corporation",
   "regional-government": "Regional government",
+  "regional-district": "Regional district",
   "government-branch": "Government branch",
   "agency": "Agency",
   "nonprofit-agency": "Nonprofit agency",
@@ -130,7 +132,7 @@ const CURATED_FAMILIES = [
   {
     "id": "regional-government",
     "label": "Regional government",
-    "description": "Metro Vancouver and its service identities, with historical GVRD evidence kept distinct."
+    "description": "Regional service identities associated with Metro Vancouver."
   },
   {
     "id": "liquor-distribution",
@@ -1105,40 +1107,6 @@ const CURATED_SUBJECTS = [
       }
     ],
     "identityStatus": "distinct-unconfirmed"
-  },
-  {
-    "id": "metro-vancouver",
-    "label": "Metro Vancouver",
-    "name": "Metro Vancouver",
-    "kind": "regional-government",
-    "family": "regional-government",
-    "graphNode": "metro-vancouver",
-    "aliases": [
-      "Greater Vancouver Regional District",
-      "GVRD",
-      "Metro Vancouver Regional District",
-      "MVRD"
-    ],
-    "collectionIds": [],
-    "salaryEmployers": [
-      "metro-vancouver"
-    ],
-    "priority": 1,
-    "scope": "core",
-    "sources": [
-      {
-        "title": "Metro Vancouver brand portal",
-        "url": "https://metrovancouver.org/media-room/metro-vancouver-brand"
-      },
-      {
-        "title": "Metro Vancouver brand book",
-        "url": "https://metrovancouver.org/media-room/Documents/metro-vancouver-brand-book.pdf",
-        "note": "Brand-name adoption is distinct from the regional district legal-name change."
-      }
-    ],
-    "nextAction": "Document approved current variants and acquire separately sourced GVRD-era specimens.",
-    "note": "Brand adoption and the legal regional-district renaming are separate chronology fields.",
-    "relations": []
   },
   {
     "id": "metro-vancouver-regional-parks",
@@ -3682,9 +3650,9 @@ const CURATED_SUBJECTS = [
 
 // The reconciled gallery owners and the municipal registry follow the curated subjects.
 // Municipalities come before the historical-research family in the register.
-export const IDENTITY_FAMILIES = [...CURATED_FAMILIES.slice(0, -1), ...RECONCILED_FAMILIES, ...MUNICIPAL_FAMILIES, AGRICULTURAL_PARTNER_FAMILY, TOURISM_PARTNER_FAMILY, AIRPORT_IDENTITY_FAMILY, SCHOOL_FAMILY, POSTSECONDARY_FAMILY, CURATED_FAMILIES.at(-1)]
+export const IDENTITY_FAMILIES = [...CURATED_FAMILIES.slice(0, -1), ...RECONCILED_FAMILIES, ...MUNICIPAL_FAMILIES, REGIONAL_DISTRICT_FAMILY, AGRICULTURAL_PARTNER_FAMILY, TOURISM_PARTNER_FAMILY, AIRPORT_IDENTITY_FAMILY, SCHOOL_FAMILY, POSTSECONDARY_FAMILY, CURATED_FAMILIES.at(-1)]
 const recoveredById = new Map(RECOVERED_IDENTITY_BODIES.map((body) => [body.id, body]))
-export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...RURAL_HEALTH_SUBJECTS, ENDORSED_2019_SUBJECT, ASI_SUBJECT, ...LIQUOR_SUBJECTS, ...SURVEY_AND_LIBRARY_SUBJECTS, CLEANBC_SUBJECT, LEGISLATIVE_ASSEMBLY_SUBJECT, ...YOUTH_SUBJECTS, ...AGRICULTURAL_PARTNER_SUBJECTS, ...TOURISM_PARTNER_SUBJECTS, ...AIRPORT_IDENTITY_SUBJECTS, ...HEALTH_COUNCIL_SUBJECTS, ...ADDITIONAL_COUNCIL_SUBJECTS, ...FOREST_GENETICS_SUBJECTS, SIFERP_SUBJECT, FORREX_SUBJECT, FAMILY_COUNCIL_SUBJECT, ALCOHOL_AND_DRUG_COMMISSION_SUBJECT, PARKS_FOUNDATION_SUBJECT, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS, ...SCHOOL_IDENTITY_SUBJECTS, ...POSTSECONDARY_SUBJECTS]
+export const IDENTITY_SUBJECTS = [...CURATED_SUBJECTS, ...RURAL_HEALTH_SUBJECTS, ENDORSED_2019_SUBJECT, ASI_SUBJECT, ...LIQUOR_SUBJECTS, ...SURVEY_AND_LIBRARY_SUBJECTS, CLEANBC_SUBJECT, LEGISLATIVE_ASSEMBLY_SUBJECT, ...YOUTH_SUBJECTS, ...AGRICULTURAL_PARTNER_SUBJECTS, ...TOURISM_PARTNER_SUBJECTS, ...AIRPORT_IDENTITY_SUBJECTS, ...HEALTH_COUNCIL_SUBJECTS, ...ADDITIONAL_COUNCIL_SUBJECTS, ...FOREST_GENETICS_SUBJECTS, SIFERP_SUBJECT, FORREX_SUBJECT, FAMILY_COUNCIL_SUBJECT, ALCOHOL_AND_DRUG_COMMISSION_SUBJECT, PARKS_FOUNDATION_SUBJECT, ...RECONCILED_SUBJECTS, ...MUNICIPAL_SUBJECTS, ...REGIONAL_DISTRICT_SUBJECTS, ...SCHOOL_IDENTITY_SUBJECTS, ...POSTSECONDARY_SUBJECTS]
   .map((subject) => recoveredById.get(subject.id)?.nextAction
     ? { ...subject, nextAction: recoveredById.get(subject.id).nextAction }
     : subject)

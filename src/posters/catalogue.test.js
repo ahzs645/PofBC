@@ -21,11 +21,15 @@ import { CARDS } from '../cards/catalogue.js'
 import { PINS } from '../pins/catalogue.js'
 import { CERTAINTY, GROUPS, MARK_OBJECTS, connectedPosters, connectionsOf, groupedConnections, objectsForLogo, postersForLogo, postersForPatch } from './connections.js'
 
+import { bearAwareWindowId, bearAwareWindowSvg } from '../initiatives/bearAwareArtwork.js'
+import { initiativeById, loadInitiative } from '../initiatives/initiatives.js'
+import { bearAwareWindow } from '../signs/bearAwareWindow.js'
 import { CARECARD_POSTER } from './carecard/poster.js'
 import { SPRING_POSTER } from './super-natural-spring/poster.js'
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
 const DRAWINGS = {
+  [bearAwareWindowId]: read(`../../public/${bearAwareWindowSvg}`),
   'super-natural-spring': read('./super-natural-spring/spring-visitors.svg'),
   'new-carecard': read('./carecard/new-carecard.svg'),
   'coastal-forest': read('./coastal-forest/poster.svg'),
@@ -66,6 +70,8 @@ const assertPlace = (to, where) => {
   } else if (to.view === 'internal') {
     assert.equal(to.internal, 'forests')
     if (to['internal-logo']) assert.ok(internal.has(to['internal-logo']), `${where}: no logo ${to['internal-logo']}`)
+  } else if (to.view === 'initiatives') {
+    assert.ok(initiativeById(to.initiative), `${where}: no initiative ${to.initiative}`)
   } else if (to.view === 'gallery') {
     assert.ok(galleries.has(to.logos), `${where}: no logo collection ${to.logos}`)
   } else if (to.view === 'government') {
@@ -89,6 +95,7 @@ const assertPlace = (to, where) => {
 // Every poster as the viewer sees it: its parts, the order they are stepped through, and which of
 // them are hotspots.
 const DEFINITIONS = {
+  [bearAwareWindowId]: bearAwareWindow,
   'super-natural-spring': SPRING_POSTER,
   'new-carecard': CARECARD_POSTER,
   'coastal-forest': { parts: COASTAL_PARTS, order: COASTAL_ORDER, regions: COASTAL_REGIONS.map(({ id }) => id) },
@@ -99,7 +106,7 @@ const DEFINITIONS = {
   ...EXPO_86_POSTERS
 }
 // The posters whose panels are data.
-const DATA_POSTERS = { 'super-natural-spring': SPRING_POSTER, 'new-carecard': CARECARD_POSTER, ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
+const DATA_POSTERS = { [bearAwareWindowId]: bearAwareWindow, 'super-natural-spring': SPRING_POSTER, 'new-carecard': CARECARD_POSTER, ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
 
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
 const partsIn = (selector) => [...selector.matchAll(/\[data-part="([\w-]+)"\]/g)].map((m) => m[1])
@@ -124,11 +131,8 @@ test('every series lists posters that exist, and every poster is in the series i
   for (const id of listed) assert.equal(seriesOf(id).id, POSTERS[id].series)
 })
 
-test('the shelf lists every poster except the unlisted leaflet', () => {
-  const unlisted = 'beware-these-alien-invaders'
-  assert.ok(POSTERS[unlisted])
-  assert.deepEqual(listedPosterIds(), posterIds().filter((id) => id !== unlisted))
-  assert.deepEqual(neighbours(unlisted), { previous: null, next: null })
+test('the shelf lists every poster in catalogue order', () => {
+  assert.deepEqual(listedPosterIds(), posterIds())
 })
 
 test('every poster has a drawing whose viewBox is the catalogue’s', () => {
@@ -277,7 +281,7 @@ test('every piece is worded for what it is made of, and its exports follow', () 
   }
 })
 
-test('every connection says what it is and what it rests on, and leads somewhere that exists', () => {
+test('every connection says what it is and what it rests on, and leads somewhere that exists', async () => {
   assert.deepEqual(connectedPosters().sort(), Object.keys(POSTERS).sort(), 'a piece has no connections')
   const groups = new Set(GROUPS.map(({ id }) => id))
   for (const id of connectedPosters()) {
@@ -292,6 +296,11 @@ test('every connection says what it is and what it rests on, and leads somewhere
       assert.ok(CERTAINTY[entry.certainty], `${where}: certainty`)
       assert.ok(!(entry.to && entry.href), `${where}: both a place and a page`)
       if (entry.to) assertPlace(entry.to, where)
+      if (entry.to?.view === 'initiatives' && entry.to.record) {
+        const initiative = await loadInitiative(entry.to.initiative)
+        const section = initiative.sections.find(({ id }) => id === entry.to.section)
+        assert.ok(section?.records.some(({ id }) => id === entry.to.record), where)
+      }
       if (entry.href) assert.match(entry.href, /^https:\/\//, `${where}: href`)
       if (entry.record) assert.ok(RECORDS[entry.record] && !entry.to && !entry.href, `${where}: no record ${entry.record}`)
       if (entry.to?.view === 'posters') assert.notEqual(entry.to.poster === id && !entry.to.part, true, `${where}: leads to itself`)
@@ -365,7 +374,7 @@ test('the shelf can be filtered: every card names its issuer, subject and format
   }
   for (const { key } of FACETS) {
     const values = new Set(listedPosterIds().map((id) => POSTERS[id][key]))
-    assert.ok(values.size > 1 && values.size <= 9, `${key}: ${values.size} values is no use as a filter`)
+    assert.ok(values.size > 1 && values.size <= 10, `${key}: ${values.size} values is no use as a filter`)
   }
 })
 

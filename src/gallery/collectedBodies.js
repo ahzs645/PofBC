@@ -1,9 +1,12 @@
 import { RURAL_HEALTH_COLLECTIONS } from './ruralHealth.js'
 import { ASI_COLLECTION } from './advancedSystemsInstitute.js'
 import { groupSpecimen } from './groupedSpecimens.js'
+import { bearAwareSpecimens } from './bearAware.js'
 import { fireSmartSpecimens } from './fireSmart.js'
 import { ecosystemsAtRiskSpecimens } from './ecosystemsAtRisk.js'
+import { resWestSpecimens } from './resWest.js'
 import { educationProvinceWordmark } from '../initiatives/educationProvinceArtwork.js'
+import { environmentYouthCorpsSpecimens } from '../initiatives/environmentYouthCorpsArtwork.js'
 import { COLLECTED_BODIES, COLLECTED_SPECIMENS } from './collectedData.js'
 import { EXPANDED_IDENTITY_BODIES } from './expandedIdentityData.js'
 import { MUNICIPAL_IDENTITY_BODIES } from './municipalIdentityData.js'
@@ -21,6 +24,7 @@ import { FAMILY_COUNCIL_BODY } from './councilForTheFamily.js'
 import { ALCOHOL_AND_DRUG_COMMISSION_BODY } from './alcoholAndDrugCommission.js'
 import { IUS_BODY } from './iusCollectionData.js'
 import { SCHOOL_IDENTITY_BODIES } from '../schools/integration.js'
+import { REGIONAL_DISTRICT_BODIES } from './regionalDistricts.js'
 
 import { SURVEY_AND_LIBRARY_BODIES } from './geologicalSurveyAndLibrary.js'
 import { ENDORSED_2019 } from './endorsed2019.js'
@@ -46,7 +50,8 @@ const additionalBodies = [
   ...SURVEY_AND_LIBRARY_BODIES,
   CLEANBC_BODY, ENDORSED_2019,
   LEGISLATIVE_ASSEMBLY_BODY,
-  ...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES,
+  ...EXPANDED_IDENTITY_BODIES.filter(({ id }) => id !== 'metro-vancouver'),
+  ...REGIONAL_DISTRICT_BODIES, ...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES,
   ...SCHOOL_IDENTITY_BODIES, ...POSTSECONDARY_IDENTITY_BODIES, IUS_BODY, YOUTH_BODY, ...HEALTH_COUNCIL_BODIES, FAMILY_COUNCIL_BODY, ALCOHOL_AND_DRUG_COMMISSION_BODY
 ]
 
@@ -56,7 +61,7 @@ const withArtworkVersions = (record) => ({
     const recovery = ACQUIRED_VECTORS[design.id]
     if (!recovery) return [design]
 
-    const { asset, prefer, designLabel = design.designLabel ?? design.label } = recovery
+    const { asset, alternates = [], prefer, designLabel = design.designLabel ?? design.label } = recovery
     return [
       {
         ...design,
@@ -65,15 +70,15 @@ const withArtworkVersions = (record) => ({
         versionLabel: design.versionLabel ?? 'Published image',
         ...(prefer && !design.preferredVector ? { preferredVector: asset.id } : {})
       },
-      {
-        ...asset,
+      ...[asset, ...alternates].map((version) => ({
+        evidenceType: 'native-pdf-vector-extraction',
+        ...version,
         variantOf: design.id,
         format: 'svg',
         isVector: true,
         reconstruction: false,
-        observedDate: '2026-11-25',
-        evidenceType: 'native-pdf-vector-extraction'
-      }
+        observedDate: '2026-11-25'
+      }))
     ]
   }).flatMap((asset) => {
     const treatment = COLLECTED_VECTOR_VARIANTS[asset.id]
@@ -85,7 +90,7 @@ export const ALL_COLLECTED_BODIES = [...COLLECTED_BODIES, ...additionalBodies].m
   const guideArtwork = NORTHERN_TRAVEL_GUIDE_ARTWORK[record.id]
   return withArtworkVersions(guideArtwork ? { ...record, assets: [...record.assets, ...guideArtwork] } : record)
 })
-export const ALL_COLLECTED_SPECIMENS = [...COLLECTED_SPECIMENS, buyBCSpecimens, fireSmartSpecimens, ecosystemsAtRiskSpecimens]
+export const ALL_COLLECTED_SPECIMENS = [...COLLECTED_SPECIMENS, buyBCSpecimens, fireSmartSpecimens, ecosystemsAtRiskSpecimens, resWestSpecimens, bearAwareSpecimens, environmentYouthCorpsSpecimens]
   .map((record) => withArtworkVersions(record.program === 'stronger-bc' ? withStrongerBCGuide(record) : record))
 
 // Individual program specimens are shelved separately from bodies but share the display pipeline.

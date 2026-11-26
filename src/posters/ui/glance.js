@@ -4,7 +4,7 @@
 // a table of facts, the colours, a picture, links. At a glance the panel keeps the second kind and
 // holds the first back. Nothing is reordered, so the full reading is the blocks exactly as written.
 
-const scannable = (block) => typeof block !== 'string' && Boolean(block.facts || block.palette || block.figure || block.links)
+const scannable = (block) => typeof block !== 'string' && Boolean(block.facts || block.palette || block.figure || block.links || block.downloads)
 
 /**
  * The blocks shown at a glance, and how many are held back. Only the first table of facts is kept;

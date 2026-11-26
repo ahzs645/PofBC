@@ -391,9 +391,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
       },
       {
         "id": "municipal-coquitlam-treasury-report-2025-white",
-        "label": "Coquitlam: Stylized-Q wordmark",
-        "preferredVector": "municipal-coquitlam-bear-smart-blue-green",
-        "versionLabel": "White · Treasury Report SVG",
+        "label": "Coquitlam — Logo, white, 2025 Treasury Report",
         "file": "identity-municipal/coquitlam/treasury-report-2025-logo-white.svg",
         "format": "svg",
         "isVector": true,
@@ -418,12 +416,12 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "notes": "The white version, as on the website’s dark masthead, drawn as vector paths on the report’s cover. The website file adds a drop shadow; this does not.",
         "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
         "darkBackground": true,
-        "search": "municipal-logos-vector-2026-11-16"
+        "search": "municipal-logos-vector-2026-11-16",
+        "versionLabel": "Vector"
       },
       {
         "id": "municipal-coquitlam-treasury-report-2025",
         "label": "Coquitlam — Logo, blue, 2025 Treasury Report",
-        "versionLabel": "Solid blue · Treasury Report SVG",
         "file": "identity-municipal/coquitlam/treasury-report-2025-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -544,7 +542,8 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-11-16",
-    "notes": "The City of Fort St. John’s logo with “The Energetic City”, as served by its website. Its adoption date and earlier versions are not established.",
+    "cover": "municipal-fort-st-john-ocp-2025-stacked",
+    "notes": "The city’s “The Energetic City” signature is documented in horizontal and stacked layouts. The collection also includes a separate compass design from a visitor campaign.",
     "assets": [
       {
         "id": "source-municipal-fort-st-john-website-logo",
@@ -571,7 +570,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "dateNote": "The observation date and any upload-directory year are not a logo adoption date.",
         "observedDate": "2026-11-16",
         "evidenceType": "official-website-raster",
-        "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
+        "notes": "The horizontal colour signature places the symbol beside the name and tagline. A matching source vector remains unverified. The city’s Promotional Marketing and Giveaways Policy identifies its Graphics Standard Manual as available on request.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
         "darkBackground": false
       },
@@ -599,9 +598,20 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "dateNote": "Publication date, not an adoption date.",
         "observedDate": "2026-11-16",
         "evidenceType": "native-pdf-vector-extraction",
-        "notes": "The same logo and colours as the website, in the stacked lockup (arcs above the name). The website file is the horizontal lockup; no vector copy of it was found.",
+        "notes": "The stacked colour signature places the arc symbol above the name and tagline. It shares the city identity shown in the horizontal website logo and in the black signature in the 2012 travel guide.",
         "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
         "darkBackground": false,
+        "specimenDate": "2025",
+        "extraction": {
+          "pdfPage": 1,
+          "pdfBounds": [
+            476,
+            668,
+            587,
+            744
+          ],
+          "method": "Isolated the logo’s native PDF paths with PyMuPDF."
+        },
         "search": "municipal-logos-vector-2026-11-16"
       }
     ]
@@ -696,9 +706,7 @@ export const MUNICIPAL_IDENTITY_BODIES = [
       },
       {
         "id": "municipal-kamloops-annual-report-2025",
-        "label": "Kamloops: Canada’s Tournament Capital",
-        "preferredVector": "municipal-kamloops-bear-smart-black-tagline",
-        "versionLabel": "White tagline · Annual Report SVG",
+        "label": "Kamloops — Logo, 2025 Annual Report",
         "file": "identity-municipal/kamloops/annual-report-2025-logo.svg",
         "format": "svg",
         "isVector": true,
@@ -723,7 +731,8 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "notes": "The same logo as the website, with “Canada’s Tournament Capital” in white for a dark ground, as on the website.",
         "fidelityNote": "Replayed from the logo’s own marked-content block in the page’s content stream: every path and clip is the PDF’s own, and each of the 26 colour ramps is the PDF’s own axial shading written as an SVG linear gradient with the shading’s own axis and its 64 sampled colours as stops. CMYK converted to RGB by MuPDF. No tracing, redrawing or recolouring.",
         "darkBackground": true,
-        "search": "municipal-logos-vector-2026-11-16"
+        "search": "municipal-logos-vector-2026-11-16",
+        "versionLabel": "Vector"
       }
     ]
   },
@@ -890,11 +899,12 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-11-16",
-    "notes": "The City of Prince George’s 2024 refresh retained the fraise and confluence, as documented on page 14 of its annual report. The 2015 Northern British Columbia Travel Guide preserves the earlier blue emblem and black lettering.",
+    "cover": "municipal-prince-george-annual-report-2025-horizontal",
+    "notes": "The City’s 2024 refresh retained the fraise and confluence. The 2025 Annual Report shows the refreshed horizontal signature in PG Blue and white. Earlier signatures use a detailed fraise and different lettering.",
     "assets": [
       {
         "id": "source-municipal-prince-george-website-logo",
-        "label": "Prince George: Website logo",
+        "label": "Prince George — Stacked website signature",
         "file": "identity-municipal/prince-george/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -917,13 +927,15 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "dateNote": "The observation date and any upload-directory year are not a logo adoption date.",
         "observedDate": "2026-11-16",
         "evidenceType": "official-website-raster",
-        "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
+        "notes": "The refreshed website signature sets the fraise and confluence above three lines of PG Blue lettering. A matching source vector remains unverified. The City identifies a brand guide in its May 6, 2024 Council report, but the public agenda links to the presentation only.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
         "darkBackground": false
       },
       {
         "id": "municipal-prince-george-annual-report-2025-horizontal",
-        "label": "Prince George — Logo, horizontal, 2025 Annual Report",
+        "label": "Prince George — Horizontal signature",
+        "designLabel": "Prince George — Horizontal signature",
+        "versionLabel": "PG Blue · front cover",
         "file": "identity-municipal/prince-george/annual-report-2025-logo-horizontal.svg",
         "format": "svg",
         "isVector": true,
@@ -939,16 +951,171 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "supplied": false,
         "reconstruction": false,
         "publisher": "City of Prince George",
-        "sourceLocator": "PDF page 1 (cover)",
-        "sourceFile": null,
+        "sourceLocator": "PDF page 1, front cover",
+        "sourceFile": "2025 Annual Report",
         "sourceDate": "2025 Annual Report; PDF created 23 June 2026",
-        "dateNote": "Publication date, not an adoption date.",
+        "specimenDate": "June 2026",
         "observedDate": "2026-11-16",
         "evidenceType": "native-pdf-vector-extraction",
-        "notes": "The same logo and colour as the website, in the horizontal lockup (symbol beside the name). The website file is the stacked lockup; no vector copy of it was found.",
-        "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
-        "darkBackground": false,
+        "notes": "The 2025 Annual Report front cover sets the refreshed symbol beside three lines of lettering in PG Blue.",
+        "fidelityNote": "Isolated 22 native paths with PyMuPDF, preserving the PDF geometry and its colours as converted to RGB.",
+        "sourceGround": "light",
+        "extraction": {
+          "pdfPage": 1,
+          "pdfBounds": [
+            36,
+            297,
+            192,
+            367
+          ],
+          "method": "Isolated the 22 native logo paths and exported their geometry and fills to SVG with PyMuPDF."
+        },
         "search": "municipal-logos-vector-2026-11-16"
+      },
+      {
+        "id": "municipal-prince-george-annual-report-2025-horizontal-white",
+        "variantOf": "municipal-prince-george-annual-report-2025-horizontal",
+        "label": "Prince George — White horizontal signature",
+        "versionLabel": "White · back cover",
+        "file": "identity-municipal/prince-george/annual-report-2025-logo-horizontal-white.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "e0800205bd6be4dc96395fe83b5f616a6b1b09836ca011865dc943723c1ab23b",
+        "bytes": 8264,
+        "publisher": "City of Prince George",
+        "sourcePage": "https://www.princegeorge.ca/sites/default/files/2026-06/Prince%20George%20Annual%20Report%202025%20-%20FINAL%20reduced%20size.pdf#page=114",
+        "sourceUrl": "https://www.princegeorge.ca/sites/default/files/2026-06/Prince%20George%20Annual%20Report%202025%20-%20FINAL%20reduced%20size.pdf",
+        "sourceFile": "2025 Annual Report",
+        "sourceLocator": "PDF page 114, back cover",
+        "specimenDate": "June 2026",
+        "observedDate": "2026-11-25",
+        "evidenceType": "native-pdf-vector-extraction",
+        "sourceGround": "dark",
+        "darkBackground": true,
+        "notes": "The report’s back cover prints the same horizontal signature in white on PG Blue.",
+        "fidelityNote": "Isolated 22 native white paths with PyMuPDF and compared the symbol, lettering and spacing with the blue cover signature.",
+        "extraction": {
+          "pdfPage": 114,
+          "pdfBounds": [
+            248,
+            623,
+            369,
+            677
+          ],
+          "method": "Isolated the native logo paths and exported their geometry and white fills to SVG with PyMuPDF."
+        },
+        "search": "municipal-logos-vector-2026-11-16",
+        "supplied": false,
+        "reconstruction": false
+      },
+      {
+        "id": "municipal-prince-george-previous-stacked-colour",
+        "label": "Prince George — Earlier stacked civic signature",
+        "designLabel": "Prince George — Earlier stacked civic signature",
+        "versionLabel": "Blue and black · Annual Report",
+        "file": "identity-municipal/prince-george/annual-report-2024-logo-previous-colour.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "8491f12ad45b8277f2594181e503d34e54431aae0e0a868f202b7aee526e29ca",
+        "bytes": 10458,
+        "publisher": "City of Prince George",
+        "sourcePage": "https://www.princegeorge.ca/sites/default/files/2025-06/Prince%20George%20Annual%20Report%202024%20-%20FINAL.pdf#page=14",
+        "sourceUrl": "https://www.princegeorge.ca/sites/default/files/2025-06/Prince%20George%20Annual%20Report%202024%20-%20FINAL.pdf",
+        "sourceFile": "2024 Annual Report",
+        "sourceLocator": "PDF page 14, previous logo in the side-by-side comparison",
+        "specimenDate": "June 2025",
+        "observedDate": "2026-11-25",
+        "role": "historical",
+        "sourceReproduction": true,
+        "historicalDateLabel": "Seen 2020",
+        "evidenceType": "native-pdf-vector-extraction",
+        "sourceGround": "light",
+        "notes": "The City’s 2024 Annual Report reproduces the earlier civic signature, with a detailed blue fraise and confluence above two lines of black lettering.",
+        "fidelityNote": "Isolated 22 native paths with PyMuPDF and compared the SVG with the report’s previous-logo specimen.",
+        "extraction": {
+          "pdfPage": 14,
+          "pdfBounds": [
+            241,
+            245,
+            344,
+            338
+          ],
+          "method": "Isolated the 22 native paths of the left-hand signature and exported the PDF geometry and fills with PyMuPDF."
+        },
+        "search": "municipal-logos-vector-2026-11-16",
+        "supplied": false,
+        "reconstruction": false
+      },
+      {
+        "id": "municipal-prince-george-previous-stacked-white",
+        "variantOf": "municipal-prince-george-previous-stacked-colour",
+        "label": "Prince George — Earlier white stacked civic signature",
+        "versionLabel": "White · Climate Change Mitigation Plan",
+        "file": "identity-municipal/prince-george/climate-change-mitigation-plan-2020-logo-white.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "3f806320a5c3c9865b071ee5868b28aaba1c88372d22f04de71bb03de3e0c4a3",
+        "bytes": 9902,
+        "publisher": "City of Prince George",
+        "sourcePage": "https://www.princegeorge.ca/media/134#page=58",
+        "sourceUrl": "https://www.princegeorge.ca/media/134",
+        "sourceFile": "2020 Climate Change Mitigation Plan",
+        "sourceLocator": "PDF page 58, back cover",
+        "specimenDate": "2020",
+        "observedDate": "2026-11-25",
+        "role": "historical",
+        "evidenceType": "native-pdf-vector-extraction",
+        "sourceGround": "dark",
+        "darkBackground": true,
+        "notes": "The back cover carries the earlier stacked signature in white, above the Environmental Services contact line.",
+        "fidelityNote": "Isolated 20 native white paths with PyMuPDF, preserving the symbol, lettering and their placement.",
+        "extraction": {
+          "pdfPage": 58,
+          "pdfBounds": [
+            518,
+            508,
+            706,
+            680
+          ],
+          "method": "Isolated the 20 native logo paths and exported their geometry and white fills to SVG with PyMuPDF."
+        },
+        "search": "municipal-logos-vector-2026-11-16",
+        "supplied": false,
+        "reconstruction": false
+      },
+      {
+        "id": "municipal-prince-george-capital-plan-single-line-white",
+        "label": "Prince George — Single-line civic signature",
+        "file": "identity-municipal/prince-george/capital-plan-2026-logo-single-line-white.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "f714f740520f8b65936c4940371ee86ac3fc64c5412a22358dceab951424ce57",
+        "bytes": 8923,
+        "publisher": "City of Prince George",
+        "sourcePage": "https://www.princegeorge.ca/sites/default/files/2026-04/2d_Capital%20Plan%20-%20Civic%20Facilities%20Roof%20Replacements%20Project.pdf#page=1",
+        "sourceUrl": "https://www.princegeorge.ca/sites/default/files/2026-04/2d_Capital%20Plan%20-%20Civic%20Facilities%20Roof%20Replacements%20Project.pdf",
+        "sourceFile": "2026–2030 Capital Projects Summary",
+        "sourceLocator": "PDF page 1, page header (printed page 280)",
+        "specimenDate": "2026",
+        "observedDate": "2026-11-25",
+        "evidenceType": "native-pdf-vector-extraction",
+        "sourceGround": "dark",
+        "darkBackground": true,
+        "notes": "The capital plan retains the earlier detailed fraise and sets the civic name on a single line beside it.",
+        "fidelityNote": "Isolated 20 native white paths with PyMuPDF after applying the PDF page’s display rotation.",
+        "extraction": {
+          "pdfPage": 1,
+          "pdfBounds": [
+            71,
+            35,
+            203,
+            65
+          ],
+          "method": "Applied the PDF display rotation, isolated the 20 native logo paths and exported their geometry and white fills to SVG with PyMuPDF."
+        },
+        "search": "municipal-logos-vector-2026-11-16",
+        "supplied": false,
+        "reconstruction": false
       }
     ]
   },
@@ -1442,11 +1609,14 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-11-16",
-    "notes": "The City of Terrace’s logo, as served by its website. Its adoption date and earlier versions are not established.",
+    "notes": "The City’s Kermode bear signature appears in blue and white on the cover of its 2016 Parks and Recreation Master Plan and on its website.",
     "assets": [
       {
         "id": "source-municipal-terrace-website-logo",
-        "label": "Terrace: Website logo",
+        "label": "Terrace — Kermode bear signature",
+        "designLabel": "Terrace — Kermode bear signature",
+        "versionLabel": "Website · PNG",
+        "preferredVector": "municipal-terrace-parks-recreation-master-plan-2016-logo",
         "file": "identity-municipal/terrace/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -1472,6 +1642,46 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
         "darkBackground": false
+      },
+      {
+        "id": "municipal-terrace-parks-recreation-master-plan-2016-logo",
+        "variantOf": "source-municipal-terrace-website-logo",
+        "label": "Terrace — Kermode bear signature, 2016 plan",
+        "versionLabel": "2016 master plan · SVG",
+        "file": "identity-municipal/terrace/parks-recreation-master-plan-2016-logo.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "99f3f888bf1beea34594e2ef0b6d757fc1ed77d2c96dc64b32bc636fd0149dfa",
+        "bytes": 43178,
+        "dimensions": {
+          "viewBox": "21.9 26.7 58.1 40.6"
+        },
+        "contentType": "image/svg+xml",
+        "reconstruction": false,
+        "publisher": "City of Terrace",
+        "sourcePage": "https://www.terrace.ca/sites/default/files/docs/cot_parks_master_plan_2016_final.pdf#page=1",
+        "sourceUrl": "https://www.terrace.ca/sites/default/files/docs/cot_parks_master_plan_2016_final.pdf",
+        "sourceFile": "2016 Parks and Recreation Master Plan",
+        "sourceLocator": "PDF page 1, upper-left cover logo",
+        "specimenDate": "2016",
+        "observedDate": "2026-11-25",
+        "evidenceType": "native-pdf-vector-extraction",
+        "sourceGround": "light",
+        "notes": "The plan’s cover shows the white Kermode bear over a blue semicircle and the civic name. This SVG uses the plan’s own blue and white.",
+        "fidelityNote": "Compared the supplied SVG with the original PDF cover and the website logo. Retained the logo’s paths, fills and clips from the supplied crop and removed the cover’s blue page field.",
+        "extraction": {
+          "pdfPage": 1,
+          "pdfBounds": [
+            68.03,
+            50.49,
+            125.17,
+            90.17
+          ],
+          "sourceSha256": "ab2511530c02c1552f45b5918b8e78a6a8b84ce6f44b612cc4a71f84a3452bf8",
+          "method": "Verified the supplied page-selection SVG against the City’s PDF, removed the page background and unused clips, and trimmed the SVG to the native logo paths."
+        },
+        "search": "municipal-logos-vector-2026-11-16",
+        "supplied": false
       }
     ]
   },
@@ -1634,11 +1844,12 @@ export const MUNICIPAL_IDENTITY_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-11-16",
-    "notes": "The City of Williams Lake’s logo, as served by its website. Its adoption date and earlier versions are not established.",
+    "cover": "municipal-williams-lake-annual-report-2011-coat-of-arms",
+    "notes": "The coat of arms is preserved as official vector artwork from the 2011 Annual Report. The separate place brand badge has a shaded 2014 treatment and a flatter 2015 treatment, each documented by a published image and supplied editable reconstructions.",
     "assets": [
       {
         "id": "source-municipal-williams-lake-website-logo",
-        "label": "Williams Lake: Website logo",
+        "label": "Williams Lake — Flat place badge",
         "file": "identity-municipal/williams-lake/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -1661,10 +1872,296 @@ export const MUNICIPAL_IDENTITY_BODIES = [
         "dateNote": "The observation date and any upload-directory year are not a logo adoption date.",
         "observedDate": "2026-11-16",
         "evidenceType": "official-website-raster",
-        "notes": "Source-native website logo, archived byte-for-byte. The same bytes were recorded by the 15 November 2026 audit.",
+        "notes": "The City website serves the flat blue and yellow place badge. The design is documented at full resolution in the 2015 Annual Report.",
         "fidelityNote": "Original source bytes retained, including original colours and transparency. No tracing, text recreation, or recolouring.",
-        "darkBackground": false
+        "darkBackground": false,
+        "designLabel": "Williams Lake — Flat place badge",
+        "versionLabel": "Website image · PNG",
+        "preferredReconstruction": "municipal-williams-lake-place-badge-flat-textured-reconstruction"
+      },
+      {
+        "id": "municipal-williams-lake-annual-report-2011-coat-of-arms",
+        "label": "Williams Lake — Coat of arms",
+        "file": "identity-municipal/williams-lake/annual-report-2011-coat-of-arms.svg",
+        "format": "svg",
+        "isVector": true,
+        "sha256": "2f27e454097e8e02fd4268eb25530f00c0c0da66dfa4ab0f1ee8c2ebfb11d7ae",
+        "bytes": 2446288,
+        "dimensions": {
+          "viewBox": "0 0 76 68"
+        },
+        "contentType": "image/svg+xml",
+        "reconstruction": false,
+        "publisher": "City of Williams Lake",
+        "sourcePage": "https://www.williamslake.ca/ArchiveCenter/ViewFile/Item/69#page=1",
+        "sourceUrl": "https://www.williamslake.ca/ArchiveCenter/ViewFile/Item/69",
+        "sourceFile": "2011 Annual Report",
+        "sourceLocator": "PDF page 1, upper-left cover artwork",
+        "sourceDate": "2011 reporting year; archived PDF dated 2012",
+        "specimenDate": "2012",
+        "observedDate": "2026-11-25",
+        "evidenceType": "native-pdf-vector-extraction-with-converted-gradients",
+        "sourceGround": "light",
+        "notes": "A cowboy and a forestry worker stand beside a shield with a wagon wheel, mountains, trees and ranching scenes. The three scrolls read “Hospitality”, “Courage” and “Opportunity”.",
+        "fidelityNote": "Isolated the native cover paths, clipping and axial and radial shadings with pikepdf. Poppler’s pdftocairo converted them to SVG paths and gradients. The browser rendering was compared side by side with the published cover.",
+        "extraction": {
+          "pdfPage": 1,
+          "pdfBounds": [
+            45,
+            61,
+            121,
+            129
+          ],
+          "sourceSha256": "6d5a73b01f340fb6564ce57ce1b4d47f16601c3fb3d21896b14a9fb13c96df56",
+          "method": "Isolated PDF content instructions 52–13218 (zero-based) with the inherited fill colour space and graphics state. Set the page to the logo bounds and converted it with pdftocairo -svg, preserving the vector clips and shading."
+        },
+        "search": "municipal-logos-vector-2026-11-16",
+        "supplied": false
+      },
+      {
+        "id": "municipal-williams-lake-place-badge-2015-original",
+        "label": "Williams Lake — Flat badge, publication image",
+        "file": "identity-municipal/williams-lake/annual-report-2015-place-badge.png",
+        "format": "png",
+        "isVector": false,
+        "bytes": 1382941,
+        "sha256": "1ccc4d6d0f2a296321c912c1b69c81be0a50b068bd764df12ed7d713ad660b79",
+        "dimensions": {
+          "width": 1333,
+          "height": 1074
+        },
+        "contentType": "image/png",
+        "publisher": "City of Williams Lake",
+        "sourcePage": "https://www.williamslake.ca/ArchiveCenter/ViewFile/Item/362#page=1",
+        "sourceUrl": "https://www.williamslake.ca/ArchiveCenter/ViewFile/Item/362",
+        "sourceFile": "2015 Annual Report",
+        "sourceLocator": "PDF page 1, front-cover place badge",
+        "specimenDate": "2015",
+        "observedDate": "2026-11-25",
+        "supplied": false,
+        "reconstruction": false,
+        "evidenceType": "official-publication-raster-extraction",
+        "fidelityNote": "Recovered the embedded raster and its original soft mask from the cover with PyMuPDF and saved the unscaled pixels in a transparent PNG.",
+        "extraction": {
+          "method": "Recovered the embedded raster and its original soft mask from the cover with PyMuPDF and saved the unscaled pixels in a transparent PNG.",
+          "page": 1,
+          "pdfBounds": [
+            87.87,
+            342.99,
+            524.41,
+            694.71
+          ],
+          "sourceSha256": "768e5907f48046ddd4e1cfbee58d71b80a5aba6d9938c7645eb59ec54aae0ef3"
+        },
+        "search": "municipal-logos-vector-2026-11-16",
+        "variantOf": "source-municipal-williams-lake-website-logo",
+        "versionLabel": "2015 Annual Report · PNG",
+        "notes": "The front cover preserves the flat blue place badge and its illustrated lettering, texture and shading."
+      },
+      {
+        "id": "municipal-williams-lake-place-badge-flat-textured-reconstruction",
+        "label": "Williams Lake — Flat badge, textured reconstruction",
+        "variantOf": "source-municipal-williams-lake-website-logo",
+        "reconstructionOf": "source-municipal-williams-lake-website-logo",
+        "versionLabel": "Textured reconstruction · SVG",
+        "file": "identity-municipal/williams-lake/place-badge-flat-textured-reconstruction.svg",
+        "format": "svg",
+        "isVector": true,
+        "bytes": 2510034,
+        "sha256": "fed0fd2c0ed05d0e61755cacd5eb30d22d16f718a2687db9fb77206e301daf99",
+        "dimensions": {
+          "viewBox": "0 0 1333 1074"
+        },
+        "contentType": "image/svg+xml",
+        "publisher": "City of Williams Lake",
+        "sourcePage": "https://www.williamslake.ca/ArchiveCenter/ViewFile/Item/362#page=1",
+        "sourceUrl": "https://www.williamslake.ca/ArchiveCenter/ViewFile/Item/362",
+        "sourceFile": "2015 Annual Report",
+        "sourceLocator": "PDF page 1, front-cover place badge used as a reference for the supplied recreation",
+        "specimenDate": "2015",
+        "observedDate": "2026-11-25",
+        "reconstructionDate": "2026-11-25",
+        "supplied": true,
+        "reconstruction": true,
+        "sourceGround": "light",
+        "search": "municipal-logos-vector-2026-11-16",
+        "evidenceType": "vector-reconstruction",
+        "fidelity": "partially compared",
+        "fidelityNote": "The supplied SVG rebuilds the badge using editable outlines, including fitted blue gradients, shadows and reconstructed vector distress.",
+        "notes": "The textured SVG is the supplied recreation, with separate editable groups for lettering, ornament, ribbon, texture and shadow.",
+        "alsoSeen": [
+          {
+            "label": "April 9, 2013 council agenda, Taiji Brand Group place-brand presentation",
+            "source": "https://williamslake.civicweb.net/document/53496/",
+            "date": "2013-04-09"
+          }
+        ],
+        "referenceDetail": {
+          "file": "identity-municipal/williams-lake/annual-report-2015-place-badge.png"
+        }
+      },
+      {
+        "id": "municipal-williams-lake-place-badge-flat-clean-reconstruction",
+        "label": "Williams Lake — Flat badge, clean reconstruction",
+        "variantOf": "source-municipal-williams-lake-website-logo",
+        "reconstructionOf": "source-municipal-williams-lake-website-logo",
+        "versionLabel": "Clean reconstruction · SVG",
+        "file": "identity-municipal/williams-lake/place-badge-flat-clean-reconstruction.svg",
+        "format": "svg",
+        "isVector": true,
+        "bytes": 33000,
+        "sha256": "aaae9d0927f7bc588ee414e7ff9a2379557de396d458a065c4036db2406402bb",
+        "dimensions": {
+          "viewBox": "0 0 1333 1074"
+        },
+        "contentType": "image/svg+xml",
+        "publisher": "City of Williams Lake",
+        "sourcePage": "https://www.williamslake.ca/ArchiveCenter/ViewFile/Item/362#page=1",
+        "sourceUrl": "https://www.williamslake.ca/ArchiveCenter/ViewFile/Item/362",
+        "sourceFile": "2015 Annual Report",
+        "sourceLocator": "PDF page 1, front-cover place badge used as a reference for the supplied recreation",
+        "specimenDate": "2015",
+        "observedDate": "2026-11-25",
+        "reconstructionDate": "2026-11-25",
+        "supplied": true,
+        "reconstruction": true,
+        "sourceGround": "light",
+        "search": "municipal-logos-vector-2026-11-16",
+        "evidenceType": "vector-reconstruction",
+        "fidelity": "partially compared",
+        "fidelityNote": "The supplied SVG rebuilds the badge using editable outlines, with solid fills and no texture, gradients or blur filters.",
+        "notes": "This supplied clean SVG preserves the layout and lettering with solid colour and simplified effects.",
+        "alsoSeen": [
+          {
+            "label": "April 9, 2013 council agenda, Taiji Brand Group place-brand presentation",
+            "source": "https://williamslake.civicweb.net/document/53496/",
+            "date": "2013-04-09"
+          }
+        ]
+      },
+      {
+        "id": "municipal-williams-lake-place-badge-2014",
+        "label": "Williams Lake — Shaded place badge",
+        "file": "identity-municipal/williams-lake/annual-report-2014-place-badge.png",
+        "format": "png",
+        "isVector": false,
+        "bytes": 1931935,
+        "sha256": "12b74af8d77e57631b3752c95829b75a115d6b74e0836d948f75c0a2342c815e",
+        "dimensions": {
+          "width": 1808,
+          "height": 1532
+        },
+        "contentType": "image/png",
+        "publisher": "City of Williams Lake",
+        "sourcePage": "https://www.williamslake.ca/ArchiveCenter/ViewFile/Item/309#page=1",
+        "sourceUrl": "https://www.williamslake.ca/ArchiveCenter/ViewFile/Item/309",
+        "sourceFile": "2014 Annual Report",
+        "sourceLocator": "PDF page 1, front-cover place badge",
+        "specimenDate": "2014",
+        "observedDate": "2026-11-25",
+        "supplied": false,
+        "reconstruction": false,
+        "evidenceType": "official-publication-raster-extraction",
+        "fidelityNote": "Recovered the embedded raster and its original soft mask from the cover with PyMuPDF and saved the unscaled pixels in a transparent PNG.",
+        "extraction": {
+          "method": "Recovered the embedded raster and its original soft mask from the cover with PyMuPDF and saved the unscaled pixels in a transparent PNG.",
+          "page": 1,
+          "pdfBounds": [
+            79.37,
+            325.98,
+            535.75,
+            678.77
+          ],
+          "sourceSha256": "0536de2f4d6930ba9131220fd74882896fcc1651a8fcb072c4b8abda5b3f583d"
+        },
+        "search": "municipal-logos-vector-2026-11-16",
+        "designLabel": "Williams Lake — Shaded place badge",
+        "versionLabel": "2014 Annual Report · PNG",
+        "notes": "The shaded place badge has an elevated second L in WILLIAMS and a texture that continues across the lettering and ribbon.",
+        "preferredReconstruction": "municipal-williams-lake-place-badge-dark-textured-reconstruction"
+      },
+      {
+        "id": "municipal-williams-lake-place-badge-dark-textured-reconstruction",
+        "label": "Williams Lake — Shaded badge, textured reconstruction",
+        "variantOf": "municipal-williams-lake-place-badge-2014",
+        "reconstructionOf": "municipal-williams-lake-place-badge-2014",
+        "versionLabel": "Textured reconstruction · SVG",
+        "file": "identity-municipal/williams-lake/place-badge-dark-textured-reconstruction.svg",
+        "format": "svg",
+        "isVector": true,
+        "bytes": 2511495,
+        "sha256": "401c060866bed48085f225f5ba2eff14bc623ccfb3850c4b525146b74dd9f6ef",
+        "dimensions": {
+          "viewBox": "0 0 1808 1532"
+        },
+        "contentType": "image/svg+xml",
+        "publisher": "City of Williams Lake",
+        "sourcePage": "https://www.williamslake.ca/ArchiveCenter/ViewFile/Item/309#page=1",
+        "sourceUrl": "https://www.williamslake.ca/ArchiveCenter/ViewFile/Item/309",
+        "sourceFile": "2014 Annual Report",
+        "sourceLocator": "PDF page 1, front-cover place badge used as a reference for the supplied recreation",
+        "specimenDate": "2014",
+        "observedDate": "2026-11-25",
+        "reconstructionDate": "2026-11-25",
+        "supplied": true,
+        "reconstruction": true,
+        "sourceGround": "light",
+        "search": "municipal-logos-vector-2026-11-16",
+        "evidenceType": "vector-reconstruction",
+        "fidelity": "partially compared",
+        "fidelityNote": "The supplied SVG rebuilds the badge using editable outlines, including fitted blue gradients, shadows and reconstructed vector distress.",
+        "notes": "The textured SVG is the supplied recreation, with separate editable groups for lettering, ornament, ribbon, texture and shadow.",
+        "alsoSeen": [
+          {
+            "label": "April 9, 2013 council agenda, Taiji Brand Group place-brand presentation",
+            "source": "https://williamslake.civicweb.net/document/53496/",
+            "date": "2013-04-09"
+          }
+        ],
+        "referenceDetail": {
+          "file": "identity-municipal/williams-lake/annual-report-2014-place-badge.png"
+        }
+      },
+      {
+        "id": "municipal-williams-lake-place-badge-dark-clean-reconstruction",
+        "label": "Williams Lake — Shaded badge, clean reconstruction",
+        "variantOf": "municipal-williams-lake-place-badge-2014",
+        "reconstructionOf": "municipal-williams-lake-place-badge-2014",
+        "versionLabel": "Clean reconstruction · SVG",
+        "file": "identity-municipal/williams-lake/place-badge-dark-clean-reconstruction.svg",
+        "format": "svg",
+        "isVector": true,
+        "bytes": 33082,
+        "sha256": "24ee523f4e68d9ae99a4ddee5e8b269866e0358c38300af18264286923c54bc9",
+        "dimensions": {
+          "viewBox": "0 0 1808 1532"
+        },
+        "contentType": "image/svg+xml",
+        "publisher": "City of Williams Lake",
+        "sourcePage": "https://www.williamslake.ca/ArchiveCenter/ViewFile/Item/309#page=1",
+        "sourceUrl": "https://www.williamslake.ca/ArchiveCenter/ViewFile/Item/309",
+        "sourceFile": "2014 Annual Report",
+        "sourceLocator": "PDF page 1, front-cover place badge used as a reference for the supplied recreation",
+        "specimenDate": "2014",
+        "observedDate": "2026-11-25",
+        "reconstructionDate": "2026-11-25",
+        "supplied": true,
+        "reconstruction": true,
+        "sourceGround": "light",
+        "search": "municipal-logos-vector-2026-11-16",
+        "evidenceType": "vector-reconstruction",
+        "fidelity": "partially compared",
+        "fidelityNote": "The supplied SVG rebuilds the badge using editable outlines, with solid fills and no texture, gradients or blur filters.",
+        "notes": "This supplied clean SVG preserves the layout and lettering with solid colour and simplified effects.",
+        "alsoSeen": [
+          {
+            "label": "April 9, 2013 council agenda, Taiji Brand Group place-brand presentation",
+            "source": "https://williamslake.civicweb.net/document/53496/",
+            "date": "2013-04-09"
+          }
+        ]
       }
-    ]
+    ],
+    "nextAction": "Seek original badge artwork and verify the display lettering’s typeface."
   }
 ]

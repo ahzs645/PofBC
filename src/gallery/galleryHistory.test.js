@@ -101,12 +101,11 @@ test('the shared council timeline owns each linked design and resolves both side
   }
 })
 
-test('ITAC’s matching reconstructions lead their designs and the source versions remain available', () => {
+test('ITAC’s official vector leads the collection and reconstructions keep their source versions', () => {
   const commission = collectionById('collected-industry-training-and-apprenticeship-commission')
   const authority = collectionById('collected-industry-training-authority')
   const skilledTrades = collectionById('collected-skilledtradesbc')
-  const spiral = commission.entries.find((entry) => entry.id === commission.cover)
-  assert.equal(spiral.id, 'source-recovered-itac-letterhead-2003')
+  const spiral = commission.entries.find((entry) => entry.id === 'source-recovered-itac-letterhead-2003')
   assert.equal(spiral.asset.id, 'itac-spiral-black-reconstruction')
   assert.equal(spiral.versions[0], spiral.asset)
   assert.equal(spiral.identity.provenance, 'third_party_reconstruction')
@@ -128,7 +127,9 @@ test('ITAC’s matching reconstructions lead their designs and the source versio
   assert.ok(report.filter((entry) => entry !== nameLeft).every(({ asset }) => !asset.isVector))
   assert.equal(galleryHistoryOf(commission.graphNode).predecessors.find((row) => row.id === 'provincial-apprenticeship-board')?.date, '1997-11-28')
   const earlier = commission.entries.find((entry) => entry.id === 'itac-gold-emblem-2000')
+  assert.equal(commission.cover, earlier.id)
   assert.equal(earlier.asset.isVector, true)
+  assert.equal(earlier.asset.reconstruction, false)
   assert.equal(earlier.owner, commission.graphNode)
   for (const [before, after, type, date] of [
     [commission, authority, 'replaced', '2004-01-02'],

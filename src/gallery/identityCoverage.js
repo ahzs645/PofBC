@@ -160,6 +160,7 @@ export const INVERSE_RELATION_LABELS = {
   'listed-by': '2024–25 sector roster',
   'used-by': 'Uses',
   'predecessor-of': 'Successor of',
+  'successor-of': 'Predecessor of',
   'campaigned-for': 'Campaign led by',
   'shares-identity-with': 'Shares identity with'
 }

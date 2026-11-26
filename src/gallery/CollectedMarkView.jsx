@@ -127,6 +127,7 @@ const SourceMarkView = ({ entry }) => {
               : 'Trimmed to the logo, in its own colours.'} {downloadNote}</dd></div>
         )}
         {asset.sourcePage && <div><dt>Publication</dt><dd><a href={asset.sourcePage} target="_blank" rel="noreferrer">View source publication or page</a>{asset.sourceLocator ? ` · ${asset.sourceLocator}` : ''}</dd></div>}
+        {entry.brandGuidelines && <div><dt>Brand guidelines</dt><dd><a href={entry.brandGuidelines.url} target="_blank" rel="noreferrer">{entry.brandGuidelines.title}</a></dd></div>}
         {(asset.alsoSeen ?? []).filter((seen) => seen.label && seen.source).map((seen) => (
           <div key={seen.source}><dt>Also published in</dt><dd><a href={seen.source} target="_blank" rel="noreferrer">{seen.label}</a></dd></div>
         ))}

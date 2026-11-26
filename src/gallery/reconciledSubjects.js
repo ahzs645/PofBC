@@ -1,7 +1,10 @@
+import { bearAwareGalleryId, bearAwareId, bearAwareReport, bearAwareTitle } from '../initiatives/bearAwareArtwork.js'
+import { environmentYouthCorpsAd, environmentYouthCorpsGalleryId, environmentYouthCorpsId, environmentYouthCorpsReprint } from '../initiatives/environmentYouthCorpsArtwork.js'
 import { fireSmartGuide } from './fireSmart.js'
 import { strongerBCGuide, strongerBCMatrix } from './strongerBC.js'
 import { buyBCStandards } from './buyBC.js'
 import { ecosystemsAtRiskSources } from './ecosystemsAtRisk.js'
+import { RESWEST_SOURCES } from './resWest.js'
 
 // Owners for artwork the gallery already held without a register subject (the 15 November 2026
 // gallery audit: 53 entries in 12 collections plus BC Cancer Foundation's two marks).
@@ -76,6 +79,20 @@ export const RECONCILED_SUBJECTS = [
     collectionIds: ['specimens-ecosystems-at-risk'], sources: ecosystemsAtRiskSources,
     note: 'The B.C. Conservation Data Centre used this badge on public brochures about threatened habitats.',
     nextAction: 'Check other dated brochures in the series for additional uses of the badge.'
+  }),
+  subject({
+    id: bearAwareId, label: bearAwareTitle, kind: 'service-brand',
+    collectionIds: [bearAwareGalleryId], aliases: ['Be Bear Aware', 'We Are Bear Aware', 'Revelstoke Bear Aware'],
+    sources: [{ title: 'Revelstoke Bear Awareness Program, 1997 Final Report', url: bearAwareReport }],
+    note: 'Revelstoke’s wildlife education campaign used the paw on its checklists and the sign awarded to participating properties.',
+    nextAction: 'Ask the Revelstoke Bear Aware Society or Revelstoke Museum & Archives about original campaign production artwork.'
+  }),
+  subject({
+    id: environmentYouthCorpsId, label: 'Environment Youth Corps', kind: 'service-brand',
+    collectionIds: [environmentYouthCorpsGalleryId], aliases: ['Environment Youth Corps of British Columbia'],
+    sources: [environmentYouthCorpsAd, environmentYouthCorpsReprint],
+    note: 'The provincial youth employment and training program used this mark in its June 1990 recruitment advertisements.',
+    nextAction: 'Locate original production artwork or printed program material with the same mark.'
   }),
   subject({
     id: 'firesmart-bc', label: 'FireSmart BC', kind: 'service-brand',
@@ -353,6 +370,34 @@ export const RECONCILED_SUBJECTS = [
     relations: [
       { subject: 'department-of-travel-industry', type: 'related-to', label: 'An earlier department for the Province’s tourism' }
     ]
+  }),
+  subject({
+    id: 'expo-86-corporation',
+    label: 'Expo 86 Corporation',
+    kind: 'crown-corporation',
+    family: 'historical-research',
+    graphNode: 'expo-86-corporation',
+    graphYear: 1985,
+    aliases: ['Expo 86', 'Transpo 86', 'The 1986 World Exposition'],
+    collectionIds: ['collected-expo-86-corporation'],
+    sources: [
+      { title: 'Expo 86 Corporation Act', url: 'https://www.bclaws.gov.bc.ca/civix/document/id/94consol18/94consol18/80059' },
+      RESWEST_SOURCES[1]
+    ],
+    note: 'The provincial Crown corporation organized the 1986 World Exposition in Vancouver. Its 1985 brochure identifies ResWest as the official accommodation agency.',
+    nextAction: 'Locate dated identity standards for the symbol and wordmark used in the fair’s publications.'
+  }),
+  subject({
+    id: 'reswest',
+    label: 'ResWest',
+    kind: 'service-brand',
+    family: 'tourism-destination-management',
+    aliases: ['Res West', 'Expo 86 accommodation reservations'],
+    collectionIds: ['reswest'],
+    sources: RESWEST_SOURCES,
+    note: 'A privately operated provincial reservation service and the official accommodation agency for Expo 86. The fair advertised provincewide bookings for a single $5 charge.',
+    nextAction: 'Identify the original colour advertisement, designer, artwork master and service end date.',
+    relations: [{ subject: 'expo-86-corporation', type: 'used-by', label: 'Promoted by ·', source: RESWEST_SOURCES[1] }]
   }),
   subject({
     id: 'superhost',

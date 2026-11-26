@@ -1,4 +1,8 @@
 import { ADVANCED_EDUCATION_1986, EDUCATION_1979, ENVIRONMENT_1988, SOCIAL_SERVICES_1986 } from './youthProgramsIndex.js'
+import {
+  environmentYouthCorpsAd, environmentYouthCorpsGalleryId, environmentYouthCorpsId,
+  environmentYouthCorpsReprint, environmentYouthCorpsScan, environmentYouthCorpsVector
+} from './environmentYouthCorpsArtwork.js'
 
 const youthDebate = {
   id: 'youth-debate-1989', title: 'Debate on youth, May 12, 1989', shortTitle: 'B.C. Hansard',
@@ -59,9 +63,13 @@ const evidence = {
       { id: 'passport-participation', date: '1990/91', dateRole: 'reported participation', title: 'Ninety students take part', description: 'The Ministry of Education’s annual report counted 90 participants. It described employers willing to train students who wanted to enter an apprenticeship.', sourceRefs: [schoolsRef] }
     ]
   },
-  'environment-youth-corps': {
-    sources: [budgetDebate, youthDebate, ombudsmanReport],
-    relatedLinks: [government('Ministry of Environment', ENVIRONMENT_1988, 1989), government('Ministry of Social Services and Housing', SOCIAL_SERVICES_1986, 1990)],
+  [environmentYouthCorpsId]: {
+    sources: [budgetDebate, youthDebate, ombudsmanReport, environmentYouthCorpsAd, environmentYouthCorpsReprint],
+    relatedLinks: [
+      government('Ministry of Environment', ENVIRONMENT_1988, 1989),
+      government('Ministry of Social Services and Housing', SOCIAL_SERVICES_1986, 1990),
+      { label: 'Environment Youth Corps in the logo gallery', to: { view: 'gallery', logos: environmentYouthCorpsGalleryId, mark: environmentYouthCorpsScan.id } }
+    ],
     timeline: [
       { id: 'corps-budget', date: '1989-03-30', dateRole: 'budget announcement', title: 'Environmental youth employment enters the provincial budget', description: 'The budget speech assigned an environmental youth services program to the minister responsible for Environment. The Ombudsman subsequently dated the establishment of the Environment Youth Corps to 1989.', sourceRefs: [{ sourceId: budgetDebate.id }, ombudsmanRef] },
       { id: 'corps-first-target', date: '1989-05-12', dateRole: 'employment target', title: 'Environment plans work for young people', description: 'Hagen described a target of about 1,000 jobs in B.C. for people aged 16–24.', sourceRefs: [debateRef] },
@@ -70,9 +78,28 @@ const evidence = {
   }
 }
 
+const environmentYouthCorpsLogos = {
+  id: 'marks', label: 'Logos', type: 'records', layout: 'marks', title: 'Recruitment logo',
+  records: [{
+    id: environmentYouthCorpsScan.id, title: environmentYouthCorpsScan.label, kind: 'recruitment mark',
+    description: 'The Corps placed this mark below the application instructions in its “Working for a better world” recruitment advertisement.',
+    artworkNote: 'SVG reconstruction and newspaper scan',
+    compareSpecimens: true,
+    images: [environmentYouthCorpsVector, environmentYouthCorpsScan].map(({ versionLabel, sourcePage, ...asset }) => ({
+      ...asset, label: versionLabel, date: asset.sourceDate, dateLabel: 'Advertisement publication',
+      sourceUrl: sourcePage, displayId: asset.isVector ? asset.id : undefined
+    })),
+    sourceRefs: [
+      { sourceId: environmentYouthCorpsAd.id, page: 10, locator: 'p. A10' },
+      { sourceId: environmentYouthCorpsReprint.id, page: 11, locator: 'p. B11' }
+    ]
+  }]
+}
+
 export const youthProgramDetail = (entry) => {
   const data = evidence[entry.id]
   const sections = [{ id: 'timeline', label: 'Timeline', type: 'timeline', title: 'Program history', records: data.timeline }]
+  if (entry.id === environmentYouthCorpsId) sections.unshift(environmentYouthCorpsLogos)
   if (entry.id === 'challenge-89') {
     sections.push({
       id: 'advertisement', label: 'Advertisement', type: 'publications', title: 'The provincial employer notice',

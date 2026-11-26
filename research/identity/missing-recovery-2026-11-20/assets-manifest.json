@@ -9,6 +9,24 @@
   },
   "sources": [
     {
+      "file": "identity-recovered/municipalities/daajing-giids/council-portal-logo.png",
+      "sha256": "e150ffaad597fd7a5c7a624a47dc1fcb8f4a0693ffe929995e91fc5509517556",
+      "bytes": 15690,
+      "observedDate": "2026-11-25",
+      "sourceUrl": "https://daajinggiids.civicweb.net/content/portallogo.png",
+      "resolvedSourceUrl": "https://daajinggiids.civicweb.net/content/portallogo.png",
+      "archivingNote": "Original Village of Daajing Giids council portal logo preserved byte-for-byte."
+    },
+    {
+      "file": "identity-recovered/municipalities/anmore/website-horizontal-white.png",
+      "sha256": "8110448a56d2de35f14e897fd927056dc4acfa452c5288fb77ee231f17ac3980",
+      "bytes": 16008,
+      "observedDate": "2026-11-25",
+      "sourceUrl": "https://anmore.com/wp-content/uploads/2023/06/Anmore_Horizontal_White.png",
+      "resolvedSourceUrl": "https://anmore.com/wp-content/uploads/2023/06/Anmore_Horizontal_White.png",
+      "archivingNote": "Unchanged horizontal white signature published by the Village of Anmore. The separate decorative banner remains archived."
+    },
+    {
       "file": "identity-recovered/municipalities/100-mile-house/website-logo.png",
       "sha256": "d137596832eded52ada88ea024120ee5c779fc7f2c75d19d5dc2ef756ebcb05d",
       "bytes": 6638,
@@ -2141,12 +2159,12 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-20",
-      "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-      "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+      "notes": "The stacked orca signature appears on the cover of the Village’s 2024 Active Transportation Network Plan. The website masthead pairs it with separate brush lettering.",
+      "nextAction": "Locate the original artwork for the separate horizontal website signature.",
       "assets": [
         {
           "id": "source-recovered-municipal-alert-bay-website-logo",
-          "label": "Alert Bay: Website logo",
+          "label": "Alert Bay — Horizontal website signature",
           "file": "identity-recovered/municipalities/alert-bay/website-logo.png",
           "format": "png",
           "isVector": false,
@@ -2172,8 +2190,47 @@
           "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged. The website signature incorporates a civic emblem; this records its published website use, without asserting a new heraldic grant or a distinct emblem design.",
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
           "darkBackground": false
+        },
+        {
+          "id": "municipal-alert-bay-active-transportation-plan-2024-logo",
+          "label": "Alert Bay — Stacked orca signature",
+          "file": "identity-recovered/municipalities/alert-bay/active-transportation-plan-2024-logo.svg",
+          "format": "svg",
+          "isVector": true,
+          "sha256": "7ac074e5f721feb901880045d6d4202b7775f54111533cce94319b17a60c4cfe",
+          "bytes": 66426,
+          "sourcePage": "https://static1.squarespace.com/static/5436b7bae4b0d50b0eede18b/t/65f37594e048af7d2faf8c1c/1710454184167/240221_VAB_ATP_FinalPlanWithAppendices_Spreads_33537.pdf#page=1",
+          "sourceUrl": "https://static1.squarespace.com/static/5436b7bae4b0d50b0eede18b/t/65f37594e048af7d2faf8c1c/1710454184167/240221_VAB_ATP_FinalPlanWithAppendices_Spreads_33537.pdf",
+          "dimensions": {
+            "viewBox": "41.29 35.6 114.87 135.08"
+          },
+          "contentType": "image/svg+xml",
+          "supplied": false,
+          "reconstruction": false,
+          "publisher": "The Corporation of the Village of Alert Bay",
+          "sourceLocator": "PDF page 1, upper-left cover logo",
+          "sourceFile": "2024 Active Transportation Network Plan",
+          "specimenDate": "February 2024",
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "notes": "The orca sits above the Village name and the motto “Home of the Killer Whale”.",
+          "fidelityNote": "Isolated the 42 native paths with PyMuPDF. The SVG retains the underlying dark grey ink and omits the cover photograph and its placement opacity.",
+          "sourceGround": "light",
+          "extraction": {
+            "method": "Recovered the 42 native logo paths and fills with PyMuPDF, omitting the cover’s 52% group opacity.",
+            "pdfPage": 1,
+            "pdfBounds": [
+              41,
+              35,
+              157,
+              171
+            ],
+            "sourceSha256": "897becf26b9eda0179a33d53415f33c9540aaec96f5c8ba50e61bf3fab9cf82c"
+          },
+          "search": "municipal-logos-vector-2026-11-16"
         }
-      ]
+      ],
+      "cover": "municipal-alert-bay-active-transportation-plan-2024-logo"
     },
     {
       "id": "municipality-anmore",
@@ -2186,39 +2243,159 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-20",
-      "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-      "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+      "notes": "The 2025 resident handbook shows the colour horizontal signature and white stacked signature as native vectors. Two additional variants appear in a bitmap social media screenshot.",
+      "nextAction": "Seek publisher vector artwork for the short colour signature, the stacked tagline signature and the white horizontal website treatment.",
       "assets": [
         {
           "id": "source-recovered-municipal-anmore-website-logo",
-          "label": "Anmore: Website logo",
-          "file": "identity-recovered/municipalities/anmore/website-logo.png",
+          "label": "Anmore — Horizontal signature, white",
+          "versionLabel": "White · website image",
+          "file": "identity-recovered/municipalities/anmore/website-horizontal-white.png",
+          "sha256": "8110448a56d2de35f14e897fd927056dc4acfa452c5288fb77ee231f17ac3980",
+          "bytes": 16008,
           "format": "png",
           "isVector": false,
-          "sha256": "eddc79f31028de042db5c2e2105da99e087684bb23e00203d182469247db3fe5",
-          "bytes": 142714,
           "sourcePage": "https://anmore.com/",
-          "sourceUrl": "https://anmore.com/wp-content/uploads/2023/04/logo.png",
-          "resolvedSourceUrl": "https://anmore.com/wp-content/uploads/2023/04/logo.png",
+          "sourceUrl": "https://anmore.com/wp-content/uploads/2023/06/Anmore_Horizontal_White.png",
+          "resolvedSourceUrl": "https://anmore.com/wp-content/uploads/2023/06/Anmore_Horizontal_White.png",
           "dimensions": {
-            "width": 1133,
-            "height": 298
+            "width": 1000,
+            "height": 328
           },
           "contentType": "image/png",
           "supplied": false,
           "reconstruction": false,
           "publisher": "Village of Anmore",
-          "sourceLocator": "Logo artwork referenced by the official municipal website.",
-          "sourceFile": "identity-recovered/municipalities/anmore/website-logo.png",
-          "sourceDate": "Undated web asset observed 2026-11-20",
-          "dateNote": "Observation date and upload-directory years do not establish logo adoption or first use.",
-          "observedDate": "2026-11-20",
+          "sourceLocator": "Official website navigation and footer artwork",
+          "sourceFile": "identity-recovered/municipalities/anmore/website-horizontal-white.png",
+          "sourceDate": "Undated web asset observed 2026-11-25",
+          "dateNote": "The observation date does not establish logo adoption.",
+          "observedDate": "2026-11-25",
           "evidenceType": "official-website-raster",
-          "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged.",
-          "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
-          "darkBackground": false
+          "sourceGround": "dark",
+          "darkBackground": true,
+          "notes": "The Village’s white horizontal navigation signature. The older file labeled website-logo.png is an archived decorative banner.",
+          "fidelityNote": "The original PNG is archived byte-for-byte."
+        },
+        {
+          "id": "municipal-anmore-handbook-2025-stacked-white",
+          "label": "Anmore — Stacked signature, white",
+          "versionLabel": "White · handbook cover",
+          "file": "identity-recovered/municipalities/anmore/resident-handbook-2025-stacked-white.svg",
+          "sha256": "73f72de93b631fc2739d54a3055955608fef541d9268d1fdee59bad1d81ae2db",
+          "bytes": 7529,
+          "publisher": "Village of Anmore",
+          "sourcePage": "https://anmore.com/wp-content/uploads/2024/05/Welcome-to-Anmore-Handbook-2025-Digital.pdf#page=24",
+          "sourceUrl": "https://anmore.com/wp-content/uploads/2024/05/Welcome-to-Anmore-Handbook-2025-Digital.pdf",
+          "sourceFile": "2025 Welcome to Anmore Handbook",
+          "sourceLocator": "PDF page 24, back cover, lower left, also printed on the front cover",
+          "specimenDate": "2025",
+          "sourceGround": "dark",
+          "notes": "The solid white A sits above the Village of Anmore wordmark. The same stacked lockup is printed on the front and back covers.",
+          "fidelityNote": "Isolated 2 native white filled paths with PyMuPDF and omitted the photographic background.",
+          "extraction": {
+            "method": "Isolated 2 native white filled paths with PyMuPDF and omitted the photographic background.",
+            "page": 24,
+            "pdfBounds": [
+              33,
+              498,
+              115,
+              576
+            ],
+            "sourceSha256": "fec5fa6f454b0ee30ada849af62bfbc4315ef290978fdfe23b0e1ea7553b6b4e"
+          },
+          "format": "svg",
+          "isVector": true,
+          "dimensions": {
+            "viewBox": "34.38 499.98 79.46 74.09"
+          },
+          "contentType": "image/svg+xml",
+          "supplied": false,
+          "reconstruction": false,
+          "evidenceType": "native-pdf-vector-extraction",
+          "observedDate": "2026-11-25",
+          "search": "municipal-logos-vector-2026-11-16"
+        },
+        {
+          "id": "municipal-anmore-handbook-2025-social-stacked-tagline",
+          "label": "Anmore — Stacked signature with tagline",
+          "versionLabel": "White on photograph · handbook screenshot",
+          "file": "identity-recovered/municipalities/anmore/resident-handbook-2025-social-stacked-tagline.png",
+          "sha256": "40337320cb5d0542971ca1748123361a67dcf89df762380bc059202dc96dac3d",
+          "bytes": 58742,
+          "format": "png",
+          "isVector": false,
+          "dimensions": {
+            "width": 160,
+            "height": 172
+          },
+          "contentType": "image/png",
+          "publisher": "Village of Anmore",
+          "sourcePage": "https://anmore.com/wp-content/uploads/2024/05/Welcome-to-Anmore-Handbook-2025-Digital.pdf#page=6",
+          "sourceUrl": "https://anmore.com/wp-content/uploads/2024/05/Welcome-to-Anmore-Handbook-2025-Digital.pdf",
+          "sourceFile": "2025 Welcome to Anmore Handbook",
+          "sourceLocator": "PDF page 6, Village Facebook profile screenshot",
+          "supplied": false,
+          "reconstruction": false,
+          "specimenDate": "2025",
+          "observedDate": "2026-11-25",
+          "evidenceType": "official-publication-raster-extraction",
+          "notes": "The white stacked signature and “At Home in Nature” tagline sit over a forest photograph. The photograph is part of the screenshot crop.",
+          "fidelityNote": "Cropped at the embedded bitmap’s native pixel size. The supplied screenshot provides bitmap artwork.",
+          "extraction": {
+            "method": "Cropped the embedded Facebook screenshot at native pixel resolution.",
+            "page": 6,
+            "pixelBounds": [
+              194,
+              14,
+              354,
+              186
+            ],
+            "sourceSha256": "fec5fa6f454b0ee30ada849af62bfbc4315ef290978fdfe23b0e1ea7553b6b4e"
+          },
+          "search": "municipal-logos-vector-2026-11-16"
+        },
+        {
+          "id": "municipal-anmore-handbook-2025-social-short-colour",
+          "label": "Anmore — Short signature, colour",
+          "versionLabel": "Colour · handbook screenshot",
+          "file": "identity-recovered/municipalities/anmore/resident-handbook-2025-social-short-colour.png",
+          "sha256": "39124053099501b20852bbb2527a2d50051a2e39ca9fcadda09d97333939cb96",
+          "bytes": 6080,
+          "format": "png",
+          "isVector": false,
+          "dimensions": {
+            "width": 68,
+            "height": 60
+          },
+          "contentType": "image/png",
+          "publisher": "Village of Anmore",
+          "sourcePage": "https://anmore.com/wp-content/uploads/2024/05/Welcome-to-Anmore-Handbook-2025-Digital.pdf#page=6",
+          "sourceUrl": "https://anmore.com/wp-content/uploads/2024/05/Welcome-to-Anmore-Handbook-2025-Digital.pdf",
+          "sourceFile": "2025 Welcome to Anmore Handbook",
+          "sourceLocator": "PDF page 6, Village Facebook profile screenshot",
+          "supplied": false,
+          "reconstruction": false,
+          "specimenDate": "2025",
+          "observedDate": "2026-11-25",
+          "evidenceType": "official-publication-raster-extraction",
+          "notes": "The Facebook profile image pairs the textured A with the short “ANMORE” wordmark.",
+          "fidelityNote": "Cropped at the embedded bitmap’s native pixel size. The supplied screenshot provides bitmap artwork.",
+          "extraction": {
+            "method": "Cropped the embedded Facebook screenshot at native pixel resolution.",
+            "page": 6,
+            "pixelBounds": [
+              23,
+              213,
+              91,
+              273
+            ],
+            "sourceSha256": "fec5fa6f454b0ee30ada849af62bfbc4315ef290978fdfe23b0e1ea7553b6b4e"
+          },
+          "search": "municipal-logos-vector-2026-11-16"
         }
-      ]
+      ],
+      "cover": "source-recovered-municipal-anmore-website-logo"
     },
     {
       "id": "municipality-ashcroft",
@@ -2368,8 +2545,8 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-20",
-      "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-      "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+      "notes": "The earlier island silhouette signature is documented in 2014 and in the 2015 annual report. Council approved the community brand with its tree signature on June 27, 2016.",
+      "nextAction": "Seek first-use evidence and original artwork for the earlier island silhouette signature.",
       "assets": [
         {
           "id": "source-recovered-municipal-bowen-island-website-logo",
@@ -2399,8 +2576,56 @@
           "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged.",
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
           "darkBackground": true
+        },
+        {
+          "id": "municipal-bowen-island-annual-report-2015-island-silhouettes",
+          "label": "Bowen Island — Earlier island silhouette signature",
+          "versionLabel": "White · 2015 Annual Report",
+          "file": "identity-recovered/municipalities/bowen-island/annual-report-2015-island-silhouettes-white.svg",
+          "sha256": "2c85513a9bcfbad4b65c1d3b52467e3bc021891f6e0fc91a66455d230e2f1d85",
+          "bytes": 15813,
+          "publisher": "Bowen Island Municipality",
+          "sourcePage": "https://bowenisland.civicweb.net/document/106949/#page=1",
+          "sourceUrl": "https://bowenisland.civicweb.net/document/106949/",
+          "sourceFile": "2015 Annual Report",
+          "sourceLocator": "PDF page 1, upper-right front cover, also printed on the back cover",
+          "specimenDate": "2015",
+          "sourceGround": "dark",
+          "notes": "The earlier civic signature pairs three overlapping island silhouettes with the serif municipality name. A June 2014 council report shows the design in black. The first-use date remains unestablished.",
+          "fidelityNote": "Isolated 26 native white paths with PyMuPDF, omitting the cyan cover field.",
+          "extraction": {
+            "method": "Isolated 26 native white paths with PyMuPDF, omitting the cyan cover field.",
+            "page": 1,
+            "pdfBounds": [
+              397,
+              13,
+              583,
+              58
+            ],
+            "sourceSha256": "fd433c1dff08fae559d941500516738b85d02e14ddf72732c12fd7c7eec46336"
+          },
+          "role": "historical",
+          "alsoSeen": [
+            {
+              "label": "June 16, 2014 council report, header in black",
+              "source": "https://bowenisland.civicweb.net/document/43332/#page=1",
+              "date": "2014-06-16"
+            }
+          ],
+          "format": "svg",
+          "isVector": true,
+          "dimensions": {
+            "viewBox": "401.68 17.9 175.21 36.47"
+          },
+          "contentType": "image/svg+xml",
+          "supplied": false,
+          "reconstruction": false,
+          "evidenceType": "native-pdf-vector-extraction",
+          "observedDate": "2026-11-25",
+          "search": "municipal-logos-vector-2026-11-16"
         }
-      ]
+      ],
+      "cover": "source-recovered-municipal-bowen-island-website-logo"
     },
     {
       "id": "municipality-campbell-river",
@@ -2504,8 +2729,8 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-20",
-      "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-      "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+      "notes": "The Community Plan and Strategic Plan document the white civic wordmark. The Community Plan extraction also has a version using the blue from the City’s website image.",
+      "nextAction": "Seek the City’s original blue vector master.",
       "assets": [
         {
           "id": "source-recovered-municipal-castlegar-website-logo",
@@ -2536,7 +2761,8 @@
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
           "darkBackground": false
         }
-      ]
+      ],
+      "cover": "source-recovered-municipal-castlegar-website-logo"
     },
     {
       "id": "municipality-central-saanich",
@@ -2549,8 +2775,8 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-20",
-      "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-      "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+      "notes": "The annual report documents the white horizontal and stacked signatures. The horizontal vector also has a version using colours from the District’s website image.",
+      "nextAction": "Seek the District’s original colour vector master.",
       "assets": [
         {
           "id": "source-recovered-municipal-central-saanich-website-logo",
@@ -2580,8 +2806,48 @@
           "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged.",
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
           "darkBackground": false
+        },
+        {
+          "id": "municipal-central-saanich-annual-report-2025-stacked-white",
+          "label": "Central Saanich — Stacked signature, white",
+          "versionLabel": "White · front cover",
+          "file": "identity-recovered/municipalities/central-saanich/annual-report-2025-stacked-white.svg",
+          "sha256": "9c892af75c749a79a13a95bf46d1318a35422e62aa008222d734b6f5da7d13e4",
+          "bytes": 21684,
+          "publisher": "District of Central Saanich",
+          "sourcePage": "https://www.centralsaanich.ca/sites/default/files/2026-07/2025%20Central%20Saanich%20Annual%20Report%20FINAL.pdf#page=1",
+          "sourceUrl": "https://www.centralsaanich.ca/sites/default/files/2026-07/2025%20Central%20Saanich%20Annual%20Report%20FINAL.pdf",
+          "sourceFile": "2025 Annual Report",
+          "sourceLocator": "PDF page 1, front cover, upper right",
+          "specimenDate": "2025",
+          "sourceGround": "dark",
+          "notes": "The farmhouse, trees and fields sit above the district name on two lines.",
+          "fidelityNote": "Isolated 23 native white paths with PyMuPDF. The surrounding cover field is omitted.",
+          "extraction": {
+            "method": "Isolated 23 native white paths with PyMuPDF. The surrounding cover field is omitted.",
+            "page": 1,
+            "pdfBounds": [
+              679,
+              28,
+              759,
+              100
+            ],
+            "sourceSha256": "39081791e088492c4e9b566d88bac47deffc32547a2126f61b1a65d667f1d843"
+          },
+          "format": "svg",
+          "isVector": true,
+          "contentType": "image/svg+xml",
+          "supplied": false,
+          "reconstruction": false,
+          "dimensions": {
+            "viewBox": "683.65 30.05 72.95 68.28"
+          },
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "search": "municipal-logos-vector-2026-11-16"
         }
-      ]
+      ],
+      "cover": "source-recovered-municipal-central-saanich-website-logo"
     },
     {
       "id": "municipality-chase",
@@ -2594,12 +2860,12 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-20",
-      "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-      "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+      "notes": "The annual report shows the civic seal and the “A Shuswap Experience” wordmark as separate marks. The two report colour treatments are available for the wordmark. The website combines the seal and wordmark in a horizontal lockup.",
+      "nextAction": "Seek native artwork published in the combined website lockup.",
       "assets": [
         {
           "id": "source-recovered-municipal-chase-website-logo",
-          "label": "Chase: Website logo",
+          "label": "Chase — Website seal and wordmark lockup",
           "file": "identity-recovered/municipalities/chase/website-logo.png",
           "format": "png",
           "isVector": false,
@@ -2625,8 +2891,137 @@
           "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged. The website signature incorporates a civic emblem; this records its published website use, without asserting a new heraldic grant or a distinct emblem design.",
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
           "darkBackground": false
+        },
+        {
+          "id": "municipal-chase-annual-report-2024-white-wordmark",
+          "label": "Chase — A Shuswap Experience wordmark",
+          "versionLabel": "White · back cover",
+          "file": "identity-recovered/municipalities/chase/annual-report-2024-white-wordmark.svg",
+          "sha256": "b5e3254dc57372a2a921566fc9d3bbfa93200da5a1913d391b8bcea00e90acf2",
+          "bytes": 19720,
+          "publisher": "Village of Chase",
+          "sourcePage": "https://chasebc.sharepoint.com/:b:/g/EUaw8pnO0jBDhZnWaEHs5lcBs8SY6hW1VvdsIKx3RXkoVA?e=KzjJ8U#page=66",
+          "sourceUrl": "https://chasebc.sharepoint.com/:b:/g/EUaw8pnO0jBDhZnWaEHs5lcBs8SY6hW1VvdsIKx3RXkoVA?e=KzjJ8U",
+          "sourceFile": "2024 Annual Report",
+          "sourceLocator": "PDF page 66, back cover, lower left",
+          "specimenDate": "2024",
+          "sourceGround": "dark",
+          "notes": "The back cover prints the stand-alone CHASE BC wordmark with the script tagline “A Shuswap Experience.”",
+          "fidelityNote": "Isolated 13 native white paths with PyMuPDF. The surrounding blue field is omitted.",
+          "extraction": {
+            "method": "Isolated 13 native white paths with PyMuPDF. The surrounding blue field is omitted.",
+            "page": 66,
+            "pdfBounds": [
+              9,
+              740,
+              134,
+              781
+            ],
+            "sourceSha256": "90e6279a18c1b8c93724be0e0a1ab12550aa6fcd610c6665c7b5b0404f50e6ed"
+          },
+          "format": "svg",
+          "isVector": true,
+          "contentType": "image/svg+xml",
+          "supplied": false,
+          "reconstruction": false,
+          "dimensions": {
+            "viewBox": "11.59 743.73 118.63 33.4"
+          },
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "search": "municipal-logos-vector-2026-11-16",
+          "preferredVector": "municipal-chase-annual-report-2024-cover-colour-wordmark",
+          "designLabel": "Chase — A Shuswap Experience wordmark"
+        },
+        {
+          "id": "municipal-chase-annual-report-2024-cover-colour-wordmark",
+          "label": "Chase — A Shuswap Experience wordmark",
+          "versionLabel": "Blue and black · front cover colours",
+          "file": "identity-recovered/municipalities/chase/annual-report-2024-cover-colour-wordmark.svg",
+          "sha256": "39ab65ca0830dfd7e3b31ca051d76fb0311bca7a76960a2467fb76337c0bf172",
+          "bytes": 19734,
+          "publisher": "Village of Chase",
+          "sourcePage": "https://chasebc.sharepoint.com/:b:/g/EUaw8pnO0jBDhZnWaEHs5lcBs8SY6hW1VvdsIKx3RXkoVA?e=KzjJ8U#page=66",
+          "sourceUrl": "https://chasebc.sharepoint.com/:b:/g/EUaw8pnO0jBDhZnWaEHs5lcBs8SY6hW1VvdsIKx3RXkoVA?e=KzjJ8U",
+          "sourceFile": "2024 Annual Report",
+          "sourceLocator": "PDF page 66 native outlines, matched to the blue and black bitmap on page 1",
+          "specimenDate": "2024",
+          "sourceGround": "light",
+          "notes": "The back-cover vector geometry with the blue and black inks sampled from the matching front-cover image.",
+          "fidelityNote": "Applied blue and black sampled from opaque interior pixels of the front cover bitmap to the same outlined geometry from page 66. Original paths are unchanged.",
+          "extraction": {
+            "method": "Applied blue and black sampled from opaque interior pixels of the front cover bitmap to the same outlined geometry from page 66. Original paths are unchanged.",
+            "page": 66,
+            "pdfBounds": [
+              9,
+              740,
+              134,
+              781
+            ],
+            "sourceSha256": "90e6279a18c1b8c93724be0e0a1ab12550aa6fcd610c6665c7b5b0404f50e6ed"
+          },
+          "format": "svg",
+          "isVector": true,
+          "contentType": "image/svg+xml",
+          "supplied": false,
+          "reconstruction": false,
+          "dimensions": {
+            "viewBox": "11.59 743.73 118.63 33.4"
+          },
+          "observedDate": "2026-11-25",
+          "evidenceType": "publication-colours-on-source-vector",
+          "search": "municipal-logos-vector-2026-11-16",
+          "variantOf": "municipal-chase-annual-report-2024-white-wordmark",
+          "darkVariant": "municipal-chase-annual-report-2024-white-wordmark",
+          "alsoSeen": [
+            {
+              "label": "Front cover image used for the colour match",
+              "source": "https://chasebc.sharepoint.com/:b:/g/EUaw8pnO0jBDhZnWaEHs5lcBs8SY6hW1VvdsIKx3RXkoVA?e=KzjJ8U#page=1",
+              "date": "2024"
+            }
+          ]
+        },
+        {
+          "id": "municipal-chase-annual-report-2024-civic-seal",
+          "label": "Chase — Civic seal",
+          "versionLabel": "Black and white · front cover",
+          "file": "identity-recovered/municipalities/chase/annual-report-2024-civic-seal.svg",
+          "sha256": "ad38b3c170dadd9ed48f0c2b5238c4f3374209a30e675f54fe677a57247d253a",
+          "bytes": 120120,
+          "publisher": "Village of Chase",
+          "sourcePage": "https://chasebc.sharepoint.com/:b:/g/EUaw8pnO0jBDhZnWaEHs5lcBs8SY6hW1VvdsIKx3RXkoVA?e=KzjJ8U#page=1",
+          "sourceUrl": "https://chasebc.sharepoint.com/:b:/g/EUaw8pnO0jBDhZnWaEHs5lcBs8SY6hW1VvdsIKx3RXkoVA?e=KzjJ8U",
+          "sourceFile": "2024 Annual Report",
+          "sourceLocator": "PDF page 1, front cover, lower left",
+          "specimenDate": "2024",
+          "sourceGround": "light",
+          "notes": "The circular Village of Chase seal shows a bighorn sheep and the incorporation year 1969.",
+          "fidelityNote": "Isolated 214 native paths with PyMuPDF, retaining the seal’s own white field and black linework.",
+          "extraction": {
+            "method": "Isolated 214 native paths with PyMuPDF, retaining the seal’s own white field and black linework.",
+            "page": 1,
+            "pdfBounds": [
+              34,
+              630,
+              172,
+              769
+            ],
+            "sourceSha256": "90e6279a18c1b8c93724be0e0a1ab12550aa6fcd610c6665c7b5b0404f50e6ed"
+          },
+          "format": "svg",
+          "isVector": true,
+          "contentType": "image/svg+xml",
+          "supplied": false,
+          "reconstruction": false,
+          "dimensions": {
+            "viewBox": "37.14 632.78 133.35 133.34"
+          },
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "search": "municipal-logos-vector-2026-11-16"
         }
-      ]
+      ],
+      "cover": "municipal-chase-annual-report-2024-white-wordmark"
     },
     {
       "id": "municipality-chetwynd",
@@ -2639,12 +3034,12 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-20",
-      "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-      "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+      "notes": "The District’s carving tour map documents the visitor landscape signature and Community Carved by Success wordmark. The District website separately publishes the civic coat of arms.",
+      "nextAction": "Seek a source vector for the District’s coat of arms.",
       "assets": [
         {
           "id": "source-recovered-municipal-chetwynd-website-logo",
-          "label": "Chetwynd: Website logo",
+          "label": "Chetwynd — District coat of arms",
           "file": "identity-recovered/municipalities/chetwynd/website-logo.webp",
           "format": "webp",
           "isVector": false,
@@ -2670,8 +3065,129 @@
           "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged. The website signature incorporates a civic emblem; this records its published website use, without asserting a new heraldic grant or a distinct emblem design.",
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
           "darkBackground": false
+        },
+        {
+          "id": "municipal-chetwynd-tour-map-landscape",
+          "label": "Chetwynd — Visitor landscape signature",
+          "versionLabel": "Colour · map interior",
+          "publisher": "District of Chetwynd",
+          "file": "identity-recovered/municipalities/chetwynd/chainsaw-carving-tour-map-landscape.svg",
+          "sha256": "8fdad185c7127021b362e1e76e85a6aec4171ccae2fc4c3858793f17b516292e",
+          "bytes": 82682,
+          "sourcePage": "https://www.gochetwynd.com/wp-content/uploads/2019/02/Chainsaw-Carving-Tour-Map.pdf#page=2",
+          "sourceUrl": "https://www.gochetwynd.com/wp-content/uploads/2019/02/Chainsaw-Carving-Tour-Map.pdf",
+          "sourceFile": "Chainsaw Carving Tour Map",
+          "sourceLocator": "PDF page 2, upper-left map signature",
+          "specimenDate": "2019-02",
+          "sourceGround": "light",
+          "notes": "Mountains, trees, water and a yellow sun sit above the Chetwynd, BC visitor wordmark.",
+          "fidelityNote": "Isolated the original PDF outlines, fills and visible strokes with PyMuPDF.",
+          "extraction": {
+            "method": "Isolated the original PDF outlines, fills and visible strokes with PyMuPDF.",
+            "page": 2,
+            "pdfBounds": [
+              616,
+              33,
+              753,
+              133
+            ],
+            "sourceSha256": "58798b33c591353bfa520efe6eb24b190df32adbc972941f22f1a276599d1a49"
+          },
+          "designLabel": "Chetwynd — Visitor landscape signature",
+          "darkVariant": "municipal-chetwynd-tour-map-landscape-outlined",
+          "format": "svg",
+          "isVector": true,
+          "contentType": "image/svg+xml",
+          "dimensions": {
+            "viewBox": "619.69 36.49 129.8 93.53"
+          },
+          "supplied": false,
+          "reconstruction": false,
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "search": "municipal-logos-vector-2026-11-16"
+        },
+        {
+          "id": "municipal-chetwynd-tour-map-landscape-outlined",
+          "label": "Chetwynd — Visitor landscape with white keyline",
+          "versionLabel": "Colour with white keyline · map cover",
+          "publisher": "District of Chetwynd",
+          "file": "identity-recovered/municipalities/chetwynd/chainsaw-carving-tour-map-landscape-outlined.svg",
+          "sha256": "97d347e46d7009f80f6bb71b8e4c82ff21351976af998eef961557e2b2376640",
+          "bytes": 182167,
+          "sourcePage": "https://www.gochetwynd.com/wp-content/uploads/2019/02/Chainsaw-Carving-Tour-Map.pdf#page=1",
+          "sourceUrl": "https://www.gochetwynd.com/wp-content/uploads/2019/02/Chainsaw-Carving-Tour-Map.pdf",
+          "sourceFile": "Chainsaw Carving Tour Map",
+          "sourceLocator": "PDF page 1, cover photograph, left signature",
+          "specimenDate": "2019-02",
+          "sourceGround": "dark",
+          "notes": "The cover uses the visitor landscape signature with a white outline for placement on a photograph.",
+          "fidelityNote": "Isolated the original PDF outlines, fills and visible strokes with PyMuPDF.",
+          "extraction": {
+            "method": "Isolated the original PDF outlines, fills and visible strokes with PyMuPDF.",
+            "page": 1,
+            "pdfBounds": [
+              1205,
+              1060,
+              1351,
+              1169
+            ],
+            "sourceSha256": "58798b33c591353bfa520efe6eb24b190df32adbc972941f22f1a276599d1a49"
+          },
+          "variantOf": "municipal-chetwynd-tour-map-landscape",
+          "format": "svg",
+          "isVector": true,
+          "contentType": "image/svg+xml",
+          "dimensions": {
+            "viewBox": "1209.07 1063.73 138.89 100.91"
+          },
+          "supplied": false,
+          "reconstruction": false,
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "search": "municipal-logos-vector-2026-11-16"
+        },
+        {
+          "id": "municipal-chetwynd-tour-map-carved-by-success",
+          "label": "Chetwynd — Community Carved by Success",
+          "versionLabel": "Orange and white · map cover",
+          "publisher": "District of Chetwynd",
+          "file": "identity-recovered/municipalities/chetwynd/chainsaw-carving-tour-map-carved-by-success.svg",
+          "sha256": "a5989e34f375aaca97db4c1e4ab7df0250b2132fdc704b2ea84bf2965e08466b",
+          "bytes": 18770,
+          "sourcePage": "https://www.gochetwynd.com/wp-content/uploads/2019/02/Chainsaw-Carving-Tour-Map.pdf#page=1",
+          "sourceUrl": "https://www.gochetwynd.com/wp-content/uploads/2019/02/Chainsaw-Carving-Tour-Map.pdf",
+          "sourceFile": "Chainsaw Carving Tour Map",
+          "sourceLocator": "PDF page 1, cover photograph, right signature",
+          "specimenDate": "2019-02",
+          "sourceGround": "dark",
+          "notes": "The map cover pairs the orange Chetwynd wordmark with the white Community Carved by Success line.",
+          "fidelityNote": "Isolated the original PDF outlines, fills and visible strokes with PyMuPDF.",
+          "extraction": {
+            "method": "Isolated the original PDF outlines, fills and visible strokes with PyMuPDF.",
+            "page": 1,
+            "pdfBounds": [
+              1368,
+              1089,
+              1607,
+              1168
+            ],
+            "sourceSha256": "58798b33c591353bfa520efe6eb24b190df32adbc972941f22f1a276599d1a49"
+          },
+          "format": "svg",
+          "isVector": true,
+          "contentType": "image/svg+xml",
+          "dimensions": {
+            "viewBox": "1371.5 1093.9 231.67 70.43"
+          },
+          "supplied": false,
+          "reconstruction": false,
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "search": "municipal-logos-vector-2026-11-16"
         }
-      ]
+      ],
+      "cover": "municipal-chetwynd-tour-map-landscape"
     },
     {
       "id": "municipality-clinton",
@@ -2684,8 +3200,7 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-20",
-      "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-      "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+      "notes": "The walking tour and community profile document the stagecoach signature in colour and white, along with their program lockups and the History Meets Adventure slogan.",
       "assets": [
         {
           "id": "source-recovered-municipal-clinton-website-logo",
@@ -2714,9 +3229,128 @@
           "evidenceType": "official-website-raster",
           "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged.",
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
-          "darkBackground": true
+          "darkBackground": true,
+          "versionLabel": "White with shadow · website image"
+        },
+        {
+          "id": "municipal-clinton-walking-tour-2021-title-lockup",
+          "label": "Clinton — Historic Walking Tour lockup",
+          "versionLabel": "Colour · walking tour",
+          "publisher": "Village of Clinton",
+          "file": "identity-recovered/municipalities/clinton/walking-tour-2021-title-lockup.svg",
+          "sha256": "1e77d46438c1ad3c91f2dc0bb2bf6f55691fb4793b118cc6f2cd4aa1e21472ad",
+          "bytes": 81265,
+          "sourcePage": "https://village.clinton.bc.ca/wp-content/uploads/2022/01/Clinton_WalkingTour_2021_Online.pdf#page=1",
+          "sourceUrl": "https://village.clinton.bc.ca/wp-content/uploads/2022/01/Clinton_WalkingTour_2021_Online.pdf",
+          "sourceFile": "Historic Walking Tour",
+          "sourceLocator": "PDF page 1, front cover",
+          "specimenDate": "2022-01",
+          "sourceGround": "light",
+          "notes": "The guide places Historic Walking Tour immediately beneath the civic signature.",
+          "fidelityNote": "Isolated the native artwork and converted the PDF’s embedded font glyphs to outlines with PyMuPDF. The cover background and adjacent artwork are omitted.",
+          "extraction": {
+            "method": "Isolated the native artwork and converted the PDF’s embedded font glyphs to outlines with PyMuPDF. The cover background and adjacent artwork are omitted.",
+            "page": 1,
+            "pdfBounds": [
+              92,
+              130,
+              313,
+              231
+            ],
+            "sourceSha256": "6bd536e17b13fcba9705a8e67c0e0ae06ac6d2d791a63b0df612f0017f04572b"
+          },
+          "format": "svg",
+          "isVector": true,
+          "contentType": "image/svg+xml",
+          "dimensions": {
+            "viewBox": "92 130 221 101"
+          },
+          "supplied": false,
+          "reconstruction": false,
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "search": "municipal-logos-vector-2026-11-16"
+        },
+        {
+          "id": "municipal-clinton-community-profile-2022-investment",
+          "label": "Clinton — Ready for Investment lockup",
+          "versionLabel": "Colour · community profile",
+          "publisher": "Village of Clinton",
+          "file": "identity-recovered/municipalities/clinton/community-profile-2022-investment.svg",
+          "sha256": "87ac9030516885c7841b87f3391c45fbe0731a83e5f41bc1b0b2ec16169efa95",
+          "bytes": 81275,
+          "sourcePage": "https://village.clinton.bc.ca/wp-content/uploads/2022/05/ClintonCommunityProfile_Design_Online.pdf#page=1",
+          "sourceUrl": "https://village.clinton.bc.ca/wp-content/uploads/2022/05/ClintonCommunityProfile_Design_Online.pdf",
+          "sourceFile": "Community Economic Profile",
+          "sourceLocator": "PDF page 1, lower-right cover lockup",
+          "specimenDate": "2022-05",
+          "sourceGround": "light",
+          "notes": "The community profile pairs the civic signature with its Ready for Investment line.",
+          "fidelityNote": "Isolated the native artwork and converted the PDF’s embedded font glyphs to outlines with PyMuPDF. The cover background and adjacent artwork are omitted.",
+          "extraction": {
+            "method": "Isolated the native artwork and converted the PDF’s embedded font glyphs to outlines with PyMuPDF. The cover background and adjacent artwork are omitted.",
+            "page": 1,
+            "pdfBounds": [
+              405,
+              680,
+              591,
+              767
+            ],
+            "sourceSha256": "d748c15cb3593087423f0c9e7cd59cc1115b6dbb30c82eebc37abba9c2d1be01"
+          },
+          "format": "svg",
+          "isVector": true,
+          "contentType": "image/svg+xml",
+          "dimensions": {
+            "viewBox": "405 680 186 87"
+          },
+          "supplied": false,
+          "reconstruction": false,
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "search": "municipal-logos-vector-2026-11-16"
+        },
+        {
+          "id": "municipal-clinton-walking-tour-2021-slogan",
+          "label": "Clinton — Where History Meets Adventure",
+          "versionLabel": "Brown · walking tour",
+          "publisher": "Village of Clinton",
+          "file": "identity-recovered/municipalities/clinton/walking-tour-2021-slogan.svg",
+          "sha256": "b3a50c612d103066fd4a87fdc8ea0f3501c25e28ff6bfa4f8840a1c79a78369c",
+          "bytes": 106737,
+          "sourcePage": "https://village.clinton.bc.ca/wp-content/uploads/2022/01/Clinton_WalkingTour_2021_Online.pdf#page=1",
+          "sourceUrl": "https://village.clinton.bc.ca/wp-content/uploads/2022/01/Clinton_WalkingTour_2021_Online.pdf",
+          "sourceFile": "Historic Walking Tour",
+          "sourceLocator": "PDF page 1, front cover",
+          "specimenDate": "2022-01",
+          "sourceGround": "light",
+          "notes": "The walking tour cover also carries the stacked Clinton promotional slogan.",
+          "fidelityNote": "Isolated the native artwork and converted the PDF’s embedded font glyphs to outlines with PyMuPDF. The cover background and adjacent artwork are omitted.",
+          "extraction": {
+            "method": "Isolated the native artwork and converted the PDF’s embedded font glyphs to outlines with PyMuPDF. The cover background and adjacent artwork are omitted.",
+            "page": 1,
+            "pdfBounds": [
+              266,
+              516,
+              357,
+              591
+            ],
+            "sourceSha256": "6bd536e17b13fcba9705a8e67c0e0ae06ac6d2d791a63b0df612f0017f04572b"
+          },
+          "format": "svg",
+          "isVector": true,
+          "contentType": "image/svg+xml",
+          "dimensions": {
+            "viewBox": "266 516 91 75"
+          },
+          "supplied": false,
+          "reconstruction": false,
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "search": "municipal-logos-vector-2026-11-16"
         }
-      ]
+      ],
+      "cover": "source-recovered-municipal-clinton-website-logo"
     },
     {
       "id": "municipality-coldstream",
@@ -2729,12 +3363,12 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-20",
-      "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-      "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+      "notes": "The 2011 neighbourhood plan documents the stacked crest and wordmark. The current website places the crest to the left of a two-line wordmark.",
+      "nextAction": "Seek a publisher vector for the current horizontal website signature and dated evidence for the transition between layouts.",
       "assets": [
         {
           "id": "source-recovered-municipal-coldstream-website-logo",
-          "label": "Coldstream: Website logo",
+          "label": "Coldstream — Horizontal website signature",
           "file": "identity-recovered/municipalities/coldstream/website-logo.png",
           "format": "png",
           "isVector": false,
@@ -2760,8 +3394,48 @@
           "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged. The website signature incorporates a civic emblem; this records its published website use, without asserting a new heraldic grant or a distinct emblem design.",
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
           "darkBackground": false
+        },
+        {
+          "id": "municipal-coldstream-neighbourhood-plan-2011-stacked",
+          "label": "Coldstream — Stacked crest and wordmark",
+          "file": "identity-recovered/municipalities/coldstream/neighbourhood-plan-2011-stacked.svg",
+          "format": "svg",
+          "isVector": true,
+          "sha256": "2161dd7e804369baf6dd64b030740414dcaeb63bf2991ef666dbd063549ae36f",
+          "bytes": 66469,
+          "sourcePage": "https://www.coldstream.ca/sites/default/files/2022-11/Central%20Coldstream%20Neighbourhood%20Plan%2C%20February%202011.pdf#page=2",
+          "sourceUrl": "https://www.coldstream.ca/sites/default/files/2022-11/Central%20Coldstream%20Neighbourhood%20Plan%2C%20February%202011.pdf",
+          "dimensions": {
+            "viewBox": "495.9 643.83 59.99 73.6"
+          },
+          "contentType": "image/svg+xml",
+          "supplied": false,
+          "reconstruction": false,
+          "publisher": "The Corporation of the District of Coldstream",
+          "sourceLocator": "PDF page 2, lower-right title-page signature",
+          "sourceFile": "Central Coldstream Neighbourhood Plan",
+          "specimenDate": "February 2011",
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "notes": "The civic crest sits between the words “District of” and “Coldstream”. The same stacked design appears on the cover.",
+          "fidelityNote": "Isolated 107 native vector paths with PyMuPDF, preserving the crest and outlined lettering with the title page’s recorded colours.",
+          "sourceGround": "light",
+          "role": "historical",
+          "extraction": {
+            "page": 2,
+            "pdfBounds": [
+              490,
+              640,
+              560,
+              719
+            ],
+            "method": "Isolated 107 native vector paths with PyMuPDF, preserving the crest and outlined lettering with the title page’s recorded colours.",
+            "sourceSha256": "1d5e32fc41093afd602e00cc2f2ebc806b44aa523b67253adb6d70df92406be9"
+          },
+          "search": "municipal-logos-vector-2026-11-16"
         }
-      ]
+      ],
+      "cover": "municipal-coldstream-neighbourhood-plan-2011-stacked"
     },
     {
       "id": "municipality-colwood",
@@ -2774,8 +3448,8 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-20",
-      "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-      "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+      "notes": "The annual report shows the colour castle emblem with white lettering, and the draft strategic plan shows the full signature in white. The dark-lettered website colourway uses the matching native report outlines.",
+      "nextAction": "Seek a publisher master for the dark-lettered colour signature and first-use evidence.",
       "assets": [
         {
           "id": "source-recovered-municipal-colwood-website-logo",
@@ -2804,9 +3478,11 @@
           "evidenceType": "official-website-raster",
           "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged.",
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
-          "darkBackground": false
+          "darkBackground": false,
+          "versionLabel": "Website colours · PNG"
         }
-      ]
+      ],
+      "cover": "source-recovered-municipal-colwood-website-logo"
     },
     {
       "id": "municipality-comox",
@@ -2819,12 +3495,12 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-20",
-      "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-      "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+      "notes": "The annual report uses a detailed sailing ship beside the town name. The website pairs the town name with a separate stylized sail illustration.",
+      "nextAction": "Seek a publisher vector for the website sail signature and evidence about the use of the two illustrations.",
       "assets": [
         {
           "id": "source-recovered-municipal-comox-website-logo",
-          "label": "Comox: Website logo",
+          "label": "Comox — Website sail signature",
           "file": "identity-recovered/municipalities/comox/website-logo.gif",
           "format": "gif",
           "isVector": false,
@@ -2850,8 +3526,99 @@
           "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged.",
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
           "darkBackground": false
+        },
+        {
+          "id": "municipal-comox-annual-report-2021-ship-navy",
+          "label": "Comox — Detailed sailing ship signature",
+          "versionLabel": "Navy · front cover",
+          "file": "identity-recovered/municipalities/comox/annual-report-2021-ship-navy.svg",
+          "format": "svg",
+          "isVector": true,
+          "sha256": "36ce3638917d759daacb5b5ea294f24dc45e09f6467e8aa6431a4323d883e9c1",
+          "bytes": 16386,
+          "sourcePage": "https://www.comox.ca/sites/default/files/2022-08/Annual%20Report%20-%20Town%20of%20Comox%202021.pdf#page=1",
+          "sourceUrl": "https://www.comox.ca/sites/default/files/2022-08/Annual%20Report%20-%20Town%20of%20Comox%202021.pdf",
+          "dimensions": {
+            "viewBox": "66.94 401.27 183.48 63.66"
+          },
+          "contentType": "image/svg+xml",
+          "supplied": false,
+          "reconstruction": false,
+          "publisher": "Town of Comox",
+          "sourceLocator": "PDF page 1, front cover",
+          "sourceFile": "2021 Annual Report",
+          "specimenDate": "August 2022",
+          "dateNote": "The report covers fiscal 2021. The PDF was produced in August 2022.",
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "notes": "The front cover shows a square-rigged ship with a pennant and two rows of wave lines, beside the Town of Comox wordmark. The current website uses a different sail illustration.",
+          "fidelityNote": "Isolated the 22 native filled paths with PyMuPDF. The SVG preserves the navy outlines and their layout.",
+          "sourceGround": "light",
+          "extraction": {
+            "method": "Isolated the 22 native filled paths with PyMuPDF. The SVG preserves the navy outlines and their layout.",
+            "page": 1,
+            "pdfBounds": [
+              65,
+              398,
+              253,
+              467
+            ],
+            "sourceSha256": "8427e2d41319fb933a5a11822658c8195bd7c55b75d9e9981eb4056cc425b04c"
+          },
+          "search": "municipal-logos-vector-2026-11-16",
+          "designLabel": "Comox — Detailed sailing ship signature",
+          "darkVariant": "municipal-comox-annual-report-2021-ship-white"
+        },
+        {
+          "id": "municipal-comox-annual-report-2021-ship-white",
+          "label": "Comox — Detailed sailing ship signature",
+          "versionLabel": "White · back cover",
+          "file": "identity-recovered/municipalities/comox/annual-report-2021-ship-white.svg",
+          "format": "svg",
+          "isVector": true,
+          "sha256": "34220744166f322ca6475dd24b6cab3859909084274ef4eed18936f7efa67890",
+          "bytes": 16715,
+          "sourcePage": "https://www.comox.ca/sites/default/files/2022-08/Annual%20Report%20-%20Town%20of%20Comox%202021.pdf#page=44",
+          "sourceUrl": "https://www.comox.ca/sites/default/files/2022-08/Annual%20Report%20-%20Town%20of%20Comox%202021.pdf",
+          "dimensions": {
+            "viewBox": "136.43 309.2 325 112.25"
+          },
+          "contentType": "image/svg+xml",
+          "supplied": false,
+          "reconstruction": false,
+          "publisher": "Town of Comox",
+          "sourceLocator": "PDF page 44, back cover",
+          "sourceFile": "2021 Annual Report",
+          "specimenDate": "August 2022",
+          "dateNote": "The report covers fiscal 2021. The PDF was produced in August 2022.",
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "notes": "The back cover prints the detailed sailing ship, wave lines and town name in white on navy.",
+          "fidelityNote": "Isolated the 22 native filled paths with PyMuPDF. The SVG preserves the white outlines and their layout.",
+          "sourceGround": "dark",
+          "extraction": {
+            "method": "Isolated the 22 native filled paths with PyMuPDF. The SVG preserves the white outlines and their layout.",
+            "page": 44,
+            "pdfBounds": [
+              133,
+              306,
+              464,
+              424
+            ],
+            "sourceSha256": "8427e2d41319fb933a5a11822658c8195bd7c55b75d9e9981eb4056cc425b04c"
+          },
+          "search": "municipal-logos-vector-2026-11-16",
+          "variantOf": "municipal-comox-annual-report-2021-ship-navy",
+          "alsoSeen": [
+            {
+              "label": "2025 Annual Report, white cover signature",
+              "source": "https://www.comox.ca/sites/default/files/2026-05/2025%20Annual%20Report-compressed.pdf#page=1",
+              "date": "2026-05"
+            }
+          ]
         }
-      ]
+      ],
+      "cover": "municipal-comox-annual-report-2021-ship-navy"
     },
     {
       "id": "municipality-courtenay",
@@ -3000,8 +3767,8 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-20",
-      "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-      "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+      "notes": "The Village’s crest uses a mining lamp, crossed tools and a wreath of maple and oak leaves. These records document the solid-leaf, outlined-leaf, horizontal and full-colour treatments printed in Village publications.",
+      "nextAction": "Seek native artwork for the softer colour treatment printed in the annual report financial statements.",
       "assets": [
         {
           "id": "source-recovered-municipal-cumberland-website-logo",
@@ -3030,9 +3797,164 @@
           "evidenceType": "official-website-raster",
           "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged. The website signature incorporates a civic emblem; this records its published website use, without asserting a new heraldic grant or a distinct emblem design.",
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
-          "darkBackground": false
+          "darkBackground": false,
+          "versionLabel": "Website grey · PNG"
+        },
+        {
+          "id": "municipal-cumberland-annual-report-2023-horizontal-white",
+          "label": "Cumberland — Horizontal crest and wordmark",
+          "versionLabel": "White · annual report footer",
+          "file": "identity-recovered/municipalities/cumberland/annual-report-2023-horizontal-white.svg",
+          "sha256": "32e0c07c405d75de8fe55ee4c8a00c0f7e3e31ab7bc29cb642b5527e6ec77318",
+          "bytes": 98747,
+          "publisher": "Village of Cumberland",
+          "sourcePage": "https://cumberland.ca/wp-content/uploads/2024/05/2023-Annual-Report-FINAL.pdf#page=1",
+          "sourceUrl": "https://cumberland.ca/wp-content/uploads/2024/05/2023-Annual-Report-FINAL.pdf",
+          "sourceFile": "2023 Annual Report",
+          "sourceLocator": "PDF page 1, front cover, lower-left horizontal lockup",
+          "specimenDate": "2024-05",
+          "sourceGround": "dark",
+          "notes": "The white solid-leaf crest sits to the left of the two-line Village of Cumberland wordmark.",
+          "fidelityNote": "Isolated 160 native paths with PyMuPDF, preserving the crest and outlined wordmark. The cover photograph and unrelated footer elements are omitted.",
+          "extraction": {
+            "method": "Isolated 160 native paths with PyMuPDF, preserving the crest and outlined wordmark. The cover photograph and unrelated footer elements are omitted.",
+            "page": 1,
+            "pdfBounds": [
+              42,
+              711,
+              255,
+              766
+            ],
+            "sourceSha256": "7d703f88713458d60f50dc66ee828f7bcb0b504578c360d76bd86b7c83078138"
+          },
+          "format": "svg",
+          "isVector": true,
+          "contentType": "image/svg+xml",
+          "dimensions": {
+            "viewBox": "44.24 712.64 208.89 52.02"
+          },
+          "supplied": false,
+          "reconstruction": false,
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "search": "municipal-logos-vector-2026-11-16"
+        },
+        {
+          "id": "municipal-cumberland-strategic-plan-2023-27-white-outlined-crest",
+          "label": "Cumberland — Crest with outlined leaves",
+          "versionLabel": "White with outlined leaves · strategic plan",
+          "file": "identity-recovered/municipalities/cumberland/strategic-plan-2023-27-white-outlined-crest.svg",
+          "sha256": "25a4dafb0e56b66053bf8f36327079e147f1545662d1ae4e7d93a02b71643671",
+          "bytes": 161455,
+          "publisher": "Village of Cumberland",
+          "sourcePage": "https://cumberland.ca/wp-content/uploads/2023/06/23-05-Strategic-Plan-2023-27-v4-SM.pdf#page=12",
+          "sourceUrl": "https://cumberland.ca/wp-content/uploads/2023/06/23-05-Strategic-Plan-2023-27-v4-SM.pdf",
+          "sourceFile": "2023–27 Strategic Plan",
+          "sourceLocator": "PDF page 12, back cover, lower-right crest, also printed on the front cover",
+          "specimenDate": "2023-06",
+          "sourceGround": "dark",
+          "notes": "The outlined leaves retain vein details around the crest. The same treatment appears on both covers.",
+          "fidelityNote": "Isolated 135 native filled paths with PyMuPDF. The artwork retains the white outlines and small coloured details from the PDF.",
+          "extraction": {
+            "method": "Isolated 135 native filled paths with PyMuPDF. The artwork retains the white outlines and small coloured details from the PDF.",
+            "page": 12,
+            "pdfBounds": [
+              461,
+              489,
+              578,
+              606
+            ],
+            "sourceSha256": "e7b9ffcff9cc9aa8227b1153c0debb7373a5bf4d04dd336124f10d9b67ed167c"
+          },
+          "format": "svg",
+          "isVector": true,
+          "contentType": "image/svg+xml",
+          "dimensions": {
+            "viewBox": "463.55 491.45 112.81 112.02"
+          },
+          "supplied": false,
+          "reconstruction": false,
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "search": "municipal-logos-vector-2026-11-16"
+        },
+        {
+          "id": "municipal-cumberland-official-community-plan-2014-colour-crest",
+          "label": "Cumberland — Full-colour crest",
+          "versionLabel": "Vivid colour · community plan",
+          "file": "identity-recovered/municipalities/cumberland/official-community-plan-2014-colour-crest.svg",
+          "sha256": "fef445ddb3be0288a5dd6b34b2ef2725e3359dd153d3aa3a2b05b7789405b9a2",
+          "bytes": 314177,
+          "publisher": "Village of Cumberland",
+          "sourcePage": "https://www.kpu.ca/sites/default/files/Cumberland_OCP_2014.pdf#page=1",
+          "sourceUrl": "https://www.kpu.ca/sites/default/files/Cumberland_OCP_2014.pdf",
+          "sourceFile": "Official Community Plan Bylaw No. 990, 2014",
+          "sourceLocator": "PDF page 1, front-cover crest, 2016 consolidation",
+          "specimenDate": "2016-09-06",
+          "sourceGround": "light",
+          "notes": "The full-colour crest has red maple leaves, green oak leaves, a yellow lamp and dark tools. The source is the Village plan as consolidated September 6, 2016, archived by Kwantlen Polytechnic University.",
+          "fidelityNote": "Isolated 277 native fill and stroke paths with PyMuPDF, preserving the page’s crest geometry and colour values.",
+          "extraction": {
+            "method": "Isolated 277 native fill and stroke paths with PyMuPDF, preserving the page’s crest geometry and colour values.",
+            "page": 1,
+            "pdfBounds": [
+              69,
+              83,
+              237,
+              250
+            ],
+            "sourceSha256": "836c75fcc9f1a5df74260e1da9600326dfb8b427b57abf578bc10db1d5107d8a"
+          },
+          "designLabel": "Cumberland — Full-colour crest",
+          "format": "svg",
+          "isVector": true,
+          "contentType": "image/svg+xml",
+          "dimensions": {
+            "viewBox": "71.49 86.03 163.59 162.3"
+          },
+          "supplied": false,
+          "reconstruction": false,
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "search": "municipal-logos-vector-2026-11-16"
+        },
+        {
+          "id": "municipal-cumberland-annual-report-2023-colour-crest-image",
+          "label": "Cumberland — Full-colour crest in financial statements",
+          "versionLabel": "Colour · annual report image",
+          "variantOf": "municipal-cumberland-official-community-plan-2014-colour-crest",
+          "file": "identity-recovered/municipalities/cumberland/annual-report-2023-colour-crest.jpeg",
+          "sha256": "15493263a0fa6011a6dbcb570396de2a52c3280ac68375b4df5e6495614b0af2",
+          "bytes": 32371,
+          "format": "jpeg",
+          "isVector": false,
+          "dimensions": {
+            "width": 300,
+            "height": 297
+          },
+          "contentType": "image/jpeg",
+          "sourcePage": "https://cumberland.ca/wp-content/uploads/2024/05/2023-Annual-Report-FINAL.pdf#page=31",
+          "sourceUrl": "https://cumberland.ca/wp-content/uploads/2024/05/2023-Annual-Report-FINAL.pdf",
+          "sourceFile": "2023 Annual Report",
+          "sourceLocator": "PDF page 31, consolidated financial statements title page, repeated on page 33",
+          "sourceDate": "2023 Annual Report, published May 2024",
+          "specimenDate": "2024-05",
+          "observedDate": "2026-11-25",
+          "publisher": "Village of Cumberland",
+          "supplied": false,
+          "reconstruction": false,
+          "evidenceType": "official-publication-raster-extraction",
+          "notes": "The financial statements print the crest in colour with softer greens than the community plan.",
+          "fidelityNote": "Extracted the embedded JPEG at its original 300 × 297 resolution without resampling.",
+          "extraction": {
+            "method": "Extracted the original JPEG image stream with PyMuPDF.",
+            "page": 31,
+            "sourceSha256": "7d703f88713458d60f50dc66ee828f7bcb0b504578c360d76bd86b7c83078138"
+          },
+          "search": "municipal-logos-vector-2026-11-16"
         }
-      ]
+      ],
+      "cover": "source-recovered-municipal-cumberland-website-logo"
     },
     {
       "id": "municipality-daajing-giids",
@@ -3045,12 +3967,12 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-20",
-      "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-      "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+      "notes": "The municipality was incorporated as the Village of Queen Charlotte on December 7, 2005. Its ancestral name, Daajing Giids, was restored July 13, 2022 under Order in Council 422/2022. The Village publicly introduced the new landscape identity in July 2026.",
+      "nextAction": "Seek publisher artwork for the four marks and evidence for the formal adoption date of the July 2026 identity.",
       "assets": [
         {
           "id": "source-recovered-municipal-daajing-giids-website-logo",
-          "label": "Daajing Giids: Website logo",
+          "label": "Daajing Giids — Italic wordmark",
           "file": "identity-recovered/municipalities/daajing-giids/website-logo.png",
           "format": "png",
           "isVector": false,
@@ -3073,11 +3995,183 @@
           "dateNote": "Observation date and upload-directory years do not establish logo adoption or first use.",
           "observedDate": "2026-11-20",
           "evidenceType": "official-website-raster",
-          "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged.",
+          "notes": "The italic serif wordmark carries the restored name with a light-green “of”. The Village used the wordmark on the 2022 annual report and its March 2025 correspondence, and was still serving it in the website header when checked.",
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
-          "darkBackground": false
+          "darkBackground": false,
+          "designLabel": "Daajing Giids — Italic wordmark",
+          "versionLabel": "Municipal website · PNG",
+          "alsoSeen": [
+            {
+              "label": "2022 Annual Report, cover",
+              "source": "https://daajinggiids.civicweb.net/document/9086/#page=1",
+              "date": "2022"
+            },
+            {
+              "label": "March 20, 2025 municipal letter, Tahsis council agenda PDF page 22",
+              "source": "https://villageoftahsis.com/wp-content/uploads/2025/03/April-1-2025-Regular-Council-Meeting-Agenda-01-04-20251-web.pdf#page=22",
+              "date": "2025-03-20"
+            },
+            {
+              "label": "BC Geographical Names record for incorporation and the restored name",
+              "source": "https://apps.gov.bc.ca/pub/bcgnws/names/75799.html"
+            }
+          ]
+        },
+        {
+          "id": "municipal-daajing-giids-council-portal-wordmark",
+          "label": "Daajing Giids — Council portal wordmark",
+          "versionLabel": "Council portal · PNG",
+          "variantOf": "source-recovered-municipal-daajing-giids-website-logo",
+          "file": "identity-recovered/municipalities/daajing-giids/council-portal-logo.png",
+          "format": "png",
+          "isVector": false,
+          "bytes": 15690,
+          "sha256": "e150ffaad597fd7a5c7a624a47dc1fcb8f4a0693ffe929995e91fc5509517556",
+          "dimensions": {
+            "width": 412,
+            "height": 116
+          },
+          "contentType": "image/png",
+          "supplied": false,
+          "reconstruction": false,
+          "observedDate": "2026-11-25",
+          "publisher": "Village of Daajing Giids",
+          "sourcePage": "https://daajinggiids.civicweb.net/Portal/",
+          "sourceUrl": "https://daajinggiids.civicweb.net/content/portallogo.png",
+          "resolvedSourceUrl": "https://daajinggiids.civicweb.net/content/portallogo.png",
+          "sourceFile": "identity-recovered/municipalities/daajing-giids/council-portal-logo.png",
+          "sourceLocator": "Council portal logo image",
+          "sourceDate": "Undated web asset observed 2026-11-25",
+          "evidenceType": "official-website-raster",
+          "notes": "The council portal uses the same italic name and light-green “of” in a tighter crop.",
+          "fidelityNote": "Original portal PNG archived byte-for-byte."
+        },
+        {
+          "id": "municipal-queen-charlotte-protocol-2006-circle",
+          "label": "Queen Charlotte — Circular protocol wordmark",
+          "file": "identity-recovered/municipalities/daajing-giids/queen-charlotte-protocol-2006.png",
+          "format": "png",
+          "isVector": false,
+          "bytes": 15485,
+          "sha256": "de7a299209ba7ba4739f53de6b72252ceaa7f9ee37a2c2e63815efe630605c16",
+          "dimensions": {
+            "width": 411,
+            "height": 400
+          },
+          "contentType": "image/png",
+          "supplied": false,
+          "reconstruction": false,
+          "observedDate": "2026-11-25",
+          "publisher": "Village of Queen Charlotte and Council of the Haida Nation",
+          "sourcePage": "https://static1.squarespace.com/static/66a42eb6e157224ea438eb79/t/685045e42a481475eaf7f02a/1750091239792/Protocol_QCC.pdf#page=1",
+          "sourceUrl": "https://static1.squarespace.com/static/66a42eb6e157224ea438eb79/t/685045e42a481475eaf7f02a/1750091239792/Protocol_QCC.pdf",
+          "sourceFile": "2006 Village of Queen Charlotte and Council of the Haida Nation Protocol Agreement",
+          "sourceLocator": "PDF page 1, upper-left signatory mark",
+          "specimenDate": "2006-11",
+          "evidenceType": "official-publication-raster-extraction",
+          "notes": "Red italic lettering runs around an open circle on the signed November 2006 agreement. Its use outside the agreement remains unverified.",
+          "fidelityNote": "Cropped the signatory mark at the embedded scan’s native pixel resolution, keeping the paper and printed ink.",
+          "extraction": {
+            "method": "Cropped the signatory mark at the embedded scan’s native pixel resolution, keeping the paper and printed ink.",
+            "page": 1,
+            "sourceSha256": "15f5fe28ce41708c09f0e54910bb34b94f00afef8e8d87f2226a88495b51a1e4"
+          },
+          "search": "municipal-logos-vector-2026-11-16",
+          "role": "historical"
+        },
+        {
+          "id": "municipal-queen-charlotte-annual-report-2007-landscape",
+          "label": "Queen Charlotte — Landscape signature",
+          "file": "identity-recovered/municipalities/daajing-giids/queen-charlotte-annual-report-2007.jpeg",
+          "format": "jpeg",
+          "isVector": false,
+          "bytes": 44288,
+          "sha256": "52be49975c8952a8a201d1ab6d812135b5508905b8129a9c2a3b75967a86f89c",
+          "dimensions": {
+            "width": 634,
+            "height": 520
+          },
+          "contentType": "image/jpeg",
+          "supplied": false,
+          "reconstruction": false,
+          "observedDate": "2026-11-25",
+          "publisher": "Village of Queen Charlotte",
+          "sourcePage": "https://daajinggiids.civicweb.net/document/4512/#page=1",
+          "sourceUrl": "https://daajinggiids.civicweb.net/document/4512/",
+          "sourceFile": "2007 Annual Report",
+          "sourceLocator": "PDF page 1, large front-cover signature",
+          "specimenDate": "2007",
+          "evidenceType": "official-publication-raster-extraction",
+          "notes": "Blue and green landscape inside a sweeping black outline, with the former Village of Queen Charlotte name below.",
+          "fidelityNote": "Extracted the cover’s original embedded JPEG at 634 × 520 pixels without resampling.",
+          "extraction": {
+            "method": "Extracted the cover’s original embedded JPEG at 634 × 520 pixels without resampling.",
+            "page": 1,
+            "sourceSha256": "45f946928d3b7e0c1d62063ff428617ddf7f7ed85c56776813da02a5622153bd"
+          },
+          "search": "municipal-logos-vector-2026-11-16",
+          "role": "historical",
+          "dateNote": "The 2007 date is the reporting year for the cover specimen.",
+          "alsoSeen": [
+            {
+              "label": "May 2022 municipal report, colour letterhead",
+              "source": "https://queencharlotte.civicweb.net/document/2803/#page=1",
+              "date": "2022-05"
+            },
+            {
+              "label": "May 16, 2017 municipal letter, regional district agenda, PDF page 84",
+              "source": "https://www.ncrdbc.com/sites/default/files/uploads/meetings/agendas/08-18-2017_ncrd_reg_ag_pkg.pdf#page=84",
+              "date": "2017-05-16"
+            }
+          ]
+        },
+        {
+          "id": "municipal-daajing-giids-village-voice-2026-landscape",
+          "label": "Daajing Giids — 2026 landscape signature",
+          "file": "identity-recovered/municipalities/daajing-giids/village-voice-july-2026-landscape.jpeg",
+          "format": "jpeg",
+          "isVector": false,
+          "bytes": 34181,
+          "sha256": "e7b21a1989f9d92e675790af1c6b4e1530f96771c1818d28363332ac96e048c0",
+          "dimensions": {
+            "width": 669,
+            "height": 500
+          },
+          "contentType": "image/jpeg",
+          "supplied": false,
+          "reconstruction": false,
+          "observedDate": "2026-11-25",
+          "publisher": "Village of Daajing Giids",
+          "sourcePage": "https://daajinggiids.civicweb.net/document/46310/#page=6",
+          "sourceUrl": "https://daajinggiids.civicweb.net/document/46310/",
+          "sourceFile": "July 2026 Village Voice",
+          "sourceLocator": "PDF page 6, “A Symbol of Place” first public look",
+          "specimenDate": "2026-07",
+          "evidenceType": "official-publication-raster-extraction",
+          "notes": "The landscape signature by Cinnamon Toast depicts the Sleeping Beauty ridgeline, forest and coastal water. The July newsletter introduces the identity and anticipates a phased rollout.",
+          "fidelityNote": "Extracted the newsletter’s original 669 × 500 JPEG without resampling. Its white background is part of the image.",
+          "extraction": {
+            "method": "Extracted the newsletter’s original 669 × 500 JPEG without resampling. Its white background is part of the image.",
+            "page": 6,
+            "sourceSha256": "46b094f68952cbed8bea7ac32cec7d52a938a82e45f2d7a65b1d6d19633540a7"
+          },
+          "search": "municipal-logos-vector-2026-11-16",
+          "role": "current",
+          "dateNote": "July 2026 documents the public unveiling. A formal adoption date is unverified.",
+          "alsoSeen": [
+            {
+              "label": "September 2026 Village Voice, PDF page 8",
+              "source": "https://daajinggiids.civicweb.net/document/47426/#page=8",
+              "date": "2026-09"
+            },
+            {
+              "label": "Cinnamon Toast visual identity case study, design and development",
+              "source": "https://cinnamontoast.ca/work/village-of-daajing-giids"
+            }
+          ]
         }
-      ]
+      ],
+      "cover": "municipal-daajing-giids-village-voice-2026-landscape"
     },
     {
       "id": "municipality-delta",
@@ -3135,8 +4229,8 @@
       "current": true,
       "status": "asset-collected",
       "observedDate": "2026-11-20",
-      "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
-      "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
+      "notes": "The clock tower signature appears on the cover and introduction of the 2025 Annual Report. The civic arms are documented separately in the City’s annual reports and in the Canadian Heraldic Authority register.",
+      "nextAction": "Seek a publisher vector for the full coat of arms.",
       "assets": [
         {
           "id": "source-recovered-municipal-duncan-website-logo",
@@ -3165,9 +4259,96 @@
           "evidenceType": "official-website-raster",
           "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged.",
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
-          "darkBackground": false
+          "darkBackground": false,
+          "versionLabel": "Black lettering · website PNG"
+        },
+        {
+          "id": "municipal-duncan-coat-of-arms-colour",
+          "file": "identity-recovered/municipalities/duncan/annual-report-2020-coat-of-arms.jpeg",
+          "bytes": 87794,
+          "sha256": "e77e5e3d7820d40042958e0ef655af11733cd64507c8ff7163f6b179f38bb5a0",
+          "format": "jpeg",
+          "isVector": false,
+          "dimensions": {
+            "width": 892,
+            "height": 1117
+          },
+          "contentType": "image/jpeg",
+          "supplied": false,
+          "reconstruction": false,
+          "publisher": "City of Duncan",
+          "sourcePage": "https://duncan.ca/wp-content/uploads/dlm_uploads/2021/06/City-of-Duncan-Annual-Report-2020.pdf#page=46",
+          "sourceUrl": "https://duncan.ca/wp-content/uploads/dlm_uploads/2021/06/City-of-Duncan-Annual-Report-2020.pdf",
+          "sourceFile": "2020 Annual Report",
+          "sourceLocator": "PDF page 46, financial section, underlying colour coat of arms",
+          "specimenDate": "2021-06",
+          "observedDate": "2026-11-25",
+          "evidenceType": "official-publication-raster-extraction",
+          "notes": "The arms show a gold elk crest above a shield with Douglas firs, a salmon and the motto “Unity and Progress”. The Canadian Heraldic Authority registered the arms on May 20, 2005. It records the original College of Arms entry on September 16, 1968.",
+          "fidelityNote": "Extracted the report’s original 892 × 1117 JPEG with PyMuPDF. The report places text and a fading treatment above the raster, which are outside the embedded image.",
+          "extraction": {
+            "method": "Extracted the report’s original 892 × 1117 JPEG with PyMuPDF. The report places text and a fading treatment above the raster, which are outside the embedded image.",
+            "page": 46,
+            "sourceSha256": "b6c3f5f08eb7c99b9075bf48c9e3ba1c036c8cba0d790e9a9565b54a54b814ed"
+          },
+          "search": "municipal-logos-vector-2026-11-16",
+          "label": "Duncan — Coat of arms",
+          "designLabel": "Duncan — Coat of arms",
+          "versionLabel": "Full colour · annual report",
+          "alsoSeen": [
+            {
+              "label": "2025 Annual Report, opening title page",
+              "source": "https://bigconversations.duncan.ca/50883/widgets/215742/documents/169895#page=2",
+              "date": "2026-06"
+            },
+            {
+              "label": "2025 Annual Report, financial section, underlying colour image",
+              "source": "https://bigconversations.duncan.ca/50883/widgets/215742/documents/169895#page=64",
+              "date": "2026-06"
+            },
+            {
+              "label": "Canadian Heraldic Authority registration, May 20, 2005",
+              "source": "https://www.gg.ca/en/heraldry/public-register/project/507",
+              "date": "2005-05-20"
+            }
+          ]
+        },
+        {
+          "id": "municipal-duncan-coat-of-arms-monochrome",
+          "file": "identity-recovered/municipalities/duncan/council-remuneration-bylaw-2019-coat-of-arms.png",
+          "bytes": 60188,
+          "sha256": "217c275527a1ec1da8e03448c3db39d956dad00e846d2947ffd34203f7ef8ee1",
+          "format": "png",
+          "isVector": false,
+          "dimensions": {
+            "width": 463,
+            "height": 640
+          },
+          "contentType": "image/png",
+          "supplied": false,
+          "reconstruction": false,
+          "publisher": "City of Duncan",
+          "sourcePage": "https://duncan.civicweb.net/document/38435/#page=1",
+          "sourceUrl": "https://duncan.civicweb.net/document/38435/",
+          "sourceFile": "Mayor and Council Remuneration Bylaw No. 3183, 2018",
+          "sourceLocator": "PDF page 1, monochrome arms beside the title",
+          "specimenDate": "2019-02",
+          "observedDate": "2026-11-25",
+          "evidenceType": "official-publication-raster-extraction",
+          "notes": "The bylaw cover uses a black-and-white drawing of the same arms with differently rendered mantling and scrollwork.",
+          "fidelityNote": "Extracted the 463 × 640 embedded raster from the PDF with PyMuPDF, keeping its original resolution.",
+          "extraction": {
+            "method": "Extracted the 463 × 640 embedded raster from the PDF with PyMuPDF, keeping its original resolution.",
+            "page": 1,
+            "sourceSha256": "14288d0e77cd93733ac1aea919b8b6e26b4fd0043b5a8a966b89f21ef77708c2"
+          },
+          "search": "municipal-logos-vector-2026-11-16",
+          "label": "Duncan — Coat of arms, monochrome",
+          "versionLabel": "Monochrome drawing · bylaw",
+          "variantOf": "municipal-duncan-coat-of-arms-colour"
         }
-      ]
+      ],
+      "cover": "source-recovered-municipal-duncan-website-logo"
     },
     {
       "id": "municipality-elkford",
@@ -3347,6 +4528,38 @@
           "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged.",
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
           "darkBackground": false
+        },
+        {
+          "id": "municipal-fernie-style-guide-principal",
+          "label": "Principal civic signature",
+          "file": "identity-recovered/municipalities/fernie/municipal-fernie-style-guide-principal.svg",
+          "publisher": "City of Fernie",
+          "sourcePage": "https://fernie.civicweb.net/document/15225/#page=4",
+          "sourceLocator": "City of Fernie Style Guide, PDF page 4",
+          "notes": "The principal signature pairs the Fernie script with small City of Fernie and British Columbia lettering.",
+          "fidelityNote": "Clipped the upper principal identity specimen and converted its native paths and fonts to outlines with Poppler.",
+          "sha256": "407f06941e15338dc96ae74a240f189509c27be36906411d9b06423d0716a809",
+          "bytes": 15689,
+          "extraction": {
+            "method": "Clipped the upper principal identity specimen and converted its native paths and fonts to outlines with Poppler.",
+            "page": 4,
+            "pdfBounds": [
+              197,
+              355,
+              358,
+              461
+            ],
+            "sourceSha256": "eaf21373b69b06e46aafbea63421f20e0f170971af8bbc63288d02f5ec22ff5c"
+          },
+          "sourceDate": "2013",
+          "format": "svg",
+          "isVector": true,
+          "reconstruction": false,
+          "supplied": false,
+          "sourceUrl": "https://fernie.civicweb.net/document/15225/",
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "search": "local-and-school-vectors-2026-11-25"
         }
       ]
     },
@@ -4327,6 +5540,38 @@
           "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged.",
           "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
           "darkBackground": false
+        },
+        {
+          "id": "municipal-lantzville-no-tagline",
+          "label": "Lantzville signature without tagline",
+          "file": "identity-recovered/municipalities/lantzville/municipal-lantzville-no-tagline.svg",
+          "publisher": "District of Lantzville",
+          "sourcePage": "https://www.lantzville.ca/cms/wpattachments/wpID485atID7292.pdf#page=50",
+          "sourceLocator": "2025 Annual Report, PDF page 50",
+          "sourceDate": "2025",
+          "notes": "The multicolour spiral and Lantzville script appear without the Love Life Here tagline.",
+          "fidelityNote": "Extracted the native logo paths with PyMuPDF.",
+          "sha256": "3a45f9fe722353e5a96a39fd5f5bbf7b1f51aec9ea99c577f645946a22d5fe0d",
+          "bytes": 17229,
+          "extraction": {
+            "method": "Extracted the native logo paths with PyMuPDF.",
+            "page": 50,
+            "pdfBounds": [
+              65.79845186047739,
+              541.1438121676298,
+              245.78025650377413,
+              657.703140064418
+            ],
+            "sourceSha256": "5b873c0fb2642a3f0ee4d272fd94d0c413f8d19170954a4af593ef40178913dd"
+          },
+          "format": "svg",
+          "isVector": true,
+          "reconstruction": false,
+          "supplied": false,
+          "sourceUrl": "https://www.lantzville.ca/cms/wpattachments/wpID485atID7292.pdf",
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "search": "local-and-school-vectors-2026-11-25"
         }
       ]
     },
@@ -12240,6 +13485,49 @@
           "notes": "Native-pixel crop retains the complete named signature. Shared provincial symbol; no separate emblem or modern adoption date inferred.",
           "fidelityNote": "Original raster specimen; no tracing, redraw, interpolation or upscaling. Extracted from the checksum-pinned PDF.",
           "darkBackground": false
+        }
+      ]
+    },
+    {
+      "id": "municipality-grand-forks",
+      "name": "City of Grand Forks",
+      "shortName": "Grand Forks",
+      "kind": "municipal-city",
+      "graphNode": null,
+      "current": true,
+      "status": "asset-collected",
+      "notes": "Original City of Grand Forks identity artwork from the municipal brand book.",
+      "assets": [
+        {
+          "id": "municipal-grand-forks-brand-book-shield",
+          "label": "Grand Forks landscape shield",
+          "file": "identity-recovered/municipalities/grand-forks/municipal-grand-forks-brand-book-shield.svg",
+          "format": "svg",
+          "isVector": true,
+          "supplied": false,
+          "reconstruction": false,
+          "publisher": "City of Grand Forks",
+          "sourceUrl": "https://www.grandforks.ca/wp-content/uploads/SCHED-D-GF_Brand-Book_Information.pdf",
+          "sourcePage": "https://www.grandforks.ca/wp-content/uploads/SCHED-D-GF_Brand-Book_Information.pdf#page=12",
+          "sourceLocator": "Grand Forks Brand Book, printed page 11 (PDF page 12), “Overview”",
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "notes": "The City’s brand book presents this landscape shield as its primary logo. The arched name, farmland lines and BC lettering are outlined in the vector source.",
+          "fidelityNote": "Extracted the native paths and outline stroke from the City’s brand book with PyMuPDF. The textured page background is omitted.",
+          "search": "local-and-school-vectors-2026-11-25",
+          "sha256": "f8f01122a63eb6312e05914fc9ed2253941b700f55f37d246ad06dc99d648e78",
+          "bytes": 16612,
+          "extraction": {
+            "method": "Extracted the native paths and outline stroke from the City’s brand book with PyMuPDF. The textured page background is omitted.",
+            "page": 12,
+            "pdfBounds": [
+              82.2,
+              185.8,
+              232.2,
+              270.5
+            ],
+            "sourceSha256": "81877759c5826d00e28c4e5318fa2a001b95d232ac646fd5774060dd5bbeb9fe"
+          }
         }
       ]
     }

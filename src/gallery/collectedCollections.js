@@ -6,23 +6,22 @@ import { withScienceCouncilHistory } from './scienceCouncilHistory.js'
 import { withLiquorHistory } from './liquorHistory.js'
 import { RAILWAY_HISTORY } from './railwayHistoryData.js'
 import { COLLECTED_PALETTES } from './collectedPalettes.js'
+import { LOGO_BRAND_GUIDELINES } from './logoBrandGuidelines.js'
 
 export { ALL_COLLECTED_BODIES }
 
 /** Municipal governments, shelved apart from the provincial bodies. */
 export const isMunicipalBody = (body) => body.kind?.startsWith('municipal-') || body.kind === 'self-government-district'
 
-/**
- * The file a body's card shows: one with a display copy that keeps its own colours on the light
- * page, else any with a display copy, else the first file. A display copy is drawn for the page
- * in both themes, where a raster file still sits on a plate of its own.
- */
-const coverOf = (all) => {
-  const assets = all.filter((asset) => !asset.variantOf)
-  const displayOf = (asset) => COLLECTED_DISPLAY[asset.preferredVector ?? asset.preferredReconstruction ?? asset.id]
-  return (assets.find((asset) => displayOf(asset)?.light.recoloured === false) ??
-    assets.find((asset) => displayOf(asset)) ?? assets[0])?.id
+/** Prefer a cover that can keep its source colours on the light page. */
+const coverOf = (entries) => {
+  const displayOf = ({ asset }) => COLLECTED_DISPLAY[asset.id]
+  return (entries.find((entry) => displayOf(entry)?.light.recoloured === false) ??
+    entries.find((entry) => displayOf(entry)) ?? entries[0])?.id
 }
+
+const isSourceVector = ({ asset }) => asset.isVector && !asset.reconstruction &&
+  (asset.format === 'svg' || Boolean(COLLECTED_DISPLAY[asset.id]))
 
 export const assetUrl = (path, base = import.meta.env?.BASE_URL ?? '/') =>
   `${base.replace(/\/?$/, '/')}${path.replace(/^\//, '')}`
@@ -76,9 +75,12 @@ const isUndatedWebsiteLogo = (asset) =>
   /^(official-website-|official-inline-)/.test(asset.evidenceType ?? '') &&
   !asset.sourcePage?.includes('web.archive.org/') && !parseSpecimenDate(asset.specimenDate ?? asset.sourceDate)
 
+const currentSpecimens = ({ asset, versions }) => (versions ?? [asset])
+  .filter((specimen) => !specimen.sourceReproduction && specimen.role !== 'historical')
+
 /** Current-use evidence leads. Publication dates compare actual sightings of the design. */
 const latestLogo = (entries) => entries.map((entry) => {
-  const evidence = (entry.versions ?? [entry.asset]).filter((asset) => !asset.sourceReproduction && asset.role !== 'historical')
+  const evidence = currentSpecimens(entry)
   const current = evidence.some((asset) => asset.role === 'current') ? 2 : Number(evidence.some(isUndatedWebsiteLogo))
   const latest = Math.max(0, ...evidence.flatMap(datesOf).map(dateOrder))
   const display = COLLECTED_DISPLAY[entry.asset.id]
@@ -98,12 +100,13 @@ export const coverFirst = (entries, cover) => {
 const VERIFIED_CURRENT_COVERS = {
   'bc-assessment': 'bc-assessment-svg',
   'bc-housing': 'vector-bc-housing-corporate-component-source-vector',
-  'bc-infrastructure-benefits': 'source-bc-infrastructure-benefits-bcib-building-opportunity-here-reverse-png',
-  'bc-railway-company': 'bcrc-website-wordmark-rebuilt',
+  'bc-infrastructure-benefits': 'vector-bcib-2025-tagline-reversed-source-vector',
+  'bc-railway-company': 'bcrc-2024-letterhead',
   'first-nations-health-authority': 'vector-fnha-logo-colour',
   'interior-health': 'vector-interior-health-blue-horizontal-source-extraction',
   'municipality-fort-st-james': 'source-recovered-municipal-fort-st-james-website-logo',
-  'northern-development-initiative-trust': 'source-expanded-northern-development-2023-stacked-reversed'
+  'northern-development-initiative-trust': 'source-expanded-northern-development-2023-stacked-reversed',
+  'school-district-44': 'school-district-44-logo-current'
 }
 
 /** One or two sightings as given; more as their full year span. Retrieval dates are never used. */
@@ -172,6 +175,7 @@ const collectedEntry = (design, timeline, owner, versions = [design]) => {
     // A design can retain an EPS source ID while using its original SVG for the web viewer.
     // Palette choices share this geometry; the other source files remain available as evidence.
     asset: preferred ?? paletteMaster(design, versions),
+    ...(LOGO_BRAND_GUIDELINES[design.id] ? { brandGuidelines: LOGO_BRAND_GUIDELINES[design.id] } : {}),
     ...(COLLECTED_PALETTES[design.id] ? { paletteGroup: COLLECTED_PALETTES[design.id] } : {}),
     ...(versions.length > 1 ? { versions: orderedVersions } : {}),
     identity: {
@@ -217,8 +221,11 @@ export const specimenEntriesOf = (program, timeline) => designsOf(ALL_COLLECTED_
 
 const collectionOf = (body) => {
   const entries = collectedEntriesOf(body.id)
-  const currentCover = body.current ? VERIFIED_CURRENT_COVERS[body.id] ?? latestLogo(entries) : undefined
-  const cover = body.cover ?? currentCover ?? coverOf(body.assets)
+  const verifiedCover = body.current ? VERIFIED_CURRENT_COVERS[body.id] : undefined
+  const vectors = entries.filter((entry) => isSourceVector(entry) && (!body.current || currentSpecimens(entry).length))
+  const vectorCover = vectors.some(({ id }) => id === body.cover) ? body.cover
+    : (body.current ? latestLogo(vectors) : undefined) ?? coverOf(vectors)
+  const cover = verifiedCover ?? vectorCover ?? body.cover ?? (body.current ? latestLogo(entries) : undefined) ?? coverOf(entries)
   const artworkSections = body.artworkSections?.map(({ marks, ...section }) => ({
     ...section, entries: marks.map((mark) => entries.find(({ id }) => id === mark)).filter(Boolean)
   }))

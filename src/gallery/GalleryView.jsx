@@ -46,7 +46,7 @@ import { COUNCIL_TIMELINE_OWNERS } from './scienceCouncilHistory.js'
 import { galleryHistoryOf, hasGalleryHistory } from './galleryHistory.js'
 import { identitySubjectById } from './identityCoverage.js'
 import { CNC_SUBJECT } from './cncIdentity.js'
-import { CncIdentityCard, IdentityCollectionLinks, IdentityCoverageBrowser, IdentityCoverageOverview, IdentitySearchResults, IdentitySubjectDetail, SubjectLink } from './IdentityCoverage.jsx'
+import { CncIdentityCard, IdentityCollectionLinks, IdentityCoverageBrowser, IdentityCoverageOverview, IdentitySearchResults, IdentitySubjectDetail, RegionalDistrictMembers, SubjectLink } from './IdentityCoverage.jsx'
 import { SiteLink, useNavigate } from '../site/navigation.jsx'
 import { movedGalleryPlace } from './movedGalleryPlaces.js'
 import { galleryPlaceUrl } from './galleryPlace.js'
@@ -498,7 +498,7 @@ const CollectionCard = ({ collection, onOpen, theme, href }) => {
         <span className="gallery__note">{collection.body}</span>
         <span className="gallery__years">
           {collection.years} · {collection.fileCollection ? `${fileCount} artwork ${fileCount === 1 ? 'file' : 'files'}` : `${count} ${count === 1 ? 'mark' : 'marks'}`}
-          {collection.eras ? ` · ${collection.eras.length} eras` : ''}
+          {collection.eras ? ` · ${collection.eras.length} ${collection.eras.length === 1 ? 'era' : 'eras'}` : ''}
         </span>
       </span>
     </Control>
@@ -861,9 +861,9 @@ const Crumbs = ({ collection, entry, onHome, onCollection, onChooseCollection })
 }
 
 /**
- * Whether a collection has multiple marks, a history, or related collections to show.
+ * Whether a collection has multiple marks, its own history, or organizational links to show.
  */
-const hasPage = (collection) => Boolean(collection.eras) || entriesOf(collection).length > 1 ||
+const hasPage = (collection) => collection.shelf === 'regional-districts' || Boolean(collection.eras) || entriesOf(collection).length > 1 ||
   childCollectionsOf(collection.id).length > 0 || Boolean(supportProvidedBy(collection.graphNode)) || hasGalleryHistory(collection.historyId ?? collection.graphNode)
 
 
@@ -1011,6 +1011,15 @@ const GalleryCategory = ({ section, theme, onChooseCollection, onOpenRegister, o
             event.preventDefault()
             onOpenRegister({ family: 'municipalities' })
           }}>municipal register</a> lists official sources and artwork still wanted.
+        </p>
+      )}
+      {value === 'regional-districts' && (
+        <p className="gallery__intro gallery__shelf-intro">
+          Explore district logos, historical artwork and member municipalities in the <a href="?view=gallery&coverage=1&identity-family=regional-districts" onClick={(event) => {
+            if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+            event.preventDefault()
+            onOpenRegister({ family: 'regional-districts' })
+          }}>regional districts register</a>.
         </p>
       )}
       {(direct.length > 0 || cnc) && cards(direct, cnc)}
@@ -1360,6 +1369,9 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             {ungroupedArtwork?.length > 0 && artworkList(ungroupedArtwork)}
           </>
           )}
+      {collection.shelf === 'regional-districts' && (
+        <RegionalDistrictMembers subject={identitySubjectById(collection.entries[0]?.owner)} onOpenSubject={openSubject} />
+      )}
       {children.length > 0 && (
         <section className="gallery__shelf gallery__children" aria-labelledby="collection-children">
           <h2 id="collection-children" className="gallery__shelf-title">Under {collection.label}</h2>

@@ -82,7 +82,7 @@ export const tileArt = (entry, theme = 'light', { cover = false } = {}) => {
         (asset !== entry.asset && asset.reconstruction ? ' title="Vector reconstruction"' : '') +
         ` style="--logo-scale: ${logoScale(display.aspect)}"${display.plate ? ' data-plate="true"' : ''} />`
     }
-    return `<img class="gallery__collected-image" src="${escape(assetUrl(collectedPreviewFile(entry.asset)))}" alt="${escape(entry.label)}" loading="lazy" data-dark="${entry.asset.darkBackground ? 'true' : 'false'}" />`
+    return `<img class="gallery__collected-image" src="${escape(assetUrl(collectedPreviewFile(asset)))}" alt="${escape(entry.label)}" loading="lazy" data-dark="${asset.darkBackground ? 'true' : 'false'}" />`
   }
   if (entry.kind === 'artwork') {
     const printed = ONE_OFF_MARKS[entry.mark].printed

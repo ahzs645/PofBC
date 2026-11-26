@@ -1642,6 +1642,37 @@
           "darkBackground": false,
           "sourceLocator": null,
           "adoptionSource": null
+        },
+        {
+          "id": "school-district-44-stacked-leaf-signature",
+          "label": "North Vancouver School District stacked leaf signature",
+          "format": "svg",
+          "file": "education/school-districts/logos/school-district-44-stacked-leaf-signature.svg",
+          "bytes": 42814,
+          "sha256": "ca0880ca0ee5b338e263a7b3227c986ff3f113dbbf61983d18871c7257a0ca16",
+          "publisher": "North Vancouver School District",
+          "sourceUrl": "https://www.publicsectorcompensation.gov.bc.ca/executive-compensation-disclosures/2024-2025/125409/School-District-44-North-Vancouver-ECD-2025pdf",
+          "sourcePage": "https://www.publicsectorcompensation.gov.bc.ca/executive-compensation-disclosures/2024-2025/125409/School-District-44-North-Vancouver-ECD-2025pdf#page=1",
+          "sourceLocator": "2024–2025 Executive Compensation Disclosure, PDF page 1",
+          "sourceDate": "2025",
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "isVector": true,
+          "reconstruction": false,
+          "supplied": false,
+          "notes": "Green leaf and green tagline above and below a two-line district name. The district uses this stacked arrangement on the cover letter of its 2025 disclosure.",
+          "fidelityNote": "Cropped the publisher’s PDF to the signature and converted it with Poppler, preserving the native path outlines.",
+          "extraction": {
+            "method": "Cropped the publisher’s PDF to the signature and converted it with Poppler, preserving the native path outlines.",
+            "page": 1,
+            "pdfBounds": [
+              432.2,
+              33.4,
+              551.4,
+              102.6
+            ],
+            "sourceSha256": "59ecfb08caea702e1e2b9050ff4910678a54330ca184a114650dfa0a68d182fc"
+          }
         }
       ],
       "events": []
@@ -3073,6 +3104,37 @@
           "sourceKind": "district-website",
           "sourcePage": "https://www.sd68.bc.ca",
           "sourceDate": null,
+          "observedDate": "2026-11-25",
+          "adoptionDate": null,
+          "adoptionDatePrecision": null,
+          "notes": "The full-size website image preserves the district’s title-case Nanaimo Ladysmith lettering and bold Public Schools subline.",
+          "status": "captured",
+          "sourceUrl": "https://www.sd68.bc.ca/wp-content/uploads/NLPS_logo.png",
+          "sourceTitle": "Nanaimo Ladysmith Public Schools — full-size website logo",
+          "file": "education/school-districts/logos/sd068-website-430.png",
+          "format": "png",
+          "isVector": false,
+          "width": 430,
+          "height": 201,
+          "actualImageFormat": "PNG",
+          "bytes": 13626,
+          "sha256": "054ac017c5453277a28ff37fa35e156e44f826dd69158613d5012862658d21e0",
+          "label": "Nanaimo Ladysmith — current logo",
+          "role": "current",
+          "fidelityNote": "Original source image file retained byte-for-byte; no tracing, redraw, recolouring or upscaling.",
+          "id": "school-district-68-logo-current",
+          "publisher": "Nanaimo Ladysmith School District",
+          "darkBackground": false,
+          "sourceLocator": "Official website logo image, 430 × 201 pixels",
+          "adoptionSource": null,
+          "versionLabel": "Full-size website PNG"
+        },
+        {
+          "officialUrl": "https://www.sd68.bc.ca",
+          "directoryUrl": "https://studentsuccess.gov.bc.ca/school-district/068",
+          "sourceKind": "district-website",
+          "sourcePage": "https://www.sd68.bc.ca",
+          "sourceDate": null,
           "observedDate": "2026-11-22",
           "adoptionDate": null,
           "adoptionDatePrecision": null,
@@ -3089,13 +3151,14 @@
           "bytes": 16097,
           "sha256": "ccd3bab09ca1435ce2a0183701a494fbb244317cb9e780cff36f30fde8ae99c7",
           "label": "Nanaimo Ladysmith — current logo",
-          "role": "current",
           "fidelityNote": "Original source image file retained byte-for-byte; no tracing, redraw, recolouring or upscaling.",
-          "id": "school-district-68-logo-current",
+          "id": "school-district-68-website-300",
           "publisher": "Nanaimo Ladysmith School District",
           "darkBackground": false,
           "sourceLocator": null,
-          "adoptionSource": null
+          "adoptionSource": null,
+          "variantOf": "school-district-68-logo-current",
+          "versionLabel": "Website PNG · 300 pixels"
         },
         {
           "id": "school-district-68-2023-fish-lockup",
@@ -4224,7 +4287,46 @@
           "publisher": "Stikine School District",
           "darkBackground": false,
           "sourceLocator": null,
-          "adoptionSource": null
+          "adoptionSource": null,
+          "alsoSeen": [
+            {
+              "date": "2025-04-14",
+              "source": "https://www.sd87.bc.ca/documents/d6917890-15d7-5f0c-8103-8dea923f9ec2/Public_Agenda_April_14_2025_Atlin.pdf?fingerprint=ppb20260902210035#page=9",
+              "label": "April 14, 2025 Superintendent’s Report, PDF page 9"
+            }
+          ]
+        },
+        {
+          "id": "school-district-87-stikine-number-sign",
+          "label": "Stikine crest with number sign",
+          "file": "education/school-districts/logos/school-district-87-stikine-number-sign.svg",
+          "publisher": "Stikine School District",
+          "sourcePage": "https://www.publicsectorcompensation.gov.bc.ca/executive-compensation-disclosures/2022-2023/113016/School-District-87-Stikine-ECD-2023pdf#page=1",
+          "sourceLocator": "2022–2023 Executive Compensation Disclosure, PDF page 1",
+          "notes": "The district’s 2023 disclosure contains the coloured crest with “DISTRICT #87 STIKINE” in the arched lettering. The website crest omits the number sign.",
+          "fidelityNote": "Cropped the publisher’s PDF to the crest and converted it with Poppler, preserving the native fills and strokes.",
+          "sha256": "2d6a075346f6cf8994127a7e22fce239ee6e188a23bde7b11e1265af812cf175",
+          "bytes": 180319,
+          "extraction": {
+            "method": "Cropped the publisher’s PDF to the crest and converted it with Poppler, preserving the native fills and strokes.",
+            "page": 1,
+            "pdfBounds": [
+              78.8,
+              80.8,
+              171.1,
+              155.3
+            ],
+            "sourceSha256": "dcfbec12a344d4bbb2914db881f039c0740bbce01df1ae74ddee9ddeac9a0dc1"
+          },
+          "sourceDate": "2023",
+          "format": "svg",
+          "isVector": true,
+          "reconstruction": false,
+          "supplied": false,
+          "sourceUrl": "https://www.publicsectorcompensation.gov.bc.ca/executive-compensation-disclosures/2022-2023/113016/School-District-87-Stikine-ECD-2023pdf",
+          "observedDate": "2026-11-25",
+          "evidenceType": "native-pdf-vector-extraction",
+          "role": "historical"
         }
       ],
       "events": []

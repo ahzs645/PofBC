@@ -6,36 +6,46 @@ const manual = {
 const box = (x, y, w, h) => ({ x, y, w, h })
 
 const trademark = 'The manual credits Tourism B.C. with the registered landscape graphic and “Super, Natural British Columbia” trademark and records permission for their use in the manual.'
-const landscape = (bounds) => ({
+const tourismContext = (layout) => ({ links: [{
+  label: `Tourism · ${layout} Super, Natural British Columbia logos`,
+  note: layout === 'stacked'
+    ? 'The trademark specimens place the landscape above the wordmark and include an oval treatment.'
+    : 'The trademark specimens show several side-by-side arrangements of the landscape and wordmark.',
+  to: { view: 'initiatives', initiative: 'tourism', section: 'marks', record: `super-natural-${layout}` }
+}] })
+const landscape = (bounds, layout) => ({
   id: 'landscape', label: 'The landscape mark', box: bounds,
   lede: 'A yellow sun rises behind two green mountains. Two blue waves run beneath them.',
-  blocks: [trademark]
+  blocks: [trademark, tourismContext(layout)]
 })
 
 const plates = [
   {
     id: 'i-180', title: 'I-180 · Welcomes You!', size: '240 × 240', view: box(79.74, 81.65, 49.56, 49.70),
+    layout: 'stacked', variantLabel: 'I-180 · Square', blurb: 'Square, wide and bilingual layouts',
     lede: 'The manual places this square welcome sign among the first signs travellers would see on a conventional highway entering British Columbia.',
     details: [
-      landscape(box(86, 87, 37, 15)),
+      landscape(box(86, 87, 37, 15), 'stacked'),
       { id: 'greeting', label: 'Welcomes You!', box: box(81, 121, 47, 8),
         lede: 'White script crosses a black band at the foot of the sign. Above it, the landscape and the province’s name are stacked on white.' }
     ]
   },
   {
     id: 'i-180x', title: 'I-180X · Welcomes You!', size: '490 × 180', view: box(48.77, 166.97, 123.74, 46.10),
+    layout: 'horizontal', variantLabel: 'I-180X · Wide', variantOf: 'i-180',
     lede: 'The manual assigns this wide welcome sign to multi-lane highways. The landscape sits beside the blue tourism wordmark, leaving the lower half for the greeting.',
     details: [
-      landscape(box(54, 173, 46, 18)),
+      landscape(box(54, 173, 46, 18), 'horizontal'),
       { id: 'greeting', label: 'Welcomes You!', box: box(80, 197, 62, 10),
         lede: 'The English greeting is centred beneath the landscape and wordmark in pale blue italic lettering.' }
     ]
   },
   {
     id: 'i-180b', title: 'I-180B · Welcomes You! / Bienvenue!', size: '488 × 305', view: box(22.01, 260.21, 193.10, 72.50),
+    layout: 'horizontal', variantLabel: 'I-180B · Bilingual', variantOf: 'i-180',
     lede: 'The bilingual panel was reserved for monument-style signs in national parks, where the greeting appeared in English and French to meet federal language policy.',
     details: [
-      landscape(box(30, 270, 71, 28)),
+      landscape(box(30, 270, 71, 28), 'horizontal'),
       { id: 'greeting', label: 'Welcomes You! / Bienvenue!', box: box(33, 308, 173, 13),
         lede: 'A slash separates the two greetings on a single line. Both use the same size, colour and italic lettering.' }
     ]
@@ -54,14 +64,28 @@ const plates = [
   }
 ]
 
-export const ENTRY_CARDS = Object.fromEntries(plates.map(({ id, title, view }) => [id, {
-  id, title, view, series: 'entering-bc', when: 'September 2000',
+export const ENTRY_CARDS = Object.fromEntries(plates.map(({ id, title, view, variantOf, variantLabel, blurb }) => [id, {
+  id, title, view, variantOf, variantLabel, blurb, series: 'entering-bc', when: 'September 2000', exportFormat: 'svg',
   page: { w: 12, h: Number((12 * view.h / view.w).toFixed(3)) }
 }]))
 
-export const ENTRY_SIGNS = Object.fromEntries(plates.map(({ id, title, view, lede, size, details }) => {
-  const blocks = [{ facts: [['Sign size listed in the manual', size + ' cm']] }]
-  if (id.startsWith('i-180')) blocks.push(trademark)
+export const entryReconstructionFile = (id) => `sign-reconstructions/entering-bc/${id}-reconstruction.svg`
+
+export const ENTRY_SIGNS = Object.fromEntries(plates.map(({ id, title, view, lede, size, details, layout }) => {
+  const blocks = [{ facts: [
+    ['Sign size listed in the manual', size + ' cm'],
+    ['Artwork source', 'September 2000 sign manual']
+  ] }]
+  if (layout) blocks.push(trademark, tourismContext(layout))
+  if (id === 'i-180x' || id === 'i-180b') {
+    blocks.push('The greeting is outlined in the Times New Roman Bold Italic face named in the PDF, using the PDF’s letter positions.')
+  }
+  const reconstructionFile = entryReconstructionFile(id)
+  blocks.push({ downloads: [
+    { label: 'Download outlined reconstruction', file: reconstructionFile },
+    { label: 'Download editable lettering SVG', file: `sign-reconstructions/entering-bc/${id}-editable.svg` }
+  ] })
+  blocks.push({ note: 'The reconstruction uses the published panel and symbol paths with newly typeset lettering. The editable SVG uses live text and requires the fonts listed in the file description.' })
   blocks.push({ sources: [manual] })
   const parts = { overview: { label: 'Whole sign', box: view, pad: 0.06,
     panel: { eyebrow: 'Entering British Columbia · September 2000', heading: title, lede, blocks } } }
@@ -72,5 +96,21 @@ export const ENTRY_SIGNS = Object.fromEntries(plates.map(({ id, title, view, led
     }
   }
   const regions = details.map((detail) => detail.id)
-  return [id, { id, parts, regions, order: ['overview', ...regions], spotlight: { keep: [id + '-panel'] } }]
+  const variations = {
+    label: 'Artwork', toolbar: true, defaultId: 'reconstruction',
+    options: [
+      { id: 'manual', label: 'Manual artwork' },
+      {
+        id: 'reconstruction', label: 'Reconstruction', changed: 'with reconstructed lettering',
+        loadSvg: async () => {
+          const response = await fetch(`${import.meta.env.BASE_URL}${reconstructionFile}`)
+          if (!response.ok) throw new Error(`Could not load ${reconstructionFile} (${response.status})`)
+          const raw = await response.text()
+          if (!raw.trimStart().startsWith('<svg ')) throw new Error(`Expected SVG artwork in ${reconstructionFile}`)
+          return raw
+        }
+      }
+    ]
+  }
+  return [id, { id, parts, regions, variations, order: ['overview', ...regions], spotlight: { keep: [id + '-panel'] } }]
 }))

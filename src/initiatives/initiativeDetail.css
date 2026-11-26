@@ -123,6 +123,14 @@
 .initiative__visual--large { margin-top: 18px; border-radius: 7px; overflow: hidden; }
 .initiative__visual--large img { max-height: 360px; height: auto; min-height: 120px; padding: 20px; }
 .initiative__visual--large figcaption { font-size: 12px; line-height: 1.7; padding: 12px 18px; background: var(--hover); color: var(--ink-muted); }
+.initiative__comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.initiative__comparison .initiative__visual--large { margin-top: 0; }
+.initiative__comparison .initiative__visual--large img { height: clamp(160px, 36vh, 330px); }
+.initiative__dialog .initiative__comparison .initiative__download { margin-top: 12px; }
+@media (max-width: 560px) {
+  .initiative__comparison { grid-template-columns: 1fr; gap: 6px; }
+}
+
 .initiative__specimen-picker { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
 .initiative__specimen-picker button { border: 1px solid var(--mid); border-radius: 6px; padding: 9px 11px; color: var(--ink-muted); background: var(--surface); cursor: pointer; font-size: 12px; }
 .initiative__specimen-picker button[aria-pressed='true'] { background: var(--ink); color: var(--surface); border-color: var(--ink); }

@@ -1,3 +1,5 @@
+import { environmentYouthCorpsCover, environmentYouthCorpsId } from './environmentYouthCorpsArtwork.js'
+
 // Three separately administered programs discussed in the youth estimates and debates of 1989.
 export const ADVANCED_EDUCATION_1986 = 'ministry-of-advanced-education-and-job-training-1986'
 export const EDUCATION_1979 = 'ministry-of-education-1979'
@@ -29,12 +31,14 @@ export const YOUTH_PROGRAMS = [
     relatedBodyIds: [ADVANCED_EDUCATION_1986, EDUCATION_1979]
   },
   {
-    id: 'environment-youth-corps',
+    id: environmentYouthCorpsId,
     title: 'Environment Youth Corps',
     subtitle: 'Environment · Social Services and Housing',
     summary: 'Young people aged 16–24 worked on local conservation projects in a provincial employment and training program established in 1989.',
-    tags: ['Youth employment', 'Conservation', 'Timeline'],
-    searchTerms: ['BC Youth', 'Environmental youth services', 'Habitat restoration', 'Job training', 'Environment ministry'],
+    cover: environmentYouthCorpsCover,
+    exploreLabel: 'Explore the recruitment mark and program history',
+    tags: ['Youth employment', 'Conservation', 'Logos', 'Timeline'],
+    searchTerms: ['BC Youth', 'Environmental youth services', 'Habitat restoration', 'Job training', 'Environment ministry', 'Working for a better world'],
     relatedBodyIds: [ENVIRONMENT_1988, SOCIAL_SERVICES_1986]
   }
 ]

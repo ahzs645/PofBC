@@ -1,3 +1,5 @@
+import { bearAwareWindowId, bearAwareWindowSvg } from '../initiatives/bearAwareArtwork.js'
+import { bearAwareWindow } from './bearAwareWindow.js'
 // The signs hang together as the posters do: every series lists real signs, every part sits on its
 // drawing and names layers the drawing has, and every link lands somewhere that exists.
 
@@ -17,6 +19,7 @@ import { GALLERY_COLLECTIONS } from '../gallery/collections.js'
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
 const DRAWINGS = {
+  [bearAwareWindowId]: read(`../../public/${bearAwareWindowSvg}`),
   ...Object.fromEntries(Object.keys(ENTRY_SIGNS).map((id) => [id, read(`./entering-bc/${id}.svg`)])),
   'fire-day': read('./forest-service/fire-day.svg'),
   'cheakamus-notice-to-anglers': read('./fish-wildlife/cheakamus.svg'),
@@ -26,7 +29,7 @@ const DRAWINGS = {
   'super-natural': read('./tourism/super-natural.svg'),
   'proposed-park-symbols': read('./parks/proposed-park-symbols.svg')
 }
-const ALL_SIGNS = { ...ENTRY_SIGNS, ...FOREST_SERVICE_SIGNS, ...TOURISM_SIGNS, ...FISH_WILDLIFE_SIGNS, ...PARKS_SIGNS }
+const ALL_SIGNS = { [bearAwareWindowId]: bearAwareWindow, ...ENTRY_SIGNS, ...FOREST_SERVICE_SIGNS, ...TOURISM_SIGNS, ...FISH_WILDLIFE_SIGNS, ...PARKS_SIGNS }
 const GOVERNMENT = read('../government/historyData.js')
 const GALLERIES = new Set(GALLERY_COLLECTIONS.map(({ id }) => id))
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
@@ -74,6 +77,7 @@ test('every link lands somewhere that exists, and no text has an em dash', async
             const initiative = await loadInitiative(to.initiative)
             const section = initiative?.sections.find((entry) => entry.id === to.section)
             assert.ok(section, `${id}/${partId}: no initiative section ${to.section}`)
+            if (to.record) assert.ok(section.records?.some(({ id }) => id === to.record), `no initiative record ${to.record}`)
             if (to.page) assert.ok(section.guide?.chapters.flatMap((entry) => entry.pages)[to.page - 1], `no guide page ${to.page}`)
           } else if (to.view === 'government') {
             assert.ok(GOVERNMENT.includes(`"${to.node}"`), `${id}/${partId}: no body ${to.node}`)
@@ -87,6 +91,37 @@ test('every link lands somewhere that exists, and no text has an em dash', async
 test('every sign has a drawing and a set of parts, and nothing else does', () => {
   assert.deepEqual(Object.keys(ALL_SIGNS).sort(), signIds().sort())
   assert.deepEqual(Object.keys(DRAWINGS).sort(), signIds().sort())
+})
+
+test('the three I-180 variants keep their own source drawings and share one shelf card', () => {
+  const ids = Object.keys(ENTRY_SIGNS)
+  assert.deepEqual(ids.filter((id) => !SIGNS[id].variantOf), ['i-180', 'i-181', 'i-182'])
+  assert.deepEqual(ids.filter((id) => (SIGNS[id].variantOf ?? id) === 'i-180'), ['i-180', 'i-180x', 'i-180b'])
+  for (const id of ids) {
+    assert.match(DRAWINGS[id], /<path\b/, id)
+    assert.doesNotMatch(DRAWINGS[id], /<(image|text|foreignObject)\b/, id)
+  }
+})
+
+test('each entry sign offers both outlined and live-text lettering editions', () => {
+  for (const [id, { parts, regions, variations }] of Object.entries(ENTRY_SIGNS)) {
+    const editions = parts.overview.panel.blocks.find((block) => block.downloads)?.downloads
+    assert.equal(editions?.length, 2, id)
+    assert.deepEqual(variations.options.map(({ id }) => id), ['manual', 'reconstruction'])
+    assert.equal(variations.defaultId, 'reconstruction')
+    assert.equal(typeof variations.options[1].loadSvg, 'function')
+    for (const { file } of editions) {
+      const drawing = read(`../../public/${file}`)
+      assert.ok(drawing.includes(`id="${id}-panel"`), id)
+      assert.match(drawing, /<path\b/, id)
+      assert.doesNotMatch(drawing, /<(image|foreignObject)\b/, id)
+      assert.equal(/<text\b/.test(drawing), file.endsWith('-editable.svg'), file)
+      assert.equal(drawing.match(/viewBox="([^"]+)"/)[1], DRAWINGS[id].match(/viewBox="([^"]+)"/)[1], file)
+      for (const region of regions) for (const layerId of idsIn(parts[region].layer)) {
+        assert.ok(drawing.includes(`id="${layerId}"`), `${file}: no #${layerId}`)
+      }
+    }
+  }
 })
 
 test('the welcome sign keeps the flag the generator draws, path for path', async () => {

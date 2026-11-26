@@ -8,6 +8,7 @@ import { MUNICIPAL_IDENTITY_BODIES } from '../src/gallery/municipalIdentityData.
 import { RECOVERED_IDENTITY_BODIES } from '../src/gallery/recoveredIdentityData.js'
 import { NORTHERN_TRAVEL_GUIDE_ARTWORK } from '../src/gallery/northernTravelGuides.js'
 import { IDENTITY_SUBJECTS } from '../src/gallery/identitySubjects.js'
+import { REGIONAL_DISTRICT_BODIES } from '../src/gallery/regionalDistricts.js'
 import { collectionById, entriesOf } from '../src/gallery/collections.js'
 
 test('expanded artwork, preserved sources and generated metadata pass the offline integrity gate', () => {
@@ -19,7 +20,9 @@ test('expanded artwork, preserved sources and generated metadata pass the offlin
 test('every added artwork body has its own declared subject and retains every accepted file', () => {
   const oldIds = new Set(COLLECTED_BODIES.map((body) => body.id))
   const subjects = new Map(IDENTITY_SUBJECTS.map((subject) => [subject.id, subject]))
-  for (const body of [...EXPANDED_IDENTITY_BODIES, ...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES]) {
+  const districtIds = new Set(REGIONAL_DISTRICT_BODIES.map(({ id }) => id))
+  const expandedBodies = EXPANDED_IDENTITY_BODIES.filter(({ id }) => !districtIds.has(id))
+  for (const body of [...expandedBodies, ...REGIONAL_DISTRICT_BODIES, ...MUNICIPAL_IDENTITY_BODIES, ...RECOVERED_IDENTITY_BODIES]) {
     assert.ok(!oldIds.has(body.id), `${body.id}: expansion overwrites a legacy body`)
     const subject = subjects.get(body.id)
     assert.ok(subject, `${body.id}: artwork has no declared identity subject`)
@@ -31,7 +34,8 @@ test('every added artwork body has its own declared subject and retains every ac
     // reached by its old address, and keeps every file among the entries it owns there.
     const own = collection.id === `collected-${body.id}` ? entriesOf(collection) : entriesOf(collection).filter((entry) => entry.owner === body.id)
     const accepted = new Set(own.flatMap((entry) => (entry.versions ?? [entry.asset]).map((asset) => asset.id)))
-    const expected = [...body.assets, ...(NORTHERN_TRAVEL_GUIDE_ARTWORK[body.id] ?? [])]
+    const original = districtIds.has(body.id) ? EXPANDED_IDENTITY_BODIES.find(({ id }) => id === body.id) : undefined
+    const expected = [...body.assets, ...(original?.assets ?? []), ...(NORTHERN_TRAVEL_GUIDE_ARTWORK[body.id] ?? [])]
     for (const asset of expected) {
       assert.ok(accepted.has(asset.id), `${body.id}: ${asset.id} lost in collection assembly`)
     }
@@ -49,7 +53,12 @@ test('follow-up accepts only attributed municipal and named institutional signat
   assert.equal(lionsBay.find((asset) => asset.id === 'municipal-lions-bay-bear-smart-stacked').isVector, false)
   assert.match(recovered.get('liquor-control-board').assets[0].notes, /not current LDB branding/)
   assert.match(recovered.get('provincial-court').notes, /not a claim.*distinct heraldic grant/)
-  for (const id of ['municipality-grand-forks', 'municipality-okanagan-falls', 'municipality-shishalh-nation-government-district', 'thompson-health-region']) {
+  const [grandForks] = recovered.get('municipality-grand-forks').assets
+  assert.equal(grandForks.publisher, 'City of Grand Forks')
+  assert.equal(grandForks.evidenceType, 'native-pdf-vector-extraction')
+  assert.equal(grandForks.extraction.page, 12)
+  assert.equal(grandForks.isVector && !grandForks.reconstruction, true)
+  for (const id of ['municipality-okanagan-falls', 'municipality-shishalh-nation-government-district', 'thompson-health-region']) {
     assert.ok(!recovered.has(id), `${id} must not be credited from a source link, shared emblem, or OCR alone`)
   }
 })

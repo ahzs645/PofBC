@@ -3,9 +3,11 @@
 // without a browser. Adding a sign is a drawing and its parts (see forest-service/, tourism/ and parks/), an entry here,
 // and a loader in SignsView.jsx.
 
+import { bearAwareId, bearAwareTitle, bearAwareWindowId, bearAwareWindowMeta } from '../initiatives/bearAwareArtwork.js'
 import { ENTRY_CARDS } from './entering-bc/signs.js'
 
 export const SIGN_SERIES = [
+  { id: bearAwareId, title: bearAwareTitle, kind: 'Window sign · 1997', signs: [bearAwareWindowId] },
   {
     id: 'forest-service',
     title: 'British Columbia Forest Service',
@@ -44,6 +46,7 @@ export const SIGN_SERIES = [
 
 export const SIGNS = {
   ...ENTRY_CARDS,
+  [bearAwareWindowId]: { ...bearAwareWindowMeta, id: bearAwareWindowId, series: bearAwareId },
   'fire-day': {
     id: 'fire-day', series: 'forest-service', title: 'TO-DAY IS A FIRE DAY',
     when: 'Photographed in Powell River, July 1938', view: { x: 0, y: 0, w: 550, h: 424 },

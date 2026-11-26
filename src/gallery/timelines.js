@@ -1,3 +1,5 @@
+import { bearAwareId, bearAwareMarkId, bearAwareReport, bearAwareTitle } from '../initiatives/bearAwareArtwork.js'
+import { environmentYouthCorpsAd, environmentYouthCorpsId, environmentYouthCorpsScan } from '../initiatives/environmentYouthCorpsArtwork.js'
 import { fireSmartGuide, fireSmartDesigns } from './fireSmart.js'
 import { strongerBCGuide, strongerBCMatrix } from './strongerBC.js'
 import { buyBCStandards } from './buyBC.js'
@@ -479,6 +481,29 @@ export const TIMELINES = {
       note: 'The tilted badge appears on the Garry Oak Ecosystems and Estuaries in British Columbia covers, with differences in its tilt and ink colours.',
       applicability: { kind: 'dated_specimen', years: '1993 and 2006', note: 'October 1993 and March 2006 are the publication dates of the two held specimens.' },
       sources: ecosystemsAtRiskSources
+    }]
+  },
+
+  [bearAwareId]: {
+    label: bearAwareTitle, initiativeId: bearAwareId,
+    eras: [{
+      id: 'bear-aware-1997-checklist', status: 'held', years: 'Documented in 1997',
+      label: 'The paw on the Bear Aware checklist', marks: [bearAwareMarkId],
+      note: 'The checklist pairs a five-clawed paw with the stacked words Be Bear Aware. The paw appears inside the oval on the window sign.',
+      applicability: { kind: 'dated_specimen', years: '1997', note: 'The final report documents these uses during the 1997 campaign.' },
+      sources: [source('Revelstoke Bear Awareness Program, 1997 Final Report', bearAwareReport + '#page=28', 'PDF pages 27–28')]
+    }]
+  },
+
+  [environmentYouthCorpsId]: {
+    label: 'Environment Youth Corps', initiativeId: environmentYouthCorpsId,
+    eras: [{
+      id: 'environment-youth-corps-1990-recruitment', status: 'held', years: 'Seen in June 1990',
+      label: 'The recruitment campaign mark', marks: [environmentYouthCorpsScan.id],
+      note: 'A waving British Columbia flag appears above the program name in the recruitment advertisement.',
+      applicability: { kind: 'dated_specimen', years: 'June 1990', note: 'The newspaper printings document use of the mark in June 1990.' },
+      sources: [source(environmentYouthCorpsAd.title, environmentYouthCorpsScan.sourcePage, environmentYouthCorpsScan.sourceLocator),
+        ...environmentYouthCorpsScan.alsoSeen.map(({ label, source: url }) => source(label, url))]
     }]
   },
 

@@ -7,7 +7,7 @@
 // is too large to wait for (Wildlife Trees) supplies a light stand-in as its drawing and an
 // `upgrade` that resolves to the real one, which replaces it when it arrives. One with named
 // recolourings (`variations`) gets a switch on its overview; the first is the drawing as it is. An
-// option may instead show layers of its own (`show`), for a piece whose drawing has faces that change. One
+// option may instead show layers of its own (`show`) or load a drawing in the same frame (`loadSvg`). One
 // with a picture of the original (`reference`) can be compared with it, the picture laid into the
 // drawing's own frame; one made of pages (`pages`) can be read a page at a time. One with a 3D
 // view of the object (`model`, a lazy component given the piece and its module) gets a Drawing / 3D
@@ -60,22 +60,31 @@ const writeStory = writeFlag('story')
 const modelInAddress = () => new URLSearchParams(globalThis.location?.search ?? '').get('3d') === '1'
 const writeModel = writeFlag('3d')
 
-export function PosterViewer({ meta, series, module, part, onPart, onExit, previous, next, shelf, backLabel = 'Posters', noun = 'poster' }) {
+export function PosterViewer({ meta, series, module, part, onPart, onExit, previous, next, shelf, variants, onVariant, backLabel = 'Posters', noun = 'poster' }) {
   const { parts, order, regions, spotlight, svgRaw, prepare, upgrade, variations, reference, pages, figures, model: Model } = module
   const useExtras = module.useExtras ?? noExtras
   const [svg, setSvg] = useState(null)
-  // The drawing on the stage: the module's, or once it arrives the one its `upgrade` fetches.
-  const [drawing, setDrawing] = useState({ raw: svgRaw, state: upgrade ? 'loading' : 'ready' })
+  const [variationId, setVariationId] = useState(null)
+  const selectedVariationId = variationId ?? variations?.defaultId
+  const variation = variations?.options.find(({ id }) => id === selectedVariationId) ?? variations?.options[0] ?? null
+  const editionLoader = variation?.loadSvg
+  const loadDrawing = editionLoader ?? upgrade
+  const [loadedDrawing, setLoadedDrawing] = useState(null)
   const [attempt, setAttempt] = useState(0)
+  const result = loadedDrawing?.loader === loadDrawing && loadedDrawing?.attempt === attempt ? loadedDrawing : null
+  const drawing = result ?? { raw: svgRaw, state: loadDrawing ? 'loading' : 'ready' }
   useEffect(() => {
-    if (!upgrade) return undefined
+    if (!loadDrawing || result) return undefined
     let gone = false
-    setDrawing((d) => ({ ...d, state: 'loading' }))
-    upgrade()
-      .then((raw) => { if (!gone) setDrawing({ raw, state: 'ready' }) })
-      .catch((error) => { console.error(error); if (!gone) setDrawing((d) => ({ ...d, state: 'failed' })) })
+    loadDrawing()
+      .then((raw) => { if (!gone) setLoadedDrawing({ loader: loadDrawing, attempt, raw, state: 'ready' }) })
+      .catch((error) => {
+        if (gone) return
+        console.error(error)
+        setLoadedDrawing({ loader: loadDrawing, attempt, raw: svgRaw, state: 'failed' })
+      })
     return () => { gone = true }
-  }, [upgrade, attempt])
+  }, [loadDrawing, attempt, result, svgRaw])
   const exportable = drawing.state === 'ready'
   const [aboutOpen, setAboutOpen] = useState(false)
   const [exportOpen, setExportOpen] = useState(false)
@@ -147,12 +156,10 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
 
   const extras = useExtras({ svg, part: current, select, openExport, tour })
 
-  // A named recolouring, if the poster offers any; the first is the drawing untouched.
-  const [variationId, setVariationId] = useState(null)
-  const variation = variations?.options.find(({ id }) => id === variationId) ?? variations?.options[0] ?? null
   useColourSwap(svg, variation?.swap ?? null)
   useLayerShow(svg, variations?.options ?? null, variation?.id)
   const variationControl = variations && { ...variations, value: variation.id, onChange: setVariationId }
+  const hasArtworkEditions = variations?.options.some(({ loadSvg }) => loadSvg)
 
   // The original, laid into the drawing's frame for comparison.
   const [compareMode, setCompareMode] = useState('reconstruction')
@@ -216,8 +223,8 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
           {drawing.state !== 'ready' && (
             <p className={'pv-drawing-status' + (drawing.state === 'failed' ? ' pv-drawing-failed' : '')} role="status">
               {drawing.state === 'failed'
-                ? <>The full drawing did not load; this is a preview. <button type="button" className="pv-ghost" onClick={(e) => { e.stopPropagation(); setAttempt((n) => n + 1) }}>Retry</button></>
-                : <><span className="pv-drawing-spinner" aria-hidden="true" />Loading the full drawing; this is a preview</>}
+                ? <>{editionLoader ? `${variation.label} did not load. Showing manual artwork.` : 'The full drawing did not load; this is a preview.'} <button type="button" className="pv-ghost" onClick={(e) => { e.stopPropagation(); setAttempt((n) => n + 1) }}>Retry</button></>
+                : <><span className="pv-drawing-spinner" aria-hidden="true" />{editionLoader ? `Loading ${variation.label.toLowerCase()}` : 'Loading the full drawing; this is a preview'}</>}
             </p>
           )}
           {paging && (
@@ -247,7 +254,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
           </div>
         )}
 
-        <header className="pv-top">
+        <header className={`pv-top${variants ? ' pv-top--variants' : ''}${hasArtworkEditions ? ' pv-top--artwork' : ''}`}>
           {/* The way back sits in the title itself: "← All posters │ REWARD: A Living Forest". */}
           <nav className="pv-crumb" aria-label={`${meta.title}, in ${backLabel.toLowerCase()}`}>
             <button type="button" className="pv-back" data-initial-focus onClick={onExit} title={`All ${backLabel.toLowerCase()} (Esc from the whole ${noun})`} aria-label={`Back to all ${backLabel.toLowerCase()}`}>
@@ -264,6 +271,9 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
                 {variations.options.map(({ id, label, note }) => <option key={id} value={id} title={note}>{label}</option>)}
               </Select>
             )}
+            {variants && (
+              <Select className="pv-edition" aria-label="Variants" display="Variants" value={meta.id} options={variants} onChange={onVariant} />
+            )}
             {module.editorHref && <a className="pv-ghost" href={module.editorHref}>Edit template</a>}
             {shelf && shelf.list.length > 1 && (
               <div className="pv-switch" role="group" aria-label={`Other ${backLabel.toLowerCase()}`}>
@@ -273,7 +283,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
                   className="pv-switch-pick"
                   title={`Go to another ${noun}`}
                   aria-label={`Go to another ${noun}`}
-                  value={meta.id}
+                  value={shelf.value}
                   onChange={(value) => shelf.open(value)}
                   display={<><span className="pv-switch-noun">{noun[0].toUpperCase() + noun.slice(1)} </span>{shelf.index + 1} / {shelf.list.length}</>}
                 >
@@ -296,7 +306,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
         {/* The story starts from here (or S); the top bar keeps to the piece, About, the tour and export. */}
         <Dock steps={steps} current={current} onSelect={select} coarse={coarse} startLabel={canTell ? 'Start the story →' : undefined} onStart={canTell ? () => tell(true) : undefined} />
 
-        <ExportDialog open={exportOpen} onClose={() => setExportOpen(false)} targets={targets} target={exportTarget} onTarget={setExportTarget} />
+        <ExportDialog open={exportOpen} onClose={() => setExportOpen(false)} targets={targets} target={exportTarget} onTarget={setExportTarget} initialFormat={meta.exportFormat} />
       </div>
     </Modal>
   )

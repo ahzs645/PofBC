@@ -612,6 +612,8 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
   .pv-model { top: calc(64px + env(safe-area-inset-top, 0px)); }
 }
 @media (max-width: 600px) {
+  .pv-top--artwork { flex-direction: column; align-items: flex-start; }
+  .pv-top--artwork .pv-top-actions { flex-wrap: wrap; max-width: 100%; }
   .pv-back-label, .pv-tour-btn { display: none; }
   /* No room for a hint: the steps take the left, the way forward stays on the right. */
   .pv-dock { grid-template-columns: minmax(0, 1fr) auto; }
@@ -626,6 +628,9 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
   .pv-switch-pick .ui-select__chevron { display: none; }
   /* A long title takes two short lines rather than being cut to its first word. */
   .pv-brand b { font-size: 14px; line-height: 1.2; white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+}
+@media (max-width: 460px) {
+  .pv-top--variants { flex-direction: column; align-items: flex-start; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -863,6 +868,9 @@ dialog.pv-dialog-backdrop::backdrop { background: transparent; }
 @keyframes pv-spin { to { transform: rotate(360deg); } }
 @media (max-width: 900px) {
   .pv-drawing-status { left: 14px; top: calc(64px + env(safe-area-inset-top, 0px)); }
+}
+@media (max-width: 600px) {
+  .pv:has(.pv-top--artwork) .pv-drawing-status { top: calc(128px + env(safe-area-inset-top, 0px)); }
 }
 @media (prefers-reduced-motion: reduce) {
   .pv-drawing-spinner { animation-duration: 2.4s; }

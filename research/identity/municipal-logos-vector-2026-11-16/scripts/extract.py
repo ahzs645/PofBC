@@ -7,7 +7,8 @@ RGB); nothing is traced, redrawn or recoloured. Jobs are listed in jobs.json nex
    "out" (path under public/), "title",
    optional "skip": [drawing indices to leave out], "only": [indices to keep],
    optional "excludeFill": ["#ffffff", ...] colours to leave out (e.g. a page ground),
-   optional "maxSize": drawings wider/taller than this are left out (page grounds, rules)}
+   optional "maxSize": drawings wider/taller than this are left out (page grounds, rules),
+   optional "upright": read coordinates in the page's displayed orientation}
 
     python3 -I extract.py <downloads-dir> [job-id ...]
 
@@ -95,6 +96,8 @@ def run(job):
     if sha != job["sha256"]:
         sys.exit(f"{job['id']}: {pdf.name} is not the PDF this extraction was checked against ({sha})")
     page = pymupdf.open(stream=data, filetype="pdf")[job["page"] - 1]
+    if job.get("upright"):
+        page.remove_rotation()
     rect = pymupdf.Rect(job["rect"])
     excl = set(job.get("excludeFill", []))
     shapes, box = [], None

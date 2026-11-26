@@ -22,6 +22,9 @@ import { PROGRAM_ENTRY_OWNERS } from './reconciledSubjects.js'
 import { COLLECTED_COLLECTIONS, SPECIMEN_COLLECTIONS, collectedEntriesOf, specimenEntriesOf, coverFirst, nodesOf } from './collectedCollections.js'
 import { LIQUOR_DISTRIBUTION_COLLECTION } from './liquorHistory.js'
 import { ENDORSED_2019 } from './endorsed2019.js'
+import { bearAwareGalleryId, bearAwareId, bearAwareMarkId, bearAwareTitle } from '../initiatives/bearAwareArtwork.js'
+import { environmentYouthCorpsGalleryId, environmentYouthCorpsId, environmentYouthCorpsScan } from '../initiatives/environmentYouthCorpsArtwork.js'
+import { resWestBadgeEra } from './resWest.js'
 
 // ── The identity record ──────────────────────────────────────────────────────────────────────────
 
@@ -1359,6 +1362,18 @@ export const GALLERY_COLLECTIONS = [
     })
   },
   {
+    id: 'reswest',
+    shelf: 'bodies',
+    label: 'ResWest',
+    body: 'Provincewide tourism reservations service',
+    years: 'Documented in 1985–1986',
+    cover: 'reswest-badge',
+    intro: 'ResWest took reservations by telephone and mail through a computerized booking service. Tourism Minister Claude Richmond reported in 1985 that the Province had franchised the system the previous year. In 1986 he described ResWest as the successful bidder and said the privately operated service was promoted in provincial tourism literature. Expo 86 named it the fair’s official accommodation agency.',
+    eras: withMarks([resWestBadgeEra], {
+      [resWestBadgeEra.id]: specimenEntriesOf('reswest').map((entry) => ({ ...entry, owner: 'reswest' }))
+    })
+  },
+  {
     id: 'superhost',
     shelf: 'bodies',
     label: 'SuperHost',
@@ -1426,13 +1441,27 @@ GALLERY_COLLECTIONS.push(...COLLECTED_COLLECTIONS.filter((candidate) => !BC_MARK
 // Travel Industry opens in Departmental Logos and keeps its own register collection.
 // A program's published specimens belong to the body its one-off stands for, so the body's panel
 // finds the original files too.
-GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-health-program-signatures', 'specimens-worksafebc', 'specimens-bcts', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc', 'specimens-bc-environment', 'specimens-tourism-recreation-culture', 'specimens-superhost', 'specimens-bc-150-years', ...BC_MARK_SPECIMEN_PROGRAMS.values()].includes(collection.id))
+GALLERY_COLLECTIONS.push(...SPECIMEN_COLLECTIONS.filter((collection) => !['specimens-health-program-signatures', 'specimens-worksafebc', 'specimens-bcts', 'specimens-travel-industry', 'specimens-justice-institute', 'specimens-auditor-general', 'specimens-sub-bc-online', 'specimens-bceid', 'specimens-shared-services-bc', 'specimens-sub-bc-cancer', 'specimens-healthlink-bc', 'specimens-bc-environment', 'specimens-tourism-recreation-culture', 'specimens-reswest', 'specimens-superhost', 'specimens-bc-150-years', ...BC_MARK_SPECIMEN_PROGRAMS.values()].includes(collection.id))
   .map((collection) => {
     if (collection.id === 'specimens-ecosystems-at-risk') {
       return { ...collection, label: 'Ecosystems at Risk', shelf: 'provincial-programs',
         body: 'B.C. Conservation Data Centre brochure series',
         cover: 'ecosystems-at-risk-badge', years: 'Seen in 1993 and 2006',
         intro: 'The B.C. Conservation Data Centre used this tilted badge on public brochures about threatened habitats. The brochures explained where each ecosystem occurs, what lives there, why it is vulnerable and how people can help protect it. The badge appears on Garry Oak Ecosystems in October 1993 and Estuaries in British Columbia in March 2006.' }
+    }
+    if (collection.id === bearAwareGalleryId) {
+      return { ...collection, label: bearAwareTitle, fileCollection: false, shelf: 'initiatives',
+        initiativeId: bearAwareId, cover: bearAwareMarkId, years: 'Artwork documented in 1997',
+        entries: collection.entries.map((entry) => ({ ...entry, owner: bearAwareId })),
+        body: 'Revelstoke wildlife education campaign',
+        intro: 'The five-clawed paw and stacked Be Bear Aware lettering appear together on a checklist reproduced in the 1997 final report.' }
+    }
+    if (collection.id === environmentYouthCorpsGalleryId) {
+      return { ...collection, label: 'Environment Youth Corps', fileCollection: false, shelf: 'initiatives',
+        initiativeId: environmentYouthCorpsId, cover: environmentYouthCorpsScan.id, years: 'Seen in June 1990',
+        entries: collection.entries.map((entry) => ({ ...entry, owner: environmentYouthCorpsId })),
+        body: 'Provincial youth employment and training program',
+        intro: 'The Corps used this mark in its June 1990 recruitment campaign. The newspaper scan and a vector reconstruction are available.' }
     }
     if (collection.id === 'specimens-firesmart-bc') {
       return { ...collection, label: 'FireSmart BC', fileCollection: false, shelf: 'initiatives', initiativeId: 'firesmart-bc',

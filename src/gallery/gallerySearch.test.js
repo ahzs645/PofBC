@@ -113,7 +113,8 @@ test('Regional Parks is browsed through Metro Vancouver, including from a servic
   const metro = collectionById('collected-metro-vancouver')
   const parks = collectionById('collected-metro-vancouver-regional-parks')
   assert.ok(childCollectionsOf(metro.id).includes(parks))
-  for (const type of ['', 'local']) {
+  assert.ok(!gallerySections('local').some(({ collections }) => collections.includes(metro)))
+  for (const type of ['', 'regional-districts']) {
     const cards = gallerySections(type).flatMap(({ collections }) => collections)
     assert.ok(cards.includes(metro))
     assert.ok(!cards.includes(parks))

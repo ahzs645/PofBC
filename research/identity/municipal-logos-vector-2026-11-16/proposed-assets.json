@@ -142,9 +142,7 @@
   "bodyId": "municipality-coquitlam",
   "asset": {
    "id": "municipal-coquitlam-treasury-report-2025-white",
-   "label": "Coquitlam: Stylized-Q wordmark",
-   "preferredVector": "municipal-coquitlam-bear-smart-blue-green",
-   "versionLabel": "White · Treasury Report SVG",
+   "label": "Coquitlam — Logo, white, 2025 Treasury Report",
    "file": "identity-municipal/coquitlam/treasury-report-2025-logo-white.svg",
    "format": "svg",
    "isVector": true,
@@ -179,7 +177,6 @@
   "asset": {
    "id": "municipal-coquitlam-treasury-report-2025",
    "label": "Coquitlam — Logo, blue, 2025 Treasury Report",
-   "versionLabel": "Solid blue · Treasury Report SVG",
    "file": "identity-municipal/coquitlam/treasury-report-2025-logo.svg",
    "format": "svg",
    "isVector": true,
@@ -270,9 +267,20 @@
    "dateNote": "Publication date, not an adoption date.",
    "observedDate": "2026-11-16",
    "evidenceType": "native-pdf-vector-extraction",
-   "notes": "The same logo and colours as the website, in the stacked lockup (arcs above the name). The website file is the horizontal lockup; no vector copy of it was found.",
+   "notes": "The stacked colour signature places the arc symbol above the name and tagline. It shares the city identity shown in the horizontal website logo and in the black signature in the 2012 travel guide.",
    "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
    "darkBackground": false,
+   "specimenDate": "2025",
+   "extraction": {
+    "pdfPage": 1,
+    "pdfBounds": [
+     476,
+     668,
+     587,
+     744
+    ],
+    "method": "Isolated the logo’s native PDF paths with PyMuPDF."
+   },
    "search": "municipal-logos-vector-2026-11-16"
   }
  },
@@ -282,9 +290,7 @@
   "bodyId": "municipality-kamloops",
   "asset": {
    "id": "municipal-kamloops-annual-report-2025",
-   "label": "Kamloops: Canada’s Tournament Capital",
-   "preferredVector": "municipal-kamloops-bear-smart-black-tagline",
-   "versionLabel": "White tagline · Annual Report SVG",
+   "label": "Kamloops — Logo, 2025 Annual Report",
    "file": "identity-municipal/kamloops/annual-report-2025-logo.svg",
    "format": "svg",
    "isVector": true,
@@ -375,40 +381,6 @@
    "observedDate": "2026-11-16",
    "evidenceType": "native-pdf-vector-extraction",
    "notes": "The same design as the website logo. The print colours are brighter process blues than the website file’s, and the waves carry thin black keylines, as printed.",
-   "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
-   "darkBackground": false,
-   "search": "municipal-logos-vector-2026-11-16"
-  }
- },
- {
-  "targetAssetId": "source-municipal-prince-george-website-logo",
-  "dataFile": "municipalIdentityData.js",
-  "bodyId": "municipality-prince-george",
-  "asset": {
-   "id": "municipal-prince-george-annual-report-2025-horizontal",
-   "label": "Prince George — Logo, horizontal, 2025 Annual Report",
-   "file": "identity-municipal/prince-george/annual-report-2025-logo-horizontal.svg",
-   "format": "svg",
-   "isVector": true,
-   "sha256": "faf758a03a81a5747652e4aa3c8bb25d0a609065433827920999039f4ab2b2dd",
-   "bytes": 7883,
-   "sourcePage": "https://www.princegeorge.ca/city-hall/finance/annual-report-corporate-plan",
-   "sourceUrl": "https://www.princegeorge.ca/sites/default/files/2026-06/Prince%20George%20Annual%20Report%202025%20-%20FINAL%20reduced%20size.pdf",
-   "resolvedSourceUrl": "https://www.princegeorge.ca/sites/default/files/2026-06/Prince%20George%20Annual%20Report%202025%20-%20FINAL%20reduced%20size.pdf",
-   "dimensions": {
-    "viewBox": "38.03 299.27 151.02 65.93"
-   },
-   "contentType": "image/svg+xml",
-   "supplied": false,
-   "reconstruction": false,
-   "publisher": "City of Prince George",
-   "sourceLocator": "PDF page 1 (cover)",
-   "sourceFile": null,
-   "sourceDate": "2025 Annual Report; PDF created 23 June 2026",
-   "dateNote": "Publication date, not an adoption date.",
-   "observedDate": "2026-11-16",
-   "evidenceType": "native-pdf-vector-extraction",
-   "notes": "The same logo and colour as the website, in the horizontal lockup (symbol beside the name). The website file is the stacked lockup; no vector copy of it was found.",
    "fidelityNote": "Every shape is a path the PDF itself draws, kept in the PDF’s own colours (as MuPDF converts them to RGB) and the PDF’s own geometry. Only the logo’s paths are kept. No tracing, redrawing or recolouring.",
    "darkBackground": false,
    "search": "municipal-logos-vector-2026-11-16"

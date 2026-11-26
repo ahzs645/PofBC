@@ -1,3 +1,4 @@
+import { bearAwareId, bearAwareIndex } from './bearAwareArtwork.js'
 import { FIRE_SMART_INITIATIVES } from './fireSmartIndex.js'
 import { YOUTH_PROGRAMS } from './youthProgramsIndex.js'
 import { educationProvinceId, educationProvinceTitle, educationProvinceWordmark } from './educationProvinceArtwork.js'
@@ -24,6 +25,7 @@ const tourismCover = {
 
 export const INITIATIVES = [
   ...FIRE_SMART_INITIATIVES,
+  bearAwareIndex,
   {
     id: 'buy-bc', title: 'Buy BC', subtitle: 'British Columbia’s food and beverage marketing program',
     summary: 'British Columbia launched Buy BC in 1993 to help shoppers find local food and beverages. Producers use its sun, land and water emblem on packaging, and retailers use it on shelves to identify B.C. products.',
@@ -199,6 +201,10 @@ const tourismDetail = (data, guide, rebranding, brief) => {
       {
         label: 'Super, Natural welcome sign',
         to: { view: 'signs', sign: 'super-natural' }
+      },
+      {
+        label: 'Super, Natural highway welcome signs (I-180 series)',
+        to: { view: 'signs', sign: 'i-180' }
       },
       {
         label: 'Tourism BC in government',
@@ -417,6 +423,10 @@ const gamesenseDetail = () => ({
 
 // Literal imports let the bundler keep each initiative's data in its own deferred chunk.
 const LOADERS = {
+  [bearAwareId]: async () => {
+    const { bearAwareDetail } = await import('./bearAware.js')
+    return bearAwareDetail(bearAwareIndex)
+  },
   ...Object.fromEntries(FIRE_SMART_INITIATIVES.map((entry) => [entry.id, async () => {
     const { fireSmartDetail } = await import('./fireSmart.js')
     return fireSmartDetail(entry)

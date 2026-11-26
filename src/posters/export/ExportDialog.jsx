@@ -21,8 +21,8 @@ const aspectOf = (svg) => {
   return vb ? +vb[4] / +vb[3] : 1
 }
 
-export function ExportDialog({ open, onClose, targets, target, onTarget, dpiBase }) {
-  const [format, setFormat] = useState('pdf')
+export function ExportDialog({ open, onClose, targets, target, onTarget, initialFormat = 'pdf' }) {
+  const [format, setFormat] = useState(initialFormat)
   const [width, setWidth] = useState(null)
   const [custom, setCustom] = useState(false)
   const [draft, setDraft] = useState('')

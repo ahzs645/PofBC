@@ -32,7 +32,8 @@ const isNestedService = (collection) => parentsWithNestedServices.has(collection
 const organizationTypes = [
   { value: 'crowns', label: 'Crown corporations', matchesSubject: ({ kind }) => kind === 'crown-corporation' },
   { value: 'schools', label: 'School districts', matchesSubject: ({ schoolDistrict }) => Boolean(schoolDistrict) },
-  { value: 'local', label: 'Cities and municipalities', matchesSubject: ({ family }) => family === 'municipalities' || family === 'regional-government' },
+  { value: 'local', label: 'Cities and municipalities', matchesSubject: ({ family }) => family === 'municipalities' },
+  { value: 'regional-districts', label: 'Regional districts', matchesSubject: ({ family }) => family === 'regional-districts' || family === 'regional-government' },
   { value: 'postsecondary', label: 'Universities and colleges', matchesSubject: ({ family, kind }) =>
     family === 'postsecondary-history' || ['public-university', 'public-college', 'public-institute'].includes(kind) },
   { value: 'health', label: 'Health authorities and services', matchesSubject: ({ family, kind }) =>

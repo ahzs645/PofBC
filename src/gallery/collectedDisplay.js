@@ -5812,30 +5812,6 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
- "source-expanded-metro-vancouver-full-logo": {
-  "light": {
-   "file": "identity-display/source-expanded-metro-vancouver-full-logo.light.svg",
-   "aspect": 6.8781,
-   "recoloured": false
-  },
-  "dark": {
-   "file": "identity-display/source-expanded-metro-vancouver-full-logo.dark.svg",
-   "aspect": 6.8781,
-   "recoloured": true
-  }
- },
- "source-expanded-metro-vancouver-wordmark": {
-  "light": {
-   "file": "identity-display/source-expanded-metro-vancouver-wordmark.light.svg",
-   "aspect": 11.4099,
-   "recoloured": false
-  },
-  "dark": {
-   "file": "identity-display/source-expanded-metro-vancouver-wordmark.dark.svg",
-   "aspect": 11.4099,
-   "recoloured": true
-  }
- },
  "source-expanded-handydart-customer-first-logo": {
   "light": {
    "file": "identity-display/source-expanded-handydart-customer-first-logo.light.svg",
@@ -5956,6 +5932,525 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "rd-alberni-clayoquot-horizontal": {
+  "light": {
+   "file": "identity-display/rd-alberni-clayoquot-horizontal.light.svg",
+   "aspect": 4.5687,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-alberni-clayoquot-horizontal.light.svg",
+   "aspect": 4.5687,
+   "recoloured": false,
+   "plate": true
+  }
+ },
+ "rd-alberni-clayoquot-stacked": {
+  "light": {
+   "file": "identity-display/rd-alberni-clayoquot-stacked.light.svg",
+   "aspect": 1.449,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-alberni-clayoquot-stacked.light.svg",
+   "aspect": 1.449,
+   "recoloured": false
+  }
+ },
+ "rd-alberni-clayoquot-website": {
+  "light": {
+   "file": "identity-display/rd-alberni-clayoquot-website.light.svg",
+   "aspect": 1.3988,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/rd-alberni-clayoquot-website.dark.svg",
+   "aspect": 1.3988,
+   "recoloured": false
+  }
+ },
+ "rd-alberni-clayoquot-bear-2024": {
+  "light": {
+   "file": "identity-display/rd-alberni-clayoquot-bear-2024.light.svg",
+   "aspect": 1.1874,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-alberni-clayoquot-bear-2024.light.svg",
+   "aspect": 1.1874,
+   "recoloured": false
+  }
+ },
+ "rd-capital-signature": {
+  "light": {
+   "file": "identity-display/rd-capital-signature.light.svg",
+   "aspect": 2.7273,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-capital-signature.dark.svg",
+   "aspect": 2.7273,
+   "recoloured": true
+  }
+ },
+ "rd-cariboo-website": {
+  "light": {
+   "file": "identity-display/rd-cariboo-website.light.svg",
+   "aspect": 1.7436,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-cariboo-website.dark.svg",
+   "aspect": 1.7436,
+   "recoloured": true
+  }
+ },
+ "rd-central-coast-website": {
+  "light": {
+   "file": "identity-display/rd-central-coast-website.light.svg",
+   "aspect": 2.983,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-central-coast-website.light.svg",
+   "aspect": 2.983,
+   "recoloured": false,
+   "plate": true
+  }
+ },
+ "rd-central-coast-mountains-2010": {
+  "light": {
+   "file": "identity-display/rd-central-coast-mountains-2010.light.svg",
+   "aspect": 0.8631,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-central-coast-mountains-2010.dark.svg",
+   "aspect": 0.8631,
+   "recoloured": true
+  }
+ },
+ "rd-central-okanagan-website": {
+  "light": {
+   "file": "identity-display/rd-central-okanagan-website.light.svg",
+   "aspect": 4.8365,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-central-okanagan-website.dark.svg",
+   "aspect": 4.8365,
+   "recoloured": true
+  }
+ },
+ "rd-central-okanagan-stacked": {
+  "light": {
+   "file": "identity-display/rd-central-okanagan-stacked.light.svg",
+   "aspect": 1.1513,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-central-okanagan-stacked.dark.svg",
+   "aspect": 1.1513,
+   "recoloured": true
+  }
+ },
+ "rd-columbia-shuswap-landscape": {
+  "light": {
+   "file": "identity-display/rd-columbia-shuswap-landscape.light.svg",
+   "aspect": 1.5846,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-columbia-shuswap-landscape.light.svg",
+   "aspect": 1.5846,
+   "recoloured": false
+  }
+ },
+ "rd-comox-valley-signature": {
+  "light": {
+   "file": "identity-display/rd-comox-valley-signature.light.svg",
+   "aspect": 4.549,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-comox-valley-signature.light.svg",
+   "aspect": 4.549,
+   "recoloured": false
+  }
+ },
+ "rd-comox-valley-monochrome": {
+  "light": {
+   "file": "identity-display/rd-comox-valley-monochrome.light.svg",
+   "aspect": 4.5561,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-comox-valley-monochrome.dark.svg",
+   "aspect": 4.5561,
+   "recoloured": true
+  }
+ },
+ "rd-cowichan-valley-website": {
+  "light": {
+   "file": "identity-display/rd-cowichan-valley-website.light.svg",
+   "aspect": 3.4912,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-cowichan-valley-website.light.svg",
+   "aspect": 3.4912,
+   "recoloured": false
+  }
+ },
+ "rd-east-kootenay-website": {
+  "light": {
+   "file": "identity-display/rd-east-kootenay-website.light.svg",
+   "aspect": 1.7897,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/rd-east-kootenay-website.dark.svg",
+   "aspect": 1.7897,
+   "recoloured": false
+  }
+ },
+ "rd-east-kootenay-mountain-emblem": {
+  "light": {
+   "file": "identity-display/rd-east-kootenay-mountain-emblem.light.svg",
+   "aspect": 1.0,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/rd-east-kootenay-mountain-emblem.dark.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  }
+ },
+ "rd-fraser-valley-website": {
+  "light": {
+   "file": "identity-display/rd-fraser-valley-website.light.svg",
+   "aspect": 2.463,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-fraser-valley-website.dark.svg",
+   "aspect": 2.463,
+   "recoloured": true
+  }
+ },
+ "rd-fraser-valley-landscape-2004": {
+  "light": {
+   "file": "identity-display/rd-fraser-valley-landscape-2004.light.svg",
+   "aspect": 0.9727,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-fraser-valley-landscape-2004.light.svg",
+   "aspect": 0.9727,
+   "recoloured": false
+  }
+ },
+ "rd-fraser-fort-george-mountain-stacked": {
+  "light": {
+   "file": "identity-display/rd-fraser-fort-george-mountain-stacked.light.svg",
+   "aspect": 1.8548,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-fraser-fort-george-mountain-stacked.dark.svg",
+   "aspect": 1.8548,
+   "recoloured": true
+  }
+ },
+ "rd-kitimat-stikine-website": {
+  "light": {
+   "file": "identity-display/rd-kitimat-stikine-website.light.svg",
+   "aspect": 4.7359,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-kitimat-stikine-website.dark.svg",
+   "aspect": 4.7359,
+   "recoloured": true
+  }
+ },
+ "rd-kitimat-stikine-reverse": {
+  "light": {
+   "file": "identity-display/rd-kitimat-stikine-reverse.light.svg",
+   "aspect": 4.7326,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/rd-kitimat-stikine-reverse.dark.svg",
+   "aspect": 4.7326,
+   "recoloured": false
+  }
+ },
+ "rd-kootenay-boundary-sunburst": {
+  "light": {
+   "file": "identity-display/rd-kootenay-boundary-sunburst.light.svg",
+   "aspect": 1.2957,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-kootenay-boundary-sunburst.dark.svg",
+   "aspect": 1.2957,
+   "recoloured": true
+  }
+ },
+ "rd-kootenay-boundary-sunburst-reversed": {
+  "light": {
+   "file": "identity-display/rd-kootenay-boundary-sunburst-reversed.light.svg",
+   "aspect": 1.3011,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/rd-kootenay-boundary-sunburst-reversed.dark.svg",
+   "aspect": 1.3011,
+   "recoloured": false
+  }
+ },
+ "rd-kootenay-boundary-sunburst-monochrome": {
+  "light": {
+   "file": "identity-display/rd-kootenay-boundary-sunburst-monochrome.light.svg",
+   "aspect": 1.2957,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-kootenay-boundary-sunburst-monochrome.dark.svg",
+   "aspect": 1.2957,
+   "recoloured": true
+  }
+ },
+ "source-expanded-metro-vancouver-full-logo": {
+  "light": {
+   "file": "identity-display/source-expanded-metro-vancouver-full-logo.light.svg",
+   "aspect": 6.8781,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-metro-vancouver-full-logo.dark.svg",
+   "aspect": 6.8781,
+   "recoloured": true
+  }
+ },
+ "source-expanded-metro-vancouver-wordmark": {
+  "light": {
+   "file": "identity-display/source-expanded-metro-vancouver-wordmark.light.svg",
+   "aspect": 11.4099,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/source-expanded-metro-vancouver-wordmark.dark.svg",
+   "aspect": 11.4099,
+   "recoloured": true
+  }
+ },
+ "rd-metro-vancouver-gvrd-pre-2004": {
+  "light": {
+   "file": "identity-display/rd-metro-vancouver-gvrd-pre-2004.light.svg",
+   "aspect": 2.2547,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-metro-vancouver-gvrd-pre-2004.dark.svg",
+   "aspect": 2.2547,
+   "recoloured": true
+  }
+ },
+ "rd-metro-vancouver-gvrd-2005": {
+  "light": {
+   "file": "identity-display/rd-metro-vancouver-gvrd-2005.light.svg",
+   "aspect": 0.7958,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-metro-vancouver-gvrd-2005.light.svg",
+   "aspect": 0.7958,
+   "recoloured": false
+  }
+ },
+ "rd-metro-vancouver-metro-2009": {
+  "light": {
+   "file": "identity-display/rd-metro-vancouver-metro-2009.light.svg",
+   "aspect": 1.37,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-metro-vancouver-metro-2009.dark.svg",
+   "aspect": 1.37,
+   "recoloured": true
+  }
+ },
+ "rd-metro-vancouver-metro-2011": {
+  "light": {
+   "file": "identity-display/rd-metro-vancouver-metro-2011.light.svg",
+   "aspect": 8.057,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-metro-vancouver-metro-2011.dark.svg",
+   "aspect": 8.057,
+   "recoloured": true
+  }
+ },
+ "rd-mount-waddington-website": {
+  "light": {
+   "file": "identity-display/rd-mount-waddington-website.light.svg",
+   "aspect": 1.1647,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-mount-waddington-website.light.svg",
+   "aspect": 1.1647,
+   "recoloured": false
+  }
+ },
+ "rd-nanaimo-horizontal": {
+  "light": {
+   "file": "identity-display/rd-nanaimo-horizontal.light.svg",
+   "aspect": 2.4563,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-nanaimo-horizontal.dark.svg",
+   "aspect": 2.4563,
+   "recoloured": true
+  }
+ },
+ "rd-nanaimo-stacked": {
+  "light": {
+   "file": "identity-display/rd-nanaimo-stacked.light.svg",
+   "aspect": 0.4903,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-nanaimo-stacked.dark.svg",
+   "aspect": 0.4903,
+   "recoloured": true
+  }
+ },
+ "rd-north-coast-stacked": {
+  "light": {
+   "file": "identity-display/rd-north-coast-stacked.light.svg",
+   "aspect": 1.8168,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-north-coast-stacked.dark.svg",
+   "aspect": 1.8168,
+   "recoloured": true
+  }
+ },
+ "rd-north-coast-skeena-queen-charlotte": {
+  "light": {
+   "file": "identity-display/rd-north-coast-skeena-queen-charlotte.light.svg",
+   "aspect": 1.2903,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-north-coast-skeena-queen-charlotte.light.svg",
+   "aspect": 1.2903,
+   "recoloured": false
+  }
+ },
+ "rd-okanagan-similkameen-stacked": {
+  "light": {
+   "file": "identity-display/rd-okanagan-similkameen-stacked.light.svg",
+   "aspect": 0.8208,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-okanagan-similkameen-stacked.light.svg",
+   "aspect": 0.8208,
+   "recoloured": false
+  }
+ },
+ "rd-okanagan-similkameen-horizontal": {
+  "light": {
+   "file": "identity-display/rd-okanagan-similkameen-horizontal.light.svg",
+   "aspect": 2.2727,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-okanagan-similkameen-horizontal.dark.svg",
+   "aspect": 2.2727,
+   "recoloured": true
+  }
+ },
+ "rd-peace-river-horizontal": {
+  "light": {
+   "file": "identity-display/rd-peace-river-horizontal.light.svg",
+   "aspect": 4.5855,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-peace-river-horizontal.dark.svg",
+   "aspect": 4.5855,
+   "recoloured": true
+  }
+ },
+ "rd-peace-river-stacked": {
+  "light": {
+   "file": "identity-display/rd-peace-river-stacked.light.svg",
+   "aspect": 3.1199,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-peace-river-stacked.dark.svg",
+   "aspect": 3.1199,
+   "recoloured": true
+  }
+ },
+ "rd-peace-river-symbol": {
+  "light": {
+   "file": "identity-display/rd-peace-river-symbol.light.svg",
+   "aspect": 1.0022,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-peace-river-symbol.light.svg",
+   "aspect": 1.0022,
+   "recoloured": false
+  }
+ },
+ "rd-qathet-website": {
+  "light": {
+   "file": "identity-display/rd-qathet-website.light.svg",
+   "aspect": 3.9804,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-qathet-website.dark.svg",
+   "aspect": 3.9804,
+   "recoloured": true
+  }
+ },
+ "rd-sunshine-coast-website": {
+  "light": {
+   "file": "identity-display/rd-sunshine-coast-website.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-sunshine-coast-website.light.svg",
+   "aspect": 1.0,
+   "recoloured": false,
+   "plate": true
+  }
+ },
+ "rd-comox-strathcona-signature-2006": {
+  "light": {
+   "file": "identity-display/rd-comox-strathcona-signature-2006.light.svg",
+   "aspect": 4.3504,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-comox-strathcona-signature-2006.light.svg",
+   "aspect": 4.3504,
+   "recoloured": false
+  }
+ },
  "municipal-abbotsford-annual-report-2025": {
   "light": {
    "file": "identity-display/municipal-abbotsford-annual-report-2025.light.svg",
@@ -6071,9 +6566,10 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   },
   "dark": {
-   "file": "identity-display/municipal-fort-st-john-ocp-2025-stacked.light.svg",
+   "file": "identity-display/municipal-fort-st-john-ocp-2025-stacked.dark.svg",
    "aspect": 1.5183,
-   "recoloured": false
+   "recoloured": true,
+   "palette": true
   }
  },
  "fort-st-john-energetic-black-2012": {
@@ -6160,6 +6656,54 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "municipal-prince-george-annual-report-2025-horizontal-white": {
+  "light": {
+   "file": "identity-display/municipal-prince-george-annual-report-2025-horizontal-white.light.svg",
+   "aspect": 2.3042,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-prince-george-annual-report-2025-horizontal-white.dark.svg",
+   "aspect": 2.3042,
+   "recoloured": false
+  }
+ },
+ "municipal-prince-george-previous-stacked-colour": {
+  "light": {
+   "file": "identity-display/municipal-prince-george-previous-stacked-colour.light.svg",
+   "aspect": 1.1005,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-prince-george-previous-stacked-colour.dark.svg",
+   "aspect": 1.1005,
+   "recoloured": true
+  }
+ },
+ "municipal-prince-george-previous-stacked-white": {
+  "light": {
+   "file": "identity-display/municipal-prince-george-previous-stacked-white.light.svg",
+   "aspect": 1.1006,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-prince-george-previous-stacked-white.dark.svg",
+   "aspect": 1.1006,
+   "recoloured": false
+  }
+ },
+ "municipal-prince-george-capital-plan-single-line-white": {
+  "light": {
+   "file": "identity-display/municipal-prince-george-capital-plan-single-line-white.light.svg",
+   "aspect": 4.7462,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-prince-george-capital-plan-single-line-white.dark.svg",
+   "aspect": 4.7462,
+   "recoloured": false
+  }
+ },
  "prince-george-city-logo-2015": {
   "light": {
    "file": "identity-display/prince-george-city-logo-2015.light.svg",
@@ -6170,6 +6714,18 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/prince-george-city-logo-2015.dark.svg",
    "aspect": 1.3225,
    "recoloured": true
+  }
+ },
+ "municipal-prince-rupert-2024-wordmark-reverse": {
+  "light": {
+   "file": "identity-display/municipal-prince-rupert-2024-wordmark-reverse.light.svg",
+   "aspect": 2.6609,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-prince-rupert-2024-wordmark-reverse.dark.svg",
+   "aspect": 2.6609,
+   "recoloured": false
   }
  },
  "municipal-prince-rupert-community-assessment-2024": {
@@ -6268,6 +6824,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "municipal-terrace-parks-recreation-master-plan-2016-logo": {
+  "light": {
+   "file": "identity-display/municipal-terrace-parks-recreation-master-plan-2016-logo.light.svg",
+   "aspect": 1.4402,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-terrace-parks-recreation-master-plan-2016-logo.dark.svg",
+   "aspect": 1.4402,
+   "recoloured": true
+  }
+ },
  "source-municipal-vanderhoof-website-logo": {
   "light": {
    "file": "identity-display/source-municipal-vanderhoof-website-logo.light.svg",
@@ -6316,6 +6884,126 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "municipal-williams-lake-annual-report-2011-coat-of-arms": {
+  "light": {
+   "file": "identity-display/municipal-williams-lake-annual-report-2011-coat-of-arms.light.svg",
+   "aspect": 1.1326,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-williams-lake-annual-report-2011-coat-of-arms.light.svg",
+   "aspect": 1.1326,
+   "recoloured": false
+  }
+ },
+ "municipal-williams-lake-place-badge-flat-textured-reconstruction": {
+  "light": {
+   "file": "identity-display/municipal-williams-lake-place-badge-flat-textured-reconstruction.light.svg",
+   "aspect": 1.2407,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-williams-lake-place-badge-flat-textured-reconstruction.light.svg",
+   "aspect": 1.2407,
+   "recoloured": false
+  }
+ },
+ "municipal-williams-lake-place-badge-flat-clean-reconstruction": {
+  "light": {
+   "file": "identity-display/municipal-williams-lake-place-badge-flat-clean-reconstruction.light.svg",
+   "aspect": 1.2407,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-williams-lake-place-badge-flat-clean-reconstruction.light.svg",
+   "aspect": 1.2407,
+   "recoloured": false
+  }
+ },
+ "municipal-williams-lake-place-badge-dark-textured-reconstruction": {
+  "light": {
+   "file": "identity-display/municipal-williams-lake-place-badge-dark-textured-reconstruction.light.svg",
+   "aspect": 1.2091,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-williams-lake-place-badge-dark-textured-reconstruction.light.svg",
+   "aspect": 1.2091,
+   "recoloured": false
+  }
+ },
+ "municipal-williams-lake-place-badge-dark-clean-reconstruction": {
+  "light": {
+   "file": "identity-display/municipal-williams-lake-place-badge-dark-clean-reconstruction.light.svg",
+   "aspect": 1.2091,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-williams-lake-place-badge-dark-clean-reconstruction.light.svg",
+   "aspect": 1.2091,
+   "recoloured": false
+  }
+ },
+ "municipal-100-mile-house-community-profile-2023-logo": {
+  "light": {
+   "file": "identity-display/municipal-100-mile-house-community-profile-2023-logo.light.svg",
+   "aspect": 4.7307,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-100-mile-house-community-profile-2023-logo.dark.svg",
+   "aspect": 4.7307,
+   "recoloured": true
+  }
+ },
+ "municipal-100-mile-house-community-profile-2023-logo-reverse": {
+  "light": {
+   "file": "identity-display/municipal-100-mile-house-community-profile-2023-logo-reverse.light.svg",
+   "aspect": 4.7251,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-100-mile-house-community-profile-2023-logo-reverse.dark.svg",
+   "aspect": 4.7251,
+   "recoloured": false
+  }
+ },
+ "municipal-alert-bay-active-transportation-plan-2024-logo": {
+  "light": {
+   "file": "identity-display/municipal-alert-bay-active-transportation-plan-2024-logo.light.svg",
+   "aspect": 0.8518,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-alert-bay-active-transportation-plan-2024-logo.dark.svg",
+   "aspect": 0.8518,
+   "recoloured": true
+  }
+ },
+ "municipal-anmore-handbook-2025-horizontal-colour": {
+  "light": {
+   "file": "identity-display/municipal-anmore-handbook-2025-horizontal-colour.light.svg",
+   "aspect": 3.8994,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-anmore-handbook-2025-horizontal-colour.dark.svg",
+   "aspect": 3.8994,
+   "recoloured": true
+  }
+ },
+ "municipal-anmore-handbook-2025-stacked-white": {
+  "light": {
+   "file": "identity-display/municipal-anmore-handbook-2025-stacked-white.light.svg",
+   "aspect": 1.0732,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-anmore-handbook-2025-stacked-white.dark.svg",
+   "aspect": 1.0732,
+   "recoloured": false
+  }
+ },
  "source-recovered-municipal-ashcroft-website-logo": {
   "light": {
    "file": "identity-display/source-recovered-municipal-ashcroft-website-logo.light.svg",
@@ -6327,6 +7015,18 @@ export const COLLECTED_DISPLAY = {
    "aspect": 2.6627,
    "recoloured": true,
    "palette": true
+  }
+ },
+ "municipal-barriere-industrial-park-prospectus-2015-logo": {
+  "light": {
+   "file": "identity-display/municipal-barriere-industrial-park-prospectus-2015-logo.light.svg",
+   "aspect": 0.7915,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-barriere-industrial-park-prospectus-2015-logo.dark.svg",
+   "aspect": 0.7915,
+   "recoloured": true
   }
  },
  "source-recovered-municipal-belcarra-website-logo": {
@@ -6341,6 +7041,42 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "municipal-bowen-island-brand-standards-2017-horizontal": {
+  "light": {
+   "file": "identity-display/municipal-bowen-island-brand-standards-2017-horizontal.light.svg",
+   "aspect": 3.4216,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-bowen-island-brand-standards-2017-horizontal.dark.svg",
+   "aspect": 3.4216,
+   "recoloured": true
+  }
+ },
+ "municipal-bowen-island-evacuation-plan-2020-horizontal-white": {
+  "light": {
+   "file": "identity-display/municipal-bowen-island-evacuation-plan-2020-horizontal-white.light.svg",
+   "aspect": 3.4159,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-bowen-island-evacuation-plan-2020-horizontal-white.dark.svg",
+   "aspect": 3.4159,
+   "recoloured": false
+  }
+ },
+ "municipal-bowen-island-annual-report-2015-island-silhouettes": {
+  "light": {
+   "file": "identity-display/municipal-bowen-island-annual-report-2015-island-silhouettes.light.svg",
+   "aspect": 4.8934,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-bowen-island-annual-report-2015-island-silhouettes.dark.svg",
+   "aspect": 4.8934,
+   "recoloured": false
+  }
+ },
  "source-recovered-municipal-campbell-river-website-logo": {
   "light": {
    "file": "identity-display/source-recovered-municipal-campbell-river-website-logo.light.svg",
@@ -6353,6 +7089,42 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "municipal-canal-flats-streetscape-beautification-plan-2021-logo": {
+  "light": {
+   "file": "identity-display/municipal-canal-flats-streetscape-beautification-plan-2021-logo.light.svg",
+   "aspect": 2.8256,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-canal-flats-streetscape-beautification-plan-2021-logo.light.svg",
+   "aspect": 2.8256,
+   "recoloured": false
+  }
+ },
+ "municipal-castlegar-community-plan-v5-wordmark-website-blue": {
+  "light": {
+   "file": "identity-display/municipal-castlegar-community-plan-v5-wordmark-website-blue.light.svg",
+   "aspect": 7.933,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-castlegar-community-plan-v5-wordmark-website-blue.light.svg",
+   "aspect": 7.933,
+   "recoloured": false
+  }
+ },
+ "municipal-castlegar-community-plan-v5-white-wordmark": {
+  "light": {
+   "file": "identity-display/municipal-castlegar-community-plan-v5-white-wordmark.light.svg",
+   "aspect": 7.933,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-castlegar-community-plan-v5-white-wordmark.dark.svg",
+   "aspect": 7.933,
+   "recoloured": false
+  }
+ },
  "municipal-castlegar-white-wordmark": {
   "light": {
    "file": "identity-display/municipal-castlegar-white-wordmark.light.svg",
@@ -6362,6 +7134,114 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/municipal-castlegar-white-wordmark.dark.svg",
    "aspect": 7.9303,
+   "recoloured": false
+  }
+ },
+ "municipal-central-saanich-annual-report-2025-horizontal-website-colours": {
+  "light": {
+   "file": "identity-display/municipal-central-saanich-annual-report-2025-horizontal-website-colours.light.svg",
+   "aspect": 6.7983,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-central-saanich-annual-report-2025-horizontal-website-colours.dark.svg",
+   "aspect": 6.7983,
+   "recoloured": true
+  }
+ },
+ "municipal-central-saanich-annual-report-2025-horizontal-white": {
+  "light": {
+   "file": "identity-display/municipal-central-saanich-annual-report-2025-horizontal-white.light.svg",
+   "aspect": 6.7983,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-central-saanich-annual-report-2025-horizontal-white.dark.svg",
+   "aspect": 6.7983,
+   "recoloured": false
+  }
+ },
+ "municipal-central-saanich-annual-report-2025-stacked-white": {
+  "light": {
+   "file": "identity-display/municipal-central-saanich-annual-report-2025-stacked-white.light.svg",
+   "aspect": 1.0691,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-central-saanich-annual-report-2025-stacked-white.dark.svg",
+   "aspect": 1.0691,
+   "recoloured": false
+  }
+ },
+ "municipal-chase-annual-report-2024-white-wordmark": {
+  "light": {
+   "file": "identity-display/municipal-chase-annual-report-2024-white-wordmark.light.svg",
+   "aspect": 3.6228,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-chase-annual-report-2024-white-wordmark.dark.svg",
+   "aspect": 3.6228,
+   "recoloured": false
+  }
+ },
+ "municipal-chase-annual-report-2024-cover-colour-wordmark": {
+  "light": {
+   "file": "identity-display/municipal-chase-annual-report-2024-cover-colour-wordmark.light.svg",
+   "aspect": 3.6228,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-chase-annual-report-2024-cover-colour-wordmark.dark.svg",
+   "aspect": 3.6228,
+   "recoloured": true
+  }
+ },
+ "municipal-chase-annual-report-2024-civic-seal": {
+  "light": {
+   "file": "identity-display/municipal-chase-annual-report-2024-civic-seal.light.svg",
+   "aspect": 1.0001,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-chase-annual-report-2024-civic-seal.dark.svg",
+   "aspect": 1.0001,
+   "recoloured": true
+  }
+ },
+ "municipal-chetwynd-tour-map-landscape": {
+  "light": {
+   "file": "identity-display/municipal-chetwynd-tour-map-landscape.light.svg",
+   "aspect": 1.3902,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-chetwynd-tour-map-landscape.dark.svg",
+   "aspect": 1.3902,
+   "recoloured": true
+  }
+ },
+ "municipal-chetwynd-tour-map-landscape-outlined": {
+  "light": {
+   "file": "identity-display/municipal-chetwynd-tour-map-landscape-outlined.light.svg",
+   "aspect": 1.3787,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-chetwynd-tour-map-landscape-outlined.light.svg",
+   "aspect": 1.3787,
+   "recoloured": false
+  }
+ },
+ "municipal-chetwynd-tour-map-carved-by-success": {
+  "light": {
+   "file": "identity-display/municipal-chetwynd-tour-map-carved-by-success.light.svg",
+   "aspect": 3.3135,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-chetwynd-tour-map-carved-by-success.dark.svg",
+   "aspect": 3.3135,
    "recoloured": false
   }
  },
@@ -6389,6 +7269,162 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "municipal-clinton-walking-tour-2021-colour": {
+  "light": {
+   "file": "identity-display/municipal-clinton-walking-tour-2021-colour.light.svg",
+   "aspect": 2.9032,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-clinton-walking-tour-2021-colour.dark.svg",
+   "aspect": 2.9032,
+   "recoloured": true
+  }
+ },
+ "municipal-clinton-community-profile-2022-white": {
+  "light": {
+   "file": "identity-display/municipal-clinton-community-profile-2022-white.light.svg",
+   "aspect": 2.9117,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-clinton-community-profile-2022-white.dark.svg",
+   "aspect": 2.9117,
+   "recoloured": false
+  }
+ },
+ "municipal-clinton-walking-tour-2021-title-lockup": {
+  "light": {
+   "file": "identity-display/municipal-clinton-walking-tour-2021-title-lockup.light.svg",
+   "aspect": 2.287,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-clinton-walking-tour-2021-title-lockup.dark.svg",
+   "aspect": 2.287,
+   "recoloured": true
+  }
+ },
+ "municipal-clinton-community-profile-2022-investment": {
+  "light": {
+   "file": "identity-display/municipal-clinton-community-profile-2022-investment.light.svg",
+   "aspect": 2.2214,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-clinton-community-profile-2022-investment.dark.svg",
+   "aspect": 2.2214,
+   "recoloured": true
+  }
+ },
+ "municipal-clinton-walking-tour-2021-slogan": {
+  "light": {
+   "file": "identity-display/municipal-clinton-walking-tour-2021-slogan.light.svg",
+   "aspect": 1.2162,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-clinton-walking-tour-2021-slogan.dark.svg",
+   "aspect": 1.2162,
+   "recoloured": true
+  }
+ },
+ "municipal-coldstream-neighbourhood-plan-2011-stacked": {
+  "light": {
+   "file": "identity-display/municipal-coldstream-neighbourhood-plan-2011-stacked.light.svg",
+   "aspect": 0.8131,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-coldstream-neighbourhood-plan-2011-stacked.dark.svg",
+   "aspect": 0.8131,
+   "recoloured": true
+  }
+ },
+ "municipal-colwood-annual-report-2023-website-colours": {
+  "light": {
+   "file": "identity-display/municipal-colwood-annual-report-2023-website-colours.light.svg",
+   "aspect": 2.6814,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-colwood-annual-report-2023-website-colours.dark.svg",
+   "aspect": 2.6814,
+   "recoloured": true
+  }
+ },
+ "municipal-colwood-annual-report-2023-reverse": {
+  "light": {
+   "file": "identity-display/municipal-colwood-annual-report-2023-reverse.light.svg",
+   "aspect": 2.6814,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-colwood-annual-report-2023-reverse.dark.svg",
+   "aspect": 2.6814,
+   "recoloured": false
+  }
+ },
+ "municipal-colwood-draft-strategic-plan-2025-white": {
+  "light": {
+   "file": "identity-display/municipal-colwood-draft-strategic-plan-2025-white.light.svg",
+   "aspect": 2.6764,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-colwood-draft-strategic-plan-2025-white.dark.svg",
+   "aspect": 2.6764,
+   "recoloured": false
+  }
+ },
+ "municipal-comox-annual-report-2021-ship-navy": {
+  "light": {
+   "file": "identity-display/municipal-comox-annual-report-2021-ship-navy.light.svg",
+   "aspect": 2.906,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-comox-annual-report-2021-ship-navy.dark.svg",
+   "aspect": 2.906,
+   "recoloured": true
+  }
+ },
+ "municipal-comox-annual-report-2021-ship-white": {
+  "light": {
+   "file": "identity-display/municipal-comox-annual-report-2021-ship-white.light.svg",
+   "aspect": 2.9072,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-comox-annual-report-2021-ship-white.dark.svg",
+   "aspect": 2.9072,
+   "recoloured": false
+  }
+ },
+ "municipal-courtenay-delegation-colour": {
+  "light": {
+   "file": "identity-display/municipal-courtenay-delegation-colour.light.svg",
+   "aspect": 2.7535,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-courtenay-delegation-colour.dark.svg",
+   "aspect": 2.7535,
+   "recoloured": true
+  }
+ },
+ "municipal-courtenay-annual-report-reverse": {
+  "light": {
+   "file": "identity-display/municipal-courtenay-annual-report-reverse.light.svg",
+   "aspect": 2.7382,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-courtenay-annual-report-reverse.dark.svg",
+   "aspect": 2.7382,
+   "recoloured": false
+  }
+ },
  "source-recovered-municipal-cranbrook-website-logo": {
   "light": {
    "file": "identity-display/source-recovered-municipal-cranbrook-website-logo.light.svg",
@@ -6411,6 +7447,116 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/municipal-creston-annual-report-2025.dark.svg",
    "aspect": 3.422,
    "recoloured": true
+  }
+ },
+ "municipal-cumberland-annual-report-2023-website-grey-crest": {
+  "light": {
+   "file": "identity-display/municipal-cumberland-annual-report-2023-website-grey-crest.light.svg",
+   "aspect": 1.0074,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-cumberland-annual-report-2023-website-grey-crest.light.svg",
+   "aspect": 1.0074,
+   "recoloured": false
+  }
+ },
+ "municipal-cumberland-annual-report-2023-white-crest": {
+  "light": {
+   "file": "identity-display/municipal-cumberland-annual-report-2023-white-crest.light.svg",
+   "aspect": 1.0074,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-cumberland-annual-report-2023-white-crest.dark.svg",
+   "aspect": 1.0074,
+   "recoloured": false
+  }
+ },
+ "municipal-cumberland-annual-report-2023-horizontal-white": {
+  "light": {
+   "file": "identity-display/municipal-cumberland-annual-report-2023-horizontal-white.light.svg",
+   "aspect": 4.0602,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-cumberland-annual-report-2023-horizontal-white.dark.svg",
+   "aspect": 4.0602,
+   "recoloured": false
+  }
+ },
+ "municipal-cumberland-strategic-plan-2023-27-white-outlined-crest": {
+  "light": {
+   "file": "identity-display/municipal-cumberland-strategic-plan-2023-27-white-outlined-crest.light.svg",
+   "aspect": 1.0071,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-cumberland-strategic-plan-2023-27-white-outlined-crest.dark.svg",
+   "aspect": 1.0071,
+   "recoloured": false
+  }
+ },
+ "municipal-cumberland-official-community-plan-2014-colour-crest": {
+  "light": {
+   "file": "identity-display/municipal-cumberland-official-community-plan-2014-colour-crest.light.svg",
+   "aspect": 1.008,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-cumberland-official-community-plan-2014-colour-crest.light.svg",
+   "aspect": 1.008,
+   "recoloured": false,
+   "plate": true
+  }
+ },
+ "municipal-delta-annual-report-teal": {
+  "light": {
+   "file": "identity-display/municipal-delta-annual-report-teal.light.svg",
+   "aspect": 1.8304,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-delta-annual-report-teal.dark.svg",
+   "aspect": 1.8304,
+   "recoloured": true,
+   "palette": true
+  }
+ },
+ "municipal-delta-budget-wordmark-reverse": {
+  "light": {
+   "file": "identity-display/municipal-delta-budget-wordmark-reverse.light.svg",
+   "aspect": 1.8297,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-delta-budget-wordmark-reverse.dark.svg",
+   "aspect": 1.8297,
+   "recoloured": false
+  }
+ },
+ "municipal-duncan-annual-report-2025-clock-tower-colour": {
+  "light": {
+   "file": "identity-display/municipal-duncan-annual-report-2025-clock-tower-colour.light.svg",
+   "aspect": 2.5648,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-duncan-annual-report-2025-clock-tower-colour.dark.svg",
+   "aspect": 2.5648,
+   "recoloured": true
+  }
+ },
+ "municipal-duncan-annual-report-2025-clock-tower-white-lettering": {
+  "light": {
+   "file": "identity-display/municipal-duncan-annual-report-2025-clock-tower-white-lettering.light.svg",
+   "aspect": 2.565,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-duncan-annual-report-2025-clock-tower-white-lettering.dark.svg",
+   "aspect": 2.565,
+   "recoloured": false
   }
  },
  "source-recovered-municipal-elkford-website-logo": {
@@ -6436,6 +7582,30 @@ export const COLLECTED_DISPLAY = {
    "aspect": 3.2936,
    "recoloured": true,
    "palette": true
+  }
+ },
+ "municipal-fernie-consultation-script": {
+  "light": {
+   "file": "identity-display/municipal-fernie-consultation-script.light.svg",
+   "aspect": 1.6059,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-fernie-consultation-script.dark.svg",
+   "aspect": 1.6059,
+   "recoloured": true
+  }
+ },
+ "municipal-fernie-style-guide-principal": {
+  "light": {
+   "file": "identity-display/municipal-fernie-style-guide-principal.light.svg",
+   "aspect": 1.6329,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-fernie-style-guide-principal.dark.svg",
+   "aspect": 1.6329,
+   "recoloured": true
   }
  },
  "source-recovered-municipal-fort-st-james-website-symbol": {
@@ -6498,6 +7668,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "municipal-ladysmith-strategic-plan-heritage-window": {
+  "light": {
+   "file": "identity-display/municipal-ladysmith-strategic-plan-heritage-window.light.svg",
+   "aspect": 0.6878,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-ladysmith-strategic-plan-heritage-window.dark.svg",
+   "aspect": 0.6878,
+   "recoloured": true
+  }
+ },
  "source-recovered-municipal-langford-website-logo": {
   "light": {
    "file": "identity-display/source-recovered-municipal-langford-website-logo.light.svg",
@@ -6510,6 +7692,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "municipal-langley-city-annual-report-colour": {
+  "light": {
+   "file": "identity-display/municipal-langley-city-annual-report-colour.light.svg",
+   "aspect": 3.7128,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-langley-city-annual-report-colour.dark.svg",
+   "aspect": 3.7128,
+   "recoloured": true
+  }
+ },
+ "municipal-langley-city-annual-report-reverse": {
+  "light": {
+   "file": "identity-display/municipal-langley-city-annual-report-reverse.light.svg",
+   "aspect": 3.7078,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-langley-city-annual-report-reverse.dark.svg",
+   "aspect": 3.7078,
+   "recoloured": false
+  }
+ },
  "source-recovered-municipal-langley-township-website-logo": {
   "light": {
    "file": "identity-display/source-recovered-municipal-langley-township-website-logo.light.svg",
@@ -6519,6 +7725,30 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/source-recovered-municipal-langley-township-website-logo.dark.svg",
    "aspect": 3.2293,
+   "recoloured": true
+  }
+ },
+ "municipal-lantzville-no-tagline": {
+  "light": {
+   "file": "identity-display/municipal-lantzville-no-tagline.light.svg",
+   "aspect": 1.631,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-lantzville-no-tagline.dark.svg",
+   "aspect": 1.631,
+   "recoloured": true
+  }
+ },
+ "municipal-maple-ridge-annual-report-colour": {
+  "light": {
+   "file": "identity-display/municipal-maple-ridge-annual-report-colour.light.svg",
+   "aspect": 5.0488,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-maple-ridge-annual-report-colour.dark.svg",
+   "aspect": 5.0488,
    "recoloured": true
   }
  },
@@ -6632,6 +7862,19 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "municipal-port-moody-annual-report-colour": {
+  "light": {
+   "file": "identity-display/municipal-port-moody-annual-report-colour.light.svg",
+   "aspect": 4.44,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-port-moody-annual-report-colour.dark.svg",
+   "aspect": 4.44,
+   "recoloured": true,
+   "palette": true
+  }
+ },
  "source-recovered-municipal-revelstoke-website-logo": {
   "light": {
    "file": "identity-display/source-recovered-municipal-revelstoke-website-logo.light.svg",
@@ -6653,6 +7896,18 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/source-recovered-municipal-salmon-arm-website-logo.dark.svg",
    "aspect": 3.8683,
+   "recoloured": true
+  }
+ },
+ "municipal-sechelt-consultation-site-colour": {
+  "light": {
+   "file": "identity-display/municipal-sechelt-consultation-site-colour.light.svg",
+   "aspect": 2.4713,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-sechelt-consultation-site-colour.dark.svg",
+   "aspect": 2.4713,
    "recoloured": true
   }
  },
@@ -6728,6 +7983,19 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "municipal-vernon-strategic-plan-colour": {
+  "light": {
+   "file": "identity-display/municipal-vernon-strategic-plan-colour.light.svg",
+   "aspect": 3.741,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-vernon-strategic-plan-colour.dark.svg",
+   "aspect": 3.741,
+   "recoloured": true,
+   "palette": true
+  }
+ },
  "municipal-vernon-monochrome-wordmark": {
   "light": {
    "file": "identity-display/municipal-vernon-monochrome-wordmark.light.svg",
@@ -6764,6 +8032,31 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "municipal-west-vancouver-annual-report-notice-colour": {
+  "light": {
+   "file": "identity-display/municipal-west-vancouver-annual-report-notice-colour.light.svg",
+   "aspect": 5.2557,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-west-vancouver-annual-report-notice-colour.dark.svg",
+   "aspect": 5.2557,
+   "recoloured": true,
+   "palette": true
+  }
+ },
+ "municipal-west-vancouver-annual-report-reverse": {
+  "light": {
+   "file": "identity-display/municipal-west-vancouver-annual-report-reverse.light.svg",
+   "aspect": 5.2687,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-west-vancouver-annual-report-reverse.dark.svg",
+   "aspect": 5.2687,
+   "recoloured": false
+  }
+ },
  "source-recovered-municipal-whistler-website-logo": {
   "light": {
    "file": "identity-display/source-recovered-municipal-whistler-website-logo.light.svg",
@@ -6786,6 +8079,18 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/municipal-whistler-bear-smart-stacked.dark.svg",
    "aspect": 1.4079,
    "recoloured": true
+  }
+ },
+ "municipal-white-rock-annual-report-reverse": {
+  "light": {
+   "file": "identity-display/municipal-white-rock-annual-report-reverse.light.svg",
+   "aspect": 3.4336,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-white-rock-annual-report-reverse.dark.svg",
+   "aspect": 3.4336,
+   "recoloured": false
   }
  },
  "source-recovered-municipal-logan-lake-website-logo": {
@@ -7608,6 +8913,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "municipal-grand-forks-brand-book-shield": {
+  "light": {
+   "file": "identity-display/municipal-grand-forks-brand-book-shield.light.svg",
+   "aspect": 1.7903,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-grand-forks-brand-book-shield.light.svg",
+   "aspect": 1.7903,
+   "recoloured": false
+  }
+ },
  "school-district-5-logo-current": {
   "light": {
    "file": "identity-display/school-district-5-logo-current.light.svg",
@@ -7899,6 +9216,19 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "school-district-44-stacked-leaf-signature": {
+  "light": {
+   "file": "identity-display/school-district-44-stacked-leaf-signature.light.svg",
+   "aspect": 1.7904,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/school-district-44-stacked-leaf-signature.dark.svg",
+   "aspect": 1.7904,
+   "recoloured": true,
+   "palette": true
+  }
+ },
  "school-district-45-strategic-plan-lighthouse": {
   "light": {
    "file": "identity-display/school-district-45-strategic-plan-lighthouse.light.svg",
@@ -8113,6 +9443,19 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/school-district-84-strategic-plan-reverse.dark.svg",
    "aspect": 0.7474,
    "recoloured": false
+  }
+ },
+ "school-district-87-stikine-number-sign": {
+  "light": {
+   "file": "identity-display/school-district-87-stikine-number-sign.light.svg",
+   "aspect": 1.2409,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/school-district-87-stikine-number-sign.light.svg",
+   "aspect": 1.2409,
+   "recoloured": false,
+   "plate": true
   }
  },
  "school-district-91-logo-current": {
@@ -9732,6 +11075,56 @@ export const COLLECTED_DISPLAY = {
    "aspect": 0.9264,
    "recoloured": false,
    "plate": true
+  }
+ },
+ "reswest-colour-rebuilt": {
+  "light": {
+   "file": "identity-display/reswest-colour-rebuilt.light.svg",
+   "aspect": 1.8596,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/reswest-colour-rebuilt.dark.svg",
+   "aspect": 1.8596,
+   "recoloured": true,
+   "palette": true
+  }
+ },
+ "reswest-one-colour-rebuilt": {
+  "light": {
+   "file": "identity-display/reswest-one-colour-rebuilt.light.svg",
+   "aspect": 1.8596,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/reswest-one-colour-rebuilt.dark.svg",
+   "aspect": 1.8596,
+   "recoloured": true,
+   "palette": true
+  }
+ },
+ "be-bear-aware-paw-lockup-reconstruction": {
+  "light": {
+   "file": "identity-display/be-bear-aware-paw-lockup-reconstruction.light.svg",
+   "aspect": 1.0366,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/be-bear-aware-paw-lockup-reconstruction.dark.svg",
+   "aspect": 1.0366,
+   "recoloured": true
+  }
+ },
+ "environment-youth-corps-reconstruction": {
+  "light": {
+   "file": "identity-display/environment-youth-corps-reconstruction.light.svg",
+   "aspect": 0.9796,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/environment-youth-corps-reconstruction.dark.svg",
+   "aspect": 0.9796,
+   "recoloured": true
   }
  },
  "education-province-wordmark": {
