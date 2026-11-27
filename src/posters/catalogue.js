@@ -122,7 +122,7 @@ export const POSTERS = {
     id: 'air-facilities-map-1977', series: 'aviation-publications', issuer: 'British Columbia Aviation Council',
     subject: 'Aviation and tourism', format: 'Map cover', made: 'mixed',
     title: 'Air Facilities Map', when: '1977/78 edition · published in 1977',
-    blurb: 'A small aircraft over snowy mountains carries an early stacked Super, Natural signature.',
+    blurb: 'A reconstructed map cover pairs an alpine flight scene with the early stacked Super, Natural wordmark.',
     view: { x: 0, y: 0, w: 1000, h: 1500 }, page: { w: 10, h: 15 }, prefetch: false
   },
   'new-carecard': {
