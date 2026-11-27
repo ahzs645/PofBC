@@ -86,8 +86,10 @@ const resources = [
     relations: [related(injuryUnit, 'Developed by BCIRPU', 'service-of')]
   }, {
     id: 'prevent-shaken-baby-syndrome-bc', name: 'Prevent Shaken Baby Syndrome BC', aliases: ['PSBSBC'], from: 2009, assets: documentSpecimens.psbs,
-    notes: 'This provincial BC Children’s Hospital program is based at BCIRPU. The hospital formed a steering committee in 2003. Provincial delivery of the Period of PURPLE Crying program began in 2009.',
-    sources: [source('Program history and education resources', 'https://www.dontshake.ca/about?tab=about-tab2')],
+    notes: 'This provincial BC Children’s Hospital program is based at BCIRPU. The hospital formed a steering committee in 2003. Provincial delivery of the Period of PURPLE Crying program began in 2009. The issuer’s website header uses a wider monochrome PSBSBC wordmark than the 2023/24 report version. It is a PNG, not a vector. The Period of PURPLE Crying has a separate program mark.',
+    sources: [source('Program history and education resources', 'https://www.dontshake.ca/about?tab=about-tab2'),
+      source('Official PSBSBC website and current header wordmark', 'https://www.dontshake.ca/'),
+      source('Published 594 × 61 monochrome header PNG', 'https://cdn.prod.website-files.com/678ef294c012666e51d5cd26/678ef294c012666e51d5cd6a_Logo%20(2).png')],
     relations: [related(injuryUnit, 'Based at the injury research unit'), related('sub-bc-childrens-hospital', 'Provincial hospital program', 'service-of')]
   }, {
     id: 'active-safe-central', name: 'Active & Safe Central', aliases: ['Active and Safe Central'], from: 2018, assets: documentSpecimens.active,

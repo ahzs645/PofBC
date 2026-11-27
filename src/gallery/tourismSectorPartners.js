@@ -76,12 +76,18 @@ const sectors = [
       source('Destination BC’s account of the trail partnership', 'https://www.destinationbc.ca/news/bc-farmers-markets-association-on-pivoting-member-operations/')]
   },
   {
-    id: 'fishing-bc', name: 'Fishing BC', kind: program, from: 2017, page: 38,
+    id: 'fishing-bc', name: 'Fishing BC', kind: program, from: 2016, page: 38,
     aliases: ['FishingBC'], officialUrl: 'https://fishingbc.com/',
     description: 'A joint marketing initiative for freshwater and saltwater fishing tourism.',
-    history: 'Destination BC reported the campaign launch in May 2017. The 2017 announcement names the BC Fishing Resorts and Outfitters Association, Freshwater Fisheries Society of BC and Sport Fishing Institute of BC. The campaign’s partner page and the 2024–25 guidelines use BC Fishing Tourism Association.',
+    history: 'The Freshwater Fisheries Society of BC dates the partnership to 2016. Destination BC announced the new branded website and video in May 2017, naming the BC Fishing Resorts and Outfitters Association, Freshwater Fisheries Society of BC and Sport Fishing Institute of BC. The campaign’s partner page and the 2024–25 guidelines use BC Fishing Tourism Association. Two 2021 magazine ads show the white framed signature in use; they do not establish when it was adopted.',
     relations: [relation('bc-fishing-tourism-association', '2024–25 sector lead')],
-    sources: [source('Destination BC’s May 2017 launch newsletter', 'https://www.destinationbc.ca/content/uploads/2018/07/2990_Corporate_24May2017_Newsletter.pdf'), fishingAbout]
+    sources: [
+      source('Freshwater Fisheries Society of BC, 2025–26 annual report, PDF p. 8', 'https://www.gofishbc.com/wp-content/uploads/2026/08/2025-26-FFSBC-Annual-Report-digital.pdf#page=8'),
+      source('Destination BC’s May 2017 branded site and video announcement', 'https://www.destinationbc.ca/content/uploads/2018/07/2990_Corporate_24May2017_Newsletter.pdf'),
+      fishingAbout,
+      source('SOAR, September/October 2021, p. 7: white framed logo in a raster ad', 'https://www.pacificcoastal.com/wp-content/uploads/2021/09/SOARMagazine_Sept_Oct_2021.pdf#page=7'),
+      source('SOAR, November/December 2021, p. 21: white framed logo in a raster ad', 'https://www.pacificcoastal.com/wp-content/uploads/2021/11/SOAR_Nov_Dec_2021.pdf#page=21')
+    ]
   },
   {
     id: 'gardens-bc', name: 'Gardens British Columbia', shortName: 'Gardens BC', kind: organization, from: 2008, page: 38,
