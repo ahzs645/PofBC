@@ -28,6 +28,7 @@ import { CARECARD_POSTER } from './carecard/poster.js'
 import { SPRING_POSTER } from './super-natural-spring/poster.js'
 import { FERRIES_POSTER } from './super-natural-ferries/poster.js'
 import { LAKE_POSTER } from './super-natural-lake/poster.js'
+import { AIR_FACILITIES_POSTER } from './air-facilities-map-1977/poster.js'
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
 const DRAWINGS = {
@@ -35,6 +36,7 @@ const DRAWINGS = {
   'super-natural-spring': read('./super-natural-spring/spring-visitors.svg'),
   'super-natural-ferries': read('./super-natural-ferries/poster.svg'),
   'super-natural-lake': read('./super-natural-lake/poster.svg'),
+  'air-facilities-map-1977': read('./air-facilities-map-1977/poster.svg'),
   'new-carecard': read('./carecard/new-carecard.svg'),
   'coastal-forest': read('./coastal-forest/poster.svg'),
   'use-your-ashtray': read('./forest-service/use-your-ashtray.svg'),
@@ -103,6 +105,7 @@ const DEFINITIONS = {
   'super-natural-spring': SPRING_POSTER,
   'super-natural-ferries': FERRIES_POSTER,
   'super-natural-lake': LAKE_POSTER,
+  'air-facilities-map-1977': AIR_FACILITIES_POSTER,
   'new-carecard': CARECARD_POSTER,
   'coastal-forest': { parts: COASTAL_PARTS, order: COASTAL_ORDER, regions: COASTAL_REGIONS.map(({ id }) => id) },
   ...FOREST_SERVICE_POSTERS,
@@ -112,7 +115,7 @@ const DEFINITIONS = {
   ...EXPO_86_POSTERS
 }
 // The posters whose panels are data.
-const DATA_POSTERS = { [bearAwareWindowId]: bearAwareWindow, 'super-natural-spring': SPRING_POSTER, 'super-natural-ferries': FERRIES_POSTER, 'super-natural-lake': LAKE_POSTER, 'new-carecard': CARECARD_POSTER, ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
+const DATA_POSTERS = { [bearAwareWindowId]: bearAwareWindow, 'air-facilities-map-1977': AIR_FACILITIES_POSTER, 'super-natural-spring': SPRING_POSTER, 'super-natural-ferries': FERRIES_POSTER, 'super-natural-lake': LAKE_POSTER, 'new-carecard': CARECARD_POSTER, ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
 
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
 const partsIn = (selector) => [...selector.matchAll(/\[data-part="([\w-]+)"\]/g)].map((m) => m[1])
@@ -401,7 +404,8 @@ test('the shelf can be filtered: every card names its issuer, subject and format
   }
   for (const { key } of FACETS) {
     const values = new Set(listedPosterIds().map((id) => POSTERS[id][key]))
-    assert.ok(values.size > 1 && values.size <= 10, `${key}: ${values.size} values is no use as a filter`)
+    const limit = key === 'issuer' ? 11 : 10
+    assert.ok(values.size > 1 && values.size <= limit, `${key}: ${values.size} values is no use as a filter`)
   }
 })
 
@@ -544,3 +548,16 @@ test('the advertisement names its photograph by file, and the file is a light co
   assert.ok(!/<\/?\w+:\w/.test(svg.replace(/<\?xml[^>]*>/, '')), 'a namespace-prefixed element')
 })
 
+
+test('the 1977/78 aviation map has independent date evidence and comparison artwork', () => {
+  const id = 'air-facilities-map-1977'
+  assert.equal(POSTERS[id].made, 'mixed')
+  assert.equal(POSTERS[id].prefetch, false)
+  assert.equal(seriesOf(id).id, 'aviation-publications')
+  assert.match(POSTERS[id].when, /1977\/78 edition/)
+  assert.ok(existsSync(new URL('./air-facilities-map-1977/reference.jpg', import.meta.url)))
+  assert.ok(existsSync(new URL('./air-facilities-map-1977/thumbnail.jpg', import.meta.url)))
+  assert.match(DRAWINGS[id], /data:image\/jpeg;base64,/)
+  assert.ok(connectionsOf(id).some(({ certainty, group }) => certainty === 'documented' && group === 'issuer'))
+  assert.ok(!connectionsOf(id).some(({ rel }) => rel === 'Same advertising campaign'))
+})

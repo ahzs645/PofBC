@@ -59,6 +59,10 @@ export const SERIES = [
     posters: ['super-natural-spring', 'super-natural-ferries', 'super-natural-lake']
   },
   {
+    id: 'aviation-publications', title: 'British Columbia Aviation Council',
+    kind: 'Aviation publications · Map covers', posters: ['air-facilities-map-1977']
+  },
+  {
     id: 'expo-86',
     title: 'Expo 86',
     kind: 'Art posters and a pavilion film poster',
@@ -113,6 +117,13 @@ export const POSTERS = {
     // Working export dimensions in the reference’s proportions, not a measurement of the print.
     page: { w: 11.12, h: 10.81 },
     prefetch: false
+  },
+  'air-facilities-map-1977': {
+    id: 'air-facilities-map-1977', series: 'aviation-publications', issuer: 'British Columbia Aviation Council',
+    subject: 'Aviation and tourism', format: 'Map cover', made: 'mixed',
+    title: 'Air Facilities Map', when: '1977/78 edition · published in 1977',
+    blurb: 'A small aircraft over snowy mountains carries an early stacked Super, Natural signature.',
+    view: { x: 0, y: 0, w: 1000, h: 1500 }, page: { w: 10, h: 15 }, prefetch: false
   },
   'new-carecard': {
     id: 'new-carecard', series: 'health', issuer: 'Ministry of Health',
