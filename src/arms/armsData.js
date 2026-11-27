@@ -283,7 +283,7 @@ const STORY = [
       },
       {
         title: 'Supplied vector reconstructions',
-        entries: [{ id: 'reconstruction-colour-ornate' }, { id: 'reconstruction-monochrome-engraved' }, { id: 'reconstruction-monochrome-line' }]
+        entries: [{ id: 'reconstruction-beanlands-colour' }, { id: 'reconstruction-colour-ornate' }, { id: 'reconstruction-monochrome-engraved' }, { id: 'reconstruction-monochrome-line' }]
       }
     ]
   }

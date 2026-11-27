@@ -4619,6 +4619,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "provincial-library-archives-emblem-rebuilt": {
+  "light": {
+   "file": "identity-display/provincial-library-archives-emblem-rebuilt.light.svg",
+   "aspect": 0.7287,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/provincial-library-archives-emblem-rebuilt.light.svg",
+   "aspect": 0.7287,
+   "recoloured": false
+  }
+ },
  "geoscience-bc-green-ridges": {
   "light": {
    "file": "identity-display/geoscience-bc-green-ridges.light.svg",

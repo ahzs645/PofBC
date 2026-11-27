@@ -117,6 +117,20 @@ const surveyAndLibrary = [
         sourcePage: assemblyReport.url, sourceLocator: 'February 2024 report cover, source of the dome and crown paths.',
         notes: 'This reconstruction follows the three-line lettering and layout of the Library’s Digital Collections header.',
         fidelityNote: 'The dome geometry comes from the Assembly’s February 2024 report. The letter outlines were traced from the published PNG and retain its line positions and spacing.'
+      },
+      {
+        // The Provincial Library and Archives' own emblem: the 1906 arms engraved under its name.
+        id: 'provincial-library-archives-emblem-rebuilt', label: 'Provincial Library & Archives emblem',
+        designLabel: 'Provincial Library & Archives emblem', versionLabel: 'Vector reconstruction',
+        file: 'identity-collected/legislative-library-bc/provincial-library-archives-emblem-rebuilt.svg',
+        sha256: '2434c9b39fac9865fee3976282b1ebcf705255c470bf9f7f51eb1bbf7cec3e7e',
+        format: 'svg', isVector: true, reconstruction: true, supplied: true, evidenceType: 'supplied-vector-reconstruction',
+        observedDate: '2026-11-27', fidelity: 'partially compared',
+        publisher: 'Provincial Library and Archives, Victoria',
+        sourceLocator: 'An undated engraving supplied to the project as a raster (research/identity/provincial-library-archives-2026-11-27/reference/source-reference.png); the publication it came from is not recorded.',
+        dateNote: 'Undated. The emblem names the Provincial Library and the Archives together; when it was drawn and used is not established here.',
+        notes: 'The Provincial Library & Archives, Victoria B.C., on two scrolls above the Province’s arms as granted in 1906: the Union Flag over the setting sun, the lion on the crown, a stag and a ram, and “SPLENDOR SINE OCCASU.” The Library is now the Legislative Library; the Archives are the BC Archives at the Royal BC Museum.',
+        fidelityNote: 'A supplied vector reconstruction of the engraving: source-derived Bézier contours with selective cleanup, the lettering kept as outlines of the original, and three white backing paths restoring the crown’s enclosed interiors. Not original artwork.'
       }
     ]
   }
@@ -131,7 +145,7 @@ export const SURVEY_AND_LIBRARY_SUBJECTS = [...surveyAndLibrary.map((body) => ({
     relations: [...geoscienceSubjects, ...surveyRegisterSubjects].map(({ id }) => ({ type: 'related-to', subject: id })),
     sources: [...surveySources, inventory1990, plan1991, plan1992, geology2017], nextAction: 'Identify a dated introduction of the seal or a contemporary design credit.'
   } : {
-    scope: 'institution', family: 'historical-research', aliases: ['British Columbia Legislative Library'],
+    scope: 'institution', family: 'historical-research', aliases: ['British Columbia Legislative Library', 'Provincial Library', 'Provincial Library and Archives'],
     relations: [{ type: 'part-of', subject: legislativeAssemblyId }],
     sources: [digitalCollections, publicationsChecklist, annualReport, directors, history, ...linocutSightings],
     nextAction: 'Examine the January 1955 bulletin cover and seek a record of formal logo adoption.'
