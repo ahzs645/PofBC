@@ -6,11 +6,14 @@ import { FOREST_LOGOS, variantsFor } from './forestLogos.js'
 import { SiteLink } from '../site/navigation.jsx'
 import { objectsForLogo } from '../posters/connections.js'
 import { Modal } from '../posters/ui/Modal.jsx'
-import { TRAVEL_PLACE } from '../gallery/movedGalleryPlaces.js'
+import { RECREATION_COLLECTION, RECREATION_PLACE, TRAVEL_PLACE } from '../gallery/movedGalleryPlaces.js'
 import travelSource from '../../research/identity/bc-travel-industry-2026-11-12/source-register.json'
 import './internal.css'
 
 const TravelIndustryLogo = lazy(() => import('./TravelIndustryLogo.jsx'))
+// The department's marks are the gallery's own records, so they and their renderers load with it.
+const RecreationConservation = lazy(() => import('./RecreationConservation.jsx'))
+const RecreationCover = lazy(() => import('./RecreationConservation.jsx').then((module) => ({ default: module.RecreationCover })))
 
 // Forest Oval's single-colour recreation retains both mountain edges as lines.
 // Its engine recolours the filled mountain to paper; restore the same supplied
@@ -313,6 +316,7 @@ const initialSelection = () => {
   const logoId = params.get('internal-logo')
   const logo = FOREST_LOGOS.find((entry) => entry.id === logoId)
   if (params.get('internal') === TRAVEL_PLACE.internal || logoId === TRAVEL_PLACE['internal-logo']) return { travel: true }
+  if (params.get('internal') === RECREATION_COLLECTION) return { recreation: true, logoId }
   return { family: params.get('internal') === 'forests' || !!logo, logoId: logo?.id ?? null }
 }
 
@@ -342,6 +346,7 @@ export const InternalLogosView = () => {
   }, [selection.family, selection.logoId])
 
   if (selection.travel) return <Suspense fallback={<p role="status">Loading logo…</p>}><TravelIndustryLogo /></Suspense>
+  if (selection.recreation) return <Suspense fallback={<p role="status">Loading logos…</p>}><RecreationConservation markId={selection.logoId} /></Suspense>
 
   return (
     <section className="internal-logos" aria-label="Departmental Logos">
@@ -436,6 +441,15 @@ export const InternalLogosView = () => {
             <span className="internal-logos__family-text">
               <span className="internal-logos__family-title">Department of Travel Industry <span aria-hidden="true">→</span></span>
               <span>Map and dogwood, about 1970</span>
+            </span>
+          </SiteLink>
+          <SiteLink className="internal-logos__family" to={RECREATION_PLACE}>
+            <span className="internal-logos__artwork">
+              <Suspense fallback={<span role="status">Loading logo…</span>}><RecreationCover /></Suspense>
+            </span>
+            <span className="internal-logos__family-text">
+              <span className="internal-logos__family-title">Department of Recreation and Conservation <span aria-hidden="true">→</span></span>
+              <span>A dogwood oval, five square symbols and two branch emblems, 1970–1973</span>
             </span>
           </SiteLink>
         </>

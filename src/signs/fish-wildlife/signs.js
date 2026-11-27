@@ -80,8 +80,8 @@ export const FISH_WILDLIFE_SIGNS = {
           lede: 'At the left of the headline, the gold-and-dark emblem pairs the oval symbol with the F&W initials. The sign uses the gallery’s reconstructed emblem in the sign’s own colours.',
           blocks: [{ links: [{
             label: 'Fish and Wildlife emblem',
-            note: 'Gallery · Recreation and Conservation',
-            to: { view: 'gallery', logos: 'recreation-conservation', mark: 'drc-fw-oval-1973' }
+            note: 'Departmental Logos · Recreation and Conservation',
+            to: { view: 'internal', internal: 'recreation-conservation', 'internal-logo': 'drc-fw-oval-1973' }
           }] }]
         }
       }

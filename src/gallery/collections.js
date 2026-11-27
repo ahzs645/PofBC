@@ -1270,7 +1270,10 @@ export const GALLERY_COLLECTIONS = [
   },
   {
     id: 'recreation-conservation',
-    shelf: 'bodies',
+    // A department: it opens in Departmental Logos (movedGalleryPlaces.js), and is kept here unlisted
+    // so the Royal BC Museum's and BC Parks' copies of its marks, and the register, still find it.
+    shelf: 'departmental',
+    showInGalleryIndex: false,
     label: 'Recreation and Conservation',
     body: 'Provincial department, 1957–1976',
     years: '1970–1973',
