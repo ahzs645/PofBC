@@ -92,7 +92,8 @@ export const IDENTITY_KIND_LABELS = {
   "public-university": "Public university",
   "advocacy-society": "Advocacy society",
   "public-institute": "Public institute",
-  "charitable-institution": "Charitable institution"
+  "charitable-institution": "Charitable institution",
+  "gaming-centre": "Community gaming centres"
 }
 
 export const IDENTITY_RELATION_LABELS = {

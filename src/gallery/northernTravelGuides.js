@@ -29,6 +29,25 @@ const records = [
     extraSources: [{ title: 'Destination BC, Visitor Services', url: 'https://www.destinationbc.ca/what-we-do/destination-management/visitor-services/' }]
   },
   {
+    id: 'chances-gaming',
+    name: 'Chances gaming venues',
+    kind: 'gaming-centre',
+    aliases: ['Chances', 'Chances community gaming centres'],
+    description: 'Chances community gaming centres in Terrace, Dawson Creek and Fort St. John carried separate venue signatures in the guides’ advertisements. ' +
+      'Each Chances venue has its own owner: Chances Prince Rupert is owned by Gitxaała Enterprises Corporation, and Snuneymuxw First Nation’s Petroglyph Development Group bought Chances Maple Ridge from Great Canadian in April 2026. ' +
+      'All of them operate under BCLC, which conducts and manages gaming in the province through service agreements with each facility’s private owner-operator. ' +
+      'The owners of the Terrace and Fort St. John venues have not been confirmed; Great Canadian is reported to have kept its Dawson Creek centre when it sold its other B.C. properties.',
+    cover: 'chances-dawson-creek-2015',
+    // BCLC conducts and manages the gaming; each venue's owner-operator runs it under a service agreement.
+    relations: [{ subject: 'bclc', type: 'service-of', label: 'Gaming centres run by separate owner-operators under BCLC service agreements' }],
+    extraSources: [
+      { title: 'Chances Prince Rupert, About (“governed and abide by BCLC policies, procedures, and standards”)', url: 'https://www.chancespr.ca/about/' },
+      { title: 'Great Canadian Entertainment, sale of Chances Maple Ridge, April 2026', url: 'https://greatcanadian.com/news/cmr-sale-2026/' },
+      { title: 'British Columbia Lottery Corporation (Wikipedia): facilities run by private owner-operators under service agreements', url: 'https://en.wikipedia.org/wiki/British_Columbia_Lottery_Corporation' },
+      { title: 'Province of B.C., Gambling and fundraising', url: 'https://www2.gov.bc.ca/gov/content/sports-culture/gambling-fundraising' }
+    ]
+  },
+  {
     id: 'bc-ferries-travel',
     name: 'BC Ferries Vacations',
     kind: 'tourism-initiative',
@@ -129,7 +148,6 @@ const records = [
     ['prince-rupert-seafest', 'Prince Rupert Seafest', 'seafest-harbour-2015', 'The 37th annual event advertisement pairs the Seafest script with an illustrated tugboat.'],
     ['gwaii-haanas', 'Gwaii Haanas', 'gwaii-haanas-blue-panel-2012', 'The bilingual site signatures appear with the conserved area’s circular emblem.'],
     ['haida-nation', 'Haida Nation', 'haida-nation-colour-2012', 'Red and white treatments of the Haida Nation signature appear in the Gwaii Haanas advertisements.'],
-    ['chances-gaming', 'Chances gaming venues', 'chances-dawson-creek-2015', 'Terrace, Dawson Creek and Fort St. John carried separate venue signatures in their advertisements.'],
     ['via-rail', 'VIA Rail Canada', 'via-rail-upper-2015', 'The guide back covers show VIA Rail’s signature, its A Green Choice badge and The Canadian campaign.'],
     ['hawkair', 'Hawkair', 'hawkair-script-2015', 'Hawkair’s script wordmark appeared in the 2015 Visit Terrace advertisement.'],
     ['helijet', 'Helijet', 'helijet-blue-charters-2015', 'The guides carry the blue Helijet panel in the North Coast charter advertisement.'],

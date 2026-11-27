@@ -1624,7 +1624,9 @@ export const FOLDED_UNDER = [
   { parent: 'bc-ferries', children: ['collected-bc-ferries-travel'] },
   { parent: 'bc-hydro', children: ['collected-power-smart', 'collected-sub-powerex', 'collected-fish-wildlife-compensation-program'] },
   { parent: 'collected-bc-housing', children: ['collected-sub-bc-housing-licensing-and-consumer-services'] },
-  { parent: 'bclc', children: ['collected-gamesense', 'collected-sub-playnow'] },
+  // Chances venues each have their own owner, but run under BCLC service agreements (chancespr.ca, research
+  // in northernTravelGuides.js), so their signatures sit with BCLC's.
+  { parent: 'bclc', children: ['collected-gamesense', 'collected-sub-playnow', 'collected-chances-gaming'] },
   {
     parent: LIQUOR_DISTRIBUTION_COLLECTION,
     children: ['collected-sub-bcliquor', 'collected-bc-signature-liquor-store',
