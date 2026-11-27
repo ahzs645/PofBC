@@ -232,6 +232,11 @@ const BY_POSTER = {
   ],
   'super-natural-ferries': tourismCampaignConnections('super-natural-ferries'),
   'super-natural-lake': tourismCampaignConnections('super-natural-lake'),
+  'air-facilities-map-1977': [
+    { group: 'issuer', rel: 'Published by', label: 'British Columbia Aviation Council', note: 'Maureen Wilson’s 1979 bibliography records the map as published in Vancouver in 1977, at 1:1,900,800.', href: 'https://ojs.library.ubc.ca/index.php/bcstudies/article/download/1014/1052/4247#page=1', certainty: 'documented' },
+    { group: 'marks', rel: 'Uses early tourism identity', label: 'Super, Natural British Columbia', note: 'The photographed cover carries a stacked signature and Canada tagline; it is not asserted to be identical to the later vector marks.', to: { view: 'gallery', logos: 'tourism-bc-destination-bc' }, certainty: 'printed' },
+    { group: 'context', rel: 'Related later advertising', label: 'Spring visitors', note: 'Related tourism wording in later advertising; the map does not establish a shared campaign.', to: piece('super-natural-spring'), certainty: 'thematic' }
+  ],
   'use-your-ashtray': [
     {
       group: 'issuer', rel: 'Printed publication', label: 'Fish and Game Branch',

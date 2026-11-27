@@ -1595,8 +1595,8 @@
     "name": "Northwest Regional Airport Terrace–Kitimat",
     "publisher": "Terrace–Kitimat Airport Society",
     "officialUrl": "https://yxt.ca/",
-    "notes": "The official website currently uses a raster with white glow around a red/orange symbol and blue name. The 2024 advertising sheet has separately recoverable native airport paths with a white wordmark on a navy background. The 2026 apron-plan cover records the non-glow positive layout as a bitmap.",
-    "cover": "airport-cyxt-signature",
+    "notes": "The 2024 advertising rate card contains a red emblem and blue wordmark on page 2 and a white-lettered signature on a navy field on page 1. The website uses a separate white-keyline treatment. The 2026 apron-plan cover documents another positive print specimen.",
+    "cover": "airport-cyxt-advertising-signature-2024",
     "assets": [
       {
         "id": "airport-cyxt-signature",
@@ -1615,7 +1615,30 @@
         "evidenceType": "official-website-raster",
         "role": "current",
         "designLabel": "Symbol and blue wordmark with website keyline",
-        "versionLabel": "Symbol and blue wordmark with website keyline",
+        "versionLabel": "Symbol and blue wordmark with website keyline"
+      },
+      {
+        "id": "airport-cyxt-advertising-signature-2024",
+        "label": "Red symbol and blue wordmark, 2024 advertising rate card",
+        "format": "svg",
+        "file": "identity-airports/cyxt/advertising-signature-2024.svg",
+        "isVector": true,
+        "publisher": "Terrace–Kitimat Airport Society",
+        "sourcePage": "https://yxt.ca/wp-content/uploads/2024/10/NWRA-AD-PRICING-.pdf",
+        "sourceUrl": "https://yxt.ca/wp-content/uploads/2024/10/NWRA-AD-PRICING-.pdf",
+        "sourceLocator": "PDF page 2, lower left, beneath the advertising prices.",
+        "notes": "The advertising sheet uses a red symbol and blue lettering on white. The airport website adds a white keyline. The same sheet prints a white-lettered colourway on page 1.",
+        "fidelityNote": "Isolated the 44 native PDF paths of the airport signature with PyMuPDF, including their original transforms and fills.",
+        "sha256": "d0cbde2b029d71e17a1bf49f7872643b7cac9cc4ebce275eadca03f4546e83eb",
+        "observedDate": "2026-11-27",
+        "evidenceType": "native-pdf-vector-extraction",
+        "role": "current",
+        "extraction": {
+          "method": "Isolated the 44 native PDF paths of the airport signature with PyMuPDF, including their original transforms and fills."
+        },
+        "specimenDate": "2024",
+        "designLabel": "Positive print signature, 2024 advertising rate card",
+        "versionLabel": "2024 positive print vector",
         "darkVariant": "airport-cyxt-reverse"
       },
       {
@@ -1640,7 +1663,7 @@
         "specimenDate": "2024",
         "sourceGround": "dark",
         "darkBackground": true,
-        "variantOf": "airport-cyxt-signature",
+        "variantOf": "airport-cyxt-advertising-signature-2024",
         "versionLabel": "Symbol and white wordmark"
       },
       {
@@ -1663,7 +1686,7 @@
           "method": "Published PDF image object extracted at its native pixel dimensions."
         },
         "specimenDate": "2026",
-        "variantOf": "airport-cyxt-signature",
+        "variantOf": "airport-cyxt-advertising-signature-2024",
         "versionLabel": "Positive airport mark in apron plan"
       },
       {
@@ -1686,7 +1709,7 @@
           "method": "Published PDF image object extracted at its native pixel dimensions."
         },
         "specimenDate": "2024",
-        "variantOf": "airport-cyxt-signature",
+        "variantOf": "airport-cyxt-advertising-signature-2024",
         "versionLabel": "Positive signature in the accessibility plan"
       },
       {
@@ -1709,7 +1732,7 @@
           "method": "Published PDF image object extracted at its native pixel dimensions."
         },
         "specimenDate": "2026",
-        "variantOf": "airport-cyxt-signature",
+        "variantOf": "airport-cyxt-advertising-signature-2024",
         "versionLabel": "Positive signature on the airport fee schedule"
       }
     ]
@@ -1824,7 +1847,7 @@
     "name": "Prince George Airport",
     "publisher": "Prince George Airport Authority",
     "officialUrl": "https://www.pgairport.ca/business-information/media/",
-    "notes": "The airport authority publishes full-colour and black-and-white PNG downloads and provides a contact for vector files and logo-use approval. The homepage already serves native white paths of the matching lockup. The 2025 annual report uses a 387 × 182 raster for the colour lockup, smaller than the media download.",
+    "notes": "The airport authority publishes full-colour and black-and-white PNGs in its media kit. Its 2023 annual report supplies the full-colour globe and lockup as paths and radial gradients. The homepage supplies its white reverse artwork.",
     "cover": "airport-cyxs-signature",
     "assets": [
       {
@@ -1845,6 +1868,31 @@
         "role": "current",
         "designLabel": "Colour airport authority signature",
         "versionLabel": "Colour airport authority signature",
+        "darkVariant": "airport-cyxs-reverse",
+        "preferredVector": "airport-cyxs-colour-annual-report-2023"
+      },
+      {
+        "id": "airport-cyxs-colour-annual-report-2023",
+        "label": "Full-colour airport authority signature in the 2023 annual report",
+        "format": "svg",
+        "file": "identity-airports/cyxs/colour-annual-report-2023.svg",
+        "isVector": true,
+        "publisher": "Prince George Airport Authority",
+        "sourcePage": "https://www.pgairport.ca/wp-content/uploads/2024/07/PGAA_2023_Annual_Report.pdf",
+        "sourceUrl": "https://www.pgairport.ca/wp-content/uploads/2024/07/PGAA_2023_Annual_Report.pdf",
+        "sourceLocator": "2023 annual report, PDF page 1, centred above “Strengthening Connections” (tagged figure 2).",
+        "notes": "The blue globe, green YXS, italic airport authority wordmark and red maple leaf match the official full-colour media download.",
+        "fidelityNote": "Isolated the placed logo from the tagged cover PDF and converted the original paths and radial shadings to SVG with Poppler. Identical gradient stops share one definition.",
+        "sha256": "2ff599dc2c4f1bf88bcd0f823a61e4d2f9a469b5ed9906d52368b5e4dac65528",
+        "observedDate": "2026-11-27",
+        "evidenceType": "native-pdf-vector-extraction",
+        "role": "current",
+        "extraction": {
+          "method": "Isolated the placed logo from the tagged cover PDF and converted the original paths and radial shadings to SVG with Poppler. Identical gradient stops share one definition."
+        },
+        "specimenDate": "2023",
+        "variantOf": "airport-cyxs-signature",
+        "versionLabel": "Full-colour vector in the 2023 annual report",
         "darkVariant": "airport-cyxs-reverse"
       },
       {
@@ -1886,6 +1934,31 @@
         "role": "current",
         "variantOf": "airport-cyxs-signature",
         "versionLabel": "Black-and-white airport authority signature"
+      },
+      {
+        "id": "yxs-airport-2012-annual-report-vector",
+        "label": "Colour emblem and white YXS from the 2012 annual report",
+        "format": "svg",
+        "file": "identity-airports/cyxs/white-lettering-annual-report-2012.svg",
+        "isVector": true,
+        "publisher": "Prince George Airport Authority",
+        "sourcePage": "https://www.pgairport.ca/wp-content/uploads/2016/02/PGAA_AnnualReport_2012.pdf",
+        "sourceUrl": "https://www.pgairport.ca/wp-content/uploads/2016/02/PGAA_AnnualReport_2012.pdf",
+        "sourceLocator": "2012 annual report, PDF page 1, cover signature above “The World Begins at YXS” (placed PDF MC1).",
+        "notes": "The 2012 annual-report cover reproduces the same blue globe, white YXS and airport-authority lettering, and red maple leaf as the airport advertisement in the 2012 Northern British Columbia Travel Guide.",
+        "fidelityNote": "Isolated the placed PDF logo and converted the native lettering, emblem paths and twenty radial gradients to SVG using Poppler. The guide advertisement remains available in its printed setting.",
+        "sha256": "2eae172c38ad5c9a764a64c7b9213f9a4a5b801e4aa272e0c86c7a6955a779f1",
+        "observedDate": "2026-11-27",
+        "evidenceType": "native-pdf-vector-extraction",
+        "role": "historical",
+        "specimenDate": "2012",
+        "sourceGround": "dark",
+        "darkBackground": true,
+        "extraction": {
+          "method": "Isolated the placed PDF logo and converted the native lettering, emblem paths and twenty radial gradients to SVG using Poppler. The guide advertisement remains available in its printed setting."
+        },
+        "variantOf": "yxs-airport-2012",
+        "versionLabel": "2012 annual-report vector"
       }
     ]
   },
@@ -2196,7 +2269,8 @@
         "evidenceType": "official-website-raster",
         "role": "current",
         "designLabel": "Tricolour standalone YVR symbol",
-        "versionLabel": "Tricolour standalone YVR symbol"
+        "versionLabel": "Tricolour standalone YVR symbol",
+        "preferredVector": "airport-cyvr-tricolour-symbol-vector"
       },
       {
         "id": "airport-cyvr-beyond-every-day",
@@ -2219,7 +2293,54 @@
         },
         "specimenDate": "2021",
         "designLabel": "Airport name and Beyond, Every Day tagline",
-        "versionLabel": "Airport name and Beyond, Every Day tagline"
+        "versionLabel": "Airport name and Beyond, Every Day tagline",
+        "preferredVector": "airport-cyvr-beyond-every-day-vector"
+      },
+      {
+        "id": "airport-cyvr-beyond-every-day-vector",
+        "label": "Airport name and Beyond, Every Day tagline",
+        "format": "svg",
+        "file": "identity-airports/cyvr/beyond-every-day-vector.svg",
+        "isVector": true,
+        "publisher": "Vancouver Airport Authority",
+        "sourcePage": "https://www.yvr.ca/-/media/yvr/documents/community/templeton-area-redevelopment-open-house-display-boards.pdf?la=en",
+        "sourceUrl": "https://www.yvr.ca/-/media/yvr/documents/community/templeton-area-redevelopment-open-house-display-boards.pdf?la=en",
+        "sourceLocator": "Templeton Area Redevelopment open house display boards, PDF page 1 (“About YVR”). Entire lower-left signature, including the three-panel device, airport name and tagline.",
+        "notes": "The three-panel YVR uses blue, pale blue and green. The airport name and “Beyond, Every Day.” sit right and below, respectively.",
+        "fidelityNote": "Isolated 48 original filled PDF paths with PyMuPDF. The SVG preserves the publication’s shape coordinates, transforms and three source inks.",
+        "sha256": "07467cc676d4265857e86d12e381a5d94efdbf7052ce28aa979a2c41e2aa1185",
+        "observedDate": "2026-11-27",
+        "evidenceType": "native-pdf-vector-extraction",
+        "role": "current",
+        "extraction": {
+          "method": "Isolated 48 original filled PDF paths with PyMuPDF. The SVG preserves the publication’s shape coordinates, transforms and three source inks."
+        },
+        "variantOf": "airport-cyvr-beyond-every-day",
+        "versionLabel": "2018 open-house display board · native vector",
+        "specimenDate": "2018"
+      },
+      {
+        "id": "airport-cyvr-tricolour-symbol-vector",
+        "label": "Standalone tricolour YVR symbol",
+        "format": "svg",
+        "file": "identity-airports/cyvr/tricolour-symbol-vector.svg",
+        "isVector": true,
+        "publisher": "Vancouver Airport Authority",
+        "sourcePage": "https://www.yvr.ca/-/media/yvr/documents/community/templeton-area-redevelopment-open-house-display-boards.pdf?la=en",
+        "sourceUrl": "https://www.yvr.ca/-/media/yvr/documents/community/templeton-area-redevelopment-open-house-display-boards.pdf?la=en",
+        "sourceLocator": "Templeton Area Redevelopment open house display boards, PDF page 1 (“About YVR”). Three filled paths of the tricolour device in the lower-left signature. The media masthead documents its standalone use.",
+        "notes": "The three-panel YVR uses blue, pale blue and green. The airport publishes this symbol separately in its media masthead.",
+        "fidelityNote": "Isolated 3 original filled PDF paths with PyMuPDF. The SVG preserves the publication’s shape coordinates, transforms and three source inks.",
+        "sha256": "d8152de665a2689298bf45de68e848e9784d48f7fe6dff4dbf52816611cb0b9b",
+        "observedDate": "2026-11-27",
+        "evidenceType": "native-pdf-vector-extraction",
+        "role": "current",
+        "extraction": {
+          "method": "Isolated 3 original filled PDF paths with PyMuPDF. The SVG preserves the publication’s shape coordinates, transforms and three source inks."
+        },
+        "variantOf": "airport-cyvr-tricolour-symbol",
+        "versionLabel": "2018 open-house display board · native vector",
+        "specimenDate": "2018"
       }
     ]
   },

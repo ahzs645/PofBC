@@ -20,7 +20,7 @@ const coverOf = (entries) => {
     entries.find((entry) => displayOf(entry)) ?? entries[0])?.id
 }
 
-const isSourceVector = ({ asset }) => asset.isVector && !asset.reconstruction &&
+const isSourceVector = ({ asset }) => asset.isVector && !asset.containsRaster && !asset.reconstruction &&
   (asset.format === 'svg' || Boolean(COLLECTED_DISPLAY[asset.id]))
 
 export const assetUrl = (path, base = import.meta.env?.BASE_URL ?? '/') =>
@@ -98,15 +98,26 @@ export const coverFirst = (entries, cover) => {
 // These sources establish the active signature even when a later date belongs to a different
 // layout, a standalone symbol, or an older design reproduced in a newer publication.
 const VERIFIED_CURRENT_COVERS = {
+  'airport-cyxt': 'airport-cyxt-signature',
   'bc-assessment': 'bc-assessment-svg',
   'bc-housing': 'vector-bc-housing-corporate-component-source-vector',
   'bc-infrastructure-benefits': 'vector-bcib-2025-tagline-reversed-source-vector',
   'bc-railway-company': 'bcrc-2024-letterhead',
   'first-nations-health-authority': 'vector-fnha-logo-colour',
   'interior-health': 'vector-interior-health-blue-horizontal-source-extraction',
+  'municipality-prince-rupert': 'municipal-prince-rupert-community-assessment-2024',
+  'municipality-gibsons': 'source-recovered-municipal-gibsons-website-logo',
   'municipality-fort-st-james': 'source-recovered-municipal-fort-st-james-website-logo',
   'northern-development-initiative-trust': 'source-expanded-northern-development-2023-stacked-reversed',
   'school-district-44': 'school-district-44-logo-current'
+}
+
+// Where several dated vectors survive, feature the body's own signature ahead of its campaigns.
+const SHELF_SIGNATURES = {
+  'airport-cyxt': 'airport-cyxt-advertising-signature-2024',
+  'municipality-radium-hot-springs': 'recovered-radium-community-colour-2012',
+  'municipality-gibsons': 'municipal-gibsons-annual-report-salmon-seal',
+  'tourism-prince-george': 'pg-moose-white-2015'
 }
 
 /** One or two sightings as given; more as their full year span. Retrieval dates are never used. */
@@ -151,7 +162,7 @@ const paletteMaster = (asset, versions) => {
 const collectedEntry = (design, timeline, owner, versions = [design]) => {
   // An explicitly matched source vector can represent the design without changing its URL.
   const preferredVector = versions.find((version) =>
-    version.id === design.preferredVector && version.variantOf === design.id && version.isVector && !version.reconstruction)
+    version.id === design.preferredVector && version.variantOf === design.id && isSourceVector({ asset: version }))
   const preferred = preferredVector ?? versions.find((version) =>
     version.id === design.preferredReconstruction && version.variantOf === design.id && version.reconstruction)
   const asset = preferred ?? design
@@ -223,10 +234,17 @@ const collectionOf = (body) => {
   const entries = collectedEntriesOf(body.id)
   const namedCover = body.coverPolicy === 'verified-current' && entries.some(({ id }) => id === body.cover) ? body.cover : undefined
   const verifiedCover = body.current ? VERIFIED_CURRENT_COVERS[body.id] ?? namedCover : undefined
-  const vectors = entries.filter((entry) => isSourceVector(entry) && (!body.current || currentSpecimens(entry).length))
+  const sourceVectors = entries.filter(isSourceVector)
+  const vectors = sourceVectors.filter((entry) => !body.current || currentSpecimens(entry).length)
   const vectorCover = vectors.some(({ id }) => id === body.cover) ? body.cover
     : (body.current ? latestLogo(vectors) : undefined) ?? coverOf(vectors)
   const cover = verifiedCover ?? vectorCover ?? body.cover ?? (body.current ? latestLogo(entries) : undefined) ?? coverOf(entries)
+  // A gallery card can feature a dated historical vector while the district or government
+  // record keeps its verified current signature. A matching vector always keeps that cover.
+  const coverEntry = entries.find((entry) => entry.id === cover)
+  const shelfSpecimen = coverEntry && !coverEntry.asset.isVector
+    ? sourceVectors.find((entry) => entry.id === SHELF_SIGNATURES[body.id])?.id ?? coverOf(vectors) ?? coverOf(sourceVectors)
+    : undefined
   const artworkSections = body.artworkSections?.map(({ marks, ...section }) => ({
     ...section, entries: marks.map((mark) => entries.find(({ id }) => id === mark)).filter(Boolean)
   }))
@@ -239,9 +257,10 @@ const collectionOf = (body) => {
     ...(body.initiativeId ? { initiativeId: body.initiativeId } : {}),
     label: body.shortName || body.name,
     body: body.publicationDate ? 'Identity guide' : body.current ? kindOf(body).replace(/^./, (letter) => letter.toUpperCase()) : `Former ${kindOf(body)}`,
-    years: body.publicationDate ?? (body.from == null && body.to == null ? 'Dates unestablished' : `${body.from ?? '?'}–${body.current ? 'present' : body.to ?? '?'}`),
+    years: body.publicationDate ?? body.yearsLabel ?? (body.from == null && body.to == null ? 'Dates unestablished' : `${body.from ?? '?'}–${body.current ? 'present' : body.to ?? '?'}`),
     intro: body.notes || 'Collected artwork, with its source recorded for each file.',
     cover,
+    ...(shelfSpecimen && { shelfSpecimen }),
     ...(body.historyId ? { historyId: body.historyId } : {}),
     ...(body.fundingHistory ? { fundingHistory: body.fundingHistory } : {}),
     ...(body.eras ? { eras: body.eras.map(({ marks, ...era }) => ({

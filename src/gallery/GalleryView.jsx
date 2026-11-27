@@ -12,6 +12,7 @@ import { SafetyAuthorityHistory } from './SafetyAuthorityHistory.jsx'
 // whose marks have not been obtained get a shelf of their own, while there are any, so a gap reads
 // as a gap rather than as a body with no mark.
 
+import { coverFirst } from './collectedCollections.js'
 import { PreviewBackground } from './PreviewBackground.jsx'
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { formatEventDate } from '../government/events.js'
@@ -39,7 +40,7 @@ import { ParksFoundationHistory } from './ParksFoundationHistory.jsx'
 import { RailwayHistory, RailwayHistoryLinks } from './RailwayHistory.jsx'
 import { InitiativeLink } from '../initiatives/InitiativeLink.jsx'
 import { UnbcOriginsTeaser } from './UnbcOrigins.jsx'
-import { generatorArt, onPage, tileArt } from './tileArt.js'
+import { defaultCollectedAsset, generatorArt, onPage, tileArt } from './tileArt.js'
 import { GALLERY_TYPE_OPTIONS, browseGallery, gallerySections, isSearchShortcut } from './gallerySearch.js'
 import { CouncilTimeline } from './CouncilTimeline.jsx'
 import { COUNCIL_TIMELINE_OWNERS } from './scienceCouncilHistory.js'
@@ -406,11 +407,11 @@ const Tile = ({ entry, onOpen, theme, said = [] }) => (
   <button type="button" className="gallery__pick gallery__pick--tile" onClick={onOpen} aria-label={`Open ${entry.label}`}>
     <span
       className="gallery__art"
-      data-ground={onPage(entry) ? 'page' : 'own'}
+      data-ground={onPage(entry, theme) ? 'page' : 'own'}
       // Built by this project's own renderers; every value is escaped where written.
       dangerouslySetInnerHTML={{ __html: tileArt(entry, theme) }}
     />
-    <span className="gallery__label">{entry.label}{entry.kind === 'collected' && <span className="gallery__asset-format"> · {entry.asset.format.toUpperCase()}</span>}</span>
+    <span className="gallery__label">{entry.label}{entry.kind === 'collected' && <span className="gallery__asset-format"> · {defaultCollectedAsset(entry, theme).format.toUpperCase()}</span>}</span>
     <span className="gallery__note">{entry.note}</span>
     <Chips labels={chipsOf(entry.identity).filter((label) => !said.includes(label))} title={FIDELITY[entry.identity.fidelity]} />
   </button>
@@ -421,7 +422,7 @@ const ThisMark = ({ entry, theme }) => (
   <div className="gallery__pick gallery__pick--tile gallery__pick--this" aria-current="true">
     <span
       className="gallery__art"
-      data-ground={onPage(entry) ? 'page' : 'own'}
+      data-ground={onPage(entry, theme) ? 'page' : 'own'}
       // Built by this project's own renderers; every value is escaped where written.
       dangerouslySetInnerHTML={{ __html: tileArt(entry, theme) }}
     />
@@ -475,8 +476,9 @@ const isPlainClick = (event) => event.button === 0 && !event.metaKey && !event.c
 const collectionHref = (id) => `?view=gallery&logos=${encodeURIComponent(id)}`
 
 const CollectionCard = ({ collection, onOpen, theme, href }) => {
-  const cover = findGalleryEntry(collection.cover) ?? entriesOf(collection)[0]
   const entries = entriesOf(collection)
+  const specimen = collection.shelfSpecimen && entries.find((entry) => entry.id === collection.shelfSpecimen)
+  const cover = specimen || findGalleryEntry(collection.cover) || entries[0]
   const count = entries.length
   const fileCount = collection.fileCollection ? entries.reduce((total, entry) => total + (entry.versions?.length || 1), 0) : 0
   const Control = href ? 'a' : 'button'
@@ -496,6 +498,7 @@ const CollectionCard = ({ collection, onOpen, theme, href }) => {
       <span className="gallery__collection-text">
         <span className="gallery__collection-title">{collection.label}</span>
         <span className="gallery__note">{collection.body}</span>
+        {specimen && <span className="gallery__note gallery__specimen">{specimen.label} · {specimen.years}</span>}
         <span className="gallery__years">
           {collection.years} · {collection.fileCollection ? `${fileCount} artwork ${fileCount === 1 ? 'file' : 'files'}` : `${count} ${count === 1 ? 'mark' : 'marks'}`}
           {collection.eras ? ` · ${collection.eras.length} ${collection.eras.length === 1 ? 'era' : 'eras'}` : ''}
@@ -1366,7 +1369,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
                 ))}
               </div>
             )}
-            {ungroupedArtwork?.length > 0 && artworkList(ungroupedArtwork)}
+            {ungroupedArtwork?.length > 0 && artworkList(coverFirst(ungroupedArtwork, collection.shelfSpecimen))}
           </>
           )}
       {collection.shelf === 'regional-districts' && (

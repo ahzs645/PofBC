@@ -10,6 +10,36 @@ import { gallerySections } from '../gallery/gallerySearch.js'
 
 const publicRoot = new URL('../../public/', import.meta.url)
 
+test('Prince George uses its full-colour vector and Terrace keeps its two positive treatments selectable', () => {
+  const princeGeorgeEntries = collectedEntriesOf('airport-cyxs')
+  const princeGeorge = princeGeorgeEntries.find(({ id }) => id === 'airport-cyxs-signature')
+  assert.equal(princeGeorge.asset.id, 'airport-cyxs-colour-annual-report-2023')
+  assert.match(readFileSync(new URL(princeGeorge.asset.file, publicRoot), 'utf8'), /<radialGradient\b/)
+  assert.ok(princeGeorge.versions.some(({ id }) => id === 'airport-cyxs-signature'))
+  assert.ok(princeGeorge.versions.some(({ id }) => id === 'airport-cyxs-reverse'))
+  const guide = princeGeorgeEntries.find(({ id }) => id === 'yxs-airport-2012')
+  assert.equal(guide.asset.id, 'yxs-airport-2012-annual-report-vector')
+  assert.ok(guide.versions.some(({ id }) => id === 'yxs-airport-2012'))
+
+  const terrace = collectedEntriesOf('airport-cyxt')
+  const print = terrace.find(({ id }) => id === 'airport-cyxt-advertising-signature-2024')
+  const website = terrace.find(({ id }) => id === 'airport-cyxt-signature')
+  assert.equal(print.asset.isVector, true)
+  assert.equal(print.asset.specimenDate, '2024')
+  assert.ok(print.versions.some(({ id }) => id === print.asset.darkVariant))
+  assert.equal(website.asset.file, 'identity-airports/cyxt/signature.png')
+})
+
+test('Vancouver airport preserves the white lettering cut out of its three coloured panels', () => {
+  const entries = collectedEntriesOf('airport-cyvr')
+  for (const design of ['airport-cyvr-beyond-every-day', 'airport-cyvr-tricolour-symbol']) {
+    const entry = entries.find(({ id }) => id === design)
+    assert.equal(entry.asset.id, design + '-vector')
+    assert.ok(entry.versions.some(({ id }) => id === design))
+    assert.equal(collectedDisplay(entry.asset, 'dark').plate, true)
+  }
+})
+
 test('airport artwork has a directory record, a gallery collection and local downloads', () => {
   const locationCodes = new Set(facilities.map(({ code }) => code.toLowerCase()))
   const [shelf] = gallerySections('airports')

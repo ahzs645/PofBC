@@ -178,7 +178,7 @@ export function PosterViewer({ meta, series, module, part, onPart, onExit, previ
   const regionList = useMemo(() => regions.map((id) => ({ id, ...parts[id] })), [regions, parts])
 
   const targets = [
-    posterTarget({ meta, noun, printPdf: variation?.printPdf, getSvg: () => posterSvgString(svg, meta), tag: extras.posterTag ?? (variation && variation !== variations.options[0] ? variation.id : null), ...(variation?.changed && !extras.posterTag ? { changed: variation.changed } : {}) }),
+    posterTarget({ meta, noun, printPdf: variation ? variation.printPdf : module.printPdf, getSvg: () => posterSvgString(svg, meta), tag: extras.posterTag ?? (variation && variation !== variations.options[0] ? variation.id : null), ...(variation?.changed && !extras.posterTag ? { changed: variation.changed } : {}) }),
     ...(extras.targets ?? [])
   ]
 

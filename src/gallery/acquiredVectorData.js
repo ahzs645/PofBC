@@ -1,5 +1,182 @@
 // Reviewed source vectors recovered for existing gallery designs.
+const kelownaPublication = 'https://hdp-ca-prod-app-kelowna-involved-files.s3.ca-central-1.amazonaws.com/6417/1562/8132/Kelowna_SUFS_May_2024_for_Engagement.pdf'
+const kelownaGeometry = {
+  publisher: 'City of Kelowna',
+  sourcePage: kelownaPublication + '#page=1',
+  sourceUrl: kelownaPublication,
+  sourceFile: 'Urban Forest Strategy, May 2024 draft',
+  sourceLocator: 'PDF page 1, lower-right city signature',
+  observedDate: '2026-11-27',
+  sourceGround: 'light',
+  extraction: {
+    method: 'Retained the 73 native filled paths of the cover signature, including the outlined lettering, and trimmed the viewBox to their bounds.',
+    page: 1,
+    pdfBounds: [459.00027, 678.59979, 584.99969, 771.25983],
+    sourceSha256: '162fb6ffa9426550c161e308d09789c0dd9282c36887c232de6c0c93399d7c6a'
+  }
+}
+
 export const ACQUIRED_VECTORS = {
+  "source-recovered-municipal-north-saanich-website-logo": {
+    "prefer": false,
+    "designLabel": "North Saanich · Landscape signature",
+    "asset": {
+      "id": "municipal-north-saanich-annual-report-reverse",
+      "label": "District of North Saanich · White · annual report",
+      "versionLabel": "White · annual report",
+      "file": "identity-recovered/municipalities/north-saanich/annual-report-reverse.svg",
+      "sourceGround": "dark",
+      "publisher": "District of North Saanich",
+      "sourceUrl": "https://www.northsaanich.ca/wp-content/uploads/2022-Annual-Report.pdf",
+      "sourcePage": "https://www.northsaanich.ca/wp-content/uploads/2022-Annual-Report.pdf#page=1",
+      "sourceFile": "2022 Annual Report",
+      "sourceLocator": "PDF page 1, upper-left reverse signature",
+      "specimenDate": "2023-06",
+      "observedDate": "2026-11-27",
+      "extraction": {
+        "method": "Isolated the 34 native filled paths of the complete cover signature, retaining fill colours, path order and original outlines.",
+        "page": 1,
+        "pdfBounds": [
+          34.459,
+          25.928,
+          164.266,
+          70.079
+        ],
+        "sourceSha256": "eed7195f2380be07c5cf929756e6d8ad1b6e961c5c6ad4dcf0a2164be9839221"
+      },
+      "sha256": "ad345ca81b1e6053054407ab08960388562e9ccba0137697d63aff5d413f23c7",
+      "bytes": 14151,
+      "darkBackground": true,
+      "notes": "The district printed this white signature against the teal cover field.",
+      "fidelityNote": "The source artwork preserves all 34 paths, including the landscape divisions and the outlines of both lines of the district name."
+    }
+  },
+  "source-recovered-municipal-mission-website-logo": {
+    "prefer": true,
+    "designLabel": "City of Mission · Multicolour civic signature",
+    "asset": {
+      "id": "municipal-mission-annual-report-signature",
+      "label": "City of Mission · Full colour · annual report",
+      "versionLabel": "Full colour · annual report",
+      "file": "identity-recovered/municipalities/mission/annual-report-full-colour.svg",
+      "sourceGround": "light",
+      "publisher": "City of Mission",
+      "sourceUrl": "https://www.mission.ca/media/file/mission-annual-report-2022",
+      "sourcePage": "https://www.mission.ca/media/file/mission-annual-report-2022#page=1",
+      "sourceFile": "2022 Annual Report",
+      "sourceLocator": "PDF page 1, lower-left City of Mission signature",
+      "specimenDate": "2023-07",
+      "observedDate": "2026-11-27",
+      "extraction": {
+        "method": "Isolated the 15 native filled paths of the complete cover signature, retaining fill colours, path order and original outlines.",
+        "page": 1,
+        "pdfBounds": [
+          19.199,
+          702.18,
+          214.0,
+          778.45
+        ],
+        "sourceSha256": "31581b38e986a1da56b669757ca20a1a08eba0c0b755d01f5ff62eb46ad08c05"
+      },
+      "sha256": "67c64246975fcf4ecae1c898b4933cfc00aa06571ec43a2116839f1b5070e2cb",
+      "bytes": 15313,
+      "notes": "The 2022 annual report carries the multicolour tree lines and two-line City of Mission name seen on the municipal website.",
+      "fidelityNote": "The SVG retains the tree symbol and wording as 15 filled paths in their original report colours. It omits the photograph and cover detail."
+    }
+  },
+  "rd-cowichan-valley-bylaw-lockup-2022": {
+    "prefer": true,
+    "asset": {
+      "id": "rd-cowichan-valley-annual-report-stacked",
+      "label": "Cowichan Valley Regional District · Stacked CVRD signature",
+      "versionLabel": "Annual report · stacked colour signature",
+      "file": "identity-regional-districts/cowichan-valley/annual-report-stacked.svg",
+      "sourceGround": "light",
+      "publisher": "Cowichan Valley Regional District",
+      "sourceUrl": "https://cvrd.ca/wp-content/uploads/2025/12/CVRD_AnnualReport_2025_Final-Web-version.pdf",
+      "sourcePage": "https://cvrd.ca/wp-content/uploads/2025/12/CVRD_AnnualReport_2025_Final-Web-version.pdf#page=1",
+      "sourceFile": "2025 Annual Report",
+      "specimenDate": "2026-07",
+      "sourceLocator": "PDF page 1, stacked sun and water symbol above CVRD",
+      "observedDate": "2026-11-27",
+      "notes": "The cover preserves the stacked arrangement in the district’s 2022 bylaw. “British Columbia” is a separate line of page text below the signature.",
+      "fidelityNote": "Preserves the source artwork’s green and teal, sun, water and four letter outlines. The cover photograph and separate page text are excluded.",
+      "extraction": {
+        "method": "Isolated the six native filled paths for the symbol and CVRD letters and retained their original positions and colours.",
+        "page": 1,
+        "pdfBounds": [
+          392.96,
+          69.064,
+          498.63,
+          151.972
+        ],
+        "sourceSha256": "3e84a5bb6466e94ed186c9cf290fb84a076360dcd6e7b1efb5812c89ab82ac12"
+      },
+      "sha256": "b9cb94ebed4faf232a488dcff8168cf6612a10472d149b18411d2fb1aaa43501",
+      "bytes": 4053
+    }
+  },
+  "rd-sunshine-coast-rosette-2015": {
+    "prefer": true,
+    "asset": {
+      "id": "rd-sunshine-coast-strategic-plan-rosette",
+      "label": "Sunshine Coast Regional District · Blue rosette",
+      "versionLabel": "Strategic plan · blue rosette",
+      "file": "identity-regional-districts/sunshine-coast/strategic-plan-rosette.svg",
+      "sourceGround": "light",
+      "publisher": "Sunshine Coast Regional District",
+      "sourceUrl": "https://www.scrd.ca/wp-content/uploads/2023-2027-Strategic-Plan.pdf",
+      "sourcePage": "https://www.scrd.ca/wp-content/uploads/2023-2027-Strategic-Plan.pdf#page=12",
+      "sourceFile": "2023–2027 Strategic Plan",
+      "specimenDate": "2023-12",
+      "sourceLocator": "PDF page 12, upper-left rosette",
+      "observedDate": "2026-11-27",
+      "notes": "The blue polygon, central white sun and surrounding outlined district name also appear over a photograph in the earlier annual report.",
+      "fidelityNote": "Retains the 31 original filled paths for the polygon, lettering and sun. The strategic plan page background is excluded.",
+      "extraction": {
+        "method": "Isolated the 31 filled PDF paths in their source paint order and cropped the SVG to the blue polygon.",
+        "page": 12,
+        "pdfBounds": [
+          83.52,
+          27.319,
+          177.75,
+          121.401
+        ],
+        "sourceSha256": "78ec4eab2496db549997b9d5fccff21de19f15d19eb12227b8b47d634a551cdc"
+      },
+      "sha256": "a11a18b9ff695df4bcb78430c01846816709333ca5eccd1951e03abc12b3811c",
+      "bytes": 14876
+    }
+  },
+  'source-recovered-municipal-kelowna-website-logo': {
+    prefer: true,
+    designLabel: 'City of Kelowna — stacked civic signature',
+    asset: {
+      ...kelownaGeometry,
+      id: 'municipal-kelowna-urban-forest-web-colours',
+      label: 'City of Kelowna — website colours',
+      versionLabel: 'Website colours · publication outlines',
+      file: 'identity-recovered/municipalities/kelowna/urban-forest-geometry-web-colours.svg',
+      evidenceType: 'website-colours-on-source-vector',
+      colourSourceUrl: 'https://www.kelowna.ca/sites/all/themes/kelowna/images/kelowna-logo-main.png',
+      notes: 'Uses the segmented ring and stacked city name seen on the municipal website.',
+      fidelityNote: 'The eight fill values come from the opaque pixels of the municipal website PNG. The May 2024 publication supplies all 73 paths. Both published specimens are available as separate versions.',
+      sha256: '62b6558e0340cca89e352aed2472c6c949bc4253a33e4d8b4d6f9ed5835c262e',
+      bytes: 12535
+    },
+    alternates: [{
+      ...kelownaGeometry,
+      id: 'municipal-kelowna-urban-forest-print',
+      label: 'City of Kelowna — Urban Forest Strategy',
+      versionLabel: 'Print colours · May 2024',
+      file: 'identity-recovered/municipalities/kelowna/urban-forest-2024-colour.svg',
+      specimenDate: '2024-05',
+      notes: 'The draft strategy cover carries the full-colour city signature.',
+      fidelityNote: 'Preserves the eight source fills, including the near-black lettering. All triangles and letter outlines come from the publication.',
+      sha256: 'de6cebb3da4b2c788ee0b1be1b4b9e89624ef8a5137654ee30caae79ba254106',
+      bytes: 12535
+    }]
+  },
   "source-recovered-municipal-duncan-website-logo": {
     "prefer": true,
     "designLabel": "Duncan — Clock tower signature",
@@ -1350,7 +1527,7 @@ export const ACQUIRED_VECTORS = {
     }
   },
   "source-recovered-municipal-sechelt-website-logo": {
-    "prefer": false,
+    "prefer": true,
     "asset": {
       "id": "municipal-sechelt-consultation-site-colour",
       "label": "Colour signature with teal lettering",

@@ -7,6 +7,7 @@ import careCardThumb from './carecard/thumbnail.jpg'
 import springThumb from './super-natural-spring/thumbnail.jpg'
 import tourismFerriesThumb from './super-natural-ferries/thumbnail.jpg'
 import tourismLakeThumb from './super-natural-lake/thumbnail.jpg'
+import airFacilitiesThumb from './air-facilities-map-1977/thumbnail.jpg'
 import coastalThumb from './coastal-forest/thumbnail.jpg'
 import ashtrayThumb from './forest-service/use-your-ashtray.svg?url'
 import dropThumb from './forest-service/dont-drop-it.svg?url'
@@ -37,6 +38,7 @@ const LOADERS = {
   'super-natural-spring': () => import('./super-natural-spring/index.js').then((module) => module.load()),
   'super-natural-ferries': () => import('./super-natural-ferries/index.js').then((module) => module.load()),
   'super-natural-lake': () => import('./super-natural-lake/index.js').then((module) => module.load()),
+  'air-facilities-map-1977': () => import('./air-facilities-map-1977/index.js').then((module) => module.load()),
   'new-carecard': () => import('./carecard/index.js').then((module) => module.load()),
   'coastal-forest': () => import('./coastal-forest/index.jsx').then((module) => module.load()),
   'use-your-ashtray': forestService('use-your-ashtray'),
@@ -64,6 +66,7 @@ const THUMBNAILS = {
   'super-natural-spring': springThumb,
   'super-natural-ferries': tourismFerriesThumb,
   'super-natural-lake': tourismLakeThumb,
+  'air-facilities-map-1977': airFacilitiesThumb,
   'new-carecard': careCardThumb,
   'coastal-forest': coastalThumb,
   'use-your-ashtray': ashtrayThumb,

@@ -145,5 +145,5 @@ export const generatorArt = (generator, theme = 'light') => {
 }
 
 /** Whether a card draws on the page's ground, or keeps a ground of its own. */
-export const onPage = (entry) => (entry.kind === 'collected' && Boolean(COLLECTED_DISPLAY[tileAsset(entry).id])) || entry.kind === 'artwork' || entry.kind === 'current' || entry.kind === 'flag' || entry.kind === 'supplied' || entry.mark === '1990' ||
+export const onPage = (entry, theme = 'light') => (entry.kind === 'collected' && Boolean(COLLECTED_DISPLAY[tileAsset(entry, theme).id])) || entry.kind === 'artwork' || entry.kind === 'current' || entry.kind === 'flag' || entry.kind === 'supplied' || entry.mark === '1990' ||
   (entry.kind === 'hydro' && HYDRO_PRESETS[entry.preset]?.group === 'signature')

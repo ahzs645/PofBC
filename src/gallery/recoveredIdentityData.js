@@ -4273,7 +4273,8 @@ export const RECOVERED_IDENTITY_BODIES = [
         "evidenceType": "official-website-raster",
         "notes": "Source-native official website artwork, archived byte-for-byte. Original colours, transparency and lettering are unchanged.",
         "fidelityNote": "The downloaded original was visually reviewed. Exact source bytes are retained; no tracing, text replacement, recolouring or upscaling was applied.",
-        "darkBackground": false
+        "darkBackground": false,
+        "darkVariant": "municipal-north-saanich-annual-report-reverse"
       }
     ]
   },
@@ -6845,12 +6846,12 @@ export const RECOVERED_IDENTITY_BODIES = [
     "current": true,
     "status": "asset-collected",
     "observedDate": "2026-11-20",
-    "notes": "Official municipal website identity artwork. No logo adoption date is inferred from the observation date.",
+    "notes": "The municipal website and the 2020 annual report publish two treatments of the salmon seal. The teal website treatment includes an additional fine line around the fish.",
     "nextAction": "Seek dated historical signatures, adoption evidence and original vector masters where the accepted specimen is raster.",
     "assets": [
       {
         "id": "source-recovered-municipal-gibsons-website-logo",
-        "label": "Gibsons: Website logo",
+        "label": "Gibsons · Teal website seal",
         "file": "identity-recovered/municipalities/gibsons/website-logo.png",
         "format": "png",
         "isVector": false,
@@ -6876,8 +6877,46 @@ export const RECOVERED_IDENTITY_BODIES = [
         "notes": "Official municipal website identity specimen. Downloaded source-native image archived byte-for-byte, with original colours and lettering. This records website use of the civic emblem, without asserting a heraldic grant date or a separate corporate mark.",
         "fidelityNote": "Visually reviewed against the published source. Original paths or raster pixels retained; no tracing, text replacement, recolouring or upscaling.",
         "darkBackground": false
+      },
+      {
+        "id": "municipal-gibsons-annual-report-salmon-seal",
+        "label": "Gibsons · Monochrome annual report seal",
+        "versionLabel": "Annual report · monochrome",
+        "file": "identity-recovered/municipalities/gibsons/annual-report-salmon-seal.svg",
+        "sourceGround": "light",
+        "publisher": "Town of Gibsons",
+        "sourceUrl": "https://gibsons.ca/wp-content/uploads/2022/07/2020-Annual-Report-as-at-July-12-2021-FINAL-optimized.pdf",
+        "sourcePage": "https://gibsons.ca/wp-content/uploads/2022/07/2020-Annual-Report-as-at-July-12-2021-FINAL-optimized.pdf#page=1",
+        "sourceFile": "2020 Annual Report",
+        "sourceLocator": "PDF page 1, lower-left seal",
+        "observedDate": "2026-11-27",
+        "notes": "The annual report uses the town’s ring of lettering and leaping salmon in black and white. The website specimen has a dark teal ring and an additional fine line around the fish field.",
+        "fidelityNote": "Retains the seal’s native fill and stroke geometry, including the white outline and lettering, in the report’s published monochrome palette.",
+        "extraction": {
+          "method": "Isolated 31 original filled and stroked SVG paths from the lower-left PDF seal. Trimmed to the outer stroke and excluded the coloured image strip.",
+          "page": 1,
+          "pdfBounds": [
+            65.023,
+            678.2,
+            164.577,
+            779.8
+          ],
+          "sourceSha256": "075919692ffac63e96032523bbd470ab2e1261002bbd9306424e7c2f057c8fdf"
+        },
+        "sha256": "ac4a9cde83fe1faf7fb269efa7852525190c63e54a9b1e29ec301725873e1204",
+        "bytes": 13158,
+        "format": "svg",
+        "isVector": true,
+        "contentType": "image/svg+xml",
+        "supplied": false,
+        "reconstruction": false,
+        "evidenceType": "native-pdf-vector-extraction",
+        "search": "gallery-vector-review-2026-11-27",
+        "specimenDate": "2021-07-12",
+        "dateNote": "The report covers 2020. The publisher’s final edition filename and PDF creation metadata both date the specimen to July 12, 2021."
       }
-    ]
+    ],
+    "cover": "municipal-gibsons-annual-report-salmon-seal"
   },
   {
     "id": "municipality-lake-cowichan",

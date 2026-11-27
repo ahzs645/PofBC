@@ -1,5 +1,9 @@
 {
   "_comment": "Per-logo settings for build_collected_display.py, keyed by collected asset id. facing: the share of a faint shape's edge that must meet the page for it to be redrawn (default 0.5; higher keeps more of a logo's own colours). light / dark: false keeps the file's own colours on that ground; \"plate\" shows them on a light plate of their own there. light-palette / dark-palette: {\"#source\": \"#shown\"} maps the file's colours by hand for that ground (every key must be a colour the file uses). \"all\" for light / dark redraws every colour too faint for that ground, without the test of whether it meets the page (for lettering drawn letter by letter in clipped fills). skip: true leaves the file out. light-css / dark-css: a selector-specific rule applied to the display copy for that theme. preserve-canvas: keep the full page of a stationery specimen.",
+  "fwcp-columbia-seal-2014": {
+    "dark-palette": { "#231f20": "#f2ece1" },
+    "dark-css": "g[opacity] { opacity: 0.85; }"
+  },
   "airport-cyqq-signature-vector": {
     "light": false,
     "dark-palette": { "#008a9b": "#45adbd" }
@@ -8,6 +12,8 @@
   "airport-cyka-horizontal": { "light": false, "dark": "plate" },
   "airport-cycd-pride": { "light": false, "dark": "plate" },
   "airport-cyvr-signature": { "light": false, "dark": "plate" },
+  "airport-cyvr-tricolour-symbol-vector": { "light": false, "dark": "plate" },
+  "airport-cyvr-beyond-every-day-vector": { "light": false, "dark": "plate" },
   "nbcta-map-red-2012": {
     "light-css": "path[fill=\"#ffffff\"]{stroke:#888178;stroke-width:.7;paint-order:stroke fill}",
     "note": "Outline the pale regions on the light page while preserving their original fill."

@@ -96,7 +96,7 @@ A = [
          publisher="City of Prince Rupert", sourcePage="https://www.princerupert.ca",
          sourceUrl="https://princerupert.ca/sites/7/files/2024-12/PR%20Complete%20Community%20Assessment%20%26%20Plan.pdf",
          locator="PDF page 1 (cover)", sourceDate="Complete Community Assessment & Plan; PDF created 25 October 2024",
-         notes="The full logo adopted in 2022: the red arch above “The City of Prince Rupert”. The website file shows a wordmark alone, set wider; that arrangement was not found as a vector."),
+         notes="The city adopted the red arch above “The City of Prince Rupert” in 2022. Its standalone website wordmark has a separate gallery entry."),
     dict(target="source-municipal-quesnel-website-logo", body="municipality-quesnel", id="municipal-quesnel-brand-guidelines-2016",
          label="Quesnel — Logo, Brand Guidelines 2016", file="quesnel/brand-guidelines-2017-logo.svg", publisher="City of Quesnel",
          sourcePage="https://www.quesnel.ca", sourceUrl="https://www.quesnel.ca/media/file/city-quesnel-guidelines-v3-size-edits",
