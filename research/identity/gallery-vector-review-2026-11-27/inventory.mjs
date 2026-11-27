@@ -20,6 +20,8 @@ function fileType(path) {
 function svgType(svg) {
   for (const match of svg.matchAll(/<(?:[\w-]+:)?(?:feImage|image)\b[^>]*>/gi)) {
     const href = /(?:xlink:)?href=["']([^"']+)/.exec(match[0])?.[1]
+    // A filter can reference another vector group inside this SVG, as Surrey's logo does.
+    if (href?.startsWith('#') && (svg.includes('id="' + href.slice(1) + '"') || svg.includes("id='" + href.slice(1) + "'"))) continue
     if (!href || !href.endsWith('.svg') || fileType(href) !== 'Vector') return 'Contains bitmap'
   }
   return 'Vector'

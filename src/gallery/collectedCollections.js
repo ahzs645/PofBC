@@ -106,6 +106,7 @@ const VERIFIED_CURRENT_COVERS = {
   'first-nations-health-authority': 'vector-fnha-logo-colour',
   'interior-health': 'vector-interior-health-blue-horizontal-source-extraction',
   'municipality-prince-rupert': 'municipal-prince-rupert-community-assessment-2024',
+  'municipality-gibsons': 'source-recovered-municipal-gibsons-website-logo',
   'municipality-fort-st-james': 'source-recovered-municipal-fort-st-james-website-logo',
   'northern-development-initiative-trust': 'source-expanded-northern-development-2023-stacked-reversed',
   'school-district-44': 'school-district-44-logo-current'
@@ -115,6 +116,7 @@ const VERIFIED_CURRENT_COVERS = {
 const SHELF_SIGNATURES = {
   'airport-cyxt': 'airport-cyxt-advertising-signature-2024',
   'municipality-radium-hot-springs': 'recovered-radium-community-colour-2012',
+  'municipality-gibsons': 'municipal-gibsons-annual-report-salmon-seal',
   'tourism-prince-george': 'pg-moose-white-2015'
 }
 
@@ -255,7 +257,7 @@ const collectionOf = (body) => {
     ...(body.initiativeId ? { initiativeId: body.initiativeId } : {}),
     label: body.shortName || body.name,
     body: body.publicationDate ? 'Identity guide' : body.current ? kindOf(body).replace(/^./, (letter) => letter.toUpperCase()) : `Former ${kindOf(body)}`,
-    years: body.publicationDate ?? (body.from == null && body.to == null ? 'Dates unestablished' : `${body.from ?? '?'}–${body.current ? 'present' : body.to ?? '?'}`),
+    years: body.publicationDate ?? body.yearsLabel ?? (body.from == null && body.to == null ? 'Dates unestablished' : `${body.from ?? '?'}–${body.current ? 'present' : body.to ?? '?'}`),
     intro: body.notes || 'Collected artwork, with its source recorded for each file.',
     cover,
     ...(shelfSpecimen && { shelfSpecimen }),

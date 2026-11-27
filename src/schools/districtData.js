@@ -671,6 +671,38 @@ export const SCHOOL_DISTRICT_DATA = {
           "adoptionSource": null
         },
         {
+          "id": "sd10-unframed-tree-2024",
+          "label": "Unframed tree and SD10 wordmark, 2024 letterhead",
+          "role": "alternate",
+          "sourceUrl": "https://sd10.bc.ca/wp-content/uploads/2024/04/Superintendents-Report-April-16-2024.pdf",
+          "sourcePage": "https://sd10.bc.ca/wp-content/uploads/2024/04/Superintendents-Report-April-16-2024.pdf#page=1",
+          "sourceTitle": "Arrow Lakes School District, Superintendent’s Report, April 16, 2024",
+          "sourceLocator": "PDF page 1, upper-right letterhead",
+          "sourceDate": "2024-04-16",
+          "observedDate": "2026-11-27",
+          "adoptionDate": null,
+          "notes": "The district report prints the unframed tree over the SD10 wordmark. The website badge adds a turquoise ring and the 2017 strategic-plan lockup adds the district name and slogan.",
+          "fidelityNote": "All 33 native path objects in the PDF letterhead are included, including three bar elements. Original fills, path transforms and drawing order are retained. Other letterhead graphics are excluded.",
+          "format": "svg",
+          "isVector": true,
+          "containsRaster": false,
+          "sha256": "305e5573e5cdb012aff3a102005e4c53d74a2b9bbfb4e043c34a7f13049074a4",
+          "bytes": 9693,
+          "file": "education/school-districts/logos/recovered/sd10-unframed-tree-2024.svg",
+          "extraction": {
+            "method": "All 33 native path objects in the PDF letterhead are included, including three bar elements. Original fills, path transforms and drawing order are retained. Other letterhead graphics are excluded.",
+            "page": 1,
+            "pdfBounds": [
+              493,
+              56,
+              563,
+              129
+            ],
+            "sourceSha256": "11faaabbc986b1743ac24026652bf678620ee137c8460f46e772ef2aa1c9adf3"
+          },
+          "darkBackground": false
+        },
+        {
           "id": "sd10-tree-slogan-2017",
           "label": "Arrow Lakes tree, wordmark and rural-learning slogan",
           "role": "historical",
@@ -704,6 +736,14 @@ export const SCHOOL_DISTRICT_DATA = {
           "kind": "district-website",
           "sourceDate": null,
           "observedDate": "2026-11-22"
+        },
+        {
+          "title": "Arrow Lakes School District, Superintendent’s Report, April 16, 2024",
+          "url": "https://sd10.bc.ca/wp-content/uploads/2024/04/Superintendents-Report-April-16-2024.pdf#page=1",
+          "locator": "PDF page 1, upper-right letterhead",
+          "kind": "district-publication",
+          "sourceDate": "2024-04-16",
+          "observedDate": "2026-11-27"
         }
       ]
     },
@@ -10707,6 +10747,76 @@ export const SCHOOL_DISTRICT_DATA = {
           "variantOf": "school-district-93-sd093-observed-2010-2011",
           "bytes": 70585,
           "sha256": "78f7a7cb0708e4bbf02108f1cf1b38d514b9db5a4d2631a90f9052cfb6eb5ab2"
+        },
+        {
+          "id": "sd93-colour-signature-2024",
+          "label": "Full-colour CSF signature with blue lettering",
+          "versionLabel": "Blue lettering SVG",
+          "role": "alternate",
+          "sourceUrl": "https://www.csf.bc.ca/wp-content/uploads/2024/09/a7989716-39a5-43ad-a4e7-5407fa49785e.pdf",
+          "sourcePage": "https://www.csf.bc.ca/wp-content/uploads/2024/09/a7989716-39a5-43ad-a4e7-5407fa49785e.pdf#page=1",
+          "sourceTitle": "Conseil scolaire francophone, Projet éducatif 2024–2026",
+          "sourceLocator": "PDF page 1, cover signature",
+          "sourceDate": "2024",
+          "observedDate": "2026-11-27",
+          "adoptionDate": null,
+          "notes": "The letterforms match the current black CSF signature. This publication prints the CSF initials in three colours with blue lettering.",
+          "fidelityNote": "Extracted the 59 native filled paths in PDF drawing order, including every letter and accent, with original fills and transforms.",
+          "format": "svg",
+          "isVector": true,
+          "containsRaster": false,
+          "sourceGround": "light",
+          "darkBackground": false,
+          "sha256": "9dc6e5dcc05df9d1e61c7db5da6f16b84d7f3c6aebfa07dc8961326ffdc52ffd",
+          "bytes": 55627,
+          "file": "education/school-districts/logos/recovered/sd93-colour-signature-2024.svg",
+          "extraction": {
+            "method": "Extracted the 59 native filled paths in PDF drawing order, including every letter and accent, with original fills and transforms.",
+            "page": 1,
+            "pdfBounds": [
+              177,
+              446,
+              435,
+              503
+            ],
+            "sourceSha256": "9ffebec8ab4c112c43e00c474f67e4dfdf0d06fc5422dd6a352b44c4ae14ac5d"
+          },
+          "darkVariant": "sd93-colour-signature-reverse-2025"
+        },
+        {
+          "id": "sd93-colour-signature-reverse-2025",
+          "label": "Full-colour CSF signature with white lettering",
+          "versionLabel": "White lettering SVG",
+          "role": "alternate",
+          "sourceUrl": "https://www.csf.bc.ca/wp-content/uploads/2026/01/Plan-accessibilite-2025-2028.pdf",
+          "sourcePage": "https://www.csf.bc.ca/wp-content/uploads/2026/01/Plan-accessibilite-2025-2028.pdf#page=1",
+          "sourceTitle": "Conseil scolaire francophone, Plan d’accessibilité 2025–2028",
+          "sourceLocator": "PDF page 1, cover signature",
+          "sourceDate": "2025",
+          "observedDate": "2026-11-27",
+          "adoptionDate": null,
+          "notes": "The letterforms match the current black CSF signature. This publication prints the CSF initials in three colours with white lettering.",
+          "fidelityNote": "Extracted the 59 native filled paths in PDF drawing order, including every letter and accent, with original fills and transforms.",
+          "format": "svg",
+          "isVector": true,
+          "containsRaster": false,
+          "sourceGround": "dark",
+          "darkBackground": true,
+          "sha256": "58e0671e325b1554d428b3985a169bd9a0780b529958ee861db5d3ba261877f8",
+          "bytes": 36408,
+          "file": "education/school-districts/logos/recovered/sd93-colour-signature-reverse-2025.svg",
+          "extraction": {
+            "method": "Extracted the 59 native filled paths in PDF drawing order, including every letter and accent, with original fills and transforms.",
+            "page": 1,
+            "pdfBounds": [
+              52,
+              52,
+              298,
+              104
+            ],
+            "sourceSha256": "bc14a0d2ba2fa19e831478e476f6c2c9b1c9597d9cec5bf27d64bb4ac23397b8"
+          },
+          "variantOf": "sd93-colour-signature-2024"
         }
       ],
       "logoStatus": "captured",
@@ -10743,6 +10853,22 @@ export const SCHOOL_DISTRICT_DATA = {
           "sourceDate": "2022-03-30",
           "sourcePeriod": null,
           "observedDate": "2026-11-22"
+        },
+        {
+          "title": "Conseil scolaire francophone, Projet éducatif 2024–2026",
+          "url": "https://www.csf.bc.ca/wp-content/uploads/2024/09/a7989716-39a5-43ad-a4e7-5407fa49785e.pdf#page=1",
+          "locator": "PDF page 1, cover signature",
+          "kind": "district-publication",
+          "sourceDate": "2024",
+          "observedDate": "2026-11-27"
+        },
+        {
+          "title": "Conseil scolaire francophone, Plan d’accessibilité 2025–2028",
+          "url": "https://www.csf.bc.ca/wp-content/uploads/2026/01/Plan-accessibilite-2025-2028.pdf#page=1",
+          "locator": "PDF page 1, cover signature",
+          "kind": "district-publication",
+          "sourceDate": "2025",
+          "observedDate": "2026-11-27"
         }
       ]
     }

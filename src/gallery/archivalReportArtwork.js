@@ -1,4 +1,4 @@
-// Native artwork from the 2004 drought handbook and UFV's 2014 accountability report.
+// Specimens from the Legislative Library reports supplied with the collection.
 const handbook = 'https://www.obwb.ca/fileadmin/docs/drought_handbook.pdf'
 const universityReport = 'https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/46d7b367-89cb-4fa5-8e03-c0de215434d9/content'
 const universityRecord = 'https://digitalcollections.llbc.leg.bc.ca/handle/123456789/50723'
@@ -16,6 +16,25 @@ const universitySource = {
 }
 
 const artwork = {
+  'bc-human-rights-commission': [{
+    id: 'bchrc-2000-01-cover-colour',
+    variantOf: 'historical-source-human-rights-2001-lockup',
+    label: 'Commission signature on the 2000/01 annual report',
+    versionLabel: 'Blue cover · 2000/01 annual report',
+    publisher: 'British Columbia Human Rights Commission',
+    sourcePage: 'https://digitalcollections.llbc.leg.bc.ca/handle/123456789/273922',
+    sourceDate: '2000/2001',
+    role: 'historical',
+    sourceLocator: '2000/01 Annual Report, Equality Through Access, Legislative Library PDF p. 2, top right.',
+    notes: 'The original blue cover carries the two-line black commission name alongside the black-and-white provincial sun. The same publication also survives as a grey ERIC scan.',
+    fidelityNote: 'Cropped the original colour cover at four pixels per PDF point. The PDF outlines the letters and combines paths with five bitmap components in the sun. The PNG preserves the printed background.',
+    format: 'png',
+    isVector: false,
+    containsRaster: true,
+    evidenceType: 'faithful-crop-of-primary-document',
+    sha256: '13f4d0be802dde88a8d3476511619af2279c3080aa25878d49889917b3b1047d',
+    bytes: 26851,
+  }],
   'land-and-water-bc': [{
     id: lwbcVector,
     label: 'LWBC initials and full name',
@@ -64,6 +83,17 @@ const artwork = {
     fidelityNote: 'Retained all 14 native outline paths, both source inks and original positioning. The separate dark-green background rectangle and cover photograph are omitted.',
     sha256: '30555431c5b6b8b2b98801c084d3866425633fd503660b713e04786546647bb7',
     bytes: 18025,
+  }, {
+    ...universitySource,
+    id: 'ufv-cascades-30-years-2013',
+    label: 'UFV Cascades athletics · 30 years',
+    historicalDateLabel: '2013 athletics anniversary',
+    dateNote: 'The ribbon dates the anniversary to 1983–2013. UFV printed the design in its 2014 retrospective.',
+    sourceLocator: 'Institutional Accountability Report and Plan 2014–15 to 2016–17, Legislative Library PDF p. 7, above the 2013 athletics caption.',
+    notes: 'A green 1983–2013 ribbon wraps around a white-outlined 30 above the Cascades mountain and UFV initials. The university identifies this as the athletic department’s 30th anniversary.',
+    fidelityNote: 'Isolated the 44 native filled paths for the numerals, ribbon, mountain, lettering and trademark from the 2014 report.',
+    sha256: '4ab6473e8af1d764ece1b84064c0a01afbd0fc8e68f4868ef731ab2c00ef775d',
+    bytes: 24411,
   }],
 }
 
@@ -76,9 +106,9 @@ export function withArchivalReportArtwork(body) {
   return {
     ...body,
     assets: [...assets, ...specimens.map((specimen) => ({
-      ...specimen, file: 'identity-archival-reports/' + specimen.id + '.svg',
       format: 'svg', isVector: true, containsRaster: false, reconstruction: false,
       evidenceType: 'native-pdf-vector-extraction', observedDate: '2026-11-27',
+      ...specimen, file: 'identity-archival-reports/' + specimen.id + '.' + (specimen.format || 'svg'),
     }))],
   }
 }

@@ -1,15 +1,34 @@
 # Logo gallery vector review, 27 November 2026
 
-The gallery holds **1,228 designs in 614 collections**. Each row in the inventory links to one design, identifies its collection and representative status, and records the artwork the gallery opens in each theme. It includes historical designs, supplied files, reconstructions and designs drawn by the gallery. [Design-by-design inventory](inventory.csv)
+The gallery holds **1,252 designs in 626 collections**. Each row in the inventory links to one design, identifies its collection and representative status, and records the artwork the gallery opens in each theme. It includes historical designs, supplied files, reconstructions and designs drawn by the gallery. [Design-by-design inventory](inventory.csv)
 
 | What appears in the gallery | All-vector preview | Raster image | SVG with bitmap content | Total |
 | --- | ---: | ---: | ---: | ---: |
-| Designs on light pages | 808 | 411 | 9 | 1,228 |
-| Designs on dark pages | 812 | 408 | 8 | 1,228 |
-| Collection representatives on light pages | 427 | 183 | 4 | 614 |
-| Collection representatives on dark pages | 430 | 181 | 3 | 614 |
+| Designs on light pages | 834 | 409 | 9 | 1,252 |
+| Designs on dark pages | 839 | 405 | 8 | 1,252 |
+| Collection representatives on light pages | 439 | 184 | 3 | 626 |
+| Collection representatives on dark pages | 443 | 181 | 2 | 626 |
 
-**430 collections show vector artwork in at least one theme.** The other 184 have raster or mixed-media previews throughout. The preview counts describe how the artwork renders. The inventory’s provenance column separately identifies original supplied, publisher-sourced, reconstructed and other artwork. In particular, an SVG can contain the publisher’s raster photograph, and an entirely vector drawing can be a documented reconstruction.
+**443 collections show vector artwork in at least one theme.** The other 183 have raster or mixed-media previews throughout. The preview counts describe how the artwork renders. The inventory’s provenance column separately identifies original supplied, publisher-sourced, reconstructed and other artwork. In particular, an SVG can contain the publisher’s raster photograph, and an entirely vector drawing can be a documented reconstruction.
+
+The companion illustrated report documents the 22 specimens added under twelve organizations, programs and initiatives, with their publication pages and institutional relationships. [Archive additions and source notes (PDF)](../document-review-2026-11-27/collection-additions-and-source-notes.pdf)
+
+## Public-source follow-up
+
+The first inventory at commit `176668ed1` contained 1,228 designs. **420 designs across 279 collections** had raster or mixed-media light previews. We compared both themes for every row. Every design whose dark preview contained pixels was already in those 420. We repeated that comparison after the additions and found no dark-only gap. New archive collections and separately documented designs enter the full gallery count above but do not change this original search group. [Fixed list of 420 designs](public-sweep-input.csv) · [Outcome, artwork, sources and remaining leads per design](public-sweep-outcomes.csv)
+
+Eight of those original 420 designs now open with newly verified positive vector artwork. A ninth, Surrey’s SD36 mark, was already entirely vector and had been misclassified. North Saanich gained a native dark-page treatment, and four other original designs already used vector artwork only in dark mode. Across the fixed group, 399 designs still show raster images on both themes and seven contain bitmap components on both themes. These figures track each exact design. Several additional, visually different layouts were acquired as separately selectable designs.
+
+The search used the issuer’s recorded sources, institutional and publisher homepages, linked brand materials, Legislative Library catalogue searches, and separate open-web queries for **281 issuing-body names**. All 420 rows also have a sector evidence entry comparing the held design with the file or lead reviewed. The public-file pass requested **2,838 distinct URLs** and received 900 HTTP 200 responses, including **203 PDFs and 42 SVGs**. A separate source reader returned usable indexed content for 266 of 314 requested pages. Every design has either a successfully fetched source or readable indexed material. The request ledger records failures, including 1,883 HTTP 503 responses and 35 files over the 14 MiB scan limit. The visual searches described in the sector ledgers also examined documents obtained independently. Source counts overlap between these searches. Indexed text can locate a report, but verifying native artwork requires inspecting the underlying file. [URL results and PDF observations](public-sweep-requests.csv) · [Publisher search queries and candidate links](public-search-leads.csv) · [Indexed source readings](public-search-readings.csv) · [Requests assigned to each design](public-sweep-designs.csv)
+
+| Area | Recovered artwork and remaining distinctions |
+| --- | --- |
+| Airports and transport | YVR’s Templeton consultation boards contain the tricolour symbol and “Beyond, Every Day” wordmark. The historical, white-lettered Prince George Airport signature comes from its 2012 annual report. The 2023 design remains independently selectable. [YVR display boards](https://www.yvr.ca/-/media/yvr/documents/community/templeton-area-redevelopment-open-house-display-boards.pdf?la=en) · [2012 airport report](https://www.pgairport.ca/wp-content/uploads/2016/02/PGAA_AnnualReport_2012.pdf) · [Transport and tourism findings](transport-tourism-followup.csv) |
+| Municipal and regional authorities | Mission’s full-colour signature, Sunshine Coast’s 31-path rosette, and Cowichan Valley’s stacked signature now open as vectors. North Saanich has a verified white vector for dark pages. Gibsons’ monochrome annual-report seal has its own entry because the website seal has teal ink and an extra inner outline. The sector review examined 944 sampled pages from 251 complete PDFs. [Municipal evidence by design](municipal-followup.csv) |
+| School districts and NVIT | Arrow Lakes’ unframed superintendent’s-letterhead design and both published versions of the CSF colour signature are newly held. Surrey’s existing SVG is fully vector. Its four filter references point to local vector groups. The Pacific Rim SVG actually embeds a PNG. The education review examined 584 sampled pages across 133 readable PDF URLs. [Education evidence by design](education-followup.csv) |
+| Provincial bodies | Northern Development’s 2014 Smithers airport brochure preserved 35 original paths. Its white treatment is separately selectable. The preferred 2015 version uses the two inks and the relative symbol size documented by that year’s tourism guide. BCLC’s 2025 GameSense information card preserved the capsule and all nine letter paths. The website supplies the transparent-letter treatment. [Smithers airport brochure, p. 2](https://investnorthwestbc.ca/uploads/news/id22/NDIT_Smithers%20Airport%20Investment%20Brochure.pdf#page=2) · [GameSense card, p. 1](https://www.bclcretailerhub.com/content/dam/retailerhub/training/resources/GameSense_Info_Card-2025.pdf#page=1) · [Provincial findings](provincial-followup.csv) |
+| Health, courts and historical programs | Sampled health publications yielded embedded logos and page scans. The Supreme Court’s criminal rules and Court of Appeal practice directives also place raster crests. The 2012 three-court release shows a different Provincial Court treatment from today’s full-colour website signature. [Health findings by design](health-followup.csv) · [Courts and programs](courts-and-programs-followup.csv) |
+| Supplied publications | The BC Human Rights Commission’s colour 2000/01 report specimen is now selectable beside the grey ERIC scan. The coloured emblem includes five bitmap components. The UFV athletics “1983–2013” ribbon, on page 7 of the 2014 report, survives as 44 native paths. [Commission report](https://digitalcollections.llbc.leg.bc.ca/handle/123456789/273922) · [UFV report](https://digitalcollections.llbc.leg.bc.ca/handle/123456789/50723) |
 
 ## The two school districts
 
@@ -45,6 +64,14 @@ Run these commands from the repository root.
 ```sh
 npm run build:cleanbc-artwork --silent
 node research/identity/gallery-vector-review-2026-11-27/inventory.mjs
+python3 research/identity/gallery-vector-review-2026-11-27/outcomes.py
 ```
 
 The script enumerates the gallery’s collection and design registry, resolves each themed tile through the renderer, checks registered downloads exist locally, and inspects displayed SVGs for image content. The broader source search checked 962 local SVGs under the identity artwork directories and screened 150 previously cited publisher pages for unresolved sources. External-source findings are limited to the files and pages successfully examined. The CSV gives existing publisher evidence and outstanding source leads per design. [Inventory script](inventory.mjs)
+
+The public-source request pass can also be repeated with Python and PyMuPDF using the archived specimen and search URL lists. Supply a writable directory for its HTTP cache. Requests reflect current source availability. The search-reader ledger preserves the independent readings made during this review.
+
+```sh
+python3 research/identity/gallery-vector-review-2026-11-27/public_scan.py /tmp/pofbc-public-gallery-sources
+python3 research/identity/gallery-vector-review-2026-11-27/outcomes.py
+```

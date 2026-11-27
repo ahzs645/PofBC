@@ -1,3 +1,4 @@
+import { DOCUMENT_COLLECTIONS } from './documentCollections.js'
 import { RURAL_HEALTH_COLLECTIONS } from './ruralHealth.js'
 import { ASI_COLLECTION } from './advancedSystemsInstitute.js'
 import { groupSpecimen } from './groupedSpecimens.js'
@@ -41,6 +42,7 @@ import { withVectorRecovery } from './vectorRecovery.js'
 import { PARKS_FOUNDATION_BODY } from './bcParksFoundation.js'
 
 const additionalBodies = [
+  ...DOCUMENT_COLLECTIONS,
   ...RURAL_HEALTH_COLLECTIONS,
   ASI_COLLECTION,
   PARKS_FOUNDATION_BODY,
@@ -80,7 +82,7 @@ const withArtworkVersions = (record) => ({
         format: 'svg',
         isVector: true,
         reconstruction: false,
-        observedDate: '2026-11-25'
+        observedDate: version.observedDate ?? '2026-11-25'
       }))
     ]
   }).flatMap((asset) => {

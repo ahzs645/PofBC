@@ -42,3 +42,35 @@ test('Nanaimo’s colour signature retains the native gradients and opens the of
   assert.doesNotMatch(svg, /<(?:image|text|feImage)\b|data:image/i)
   assert.equal(createHash('sha256').update(svg).digest('hex'), entry.asset.sha256)
 })
+
+test('GameSense opens the standalone website knockout while the endorsed version keeps its own design', () => {
+  const entry = findGalleryEntry('source-recovered-gamesense-website')
+  const source = findGalleryEntry('source-recovered-gamesense-bclc-2025-reverse')
+  assert.equal(entry.asset.derivedFrom, source.asset.id)
+  assert.notEqual(source.id, entry.id)
+  assert.equal(entry.asset.sourceGround, 'dark')
+  assert.ok(entry.versions.some((version) => version.id === entry.id && version.format === 'png'))
+  const svg = readArtwork(entry.asset)
+  assert.match(svg, /fill="#ffffff" fill-rule="evenodd"/)
+  assert.equal((svg.match(/<path\b/g) ?? []).length, 1)
+  assert.doesNotMatch(svg, /<(?:image|text|feImage)\b/)
+  assert.equal(createHash('sha256').update(svg).digest('hex'), entry.asset.sha256)
+})
+
+test('Northern Development’s two-tone script uses the same 35 native outlines as the 2014 white brochure', () => {
+  const entry = findGalleryEntry('ndit-northern-development-script-2015')
+  const source = entry.versions.find((version) => version.id === entry.asset.derivedFrom)
+  assert.equal(source.id, 'ndit-script-smithers-2014-white')
+  assert.equal(entry.asset.id, 'ndit-script-2015-source-colours')
+  const colour = readArtwork(entry.asset)
+  const white = readArtwork(source)
+  const outlines = (svg) => [...svg.matchAll(/<path\b[^>]*\sd="([^"]+)"/g)].map((match) => match[1])
+  assert.equal(outlines(white).length, 35)
+  assert.deepEqual(outlines(colour), outlines(white))
+  assert.equal((colour.match(/fill="#0083c0"/g) ?? []).length, 8)
+  assert.equal((colour.match(/fill="#1e285b"/g) ?? []).length, 27)
+  assert.doesNotMatch(colour + white, /<(?:image|text|feImage)\b/)
+  for (const version of [source, entry.asset]) {
+    assert.equal(createHash('sha256').update(readArtwork(version)).digest('hex'), version.sha256)
+  }
+})

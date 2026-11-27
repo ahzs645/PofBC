@@ -2079,6 +2079,199 @@ export const COLLECTED_DISPLAY = {
    "palette": true
   }
  },
+ "leading-edge-2005": {
+  "light": {
+   "file": "identity-display/leading-edge-2005.light.svg",
+   "aspect": 1.9033,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/leading-edge-2005.light.svg",
+   "aspect": 1.9033,
+   "recoloured": false
+  }
+ },
+ "leading-edge-cover-2005": {
+  "light": {
+   "file": "identity-display/leading-edge-cover-2005.light.svg",
+   "aspect": 4.4175,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/leading-edge-cover-2005.dark.svg",
+   "aspect": 4.4175,
+   "recoloured": false
+  }
+ },
+ "islands-trust-2019": {
+  "light": {
+   "file": "identity-display/islands-trust-2019.light.svg",
+   "aspect": 1.5978,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/islands-trust-2019.dark.svg",
+   "aspect": 1.5978,
+   "recoloured": true
+  }
+ },
+ "islands-trust-2006": {
+  "light": {
+   "file": "identity-display/islands-trust-2006.light.svg",
+   "aspect": 1.5981,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/islands-trust-2006.dark.svg",
+   "aspect": 1.5981,
+   "recoloured": true
+  }
+ },
+ "islands-trust-outline-2006": {
+  "light": {
+   "file": "identity-display/islands-trust-outline-2006.light.svg",
+   "aspect": 1.6014,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/islands-trust-outline-2006.dark.svg",
+   "aspect": 1.6014,
+   "recoloured": true
+  }
+ },
+ "conservancy-landscape-2019": {
+  "light": {
+   "file": "identity-display/conservancy-landscape-2019.light.svg",
+   "aspect": 1.9254,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/conservancy-landscape-2019.dark.svg",
+   "aspect": 1.9254,
+   "recoloured": true
+  }
+ },
+ "islands-trust-fund-2006": {
+  "light": {
+   "file": "identity-display/islands-trust-fund-2006.light.svg",
+   "aspect": 1.9408,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/islands-trust-fund-2006.dark.svg",
+   "aspect": 1.9408,
+   "recoloured": true
+  }
+ },
+ "bcgwa-website": {
+  "light": {
+   "file": "identity-display/bcgwa-website.light.svg",
+   "aspect": 1.0029,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcgwa-website.light.svg",
+   "aspect": 1.0029,
+   "recoloured": false
+  }
+ },
+ "bcgwa-pumphandle-2005": {
+  "light": {
+   "file": "identity-display/bcgwa-pumphandle-2005.light.svg",
+   "aspect": 1.0023,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/bcgwa-pumphandle-2005.dark.svg",
+   "aspect": 1.0023,
+   "recoloured": false
+  }
+ },
+ "fwcp-columbia-2006": {
+  "light": {
+   "file": "identity-display/fwcp-columbia-2006.light.svg",
+   "aspect": 1.3625,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fwcp-columbia-2006.dark.svg",
+   "aspect": 1.3625,
+   "recoloured": true
+  }
+ },
+ "fwcp-columbia-ten-years": {
+  "light": {
+   "file": "identity-display/fwcp-columbia-ten-years.light.svg",
+   "aspect": 0.9105,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fwcp-columbia-ten-years.dark.svg",
+   "aspect": 0.9105,
+   "recoloured": true
+  }
+ },
+ "fwcp-columbia-seal-2014": {
+  "light": {
+   "file": "identity-display/fwcp-columbia-seal-2014.light.svg",
+   "aspect": 0.9615,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fwcp-columbia-seal-2014.dark.svg",
+   "aspect": 0.9615,
+   "recoloured": true,
+   "palette": true
+  }
+ },
+ "fwcp-peace-2015": {
+  "light": {
+   "file": "identity-display/fwcp-peace-2015.light.svg",
+   "aspect": 2.4448,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/fwcp-peace-2015.dark.svg",
+   "aspect": 2.4448,
+   "recoloured": true
+  }
+ },
+ "bcirpu-2024": {
+  "light": {
+   "file": "identity-display/bcirpu-2024.light.svg",
+   "aspect": 6.8006,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bcirpu-2024.dark.svg",
+   "aspect": 6.8006,
+   "recoloured": true
+  }
+ },
+ "islands-2050-2019": {
+  "light": {
+   "file": "identity-display/islands-2050-2019.light.svg",
+   "aspect": 1.5823,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/islands-2050-2019.dark.svg",
+   "aspect": 1.5823,
+   "recoloured": true
+  }
+ },
+ "catt-2024": {
+  "light": {
+   "file": "identity-display/catt-2024.light.svg",
+   "aspect": 8.0258,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/catt-2024.dark.svg",
+   "aspect": 8.0258,
+   "recoloured": true
+  }
+ },
  "rccbc-original-horizontal-vector": {
   "light": {
    "file": "identity-display/rccbc-original-horizontal-vector.light.svg",
@@ -4075,6 +4268,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "yxs-airport-2012-annual-report-vector": {
+  "light": {
+   "file": "identity-display/yxs-airport-2012-annual-report-vector.light.svg",
+   "aspect": 2.3165,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/yxs-airport-2012-annual-report-vector.dark.svg",
+   "aspect": 2.3165,
+   "recoloured": false
+  }
+ },
  "airport-cbc7-phs-operator-emblem-2016-blue": {
   "light": {
    "file": "identity-display/airport-cbc7-phs-operator-emblem-2016-blue.light.svg",
@@ -4120,6 +4325,32 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/airport-cyvr-signature.light.svg",
    "aspect": 3.5824,
+   "recoloured": false,
+   "plate": true
+  }
+ },
+ "airport-cyvr-beyond-every-day-vector": {
+  "light": {
+   "file": "identity-display/airport-cyvr-beyond-every-day-vector.light.svg",
+   "aspect": 2.5181,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/airport-cyvr-beyond-every-day-vector.light.svg",
+   "aspect": 2.5181,
+   "recoloured": false,
+   "plate": true
+  }
+ },
+ "airport-cyvr-tricolour-symbol-vector": {
+  "light": {
+   "file": "identity-display/airport-cyvr-tricolour-symbol-vector.light.svg",
+   "aspect": 2.0976,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/airport-cyvr-tricolour-symbol-vector.light.svg",
+   "aspect": 2.0976,
    "recoloured": false,
    "plate": true
   }
@@ -5689,6 +5920,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "ndit-script-2015-source-colours": {
+  "light": {
+   "file": "identity-display/ndit-script-2015-source-colours.light.svg",
+   "aspect": 2.948,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/ndit-script-2015-source-colours.dark.svg",
+   "aspect": 2.948,
+   "recoloured": true
+  }
+ },
+ "ndit-script-smithers-2014-white": {
+  "light": {
+   "file": "identity-display/ndit-script-smithers-2014-white.light.svg",
+   "aspect": 2.9505,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/ndit-script-smithers-2014-white.dark.svg",
+   "aspect": 2.9505,
+   "recoloured": false
+  }
+ },
  "source-expanded-island-coastal-economic-trust-five-paddle-website-colours": {
   "light": {
    "file": "identity-display/source-expanded-island-coastal-economic-trust-five-paddle-website-colours.light.svg",
@@ -6342,6 +6597,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "rd-cowichan-valley-annual-report-stacked": {
+  "light": {
+   "file": "identity-display/rd-cowichan-valley-annual-report-stacked.light.svg",
+   "aspect": 1.2766,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-cowichan-valley-annual-report-stacked.light.svg",
+   "aspect": 1.2766,
+   "recoloured": false
+  }
+ },
  "rd-east-kootenay-website": {
   "light": {
    "file": "identity-display/rd-east-kootenay-website.light.svg",
@@ -6701,6 +6968,18 @@ export const COLLECTED_DISPLAY = {
    "aspect": 1.0,
    "recoloured": false,
    "plate": true
+  }
+ },
+ "rd-sunshine-coast-strategic-plan-rosette": {
+  "light": {
+   "file": "identity-display/rd-sunshine-coast-strategic-plan-rosette.light.svg",
+   "aspect": 1.0016,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/rd-sunshine-coast-strategic-plan-rosette.light.svg",
+   "aspect": 1.0016,
+   "recoloured": false
   }
  },
  "rd-comox-strathcona-signature-2006": {
@@ -8076,6 +8355,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "municipal-mission-annual-report-signature": {
+  "light": {
+   "file": "identity-display/municipal-mission-annual-report-signature.light.svg",
+   "aspect": 2.5722,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-mission-annual-report-signature.dark.svg",
+   "aspect": 2.5722,
+   "recoloured": true
+  }
+ },
  "recovered-nakusp-stacked-colour-2023": {
   "light": {
    "file": "identity-display/recovered-nakusp-stacked-colour-2023.light.svg",
@@ -8134,6 +8425,18 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/recovered-north-cowichan-150-anniversary-2023.dark.svg",
    "aspect": 1.8036,
    "recoloured": true
+  }
+ },
+ "municipal-north-saanich-annual-report-reverse": {
+  "light": {
+   "file": "identity-display/municipal-north-saanich-annual-report-reverse.light.svg",
+   "aspect": 2.7966,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/municipal-north-saanich-annual-report-reverse.dark.svg",
+   "aspect": 2.7966,
+   "recoloured": false
   }
  },
  "municipal-north-vancouver-city-logo-quicksheet": {
@@ -8645,6 +8948,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "municipal-gibsons-annual-report-salmon-seal": {
+  "light": {
+   "file": "identity-display/municipal-gibsons-annual-report-salmon-seal.light.svg",
+   "aspect": 0.9799,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-gibsons-annual-report-salmon-seal.light.svg",
+   "aspect": 0.9799,
+   "recoloured": false
+  }
+ },
  "source-recovered-municipal-logan-lake-website-logo": {
   "light": {
    "file": "identity-display/source-recovered-municipal-logan-lake-website-logo.light.svg",
@@ -9041,6 +9356,18 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/bclc-gamesense-strip-2015.dark.svg",
    "aspect": 15.7677,
    "recoloured": true
+  }
+ },
+ "gamesense-website-knockout-vector": {
+  "light": {
+   "file": "identity-display/gamesense-website-knockout-vector.light.svg",
+   "aspect": 4.5764,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/gamesense-website-knockout-vector.dark.svg",
+   "aspect": 4.5764,
+   "recoloured": false
   }
  },
  "source-recovered-elections-bc-2026-source-vector": {
@@ -9594,6 +9921,18 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/school-district-8-logo-current.dark.svg",
    "aspect": 2.4472,
+   "recoloured": true
+  }
+ },
+ "sd10-unframed-tree-2024": {
+  "light": {
+   "file": "identity-display/sd10-unframed-tree-2024.light.svg",
+   "aspect": 0.968,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/sd10-unframed-tree-2024.dark.svg",
+   "aspect": 0.968,
    "recoloured": true
   }
  },
@@ -10335,6 +10674,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "sd93-colour-signature-2024": {
+  "light": {
+   "file": "identity-display/sd93-colour-signature-2024.light.svg",
+   "aspect": 4.7952,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/sd93-colour-signature-2024.dark.svg",
+   "aspect": 4.7952,
+   "recoloured": true
+  }
+ },
+ "sd93-colour-signature-reverse-2025": {
+  "light": {
+   "file": "identity-display/sd93-colour-signature-reverse-2025.light.svg",
+   "aspect": 5.0152,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/sd93-colour-signature-reverse-2025.dark.svg",
+   "aspect": 5.0152,
+   "recoloured": false
+  }
+ },
  "ius-ius-print-colour": {
   "light": {
    "file": "identity-display/ius-ius-print-colour.light.svg",
@@ -11043,6 +11406,18 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/ufv-40-years-2014.dark.svg",
    "aspect": 2.9879,
+   "recoloured": false
+  }
+ },
+ "ufv-cascades-30-years-2013": {
+  "light": {
+   "file": "identity-display/ufv-cascades-30-years-2013.light.svg",
+   "aspect": 1.1269,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/ufv-cascades-30-years-2013.light.svg",
+   "aspect": 1.1269,
    "recoloured": false
   }
  },
