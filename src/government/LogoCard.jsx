@@ -41,7 +41,7 @@ export const LogoCard = ({ node, theme }) => {
       </div>}
       {subject && <p className="gov-muted">
         {!logos && <>{subject.stateLabel}. </>}
-        <SiteLink to={{ view: 'gallery', subject: subject.id }}>Identity, sources and collection gaps →</SiteLink>
+        <SiteLink to={{ view: 'gallery', subject: subject.id }}>Open in the register →</SiteLink>
       </p>}
     </section>
   )

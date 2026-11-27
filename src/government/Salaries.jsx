@@ -99,7 +99,7 @@ export const Salaries = ({ node, year }) => {
     <section className="gov-card gov-salaries" aria-labelledby={`salaries-${node.id}`}>
       <div className="gov-salaries__head">
         <h2 id={`salaries-${node.id}`} className="gov-card__heading">Salaries</h2>
-        <SiteLink className="gov-salaries__open" to={{ view: 'salaries', employer, 'employer-year': label }}>All years in Salaries →</SiteLink>
+        <SiteLink className="gov-salaries__open" to={{ view: 'salaries', employer, 'employer-year': label }}>Open in Salaries →</SiteLink>
       </div>
       {key === PUBLIC_SERVICE && <p className="gov-muted gov-salaries__about">The Province discloses its public service as one employer, so every ministry shows the same records.</p>}
       <YearPicker years={SALARY_YEARS.map((each) => each.label)} counts={counts} coverage={SALARY_COVERAGE[key]} value={selectedIndex} onChange={(at) => { setSlug(SALARY_YEARS[at].slug); setShown(PAGE) }} />

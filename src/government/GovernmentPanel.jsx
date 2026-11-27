@@ -3,7 +3,7 @@
 // for a ministry, its mark as it would have been set in the year on screen.
 
 import { Suspense, lazy, useEffect, useMemo, useState } from 'react'
-import { bodyFamily, elsewhereLine, groupTitle } from './bodyFamily.js'
+import { bodyFamily, elsewhereLine, relationLabel } from './bodyFamily.js'
 import { CABINET_SOURCE, HANDOVER, mandateUrl } from './cabinet2026.js'
 import { CURRENT_AS_OF } from './currentData.js'
 import { ELECTION_RESULTS_2026 } from './atlasData.js'
@@ -35,6 +35,8 @@ import { areaById, healthMapLink } from '../health/healthStoryData.js'
 // body is opened.
 const loadSalaries = () => import('./Salaries.jsx')
 const Salaries = lazy(() => loadSalaries().then((module) => ({ default: module.Salaries })))
+// The Money card: its index is small, and a body's records are fetched when its panel opens.
+const Money = lazy(() => import('./Money.jsx').then((module) => ({ default: module.Money })))
 const whenIdle = (work) => {
   if (globalThis.requestIdleCallback) {
     const id = globalThis.requestIdleCallback(work, { timeout: 4000 })
@@ -255,28 +257,30 @@ const BodyLineage = ({ label, bodies, onJump, end, linesOf }) => bodies.length >
 )
 
 /**
- * A body's nearest family, one way: the bodies it was formed from, or went into, grouped by how —
- * amalgamated, services passed on, area moved — each saying where else it went, so a body shared
- * between two families says so in both. The generations before and after are in the Lineage chart.
+ * A body's nearest family, one way, under the site's shared headings: Predecessors (the bodies it was
+ * formed from) or Successors (what it went into). Each card says how it joins this body and when,
+ * and, for a predecessor shared with another family, where else it went. The generations before
+ * and after are in the chart below.
  */
 const BodyFamily = ({ rows, direction, onJump }) => {
   const nearest = rows.filter((row) => row.depth === 1)
-  const groups = [...new Set(nearest.map((row) => row.how))].map((how) => ({ how, rows: nearest.filter((row) => row.how === how) }))
+  const several = (how) => nearest.filter((row) => row.how === how).length > 1
   const linesOf = (row) => [
-    row.how === 'area' && row.date ? `Moved ${formatDate(row.date)}` : null,
+    // The card's first line is the body's own years, which end when it joined this one; only a move
+    // of area has a date of its own.
+    [relationLabel(direction, row.how, several(row.how)), row.how === 'area' && row.date ? formatDate(row.date) : null].filter(Boolean).join(' · '),
     direction === 'formedFrom' && row.count ? `Formed from ${row.count} earlier ${row.count === 1 ? 'body' : 'bodies'}` : null,
     direction === 'formedFrom' ? elsewhereLine(row) : null
   ]
-  return groups.map(({ how, rows: group }) => (
+  return (
     <BodyLineage
-      key={how}
-      label={groupTitle(direction, how, group.length > 1)}
-      bodies={group}
+      label={direction === 'formedFrom' ? 'Predecessors' : 'Successors'}
+      bodies={nearest}
       onJump={onJump}
       end={direction === 'formedFrom' ? 'end' : 'start'}
       linesOf={linesOf}
     />
-  ))
+  )
 }
 
 /**
@@ -330,7 +334,7 @@ const MinistryTimeline = ({ node, year, onJump }) => {
 
   return (
     <section className="gov-card gov-timeline-card">
-      <h2 className="gov-card__heading">Lineage <span className="gov-muted">{start}–{end - 1 >= PRESENT_YEAR ? 'today' : end - 1}</span></h2>
+      <h2 className="gov-card__heading">Predecessors and successors through time <span className="gov-muted">{start}–{end - 1 >= PRESENT_YEAR ? 'today' : end - 1}</span></h2>
       <div className="gov-lineage-chart">
         <div className="gov-lineage-chart__axis" aria-hidden="true">
           {ticks.map((tick) => <span key={tick} style={{ left: at(tick) }}>{tick}</span>)}
@@ -471,7 +475,7 @@ const BodyTimeline = ({ node, family, year, onJump, onJumpBody, onGo }) => {
 
   return (
     <section className="gov-card gov-timeline-card">
-      <h2 className="gov-card__heading">Lineage <span className="gov-muted">{start}–today</span></h2>
+      <h2 className="gov-card__heading">Predecessors and successors through time <span className="gov-muted">{start}–today</span></h2>
       <div className="gov-lineage-chart">
         <div className="gov-lineage-chart__axis" aria-hidden="true">
           {ticks.map((tick) => <span key={tick} style={{ left: at(tick) }}>{tick}</span>)}
@@ -522,7 +526,7 @@ const BodyTimeline = ({ node, family, year, onJump, onJumpBody, onGo }) => {
         )}
         {family.formedFrom.length > 0 && (
           <>
-            <h3 className="gov-lineage-chart__group">Came from <span className="gov-muted">{family.formedFrom.length}</span></h3>
+            <h3 className="gov-lineage-chart__group">Predecessors <span className="gov-muted">{family.formedFrom.length}</span></h3>
             {formedFrom.map((row) => relativeRow(row, 'formedFrom'))}
             {family.formedFrom.length > 14 && (
               <button type="button" className="gov-link-button gov-lineage-chart__more" onClick={() => setDeep((value) => !value)}>
@@ -546,7 +550,7 @@ const BodyTimeline = ({ node, family, year, onJump, onJumpBody, onGo }) => {
         )}
         {family.wentTo.length > 0 && (
           <>
-            <h3 className="gov-lineage-chart__group">Went into</h3>
+            <h3 className="gov-lineage-chart__group">Successors</h3>
             {family.wentTo.map((row) => relativeRow(row, 'wentTo'))}
           </>
         )}
@@ -870,6 +874,7 @@ export const EntityCard = ({ node, government, theme, onSelect, onJump, onJumpBo
       <RuralHealthConnections id={node.id} />
       {(isBody || node.kind === 'ministry') && <LogoCard node={node} theme={theme} />}
       <Suspense fallback={null}><Salaries key={node.id} node={node} year={year} /></Suspense>
+      <Suspense fallback={null}><Money key={node.id} node={node} year={year} /></Suspense>
       <EventsCard events={node.events} day={day} />
       {onOpenInstrument && <LegislationCard node={node} onOpen={onOpenInstrument} />}
       {isMinistry && <MinistryTimeline node={node} year={year} onJump={onJump} />}

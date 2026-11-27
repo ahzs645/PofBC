@@ -160,6 +160,25 @@ export const COMMISSION_HISTORIES = [
     id: 'public-utilities-commission', name: 'Public Utilities Commission', period: '1938–1973', graphYear: 1972, kind: 'independent-regulator',
     history: 'Regulated utility rates and services under the Public Utilities Act.', outcome: 'Its energy functions passed to the BC Energy Commission in 1973, then to the BC Utilities Commission in 1980.', next: 'bc-energy-commission', sources: [energyHistory, utilities]
   },
+  // Added 27 November 2026 with the Public Accounts bodies (research/finance/public-accounts-23-1).
+  {
+    id: 'bc-racing-commission', name: 'British Columbia Racing Commission', period: 'To 2003', graphYear: 2002,
+    history: 'The Horse Racing Act continued the commission as a corporation of members appointed by the Lieutenant Governor in Council. The Public Accounts consolidated its Horse Racing Improvement Fund.',
+    outcome: 'The Gaming Control Act repealed the Horse Racing Act effective April 1, 2003; the fund ceased operations on March 31, 2003.',
+    sources: [source('Horse Racing Act, RSBC 1996, c. 198, point in time', 'https://free.bcpublications.ca/civix/document/id/complete/statreg/96198_pit'), source('Horse Racing Improvement Fund, financial statements 2002-03', 'https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2002-03/sup-e/bc-racing-commission-fs-2002-03.pdf')]
+  },
+  {
+    id: 'forensic-psychiatric-services-commission', name: 'Forensic Psychiatric Services Commission', period: 'Since 1998', graphYear: 2003,
+    history: 'Established as a Crown corporation by order in council in November 1998; it took over the ministry’s forensic psychiatric services on April 1, 1999, and runs the Forensic Psychiatric Hospital and community clinics.',
+    outcome: 'A member of the Provincial Health Services Authority from 2001, still reporting separately as a Crown corporation in 2004.',
+    sources: [source('Forensic Psychiatric Services Commission, financial statements 2003-04, note 1', 'https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2003-04/sup-e/forensic-psychiatric-services-commission-fs-2003-04.pdf'), source('BC Mental Health and Substance Use Services, Forensic Psychiatry Act', 'https://bcmhsus.ca/about-us/who-we-are/governance/forensic-psychiatry-act')]
+  },
+  {
+    id: 'private-post-secondary-education-commission', name: 'Private Post-Secondary Education Commission', period: '1990–2004', graphYear: 2003,
+    history: 'Registered and regulated private post-secondary institutions.',
+    outcome: 'Continued as the Private Career Training Institutions Agency, incorporated November 22, 2004, which received all its assets and liabilities.',
+    sources: [source('Private Career Training Institutions Agency, financial statements 2016-17, note 1', 'https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2016-17/sup-e/private-career-training-fs-2016-17.pdf'), source('BC Registries (OrgBook BC), Private Post-Secondary Education Commission', 'https://orgbook.gov.bc.ca/entity/PA0000364')]
+  },
   {
     id: 'bc-vegetable-marketing-commission', name: 'British Columbia Vegetable Marketing Commission', period: '1980 marketing scheme', atlas: false,
     history: 'The provincial vegetable marketing scheme established the Commission in 1980.', outcome: 'Continues to regulate the marketing of designated vegetables under that scheme.', sources: [laws('British Columbia Vegetable Scheme, section 3', 'complete/statreg/96_80')]

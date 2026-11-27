@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { Suspense, lazy, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { SiteLink } from '../site/navigation.jsx'
 import { ViewSwitcher } from '../site/ViewSwitcher.jsx'
 import { SunGlyph, ThemeIcon } from '../site/icons.jsx'
@@ -8,6 +8,8 @@ import {
   RELATED_BODIES, RELATED_BODIES_AS_OF, RELATED_BODY_KINDS, groupRelatedBodies, relatedBodyById, relatedBodyPlace, searchRelatedBodies
 } from './relatedBodies.js'
 import './relatedBodies.css'
+
+const Money = lazy(() => import('./Money.jsx').then((module) => ({ default: module.Money })))
 
 const LIST_PLACE = { view: 'government', mode: 'related' }
 // What gives way, in order, when the breadcrumb is too narrow for the page's own name.
@@ -70,6 +72,9 @@ export const RelatedBodiesView = ({ selectedId, onChangeView, themeName, onToggl
   const foldList = folded.includes('list')
   const foldView = folded.includes('view')
   const showList = Boolean(selected) && !(foldList && foldView)
+  // One way back at a time: the list's crumb while it is a word, the record's own link once the crumb
+  // has folded to "…" or gone.
+  const backInRecord = Boolean(selected) && foldList
 
   // Choosing a body from far down the list on a phone would leave its record above, out of sight.
   const first = useRef(true)
@@ -88,9 +93,9 @@ export const RelatedBodiesView = ({ selectedId, onChangeView, themeName, onToggl
         <span className="gov-muted" aria-hidden="true">/</span>
         {selected ? <>
           {showList && <>
-          <SiteLink className="gov-breadcrumb__parent" to={LIST_PLACE} aria-label={foldList ? 'Related bodies' : undefined} title="All related bodies">
-            {foldList ? '…' : 'Related bodies'}
-          </SiteLink>
+          {backInRecord
+            ? <span className="gov-muted" aria-hidden="true">…</span>
+            : <SiteLink className="gov-breadcrumb__parent" to={LIST_PLACE} title="All related bodies">Related bodies</SiteLink>}
           <span className="gov-muted" aria-hidden="true">/</span>
           </>}
           <span className="gov-breadcrumb__page" aria-current="page" title={selected.name}>{selected.shortName ?? selected.name}</span>
@@ -105,13 +110,13 @@ export const RelatedBodiesView = ({ selectedId, onChangeView, themeName, onToggl
       <main className="gov-related__main" aria-live="polite">
         {selected ? <>
           <section className="gov-card gov-related__record" aria-labelledby="related-body-title">
-            <SiteLink className="gov-related__back" to={LIST_PLACE}>← All related bodies</SiteLink>
+            {backInRecord && <SiteLink className="gov-related__back" to={LIST_PLACE}>← All related bodies</SiteLink>}
             <p className="gov-eyebrow">{RELATED_BODY_KINDS[selected.kind]} · {selected.historical ? 'historical record' : 'current record'}</p>
             <h1 className="gov-title" id="related-body-title">{selected.name}</h1>
             {selected.shortName !== selected.name && <p className="gov-muted">{selected.shortName}</p>}
             <p className="gov-description">{selected.description}</p>
             {selected.historyNote && <p className="gov-muted">{selected.historyNote}</p>}
-            {selected.schoolDistrict && <p className="gov-links"><SiteLink to={{ view: 'school-districts', district: selected.schoolDistrict }}>District history, predecessor connections and logos →</SiteLink></p>}
+            {selected.schoolDistrict && <p className="gov-links"><SiteLink to={{ view: 'school-districts', district: selected.schoolDistrict }}>Open in School Districts →</SiteLink></p>}
             {selected.officialUrl && <p className="gov-links"><a href={selected.officialUrl} target="_blank" rel="noreferrer">Official website ↗</a></p>}
           </section>
 
@@ -130,6 +135,8 @@ export const RelatedBodiesView = ({ selectedId, onChangeView, themeName, onToggl
               </li>)}
             </ul>
           </section>}
+
+          <Suspense fallback={null}><Money key={selected.id} node={selected} /></Suspense>
 
           {selected.salaryEmployers.length > 0 && <section className="gov-card" aria-labelledby="related-salaries">
             <h2 className="gov-card__heading" id="related-salaries">Salary disclosures</h2>

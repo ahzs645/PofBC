@@ -118,7 +118,9 @@
     "build:salary-search": "node scripts/build-salary-search.mjs",
     "build:salary-browse-index": "node scripts/build-salary-browse-index.mjs",
     "check:salary-search": "npm run build:salary-search --silent && node scripts/check-salary-search.mjs",
-    "check:record-links": "node scripts/check-record-links.mjs"
+    "check:record-links": "node scripts/check-record-links.mjs",
+    "build:finance": "node scripts/build-finance.mjs",
+    "check:finance": "node scripts/build-finance.mjs --check && node --test scripts/finance.test.mjs"
   },
   "peerDependencies": {
     "react": ">=18",

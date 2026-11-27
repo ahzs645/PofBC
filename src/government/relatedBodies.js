@@ -7,6 +7,7 @@ import { FORREX_RELATED_BODY } from './forrex.js'
 import { SCHOOL_RELATED_BODIES } from '../schools/integration.js'
 import { TOURISM_RELATED_BODIES } from '../gallery/tourismPartners.js'
 import { REGIONAL_DISTRICT_RELATED_BODIES } from '../gallery/regionalDistricts.js'
+import { PUBLIC_ACCOUNTS_RELATED_BODIES } from './publicAccountsBodies.js'
 
 export const RELATED_BODIES_AS_OF = '2026-11-15'
 
@@ -51,7 +52,15 @@ export const RELATED_BODY_KINDS = {
   'public-institute': 'Public institute',
   'charitable-society': 'Charitable society',
   'corporate-subsidiary': 'Corporate subsidiary',
-  'gaming-centre': 'Community gaming centres'
+  'gaming-centre': 'Community gaming centres',
+  'affiliated-health-society': 'Affiliated health care society',
+  'health-sector-society': 'Health sector society',
+  'national-nonprofit': 'National not-for-profit corporation',
+  'members-society': 'Members’ not-for-profit organization',
+  'statutory-foundation': 'Statutory foundation',
+  'project-authority': 'Project authority',
+  'exhibition-corporation': 'Exhibition corporation',
+  'provincial-society': 'Provincially funded society'
 }
 
 /**
@@ -62,11 +71,12 @@ export const RELATED_BODY_KINDS = {
 export const RELATED_BODY_GROUPS = [
   { id: 'school-districts', label: 'School districts', kinds: ['school-district', 'francophone-school-district'] },
   { id: 'transit', label: 'Transit in Metro Vancouver', kinds: ['regional-transportation-authority', 'transit-company', 'transit-police'] },
-  { id: 'services', label: 'Regional and public services', kinds: ['regional-federation', 'ferry-authority', 'emergency-communications', 'statutory-authority', 'independent-regulator', 'corporate-subsidiary', 'gaming-centre'] },
+  { id: 'services', label: 'Regional and public services', kinds: ['regional-federation', 'ferry-authority', 'emergency-communications', 'statutory-authority', 'independent-regulator', 'corporate-subsidiary', 'gaming-centre', 'statutory-foundation', 'project-authority', 'exhibition-corporation', 'provincial-society'] },
+  { id: 'health-societies', label: 'Hospitals and health sector societies', kinds: ['affiliated-health-society', 'health-sector-society', 'national-nonprofit'] },
   { id: 'tourism', label: 'Tourism and destination management', kinds: ['tourism-association', 'tourism-region', 'tourism-collaboration', 'tourism-enterprise', 'tourism-initiative'] },
   { id: 'development', label: 'Economic development', kinds: ['development-trust', 'development-society'] },
   { id: 'rural-health', label: 'Rural health and medical practice', kinds: ['nonprofit-society', 'joint-committee', 'professional-association', 'medical-division', 'clinical-network', 'health-research-network'] },
-  { id: 'learning', label: 'Education and science', kinds: ['public-university', 'public-institute', 'charitable-society'] }
+  { id: 'learning', label: 'Education and science', kinds: ['public-university', 'public-institute', 'charitable-society', 'members-society'] }
 ]
 
 /** The given bodies in their groups, in catalogue order, leaving out groups with none of them. */
@@ -92,6 +102,7 @@ export const RELATED_BODIES = [
   ...REGIONAL_DISTRICT_RELATED_BODIES,
   FORREX_RELATED_BODY,
   ...RURAL_HEALTH_BODIES,
+  ...PUBLIC_ACCOUNTS_RELATED_BODIES,
   {
     id: 'translink', name: 'South Coast British Columbia Transportation Authority', shortName: 'TransLink',
     aliases: ['TransLink', 'Greater Vancouver Transportation Authority', 'GVTA', 'SCBCTA'],

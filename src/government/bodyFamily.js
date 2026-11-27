@@ -120,12 +120,13 @@ export const bodyFamily = (id) => {
 }
 
 /**
- * The heading a group of rows goes under, by how they join the body: in the direction of the walk,
- * and for `became` whether several merged (a body several became was formed by amalgamation).
+ * How one row's body is joined to the body on the page, said from the page's side, as the site's
+ * shared lineage says it (site/Lineage.jsx): the card sits under Predecessors or Successors and this
+ * line says how. `several` is whether more than one body joins the same way (an amalgamation).
  */
-export const groupTitle = (direction, how, several) => (direction === 'formedFrom'
-  ? { became: several ? 'Amalgamated to form it' : 'Came from', predecessor: 'Came from', services: 'Its services came from', area: 'Part of its area came from' }
-  : { became: 'Became', predecessor: 'Succeeded by', services: 'Its services passed to', area: 'Part of its area moved to' })[how]
+export const relationLabel = (direction, how, several) => (direction === 'formedFrom'
+  ? { became: several ? 'Amalgamated into this body' : 'Became this body', predecessor: 'Preceded this body', services: 'Its services passed to this body', area: 'Part of its area moved to this body' }
+  : { became: 'This body became it', predecessor: 'Succeeded this body', services: 'This body’s services passed to it', area: 'Part of this body’s area moved to it' })[how]
 
 /** How a row's body also went elsewhere, as a line: "also to Interior Health Authority (services)". */
 export const elsewhereLine = (row) => (row.elsewhere.length

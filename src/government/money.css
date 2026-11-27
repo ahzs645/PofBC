@@ -1,0 +1,53 @@
+/* The Money card (Money.jsx), in the atlas's card style; it works in the government panel and on
+   related-body pages, which share the .gov colour tokens in light and dark. */
+
+.gov-money__about { margin: 4px 0 12px; font-size: 13px; line-height: 1.5; color: var(--gov-ink-2); }
+.gov-money__note { margin: 8px 0 0; font-size: 12px; line-height: 1.5; }
+
+.gov-money__chart { margin: 0 0 10px; }
+.gov-money__bars { display: block; width: 100%; height: 56px; }
+.gov-money__bar--revenue { fill: var(--gov-executive); }
+.gov-money__bar--expense { fill: var(--gov-ink-4); }
+.gov-money__legend { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 6px; font-size: 12px; color: var(--gov-ink-3); }
+.gov-money__legend span { display: inline-flex; align-items: center; gap: 6px; }
+.gov-money__swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; }
+.gov-money__swatch--revenue { background: var(--gov-executive); }
+.gov-money__swatch--expense { background: var(--gov-ink-4); }
+
+/* The table scrolls inside the card on a narrow screen rather than widening the page. */
+.gov-money__scroll { max-height: 22rem; overflow: auto; border: 1px solid var(--gov-outline); border-radius: 10px; }
+.gov-money__scroll:focus-visible { outline: 2px solid var(--gov-link); outline-offset: 2px; }
+.gov-money__table { width: 100%; border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.gov-money__table thead th {
+  position: sticky; top: 0; z-index: 1;
+  padding: 7px 8px; background: var(--gov-surface); border-bottom: 1px solid var(--gov-mid);
+  font: 500 10px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--gov-ink-4); text-align: right; white-space: nowrap;
+}
+.gov-money__table thead th:first-child, .gov-money__table tbody th { text-align: left; }
+.gov-money__table td, .gov-money__table tbody th { padding: 6px 8px; border-bottom: 1px solid var(--gov-outline); vertical-align: top; }
+.gov-money__table td { text-align: right; white-space: nowrap; color: var(--gov-ink); }
+.gov-money__table tbody th { font-weight: 500; white-space: nowrap; }
+.gov-money__table tbody tr:last-child > * { border-bottom: 0; }
+.gov-money__table a { color: var(--gov-link); text-decoration: none; }
+.gov-money__table a:hover { text-decoration: underline; }
+.gov-money__current > * { background: var(--gov-hover); }
+.gov-money__tag { display: block; max-width: 11rem; margin-top: 2px; font-size: 11px; font-weight: 400; color: var(--gov-ink-4); white-space: normal; }
+
+.gov-money__notes { margin: 8px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.5; color: var(--gov-ink-2); }
+.gov-money__warning {
+  margin: 12px 0 0; padding: 10px 12px; border-radius: 10px; background: var(--gov-hover);
+  font-size: 12.5px; line-height: 1.5; color: var(--gov-ink-2);
+}
+
+.gov-money__statements { margin-top: 16px; }
+.gov-money__list { display: grid; gap: 6px; margin: 10px 0 0; padding: 0; list-style: none; font-size: 13px; }
+.gov-money__list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.gov-money__list a { color: var(--gov-link); font-variant-numeric: tabular-nums; }
+.gov-money__list .gov-muted { font-size: 12px; }
+.gov-money .gov-show-more { margin-top: 10px; }
+
+.gov-money__sources { margin-top: 14px; font-size: 13px; }
+.gov-money__sources summary { cursor: pointer; color: var(--gov-ink-3); }
+.gov-money__sources .source-list { margin-top: 8px; --ink-muted: var(--gov-ink-4); }
+.gov-money__sources a { color: var(--gov-link); }

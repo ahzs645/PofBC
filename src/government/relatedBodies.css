@@ -47,7 +47,7 @@
 .gov-related__intro .gov-muted { max-width: 70ch; }
 .gov-related__record > .gov-muted { margin-top: 6px; }
 .gov-related__back {
-  display: none;
+  display: inline-block;
   margin: -6px 0 14px;
   font-size: 14px;
   color: var(--gov-ink-3);
@@ -130,7 +130,6 @@
 
 @media (max-width: 899px) {
   .gov-related .gov-breadcrumb { padding: 6px 6px 6px 20px; }
-  .gov-related__back { display: inline-block; }
   .gov-related .gov-card:not(.gov-breadcrumb) { padding: 20px 20px 24px; }
   .gov-related .gov-related__directory { padding: 18px 10px 10px; }
   .gov-related .gov-description { font-size: 15px; }
