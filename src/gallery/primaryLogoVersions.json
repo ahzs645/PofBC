@@ -1,0 +1,83 @@
+{
+  "source-recovered-aircare-archived-wordmark": {
+    "sourceLabel": "Published image",
+    "preferred": "aircare-wordmark-rebuilt",
+    "asset": {
+      "id": "aircare-wordmark-rebuilt",
+      "file": "identity-recovered/aircare/archived-wordmark-rebuilt.svg",
+      "format": "svg",
+      "isVector": true,
+      "containsRaster": false,
+      "variantOf": "source-recovered-aircare-archived-wordmark",
+      "label": "AirCare — reconstructed archived wordmark",
+      "versionLabel": "Hand-built reconstruction",
+      "notes": "Independently rebuilt two-colour historical wordmark based on the archived publisher raster; this is not an issuer vector.",
+      "fidelityNote": "Cubic Bézier outlines informed by documented ITC Garamond Bold. Exact font outline unavailable. The supplied source comparison reports 96.17% ink-mask overlap at 245 × 91; not a guarantee of exact glyph shapes at larger sizes.",
+      "reconstruction": true,
+      "observedDate": "2026-11-27",
+      "bytes": 3404,
+      "sha256": "08b8393047d719d9241d99d6488f95fada6a0c2118ad107fdca1a045cb1b8e7c",
+      "publisher": "Opus Inspection, preserved by Internet Archive",
+      "sourcePage": "https://web.archive.org/web/20160427165738/http://opusinspection.com/wp-content/uploads/2014/03/AirCare-logo.png",
+      "sourceUrl": "https://web.archive.org/web/20160427165738id_/http://opusinspection.com/wp-content/uploads/2014/03/AirCare-logo.png",
+      "derivedFrom": "source-recovered-aircare-archived-wordmark",
+      "evidenceType": "independent-lettering-reconstruction",
+      "sourceLocator": "Published raster shown alongside the reconstruction.",
+      "provenance": "third_party_reconstruction"
+    }
+  },
+  "source-expanded-sub-bc-cannabis-stores-website-logo": {
+    "sourceLabel": "Published image",
+    "preferred": "bc-cannabis-stores-wordmark-rebuilt",
+    "asset": {
+      "id": "bc-cannabis-stores-wordmark-rebuilt",
+      "file": "identity-collected/cannabis/stores-wordmark-rebuilt.svg",
+      "format": "svg",
+      "isVector": true,
+      "containsRaster": false,
+      "variantOf": "source-expanded-sub-bc-cannabis-stores-website-logo",
+      "label": "BC Cannabis Stores — reconstructed wordmark",
+      "versionLabel": "Reconstructed lettering",
+      "notes": "Rebuilt the current published green wordmark from its raster. This is not a Liquor Distribution Branch master.",
+      "fidelityNote": "Fitted compatible glyph outlines from the sibling Wholesale vector and hand-built the remaining letter shapes and tapered rule. Final ink-mask overlap against the 1,200 × 107 publisher raster: 95.86% overall, 96.99% for lettering.",
+      "reconstruction": true,
+      "observedDate": "2026-11-27",
+      "bytes": 12586,
+      "sha256": "ce54919657f0ca42326118e433bb0029a7a7efc1c0a6d5b8b3d0396c1320542b",
+      "publisher": "BC Cannabis Stores",
+      "sourcePage": "https://www.bccannabisstores.com/",
+      "sourceUrl": "https://www.bccannabisstores.com/cdn/shop/files/BCCannabisStores-Logo-Green_1200x108.png?v=1731601511",
+      "derivedFrom": "source-expanded-sub-bc-cannabis-stores-website-logo",
+      "evidenceType": "independent-lettering-reconstruction",
+      "sourceLocator": "Published raster shown alongside the reconstruction.",
+      "provenance": "third_party_reconstruction"
+    }
+  },
+  "source-expanded-bc-cannabis-wholesale-website-logo": {
+    "sourceLabel": "Published image",
+    "preferred": null,
+    "asset": {
+      "id": "bc-cannabis-wholesale-2022-green-vector",
+      "file": "identity-collected/cannabis/wholesale-report-green.svg",
+      "format": "svg",
+      "isVector": true,
+      "containsRaster": false,
+      "variantOf": "source-expanded-bc-cannabis-wholesale-website-logo",
+      "label": "BC Cannabis Wholesale — published green wordmark",
+      "versionLabel": "Green report vector · 2022",
+      "notes": "Native green wordmark from the issuer’s 2022 quarterly report. The newer black underlined website file is kept as the default; it is not certified to be the same artwork.",
+      "fidelityNote": "Twenty native filled shapes: outlined lettering and tapered underline. No bitmap or live text in the crop. The source is a published report, not a supplied retail or wholesale master.",
+      "reconstruction": false,
+      "observedDate": "2026-11-27",
+      "bytes": 12857,
+      "sha256": "acd183973940f1d75e43c486d61ca5eafcd2c2c545585422eaa97cdf133ff832",
+      "publisher": "BC Liquor Distribution Branch",
+      "sourcePage": "https://www.bcldb.com/files/BC%20Cannabis%20Quarterly%20Sales%20Report%20-%20Q1%202022.pdf#page=2",
+      "sourceUrl": "https://www.bcldb.com/files/BC%20Cannabis%20Quarterly%20Sales%20Report%20-%20Q1%202022.pdf",
+      "sourceLocator": "Q1 2022 Quarterly Sales Report, PDF page 2 · About this publication",
+      "sourceDate": "2022",
+      "specimenDate": "2022",
+      "evidenceType": "native-pdf-vector-extraction"
+    }
+  }
+}

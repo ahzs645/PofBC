@@ -56,8 +56,8 @@ export const LOGO_BRAND_GUIDELINES = {
     url: 'https://www.sooke.ca/municipal-hall/branding-and-logo/'
   },
   'source-recovered-municipal-vancouver-website-logo': {
-    title: 'City of Vancouver Graphic Standards Manual',
-    url: 'https://policy.vancouver.ca/CP00103P2.pdf'
+    title: 'City of Vancouver Graphic Standards Manual · stacked colour logo on PDF page 5',
+    url: 'https://policy.vancouver.ca/CP00103P2.pdf#page=5'
   },
   'source-recovered-municipal-white-rock-website-logo': {
     title: 'White Rock Coat of Arms and City Logo Policy',
@@ -82,6 +82,14 @@ export const LOGO_BRAND_GUIDELINES = {
   'school-district-72-logo-current': {
     title: 'Campbell River School District Procedure 155 · Brand Identity',
     url: 'https://media.sd72.bc.ca/media/Default/medialib/op-155-brand-identity.32161b7122.pdf'
+  },
+  'rd-thompson-nicola-horizontal': {
+    title: 'Thompson-Nicola Regional District Visual Strategy · variants on PDF pages 5–6',
+    url: 'https://wpcdn.tnrd.ca/wp-content/uploads/2023/05/17133043/TNRD_VisualStrategy_Sept2018_r2020_Online.pdf#page=5'
+  },
+  'sd79-full-colour-landscape-2022': {
+    title: 'Cowichan Valley School District Brand Standards · landscape treatment on PDF page 11',
+    url: 'https://sd79.bc.ca/wp-content/uploads/2022-Cowichan-Valley-School-District-Brand-Standards1.pdf#page=11'
   },
   'school-district-79-logo-current': {
     title: 'Cowichan Valley School District Brand Standards, May 2022',
