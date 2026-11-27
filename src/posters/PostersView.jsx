@@ -1,6 +1,6 @@
 // The posters: a shelf (see ShelfView.jsx) over the poster catalogue.
 
-import { bearAwareWindowId, bearAwareWindowScan } from '../initiatives/bearAwareArtwork.js'
+import { bearAwareDecalSvg, bearAwareWindowId } from '../initiatives/bearAwareArtwork.js'
 import { ShelfView } from './ShelfView.jsx'
 import { FACETS, POSTERS, SERIES } from './catalogue.js'
 import careCardThumb from './carecard/thumbnail.jpg'
@@ -34,7 +34,7 @@ const bcFerries = (id) => () => import('./bc-ferries/index.js').then((module) =>
 const noxiousWeeds = (id) => () => import('./noxious-weeds/index.js').then((module) => module.loaderFor(id)())
 const expo86 = (id) => () => import('./expo-86/index.js').then((module) => module.loaderFor(id)())
 const LOADERS = {
-  [bearAwareWindowId]: () => import('../signs/bearAwareWindow.js').then(({ loadBearAwareWindow }) => loadBearAwareWindow()),
+  [bearAwareWindowId]: () => import('./bearAwareDecal.js').then(({ loadBearAwareDecal }) => loadBearAwareDecal()),
   'super-natural-spring': () => import('./super-natural-spring/index.js').then((module) => module.load()),
   'super-natural-ferries': () => import('./super-natural-ferries/index.js').then((module) => module.load()),
   'super-natural-lake': () => import('./super-natural-lake/index.js').then((module) => module.load()),
@@ -62,7 +62,7 @@ const LOADERS = {
 }
 
 const THUMBNAILS = {
-  [bearAwareWindowId]: import.meta.env.BASE_URL + bearAwareWindowScan,
+  [bearAwareWindowId]: import.meta.env.BASE_URL + bearAwareDecalSvg,
   'super-natural-spring': springThumb,
   'super-natural-ferries': tourismFerriesThumb,
   'super-natural-lake': tourismLakeThumb,

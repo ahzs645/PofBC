@@ -192,7 +192,7 @@ const BY_POSTER = {
     },
     {
       group: 'marks', rel: 'Related campaign mark', label: 'Be Bear Aware paw lockup',
-      note: 'The checklist combines the paw with stacked campaign lettering.',
+      note: 'Same 1997 campaign and paw motif, but a different design: the checklist says “Be Bear Aware” beneath the paw; the decal says “We Are Bear Aware” above it inside an oval.',
       to: { view: 'gallery', logos: bearAwareGalleryId, mark: bearAwareMarkId },
       certainty: 'documented'
     }

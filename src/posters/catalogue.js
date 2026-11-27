@@ -8,7 +8,7 @@
 //
 // Nothing here imports a drawing, so the catalogue can be read and tested without a browser.
 
-import { bearAwareId, bearAwareTitle, bearAwareWindowId, bearAwareWindowMeta } from '../initiatives/bearAwareArtwork.js'
+import { bearAwareDecalView, bearAwareId, bearAwareTitle, bearAwareWindowId, bearAwareWindowMeta } from '../initiatives/bearAwareArtwork.js'
 
 export const SERIES = [
   { id: bearAwareId, title: bearAwareTitle, kind: 'Wildlife education · 1997', posters: [bearAwareWindowId] },
@@ -83,6 +83,7 @@ export const SERIES = [
 export const POSTERS = {
   [bearAwareWindowId]: {
     ...bearAwareWindowMeta, id: bearAwareWindowId, series: bearAwareId,
+    view: bearAwareDecalView, page: { w: 7.2, h: 7.84 }, format: 'Window decal',
     issuer: bearAwareTitle, subject: 'Bear awareness',
     blurb: 'Revelstoke residents and businesses could earn this sign by completing a Bear Aware checklist.'
   },
