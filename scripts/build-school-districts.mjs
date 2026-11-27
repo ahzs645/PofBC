@@ -12,13 +12,56 @@ const roster = read('roster.json')
 const history = read('history.json')
 const logos = read('logos.json')
 const employers = read('employers.json')
+const recoveries = read('recoveries-2026-11-26.json')
+const recoveryByDistrict = new Map()
+const recoveryIds = new Set()
+for (const review of recoveries.records) {
+  if (!review.id || recoveryIds.has(review.id) || !/^https:\/\//.test(review.source?.url ?? '') ||
+      !['gallery', 'source-only'].includes(review.disposition) ||
+      (review.disposition === 'gallery' ? review.asset?.id !== review.id : review.asset || !review.reason)) {
+    throw new Error(`Incomplete or duplicate recovery: ${review.id}`)
+  }
+  recoveryIds.add(review.id)
+  if (!recoveryByDistrict.has(review.subject)) recoveryByDistrict.set(review.subject, [])
+  recoveryByDistrict.get(review.subject).push(review)
+}
+const attachRecoveries = (row) => {
+  const reviews = recoveryByDistrict.get(row.id) ?? []
+  if (!reviews.length) return row
+  recoveryByDistrict.delete(row.id)
+  const preferred = new Map(reviews.filter((review) => review.preferredFor)
+    .map((review) => [review.preferredFor, review.id]))
+  const newAssets = reviews.filter((review) => review.asset).map(({ asset }) => ({
+    ...asset, darkBackground: Boolean(asset.darkBackground)
+  }))
+  const assets = [...row.assets.map((asset) => preferred.has(asset.id)
+    ? { ...asset, preferredVector: preferred.get(asset.id) } : asset), ...newAssets]
+  const ids = new Set(assets.map((asset) => asset.id))
+  if (ids.size !== assets.length) throw new Error(`Duplicate artwork IDs for ${row.id}`)
+  for (const asset of newAssets) {
+    if (asset.variantOf && !assets.some((parent) => parent.id === asset.variantOf && !parent.variantOf)) {
+      throw new Error(`Missing design ${asset.variantOf} for ${asset.id}`)
+    }
+  }
+  for (const [design, replacement] of preferred) {
+    if (!row.assets.some((asset) => asset.id === design && !asset.variantOf) ||
+        !newAssets.some((asset) => asset.id === replacement && asset.variantOf === design && asset.isVector && !asset.containsRaster)) {
+      throw new Error(`Invalid recovered preferred vector for ${design}`)
+    }
+  }
+  const sourceOnly = reviews.filter((review) => review.disposition === 'source-only').map((review) => ({
+    ...review.source, title: `${review.source.title} (${review.id})`, note: review.reason
+  }))
+  return { ...row, assets, sources: [...row.sources, ...sourceOnly] }
+}
+
 const histories = new Map(history.records.map((row) => [row.number, row]))
 const artwork = new Map(logos.records.map((row) => [row.number, row]))
 if (roster.districts.length !== 60 || new Set(roster.districts.map((row) => row.number)).size !== 60) throw new Error('The reviewed current directory must contain 60 unique districts')
 const districts = roster.districts.map((row) => {
   const record = histories.get(row.number) ?? {}
   const art = artwork.get(row.number) ?? {}
-  return {
+  return attachRecoveries({
     ...row,
     id: currentDistrictId(row.number),
     current: true,
@@ -36,7 +79,7 @@ const districts = roster.districts.map((row) => {
     logoStatus: art.status ?? 'not-reviewed',
     logoNotes: art.notes ?? '',
     logoSources: art.sources ?? []
-  }
+  })
 })
 for (const row of districts) {
   if (!row.employerSlug) throw new Error(`SD${row.number} has no existing employer link`)
@@ -91,6 +134,8 @@ for (const row of pending) {
     }
   }
 }
+for (const [id, row] of historical) historical.set(id, attachRecoveries(row))
+if (recoveryByDistrict.size) throw new Error(`Unknown recovery subjects: ${[...recoveryByDistrict.keys()].join(', ')}`)
 const data = { asOf: roster.asOf, directorySource: roster.sourceUrl,
   methodology: history.methodology ?? [], districts,
   historical: [...historical.values()].sort((a, b) => a.number - b.number || a.name.localeCompare(b.name)),

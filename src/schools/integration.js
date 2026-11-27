@@ -9,6 +9,8 @@ export const SCHOOL_IDENTITY_BODIES = SCHOOL_DISTRICTS.map((district) => ({
   to: district.ended?.date ? Number(district.ended.date.slice(0, 4)) : null, current: district.current,
   status: district.assets.length ? 'asset-collected' : 'source-found',
   cover: district.current ? primaryDistrictDesign(district)?.id : undefined,
+  // A separately documented vector layout is not a replacement for the current district mark.
+  coverPolicy: district.current ? 'verified-current' : undefined,
   notes: `School district history and original identity specimens. ${district.established?.date ? `${establishmentLabel(district)}: ${formatHistoryDate(district.established.date)}. ` : ''}Each logo has its own source; a district's establishment does not date its artwork.`,
   assets: district.assets
 }))

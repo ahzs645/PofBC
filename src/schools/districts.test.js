@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs'
 import { createHash } from 'node:crypto'
 import { execFileSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
-import { CURRENT_DISTRICTS, HISTORICAL_DISTRICTS, SCHOOL_DISTRICTS, DISTRICT_CONNECTIONS, districtById, districtForEmployer, districtHistory, connectionsOf, searchDistricts, formatHistoryDate, formerDistrictId, establishmentLabel } from './districts.js'
+import { CURRENT_DISTRICTS, HISTORICAL_DISTRICTS, SCHOOL_DISTRICTS, DISTRICT_CONNECTIONS, districtById, districtForEmployer, districtHistory, connectionsOf, searchDistricts, formatHistoryDate, formerDistrictId, establishmentLabel, primaryDistrictDesign, primaryDistrictLogo, districtSources } from './districts.js'
 import { SCHOOL_IDENTITY_BODIES, SCHOOL_IDENTITY_SUBJECTS, SCHOOL_RELATED_BODIES } from './integration.js'
 
 const root = fileURLToPath(new URL('../../', import.meta.url))
@@ -72,13 +72,13 @@ test('each dated claim has source and precision, and dates preserve their meanin
   assert.ok(districtHistory(districtById(93)).some((event) => event.date === '1996-01-03'), 'retain the separate audited claim alongside the 1995 government account')
 })
 
-test('all 60 current districts have hashed source artwork, and bitmap SVGs are not called vectors', () => {
+test('all current districts have artwork, and all original files have verified hashes and formats', () => {
   const ids = new Set()
-  for (const district of CURRENT_DISTRICTS) {
-    assert.ok(district.assets.length, district.id)
+  for (const district of SCHOOL_DISTRICTS) {
+    if (district.current) assert.ok(district.assets.length, district.id)
     for (const asset of district.assets) {
       assert.ok(!ids.has(asset.id), asset.id); ids.add(asset.id)
-      assert.match(asset.file, /^education\/school-districts\/logos\/[^/]+\.(svg|png|jpe?g|webp)$/)
+      assert.match(asset.file, /^education\/school-districts\/logos\/(?:recovered\/)?[^/]+\.(svg|png|jpe?g|webp)$/)
       assert.match(asset.sourceUrl, /^https?:\/\//, 'retain the original source URL without inventing a secure endpoint')
       const bytes = file(`public/${asset.file}`)
       assert.equal(createHash('sha256').update(bytes).digest('hex'), asset.sha256, asset.id)
@@ -114,4 +114,24 @@ test('the shared catalogue connects current governance and every identity withou
   }
   assert.ok(searchDistricts({ query: 'Powell River' }).some((district) => district.number === 47))
   assert.ok(searchDistricts({ query: 'Penticton', scope: 'historical' }).some((district) => district.number === 15))
+})
+
+test('the recovery batch preserves distinct design and source evidence without changing the succession graph', () => {
+  const { records } = JSON.parse(file('research/education/school-districts/recoveries-2026-11-26.json'))
+  assert.equal(records.length, 70)
+  const artwork = records.filter(({ disposition }) => disposition === 'gallery')
+  assert.equal(artwork.length, 62)
+  assert.equal(artwork.filter(({ asset }) => asset.isVector).length, 16)
+  for (const row of records) {
+    const district = districtById(row.subject)
+    assert.ok(district, row.subject)
+    assert.equal(district.assets.some((asset) => row.id === asset.id), row.disposition === 'gallery', row.id)
+    if (row.disposition === 'source-only') assert.ok(districtSources(district).some((source) => source.url === row.source.url), row.id)
+  }
+  const gulf = districtById(64)
+  assert.equal(primaryDistrictDesign(gulf).id, 'school-district-64-logo-current')
+  assert.equal(primaryDistrictLogo(gulf).id, 'sd64-full-colour-lockup-2023-native')
+  assert.equal(primaryDistrictLogo(districtById(72)).id, 'school-district-72-logo-current')
+  assert.ok(districtById('former-school-district-56-nechako').assets.some(({ id }) => id === 'sd56-nechako-1991'))
+  assert.equal(districtById(91).assets.some(({ id }) => id === 'sd56-nechako-1991'), false)
 })
