@@ -3385,6 +3385,41 @@
   ],
   "municipality-taylor": [
     {
+      "publisher": "Northern British Columbia Tourism Association",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/5a61b69d-7ee3-460b-9638-ff6b76e8a143/content",
+      "sourceFile": "Northern British Columbia Travel Guide 2013",
+      "specimenDate": "2013",
+      "observedDate": "2026-11-27",
+      "role": "historical",
+      "reconstruction": false,
+      "evidenceType": "native-pdf-vector-extraction",
+      "format": "svg",
+      "isVector": true,
+      "sourceGround": "light",
+      "id": "taylor-district-swoosh-2013",
+      "label": "District of Taylor · script over the yellow swoosh",
+      "file": "identity-collected/northern-bc-travel-guides/taylor-district-swoosh-2013.svg",
+      "sourcePage": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/5a61b69d-7ee3-460b-9638-ff6b76e8a143/content#page=33",
+      "sourceLocator": "PDF page 33, District of Taylor advertisement, lower left.",
+      "notes": "The blue Taylor script with its dark shadow and DISTRICT OF, set over two pale-yellow swooshes. The 2015 guide shows the script without the swoosh.",
+      "fidelityNote": "Native shapes and inks are retained from the cited PDF. DISTRICT OF is live Frutiger text in the PDF, converted to glyph outlines. The page’s yellow panel was removed; the swoosh is cut at the page’s left edge as printed.",
+      "extraction": {
+        "pdfPage": 33,
+        "pdfBounds": [
+          0,
+          640,
+          201,
+          774
+        ],
+        "method": "Isolated the native PDF graphics with MuPDF (PyMuPDF): removed the page’s images, the surrounding text and the vector artwork touching the area outside the logo by redaction, cropped to the logo, and exported SVG with live text converted to glyph paths.",
+        "nativePathCount": 16,
+        "liveText": [
+          "DISTRICT OF (Frutiger-Roman)"
+        ]
+      },
+      "sha256": "91c97a8e09ea79e40e06e755986db6a6a83b91d177f299c94dd6d4b9232feb37"
+    },
+    {
       "id": "taylor-district-script-2015",
       "label": "District of Taylor · visitor campaign script",
       "file": "identity-collected/northern-bc-travel-guides/taylor-district-script-2015.svg",
@@ -3822,7 +3857,48 @@
         }
       ],
       "fidelityNote": "The source crop retains the artwork as printed, including any surrounding design needed for the specimen.",
-      "sha256": "21eda2236f3b7efb7839799f3d1c862bafe30d7a3ad976cf2258ee43b5efb5fe"
+      "sha256": "21eda2236f3b7efb7839799f3d1c862bafe30d7a3ad976cf2258ee43b5efb5fe",
+      "preferredVector": "houston-wilderness-script-2013-vector",
+      "designLabel": "Houston · Where the welcome is warm and the wilderness beckons",
+      "versionLabel": "Printed crop · 2012 guide"
+    },
+    {
+      "publisher": "Northern British Columbia Tourism Association",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/5a61b69d-7ee3-460b-9638-ff6b76e8a143/content",
+      "sourceFile": "Northern British Columbia Travel Guide 2013",
+      "specimenDate": "2013",
+      "observedDate": "2026-11-27",
+      "role": "historical",
+      "reconstruction": false,
+      "evidenceType": "native-pdf-vector-extraction",
+      "format": "svg",
+      "isVector": true,
+      "sourceGround": "light",
+      "id": "houston-wilderness-script-2013-vector",
+      "label": "Houston · Where the welcome is warm and the wilderness beckons · 2013 native vector",
+      "file": "identity-collected/northern-bc-travel-guides/houston-wilderness-script-2013-vector.svg",
+      "sourcePage": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/5a61b69d-7ee3-460b-9638-ff6b76e8a143/content#page=52",
+      "sourceLocator": "PDF page 52, Houston advertisement, upper left: the same signature as the 2012 guide.",
+      "notes": "The 2013 guide reprints the 2012 signature. White “Houston” in Candy Script with a drawn green outline, and the two-line tagline in Calibri Bold.",
+      "fidelityNote": "Native shapes and inks are retained from the cited PDF. “Houston” and the tagline are live text in the PDF (Candy Script and Calibri Bold), here converted to the same glyph outlines; the green outlines are the PDF’s own paths. The photograph behind it was removed.",
+      "extraction": {
+        "pdfPage": 52,
+        "pdfBounds": [
+          56,
+          405,
+          272,
+          522
+        ],
+        "method": "Isolated the native PDF graphics with MuPDF (PyMuPDF): removed the page’s images, the surrounding text and the vector artwork touching the area outside the logo by redaction, cropped to the logo, and exported SVG with live text converted to glyph paths.",
+        "nativePathCount": 52,
+        "liveText": [
+          "Houston (CandyScript)",
+          "Where the welcome is warm / & the wilderness beckons (Calibri-Bold)"
+        ]
+      },
+      "variantOf": "houston-wilderness-script-2012",
+      "versionLabel": "Native vector · 2013 guide",
+      "sha256": "537b39e9b270b8d41030b8004608f8017755f0d19d34e35ae5e2fc46b1e3c920"
     },
     {
       "id": "houston-naturally-amazing-2015",

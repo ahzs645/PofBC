@@ -8199,6 +8199,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "houston-wilderness-script-2013-vector": {
+  "light": {
+   "file": "identity-display/houston-wilderness-script-2013-vector.light.svg",
+   "aspect": 1.9571,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/houston-wilderness-script-2013-vector.dark.svg",
+   "aspect": 1.9571,
+   "recoloured": true
+  }
+ },
  "houston-naturally-amazing-2015": {
   "light": {
    "file": "identity-display/houston-naturally-amazing-2015.light.svg",
@@ -8800,6 +8812,18 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/source-recovered-municipal-stewart-website-logo.dark.svg",
    "aspect": 3.6047,
    "recoloured": false
+  }
+ },
+ "taylor-district-swoosh-2013": {
+  "light": {
+   "file": "identity-display/taylor-district-swoosh-2013.light.svg",
+   "aspect": 1.4886,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/taylor-district-swoosh-2013.dark.svg",
+   "aspect": 1.4886,
+   "recoloured": true
   }
  },
  "taylor-district-script-2015": {
