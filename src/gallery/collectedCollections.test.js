@@ -6,10 +6,11 @@ import { COLLECTING } from './collectingData.js'
 import { COLLECTED_BODIES } from './collectedData.js'
 import { ACQUIRED_VECTORS } from './acquiredVectorData.js'
 import { LOGO_BRAND_GUIDELINES } from './logoBrandGuidelines.js'
-import { COLLECTED_COLLECTIONS, CONTINUATIONS, assetUrl, collectedEntriesOf, nodesOf, parseSpecimenDate, researchLabel } from './collectedCollections.js'
+import { COLLECTED_COLLECTIONS, CONTINUATIONS, REGISTER_CONTINUATIONS, assetUrl, collectedEntriesOf, nodesOf, parseSpecimenDate, researchLabel } from './collectedCollections.js'
 import { GALLERY_COLLECTIONS, collectionById, collectionOfNode, entriesOf, entriesOfNode, findGalleryEntry } from './collections.js'
 import { COLLECTED_PALETTES, paletteFor } from './collectedPalettes.js'
 import { HISTORICAL_BODIES } from '../government/historyData.js'
+import { IDENTITY_COVERAGE } from './identityCoverage.js'
 
 const root = new URL('../../', import.meta.url)
 
@@ -269,7 +270,9 @@ test('a body folded into a later name is a one-to-one line in the government his
   const held = new Set(COLLECTED_BODIES.filter((body) => body.assets.length).map((body) => body.id))
   const folded = [...CONTINUATIONS, ...GALLERY_COLLECTIONS.filter((collection) => collection.eras && collection.graphNodes)
     .flatMap((collection) => collection.graphNodes.slice(1).map((node) => [node, null]))]
+  const fromRegister = new Set(REGISTER_CONTINUATIONS.map(([from]) => from))
   for (const [from, to] of folded) {
+    if (fromRegister.has(from)) continue
     const became = history.get(from)?.became
     assert.ok(became, `${from} became something`)
     if (to) assert.equal(became, to, from)
@@ -281,6 +284,26 @@ test('a body folded into a later name is a one-to-one line in the government his
     assert.deepEqual(heirs.map((body) => body.id), [], from)
     assert.ok(!(history.get(from).servicesPassedTo ?? []).some((id) => id !== became), from)
   }
+})
+
+test('a college line is a one-to-one rename in the identity register', () => {
+  const subjects = new Map(IDENTITY_COVERAGE.map((subject) => [subject.id, subject]))
+  const renamed = (id) => (subjects.get(id)?.relations ?? []).filter(({ type }) => type === 'renamed-to').map(({ subject }) => subject)
+  for (const [from, to] of REGISTER_CONTINUATIONS) {
+    assert.ok(CONTINUATIONS.some(([a, b]) => a === from && b === to), from)
+    assert.deepEqual(renamed(from), [to], from)
+    // Many to one: no other subject was renamed to, merged into or became the same successor.
+    const others = IDENTITY_COVERAGE.filter((subject) => subject.id !== from && subject.relations?.some((relation) =>
+      relation.subject === to && ['renamed-to', 'merged-into', 'became', 'predecessor-of'].includes(relation.type)))
+    assert.deepEqual(others.map(({ id }) => id), [], from)
+    // One to many: the earlier name did not split or pass its work to anyone else.
+    assert.ok(!(subjects.get(from).relations ?? []).some(({ type, subject }) => subject !== to &&
+      ['split-into', 'merged-into', 'transferred-operations-to', 'became'].includes(type)), from)
+  }
+  // Each line is one collection, and every earlier name's link opens it.
+  assert.equal(collectionById('collected-cariboo-college'), collectionById('collected-thompson-rivers-university'))
+  assert.deepEqual(collectionById('collected-thompson-rivers-university').eras.map(({ years }) => years), ['1970–1991', '1991–2005', '2005–present'])
+  assert.notEqual(collectionById('collected-bc-place-ltd'), collectionById('collected-bc-enterprise-corporation'))
 })
 
 test('a link to a folded body’s old collection opens the collection that holds it now', () => {

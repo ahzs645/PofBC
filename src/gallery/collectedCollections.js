@@ -271,6 +271,37 @@ const collectionOf = (body) => {
   }
 }
 
+/** The college lines, oldest name first; each pair is a register renamed-to relation. */
+export const REGISTER_CONTINUATIONS = [
+  ['capilano-college', 'capilano-university'],
+  ['emily-carr-institute-of-art-and-design', 'emily-carr-university'],
+  ['kwantlen-college', 'kwantlen-university-college'],
+  ['kwantlen-university-college', 'kwantlen-polytechnic-university'],
+  ['cariboo-college', 'university-college-of-the-cariboo'],
+  ['university-college-of-the-cariboo', 'thompson-rivers-university'],
+  ['fraser-valley-college', 'university-college-of-the-fraser-valley'],
+  ['university-college-of-the-fraser-valley', 'university-of-the-fraser-valley']
+]
+
+// The years of each name on a college line, as the register's notes give them (identity register,
+// postsecondary subjects): the generated body records carry none. Emily Carr's institute name is
+// dated "by 1995", with sources split between 1994 and 1995, so its start is left open.
+const LINE_YEARS = {
+  'capilano-college': { from: 1968, to: 2008 },
+  'capilano-university': { from: 2008 },
+  'emily-carr-institute-of-art-and-design': { from: null, to: 2008 },
+  'emily-carr-university': { from: 2008 },
+  'kwantlen-college': { from: 1981, to: 1995 },
+  'kwantlen-university-college': { from: 1995, to: 2008 },
+  'kwantlen-polytechnic-university': { from: 2008 },
+  'cariboo-college': { from: 1970, to: 1991 },
+  'university-college-of-the-cariboo': { from: 1991, to: 2005 },
+  'thompson-rivers-university': { from: 2005 },
+  'fraser-valley-college': { from: 1974, to: 1991 },
+  'university-college-of-the-fraser-valley': { from: 1991, to: 2008 },
+  'university-of-the-fraser-valley': { from: 2008 }
+}
+
 /**
  * Bodies that carried on as another under a new name, each with the body it became, as the
  * government history records them (historyData.js: the body's `became`, with no other body holding
@@ -288,7 +319,17 @@ export const CONTINUATIONS = [
   ['pacific-great-eastern-railway', 'bc-railway-company'],
   ['bc-assets-and-land-corporation', 'land-and-water-bc'],
   ['oil-and-gas-commission', 'bc-energy-regulator'],
-  ['partnerships-bc', 'infrastructure-bc']
+  ['partnerships-bc', 'infrastructure-bc'],
+  // From research/identity/gallery-hierarchy-2026-11-27. BC Place Ltd. is not here: BC Development
+  // Corporation also became BC Enterprise Corporation, an amalgamation the rule above keeps apart.
+  ['industry-training-authority', 'skilledtradesbc'],
+  ['bc-safety-authority', 'technical-safety-bc'],
+  ['bc-innovation-council', 'innovate-bc'],
+  // Colleges continued as universities. These are not in the government history; each is the
+  // identity register's own renamed-to relation, checked by the same one-to-one rule against the
+  // register (collectedCollections.test.js). BC Open University's operations passed to TRU in 2005,
+  // a transfer rather than a rename, so it is not on TRU's line.
+  ...REGISTER_CONTINUATIONS
 ]
 
 const nameOf = (body) => body.shortName && body.shortName !== body.name ? `${body.name} (${body.shortName})` : body.name
@@ -319,12 +360,15 @@ const nameEra = (body, from, to, next) => {
 
 /** One collection for a line of names: the last body's, with an era for each name, oldest first. */
 const lineCollection = (line) => {
-  const bodies = line.map((id) => BODIES.get(id))
+  const bodies = line.map((id) => ({ ...BODIES.get(id), ...LINE_YEARS[id] }))
   const last = bodies.at(-1)
   const eras = bodies.map((body, at) => nameEra(body, at ? bodies[at - 1].to : body.from, at < bodies.length - 1 ? body.to : last.current ? null : last.to, bodies[at + 1]))
   const earlier = bodies.slice(0, -1)
+  const own = collectionOf(last)
+  // The present name's era leads with the cover, as a single name's collection does.
+  if (last.current) eras[eras.length - 1] = { ...eras.at(-1), entries: coverFirst(eras.at(-1).entries, own.cover) }
   const collection = {
-    ...collectionOf(last),
+    ...own,
     graphNodes: [last.id, ...earlier.map((body) => body.id)],
     aliases: earlier.map((body) => `collected-${body.id}`),
     body: `${last.current ? kindOf(last).replace(/^./, (letter) => letter.toUpperCase()) : `Former ${kindOf(last)}`} · formerly ${earlier.map((body) => body.name).join(', then ')}`,
