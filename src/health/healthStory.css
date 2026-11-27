@@ -140,13 +140,9 @@
 .hm-table th, .hm-table td { padding: 8px 10px; border-bottom: 1px solid var(--mid); text-align: right; white-space: nowrap; }
 .hm-table th[scope="row"], .hm-table thead th:first-child { text-align: left; font-weight: 500; white-space: normal; }
 .hm-table thead th { color: var(--ink-muted); font-size: 12px; font-weight: 600; }
-.hm-method__fold > .hm-small { max-width: 860px; margin: 14px 0 0; }
-/* The method is one disclosure: its heading is the summary, with a chevron that turns when open. */
-.hm-method__fold > summary { justify-content: flex-start; align-items: center; margin-bottom: 0; cursor: pointer; list-style: none; }
-.hm-method__fold > summary::-webkit-details-marker { display: none; }
-.hm-method__fold > summary::after { content: ''; flex: none; width: 8px; height: 8px; margin-top: 18px; border: solid var(--ink-muted); border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); transition: transform 140ms; }
-.hm-method__fold[open] > summary::after { transform: rotate(-135deg); margin-top: 24px; }
-.hm-method__fold[open] > summary { margin-bottom: 16px; }
+.hm-method__fold .hm-small { max-width: 860px; margin: 14px 0 0; }
+.hm-method__fold.disclosure { margin-top: 0; }
+/* The method's heading stands above its fold (Disclosure.jsx). */
 .hm-downloads { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; margin-top: 20px; font-size: 14px; }
 .hm-button { display: inline-flex; align-items: center; min-height: 44px; padding: 10px 16px; border: 1px solid var(--primary); border-radius: 8px; background: var(--primary); color: var(--primary-ink); font-size: 14px; font-weight: 600; text-decoration: none; }
 .hm a.hm-button { color: var(--primary-ink); text-decoration: none; }
@@ -170,7 +166,6 @@
   .hm-directory, .hm-method, .hm-sources { padding: 36px 0 0; }
   .hm-cards { grid-template-columns: minmax(0, 1fr); }
   .hm-section-heading { flex-direction: column; align-items: flex-start; }
-  .hm-method__fold > summary { flex-direction: row; align-items: center; }
   .hm-table__baseline { display: none; }
   .hm-table th, .hm-table td { padding: 8px 6px; }
 }

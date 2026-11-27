@@ -6,6 +6,7 @@ import { useDeferredValue, useEffect, useLayoutEffect, useRef, useState } from '
 import { createDigitizer, profileOf, renderTextured, threadColor, threadColors, writeDst, writeExp } from 'patcher'
 import { LIBRARY, cardLabel, loadPatchSvg, variantsOf } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 import { PatchHistory, photosOf } from './PatchDetails.jsx'
 import sourceCrops from './sourceCrops.json'
 import { SourceOverlay } from './SourceOverlay.jsx'
@@ -372,10 +373,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
           <PatchHistory patch={patch} />
           {!showSourceReview && patch.limitations && (
-            <details className="patch__limits">
-              <summary>Limitations</summary>
-              <p>{patch.limitations}</p>
-            </details>
+            <p className="patch__limits"><strong>Limitations:</strong> {patch.limitations}</p>
           )}
           {photosOf(patch).length <= 1 && patch.sourceUrl && <p className="patch__source"><a href={patch.sourceUrl} target="_blank" rel="noreferrer">Source image</a></p>}
           {photosOf(patch).length > 1 && (
@@ -394,8 +392,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
         {/* The evidence behind the drawing, closed until asked for: findings, limitations, the
             source occurrence and the record's date. */}
-        {showSourceReview && <details className="patch__review">
-          <summary><h3>Source comparison</h3></summary>
+        {showSourceReview && <Disclosure className="patch__review" summary="Source comparison">
           {review && (
             <p className="patch__review-heading">
               <span className={`patch__review-status patch__review-status--${reviewIsCurrent ? review.status : 'unreviewed'}`}>{reviewIsCurrent ? REVIEW_LABELS[review.status] ?? 'Not yet reviewed' : 'Drawing changed since review'}</span>
@@ -437,7 +434,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
             </p>
           )}
           {review && <p className="patch__review-date">Evidence record: {review.reviewedAt ?? reviewIndex.data.reviewedAt}. Source images keep their original proportions.</p>}
-        </details>}
+        </Disclosure>}
       </div>
     </section>
   )

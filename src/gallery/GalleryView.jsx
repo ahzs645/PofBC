@@ -18,6 +18,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } fr
 import { formatEventDate } from '../government/events.js'
 import { ColourField } from '../site/ColourField.jsx'
 import { Segmented } from '../site/Segmented.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 import { holdScrollFrom } from '../site/holdScroll.js'
 import { renderFlagSvg } from '../flag/renderFlagSvg.js'
 import { FLAG_PALETTE_HINTS, FLAG_PALETTE_LABELS, FLAG_PALETTE_ORDER, FLAG_SWATCHES } from '../flag/flagPalettes.js'
@@ -327,13 +328,12 @@ export const AboutCollection = ({ collection }) => {
   })
   // Closed at first: the cards already carry the short form, and this is the long one.
   return (
-    <details className="panel gallery__about gallery__about--closed">
-      <summary>
-        <h2>{entries.length === 1 ? 'About this mark' : 'About these marks'}</h2>
-        <span className="gallery__summary-hint">Provenance, fidelity, dates and rights</span>
-      </summary>
-      <Facts rows={rows} />
-    </details>
+    <section className="panel gallery__about" aria-labelledby="gallery-about-title">
+      <h2 id="gallery-about-title">{entries.length === 1 ? 'About this mark' : 'About these marks'}</h2>
+      <Disclosure summary="Provenance, fidelity, dates and rights">
+        <Facts rows={rows} />
+      </Disclosure>
+    </section>
   )
 }
 
@@ -655,7 +655,7 @@ export const Timeline = ({ eras, current, onPick, history, onChooseCollection, c
     </nav>
   )
   return steps > 5
-    ? <details className="gallery__timeline-index"><summary>Jump to an era <span>{steps} steps</span></summary>{rail}</details>
+    ? <Disclosure className="gallery__timeline-index" summary="Jump to an era" hint={`${steps} steps`}>{rail}</Disclosure>
     : rail
 }
 
@@ -747,12 +747,11 @@ const EraMore = ({ era }) => {
   const dated = Boolean(era.applicability)
   if (!dated && !era.seenAt?.length && !era.sources?.length) return null
   return (
-    <details className="gallery__era-more">
-      <summary>{dated ? 'Dates & sources' : 'Sources'}</summary>
+    <Disclosure className="gallery__era-more" summary={dated ? 'Dates & sources' : 'Sources'}>
       <EraDates era={era} />
       <SeenAt urls={era.seenAt} />
       <Sources sources={era.sources} />
-    </details>
+    </Disclosure>
   )
 }
 

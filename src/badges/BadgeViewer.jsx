@@ -13,6 +13,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { cardLabel, loadPatchSvg, variantsOf } from 'patcher/library'
 import { Segmented } from '../site/Segmented.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 import { holdScroll } from '../site/holdScroll.js'
 import { SourceOverlay } from '../patches/SourceOverlay.jsx'
 import { BadgeRelief } from '../patches/BadgeRelief.jsx'
@@ -372,8 +373,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
             </p>
           )}
 
-          <details className="patch__limits">
-            <summary>How the badge is built</summary>
+          <Disclosure className="patch__limits" summary="How the badge is built">
             <p>{leather
               ? 'Shown as tooled leather from the catalogue attribution. Material, size, relief and curvature have not been measured from the specimen.'
               : 'An illustrative 3D view: size, relief, finish and curvature are modelling choices, not measurements.'}</p>
@@ -389,20 +389,16 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
               The size, depths, finish and curvature are not measured from a specimen, and the reverse has no pin, clutch
               or maker’s marks. Fine detail in the drawing (letter shapes, the arms) is its reconstruction, not the die’s.
             </p>
-          </details>
+          </Disclosure>
           <PatchHistory patch={patch} />
           {patch.limitations && (
-            <details className="patch__limits">
-              <summary>Limitations of the drawing</summary>
-              <p>{patch.limitations}</p>
-            </details>
+            <p className="patch__limits"><strong>Limitations of the drawing:</strong> {patch.limitations}</p>
           )}
           {photosOf(patch).length <= 1 && patch.sourceUrl && <p className="patch__source"><a href={patch.sourceUrl} target="_blank" rel="noreferrer">Source image</a></p>}
         </aside>
 
         {/* The evidence behind the drawing, closed until asked for. */}
-        {(review || reviewIndex.status === 'failed') && <details className="patch__review">
-          <summary><h3>Source comparison</h3></summary>
+        {(review || reviewIndex.status === 'failed') && <Disclosure className="patch__review" summary="Source comparison">
           {review && <p className="patch__review-heading"><span className={`patch__review-status patch__review-status--${reviewIsCurrent ? review.status : 'unreviewed'}`}>{reviewIsCurrent ? REVIEW_LABELS[review.status] ?? 'Not yet reviewed' : 'Drawing changed since review'}</span></p>}
           {reviewIndex.status === 'failed' && <p role="status">The source comparison could not be loaded. <button type="button" className="button--inline" onClick={() => setReviewAttempt((n) => n + 1)}>Retry comparison</button></p>}
           {!reviewIsCurrent && <p>The findings below describe an earlier drawing. The current reconstruction needs another comparison.</p>}
@@ -417,7 +413,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
             <a href={source.url} target="_blank" rel="noreferrer">Open full source</a>
           </div>}
           {review && <p className="patch__review-date">Evidence record: {review.reviewedAt ?? reviewIndex.data.reviewedAt}. Source images keep their original proportions.</p>}
-        </details>}
+        </Disclosure>}
       </div>
     </section>
   )

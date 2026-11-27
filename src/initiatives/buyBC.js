@@ -42,8 +42,8 @@ export const buyBCDetail = (entry) => ({
     { id: 'sources', label: 'Sources', type: 'sources', records: sources }
   ],
   relatedLinks: [
-    { label: 'Buy BC in the government history', to: { view: 'government', node: 'sub-buy-bc' } },
-    { label: 'Buy BC in the logo gallery', to: { view: 'gallery', logos: 'specimens-buy-bc' } },
+    { label: 'Buy BC', to: { view: 'government', node: 'sub-buy-bc' } },
+    { label: 'Buy BC logos', to: { view: 'gallery', logos: 'specimens-buy-bc' } },
     { label: 'BC Agriculture Council', to: { view: 'gallery', subject: 'bc-agriculture-council' } },
     { label: 'Investment Agriculture Foundation of British Columbia', to: { view: 'gallery', subject: 'investment-agriculture-foundation' } }
   ]

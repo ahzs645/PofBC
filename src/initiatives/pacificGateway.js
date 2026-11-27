@@ -11,7 +11,7 @@ export const pacificGatewayDetail = (entry) => {
     id: entry.id, title: entry.title, sources,
     hero: { title: entry.title, eyebrow: entry.subtitle, description: entry.summary },
     relatedLinks: [
-      { label: 'The earlier Pacific Gateway lockup in the logo gallery', to: { view: 'gallery', logos: 'bc-mark', mark: 'pacific-gateway' } }
+      { label: 'The earlier Pacific Gateway lockup', to: { view: 'gallery', logos: 'bc-mark', mark: 'pacific-gateway' } }
     ],
     sections: [
       {

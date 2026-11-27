@@ -4,6 +4,7 @@
 
 import { memo, useDeferredValue, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { CollectionCard, Tile } from './GalleryView.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 import { tileArt, onPage } from './tileArt.js'
 import {
   GALLERY_MODES, PRESENT_YEAR, allLogosOf, documentedCounts, firstMarkYear, currentMarkOf, logosInYear, organizationStatus
@@ -132,13 +133,15 @@ export const CurrentOrganizations = ({ sections, theme, onChooseCollection }) =>
         </section>
       ))}
       {unconfirmed.length > 0 && (
-        <details className="gallery__shelf gallery__unconfirmed">
-          <summary>
-            <span className="gallery__category-title">Status not confirmed</span>
-            <span className="gallery__note">{unconfirmed.length} organizations with no source here for whether they stand today</span>
-          </summary>
-          <div className="gallery__collections">{unconfirmed.map(card)}</div>
-        </details>
+        <section className="gallery__shelf gallery__category gallery__unconfirmed" aria-labelledby="current-unconfirmed">
+          <div className="gallery__category-head">
+            <h2 id="current-unconfirmed" className="gallery__category-title">Status not confirmed</h2>
+            <span className="gallery__count">{unconfirmed.length}</span>
+          </div>
+          <Disclosure summary={`Show the ${unconfirmed.length} organizations`} hint="No source here says whether they stand today">
+            <div className="gallery__collections">{unconfirmed.map(card)}</div>
+          </Disclosure>
+        </section>
       )}
     </>
   )

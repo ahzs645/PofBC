@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Disclosure } from '../site/Disclosure.jsx'
 import {
   COVERAGE_FAMILIES, COVERAGE_STATES, IDENTITY_COVERAGE, INVERSE_RELATION_LABELS, coverageSummary, familyById,
   filterIdentityCoverage, identitySubjectById, regionOf, relationsOf, subjectsForCollection
@@ -121,8 +122,7 @@ const MunicipalRegions = ({ subjects, onOpen, onRegion }) => {
   return (
     <div className="identity-regions">
       {regions.map(({ region, subjects: inRegion }) => (
-        <details key={region} className="identity-region">
-          <summary>{region}<span>{inRegion.length} {inRegion.length === 1 ? 'municipality' : 'municipalities'}{located(inRegion)}</span></summary>
+        <Disclosure key={region} className="identity-region" summary={region} hint={`${inRegion.length} ${inRegion.length === 1 ? 'municipality' : 'municipalities'}${located(inRegion)}`}>
           <div className="identity-subject-links">{inRegion.map((subject) => <SubjectButton key={subject.id} subject={subject} onOpen={onOpen} />)}</div>
           <button type="button" className="gallery__back" onClick={(event) => {
             // The regions give way to the one region's municipalities: their heading takes the
@@ -130,7 +130,7 @@ const MunicipalRegions = ({ subjects, onOpen, onRegion }) => {
             holdScroll(event.currentTarget, { find: () => document.getElementById('identity-family-municipalities') })
             onRegion(region)
           }}>Only this region</button>
-        </details>
+        </Disclosure>
       ))}
     </div>
   )
@@ -182,6 +182,9 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
     const members = filterIdentityCoverage(subjects, { family: group.id })
     if (group.id === COMMISSION_FAMILY.id) {
       members.sort((a, b) => commissionById.get(a.id).name.localeCompare(commissionById.get(b.id).name, 'en-CA'))
+      // A commission held in another family (a Crown corporation's "FPSC") is named in full here, as
+      // the group is sorted and the commissions register names it.
+      return { ...group, subjects: members.map((subject) => ({ ...subject, label: commissionById.get(subject.id).name })) }
     }
     return { ...group, subjects: members }
   }).filter((group) => group.subjects.length)
@@ -209,16 +212,18 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
       </div>
       {(family?.note || family?.description) && <p className="gallery__note">{family.note || family.description}{family.id === 'municipalities' && ` Registry as of ${MUNICIPAL_AS_OF}; filter by regional district with Region.`}</p>}
       {!subjects.length && <p className="identity-empty">No subjects match these filters. Try another name or clear the filters.</p>}
-      {commissionsSelected && <details className="identity-research">
-        <summary>Where to find other commissions</summary>
+      {commissionsSelected && <Disclosure className="identity-research" summary="Where to find other commissions">
         <ul className="identity-sources">{COMMISSION_DIRECTORIES.map((entry) => <li key={entry.url}>
           <External href={entry.url}>{entry.title}</External><p>{entry.note}</p>
         </li>)}</ul>
-      </details>}
+      </Disclosure>}
       {groups.map((group) => (
         <section className="identity-family" key={group.id} aria-labelledby={`identity-family-${group.id}`}>
-          <h3 id={`identity-family-${group.id}`}>{group.label}<span>{group.subjects.length} subjects</span></h3>
-          {group.id === COMMISSION_FAMILY.id && !commissionsSelected && <button type="button" className="gallery__back" onClick={() => update({ family: COMMISSION_FAMILY.id })}>Browse commissions across all families →</button>}
+          <div className="identity-family__head">
+            <h3 id={`identity-family-${group.id}`}>{group.label}<span>{group.subjects.length} {group.subjects.length === 1 ? 'subject' : 'subjects'}</span></h3>
+            {/* A link to the whole commissions register, beside the heading rather than a button over the list. */}
+            {group.id === COMMISSION_FAMILY.id && !commissionsSelected && <button type="button" className="identity-family__more" onClick={() => update({ family: COMMISSION_FAMILY.id })}>All commissions, across families <span aria-hidden="true">→</span></button>}
+          </div>
           {group.id === 'postsecondary-history' && <PostsecondaryCounts subjects={group.subjects} />}
           {commissionsSelected ? (
             <ul className="identity-sources">{group.subjects.map((subject) => {
@@ -233,12 +238,12 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
             : <IdentitySubjectLinks subjects={group.subjects} onOpen={onOpenSubject} />}
         </section>
       ))}
-      <details className="identity-method"><summary>What the register measures</summary>
+      <section className="identity-method" aria-labelledby="identity-method-title"><h3 id="identity-method-title">What the register measures</h3>
         <p>Each subject has its own evidence. A parent’s logo does not fill its services’ gaps, and a collected file does not establish a complete history.</p>
         <p>This is a researched collection scope, not a census of every BC institution. It retains the earlier Crown corporation and health-authority queue and adds explicit agencies, regional bodies, officers and service identities. Named wider institutions can be filtered separately.</p>
         <p>Evidence states describe the files actually held. They do not imply permission to reuse a mark, an adoption date, or complete coverage of every historical era. Those questions remain attached to each specimen and its sources.</p>
         <dl>{Object.entries(COVERAGE_STATES).map(([id, state]) => <div key={id}><dt>{state.label}</dt><dd>{state.description}</dd></div>)}</dl>
-      </details>
+      </section>
     </div>
   )
 }
@@ -488,8 +493,7 @@ export const IdentitySubjectDetail = ({ subject, theme, onHome, onOpenRegister, 
           </section>
 
           {(subject.sources?.length > 0 || (heldEntries.length > 0 && subject.nextAction)) && (
-            <details className="identity-research">
-              <summary>Research notes<span>{[heldEntries.length > 0 && subject.nextAction ? 'next step' : null, subject.sources?.length ? `${subject.sources.length} ${subject.sources.length === 1 ? 'source' : 'sources'}` : null].filter(Boolean).join(' · ')}</span></summary>
+            <Disclosure className="identity-research" summary="Research notes" hint={[heldEntries.length > 0 && subject.nextAction ? 'next step' : null, subject.sources?.length ? `${subject.sources.length} ${subject.sources.length === 1 ? 'source' : 'sources'}` : null].filter(Boolean).join(' · ')}>
               {heldEntries.length > 0 && subject.nextAction && <p className="identity-research__next"><strong>Next:</strong> {subject.nextAction}</p>}
               <ul className="identity-sources">{subject.sources.map((source, index) => (
                 <li key={`${source.url ?? source.title}-${index}`}>
@@ -497,7 +501,7 @@ export const IdentitySubjectDetail = ({ subject, theme, onHome, onOpenRegister, 
                   {(source.note || source.citation) && <p>{source.note ?? source.citation}</p>}
                 </li>
               ))}</ul>
-            </details>
+            </Disclosure>
           )}
         </div>
 

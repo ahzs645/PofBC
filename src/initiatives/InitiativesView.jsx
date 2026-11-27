@@ -1,19 +1,18 @@
 import { useEffect, useLayoutEffect, useState } from 'react'
 import { Breadcrumbs } from '../site/Breadcrumbs.jsx'
-import { INITIATIVES, initiativeById, loadInitiative } from './initiatives.js'
+import { INITIATIVES, initiativeAncestors, initiativeById, initiativeParts, loadInitiative } from './initiatives.js'
 import { InitiativeDetail } from './InitiativeDetail.jsx'
 import { initiativePlaceUrl, readInitiativePlace } from './initiativePlace.js'
-import { searchInitiatives } from './initiativeModel.js'
+import { indexGroups, searchInitiatives } from './initiativeModel.js'
+import { InitiativeParts, coverFile, coverUrl } from './InitiativeParts.jsx'
 import { writeHistory } from '../site/browserHistory.js'
 import { SiteLink } from '../site/navigation.jsx'
 import { documentTitle, setDocumentMeta } from '../site/documentMeta.js'
 import { useCatalogueIndex } from '../site/useCatalogueIndex.js'
 import { useSiteTheme } from '../site/useTheme.js'
-import { COLLECTED_DISPLAY } from '../gallery/collectedDisplay.js'
 import './initiatives.css'
 
 const plainClick = (event) => event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey
-const coverUrl = (file) => `${import.meta.env.BASE_URL}${file.replace(/^\//, '')}`
 const Forward = () => <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10h13m-5-5 5 5-5 5" stroke="currentColor" strokeWidth="1.4" /></svg>
 const INDEX_DESCRIPTION = 'Explore British Columbia’s public programs, campaigns and services through their websites, identities, publications and source records.'
 
@@ -25,7 +24,7 @@ export const InitiativesView = () => {
   const { name: theme } = useSiteTheme()
   const { cards, query, setQuery, openCard, closeCard } = useCatalogueIndex('initiatives')
   const initiative = initiativeById(place.initiative)
-  const parent = initiativeById(initiative?.parentId)
+  const ancestors = initiative ? initiativeAncestors(initiative.id) : []
 
   useLayoutEffect(() => {
     const saved = globalThis.history?.state?.catalogueIndex
@@ -81,35 +80,44 @@ export const InitiativesView = () => {
   if (place.initiative) return <main className="initiatives">
     <Breadcrumbs label="Initiatives" steps={[
       { label: 'All initiatives', href: '?view=initiatives', onClick: back },
-      ...(parent ? [{ label: parent.title, to: { view: 'initiatives', initiative: parent.id } }] : []),
+      ...ancestors.map((program) => ({ label: program.title, to: { view: 'initiatives', initiative: program.id } })),
       { label: initiative?.title ?? 'Unknown initiative' }
     ]} />
     {!initiative ? <div className="initiatives__empty"><h2>Initiative not found</h2><p>This initiative is not in the catalogue. Browse the available initiatives using the link above.</p></div>
       : error ? <div className="initiatives__empty" role="alert"><h2>The initiative could not load</h2><p>Please try again.</p><button type="button" onClick={() => setAttempt((value) => value + 1)}>Try again</button></div>
-        : detail?.id === initiative.id ? <InitiativeDetail key={detail.id} initiative={detail} subInitiatives={INITIATIVES.filter((entry) => entry.parentId === detail.id)} place={place} onChange={changeSection} />
+        : detail?.id === initiative.id ? <InitiativeDetail key={detail.id} initiative={detail} entry={initiative} parent={ancestors.at(-1)} parts={initiativeParts(initiative.id)} place={place} onChange={changeSection} />
           : <p className="initiatives__loading" role="status">Loading {initiative.title}…</p>}
   </main>
 
   const results = searchInitiatives(query, INITIATIVES)
+  const groups = indexGroups(results, INITIATIVES)
+  const programs = groups.filter((group) => group.parts.length)
+  const singles = groups.filter((group) => !group.parts.length)
+  const card = ({ program, matched }) => <a key={program.id} className="initiatives__card" data-context={matched ? undefined : true}
+    href={`?view=initiatives&initiative=${encodeURIComponent(program.id)}`} onClick={(event) => open(event, program.id)} ref={(element) => { cards.current[program.id] = element }}>
+    <div className="initiatives__card-copy">
+      <p className="initiatives__eyebrow">{program.subtitle}</p><h3>{program.title}</h3><p>{program.summary}</p>
+      {program.tags?.length > 0 && <ul className="initiatives__tags" aria-label="Available material">{program.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>}
+      <span className="initiatives__explore">Explore initiative <Forward /></span>
+    </div>
+    {program.cover && <figure className="initiatives__cover">
+      <span className="initiatives__art" data-themed={coverFile(program.cover, theme) !== program.cover.file ? true : undefined} data-dark={program.cover.darkBackground ? true : undefined}>
+        <img src={coverUrl(coverFile(program.cover, theme))} alt={program.cover.alt} />
+      </span>
+      <figcaption>{program.cover.caption}</figcaption>
+    </figure>}
+  </a>
   return <main className="initiatives">
     <div className="initiatives__toolbar">
       <div><h3>Explore initiatives</h3><p aria-live="polite">{results.length} {results.length === 1 ? 'initiative' : 'initiatives'}{query.trim() ? ' matching your search' : ' in the collection'}</p></div>
       <label className="initiatives__search"><span className="initiatives__sr-only">Search initiatives</span><input type="search" placeholder="Search initiatives or programs" value={query} onChange={(event) => setQuery(event.target.value)} /></label>
     </div>
-    <div className="initiatives__grid" data-single={results.length === 1}>
-      {results.map((entry) => <a key={entry.id} className="initiatives__card" href={`?view=initiatives&initiative=${encodeURIComponent(entry.id)}`} onClick={(event) => open(event, entry.id)} ref={(element) => { cards.current[entry.id] = element }}>
-        <div className="initiatives__card-copy">
-          <p className="initiatives__eyebrow">{entry.subtitle}</p><h3>{entry.title}</h3><p>{entry.summary}</p>
-          {entry.tags?.length > 0 && <ul className="initiatives__tags" aria-label="Available material">{entry.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>}
-          <span className="initiatives__explore">Explore initiative <Forward /></span>
-        </div>
-        {entry.cover && <figure className="initiatives__cover" data-themed={entry.cover.displayId ? true : undefined}>
-          <img src={coverUrl(COLLECTED_DISPLAY[entry.cover.displayId]?.[theme]?.file ?? entry.cover.file)} alt={entry.cover.alt} />
-          <figcaption>{entry.cover.caption}</figcaption>
-        </figure>}
-      </a>)}
-    </div>
+    {programs.map((group) => <article key={group.program.id} className="initiatives__program" aria-label={group.program.title}>
+      {card(group)}
+      <InitiativeParts program={group.program} parts={group.parts} theme={theme} onOpen={open} linkRef={(id) => (element) => { cards.current[id] = element }} />
+    </article>)}
+    {singles.length > 0 && <div className="initiatives__grid" data-single={singles.length === 1 && !programs.length}>{singles.map(card)}</div>}
     {!results.length && <div className="initiatives__empty"><h3>No matching initiatives</h3><p>Try a program, campaign or organization name.</p><button type="button" onClick={() => setQuery('')}>Show all initiatives</button></div>}
-    <aside className="initiatives__about"><h3>One initiative, a connected history.</h3><p>Websites, campaign artwork and publications belong together. Each collection keeps the original material alongside its dates, sources and related organizations.</p></aside>
+    <aside className="initiatives__about"><h3>One initiative, a connected history.</h3><p>Websites, campaign artwork and publications belong together. Each collection keeps the original material alongside its dates, sources and related organizations. A program’s campaigns, events and sub-programs are listed beneath it and keep pages of their own.</p></aside>
   </main>
 }

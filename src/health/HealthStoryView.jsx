@@ -6,6 +6,7 @@ import {
   areaById, areasIn, assetUrl, filterAreas, formatDate, frameworkById, readHealthPlace, relatedAreas,
 } from './healthStoryData.js'
 import { SiteLink } from '../site/navigation.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 import { holdScrollFrom } from '../site/holdScroll.js'
 import './healthStory.css'
 import { Checkbox } from '../site/ui/Checkbox.jsx'
@@ -197,8 +198,8 @@ export function HealthStoryView() {
     </section>
 
     <section className="hm-method" aria-labelledby="hm-method-title">
-      <details className="hm-method__fold">
-      <summary className="hm-section-heading"><div><p className="hm-kicker">Method</p><h2 id="hm-method-title">How these boundaries were made</h2></div></summary>
+      <div className="hm-section-heading"><div><p className="hm-kicker">Method</p><h2 id="hm-method-title">How these boundaries were made</h2></div></div>
+      <Disclosure className="hm-method__fold" summary="The three steps, and how closely they match the printed maps">
       <ol className="hm-steps">
         <li><b>Georectify the printed maps.</b> The three 1997/98 Ministry maps (published by the Auditor General in March 1998) and the Statistics Canada map were fitted onto modern BC geography. Thousands of points along each printed boundary were matched to the coast, the provincial border and modern local health area (LHA) edges, and each map panel, including the enlarged insets, was warped to fit.</li>
         <li><b>Snap each printed region to local health areas.</b> Health regions were built from LHAs, so every LHA that falls at least half inside a printed region is assigned to it. Two exceptions, where a legal boundary description settles a detail the printed map is too small to show, are noted on those areas.</li>
@@ -206,7 +207,7 @@ export function HealthStoryView() {
       </ol>
       <AccuracyTable />
       <p className="hm-small">Boundaries use today’s LHA lines. Where a 1997 edge did not follow one, the true line can differ locally. The statistical layer also corrects an earlier mix-up: New Westminster belongs to Simon Fraser (region 08) and Burnaby is region 17.</p>
-      </details>
+      </Disclosure>
       <div className="hm-downloads">
         <a className="hm-button hm-button--quiet" href={asset('historical-boundaries.geojson')} download>Download all boundaries (GeoJSON) ↓</a>
         <a href={asset('georectification.json')} download>Fit and LHA-share report ↓</a>

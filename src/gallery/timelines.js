@@ -903,6 +903,44 @@ const BCT_SOURCES = {
  * eras itself; what is here is everything else an era says.
  */
 export const COLLECTION_ERAS = {
+  // The Fish and Wildlife Branch's own marks, shared with the Department of Recreation and
+  // Conservation's collection: its square in the department's set, then its own oval and lockup.
+  'fish-wildlife-branch': [
+    {
+      id: 'fwb-square',
+      status: 'held',
+      years: '1971–1973',
+      label: 'The branch’s square',
+      note: 'A deer’s head and a fish, interlocked in a rounded square: the Fish and Wildlife Branch’s symbol in ' +
+        'the Department of Recreation and Conservation’s family of five, which has its own collection. The 1973 ' +
+        'report still prints it on its back cover after the branch’s own emblem appears.',
+      applicability: { kind: 'dated_specimen', years: '1971–1973', note: DRC_SQUARES },
+      sources: [
+        DRC_REPORT(1971, DRC_1971, 16, 'Fish and Wildlife Branch divider'),
+        DRC_REPORT(1973, DRC_1973, 162, 'Back cover with the deer and fish square')
+      ]
+    },
+    {
+      id: 'fwb-emblem',
+      status: 'held',
+      years: '1972–73 synopsis and 1973 report',
+      label: 'The F&W oval, and the emblem with the branch’s name',
+      note: 'The 1972–73 hunting regulations cover shows a framed oval above F&W. The 1972 annual report records a ' +
+        'new insignia used to identify vehicles, offices and field installations, without showing or naming its ' +
+        'designer. In the 1973 report the branch’s dividers set the emblem beside a panel reading British Columbia ' +
+        'Fish & Wildlife Branch.',
+      applicability: {
+        kind: 'dated_specimen',
+        years: '1972–73 synopsis and 1973 report',
+        note: 'The synopsis cover dates the oval, and the 1973 annual report the emblem beside the name. Neither dates its introduction.'
+      },
+      sources: [
+        source('British Columbia Hunting Regulations, Synopsis 1972–1973, cover', HUNTING_1972_73),
+        DRC_REPORT(1972, DRC_1972_MINISTRY, 57, 'Fish and Wildlife Branch promotional activities, printed Z56'),
+        DRC_REPORT(1973, DRC_1973, 22, 'Fish and Wildlife Branch divider')
+      ]
+    }
+  ],
   'royal-bc-museum': [
     {
       id: 'rbcm-bcpm-square',

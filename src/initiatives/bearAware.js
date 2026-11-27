@@ -112,9 +112,9 @@ export const bearAwareDetail = (entry) => ({
   id: entry.id, title: entry.title, sources,
   hero: { title: entry.title, eyebrow: entry.subtitle, description: entry.summary, image: entry.cover, caption: entry.cover.caption },
   relatedLinks: [
-    { label: 'Window sign in Signs', to: { view: 'signs', sign: bearAwareWindowId } },
-    { label: 'Window sign in Posters', to: { view: 'posters', poster: bearAwareWindowId } },
-    { label: 'Be Bear Aware paw lockup in Gallery', to: { view: 'gallery', logos: bearAwareGalleryId, mark: bearAwareMarkId } }
+    { label: 'We Are Bear Aware window sign', to: { view: 'signs', sign: bearAwareWindowId } },
+    { label: 'We Are Bear Aware window sign', to: { view: 'posters', poster: bearAwareWindowId } },
+    { label: 'Be Bear Aware paw lockup', to: { view: 'gallery', logos: bearAwareGalleryId, mark: bearAwareMarkId } }
   ],
   sections: [
     { id: 'sign-and-checklists', label: 'Sign & checklists', type: 'records',

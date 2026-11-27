@@ -122,8 +122,8 @@ export const CollectedPaletteView = ({ entry }) => {
         {master.sourcePage && <div><dt>Publication</dt><dd><a href={master.sourcePage} target="_blank" rel="noreferrer">
           View source publication or page</a>{master.sourceLocator ? ` · ${master.sourceLocator}` : ''}</dd></div>}
       </dl>
-      <details className="gallery__palette-sources">
-        <summary>Original source files</summary>
+      <div className="gallery__palette-sources">
+        <h3>Original source files</h3>
         <p>The original files are kept as published. Colour choices above reuse the source SVG’s shapes; downloads reflect the selected palette.</p>
         <ul>
           {sourceFiles.map((source) => (
@@ -133,7 +133,7 @@ export const CollectedPaletteView = ({ entry }) => {
             </li>
           ))}
         </ul>
-      </details>
+      </div>
     </section>
   )
 }

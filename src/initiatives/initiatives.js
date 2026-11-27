@@ -1,6 +1,7 @@
 import { bearAwareId, bearAwareIndex } from './bearAwareArtwork.js'
 import { FIRE_SMART_INITIATIVES } from './fireSmartIndex.js'
 import { YOUTH_PROGRAMS } from './youthProgramsIndex.js'
+import { ancestorsOf, partsOf, templateInitiative } from './initiativeModel.js'
 import { educationProvinceId, educationProvinceTitle, educationProvinceWordmark } from './educationProvinceArtwork.js'
 
 // The index stays small: an initiative's sourced records are loaded only when it opens.
@@ -70,7 +71,12 @@ export const INITIATIVES = [
     cover: { file: 'identity-collected/bc-youth/right-flag.svg', alt: 'BC Youth wordmark and waving flag', caption: 'Reconstruction of the mark printed in October 1989' },
     tags: ['Youth grants', 'Logos', 'Timeline'],
     searchTerms: ['British Columbia Youth Advisory Council', 'The Next Step', 'Stanley B. Hagen', 'Minister Responsible for Youth', 'Youth Grants Program'],
-    relatedBodyIds: ['bc-youth', 'bc-youth-advisory-council', 'ministry-of-labour-1976', 'ministry-of-advanced-education-and-job-training-1986']
+    relatedBodyIds: ['bc-youth', 'bc-youth-advisory-council', 'ministry-of-labour-1976', 'ministry-of-advanced-education-and-job-training-1986'],
+    parts: {
+      label: 'Youth programs of 1989', noun: ['youth program', 'youth programs'],
+      note: 'Stan Hagen, Minister Responsible for Youth, described these three programs to the legislature on May 12, 1989. Each was administered by its own ministries.',
+      source: { title: 'B.C. Hansard, May 12, 1989, p. 6750', url: 'https://lims.leg.bc.ca/hdms/file/Debates/34th3rd/34p_03s_890512a.htm#06750' }
+    }
   },
   ...YOUTH_PROGRAMS,
   {
@@ -114,7 +120,12 @@ export const INITIATIVES = [
       'Thompson Okanagan Tourism Association', 'Destination Osoyoos', 'Indigenous Tourism BC',
       'Research & Planning', 'Visitor Services', 'Travel Media Relations', 'Tourism BC Industry Programs'
     ],
-    relatedBodyIds: ['tourism-bc', 'destination-bc']
+    relatedBodyIds: ['tourism-bc', 'destination-bc'],
+    parts: {
+      label: 'Destination BC brands', noun: ['destination brand', 'destination brands'],
+      note: 'Destination BC publishes the brand guidelines for its tourism partners.',
+      source: { title: 'Rainforest to Rockies Industry Brand Guidelines, March 2024', url: 'https://www.destinationbc.ca/content/uploads/2024/03/Rainforest-to-Rockies-Industry-Brand-Guidelines.pdf' }
+    }
   },
   {
     id: 'rainforest-to-rockies',
@@ -173,6 +184,12 @@ export const initiativesForBody = (id) => INITIATIVES.filter((initiative) => ini
 /** Lightweight metadata for a stable initiative ID, or null when it is unknown. */
 export const initiativeById = (id) => INITIATIVES.find((initiative) => initiative.id === id) ?? null
 
+/** The parts listed beneath a program on the index and on the program's page. */
+export const initiativeParts = (id) => partsOf(id, INITIATIVES)
+
+/** The programs an initiative sits within, outermost first, for the trail at the top of its page. */
+export const initiativeAncestors = (id) => ancestorsOf(id, INITIATIVES)
+
 const tourismDetail = (data, guide, rebranding, brief) => {
   const sources = [...data.sources, ...rebranding.tourismRebrandingSources, ...brief.tourismBriefSources]
   const heroImage = data.marks.flatMap((record) => record.images ?? [])
@@ -182,7 +199,7 @@ const tourismDetail = (data, guide, rebranding, brief) => {
     title: 'Tourism',
     hero: {
       eyebrow: 'Tourism BC & Destination BC',
-      title: 'Tourism, on screen\nand in print.',
+      title: 'Tourism',
       description: initiativeById('tourism').summary,
       image: heroImage ?? tourismCover,
       caption: tourismCover.caption
@@ -220,11 +237,11 @@ const tourismDetail = (data, guide, rebranding, brief) => {
         to: { view: 'signs', sign: 'i-180' }
       },
       {
-        label: 'Tourism BC in government',
+        label: 'Tourism BC',
         to: { view: 'government', node: 'tourism-bc', year: 2009 }
       },
       {
-        label: 'Destination BC in government',
+        label: 'Destination BC',
         to: { view: 'government', node: 'destination-bc' }
       }
     ],
@@ -363,9 +380,9 @@ const gamesenseDetail = () => ({
   ],
   sources: GAMESENSE_SOURCES,
   relatedLinks: [
-    { label: 'GameSense in the logo gallery', to: { view: 'gallery', logos: 'collected-gamesense' } },
+    { label: 'GameSense logos', to: { view: 'gallery', logos: 'collected-gamesense' } },
     { label: 'BCLC’s logos', to: { view: 'gallery', logos: 'bclc' } },
-    { label: 'BCLC in government', to: { view: 'government', node: 'bclc' } }
+    { label: 'British Columbia Lottery Corporation', to: { view: 'government', node: 'bclc' } }
   ],
   sections: [
     {
@@ -404,7 +421,7 @@ const gamesenseDetail = () => ({
             dateLabel: 'GameSense Info Card, 2025'
           }],
           sourceRefs: [{ sourceId: 'gamesense-website' }, { sourceId: 'gamesense-info-card-2025', page: 1 }],
-          links: [{ label: 'Open in the logo gallery', url: '?view=gallery&logos=collected-gamesense' }]
+          links: [{ label: 'GameSense logos', url: '?view=gallery&logos=collected-gamesense' }]
         }
       ]
     },
@@ -499,6 +516,7 @@ const LOADERS = {
 
 /** Load an initiative's shared detail model; unknown IDs do not load any dataset. */
 export const loadInitiative = async (id) => {
-  if (!initiativeById(id)) return null
-  return LOADERS[id]()
+  const entry = initiativeById(id)
+  if (!entry) return null
+  return templateInitiative(await LOADERS[id](), entry, initiativeParts(id))
 }

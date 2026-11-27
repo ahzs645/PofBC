@@ -19,10 +19,7 @@ export const bcYouthDetail = (entry) => ({
   hero: { title: entry.title, eyebrow: 'Provincial youth programs', description: entry.summary, image: entry.cover, caption: entry.cover.caption },
   sources,
   relatedLinks: [
-    { label: 'BC Youth identity register', to: { view: 'gallery', subject: 'bc-youth' } },
-    { label: 'Challenge ’89 summer employment program', to: { view: 'initiatives', initiative: 'challenge-89' } },
-    { label: 'Passport to Apprenticeship', to: { view: 'initiatives', initiative: 'passport-to-apprenticeship' } },
-    { label: 'Environment Youth Corps', to: { view: 'initiatives', initiative: 'environment-youth-corps' } },
+    { label: 'BC Youth identity', to: { view: 'gallery', subject: 'bc-youth' } },
     { label: 'BC Youth Advisory Council', to: { view: 'gallery', subject: 'bc-youth-advisory-council' } },
     { label: 'Ministry of Labour (1985 atlas)', to: { view: 'government', node: 'ministry-of-labour-1976', year: 1985 } },
     { label: 'Hagen’s Ministry of Advanced Education and Job Training', to: { view: 'government', node: 'ministry-of-advanced-education-and-job-training-1986', year: 1988 } }

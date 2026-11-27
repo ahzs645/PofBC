@@ -52,18 +52,15 @@ const ForestsPage = ({ headingRef }) => (
         </SiteLink>
       ))}
     </div>
-    <details className="panel gallery__about gallery__about--closed">
-      <summary>
-        <h2>About these marks</h2>
-        <span className="gallery__summary-hint">Provenance, fidelity, dates and versions</span>
-      </summary>
+    <section className="panel gallery__about" aria-labelledby="forests-about-title">
+      <h2 id="forests-about-title">About these marks</h2>
       <dl className="gallery__facts">
         <div><dt>Provenance</dt><dd>Reconstructions, not original artwork. The three Forest Oval designs are drawn by its engine from supplied references; the others are separate vector reconstructions from supplied images.</dd></div>
         <div><dt>Fidelity</dt><dd>Each is a reconstruction: its colours are flat approximations of the references, not verified ink specifications, and small details are interpreted.</dd></div>
         <div><dt>Dates</dt><dd>The designs are grouped by family. Apart from the seal and the emblem coming before the ovals, their order does not imply a verified sequence of adoption; each design’s dating is on its page.</dd></div>
         <div><dt>Versions</dt><dd>The colourways and studies offered on each design’s page are display variations. They do not establish historical adoption or official approval.</dd></div>
       </dl>
-    </details>
+    </section>
   </section>
 )
 

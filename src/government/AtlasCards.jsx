@@ -16,6 +16,7 @@ import { storySteps } from './storySteps.js'
 import { governmentIn, PRESENT_YEAR, FIRST_YEAR } from './snapshot.js'
 import { HISTORICAL_BODIES, MINISTERS, SUB_AGENCIES } from './historyData.js'
 import { Select } from '../site/ui/Select.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 
 const hostOf = (url) => {
   try { return new URL(url).hostname.replace(/^www\d?\./, '') } catch { return url }
@@ -104,10 +105,9 @@ export const EventsCard = ({ events, day, title = 'Origins and changes', limit =
                 <span className="gov-events__title">{event.title}</span>
                 {folded
                   ? (
-                    <details className="gov-events__more">
-                      <summary>Sources</summary>
+                    <Disclosure className="gov-events__more" summary="Sources">
                       <span className="gov-events__body"><EventDetail event={event} /></span>
-                    </details>
+                    </Disclosure>
                     )
                   : <EventDetail event={event} />}
               </span>
@@ -347,25 +347,23 @@ const measureCoverage = () => {
   ]
 }
 
-export const CoverageCard = () => {
-  const [rows, setRows] = useState(null)
+/**
+ * How much of the history the data covers, as shares. Measured when shown: it is shown only inside
+ * the sources card's fold, which is built when first opened (SourcesCard.jsx).
+ */
+export const Coverage = () => {
+  const rows = useMemo(measureCoverage, [])
   return (
-    <div className="gov-coverage">
-      <h3 className="gov-card__subheading">Coverage</h3>
-      {!rows && <button type="button" className="gov-show-more" onClick={() => setRows(measureCoverage())}>Measure coverage</button>}
-      {rows && (
-        <ul>
-          {rows.map((row) => (
-            <li key={row.label}>
-              <span className="gov-coverage__bar" style={{ '--share': `${(row.value / Math.max(1, row.of)) * 100}%` }} aria-hidden="true" />
-              <span>{row.label}</span>
-              <strong>{Math.round((row.value / Math.max(1, row.of)) * 100)}%</strong>
-              <span className="gov-muted">{row.value.toLocaleString('en-CA')} of {row.of.toLocaleString('en-CA')} · {row.note}</span>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
+    <ul className="gov-coverage">
+      {rows.map((row) => (
+        <li key={row.label}>
+          <span className="gov-coverage__bar" style={{ '--share': `${(row.value / Math.max(1, row.of)) * 100}%` }} aria-hidden="true" />
+          <span>{row.label}</span>
+          <strong>{Math.round((row.value / Math.max(1, row.of)) * 100)}%</strong>
+          <span className="gov-muted">{row.value.toLocaleString('en-CA')} of {row.of.toLocaleString('en-CA')} · {row.note}</span>
+        </li>
+      ))}
+    </ul>
   )
 }
 
@@ -507,33 +505,49 @@ export const RelationsCard = ({ relations }) => {
   )
 }
 
-/** Contemporary rosters have their own denominator and do not imply continuous existence. */
-export const ResearchCard = () => (
-  <section className="gov-card">
-    <h3 className="gov-card__subheading">Historical source rosters</h3>
+/**
+ * Contemporary rosters have their own denominator and do not imply continuous existence. Each is
+ * written out under its report, its rows in a short scrolling list, rather than folded one by one.
+ */
+export const HistoricalRosters = () => (
+  <>
     <p>These lists record what a report printed. A name match is a research lead; it does not establish founding, continuous responsibility or institutional identity.</p>
     {HISTORICAL_CENSUSES.map((census) => (
-      <div key={census.title ?? census.ministry}>
+      <div key={census.title ?? census.ministry} className="gov-rosters">
         <h4>{census.title ?? census.ministry}</h4>
-        {census.rosters.map((roster) => (
-          <details key={roster.id}>
-            <summary>{roster.report_period}: {roster.title ?? `Appendix ${roster.id.slice(-1).toUpperCase()}`} · {roster.rows.length} entries · {roster.observed_on ? `observed ${roster.observed_on}` : 'exact observation date unresolved'}</summary>
-            <SourceLink source={{ url: roster.source_url, title: 'Open source roster' }} />
-            {roster.limitation && <p className="gov-notice">{roster.limitation}</p>}
-            <ul>{roster.rows.map((row) => (
-              <li key={row.ordinal}>
-                <strong>{row.name_as_printed}</strong> · {row.parent_as_printed}
-                <span className="gov-muted"> · {row.disposition.replaceAll('_', ' ')}</span>
-              </li>
-            ))}</ul>
-          </details>
-        ))}
+        {census.rosters.map((roster) => {
+          const label = `${roster.report_period}: ${roster.title ?? `Appendix ${roster.id.slice(-1).toUpperCase()}`}`
+          return (
+            <div key={roster.id} className="gov-roster">
+              <p className="gov-roster__head">
+                <strong>{label}</strong>
+                <span className="gov-muted"> · {roster.rows.length} {roster.rows.length === 1 ? 'entry' : 'entries'} · {roster.observed_on ? `observed ${roster.observed_on}` : 'exact observation date unresolved'} · </span>
+                <SourceLink source={{ url: roster.source_url, title: 'Open source roster' }} />
+              </p>
+              {roster.limitation && <p className="gov-notice">{roster.limitation}</p>}
+              {/* A scrolling list takes the keyboard's focus, so it can be scrolled without a pointer. */}
+              <ul className="gov-roster__rows" tabIndex={roster.rows.length > 8 ? 0 : undefined} aria-label={roster.rows.length > 8 ? `${label}, entries` : undefined}>
+                {roster.rows.map((row) => (
+                  <li key={row.ordinal}>
+                    <strong>{row.name_as_printed}</strong> · {row.parent_as_printed}
+                    <span className="gov-muted"> · {row.disposition.replaceAll('_', ' ')}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )
+        })}
       </div>
     ))}
-    <details>
-      <summary>Import accounting</summary>
-      <p>Compiler outcomes describe processing, not historical verification. Full input assertions and reasons are retained in the research audit files.</p>
-      {Object.entries(IMPORT_COUNTS).map(([build, counts]) => <p key={build}>{build}: {counts ? Object.entries(counts).map(([status, count]) => `${count} ${status.replaceAll('_', ' ')}`).join(' · ') : 'not built'}</p>)}
-    </details>
-  </section>
+  </>
+)
+
+/** What the research compiler did with each input, as counts. */
+export const ImportAccounting = () => (
+  <>
+    <p>Compiler outcomes describe processing, not historical verification. Full input assertions and reasons are retained in the research audit files.</p>
+    <ul className="gov-import">
+      {Object.entries(IMPORT_COUNTS).map(([build, counts]) => <li key={build}><strong>{build}</strong>: {counts ? Object.entries(counts).map(([status, count]) => `${count.toLocaleString('en-CA')} ${status.replaceAll('_', ' ')}`).join(' · ') : 'not built'}</li>)}
+    </ul>
+  </>
 )

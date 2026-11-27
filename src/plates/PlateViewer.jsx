@@ -197,9 +197,9 @@ export const PlateViewer = ({ region, format, family, section, position, previou
               </ul>
             </div>
           )}
-          {/* How this plate was rebuilt and what is not known, closed until asked for. */}
-          <details className="plate__limits">
-            <summary>About these reconstructions</summary>
+          {/* How this plate was rebuilt and what is not known: short, and part of reading the plate. */}
+          <section className="plate__limits" aria-labelledby="plate-limits-title">
+            <h3 id="plate-limits-title">About these reconstructions</h3>
             {format.description && <p>{undash(format.description)}</p>}
             <p>
               Research lettering: letters traced from source photographs where they were seen; the rest use
@@ -207,7 +207,7 @@ export const PlateViewer = ({ region, format, family, section, position, previou
             </p>
             {format.pattern?.endsWith('syntax only') && <p>The serial is checked for its form only, not against a verified range.</p>}
             {region.notes && <p>{region.notes}</p>}
-          </details>
+          </section>
         </aside>
       </div>
     </section>

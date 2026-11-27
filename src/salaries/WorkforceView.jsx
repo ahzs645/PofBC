@@ -74,14 +74,14 @@ function HeadcountSalary({ data, populationId, layout }) {
           <MeasureChart rows={rows} measure="averageSalary" label="Average Salary, as published" format={formatWorkforceSalary} />
           <MeasureChart rows={rows} measure="realSalary" label={`Average Salary in ${CPI_LATEST} dollars (B.C. CPI)`} format={formatWorkforceSalary} />
         </div>}
-      <details className="salaries__about">
-        <summary className="salaries__title">How to read these figures</summary>
+      <section className="salaries__about" aria-labelledby="workforce-figures-notes">
+        <h3 id="workforce-figures-notes" className="salaries__title">How to read these figures</h3>
         <ul className="salaries__hint salaries__hint--small workforce__notes">
           <li>“Average HeadCount” and “Average Salary” are the release’s own labels; it does not explain how they were calculated, or when each year starts and ends. Year labels are as printed, and 2024 may not be a complete year.</li>
           <li>{populationId === 'victoria' ? 'Victoria-office employees are also counted in the all-employees figures; do not add the two populations.' : 'The population is the B.C. Public Service only, not the wider public sector.'} Page 1 of the release has the all-employees table and page 3 the Victoria-office table.</li>
           <li>These aggregates are separate from the named payment records, which only list people above the $75,000 threshold, and cannot be compared directly with an average of them. Dollars adjusted to {CPI_LATEST} use the B.C. consumer price index.</li>
         </ul>
-      </details>
+      </section>
     </section>
   )
 }
@@ -139,14 +139,14 @@ function Profiles({ data, edition, kind, query, layout, onEdition, onKind }) {
       {layout === 'cards' && chosenKind === 'EmpCounts' && !words.length
         ? <MinistryBars table={table} />
         : <DataTable key={table.name} data={rows} columns={columns} label={`${table.name} source rows`} />}
-      <details className="salaries__about">
-        <summary className="salaries__title">How to read these tables</summary>
+      <section className="salaries__about" aria-labelledby="workforce-tables-notes">
+        <h3 id="workforce-tables-notes" className="salaries__title">How to read these tables</h3>
         <ul className="salaries__hint salaries__hint--small workforce__notes">
           <li>Aggregate statistics from BC Stats corporate surveys, not a list of people. Cells keep their published text: “S” (suppressed), “NA” and blanks are not zero.</li>
           <li>Tables use different units and denominators, and groups overlap, so rows should not be added together. Comparison columns can refer to earlier years than the edition.</li>
           <li>Ministry names come from each edition’s own ministry key, since keys change between editions. <a href={data.catalogueUrl} target="_blank" rel="noreferrer">BC Stats catalogue and methods</a> · {data.license}.</li>
         </ul>
-      </details>
+      </section>
     </section>
   )
 }

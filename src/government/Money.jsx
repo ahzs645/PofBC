@@ -177,14 +177,14 @@ export const Money = ({ node, year }) => {
             {allStatements ? 'Show fewer' : `Show all ${statements.length}`}
           </button>}
         </div>}
-        <details className="gov-money__sources">
-          <summary>Sources</summary>
+        <div className="gov-money__sources">
+          <h3 className="gov-card__subheading">Sources</h3>
           <SourceList sources={[
             { ...FINANCE_SOURCES.table, locator: 'Each year’s Supplementary Information PDF; every figure links to its page' },
             { ...FINANCE_SOURCES.statements, locator: 'Financial statements of the government reporting entity, by sector' },
             ...(statements.some((statement) => statement.hosted === 'ministry page') ? [FINANCE_SOURCES.postSecondary] : [])
           ]} />
-        </details>
+        </div>
       </>}
     </section>
   )

@@ -15,11 +15,10 @@ import { InstrumentCard } from './LegislationCards.jsx'
 import { instrumentById } from './instruments.js'
 import { GovernmentGraph } from './GovernmentGraph.jsx'
 import { GovernmentList } from './GovernmentList.jsx'
-import { CompareView, CoverageCard, ResearchCard } from './AtlasCards.jsx'
-import { EVENT_SOURCES } from './events.js'
+import { CompareView } from './AtlasCards.jsx'
+import { SourcesCard } from './SourcesCard.jsx'
 import { Legend } from './Legend.jsx'
 import { Sheet } from './Sheet.jsx'
-import { StoryText } from './StoryText.jsx'
 import { ViewSwitcher } from '../site/ViewSwitcher.jsx'
 import { holdScrollFrom } from '../site/holdScroll.js'
 import { SiteLink, useNavigate } from '../site/navigation.jsx'
@@ -29,31 +28,11 @@ import { layoutGovernment } from './layout.js'
 import { FIRST_YEAR, governmentIn, lifeOf, lifespanOf, PRESENT_YEAR } from './snapshot.js'
 import { TimelineBar } from './TimelineBar.jsx'
 import { THEMES } from './theme.js'
-import { BODY_CHECKED, CURRENT_AS_OF, CURRENT_SOURCES } from './currentData.js'
 import { RelatedBodiesView } from './RelatedBodiesView.jsx'
 import { search } from './governmentSearch.js'
 import { relatedBodyById, relatedBodyPlace } from './relatedBodies.js'
 import { readGovernmentPlace } from './governmentPlace.js'
-import { HISTORY_SOURCES } from './historyData.js'
-import { TIMELINE_SOURCES } from './timelineData.js'
-import { AMR_ATTRIBUTION, AMR_COLLECTION, AMR_LICENCE } from './amrLicence.js'
 import './government.css'
-
-// What the view is drawn from, and how far to trust it: read in steps under Sources and caveats.
-const SOURCES_NOTE = `
-  Ministries and their lineage from the BC Archives’ ministry history diagram (to December 2024),
-  corrected where it leaves ends open and extended since. Ministers from the Legislative Library’s
-  Executive Council Appointments 1871–1986 and its cabinet lists since; former Crown corporations and
-  agencies, and past Speakers, officers and chief justices, from BC Archives, the Library, Orders in
-  Council and Wikipedia. Which ministry answered for a body is shown where a source states it, and
-  otherwise inferred and marked so. Cabinet appointments and portfolio transfers were checked on ${CURRENT_AS_OF}. Other agency
-  leadership was checked on ${BODY_CHECKED}. Staff are 2025/26 full-time equivalents from the Public
-  Accounts. The dates of the four identities are estimates, most of all the crest’s. Typed events
-  (origins, name and logo changes, appointments, the 2026 election’s schedule) come from the BC
-  government atlas research package of 25 September 2026 and the research that followed it
-  (${EVENT_SOURCES.length} sources). A date is shown only as precisely as its source gives it; an
-  unknown start is not treated as proof a body did not exist.
-`.replace(/\s+/g, ' ').trim()
 
 const readParams = () => readGovernmentPlace(globalThis.location?.search ?? '')
 
@@ -162,20 +141,6 @@ const Search = ({ onPick }) => {
  * @param {(patch: {era: string, name: string}) => void} props.onOpenInGenerator
  * @param {(view: string) => void} props.onChangeView
  */
-/**
- * A fold whose contents are built when it is first opened. The sources fold holds some 1,200 links
- * that almost no visit reads; built with the page, they were a third of everything it drew.
- */
-const Folded = ({ className, summary, children }) => {
-  const [opened, setOpened] = useState(false)
-  return (
-    <details className={className} onToggle={(event) => { if (event.currentTarget.open) setOpened(true) }}>
-      <summary>{summary}</summary>
-      {opened && children()}
-    </details>
-  )
-}
-
 export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
   const navigate = useNavigate()
   usePreloadSalaries()
@@ -417,29 +382,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
             : <OverviewCard government={government} onSelect={setSelectedId} />}
         {!selected && <ChangesCard key={year} year={year} onSelect={setSelectedId} onJump={jump} />}
 
-        <Folded className="gov-card gov-sources" summary="Sources and caveats">{() => <>
-          <p className="gov-muted">
-            <StoryText label="Sources and caveats" text={SOURCES_NOTE} />
-          </p>
-          <CoverageCard />
-          <ResearchCard />
-          <ul>
-            {[...TIMELINE_SOURCES, ...CURRENT_SOURCES].map((source) => (
-              <li key={source.id}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>
-            ))}
-          </ul>
-          <p className="gov-muted gov-sources__licence">
-            Ministers’ responsibilities for Acts: <a href={AMR_COLLECTION.url} target="_blank" rel="noreferrer">{AMR_COLLECTION.title}</a>,
-            under the <a href={AMR_LICENCE.url} target="_blank" rel="noreferrer">{AMR_LICENCE.name}</a>. {AMR_ATTRIBUTION}
-          </p>
-          <Folded className="gov-sources__more" summary={`${HISTORY_SOURCES.length} sources behind the history`}>{() => (
-            <ul>
-              {HISTORY_SOURCES.map((url) => (
-                <li key={url}><a href={url} target="_blank" rel="noreferrer">{url.replace(/^https?:\/\/(www\.)?/, '')}</a></li>
-              ))}
-            </ul>
-          )}</Folded>
-        </>}</Folded>
+        <SourcesCard />
       </div>
 
       {sheeted && (

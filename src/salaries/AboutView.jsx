@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from 'react'
 import { CompanionShell } from './CompanionShell.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 import { councilNotes, councilSourceUrl, loadCouncilPay } from './councilPay.js'
 import { CouncilSource } from './CouncilPayView.jsx'
 import { MIN_EMPLOYER_RECORDS, MIN_RANKED_STAYERS, MIN_STAYERS } from './employerStats.js'
@@ -26,21 +27,18 @@ const CouncilSources = () => {
     <>
       <p>Council pay keeps three kinds of figure apart: office pay reported in surveys (CBC’s 2019 and 2021 municipal surveys), annual base rates from council salary schedules, and actual payments to named officials. A survey figure and a base rate can be defined differently, so where they disagree for the same office and year both are shown. Office figures are never assigned to a person, missing years are unknown rather than zero, and a payment is what an official was paid that year, which partial terms and extra duties can change. Reviewed {data.asOf}.</p>
       {notes.length > 0 && (
-        <details className="salaries-about__fold">
-          <summary>Coverage notes ({notes.length})</summary>
+        <Disclosure className="salaries-about__fold" summary={`Coverage notes (${notes.length})`}>
           <ul>{notes.map((note, at) => <li key={at}>{note}</li>)}</ul>
-        </details>
+        </Disclosure>
       )}
       {held.length > 0 && (
-        <details className="salaries-about__fold">
-          <summary>Held for verification ({held.length})</summary>
+        <Disclosure className="salaries-about__fold" summary={`Held for verification (${held.length})`}>
           <ul>{held.map((entry, at) => <li key={at}><strong>{entry.municipality ? `${entry.municipality}, ` : ''}{entry.year}.</strong> {entry.reason} {councilSourceUrl(entry.evidenceUrl) && <a href={councilSourceUrl(entry.evidenceUrl)} target="_blank" rel="noreferrer">Correction evidence</a>}</li>)}</ul>
-        </details>
+        </Disclosure>
       )}
-      <details className="salaries-about__fold">
-        <summary>All {data.sources.length} sources</summary>
+      <Disclosure className="salaries-about__fold" summary={`All ${data.sources.length} sources`}>
         <ul className="salaries-about__sources">{data.sources.map((source) => <li key={source.id}><CouncilSource source={source} />{councilSourceUrl(source.originalUrl) && <> · <a href={councilSourceUrl(source.originalUrl)} target="_blank" rel="noreferrer">original article</a></>}</li>)}</ul>
-      </details>
+      </Disclosure>
       <p><a href={`${BASE}salaries/council-pay.csv`} download>Download every council record (CSV)</a> · <a href={`${BASE}salaries/council-pay.json`} download>JSON with sources and coverage</a></p>
     </>
   )

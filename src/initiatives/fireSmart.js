@@ -175,7 +175,7 @@ export function fireSmartDetail(entry) {
     hero: { title: entry.title, eyebrow: entry.subtitle, description: entry.summary, image: entry.cover, caption: entry.cover.caption },
     sections: [...sections, { id: 'sources', label: 'Sources', type: 'sources', records: library }],
     relatedLinks: [
-      { label: 'FireSmart BC logo gallery', to: { view: 'gallery', logos: 'specimens-firesmart-bc', ...(programGuide[entry.key] ? { mark: 'firesmart-bc-' + entry.key } : {}) } },
+      { label: 'FireSmart BC logos', to: { view: 'gallery', logos: 'specimens-firesmart-bc', ...(programGuide[entry.key] ? { mark: 'firesmart-bc-' + entry.key } : {}) } },
       ...(parent ? [{ label: 'BC Wildfire Service', to: { view: 'government', node: 'sub-bc-wildfire-service' } }] : [])
     ]
   }

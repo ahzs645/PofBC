@@ -7,6 +7,7 @@
 
 import { useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { KINDS } from './GovernmentGraph.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 import { CROWN_CATEGORIES } from './crownCategories.js'
 
 const Item = ({ node, selected, onSelect, nested }) => (
@@ -76,7 +77,7 @@ export const GovernmentList = ({ government, selectedId, onSelect, hiddenKinds, 
   return (
     <div className="gov-list" ref={frame} aria-label={`The Government of British Columbia in ${government.year}, as a list`}>
       {sections.map((section) => {
-        const title = <h2 className="gov-list__title">{section.title} <span className="gov-muted">{section.items.length}</span></h2>
+        const count = <span className="gov-muted">{section.items.length}</span>
         const items = (
           <ul>
             {section.note && <li className="gov-list__note gov-muted">{section.note}</li>}
@@ -89,12 +90,16 @@ export const GovernmentList = ({ government, selectedId, onSelect, hiddenKinds, 
         // folded — the one holding the chosen body open — so the timeline stays near.
         return compact
           ? (
-            <details key={section.title} className="gov-list__section" open={section.items.some(({ node }) => node.id === chosenAtStart) || undefined}>
-              <summary>{title}</summary>
+            <Disclosure
+              key={section.title}
+              className="gov-list__section"
+              summary={<span className="gov-list__title">{section.title} {count}</span>}
+              defaultOpen={section.items.some(({ node }) => node.id === chosenAtStart)}
+            >
               {items}
-            </details>
+            </Disclosure>
             )
-          : <section key={section.title} className="gov-list__section">{title}{items}</section>
+          : <section key={section.title} className="gov-list__section"><h2 className="gov-list__title">{section.title} {count}</h2>{items}</section>
       })}
     </div>
   )

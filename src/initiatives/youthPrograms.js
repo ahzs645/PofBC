@@ -68,7 +68,7 @@ const evidence = {
     relatedLinks: [
       government('Ministry of Environment', ENVIRONMENT_1988, 1989),
       government('Ministry of Social Services and Housing', SOCIAL_SERVICES_1986, 1990),
-      { label: 'Environment Youth Corps in the logo gallery', to: { view: 'gallery', logos: environmentYouthCorpsGalleryId, mark: environmentYouthCorpsScan.id } }
+      { label: 'Environment Youth Corps recruitment logo', to: { view: 'gallery', logos: environmentYouthCorpsGalleryId, mark: environmentYouthCorpsScan.id } }
     ],
     timeline: [
       { id: 'corps-budget', date: '1989-03-30', dateRole: 'budget announcement', title: 'Environmental youth employment enters the provincial budget', description: 'The budget speech assigned an environmental youth services program to the minister responsible for Environment. The Ombudsman subsequently dated the establishment of the Environment Youth Corps to 1989.', sourceRefs: [{ sourceId: budgetDebate.id }, ombudsmanRef] },
@@ -119,7 +119,7 @@ export const youthProgramDetail = (entry) => {
   return {
     id: entry.id, title: entry.title,
     hero: { eyebrow: entry.subtitle, title: entry.title, description: entry.summary, image: entry.cover, caption: entry.cover?.caption },
-    relatedLinks: [...data.relatedLinks, { label: 'BC Youth and the Youth Advisory Council', to: { view: 'initiatives', initiative: 'bc-youth' } }],
+    relatedLinks: data.relatedLinks,
     sources: data.sources, sections
   }
 }

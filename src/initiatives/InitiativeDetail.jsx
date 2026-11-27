@@ -4,8 +4,10 @@ import { useSiteTheme } from '../site/useTheme.js'
 import { BrandGuide } from './BrandGuide.jsx'
 import { SiteLink } from '../site/navigation.jsx'
 import { TabList } from '../site/ui/TabList.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 import { fileOf, imagesOf, resolveInitiativeSelection } from './initiativeModel.js'
 import { HistoryTimeline } from '../site/HistoryTimeline.jsx'
+import { InitiativeParts, RelatedLinks, openLabel } from './InitiativeParts.jsx'
 import './initiativeDetail.css'
 
 const InitiativeContext = createContext(null)
@@ -80,9 +82,15 @@ const Visual = ({ item, image = imagesOf(item)[0], large = false }) => {
     </div>
 }
 
-const Links = ({ links = [] }) => links.length > 0 && <ul className="initiative__links">{links.map((link, index) =>
-  <li key={`${link.url}-${index}`}><a href={link.url} target={link.url.startsWith('#') || link.url.startsWith('?') ? undefined : '_blank'} rel="noreferrer">{link.label}<Arrow /></a>{link.note && <small>{link.note}</small>}</li>
-)}</ul>
+const placeOf = (url) => url.startsWith('?') ? Object.fromEntries(new URLSearchParams(url)) : null
+const Links = ({ links = [] }) => links.length > 0 && <ul className="initiative__links">{links.map((link, index) => {
+  const place = placeOf(link.url)
+  return <li key={`${link.url}-${index}`}>{place
+    ? <a href={link.url}>{link.label}</a>
+    : <a href={link.url} target={link.url.startsWith('#') ? undefined : '_blank'} rel="noreferrer">{link.label}<Arrow /></a>}
+    {place && <small>{openLabel(place)} <span aria-hidden="true">→</span></small>}
+    {link.note && <small>{link.note}</small>}</li>
+})}</ul>
 
 const SpecimenDownload = ({ image }) => (
   <a className="initiative__download" href={assetUrl(fileOf(image))} download>
@@ -135,7 +143,7 @@ const SpecimenDialog = ({ item, requestedRecord, onClose, textOnly }) => {
       {item.current && <section><h3>Current status</h3><p className="initiative__date-note">{item.current}</p></section>}
       {item.dateNote && <p className="initiative__date-note">{item.dateNote}</p>}
       {item.domains?.length > 0 && <section><h3>Documented addresses</h3><ul className="initiative__domain-chips">{item.domains.map((domain) => <li key={domain}><code>{domain}</code></li>)}</ul>{initiative.domainNote && <p className="initiative__small">{initiative.domainNote}</p>}</section>}
-      {item.registrations?.length > 0 && <details className="initiative__record-details"><summary>Trademark and registration evidence</summary><ul>{item.registrations.map((entry, index) => <li key={`${entry.number}-${index}`}>{entry.territory} · {entry.type} {entry.number}{entry.page ? ` · PDF page ${entry.page}` : ''}</li>)}</ul></details>}
+      {item.registrations?.length > 0 && <section className="initiative__record-details"><h3>Trademark and registration evidence</h3><ul>{item.registrations.map((entry, index) => <li key={`${entry.number}-${index}`}>{entry.territory} · {entry.type} {entry.number}{entry.page ? ` · PDF page ${entry.page}` : ''}</li>)}</ul></section>}
       {textOnly && <Links links={item.links} />}
       <Sources references={item.sourceRefs} />
       {!textOnly && <Links links={item.links} />}
@@ -196,7 +204,7 @@ const Timeline = ({ section }) => <HistoryTimeline events={(section.records ?? [
 
 const Publications = ({ section, onOpen }) => <>
   <div className="initiative__publication-grid">{(section.records ?? []).map((item) => <article key={item.id} className="initiative__publication"><p className="initiative__eyebrow">{item.kind?.replaceAll('-', ' ') ?? 'Publication'}</p><h4>{item.title}</h4><p>{item.description}</p><Sources references={item.sourceRefs} /><Links links={item.links} />{imagesOf(item).length > 0 && <button type="button" className="initiative__text-button" onClick={() => onOpen(item)}>View specimen <Arrow /></button>}</article>)}</div>
-  {section.leads?.length > 0 && <section className="initiative__leads"><h4>Further research</h4><p>Names and commissioning records to follow up; artwork is not inferred from a name.</p>{section.leads.map((item) => <details key={item.id}><summary>{item.title}</summary><p>{item.description}</p><Sources references={item.sourceRefs} /></details>)}</section>}
+  {section.leads?.length > 0 && <section className="initiative__leads"><h4>Further research</h4><p>Names and commissioning records to follow up; artwork is not inferred from a name.</p>{section.leads.map((item) => <div key={item.id} className="initiative__lead"><h5>{item.title}</h5><p>{item.description}</p><Sources references={item.sourceRefs} /></div>)}</section>}
 </>
 
 const downloadInventory = (inventory, sourceMap) => {
@@ -225,13 +233,13 @@ const AddressInventory = ({ inventory }) => {
 const SourceRegister = ({ section }) => {
   const { initiative } = useInitiative()
   return <>
-    <details className="initiative__source-list"><summary>Source library · {initiative.sources.length} references</summary><ol>{initiative.sources.map((source) => <li key={source.id}>{source.url ? <a href={source.url} target="_blank" rel="noreferrer">{source.title}<Arrow /></a> : <strong>{source.title}</strong>}{source.date && <span>{source.date}</span>}{(source.description || source.note || source.citation) && <p>{source.description ?? source.note ?? source.citation}</p>}</li>)}</ol></details>
+    <Disclosure className="initiative__source-list" summary={`Source library · ${initiative.sources.length} references`}><ol>{initiative.sources.map((source) => <li key={source.id}>{source.url ? <a href={source.url} target="_blank" rel="noreferrer">{source.title}<Arrow /></a> : <strong>{source.title}</strong>}{source.date && <span>{source.date}</span>}{(source.description || source.note || source.citation) && <p>{source.description ?? source.note ?? source.citation}</p>}</li>)}</ol></Disclosure>
     {section.inventory && <AddressInventory inventory={section.inventory} />}
   </>
 }
 
 /** A shared explorer; each initiative supplies its own sections, evidence and related pages. */
-export const InitiativeDetail = ({ initiative, subInitiatives = [], place, onChange }) => {
+export const InitiativeDetail = ({ initiative, entry, parent, parts = [], place, onChange }) => {
   const { name: theme } = useSiteTheme()
   const { section: current, record: selected, missingRecord } = resolveInitiativeSelection(initiative, place)
   const context = useMemo(() => ({ initiative, theme, sourceMap: new Map(initiative.sources.map((source) => [source.id, source])) }), [initiative, theme])
@@ -240,15 +248,14 @@ export const InitiativeDetail = ({ initiative, subInitiatives = [], place, onCha
   const heroDisplay = COLLECTED_DISPLAY[hero.image?.displayId]?.[theme]
   return <InitiativeContext.Provider value={context}><section className="initiative-detail" aria-label={`${initiative.title} initiative`}>
     <div className={`initiative__hero ${!hero.image ? 'initiative__hero--text' : ''}`}>
-      <div className="initiative__hero-copy"><p className="initiative__eyebrow">{hero.eyebrow}</p><h2>{hero.title}</h2><p>{hero.description}</p>
+      <div className="initiative__hero-copy"><p className="initiative__eyebrow">{hero.eyebrow}</p><h2>{hero.title}</h2>
+        {parent && <p className="initiative__part-of">Part of <SiteLink to={{ view: 'initiatives', initiative: parent.id }}>{parent.title}</SiteLink></p>}
+        <p>{hero.description}</p>
         {initiative.stats?.length > 0 && <div className="initiative__hero-stats">{initiative.stats.map((stat) => <span key={stat.label}><strong>{stat.value}</strong>{stat.label}</span>)}</div>}
       </div>
-      {hero.image && <div className={`initiative__hero-art ${hero.image.darkBackground ? 'initiative__hero-art--dark' : ''}`} data-themed={heroDisplay ? true : undefined}><img src={assetUrl(heroDisplay?.file ?? fileOf(hero.image))} alt={hero.image.alt ?? initiative.title} />{hero.caption && <span>{hero.caption}</span>}</div>}
+      {hero.image && <figure className="initiative__hero-art"><span className="initiatives__art" data-dark={hero.image.darkBackground ? true : undefined} data-themed={heroDisplay ? true : undefined}><img src={assetUrl(heroDisplay?.file ?? fileOf(hero.image))} alt={hero.image.alt ?? initiative.title} /></span>{hero.caption && <figcaption>{hero.caption}</figcaption>}</figure>}
     </div>
-    {subInitiatives.length > 0 && <nav className="initiative__related" aria-label="Sub-initiatives">
-      <span>Sub-initiatives</span>
-      {subInitiatives.map((child) => <SiteLink key={child.id} to={{ view: 'initiatives', initiative: child.id }}>{child.title}<Arrow /></SiteLink>)}
-    </nav>}
+    {entry && <InitiativeParts program={entry} parts={parts} theme={theme} />}
     <TabList idPrefix="initiative" label={`${initiative.title} initiative sections`} tabs={sections} selected={current?.id} onChange={onChange} />
     {missingRecord && <p className="initiative__notice" role="status">That record is not in this initiative. <button className="initiative__text-button" type="button" onClick={() => onChange(current?.id)}>Browse the available records</button></p>}
     {sections.map((section) => <div key={section.id} className="initiative__panel" role="tabpanel" id={`initiative-panel-${section.id}`} aria-labelledby={`initiative-tab-${section.id}`} tabIndex={0} hidden={current?.id !== section.id}>
@@ -262,7 +269,7 @@ export const InitiativeDetail = ({ initiative, subInitiatives = [], place, onCha
         {section.type === 'sources' && <SourceRegister section={section} />}
       </>}
     </div>)}
-    {initiative.relatedLinks?.length > 0 && <nav className="initiative__related" aria-label="Related pages"><span>Continue exploring</span>{initiative.relatedLinks.map((link) => <SiteLink key={link.label} to={link.to}>{link.label}<Arrow /></SiteLink>)}</nav>}
+    <RelatedLinks links={initiative.relatedLinks} />
     {selected && <SpecimenDialog key={place.record} requestedRecord={place.record} item={selected} textOnly={current?.layout === 'text'} onClose={() => onChange(current?.id)} />}
   </section></InitiativeContext.Provider>
 }

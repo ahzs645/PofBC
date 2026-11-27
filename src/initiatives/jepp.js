@@ -7,7 +7,7 @@ const sources = [
 export const jeppDetail = (entry) => ({
   id: entry.id, title: entry.title, sources,
   hero: { title: entry.title, eyebrow: 'Emergency preparedness', description: entry.summary, image: entry.cover, caption: entry.cover.caption },
-  relatedLinks: [{ label: 'Provincial Emergency Program gallery and SVG downloads', to: { view: 'gallery', logos: 'specimens-provincial-emergency-program', mark: 'pep-striped-ink' } }],
+  relatedLinks: [{ label: 'Provincial Emergency Program logos and SVG downloads', to: { view: 'gallery', logos: 'specimens-provincial-emergency-program', mark: 'pep-striped-ink' } }],
   sections: [
     { id: 'marks', label: 'Logos', type: 'records', layout: 'marks', title: 'Two marks on the 1993 cover', records: [
       { id: 'jepp-cover', title: 'Joint Emergency Preparedness Program', kind: 'program-identity',

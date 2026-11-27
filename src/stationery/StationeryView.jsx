@@ -80,13 +80,10 @@ export const StationeryView = () => {
             ))}
           </div>
         </div>
-        <details className="stationery__about">
-          <summary>About the type and ink</summary>
-          <p>
-            Helvetica Medium is set in the bold the site carries, and the italic is the regular slanted. Pantone 462 is shown as
-            Pantone’s screen conversion; proof the ink with the printer.
-          </p>
-        </details>
+        <p className="stationery__about">
+          <strong>About the type and ink:</strong> Helvetica Medium is set in the bold the site carries, and the italic is the
+          regular slanted. Pantone 462 is shown as Pantone’s screen conversion; proof the ink with the printer.
+        </p>
       </TemplateStudio>
     </section>
   )

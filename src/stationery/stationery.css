@@ -9,8 +9,8 @@
 .stationery__swatch { width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5); }
 
 .stationery__about { font-size: 12.5px; line-height: 1.5; color: var(--ink-muted); }
-.stationery__about summary { width: fit-content; cursor: pointer; font-weight: 600; color: var(--ink-2); }
-.stationery__about p { margin: 6px 0 0; }
+.stationery__about { margin: 0; }
+.stationery__about strong { font-weight: 600; color: var(--ink-2); }
 
 /* On a phone the PDF and "More formats" share one row at one height, rather than a tall PDF bar
    over a shorter menu button. */

@@ -2,16 +2,16 @@ import { useState } from 'react'
 import { assetUrl } from './collectedCollections.js'
 import { collectedDisplay } from './tileArt.js'
 import { checkPlacement } from './programPlacement.js'
+import { Disclosure } from '../site/Disclosure.jsx'
 import './programPlacement.css'
 
 export function ProgramPlacement({ asset }) {
   const rule = asset?.placement
   if (!rule) return null
   return (
-    <details className="program-placement" id="placement" open={globalThis.location?.hash === '#placement' || undefined}>
-      <summary>Check placement</summary>
+    <Disclosure className="program-placement" id="placement" summary="Check placement" defaultOpen={globalThis.location?.hash === '#placement'}>
       <PlacementControls key={asset.variantOf ?? asset.id} asset={asset} rule={rule} />
-    </details>
+    </Disclosure>
   )
 }
 

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { assetUrl } from './collectedCollections.js'
+import { Disclosure } from '../site/Disclosure.jsx'
 
 const SECTION_IDS = ['railway-history', 'railway-connections', 'railway-evidence']
 const EVIDENCE_LABELS = {
@@ -146,10 +147,11 @@ export const RailwayHistory = ({ history, compact = false }) => {
 
   if (!history) return null
   if (compact) return (
-    <details className="gallery__railway-more" ref={container}>
-      <summary>Railway history, connections and supporting images</summary>
-      <HistoryContent history={history} />
-    </details>
+    <div ref={container}>
+      <Disclosure className="gallery__railway-more" summary="Railway history, connections and supporting images">
+        <HistoryContent history={history} />
+      </Disclosure>
+    </div>
   )
   return <HistoryContent history={history} containerRef={container} />
 }

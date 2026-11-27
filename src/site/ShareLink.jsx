@@ -8,6 +8,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { buildConfigUrl, parseConfig, toConfig } from './configFormat.js'
 import { buildShareUrl } from './shareLink.js'
+import { Disclosure } from './Disclosure.jsx'
 
 const copy = async (text) => {
   try {
@@ -109,8 +110,7 @@ export const ShareLink = ({ state, update }) => {
       )}
 
       {/* The JSON is for the few who script the generator; it stays folded until asked for. */}
-      <details className="field field--fold">
-        <summary className="field__label">Configuration (JSON)</summary>
+      <Disclosure className="field" summary="Configuration (JSON)">
         <p className="field__note" style={{ margin: '0 0 6px' }}>
           The current lockup as JSON. Paste one in and press Apply; the field names are the ones in{' '}
           <a href={`${import.meta.env.BASE_URL}capabilities.json`}>capabilities.json</a>.
@@ -132,7 +132,7 @@ export const ShareLink = ({ state, update }) => {
             <button type="button" className="button button--ghost" onClick={() => setDraft('')}>Discard</button>
           )}
         </div>
-      </details>
+      </Disclosure>
 
       <p className="export__status" data-tone={status.tone} role="status" aria-live="polite">
         {status.message}

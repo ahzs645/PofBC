@@ -13,6 +13,7 @@ import {
 } from './armsData.js'
 import './arms.css'
 import { SourceList } from '../site/SourceList.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 
 const SPECIMEN_IMAGES = import.meta.glob('../../research/identity/arms-variants-2026-11-14/reference/*', { eager: true, query: '?url', import: 'default' })
 const HOLDER_IMAGES = import.meta.glob('./images/*', { eager: true, query: '?url', import: 'default' })
@@ -126,18 +127,27 @@ const Index = ({ onOpen }) => (
 
 const ELEMENTS = [['arms', 'Arms'], ['crest', 'Crest'], ['supporters', 'Supporters'], ['compartment', 'Compartment'], ['motto', 'Motto'], ['badge', 'Badge'], ['flag', 'Flag']]
 
-const Elements = ({ record, summary }) => {
+/**
+ * The arms element by element. The blazon is the grant's own words, so it is written out; the
+ * register's account of what each element means is the longer, secondary reading, and folds.
+ */
+const Elements = ({ record, title, fold = false }) => {
   const rows = ELEMENTS.map(([key, term]) => [term, record?.[key]]).filter(([, text]) => text)
   if (!rows.length) return null
+  const list = (
+    <dl>
+      {rows.map(([term, text]) => (
+        <div key={term}><dt>{term}</dt><dd>{text}</dd></div>
+      ))}
+    </dl>
+  )
+  if (fold) return <Disclosure className="arms__blazon" summary={title}>{list}</Disclosure>
+  const id = `arms-elements-${title.toLowerCase().replace(/[^a-z]+/g, '-')}`
   return (
-    <details className="arms__blazon">
-      <summary>{summary}</summary>
-      <dl>
-        {rows.map(([term, text]) => (
-          <div key={term}><dt>{term}</dt><dd>{text}</dd></div>
-        ))}
-      </dl>
-    </details>
+    <section className="arms__blazon" aria-labelledby={id}>
+      <h3 id={id}>{title}</h3>
+      {list}
+    </section>
   )
 }
 
@@ -245,12 +255,12 @@ const Artwork = ({ items }) => {
         </ul>
       )}
       {letters.length > 0 && (
-        <details className="arms__letters">
-          <summary>Letters patent and register pages ({letters.length})</summary>
+        <div className="arms__letters arms__specimen-section">
+          <h4>Letters patent and register pages <span className="arms__count">{letters.length}</span></h4>
           <ul className="arms__specimens">
             {letters.map((item) => <ArtworkItem key={item.id} item={item} shared={shared} />)}
           </ul>
-        </details>
+        </div>
       )}
     </section>
   )
@@ -370,12 +380,12 @@ const Story = () => (
           </div>
         ))}
         {section.letters.length > 0 && (
-          <details className="arms__letters">
-            <summary>Letters patent ({section.letters.length})</summary>
+          <div className="arms__letters arms__specimen-section">
+            <h4>Letters patent <span className="arms__count">{section.letters.length}</span></h4>
             <ul className="arms__specimens">
               {section.letters.map((entry) => <StoryEntry key={entry.id} entry={entry} />)}
             </ul>
-          </details>
+          </div>
         )}
       </section>
     ))}
@@ -406,8 +416,8 @@ const Detail = ({ holder, onBack, titleRef }) => (
         </dl>
         {holder.description && <p className="arms__description">{holder.description}</p>}
         {holder.note && <p className="arms__note">{holder.note}</p>}
-        <Elements record={holder.symbolism} summary="Symbolism, from the register" />
-        <Elements record={holder.blazon} summary="Blazon" />
+        <Elements record={holder.blazon} title="Blazon" />
+        <Elements record={holder.symbolism} title="Symbolism, from the register" fold />
         {holder.image?.credit && (
           <p className="arms__credit">
             {holder.image.alt ? `${holder.image.alt}: ` : 'Image: '}

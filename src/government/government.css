@@ -7,6 +7,9 @@
  * take the same stone and cards from site.css, so moving between views changes nothing but content.
  */
 
+/* The site's one fold (Disclosure.jsx) in this view's ink. */
+.gov .disclosure { --ink: var(--gov-ink); --ink-2: var(--gov-ink-2); --ink-faint: var(--gov-ink-4); --mid: var(--gov-mid); }
+
 .gov {
   --gov-background: #eceae4;
   --gov-surface: #ffffff;
@@ -401,8 +404,19 @@
 .gov-feed__item > .gov-chip { max-width: 100%; white-space: normal; }
 .gov-feed__names .gov-link-button { text-align: left; }
 
-.gov-sources summary { cursor: pointer; font-weight: 600; font-size: 14px; }
-.gov-sources ul { margin: 12px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.5; color: var(--gov-ink-3); }
+.gov-sources ul { margin: 8px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.5; color: var(--gov-ink-3); }
+.gov-sources__points li + li { margin-top: 4px; }
+.gov-card p.gov-sources__caveats { margin-top: 10px; font-size: 13px; line-height: 1.5; }
+.gov-sources__points strong { color: var(--gov-ink-2); font-weight: 600; }
+.gov-sources .disclosure__body > h3 { margin-top: 18px; }
+.gov-sources .disclosure__body > h3:first-child { margin-top: 4px; }
+.gov-sources .disclosure__body p { margin: 8px 0 0; font-size: 13px; line-height: 1.5; color: var(--gov-ink-3); }
+/* Long lists scroll in a framed box, so it is plain they hold more than shows. */
+.gov-sources ul.gov-sources__list--scroll, .gov-sources ul.gov-roster__rows { max-height: 240px; overflow: auto; overscroll-behavior: contain; padding: 8px 10px 8px 26px; border: 1px solid var(--gov-mid); border-radius: 8px; }
+.gov-sources__list--scroll:focus-visible, .gov-roster__rows:focus-visible { outline: 2px solid var(--focus, #1a73e8); outline-offset: 2px; }
+.gov-rosters h4 { margin: 14px 0 0; font-size: 13px; font-weight: 600; color: var(--gov-ink-2); }
+.gov-roster { margin-top: 10px; }
+.gov-roster ul.gov-roster__rows { margin-top: 6px; max-height: 200px; }
 
 /* ── Buttons ──────────────────────────────────────────────────────────────────────────────────── */
 
@@ -751,13 +765,13 @@
 
 .gov-list__section { background: var(--gov-surface); border-radius: 12px; padding: 16px 12px; }
 .gov-list__title { margin: 0 8px 8px; font-size: 14px; font-weight: 600; }
-details.gov-list__section { padding: 0 12px; }
-details.gov-list__section > summary { display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 8px; cursor: pointer; list-style: none; }
-details.gov-list__section > summary::-webkit-details-marker { display: none; }
-details.gov-list__section > summary::after { content: ''; margin-left: auto; width: 7px; height: 7px; border: solid var(--gov-ink-4); border-width: 0 1.5px 1.5px 0; transform: translateY(-2px) rotate(45deg); transition: transform 140ms; }
-details.gov-list__section[open] > summary::after { transform: translateY(2px) rotate(-135deg); }
-details.gov-list__section > summary .gov-list__title { margin: 0; }
-details.gov-list__section[open] { padding-bottom: 12px; }
+/* On a phone each group is a fold (Disclosure.jsx) whose summary is the group's full-width row. */
+.disclosure.gov-list__section { margin: 0; padding: 0 12px; }
+.gov-list__section > .disclosure__summary { display: flex; flex-wrap: nowrap; width: 100%; min-height: 48px; padding: 0 8px; }
+.gov-list__section > .disclosure__summary .disclosure__label { min-width: 0; }
+.gov-list__section > .disclosure__summary .gov-list__title { margin: 0; color: var(--gov-ink); }
+.gov-list__section > .disclosure__summary .disclosure__chevron { margin-left: auto; }
+.disclosure.gov-list__section[open] { padding-bottom: 12px; }
 .gov-list__section ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1px; }
 
 .gov-list__item {
@@ -1008,9 +1022,7 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 .gov-holders li[aria-current='true'] { background: var(--gov-hover); font-weight: 500; }
 .gov-holders li > span:last-child { flex: none; font-size: 12px; font-variant-numeric: tabular-nums; }
 .gov-holders__title { font-size: 12px; font-weight: 400; color: var(--gov-ink-3); }
-.gov-sources__more { margin-top: 12px; font-size: 13px; }
 .gov-card p.gov-sources__licence { margin-top: 12px; font-size: 12px; }
-.gov-sources__more ul { max-height: 240px; overflow: auto; }
 
 /* ── A ministry's lineage, as a small chart ──────────────────────────────────────────────── */
 
@@ -1148,9 +1160,7 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 .gov-events__body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; min-width: 0; }
 /* Narrow, the date sits over its event rather than beside it, so the text has the card's width. */
 @media (max-width: 559px) { .gov-events__item { grid-template-columns: minmax(0, 1fr); gap: 2px; } }
-.gov-events__more { font-size: 12px; color: var(--gov-ink-3); }
-.gov-events__more > summary { width: max-content; cursor: pointer; text-decoration: underline; text-decoration-color: var(--gov-mid); text-underline-offset: 2px; }
-.gov-events__more[open] > summary { margin-bottom: 4px; }
+.gov-events__more { margin: 0; }
 .gov-events + .gov-show-more { margin-top: 12px; }
 .gov-nowrap { white-space: nowrap; }
 .gov-events__type { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--gov-ink-4); }
@@ -1200,9 +1210,8 @@ details.gov-list__section[open] { padding-bottom: 12px; }
 @media (min-width: 720px) { .gov-compare__pair { grid-template-columns: 1fr 1fr; } }
 .gov-compare .gov-card { margin: 0; }
 
-.gov-coverage { margin-top: 16px; }
-.gov-coverage ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.gov-coverage li { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 8px 10px; border-radius: 8px; overflow: hidden; font-size: 13px; }
+.gov-sources ul.gov-coverage { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 10px; color: inherit; }
+.gov-coverage li { position: relative; isolation: isolate; display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 8px 10px; border-radius: 8px; overflow: hidden; font-size: 13px; }
 .gov-coverage li > .gov-muted { grid-column: 1 / -1; font-size: 12px; }
 .gov-coverage__bar { position: absolute; inset: 0 auto 0 0; width: var(--share); background: var(--gov-hover); z-index: -1; }
 .gov-compare__pick label { display: inline-flex; align-items: center; gap: 6px; }

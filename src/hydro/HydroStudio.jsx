@@ -11,6 +11,7 @@ import { PreviewBackground } from '../gallery/PreviewBackground.jsx'
 import { useMemo, useRef, useState } from 'react'
 import { ColourField } from '../site/ColourField.jsx'
 import { Segmented } from '../site/Segmented.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 import { holdScrollFrom } from '../site/holdScroll.js'
 import { TRANSPARENT } from '../logo/logoColors.js'
 import { HydroDownload, saveText } from './HydroDownload.jsx'
@@ -165,8 +166,7 @@ const MoreFiles = ({ all, active, settings, outline, run, onLoad }) => {
   })
 
   return (
-    <details className="hydro__more">
-      <summary>More files</summary>
+    <Disclosure className="hydro__more" summary="More files">
       <div className="row hydro__buttons">
         <button
           type="button"
@@ -210,7 +210,7 @@ const MoreFiles = ({ all, active, settings, outline, run, onLoad }) => {
           }}
         />
       </div>
-    </details>
+    </Disclosure>
   )
 }
 
@@ -426,12 +426,11 @@ export const HydroStudio = ({ initialPreset = 'standard', onClose }) => {
             {HYDRO_SLIDERS.filter(([name]) => !hidden.has(name)).map(([name, label, step, unit]) => (
               <Slider key={name} name={name} label={label} step={step} unit={unit} settings={settings} update={update} />
             ))}
-            <details className="hydro__more">
-              <summary>Geometry, border and padding</summary>
+            <Disclosure className="hydro__more" summary="Geometry, border and padding">
               {HYDRO_ADVANCED_SLIDERS.filter(([name]) => !hidden.has(name)).map(([name, label, step, unit]) => (
                 <Slider key={name} name={name} label={label} step={step} unit={unit} settings={settings} update={update} />
               ))}
-            </details>
+            </Disclosure>
             {isSign && (
               <p className="field__note">
                 Cap height {preview.scene.metrics.capHeight.toFixed(1)} · x-height {preview.scene.metrics.xHeight.toFixed(1)} units. The sign’s borders are measured in these.
@@ -455,8 +454,7 @@ export const HydroStudio = ({ initialPreset = 'standard', onClose }) => {
               <div><dt><i style={{ background: '#000000' }} />Black</dt><dd>{formatRecipe(spec.black)}</dd></div>
             </dl>
             <p className="field__note">The manual’s recipes, carried in each SVG’s metadata. They do not change the screen colours.</p>
-            <details className="hydro__more">
-              <summary>Screen colours</summary>
+            <Disclosure className="hydro__more" summary="Screen colours">
               <div className="field">
                 <label htmlFor="hydro-palette">Palette</label>
                 <Select id="hydro-palette" value={settings.screenPalette} onChange={(value) => update('screenPalette', value)}>
@@ -467,7 +465,7 @@ export const HydroStudio = ({ initialPreset = 'standard', onClose }) => {
               <ColourField label="Green" value={settings.green} onChange={(value) => update('green', value)} palette={HYDRO_SWATCHES} />
               <ColourField label="Blue" value={settings.blue} onChange={(value) => update('blue', value)} palette={HYDRO_SWATCHES} />
               <p className="field__note">{HYDRO_STANDARDS.colours.screenPreview.basis}</p>
-            </details>
+            </Disclosure>
           </section>
 
           <HydroDownload

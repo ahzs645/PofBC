@@ -14,6 +14,7 @@ import { hasExpenseAmount } from './viewState.js'
 import { isCadPerson, personAnnotation, personCurrency } from './recordAnnotations.js'
 import { RecordAnnotation } from './RecordAnnotation.jsx'
 import { Segmented } from '../site/Segmented.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 import { CPI_LATEST, inDollarsOf } from './inflation.js'
 
 /** A change between two payments as a signed whole percentage, with a true minus sign. */
@@ -220,8 +221,7 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
       </ol>
 
       {near.length > 0 && (
-        <details className="salaries__about salaries__matches">
-          <summary className="salaries__title">Possible matches ({near.length})</summary>
+        <Disclosure className="salaries__about salaries__matches" summary={`Possible matches (${near.length})`}>
           <p className="salaries__hint salaries__hint--small">The same surname with compatible initials or given names, in periods this name has no record. These may be the same person or someone else.</p>
           <ol className="salaries-years salaries-years--weak">
             {[...new Set(near.map((row) => row[5]))].sort((a, b) => b - a).map((at) => (
@@ -231,11 +231,10 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
               </li>
             ))}
           </ol>
-        </details>
+        </Disclosure>
       )}
 
-      <details className="salaries__about">
-        <summary className="salaries__title">About these records</summary>
+      <Disclosure className="salaries__about" summary="About these records">
         <p className="salaries__hint salaries__hint--small">
           Amounts are payments disclosed for a reporting period, not annual salary rates.
           Records are grouped by the disclosed name only, so they may not all concern one person.
@@ -260,7 +259,7 @@ export const PersonPage = ({ chosen, joins = [], joinedElsewhere = [], all, scop
         )}
         <SourceNotes sourceIds={chosen.rows.map((row) => row[6])} sources={index.sources} />
         {[...new Map(chosen.rows.map((row) => personAnnotation(row, index)).filter(Boolean).map((annotation) => [annotation.id, annotation])).values()].map((annotation) => <p className="salaries__hint salaries__hint--small" key={annotation.id}>{annotation.note}</p>)}
-      </details>
+      </Disclosure>
     </section>
   )
 }

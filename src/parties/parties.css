@@ -80,7 +80,8 @@
 .parties__design-copy > p { font-size: 13px; line-height: 1.6; margin: 0 0 8px; }
 .parties__design-copy .parties__eyebrow { font-size: 10px; margin-bottom: 6px; }
 .parties__variants { margin-top: 14px; border-top: 1px solid var(--outline); padding-top: 12px; font-size: 12px; }
-.parties__variants summary { cursor: pointer; font-weight: 600; }
+.parties__variants.disclosure { margin-top: 14px; }
+.parties__variants .parties__files:first-child { margin-top: 0; }
 .parties__files { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
 .parties__files li { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 14px; align-items: center; }
 .parties__files li > div:last-child { display: flex; flex-direction: column; gap: 3px; min-width: 0; }

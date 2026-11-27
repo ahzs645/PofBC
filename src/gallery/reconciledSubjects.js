@@ -58,6 +58,8 @@ export const PROGRAM_ENTRY_OWNERS = {
   ...Object.fromEntries(['drc-dogwood-oval-1970', 'drc-department', 'drc-fish-wildlife', 'drc-parks', 'drc-museum',
     'drc-fisheries', 'drc-fw-oval-1973', 'drc-fw-lockup-1973', 'drc-parks-shield-1973']
     .map((id) => [id, 'department-of-recreation-and-conservation'])),
+  // The Fish and Wildlife Branch's copies of its three marks are its own.
+  ...Object.fromEntries(['fwb-1971-square', 'fwb-1973-oval', 'fwb-1973-lockup'].map((id) => [id, 'fish-and-wildlife-branch'])),
   'bceid-reversed': 'bceid',
   'bceid-reversed-rebuilt': 'bceid'
 }
@@ -427,7 +429,7 @@ export const RECONCILED_SUBJECTS = [
     id: 'department-of-recreation-and-conservation',
     label: 'Department of Recreation and Conservation',
     kind: 'government-branch',
-    aliases: ['Recreation and Conservation', 'Fish and Wildlife Branch', 'Provincial Parks Branch', 'Commercial Fisheries Branch', 'Marine Resources Branch'],
+    aliases: ['Recreation and Conservation', 'Provincial Parks Branch', 'Commercial Fisheries Branch', 'Marine Resources Branch'],
     collectionIds: ['recreation-conservation'],
     priority: 3,
     sources: [
@@ -438,6 +440,26 @@ export const RECONCILED_SUBJECTS = [
     ],
     nextAction: 'Find who designed the five square symbols, and any identity manual; date the 1970 oval beyond its one report.',
     note: 'A provincial department, 1957–1976. Its 1970 oval, the five square symbols of its 1971–1973 reports and the separate Fish and Wildlife oval and Parks shield are held as reconstructions from the reports. The oval also appears on the 1972–73 hunting regulations cover. The department is a ministry in the government atlas, not a separate agency, and its branches have no atlas bodies of their own, so their marks sit with it; the Parks Branch’s two are also on BC Parks’ timeline.'
+  }),
+  subject({
+    id: 'fish-and-wildlife-branch',
+    label: 'Fish and Wildlife Branch',
+    kind: 'government-branch',
+    aliases: ['Fish & Wildlife Branch', 'F&W', 'Fish and Game Branch'],
+    collectionIds: ['fish-wildlife-branch'],
+    priority: 3,
+    relations: [
+      // The Game Commission it grew from is in the commissions register, which relations do not reach;
+      // the note names it.
+      { subject: 'department-of-recreation-and-conservation', type: 'part-of', label: 'A branch of the department, 1957–1976' }
+    ],
+    sources: [
+      { title: 'BC Archives, British Columbia. Fish and Game Branch (authority record)', url: 'https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-fish-and-game-branch-2' },
+      { title: 'BC Archives, British Columbia. Game Commission (authority record)', url: 'https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-game-commission' },
+      { title: 'Department of Recreation and Conservation, Annual Report 1973, Fish and Wildlife Branch divider', url: 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1973.pdf#page=22' }
+    ],
+    nextAction: 'Trace the branch after the department ended in 1976, and its marks under the later ministries.',
+    note: 'The Department of Recreation and Conservation’s fish and wildlife branch: the Game Commission became its Fish and Game Branch on 1 April 1957, named the Fish and Wildlife Branch in 1966. Its square in the department’s 1971–1973 set, its F&W oval of the 1972–73 hunting regulations and its emblem beside its name in the 1973 report are held as reconstructions, shared with the department’s collection.'
   }),
   subject({
     id: 'bceid',

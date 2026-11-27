@@ -78,6 +78,6 @@ export const rainforestToRockiesDetail = (entry) => ({
   relatedLinks: [
     { label: 'Super, Natural British Columbia’s 2021 brand guide', to: { view: 'initiatives', initiative: 'tourism', section: 'publications', record: 'our-brand-2021' } },
     { label: 'Super, Natural roadside welcome sign', to: { view: 'signs', sign: 'super-natural' } },
-    { label: 'Destination BC in government', to: { view: 'government', node: 'destination-bc' } }
+    { label: 'Destination BC', to: { view: 'government', node: 'destination-bc' } }
   ]
 })

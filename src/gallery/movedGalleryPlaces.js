@@ -11,6 +11,7 @@ export const DEPARTMENTAL_MARKS = {
     'drc-dogwood-oval-1970', 'drc-department', 'drc-fish-wildlife', 'drc-parks', 'drc-museum', 'drc-fisheries',
     'drc-fw-oval-1973', 'drc-fw-lockup-1973', 'drc-parks-shield-1973'
   ],
+  'fish-wildlife-branch': ['fwb-1971-square', 'fwb-1973-oval', 'fwb-1973-lockup'],
   'collected-bc-public-health-service': ['bc-public-health-service-green-badge'],
   'tourism-recreation-culture': ['tourism-recreation-culture-1986'],
   'bc-lands': ['bc-lands'],

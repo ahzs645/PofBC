@@ -1,28 +1,27 @@
-.initiative-detail { --initiative-green: #234536; --initiative-muted: #738473; margin: 8px 0 20px; min-width: 0; }
+.initiative-detail { margin: 8px 0 20px; min-width: 0; }
 .initiative-detail *, .initiative-detail *::before, .initiative-detail *::after { box-sizing: border-box; }
 .initiative-detail button, .initiative-detail input, .initiative-detail select { font: inherit; }
 .initiative-detail button, .initiative-detail a { -webkit-tap-highlight-color: transparent; }
 .initiative-detail a { text-underline-offset: 3px; }
 .initiative__link-icon { display: inline-block; flex-shrink: 0; margin-left: 6px; vertical-align: baseline; }
 .initiative__card h3 .initiative__link-icon { margin-top: 6px; color: var(--ink-faint); }
-.initiative-detail button:focus-visible, .initiative-detail a:focus-visible, .initiative-detail input:focus-visible, .initiative-detail select:focus-visible, .initiative-detail [tabindex]:focus-visible, .initiative-detail summary:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
-.initiative__hero { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); overflow: hidden; background: var(--initiative-green); color: #fff; border-radius: 16px; }
+.initiative-detail button:focus-visible, .initiative-detail a:focus-visible, .initiative-detail input:focus-visible, .initiative-detail select:focus-visible, .initiative-detail [tabindex]:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.initiative__hero { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); overflow: hidden; background: var(--surface); color: var(--ink); border-radius: var(--radius); }
 .initiative__hero-copy { padding: clamp(26px, 3vw, 40px); }
 .initiative__eyebrow { margin: 0 0 14px; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; line-height: 1.6; }
-.initiative__hero .initiative__eyebrow { color: #d0ddcd; }
+.initiative__hero .initiative__eyebrow { color: var(--ink-muted); }
 .initiative__hero h2 { margin: 0; font-size: clamp(32px, 3.5vw, 48px); font-weight: 500; letter-spacing: -.04em; line-height: 1.08; }
-.initiative__hero-copy > p:not(.initiative__eyebrow) { max-width: 440px; color: #d9e3d7; font-size: 16px; line-height: 1.7; margin: 20px 0 26px; }
-.initiative__hero-stats { display: flex; flex-wrap: wrap; gap: 18px 25px; padding-top: 20px; border-top: 1px solid #ffffff35; font-size: 12px; color: #d5e1d3; }
+.initiative__hero-copy > p:not(.initiative__eyebrow, .initiative__part-of) { max-width: 480px; color: var(--ink-muted); font-size: 16px; line-height: 1.7; margin: 20px 0 26px; }
+.initiative__part-of { margin: 12px 0 0; font-size: 14px; color: var(--ink-muted); }
+.initiative__part-of a { color: var(--ink); text-underline-offset: 3px; }
+.initiative__hero-stats { display: flex; flex-wrap: wrap; gap: 18px 25px; padding-top: 20px; border-top: 1px solid var(--mid); font-size: 12px; color: var(--ink-muted); }
 .initiative__hero-stats span { display: grid; gap: 5px; }
-.initiative__hero-stats strong { color: #fff; font-size: 21px; font-weight: 500; }
-.initiative__hero-art { margin: 24px 24px 24px 0; background: #f8f5eb; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 28px; gap: 24px; min-width: 0; }
+.initiative__hero-stats strong { color: var(--ink); font-size: 21px; font-weight: 500; }
+.initiative__hero-art { margin: 24px 24px 24px 0; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+/* The artwork's ground (initiatives.css): light for a logo made for a light page, dark for reverse artwork. */
+.initiative__hero-art .initiatives__art { flex: 1; padding: 28px; }
 .initiative__hero-art img { width: 100%; max-width: 300px; height: 195px; object-fit: contain; }
-.initiative__hero-art span { color: #67665b; font-size: 12px; text-align: center; line-height: 1.6; }
-/* Reverse artwork (a white logo) is shown on the dark ground it was made for. */
-.initiative__hero-art--dark { background: #23211d; }
-.initiative__hero-art--dark span { color: #b9b4a8; }
-.initiative__hero-art[data-themed] { background: var(--surface); }
-.initiative__hero-art[data-themed] span { color: var(--ink-muted); }
+.initiative__hero-art figcaption { color: var(--ink-muted); font-size: 12px; text-align: center; line-height: 1.6; }
 .initiative__panel { padding: 29px 0 0; }
 .initiative__section-heading { display: flex; justify-content: space-between; gap: 20px; margin-bottom: 21px; }
 .initiative__section-heading .initiative__eyebrow { color: var(--ink-muted); margin-bottom: 8px; }
@@ -39,27 +38,26 @@
 .initiative__small { color: var(--ink-muted); font-size: 12px; line-height: 1.65; }
 .initiative__result-count { margin: 0 0 14px; }
 .initiative__cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
-.initiative__card { background: var(--surface); border-radius: 10px; overflow: hidden; min-width: 0; display: flex; flex-direction: column; }
+.initiative__card { background: var(--surface); border-radius: var(--radius); overflow: hidden; min-width: 0; display: flex; flex-direction: column; }
 .initiative__card--featured { grid-column: span 2; }
-.initiative__card-image { border: 0; padding: 0; display: block; width: 100%; background: #f8f7f3; cursor: pointer; text-align: inherit; }
-.initiative__visual { margin: 0; background: #f6f5f0; }
+.initiative__card-image { border: 0; padding: 0; display: block; width: 100%; background: var(--initiative-artwork); cursor: pointer; text-align: inherit; }
+.initiative__visual { margin: 0; background: var(--initiative-artwork); }
 .initiative__visual img { display: block; width: 100%; height: 180px; padding: 12px; object-fit: contain; object-position: center; }
 .initiative__card--featured .initiative__visual img { height: 242px; padding: 18px 30px; }
 .initiative__card--featured .initiative__unrecovered { height: 242px; }
 .initiative__card--featured + .initiative__card .initiative__visual img, .initiative__card--featured + .initiative__card .initiative__unrecovered { height: 242px; }
-.initiative__card--mark .initiative__visual { background: #fff; }
 .initiative__card--mark .initiative__visual img { height: 180px; padding: 28px; }
-.initiative__visual[data-themed], .initiative__card--mark .initiative__visual[data-themed] { background: var(--surface); }
-.initiative__visual--dark { background: #20231e !important; }
-.initiative__unrecovered { height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; color: #7b7b6e; background: #f3f2ec; padding: 20px; text-align: center; }
+.initiative__visual[data-themed] { background: var(--hover); }
+.initiative__visual--dark { background: var(--initiative-artwork-dark) !important; }
+.initiative__unrecovered { height: 180px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; color: var(--ink-muted); background: var(--hover); padding: 20px; text-align: center; }
 .initiative__unrecovered svg { margin-bottom: 4px; opacity: .65; }
 .initiative__unrecovered span { font-size: 14px; }
-.initiative__unrecovered small { font-size: 12px; color: #77796d; }
+.initiative__unrecovered small { font-size: 12px; color: var(--ink-muted); }
 .initiative__card-copy { padding: 19px; }
 .initiative__card-meta { display: flex; flex-wrap: wrap; gap: 7px 12px; align-items: center; color: var(--ink-muted); font-size: 12px; text-transform: capitalize; }
 .initiative__status { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--ink-muted); text-transform: none; }
-.initiative__status > span { width: 5px; height: 5px; flex-shrink: 0; border-radius: 50%; background: #a17a34; }
-.initiative__status--visual > span { background: #437451; }
+.initiative__status > span { width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%; background: var(--initiative-sought); }
+.initiative__status--visual > span { background: var(--initiative-held); }
 .initiative__card h3 { margin: 12px 0 10px; font-size: 20px; line-height: 1.3; font-weight: 500; }
 .initiative__card h3 button { display: flex; gap: 12px; justify-content: space-between; width: 100%; border: 0; color: var(--ink); background: transparent; text-align: left; padding: 0; cursor: pointer; letter-spacing: -.02em; }
 .initiative__card h3 button span { color: var(--ink-faint); font-weight: 400; }
@@ -74,16 +72,16 @@
 .initiative__references li > span, .initiative__links small { color: var(--ink-muted); }
 .initiative__links small { display: block; }
 .initiative__publication-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.initiative__publication { border-radius: 10px; background: var(--surface); padding: 25px; }
+.initiative__publication { border-radius: var(--radius); background: var(--surface); padding: 25px; }
 .initiative__publication h4 { margin: 0 0 13px; font-size: 19px; font-weight: 500; line-height: 1.35; }
 .initiative__publication > p:not(.initiative__eyebrow), .initiative__leads p { color: var(--ink-muted); font-size: 16px; line-height: 1.75; }
 .initiative__text-button { border: 0; background: transparent; color: var(--ink); padding: 12px 0 0; text-decoration: underline; cursor: pointer; font-size: 14px !important; }
 .initiative__leads { margin-top: 30px; }
 .initiative__leads h4 { font-size: 20px; font-weight: 500; margin: 0; }
-.initiative__leads details { padding: 17px 0; border-top: 1px solid var(--mid); font-size: 16px; }
-.initiative-detail summary { cursor: pointer; line-height: 1.6; }
-.initiative__source-list { background: var(--surface); border-radius: 9px; padding: 16px 20px; margin-bottom: 25px; font-size: 16px; }
-.initiative__source-list ol { padding-left: 20px; margin: 20px 0 0; display: grid; gap: 18px; }
+.initiative__lead { padding: 17px 0; border-top: 1px solid var(--mid); font-size: 16px; }
+.initiative__lead h5 { margin: 0; font-size: 16px; font-weight: 600; line-height: 1.6; }
+.initiative__source-list.disclosure { background: var(--surface); border-radius: 9px; padding: 10px 20px; margin: 0 0 25px; font-size: 16px; }
+.initiative__source-list ol { padding-left: 20px; margin: 12px 0 8px; display: grid; gap: 18px; }
 .initiative__source-list li { padding-left: 6px; }
 .initiative__source-list a { color: var(--ink); }
 .initiative__source-list li > span { display: block; font-size: 12px; color: var(--ink-muted); margin-top: 4px; }
@@ -99,13 +97,18 @@
 .initiative__table-wrap td:first-child { color: var(--ink); min-width: 195px; overflow-wrap: anywhere; }
 .initiative__table-wrap td:nth-child(4) { min-width: 190px; }
 .initiative__table-wrap small { display: block; color: var(--ink-faint); }
-.initiative__related { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 23px; margin-top: 32px; padding: 22px 0 0; border-top: 1px solid var(--mid); font-size: 12px; }
-.initiative__related > span { color: var(--ink-muted); }
-.initiative__related a { color: var(--ink-2); }
-.initiative__related a > span { padding-left: 4px; }
-.initiative__empty { font-size: 16px; color: var(--ink-muted); padding: 30px; text-align: center; background: var(--surface); border-radius: 10px; }
-.initiative__dialog { border: 0; padding: 0; border-radius: 14px; color: var(--ink); background: var(--surface); width: min(800px, calc(100vw - 32px)); max-height: calc(100dvh - 40px); overflow-y: auto; box-shadow: 0 20px 80px #0004; }
-.initiative__dialog::backdrop { background: #171d19a8; }
+/* Links to other sections, each card named for the section it opens ("Open in Logos →"). */
+.initiative__related { margin-top: 32px; padding: 22px 0 0; border-top: 1px solid var(--mid); }
+.initiative__related h3 { margin: 0 0 12px; font-size: 14px; font-weight: 600; }
+.initiative__related ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 8px; }
+.initiative__related a { display: grid; gap: 3px; height: 100%; padding: 12px 14px; border-radius: var(--radius-sm); background: var(--surface); border: 1px solid transparent; color: var(--ink); text-decoration: none; transition: border-color .12s; }
+.initiative__related a:hover { border-color: var(--mid); }
+.initiative__related strong { font-size: 14px; font-weight: 500; line-height: 1.4; }
+.initiative__related a > span { font-size: 12px; color: var(--ink-muted); }
+.brand-guide .initiative__related { margin-top: 20px; padding-top: 16px; }
+.initiative__empty { font-size: 16px; color: var(--ink-muted); padding: 30px; text-align: center; background: var(--surface); border-radius: var(--radius); }
+.initiative__dialog { border: 0; padding: 0; border-radius: var(--radius); color: var(--ink); background: var(--surface); width: min(800px, calc(100vw - 32px)); max-height: calc(100dvh - 40px); overflow-y: auto; box-shadow: var(--menu-shadow-token); }
+.initiative__dialog::backdrop { background: rgba(20, 17, 14, 0.66); }
 .initiative__dialog-inner { padding: clamp(20px, 4vw, 36px); }
 .initiative__dialog-head { display: flex; justify-content: space-between; align-items: start; gap: 20px; margin-bottom: 17px; }
 .initiative__dialog-head .initiative__eyebrow { color: var(--ink-muted); margin-bottom: 7px; }
@@ -130,7 +133,8 @@
 .initiative__dialog h3 { font-size: 16px; margin: 22px 0 10px; font-weight: 600; }
 .initiative__domain-chips { display: flex; flex-wrap: wrap; gap: 7px; list-style: none; padding: 0; margin: 0; }
 .initiative__domain-chips li { font-size: 12px; border: 1px solid var(--mid); padding: 5px 8px; border-radius: 4px; overflow-wrap: anywhere; max-width: 100%; }
-.initiative__record-details { font-size: 14px; line-height: 1.8; margin-top: 17px; }
+.initiative__record-details { font-size: 14px; line-height: 1.8; }
+.initiative__record-details ul { margin: 0; }
 .initiative__dialog .initiative__download { margin-top: 24px; }
 .initiative__sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 @media (max-width: 800px) {
@@ -138,16 +142,16 @@
   .initiative__card--featured { grid-column: auto; }
   .initiative__card--featured .initiative__visual img, .initiative__card--featured + .initiative__card .initiative__visual img, .initiative__card--featured .initiative__unrecovered, .initiative__card--featured + .initiative__card .initiative__unrecovered { height: 180px; padding: 12px; }
   .initiative__hero { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); }
-  .initiative__hero-art { padding: 20px; }
+  .initiative__hero-art .initiatives__art { padding: 20px; }
 }
 @media (max-width: 560px) {
-  .initiative__hero { grid-template-columns: 1fr; border-radius: 12px; }
+  .initiative__hero { grid-template-columns: 1fr; }
   .initiative__hero-copy { padding: 25px; }
   .initiative__hero h2 { font-size: 34px; }
-  .initiative__hero-copy > p:not(.initiative__eyebrow) { font-size: 16px; margin: 15px 0 18px; }
-  .initiative__hero-art { margin: 0 17px 17px; padding: 20px; gap: 10px; }
+  .initiative__hero-copy > p:not(.initiative__eyebrow, .initiative__part-of) { font-size: 16px; margin: 15px 0 18px; }
+  .initiative__hero-art { margin: 0 17px 17px; gap: 8px; }
+  .initiative__hero-art .initiatives__art { padding: 20px; }
   .initiative__hero-art img { height: 92px; }
-  .initiative__hero-art span { font-size: 12px; }
   .initiative__hero-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-top: 16px; gap: 12px; }
   .initiative__hero-stats strong { font-size: 19px; }
   .initiative__hero-stats span { font-size: 12px; }
@@ -163,11 +167,9 @@
   .initiative__toolbar { gap: 9px; }
   .initiative__references li { display: block; }
   .initiative__references li > span { display: block; }
-  .initiative__related { align-items: start; flex-direction: column; gap: 15px; }
   .initiative__dialog { width: calc(100vw - 20px); max-height: calc(100dvh - 20px); }
   .initiative__dialog-inner { padding: 20px; }
   .initiative__visual--large img { padding: 10px; }
 }
 @media (prefers-reduced-motion: reduce) { .initiative-detail *, .initiative-detail *::before, .initiative-detail *::after { scroll-behavior: auto !important; } }
-.initiative__hero h2 { white-space: pre-line; }
 .initiative__hero--text { grid-template-columns: minmax(0, 1fr); }

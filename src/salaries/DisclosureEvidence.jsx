@@ -1,3 +1,4 @@
+import { Disclosure } from '../site/Disclosure.jsx'
 import { coverageStatus, disclosurePeriod, materialSourceQualifications, readerNotes, scopeLabel, sourceHref, thresholdLabel } from './coverage.js'
 
 export const SourceLink = ({ sourceId, sources = {}, pdfPage, label, url }) => {
@@ -21,10 +22,9 @@ export const SourceWarnings = ({ sourceIds, sources }) => {
   const warnings = readerNotes(sourceIds, sources)
   if (!warnings.length) return null
   return (
-    <details className="salaries__caveats">
-      <summary className="salaries__hint salaries__hint--small">{warnings.length === 1 ? 'Source note' : `Source notes (${warnings.length})`}</summary>
+    <Disclosure className="salaries__caveats" summary={warnings.length === 1 ? 'Source note' : `Source notes (${warnings.length})`}>
       <SourceNotes sourceIds={sourceIds} sources={sources} />
-    </details>
+    </Disclosure>
   )
 }
 

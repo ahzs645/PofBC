@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { SiteLink } from '../site/navigation.jsx'
+import { RelatedLinks } from './InitiativeParts.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 import './brandGuide.css'
 
 const PageText = ({ base, page }) => {
@@ -66,9 +67,9 @@ export const BrandGuide = ({ guide, source, requestedPage, onPage }) => {
         <button type="button" aria-pressed={zoom} onClick={() => setZoom(!zoom)}>{zoom ? 'Fit page' : 'Enlarge page'}</button>
         <a href={source.url + '#page=' + page} target="_blank" rel="noreferrer">Original PDF ↗</a>
       </div>
-      <details className="brand-guide__text" onToggle={(event) => setShowText(event.currentTarget.open)}>
-        <summary>Read page text</summary>{showText && <PageText base={base} page={page} />}
-      </details>
+      <Disclosure className="brand-guide__text" summary="Read page text" onToggle={setShowText}>
+        {showText && <PageText base={base} page={page} />}
+      </Disclosure>
       {showPalette && <section className="brand-guide__palette"><h4>Colour specifications</h4>
         <label className="brand-guide__format">Colour values <select value={colourFormat} onChange={(event) => setColourFormat(event.target.value)}>
           <option value="screen">Screen (hex)</option><option value="process">CMYK</option><option value="spot">Pantone</option>
@@ -81,9 +82,7 @@ export const BrandGuide = ({ guide, source, requestedPage, onPage }) => {
           </li>
         })}</ul>
       </section>}
-      {related.length > 0 && <nav aria-label="Related brand material" className="initiative__related">
-        {related.map(({ label, to }) => <SiteLink key={label} to={to}>{label} →</SiteLink>)}
-      </nav>}
+      <RelatedLinks links={related} label="Related brand material" title={null} />
     </div>
   </div>
 }

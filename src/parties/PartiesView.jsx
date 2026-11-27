@@ -17,6 +17,7 @@ import {
 } from './parties.js'
 import './parties.css'
 import { SourceList } from '../site/SourceList.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 
 const assetUrl = (file) => `${import.meta.env.BASE_URL}${file.replace(/^\//, '')}`
 const External = ({ children, ...props }) => <a {...props} target="_blank" rel="noreferrer">{children}<span aria-hidden="true"> ↗</span></a>
@@ -131,11 +132,20 @@ const Design = ({ design, open }) => {
         {asset.dateBasis && <p className="parties__muted">{asset.dateBasis}</p>}
         {asset.notes && <p>{asset.notes}</p>}
         {asset.source.url && <p className="parties__source"><External href={asset.source.url}>{asset.source.title}</External>{asset.source.locator && <span> · {asset.source.locator}</span>}</p>}
-        <details className="parties__variants" open={open || design.assets.length === 1 || undefined}>
-          <summary>{design.assets.length === 1 ? 'The file' : `${design.assets.length} files: colourways and formats`}</summary>
-          <VariantList design={design} />
-          {asset.rights && <p className="parties__muted parties__rights">{asset.rights}</p>}
-        </details>
+        {/* One file is simply listed; several fold, open on the design the page was opened to. */}
+        {design.assets.length === 1
+          ? (
+            <div className="parties__variants">
+              <VariantList design={design} />
+              {asset.rights && <p className="parties__muted parties__rights">{asset.rights}</p>}
+            </div>
+            )
+          : (
+            <Disclosure className="parties__variants" summary={`${design.assets.length} files: colourways and formats`} defaultOpen={open}>
+              <VariantList design={design} />
+              {asset.rights && <p className="parties__muted parties__rights">{asset.rights}</p>}
+            </Disclosure>
+            )}
       </div>
     </article>
   )

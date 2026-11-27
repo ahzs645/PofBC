@@ -38,6 +38,11 @@ export function DepartmentCover({ id }) {
 const SHARED_WITH = {
   'recreation-conservation': [['royal-bc-museum', 'Royal BC Museum'], ['bc-parks', 'BC Parks']]
 }
+// Departments in this section that share marks with each other: the department and its branch.
+const SHARED_HERE = {
+  'recreation-conservation': [['fish-wildlife-branch', 'Fish and Wildlife Branch']],
+  'fish-wildlife-branch': [['recreation-conservation', 'Department of Recreation and Conservation']]
+}
 
 export default function DepartmentCollection({ id, markId }) {
   const { name: theme } = useSiteTheme()
@@ -102,6 +107,14 @@ export default function DepartmentCollection({ id, markId }) {
       <CollectionHead collection={collection} onOpenGovernment={openGovernment} headingRef={heading} />
       <p className="gallery__intro">{collection.intro}</p>
       {links}
+      {SHARED_HERE[collection.id] && (
+        <p className="gallery__intro">
+          Also in Departmental Logos:{' '}
+          {SHARED_HERE[collection.id].map(([other, label], at) => (
+            <span key={other}>{at > 0 && ' · '}<SiteLink to={departmentalPlace(other)}>{label} →</SiteLink></span>
+          ))}
+        </p>
+      )}
       {SHARED_WITH[collection.id] && (
         <p className="gallery__intro">
           Also in the gallery:{' '}

@@ -1,5 +1,6 @@
 import { DOCUMENT_ARMS_LAYOUT_ORDER, DOCUMENT_ARMS_LAYOUTS } from '../documentArms/layouts.js'
 import { DOCUMENT_ARMS_RESEARCH_URL } from '../documentArms/evidence.js'
+import { Disclosure } from './Disclosure.jsx'
 import { SiteLink } from './navigation.jsx'
 import { Segmented } from './Segmented.jsx'
 
@@ -26,8 +27,7 @@ export function DocumentArmsPanel({ state, update, clearSpaceOptions }) {
         onChange={(clearSpace) => update({ clearSpace })}
         hint="An adjustable export margin, not a recovered historical rule."
       />
-      <details className="document-arms-evidence">
-        <summary>Evidence and visual guides</summary>
+      <Disclosure className="document-arms-evidence" summary="Evidence and visual guides">
         <p>Earlier arms appear on the 1954 mining booklet and 1978 orders shown beside the study. The 1987 grant added the helmet, mantling and dogwood details.</p>
         <ul>
           <li><a href="https://www2.gov.bc.ca/gov/content/governments/celebrating-british-columbia/symbols-of-bc/coat-of-arms" target="_blank" rel="noreferrer">Province’s history of the arms</a></li>
@@ -38,7 +38,7 @@ export function DocumentArmsPanel({ state, update, clearSpaceOptions }) {
         </ul>
         <p>The 1954 cover and title page use different engravings. No period standard for these exact headings has been verified; the specimens document individual examples.</p>
         <a href={DOCUMENT_ARMS_RESEARCH_URL} target="_blank" rel="noreferrer">Research, retained originals and archival leads</a>
-      </details>
+      </Disclosure>
     </section>
   )
 }

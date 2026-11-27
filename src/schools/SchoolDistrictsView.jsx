@@ -8,6 +8,7 @@ import { documentTitle, setDocumentMeta } from '../site/documentMeta.js'
 import { CURRENT_DISTRICTS, SCHOOL_DIRECTORY_SOURCE, SCHOOL_DISTRICTS_AS_OF, DISTRICT_COUNTS, districtById, districtPlace, searchDistricts, connectionsOf, districtHistory, districtSources, formatHistoryDate, establishmentLabel, primaryDistrictLogo } from './districts.js'
 import './schools.css'
 import { SourceList } from '../site/SourceList.jsx'
+import { Disclosure } from '../site/Disclosure.jsx'
 
 const assetUrl = (file) => `${import.meta.env.BASE_URL}${file.replace(/^\//, '')}`
 const External = ({ children, ...props }) => <a {...props} target="_blank" rel="noreferrer">{children}<span aria-hidden="true"> ↗</span></a>
@@ -65,14 +66,13 @@ const DistrictConnections = ({ district, place }) => {
 
 const AmalgamationOverview = ({ place }) => {
   const rows = CURRENT_DISTRICTS.map((district) => ({ district, links: connectionsOf(district.id).predecessors })).filter((row) => row.links.length)
-  return <details className="schools__amalgamations">
-    <summary>Amalgamations <span>{rows.length} current districts formed from {DISTRICT_COUNTS.connections} earlier ones</span></summary>
+  return <Disclosure className="schools__amalgamations" summary="Amalgamations" hint={`${rows.length} current districts formed from ${DISTRICT_COUNTS.connections} earlier ones`}>
     <ul>{rows.map(({ district, links }) => <li key={district.id}>
       <div className="schools__merger-predecessors">{links.map((link) => <SiteLink key={link.from} to={districtPlace(link.district, preserved(place))}>{link.district.title}</SiteLink>)}</div>
       <span className="schools__merger-arrow" aria-hidden="true">→</span>
       <div className="schools__merger-successor"><SiteLink to={districtPlace(district, preserved(place))}>{district.title}</SiteLink><span>Amalgamated {formatHistoryDate(links[0].date)} · <External href={links[0].sourceUrl}>{links[0].sourceTitle ?? 'Source'}</External></span></div>
     </li>)}</ul>
-  </details>
+  </Disclosure>
 }
 
 const DATE_NOTES = { year: 'Year recorded', month: 'Month recorded', 'report-period': 'Report period' }
@@ -93,7 +93,7 @@ const DistrictTimeline = ({ district }) => {
       </>,
       sources: sourceLink(event)
     }))} /> : <p className="schools__empty">No establishment date verified yet. The sources below are the starting points.</p>}
-    {district.notes.length > 0 && <details className="schools__notes"><summary>Research notes and remaining questions</summary><ul>{district.notes.map((note, i) => <li key={i}>{note}</li>)}</ul></details>}
+    {district.notes.length > 0 && <Disclosure className="schools__notes" summary="Research notes and remaining questions"><ul>{district.notes.map((note, i) => <li key={i}>{note}</li>)}</ul></Disclosure>}
   </section>
 }
 

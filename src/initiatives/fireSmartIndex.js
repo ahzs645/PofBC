@@ -10,7 +10,12 @@ export const fireSmartParent = {
   cover: cover('signature', 'Yellow flame surrounding a house beside the British Columbia FireSmart name', 5),
   tags: ['Wildfire prevention', 'Community programs', 'Logos', 'Timeline'],
   searchTerms: ['BCFSC', 'Ember the FireSmart Fox', 'Community Resiliency Investment', 'Home Partners', 'FireSmart Canada', 'Community FireSmart and Resiliency Collaboratives'],
-  relatedBodyIds: ['sub-bc-wildfire-service']
+  relatedBodyIds: ['sub-bc-wildfire-service'],
+  parts: {
+    label: 'FireSmart BC programs', noun: ['program', 'programs'],
+    note: 'FireSmart BC presents each of these as one of its programs; its July 2025 brand guidelines give four of them their own logos.',
+    source: { title: 'FireSmart BC — What is FireSmart?', url: 'https://firesmartbc.ca/what-is-firesmart/' }
+  }
 }
 
 export const fireSmartChildren = [

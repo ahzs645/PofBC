@@ -361,7 +361,7 @@ a { color: inherit; text-underline-offset: 2px; }
 .document-arms-panel > .field:first-of-type .segmented { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .document-arms-reference { margin: 16px 4px 0; color: var(--ink-muted); font-size: 13px; line-height: 1.5; }
 .document-arms-reference__status { color: var(--ink); font-weight: 600; margin-bottom: 4px; }
-.document-arms-reference summary, .document-arms-evidence summary { cursor: pointer; color: var(--ink); }
+.document-arms-source__title { margin: 0; color: var(--ink); font-size: 13px; font-weight: 600; }
 .document-arms-reference figure { margin: 12px 0 0; }
 .document-arms-reference img { display: block; width: 100%; max-height: 220px; object-fit: contain; background: #fff; border-radius: 6px; }
 .document-arms-reference figcaption { margin-top: 8px; font-size: 12px; }
@@ -443,9 +443,38 @@ a { color: inherit; text-underline-offset: 2px; }
 .field__help:hover, .field__help[aria-expanded='true'] { color: var(--ink); border-color: currentColor; }
 .field--compact .field__head { margin: 0; }
 
-/* A folded field: its label is the summary (ShareLink.jsx). */
-.field--fold > summary { display: list-item; width: fit-content; cursor: pointer; margin-bottom: 0; }
-.field--fold[open] > summary { margin-bottom: 6px; }
+/* ── The one fold (Disclosure.jsx) ──────────────────────────────────────────────────────────────
+   For long secondary material only. No browser triangle: a line of text in the site's quiet ink
+   with a small chevron that turns when open, and the same spacing wherever it appears. */
+.disclosure { margin: 12px 0 0; min-width: 0; }
+.disclosure__summary {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 6px;
+  max-width: 100%;
+  min-height: 32px;
+  padding: 4px 0;
+  list-style: none;
+  cursor: pointer;
+  color: var(--ink-2);
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  border-radius: 4px;
+}
+.disclosure__summary::-webkit-details-marker { display: none; }
+.disclosure__summary::marker { content: ''; }
+.disclosure__summary:hover { color: var(--ink); }
+.disclosure__summary:hover .disclosure__label { text-decoration: underline; text-decoration-color: var(--mid); text-underline-offset: 3px; }
+.disclosure__summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.disclosure__chevron { flex: none; color: var(--ink-faint); transition: transform 160ms ease-out; }
+.disclosure[open] > .disclosure__summary .disclosure__chevron { transform: rotate(180deg); }
+.disclosure__hint { flex-basis: 100%; color: var(--ink-faint); font-size: 12.5px; font-weight: 400; }
+.disclosure__body { padding: 6px 0 2px; }
+.disclosure__body > :first-child { margin-top: 0; }
+.disclosure__body > :last-child { margin-bottom: 0; }
+@media (prefers-reduced-motion: reduce) { .disclosure__chevron { transition: none; } }
 
 .field__note {
   margin: 6px 0 0;
@@ -1221,7 +1250,6 @@ a.gallery__pick, a.gallery__collection { text-decoration: none; }
 .hydro__slider .ui-range { width: 100%; }
 
 .hydro__more { margin-top: 14px; }
-.hydro__more summary { cursor: pointer; font-size: 13px; font-weight: 600; }
 
 .hydro__buttons { flex-wrap: wrap; margin-top: 10px; }
 .hydro__buttons .button { min-height: 38px; padding: 7px 12px; font-size: 14px; }
@@ -1539,8 +1567,9 @@ a.gallery__pick, a.gallery__collection { text-decoration: none; }
 @media (max-width: 560px) {
   .gallery__palette-choices:has(> :nth-child(4)) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-.gallery__palette-sources summary { cursor: pointer; font-weight: 600; }
-.gallery__palette-sources p, .gallery__palette-sources ul { margin-top: 12px; }
+.gallery__palette-sources { margin-top: 20px; }
+.gallery__palette-sources h3 { margin: 0; font-size: 14px; font-weight: 600; color: var(--ink); }
+.gallery__palette-sources p, .gallery__palette-sources ul { margin-top: 8px; }
 .gallery__palette-sources li + li { margin-top: 6px; }
 .gallery__asset-source { margin: 0; display: grid; gap: 10px; font-size: 14px; }
 .gallery__asset-source > div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 12px; }
@@ -1650,8 +1679,6 @@ a.gallery__pick, a.gallery__collection { text-decoration: none; }
 
 /* An era's dates and sources, folded under one line beneath its note and chips. */
 .gallery__era-more { margin-top: 10px; }
-.gallery__era-more summary { width: fit-content; cursor: pointer; font-size: 13px; font-weight: 600; color: var(--ink-muted); }
-.gallery__era-more summary:hover { color: var(--ink); }
 .gallery__era-more .gallery__era-dates { margin-top: 8px; }
 .gallery__era-more .gallery__sources { margin-top: 8px; }
 
@@ -1691,11 +1718,9 @@ a.gallery__pick, a.gallery__collection { text-decoration: none; }
 .gallery__railway-evidence figcaption { margin-top: 12px; }
 .gallery__railway-evidence h3 { margin-top: 4px; }
 .gallery__railway-download { display: inline-block; margin-top: 10px; color: var(--ink-muted); font-size: 13px; text-underline-offset: 3px; }
-.gallery__railway-more { padding: 16px 20px; border-radius: var(--radius); background: var(--surface); }
-.gallery__railway-more > summary { cursor: pointer; color: var(--ink-muted); font-size: 14px; font-weight: 600; line-height: 1.5; }
-.gallery__railway-more[open] > summary { margin-bottom: 20px; }
+.gallery__railway-more { margin: 0; padding: 12px 20px; border-radius: var(--radius); background: var(--surface); }
 .gallery__railway-more .gallery__railway-section { padding: 12px 0; }
-.gallery__railway-links a:focus-visible, .gallery__railway-image:focus-visible, .gallery__railway-download:focus-visible, .gallery__railway-more > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+.gallery__railway-links a:focus-visible, .gallery__railway-image:focus-visible, .gallery__railway-download:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
 @media (min-width: 760px) {
   .gallery__railway-events > li { grid-template-columns: 160px minmax(0, 1fr); gap: 24px; }
   .gallery__railway-event-date { display: grid; gap: 4px; }
@@ -1795,9 +1820,7 @@ a.gallery__pick, a.gallery__collection { text-decoration: none; }
   .gallery__timeline .gallery__timeline-link::before { top: 12px; }
 }
 
-.gallery__timeline-index { border: 1px solid var(--border); border-radius: var(--radius-sm); }
-.gallery__timeline-index > summary { cursor: pointer; padding: 12px; font-weight: 600; }
-.gallery__timeline-index > summary span { margin-inline-start: 8px; color: var(--ink-muted); font-size: 13px; font-weight: 400; }
+.gallery__timeline-index { margin: 0; }
 .gallery__timeline-index ol {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 185px), 1fr));
   grid-auto-flow: row;
@@ -1923,12 +1946,9 @@ a.gallery__back, a.gallery__crumb { text-decoration: none; }
 /* The fuller account on a mark's or a collection's own page: each classification as a term with
    its sentences beside it on a wide screen, beneath it on a narrow one. */
 .gallery__about > h2 { margin-bottom: 12px; }
+.gallery__about > h2 + .disclosure { margin-top: -6px; }
 
 /* A collection's account starts closed, its heading the line that opens it. */
-.gallery__about--closed summary { cursor: pointer; }
-.gallery__about--closed summary h2 { display: inline; margin: 0; font-size: 16px; font-weight: 600; color: var(--ink); }
-.gallery__summary-hint { margin-left: 10px; font-size: 13px; color: var(--ink-faint); }
-.gallery__about--closed[open] summary { margin-bottom: 12px; }
 
 .gallery__facts { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; margin: 0; }
 .gallery__facts > div { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; }
@@ -1949,7 +1969,6 @@ a.gallery__back, a.gallery__crumb { text-decoration: none; }
 
 .gallery__collecting-group { display: grid; gap: 8px; margin-top: 8px; }
 .gallery__collecting-heading { margin: 0; font-size: 15px; font-weight: 600; cursor: default; }
-details.gallery__collecting-group > summary { cursor: pointer; }
 .gallery__collecting-count { margin-left: 6px; font-size: 13px; font-weight: 400; color: var(--ink-faint); }
 .gallery__collecting-list {
   display: grid;
@@ -2379,12 +2398,11 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__head-tools .field { margin: 0; }
 .salaries__layout-icon { display: block; width: 14px; height: 14px; fill: currentColor; }
 .segmented[aria-label='Layout'] button { padding-inline: 8px; }
-.salaries__caveats > summary { cursor: pointer; width: fit-content; }
 .salaries__matches + .salaries__about { margin-top: 0; }
 .salaries__about { margin-top: 24px; padding-top: 12px; border-top: 1px solid var(--border); }
-.salaries__about > summary { cursor: pointer; width: fit-content; }
-.salaries__about[open] { display: grid; gap: 8px; }
-.salaries__caveats[open] { display: grid; gap: 6px; }
+.salaries__about:not(.disclosure), .salaries__about > .disclosure__body { display: grid; gap: 8px; }
+.salaries__caveats > .disclosure__body { display: grid; gap: 6px; }
+.salaries__caveats.disclosure { margin-top: 4px; }
 
 /* How pay moved: the tip beside a heading, the measures as tiles, and charts side by side when there
    is room. */
@@ -2646,8 +2664,6 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 /* The page's four parts, each a tap away; and the long reference lists, folded until wanted. */
 .salaries-about__contents { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 14px; }
 .salaries-about section { scroll-margin-top: 16px; }
-.salaries-about__fold > summary { cursor: pointer; font-size: 14px; font-weight: 600; padding: 6px 0; }
-.salaries-about__fold[open] > summary { margin-bottom: 6px; }
 .salaries-about__sources { font-size: 14px; }
 .council-pay__links { margin: 0; }
 .council-pay__years .salaries-record + .salaries-record { margin-top: 8px; }
@@ -2697,8 +2713,6 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .gallery__more { display: flex; justify-content: center; padding: 20px 0 8px; }
 .gallery__more-count { color: var(--ink-muted); font-weight: 400; }
 .gallery__unconfirmed { margin-top: 20px; }
-.gallery__unconfirmed > summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; cursor: pointer; padding: 6px 4px 12px; }
-.gallery__unconfirmed > summary .gallery__category-title { margin: 0; }
 
 /* The scrubber sits in the sticky toolbar, so the year stays in reach while the cards scroll. */
 .gallery__scrubber {

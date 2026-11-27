@@ -1,6 +1,9 @@
 import { environmentYouthCorpsCover, environmentYouthCorpsId } from './environmentYouthCorpsArtwork.js'
 
 // Three separately administered programs discussed in the youth estimates and debates of 1989.
+// On May 12, 1989 Stan Hagen, Minister Responsible for Youth, described all three to the legislature
+// as the Province's youth programs (youthPrograms.js, youthDebate), so each sits under BC Youth.
+export const BC_YOUTH_ID = 'bc-youth'
 export const ADVANCED_EDUCATION_1986 = 'ministry-of-advanced-education-and-job-training-1986'
 export const EDUCATION_1979 = 'ministry-of-education-1979'
 export const ENVIRONMENT_1988 = 'ministry-of-environment-1988'
@@ -8,7 +11,7 @@ export const SOCIAL_SERVICES_1986 = 'ministry-of-social-services-and-housing-198
 
 export const YOUTH_PROGRAMS = [
   {
-    id: 'challenge-89',
+    id: 'challenge-89', parentId: BC_YOUTH_ID,
     title: 'Challenge ’89',
     subtitle: 'British Columbia Summer Employment Program',
     summary: 'In 1989 the province offered to share wages with employers creating summer jobs for young British Columbians. The program combined federal and provincial funding.',
@@ -22,7 +25,7 @@ export const YOUTH_PROGRAMS = [
     relatedBodyIds: [ADVANCED_EDUCATION_1986]
   },
   {
-    id: 'passport-to-apprenticeship',
+    id: 'passport-to-apprenticeship', parentId: BC_YOUTH_ID,
     title: 'Passport to Apprenticeship',
     subtitle: 'Education · Advanced Education and Job Training',
     summary: 'B.C. introduced this program in 1989 to give high-school trades students experience with employers before they left school.',
@@ -31,7 +34,7 @@ export const YOUTH_PROGRAMS = [
     relatedBodyIds: [ADVANCED_EDUCATION_1986, EDUCATION_1979]
   },
   {
-    id: environmentYouthCorpsId,
+    id: environmentYouthCorpsId, parentId: BC_YOUTH_ID,
     title: 'Environment Youth Corps',
     subtitle: 'Environment · Social Services and Housing',
     summary: 'Young people aged 16–24 worked on local conservation projects in a provincial employment and training program established in 1989.',

@@ -63,8 +63,8 @@ export function DocumentArmsReference({ layout }) {
     <div className="document-arms-reference">
       <p className="document-arms-reference__status">Reconstruction study</p>
       <p>The shared plate artwork differs from the original engravings. The lettering and spacing remain studies.</p>
-      <details open className="document-arms-source">
-        <summary>Compare with source evidence</summary>
+      <section className="document-arms-source" aria-labelledby={`${selectId}-title`}>
+        <h3 id={`${selectId}-title`} className="document-arms-source__title">Compare with source evidence</h3>
         <div className="document-arms-source__controls">
           <label htmlFor={selectId}>Reference specimen</label>
           <Select id={selectId} value={reference.id} onChange={(value) => {
@@ -93,7 +93,7 @@ export function DocumentArmsReference({ layout }) {
           {reference.sourceUrl && <a href={reference.sourceUrl} target="_blank" rel="noreferrer">{reference.sourceLabel}</a>}
         </div>
         <p className="document-arms-source__note">Reference images are for comparison only. Downloads contain the vector study shown above. <a href={DOCUMENT_ARMS_RESEARCH_URL} target="_blank" rel="noreferrer">Research and retained originals</a></p>
-      </details>
+      </section>
     </div>
   )
 }

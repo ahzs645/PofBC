@@ -1294,6 +1294,27 @@ export const GALLERY_COLLECTIONS = [
     })
   },
   {
+    id: 'fish-wildlife-branch',
+    // A branch of the Department of Recreation and Conservation: it opens in Departmental Logos, like
+    // the department, and holds copies of the department's three Fish and Wildlife marks under its
+    // own ids so each page can scroll to its own copy.
+    shelf: 'departmental',
+    showInGalleryIndex: false,
+    label: 'Fish and Wildlife Branch',
+    body: 'Branch of the Department of Recreation and Conservation, named in 1966',
+    years: '1971–1973',
+    cover: 'fwb-1973-oval',
+    intro: 'The Fish and Wildlife Branch’s marks, from the Department of Recreation and Conservation’s reports and ' +
+      'the 1972–73 hunting regulations: its square in the department’s family of five, then its own framed oval ' +
+      'above F&W and the emblem beside the branch’s name. The branch began as the Game Commission, became the ' +
+      'department’s Fish and Game Branch on 1 April 1957 and was named the Fish and Wildlife Branch in 1966. ' +
+      'Its marks after the department ended in 1976 are still sought.',
+    eras: withMarks(COLLECTION_ERAS['fish-wildlife-branch'], {
+      'fwb-square': [{ ...DRC_SQUARES.fishWildlife, id: 'fwb-1971-square' }],
+      'fwb-emblem': [{ ...DRC_EMBLEMS.fwOval, id: 'fwb-1973-oval' }, { ...DRC_EMBLEMS.fwLockup, id: 'fwb-1973-lockup' }]
+    })
+  },
+  {
     id: 'royal-bc-museum',
     shelf: 'bodies',
     label: 'Royal BC Museum',
