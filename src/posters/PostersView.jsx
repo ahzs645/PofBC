@@ -5,6 +5,8 @@ import { ShelfView } from './ShelfView.jsx'
 import { FACETS, POSTERS, SERIES } from './catalogue.js'
 import careCardThumb from './carecard/thumbnail.jpg'
 import springThumb from './super-natural-spring/thumbnail.jpg'
+import tourismFerriesThumb from './super-natural-ferries/thumbnail.jpg'
+import tourismLakeThumb from './super-natural-lake/thumbnail.jpg'
 import coastalThumb from './coastal-forest/thumbnail.jpg'
 import ashtrayThumb from './forest-service/use-your-ashtray.svg?url'
 import dropThumb from './forest-service/dont-drop-it.svg?url'
@@ -33,6 +35,8 @@ const expo86 = (id) => () => import('./expo-86/index.js').then((module) => modul
 const LOADERS = {
   [bearAwareWindowId]: () => import('../signs/bearAwareWindow.js').then(({ loadBearAwareWindow }) => loadBearAwareWindow()),
   'super-natural-spring': () => import('./super-natural-spring/index.js').then((module) => module.load()),
+  'super-natural-ferries': () => import('./super-natural-ferries/index.js').then((module) => module.load()),
+  'super-natural-lake': () => import('./super-natural-lake/index.js').then((module) => module.load()),
   'new-carecard': () => import('./carecard/index.js').then((module) => module.load()),
   'coastal-forest': () => import('./coastal-forest/index.jsx').then((module) => module.load()),
   'use-your-ashtray': forestService('use-your-ashtray'),
@@ -58,6 +62,8 @@ const LOADERS = {
 const THUMBNAILS = {
   [bearAwareWindowId]: import.meta.env.BASE_URL + bearAwareWindowScan,
   'super-natural-spring': springThumb,
+  'super-natural-ferries': tourismFerriesThumb,
+  'super-natural-lake': tourismLakeThumb,
   'new-carecard': careCardThumb,
   'coastal-forest': coastalThumb,
   'use-your-ashtray': ashtrayThumb,

@@ -1,0 +1,1599 @@
+{
+  "schema": "headline-layout-fit/1",
+  "method": "Direct visual measurements of headline ink bounds in source PNGs, using threshold/component analysis to aid placement. Native glyph outlines are to be independently fitted into the boxes; no source pixel contours have been converted into paths.",
+  "units": "source-image pixels",
+  "precision": "Boxes are optical estimates, usually within 1–3 source pixels. Thin strokes and overlapping glyphs make exact segmentation ambiguous. The outline font is an approximation, so a pixel-perfect overlay is not expected.",
+  "straightening": "Source y coordinates were rectified with y_straight = y_source - slope*(x_source-width/2); final lines then use normalized baselines. This retains source x coordinates and canvas size.",
+  "fallback": "Line-level tracking is an equivalent average for native font advances at the listed cap-matched size. It is not a substitute for the measured per-letter boxes. Standard Termes lowercase is too tall at cap-matched size; use xHeight explicitly.",
+  "ads": {
+    "spring": {
+      "source": "image(20261126-202539).png",
+      "canvas": {
+        "width": 1462,
+        "height": 1021
+      },
+      "sourceSlope": 0.01,
+      "headline": {
+        "lines": [
+          {
+            "text": "So many of our visitors return in Spring.",
+            "x": 10,
+            "baseline": 970,
+            "width": 1442,
+            "size": 120.0586,
+            "tracking": -11.7366,
+            "capHeight": 82,
+            "xHeight": 52,
+            "letters": [
+              {
+                "char": "S",
+                "box": [
+                  10.0,
+                  888,
+                  52.1323,
+                  83
+                ]
+              },
+              {
+                "char": "o",
+                "box": [
+                  65.0832,
+                  918,
+                  48.1978,
+                  53
+                ]
+              },
+              {
+                "char": "m",
+                "box": [
+                  129.0191,
+                  918,
+                  76.7231,
+                  52
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  205.7422,
+                  918,
+                  42.296,
+                  53
+                ]
+              },
+              {
+                "char": "n",
+                "box": [
+                  249.0218,
+                  918,
+                  47.2142,
+                  52
+                ]
+              },
+              {
+                "char": "y",
+                "box": [
+                  295.2524,
+                  920,
+                  53.116,
+                  70
+                ]
+              },
+              {
+                "char": "o",
+                "box": [
+                  352.3029,
+                  918,
+                  48.1978,
+                  53
+                ]
+              },
+              {
+                "char": "f",
+                "box": [
+                  395.5825,
+                  888,
+                  33.4434,
+                  82
+                ]
+              },
+              {
+                "char": "o",
+                "box": [
+                  437.8786,
+                  918,
+                  48.1978,
+                  53
+                ]
+              },
+              {
+                "char": "u",
+                "box": [
+                  488.0437,
+                  920,
+                  44.2633,
+                  51
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  536.2415,
+                  918,
+                  30.4925,
+                  52
+                ]
+              },
+              {
+                "char": "v",
+                "box": [
+                  580.5048,
+                  920,
+                  51.1487,
+                  50
+                ]
+              },
+              {
+                "char": "i",
+                "box": [
+                  633.6207,
+                  889,
+                  17.7053,
+                  81
+                ]
+              },
+              {
+                "char": "s",
+                "box": [
+                  653.2933,
+                  918,
+                  31.4761,
+                  53
+                ]
+              },
+              {
+                "char": "i",
+                "box": [
+                  686.7367,
+                  889,
+                  18.6889,
+                  81
+                ]
+              },
+              {
+                "char": "t",
+                "box": [
+                  705.4256,
+                  911,
+                  29.5089,
+                  59
+                ]
+              },
+              {
+                "char": "o",
+                "box": [
+                  731.0,
+                  918,
+                  48.1978,
+                  53
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  779.1978,
+                  918,
+                  31.4761,
+                  52
+                ]
+              },
+              {
+                "char": "s",
+                "box": [
+                  809.6903,
+                  918,
+                  30.4925,
+                  53
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  856.9045,
+                  918,
+                  30.4925,
+                  52
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  883.4625,
+                  918,
+                  45.2469,
+                  53
+                ]
+              },
+              {
+                "char": "t",
+                "box": [
+                  925.7585,
+                  911,
+                  33.4434,
+                  59
+                ]
+              },
+              {
+                "char": "u",
+                "box": [
+                  959.2019,
+                  920,
+                  46.2306,
+                  51
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  1007.3997,
+                  918,
+                  32.4598,
+                  52
+                ]
+              },
+              {
+                "char": "n",
+                "box": [
+                  1037.8922,
+                  918,
+                  47.2142,
+                  52
+                ]
+              },
+              {
+                "char": "i",
+                "box": [
+                  1100.8445,
+                  889,
+                  17.7053,
+                  81
+                ]
+              },
+              {
+                "char": "n",
+                "box": [
+                  1123.4679,
+                  918,
+                  46.2306,
+                  52
+                ]
+              },
+              {
+                "char": "S",
+                "box": [
+                  1191.3383,
+                  888,
+                  52.1323,
+                  83
+                ]
+              },
+              {
+                "char": "p",
+                "box": [
+                  1242.487,
+                  918,
+                  48.1978,
+                  72
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  1291.6685,
+                  918,
+                  31.4761,
+                  52
+                ]
+              },
+              {
+                "char": "i",
+                "box": [
+                  1325.1119,
+                  889,
+                  17.7053,
+                  81
+                ]
+              },
+              {
+                "char": "n",
+                "box": [
+                  1344.7844,
+                  918,
+                  48.1978,
+                  52
+                ]
+              },
+              {
+                "char": "g",
+                "box": [
+                  1391.9986,
+                  918,
+                  50.1651,
+                  72
+                ]
+              },
+              {
+                "char": ".",
+                "box": [
+                  1440.1965,
+                  959,
+                  11.8035,
+                  11
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "The observed scan clips the S at left and final period at right. For the restored output, map the whole measured 1466 px ink span to x=10…1452 (scale x by 1442/1466 about centre), preserving the vertical metrics.",
+        "After straightening, cap height is about 82 px, lowercase height about 52 px, baseline 970 px. A global scale about 2.49 from the old 620 px design roughly works, but per-letter widths in this new scan differ."
+      ]
+    },
+    "ferry": {
+      "source": "image(20261126-202602).png",
+      "canvas": {
+        "width": 1656,
+        "height": 1041
+      },
+      "sourceSlope": -0.0125,
+      "headline": {
+        "lines": [
+          {
+            "text": "Our good ferries take you",
+            "x": 189,
+            "baseline": 893,
+            "width": 1279,
+            "size": 159.59,
+            "tracking": -14.3346,
+            "capHeight": 109,
+            "xHeight": 70,
+            "letters": [
+              {
+                "char": "O",
+                "box": [
+                  189,
+                  784,
+                  110,
+                  110
+                ]
+              },
+              {
+                "char": "u",
+                "box": [
+                  300,
+                  825,
+                  66,
+                  69
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  367,
+                  823,
+                  41,
+                  70
+                ]
+              },
+              {
+                "char": "g",
+                "box": [
+                  420,
+                  823,
+                  67,
+                  96
+                ]
+              },
+              {
+                "char": "o",
+                "box": [
+                  480,
+                  823,
+                  66,
+                  71
+                ]
+              },
+              {
+                "char": "o",
+                "box": [
+                  550,
+                  823,
+                  65,
+                  71
+                ]
+              },
+              {
+                "char": "d",
+                "box": [
+                  619,
+                  784,
+                  68,
+                  109
+                ]
+              },
+              {
+                "char": "f",
+                "box": [
+                  704,
+                  784,
+                  44,
+                  109
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  735,
+                  823,
+                  61,
+                  71
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  795,
+                  823,
+                  42,
+                  70
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  841,
+                  823,
+                  42,
+                  70
+                ]
+              },
+              {
+                "char": "i",
+                "box": [
+                  884,
+                  785,
+                  23,
+                  108
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  907,
+                  823,
+                  59,
+                  71
+                ]
+              },
+              {
+                "char": "s",
+                "box": [
+                  971,
+                  823,
+                  42,
+                  71
+                ]
+              },
+              {
+                "char": "t",
+                "box": [
+                  1036,
+                  815,
+                  40,
+                  78
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  1076,
+                  823,
+                  56,
+                  71
+                ]
+              },
+              {
+                "char": "k",
+                "box": [
+                  1136,
+                  784,
+                  70,
+                  109
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  1195,
+                  823,
+                  61,
+                  71
+                ]
+              },
+              {
+                "char": "y",
+                "box": [
+                  1269,
+                  825,
+                  74,
+                  94
+                ]
+              },
+              {
+                "char": "o",
+                "box": [
+                  1334,
+                  823,
+                  66,
+                  71
+                ]
+              },
+              {
+                "char": "u",
+                "box": [
+                  1400,
+                  825,
+                  68,
+                  69
+                ]
+              }
+            ]
+          },
+          {
+            "text": "to some very enchanted islands.",
+            "x": 40,
+            "baseline": 1005,
+            "width": 1597,
+            "size": 156.6618,
+            "tracking": -12.7526,
+            "capHeight": 107,
+            "xHeight": 69,
+            "letters": [
+              {
+                "char": "t",
+                "box": [
+                  40,
+                  927,
+                  41,
+                  78
+                ]
+              },
+              {
+                "char": "o",
+                "box": [
+                  75,
+                  936,
+                  65,
+                  70
+                ]
+              },
+              {
+                "char": "s",
+                "box": [
+                  166,
+                  936,
+                  42,
+                  70
+                ]
+              },
+              {
+                "char": "o",
+                "box": [
+                  209,
+                  936,
+                  66,
+                  70
+                ]
+              },
+              {
+                "char": "m",
+                "box": [
+                  276,
+                  936,
+                  105,
+                  69
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  381,
+                  936,
+                  59,
+                  70
+                ]
+              },
+              {
+                "char": "v",
+                "box": [
+                  460,
+                  938,
+                  69,
+                  67
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  521,
+                  936,
+                  60,
+                  70
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  582,
+                  936,
+                  42,
+                  69
+                ]
+              },
+              {
+                "char": "y",
+                "box": [
+                  624,
+                  938,
+                  74,
+                  92
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  714,
+                  936,
+                  60,
+                  70
+                ]
+              },
+              {
+                "char": "n",
+                "box": [
+                  775,
+                  936,
+                  67,
+                  69
+                ]
+              },
+              {
+                "char": "c",
+                "box": [
+                  845,
+                  936,
+                  56,
+                  70
+                ]
+              },
+              {
+                "char": "h",
+                "box": [
+                  901,
+                  898,
+                  67,
+                  107
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  971,
+                  936,
+                  53,
+                  70
+                ]
+              },
+              {
+                "char": "n",
+                "box": [
+                  1028,
+                  936,
+                  67,
+                  69
+                ]
+              },
+              {
+                "char": "t",
+                "box": [
+                  1094,
+                  927,
+                  40,
+                  78
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  1128,
+                  936,
+                  60,
+                  70
+                ]
+              },
+              {
+                "char": "d",
+                "box": [
+                  1191,
+                  898,
+                  69,
+                  107
+                ]
+              },
+              {
+                "char": "i",
+                "box": [
+                  1284,
+                  906,
+                  24,
+                  99
+                ]
+              },
+              {
+                "char": "s",
+                "box": [
+                  1312,
+                  936,
+                  41,
+                  70
+                ]
+              },
+              {
+                "char": "l",
+                "box": [
+                  1354,
+                  898,
+                  22,
+                  107
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  1380,
+                  936,
+                  55,
+                  70
+                ]
+              },
+              {
+                "char": "n",
+                "box": [
+                  1438,
+                  936,
+                  68,
+                  69
+                ]
+              },
+              {
+                "char": "d",
+                "box": [
+                  1507,
+                  898,
+                  68,
+                  107
+                ]
+              },
+              {
+                "char": "s",
+                "box": [
+                  1578,
+                  936,
+                  42,
+                  70
+                ]
+              },
+              {
+                "char": ".",
+                "box": [
+                  1623,
+                  991,
+                  14,
+                  14
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "The y descender in first-line “you” occupies approximately the same area as the dot of second-line initial i in “islands”; the tightly interlocked vertical spacing is visible in the original. Avoid adding extra line spacing solely to separate them.",
+        "First-line “i” is taller in the measured source than the second-line i; this source detail is retained in the box estimates.",
+        "Use identical white tone on headline glyphs; the scan fringe is not an intentional outline."
+      ]
+    },
+    "lake": {
+      "source": "image(20261126-202608).png",
+      "canvas": {
+        "width": 1112,
+        "height": 1081
+      },
+      "sourceSlope": -0.01,
+      "headline": {
+        "lines": [
+          {
+            "text": "Take away our great hotels,",
+            "x": 128,
+            "baseline": 885,
+            "width": 862,
+            "size": 102.489,
+            "tracking": -9.5683,
+            "capHeight": 70,
+            "xHeight": 45,
+            "letters": [
+              {
+                "char": "T",
+                "box": [
+                  128,
+                  815,
+                  74,
+                  70
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  180,
+                  840,
+                  40,
+                  46
+                ]
+              },
+              {
+                "char": "k",
+                "box": [
+                  213,
+                  815,
+                  52,
+                  70
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  256,
+                  840,
+                  38,
+                  46
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  307,
+                  840,
+                  38,
+                  46
+                ]
+              },
+              {
+                "char": "w",
+                "box": [
+                  340,
+                  842,
+                  64,
+                  43
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  399,
+                  840,
+                  42,
+                  46
+                ]
+              },
+              {
+                "char": "y",
+                "box": [
+                  433,
+                  842,
+                  42,
+                  60
+                ]
+              },
+              {
+                "char": "o",
+                "box": [
+                  490,
+                  840,
+                  42,
+                  46
+                ]
+              },
+              {
+                "char": "u",
+                "box": [
+                  532,
+                  842,
+                  40,
+                  44
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  574,
+                  840,
+                  25,
+                  45
+                ]
+              },
+              {
+                "char": "g",
+                "box": [
+                  610,
+                  840,
+                  43,
+                  62
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  655,
+                  840,
+                  26,
+                  45
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  678,
+                  840,
+                  37,
+                  46
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  718,
+                  840,
+                  33,
+                  46
+                ]
+              },
+              {
+                "char": "t",
+                "box": [
+                  751,
+                  835,
+                  26,
+                  50
+                ]
+              },
+              {
+                "char": "h",
+                "box": [
+                  791,
+                  815,
+                  43,
+                  70
+                ]
+              },
+              {
+                "char": "o",
+                "box": [
+                  834,
+                  840,
+                  41,
+                  46
+                ]
+              },
+              {
+                "char": "t",
+                "box": [
+                  874,
+                  835,
+                  24,
+                  50
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  896,
+                  840,
+                  37,
+                  46
+                ]
+              },
+              {
+                "char": "l",
+                "box": [
+                  934,
+                  815,
+                  15,
+                  70
+                ]
+              },
+              {
+                "char": "s",
+                "box": [
+                  952,
+                  840,
+                  26,
+                  46
+                ]
+              },
+              {
+                "char": ",",
+                "box": [
+                  979,
+                  875,
+                  11,
+                  24
+                ]
+              }
+            ]
+          },
+          {
+            "text": "fine restaurants, markets and",
+            "x": 103,
+            "baseline": 966,
+            "width": 911,
+            "size": 101.0249,
+            "tracking": -8.7149,
+            "capHeight": 69,
+            "xHeight": 44,
+            "letters": [
+              {
+                "char": "f",
+                "box": [
+                  103,
+                  897,
+                  29,
+                  69
+                ]
+              },
+              {
+                "char": "i",
+                "box": [
+                  131,
+                  898,
+                  15,
+                  68
+                ]
+              },
+              {
+                "char": "n",
+                "box": [
+                  149,
+                  922,
+                  45,
+                  44
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  193,
+                  922,
+                  39,
+                  45
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  248,
+                  922,
+                  28,
+                  44
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  271,
+                  922,
+                  40,
+                  45
+                ]
+              },
+              {
+                "char": "s",
+                "box": [
+                  312,
+                  922,
+                  28,
+                  45
+                ]
+              },
+              {
+                "char": "t",
+                "box": [
+                  340,
+                  916,
+                  26,
+                  50
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  364,
+                  922,
+                  37,
+                  45
+                ]
+              },
+              {
+                "char": "u",
+                "box": [
+                  397,
+                  924,
+                  46,
+                  43
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  440,
+                  922,
+                  26,
+                  44
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  464,
+                  922,
+                  37,
+                  45
+                ]
+              },
+              {
+                "char": "n",
+                "box": [
+                  499,
+                  922,
+                  46,
+                  44
+                ]
+              },
+              {
+                "char": "t",
+                "box": [
+                  539,
+                  916,
+                  26,
+                  50
+                ]
+              },
+              {
+                "char": "s",
+                "box": [
+                  563,
+                  922,
+                  29,
+                  45
+                ]
+              },
+              {
+                "char": ",",
+                "box": [
+                  592,
+                  956,
+                  15,
+                  24
+                ]
+              },
+              {
+                "char": "m",
+                "box": [
+                  618,
+                  922,
+                  68,
+                  44
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  688,
+                  922,
+                  34,
+                  45
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  723,
+                  922,
+                  25,
+                  44
+                ]
+              },
+              {
+                "char": "k",
+                "box": [
+                  748,
+                  897,
+                  43,
+                  69
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  785,
+                  922,
+                  37,
+                  45
+                ]
+              },
+              {
+                "char": "t",
+                "box": [
+                  822,
+                  916,
+                  24,
+                  50
+                ]
+              },
+              {
+                "char": "s",
+                "box": [
+                  850,
+                  922,
+                  27,
+                  45
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  894,
+                  922,
+                  34,
+                  45
+                ]
+              },
+              {
+                "char": "n",
+                "box": [
+                  930,
+                  922,
+                  42,
+                  44
+                ]
+              },
+              {
+                "char": "d",
+                "box": [
+                  971,
+                  897,
+                  43,
+                  69
+                ]
+              }
+            ]
+          },
+          {
+            "text": "sparkling nightlife and what’s left?",
+            "x": 20,
+            "baseline": 1050,
+            "width": 1081,
+            "size": 101.0249,
+            "tracking": -8.9672,
+            "capHeight": 69,
+            "xHeight": 44,
+            "letters": [
+              {
+                "char": "s",
+                "box": [
+                  20,
+                  1006,
+                  27,
+                  45
+                ]
+              },
+              {
+                "char": "p",
+                "box": [
+                  43,
+                  1006,
+                  45,
+                  61
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  89,
+                  1006,
+                  35,
+                  45
+                ]
+              },
+              {
+                "char": "r",
+                "box": [
+                  126,
+                  1006,
+                  26,
+                  44
+                ]
+              },
+              {
+                "char": "k",
+                "box": [
+                  151,
+                  981,
+                  44,
+                  69
+                ]
+              },
+              {
+                "char": "l",
+                "box": [
+                  196,
+                  981,
+                  18,
+                  69
+                ]
+              },
+              {
+                "char": "i",
+                "box": [
+                  215,
+                  981,
+                  16,
+                  69
+                ]
+              },
+              {
+                "char": "n",
+                "box": [
+                  233,
+                  1006,
+                  45,
+                  44
+                ]
+              },
+              {
+                "char": "g",
+                "box": [
+                  276,
+                  1006,
+                  43,
+                  61
+                ]
+              },
+              {
+                "char": "n",
+                "box": [
+                  335,
+                  1006,
+                  44,
+                  44
+                ]
+              },
+              {
+                "char": "i",
+                "box": [
+                  381,
+                  981,
+                  17,
+                  69
+                ]
+              },
+              {
+                "char": "g",
+                "box": [
+                  397,
+                  1006,
+                  43,
+                  61
+                ]
+              },
+              {
+                "char": "h",
+                "box": [
+                  440,
+                  981,
+                  46,
+                  69
+                ]
+              },
+              {
+                "char": "t",
+                "box": [
+                  481,
+                  1000,
+                  27,
+                  50
+                ]
+              },
+              {
+                "char": "l",
+                "box": [
+                  507,
+                  981,
+                  19,
+                  69
+                ]
+              },
+              {
+                "char": "i",
+                "box": [
+                  525,
+                  981,
+                  19,
+                  69
+                ]
+              },
+              {
+                "char": "f",
+                "box": [
+                  542,
+                  981,
+                  26,
+                  69
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  562,
+                  1006,
+                  39,
+                  45
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  617,
+                  1006,
+                  36,
+                  45
+                ]
+              },
+              {
+                "char": "n",
+                "box": [
+                  653,
+                  1006,
+                  46,
+                  44
+                ]
+              },
+              {
+                "char": "d",
+                "box": [
+                  696,
+                  981,
+                  43,
+                  69
+                ]
+              },
+              {
+                "char": "w",
+                "box": [
+                  756,
+                  1008,
+                  65,
+                  42
+                ]
+              },
+              {
+                "char": "h",
+                "box": [
+                  820,
+                  981,
+                  44,
+                  69
+                ]
+              },
+              {
+                "char": "a",
+                "box": [
+                  864,
+                  1006,
+                  34,
+                  45
+                ]
+              },
+              {
+                "char": "t",
+                "box": [
+                  896,
+                  1000,
+                  26,
+                  50
+                ]
+              },
+              {
+                "char": "’",
+                "box": [
+                  919,
+                  976,
+                  14,
+                  22
+                ]
+              },
+              {
+                "char": "s",
+                "box": [
+                  925,
+                  1006,
+                  27,
+                  45
+                ]
+              },
+              {
+                "char": "l",
+                "box": [
+                  971,
+                  981,
+                  15,
+                  69
+                ]
+              },
+              {
+                "char": "e",
+                "box": [
+                  985,
+                  1006,
+                  37,
+                  45
+                ]
+              },
+              {
+                "char": "f",
+                "box": [
+                  1022,
+                  981,
+                  26,
+                  69
+                ]
+              },
+              {
+                "char": "t",
+                "box": [
+                  1044,
+                  1000,
+                  26,
+                  50
+                ]
+              },
+              {
+                "char": "?",
+                "box": [
+                  1073,
+                  980,
+                  28,
+                  70
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "notes": [
+        "Curly apostrophe is visible in what’s; preserve it.",
+        "The tiny comma tails and thin question-mark curves are approximate because the scan blurs them.",
+        "Normalize each line to the baselines listed rather than preserving local scan warping."
+      ]
+    }
+  }
+}
