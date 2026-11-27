@@ -1627,7 +1627,19 @@ export const FOLDED_UNDER = [
     parent: 'collected-provincial-health-services-authority',
     children: ['collected-sub-bc-childrens-hospital', 'collected-sub-bc-womens-hospital', 'collected-sub-bc-centre-for-disease-control', 'collected-sub-bc-cancer', 'collected-bc-emergency-health-services']
   },
-  { parent: 'collected-bc-pavilion-corporation', children: ['collected-sub-bc-place', 'collected-sub-vancouver-convention-centre'] }
+  { parent: 'collected-bc-pavilion-corporation', children: ['collected-sub-bc-place', 'collected-sub-vancouver-convention-centre'] },
+  // From the review in research/identity/gallery-hierarchy-2026-11-27: each tie is the register's own
+  // part-of, service-of or operated-by relation. Earlier names of a continuing body are not folded
+  // here, since this shelf is for programs, services and subsidiaries; their histories link them.
+  { parent: 'collected-islands-trust', children: ['collected-islands-trust-conservancy', 'collected-islands-2050'] },
+  { parent: 'collected-legislative-assembly', children: ['collected-legislative-library-bc'] },
+  { parent: 'collected-university-of-british-columbia', children: ['collected-ubc-okanagan-campus'] },
+  { parent: 'collected-4vi-group', children: ['collected-4tvi-stewardship', 'collected-4ever-strategies', 'collected-4good-social-impact-fund'] },
+  { parent: 'tourism-bc-destination-bc', children: ['collected-vancouver-coast-mountains'] },
+  { parent: 'collected-bc-snowmobile-federation', children: ['collected-lets-ride-bc'] },
+  { parent: 'collected-bc-association-farmers-markets', children: ['collected-bc-farmers-market-trail'] },
+  { parent: 'collected-bc-regional-tourism-secretariat', children: ['collected-bc-tourism-sustainability-network'] },
+  { parent: 'collected-bc-injury-research-and-prevention-unit', children: ['collected-concussion-awareness-training-tool'] }
 ]
 
 // Program collections link to their histories in the initiatives register.
