@@ -15,6 +15,10 @@ export const bearAwareWindowMeta = {
   page: { w: 7.64, h: 10 }
 }
 
+// Posters presents the decal on its own; Signs and Initiatives retain the complete historical layout.
+export const bearAwareDecalView = { x: 36, y: 38, w: 720, h: 784 }
+export const bearAwareDecalSvg = bearAwareFolder + 'svg/01-we-are-bear-aware-decal.svg'
+
 export const bearAwareWindowSvg = bearAwareFolder + 'svg/01-we-are-bear-aware-window-sign.svg'
 export const bearAwareWindowScan = bearAwareFolder + 'scans/01-we-are-bear-aware-window-sign.png'
 export const bearAwareMarkId = 'be-bear-aware-paw-lockup'

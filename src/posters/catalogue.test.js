@@ -21,9 +21,9 @@ import { CARDS } from '../cards/catalogue.js'
 import { PINS } from '../pins/catalogue.js'
 import { CERTAINTY, GROUPS, MARK_OBJECTS, connectedPosters, connectionsOf, groupedConnections, objectsForLogo, postersForLogo, postersForPatch } from './connections.js'
 
-import { bearAwareWindowId, bearAwareWindowSvg } from '../initiatives/bearAwareArtwork.js'
+import { bearAwareDecalSvg, bearAwareWindowId, bearAwareWindowSvg } from '../initiatives/bearAwareArtwork.js'
 import { initiativeById, loadInitiative } from '../initiatives/initiatives.js'
-import { bearAwareWindow } from '../signs/bearAwareWindow.js'
+import { bearAwareDecal, loadBearAwareDecal } from './bearAwareDecal.js'
 import { CARECARD_POSTER } from './carecard/poster.js'
 import { SPRING_POSTER } from './super-natural-spring/poster.js'
 import { FERRIES_POSTER } from './super-natural-ferries/poster.js'
@@ -32,7 +32,7 @@ import { AIR_FACILITIES_POSTER } from './air-facilities-map-1977/poster.js'
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
 const DRAWINGS = {
-  [bearAwareWindowId]: read(`../../public/${bearAwareWindowSvg}`),
+  [bearAwareWindowId]: read(`../../public/${bearAwareDecalSvg}`),
   'super-natural-spring': read('./super-natural-spring/spring-visitors.svg'),
   'super-natural-ferries': read('./super-natural-ferries/poster.svg'),
   'super-natural-lake': read('./super-natural-lake/poster.svg'),
@@ -101,7 +101,7 @@ const assertPlace = (to, where) => {
 // Every poster as the viewer sees it: its parts, the order they are stepped through, and which of
 // them are hotspots.
 const DEFINITIONS = {
-  [bearAwareWindowId]: bearAwareWindow,
+  [bearAwareWindowId]: bearAwareDecal,
   'super-natural-spring': SPRING_POSTER,
   'super-natural-ferries': FERRIES_POSTER,
   'super-natural-lake': LAKE_POSTER,
@@ -115,7 +115,7 @@ const DEFINITIONS = {
   ...EXPO_86_POSTERS
 }
 // The posters whose panels are data.
-const DATA_POSTERS = { [bearAwareWindowId]: bearAwareWindow, 'air-facilities-map-1977': AIR_FACILITIES_POSTER, 'super-natural-spring': SPRING_POSTER, 'super-natural-ferries': FERRIES_POSTER, 'super-natural-lake': LAKE_POSTER, 'new-carecard': CARECARD_POSTER, ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
+const DATA_POSTERS = { [bearAwareWindowId]: bearAwareDecal, 'air-facilities-map-1977': AIR_FACILITIES_POSTER, 'super-natural-spring': SPRING_POSTER, 'super-natural-ferries': FERRIES_POSTER, 'super-natural-lake': LAKE_POSTER, 'new-carecard': CARECARD_POSTER, ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
 
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
 const partsIn = (selector) => [...selector.matchAll(/\[data-part="([\w-]+)"\]/g)].map((m) => m[1])
@@ -560,4 +560,26 @@ test('the 1977/78 aviation map has independent date evidence and comparison artw
   assert.match(DRAWINGS[id], /data:image\/jpeg;base64,/)
   assert.ok(connectionsOf(id).some(({ certainty, group }) => certainty === 'documented' && group === 'issuer'))
   assert.ok(!connectionsOf(id).some(({ rel }) => rel === 'Same advertising campaign'))
+})
+
+
+test('Bear Aware uses the decal alone in Posters and keeps the sponsor panel in Signs', async (t) => {
+  const decal = DRAWINGS[bearAwareWindowId]
+  assert.match(decal, /<ellipse[^>]+cx="396"/)
+  assert.match(decal, /aria-label="Bear paw and five claws"/)
+  for (const label of ['Sponsored', 'BC Hydro historic wordmark', 'BC Environment flag wordmark', 'Friends of Mt. Revelstoke']) {
+    assert.ok(!decal.includes(label), label)
+    assert.ok(read(`../../public/${bearAwareWindowSvg}`).includes(label), label)
+  }
+  const posterShelf = read('./PostersView.jsx')
+  assert.match(posterShelf, /\[bearAwareWindowId\]: import\.meta\.env\.BASE_URL \+ bearAwareDecalSvg/)
+  assert.match(posterShelf, /\[bearAwareWindowId\]: .*loadBearAwareDecal/)
+  t.mock.method(globalThis, 'fetch', async (url) => {
+    assert.equal(url, '/PofBC/' + bearAwareDecalSvg)
+    return new Response(decal)
+  })
+  const loaded = await loadBearAwareDecal('/PofBC/')
+  assert.equal(loaded.svgRaw, decal)
+  assert.deepEqual(loaded.order, ['overview'])
+  assert.equal(loaded.reference, undefined)
 })
