@@ -1,18 +1,19 @@
 {
-  "region": [
-    0,
-    357,
-    620,
-    53
+  "reference": "The new supplied 1462 x 1021 crop has clipped headline endpoints and a clipped right header; its aspect ratio is not established as the complete historical page. The restored text has a small safe inset. The lower-resolution ADCC scan preserves more of the right edge.",
+  "method": "Direct visual measurements of headline ink bounds in source PNGs, using threshold/component analysis to aid placement. Native glyph outlines are to be independently fitted into the boxes; no source pixel contours have been converted into paths.",
+  "fontStatus": "Reconstruction substitute, not identified original",
+  "sourceSlope": 0.01,
+  "lines": [
+    {
+      "text": "So many of our visitors return in Spring.",
+      "x": 10,
+      "baseline": 970,
+      "width": 1442,
+      "size": 120.0586,
+      "tracking": -11.7366,
+      "capHeight": 82,
+      "xHeight": 52
+    }
   ],
-  "referenceSize": [
-    620,
-    418
-  ],
-  "method": "Reference white-letter mask: minimum RGB channel >184 and max-minus-min <26; reconstruction native-outline alpha >0.5 after 4x render downsampled with Lanczos. No photo pixels scored.",
-  "intersectionOverUnion": 0.7314381896390499,
-  "dice": 0.8448909051631022,
-  "sourceMaskPixels": 4185,
-  "reconstructionMaskPixels": 5073,
-  "limitation": "Threshold-dependent alignment diagnostic, not a verified font identification or historical authenticity score. Residual contour differences remain."
+  "note": "No previous overlap score is reused. Current overlays compare new measured layouts against the supplied scan after straightening. Source photograph differs from modern reconstruction."
 }

@@ -26,11 +26,15 @@ import { initiativeById, loadInitiative } from '../initiatives/initiatives.js'
 import { bearAwareWindow } from '../signs/bearAwareWindow.js'
 import { CARECARD_POSTER } from './carecard/poster.js'
 import { SPRING_POSTER } from './super-natural-spring/poster.js'
+import { FERRIES_POSTER } from './super-natural-ferries/poster.js'
+import { LAKE_POSTER } from './super-natural-lake/poster.js'
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), 'utf8')
 const DRAWINGS = {
   [bearAwareWindowId]: read(`../../public/${bearAwareWindowSvg}`),
   'super-natural-spring': read('./super-natural-spring/spring-visitors.svg'),
+  'super-natural-ferries': read('./super-natural-ferries/poster.svg'),
+  'super-natural-lake': read('./super-natural-lake/poster.svg'),
   'new-carecard': read('./carecard/new-carecard.svg'),
   'coastal-forest': read('./coastal-forest/poster.svg'),
   'use-your-ashtray': read('./forest-service/use-your-ashtray.svg'),
@@ -97,6 +101,8 @@ const assertPlace = (to, where) => {
 const DEFINITIONS = {
   [bearAwareWindowId]: bearAwareWindow,
   'super-natural-spring': SPRING_POSTER,
+  'super-natural-ferries': FERRIES_POSTER,
+  'super-natural-lake': LAKE_POSTER,
   'new-carecard': CARECARD_POSTER,
   'coastal-forest': { parts: COASTAL_PARTS, order: COASTAL_ORDER, regions: COASTAL_REGIONS.map(({ id }) => id) },
   ...FOREST_SERVICE_POSTERS,
@@ -106,7 +112,7 @@ const DEFINITIONS = {
   ...EXPO_86_POSTERS
 }
 // The posters whose panels are data.
-const DATA_POSTERS = { [bearAwareWindowId]: bearAwareWindow, 'super-natural-spring': SPRING_POSTER, 'new-carecard': CARECARD_POSTER, ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
+const DATA_POSTERS = { [bearAwareWindowId]: bearAwareWindow, 'super-natural-spring': SPRING_POSTER, 'super-natural-ferries': FERRIES_POSTER, 'super-natural-lake': LAKE_POSTER, 'new-carecard': CARECARD_POSTER, ...FOREST_SERVICE_POSTERS, ...BC_FERRIES_POSTERS, 'wildlife-trees': WILDLIFE_TREES, ...NOXIOUS_WEEDS_POSTERS, ...EXPO_86_POSTERS }
 
 const idsIn = (selector) => [...selector.matchAll(/#([\w-]+)/g)].map((m) => m[1])
 const partsIn = (selector) => [...selector.matchAll(/\[data-part="([\w-]+)"\]/g)].map((m) => m[1])
@@ -331,6 +337,27 @@ test('no card dates a piece more firmly than its evidence', () => {
   // Dated by a document, and saying which.
   assert.equal(POSTERS['be-careful'].when, '1960, from the Protection Bulletin')
   assert.equal(POSTERS['coons-age'].when, '2 December 1971, Gulf Islands Driftwood')
+  for (const id of ['super-natural-ferries', 'super-natural-lake']) {
+    assert.match(POSTERS[id].when, /^Publication date unestablished/, `${id}: publication date inferred from its award`)
+    assert.match(POSTERS[id].when, /campaign awarded in 1985/, `${id}: missing award date`)
+  }
+})
+
+test('the tourism campaign keeps all three advertisements connected and preserves their comparison sources', () => {
+  const campaign = ['super-natural-spring', 'super-natural-ferries', 'super-natural-lake']
+  assert.deepEqual(seriesOf('super-natural-spring').posters, campaign)
+  for (const id of campaign) {
+    assert.equal(POSTERS[id].made, 'mixed', `${id}: photographic reconstruction presented as vector-only`)
+    assert.equal(POSTERS[id].prefetch, false, `${id}: large photographic artwork fetched before opening`)
+    const related = connectionsOf(id).filter(({ rel }) => rel === 'Same advertising campaign').map(({ to }) => to.poster)
+    assert.deepEqual(related, campaign.filter((other) => other !== id), `${id}: missing campaign companion`)
+    const loader = read(`./${id}/index.js`)
+    const file = id === 'super-natural-spring' ? 'reference.png' : 'reference.jpg'
+    assert.ok(loader.includes(`import reference from './${file}'`), `${id}: no original comparison source`)
+    assert.ok(existsSync(new URL(`./${id}/${file}`, import.meta.url)), `${id}: comparison source missing`)
+    assert.match(loader, /reference:\s*\{[\s\S]*src: reference/, `${id}: reference is not passed to the viewer`)
+  }
+  assert.match(POSTERS['super-natural-lake'].title, /what’s left\?$/)
 })
 
 test('every record says what it rests on, and is printed where it says', () => {

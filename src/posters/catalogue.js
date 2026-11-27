@@ -56,7 +56,7 @@ export const SERIES = [
     id: 'tourism',
     title: 'Super, Natural British Columbia',
     kind: 'Tourism advertising',
-    posters: ['super-natural-spring']
+    posters: ['super-natural-spring', 'super-natural-ferries', 'super-natural-lake']
   },
   {
     id: 'expo-86',
@@ -87,9 +87,31 @@ export const POSTERS = {
     subject: 'Coastal travel', format: 'Magazine ad', made: 'mixed',
     title: 'So many of our visitors return in Spring.', when: '1984, from the creators’ published account',
     blurb: 'Returning orcas introduce a spring invitation to British Columbia.',
-    view: { x: 0, y: 0, w: 620, h: 418 },
-    // An export size in the supplied reference’s proportions, not a measurement of the original.
-    page: { w: 12.4, h: 8.36 },
+    view: { x: 0, y: 0, w: 1462, h: 1021 },
+    // The uploaded reference is a crop; this is a working export size, not the original page size.
+    page: { w: 14.62, h: 10.21 },
+    prefetch: false
+  },
+  'super-natural-ferries': {
+    id: 'super-natural-ferries', series: 'tourism', issuer: 'Province of British Columbia',
+    subject: 'Coastal travel', format: 'Magazine ad', made: 'mixed',
+    title: 'Our good ferries take you to some very enchanted islands.',
+    when: 'Publication date unestablished · campaign awarded in 1985',
+    blurb: 'An evening ferry crossing turns the Gulf Islands into an enchanted destination.',
+    view: { x: 0, y: 0, w: 1656, h: 1041 },
+    // Working export dimensions in the reference’s proportions, not a measurement of the print.
+    page: { w: 16.56, h: 10.41 },
+    prefetch: false
+  },
+  'super-natural-lake': {
+    id: 'super-natural-lake', series: 'tourism', issuer: 'Province of British Columbia',
+    subject: 'Mountain travel', format: 'Magazine ad', made: 'mixed',
+    title: 'Take away our great hotels, fine restaurants, markets and sparkling nightlife and what’s left?',
+    when: 'Publication date unestablished · campaign awarded in 1985',
+    blurb: 'A quiet mountain lake answers a question about leaving the city’s attractions behind.',
+    view: { x: 0, y: 0, w: 1112, h: 1081 },
+    // Working export dimensions in the reference’s proportions, not a measurement of the print.
+    page: { w: 11.12, h: 10.81 },
     prefetch: false
   },
   'new-carecard': {

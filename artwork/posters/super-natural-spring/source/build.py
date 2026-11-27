@@ -1,160 +1,96 @@
 #!/usr/bin/env python3
-"""Compose the 1984 Spring visitors study from photographs and native type outlines.
-
-No image tracing, font download or system font is involved. Change design.json to
-adjust the composition. The glyph table comes from PofBC's TeX Gyre Termes table.
-Run from any directory: python3 artwork/posters/super-natural-spring/source/build.py
+"""Build the three Super, Natural BC studies from unmodified scene files and native type.
+Run from any directory; --exports needs Inkscape and Pillow. Outlined masters need
+no installed font. Editable text requires TeX Gyre Termes. The historic font is
+unconfirmed. No lettering or photography is traced.
 """
 from __future__ import annotations
-
-import argparse
-import base64
-import html
-import json
+import argparse, base64, hashlib, html, json, shutil, subprocess
 from pathlib import Path
-
-HERE = Path(__file__).resolve().parent
-PACKAGE = HERE.parent
-ROOT = PACKAGE.parents[2]
-SITE = (ROOT / 'src/posters/super-natural-spring' if (ROOT / 'src/hydro/serif.js').exists()
-        else PACKAGE / 'gallery')
-DESIGN = json.loads((HERE / 'design.json').read_text())
-TYPE = json.loads((HERE / 'type-glyphs.json').read_text())
-ITALIC = json.loads((HERE / 'type-glyphs-italic.json').read_text())
-GLYPHS = TYPE['glyphs']
-KERNING = TYPE['kerning']
-
-
-def n(value):
-    return format(value, '.6f').rstrip('0').rstrip('.') or '0'
-
-
-def esc(value):
-    return html.escape(str(value), quote=True)
-
-
-def data_url(path, mime):
-    return 'data:' + mime + ';base64,' + base64.b64encode(path.read_bytes()).decode('ascii')
-
-
-def fitted_letter(char, box, index, outline=True):
-    glyph = GLYPHS[char]
-    l, t, r, b = glyph['box']
-    x, y, w, h = box
-    sx, sy = w / (r - l), h / (b - t)
-    transform = f'matrix({n(sx)} 0 0 {n(sy)} {n(x-l*sx)} {n(y-t*sy)})'
+HERE=Path(__file__).resolve().parent
+POSTERS=HERE.parent.parent
+ROOT=POSTERS.parent.parent
+TYPE=json.loads((HERE/'type-glyphs.json').read_text())
+ITALIC=json.loads((HERE/'type-glyphs-italic.json').read_text())
+KEYS={'spring':'super-natural-spring','ferries':'super-natural-ferries','lake':'super-natural-lake'}
+def n(v): return f'{v:.6f}'.rstrip('0').rstrip('.') or '0'
+def esc(v): return html.escape(str(v),quote=True)
+def image_url(p):
+    mime='image/png' if p.suffix.lower()=='.png' else 'image/jpeg'
+    return f'data:{mime};base64,'+base64.b64encode(p.read_bytes()).decode('ascii')
+def run(text,x,baseline,width,size,tracking=0,fill=None,italic=False,outline=True,id=None,optical=None,**unused):
+    table=ITALIC if italic else TYPE
+    glyphs,kern=table['glyphs'],table['kerning']; pos=[]; cursor=0; left=float('inf');right=float('-inf')
+    for i,ch in enumerate(text):
+        if ch not in glyphs: raise ValueError(f'Unknown glyph {ch!r} in {text!r}')
+        if i: cursor+=kern.get(text[i-1:i+1],0)+(optical or {}).get(text[i-1:i+1],0)
+        g=glyphs[ch];pos.append(cursor)
+        if 'box' in g:left=min(left,cursor+g['box'][0]);right=max(right,cursor+g['box'][2])
+        cursor+=g['w']+tracking
+    sx,sy=width/(right-left),size/1000
+    attrs=f' data-text="{esc(text)}" transform="matrix({n(sx)} 0 0 {n(sy)} {n(x-left*sx)} {n(baseline)})"'
+    if fill:attrs+=f' fill="{fill}"'
+    if id:attrs+=f' id="{id}"'
     if outline:
-        return (f'<path id="spring-letter-{index:02d}" data-letter="{esc(char)}" '
-                f'transform="{transform}" d="{glyph["d"]}"/>')
-    return (f'<text id="spring-letter-{index:02d}" transform="{transform}" x="0" y="0" '
-            'font-family="TeX Gyre Termes, Nimbus Roman, Times New Roman, serif" font-size="1000">'
-            + esc(char) + '</text>')
-
-
-def run(text, x, baseline, width, size=7.8, fill='#85898b', tracking=0, outline=True, italic=False):
-    glyphs = ITALIC['glyphs'] if italic else GLYPHS
-    kerning = ITALIC['kerning'] if italic else KERNING
-    positions = []
-    cursor = 0
-    ink_left = None
-    ink_right = None
-    for i, char in enumerate(text):
-        if i:
-            cursor += kerning.get(text[i-1] + char, 0)
-        glyph = glyphs[char]
-        positions.append(cursor)
-        if 'box' in glyph:
-            ink_left = min(ink_left if ink_left is not None else 1e9, cursor + glyph['box'][0])
-            ink_right = max(ink_right if ink_right is not None else -1e9, cursor + glyph['box'][2])
-        cursor += glyph['w'] + tracking
-    sx = width / (ink_right - ink_left)
-    sy = size / 1000
-    tx = x - ink_left*sx
-    opening = (f'<g data-text="{esc(text)}" fill="{fill}" '
-               f'transform="matrix({n(sx)} 0 0 {n(sy)} {n(tx)} {n(baseline)})">')
-    if outline:
-        letters = ''.join(f'<path transform="translate({n(pos)} 0)" d="{glyphs[char]["d"]}"/>'
-                          for char, pos in zip(text, positions) if 'd' in glyphs[char])
+        letters=''.join(f'<path data-letter="{esc(ch)}" transform="translate({n(p)} 0)" d="{glyphs[ch]["d"]}"/>' for ch,p in zip(text,pos) if 'd' in glyphs[ch])
     else:
-        letters = (f'<text x="{" ".join(n(pos) for pos in positions)}" y="0" '
-                   'font-family="TeX Gyre Termes, Nimbus Roman, Times New Roman, serif" '
-                   f'font-size="1000" font-style="{"italic" if italic else "normal"}" font-kerning="none">' + esc(text) + '</text>')
-    return opening + letters + '</g>'
-
-
-def document(*, variant='both', text_only=False, outline=True):
-    vintage = PACKAGE/'photos/vintage-orcas.png'
-    gemini = PACKAGE/'photos/alternate-orcas.jpeg'
-    metadata = {
-        'work': DESIGN['title'], 'historicalDate': 1984,
-        'award': 'ADCC Gold 1985, Consumer Magazine Ad',
-        'originalCredits': {'client': 'Tourism B.C.', 'agency': 'McKim Advertising',
-            'writerAndCreativeDirector': 'Alvin Wasserman',
-            'designerAndArtDirector': 'Bill Cozens', 'photographer': 'Peter Thomas'},
-        'status': 'Modern reconstruction; supplied reconstructed photographs and fitted serif outlines.',
-        'typography': DESIGN['headline']['basis'],
-        'sources': DESIGN['sources'], 'uncertainCopy': DESIGN['uncertainCopy'],
-        'photoSources': ['Vintage Orcas in British Columbia Waters.png',
-                        'Gemini_Generated_Image_6ia0526ia0526ia0.jpeg'],
-        'fontTable': 'PofBC src/hydro/serif.js, TeX Gyre Termes Regular (GUST Font License)',
-        'printSize': '12.4 × 8.36 inches; chosen export size, not a measurement of the original'
-    }
-    parts = [
-        '<?xml version="1.0" encoding="UTF-8"?>',
-        '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" '
-        'viewBox="0 0 620 418" width="12.4in" height="8.36in" '
-        'role="img" aria-labelledby="spring-title spring-description">',
-        '<title id="spring-title">So many of our visitors return in Spring.</title>',
-        '<desc id="spring-description">A reconstruction of the 1984 Tourism B.C. magazine advertisement. '
-        'Three orcas surface beneath forested mountains. The headline, two columns of copy and '
-        'Super,Natural British Columbia signature are rebuilt as serif outlines. The photographs '
-        'are supplied modern recreations. The exact historical typeface remains unconfirmed.</desc>',
-        '<metadata>'+esc(json.dumps(metadata,ensure_ascii=False))+'</metadata>',
-        '<defs><clipPath id="spring-photo-window"><rect x="0" y="53" width="620" height="365"/></clipPath></defs>',
-    ]
+        letters=f'<text x="{" ".join(n(p) for p in pos)}" y="0" font-family="TeX Gyre Termes" font-size="1000" font-style="{"italic" if italic else "normal"}" font-kerning="none" xml:space="preserve">{esc(text)}</text>'
+    return f'<g{attrs}>{letters}</g>'
+def fitted_letters(rows,prefix,outline=True):
+    parts=[]
+    for i,row in enumerate(rows):
+        ch,(x,y,w,h)=row['char'],row['box'];g=TYPE['glyphs'][ch];l,t,r,b=g['box'];sx,sy=w/(r-l),h/(b-t)
+        attrs=f'id="{prefix}-letter-{i:03d}" data-letter="{esc(ch)}" transform="matrix({n(sx)} 0 0 {n(sy)} {n(x-l*sx)} {n(y-t*sy)})"'
+        if outline:parts.append(f'<path {attrs} d="{g["d"]}"/>')
+        else:parts.append(f'<text {attrs} x="0" y="0" font-family="TeX Gyre Termes" font-size="1000">{esc(ch)}</text>')
+    return ''.join(parts)
+def document(d,package,outline=True,text_only=False,variant=None,gallery=False):
+    w,h,top=d['canvas']['width'],d['canvas']['height'],d['canvas']['photoTop'];prefix=d['prefix'];photos=d['photos']
+    if variant:photos=[p for p in photos if p['id']==variant]
+    elif not gallery:photos=photos[:1]
+    meta={k:d[k] for k in ['title','date','credits','sources','uncertainties','reconstruction']}
+    meta.update({'kind':'Mixed-media reconstruction: native lettering and raster scene','font':'TeX Gyre Termes; historical font unconfirmed','referenceFraming':d['referenceNote'],'exportSizeInches':[w/100,h/100],'exportSizeNote':'Working size; original printed dimensions unestablished','photoFiles':[p['file'] for p in photos]})
+    parts=['<?xml version="1.0" encoding="UTF-8"?>',f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 {w} {h}" width="{n(w/100)}in" height="{n(h/100)}in" role="img" aria-labelledby="{prefix}-title {prefix}-description">',f'<title id="{prefix}-title">{esc(d["title"])}</title>',f'<desc id="{prefix}-description">{esc(d["reconstruction"])}</desc>','<metadata>'+esc(json.dumps(meta,ensure_ascii=False))+'</metadata>',f'<defs><clipPath id="{prefix}-photo-window"><rect x="0" y="{top}" width="{w}" height="{h-top}"/></clipPath></defs>']
     if not text_only:
-        parts.append('<g id="spring-paper"><rect width="620" height="418" fill="#ffffff"/></g>')
-        if variant in ('both', 'vintage'):
-            parts.append('<g id="spring-photo-vintage" clip-path="url(#spring-photo-window)">'
-                         '<image x="0" y="53" width="620" height="365" preserveAspectRatio="xMidYMid slice" '
-                         f'xlink:href="{data_url(vintage,"image/png")}"/></g>')
-        if variant in ('both', 'gemini'):
-            hidden = ' display="none"' if variant == 'both' else ''
-            # The alternate's extra sky lies above the original picture window.
-            parts.append(f'<g id="spring-photo-gemini" clip-path="url(#spring-photo-window)"{hidden}>'
-                         '<image x="0" y="0" width="620" height="417.933227" '
-                         f'xlink:href="{data_url(gemini,"image/jpeg")}"/></g>')
-    parts.append('<g id="spring-copy" aria-label="Travel information">')
-    for row in DESIGN['copy']:
-        parts.append(run(**row,outline=outline))
-    credit = DESIGN['credit']
-    parts.append(run(**credit,fill='#85898b',outline=outline))
-    if not text_only:
-        # Deliberately keep the unreadable reply code as evidence, not an invented transcription.
-        code = PACKAGE/'photos/reply-code-facsimile.png'
-        if code.exists():
-            parts.append('<image id="spring-reply-code-facsimile" x="589" y="30" width="18" height="8" '
-                         f'xlink:href="{data_url(code,"image/png")}">'
-                         '<title>Unresolved reply code retained from the supplied reference</title></image>')
-    parts.append('</g>')
-    parts.append('<g id="spring-wordmark" aria-label="Super,Natural British Columbia">')
-    parts.append(run(**DESIGN['wordmark'],fill='#444b50',tracking=-30,outline=outline))
-    parts.append('</g>')
-    parts.append('<g id="spring-headline" fill="#ffffff" data-text="'+esc(DESIGN['title'])+'">')
-    parts.extend(fitted_letter(row['char'],row['box'],i,outline=outline) for i,row in enumerate(DESIGN['headline']['letters']))
-    parts.append('</g></svg>')
-    return '\n'.join(parts)+'\n'
-
-
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--proof', action='store_true', help='also write a transparent typography-only SVG')
-    args = parser.parse_args()
-    SITE.mkdir(parents=True, exist_ok=True)
-    (SITE/'spring-visitors.svg').write_text(document(),encoding='utf-8')
-    (PACKAGE/'spring-visitors.svg').write_text(document(variant='vintage'),encoding='utf-8')
-    (PACKAGE/'spring-visitors-alternate.svg').write_text(document(variant='gemini'),encoding='utf-8')
-    (PACKAGE/'spring-visitors-editable-text.svg').write_text(document(variant='vintage',outline=False),encoding='utf-8')
-    if args.proof:
-        (PACKAGE/'review/typography.svg').write_text(document(text_only=True),encoding='utf-8')
-    print('Built the gallery master and two standalone photograph variants.')
+        parts.append(f'<g id="{prefix}-paper"><rect width="{w}" height="{h}" fill="#fbfaf7"/></g>')
+        for i,p in enumerate(photos):
+            hidden=' display="none"' if i else '';x,y,pw,ph=p['box']
+            parts.append(f'<g id="{p["id"]}" clip-path="url(#{prefix}-photo-window)"{hidden}><image x="{n(x)}" y="{n(y)}" width="{n(pw)}" height="{n(ph)}" preserveAspectRatio="{p.get("preserveAspectRatio","xMidYMid slice")}" xlink:href="{image_url(package/p["file"])}"/></g>')
+    parts.append(f'<g id="{prefix}-copy" fill="#453b35" aria-label="Travel information">')
+    for row in d['copy']:parts.append(run(**row,outline=outline))
+    parts.append(run(**d['credit'],outline=outline,italic=True))
+    if not text_only and d.get('facsimile'):
+        f=d['facsimile'];x,y,fw,fh=f['box']
+        parts.append(f'<image id="{prefix}-reply-code-facsimile" x="{x}" y="{y}" width="{fw}" height="{fh}" xlink:href="{image_url(package/f["file"])}"><title>Unresolved reply code from the prior source; not an asserted transcription</title></image>')
+    parts.append('</g>');parts.append(f'<g id="{prefix}-wordmark" fill="#332e2b" aria-label="Campaign signature">')
+    for row in d['wordmark']:parts.append(run(**row,outline=outline))
+    parts.append('</g>');parts.append(f'<g id="{prefix}-headline" fill="#fffdfa" data-text="{esc(d["title"])}">')
+    for i,row in enumerate(d['headline']['lines']):
+        if 'letters' in row:parts.append(f'<g data-text="{esc(row["text"])}">'+fitted_letters(row['letters'],f'{prefix}-{i}',outline)+'</g>')
+        else:parts.append(run(**row,outline=outline,id=f'{prefix}-headline-line-{i+1}'))
+    parts.append('</g></svg>');return '\n'.join(parts)+'\n'
+def render(source,output,width=None):
+    args=['inkscape',str(source),'--export-filename='+str(output)]
+    if width:args.append('--export-width='+str(width))
+    subprocess.run(args,check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+def build(key,exports=False):
+    package=POSTERS/KEYS[key];d=json.loads((package/'source/design.json').read_text());review=package/'review';review.mkdir(exist_ok=True)
+    site=ROOT/'src/posters'/KEYS[key];site.mkdir(parents=True,exist_ok=True);stem=d['stem']
+    (site/('spring-visitors.svg' if key=='spring' else 'poster.svg')).write_text(document(d,package,gallery=True))
+    master=package/(stem+'.svg');master.write_text(document(d,package))
+    (package/(stem+'-editable-text.svg')).write_text(document(d,package,outline=False))
+    (review/'typography.svg').write_text(document(d,package,text_only=True))
+    if len(d['photos'])>1:
+        (package/(stem+'-alternate.svg')).write_text(document(d,package,variant=d['photos'][1]['id']))
+        (package/(stem+'-alternate-editable-text.svg')).write_text(document(d,package,variant=d['photos'][1]['id'],outline=False))
+    if exports:
+        from PIL import Image
+        render(master,package/(stem+'.pdf'));render(master,review/'reconstruction.png',d['canvas']['width']);render(review/'typography.svg',review/'typography.png',d['canvas']['width'])
+        if len(d['photos'])>1:render(package/(stem+'-alternate.svg'),package/(stem+'-alternate.pdf'))
+        im=Image.open(review/'reconstruction.png').convert('RGB');im.thumbnail((900,900));im.save(site/'thumbnail.jpg',quality=92)
+    record={'id':KEYS[key],'title':d['title'],'viewBox':[0,0,d['canvas']['width'],d['canvas']['height']],'master':str(master.relative_to(ROOT)),'sha256':hashlib.sha256(master.read_bytes()).hexdigest(),'typography':'Native TeX Gyre Termes glyph outlines; original historical typeface unconfirmed','photos':[{'file':p['file'],'sha256':hashlib.sha256((package/p['file']).read_bytes()).hexdigest()} for p in d['photos']]}
+    (package/'manifest.json').write_text(json.dumps(record,indent=2,ensure_ascii=False)+'\n');print('Built',KEYS[key])
+if __name__=='__main__':
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--only',choices=KEYS);ap.add_argument('--exports',action='store_true');ap.add_argument('--proof',action='store_true',help='Compatibility flag; typography proofs are always written');args=ap.parse_args()
+    if args.exports and not shutil.which('inkscape'):raise SystemExit('Inkscape is needed for --exports')
+    for key in ([args.only] if args.only else KEYS):build(key,args.exports)

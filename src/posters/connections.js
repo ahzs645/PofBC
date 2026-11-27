@@ -149,6 +149,37 @@ const BRANCH = {
   certainty: 'printed'
 }
 
+const TOURISM_CAMPAIGN_SOURCE = 'https://theadcc.ca/archive/so-many-of-our-visitors-our-good-ferries-take-away-our-great-hotels_1985_gold_consumer-magazine'
+const TOURISM_CAMPAIGN_IDS = ['super-natural-spring', 'super-natural-ferries', 'super-natural-lake']
+const tourismCompanions = (id) => TOURISM_CAMPAIGN_IDS.filter((other) => other !== id).map((poster) => ({
+  ...companion(poster, 'Posters · ADCC records the three advertisements together as its 1985 Gold tourism campaign.'),
+  rel: 'Same advertising campaign',
+  certainty: 'documented'
+}))
+const tourismCampaignConnections = (id) => [
+  {
+    group: 'issuer', rel: 'Advertises', label: 'Tourism B.C.',
+    note: 'The ADCC campaign record names Tourism B.C. as the client of McKim Advertising (Vancouver).',
+    href: TOURISM_CAMPAIGN_SOURCE, certainty: 'documented'
+  },
+  {
+    group: 'marks', rel: 'Campaign identity', label: 'Super, Natural British Columbia',
+    note: 'Logos · the wider tourism identity collection. The signature on this advertisement is a reconstruction, not one of the later recovered source-vector marks.',
+    to: { view: 'gallery', logos: 'tourism-bc-destination-bc' }, certainty: 'printed'
+  },
+  ...tourismCompanions(id),
+  {
+    group: 'objects', rel: 'Related tourism wording', label: 'Super, Natural British Columbia welcomes you',
+    note: 'Signs · the same tourism phrase on a provincial welcome sign, in a different arrangement.',
+    to: { view: 'signs', sign: 'super-natural' }, certainty: 'thematic'
+  },
+  {
+    group: 'context', rel: 'Award and creative credits', label: 'ADCC Gold, Consumer Magazine Ad, Campaign, 1985',
+    note: 'ADCC names Alvin Wasserman for writing and creative direction, Bill Cozens for design and art direction, and Peter Thomas, Ed Gifford and Bob Herger collectively for photography. It does not assign each photograph individually. The award year does not establish this advertisement’s publication date.',
+    href: TOURISM_CAMPAIGN_SOURCE, certainty: 'documented'
+  }
+]
+
 // ── The connections, by piece ───────────────────────────────────────────────────────────────────
 
 const BY_POSTER = {
@@ -167,6 +198,7 @@ const BY_POSTER = {
     }
   ],
   'super-natural-spring': [
+    ...tourismCompanions('super-natural-spring'),
     {
       group: 'issuer', rel: 'Advertises', label: 'Province of British Columbia',
       note: 'Concordia University’s account identifies the advertisement with the Province’s Super, Natural tourism campaign.',
@@ -198,6 +230,8 @@ const BY_POSTER = {
       certainty: 'documented'
     }
   ],
+  'super-natural-ferries': tourismCampaignConnections('super-natural-ferries'),
+  'super-natural-lake': tourismCampaignConnections('super-natural-lake'),
   'use-your-ashtray': [
     {
       group: 'issuer', rel: 'Printed publication', label: 'Fish and Game Branch',

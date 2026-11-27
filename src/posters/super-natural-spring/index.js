@@ -8,7 +8,7 @@ export const load = () => ({
   reference: {
     src: reference,
     box: SPRING_POSTER.parts.overview.box,
-    caption: 'The supplied 620 × 418 pixel reference of the 1984 advertisement, also reproduced by Concordia University in 2021.'
+    caption: 'The supplied 1462 × 1021 pixel reference crop of the 1984 advertisement. The image clips some edge content and does not establish the original page dimensions; the reconstruction restores the complete headline within a small inset.'
   },
   variations: {
     label: 'Reconstruction photograph',

@@ -1,24 +1,37 @@
 {
+  "updated": "2026-11-26",
   "svg": {
-    "viewBox": "0 0 620 418",
+    "viewBox": "0 0 1462 1021",
     "uniqueIds": true,
     "paths": 742,
-    "images": 3,
+    "images": 2,
     "embeddedImages": true,
     "textNodes": 0
   },
   "checks": {
-    "posterCatalogue": "33 passed, 0 failed",
-    "buildAssets": "passed; repository-supported Heros font fallback on this Linux runtime",
-    "productionBuild": "vite build passed",
-    "pdf": "1 page, 892.8 x 601.92 pt; rasterized and visually inspected",
-    "visualReview": "Layout, photo landmarks, copy, typography and PDF inspected; two headline fitting passes",
-    "browser": "Not verified: connected and cloud browsers could not reach the workspace development server"
+    "posterCatalogue": "34 passed, 0 failed",
+    "pdf": {
+      "pages": 1,
+      "widthPt": 1052.64,
+      "heightPt": 735.12,
+      "vectorDrawingObjects": 743
+    },
+    "editableVsOutlined": "Identical rendered pixels at native canvas width with bundled Termes installed",
+    "fontTables": "All catalogued regular/italic glyph bounding boxes match the official bundled OTF fonts",
+    "photoBytes": "Supplied photo files preserved unchanged",
+    "standaloneViewer": "Browser verified ad selection, original/reconstruction/overlay modes, scan levelling, opacity controls, and fit-width/100% sizing. Download targets match the selected scene.",
+    "fullSiteBuild": "Not run; catalogue tests and standalone browser review were completed.",
+    "alternatePdf": {
+      "pages": 1,
+      "widthPt": 1052.6400146484375,
+      "heightPt": 735.1199951171875,
+      "vectorDrawingObjects": 743
+    }
   },
-  "fontStatus": "TeX Gyre Termes Regular and Italic reconstruction; original face unconfirmed",
-  "remainingLimitations": [
-    "Clean scene images are supplied modern recreations, not recovered original photography",
-    "Tiny reply code retained as source raster",
-    "Headline retains visible contour differences; see overlay"
+  "limits": [
+    "Exact historical typeface unconfirmed.",
+    "Original printed dimensions unestablished.",
+    "Spring departmental reply code remains unreadable; retained as a tiny facsimile from the prior reference, without an asserted numeric transcription.",
+    "Fine punctuation in minister credit remains uncertain."
   ]
 }
