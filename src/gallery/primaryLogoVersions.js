@@ -6,11 +6,15 @@ export const withPrimaryLogoVersions = (body) => ({
   assets: (body.assets ?? []).flatMap((design) => {
     const recovered = versions[design.id]
     if (!recovered || design.variantOf) return [design]
+    const published = recovered.alsoSeen
+      ? { ...design, alsoSeen: [...(design.alsoSeen ?? []), ...recovered.alsoSeen] }
+      : design
+    if (!recovered.asset) return [published]
     const preferred = recovered.preferred && !design.preferredVector && !design.preferredReconstruction
       ? { preferredReconstruction: recovered.preferred }
       : {}
     return [
-      { ...design, versionLabel: design.versionLabel ?? recovered.sourceLabel, ...preferred },
+      { ...published, versionLabel: design.versionLabel ?? recovered.sourceLabel, ...preferred },
       recovered.asset,
     ]
   })

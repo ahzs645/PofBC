@@ -13263,5 +13263,17 @@ export const COLLECTED_DISPLAY = {
    "preserveCanvas": true,
    "palette": true
   }
+ },
+ "tahsis-website-wordmark-rebuilt": {
+  "light": {
+   "file": "identity-display/tahsis-website-wordmark-rebuilt.light.svg",
+   "aspect": 1.6462,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/tahsis-website-wordmark-rebuilt.dark.svg",
+   "aspect": 1.6462,
+   "recoloured": true
+  }
  }
 }
