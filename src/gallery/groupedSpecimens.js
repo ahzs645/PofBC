@@ -118,4 +118,14 @@ for (const { title, versions, darkVariant } of groups) {
   }
 }
 
+const publishedReverses = {
+  'innovate-bc-2024-colour': 'source-innovate-bc-innovate-bc-white-eps',
+  'source-expanded-coast-mountain-bus-company-route-map-logo': 'source-vector-coast-mountain-bus-company-2022-white',
+  'school-district-84-logo-current': 'school-district-84-strategic-plan-reverse',
+  'school-district-93-sd093-observed-2010-2011': 'school-district-93-illustrated-book-annual-report-reverse'
+}
+for (const [id, darkVariant] of Object.entries(publishedReverses)) {
+  reviewed.set(id, { ...reviewed.get(id), darkVariant })
+}
+
 export const groupSpecimen = (asset) => reviewed.has(asset.id) ? { ...asset, ...reviewed.get(asset.id) } : asset

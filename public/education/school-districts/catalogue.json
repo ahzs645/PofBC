@@ -7009,7 +7009,8 @@
           "darkBackground": false,
           "sourceLocator": "Official website logo image, 430 × 201 pixels",
           "adoptionSource": null,
-          "versionLabel": "Full-size website PNG"
+          "versionLabel": "Full-size website PNG",
+          "preferredVector": "school-district-68-accessibility-plan-2026"
         },
         {
           "officialUrl": "https://www.sd68.bc.ca",
@@ -7079,6 +7080,45 @@
           "darkBackground": false,
           "bytes": 44045,
           "sha256": "759866cef1e668ca7e4bcf8794c186743318729395a5136afd18cc983b0e1718"
+        },
+        {
+          "id": "school-district-68-accessibility-plan-2026",
+          "label": "Nanaimo Ladysmith — current title-case salmon signature",
+          "versionLabel": "Accessibility plan SVG",
+          "file": "education/school-districts/logos/school-district-68-accessibility-plan-2026.svg",
+          "format": "svg",
+          "isVector": true,
+          "containsRaster": false,
+          "status": "captured",
+          "publisher": "Nanaimo Ladysmith School District",
+          "sourceKind": "district-publication",
+          "sourceTitle": "Nanaimo Ladysmith Public Schools Accessibility Plan, August 2026",
+          "sourceUrl": "https://www.sd68.bc.ca/wp-content/uploads/2026-nlps-accessibility-plan-1.pdf",
+          "sourcePage": "https://www.sd68.bc.ca/wp-content/uploads/2026-nlps-accessibility-plan-1.pdf#page=1",
+          "sourceLocator": "Cover, PDF page 1, upper right above the address",
+          "sourceDate": "2026-08",
+          "observedDate": "2026-11-27",
+          "role": "current",
+          "variantOf": "school-district-68-logo-current",
+          "notes": "Title-case Nanaimo Ladysmith and bold PUBLIC SCHOOLS match the website signature. The publication uses the outlined salmon and both lines of type.",
+          "fidelityNote": "Isolated all 50 native filled logo paths from the cover with MuPDF. Retained original coordinates, fills and transforms. The paths include both lines of lettering.",
+          "evidenceType": "native-pdf-vector-extraction",
+          "derivation": "outline-extraction",
+          "extraction": {
+            "method": "Isolated all 50 native filled logo paths from the cover with MuPDF. Retained original coordinates, fills and transforms. The paths include both lines of lettering.",
+            "page": 1,
+            "pdfBounds": [
+              602,
+              14,
+              751,
+              87
+            ],
+            "sourceSha256": "416574ef6b888b9d8ac3b636c84654d284e887b7227912badc903a8e8c7d028a"
+          },
+          "sourceGround": "light",
+          "bytes": 15846,
+          "sha256": "e235d20d121b1a33aa9fffd6d1b4a2a1c9b91efac136647cbb04acfaaa6ff069",
+          "darkBackground": false
         }
       ],
       "logoStatus": "captured",
@@ -7091,6 +7131,14 @@
           "kind": "district-website",
           "sourceDate": null,
           "observedDate": "2026-11-22"
+        },
+        {
+          "title": "Nanaimo Ladysmith Public Schools Accessibility Plan, August 2026",
+          "url": "https://www.sd68.bc.ca/wp-content/uploads/2026-nlps-accessibility-plan-1.pdf#page=1",
+          "locator": "Cover, PDF page 1, upper right above the address",
+          "kind": "district-publication",
+          "sourceDate": "2026-08",
+          "observedDate": "2026-11-27"
         }
       ]
     },

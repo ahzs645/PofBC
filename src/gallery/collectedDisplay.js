@@ -1625,6 +1625,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "lwbc-handbook-2004-black": {
+  "light": {
+   "file": "identity-display/lwbc-handbook-2004-black.light.svg",
+   "aspect": 2.4689,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/lwbc-handbook-2004-black.dark.svg",
+   "aspect": 2.4689,
+   "recoloured": true
+  }
+ },
  "vector-partnerships-bc-2012": {
   "light": {
    "file": "identity-display/vector-partnerships-bc-2012.light.svg",
@@ -3979,6 +3991,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "airport-cycd-colour-signature-2025": {
+  "light": {
+   "file": "identity-display/airport-cycd-colour-signature-2025.light.svg",
+   "aspect": 2.2669,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/airport-cycd-colour-signature-2025.light.svg",
+   "aspect": 2.2669,
+   "recoloured": false
+  }
+ },
+ "airport-cyxt-advertising-signature-2024": {
+  "light": {
+   "file": "identity-display/airport-cyxt-advertising-signature-2024.light.svg",
+   "aspect": 6.5283,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/airport-cyxt-advertising-signature-2024.dark.svg",
+   "aspect": 6.5283,
+   "recoloured": true
+  }
+ },
  "airport-cyxt-reverse": {
   "light": {
    "file": "identity-display/airport-cyxt-reverse.light.svg",
@@ -4015,6 +4051,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "airport-cyxs-colour-annual-report-2023": {
+  "light": {
+   "file": "identity-display/airport-cyxs-colour-annual-report-2023.light.svg",
+   "aspect": 2.3173,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/airport-cyxs-colour-annual-report-2023.dark.svg",
+   "aspect": 2.3173,
+   "recoloured": true
+  }
+ },
  "airport-cyxs-reverse": {
   "light": {
    "file": "identity-display/airport-cyxs-reverse.light.svg",
@@ -4035,6 +4083,18 @@ export const COLLECTED_DISPLAY = {
   },
   "dark": {
    "file": "identity-display/airport-cbc7-phs-operator-emblem-2016-blue.dark.svg",
+   "aspect": 1.5785,
+   "recoloured": true
+  }
+ },
+ "airport-cbc7-phs-2022-letterhead-blue": {
+  "light": {
+   "file": "identity-display/airport-cbc7-phs-2022-letterhead-blue.light.svg",
+   "aspect": 1.5785,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/airport-cbc7-phs-2022-letterhead-blue.dark.svg",
    "aspect": 1.5785,
    "recoloured": true
   }
@@ -6016,6 +6076,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "west-coast-express-2024-navy": {
+  "light": {
+   "file": "identity-display/west-coast-express-2024-navy.light.svg",
+   "aspect": 3.1917,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/west-coast-express-2024-navy.dark.svg",
+   "aspect": 3.1917,
+   "recoloured": true
+  }
+ },
  "source-expanded-bc-arts-council-arts-council-signature": {
   "light": {
    "file": "identity-display/source-expanded-bc-arts-council-arts-council-signature.light.svg",
@@ -6929,6 +7001,18 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/municipal-prince-rupert-community-assessment-2024.dark.svg",
    "aspect": 1.3755,
+   "recoloured": true
+  }
+ },
+ "municipal-prince-rupert-website-black": {
+  "light": {
+   "file": "identity-display/municipal-prince-rupert-website-black.light.svg",
+   "aspect": 2.6609,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-prince-rupert-website-black.dark.svg",
+   "aspect": 2.6609,
    "recoloured": true
   }
  },
@@ -7860,6 +7944,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "municipal-kelowna-urban-forest-web-colours": {
+  "light": {
+   "file": "identity-display/municipal-kelowna-urban-forest-web-colours.light.svg",
+   "aspect": 1.3591,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-kelowna-urban-forest-web-colours.dark.svg",
+   "aspect": 1.3591,
+   "recoloured": true
+  }
+ },
+ "municipal-kelowna-urban-forest-print": {
+  "light": {
+   "file": "identity-display/municipal-kelowna-urban-forest-print.light.svg",
+   "aspect": 1.3591,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-kelowna-urban-forest-print.dark.svg",
+   "aspect": 1.3591,
+   "recoloured": true
+  }
+ },
  "source-recovered-municipal-kimberley-website-logo": {
   "light": {
    "file": "identity-display/source-recovered-municipal-kimberley-website-logo.light.svg",
@@ -8523,6 +8631,18 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/municipal-white-rock-annual-report-reverse.dark.svg",
    "aspect": 3.4336,
    "recoloured": false
+  }
+ },
+ "municipal-white-rock-website-navy": {
+  "light": {
+   "file": "identity-display/municipal-white-rock-website-navy.light.svg",
+   "aspect": 3.4336,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/municipal-white-rock-website-navy.dark.svg",
+   "aspect": 3.4336,
+   "recoloured": true
   }
  },
  "source-recovered-municipal-logan-lake-website-logo": {
@@ -10045,6 +10165,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "school-district-68-accessibility-plan-2026": {
+  "light": {
+   "file": "identity-display/school-district-68-accessibility-plan-2026.light.svg",
+   "aspect": 2.0951,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/school-district-68-accessibility-plan-2026.dark.svg",
+   "aspect": 2.0951,
+   "recoloured": true
+  }
+ },
  "school-district-70-logo-current": {
   "light": {
    "file": "identity-display/school-district-70-logo-current.light.svg",
@@ -10890,6 +11022,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "ufv-wave-wordmark-white-2014": {
+  "light": {
+   "file": "identity-display/ufv-wave-wordmark-white-2014.light.svg",
+   "aspect": 3.0998,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/ufv-wave-wordmark-white-2014.dark.svg",
+   "aspect": 3.0998,
+   "recoloured": false
+  }
+ },
+ "ufv-40-years-2014": {
+  "light": {
+   "file": "identity-display/ufv-40-years-2014.light.svg",
+   "aspect": 2.9879,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/ufv-40-years-2014.dark.svg",
+   "aspect": 2.9879,
+   "recoloured": false
+  }
+ },
  "recovered-historical-kwantlen-college-1994-minutes": {
   "light": {
    "file": "identity-display/recovered-historical-kwantlen-college-1994-minutes.light.svg",
@@ -10984,6 +11140,18 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/recovered-ucfv-2007-calendar-vector.dark.svg",
    "aspect": 3.1964,
    "recoloured": true
+  }
+ },
+ "ucfv-initials-white-2014": {
+  "light": {
+   "file": "identity-display/ucfv-initials-white-2014.light.svg",
+   "aspect": 3.3653,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/ucfv-initials-white-2014.dark.svg",
+   "aspect": 3.3653,
+   "recoloured": false
   }
  },
  "recovered-ecuad-2004-framed-one-line": {

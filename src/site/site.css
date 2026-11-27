@@ -1586,7 +1586,7 @@ input.share__url {
     font-size: 14px; line-height: 1.25;
   }
   /* Scoped to the grid so it outranks the card's line clamp further down, which sets display. */
-  .gallery__collections .gallery__collection .gallery__collection-text > :is(.gallery__note, .gallery__years, .gallery__chips) { display: none; }
+  .gallery__collections .gallery__collection .gallery__collection-text > :is(.gallery__note:not(.gallery__specimen), .gallery__years, .gallery__chips) { display: none; }
 }
 .gallery__collection-title { font-size: 18px; font-weight: 600; }
 

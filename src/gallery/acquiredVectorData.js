@@ -1,5 +1,51 @@
 // Reviewed source vectors recovered for existing gallery designs.
+const kelownaPublication = 'https://hdp-ca-prod-app-kelowna-involved-files.s3.ca-central-1.amazonaws.com/6417/1562/8132/Kelowna_SUFS_May_2024_for_Engagement.pdf'
+const kelownaGeometry = {
+  publisher: 'City of Kelowna',
+  sourcePage: kelownaPublication + '#page=1',
+  sourceUrl: kelownaPublication,
+  sourceFile: 'Urban Forest Strategy, May 2024 draft',
+  sourceLocator: 'PDF page 1, lower-right city signature',
+  observedDate: '2026-11-27',
+  sourceGround: 'light',
+  extraction: {
+    method: 'Retained the 73 native filled paths of the cover signature, including the outlined lettering, and trimmed the viewBox to their bounds.',
+    page: 1,
+    pdfBounds: [459.00027, 678.59979, 584.99969, 771.25983],
+    sourceSha256: '162fb6ffa9426550c161e308d09789c0dd9282c36887c232de6c0c93399d7c6a'
+  }
+}
+
 export const ACQUIRED_VECTORS = {
+  'source-recovered-municipal-kelowna-website-logo': {
+    prefer: true,
+    designLabel: 'City of Kelowna — stacked civic signature',
+    asset: {
+      ...kelownaGeometry,
+      id: 'municipal-kelowna-urban-forest-web-colours',
+      label: 'City of Kelowna — website colours',
+      versionLabel: 'Website colours · publication outlines',
+      file: 'identity-recovered/municipalities/kelowna/urban-forest-geometry-web-colours.svg',
+      evidenceType: 'website-colours-on-source-vector',
+      colourSourceUrl: 'https://www.kelowna.ca/sites/all/themes/kelowna/images/kelowna-logo-main.png',
+      notes: 'Uses the segmented ring and stacked city name seen on the municipal website.',
+      fidelityNote: 'The eight fill values come from the opaque pixels of the municipal website PNG. The May 2024 publication supplies all 73 paths. Both published specimens are available as separate versions.',
+      sha256: '62b6558e0340cca89e352aed2472c6c949bc4253a33e4d8b4d6f9ed5835c262e',
+      bytes: 12535
+    },
+    alternates: [{
+      ...kelownaGeometry,
+      id: 'municipal-kelowna-urban-forest-print',
+      label: 'City of Kelowna — Urban Forest Strategy',
+      versionLabel: 'Print colours · May 2024',
+      file: 'identity-recovered/municipalities/kelowna/urban-forest-2024-colour.svg',
+      specimenDate: '2024-05',
+      notes: 'The draft strategy cover carries the full-colour city signature.',
+      fidelityNote: 'Preserves the eight source fills, including the near-black lettering. All triangles and letter outlines come from the publication.',
+      sha256: 'de6cebb3da4b2c788ee0b1be1b4b9e89624ef8a5137654ee30caae79ba254106',
+      bytes: 12535
+    }]
+  },
   "source-recovered-municipal-duncan-website-logo": {
     "prefer": true,
     "designLabel": "Duncan — Clock tower signature",
@@ -1350,7 +1396,7 @@ export const ACQUIRED_VECTORS = {
     }
   },
   "source-recovered-municipal-sechelt-website-logo": {
-    "prefer": false,
+    "prefer": true,
     "asset": {
       "id": "municipal-sechelt-consultation-site-colour",
       "label": "Colour signature with teal lettering",

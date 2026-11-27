@@ -10,6 +10,22 @@ import { gallerySections } from '../gallery/gallerySearch.js'
 
 const publicRoot = new URL('../../public/', import.meta.url)
 
+test('Prince George uses its full-colour vector and Terrace keeps its two positive treatments selectable', () => {
+  const princeGeorge = collectedEntriesOf('airport-cyxs').find(({ id }) => id === 'airport-cyxs-signature')
+  assert.equal(princeGeorge.asset.id, 'airport-cyxs-colour-annual-report-2023')
+  assert.match(readFileSync(new URL(princeGeorge.asset.file, publicRoot), 'utf8'), /<radialGradient\b/)
+  assert.ok(princeGeorge.versions.some(({ id }) => id === 'airport-cyxs-signature'))
+  assert.ok(princeGeorge.versions.some(({ id }) => id === 'airport-cyxs-reverse'))
+
+  const terrace = collectedEntriesOf('airport-cyxt')
+  const print = terrace.find(({ id }) => id === 'airport-cyxt-advertising-signature-2024')
+  const website = terrace.find(({ id }) => id === 'airport-cyxt-signature')
+  assert.equal(print.asset.isVector, true)
+  assert.equal(print.asset.specimenDate, '2024')
+  assert.ok(print.versions.some(({ id }) => id === print.asset.darkVariant))
+  assert.equal(website.asset.file, 'identity-airports/cyxt/signature.png')
+})
+
 test('airport artwork has a directory record, a gallery collection and local downloads', () => {
   const locationCodes = new Set(facilities.map(({ code }) => code.toLowerCase()))
   const [shelf] = gallerySections('airports')

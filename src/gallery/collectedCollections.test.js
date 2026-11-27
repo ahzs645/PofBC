@@ -147,6 +147,21 @@ test('Fort St. John features the stacked vector and preserves each documented sp
   }
 })
 
+test('the gallery can feature a dated native specimen while preserving the current design link', () => {
+  const goldTrail = collectionById('collected-school-district-74')
+  assert.equal(goldTrail.cover, 'school-district-74-logo-current')
+  const featured = findGalleryEntry(goldTrail.shelfSpecimen)
+  assert.equal(featured.id, 'school-district-74-strategic-plan-gold-trail')
+  assert.equal(featured.years, 'Seen 2021')
+  assert.equal(findGalleryEntry(goldTrail.cover).asset.format, 'png')
+
+  for (const collection of GALLERY_COLLECTIONS.filter((each) => each.shelfSpecimen)) {
+    const entry = entriesOf(collection).find((each) => each.id === collection.shelfSpecimen)
+    assert.ok(entry?.asset.isVector && !entry.asset.reconstruction && !entry.asset.containsRaster, collection.id)
+    assert.notEqual(collection.shelfSpecimen, collection.cover)
+  }
+})
+
 test('the Survey separates its current and earlier seals from anniversary artwork', () => {
   const survey = collectionById('collected-sub-british-columbia-geological-survey')
   const sections = survey.artworkSections.map(({ label, entries }) => [label, entries.map(({ id }) => id)])
@@ -168,7 +183,10 @@ test('publication vectors keep existing design links, source files and colourway
     assert.ok(entry.versions.some((version) => !version.isVector), id)
     const vectorDefault = prefer || entry.asset.derivedFrom === asset.id
     assert.equal(entry.asset.isVector, vectorDefault, id)
-    if (vectorDefault) assert.equal(entry.identity.provenance, 'extracted_from_official_vector', id)
+    if (vectorDefault) {
+      const provenance = entry.asset.evidenceType === 'official-website-svg' ? 'published_vector' : 'extracted_from_official_vector'
+      assert.equal(entry.identity.provenance, provenance, id)
+    }
 
     for (const version of [asset, ...alternates]) {
       assert.equal(findGalleryEntry(version.id), entry)

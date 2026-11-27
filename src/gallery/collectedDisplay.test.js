@@ -125,6 +125,20 @@ test('the BC Ambulance badge opens its mixed-media reconstruction at the publish
   }
 })
 
+test('the photographed and positive print designs use their published reverse on a dark page', () => {
+  for (const [id, reverseId] of [
+    ['innovate-bc-2024-colour', 'source-innovate-bc-innovate-bc-white-eps'],
+    ['source-expanded-coast-mountain-bus-company-route-map-logo', 'source-vector-coast-mountain-bus-company-2022-white'],
+    ['school-district-84-logo-current', 'school-district-84-strategic-plan-reverse'],
+    ['school-district-93-sd093-observed-2010-2011', 'school-district-93-illustrated-book-annual-report-reverse']
+  ]) {
+    const entry = findGalleryEntry(id)
+    assert.ok(tileArt(entry, 'light').includes(collectedDisplay(entry.asset, 'light')?.file ?? entry.asset.file))
+    assert.ok(tileArt(entry, 'dark').includes(collectedDisplay(assets.get(reverseId), 'dark').file))
+    assert.equal(onPage(entry, 'dark'), true)
+  }
+})
+
 test('a long wordmark is drawn shorter than a square emblem, within bounds', () => {
   assert.equal(logoScale(1), 1)
   assert.equal(logoScale(2.4), 1)

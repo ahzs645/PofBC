@@ -34,6 +34,8 @@ import { FORREX_COLLECTION, SIFERP_COLLECTION } from './forrex.js'
 import { FOREST_GENETICS_BODIES } from './forestGenetics.js'
 import { ACQUIRED_VECTORS } from './acquiredVectorData.js'
 import { COLLECTED_VECTOR_VARIANTS } from './collectedVectorVariants.js'
+import { withArchivalReportArtwork } from './archivalReportArtwork.js'
+import { withVerifiedSourceColours } from './verifiedSourceColours.js'
 import { withVectorRecovery } from './vectorRecovery.js'
 
 import { PARKS_FOUNDATION_BODY } from './bcParksFoundation.js'
@@ -87,10 +89,11 @@ const withArtworkVersions = (record) => ({
   }).map(groupSpecimen)
 })
 
-export const ALL_COLLECTED_BODIES = withVectorRecovery([...COLLECTED_BODIES, ...additionalBodies].map((record) => {
+const bodiesWithVersions = [...COLLECTED_BODIES, ...additionalBodies].map((record) => {
   const guideArtwork = NORTHERN_TRAVEL_GUIDE_ARTWORK[record.id]
   return withArtworkVersions(guideArtwork ? { ...record, assets: [...record.assets, ...guideArtwork] } : record)
-}))
+})
+export const ALL_COLLECTED_BODIES = withVerifiedSourceColours(withVectorRecovery(bodiesWithVersions).map(withArchivalReportArtwork))
 export const ALL_COLLECTED_SPECIMENS = [...COLLECTED_SPECIMENS, buyBCSpecimens, fireSmartSpecimens, ecosystemsAtRiskSpecimens, resWestSpecimens, bearAwareSpecimens, environmentYouthCorpsSpecimens]
   .map((record) => withArtworkVersions(record.program === 'stronger-bc' ? withStrongerBCGuide(record) : record))
 
