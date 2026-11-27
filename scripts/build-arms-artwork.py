@@ -159,7 +159,9 @@ def main():
             'notes': asset.get('notes'),
             'image': name,
             'vectorImage': vector_copy(asset),
-            'size': list(size)
+            'size': list(size),
+            # The catalogue specimen this file is another copy of (see the acquisition README).
+            **({'sameAs': asset['sameAs']} if asset.get('sameAs') else {})
         }
 
     by_file = {asset['file']: asset_id for asset_id, asset in assets.items()}

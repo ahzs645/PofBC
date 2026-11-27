@@ -3,14 +3,16 @@
 //
 // The place is in the address (`?view=arms&holder=british-columbia`), so a holder can be linked to.
 
+import { Breadcrumbs } from '../site/Breadcrumbs.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { ARMS } from '../assets/crestMark.js'
 import { SiteLink } from '../site/navigation.jsx'
 import { writeHistory } from '../site/browserHistory.js'
 import {
-  ACQUISITION_DIR, GROUPS, PROVINCE, holderById, holdersInGroup, provinceSections
+  ACQUISITION_DIR, CATALOGUE_DIR, GROUPS, PROVINCE, PROVINCE_STORY, holderById, holdersInGroup
 } from './armsData.js'
 import './arms.css'
+import { SourceList } from '../site/SourceList.jsx'
 
 const SPECIMEN_IMAGES = import.meta.glob('../../research/identity/arms-variants-2026-11-14/reference/*', { eager: true, query: '?url', import: 'default' })
 const HOLDER_IMAGES = import.meta.glob('./images/*', { eager: true, query: '?url', import: 'default' })
@@ -63,7 +65,8 @@ const HolderImage = ({ holder, label }) => {
 
 const External = ({ href, children }) => <a href={href} target="_blank" rel="noreferrer">{children}</a>
 
-const SourceList = ({ sources }) => (sources?.length
+// A specimen's or stage's own sources, compact, inside its card.
+const CardSources = ({ sources }) => (sources?.length
   ? (
     <ul className="arms__sources">
       {sources.map((source) => <li key={source.url}><External href={source.url}>{source.title}</External></li>)}
@@ -71,7 +74,9 @@ const SourceList = ({ sources }) => (sources?.length
     )
   : null)
 
-const PROVINCE_SPECIMEN_COUNT = provinceSections().reduce((sum, section) => sum + section.specimens.length, 0)
+// The historical entries, each design, object or treatment once; the modern renderings are not counted.
+const PROVINCE_ENTRY_COUNT = PROVINCE_STORY.filter(({ renderings }) => !renderings)
+  .reduce((sum, section) => sum + section.groups.reduce((count, { entries }) => count + entries.length, 0), 0)
 
 const yearOf = (holder) => holder.year ?? holder.granted?.match(/\b(1[89]\d\d|20\d\d)\b/)?.[1] ?? null
 
@@ -83,7 +88,7 @@ const HolderCard = ({ holder, onOpen, feature = false }) => (
         <span className="arms__card-name">{holder.name}</span>
         {holder.motto?.text && <span className="arms__card-motto">{holder.motto.text}</span>}
         <span className="arms__card-meta">
-          {feature ? `${PROVINCE_SPECIMEN_COUNT} dated specimens, 1850 to 2023` : [yearOf(holder), holder.registered?.join(', ')].filter(Boolean).join(' · ')}
+          {feature ? `${PROVINCE_ENTRY_COUNT} dated specimens, 1850 to 2023` : [yearOf(holder), holder.registered?.join(', ')].filter(Boolean).join(' · ')}
         </span>
       </span>
     </button>
@@ -136,22 +141,6 @@ const Elements = ({ record, summary }) => {
   )
 }
 
-const Stages = ({ stages }) => (
-  <section className="arms__section" aria-labelledby="arms-stages">
-    <h3 id="arms-stages">Three designs</h3>
-    <ol className="arms__stages">
-      {stages.map((stage) => (
-        <li key={stage.year}>
-          <span className="arms__stage-year">{stage.year}</span>
-          <strong>{stage.title}</strong>
-          <p>{stage.text}</p>
-          <SourceList sources={stage.sources} />
-        </li>
-      ))}
-    </ol>
-  </section>
-)
-
 /**
  * Whether a picture is dark ink on a transparent ground, which the dark theme's tile would swallow.
  * Such a picture is given a soft light well; one that draws its own opaque ground needs none, and
@@ -183,48 +172,6 @@ const groundFor = (event) => {
   const frame = event.currentTarget.parentElement
   if (frame && needsLightGround(event.currentTarget)) frame.dataset.ground = 'light'
 }
-
-const Specimen = ({ item }) => {
-  const url = specimenUrl(item.image)
-  return (
-    <li className="arms__specimen">
-      <figure>
-        <a className="arms__specimen-art" href={url ?? undefined} target="_blank" rel="noreferrer" aria-label={`${item.title}, full image`}>
-          {url && <img src={url} alt="" loading="lazy" decoding="async" onLoad={groundFor} />}
-        </a>
-        <figcaption>
-          <span className="arms__specimen-number">{item.number}</span>
-          <strong>{item.title}</strong>
-          <span className="arms__specimen-date">{item.date}</span>
-          <span className="arms__specimen-class">{item.classification}</span>
-          <p>{item.description}</p>
-          {item.credit && <p className="arms__credit">{item.credit}</p>}
-          <SourceList sources={item.sources} />
-        </figcaption>
-      </figure>
-    </li>
-  )
-}
-
-const Specimens = () => (
-  <section className="arms__section" aria-labelledby="arms-specimens">
-    <h3 id="arms-specimens">Dated specimens</h3>
-    <p className="arms__group-description">
-      Numbered as in the{' '}
-      <External href={`${REPOSITORY}/${PROVINCE.catalogue.readme}`}>arms catalogue</External>{' '}
-      (<External href={`${REPOSITORY}/${PROVINCE.catalogue.pdf}`}>PDF</External>); a specimen’s date shows when it
-      was in use, not when its drawing was made.
-    </p>
-    {provinceSections().map((section) => (
-      <div key={section.title} className="arms__specimen-section">
-        <h4>{section.title}</h4>
-        <ul className="arms__specimens">
-          {section.specimens.map((item) => <Specimen key={item.id} item={item} />)}
-        </ul>
-      </div>
-    ))}
-  </section>
-)
 
 const KINDS = {
   arms: 'Arms',
@@ -309,17 +256,139 @@ const Artwork = ({ items }) => {
   )
 }
 
+// The Province's account, oldest first (armsData.js PROVINCE_STORY). Each entry shows its best
+// file and lists every other copy of the same drawing or object, so nothing appears twice and no
+// copy, credit or source is lost.
+
+const fileImageUrl = (file) => (file.from === 'catalogue' ? specimenUrl(file.image) : artworkImageUrl(file.item))
+const repositoryFile = (path) => `${REPOSITORY}/${path}`
+
+/** A file's own links: its image or original in the repository, its other formats, its source page. */
+const FileLinks = ({ file }) => (
+  <>
+    {file.from === 'catalogue'
+      ? <li><External href={repositoryFile(`${CATALOGUE_DIR}/reference/${file.image}`)}>Catalogue image ({file.format})</External></li>
+      : (
+        <>
+          {file.page && <li><External href={file.page}>Source</External></li>}
+          {file.original && <li><External href={repositoryFile(`${ACQUISITION_DIR}/assets/${file.original}`)}>Original file ({file.format})</External></li>}
+          {file.alternates.map((path) => <li key={path}><External href={repositoryFile(`${ACQUISITION_DIR}/assets/${path}`)}>Also as {path.split('.').at(-1).toUpperCase()}</External></li>)}
+        </>
+        )}
+  </>
+)
+
+const FileCredit = ({ file }) => (file.from === 'catalogue'
+  ? file.credit
+  : (
+    <>
+      {file.author}
+      {file.licence && <> · {file.licenceUrl ? <External href={file.licenceUrl}>{file.licence}</External> : file.licence}</>}
+    </>
+    ))
+
+/** Every copy of one entry, the one shown first. */
+const Copies = ({ entry }) => (
+  <div className="arms__copies">
+    <span className="arms__copies-title">Held in {entry.files.length} copies</span>
+    <ol>
+      {entry.files.map((file, index) => (
+        <li key={file.id}>
+          <span className="arms__copy-name">
+            {index === 0 && <span className="arms__copy-shown">Shown · </span>}
+            {file.number ? `No. ${file.number}: ${file.title}` : file.title}
+            {file.vector && ' · vector'}
+          </span>
+          <span className="arms__copy-meta">
+            {file.date}
+            {(file.credit || file.author) && <> · <FileCredit file={file} /></>}
+          </span>
+          <ul className="arms__copy-links"><FileLinks file={file} /></ul>
+        </li>
+      ))}
+    </ol>
+  </div>
+)
+
+const StoryEntry = ({ entry }) => {
+  const url = fileImageUrl(entry.lead)
+  const single = entry.files.length === 1 ? entry.lead : null
+  const kind = [KINDS[entry.kind] ?? entry.kind, entry.historical && 'historical'].filter(Boolean).join(' · ')
+  return (
+    <li className="arms__specimen" data-entry={entry.id}>
+      <figure>
+        <a className="arms__specimen-art" href={url ?? undefined} target="_blank" rel="noreferrer" aria-label={`${entry.title}, full image`}>
+          {url && <img src={url} alt="" loading="lazy" decoding="async" onLoad={groundFor} />}
+        </a>
+        <figcaption>
+          {entry.number && <span className="arms__specimen-number">No. {entry.number}</span>}
+          <strong>{entry.title}</strong>
+          <span className="arms__specimen-date">{entry.date}</span>
+          <span className="arms__specimen-class">{[entry.classification ?? kind, entry.lead.vector && 'vector'].filter(Boolean).join(' · ')}</span>
+          {entry.description && <p>{entry.description}</p>}
+          {entry.follows && <p className="arms__credit">Redrawn from no. {entry.follows}; a reconstruction, not original artwork.</p>}
+          {/* The entry's credit is its own file's; when another copy is shown, the copies list credits each. */}
+          {entry.credit && entry.lead.id === entry.id && <p className="arms__credit">{entry.credit}</p>}
+          {single?.from === 'artwork' && (
+            <>
+              <p className="arms__credit"><FileCredit file={single} /></p>
+              <ul className="arms__sources"><FileLinks file={single} /></ul>
+            </>
+          )}
+          {!single && <Copies entry={entry} />}
+          <CardSources sources={entry.sources} />
+        </figcaption>
+      </figure>
+    </li>
+  )
+}
+
+const Story = () => (
+  <>
+    <p className="arms__story-note">
+      Each design, object or treatment appears once, oldest first; where several copies of one drawing are held, the
+      best is shown and the rest are listed with it. Numbers are the{' '}
+      <External href={`${REPOSITORY}/${PROVINCE.catalogue.readme}`}>arms catalogue</External>’s{' '}
+      (<External href={`${REPOSITORY}/${PROVINCE.catalogue.pdf}`}>PDF</External>). A specimen’s date shows when it
+      was printed or seen, not when its drawing was made.
+    </p>
+    {PROVINCE_STORY.map((section) => (
+      <section key={section.id} className={`arms__section arms__era${section.renderings ? ' arms__era--renderings' : ''}`} aria-labelledby={`arms-era-${section.id}`}>
+        <h3 id={`arms-era-${section.id}`}>
+          {section.title}
+          <span className="arms__era-period">{section.period}</span>
+        </h3>
+        {section.stage && <p className="arms__era-text"><strong>{section.stage.title}.</strong> {section.stage.text}</p>}
+        {section.text && <p className="arms__era-text">{section.text}</p>}
+        <CardSources sources={section.sources} />
+        {section.groups.map((group, index) => (
+          <div key={group.title ?? index} className="arms__specimen-section">
+            {group.title && <h4>{group.title}</h4>}
+            <ul className="arms__specimens">
+              {group.entries.map((entry) => <StoryEntry key={entry.id} entry={entry} />)}
+            </ul>
+          </div>
+        ))}
+        {section.letters.length > 0 && (
+          <details className="arms__letters">
+            <summary>Letters patent ({section.letters.length})</summary>
+            <ul className="arms__specimens">
+              {section.letters.map((entry) => <StoryEntry key={entry.id} entry={entry} />)}
+            </ul>
+          </details>
+        )}
+      </section>
+    ))}
+  </>
+)
+
 const Detail = ({ holder, onBack, titleRef }) => (
   <article className="arms__detail" aria-labelledby="arms-holder-name">
+    <Breadcrumbs label="Coats of Arms" steps={[{ label: 'All coats of arms', onClick: onBack }, { label: holder.name }]} />
     <header className="arms__header">
       <div className="arms__art arms__art--large"><HolderImage holder={holder} label={`Arms of ${holder.name}`} /></div>
       <div className="arms__header-text">
-        {/* The site's header already names the view, so the way back is an arrow on the title's
-            line rather than "← Coats of Arms" on a line of its own above the card. */}
         <div className="arms__title-row">
-          <button type="button" className="icon-back" aria-label="Back to Coats of Arms" title="Back to Coats of Arms" onClick={onBack}>
-            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3.5M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>
-          </button>
           <h2 id="arms-holder-name" ref={titleRef} tabIndex={-1}>{holder.name}</h2>
         </div>
         {holder.motto?.text && (
@@ -347,22 +416,22 @@ const Detail = ({ holder, onBack, titleRef }) => (
         )}
       </div>
     </header>
-    {holder.stages && <Stages stages={holder.stages} />}
-    {holder.artwork?.length > 0 && <Artwork items={holder.artwork} />}
-    {holder.id === PROVINCE.id && <Specimens />}
+    {holder.id === PROVINCE.id
+      ? <Story />
+      : holder.artwork?.length > 0 && <Artwork items={holder.artwork} />}
     {(holder.links?.length > 0 || holder.sources?.length > 0 || holder.register?.url || holder.related?.length > 0) && (
       <section className="arms__section" aria-labelledby="arms-elsewhere">
-        <h3 id="arms-elsewhere">Sources and related pages</h3>
-        <ul className="arms__sources">
-          {holder.register?.url && <li><External href={holder.register.url}>Canadian Heraldic Authority: public register entry</External></li>}
-          {holder.related?.map((related) => (
-            <li key={related.url}><External href={related.url}>{related.title}</External>{related.relation && <>. {related.relation}</>}</li>
-          ))}
-          {holder.sources?.filter((source) => source.url !== holder.register?.url).map((source) => (
-            <li key={source.url}><External href={source.url}>{source.title}</External></li>
-          ))}
-          {holder.links?.map((link) => <li key={link.label}><SiteLink to={link.to}>{link.label} <span aria-hidden="true">→</span></SiteLink></li>)}
-        </ul>
+        <h3 id="arms-elsewhere">Sources</h3>
+        <SourceList sources={[
+          ...(holder.register?.url ? [{ url: holder.register.url, title: 'Canadian Heraldic Authority: public register entry' }] : []),
+          ...(holder.related ?? []).map((related) => ({ url: related.url, title: related.title, note: related.relation })),
+          ...(holder.sources ?? []).filter((source) => source.url !== holder.register?.url).map((source) => ({ url: source.url, title: source.title }))
+        ]} />
+        {holder.links?.length > 0 && (
+          <p className="arms__links">
+            {holder.links.map((link) => <SiteLink key={link.label} to={link.to}>{link.label} <span aria-hidden="true">→</span></SiteLink>)}
+          </p>
+        )}
       </section>
     )}
   </article>

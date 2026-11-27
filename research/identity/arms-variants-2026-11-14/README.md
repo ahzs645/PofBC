@@ -93,6 +93,28 @@ Two source conflicts are recorded rather than resolved by guesswork: LAC’s **c
 
 No archival enquiries or messages were sent. Unretrieved drawings are described as leads without substitute images.
 
+## Copies of one drawing (`sameAs`)
+
+Some entries, and some files of the [arms acquisition](../arms-acquisition-2026-11-16/README.md), are
+further copies of a drawing or object already catalogued. Such a record carries `sameAs` (the id of
+the catalogue entry it is a copy of) and `sameAsEvidence` (how that was established). Nothing is
+removed: every copy keeps its number, file, date, credit and sources. The Coats of Arms page
+(`?view=arms&holder=british-columbia`) shows each design, object or treatment once, with the best
+copy (a source vector first) as its picture and the others listed under it.
+
+| Entry | Further copies | Evidence |
+| --- | --- | --- |
+| 07 Diamond Jubilee stained glass | Acquisition `province-older-arms-window-makaristos` (shown: 3072×2304, takes in the motto) | Same leading, roundel arrows and roses, and the same crack across the ram |
+| 22 1987 complete arms: period plate | 24 Legislature web drawing; 25 Provincial web specimen | Overlaid at a common scale, all three register line for line |
+| 23 1990 registration painting | Acquisition `cha-1406-arms-1` | Same register entry and image, 490×548 px, differing only by JPEG re-encoding |
+| 29 One-colour black treatment | Acquisition `province-official-monochrome-sample` (shown: source vector, SAMPLE kept) | Both clipped from page 3 of the same guide at nearly the same box |
+| 30 Reverse white-on-blue treatment | Acquisition `province-official-reverse-sample` (shown: source vector, SAMPLE kept) | Both clipped from page 3 of the same guide; the raster also takes in the shield diagram |
+
+Entries 24 and 25 keep their own dates: they show the 1987–88 drawing still in use when observed in
+2026, not a new drawing. The guide's colour, one-colour and reverse treatments (28–31) are the same
+drawing again; they stay separate entries because each is a different treatment. Reconstructions
+(33–35) are not copies: 33 and 34 name the specimen they were redrawn from with `follows`.
+
 ## Files and regeneration
 
 The complete catalogue is `catalogue.json`; `reference/` contains its 32 image assets. `build_catalogue.py` renders the PDF using Python, Pillow and ReportLab:

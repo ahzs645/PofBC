@@ -53,7 +53,19 @@ python3 scripts/build-arms-artwork.py
 Each holder's page leads with the picture the acquisition chose (`holders.json` → `image`), except the
 Province (the site's own vector) and the Lieutenant Governor (the Commons flag already in
 `src/arms/images/`). Every record is shown in the page's Artwork section with its artist, licence,
-source and a link to the original file here.
+source and a link to the original file here; the Province's records appear instead in its account of
+the arms, in the section of their period, and a copy of a catalogued specimen within that specimen's entry.
+
+## Copies of catalogued specimens (`sameAs`)
+
+Four records are further copies of specimens in the
+[arms catalogue](../arms-variants-2026-11-14/README.md#copies-of-one-drawing-sameas): the two SAMPLE
+vectors (nos. 29 and 30, as source vectors), the register's arms painting (no. 23) and the
+Makaristos photograph of the Diamond Jubilee window (no. 7). Each carries `sameAs`, the catalogue
+entry's id, and `sameAsEvidence`, in both `catalogue.json` and `holders.json`;
+`build-arms-artwork.py` copies `sameAs` into the site's index, and the Province's page shows the
+record within that entry rather than as a second one. The files themselves are unchanged, SAMPLE
+marks included.
 
 ## Dates and rights
 

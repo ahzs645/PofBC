@@ -838,8 +838,8 @@
       "section": "05 · The complete 1987 arms",
       "dateLabel": "Undated · observed 2026",
       "classification": "Current colour drawing",
-      "description": "Strong outlines and graphic shading make this rendition distinct from the registration painting. Its broad composition resembles the 1987 period plate.",
-      "datingNote": "Master artwork date and identity with the earlier plate are unestablished.",
+      "description": "Strong outlines and graphic shading on a clean white ground. Overlaid at a common scale, every contour registers with the 1987–88 report plate (no. 22), so this is the same drawing as printed then.",
+      "datingNote": "The drawing is the one printed in the 1987–88 report (no. 22); this web copy is undated and was observed in 2026. When the master artwork was made is not established.",
       "imagePath": "reference/full-current-legislature-web.jpg",
       "sources": [
         "S22"
@@ -867,7 +867,9 @@
       },
       "transformation": "Unmodified downloaded JPEG",
       "confidence": "high official source; uncertain drawing date",
-      "catalogueNumber": 24
+      "catalogueNumber": 24,
+      "sameAs": "full-1987-period-report",
+      "sameAsEvidence": "Same drawing as no. 22: overlaid at a common scale (bounding boxes of the coloured artwork, 600 px wide), the stag, ram, crest, mantling, scroll lettering and every dogwood flower register line for line. Checked 27 November 2026."
     },
     {
       "id": "full-current-government-web",
@@ -875,7 +877,7 @@
       "section": "05 · The complete 1987 arms",
       "dateLabel": "Undated · observed 2026",
       "classification": "Current colour reproduction",
-      "description": "A small official colour image carries a magenta SAMPLE watermark. It documents online use of the complete arms.",
+      "description": "A small official colour image with a magenta SAMPLE watermark. Its drawing registers line for line with the Legislature's web copy (no. 24) and the 1987–88 plate (no. 22).",
       "datingNote": "The page date does not establish when its artwork was drawn. Watermark retained.",
       "imagePath": "reference/full-current-government-web.jpg",
       "sources": [
@@ -904,7 +906,9 @@
       },
       "transformation": "Unmodified downloaded JPEG",
       "confidence": "high official source; uncertain drawing date",
-      "catalogueNumber": 25
+      "catalogueNumber": 25,
+      "sameAs": "full-1987-period-report",
+      "sameAsEvidence": "Same drawing as no. 22: overlaid on no. 24 at a common scale, the two images coincide except for JPEG edges and the SAMPLE watermark; no. 24 in turn registers with no. 22. Checked 27 November 2026."
     },
     {
       "id": "full-legislature-factsheet-2025",
@@ -1190,6 +1194,63 @@
       "transformation": "Full page rasterization with PyMuPDF",
       "confidence": "high: official slide title and contemporary news statement",
       "catalogueNumber": 32
+    },
+    {
+      "section": "08 · Vector reconstructions",
+      "classification": "Supplied vector reconstruction",
+      "designFamily": "1906-arms-with-unofficial-achievement",
+      "retrievedOn": "2026-11-27",
+      "transformation": "Supplied vector redraw of a raster reference: curves fitted to the reference and refined, parts regularised. Not original artwork and not an official master.",
+      "id": "reconstruction-colour-ornate",
+      "catalogueNumber": 33,
+      "title": "Colour reconstruction of the government illustration",
+      "dateLabel": "Reconstruction supplied 2026 · drawing undated",
+      "description": "A colour vector redraw of the full pre-1987 achievement: the 1906 shield with the lion crest, stag and ram, and the motto on a pink-edged scroll. It follows the same drawing as no. 17, the government history illustration, in a cleaner print. The palette is the reconstruction’s own, not an official colour specification.",
+      "datingNote": "The reconstruction dates from November 2026; the drawing it follows is undated (see no. 17). It shows no dogwood compartment, which the 1987 grant added.",
+      "credit": "Vector reconstruction supplied to the project (revision 2); reference and build sources in research/identity/arms-reconstructions-2026-11-27/colour-ornate",
+      "imagePath": "reference/reconstruction-colour-ornate.svg",
+      "sources": [
+        "S01"
+      ],
+      "visualSha256": "664e20faf1eac3bb0a8320ff25c3aa0d4151b1d069d6a375644ac1bf5f908895",
+      "follows": "old-full-arms-government"
+    },
+    {
+      "section": "08 · Vector reconstructions",
+      "classification": "Supplied vector reconstruction",
+      "designFamily": "1906-arms-with-unofficial-achievement",
+      "retrievedOn": "2026-11-27",
+      "transformation": "Supplied vector redraw of a raster reference: curves fitted to the reference and refined, parts regularised. Not original artwork and not an official master.",
+      "id": "reconstruction-monochrome-engraved",
+      "catalogueNumber": 34,
+      "title": "Engraved monochrome reconstruction",
+      "dateLabel": "Reconstruction supplied 2026 · drawing as printed 1936",
+      "description": "A black-and-white vector redraw of the fine engraved achievement: low open crown, slender stag and ram, narrow shield and long forked scroll. It follows the same engraving as no. 11, the 1935 museum report printed in 1936; the 18 motto letters are outlined from the drawing, not set in a font.",
+      "datingNote": "The reconstruction dates from November 2026. The matching engraving is dated by its 1936 printing, not by any adoption.",
+      "credit": "Vector reconstruction supplied to the project; notes and reference in research/identity/arms-reconstructions-2026-11-27/monochrome-engraved",
+      "imagePath": "reference/reconstruction-monochrome-engraved.svg",
+      "sources": [
+        "S15"
+      ],
+      "visualSha256": "318360e6dba18411bc617f782246df6117d0d65d8666cff3fa241d8c266e4967",
+      "follows": "museum-report-1935"
+    },
+    {
+      "section": "08 · Vector reconstructions",
+      "classification": "Supplied vector reconstruction",
+      "designFamily": "1906-arms-with-unofficial-achievement",
+      "retrievedOn": "2026-11-27",
+      "transformation": "Supplied vector redraw of a raster reference: curves fitted to the reference and refined, parts regularised. Not original artwork and not an official master.",
+      "id": "reconstruction-monochrome-line",
+      "catalogueNumber": 35,
+      "title": "Simplified line reconstruction",
+      "dateLabel": "Reconstruction supplied 2026 · source drawing not identified",
+      "description": "A bold monochrome line version of the same pre-1987 achievement: a flat-topped crown, simplified stag and ram and a blocky scroll, with the motto as outlined lettering. Its supplied cutout was not included, and it does not match any dated specimen in this catalogue.",
+      "datingNote": "Neither the source drawing nor its date is known; the reconstruction dates from November 2026.",
+      "credit": "Monochrome vector conversion supplied to the project, as described in the file’s own title and description",
+      "imagePath": "reference/reconstruction-monochrome-line.svg",
+      "sources": [],
+      "visualSha256": "e99ce07b63a5e6ce4d2c2aebbf04698c1464cca43e9bc77a3727ee7bc2bd5ed2"
     }
   ],
   "documentaryRecordsAndLeads": [

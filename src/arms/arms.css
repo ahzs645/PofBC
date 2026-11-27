@@ -97,18 +97,6 @@
 .arms__section h3 { margin: 0 0 12px; font-size: 18px; }
 .arms__section .arms__group-description { padding: 0; margin-bottom: 12px; }
 
-.arms__stages {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-  gap: var(--gap);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.arms__stages > li { display: grid; align-content: start; gap: 6px; padding: 14px; border: 1px solid var(--outline); border-radius: var(--radius-sm); }
-.arms__stages p { margin: 0; color: var(--ink-2); line-height: 1.5; font-size: 14px; }
-.arms__stage-year { font-size: 28px; font-weight: 700; line-height: 1; color: var(--sun); }
-
 .arms__specimen-section + .arms__specimen-section { margin-top: 20px; }
 .arms__specimen-section h4 { margin: 0 0 10px; font-size: 15px; color: var(--ink-2); }
 .arms__specimens {
@@ -142,11 +130,28 @@
 .arms__specimen-date { color: var(--ink-muted); }
 .arms__specimen-class { color: var(--ink-faint); font-size: 13px; }
 
+/* The Province's account (ArmsView.jsx Story): one section per period, oldest first. */
+.arms__story-note { margin: 0; padding: 0 4px; max-width: 72ch; color: var(--ink-muted); font-size: 14px; line-height: 1.5; }
+.arms__story-note a { color: var(--ink-2); }
+.arms__era h3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.arms__era-period { color: var(--ink-muted); font-size: 14px; font-weight: 500; }
+.arms__era-text { margin: 0 0 8px; max-width: 72ch; color: var(--ink-2); line-height: 1.55; }
+.arms__era > .arms__sources { margin: 0 0 16px; }
+/* Drawings made since 2009 are set apart from the dated specimens above them. */
+.arms__era--renderings { margin-top: 12px; border: 1px dashed var(--outline); }
+.arms__copies { display: grid; gap: 6px; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--outline); font-size: 13px; }
+.arms__copies-title { color: var(--ink-muted); font-weight: 600; }
+.arms__copies ol { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.arms__copies li { display: grid; gap: 2px; min-width: 0; }
+.arms__copy-name { color: var(--ink-2); overflow-wrap: anywhere; }
+.arms__copy-shown { color: var(--ink-faint); }
+.arms__copy-meta { color: var(--ink-faint); overflow-wrap: anywhere; }
+.arms__copy-meta a, .arms__copy-links a { color: var(--ink-2); }
+.arms__copy-links { display: flex; flex-wrap: wrap; gap: 2px 12px; margin: 0; padding: 0; list-style: none; }
+
 .arms__letters { margin-top: 16px; }
 .arms__letters summary { cursor: pointer; color: var(--ink-2); font-weight: 600; margin-bottom: 12px; }
 
-.arms__sources { display: grid; gap: 4px; margin: 6px 0 0; padding: 0 0 0 18px; font-size: 13px; }
-.arms__sources a { color: var(--ink-2); }
 
 @media (max-width: 640px) {
   .arms__header { grid-template-columns: minmax(0, 1fr); padding: 16px; }
@@ -158,3 +163,7 @@
   .arms__card--feature .arms__open { grid-template-columns: 96px minmax(0, 1fr); padding: 16px; gap: 16px; }
   .arms__section { padding: 16px; }
 }
+
+.arms__sources { display: grid; gap: 4px; margin: 6px 0 0; padding: 0 0 0 18px; font-size: 13px; }
+.arms__sources a { color: var(--ink-2); }
+.arms__links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 12px 0 0; font-size: 13px; }

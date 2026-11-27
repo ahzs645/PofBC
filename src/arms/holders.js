@@ -169,8 +169,8 @@ const holder = (entry) => {
   const extra = EXTRAS[entry.name] ?? {}
   const held = acquiredByRegisterUrl.get(entry.register_url)
   const links = []
-  if (extra.subject) links.push({ label: 'Its logos and identity, in Logos', to: { view: 'gallery', subject: extra.subject } })
-  if (extra.salaries) links.push({ label: 'Its published salaries', to: { view: 'salaries', employer: extra.salaries } })
+  if (extra.subject) links.push({ label: 'Open in the register', to: { view: 'gallery', subject: extra.subject } })
+  if (extra.salaries) links.push({ label: 'Open in Salaries', to: { view: 'salaries', employer: extra.salaries } })
   return {
     id: extra.id,
     name: extra.name ?? entry.common_name ?? entry.name,
@@ -273,7 +273,7 @@ const municipalHolder = (held) => {
       relation: null
     })),
     links: profiles.map(([subject, status]) => ({
-      label: status === 'predecessor' ? 'The current municipality’s profile: logo, council pay and salaries' : 'Its profile: logo, council pay and salaries',
+      label: status === 'predecessor' ? 'The current municipality in the register' : 'Open in the register',
       to: { view: 'gallery', subject }
     }))
   }
