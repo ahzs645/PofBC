@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { assetUrl, parseSpecimenDate } from './collectedCollections.js'
+import { adoptionOf, assetUrl, parseSpecimenDate } from './collectedCollections.js'
 import { collectedDetailPreview, defaultCollectedAsset } from './tileArt.js'
 import { PreviewBackground } from './PreviewBackground.jsx'
 import { ProgramPlacement } from './ProgramPlacement.jsx'
@@ -24,7 +24,9 @@ const SourceMarkView = ({ entry }) => {
   const theme = white ? 'light' : siteTheme
   const asset = entry.versions?.find((each) => each.id === version) ?? defaultCollectedAsset(entry, theme)
   const specimenDate = parseSpecimenDate(asset.specimenDate ?? asset.sourceDate)
-  const dateLabel = !specimenDate ? 'Logo dates unestablished'
+  const adoption = adoptionOf(asset) ?? entry.versions?.map(adoptionOf).find(Boolean)
+  const dateLabel = adoption ? `${adoption.verb} ${adoption.label}${specimenDate ? ` · this file ${specimenDate.label}` : ''}`
+    : !specimenDate ? 'Logo dates unestablished'
     : asset.reconstructionDate ? `Reconstructed ${asset.reconstructionDate} · specimen dated ${specimenDate.label}`
     : asset.sourceReproduction && asset.historicalDateLabel ? `${asset.historicalDateLabel} · reproduced ${specimenDate.label}`
     : `Seen ${specimenDate.label}`

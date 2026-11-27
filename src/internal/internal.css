@@ -1,90 +1,44 @@
-.internal-logos__intro {
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: 20px;
-  margin-bottom: var(--gap);
-}
-.internal-logos__intro h2 { margin: 0 0 6px; font-size: 22px; }
-.internal-logos__intro--row { display: flex; align-items: center; gap: 10px; padding-block: 14px; }
-.internal-logos__intro--row h2 { margin: 0; }
-.internal-logos__intro--row .icon-info { margin-left: auto; }
-.internal-logos__intro h2:focus { outline: none; }
-.internal-logos__intro p { margin: 0; color: var(--ink-muted); }
-.internal-logos__back {
-  border: 0;
-  background: none;
-  padding: 0;
-  margin-bottom: 12px;
-  color: var(--ink-muted);
-  font: inherit;
-  cursor: pointer;
-}
-.internal-logos__family {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  width: min(100%, 620px);
-  padding: 20px;
-  background: var(--surface);
-  border: 2px solid transparent;
-  border-radius: var(--radius);
-  color: var(--ink);
-  text-align: left;
-  font: inherit;
-  cursor: pointer;
-}
-a.internal-logos__family { text-decoration: none; }
-.internal-logos__family + .internal-logos__family { margin-top: var(--gap); }
-.internal-logos__family img { width: 100%; height: 100%; object-fit: contain; }
-.internal-logos__family:hover { border-color: var(--mid); }
-.internal-logos__family .internal-logos__artwork { flex: 0 0 150px; height: 190px; border-radius: var(--radius-sm); }
-.internal-logos__family-text { display: grid; gap: 8px; }
-.internal-logos__family-title { display: flex; justify-content: space-between; gap: 16px; font-size: 22px; font-weight: 650; }
-.internal-logos__family-description { color: var(--ink-muted); font-size: 14px; }
-.internal-logos__designs { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: var(--gap); }
-.internal-logos__design { min-width: 0; background: var(--surface); border-radius: var(--radius); overflow: hidden; }
-.internal-logos__open {
-  display: block;
-  width: 100%;
-  border: 0;
-  padding: 0;
-  color: var(--ink);
-  background: var(--surface);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-.internal-logos__design .internal-logos__artwork { height: 300px; }
-.internal-logos__title {
-  display: inline;
-  padding: 0;
-  border: 0;
-  background: none;
-  color: var(--ink);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-.internal-logos__title:hover, .internal-logos__design:has(.internal-logos__open:hover) .internal-logos__title { text-decoration: underline; text-underline-offset: 3px; }
-.internal-logos__title:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
-.internal-logos__section-title { margin: 20px 4px 12px; font-size: 18px; }
-.internal-logos__variants { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: var(--gap); }
-.internal-logos__variant { min-width: 0; border-radius: var(--radius); overflow: hidden; background: var(--surface); }
-.internal-logos__variant .internal-logos__artwork { height: 300px; }
-.internal-logos__variant-source { margin: 10px 0 0; font-size: 12px; color: var(--ink-muted); }
-.internal-logos__history-panel { margin-top: var(--gap); padding: 20px; border-radius: var(--radius); background: var(--surface); }
-.internal-logos__history-panel .internal-logos__comments { margin-top: 0; padding-top: 0; border-top: 0; }
+/* Departmental Logos. Its pages are the gallery's (site.css): these rules only fit the Forests
+   designs' live artwork into the gallery's frames, and give it its dark-mode treatment. */
+
+/* A page opens with its heading or trail focused (InternalLogosView.jsx); that draws no ring. */
+.internal-logos [tabindex='-1']:focus { outline: none; }
+
+/* A department's cover, drawn by the gallery, sits in the card's frame as the gallery's own does. */
+.internal-logos__cover { display: contents; }
+
+/* A Forests design: a tile of its own paper (or its version's background), its SVG filling it. */
 .internal-logos__artwork {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   height: 360px;
   padding: 20px;
+  border-radius: var(--radius-sm);
   background: var(--tile, #fff);
   color: #57534e;
+  font-size: 13px;
 }
-/* Dark mode (see InternalLogosView.jsx): a logo on plain white paper moves onto a dark tile. */
+.internal-logos__svg { display: block; width: 100%; height: 100%; }
+.internal-logos__svg:empty { display: none; }
+.internal-logos__svg > svg { display: block; width: 100%; height: 100%; }
+
+/* In the gallery's frames: an index card's cover, a department's tile, a design's preview. */
+.gallery__art--cover > .internal-logos__artwork { height: 120px; padding: 8px; }
+.gallery__pick--tile .gallery__art > .internal-logos__artwork { height: 180px; padding: 10px; }
+/* The design's own tile is the preview's frame, the generator's stage size (site.css). */
+.gallery-preview > .stage__frame.internal-logos__stage { min-height: 0; padding: 0; overflow: hidden; }
+.internal-logos__stage > .internal-logos__artwork { height: clamp(320px, 60vh, 480px); padding: max(44px, 4vw) 24px 24px; border-radius: var(--radius); }
+@media (min-width: 900px) {
+  .internal-logos__stage > .internal-logos__artwork { height: min(70vh, 620px); }
+}
+@media (max-width: 639px) {
+  .gallery__collections .gallery__art--cover > .internal-logos__artwork { height: 76px; padding: 4px; }
+}
+
+/* Dark mode: a logo on plain white paper moves onto a dark tile (ForestArtwork.jsx). */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) .internal-logos__artwork[data-paper] { background: #2a2824; color: #b5aea4; }
   :root:not([data-theme='light']) .internal-logos__artwork[data-paper][data-ink='mono'] .internal-logos__svg { filter: invert(1); }
@@ -95,50 +49,10 @@ a.internal-logos__family { text-decoration: none; }
 :root[data-theme='dark'] .internal-logos__artwork[data-paper][data-ink='mono'] .internal-logos__svg { filter: invert(1); }
 :root[data-theme='dark'] .internal-logos__artwork[data-paper][data-ink='colour'] .internal-logos__svg > svg { filter: drop-shadow(0 0 1px rgb(255 255 255 / 0.55)); }
 :root[data-theme='dark'] .internal-logos__artwork[data-paper][data-ink='dark'] .internal-logos__svg { background: #eceae4; border-radius: var(--radius-sm); }
-.internal-logos__svg { width: 100%; height: 100%; }
-.internal-logos__svg:empty { display: none; }
-.internal-logos__svg > svg { display: block; width: 100%; height: 100%; }
-.internal-logos__posters { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 8px; }
-.internal-logos__posters a {
-  display: grid;
-  gap: 2px;
-  padding: 10px 12px;
-  border: 1px solid var(--outline);
-  border-radius: var(--radius-sm);
-  background: var(--surface);
-  color: var(--ink);
-  text-decoration: none;
-}
-.internal-logos__posters a:hover { background: var(--hover); border-color: var(--mid); }
-.internal-logos__posters b { font-size: 14px; }
-.internal-logos__posters span { font-size: 12.5px; color: var(--ink-muted); }
-.internal-logos__comments .internal-logos__posters + * { margin-top: 12px; }
-.internal-logos__comments h4 + .internal-logos__posters { margin-top: 0; }
-.internal-logos__notes { padding: 20px; }
-.internal-logos__notes h3 { margin: 0 0 6px; font-size: 20px; }
-.internal-logos__description { margin: 0; color: var(--ink-muted); }
-.internal-logos__comments { margin-top: 20px; border-top: 1px solid var(--outline); padding-top: 16px; }
-.internal-logos__comments h4 { margin: 0 0 8px; font-size: 14px; }
-.internal-logos__comments p + h4 { margin-top: 16px; }
-.internal-logos__comments p { margin: 10px 0 0; font-size: 14px; color: var(--ink-muted); }
-.internal-logos__comments .internal-logos__evidence { color: var(--ink); font-size: 12px; font-weight: 600; }
-.internal-logos__sources { margin-top: 18px; color: var(--ink-muted); font-size: 12px; }
-.internal-logos__sources summary { cursor: pointer; }
-.internal-logos__sources ul { padding-left: 18px; }
-.internal-logos__sources li { margin: 8px 0; overflow-wrap: anywhere; }
-.internal-logos__sources p { margin: 8px 0 0; line-height: 1.5; }
-.internal-logos__footnote { margin: 16px 4px; color: var(--ink-muted); font-size: 12px; }
-@media (max-width: 600px) {
-  .internal-logos__family { flex-direction: column; align-items: stretch; }
-  .internal-logos__family .internal-logos__artwork { flex-basis: auto; }
-  .internal-logos__artwork { height: 340px; }
-  .internal-logos__design .internal-logos__artwork, .internal-logos__variant .internal-logos__artwork { height: 300px; }
-}
 
-/* An undated clipping is important context, but not a dated adoption record. */
-.internal-logos__article { margin-top: 18px; padding: 16px; border: 1px solid var(--outline); border-radius: var(--radius-sm); }
-.internal-logos__article h4 { margin: 0 0 8px; font-size: 14px; }
-.internal-logos__article blockquote { margin: 8px 0; padding-left: 12px; border-left: 3px solid var(--mid); font-size: 15px; font-style: italic; }
-.internal-logos__article p { margin: 10px 0 0; }
-.internal-logos__article .internal-logos__article-evidence { color: var(--ink); }
-.internal-logos__article .internal-logos__article-source { font-size: 12px; }
+/* A design's account: the clipping it is compared in, and its sources. */
+.internal-logos .gallery__facts dd > p { margin: 0; }
+.internal-logos .gallery__facts dd > * + p { margin-top: 8px; }
+.internal-logos__quote { margin: 8px 0; padding-left: 12px; border-left: 3px solid var(--mid); font-style: italic; }
+.internal-logos__sources { margin: 0; padding-left: 18px; }
+.internal-logos__sources li + li { margin-top: 4px; }

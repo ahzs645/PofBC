@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react'
+import { Breadcrumbs } from '../site/Breadcrumbs.jsx'
+import { HistoryTimeline } from '../site/HistoryTimeline.jsx'
+import { Lineage } from '../site/Lineage.jsx'
 import { SiteLink } from '../site/navigation.jsx'
 import { writeHistory } from '../site/browserHistory.js'
 import { documentTitle, setDocumentMeta } from '../site/documentMeta.js'
 import { CURRENT_DISTRICTS, SCHOOL_DIRECTORY_SOURCE, SCHOOL_DISTRICTS_AS_OF, DISTRICT_COUNTS, districtById, districtPlace, searchDistricts, connectionsOf, districtHistory, districtSources, formatHistoryDate, establishmentLabel, primaryDistrictLogo } from './districts.js'
 import './schools.css'
+import { SourceList } from '../site/SourceList.jsx'
 
 const assetUrl = (file) => `${import.meta.env.BASE_URL}${file.replace(/^\//, '')}`
 const External = ({ children, ...props }) => <a {...props} target="_blank" rel="noreferrer">{children}<span aria-hidden="true"> ↗</span></a>
@@ -35,24 +39,27 @@ const DistrictCard = ({ district, place }) => <SiteLink className="schools__card
   </div>
 </SiteLink>
 
-const Connection = ({ link, place, label }) => <li>
-  <SiteLink className="schools__connection" to={districtPlace(link.district, preserved(place))}>
-    <span className="schools__eyebrow">SD {link.district.number}</span>
-    <strong>{link.district.name}</strong>
-    <span>{label} {formatHistoryDate(link.date)}</span>
-  </SiteLink>
-  <div className="schools__connection-source"><External href={link.sourceUrl}>{link.sourceTitle ?? 'Source'}{link.locator ? ` · ${link.locator}` : ''}</External></div>
-</li>
+// A neighbouring district in the site's shared lineage (site/Lineage.jsx).
+const connection = (link, place, relation) => ({
+  key: link.from + link.to,
+  eyebrow: `SD ${link.district.number}`,
+  name: <SiteLink to={districtPlace(link.district, preserved(place))}>{link.district.name}</SiteLink>,
+  relation,
+  date: formatHistoryDate(link.date),
+  source: { title: link.sourceTitle ?? 'Source', url: link.sourceUrl, locator: link.locator }
+})
 
 const DistrictConnections = ({ district, place }) => {
   const { predecessors, successors } = connectionsOf(district.id)
   return <section className="schools__section" id="district-connections" aria-labelledby="district-connections-title">
     <div className="schools__section-heading"><h3 id="district-connections-title">Predecessors and successors</h3></div>
-    {predecessors.length || successors.length ? <div className="schools__lineage">
-      <div className="schools__lineage-column"><h4>Predecessors</h4>{predecessors.length ? <ul>{predecessors.map((link) => <Connection key={link.from} link={link} place={place} label="Merged into this district" />)}</ul> : <p className="schools__muted">None found in the sources so far.</p>}</div>
-      <div className="schools__lineage-focus"><span className="schools__lineage-arrow" aria-hidden="true">↓</span><Logo district={district} /><h4>{district.title}</h4><p>{district.established?.date ? `${establishmentLabel(district)} ${formatHistoryDate(district.established.date)}` : 'Establishment date not yet verified'}</p><span className="schools__lineage-arrow" aria-hidden="true">↓</span></div>
-      <div className="schools__lineage-column"><h4>Successors</h4>{successors.length ? <ul>{successors.map((link) => <Connection key={link.to} link={link} place={place} label="This district merged into it" />)}</ul> : <p className="schools__muted">{district.current ? 'None. It is a current district.' : 'None found in the sources so far.'}</p>}</div>
-    </div> : <p className="schools__empty">No earlier or later district found in the sources so far.</p>}
+    {predecessors.length || successors.length
+      ? <Lineage level={4}
+          predecessors={predecessors.map((link) => connection(link, place, 'Merged into this district'))}
+          successors={successors.map((link) => connection(link, place, 'This district merged into it'))}
+          emptyPredecessors="None found in the sources so far."
+          emptySuccessors={district.current ? 'None. It is a current district.' : 'None found in the sources so far.'} />
+      : <p className="schools__empty">No earlier or later district found in the sources so far.</p>}
   </section>
 }
 
@@ -68,14 +75,24 @@ const AmalgamationOverview = ({ place }) => {
   </details>
 }
 
+const DATE_NOTES = { year: 'Year recorded', month: 'Month recorded', 'report-period': 'Report period' }
+
 const DistrictTimeline = ({ district }) => {
   const events = districtHistory(district)
   return <section className="schools__section" id="district-history" aria-labelledby="district-history-title">
     <div className="schools__section-heading"><h3 id="district-history-title">History</h3></div>
-    {events.length ? <ol className="schools__timeline">{events.map((event, i) => <li key={`${event.type}-${event.date}-${i}`}>
-      <div className="schools__timeline-date"><time dateTime={event.precision === 'report-period' ? undefined : event.date}>{formatHistoryDate(event.date)}</time><span>{event.precision === 'year' ? 'Year recorded' : event.precision === 'month' ? 'Month recorded' : event.precision === 'report-period' ? 'Report period' : event.evidenceType?.includes('financial-statement') ? 'District-reported date' : ''}</span></div>
-      <div className="schools__timeline-event"><h4>{event.title}</h4>{event.detail && <p>{event.detail}</p>}{event.notes && <p className="schools__muted">{Array.isArray(event.notes) ? event.notes.join(' ') : event.notes}</p>}<div className="schools__source">{sourceLink(event)}</div></div>
-    </li>)}</ol> : <p className="schools__empty">No establishment date verified yet. The sources below are the starting points.</p>}
+    {events.length ? <HistoryTimeline events={events.map((event, i) => ({
+      key: `${event.type}-${event.date}-${i}`,
+      date: formatHistoryDate(event.date),
+      dateTime: event.precision === 'report-period' ? undefined : event.date,
+      dateNote: DATE_NOTES[event.precision] ?? (event.evidenceType?.includes('financial-statement') ? 'District-reported date' : undefined),
+      title: event.title,
+      body: <>
+        {event.detail && <p>{event.detail}</p>}
+        {event.notes && <p className="history-timeline__muted">{Array.isArray(event.notes) ? event.notes.join(' ') : event.notes}</p>}
+      </>,
+      sources: sourceLink(event)
+    }))} /> : <p className="schools__empty">No establishment date verified yet. The sources below are the starting points.</p>}
     {district.notes.length > 0 && <details className="schools__notes"><summary>Research notes and remaining questions</summary><ul>{district.notes.map((note, i) => <li key={i}>{note}</li>)}</ul></details>}
   </section>
 }
@@ -97,16 +114,16 @@ const DistrictLogos = ({ district }) => <section className="schools__section" id
 </section>
 
 const DistrictDetail = ({ district, place }) => <article className="schools__detail">
-  <SiteLink className="schools__back" to={districtPlace(null, preserved(place))}>← All school districts</SiteLink>
+  <Breadcrumbs label="School Districts" steps={[{ label: 'All school districts', to: districtPlace(null, preserved(place)) }, { label: district.name }]} />
   <header className="schools__detail-head"><div><p className="schools__eyebrow">{district.current ? 'School district' : 'Former school district'}</p><h2>{district.name}</h2><p className="schools__detail-subtitle">School District No. {district.number}</p>{district.legalName && <p className="schools__muted">{district.legalName}</p>}
     <div className="schools__detail-facts"><div><span>{district.established?.date ? establishmentLabel(district) : 'Established'}</span><strong>{district.established?.date ? formatHistoryDate(district.established.date) : 'Not yet verified'}</strong></div>{district.ended?.date && <div><span>Abolished</span><strong>{formatHistoryDate(district.ended.date)}</strong></div>}<div><span>Logos</span><strong>{district.assets.length ? `${district.assets.length} ${district.assets.length === 1 ? 'file' : 'files'}` : 'None collected yet'}</strong></div></div>
     {district.established?.disputed && <p className="schools__date-note">Sources give different dates. See the dated claims and evidence in the history below.</p>}
     {district.established?.kind === 'institutional-origin' && <p className="schools__date-note">This records an institutional origin; the formation of the modern numbered district is a separate research question.</p>}
-    <div className="schools__actions">{district.officialUrl && <External href={district.officialUrl}>Official website</External>}{district.employerSlug && <SiteLink to={{ view: 'salaries', employer: district.employerSlug }}>Salary disclosures →</SiteLink>}{district.current && <SiteLink to={{ view: 'government', mode: 'related', node: district.id }}>Governance and organization →</SiteLink>}</div>
+    <div className="schools__actions">{district.officialUrl && <External href={district.officialUrl}>Official website</External>}{district.employerSlug && <SiteLink to={{ view: 'salaries', employer: district.employerSlug }}>Open in Salaries →</SiteLink>}{district.current && <SiteLink to={{ view: 'government', mode: 'related', node: district.id }}>Open in Government →</SiteLink>}</div>
   </div><Logo district={district} className="schools__hero-logo" /></header>
   <nav className="schools__section-nav" aria-label="District sections"><a href="#district-connections">Connections</a><a href="#district-history">History</a><a href="#district-logos">Logos</a><a href="#district-sources">Sources</a></nav>
   <DistrictConnections district={district} place={place} /><DistrictTimeline district={district} /><DistrictLogos district={district} />
-  <section className="schools__section" id="district-sources" aria-labelledby="district-sources-title"><div className="schools__section-heading"><h3 id="district-sources-title">Sources</h3></div><ol className="schools__sources">{districtSources(district).map((source, i) => <li key={`${source.url}-${i}`}><External href={source.url}>{source.title}</External>{source.locator && <span>{source.locator}</span>}{source.note && <p>{source.note}</p>}</li>)}</ol></section>
+  <section className="schools__section" id="district-sources" aria-labelledby="district-sources-title"><div className="schools__section-heading"><h3 id="district-sources-title">Sources</h3></div><SourceList sources={districtSources(district)} /></section>
 </article>
 
 export const SchoolDistrictsView = () => {

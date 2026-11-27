@@ -2724,15 +2724,47 @@
         "height": 221
       },
       "sourceGround": "dark",
-      "alsoSeen": [
-        {
-          "date": "2013",
-          "source": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/5a61b69d-7ee3-460b-9638-ff6b76e8a143/content#page=47",
-          "label": "Northern British Columbia Travel Guide 2013, PDF page 47"
-        }
-      ],
       "fidelityNote": "The source crop retains the artwork as printed, including any surrounding design needed for the specimen.",
-      "sha256": "813e3a59a3c796ec300e3c0bbc824e3325296c5d51fc509ad9e7fe7ff992dc0c"
+      "sha256": "813e3a59a3c796ec300e3c0bbc824e3325296c5d51fc509ad9e7fe7ff992dc0c",
+      "preferredVector": "fort-st-james-district-2013-vector",
+      "versionLabel": "Printed crop · 2015 guide",
+      "designLabel": "Fort St. James District · reverse signature"
+    },
+    {
+      "publisher": "Northern British Columbia Tourism Association",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/5a61b69d-7ee3-460b-9638-ff6b76e8a143/content",
+      "sourceFile": "Northern British Columbia Travel Guide 2013",
+      "specimenDate": "2013",
+      "observedDate": "2026-11-27",
+      "role": "historical",
+      "reconstruction": false,
+      "evidenceType": "native-pdf-vector-extraction",
+      "format": "svg",
+      "isVector": true,
+      "sourceGround": "dark",
+      "darkBackground": true,
+      "id": "fort-st-james-district-2013-vector",
+      "label": "Fort St. James District · reverse signature · 2013 native vector",
+      "file": "identity-collected/northern-bc-travel-guides/fort-st-james-district-2013-vector.svg",
+      "sourcePage": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/5a61b69d-7ee3-460b-9638-ff6b76e8a143/content#page=47",
+      "sourceLocator": "PDF page 47 (printed page 46), Fort St. James advertisement, foot of the dark panel: the same signature as the 2015 guide.",
+      "notes": "White condensed “FORT ST. JAMES” with a gold full stop and spaced “DISTRICT”, beside a gold sun and green hill over two blue waves. Printed on the advertisement’s dark panel, which is not part of the artwork.",
+      "fidelityNote": "The guide’s own 24 filled paths, in its own colours and geometry, as MuPDF converts the page; the lettering is drawn as paths in the PDF, not live text. The advertisement’s dark panel and photograph are page images and are left out. No tracing, retyping or recolouring.",
+      "extraction": {
+        "pdfPage": 47,
+        "pdfBounds": [
+          58,
+          659,
+          342,
+          719
+        ],
+        "method": "Kept the PDF’s native paths drawn inside the bounds with scripts/pdf_vector_region.py (PyMuPDF 1.28.2); the page’s images lie outside the artwork and were not kept.",
+        "nativePathCount": 24,
+        "sourceSha256": "b6dad7ddddfdf432f98fc169e292f43778b6bdf4c5b50e485b7b66c59694f4c0"
+      },
+      "variantOf": "fort-st-james-district-reverse-2015",
+      "versionLabel": "Native vector · 2013 guide",
+      "sha256": "58ccf1956d2463c084c6a12978d21f7e24eac62f506f1d13234754e5d9e64f3e"
     }
   ],
   "friends-of-fort-st-james": [

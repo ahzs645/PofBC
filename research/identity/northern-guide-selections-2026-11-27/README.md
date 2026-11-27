@@ -17,16 +17,20 @@ Sources (Legislative Library of BC):
 
 | Page | Logo | Vector in the selection? | Outcome |
 |---|---|---|---|
-| 3 | Super, Natural British Columbia Canada | No: part of the photograph | Native vector already held from the same page (`snbc-canada-no-oval-2013`) |
+| 3 | Super, Natural British Columbia Canada | Yes: white paths over the photograph | Native vector already held from the same page (`snbc-canada-no-oval-2013`) |
 | 17 | Prince George moose | Moose and lettering only; the skyline is a page image | Not added; the held PNG notes the same image-dependent skyline |
 | 25 | Tumbler Ridge | Yes | Already held (`tumbler-ridge-waterfall-colour-2013`) |
 | 27 | Pouce Coupe | No | Nothing to add |
 | 33 | District of Taylor with yellow swoosh | Yes | **Added** `taylor-district-swoosh-2013`, a separate design from the 2015 script |
-| 47 | Fort St. James District | Symbol only; lettering is a bitmap | Symbol already held from the website |
+| 47 | Fort St. James District | Yes: lettering, “DISTRICT”, the gold stop and the symbol are all paths; only the dark panel behind them is a page image | **Added** `fort-st-james-district-2013-vector` as the preferred vector of the 2015 reverse signature (corrected 2026-11-27, see below) |
 | 52 | Houston | Yes | **Added** `houston-wilderness-script-2013-vector` as the preferred vector of the 2012 design |
 | 62 | Blue “British Columbia” panel | Panel and text only | Not a logo; the page's Stewart Bear Arts mark is already held |
 | 66 | Visit Terrace | Yes | Already held (`visit-terrace-bear-script-2013`) |
 | 72 | Kitimat | Yes (renders broken in the selection) | Already held (`kitimat-tourism-script-2013`) |
+
+### Correction, 27 November 2026
+
+The selections were checked again by rendering each with its bitmaps removed on a dark ground as well as a light one. White artwork disappears on a light check, which is how the page 47 lettering and the page 3 lettering were first read as bitmaps. Both are paths. Page 3 changes nothing (that page's vector is already held); page 47 gave the Fort St. James District signature its native vector, extracted from the Library's copy (SHA-256 `b6dad7ddddfdf432f98fc169e292f43778b6bdf4c5b50e485b7b66c59694f4c0`) with `scripts/pdf_vector_region.py`, bounds `[58, 659, 342, 719]` on PDF page 47. The other eight outcomes stand: Pouce Coupe (page 27) and the Stewart script (page 62) are images, and the Prince George skyline (page 17) is a page image under vector lettering.
 
 ## 2014
 

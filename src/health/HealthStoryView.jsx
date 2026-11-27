@@ -141,7 +141,7 @@ export function HealthStoryView() {
   return <main className="health-story hm">
     <header className="hm-header">
       <p className="hm-kicker">Historical atlas · British Columbia</p>
-      <h1>How BC’s health map changed</h1>
+      <h2>How BC’s health map changed</h2>
       <p className="hm-lede">Before five health authorities took over in December 2001, BC’s health services were run by regional boards, community councils and service societies. These maps put each of those organizations back on the map, with its dates, its earlier names and what it became.</p>
     </header>
 

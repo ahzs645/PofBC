@@ -20,6 +20,7 @@ import { CNC_BRAND_RESOURCES, CNC_CURRENT_MARKS, CNC_HISTORICAL_MARKS, CNC_SUBJE
 import { POSTSECONDARY_ARTWORK_FORMAT, POSTSECONDARY_ARTWORK_SCOPE, summarizePostsecondaryArtwork } from './postsecondaryArtwork.js'
 import './identityCoverage.css'
 import { Select } from '../site/ui/Select.jsx'
+import { Breadcrumbs } from '../site/Breadcrumbs.jsx'
 import { holdScroll } from '../site/holdScroll.js'
 import { UnbcOrigins, UnbcOriginsLink, hasUnbcOrigins, useUnbcOriginsRequested } from './UnbcOrigins.jsx'
 
@@ -186,7 +187,7 @@ export const IdentityCoverageBrowser = ({ onHome, onOpenSubject }) => {
   }).filter((group) => group.subjects.length)
   return (
     <div className="identity-register">
-      <nav className="gallery__crumbs" aria-label="Gallery"><button type="button" className="gallery__back" onClick={onHome}>← All logos</button><span aria-hidden="true">/</span><span aria-current="page">{title}</span></nav>
+      <Breadcrumbs label="Gallery" steps={[{ label: 'All logos', onClick: onHome }, { label: title }]} />
       <header className="identity-register__head">
         <p className="identity-eyebrow">{section ? 'Identity records' : 'Coverage and acquisition'}</p>
         <h2>{title}</h2>
@@ -257,10 +258,16 @@ const SubjectChip = ({ subject, onOpen, label = subject.label }) => (
 const connectionGroups = (subject) => {
   const { outgoing, incoming } = relationsOf(subject)
   const groups = new Map()
+  // A relation's own label is a description ("Provincial department responsible for public health in
+  // 1961"), not a short lead-in like "Part of", so a link that puts the name after it needs a colon.
+  const described = new Set()
   const add = (label, relation) => groups.set(label, [...(groups.get(label) ?? []), relation])
-  for (const relation of outgoing) add(relation.label ?? IDENTITY_RELATION_LABELS[relation.type] ?? relation.type.replace(/-/g, ' '), relation)
+  for (const relation of outgoing) {
+    if (relation.label) described.add(relation.label)
+    add(relation.label ?? IDENTITY_RELATION_LABELS[relation.type] ?? relation.type.replace(/-/g, ' '), relation)
+  }
   for (const relation of incoming) add(INVERSE_RELATION_LABELS[relation.type] ?? relation.type.replace(/-/g, ' '), relation)
-  return [...groups].map(([label, relations]) => ({ label, relations }))
+  return [...groups].map(([label, relations]) => ({ label, relations, described: described.has(label) }))
 }
 
 const External = ({ href, children, className }) => <a className={className} href={href} target="_blank" rel="noopener noreferrer">{children} <span aria-hidden="true">↗</span></a>
@@ -407,7 +414,7 @@ const PostsecondaryArtworkReview = ({ review, subjectId, onOpenSubject }) => {
   )
 }
 
-export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSubject, onChooseCollection, onOpenGovernment, children }) => {
+export const IdentitySubjectDetail = ({ subject, theme, onHome, onOpenRegister, onOpenSubject, onChooseCollection, onOpenGovernment, children }) => {
   const commission = commissionById.get(subject.id)
   const relatedCommissionSubject = commission?.next && identitySubjectById(commission.next)
   const family = familyById(subject.family)
@@ -425,7 +432,12 @@ export const IdentitySubjectDetail = ({ subject, theme, onOpenRegister, onOpenSu
   const story = useUnbcOriginsRequested()
   return (
     <article className="identity-detail">
-      <nav className="gallery__crumbs" aria-label="Gallery"><button type="button" className="gallery__back" onClick={() => onOpenRegister(subject.regionalDistrict ? { family: subject.family } : undefined)}>← {subject.regionalDistrict ? 'Regional districts register' : 'Collection register'}</button><span aria-hidden="true">/</span><span aria-current="page">{subject.label}</span></nav>
+      {/* The register is a page of the gallery, so the trail starts where the gallery's others do. */}
+      <Breadcrumbs label="Gallery" steps={[
+        ...(onHome ? [{ label: 'All logos', onClick: onHome }] : []),
+        { label: subject.regionalDistrict ? 'Regional districts register' : 'Collection register', onClick: () => onOpenRegister(subject.regionalDistrict ? { family: subject.family } : undefined) },
+        { label: subject.label }
+      ]} />
 
       <header className="identity-hero">
         <p className="identity-eyebrow">{family?.label ?? 'Identity subject'} · {kind}</p>
@@ -541,7 +553,8 @@ export const IdentityCollectionLinks = ({ collectionId, entryId, graphShown, his
   // subjects (Capilano College renamed to Capilano University) would only lead back to this page.
   const own = new Set(all.map(({ id }) => id))
   const tiesOf = (subject) => connectionGroups(subject)
-    .flatMap(({ label, relations }) => relations.filter((relation) => relation.type !== 'related-to').map((relation) => ({ label, relation })))
+    .flatMap(({ label, relations, described }) => relations.filter((relation) => relation.type !== 'related-to')
+      .map((relation) => ({ label: described ? `${label}:` : label, relation })))
     .filter(({ relation }) => !own.has(relation.target.id))
     // A tie recorded from both sides reads the same from here; show it once.
     .filter(({ label, relation }, at, ties) => ties.findIndex((other) => other.label === label && other.relation.target.id === relation.target.id) === at)
@@ -552,7 +565,7 @@ export const IdentityCollectionLinks = ({ collectionId, entryId, graphShown, his
   if (!rows.length) return false
   return <section className="identity-collection-links" aria-label="Identity context">{rows.map(({ subject, ties }) => <div key={subject.id}>
     {registerShown && <SubjectLink id={subject.id} onOpen={onOpenSubject} className="gallery__graph-link">{subject.label} in the register →</SubjectLink>}
-    {registerShown && subject.graphNode && subject.graphNode !== graphShown && onOpenGovernment && <button type="button" className="gallery__graph-link" onClick={() => onOpenGovernment(subject.graphNode, subject.graphYear)}>Organization and salary links →</button>}
+    {registerShown && subject.graphNode && subject.graphNode !== graphShown && onOpenGovernment && <button type="button" className="gallery__graph-link" onClick={() => onOpenGovernment(subject.graphNode, subject.graphYear)}>Open in Government →</button>}
     {ties.map(({ label, relation }) => relation.type === 'charitable-partner-of' && relation.target.collectionIds?.length === 1
       ? <a key={relation.target.id} className="gallery__graph-link" href={`?view=gallery&logos=${encodeURIComponent(relation.target.collectionIds[0])}`} onClick={(event) => {
           if (onOpenCollection && plainClick(event)) {

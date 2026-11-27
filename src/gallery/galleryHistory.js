@@ -5,6 +5,8 @@ import { identitySubjectById } from './identityCoverage.js'
 import { SIFERP_RENAME } from './forrex.js'
 import { COUNCIL_SUCCESSION } from './scienceCouncilHistory.js'
 import { LIQUOR_SUCCESSION } from './liquorHistory.js'
+import { episodeById, predecessorsOf, successorsOf } from '../government/episodes.js'
+import { DEPARTMENTAL_COLLECTIONS } from './movedGalleryPlaces.js'
 
 const regionalAuthorities = new Set(['fraser-health', 'interior-health', 'northern-health', 'vancouver-coastal-health', 'island-health'])
 const reorganizationDate = '2001-12-12'
@@ -128,6 +130,27 @@ for (const collection of GALLERY_COLLECTIONS) {
   const combined = { predecessors: outside('predecessors'), successors: outside('successors') }
   if (combined.predecessors.length || combined.successors.length) historyByBody.set(key, combined)
   else historyByBody.delete(key)
+}
+
+// A ministry's own collection (a department in Departmental Logos) has the ministries it was renamed
+// from and into, as the government atlas draws them; a program filed under a ministry does not. Each row leads
+// to that ministry in the atlas, or to its collection where it has one.
+const MINISTRY_SOURCE = {
+  title: 'BC Archives, Government of British Columbia ministry history diagram (revised 16 December 2024)',
+  url: 'https://bcarchives.ca/wp-content/uploads/sites/2/2026/01/BC-Government-Ministry-History-Diagram.pdf'
+}
+for (const collection of GALLERY_COLLECTIONS.filter(({ id }) => DEPARTMENTAL_COLLECTIONS.includes(id))) {
+  const episode = episodeById(collection.graphNode)
+  if (!episode || historyByBody.has(collection.graphNode)) continue
+  const row = (other, date) => ({
+    type: 'ministry', id: other.id, label: other.name, date: String(date), source: MINISTRY_SOURCE,
+    graphNode: other.id, graphYear: other.from,
+    // Only a collection that is that ministry's own; a program filed under it is not the ministry.
+    collection: [collectionsByBody.get(other.id)].find((owned) => owned && DEPARTMENTAL_COLLECTIONS.includes(owned.id))
+  })
+  const predecessors = predecessorsOf(episode.id).filter(Boolean).map((other) => row(other, episode.from))
+  const successors = successorsOf(episode.id).filter(Boolean).map((other) => row(other, other.from))
+  if (predecessors.length || successors.length) historyByBody.set(collection.graphNode, { predecessors, successors })
 }
 
 export const galleryHistoryOf = (id) => historyByBody.get(id) ?? noHistory

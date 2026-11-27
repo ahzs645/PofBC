@@ -3497,6 +3497,54 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "chances-terrace-cards-2012": {
+  "light": {
+   "file": "identity-display/chances-terrace-cards-2012.light.svg",
+   "aspect": 0.9922,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/chances-terrace-cards-2012.light.svg",
+   "aspect": 0.9922,
+   "recoloured": false
+  }
+ },
+ "chances-terrace-2013": {
+  "light": {
+   "file": "identity-display/chances-terrace-2013.light.svg",
+   "aspect": 1.8203,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/chances-terrace-2013.dark.svg",
+   "aspect": 1.8203,
+   "recoloured": false
+  }
+ },
+ "chances-dawson-creek-2015": {
+  "light": {
+   "file": "identity-display/chances-dawson-creek-2015.light.svg",
+   "aspect": 1.8281,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/chances-dawson-creek-2015.dark.svg",
+   "aspect": 1.8281,
+   "recoloured": false
+  }
+ },
+ "chances-fort-st-john-2015": {
+  "light": {
+   "file": "identity-display/chances-fort-st-john-2015.light.svg",
+   "aspect": 2.3013,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/chances-fort-st-john-2015.dark.svg",
+   "aspect": 2.3013,
+   "recoloured": false
+  }
+ },
  "bc-ferries-vacations-guide": {
   "light": {
    "file": "identity-display/bc-ferries-vacations-guide.light.svg",
@@ -3879,54 +3927,6 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/haida-nation-colour-2012.dark.svg",
    "aspect": 3.487,
    "recoloured": true
-  }
- },
- "chances-terrace-cards-2012": {
-  "light": {
-   "file": "identity-display/chances-terrace-cards-2012.light.svg",
-   "aspect": 0.9922,
-   "recoloured": false
-  },
-  "dark": {
-   "file": "identity-display/chances-terrace-cards-2012.light.svg",
-   "aspect": 0.9922,
-   "recoloured": false
-  }
- },
- "chances-terrace-2013": {
-  "light": {
-   "file": "identity-display/chances-terrace-2013.light.svg",
-   "aspect": 1.8203,
-   "recoloured": true
-  },
-  "dark": {
-   "file": "identity-display/chances-terrace-2013.dark.svg",
-   "aspect": 1.8203,
-   "recoloured": false
-  }
- },
- "chances-dawson-creek-2015": {
-  "light": {
-   "file": "identity-display/chances-dawson-creek-2015.light.svg",
-   "aspect": 1.8281,
-   "recoloured": true
-  },
-  "dark": {
-   "file": "identity-display/chances-dawson-creek-2015.dark.svg",
-   "aspect": 1.8281,
-   "recoloured": false
-  }
- },
- "chances-fort-st-john-2015": {
-  "light": {
-   "file": "identity-display/chances-fort-st-john-2015.light.svg",
-   "aspect": 2.3013,
-   "recoloured": true
-  },
-  "dark": {
-   "file": "identity-display/chances-fort-st-john-2015.dark.svg",
-   "aspect": 2.3013,
-   "recoloured": false
   }
  },
  "via-rail-tagline-2012": {
@@ -8247,6 +8247,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "fort-st-james-district-2013-vector": {
+  "light": {
+   "file": "identity-display/fort-st-james-district-2013-vector.light.svg",
+   "aspect": 5.0471,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/fort-st-james-district-2013-vector.dark.svg",
+   "aspect": 5.0471,
+   "recoloured": false
+  }
+ },
  "source-recovered-municipal-hope-website-logo": {
   "light": {
    "file": "identity-display/source-recovered-municipal-hope-website-logo.light.svg",
@@ -8874,6 +8886,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "tahsis-website-wordmark-rebuilt": {
+  "light": {
+   "file": "identity-display/tahsis-website-wordmark-rebuilt.light.svg",
+   "aspect": 1.6462,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/tahsis-website-wordmark-rebuilt.dark.svg",
+   "aspect": 1.6462,
+   "recoloured": true
+  }
+ },
  "taylor-district-swoosh-2013": {
   "light": {
    "file": "identity-display/taylor-district-swoosh-2013.light.svg",
@@ -8908,6 +8932,258 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/source-recovered-municipal-ucluelet-website-logo.dark.svg",
    "aspect": 3.0489,
    "recoloured": true
+  }
+ },
+ "vancouver-emblem-2006-colour": {
+  "light": {
+   "file": "identity-display/vancouver-emblem-2006-colour.light.svg",
+   "aspect": 2.5675,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-emblem-2006-colour.light.svg",
+   "aspect": 2.5675,
+   "recoloured": false
+  }
+ },
+ "vancouver-emblem-2006-black": {
+  "light": {
+   "file": "identity-display/vancouver-emblem-2006-black.light.svg",
+   "aspect": 2.5676,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-emblem-2006-black.dark.svg",
+   "aspect": 2.5676,
+   "recoloured": true
+  }
+ },
+ "vancouver-emblem-2006-white": {
+  "light": {
+   "file": "identity-display/vancouver-emblem-2006-white.light.svg",
+   "aspect": 2.5676,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vancouver-emblem-2006-white.dark.svg",
+   "aspect": 2.5676,
+   "recoloured": false
+  }
+ },
+ "vancouver-engineering-services-colour": {
+  "light": {
+   "file": "identity-display/vancouver-engineering-services-colour.light.svg",
+   "aspect": 4.1832,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-engineering-services-colour.light.svg",
+   "aspect": 4.1832,
+   "recoloured": false
+  }
+ },
+ "vancouver-engineering-services-black": {
+  "light": {
+   "file": "identity-display/vancouver-engineering-services-black.light.svg",
+   "aspect": 4.1848,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-engineering-services-black.dark.svg",
+   "aspect": 4.1848,
+   "recoloured": true
+  }
+ },
+ "vancouver-engineering-services-white": {
+  "light": {
+   "file": "identity-display/vancouver-engineering-services-white.light.svg",
+   "aspect": 4.1848,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vancouver-engineering-services-white.dark.svg",
+   "aspect": 4.1848,
+   "recoloured": false
+  }
+ },
+ "vancouver-engineering-services-former": {
+  "light": {
+   "file": "identity-display/vancouver-engineering-services-former.light.svg",
+   "aspect": 1.7799,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-engineering-services-former.light.svg",
+   "aspect": 1.7799,
+   "recoloured": false
+  }
+ },
+ "vancouver-public-art-program-colour": {
+  "light": {
+   "file": "identity-display/vancouver-public-art-program-colour.light.svg",
+   "aspect": 3.8492,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-public-art-program-colour.light.svg",
+   "aspect": 3.8492,
+   "recoloured": false
+  }
+ },
+ "vancouver-public-art-program-black": {
+  "light": {
+   "file": "identity-display/vancouver-public-art-program-black.light.svg",
+   "aspect": 3.8525,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-public-art-program-black.dark.svg",
+   "aspect": 3.8525,
+   "recoloured": true
+  }
+ },
+ "vancouver-public-art-program-white": {
+  "light": {
+   "file": "identity-display/vancouver-public-art-program-white.light.svg",
+   "aspect": 3.8525,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vancouver-public-art-program-white.dark.svg",
+   "aspect": 3.8525,
+   "recoloured": false
+  }
+ },
+ "vancouver-greenest-city-colour": {
+  "light": {
+   "file": "identity-display/vancouver-greenest-city-colour.light.svg",
+   "aspect": 5.6774,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-greenest-city-colour.light.svg",
+   "aspect": 5.6774,
+   "recoloured": false
+  }
+ },
+ "vancouver-greenest-city-black": {
+  "light": {
+   "file": "identity-display/vancouver-greenest-city-black.light.svg",
+   "aspect": 5.676,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-greenest-city-black.dark.svg",
+   "aspect": 5.676,
+   "recoloured": true
+  }
+ },
+ "vancouver-greenest-city-white": {
+  "light": {
+   "file": "identity-display/vancouver-greenest-city-white.light.svg",
+   "aspect": 5.676,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/vancouver-greenest-city-white.dark.svg",
+   "aspect": 5.676,
+   "recoloured": false
+  }
+ },
+ "vancouver-talk-green-to-us": {
+  "light": {
+   "file": "identity-display/vancouver-talk-green-to-us.light.svg",
+   "aspect": 0.9199,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-talk-green-to-us.light.svg",
+   "aspect": 0.9199,
+   "recoloured": false
+  }
+ },
+ "vancouver-greenest-city-2020": {
+  "light": {
+   "file": "identity-display/vancouver-greenest-city-2020.light.svg",
+   "aspect": 3.2364,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-greenest-city-2020.light.svg",
+   "aspect": 3.2364,
+   "recoloured": false
+  }
+ },
+ "vancouver-greenest-city-2020-access-to-nature": {
+  "light": {
+   "file": "identity-display/vancouver-greenest-city-2020-access-to-nature.light.svg",
+   "aspect": 5.9856,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-greenest-city-2020-access-to-nature.light.svg",
+   "aspect": 5.9856,
+   "recoloured": false
+  }
+ },
+ "vancouver-public-library-2018": {
+  "light": {
+   "file": "identity-display/vancouver-public-library-2018.light.svg",
+   "aspect": 3.1317,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-public-library-2018.dark.svg",
+   "aspect": 3.1317,
+   "recoloured": true
+  }
+ },
+ "vancouver-police-department-2018": {
+  "light": {
+   "file": "identity-display/vancouver-police-department-2018.light.svg",
+   "aspect": 1.9932,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-police-department-2018.dark.svg",
+   "aspect": 1.9932,
+   "recoloured": true
+  }
+ },
+ "vancouver-economic-commission-2018": {
+  "light": {
+   "file": "identity-display/vancouver-economic-commission-2018.light.svg",
+   "aspect": 1.8993,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-economic-commission-2018.dark.svg",
+   "aspect": 1.8993,
+   "recoloured": true
+  }
+ },
+ "vancouver-park-board-2018": {
+  "light": {
+   "file": "identity-display/vancouver-park-board-2018.light.svg",
+   "aspect": 1.4334,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-park-board-2018.light.svg",
+   "aspect": 1.4334,
+   "recoloured": false
+  }
+ },
+ "vancouver-fire-rescue-2018": {
+  "light": {
+   "file": "identity-display/vancouver-fire-rescue-2018.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/vancouver-fire-rescue-2018.light.svg",
+   "aspect": 1.0,
+   "recoloured": false
   }
  },
  "municipal-vernon-strategic-plan-colour": {
@@ -12033,6 +12309,42 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "nwcc-thunderbird-wordmark-white-2015": {
+  "light": {
+   "file": "identity-display/nwcc-thunderbird-wordmark-white-2015.light.svg",
+   "aspect": 4.4172,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/nwcc-thunderbird-wordmark-white-2015.dark.svg",
+   "aspect": 4.4172,
+   "recoloured": false
+  }
+ },
+ "nwcc-thunderbird-wordmark-colour": {
+  "light": {
+   "file": "identity-display/nwcc-thunderbird-wordmark-colour.light.svg",
+   "aspect": 4.411,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/nwcc-thunderbird-wordmark-colour.light.svg",
+   "aspect": 4.411,
+   "recoloured": false
+  }
+ },
+ "nwcc-wordmark-2017-white": {
+  "light": {
+   "file": "identity-display/nwcc-wordmark-2017-white.light.svg",
+   "aspect": 5.5431,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/nwcc-wordmark-2017-white.dark.svg",
+   "aspect": 5.5431,
+   "recoloured": false
+  }
+ },
  "vector-bc-public-service-where-ideas-work-2023-reverse": {
   "light": {
    "file": "identity-display/vector-bc-public-service-where-ideas-work-2023-reverse.light.svg",
@@ -13322,18 +13634,6 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true,
    "preserveCanvas": true,
    "palette": true
-  }
- },
- "tahsis-website-wordmark-rebuilt": {
-  "light": {
-   "file": "identity-display/tahsis-website-wordmark-rebuilt.light.svg",
-   "aspect": 1.6462,
-   "recoloured": false
-  },
-  "dark": {
-   "file": "identity-display/tahsis-website-wordmark-rebuilt.dark.svg",
-   "aspect": 1.6462,
-   "recoloured": true
   }
  }
 }

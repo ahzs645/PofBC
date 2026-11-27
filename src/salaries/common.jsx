@@ -2,6 +2,7 @@
 // (who or what is open) kept in the address bar (viewState.js).
 
 import { useEffect, useState } from 'react'
+import { Breadcrumbs } from '../site/Breadcrumbs.jsx'
 import { displayName } from './people.js'
 import { displayTitle } from './positions.js'
 import { sourceHref } from './coverage.js'
@@ -18,11 +19,18 @@ export const seenYears = (entry) => entry.counts.map((value, at) => (value > 0 ?
 export const latestYear = (entry) => entry.counts.reduce((best, value, at) => (value ? at : best), 0)
 export const toTop = () => globalThis.scrollTo?.({ top: 0 })
 
-export const SalaryPageHeading = ({ id, back, children }) => (
-  <div className="salaries__page-heading">
-    {back}
-    <h2 id={id} className="salaries__heading">{children}</h2>
-  </div>
+/**
+ * A salary page's title, under the site's shared trail (site/Breadcrumbs.jsx): `back` is the steps
+ * before this page ([{ label, onClick }]), and `current` names this page in the trail where the title
+ * itself is a link.
+ */
+export const SalaryPageHeading = ({ id, back, current, children }) => (
+  <>
+    {back?.length > 0 && <Breadcrumbs label="Salaries" steps={[...back, { label: current ?? (typeof children === 'string' ? children : '') }]} />}
+    <div className="salaries__page-heading">
+      <h2 id={id} className="salaries__heading">{children}</h2>
+    </div>
+  </>
 )
 
 /** A gzipped file, decompressed here; or plain JSON, if the server already undid the gzip. */

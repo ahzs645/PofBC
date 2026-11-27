@@ -482,57 +482,6 @@ textarea::placeholder { color: var(--ink-faint); }
   input[type='text'], select, textarea { font-size: 14px; }
 }
 
-/* ── Back arrow ────────────────────────────────────────────────────────────────────────────────
-   For a page whose way back is to the view the site's header already names: the arrow alone,
-   named for a screen reader and a tooltip. */
-.icon-back {
-  display: inline-grid;
-  place-items: center;
-  flex: none;
-  width: 34px;
-  height: 34px;
-  padding: 0;
-  border: 1px solid var(--mid);
-  border-radius: 10px;
-  background: var(--surface);
-  color: var(--ink);
-  cursor: pointer;
-}
-.icon-back:hover { background: var(--hover); }
-.icon-back:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-
-/* An information button and the dialog it opens: notes about a whole page kept out of its way. */
-.icon-info {
-  display: inline-grid;
-  place-items: center;
-  flex: none;
-  width: 34px;
-  height: 34px;
-  padding: 0;
-  border: 0;
-  border-radius: 10px;
-  background: transparent;
-  color: var(--ink-muted);
-  cursor: pointer;
-}
-.icon-info:hover { background: var(--hover); color: var(--ink); }
-.icon-info:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-.info-dialog {
-  width: min(520px, calc(100vw - 32px));
-  max-height: calc(100dvh - 48px);
-  padding: 0;
-  border: 0;
-  border-radius: var(--radius);
-  background: var(--surface);
-  color: var(--ink);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-}
-.info-dialog::backdrop { background: rgba(20, 17, 14, 0.45); }
-.info-dialog__body { display: grid; gap: 12px; padding: 22px; }
-.info-dialog__body h2 { margin: 0; font-size: 18px; }
-.info-dialog__body p { margin: 0; color: var(--ink-muted); line-height: 1.5; }
-.info-dialog__body .button { justify-self: end; margin-top: 4px; }
-
 /* A heading that takes two lines splits them evenly, so a name ends on a phrase ("Province of /
    British Columbia"), not a lone last word ("Province of British / Columbia"). Browsers without
    text-wrap: balance keep the ordinary wrap. */
@@ -1192,6 +1141,9 @@ input.share__url {
 .gallery__pick--wide { max-width: 520px; }
 .gallery__pick--wide .gallery__art svg { width: 100%; }
 
+/* A card that is a link to its mark (or collection) reads as the card, not as underlined text. */
+a.gallery__pick, a.gallery__collection { text-decoration: none; }
+
 .gallery__pick:hover { background: var(--hover); border-color: var(--mid); }
 .gallery__pick:hover .gallery__label { color: var(--ink); }
 
@@ -1384,44 +1336,71 @@ input.share__url {
 .gallery__group-link { padding: 0; border: 0; background: none; color: var(--ink); font: inherit; cursor: pointer; }
 .gallery__group-link:hover { text-decoration: underline; }
 .gallery__children { margin-top: var(--gap); }
-.gallery__relationships { display: grid; gap: var(--gap); }
-.gallery__relationships[data-previews] {
-  align-items: start;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+/* ── Predecessors and successors (site/Lineage.jsx) ────────────────────────────────────────────
+   The same two columns wherever a body's lineage is shown: the gallery, Departmental Logos and the
+   school districts. Each record is a card: the other body, how and when they are joined, a source. */
+.lineage { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px 24px; align-items: start; }
+.lineage__heading { margin: 0 0 10px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); }
+.lineage__records { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.lineage__record { display: grid; gap: 10px; padding: 12px 14px; border: 1px solid var(--mid); border-radius: var(--radius-sm); background: var(--surface); }
+.lineage__text { display: grid; gap: 4px; min-width: 0; font-size: 13px; overflow-wrap: anywhere; }
+.lineage__eyebrow { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); }
+.lineage__name { font-size: 15px; font-weight: 600; }
+.lineage__name a { color: inherit; text-underline-offset: 3px; }
+.lineage__relation, .lineage__note { color: var(--ink-muted); }
+.lineage__note { margin: 0; }
+.lineage__source { font-size: 11px; color: var(--ink-muted); text-underline-offset: 3px; }
+.lineage__empty { margin: 0; font-size: 13px; color: var(--ink-muted); }
+
+/* ── A record's sources (site/SourceList.jsx) ───────────────────────────────────────────────────
+   The same list at the foot of the parties', school districts' and coats of arms' pages. */
+.source-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; font-size: 13px; line-height: 1.6; }
+.source-list > li { display: flex; gap: 12px; overflow-wrap: anywhere; }
+.source-list__id { flex: 0 0 40px; padding-top: 2px; font-size: 11px; color: var(--ink-muted); }
+.source-list__text { display: grid; gap: 2px; min-width: 0; }
+.source-list__locator { font-size: 11px; color: var(--ink-muted); }
+.source-list__note { margin: 2px 0 0; font-size: 12px; color: var(--ink-muted); }
+
+/* ── A body's dated events (site/HistoryTimeline.jsx) ─────────────────────────────────────────
+   The same timeline in the school districts, the parties and the initiatives: the date and what
+   kind of date it is on the left, the event on a rule to its right. */
+.history-timeline { list-style: none; margin: 0; padding: 0; }
+.history-timeline > li { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 24px; padding: 0 0 24px; }
+.history-timeline > li:last-child { padding-bottom: 0; }
+.history-timeline__date { display: flex; flex-direction: column; gap: 5px; padding-top: 2px; font-size: 13px; font-weight: 600; }
+.history-timeline__date > span { font-size: 11px; font-weight: 400; color: var(--ink-muted); }
+.history-timeline__event { position: relative; border-left: 1px solid var(--mid); padding-left: 24px; min-width: 0; }
+.history-timeline__event::before { content: ''; position: absolute; left: -5px; top: 5px; width: 7px; height: 7px; border: 1px solid var(--surface); border-radius: 50%; background: var(--ink); }
+.history-timeline > li[data-quiet] .history-timeline__event::before { background: var(--ink-muted); }
+.history-timeline__title { margin: 0 0 6px; font-size: 16px; font-weight: 600; }
+.history-timeline__event p { margin: 0 0 8px; font-size: 13px; line-height: 1.6; }
+.history-timeline__event p.history-timeline__muted { color: var(--ink-muted); }
+.history-timeline__sources { font-size: 11px; color: var(--ink-muted); overflow-wrap: anywhere; }
+.history-timeline__sources a { color: inherit; text-underline-offset: 3px; }
+@media (max-width: 640px) {
+  .history-timeline > li { grid-template-columns: 1fr; gap: 8px; }
+  .history-timeline__event { padding-left: 16px; }
 }
-.gallery__history-cards {
-  display: grid;
-  gap: var(--gap);
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-}
-.gallery__history-cards .gallery__collection {
+
+/* A predecessor's or successor's collection card inside its lineage record. */
+.lineage__record .gallery__collection {
   width: 100%;
-  min-height: 110px;
+  min-height: 96px;
   grid-template: auto / clamp(72px, 28%, 132px) minmax(0, 1fr);
   align-items: center;
   gap: 12px;
-  padding: 12px;
+  padding: 8px;
   text-decoration: none;
+  background: var(--page);
 }
-.gallery__history-cards .gallery__collection .gallery__art--cover {
-  min-height: 0;
-  height: 74px;
-  aspect-ratio: auto;
-  padding: 4px;
-}
-.gallery__history-cards .gallery__collection .gallery__art--cover :is(svg, .gallery__collected-image) {
-  max-height: 66px;
-}
-.gallery__history-cards .gallery__collection-title { font-size: 15px; overflow-wrap: anywhere; }
-.gallery__history-cards .gallery__collection-text { text-align: start; }
-.gallery__history-preview { display: grid; grid-template-rows: 1fr auto; gap: 8px; }
+.lineage__record .gallery__collection .gallery__art--cover { min-height: 0; height: 74px; aspect-ratio: auto; padding: 4px; }
+.lineage__record .gallery__collection .gallery__art--cover :is(svg, .gallery__collected-image) { max-height: 66px; }
+.lineage__record .gallery__collection-title { font-size: 15px; overflow-wrap: anywhere; }
+.lineage__record .gallery__collection-text { text-align: start; }
+/* The Safety Authority's account (SafetyAuthorityHistory.jsx) keeps its own list of records. */
 .gallery__history-records { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
 .gallery__history-records > li { padding: 10px 12px; background: var(--surface); border-radius: var(--radius-sm); }
 .gallery__history-records > li > a { font-weight: 600; }
-.gallery__relationship-evidence { display: grid; gap: 4px; margin: 4px 0 0; overflow-wrap: anywhere; }
-.gallery__history-preview > .gallery__relationship-evidence { padding-inline: 4px; }
-.gallery__relationships a { color: inherit; text-underline-offset: 3px; }
-.gallery__relationships details .gallery__history-records { margin-top: 10px; }
 
 .gallery__collections {
   display: grid;
@@ -1594,6 +1573,10 @@ input.share__url {
    government diagram. */
 .gallery__crumbs { display: flex; align-items: center; gap: 8px; min-width: 0; white-space: nowrap; font-size: 14px; color: var(--ink-muted); }
 .gallery__crumbs > [aria-hidden='true'] { flex: none; }
+/* Every page below a section's first opens with this trail (site/Breadcrumbs.jsx); the gallery's
+   grid spaces it from what follows, and any other page the same distance. */
+.gallery__crumbs { margin-bottom: var(--gap); }
+.gallery > .gallery__crumbs { margin-bottom: 0; }
 
 .gallery__back {
   display: inline-flex;
@@ -1860,6 +1843,15 @@ input.share__url {
   cursor: pointer;
 }
 .gallery__crumb:hover { background: var(--hover); }
+/* A step with an address of its own is a link, drawn as the buttons are. */
+a.gallery__back, a.gallery__crumb { text-decoration: none; }
+/* A step with no page of its own is named only. */
+.gallery__crumb--plain { cursor: default; }
+.gallery__crumb--plain:hover { background: none; }
+/* In a viewer's bar the trail takes the bar's free width, beside its Previous and Next. */
+:is(.patch__bar, .plate__bar) > .gallery__crumbs { flex: 1 1 auto; margin: 0; }
+.patch__position { flex: none; margin-left: 4px; font-size: 13px; color: var(--ink-muted); }
+.gallery__crumbs [aria-current='page']:focus { outline: none; }
 .gallery__crumbs [aria-current='page'] { flex: 1 1 0; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink-muted); }
 
 /* ── What each mark is, and what is missing ───────────────────────────────────────────────────── */
@@ -2328,7 +2320,7 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries__line { display: block; font-size: 12px; line-height: 1.35; color: var(--ink-faint); font-weight: 400; }
 .salaries__line[data-up] { color: #2e7d4f; }
 .salaries__aside { flex: none; white-space: nowrap; display: grid; justify-items: end; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink); }
-.salaries__more, .salaries__back {
+.salaries__more {
   justify-self: start;
   margin-top: 8px;
   padding: 6px 12px;
@@ -2340,8 +2332,6 @@ button.gallery__collecting-status, .gallery__collecting-graph {
   font-size: 14px;
   cursor: pointer;
 }
-.salaries__back { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 44px; height: 44px; margin: 0; padding: 0; }
-.salaries__back:focus-visible { outline: 2px solid var(--salaries-ink); outline-offset: 2px; }
 .salaries__page-heading { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .salaries__page-heading .salaries__heading { min-width: 0; overflow-wrap: anywhere; }
 .salaries__heading-link { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
@@ -2742,6 +2732,3 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .gallery__year-card[data-carried] .gallery__art { opacity: .55; }
 .gallery__year-card[data-carried] .gallery__note { font-style: italic; }
 
-/* A family page in Departmental Logos focuses its heading; the crumb it focuses draws no ring. */
-.internal-logos [tabindex='-1']:focus { outline: none; }
-.internal-logos__cover { display: block; width: 100%; height: 100%; }

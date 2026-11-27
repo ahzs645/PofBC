@@ -5,6 +5,7 @@
 import { Segmented } from '../site/Segmented.jsx'
 import { SalarySearchField } from './MobileFilters.jsx'
 import { LAYOUTS } from './common.jsx'
+import { Breadcrumbs } from '../site/Breadcrumbs.jsx'
 
 // The bar holds two kinds of thing. Employers, People and Positions are three ways through the same
 // payment records, and keep the period and sector chosen: a segmented control. Council pay, Workforce
@@ -56,8 +57,8 @@ export const CompanionShell = ({ browse, onBrowse, layout, onLayout, query, onSe
       </div>
     )}
     <section className={`salaries__intro salaries__intro--${browse}`} aria-labelledby={`salaries-${browse}-intro`}>
+      {back?.length > 0 && <Breadcrumbs label="Salaries" steps={[...back, { label: heading }]} />}
       <div className="salaries__page-heading">
-        {back}
         <h2 id={`salaries-${browse}-intro`} className="salaries__heading">{heading}</h2>
       </div>
       {intro}

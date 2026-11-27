@@ -68,7 +68,8 @@ test('post-secondary coverage counts subjects once, not their variants or visibl
   const counts = summarizePostsecondaryArtwork(subjects)
   assert.equal(counts.total, 49)
   assert.equal(counts.total, counts.vector + counts.observedNonvector + counts.unverified)
-  assert.deepEqual(counts, { total: 49, held: 30, vector: 28, observedNonvector: 7, unverified: 14, shared: 1 })
+  // Northwest Community College's logos (nwccVectorLogos.json) moved it from unverified to vector.
+  assert.deepEqual(counts, { total: 49, held: 31, vector: 29, observedNonvector: 7, unverified: 13, shared: 1 })
   assert.deepEqual(summarizePostsecondaryArtwork(subjects.filter((subject) => subject.priority === 1 && subject.kind === 'public-college')),
     { total: 11, held: 11, vector: 11, observedNonvector: 0, unverified: 0, shared: 0 })
 
@@ -93,7 +94,7 @@ test('post-secondary coverage counts subjects once, not their variants or visibl
   assert.equal(school.id, 'vancouver-school-of-art')
   assert.equal(school.state, 'distinct-unconfirmed')
   assert.equal(school.artworkReview.specimens[0].scope, 'cover-art')
-  assert.equal(subjects.filter(({ hasArtwork }) => hasArtwork).length, 30)
+  assert.equal(subjects.filter(({ hasArtwork }) => hasArtwork).length, 31)
 })
 
 

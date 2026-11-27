@@ -12,6 +12,7 @@ import { spanOf, undash } from './timeline.js'
 import { Checkbox } from '../site/ui/Checkbox.jsx'
 import { Select } from '../site/ui/Select.jsx'
 import { Slider } from '../site/ui/Slider.jsx'
+import { Breadcrumbs } from '../site/Breadcrumbs.jsx'
 
 /** A fresh serial, keeping the fields a format marks as appearance (finish, decal, palette…). */
 const regenerate = (format, parts) => {
@@ -114,9 +115,10 @@ export const PlateViewer = ({ region, format, family, section, position, previou
 
   return (
     <section className="plate" aria-label={format.label}>
-      <nav className="plate__bar" aria-label="Licence plates">
-        <button type="button" className="button button--ghost" onClick={onClose}>← All plates</button>
-        <span className="plate__crumb">{family.label}{section?.label && ` · ${section.label}`} · {position.index + 1} of {position.count}</span>
+      <div className="plate__bar">
+        <Breadcrumbs label="Licence plates"
+          steps={[{ label: 'All plates', onClick: onClose }, { label: section?.label ? `${family.label} · ${section.label}` : family.label }, { label: format.label }]}
+          after={<span className="patch__position">{position.index + 1} of {position.count}</span>} />
         <span className="plate__steps">
           <button type="button" className="button" disabled={!previous} onClick={() => onOpen(previous)} title={previous?.label} aria-label="Previous">
             <span aria-hidden="true">‹</span><span className="plate__step-label"> Previous</span>
@@ -125,7 +127,7 @@ export const PlateViewer = ({ region, format, family, section, position, previou
             <span className="plate__step-label">Next </span><span aria-hidden="true">›</span>
           </button>
         </span>
-      </nav>
+      </div>
 
       <div className="plate__body">
         {/* The stage fills its column, as tall as the panel beside it; the plate sits at the top of

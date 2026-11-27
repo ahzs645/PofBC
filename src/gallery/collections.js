@@ -20,6 +20,7 @@ import { COLLECTION_ERAS, TIMELINES, timelineKeyOf } from './timelines.js'
 import { CURRENT_VARIANTS } from '../hydro/hydroMarks.js'
 import { PROGRAM_ENTRY_OWNERS } from './reconciledSubjects.js'
 import { COLLECTED_COLLECTIONS, SPECIMEN_COLLECTIONS, collectedEntriesOf, specimenEntriesOf, coverFirst, nodesOf } from './collectedCollections.js'
+import { withMarkRoles } from './markRoles.js'
 import { LIQUOR_DISTRIBUTION_COLLECTION } from './liquorHistory.js'
 import { ENDORSED_2019 } from './endorsed2019.js'
 import { bearAwareGalleryId, bearAwareId, bearAwareMarkId, bearAwareTitle } from '../initiatives/bearAwareArtwork.js'
@@ -1578,6 +1579,11 @@ for (const id of DEPARTMENTAL_COLLECTIONS) {
   if (!collection) throw new Error(`Unknown departmental collection: ${id}`)
   Object.assign(collection, { shelf: 'departmental', showInGalleryIndex: false })
 }
+
+// Every collection leads with its body's identity: anniversary, campaign, event, partner and
+// decorative marks follow it, in sections of their own, and are never its cover while it holds an
+// identity design (markRoles.js). Each collection object is kept, so later references still hold.
+for (const collection of GALLERY_COLLECTIONS) Object.assign(collection, withMarkRoles(collection))
 
 /**
  * Every collection holding a body's own designs. Its dedicated collection comes first, followed

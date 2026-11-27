@@ -13,6 +13,7 @@ import './patches.css'
 import '../posters/shelfTools.css'
 import { Select } from '../site/ui/Select.jsx'
 import { holdScroll } from '../site/holdScroll.js'
+import { Breadcrumbs } from '../site/Breadcrumbs.jsx'
 
 // Browsing needs only metadata and previews. Load the digitizer and export tools when a patch opens.
 const PatchViewer = lazy(() => import('./PatchViewer.jsx').then((module) => ({ default: module.PatchViewer })))
@@ -94,7 +95,7 @@ export const PatchesView = ({ collection = 'patches' }) => {
     const Viewer = collection === 'badges' ? BadgeViewer : PatchViewer
     return (
       <Suspense fallback={<section className="patches__intro" aria-label="Loading patch">
-        <button type="button" className="button button--ghost" onClick={close}>← All {copy.noun}</button>
+        <Breadcrumbs label={collection === 'badges' ? 'Badges' : 'Patches'} steps={[{ label: `All ${copy.noun}`, onClick: close }, { label: openOrg.name }]} />
         <p role="status">Loading the {collection === 'badges' ? 'badge' : 'patch'} viewer…</p>
       </section>}>
         <Viewer

@@ -6,7 +6,7 @@ import { COLLECTING } from './collectingData.js'
 import { COLLECTED_BODIES } from './collectedData.js'
 import { ACQUIRED_VECTORS } from './acquiredVectorData.js'
 import { LOGO_BRAND_GUIDELINES } from './logoBrandGuidelines.js'
-import { COLLECTED_COLLECTIONS, CONTINUATIONS, REGISTER_CONTINUATIONS, assetUrl, collectedEntriesOf, nodesOf, parseSpecimenDate, researchLabel } from './collectedCollections.js'
+import { COLLECTED_COLLECTIONS, CONTINUATIONS, REGISTER_CONTINUATIONS, adoptionOf, assetUrl, collectedEntriesOf, nodesOf, parseSpecimenDate, researchLabel } from './collectedCollections.js'
 import { GALLERY_COLLECTIONS, collectionById, collectionOfNode, entriesOf, entriesOfNode, findGalleryEntry } from './collections.js'
 import { COLLECTED_PALETTES, paletteFor } from './collectedPalettes.js'
 import { HISTORICAL_BODIES } from '../government/historyData.js'
@@ -56,7 +56,15 @@ test('collected entries date sightings rather than claiming logo adoption', () =
   assert.ok(entries.length > 0)
   for (const entry of entries) {
     assert.equal(entry.kind, 'collected')
-    assert.ok(['unknown', 'dated_specimen'].includes(entry.identity.applicability.kind), entry.id)
+    // Only a file that cites a record of the design's adoption (a dated decision and where it is
+    // written) may date the design by it; a sighting never does.
+    const adoption = (entry.versions ?? [entry.asset]).map(adoptionOf).find(Boolean)
+    if (adoption) {
+      assert.equal(entry.identity.applicability.kind, 'documented_adoption', entry.id)
+      assert.match(adoption.date, /^\d{4}-\d{2}-\d{2}$/, entry.id)
+      assert.equal(new URL(adoption.source.url).protocol, 'https:', entry.id)
+      assert.equal(entry.years, `${adoption.verb} ${adoption.label}`, entry.id)
+    } else assert.ok(['unknown', 'dated_specimen'].includes(entry.identity.applicability.kind), entry.id)
     if (entry.asset.reconstruction) assert.ok(['reconstructed', 'third_party_reconstruction'].includes(entry.identity.provenance))
     // A supplied file is dated only by the sightings of its design it stands for.
     if (entry.asset.supplied && !entry.asset.sourceDate && !entry.asset.alsoSeen?.length) assert.equal(entry.identity.applicability.kind, 'unknown')
@@ -139,8 +147,9 @@ test('Fort St. John features the stacked vector and preserves each documented sp
   assert.deepEqual(specimens.map(({ id, asset, years }) => [id, asset.format, years]), [
     ['municipal-fort-st-john-ocp-2025-stacked', 'svg', 'Seen 2025'],
     ['fort-st-john-energetic-black-2012', 'svg', 'Seen 2012'],
-    ['fort-st-john-compass-2013', 'png', 'Seen 2013'],
-    ['source-municipal-fort-st-john-website-logo', 'png', 'Logo dates unestablished']
+    // The visitor-campaign design follows the City's own signatures (markRoles.js).
+    ['source-municipal-fort-st-john-website-logo', 'png', 'Logo dates unestablished'],
+    ['fort-st-john-compass-2013', 'png', 'Seen 2013']
   ])
   for (const entry of specimens) {
     assert.equal(findGalleryEntry(entry.id), entry)
@@ -343,4 +352,24 @@ test('palette consolidation keeps different lockups separate', () => {
   assert.ok(knowledge[0].versions.some((source) => source.format === 'eps'), 'print source is retained')
   const fpcc = collectedEntriesOf('first-peoples-cultural-council')
   assert.equal(fpcc.length, 2, 'different emblem proportions and lettering are not colour-only variants')
+})
+
+test('every version of a collected design names itself on its button', () => {
+  const blank = GALLERY_COLLECTIONS.flatMap((collection) => entriesOf(collection))
+    .flatMap((entry) => (entry.versions ?? []).filter((version) => !version.versionLabel?.trim()).map((version) => `${entry.id}: ${version.id}`))
+  assert.deepEqual([...new Set(blank)], [])
+})
+
+test('a design is dated by a cited adoption or announcement, never by a sighting or an incomplete record', () => {
+  const source = { title: 'Minutes', url: 'https://example.org/minutes#page=3' }
+  assert.equal(adoptionOf({ adoption: { date: '2006-07-18', note: 'Adopted by Council.', source } }).label, '18 July 2006')
+  assert.equal(adoptionOf({ adoptionDate: '2025-09-09', adoptionDatePrecision: 'announcement', adoptionSource: 'https://sd57.bc.ca/x' }).verb, 'Announced')
+  // A year alone, a missing source, or a sighting date does not date a design.
+  assert.equal(adoptionOf({ adoption: { date: '2006', note: '', source } }), undefined)
+  assert.equal(adoptionOf({ adoption: { date: '2006-07-18', note: '' } }), undefined)
+  assert.equal(adoptionOf({ adoptionDate: '2025-09-09' }), undefined)
+  assert.equal(adoptionOf({ sourceDate: '2018-02-01', specimenDate: '2018' }), undefined)
+  const sd57 = findGalleryEntry('school-district-57-logo-current')
+  assert.equal(sd57.years, 'Announced 9 September 2025')
+  assert.equal(sd57.identity.applicability.kind, 'documented_adoption')
 })

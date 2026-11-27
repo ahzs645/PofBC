@@ -1,474 +1,73 @@
-import { lazy, Suspense, useEffect, useId, useMemo, useRef, useState } from 'react'
-import { loadLetteringRuntime } from '../../vendor/forestoval/shared-primitives/live-lettering/src/runtime.ts'
-import mountainRidge from '../../vendor/forestoval/shared-primitives/bc-ministry-v5/scenes/tree-parts/mountain-ridge.svg?raw'
-import mountainBase from '../../vendor/forestoval/shared-primitives/bc-ministry-v5/scenes/tree-parts/mountain-base.svg?raw'
-import { FOREST_LOGOS, variantsFor } from './forestLogos.js'
+// Departmental Logos: the index of departments, and each department's pages.
+//
+// Every page is an address (internalPlaces.js), reached through the site's navigation, so Back,
+// Forward, a new tab and a reload all return to it. The view reads its page from the address when
+// it opens — the App opens it afresh on every visit — and rewrites an older form of the address to
+// the page's own, in place.
+
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
+import { ForestLogo } from './ForestArtwork.jsx'
+import { FOREST_LOGOS } from './forestLogos.js'
+import { DEPARTMENT_INDEX, departmentPlace, FORESTS, internalPlaceUrl, resolveInternalPlace } from './internalPlaces.js'
 import { SiteLink } from '../site/navigation.jsx'
-import { objectsForLogo } from '../posters/connections.js'
-import { Modal } from '../posters/ui/Modal.jsx'
-import { DEPARTMENTAL_COLLECTIONS, departmentalPlace, TRAVEL_PLACE } from '../gallery/movedGalleryPlaces.js'
-import travelSource from '../../research/identity/bc-travel-industry-2026-11-12/source-register.json'
 import './internal.css'
 
-const TravelIndustryLogo = lazy(() => import('./TravelIndustryLogo.jsx'))
 // The departments' marks are the gallery's own records, so they and their renderers load with it.
 const DepartmentCollection = lazy(() => import('./DepartmentCollection.jsx'))
 const DepartmentCover = lazy(() => import('./DepartmentCollection.jsx').then((module) => ({ default: module.DepartmentCover })))
+const ForestsCollection = lazy(() => import('./ForestsCollection.jsx'))
 
-// The departments, ministries and branches moved from the gallery, oldest first. Their cards say
-// what each is without loading the gallery; the gallery's records draw their covers.
-const DEPARTMENTS = [
-  { id: 'collected-bc-public-health-service', title: 'BC Public Health Service', note: 'A public health nursing badge, 1961' },
-  { id: 'recreation-conservation', title: 'Department of Recreation and Conservation', note: 'A dogwood oval, five square symbols and two branch emblems, 1970–1973' },
-  { id: 'tourism-recreation-culture', title: 'Ministry of Tourism, Recreation and Culture', note: 'The flag run out as three bands, 1986–1988' },
-  { id: 'bc-lands', title: 'BC Lands', note: 'The flag-years badge, seen 1986–88 and 1994' },
-  { id: 'bc-environment', title: 'Ministry of Environment', note: 'The flag-years mark, 1988–1991' },
-  { id: 'collected-shared-services-bc', title: 'Solutions BC and Shared Services BC', note: 'Four marks, 2003–2015' }
-]
+const FOREST_COVER = FOREST_LOGOS.find(({ id }) => id === FORESTS)
 
-// Forest Oval's single-colour recreation retains both mountain edges as lines.
-// Its engine recolours the filled mountain to paper; restore the same supplied
-// line primitives behind the tree, in the source scene's own coordinate system.
-const addMountainLines = (svg, artwork, ink) => {
-  const parser = new DOMParser()
-  const source = parser.parseFromString(`<svg xmlns="http://www.w3.org/2000/svg">${artwork}</svg>`, 'image/svg+xml')
-  const mountain = source.querySelector('path[fill="#0091c4"]')
-  const paths = svg.querySelectorAll('[data-layer="scene"] path, defs [data-primitive="scene-tree"] path')
-  const target = [...paths].find((path) => path.getAttribute('d') === mountain?.getAttribute('d'))
-  if (!target) return
-  const lines = [mountainRidge, mountainBase].map((primitive) => {
-    const path = document.importNode(parser.parseFromString(primitive, 'image/svg+xml').querySelector('path'), true)
-    path.removeAttribute('id')
-    path.setAttribute('stroke', ink)
-    path.setAttribute('data-primitive', 'mountain-line')
-    return path
-  })
-  target.after(...lines)
-}
+/** A department on the index: its cover, its name, and what it holds, as one link. */
+const DepartmentCard = ({ id, title, note }) => (
+  <SiteLink to={departmentPlace(id)} className="gallery__collection" aria-label={`Open ${title}`}>
+    <span className="gallery__art gallery__art--cover" data-ground="page">
+      {id === FORESTS
+        ? <ForestLogo item={FOREST_COVER} name={title} decorative />
+        : <Suspense fallback={<span role="status">Loading logo…</span>}><DepartmentCover id={id} /></Suspense>}
+    </span>
+    <span className="gallery__collection-text">
+      <span className="gallery__collection-title">{title} <span aria-hidden="true">→</span></span>
+      <span className="gallery__note">{note}</span>
+    </span>
+  </SiteLink>
+)
 
-// In dark mode a logo on the default white paper moves onto a dark tile. Artwork drawn only in black
-// and white is inverted there (exactly: black becomes white); artwork in dark inks alone sits in a
-// light well; colour artwork keeps its colours, with a light edge so its black outlines still read
-// (internal.css). A variant with a background of its own
-// keeps it.
-const PAPER = new Set(['#fff', '#ffffff', 'white'])
-const PLAIN = new Set(['#000', '#000000', 'black', '#fff', '#ffffff', 'white', 'none', 'transparent', 'currentcolor'])
-// A one-ink study drawn in a near-black or deep green would vanish on the dark tile, and inverting a
-// colour would change the artwork, so that ink is given a light well to sit in instead.
-const isDark = (colour) => {
-  const hex = colour.toLowerCase().match(/^#([0-9a-f]{3}|[0-9a-f]{6})$/)?.[1]
-  if (!hex) return false
-  const full = hex.length === 3 ? [...hex].map((digit) => digit + digit).join('') : hex
-  const [r, g, b] = [0, 2, 4].map((at) => parseInt(full.slice(at, at + 2), 16) / 255)
-  return 0.2126 * r + 0.7152 * g + 0.0722 * b < 0.35
-}
-const inkOf = (colours) => {
-  const all = [...colours].map((colour) => colour.toLowerCase())
-  if (all.every((colour) => PLAIN.has(colour))) return 'mono'
-  // White beside the dark ink means the drawing carries its own dark ground (a reversed study).
-  const white = all.some((colour) => ['#fff', '#ffffff', 'white'].includes(colour))
-  const inks = all.filter((colour) => !PLAIN.has(colour))
-  return !white && inks.every(isDark) ? 'dark' : 'colour'
-}
-const coloursOfMarkup = (markup) => new Set([...markup.matchAll(/(?:fill|stroke)(?:="|:\s*)(#[0-9a-fA-F]{3,6}|[a-z]+)/g)].map((match) => match[1]))
-const coloursOfElement = (root) => {
-  const colours = new Set()
-  for (const element of root.querySelectorAll('*')) {
-    for (const attribute of ['fill', 'stroke']) if (element.getAttribute(attribute)) colours.add(element.getAttribute(attribute))
-    for (const match of (element.getAttribute('style') ?? '').matchAll(/(?:fill|stroke)\s*:\s*([^;]+)/g)) colours.add(match[1].trim())
-  }
-  return colours
-}
-const tile = (background, ink) => ({ style: { '--tile': background }, 'data-paper': PAPER.has(String(background).toLowerCase()) || undefined, 'data-ink': ink ?? undefined })
-
-// Render the reference presets directly, without the editor, its options or browser drafts.
-const OvalLogo = ({ preset, name, decorative = false, theme, colours, composition, background = '#fff' }) => {
-  const host = useRef(null)
-  const [status, setStatus] = useState('loading')
-  const [attempt, setAttempt] = useState(0)
-  const [ink, setInk] = useState(null)
-  useEffect(() => {
-    let disposed = false
-    setStatus('loading')
-    const render = async () => {
-      const runtime = await loadLetteringRuntime()
-      const { P, E } = runtime
-      const [kabel] = await E.ensureFonts(['kabel-black'], false)
-      const state = E.recipeState(preset, {
-        textFit: 'reference-calibrated',
-        treeLettering: kabel?.status === 'ready' ? 'kabel-black' : 'reference-v2',
-        autoProfile: true,
-        separatorPlacement: 'follow-text',
-        fanOut: true,
-        centreInRing: true
-      })
-      let result = await E.render({
-        ...state,
-        ...(theme ? { theme } : {}),
-        ...(colours ? { colours } : {})
-      })
-      if (composition === 'airtanker-package') {
-        const { AIRTANKER } = await import('../../vendor/forestoval/shared-primitives/live-lettering/src/badges/airtanker.ts')
-        result = await AIRTANKER.compose(result, runtime, null)
-      }
-      if (disposed) return
-      const { svg } = result
-      // The composition repeats its diamond source twice. Its duplicate IDs
-      // are unnecessary on the instances; keep one target for each source ID.
-      if (composition) {
-        const ids = new Set()
-        for (const element of svg.querySelectorAll('[id]')) {
-          if (ids.has(element.id)) element.removeAttribute('id')
-          else ids.add(element.id)
-        }
-      }
-      if (preset === 'forest-service' && theme === 'mono') {
-        addMountainLines(svg, E.ART.treeInner, result.state.colours.ink ?? P.THEMES[result.state.theme].ink)
-      }
-      // These are catalogue specimens, not clickable text fields.
-      svg.querySelectorAll('[data-live-text]').forEach((run) => {
-        run.removeAttribute('tabindex')
-        run.removeAttribute('role')
-      })
-      svg.setAttribute('role', 'img')
-      svg.removeAttribute('aria-labelledby')
-      svg.setAttribute('aria-label', `${name} oval logo`)
-      svg.setAttribute('focusable', 'false')
-      host.current.replaceChildren(svg)
-      setInk(inkOf(coloursOfElement(svg)))
-      setStatus('ready')
-    }
-    render().catch(() => { if (!disposed) setStatus('error') })
-    return () => { disposed = true }
-  }, [preset, name, attempt, theme, colours, composition])
-
+const DepartmentIndex = () => {
+  const heading = useRef(null)
+  useEffect(() => { heading.current?.focus({ preventScroll: true }) }, [])
   return (
-    <div className="internal-logos__artwork" {...tile(background, ink)} aria-hidden={decorative || undefined}>
-      <div className="internal-logos__svg" ref={host} />
-      {status === 'loading' && <span role="status">Loading logo…</span>}
-      {status === 'error' && (decorative ? <span>Logo unavailable</span> : <div role="alert">Could not load this logo. <button type="button" onClick={() => setAttempt((value) => value + 1)}>Retry</button></div>)}
-    </div>
+    <section className="internal-logos gallery" aria-label="Departmental Logos">
+      <div className="gallery__collection-head">
+        <div>
+          <h2 className="gallery__collection-heading" ref={heading} tabIndex={-1}>Departmental Logos</h2>
+          <p className="gallery__note">Former departments, ministries and government branches · {DEPARTMENT_INDEX.length} departments</p>
+        </div>
+      </div>
+      <div className="gallery__collections">
+        {DEPARTMENT_INDEX.map((department) => <DepartmentCard key={department.id} {...department} />)}
+      </div>
+    </section>
   )
 }
 
-// Some designs are supplied drawings rather than Forest Oval recipes: recoloured by mapping their own
-// colours to new ones, with every id prefixed per copy so a clip path still finds its own shape
-// when several copies share a page. They are fetched when first shown, since the engraved seal
-// alone is larger than the rest of this view.
-const DRAWINGS = {
-  'forest-service-lands-department.svg': () => import('./forest-service-lands-department.svg?raw'),
-  'forest-service-emblem.svg': () => import('./forest-service-emblem.svg?raw'),
-  'forest-service-emblem-lettered.svg': () => import('./forest-service-emblem-lettered.svg?raw'),
-  'forest-service-emblem-one-ink.svg': () => import('./forest-service-emblem-one-ink.svg?raw'),
-  'forest-service-emblem-three-islands-separated.svg': () => import('./forest-service-emblem-three-islands-separated.svg?raw'),
-  'forest-service-emblem-three-islands-green.svg': () => import('./forest-service-emblem-three-islands-green.svg?raw'),
-  'forest-service-emblem-reverse.svg': () => import('./forest-service-emblem-reverse.svg?raw'),
-  'forest-service-green-gold.svg': () => import('./forest-service-green-gold.svg?raw'),
-  'forest-service-yellow-sky.svg': () => import('./forest-service-yellow-sky.svg?raw'),
-  'forest-service-one-ink-oval.svg': () => import('./forest-service-one-ink-oval.svg?raw')
-}
-const fetched = new Map()
-
-const useDrawing = (artwork, attempt) => {
-  const [state, setState] = useState(() => ({ svg: fetched.get(artwork) ?? null, failed: false }))
-  useEffect(() => {
-    if (fetched.has(artwork)) { setState({ svg: fetched.get(artwork), failed: false }); return undefined }
-    let gone = false
-    setState({ svg: null, failed: false })
-    DRAWINGS[artwork]()
-      .then(({ default: svg }) => { fetched.set(artwork, svg); if (!gone) setState({ svg, failed: false }) })
-      .catch(() => { if (!gone) setState({ svg: null, failed: true }) })
-    return () => { gone = true }
-  }, [artwork, attempt])
-  return state
-}
-
-const drawingMarkup = ({ svg, recolour = {}, name, prefix }) => svg
-  .replace(/<\?xml[^>]*>\s*/, '')
-  .replace(/<title[\s\S]*?<\/title>\s*/, '')
-  .replace(/<desc[\s\S]*?<\/desc>\s*/, '')
-  .replace(/<svg[^>]*>/, (tag) => tag.replace(/ (?:width|height|aria-labelledby|role)="[^"]*"/g, '').replace('<svg', `<svg role="img" aria-label="${name}" focusable="false"`))
-  .replace(/ id="([^"]+)"/g, (_, id) => ` id="${prefix}-${id}"`)
-  .replace(/url\(#([^)]+)\)/g, (_, id) => `url(#${prefix}-${id})`)
-  .replace(/(fill|stroke)="(#[0-9a-fA-F]{6})"/g, (_, attribute, hex) => `${attribute}="${recolour[hex.toUpperCase()] ?? hex}"`)
-
-const DrawingLogo = ({ artwork, recolour, padding, name, decorative = false, background = '#fff' }) => {
-  const prefix = `drawing${useId().replace(/[^a-zA-Z0-9]/g, '')}`
-  const [attempt, setAttempt] = useState(0)
-  const { svg, failed } = useDrawing(artwork, attempt)
-  const markup = useMemo(() => svg && drawingMarkup({ svg, recolour, name, prefix }), [svg, recolour, name, prefix])
-  const ink = useMemo(() => (markup ? inkOf(coloursOfMarkup(markup)) : null), [markup])
-  return (
-    <div className="internal-logos__artwork" {...tile(background, ink)} aria-hidden={decorative || undefined}>
-      {markup && <div className="internal-logos__svg" style={{ padding }} dangerouslySetInnerHTML={{ __html: markup }} />}
-      {!markup && !failed && <span role="status">Loading logo…</span>}
-      {failed && (decorative ? <span>Logo unavailable</span> : <div role="alert">Could not load this logo. <button type="button" onClick={() => setAttempt((value) => value + 1)}>Retry</button></div>)}
-    </div>
-  )
-}
-
-// The patches and badges that carry the mark come from the posters' connection registry, so a
-// poster, its mark and the cloth version of that mark all name each other from one record.
-const PosterLinks = ({ logo }) => (
-  <ul className="internal-logos__posters">
-    {logo.seenOn.map((entry) => (
-      <li key={entry.to.poster ?? entry.to.card ?? entry.title}>
-        <SiteLink to={entry.to}><b>{entry.title} <span aria-hidden="true">→</span></b><span>{entry.note}</span></SiteLink>
-      </li>
-    ))}
-    {objectsForLogo(logo.id).map((entry) => (
-      <li key={entry.to.patch}>
-        <SiteLink to={entry.to}><b>{entry.label} <span aria-hidden="true">→</span></b><span>{entry.note}</span></SiteLink>
-      </li>
-    ))}
-  </ul>
-)
-
-const LogoSources = ({ logo }) => (logo.sources.length > 0 || logo.measurements?.length > 0) && (
-  <details className="internal-logos__sources">
-    <summary>Sources</summary>
-    {logo.measurements?.map((measurement) => <p key={measurement}>{measurement}</p>)}
-    {logo.sources.length > 0 && <ul>{logo.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.title}</a></li>)}</ul>}
-  </details>
-)
-
-// A logo's own page gives its poster links a section of their own, so its history leaves them
-// out (posters={false}); the links are drawn here only for a caller that wants them inline.
-const LogoComments = ({ logo, posters = true }) => (
-  <>
-    {logo.comments.map((comment) => <p key={comment}>{comment}</p>)}
-    {logo.article && (
-      <aside className="internal-logos__article" aria-label="Newspaper clipping comparison">
-        <h4>Newspaper comparison · {logo.article.title}</h4>
-        <blockquote>“{logo.article.excerpt}”</blockquote>
-        <p>{logo.article.context}</p>
-        <p className="internal-logos__article-evidence">{logo.article.qualification}</p>
-        <p className="internal-logos__article-source">{logo.article.citation}</p>
-      </aside>
-    )}
-    {posters && logo.seenOn && (
-      <>
-        <h4>On the posters, and as an object</h4>
-        <PosterLinks logo={logo} />
-      </>
-    )}
-  </>
-)
-
-// A logo's history, dating and sources are on its own page; the family's cards carry the picture,
-// the name and a line about the design.
-const LogoHistory = ({ logo }) => (
-  <>
-    <div className="internal-logos__comments" aria-label={`${logo.name} historical comments`}>
-      <h4>History &amp; comments</h4>
-      <p className="internal-logos__evidence">{logo.evidence}</p>
-      <LogoComments logo={logo} posters={false} />
-    </div>
-    <LogoSources logo={logo} />
-  </>
-)
-
-/** What the whole family's artwork is, behind an information button rather than open under it. */
-const AboutForests = () => {
-  const [open, setOpen] = useState(false)
-  const titleId = useId()
-  return (
-    <>
-      <button
-        type="button"
-        className="icon-info"
-        aria-haspopup="dialog"
-        aria-label="About these reconstructions"
-        title="About these reconstructions"
-        onClick={() => setOpen(true)}
-      >
-        <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
-          <circle cx="9" cy="9" r="7.6" fill="none" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M9 8v5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
-          <circle cx="9" cy="5.3" r="1.05" fill="currentColor" />
-        </svg>
-      </button>
-      {open && (
-        <Modal
-          className="info-dialog"
-          aria-labelledby={titleId}
-          onDismiss={() => setOpen(false)}
-          // A click on the backdrop (the dialog element itself, outside its content) closes it.
-          onClick={(event) => { if (event.target === event.currentTarget) setOpen(false) }}
-        >
-          <div className="info-dialog__body">
-            <h2 id={titleId}>All are reconstructions</h2>
-            <p>Their order is not a verified sequence of adoption.</p>
-            <p>Three of the ovals are reconstructed in Forest Oval from supplied references; the Lands Department seal, the evergreen emblem and the yellow-sky and green-and-gold Forest Service ovals are separate vector reconstructions from supplied images. The designs are grouped by family; apart from the seal and the emblem coming before the ovals, their order does not imply a verified sequence of adoption.</p>
-            <p>Each design’s history, dating and sources are on its own page.</p>
-            <button type="button" className="button" data-initial-focus onClick={() => setOpen(false)}>Close</button>
-          </div>
-        </Modal>
-      )}
-    </>
-  )
-}
-
-const VariantCard = ({ variant }) => (
-  <article className="internal-logos__variant" aria-labelledby={`variant-${variant.id}`}>
-    {variant.artwork
-      ? <DrawingLogo artwork={variant.artwork} recolour={variant.recolour} padding={variant.padding} name={variant.name} background={variant.background} />
-      : <OvalLogo preset={variant.recipe} name={variant.name} theme={variant.theme} colours={variant.colours} composition={variant.composition} background={variant.background} />}
-    <div className="internal-logos__notes">
-      <h3 id={`variant-${variant.id}`}>{variant.name}</h3>
-      <p className="internal-logos__description">{variant.note}</p>
-      {variant.source && <p className="internal-logos__variant-source"><a href={variant.source.url} target="_blank" rel="noreferrer">{variant.source.title}</a></p>}
-    </div>
-  </article>
-)
-
-const initialSelection = () => {
-  const params = new URLSearchParams(globalThis.location?.search ?? '')
-  const logoId = params.get('internal-logo')
-  const logo = FOREST_LOGOS.find((entry) => entry.id === logoId)
-  if (params.get('internal') === TRAVEL_PLACE.internal || logoId === TRAVEL_PLACE['internal-logo']) return { travel: true }
-  if (DEPARTMENTAL_COLLECTIONS.includes(params.get('internal'))) return { department: params.get('internal'), logoId }
-  return { family: params.get('internal') === 'forests' || !!logo, logoId: logo?.id ?? null }
+/** The page the address names; an older form of its address is rewritten to its own, in place. */
+const placeInAddress = () => {
+  const href = globalThis.location?.href
+  const rewritten = href && internalPlaceUrl(href)
+  if (rewritten) globalThis.history?.replaceState(globalThis.history.state, '', rewritten)
+  return resolveInternalPlace(Object.fromEntries(new URLSearchParams(globalThis.location?.search ?? '')))
 }
 
 export const InternalLogosView = () => {
-  const [selection, setSelection] = useState(initialSelection)
-  const title = useRef(null)
-  const forestButton = useRef(null)
-  const logoButtons = useRef({})
-  const current = FOREST_LOGOS.find((logo) => logo.id === selection.logoId)
-  const variants = current ? variantsFor(current) : null
-  const navigate = (family, logoId = null) => {
-    const url = new URL(globalThis.location.href)
-    if (family) url.searchParams.set('internal', 'forests')
-    else url.searchParams.delete('internal')
-    if (logoId) url.searchParams.set('internal-logo', logoId)
-    else url.searchParams.delete('internal-logo')
-    globalThis.history?.replaceState(null, '', url)
-    setSelection({ family, logoId })
+  // Read once: the App opens this view afresh for every page.
+  const [{ department, mark, variant }] = useState(placeInAddress)
+  if (department === FORESTS) {
+    return <Suspense fallback={<p className="gallery__intro" role="status">Loading logos…</p>}><ForestsCollection logoId={mark} variantId={variant} /></Suspense>
   }
-  const backToFamily = () => {
-    const id = selection.logoId
-    navigate(true)
-    requestAnimationFrame(() => logoButtons.current[id]?.focus())
+  if (department) {
+    return <Suspense fallback={<p className="gallery__intro" role="status">Loading logos…</p>}><DepartmentCollection id={department} markId={mark} /></Suspense>
   }
-  useEffect(() => {
-    if (selection.family) title.current?.focus()
-  }, [selection.family, selection.logoId])
-
-  if (selection.travel) return <Suspense fallback={<p role="status">Loading logo…</p>}><TravelIndustryLogo /></Suspense>
-  if (selection.department) {
-    return <Suspense fallback={<p role="status">Loading logos…</p>}><DepartmentCollection id={selection.department} markId={selection.logoId} /></Suspense>
-  }
-
-  return (
-    <section className="internal-logos" aria-label="Departmental Logos">
-      {current ? (
-        <>
-          <div className="internal-logos__intro">
-            <button className="internal-logos__back" type="button" onClick={backToFamily}>← Forests</button>
-            <h2 ref={title} tabIndex={-1}>{current.name}</h2>
-            <p>{current.description}</p>
-          </div>
-          <h3 className="internal-logos__section-title">Colour variants</h3>
-          <div className="internal-logos__variants">
-            {variants.colours.map((variant) => <VariantCard key={variant.id} variant={variant} />)}
-          </div>
-          {variants.studies?.length > 0 && (
-            <>
-              <h3 className="internal-logos__section-title">Reconstructed one-ink and coastal studies</h3>
-              <p className="internal-logos__footnote">These are modern construction and reversal experiments based on the reference specimens, not verified historical logo versions.</p>
-              <div className="internal-logos__variants">
-                {variants.studies.map((variant) => <VariantCard key={variant.id} variant={variant} />)}
-              </div>
-            </>
-          )}
-          <p className="internal-logos__footnote">The colourways are display variations; they do not establish historical adoption or official approval.</p>
-          {variants.related.length > 0 && (
-            <>
-              <h3 className="internal-logos__section-title">Service variants</h3>
-              <div className="internal-logos__variants">
-                {variants.related.map((variant) => <VariantCard key={variant.id} variant={variant} />)}
-              </div>
-            </>
-          )}
-          {current.seenOn && (
-            <>
-              <h3 className="internal-logos__section-title">On the posters, and as an object</h3>
-              <PosterLinks logo={current} />
-            </>
-          )}
-          <div className="internal-logos__history-panel"><LogoHistory logo={current} /></div>
-        </>
-      ) : selection.family ? (
-        <>
-          {/* The site's header already names the view, so the way back is an arrow beside the
-              family's name rather than "← Departmental Logos" over it. */}
-          <div className="internal-logos__intro internal-logos__intro--row">
-            <button
-              className="icon-back"
-              type="button"
-              aria-label="Back to Departmental Logos"
-              title="Back to Departmental Logos"
-              onClick={() => { navigate(false); requestAnimationFrame(() => forestButton.current?.focus()) }}
-            >
-              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 8H3.5M7.5 3.5 3 8l4.5 4.5" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>
-            </button>
-            <h2 ref={title} tabIndex={-1}>Forests</h2>
-            <AboutForests />
-          </div>
-          <div className="internal-logos__designs">
-            {FOREST_LOGOS.map((logo) => (
-              <article key={logo.id} className="internal-logos__design" aria-labelledby={`internal-${logo.id}`}>
-                {/* The artwork opens the logo too, for a pointer; the title is the one way in for a
-                    keyboard or a screen reader, so the artwork stays out of both. */}
-                <button type="button" className="internal-logos__open" tabIndex={-1} aria-hidden="true" onClick={() => navigate(true, logo.id)}>
-                  {logo.kind === 'drawing' ? <DrawingLogo artwork={logo.artwork} padding={logo.padding} name={logo.name} decorative /> : <OvalLogo preset={logo.id} name={logo.name} decorative />}
-                </button>
-                <div className="internal-logos__notes">
-                  <h3 id={`internal-${logo.id}`}>
-                    <button type="button" className="internal-logos__title" aria-label={`${logo.name}: view variants`} ref={(element) => { logoButtons.current[logo.id] = element }} onClick={() => navigate(true, logo.id)}>
-                      {logo.name}{'\u00a0'}<span aria-hidden="true">→</span>
-                    </button>
-                  </h3>
-                  <p className="internal-logos__description">{logo.description}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="internal-logos__intro">
-            <h2>Departmental Logos</h2>
-          </div>
-          <button ref={forestButton} type="button" className="internal-logos__family" onClick={() => navigate(true)}>
-            <OvalLogo preset="forests" name="Forests" decorative />
-            <span className="internal-logos__family-text">
-              <span className="internal-logos__family-title">Forests <span aria-hidden="true">→</span></span>
-              <span>Two early marks and five oval designs</span>
-            </span>
-          </button>
-          <SiteLink className="internal-logos__family" to={TRAVEL_PLACE}>
-            <span className="internal-logos__artwork"><img alt="" src={import.meta.env.BASE_URL + travelSource.assets[0].file} /></span>
-            <span className="internal-logos__family-text">
-              <span className="internal-logos__family-title">Department of Travel Industry <span aria-hidden="true">→</span></span>
-              <span>Map and dogwood, about 1970</span>
-            </span>
-          </SiteLink>
-          {DEPARTMENTS.map(({ id, title, note }) => (
-            <SiteLink key={id} className="internal-logos__family" to={departmentalPlace(id)}>
-              <span className="internal-logos__artwork">
-                <Suspense fallback={<span role="status">Loading logo…</span>}><DepartmentCover id={id} /></Suspense>
-              </span>
-              <span className="internal-logos__family-text">
-                <span className="internal-logos__family-title">{title} <span aria-hidden="true">→</span></span>
-                <span>{note}</span>
-              </span>
-            </SiteLink>
-          ))}
-        </>
-      )}
-    </section>
-  )
+  return <DepartmentIndex />
 }

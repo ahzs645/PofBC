@@ -144,11 +144,7 @@ export const SalariesView = ({ onOpenGovernment }) => {
           navigation.go({ ...navigation.place, councilMunicipality: name, q: '' }, 'Council pay')
           toTop()
         }}
-        back={(
-          <button type="button" className="salaries__back" aria-label="Back" title="Back" onClick={() => { navigation.goBack({ ...navigation.place, councilMunicipality: 'all' }); toTop() }}>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 10H4m5-5-5 5 5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
-          </button>
-        )}
+        back={[{ label: 'Council pay', onClick: () => { navigation.goBack({ ...navigation.place, councilMunicipality: 'all' }); toTop() } }]}
         onEmployer={(slug) => {
           navigation.go({ ...navigation.place, browse: 'employers', q: '', person: null, personAt: null, employer: slug, employerYear: null, role: null, title: null, show: null }, 'Council pay')
           toTop()
@@ -392,13 +388,12 @@ const SalaryRecordsView = ({ onOpenGovernment, navigation }) => {
     })
     toTop()
   }
-  const backButton = (parentEmployer = null) => (
-    <button type="button" className="salaries__back" aria-label="Back" title="Back" onClick={() => goBack(parentEmployer)}>
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-        <path d="M16 10H4m5-5-5 5 5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    </button>
-  )
+  // The trail's steps before the page: the list it was opened from, then the employer a name was
+  // opened at, where it was.
+  const backButton = (parentEmployer = null) => [
+    { label: rootLabel, onClick: () => goBack(null) },
+    ...(parentEmployer ? [{ label: employersIndex.employers.find((entry) => entry.slug === parentEmployer)?.name ?? 'Employer', onClick: () => goBack(parentEmployer) }] : [])
+  ]
   const back = backButton(place.person && employersIndex.employers.some((entry) => entry.slug === place.personAt) ? place.personAt : null)
   const remember = (label) => { heading.current = label }
   const setYear = (at) => setPlace((current) => ({ ...current, employerYear: years[at] }))

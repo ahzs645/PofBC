@@ -7,6 +7,8 @@ import { withLiquorHistory } from './liquorHistory.js'
 import { RAILWAY_HISTORY } from './railwayHistoryData.js'
 import { COLLECTED_PALETTES } from './collectedPalettes.js'
 import { LOGO_BRAND_GUIDELINES } from './logoBrandGuidelines.js'
+import { withVersionLabel } from './collectedVersionLabels.js'
+import { coverCandidates, identityFirst, markRoleOf } from './markRoles.js'
 
 export { ALL_COLLECTED_BODIES }
 
@@ -138,12 +140,15 @@ const firstSentence = (text = '') => {
 }
 
 /** A body's files as one entry per design, each with its other colourways as versions, oldest first. */
-const designsOf = (assets) => assets.filter((asset) => !asset.variantOf).map((asset) => {
-  const versions = [asset, ...assets.filter((each) => each.variantOf === asset.id)]
-  return { asset, versions }
-}).map((design, order) => ({ ...design, order, year: Math.min(...design.versions.flatMap(datesOf).map((date) => date.firstYear)) }))
-  // Undated designs keep their place after the dated ones.
-  .sort((a, b) => (Number.isFinite(a.year) ? a.year : 9999) - (Number.isFinite(b.year) ? b.year : 9999) || a.order - b.order)
+const designsOf = (records) => {
+  const assets = records.map(withVersionLabel)
+  return assets.filter((asset) => !asset.variantOf).map((asset) => {
+    const versions = [asset, ...assets.filter((each) => each.variantOf === asset.id)]
+    return { asset, versions }
+  }).map((design, order) => ({ ...design, order, year: Math.min(...design.versions.flatMap(datesOf).map((date) => date.firstYear)) }))
+    // Undated designs keep their place after the dated ones.
+    .sort((a, b) => (Number.isFinite(a.year) ? a.year : 9999) - (Number.isFinite(b.year) ? b.year : 9999) || a.order - b.order)
+}
 
 const paletteMaster = (asset, versions) => {
   const group = COLLECTED_PALETTES[asset.id]
@@ -153,6 +158,34 @@ const paletteMaster = (asset, versions) => {
     throw new Error(`Palette group ${asset.id} has no source SVG: ${group.masterId}`)
   }
   return master
+}
+
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+const dayLabel = (date) => {
+  const [year, month, day] = date.split('-').map(Number)
+  return `${day} ${MONTHS[month - 1]} ${year}`
+}
+
+/**
+ * The record that dates a design by its adoption, or nothing. Only two kinds of record count, and
+ * each must give an exact day and a source to open (AGENTS.md, "Logo dates"):
+ *  - `adoption`: { date, label?, note, source: { title, url } }, a decision to adopt the design,
+ *    such as a council resolution or a guide that records one;
+ *  - `adoptionDate` with `adoptionSource`: the body's own announcement of a new logo (the school
+ *    districts), shown as announced rather than adopted.
+ * A sighting (a publication, a website capture) or a file's own date never dates the design.
+ */
+export const adoptionOf = (asset) => {
+  const record = asset.adoption ?? (asset.adoptionDate && asset.adoptionSource ? {
+    date: asset.adoptionDate,
+    announced: asset.adoptionDatePrecision === 'announcement',
+    note: asset.adoptionDatePrecision === 'announcement'
+      ? `${asset.publisher ?? 'The body'} announced the new logo on this day.`
+      : `${asset.publisher ?? 'The body'} introduced the logo on this day.`,
+    source: { title: asset.adoptionDatePrecision === 'announcement' ? 'Announcement of the new logo' : 'Record of the logo’s introduction', url: asset.adoptionSource }
+  } : null)
+  if (!record || !/^\d{4}-\d{2}-\d{2}$/.test(record.date) || !/^https:\/\//.test(record.source?.url ?? '')) return undefined
+  return { ...record, label: record.label ?? dayLabel(record.date), verb: record.announced ? 'Announced' : 'Adopted' }
 }
 
 /**
@@ -166,10 +199,16 @@ const collectedEntry = (design, timeline, owner, versions = [design]) => {
   const preferred = preferredVector ?? versions.find((version) =>
     version.id === design.preferredReconstruction && version.variantOf === design.id && version.reconstruction)
   const asset = preferred ?? design
+  // A record of the design's adoption dates the design itself; the files' own dates are only
+  // sightings of it (adoptionOf says what counts as such a record).
+  const adoption = versions.map(adoptionOf).find(Boolean)
   const orderedVersions = preferred ? [preferred, ...versions.filter((version) => version !== preferred)] : versions
+  // An anniversary, campaign, event, partner or decorative mark follows its body's identity (markRoles.js).
+  const markRole = markRoleOf({ id: design.designId ?? design.id, asset: design, versions })
   return {
     id: design.designId ?? design.id,
     kind: 'collected',
+    ...(markRole !== 'identity' ? { markRole } : {}),
     ...(timeline ? { timeline } : {}),
     ...(owner ? { owner } : {}),
     // A design seen in several places is named for the design where its record names one, else for
@@ -180,7 +219,7 @@ const collectedEntry = (design, timeline, owner, versions = [design]) => {
     // A card says what the mark is in a sentence; its full account, versions and sources are on its page.
     note: firstSentence(asset.notes),
     // A publication reproducing historical artwork is dated as such, beside the use it records.
-    years: asset.sourceReproduction && asset.historicalDateLabel && parseSpecimenDate(asset.specimenDate ?? asset.sourceDate)
+    years: adoption ? `${adoption.verb} ${adoption.label}` : asset.sourceReproduction && asset.historicalDateLabel && parseSpecimenDate(asset.specimenDate ?? asset.sourceDate)
       ? `${asset.historicalDateLabel} · reproduced ${parseSpecimenDate(asset.specimenDate ?? asset.sourceDate).label}`
       : seenDates(versions) ? `Seen ${seenDates(versions)}` : 'Logo dates unestablished',
     // A design can retain an EPS source ID while using its original SVG for the web viewer.
@@ -195,7 +234,12 @@ const collectedEntry = (design, timeline, owner, versions = [design]) => {
           ? 'extracted_from_official_vector' : asset.isVector ? 'published_vector' : 'published_raster',
       fidelity: asset.fidelity ?? 'source compared',
       fidelityNote: asset.fidelityNote,
-      applicability: {
+      applicability: adoption ? {
+        kind: 'documented_adoption',
+        years: adoption.label,
+        note: [adoption.note, adoption.source && `Source: ${adoption.source.title}.`,
+          seenDates(versions) && `Its files here are dated ${seenDates(versions)}.`].filter(Boolean).join(' ')
+      } : {
         kind: seenDates(versions) ? 'dated_specimen' : 'unknown',
         years: seenDates(versions) || 'undated',
         note: seenDates(versions)
@@ -231,14 +275,19 @@ export const specimenEntriesOf = (program, timeline) => designsOf(ALL_COLLECTED_
   .map(({ asset, versions }) => collectedEntry(asset, timeline, undefined, versions))
 
 const collectionOf = (body) => {
-  const entries = collectedEntriesOf(body.id)
-  const namedCover = body.coverPolicy === 'verified-current' && entries.some(({ id }) => id === body.cover) ? body.cover : undefined
-  const verifiedCover = body.current ? VERIFIED_CURRENT_COVERS[body.id] ?? namedCover : undefined
-  const sourceVectors = entries.filter(isSourceVector)
+  const entries = identityFirst(collectedEntriesOf(body.id))
+  // The cover is one of the body's identity designs whenever it holds one; an anniversary, campaign,
+  // event or decorative mark is never chosen over it, however recent (markRoles.js).
+  const candidates = coverCandidates(entries)
+  const secondary = new Set(entries.filter((entry) => !candidates.includes(entry)).map(({ id }) => id))
+  const candidate = (id) => (id && !secondary.has(id) ? id : undefined)
+  const namedCover = body.coverPolicy === 'verified-current' ? candidate(body.cover) : undefined
+  const verifiedCover = body.current ? candidate(VERIFIED_CURRENT_COVERS[body.id]) ?? namedCover : undefined
+  const sourceVectors = candidates.filter(isSourceVector)
   const vectors = sourceVectors.filter((entry) => !body.current || currentSpecimens(entry).length)
   const vectorCover = vectors.some(({ id }) => id === body.cover) ? body.cover
     : (body.current ? latestLogo(vectors) : undefined) ?? coverOf(vectors)
-  const cover = verifiedCover ?? vectorCover ?? body.cover ?? (body.current ? latestLogo(entries) : undefined) ?? coverOf(entries)
+  const cover = verifiedCover ?? vectorCover ?? candidate(body.cover) ?? (body.current ? latestLogo(candidates) : undefined) ?? coverOf(candidates)
   // A gallery card can feature a dated historical vector while the district or government
   // record keeps its verified current signature. A matching vector always keeps that cover.
   const coverEntry = entries.find((entry) => entry.id === cover)
@@ -280,7 +329,8 @@ export const REGISTER_CONTINUATIONS = [
   ['cariboo-college', 'university-college-of-the-cariboo'],
   ['university-college-of-the-cariboo', 'thompson-rivers-university'],
   ['fraser-valley-college', 'university-college-of-the-fraser-valley'],
-  ['university-college-of-the-fraser-valley', 'university-of-the-fraser-valley']
+  ['university-college-of-the-fraser-valley', 'university-of-the-fraser-valley'],
+  ['northwest-community-college', 'coast-mountain-college']
 ]
 
 // The years of each name on a college line, as the register's notes give them (identity register,
@@ -299,7 +349,10 @@ const LINE_YEARS = {
   'thompson-rivers-university': { from: 2005 },
   'fraser-valley-college': { from: 1974, to: 1991 },
   'university-college-of-the-fraser-valley': { from: 1991, to: 2008 },
-  'university-of-the-fraser-valley': { from: 2008 }
+  'university-of-the-fraser-valley': { from: 2008 },
+  // Renamed effective 18 June 2018 (news.gov.bc.ca 2018AEST0056).
+  'northwest-community-college': { from: 1975, to: 2018 },
+  'coast-mountain-college': { from: 2018 }
 }
 
 /**
@@ -354,7 +407,7 @@ const nameEra = (body, from, to, next) => {
       note: 'These are the body’s years under this name, not the dates of its logos: each file gives when it was seen.'
     },
     sources,
-    entries: collectedEntriesOf(body.id)
+    entries: identityFirst(collectedEntriesOf(body.id))
   }
 }
 

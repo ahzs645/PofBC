@@ -83,7 +83,6 @@
   padding: 10px 12px;
   border-bottom: 1px solid var(--outline);
 }
-.patch__crumb { flex: 1; min-width: 0; font-size: 13px; color: var(--ink-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .patch__steps { display: flex; gap: 8px; margin-left: auto; }
 
 .patch__body { display: grid; grid-template-columns: minmax(0, 1fr) 340px; grid-template-areas: 'visuals panel' 'review panel'; grid-template-rows: auto 1fr; }

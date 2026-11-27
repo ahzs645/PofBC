@@ -28,6 +28,7 @@ import { badgeReviewAssetUrl, badgeReviewSources } from './badgeReview.js'
 import './badges.css'
 import { Select } from '../site/ui/Select.jsx'
 import { Slider } from '../site/ui/Slider.jsx'
+import { Breadcrumbs } from '../site/Breadcrumbs.jsx'
 
 const REVIEW_URL = `${import.meta.env.BASE_URL}badge-review/index.json`
 const REVIEW_LABELS = { refine: 'Needs refinement', reconstruct: 'Needs reconstruction', reviewed: 'Reviewed', unreviewed: 'Not yet reviewed' }
@@ -264,9 +265,10 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
   return (
     <section className="patch badge" aria-label={title}>
-      <nav className="patch__bar" aria-label="Badges">
-        <button type="button" className="button button--ghost" ref={back} onClick={onClose}>← All {noun}</button>
-        <span className="patch__crumb">{org.name} · {position.index + 1} of {position.count}</span>
+      <div className="patch__bar">
+        <Breadcrumbs label="Badges" backRef={back}
+          steps={[{ label: `All ${noun}`, onClick: onClose }, { label: org.name }, { label: title }]}
+          after={<span className="patch__position">{position.index + 1} of {position.count}</span>} />
         <span className="patch__steps">
           <button type="button" className="button" disabled={!previous} onClick={() => onOpen(previous)} title={previous?.label} aria-label="Previous">
             <span aria-hidden="true">‹</span><span className="patch__step-label"> Previous</span>
@@ -275,7 +277,7 @@ export const BadgeViewer = ({ patch, org, position, previous, next, onOpen, onCl
             <span className="patch__step-label">Next </span><span aria-hidden="true">›</span>
           </button>
         </span>
-      </nav>
+      </div>
 
       <div className="patch__body">
         <div className="patch__visuals" ref={visuals}>

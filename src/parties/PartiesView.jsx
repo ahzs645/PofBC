@@ -6,6 +6,8 @@
 // the research left open. The data is the filed package in research/parties (scripts/build-parties.mjs).
 
 import { useEffect, useState } from 'react'
+import { Breadcrumbs } from '../site/Breadcrumbs.jsx'
+import { HistoryTimeline } from '../site/HistoryTimeline.jsx'
 import { SiteLink } from '../site/navigation.jsx'
 import { writeHistory } from '../site/browserHistory.js'
 import { documentTitle, setDocumentMeta } from '../site/documentMeta.js'
@@ -14,6 +16,7 @@ import {
   kindLabel, lineageOf, partyAsset, partyById, partyHistory, partyPlace, partySources, searchParties, statusLabel
 } from './parties.js'
 import './parties.css'
+import { SourceList } from '../site/SourceList.jsx'
 
 const assetUrl = (file) => `${import.meta.env.BASE_URL}${file.replace(/^\//, '')}`
 const External = ({ children, ...props }) => <a {...props} target="_blank" rel="noreferrer">{children}<span aria-hidden="true"> ↗</span></a>
@@ -147,7 +150,7 @@ const PartyDetail = ({ party, place, design }) => {
   }, [design])
   return (
     <article className="parties__detail">
-      <SiteLink className="parties__back" to={partyPlace(null, preserved(place))}>← All parties</SiteLink>
+      <Breadcrumbs label="Political Parties" steps={[{ label: 'All parties', to: partyPlace(null, preserved(place)) }, { label: party.name }]} />
       <header className="parties__detail-head">
         <div>
           <p className="parties__eyebrow">British Columbia · {statusLabel(party)}</p>
@@ -184,25 +187,25 @@ const PartyDetail = ({ party, place, design }) => {
       <section className="parties__section" id="party-history" aria-labelledby="party-history-title">
         <div className="parties__section-heading"><div><p className="parties__eyebrow">Names, formations and observations</p><h3 id="party-history-title">History</h3></div></div>
         {history.length ? (
-          <ol className="parties__timeline">
-            {history.map((event) => (
-              <li key={event.id} data-visual={event.visual || undefined}>
-                <div className="parties__timeline-date"><span>{shortDate(event)}</span><span className="parties__chip">{eventLabel(event)}</span></div>
-                <div className="parties__timeline-event">
-                  <p>{event.description}</p>
-                  {shortDate(event) !== event.dateLabel && event.dateLabel && <p className="parties__muted">Date: {event.dateLabel}</p>}
-                  {event.qualification && <p className="parties__muted">{event.qualification}</p>}
-                  {event.parties.length > 1 && (
-                    <p className="parties__muted">Also concerns {event.parties.filter((id) => id !== party.id).map((id, i) => {
-                      const other = partyById(id)
-                      return <span key={id}>{i ? ', ' : ''}{other ? <SiteLink to={partyPlace(other, preserved(place))}>{other.name}</SiteLink> : id}</span>
-                    })}</p>
-                  )}
-                  <p className="parties__source">{eventSources(event).map((source, i) => <span key={source.url}>{i ? ' · ' : ''}<External href={source.url}>{source.id ? `${source.id} · ` : ''}{source.title ?? 'Source'}</External></span>)}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <HistoryTimeline events={history.map((event) => ({
+            key: event.id,
+            date: shortDate(event),
+            dateNote: eventLabel(event),
+            // A logo seen in use is an observation, not something the party did.
+            quiet: Boolean(event.visual),
+            body: <>
+              <p>{event.description}</p>
+              {shortDate(event) !== event.dateLabel && event.dateLabel && <p className="history-timeline__muted">Date: {event.dateLabel}</p>}
+              {event.qualification && <p className="history-timeline__muted">{event.qualification}</p>}
+              {event.parties.length > 1 && (
+                <p className="history-timeline__muted">Also concerns {event.parties.filter((id) => id !== party.id).map((id, i) => {
+                  const other = partyById(id)
+                  return <span key={id}>{i ? ', ' : ''}{other ? <SiteLink to={partyPlace(other, preserved(place))}>{other.name}</SiteLink> : id}</span>
+                })}</p>
+              )}
+            </>,
+            sources: eventSources(event).map((source, i) => <span key={source.url}>{i ? ' · ' : ''}<External href={source.url}>{source.id ? `${source.id} · ` : ''}{source.title ?? 'Source'}</External></span>)
+          }))} />
         ) : <p className="parties__empty">No organizational events are recorded for this party yet.</p>}
       </section>
 
@@ -216,7 +219,7 @@ const PartyDetail = ({ party, place, design }) => {
 
       <section className="parties__section" id="party-sources" aria-labelledby="party-sources-title">
         <div className="parties__section-heading"><div><p className="parties__eyebrow">Follow the evidence</p><h3 id="party-sources-title">Sources</h3></div></div>
-        <ol className="parties__sources">{sources.map((source) => <li key={`${source.id}-${source.url}`}>{source.id && <span className="parties__source-id">{source.id}</span>}<External href={source.url}>{source.title ?? source.url}</External></li>)}</ol>
+        <SourceList sources={sources} />
       </section>
     </article>
   )

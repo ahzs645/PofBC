@@ -213,7 +213,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
   return (
     <div className="salaries">
       <section className="salaries__person" aria-labelledby="salaries-employer">
-        <SalaryPageHeading id="salaries-employer" back={back}>
+        <SalaryPageHeading id="salaries-employer" back={back} current={name}>
           {entry.body && onOpenGovernment ? (
             <SiteLink
               className="salaries__heading-link"
@@ -226,7 +226,7 @@ export const EmployerPage = ({ entry, years, sources, year: wantedYear, show, ro
           {entry.sector}
           {entry.names.length > 1 ? ` · also filed as ${entry.names.slice(0, -1).map((each) => `“${each}”`).join(', ')}` : ''}
           {/* A municipality is not a provincial body, so its profile is in the collection register. */}
-          {!entry.body && MUNICIPAL_PROFILE_BY_EMPLOYER[entry.slug] && <> · <SiteLink className="salaries__link" to={{ view: 'gallery', subject: MUNICIPAL_PROFILE_BY_EMPLOYER[entry.slug] }}>Municipal profile: logo, arms and council pay</SiteLink></>}
+          {!entry.body && MUNICIPAL_PROFILE_BY_EMPLOYER[entry.slug] && <> · <SiteLink className="salaries__link" to={{ view: 'gallery', subject: MUNICIPAL_PROFILE_BY_EMPLOYER[entry.slug] }}>Municipal profile in the register →</SiteLink></>}
         </p>
         <YearPicker years={years} counts={entry.counts} coverage={entry.coverage} value={year} onChange={pick} />
         {foreignRows.length > 0 && <p className="salaries__hint salaries__hint--small">Comparisons use CAD observations. Other currencies remain available below with their original amounts and evidence.</p>}

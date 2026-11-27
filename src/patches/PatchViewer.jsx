@@ -14,6 +14,7 @@ import { plainLabel, splitLabel } from './patchCatalogue.js'
 import { VIEW_DEFAULTS, exportScale, exportSize, loadView, modeFor, saveView } from './patchView.js'
 import { Select } from '../site/ui/Select.jsx'
 import { Slider } from '../site/ui/Slider.jsx'
+import { Breadcrumbs } from '../site/Breadcrumbs.jsx'
 
 /** Patcher's own site, which opens a library patch with every digitizing setting exposed. */
 const PATCHER_URL = 'https://ahzs645.github.io/patcher/'
@@ -283,9 +284,10 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
 
   return (
     <section className="patch" aria-label={title}>
-      <nav className="patch__bar" aria-label={noun === 'badges' ? 'Badges' : 'Patches'}>
-        <button type="button" className="button button--ghost" ref={back} onClick={onClose}>← All {noun}</button>
-        <span className="patch__crumb">{org.name} · {position.index + 1} of {position.count}</span>
+      <div className="patch__bar">
+        <Breadcrumbs label={noun === 'badges' ? 'Badges' : 'Patches'} backRef={back}
+          steps={[{ label: `All ${noun}`, onClick: onClose }, { label: org.name }, { label: title }]}
+          after={<span className="patch__position">{position.index + 1} of {position.count}</span>} />
         {/* On a phone the steps shrink to arrows, so the bar stays one row. */}
         <span className="patch__steps">
           <button type="button" className="button" disabled={!previous} onClick={() => onOpen(previous)} title={previous?.label} aria-label="Previous">
@@ -295,7 +297,7 @@ export const PatchViewer = ({ patch, org, position, previous, next, onOpen, onCl
             <span className="patch__step-label">Next </span><span aria-hidden="true">›</span>
           </button>
         </span>
-      </nav>
+      </div>
 
       <div className="patch__body">
         <div className="patch__visuals">

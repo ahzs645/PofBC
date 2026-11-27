@@ -56,7 +56,7 @@ export const LOGO_BRAND_GUIDELINES = {
     url: 'https://www.sooke.ca/municipal-hall/branding-and-logo/'
   },
   'source-recovered-municipal-vancouver-website-logo': {
-    title: 'City of Vancouver Graphic Standards Manual · stacked colour logo on PDF page 5',
+    title: 'City of Vancouver Visual Standards Guide (February 2018) · the emblem’s three versions on PDF page 5',
     url: 'https://policy.vancouver.ca/CP00103P2.pdf#page=5'
   },
   'source-recovered-municipal-white-rock-website-logo': {

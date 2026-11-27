@@ -38,6 +38,8 @@ import { supportProvidedBy } from '../government/forrex.js'
 import { FundingHistory, SupportProvided, RuralHealthConnections } from '../government/FundingHistory.jsx'
 import { ParksFoundationHistory } from './ParksFoundationHistory.jsx'
 import { RailwayHistory, RailwayHistoryLinks } from './RailwayHistory.jsx'
+import { Breadcrumbs } from '../site/Breadcrumbs.jsx'
+import { Lineage } from '../site/Lineage.jsx'
 import { InitiativeLink } from '../initiatives/InitiativeLink.jsx'
 import { UnbcOriginsTeaser } from './UnbcOrigins.jsx'
 import { defaultCollectedAsset, generatorArt, onPage, tileArt } from './tileArt.js'
@@ -54,6 +56,7 @@ import { galleryPlaceUrl } from './galleryPlace.js'
 import { writeHistory } from '../site/browserHistory.js'
 import { AllLogos, CurrentOrganizations, GalleryModeSwitch, GalleryTimeline, TimelineScrubber } from './GalleryModes.jsx'
 import { PRESENT_YEAR, isGalleryMode } from './galleryModes.js'
+import { MARK_ROLE_LABELS } from './markRoles.js'
 
 const PALETTE_OPTIONS = FLAG_PALETTE_ORDER.map((value) => ({
   value, label: FLAG_PALETTE_LABELS[value], title: FLAG_PALETTE_HINTS[value]
@@ -419,9 +422,17 @@ export const OpenMark = ({ entry, openId, onChooseVersion }) => {
   return <Detail key={entry.id} entry={entry} />
 }
 
-/** A card in an era, with only the chips its era has not already said for every mark in it. */
-export const Tile = ({ entry, onOpen, theme, said = [], owner }) => (
-  <button type="button" className="gallery__pick gallery__pick--tile" onClick={onOpen} aria-label={`Open ${entry.label}${owner ? `, ${owner}` : ''}`}>
+/**
+ * A card in an era, with only the chips its era has not already said for every mark in it. Given the
+ * mark's address (`href`), it is a link to it, which a plain click still opens through `onOpen`.
+ */
+export const Tile = ({ entry, onOpen, theme, said = [], owner, href }) => {
+  const Control = href ? 'a' : 'button'
+  const control = href
+    ? { href, onClick: (event) => { if (!isPlainClick(event)) return; event.preventDefault(); onOpen() } }
+    : { type: 'button', onClick: onOpen }
+  return (
+  <Control {...control} className="gallery__pick gallery__pick--tile" aria-label={`Open ${entry.label}${owner ? `, ${owner}` : ''}`}>
     <span
       className="gallery__art"
       data-ground={onPage(entry, theme) ? 'page' : 'own'}
@@ -431,9 +442,10 @@ export const Tile = ({ entry, onOpen, theme, said = [], owner }) => (
     {owner && <span className="gallery__owner">{owner}</span>}
     <span className="gallery__label">{entry.label}{entry.kind === 'collected' && <span className="gallery__asset-format"> · {defaultCollectedAsset(entry, theme).format.toUpperCase()}</span>}</span>
     <span className="gallery__note">{owner ? entry.years : entry.note}</span>
-    <Chips labels={chipsOf(entry.identity).filter((label) => !said.includes(label))} title={FIDELITY[entry.identity.fidelity]} />
-  </button>
-)
+    <Chips labels={[...(entry.markRole ? [MARK_ROLE_LABELS[entry.markRole]] : []), ...chipsOf(entry.identity).filter((label) => !said.includes(label))]} title={FIDELITY[entry.identity.fidelity]} />
+  </Control>
+  )
+}
 
 /** The mark already open, on its own timeline: drawn as its tile is, but not a way to itself. */
 const ThisMark = ({ entry, theme }) => (
@@ -458,6 +470,7 @@ const OneOffEntry = ({ entry, onOpen, theme, onOpenGovernment, said = [] }) => (
     <div className="gallery__head">
       <h2>{entry.label}</h2>
       <span className="gallery__years">
+        {entry.markRole && `${MARK_ROLE_LABELS[entry.markRole]} · `}
         {entry.years}
         {timelineOf(entry) && ` · ${timelineOf(entry).eras.length} eras`}
       </span>
@@ -517,6 +530,8 @@ export const CollectionCard = ({ collection, onOpen, theme, href, coverEntry, ch
         <span className="gallery__collection-title">{collection.label}</span>
         <span className="gallery__note">{collection.body}</span>
         {specimen && <span className="gallery__note gallery__specimen">{specimen.label} · {specimen.years}</span>}
+        {/* A collection holding only secondary marks shows one, and says what it is. */}
+        {!specimen && cover?.markRole && <span className="gallery__note gallery__specimen">{MARK_ROLE_LABELS[cover.markRole]}</span>}
         <span className="gallery__years">
           {collection.years} · {collection.fileCollection ? `${fileCount} artwork ${fileCount === 1 ? 'file' : 'files'}` : `${count} ${count === 1 ? 'mark' : 'marks'}`}
           {collection.eras ? ` · ${collection.eras.length} ${collection.eras.length === 1 ? 'era' : 'eras'}` : ''}
@@ -535,16 +550,9 @@ const historyLabels = {
   renamed: { predecessors: 'Former operating name', successors: 'Operating name adopted' },
   amalgamated: { predecessors: 'Amalgamated into this authority', successors: 'Amalgamated into' },
   services: { predecessors: 'Services received from', successors: 'Services transferred to' },
-  territory: { predecessors: 'Territory reassigned', successors: 'Former service area moved to' }
+  territory: { predecessors: 'Territory reassigned', successors: 'Former service area moved to' },
+  ministry: { predecessors: 'Earlier ministry, renamed into this one', successors: 'Renamed into' }
 }
-
-const RelationshipEvidence = ({ row, direction }) => (
-  <p className="gallery__note gallery__relationship-evidence">
-    <span>{historyLabels[row.type][direction]} · <time dateTime={row.date}>{formatEventDate({ start: row.date })}</time></span>
-    {row.note && <span>{row.note}</span>}
-    <a href={row.source.url} target="_blank" rel="noreferrer">{row.source.title}</a>
-  </p>
-)
 
 const isTimelineRename = (row) => row.type === 'registered-name' && row.collection
 
@@ -556,50 +564,37 @@ const HistoryCollectionLink = ({ row, onChooseCollection, className, children })
   }}>{children}</a>
 )
 
-const GalleryHistory = ({ id, theme, onChooseCollection, onOpenSubject, showPreviews = false, successorsOnly = false, hasTimeline = false }) => {
+/**
+ * A collection's predecessors and successors, in the site's shared lineage (site/Lineage.jsx). The
+ * other body opens at its collection, else its ministry in the atlas, else its register entry; the
+ * first two with collections also show their covers where the page asks for previews.
+ */
+export const GalleryHistory = ({ id, theme, onChooseCollection, onOpenSubject, showPreviews = false, successorsOnly = false, hasTimeline = false }) => {
   const history = galleryHistoryOf(id)
-  const predecessors = history.predecessors.filter((row) => !(hasTimeline && isTimelineRename(row)))
+  const predecessors = successorsOnly ? [] : history.predecessors.filter((row) => !(hasTimeline && isTimelineRename(row)))
   const successors = history.successors.filter((row) => !(hasTimeline && isTimelineRename(row)))
-  if (!successors.length && (successorsOnly || !predecessors.length)) return null
-
-  const records = (rows, direction) => (
-    <ul className="gallery__history-records">
-      {rows.map((row) => <li key={`${row.type}:${row.id}:${row.date}`}>
-        {row.collection
-          ? <HistoryCollectionLink row={row} onChooseCollection={onChooseCollection}>{row.label}</HistoryCollectionLink>
-          : <SubjectLink id={row.id} onOpen={onOpenSubject}>{row.label}</SubjectLink>}
-        <RelationshipEvidence row={row} direction={direction} />
-      </li>)}
-    </ul>
+  if (!predecessors.length && !successors.length) return null
+  const records = (rows, direction) => rows.map((row, at) => ({
+    key: `${row.type}:${row.id}:${row.date}`,
+    name: row.collection
+      ? <HistoryCollectionLink row={row} onChooseCollection={onChooseCollection}>{row.label}</HistoryCollectionLink>
+      : row.graphNode
+        ? <SiteLink to={{ view: 'government', node: row.graphNode, year: row.graphYear }}>{row.label}</SiteLink>
+        : <SubjectLink id={row.id} onOpen={onOpenSubject}>{row.label}</SubjectLink>,
+    relation: historyLabels[row.type][direction],
+    date: formatEventDate({ start: row.date }),
+    note: row.note,
+    source: row.source,
+    preview: showPreviews && row.collection && at < 2
+      ? <CollectionCard collection={row.collection} theme={theme} href={collectionHref(row.collection.id)} onOpen={() => onChooseCollection(row.collection.id)} />
+      : undefined
+  }))
+  return (
+    <section className="gallery__shelf" aria-labelledby={`history-${id}`}>
+      <h2 id={`history-${id}`} className="gallery__shelf-title">{successorsOnly ? 'Successors' : 'Predecessors and successors'}</h2>
+      <Lineage predecessors={records(predecessors, 'predecessors')} successors={records(successors, 'successors')} />
+    </section>
   )
-  const group = (rows, direction, title) => {
-    if (!rows.length) return null
-    const heading = `collection-${direction}`
-    const previews = showPreviews ? rows.filter((row) => row.collection).slice(0, 2) : []
-    const remaining = rows.filter((row) => !previews.includes(row))
-    return (
-      <section className="gallery__shelf" aria-labelledby={heading}>
-        <h2 id={heading} className="gallery__shelf-title">{title}</h2>
-        {previews.length > 0 && <div className="gallery__history-cards">
-          {previews.map((row) => <article key={`${row.type}:${row.id}:${row.date}`} className="gallery__history-preview">
-            <CollectionCard collection={row.collection} theme={theme} href={collectionHref(row.collection.id)} onOpen={() => onChooseCollection(row.collection.id)} />
-            <RelationshipEvidence row={row} direction={direction} />
-          </article>)}
-        </div>}
-        {previews.length > 0 && remaining.length > 0 ? (
-          <details className="gallery__era-more">
-            <summary>{remaining.length} more historical {remaining.length === 1 ? 'record' : 'records'}</summary>
-            {records(remaining, direction)}
-          </details>
-        ) : remaining.length > 0 && records(remaining, direction)}
-      </section>
-    )
-  }
-
-  return <div className="gallery__relationships" data-previews={showPreviews || undefined}>
-    {!successorsOnly && group(predecessors, 'predecessors', predecessors.length === 1 ? 'Historical predecessor' : 'Historical predecessors')}
-    {group(successors, 'successors', 'Where it continued')}
-  </div>
 }
 
 /** Where an era's dates and description come from, each a link to the page it rests on. */
@@ -635,6 +630,8 @@ const TimelineRenames = ({ rows, direction, onChooseCollection }) => rows.filter
  */
 export const Timeline = ({ eras, current, onPick, history, onChooseCollection, collectionId, opensCollection }) => {
   const steps = eras.length + [...history.predecessors, ...history.successors].filter(isTimelineRename).length
+  // A rail of one step says only what the era's own heading below it says.
+  if (steps < 2) return null
   const rail = (
     <nav className="gallery__timeline" aria-label="Eras, oldest first">
       <ol>
@@ -764,7 +761,7 @@ const EraMore = ({ era }) => {
  * its marks — or the slot that stands for them — under the words, as every era has them. On a
  * mark's own timeline the open mark is marked as the one being looked at rather than offered again.
  */
-export const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator }) => {
+export const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator, hrefFor }) => {
   const said = eraChips(era.entries)
   const fidelities = new Set(era.entries.map((entry) => entry.identity.fidelity))
   return (
@@ -788,7 +785,7 @@ export const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator }) =>
           <div className="gallery__tiles">
             {era.entries.map((entry) => entry.id === openId
               ? <ThisMark key={entry.id} entry={entry} theme={theme} />
-              : <Tile key={entry.id} entry={entry} theme={theme} said={said} onOpen={() => onOpen(entry.id)} />)}
+              : <Tile key={entry.id} entry={entry} theme={theme} said={said} href={hrefFor?.(entry.id)} onOpen={() => onOpen(entry.id)} />)}
           </div>
           )
         : <EmptyEra era={era} theme={theme} onOpenInGenerator={onOpenInGenerator} />}
@@ -797,10 +794,21 @@ export const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator }) =>
 }
 
 /** A link from a mark to the body it stands for, in the government diagram. */
-const GraphLink = ({ node, year, onOpenGovernment }) => node && onOpenGovernment && (
+export const GraphLink = ({ node, year, onOpenGovernment }) => node && onOpenGovernment && (
   <button type="button" className="gallery__graph-link" onClick={() => onOpenGovernment(node, year)}>
-    Organization in the atlas <span aria-hidden="true">→</span>
+    Open in Government <span aria-hidden="true">→</span>
   </button>
+)
+
+/** A collection's page opens with its name, whose it is and its years, and a way to it in the atlas. */
+export const CollectionHead = ({ collection, onOpenGovernment, headingRef }) => (
+  <div className="gallery__collection-head">
+    <div>
+      <h2 className="gallery__collection-heading" ref={headingRef} tabIndex={headingRef ? -1 : undefined}>{collection.label}</h2>
+      <p className="gallery__note">{collection.body} · {collection.years}</p>
+    </div>
+    <GraphLink node={collection.graphNode} year={collection.graphYear} onOpenGovernment={onOpenGovernment} />
+  </div>
 )
 
 /**
@@ -866,26 +874,15 @@ const readYear = () => {
  */
 const Crumbs = ({ collection, entry, onHome, onCollection, onChooseCollection }) => {
   const parent = collectionById(collection?.foldedUnder)
+  const markShown = entry && collection && hasPage(collection)
   return (
-    <nav className="gallery__crumbs" aria-label="Gallery">
-      <button type="button" className="gallery__back" onClick={onHome}>
-        <span aria-hidden="true">←</span> All logos
-      </button>
-      {collection?.shelf === 'airports' && <>
-        <span aria-hidden="true">/</span>
-        <SiteLink className="gallery__crumb" to={{ view: 'airports' }}>Airports</SiteLink>
-      </>}
-      {parent && <>
-        <span aria-hidden="true">/</span>
-        <button type="button" className="gallery__crumb" title={parent.label} onClick={() => onChooseCollection(parent.id)}>{parent.label}</button>
-      </>}
-      {collection && <span aria-hidden="true">/</span>}
-      {collection && (entry && hasPage(collection)
-        ? <button type="button" className="gallery__crumb" title={collection.label} onClick={onCollection}>{collection.label}</button>
-        : <span aria-current="page" title={collection.label}>{collection.label}</span>)}
-      {entry && hasPage(collection) && <span aria-hidden="true">/</span>}
-      {entry && hasPage(collection) && <span aria-current="page" title={entry.label}>{entry.label}</span>}
-    </nav>
+    <Breadcrumbs label="Gallery" steps={[
+      { label: 'All logos', onClick: onHome },
+      ...(collection?.shelf === 'airports' ? [{ label: 'Airports', to: { view: 'airports' } }] : []),
+      ...(parent ? [{ label: parent.label, title: parent.label, onClick: () => onChooseCollection(parent.id) }] : []),
+      ...(collection ? [{ label: collection.label, title: collection.label, onClick: onCollection }] : []),
+      ...(markShown ? [{ label: entry.label }] : [])
+    ]} />
   )
 }
 
@@ -1261,7 +1258,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   )
 
   if (subject) return <div className="gallery">
-    <IdentitySubjectDetail subject={subject} theme={theme} onOpenRegister={openRegister} onOpenSubject={openSubject}
+    <IdentitySubjectDetail subject={subject} theme={theme} onHome={home} onOpenRegister={openRegister} onOpenSubject={openSubject}
       onChooseCollection={choose} onOpenGovernment={onOpenGovernment}>
       <SupportProvided onChooseCollection={choose} id={subject.id} />
       <RuralHealthConnections id={subject.id} />
@@ -1371,17 +1368,21 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
       </div>
     )
   }
+  const artworkSectionList = (sections) => sections.some(({ entries }) => entries.length) && (
+    <div className="gallery__artwork-sections">
+      {sections.filter(({ entries }) => entries.length).map(({ id, label, entries }) => (
+        <section key={id} className="gallery__shelf" aria-labelledby={`${id}-heading`} data-single={entries.length === 1 || undefined}>
+          <h2 id={`${id}-heading`} className="gallery__shelf-title">{label}</h2>
+          {artworkList(entries)}
+        </section>
+      ))}
+    </div>
+  )
 
   return (
     <div className="gallery">
       {crumbs}
-      <div className="gallery__collection-head">
-        <div>
-          <h2 className="gallery__collection-heading">{collection.label}</h2>
-          <p className="gallery__note">{collection.body} · {collection.years}</p>
-        </div>
-        <GraphLink node={collection.graphNode} year={collection.graphYear} onOpenGovernment={onOpenGovernment} />
-      </div>
+      <CollectionHead collection={collection} onOpenGovernment={onOpenGovernment} />
       <p className="gallery__intro">{collection.intro}</p>
       {councilTimeline && <a className="gallery__graph-link" href="#council-timeline-heading">Organization and logo timeline ↓</a>}
       {collection.relatedGenerator && onOpenInGenerator && (
@@ -1401,17 +1402,10 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         ? collection.eras.map(eraSection)
         : (
           <>
-            {artworkSections.length > 0 && (
-              <div className="gallery__artwork-sections">
-                {artworkSections.filter(({ entries }) => entries.length).map(({ id, label, entries }) => (
-                  <section key={id} className="gallery__shelf" aria-labelledby={`${id}-heading`} data-single={entries.length === 1 || undefined}>
-                    <h2 id={`${id}-heading`} className="gallery__shelf-title">{label}</h2>
-                    {artworkList(entries)}
-                  </section>
-                ))}
-              </div>
-            )}
+            {artworkSectionList(artworkSections.filter(({ secondary }) => !secondary))}
             {ungroupedArtwork?.length > 0 && artworkList(coverFirst(ungroupedArtwork, collection.shelfSpecimen))}
+            {/* Anniversary, campaign, event and decorative marks follow the body's identity (markRoles.js). */}
+            {artworkSectionList(artworkSections.filter(({ secondary }) => secondary))}
           </>
           )}
       {collection.shelf === 'regional-districts' && (

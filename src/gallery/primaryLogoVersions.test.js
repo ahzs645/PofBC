@@ -5,6 +5,7 @@ import { test } from 'node:test'
 import { findGalleryEntry } from './collections.js'
 import { COLLECTED_DISPLAY } from './collectedDisplay.js'
 import reviewed from './primaryLogoVersions.json' with { type: 'json' }
+import { RECOVERY_PACKAGES } from './vectorRecovery.js'
 
 const readPublic = (file) => readFileSync(new URL(`../../public/${file}`, import.meta.url))
 
@@ -12,6 +13,17 @@ test('primary-logo variants preserve the gallery design IDs, published sources, 
   for (const [id, record] of Object.entries(reviewed)) {
     const entry = findGalleryEntry(id)
     const variant = record.asset
+    // A lead whose vector was later extracted and held keeps its raster as a version, upgraded
+    // only by that held file (vectorRecovery.js), never by the lead's link.
+    const held = RECOVERY_PACKAGES.flatMap((pack) => Object.values(pack.additions ?? {}).flat())
+      .find((asset) => asset.id === entry.asset.id && asset.variantOf === id)
+    if (!variant && held) {
+      assert.equal(entry.id, id)
+      assert.ok(entry.versions.some((source) => source.id === id && source.isVector === false), id)
+      assert.equal(entry.identity.provenance, 'extracted_from_official_vector')
+      for (const source of record.alsoSeen) assert.ok(entry.versions.find((source) => source.id === id).alsoSeen.includes(source))
+      continue
+    }
     if (!variant) {
       assert.equal(entry.asset.id, id)
       assert.equal(entry.identity.provenance, 'published_raster')
@@ -56,8 +68,9 @@ test('source and generated display SVGs are self-contained vector geometry', () 
 })
 
 test('official PDF leads link to their verified page without upgrading a raster', () => {
+  // Vancouver's guide is now held as extracted paths (vancouverVisualStandards.test.js); its link stays.
   const vancouver = findGalleryEntry('source-recovered-municipal-vancouver-website-logo')
-  assert.equal(vancouver.identity.provenance, 'published_raster')
+  assert.equal(vancouver.asset.id, 'vancouver-emblem-2006-colour')
   assert.match(vancouver.brandGuidelines.url, /#page=5$/)
   assert.match(findGalleryEntry('rd-thompson-nicola-horizontal').brandGuidelines.url, /#page=5$/)
   assert.match(findGalleryEntry('sd79-full-colour-landscape-2022').brandGuidelines.url, /#page=11$/)

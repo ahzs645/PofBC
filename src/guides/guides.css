@@ -28,20 +28,22 @@
 .guides .guides__book:focus-visible,
 .guides .guides__thumb:focus-visible { border-radius: var(--radius); }
 
-/* The way back: the same quiet button as on a patch, a badge or a plate. */
+/* The way back: the first step of the site's shared trail (site/Breadcrumbs.jsx, .gallery__back),
+   which every other page below a section's first opens with. brandkit draws this button; the site
+   gives it the trail's look and place. */
 .guides .guides__back {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  min-height: var(--control);
-  margin: 0 0 8px -14px;
-  padding: 6px 14px;
+  height: var(--control);
+  margin: 0 0 var(--gap);
+  padding: 0 10px;
+  border: 0;
   border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
   font-size: 14px;
-  font-weight: 500;
-  color: var(--ink-muted);
+  cursor: pointer;
 }
-.guides .guides__back:hover { background: var(--hover); color: var(--ink); }
-@media (max-width: 600px) {
-  .guides .guides__back { margin-left: -10px; padding-inline: 10px; }
-}
+.guides .guides__back:hover { background: var(--hover); }

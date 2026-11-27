@@ -181,7 +181,7 @@ const initialView = () => {
  */
 const writeView = (view) => {
   const url = salaryPlaceUrl(globalThis.location.href, {})
-  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', ...GALLERY_PLACE_KEYS, 'internal', 'internal-logo', 'poster', 'sign', 'card', 'sticker', 'pin', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'plate', 'area', 'chapter', 'story', 'holder', 'initiative', 'section', 'record', 'district', 'school-query', 'school-scope', 'party', 'party-query', 'party-scope', 'party-design']) url.searchParams.delete(key)
+  for (const key of ['view', 'year', 'node', 'mode', 'compare', 'undated', 'local', 'instrument', ...GALLERY_PLACE_KEYS, 'internal', 'internal-logo', 'internal-variant', 'poster', 'sign', 'card', 'sticker', 'pin', 'part', 'guide', 'page', 'org', 'patch', 'group', 'family', 'plate', 'area', 'chapter', 'story', 'holder', 'initiative', 'section', 'record', 'district', 'school-query', 'school-scope', 'party', 'party-query', 'party-scope', 'party-design']) url.searchParams.delete(key)
   if (/^#tourism-/.test(url.hash)) url.hash = ''
   if (view !== 'generator') url.searchParams.set('view', view)
   writeHistory(url)

@@ -248,8 +248,8 @@ const drawingVariants = (logo) => {
 
 export const variantsFor = (logo) => logo.kind === 'drawing' ? drawingVariants(logo) : ({
   colours: [
-    { id: 'colour', name: 'Full colour', recipe: logo.id, note: 'The Forest Oval preset palette.' },
-    { id: 'black', name: 'Black & white', recipe: logo.id, theme: 'mono', note: 'The Forest Oval single-colour palette.' },
+    { id: 'colour', name: 'Full colour', recipe: logo.id, note: 'The reconstruction’s own colours, as the Forest Oval editor draws this design.' },
+    { id: 'black', name: 'Black & white', recipe: logo.id, theme: 'mono', note: 'One ink: black on white, as the Forest Oval editor draws this design in a single colour.' },
     { id: 'green', name: 'Forest green', recipe: logo.id, theme: 'mono', colours: oneInk('#008450', '#ffffff'), note: 'A generated green recolour of the single-colour design.' },
     { id: 'reversed', name: 'White on green', recipe: logo.id, theme: 'mono', colours: oneInk('#ffffff', '#008450'), background: '#008450', note: 'A generated reversed recolour of the single-colour design.' },
     ...(logo.id === 'forest-service' ? [

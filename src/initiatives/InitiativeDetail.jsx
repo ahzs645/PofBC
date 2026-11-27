@@ -5,6 +5,7 @@ import { BrandGuide } from './BrandGuide.jsx'
 import { SiteLink } from '../site/navigation.jsx'
 import { TabList } from '../site/ui/TabList.jsx'
 import { fileOf, imagesOf, resolveInitiativeSelection } from './initiativeModel.js'
+import { HistoryTimeline } from '../site/HistoryTimeline.jsx'
 import './initiativeDetail.css'
 
 const InitiativeContext = createContext(null)
@@ -183,9 +184,15 @@ const Records = ({ section, onOpen }) => {
   </>
 }
 
-const Timeline = ({ section }) => <ol className="initiative__timeline">{(section.records ?? []).map((item) =>
-  <li key={item.id}><div className="initiative__timeline-date"><strong>{item.date}</strong><span>{item.dateRole?.replaceAll('-', ' ')}</span></div><div className="initiative__timeline-copy"><h4>{item.title}</h4><p>{item.description}</p><Sources references={item.sourceRefs} /></div></li>
-)}</ol>
+// The initiative's dated events, in the site's shared timeline (site/HistoryTimeline.jsx).
+const Timeline = ({ section }) => <HistoryTimeline events={(section.records ?? []).map((item) => ({
+  key: item.id,
+  date: item.date,
+  dateNote: item.dateRole?.replaceAll('-', ' ').replace(/^./, (letter) => letter.toUpperCase()),
+  title: item.title,
+  body: <p>{item.description}</p>,
+  sources: <Sources references={item.sourceRefs} />
+}))} />
 
 const Publications = ({ section, onOpen }) => <>
   <div className="initiative__publication-grid">{(section.records ?? []).map((item) => <article key={item.id} className="initiative__publication"><p className="initiative__eyebrow">{item.kind?.replaceAll('-', ' ') ?? 'Publication'}</p><h4>{item.title}</h4><p>{item.description}</p><Sources references={item.sourceRefs} /><Links links={item.links} />{imagesOf(item).length > 0 && <button type="button" className="initiative__text-button" onClick={() => onOpen(item)}>View specimen <Arrow /></button>}</article>)}</div>

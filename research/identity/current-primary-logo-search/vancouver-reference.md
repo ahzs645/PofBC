@@ -21,3 +21,7 @@ Guide SHA-256: `baa38a1913417a9dcda1cf8e18cb7e7ce17c7a879af506f3f5311105b0adb2a1
 The colour logo is located at approx. (214, 82)–(377, 150) pt using PDF
 top-left coordinates. No glyph substitution, bitmap tracing or recolouring is
 needed to identify the source geometry.
+
+**Update, 27 November 2026.** The marks in this guide are now held as native-path extractions; see
+[vancouver-visual-standards-2026-11-27](../vancouver-visual-standards-2026-11-27/README.md). The colour
+emblem is the gallery's default for the City's design, with the website PNG kept as a version.

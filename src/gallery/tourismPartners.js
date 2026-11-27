@@ -155,7 +155,8 @@ const records = [
     history: 'The association formed in 1976. It operated as the Council of Regional Tourism Associations after 1989 and later the Council of Tourism Associations before returning to the Tourism Industry Association of BC name.',
     relations: [partner(resiliency, 'Industry association supported the 2020 network')],
     sources: [source('Destination BC account of TIABC’s first 50 years', dbc + 'news/tourism-industry-association-of-bc-celebrates-50-years-of-leadership-and-advocacy/'), launch2020],
-    cover: 'tiabc-website'
+    // The three-waves signature is the association's identity; the 50th-anniversary masthead lockup is commemorative.
+    cover: 'tiabc-waves'
   },
   {
     id: secretariat, name: 'BC Regional Tourism Secretariat', kind: 'tourism-collaboration', aliases: ['BCRTS', 'British Columbia Regional Tourism Secretariat'],

@@ -1,4 +1,5 @@
 import { useEffect, useLayoutEffect, useState } from 'react'
+import { Breadcrumbs } from '../site/Breadcrumbs.jsx'
 import { INITIATIVES, initiativeById, loadInitiative } from './initiatives.js'
 import { InitiativeDetail } from './InitiativeDetail.jsx'
 import { initiativePlaceUrl, readInitiativePlace } from './initiativePlace.js'
@@ -78,11 +79,11 @@ export const InitiativesView = () => {
   }
 
   if (place.initiative) return <main className="initiatives">
-    <nav className="initiatives__breadcrumbs" aria-label="Initiative breadcrumb">
-      <a href="?view=initiatives" onClick={back}>All initiatives</a><span aria-hidden="true">/</span>
-      {parent && <><SiteLink to={{ view: 'initiatives', initiative: parent.id }}>{parent.title}</SiteLink><span aria-hidden="true">/</span></>}
-      <span aria-current="page">{initiative?.title ?? 'Unknown initiative'}</span>
-    </nav>
+    <Breadcrumbs label="Initiatives" steps={[
+      { label: 'All initiatives', href: '?view=initiatives', onClick: back },
+      ...(parent ? [{ label: parent.title, to: { view: 'initiatives', initiative: parent.id } }] : []),
+      { label: initiative?.title ?? 'Unknown initiative' }
+    ]} />
     {!initiative ? <div className="initiatives__empty"><h2>Initiative not found</h2><p>This initiative is not in the catalogue. Browse the available initiatives using the link above.</p></div>
       : error ? <div className="initiatives__empty" role="alert"><h2>The initiative could not load</h2><p>Please try again.</p><button type="button" onClick={() => setAttempt((value) => value + 1)}>Try again</button></div>
         : detail?.id === initiative.id ? <InitiativeDetail key={detail.id} initiative={detail} subInitiatives={INITIATIVES.filter((entry) => entry.parentId === detail.id)} place={place} onChange={changeSection} />

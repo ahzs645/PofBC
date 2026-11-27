@@ -1,6 +1,6 @@
 // Lightweight destinations used by both the gallery and the app's deep-link reader.
 export const TRAVEL_LOGO = 'bc-travel-industry-ca-1970'
-export const TRAVEL_PLACE = { view: 'internal', internal: 'travel-industry', 'internal-logo': TRAVEL_LOGO }
+export const TRAVEL_COLLECTION = 'specimens-travel-industry'
 
 // Former departments, ministries and government branches open in Departmental Logos. Each
 // collection stays in the gallery's data, unlisted (collections.js), so marks shared with other
@@ -17,13 +17,31 @@ export const DEPARTMENTAL_MARKS = {
   'bc-environment': ['bc-environment-flag-years'],
   'collected-shared-services-bc': [
     'solutions-bc-2003-vector', 'solutions-bc-2006-letterhead-rebuilt', 'shared-services-bc-2006-07-rebuilt', 'shared-services-bc-2015-rebuilt'
-  ]
+  ],
+  [TRAVEL_COLLECTION]: [TRAVEL_LOGO]
 }
 export const DEPARTMENTAL_COLLECTIONS = Object.keys(DEPARTMENTAL_MARKS)
-const departmentOfMark = new Map(Object.entries(DEPARTMENTAL_MARKS).flatMap(([id, marks]) => marks.map((mark) => [mark, id])))
+/** The first step of every trail in Departmental Logos. */
+export const DEPARTMENTAL_ROOT = { label: 'All departments', to: { view: 'internal' } }
+export const departmentOfMark = new Map(Object.entries(DEPARTMENTAL_MARKS).flatMap(([id, marks]) => marks.map((mark) => [mark, id])))
+
+// A department whose address is not its collection's id: the Department of Travel Industry had its
+// own page, at `internal=travel-industry`, before it was a collection here. Both name it.
+const DEPARTMENT_ADDRESSES = { [TRAVEL_COLLECTION]: 'travel-industry' }
+const DEPARTMENT_OF_ADDRESS = Object.fromEntries(Object.entries(DEPARTMENT_ADDRESSES).map(([id, address]) => [address, id]))
+/** The collection a department's address names, or undefined for one that is not a department. */
+export const departmentOfAddress = (address) => {
+  const id = DEPARTMENT_OF_ADDRESS[address] ?? address
+  return DEPARTMENTAL_MARKS[id] ? id : undefined
+}
 
 /** A departmental collection's place in Departmental Logos, at one of its marks if given. */
-export const departmentalPlace = (id, mark) => ({ view: 'internal', internal: id, ...(mark ? { 'internal-logo': mark } : {}) })
+export const departmentalPlace = (id, mark) => ({
+  view: 'internal',
+  internal: DEPARTMENT_ADDRESSES[id] ?? id,
+  ...(mark ? { 'internal-logo': mark } : {})
+})
+export const TRAVEL_PLACE = departmentalPlace(TRAVEL_COLLECTION, TRAVEL_LOGO)
 
 // Kept for the links written before the other departments moved.
 export const RECREATION_COLLECTION = 'recreation-conservation'
@@ -44,7 +62,7 @@ export function movedGalleryPlace({ view, logos, mark, subject, coverage }) {
   if (view !== 'gallery' || subject || coverage) return null
   if (mark === 'icet-lowercase-teal-specimen') return { view, logos: 'collected-island-coastal-economic-trust', mark: 'icet-lowercase-report' }
   if (logos === 'collected-forrex' && mark === 'forrex-siferp') return { view, logos: 'collected-siferp', mark }
-  if (mark === TRAVEL_LOGO || logos === 'specimens-travel-industry') return TRAVEL_PLACE
+  if (mark === TRAVEL_LOGO) return TRAVEL_PLACE
   if (DEPARTMENTAL_MARKS[logos]) return departmentalPlace(logos, mark)
   // A bare link to one of a department's marks; the same mark under another collection stays there.
   if (!logos && departmentOfMark.has(mark)) return departmentalPlace(departmentOfMark.get(mark), mark)
