@@ -25,6 +25,7 @@ import { ENDORSED_2019 } from './endorsed2019.js'
 import { bearAwareGalleryId, bearAwareId, bearAwareMarkId, bearAwareTitle } from '../initiatives/bearAwareArtwork.js'
 import { environmentYouthCorpsGalleryId, environmentYouthCorpsId, environmentYouthCorpsScan } from '../initiatives/environmentYouthCorpsArtwork.js'
 import { resWestBadgeEra } from './resWest.js'
+import { DEPARTMENTAL_COLLECTIONS } from './movedGalleryPlaces.js'
 
 // ── The identity record ──────────────────────────────────────────────────────────────────────────
 
@@ -1569,6 +1570,15 @@ for (const [node, place] of Object.entries(PLACED)) {
   })
 }
 
+// Former departments, ministries and government branches open in Departmental Logos instead of
+// the gallery's index (movedGalleryPlaces.js). They stay here, unlisted, so search, the register and
+// any collection sharing their marks still find them; their links redirect.
+for (const id of DEPARTMENTAL_COLLECTIONS) {
+  const collection = GALLERY_COLLECTIONS.find((each) => each.id === id)
+  if (!collection) throw new Error(`Unknown departmental collection: ${id}`)
+  Object.assign(collection, { shelf: 'departmental', showInGalleryIndex: false })
+}
+
 /**
  * Every collection holding a body's own designs. Its dedicated collection comes first, followed
  * by shared shelves such as the BC mark. Gallery placement and organization identity are separate.
@@ -1612,7 +1622,7 @@ export const FOLDED_UNDER = [
   },
   { parent: 'bc-transit', children: ['collected-umo'] },
   { parent: 'bc-ferries', children: ['collected-bc-ferries-travel'] },
-  { parent: 'bc-hydro', children: ['collected-power-smart', 'collected-sub-powerex'] },
+  { parent: 'bc-hydro', children: ['collected-power-smart', 'collected-sub-powerex', 'collected-fish-wildlife-compensation-program'] },
   { parent: 'collected-bc-housing', children: ['collected-sub-bc-housing-licensing-and-consumer-services'] },
   { parent: 'bclc', children: ['collected-gamesense', 'collected-sub-playnow'] },
   {
@@ -1635,11 +1645,19 @@ export const FOLDED_UNDER = [
   { parent: 'collected-legislative-assembly', children: ['collected-legislative-library-bc'] },
   { parent: 'collected-university-of-british-columbia', children: ['collected-ubc-okanagan-campus'] },
   { parent: 'collected-4vi-group', children: ['collected-4tvi-stewardship', 'collected-4ever-strategies', 'collected-4good-social-impact-fund'] },
-  { parent: 'tourism-bc-destination-bc', children: ['collected-vancouver-coast-mountains'] },
+  { parent: 'tourism-bc-destination-bc', children: ['collected-vancouver-coast-mountains', 'collected-destination-brand', 'collected-visitor-centre'] },
   { parent: 'collected-bc-snowmobile-federation', children: ['collected-lets-ride-bc'] },
   { parent: 'collected-bc-association-farmers-markets', children: ['collected-bc-farmers-market-trail'] },
   { parent: 'collected-bc-regional-tourism-secretariat', children: ['collected-bc-tourism-sustainability-network'] },
-  { parent: 'collected-bc-injury-research-and-prevention-unit', children: ['collected-concussion-awareness-training-tool'] }
+  { parent: 'collected-bc-injury-research-and-prevention-unit', children: ['collected-concussion-awareness-training-tool', 'collected-active-safe-central', 'collected-cost-of-injury', 'collected-prevent-shaken-baby-syndrome-bc'] },
+  // The second pass: each rests on a register tie that names the parent (operated-by, or a labelled
+  // related-to such as "Based at the injury research unit" or "Coalition managed by"), checked against
+  // the child's own intro. FWCP is BC Hydro's: BC Hydro funds it to meet its water licences (fwcp.ca).
+  { parent: 'collected-bc-lodging-campgrounds-association', children: ['collected-camping-rving-bc-coalition'] },
+  { parent: 'collected-bc-craft-brewers-guild', children: ['collected-bc-ale-trail'] },
+  { parent: 'collected-rural-coordination-centre-bc', children: ['collected-real-time-virtual-support'] },
+  { parent: 'collected-municipality-west-vancouver', children: ['collected-west-vancouver-blue-bus'] },
+  { parent: 'collected-emergency-health-services-commission', children: ['collected-bc-ambulance-service'] }
 ]
 
 // Program collections link to their histories in the initiatives register.

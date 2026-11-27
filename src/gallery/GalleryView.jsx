@@ -404,6 +404,21 @@ const Detail = ({ entry, onClose }) => {
   )
 }
 
+/**
+ * A mark, opened, in the view its kind is edited in. Shared with Departmental Logos, so a mark
+ * opens the same wherever its collection is shown.
+ */
+export const OpenMark = ({ entry, openId, onChooseVersion }) => {
+  const editorVersion = entry.editorVersions?.find((version) => version.id === openId) ?? entry.editorVersions?.[0]
+  if (entry.kind === 'hydro') return <HydroStudio initialPreset={entry.preset} />
+  if (entry.kind === 'hydro-mark') {
+    return <HydroMarkView key={openId} mark={entry.mark} variant={editorVersion?.variant ?? entry.variant} options={entry.editorVersions?.map((version) => version.variant)} />
+  }
+  if (entry.kind === 'supplied') return <SuppliedMarkView key={entry.id} entry={editorVersion ?? entry} family={entry} onChooseVersion={onChooseVersion} />
+  if (entry.kind === 'collected') return <CollectedMarkView key={openId} entry={entry} />
+  return <Detail key={entry.id} entry={entry} />
+}
+
 /** A card in an era, with only the chips its era has not already said for every mark in it. */
 export const Tile = ({ entry, onOpen, theme, said = [], owner }) => (
   <button type="button" className="gallery__pick gallery__pick--tile" onClick={onOpen} aria-label={`Open ${entry.label}${owner ? `, ${owner}` : ''}`}>
@@ -1264,15 +1279,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         {/* A mark with its own history below lists the same eras there; the rail would say them twice. */}
         {!markTimeline && timeline}
         <UnbcOriginsTeaser owner={open.owner} />
-        {open.kind === 'hydro'
-          ? <HydroStudio initialPreset={open.preset} />
-          : open.kind === 'hydro-mark'
-            ? <HydroMarkView key={openId} mark={open.mark} variant={editorVersion?.variant ?? open.variant} options={open.editorVersions?.map((version) => version.variant)} />
-            : open.kind === 'supplied'
-              ? <SuppliedMarkView key={open.id} entry={editorVersion ?? open} family={open} onChooseVersion={(id) => go(collectionId, id)} />
-              : open.kind === 'collected'
-                ? <CollectedMarkView key={openId} entry={open} />
-                : <Detail key={open.id} entry={open} />}
+        <OpenMark entry={open} openId={openId} onChooseVersion={(id) => go(collectionId, id)} />
         {markTimeline && (
           <section className="gallery__history" aria-labelledby="mark-history">
             <h2 id="mark-history" className="gallery__shelf-title">{markTimeline.label} through time</h2>

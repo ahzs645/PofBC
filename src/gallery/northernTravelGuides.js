@@ -11,7 +11,10 @@ const records = [
     description: 'Provincial destination marketing as printed in the 2012–15 Northern British Columbia Travel Guides.',
     history: 'The 2012 and 2013 guides carry the shaded provincial sunrise and the white Super, Natural lettering. The 2015 guide uses the newer stacked wordmark and maple leaf in two colourways.',
     cover: 'snbc-canada-stacked-positive-2015',
-    initiativeId: 'tourism'
+    initiativeId: 'tourism',
+    // destinationbc.ca: “promoting our Super, Natural British Columbia® brand”, a trade-mark of Destination BC Corp.
+    relations: [{ subject: 'destination-bc', type: 'service-of', label: 'Destination BC’s trade-marked provincial brand' }],
+    extraSources: [{ title: 'Destination BC', url: 'https://www.destinationbc.ca/' }]
   },
   {
     id: 'visitor-centre',
@@ -20,7 +23,10 @@ const records = [
     aliases: ['Visitor Centre', 'Visitor Information Centre'],
     description: 'The Visitor Centre signs printed in the guides pair the yellow information symbol and blue panel with the Super, Natural oval.',
     cover: 'visitor-centre-super-natural-oval-pdf',
-    initiativeId: 'tourism'
+    initiativeId: 'tourism',
+    // The centres are community-owned; the network is Destination BC's Visitor Services Network Program.
+    relations: [{ subject: 'destination-bc', type: 'service-of', label: 'Community-owned centres in Destination BC’s Visitor Services Network Program' }],
+    extraSources: [{ title: 'Destination BC, Visitor Services', url: 'https://www.destinationbc.ca/what-we-do/destination-management/visitor-services/' }]
   },
   {
     id: 'bc-ferries-travel',
@@ -132,9 +138,9 @@ const records = [
   ].map(([id, name, cover, description]) => ({ id, name, cover, description, kind: 'tourism-initiative' }))
 ]
 
-export const NORTHERN_TRAVEL_GUIDE_RECORDS = records.map((record) => ({
+export const NORTHERN_TRAVEL_GUIDE_RECORDS = records.map(({ extraSources = [], ...record }) => ({
   ...record,
-  sources: [...new Map(artwork[record.id].map(({ sourceUrl, sourceFile }) => [
+  sources: [...[...new Map(artwork[record.id].map(({ sourceUrl, sourceFile }) => [
     sourceUrl, { title: sourceFile, url: sourceUrl }
-  ])).values()]
+  ])).values()], ...extraSources]
 }))
