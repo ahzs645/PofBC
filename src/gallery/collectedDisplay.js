@@ -5758,6 +5758,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "bc-cannabis-stores-wordmark-rebuilt": {
+  "light": {
+   "file": "identity-display/bc-cannabis-stores-wordmark-rebuilt.light.svg",
+   "aspect": 11.066,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-cannabis-stores-wordmark-rebuilt.dark.svg",
+   "aspect": 11.066,
+   "recoloured": true
+  }
+ },
+ "bc-cannabis-wholesale-2022-green-vector": {
+  "light": {
+   "file": "identity-display/bc-cannabis-wholesale-2022-green-vector.light.svg",
+   "aspect": 13.1128,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-cannabis-wholesale-2022-green-vector.dark.svg",
+   "aspect": 13.1128,
+   "recoloured": true
+  }
+ },
  "source-expanded-bc-cannabis-wholesale-shipping-2026-black": {
   "light": {
    "file": "identity-display/source-expanded-bc-cannabis-wholesale-shipping-2026-black.light.svg",
@@ -9235,6 +9259,18 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/source-recovered-power-smart-reversed-wordmark.dark.svg",
    "aspect": 6.1113,
    "recoloured": false
+  }
+ },
+ "aircare-wordmark-rebuilt": {
+  "light": {
+   "file": "identity-display/aircare-wordmark-rebuilt.light.svg",
+   "aspect": 5.1279,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/aircare-wordmark-rebuilt.dark.svg",
+   "aspect": 5.1279,
+   "recoloured": true
   }
  },
  "source-recovered-landsure-current-inline": {
@@ -13226,6 +13262,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true,
    "preserveCanvas": true,
    "palette": true
+  }
+ },
+ "tahsis-website-wordmark-rebuilt": {
+  "light": {
+   "file": "identity-display/tahsis-website-wordmark-rebuilt.light.svg",
+   "aspect": 1.6462,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/tahsis-website-wordmark-rebuilt.dark.svg",
+   "aspect": 1.6462,
+   "recoloured": true
   }
  }
 }

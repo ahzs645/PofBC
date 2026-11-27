@@ -1,0 +1,157 @@
+{
+  "source_width": 245,
+  "source_height": 91,
+  "source_blob_sha": "fd93599264ef0ef4170cee927889d8b86af76c1e",
+  "metric": "intersection over union of classified ink masks",
+  "passes": [
+    {
+      "pass": 1,
+      "all": {
+        "iou": 0.9063,
+        "reference_pixels": 3001,
+        "vector_pixels": 2962,
+        "intersection": 2835,
+        "union": 3128,
+        "source_only": 166,
+        "vector_only": 127
+      }
+    },
+    {
+      "pass": 2,
+      "all": {
+        "iou": 0.937,
+        "reference_pixels": 3001,
+        "vector_pixels": 2996,
+        "intersection": 2901,
+        "union": 3096,
+        "source_only": 100,
+        "vector_only": 95
+      }
+    },
+    {
+      "pass": 3,
+      "all": {
+        "iou": 0.9458,
+        "reference_pixels": 3001,
+        "vector_pixels": 3033,
+        "intersection": 2933,
+        "union": 3101,
+        "source_only": 68,
+        "vector_only": 100
+      }
+    },
+    {
+      "pass": 4,
+      "all": {
+        "iou": 0.9617,
+        "reference_pixels": 3001,
+        "vector_pixels": 2990,
+        "intersection": 2937,
+        "union": 3054,
+        "source_only": 64,
+        "vector_only": 53
+      }
+    }
+  ],
+  "final": {
+    "A": {
+      "iou": 0.9666,
+      "reference_pixels": 646,
+      "vector_pixels": 648,
+      "intersection": 636,
+      "union": 658,
+      "source_only": 10,
+      "vector_only": 12
+    },
+    "i": {
+      "iou": 0.9702,
+      "reference_pixels": 297,
+      "vector_pixels": 298,
+      "intersection": 293,
+      "union": 302,
+      "source_only": 4,
+      "vector_only": 5
+    },
+    "r (blue)": {
+      "iou": 0.9664,
+      "reference_pixels": 293,
+      "vector_pixels": 293,
+      "intersection": 288,
+      "union": 298,
+      "source_only": 5,
+      "vector_only": 5
+    },
+    "C": {
+      "iou": 0.9704,
+      "reference_pixels": 634,
+      "vector_pixels": 631,
+      "intersection": 623,
+      "union": 642,
+      "source_only": 11,
+      "vector_only": 8
+    },
+    "a": {
+      "iou": 0.9407,
+      "reference_pixels": 397,
+      "vector_pixels": 389,
+      "intersection": 381,
+      "union": 405,
+      "source_only": 16,
+      "vector_only": 8
+    },
+    "r (green)": {
+      "iou": 0.9662,
+      "reference_pixels": 290,
+      "vector_pixels": 292,
+      "intersection": 286,
+      "union": 296,
+      "source_only": 4,
+      "vector_only": 6
+    },
+    "e": {
+      "iou": 0.9567,
+      "reference_pixels": 386,
+      "vector_pixels": 383,
+      "intersection": 376,
+      "union": 393,
+      "source_only": 10,
+      "vector_only": 7
+    },
+    "registered": {
+      "iou": 0.9,
+      "reference_pixels": 58,
+      "vector_pixels": 56,
+      "intersection": 54,
+      "union": 60,
+      "source_only": 4,
+      "vector_only": 2
+    },
+    "Air": {
+      "iou": 0.9674,
+      "reference_pixels": 1236,
+      "vector_pixels": 1239,
+      "intersection": 1217,
+      "union": 1258,
+      "source_only": 19,
+      "vector_only": 22
+    },
+    "Care": {
+      "iou": 0.9577,
+      "reference_pixels": 1765,
+      "vector_pixels": 1751,
+      "intersection": 1720,
+      "union": 1796,
+      "source_only": 45,
+      "vector_only": 31
+    },
+    "all": {
+      "iou": 0.9617,
+      "reference_pixels": 3001,
+      "vector_pixels": 2990,
+      "intersection": 2937,
+      "union": 3054,
+      "source_only": 64,
+      "vector_only": 53
+    }
+  }
+}

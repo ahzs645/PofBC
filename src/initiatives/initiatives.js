@@ -25,6 +25,19 @@ const tourismCover = {
 
 export const INITIATIVES = [
   ...FIRE_SMART_INITIATIVES,
+  {
+    id: 'power-smart', title: 'Power Smart', subtitle: 'BC Hydro · energy efficiency since 1989',
+    summary: 'BC Hydro launched Power Smart in 1989 to help British Columbians use electricity more efficiently. The program’s own wordmark is documented separately from BC Hydro’s corporate signature.',
+    cover: {
+      file: 'identity-display/source-recovered-power-smart-reversed-wordmark.light.svg',
+      alt: 'Power Smart wordmark',
+      caption: 'From the 2013 Power Smart Forum cover; gallery display adapted for a light background'
+    },
+    tags: ['Energy efficiency', 'Conservation', 'Logos', 'Timeline'],
+    searchTerms: ['PowerSmart', 'BC Hydro', 'Power Smart 2.0', 'electricity', 'demand response'],
+    exploreLabel: 'Explore the Power Smart program and its wordmark',
+    relatedBodyIds: ['power-smart', 'bc-hydro']
+  },
   bearAwareIndex,
   {
     id: 'buy-bc', title: 'Buy BC', subtitle: 'British Columbia’s food and beverage marketing program',
@@ -458,6 +471,10 @@ const LOADERS = {
   'pacific-gateway': async () => {
     const { pacificGatewayDetail } = await import('./pacificGateway.js')
     return pacificGatewayDetail(initiativeById('pacific-gateway'))
+  },
+  'power-smart': async () => {
+    const { powerSmartDetail } = await import('./powerSmart.js')
+    return powerSmartDetail(initiativeById('power-smart'))
   },
   gamesense: async () => gamesenseDetail(),
   tourism: async () => {

@@ -1628,7 +1628,7 @@ export const FOLDED_UNDER = [
 ]
 
 // Program collections link to their histories in the initiatives register.
-for (const program of ['gamesense', 'bc-youth']) {
+for (const program of ['gamesense', 'bc-youth', 'power-smart']) {
   GALLERY_COLLECTIONS.find((collection) => collection.id === 'collected-' + program).initiativeId = program
 }
 
