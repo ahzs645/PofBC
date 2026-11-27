@@ -176,7 +176,9 @@ test('historical acquisitions do not replace the verified current collection cov
   for (const [owner, cover] of Object.entries(currentCovers)) {
     const collection = collectionById(`collected-${owner}`)
     assert.equal(collection.cover, cover, owner)
-    assert.equal(entriesOf(collection)[0].id, cover, owner)
+    // A line of names lists its oldest name first; its cover leads the present name's era instead.
+    const current = collection.eras ? collection.eras.at(-1).entries : entriesOf(collection)
+    assert.equal(current[0].id, cover, owner)
     assert.notEqual(findGalleryEntry(cover).asset.role, 'historical', owner)
     for (const asset of recovery.additions[owner].filter(({ role }) => role === 'historical')) {
       assert.ok(findGalleryEntry(asset.id), `${asset.id}: historical artwork remains available`)

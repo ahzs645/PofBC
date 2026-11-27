@@ -115,5 +115,20 @@ for (const relationship of relationships) {
   }
 }
 
+// A collection that holds a line of names (CONTINUATIONS, and the researched histories with
+// graphNodes) is read by its own id. That id answers for the whole line: every name's history,
+// less the steps within the line, which its eras already show. So SkilledTradesBC's page keeps the
+// commission its first name replaced, and Innovate BC's the 2004 merger that formed its first name.
+for (const collection of GALLERY_COLLECTIONS) {
+  const nodes = nodesOf(collection)
+  const key = collection.historyId ?? collection.graphNode
+  if (!key || nodes.length < 2) continue
+  const ids = [...new Set([key, ...nodes])]
+  const outside = (side) => ids.flatMap((id) => historyByBody.get(id)?.[side] ?? []).filter((row) => row.collection !== collection)
+  const combined = { predecessors: outside('predecessors'), successors: outside('successors') }
+  if (combined.predecessors.length || combined.successors.length) historyByBody.set(key, combined)
+  else historyByBody.delete(key)
+}
+
 export const galleryHistoryOf = (id) => historyByBody.get(id) ?? noHistory
 export const hasGalleryHistory = (id) => historyByBody.has(id)

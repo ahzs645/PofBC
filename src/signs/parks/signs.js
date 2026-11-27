@@ -20,8 +20,8 @@ const REPORT_1971_COLOUR = {
 const LINKS = [
   {
     label: 'The department’s marks',
-    note: 'Logos · Recreation and Conservation: the five square symbols, among them the Parks Branch’s spirals',
-    to: { view: 'gallery', logos: 'recreation-conservation' }
+    note: 'Departmental Logos · Recreation and Conservation: the five square symbols, among them the Parks Branch’s spirals',
+    to: { view: 'internal', internal: 'recreation-conservation' }
   },
   {
     label: 'BC Parks, from 1971',

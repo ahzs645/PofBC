@@ -50,7 +50,8 @@ export const RELATED_BODY_KINDS = {
   'public-university': 'Public university',
   'public-institute': 'Public institute',
   'charitable-society': 'Charitable society',
-  'corporate-subsidiary': 'Corporate subsidiary'
+  'corporate-subsidiary': 'Corporate subsidiary',
+  'gaming-centre': 'Community gaming centres'
 }
 
 /**
@@ -61,7 +62,7 @@ export const RELATED_BODY_KINDS = {
 export const RELATED_BODY_GROUPS = [
   { id: 'school-districts', label: 'School districts', kinds: ['school-district', 'francophone-school-district'] },
   { id: 'transit', label: 'Transit in Metro Vancouver', kinds: ['regional-transportation-authority', 'transit-company', 'transit-police'] },
-  { id: 'services', label: 'Regional and public services', kinds: ['regional-federation', 'ferry-authority', 'emergency-communications', 'statutory-authority', 'independent-regulator', 'corporate-subsidiary'] },
+  { id: 'services', label: 'Regional and public services', kinds: ['regional-federation', 'ferry-authority', 'emergency-communications', 'statutory-authority', 'independent-regulator', 'corporate-subsidiary', 'gaming-centre'] },
   { id: 'tourism', label: 'Tourism and destination management', kinds: ['tourism-association', 'tourism-region', 'tourism-collaboration', 'tourism-enterprise', 'tourism-initiative'] },
   { id: 'development', label: 'Economic development', kinds: ['development-trust', 'development-society'] },
   { id: 'rural-health', label: 'Rural health and medical practice', kinds: ['nonprofit-society', 'joint-committee', 'professional-association', 'medical-division', 'clinical-network', 'health-research-network'] },

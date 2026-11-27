@@ -55,11 +55,26 @@ const records = [
   }, {
     id: 'fish-wildlife-compensation-program', name: 'Fish & Wildlife Compensation Program', kind: 'service-brand', shelf: 'initiatives',
     family: 'hydro', aliases: ['FWCP', 'Columbia Basin Fish & Wildlife Compensation Program', 'Peace/Williston Fish & Wildlife Compensation Program'], current: true, from: 1988,
-    notes: 'BC Hydro funds compensation work in watersheds affected by its dams. The governance manual dates the Peace program to 1988 and Columbia to 1993. Columbia’s own anniversary badge counts from 1995. The reports identify the Province, Fisheries and Oceans Canada, First Nations and the public as participants, with Columbia Basin Trust partnering on East Kootenay work.',
+    notes: 'BC Hydro funds compensation work in watersheds affected by its dams. The governance manual dates the Peace program to 1988 and Columbia to 1993. Columbia’s own anniversary badge counts from 1995. The reports identify the Province, Fisheries and Oceans Canada, First Nations and the public as participants, with Columbia Basin Trust partnering on East Kootenay work. ' +
+      'The program describes itself as a partnership of BC Hydro, the Province, Fisheries and Oceans Canada, First Nations and public interest holders, funded annually by BC Hydro: in the Columbia and Peace regions it is how BC Hydro meets its water licence conditions, and in the Coastal region BC Hydro’s contribution is voluntary. Its site names the Province’s ministry once, in 2019: the Ministry of Forests, Lands, Natural Resource Operations and Rural Development managed that year’s evaluation and financial audit. It names no later ministry.',
     sources: [publication('columbia'), publication('columbiaAnnual'), publication('peace'),
       source('Program governance manual, 2024', 'https://fwcp.ca/app/uploads/2024/04/FWCP-Governance-Manual-2024.pdf'),
-      source('Peace/Williston wildlife report 40, early regional signature', 'https://a100.gov.bc.ca/pub/acat/documents/r40730/pwfwcp_report_no_040_1388807711941_8805259919.pdf')],
+      source('Peace/Williston wildlife report 40, early regional signature', 'https://a100.gov.bc.ca/pub/acat/documents/r40730/pwfwcp_report_no_040_1388807711941_8805259919.pdf'),
+      source('FWCP, Our Story', 'https://fwcp.ca/our-story.html'),
+      source('FWCP, Columbia Region', 'https://fwcp.ca/regions/columbia.html'),
+      source('FWCP, Evaluation & Financial Audit 2019', 'https://fwcp.ca/our-story/evaluation---financial-audit---2019.html')],
     fundingHistory: [{
+      period: 'Annually', role: 'Funder', organizations: [gallery('BC Hydro', 'bc-hydro')],
+      note: 'BC Hydro funds the program each year to meet its water licence conditions in the Columbia and Peace regions, and voluntarily in the Coastal region. Several Columbia contracts are administered by BC Hydro on the program’s behalf.',
+      source: source('FWCP, Our Story', 'https://fwcp.ca/our-story.html')
+    }, {
+      period: '2019', role: 'Provincial partner', organizations: [{
+        label: 'Ministry of Forests, Lands, Natural Resource Operations and Rural Development',
+        to: { view: 'government', node: 'ministry-of-forests-lands-natural-resource-operations-and-rural-development-2017', year: 2019 }
+      }],
+      note: 'Named for the Province of B.C. as managing the 2019 evaluation and financial audit. Columbia projects are also delivered with the Province through a letter of agreement. No later ministry is named.',
+      source: source('FWCP, Evaluation & Financial Audit 2019', 'https://fwcp.ca/our-story/evaluation---financial-audit---2019.html')
+    }, {
       period: '2013/14', role: 'Regional project partner', organizations: [gallery('Columbia Basin Trust', 'collected-columbia-basin-trust')],
       note: 'Page 3 credits joint work in the East Kootenay. BC Hydro is the compensation program’s funder.', source: publication('columbiaAnnual')
     }],

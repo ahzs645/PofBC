@@ -1,0 +1,920 @@
+{
+  "generated": "2026-11-27",
+  "basis": {
+    "collections": 626,
+    "entries": 1252,
+    "registerSubjects": 863,
+    "existingFoldedChildren": 41,
+    "note": "Read from the working tree on 2026-11-27 (HEAD d009cd29 plus the user’s staged, uncommitted gallery/departmental edits, which were briefly stashed and restored during the review). Ids verified against GALLERY_COLLECTIONS; folds checked against FOLDED_UNDER (no folded parent, no refolded child, no existing pair, no proposed child as a proposed parent)."
+  },
+  "foldUnder": [
+    {
+      "parent": "collected-islands-trust",
+      "child": "collected-islands-trust-conservancy",
+      "confidence": "high",
+      "relation": "branch",
+      "evidence": "register: islands-trust-conservancy —part-of→ islands-trust (“Conservation arm of the Islands Trust federation”) @ src/gallery/documentCollections.js:39; intro of collected-islands-trust-conservancy: “The Fund and Board took the Conservancy name on May 31, 2018” @ src/gallery/documentCollections.js:36"
+    },
+    {
+      "parent": "collected-islands-trust",
+      "child": "collected-islands-2050",
+      "confidence": "high",
+      "relation": "program",
+      "evidence": "register: islands-2050 —service-of→ islands-trust (“Policy Statement review led by Islands Trust”) @ src/gallery/documentCollections.js:114; intro of collected-islands-2050: “Islands Trust began public engagement on amendments to its Policy Statement in 2019” @ src/gallery/documentCollections.js:112"
+    },
+    {
+      "parent": "collected-legislative-assembly",
+      "child": "collected-legislative-library-bc",
+      "confidence": "high",
+      "relation": "branch",
+      "evidence": "register: legislative-library-bc —part-of→ legislative-assembly @ src/gallery/geologicalSurveyAndLibrary.js:135; intro of collected-legislative-library-bc: “The Library identifies a linocut of its entrance as its logo” @ src/gallery/geologicalSurveyAndLibrary.js:74"
+    },
+    {
+      "parent": "collected-university-of-british-columbia",
+      "child": "collected-ubc-okanagan-campus",
+      "confidence": "high",
+      "relation": "campus",
+      "evidence": "register: ubc-okanagan-campus —part-of→ university-of-british-columbia @ research/identity/postsecondary-2026-11-24/source-register.json:1554; register: ubc-okanagan-campus —shares-identity-with→ university-of-british-columbia @ research/identity/postsecondary-2026-11-24/source-register.json:1524; intro of collected-ubc-okanagan-campus: “not a separate public university” @ generated intro (collections.js)"
+    },
+    {
+      "parent": "collected-4vi-group",
+      "child": "collected-4tvi-stewardship",
+      "confidence": "high",
+      "relation": "division",
+      "evidence": "register: 4tvi-stewardship —part-of→ 4vi-group (“Operation within the 4VI social enterprise group”) @ src/gallery/tourismPartners.js:32; intro of collected-4vi-group: “brings together 4TVI Stewardship, 4EVER Strategies and 4GOOD Social Impact Fund” @ src/gallery/tourismPartners.js:121"
+    },
+    {
+      "parent": "collected-4vi-group",
+      "child": "collected-4ever-strategies",
+      "confidence": "high",
+      "relation": "division",
+      "evidence": "register: 4ever-strategies —part-of→ 4vi-group (“Operation within the 4VI social enterprise group”) @ src/gallery/tourismPartners.js:32"
+    },
+    {
+      "parent": "collected-4vi-group",
+      "child": "collected-4good-social-impact-fund",
+      "confidence": "high",
+      "relation": "division",
+      "evidence": "register: 4good-social-impact-fund —part-of→ 4vi-group (“Operation within the 4VI social enterprise group”) @ src/gallery/tourismPartners.js:32"
+    },
+    {
+      "parent": "tourism-bc-destination-bc",
+      "child": "collected-vancouver-coast-mountains",
+      "confidence": "high",
+      "relation": "branch",
+      "evidence": "register: vancouver-coast-mountains —operated-by→ destination-bc (“Regional operation managed by Destination BC”) @ src/gallery/tourismPartners.js:48; intro of collected-vancouver-coast-mountains: “Destination BC directly manages this regional tourism operation” @ src/gallery/tourismPartners.js:46",
+      "note": "Cross-shelf fold (tourism → bodies), as Metro Vancouver Regional Parks already is. The other five regional tourism organizations are independent societies and are crossLinks, not folds."
+    },
+    {
+      "parent": "collected-bc-snowmobile-federation",
+      "child": "collected-lets-ride-bc",
+      "confidence": "high",
+      "relation": "program",
+      "evidence": "register: lets-ride-bc —operated-by→ bc-snowmobile-federation (“Tourism program of”) @ src/gallery/tourismSectorPartners.js:246; intro of collected-lets-ride-bc: “visitor program for snowmobiling destinations” @ src/gallery/tourismSectorPartners.js:244"
+    },
+    {
+      "parent": "collected-bc-association-farmers-markets",
+      "child": "collected-bc-farmers-market-trail",
+      "confidence": "high",
+      "relation": "program",
+      "evidence": "register: bc-farmers-market-trail —operated-by→ bc-association-farmers-markets (“Campaign operated by”) @ src/gallery/tourismSectorPartners.js:73; intro of collected-bc-farmers-market-trail: “launched the website in 2018” @ src/gallery/tourismSectorPartners.js:72"
+    },
+    {
+      "parent": "collected-bc-regional-tourism-secretariat",
+      "child": "collected-bc-tourism-sustainability-network",
+      "confidence": "high",
+      "relation": "program",
+      "evidence": "register: bc-tourism-sustainability-network —operated-by→ bc-regional-tourism-secretariat (“Operated by the BC Regional Tourism Secretariat”) @ src/gallery/tourismPartners.js:184; intro of collected-bc-tourism-sustainability-network: “The network began in 2022 under the BC Regional Tourism Secretariat” @ src/gallery/tourismPartners.js:183"
+    },
+    {
+      "parent": "collected-bc-injury-research-and-prevention-unit",
+      "child": "collected-concussion-awareness-training-tool",
+      "confidence": "high",
+      "relation": "program",
+      "evidence": "register: concussion-awareness-training-tool —service-of→ bc-injury-research-and-prevention-unit (“Developed by BCIRPU”) @ src/gallery/documentCollections.js:86; intro of collected-concussion-awareness-training-tool: “BCIRPU launched the first CATT course” @ src/gallery/documentCollections.js:84"
+    },
+    {
+      "parent": "collected-capilano-university",
+      "child": "collected-capilano-college",
+      "confidence": "high",
+      "relation": "predecessor-name",
+      "evidence": "register: capilano-college —renamed-to→ capilano-university @ research/identity/postsecondary-2026-11-24/source-register.json:1792; register: capilano-university —renamed-from→ capilano-college @ research/identity/postsecondary-2026-11-24/source-register.json:853"
+    },
+    {
+      "parent": "collected-emily-carr-university",
+      "child": "collected-emily-carr-institute-of-art-and-design",
+      "confidence": "high",
+      "relation": "predecessor-name",
+      "evidence": "register: emily-carr-institute-of-art-and-design —renamed-to→ emily-carr-university @ research/identity/postsecondary-2026-11-24/source-register.json:1765; register: emily-carr-university —renamed-from→ emily-carr-institute-of-art-and-design @ research/identity/postsecondary-2026-11-24/source-register.json:911"
+    },
+    {
+      "parent": "collected-kwantlen-polytechnic-university",
+      "child": "collected-kwantlen-university-college",
+      "confidence": "high",
+      "relation": "predecessor-name",
+      "evidence": "register: kwantlen-university-college —renamed-to→ kwantlen-polytechnic-university @ research/identity/postsecondary-2026-11-24/source-register.json:1448; register: kwantlen-polytechnic-university —renamed-from→ kwantlen-university-college @ research/identity/postsecondary-2026-11-24/source-register.json:963"
+    },
+    {
+      "parent": "collected-kwantlen-polytechnic-university",
+      "child": "collected-kwantlen-college",
+      "confidence": "high",
+      "relation": "predecessor-name",
+      "evidence": "register: kwantlen-college —renamed-to→ kwantlen-university-college @ research/identity/postsecondary-2026-11-24/source-register.json:1421; chain continues: kwantlen-university-college renamed-to kwantlen-polytechnic-university (above); folded to the current name directly because FOLDED_UNDER has one level"
+    },
+    {
+      "parent": "collected-thompson-rivers-university",
+      "child": "collected-university-college-of-the-cariboo",
+      "confidence": "high",
+      "relation": "predecessor-name",
+      "evidence": "register: university-college-of-the-cariboo —renamed-to→ thompson-rivers-university @ research/identity/postsecondary-2026-11-24/source-register.json:1861; register: thompson-rivers-university —renamed-from→ university-college-of-the-cariboo @ research/identity/postsecondary-2026-11-24/source-register.json:1029"
+    },
+    {
+      "parent": "collected-thompson-rivers-university",
+      "child": "collected-cariboo-college",
+      "confidence": "high",
+      "relation": "predecessor-name",
+      "evidence": "register: cariboo-college —renamed-to→ university-college-of-the-cariboo @ research/identity/postsecondary-2026-11-24/source-register.json:1824; chain continues: university-college-of-the-cariboo renamed-to thompson-rivers-university; one level only"
+    },
+    {
+      "parent": "collected-university-of-the-fraser-valley",
+      "child": "collected-university-college-of-the-fraser-valley",
+      "confidence": "high",
+      "relation": "predecessor-name",
+      "evidence": "register: university-college-of-the-fraser-valley —renamed-to→ university-of-the-fraser-valley @ research/identity/postsecondary-2026-11-24/source-register.json:1947; register: university-of-the-fraser-valley —renamed-from→ university-college-of-the-fraser-valley @ research/identity/postsecondary-2026-11-24/source-register.json:1081"
+    },
+    {
+      "parent": "collected-university-of-the-fraser-valley",
+      "child": "collected-fraser-valley-college",
+      "confidence": "high",
+      "relation": "predecessor-name",
+      "evidence": "register: fraser-valley-college —renamed-to→ university-college-of-the-fraser-valley @ research/identity/postsecondary-2026-11-24/source-register.json:1920; chain continues: university-college-of-the-fraser-valley renamed-to university-of-the-fraser-valley; one level only"
+    },
+    {
+      "parent": "collected-skilledtradesbc",
+      "child": "collected-industry-training-authority",
+      "confidence": "high",
+      "relation": "predecessor-name",
+      "evidence": "register: industry-training-authority —renamed-to→ skilledtradesbc @ src/gallery/identitySubjects.js:2683; graph: HISTORICAL_BODIES industry-training-authority (agency, 2004-01-02–2022-12-01) became → skilledtradesbc @ src/government/historyData.js:365; intro of collected-skilledtradesbc: “The Industry Training Authority continued under the name SkilledTradesBC on December 1, 2022” @ src/gallery/collectedData.js:1320"
+    },
+    {
+      "parent": "collected-technical-safety-bc",
+      "child": "collected-bc-safety-authority",
+      "confidence": "high",
+      "relation": "predecessor-name",
+      "evidence": "register: bc-safety-authority —predecessor-of→ technical-safety-bc (“Earlier operating name”) @ src/gallery/identitySubjects.js:1782; graph: HISTORICAL_BODIES bc-safety-authority (agency, 2004–2017-09-20) became → technical-safety-bc @ src/government/historyData.js:367; intro of collected-bc-safety-authority: “It adopted Technical Safety BC as its operating name in 2017” @ src/gallery/recoveredIdentityData.js:10002"
+    },
+    {
+      "parent": "collected-innovate-bc",
+      "child": "collected-bc-innovation-council",
+      "confidence": "high",
+      "relation": "predecessor-name",
+      "evidence": "graph: HISTORICAL_BODIES bc-innovation-council (agency, 2004–2018) became → innovate-bc @ src/government/historyData.js:366; register: bc-innovation-council —predecessor-of→ innovate-bc @ src/gallery/identitySubjects.js:2593; intro of collected-bc-innovation-council: “The Province renamed the council Innovate BC in March 2018” @ src/gallery/recoveredIdentityData.js:9479"
+    },
+    {
+      "parent": "collected-bc-enterprise-corporation",
+      "child": "collected-bc-place-ltd",
+      "confidence": "high",
+      "relation": "predecessor-name",
+      "evidence": "graph: HISTORICAL_BODIES bc-place-ltd (crown-corporation, 1980-03-25–1987-03-31) became → bc-enterprise-corporation [“statutory rename to British Columbia Enterprise Corporation, effective 31 March 1987 under…”] @ src/government/historyData.js:327; intro of collected-bc-enterprise-corporation: “BC Place Ltd. renamed with effect from 31 March 1987” @ src/gallery/collectedData.js:5342",
+      "note": "Same company renamed. BC Place Ltd. is the better-known name; if the user prefers the older name as the visible parent, reverse the pair. Its stadium marks stay with collected-sub-bc-place (crossLink)."
+    },
+    {
+      "parent": "collected-innovate-bc",
+      "child": "collected-science-council-of-bc",
+      "confidence": "medium",
+      "relation": "predecessor-name",
+      "evidence": "graph: HISTORICAL_BODIES science-council-of-bc (agency, 1978–2004) became → bc-innovation-council @ src/government/historyData.js:321; register: science-council-of-bc —predecessor-of→ bc-innovation-council @ src/gallery/identitySubjects.js:2626; intro of collected-science-council-of-bc: “It took the name Innovation and Science Council of British Columbia in March 2003” @ src/gallery/recoveredIdentityData.js:9262; graph description: “its Act was retitled the Innovation and Science Council Act in 2003 and it became the BC Innovation Council in 2004” @ src/government/historyData.js:320",
+      "note": "Renamed in 2003, then merged with the Advanced Systems Institute (2004) into the BC Innovation Council, renamed Innovate BC (2018). The merger makes legal continuity less certain than the 2018 rename; one level only, so it folds to Innovate BC directly."
+    },
+    {
+      "parent": "collected-selkirk-college",
+      "child": "collected-kootenay-school-of-the-arts",
+      "confidence": "medium",
+      "relation": "absorbed-school",
+      "evidence": "register: kootenay-school-of-the-arts —amalgamated-into→ selkirk-college @ research/identity/postsecondary-2026-11-24/source-register.json:1602; register: selkirk-college —absorbed→ kootenay-school-of-the-arts @ research/identity/postsecondary-2026-11-24/source-register.json:706; intro of collected-kootenay-school-of-the-arts: “Selkirk confirms the school became part of the college in July 2006” @ generated intro (collections.js)",
+      "note": "The intro cautions that continuity with the predecessor cooperative is not established; KSA now operates as a school of Selkirk."
+    },
+    {
+      "parent": "collected-4vi-group",
+      "child": "collected-tourism-vancouver-island",
+      "confidence": "medium",
+      "relation": "predecessor-name",
+      "evidence": "register: tourism-vancouver-island —related-to→ 4vi-group (“The group grew out of the 2022 social enterprise transition”) @ src/gallery/tourismPartners.js:113; intro of collected-tourism-vancouver-island: “The society began doing business as 4VI in April 2022” @ src/gallery/tourismPartners.js:111",
+      "note": "Register says only related-to. The society renamed itself 4VI; whether its successor is the group or 4TVI Stewardship is not settled in the register."
+    },
+    {
+      "parent": "collected-forrex",
+      "child": "collected-siferp",
+      "confidence": "medium",
+      "relation": "predecessor-name",
+      "evidence": "intro of collected-siferp: “was the first operating name of the Southern Interior Extension and Research Society” @ src/gallery/forrex.js:6; intro of collected-siferp: “the society adopted the operating name FORREX” @ src/gallery/forrex.js:6; no register relation recorded; src/gallery/movedGalleryPlaces.js redirects the forrex-siferp mark from collected-forrex to collected-siferp, so the split is recent and deliberate",
+      "note": "Same society, earlier operating name. Folding keeps SIFERP a separate collection but nests it."
+    },
+    {
+      "parent": "collected-bc-injury-research-and-prevention-unit",
+      "child": "collected-active-safe-central",
+      "confidence": "medium",
+      "relation": "program",
+      "evidence": "register: active-safe-central —related-to→ bc-injury-research-and-prevention-unit (“Developed with sport and injury-prevention partners”) @ src/gallery/documentCollections.js:96; intro of collected-active-safe-central: “BCIRPU and its sport and injury-prevention partners launched Active & Safe Central” @ src/gallery/documentCollections.js:94"
+    },
+    {
+      "parent": "collected-bc-injury-research-and-prevention-unit",
+      "child": "collected-cost-of-injury",
+      "confidence": "medium",
+      "relation": "program",
+      "evidence": "register: cost-of-injury —related-to→ bc-injury-research-and-prevention-unit (“Credited presenter on the 2023/24 signature”) @ src/gallery/documentCollections.js:101; intro of collected-cost-of-injury: “BCIRPU announced the interactive tool on November 20, 2022” @ src/gallery/documentCollections.js:99"
+    },
+    {
+      "parent": "collected-bc-injury-research-and-prevention-unit",
+      "child": "collected-prevent-shaken-baby-syndrome-bc",
+      "confidence": "medium",
+      "relation": "program",
+      "evidence": "register: prevent-shaken-baby-syndrome-bc —related-to→ bc-injury-research-and-prevention-unit (“Based at the injury research unit”) @ src/gallery/documentCollections.js:91; register: prevent-shaken-baby-syndrome-bc —service-of→ sub-bc-childrens-hospital (“Provincial hospital program”) @ src/gallery/documentCollections.js:91; intro of collected-prevent-shaken-baby-syndrome-bc: “This provincial BC Children” @ src/gallery/documentCollections.js:89",
+      "note": "Its owning program is BC Children’s Hospital, which is already folded under PHSA (see conflicts); the unit it is based at is the nearest foldable parent."
+    },
+    {
+      "parent": "collected-bc-lodging-campgrounds-association",
+      "child": "collected-camping-rving-bc-coalition",
+      "confidence": "medium",
+      "relation": "program",
+      "evidence": "register: camping-rving-bc-coalition —operated-by→ bc-lodging-campgrounds-association (“Coalition managed by”) @ src/gallery/tourismSectorPartners.js:63; intro of collected-camping-rving-bc-coalition: “Destination BC identifies the BC Lodging and Campgrounds Association as the sector lead in 2020” @ src/gallery/tourismSectorPartners.js:62",
+      "note": "A coalition managed by the association, not wholly its own program."
+    },
+    {
+      "parent": "collected-rural-coordination-centre-bc",
+      "child": "collected-real-time-virtual-support",
+      "confidence": "medium",
+      "relation": "program",
+      "evidence": "register: rural-coordination-centre-bc —related-to→ real-time-virtual-support (“Virtual care initiative”) @ src/government/ruralHealth.js:88; intro of collected-real-time-virtual-support: “RCCbc and its partners connect rural healthcare providers with clinical support through RTVS” @ src/government/ruralHealth.js:64"
+    },
+    {
+      "parent": "bc-hydro",
+      "child": "collected-fish-wildlife-compensation-program",
+      "confidence": "medium",
+      "relation": "program",
+      "evidence": "register: fish-wildlife-compensation-program —related-to→ bc-hydro (“Funds compensation for the effects of hydroelectric dams”) @ src/gallery/documentCollections.js:66; register kind: fish-wildlife-compensation-program is service-brand (hydro) @ src/gallery/documentCollections.js:56; intro of collected-fish-wildlife-compensation-program: “BC Hydro funds compensation work in watersheds affected by its dams” @ src/gallery/documentCollections.js:58",
+      "note": "A BC Hydro-funded partnership with the Province, DFO and First Nations; register family is hydro but the relation is only related-to."
+    },
+    {
+      "parent": "collected-municipality-west-vancouver",
+      "child": "collected-west-vancouver-blue-bus",
+      "confidence": "medium",
+      "relation": "service-brand",
+      "evidence": "register kind: west-vancouver-blue-bus is municipal-service (transit) @ src/gallery/identitySubjects.js:850; intro of collected-west-vancouver-blue-bus: “Municipal service” @ src/gallery/identitySubjects.js:71; register: west-vancouver-blue-bus —related-to→ translink (“Regional service partnership”) @ src/gallery/identitySubjects.js:874",
+      "note": "Municipal service of the District of West Vancouver, run under contract to TransLink. No part-of relation is recorded; it currently sits in the municipalities shelf as if it were a municipality."
+    },
+    {
+      "parent": "collected-emergency-health-services-commission",
+      "child": "collected-bc-ambulance-service",
+      "confidence": "medium",
+      "relation": "service-brand",
+      "evidence": "register: bc-ambulance-service —service-of→ bc-emergency-health-services @ src/gallery/identitySubjects.js:2016; graph: HISTORICAL_BODIES emergency-health-services-commission responsible note “Summaries list the BC Ambulance Service (the Commission’s operating service)” @ src/government/historyData.js:310",
+      "note": "The register’s parent (BC Emergency Health Services) is folded under PHSA, so cannot take children (see conflicts). Alternative: fold under collected-provincial-health-services-authority beside BCEHS."
+    },
+    {
+      "parent": "tourism-bc-destination-bc",
+      "child": "collected-destination-brand",
+      "confidence": "medium",
+      "relation": "service-brand",
+      "evidence": "register kind: destination-brand is tourism-initiative (tourism-destination-management) @ src/gallery/northernTravelGuides.js:7; intro of collected-destination-brand: “Provincial destination marketing as printed in the 2012–15 Northern British Columbia Travel Guides” @ src/gallery/northernTravelGuides.js:11",
+      "note": "Super, Natural British Columbia is the Province’s destination brand, managed by Destination BC in the 2012–15 guides held here. No register relation is recorded; add one before folding."
+    },
+    {
+      "parent": "tourism-bc-destination-bc",
+      "child": "collected-visitor-centre",
+      "confidence": "low",
+      "relation": "program",
+      "evidence": "register kind: visitor-centre is tourism-initiative (tourism-destination-management) @ src/gallery/northernTravelGuides.js:17; intro of collected-visitor-centre: “pair the yellow information symbol and blue panel with the Super, Natural oval” @ src/gallery/northernTravelGuides.js:21",
+      "note": "The Visitor Centre network is Destination BC’s program, but neither the register nor the intro says so."
+    },
+    {
+      "parent": "bclc",
+      "child": "collected-chances-gaming",
+      "confidence": "low",
+      "relation": "service-brand",
+      "evidence": "register kind: chances-gaming is tourism-initiative (tourism-destination-management) @ generated subject; intro of collected-chances-gaming: “Terrace, Dawson Creek and Fort St. John carried separate venue signatures” @ src/gallery/northernTravelGuides.js:126",
+      "note": "Chances is BCLC’s community gaming centre brand, run by private service providers. Not in the register as BCLC’s; verify before folding."
+    },
+    {
+      "parent": "collected-bc-craft-brewers-guild",
+      "child": "collected-bc-ale-trail",
+      "confidence": "low",
+      "relation": "program",
+      "evidence": "register: bc-ale-trail —operated-by→ bc-craft-brewers-guild (“Program delivered with”) @ src/gallery/tourismSectorPartners.js:42",
+      "note": "“Delivered with” is a partnership; the intro names a project team, not the Guild."
+    },
+    {
+      "parent": "tourism-recreation-culture",
+      "child": "superhost",
+      "confidence": "low",
+      "relation": "program",
+      "evidence": "register: superhost —related-to→ ministry-of-tourism-recreation-and-culture-1986 (“The ministry that followed, from November 1986”) @ src/gallery/reconciledSubjects.js:423; intro of superhost: “training program for the people who served visitors in the Expo 86 years” @ generated intro (collections.js)",
+      "note": "SuperHost belongs to the Ministry of Tourism (1980–86, no collection); the 1986 ministry followed it. Relevant only if both move to Departmental Logos together."
+    }
+  ],
+  "moveToDepartmental": [
+    {
+      "collection": "bc-lands",
+      "department": "BC Lands (Crown lands administration; Lands Operations Division), Ministry of Crown Lands / Environment, Lands and Parks",
+      "years": "1986–88 form; 1994 fax",
+      "confidence": "high",
+      "type": "former branch",
+      "evidence": "register kind: bc-lands is government-branch (provincial-programs) @ src/gallery/collections.js:1315; intro of bc-lands: “A 1994 Lands Operations Division fax also shows the badge” @ generated intro (collections.js); not a body in the atlas (src/gallery/reconciledSubjects.js:31)"
+    },
+    {
+      "collection": "bc-environment",
+      "department": "Ministry of Environment",
+      "years": "1988–1991",
+      "confidence": "high",
+      "type": "former ministry",
+      "evidence": "register kind: ministry-of-environment-1988 is government-branch (provincial-programs) @ src/gallery/reconciledSubjects.js:334; graphNode ministry-of-environment-1988 = ministry episode “Ministry of Environment”, 1988–1991 @ src/ministries/history.js:112; intro of bc-environment: “Ministry of Environment, 1988–1991” @ src/gallery/collections.js:1335"
+    },
+    {
+      "collection": "tourism-recreation-culture",
+      "department": "Ministry of Tourism, Recreation and Culture",
+      "years": "1986–1988",
+      "confidence": "high",
+      "type": "former ministry",
+      "evidence": "register kind: ministry-of-tourism-recreation-and-culture-1986 is government-branch (provincial-programs) @ src/gallery/reconciledSubjects.js:355; graphNode ministry-of-tourism-recreation-and-culture-1986 = ministry episode, 1986–1988 @ src/ministries/history.js:110 (renamed from Ministry of Tourism, :398); register: ministry-of-tourism-recreation-and-culture-1986 —related-to→ department-of-travel-industry (“An earlier department for the Province’s tourism”) @ src/gallery/reconciledSubjects.js:371"
+    },
+    {
+      "collection": "collected-bc-public-health-service",
+      "department": "BC Public Health Service / Health Branch, Department of Health Services and Hospital Insurance",
+      "years": "c. 1961",
+      "confidence": "high",
+      "type": "former departmental service",
+      "evidence": "register: bc-public-health-service —service-of→ department-of-health-services-and-hospital-insurance-1959 (“Provincial department responsible for public health in 1961”) @ src/gallery/healthCouncilHistory.js:39; intro of collected-bc-public-health-service: “The provincial Health Branch had responsibility for public health at that date” @ src/gallery/healthCouncilHistory.js:19"
+    },
+    {
+      "collection": "collected-shared-services-bc",
+      "department": "Solutions BC / Shared Services BC, Ministry of Management Services (later Labour and Citizens’ Services)",
+      "years": "2003–c. 2015",
+      "confidence": "high",
+      "type": "former branch",
+      "evidence": "register kind: shared-services-bc is government-branch (provincial-programs) @ src/gallery/reconciledSubjects.js:237; graph: HISTORICAL_BODIES shared-services-bc (agency, 2003-04-01–) @ src/government/historyData.js:505; intro of collected-shared-services-bc: “launched on 1 April 2003 in the Ministry of Management Services” @ src/gallery/collections.js:1528"
+    },
+    {
+      "collection": "specimens-provincial-emergency-program",
+      "department": "Provincial Emergency Program (became Emergency Management BC, 2006)",
+      "years": "1993–2003 artwork",
+      "confidence": "medium",
+      "type": "former branch/program",
+      "evidence": "register kind: provincial-emergency-program is service-brand (provincial-administration) @ src/gallery/reconciledSubjects.js:112; intro of specimens-provincial-emergency-program: “Provincial Emergency Program processed applications and claims for JEPP” @ src/gallery/collections.js:1498",
+      "note": "No graph node; its program status is known, its departmental placement (Solicitor General / Public Safety) is not recorded in the repo."
+    },
+    {
+      "collection": "superhost",
+      "department": "Ministry of Tourism (hospitality-training program)",
+      "years": "1985–86 (Expo 86 years)",
+      "confidence": "medium",
+      "type": "ministry program",
+      "evidence": "graphNode ministry-of-tourism-1980 = ministry episode “Ministry of Tourism”, 1980–1986 @ src/ministries/history.js:95; register kind: superhost is service-brand (provincial-programs) @ src/gallery/reconciledSubjects.js:403; intro of superhost: “The Ministry of Tourism’s training program” @ src/gallery/reconciledSubjects.js:421",
+      "note": "A program, not a branch. The later SuperHost figure mark lives in Tourism BC & Destination BC."
+    },
+    {
+      "collection": "health-program-signatures",
+      "department": "Ministry of Health Services (BCHealthCare, BCPharmaCare)",
+      "years": "2003–2005",
+      "confidence": "medium",
+      "type": "ministry program signatures",
+      "evidence": "graphNode ministry-of-health-services-2001 = ministry episode “Ministry of Health Services”, 2001–2005 @ src/ministries/history.js:164; register kind: bchealthcare is service-brand (provincial-programs) @ src/gallery/reconciledSubjects.js:128; register kind: bcpharmacare is service-brand (provincial-programs) @ src/gallery/reconciledSubjects.js:135",
+      "note": "Ministry service brands rather than a department; fits if Departmental Logos is meant to include ministry marks of the 2000s."
+    },
+    {
+      "collection": "specimens-ecosystems-at-risk",
+      "department": "B.C. Conservation Data Centre, Ministry of Environment",
+      "years": "1993–2006",
+      "confidence": "medium",
+      "type": "ministry program series",
+      "evidence": "register kind: ecosystems-at-risk is service-brand (provincial-programs) @ src/gallery/reconciledSubjects.js:78; intro of specimens-ecosystems-at-risk: “The B.C. Conservation Data Centre used this tilted badge” @ src/gallery/collections.js:1453",
+      "note": "The repo does not record the CDC’s ministry placement; inferred."
+    },
+    {
+      "collection": "collected-sub-british-columbia-geological-survey",
+      "department": "British Columbia Geological Survey (Mineralogical Branch → Geological Division/Branch → Geological Survey Branch)",
+      "years": "1895–present",
+      "confidence": "medium",
+      "type": "current branch with departmental history",
+      "evidence": "graph: SUB_AGENCIES sub-british-columbia-geological-survey type=division parent=ministry-of-mining-and-critical-minerals-2024 @ src/government/historyData.js:641; intro of collected-sub-british-columbia-geological-survey: “The department renamed its Mineralogical Branch the Geological Division in 1973” @ src/gallery/geologicalSurveyResearch.js:37",
+      "note": "Still a branch today and a FOLDED_UNDER parent (MapPlace, MINFILE): moving it moves its group."
+    },
+    {
+      "collection": "specimens-environment-youth-corps",
+      "department": "Provincial youth employment and training program (ministry not recorded)",
+      "years": "1990",
+      "confidence": "low",
+      "type": "ministry program",
+      "evidence": "register kind: environment-youth-corps is service-brand (provincial-programs) @ generated subject; intro of specimens-environment-youth-corps: “The Corps used this mark in its June 1990 recruitment campaign” @ src/gallery/collections.js:1467",
+      "note": "The sponsoring ministry is not recorded in the repo."
+    },
+    {
+      "collection": "bc-parks",
+      "department": "Parks Branch, Department of Recreation and Conservation (1957–76); now a division of the Ministry of Environment and Parks",
+      "years": "1971–present",
+      "confidence": "low",
+      "type": "current division with departmental marks",
+      "evidence": "graph: SUB_AGENCIES sub-bc-parks parents include “Department of Recreation and Conservation” from 1957-04-01 @ src/government/historyData.js:585; intro of bc-parks: “reconstructions shared with that department” @ src/gallery/collections.js:1259",
+      "note": "Its 1971–73 Parks Branch marks are already shared with recreation-conservation. Recommend leaving the current public brand in the gallery and crossLinking."
+    },
+    {
+      "collection": "bcts",
+      "department": "BC Timber Sales, Ministry of Forests",
+      "years": "2003–present",
+      "confidence": "low",
+      "type": "current ministry program",
+      "evidence": "graph: SUB_AGENCIES sub-bc-timber-sales type=program parent=ministry-of-forests-2022 @ src/government/historyData.js:604; intro of bcts: “Its 2004 brochure shows the Forest Service oval beside green BCTS initials” @ src/gallery/collections.js:1150",
+      "note": "Uses the Forest Service oval already shown in Departmental Logos; current program, so only if the view is to hold current branches."
+    },
+    {
+      "collection": "collected-sub-bc-online",
+      "department": "BC OnLine, Ministry of Citizens’ Services",
+      "years": "1989–present",
+      "confidence": "low",
+      "type": "current ministry service",
+      "evidence": "graph: SUB_AGENCIES sub-bc-online type=program parent=ministry-of-citizens-services-2017 @ src/government/historyData.js:554"
+    },
+    {
+      "collection": "collected-liquor-control-board",
+      "department": "Liquor Control Board (under the Attorney-General’s Department)",
+      "years": "1921–1973",
+      "confidence": "low",
+      "type": "former board",
+      "evidence": "graph: HISTORICAL_BODIES liquor-control-board (agency, 1921-04-13–1973) became → liquor-distribution-branch @ src/government/historyData.js:284",
+      "note": "A statutory board reporting through the Attorney-General’s Department, not itself a department branch."
+    },
+    {
+      "collection": "collected-alcohol-and-drug-commission",
+      "department": "Alcohol and Drug Commission (absorbed into the Ministry of Health’s Alcohol and Drug Programs, 1983)",
+      "years": "1973–1983",
+      "confidence": "low",
+      "type": "former commission",
+      "evidence": "register kind: alcohol-and-drug-commission is agency (specialist-health) @ src/gallery/commissionHistory.js:25; src/gallery/commissionHistory.js:27 (“the ministry had integrated the program … and absorbed the staff”)",
+      "note": "An agent of the Crown with its own Act; it became a ministry program only at its end."
+    }
+  ],
+  "crossLinks": [
+    {
+      "a": "recreation-conservation",
+      "b": "bc-parks",
+      "why": "The Parks Branch marks of 1971–73 are reconstructions shared by both collections (collections.js comment at recreation-conservation; bc-parks intro)."
+    },
+    {
+      "a": "recreation-conservation",
+      "b": "royal-bc-museum",
+      "why": "The Provincial Museum square symbol is one of the department’s 1971–73 branch marks; both collections hold copies."
+    },
+    {
+      "a": "specimens-travel-industry",
+      "b": "tourism-recreation-culture",
+      "why": "register: ministry-of-tourism-recreation-and-culture-1986 related-to department-of-travel-industry (“An earlier department for the Province’s tourism”)."
+    },
+    {
+      "a": "superhost",
+      "b": "tourism-bc-destination-bc",
+      "why": "The later SuperHost figure mark is held in the Tourism BC & Destination BC collection (superhost intro)."
+    },
+    {
+      "a": "reswest",
+      "b": "collected-expo-86-corporation",
+      "why": "register: reswest used-by expo-86-corporation; Expo 86 named ResWest its official accommodation agency. ResWest was privately operated, so not a fold."
+    },
+    {
+      "a": "bc-environment",
+      "b": "bc-lands",
+      "why": "register: ministry-of-environment-1988 related-to bc-lands (“Badges of the same flag-years identity”)."
+    },
+    {
+      "a": "bc-environment",
+      "b": "bc-parks",
+      "why": "register: ministry-of-environment-1988 related-to sub-bc-parks (same flag-years badge family)."
+    },
+    {
+      "a": "collected-liquor-control-board",
+      "b": "collected-liquor-distribution-branch",
+      "why": "graph: liquor-control-board became liquor-distribution-branch; register transferred-operations-to. A board replaced by a branch, distinct bodies."
+    },
+    {
+      "a": "collected-bc-power-commission",
+      "b": "bc-hydro",
+      "why": "graph: bc-power-commission became bc-hydro (statutory amalgamation with BC Electric, 1962–66)."
+    },
+    {
+      "a": "collected-bc-transmission-corporation",
+      "b": "bc-hydro",
+      "why": "graph: bc-transmission-corporation became bc-hydro (separate Crown 2003–2010, reintegrated)."
+    },
+    {
+      "a": "collected-bc-development-corporation",
+      "b": "collected-bc-enterprise-corporation",
+      "why": "graph: bc-development-corporation became bc-enterprise-corporation (assets transferred into the renamed BC Place Ltd.)."
+    },
+    {
+      "a": "collected-bc-place-ltd",
+      "b": "collected-sub-bc-place",
+      "why": "register: bc-place-ltd related-to sub-bc-place (“Distinct historical company and venue subjects”)."
+    },
+    {
+      "a": "collected-bc-enterprise-corporation",
+      "b": "collected-bc-pavilion-corporation",
+      "why": "BCEC transferred certain assets and liabilities to PavCo in 1989 (bc-enterprise-corporation intro)."
+    },
+    {
+      "a": "collected-emergency-health-services-commission",
+      "b": "collected-bc-emergency-health-services",
+      "why": "graph: emergency-health-services-commission became bc-emergency-health-services; register predecessor-of. BCEHS is folded under PHSA."
+    },
+    {
+      "a": "collected-financial-institutions-commission",
+      "b": "collected-bc-financial-services-authority",
+      "why": "graph: financial-institutions-commission became bc-financial-services-authority; BCFSA is a new Crown agency."
+    },
+    {
+      "a": "collected-industry-training-and-apprenticeship-commission",
+      "b": "collected-industry-training-authority",
+      "why": "graph: ITAC became industry-training-authority on statutory repeal (2004)."
+    },
+    {
+      "a": "collected-bc-film-commission",
+      "b": "collected-creative-bc",
+      "why": "graph: bc-film-commission became creative-bc; register predecessor-of."
+    },
+    {
+      "a": "collected-bc-film-and-media",
+      "b": "collected-creative-bc",
+      "why": "register: bc-film-and-media predecessor-of creative-bc (separate society)."
+    },
+    {
+      "a": "collected-advanced-systems-institute-of-bc",
+      "b": "collected-bc-innovation-council",
+      "why": "register: advanced-systems-institute-of-bc predecessor-of bc-innovation-council (“Merger partner in October 2004”)."
+    },
+    {
+      "a": "collected-leading-edge-bc",
+      "b": "collected-bc-innovation-council",
+      "why": "register: leading-edge-bc related-to bc-innovation-council."
+    },
+    {
+      "a": "collected-okanagan-university-college",
+      "b": "collected-okanagan-college",
+      "why": "register: okanagan-university-college split-into okanagan-college."
+    },
+    {
+      "a": "collected-okanagan-university-college",
+      "b": "collected-ubc-okanagan-campus",
+      "why": "register: okanagan-university-college split-into ubc-okanagan-campus."
+    },
+    {
+      "a": "collected-vancouver-community-college",
+      "b": "collected-langara-college",
+      "why": "register: vancouver-community-college split-off langara-college."
+    },
+    {
+      "a": "collected-douglas-college",
+      "b": "collected-kwantlen-college",
+      "why": "register: douglas-college split-off kwantlen-college."
+    },
+    {
+      "a": "collected-interior-university-society",
+      "b": "collected-university-of-northern-bc",
+      "why": "register: interior-university-society campaigned-for university-of-northern-bc."
+    },
+    {
+      "a": "collected-bc-ferry-authority-2003",
+      "b": "bc-ferries",
+      "why": "register: bc-ferry-authority-2003 shareholder-of bc-ferry-corporation. Separate statutory corporation."
+    },
+    {
+      "a": "collected-sub-bc-ferry-commission",
+      "b": "bc-ferries",
+      "why": "The Commissioner regulates BC Ferries; separate regulator."
+    },
+    {
+      "a": "collected-sub-bc-ferry-commission",
+      "b": "collected-bc-ferry-authority-2003",
+      "why": "register: related-to (“Separate regulator and shareholder roles”)."
+    },
+    {
+      "a": "collected-bc-parks-foundation",
+      "b": "bc-parks",
+      "why": "register: bc-parks-foundation charitable-partner-of sub-bc-parks. Independent charity."
+    },
+    {
+      "a": "collected-geoscience-bc",
+      "b": "collected-sub-british-columbia-geological-survey",
+      "why": "register: geoscience-bc related-to sub-british-columbia-geological-survey; independent society."
+    },
+    {
+      "a": "collected-select-seed",
+      "b": "collected-forest-genetics-council",
+      "why": "SelectSeed provides program management to the Council; owned by the BC Forest Genetics Society (register owned-by bc-forest-genetics-society, which has no collection)."
+    },
+    {
+      "a": "collected-siferp",
+      "b": "collected-forest-renewal-bc",
+      "why": "Forest Renewal BC helped establish and fund the society (siferp intro)."
+    },
+    {
+      "a": "collected-bc-injury-research-and-prevention-unit",
+      "b": "collected-sub-bc-childrens-hospital",
+      "why": "register: related-to (“Based at BC Children’s Hospital Research Institute”)."
+    },
+    {
+      "a": "collected-bc-injury-research-and-prevention-unit",
+      "b": "collected-provincial-health-services-authority",
+      "why": "register: related-to (“Provincial health-system partner”)."
+    },
+    {
+      "a": "collected-outside-play",
+      "b": "collected-bc-injury-research-and-prevention-unit",
+      "why": "register: related-to (“Featured as a resource by BCIRPU”); developed by a UBC team, so not BCIRPU’s program."
+    },
+    {
+      "a": "collected-outside-play",
+      "b": "collected-university-of-british-columbia",
+      "why": "register: related-to (“Developed by the UBC research team”)."
+    },
+    {
+      "a": "collected-prevent-shaken-baby-syndrome-bc",
+      "b": "collected-sub-bc-childrens-hospital",
+      "why": "register: service-of sub-bc-childrens-hospital, which is folded under PHSA (see conflicts)."
+    },
+    {
+      "a": "collected-joint-standing-committee-on-rural-issues",
+      "b": "collected-rural-coordination-centre-bc",
+      "why": "register: rural-coordination-centre-bc related-to JSC (“Funding and accountability”)."
+    },
+    {
+      "a": "collected-rural-and-remote-division-of-family-practice",
+      "b": "collected-rural-coordination-centre-bc",
+      "why": "register: related-to (“Forum co-hosts”)."
+    },
+    {
+      "a": "collected-rural-health-services-research-network-bc",
+      "b": "collected-rural-coordination-centre-bc",
+      "why": "register: related-to (“Research network support”); hosted by UBC Family Practice."
+    },
+    {
+      "a": "collected-joint-standing-committee-on-rural-issues",
+      "b": "collected-doctors-of-bc",
+      "why": "register: related-to (“Committee representation”)."
+    },
+    {
+      "a": "collected-west-vancouver-blue-bus",
+      "b": "collected-translink",
+      "why": "register: related-to (“Regional service partnership”)."
+    },
+    {
+      "a": "collected-small-town-love",
+      "b": "collected-northern-development-initiative-trust",
+      "why": "register: related-to (“Regional program partner”); the Trust’s sponsor signature."
+    },
+    {
+      "a": "collected-bc-bird-trail",
+      "b": "collected-tourism-richmond",
+      "why": "register: operated-by (“2024–25 sector lead”) — a sector lead, not owner."
+    },
+    {
+      "a": "collected-paddle-bc",
+      "b": "collected-destination-castlegar",
+      "why": "register: operated-by (“2024–25 sector lead”) — a sector lead, not owner."
+    },
+    {
+      "a": "collected-fishing-bc",
+      "b": "collected-bc-fishing-tourism-association",
+      "why": "register: related-to (“2024–25 sector lead”)."
+    },
+    {
+      "a": "collected-fishing-bc",
+      "b": "collected-bc-fishing-resorts-and-outfitters-association",
+      "why": "register: related-to (“Named partner in the 2017 Fishing BC launch”)."
+    },
+    {
+      "a": "collected-cariboo-chilcotin-coast-tourism",
+      "b": "tourism-bc-destination-bc",
+      "why": "register: related-to destination-bc (“Regional partner of Destination BC” / provincial Indigenous tourism partner); independent society."
+    },
+    {
+      "a": "collected-kootenay-rockies-tourism",
+      "b": "tourism-bc-destination-bc",
+      "why": "register: related-to destination-bc (“Regional partner of Destination BC” / provincial Indigenous tourism partner); independent society."
+    },
+    {
+      "a": "collected-northern-bc-tourism",
+      "b": "tourism-bc-destination-bc",
+      "why": "register: related-to destination-bc (“Regional partner of Destination BC” / provincial Indigenous tourism partner); independent society."
+    },
+    {
+      "a": "collected-thompson-okanagan-tourism",
+      "b": "tourism-bc-destination-bc",
+      "why": "register: related-to destination-bc (“Regional partner of Destination BC” / provincial Indigenous tourism partner); independent society."
+    },
+    {
+      "a": "collected-4tvi-stewardship",
+      "b": "tourism-bc-destination-bc",
+      "why": "register: related-to destination-bc (“Regional partner of Destination BC” / provincial Indigenous tourism partner); independent society."
+    },
+    {
+      "a": "collected-indigenous-tourism-bc",
+      "b": "tourism-bc-destination-bc",
+      "why": "register: related-to destination-bc (“Regional partner of Destination BC” / provincial Indigenous tourism partner); independent society."
+    },
+    {
+      "a": "collected-bc-regional-tourism-secretariat",
+      "b": "collected-bc-tourism-resiliency-network",
+      "why": "register: bc-tourism-resiliency-network related-to secretariat (“Regional coordinating partner”)."
+    },
+    {
+      "a": "collected-tourism-prince-george",
+      "b": "collected-municipality-prince-george",
+      "why": "register: related-to (“Community destination branding”); separate society."
+    },
+    {
+      "a": "collected-tourism-prince-rupert",
+      "b": "collected-municipality-prince-rupert",
+      "why": "register: related-to (“Community destination branding”)."
+    },
+    {
+      "a": "collected-visit-terrace",
+      "b": "collected-municipality-terrace",
+      "why": "register: related-to (“Community destination branding”)."
+    },
+    {
+      "a": "collected-tourism-northern-rockies",
+      "b": "collected-municipality-northern-rockies",
+      "why": "register: related-to (“Regional destination branding”)."
+    },
+    {
+      "a": "collected-regional-district-comox-strathcona",
+      "b": "collected-regional-district-comox-valley",
+      "why": "register: comox-valley successor-of comox-strathcona (2008 split)."
+    },
+    {
+      "a": "collected-regional-district-comox-strathcona",
+      "b": "collected-regional-district-strathcona",
+      "why": "register: strathcona successor-of comox-strathcona (2008 split)."
+    },
+    {
+      "a": "collected-former-school-district-9-castlegar",
+      "b": "collected-school-district-20",
+      "why": "register: former-school-district-9-castlegar predecessor-of school-district-20 (1996 amalgamation)."
+    },
+    {
+      "a": "collected-former-school-district-18-golden",
+      "b": "collected-school-district-6",
+      "why": "register: former-school-district-18-golden predecessor-of school-district-6 (1996 amalgamation)."
+    },
+    {
+      "a": "collected-former-school-district-24-kamloops",
+      "b": "collected-school-district-73",
+      "why": "register: former-school-district-24-kamloops predecessor-of school-district-73 (1996 amalgamation)."
+    },
+    {
+      "a": "collected-former-school-district-56-nechako",
+      "b": "collected-school-district-91",
+      "why": "register: former-school-district-56-nechako predecessor-of school-district-91 (1996 amalgamation)."
+    },
+    {
+      "a": "collected-former-school-district-86-creston-kaslo",
+      "b": "collected-school-district-8",
+      "why": "register: former-school-district-86-creston-kaslo predecessor-of school-district-8 (1996 amalgamation)."
+    },
+    {
+      "a": "collected-fraser-valley-health-region",
+      "b": "collected-fraser-health",
+      "why": "graph: fraser-valley-health-region became fraser-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-simon-fraser-health-region",
+      "b": "collected-fraser-health",
+      "why": "graph: simon-fraser-health-region became fraser-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-south-fraser-health-region",
+      "b": "collected-fraser-health",
+      "why": "graph: south-fraser-health-region became fraser-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-greater-trail-community-health-council",
+      "b": "collected-interior-health",
+      "why": "graph: greater-trail-community-health-council became interior-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-north-okanagan-health-region",
+      "b": "collected-interior-health",
+      "why": "graph: north-okanagan-health-region became interior-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-okanagan-similkameen-health-region",
+      "b": "collected-interior-health",
+      "why": "graph: okanagan-similkameen-health-region became interior-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-south-cariboo-community-health-council",
+      "b": "collected-interior-health",
+      "why": "graph: south-cariboo-community-health-council became interior-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-thompson-health-region",
+      "b": "collected-interior-health",
+      "why": "graph: thompson-health-region became interior-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-northern-interior-regional-health-board",
+      "b": "collected-northern-health",
+      "why": "graph: northern-interior-regional-health-board became northern-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-north-shore-health-region",
+      "b": "collected-vancouver-coastal-health",
+      "why": "graph: north-shore-health-region became vancouver-coastal-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-sunshine-coast-community-health-council",
+      "b": "collected-vancouver-coastal-health",
+      "why": "graph: sunshine-coast-community-health-council became vancouver-coastal-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-vancouver-richmond-health-board",
+      "b": "collected-vancouver-coastal-health",
+      "why": "graph: vancouver-richmond-health-board became vancouver-coastal-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-campbell-river-nootka-community-health-council",
+      "b": "collected-island-health",
+      "why": "graph: campbell-river-nootka-community-health-council became island-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-capital-health-region",
+      "b": "collected-island-health",
+      "why": "graph: capital-health-region became island-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-central-vancouver-island-health-region",
+      "b": "collected-island-health",
+      "why": "graph: central-vancouver-island-health-region became island-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-kootenay-boundary-community-health-services-society",
+      "b": "collected-interior-health",
+      "why": "graph: kootenay-boundary-community-health-services-society is a predecessor of interior-health (2001–02 regionalization); dissolved and replaced."
+    },
+    {
+      "a": "collected-coast-garibaldi-community-health-services-society",
+      "b": "collected-vancouver-coastal-health",
+      "why": "graph: coast-garibaldi-community-health-services-society is a predecessor of vancouver-coastal-health (2001–02 regionalization); dissolved and replaced."
+    }
+  ],
+  "conflicts": [
+    {
+      "kind": "parent-already-folded",
+      "child": "collected-bc-ambulance-service",
+      "registerParent": "collected-bc-emergency-health-services",
+      "foldedUnder": "collected-provincial-health-services-authority",
+      "detail": "register: bc-ambulance-service service-of bc-emergency-health-services, but BCEHS is itself folded under PHSA. Proposed instead: fold under collected-emergency-health-services-commission (medium), or under PHSA beside BCEHS."
+    },
+    {
+      "kind": "parent-already-folded",
+      "child": "collected-prevent-shaken-baby-syndrome-bc",
+      "registerParent": "collected-sub-bc-childrens-hospital",
+      "foldedUnder": "collected-provincial-health-services-authority",
+      "detail": "register: service-of sub-bc-childrens-hospital (folded under PHSA). Proposed instead: fold under BCIRPU (medium), where the program is based."
+    },
+    {
+      "kind": "parent-already-folded",
+      "child": "collected-emergency-health-services-commission",
+      "registerParent": "collected-bc-emergency-health-services",
+      "foldedUnder": "collected-provincial-health-services-authority",
+      "detail": "graph: became bc-emergency-health-services. A distinct commission, so a crossLink, and BCEHS could not take a child anyway."
+    },
+    {
+      "kind": "two-level-chain-flattened",
+      "child": "collected-kwantlen-college / collected-cariboo-college / collected-fraser-valley-college / collected-science-council-of-bc",
+      "detail": "Each is two renames from the current name (via KUC, UCC, UCFV, BCIC). All are proposed directly under the current collection, so no child is a parent."
+    },
+    {
+      "kind": "two-level-already-flattened",
+      "child": "collected-canada-line, collected-expo-line, collected-millennium-line, collected-transit-security, collected-seabus, collected-bc-signature-liquor-store",
+      "detail": "The register nests these one level deeper (part-of SkyTrain; service-of/operated-by CMBC or BCRTC; part-of BCLIQUOR). FOLDED_UNDER flattens them under TransLink and the LDB; no change proposed."
+    },
+    {
+      "kind": "two-parents",
+      "child": "collected-handydart",
+      "detail": "register: handydart service-of both bc-transit and translink. It is folded under TransLink only; a crossLink to bc-transit is the only way to show the second tie."
+    },
+    {
+      "kind": "would-orphan-children",
+      "child": "collected-sub-british-columbia-geological-survey, collected-liquor-distribution-branch",
+      "detail": "Both are FOLDED_UNDER parents. Moving either to Departmental Logos needs a decision about MapPlace/MINFILE and the five LDB brands."
+    },
+    {
+      "kind": "already-departmental",
+      "child": "recreation-conservation, specimens-travel-industry",
+      "detail": "Both have shelf “departmental” in the tree as read (recreation-conservation via the user’s staged, uncommitted change, with showInGalleryIndex false), so they are not proposed. The tree changed during the review (the change was briefly stashed); re-check before applying."
+    },
+    {
+      "kind": "prevents-nesting",
+      "child": "collected-bc-injury-research-and-prevention-unit",
+      "detail": "Register ties BCIRPU to BC Children’s/PHSA only by related-to. Folding it under PHSA would stop it holding CATT, Active & Safe Central, Cost of Injury and PSBS; proposals keep it top-level as their parent."
+    }
+  ]
+}

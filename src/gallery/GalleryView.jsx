@@ -14,7 +14,7 @@ import { SafetyAuthorityHistory } from './SafetyAuthorityHistory.jsx'
 
 import { coverFirst } from './collectedCollections.js'
 import { PreviewBackground } from './PreviewBackground.jsx'
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { formatEventDate } from '../government/events.js'
 import { ColourField } from '../site/ColourField.jsx'
 import { Segmented } from '../site/Segmented.jsx'
@@ -52,6 +52,8 @@ import { SiteLink, useNavigate } from '../site/navigation.jsx'
 import { movedGalleryPlace } from './movedGalleryPlaces.js'
 import { galleryPlaceUrl } from './galleryPlace.js'
 import { writeHistory } from '../site/browserHistory.js'
+import { AllLogos, CurrentOrganizations, GalleryModeSwitch, GalleryTimeline, TimelineScrubber } from './GalleryModes.jsx'
+import { PRESENT_YEAR, isGalleryMode } from './galleryModes.js'
 
 const PALETTE_OPTIONS = FLAG_PALETTE_ORDER.map((value) => ({
   value, label: FLAG_PALETTE_LABELS[value], title: FLAG_PALETTE_HINTS[value]
@@ -268,7 +270,7 @@ const Facts = ({ rows }) => (
 )
 
 /** The fuller account, under a mark that is open, with how this page draws it where that is said. */
-const AboutMark = ({ identity, drawing }) => identity && (
+export const AboutMark = ({ identity, drawing }) => identity && (
   <section className="panel gallery__about" aria-labelledby="about-mark">
     <h2 id="about-mark">About this mark</h2>
     <Facts rows={[...Object.entries(sentencesOf(identity)), ...(drawing ? [['Drawing', drawing]] : [])]} />
@@ -299,7 +301,7 @@ const whoOf = (collection, entries) => {
  * The account for a whole collection, one classification at a time: a sentence that holds for
  * every mark is said once, and one that differs is said for each group it holds for.
  */
-const AboutCollection = ({ collection }) => {
+export const AboutCollection = ({ collection }) => {
   const entries = entriesOf(collection)
   const terms = [...new Set(entries.flatMap((entry) => Object.keys(sentencesOf(entry.identity))))]
   const rows = terms.map((term) => {
@@ -402,17 +404,33 @@ const Detail = ({ entry, onClose }) => {
   )
 }
 
+/**
+ * A mark, opened, in the view its kind is edited in. Shared with Departmental Logos, so a mark
+ * opens the same wherever its collection is shown.
+ */
+export const OpenMark = ({ entry, openId, onChooseVersion }) => {
+  const editorVersion = entry.editorVersions?.find((version) => version.id === openId) ?? entry.editorVersions?.[0]
+  if (entry.kind === 'hydro') return <HydroStudio initialPreset={entry.preset} />
+  if (entry.kind === 'hydro-mark') {
+    return <HydroMarkView key={openId} mark={entry.mark} variant={editorVersion?.variant ?? entry.variant} options={entry.editorVersions?.map((version) => version.variant)} />
+  }
+  if (entry.kind === 'supplied') return <SuppliedMarkView key={entry.id} entry={editorVersion ?? entry} family={entry} onChooseVersion={onChooseVersion} />
+  if (entry.kind === 'collected') return <CollectedMarkView key={openId} entry={entry} />
+  return <Detail key={entry.id} entry={entry} />
+}
+
 /** A card in an era, with only the chips its era has not already said for every mark in it. */
-const Tile = ({ entry, onOpen, theme, said = [] }) => (
-  <button type="button" className="gallery__pick gallery__pick--tile" onClick={onOpen} aria-label={`Open ${entry.label}`}>
+export const Tile = ({ entry, onOpen, theme, said = [], owner }) => (
+  <button type="button" className="gallery__pick gallery__pick--tile" onClick={onOpen} aria-label={`Open ${entry.label}${owner ? `, ${owner}` : ''}`}>
     <span
       className="gallery__art"
       data-ground={onPage(entry, theme) ? 'page' : 'own'}
       // Built by this project's own renderers; every value is escaped where written.
       dangerouslySetInnerHTML={{ __html: tileArt(entry, theme) }}
     />
+    {owner && <span className="gallery__owner">{owner}</span>}
     <span className="gallery__label">{entry.label}{entry.kind === 'collected' && <span className="gallery__asset-format"> · {defaultCollectedAsset(entry, theme).format.toUpperCase()}</span>}</span>
-    <span className="gallery__note">{entry.note}</span>
+    <span className="gallery__note">{owner ? entry.years : entry.note}</span>
     <Chips labels={chipsOf(entry.identity).filter((label) => !said.includes(label))} title={FIDELITY[entry.identity.fidelity]} />
   </button>
 )
@@ -475,10 +493,10 @@ const OneOffEntry = ({ entry, onOpen, theme, onOpenGovernment, said = [] }) => (
 const isPlainClick = (event) => event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey
 const collectionHref = (id) => `?view=gallery&logos=${encodeURIComponent(id)}`
 
-const CollectionCard = ({ collection, onOpen, theme, href }) => {
+export const CollectionCard = ({ collection, onOpen, theme, href, coverEntry, children }) => {
   const entries = entriesOf(collection)
-  const specimen = collection.shelfSpecimen && entries.find((entry) => entry.id === collection.shelfSpecimen)
-  const cover = specimen || findGalleryEntry(collection.cover) || entries[0]
+  const specimen = !coverEntry && collection.shelfSpecimen && entries.find((entry) => entry.id === collection.shelfSpecimen)
+  const cover = coverEntry || specimen || findGalleryEntry(collection.cover) || entries[0]
   const count = entries.length
   const fileCount = collection.fileCollection ? entries.reduce((total, entry) => total + (entry.versions?.length || 1), 0) : 0
   const Control = href ? 'a' : 'button'
@@ -503,6 +521,7 @@ const CollectionCard = ({ collection, onOpen, theme, href }) => {
           {collection.years} · {collection.fileCollection ? `${fileCount} artwork ${fileCount === 1 ? 'file' : 'files'}` : `${count} ${count === 1 ? 'mark' : 'marks'}`}
           {collection.eras ? ` · ${collection.eras.length} ${collection.eras.length === 1 ? 'era' : 'eras'}` : ''}
         </span>
+        {children}
       </span>
     </Control>
   )
@@ -614,7 +633,7 @@ const TimelineRenames = ({ rows, direction, onChooseCollection }) => rows.filter
  * would claim a precision they do not have. An era with no artwork keeps its place, drawn hollow,
  * because a gap in the gallery is not a gap in the body's history.
  */
-const Timeline = ({ eras, current, onPick, history, onChooseCollection, collectionId, opensCollection }) => {
+export const Timeline = ({ eras, current, onPick, history, onChooseCollection, collectionId, opensCollection }) => {
   const steps = eras.length + [...history.predecessors, ...history.successors].filter(isTimelineRename).length
   const rail = (
     <nav className="gallery__timeline" aria-label="Eras, oldest first">
@@ -745,7 +764,7 @@ const EraMore = ({ era }) => {
  * its marks — or the slot that stands for them — under the words, as every era has them. On a
  * mark's own timeline the open mark is marked as the one being looked at rather than offered again.
  */
-const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator }) => {
+export const EraSection = ({ era, theme, onOpen, openId, onOpenInGenerator }) => {
   const said = eraChips(era.entries)
   const fidelities = new Set(era.entries.map((entry) => entry.identity.fidelity))
   return (
@@ -831,8 +850,15 @@ const readMark = () => {
  * Where the gallery is lives in the address bar — the collection, and the mark open in it — so a
  * link to BC Hydro's page, or to one of its signatures, opens there.
  */
-const writePlace = (collection, mark, subject, coverage, filters) => {
-  if (globalThis.location) writeHistory(galleryPlaceUrl(globalThis.location.href, { collection, mark, subject, coverage, filters }))
+const writePlace = (collection, mark, subject, coverage, filters, browse) => {
+  if (globalThis.location) writeHistory(galleryPlaceUrl(globalThis.location.href, { collection, mark, subject, coverage, filters, browse }))
+}
+
+/** The first page's way through the logos, and the timeline's year, as the address bar has them. */
+const readMode = () => (isGalleryMode(readParam('gallery-mode')) ? readParam('gallery-mode') : '')
+const readYear = () => {
+  const year = Number(readParam('gallery-year'))
+  return Number.isInteger(year) && year > 1800 && year <= PRESENT_YEAR ? year : PRESENT_YEAR
 }
 
 /**
@@ -1087,6 +1113,8 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   const [openId, setOpenId] = useState(readMark)
   const [subjectId, setSubjectId] = useState(() => readParam('subject'))
   const [showCoverage, setShowCoverage] = useState(() => readParam('coverage') === '1')
+  const [mode, setMode] = useState(readMode)
+  const [year, setYear] = useState(readYear)
   const open = openId && findGalleryEntry(openId)
   const editorVersion = open?.editorVersions?.find((version) => version.id === openId) ?? open?.editorVersions?.[0]
   const collection = collectionById(collectionId)
@@ -1112,7 +1140,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
     setOpenId(nextMark)
     setSubjectId(nextSubject)
     setShowCoverage(coverage)
-    writePlace(nextCollection, nextMark, nextSubject, coverage, filters)
+    writePlace(nextCollection, nextMark, nextSubject, coverage, filters, { mode, year })
     setArrival({ from: collectionId, key: pageKey(nextCollection, nextMark, nextSubject, coverage) })
   }
   // App remounts views on history navigation; the listener also makes the standalone review work.
@@ -1120,6 +1148,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
     const restore = () => {
       setCollectionId(readCollection()); setOpenId(readMark())
       setSubjectId(readParam('subject')); setShowCoverage(readParam('coverage') === '1')
+      setMode(readMode()); setYear(readYear())
     }
     globalThis.addEventListener?.('popstate', restore)
     return () => globalThis.removeEventListener?.('popstate', restore)
@@ -1152,6 +1181,15 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   // Search, on the first page. Cmd-K (Ctrl-K elsewhere) reaches it from any page of the gallery.
   const [query, setQuery] = useState('')
   const [organizationType, setOrganizationType] = useState('')
+  const sections = useMemo(() => gallerySections(organizationType), [organizationType])
+  // The mode and year change the page in place, so they replace the address rather than add to it.
+  const replaceBrowse = (browse) => {
+    if (globalThis.location) writeHistory(galleryPlaceUrl(globalThis.location.href, { browse }), { replace: true })
+  }
+  const pickYear = useCallback((value) => {
+    setYear(value)
+    replaceBrowse({ mode: 'timeline', year: value })
+  }, [])
   const browsePage = useRef(null)
   const searchInput = useRef(null)
   const scrollToBrowseResults = () => {
@@ -1241,15 +1279,7 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
         {/* A mark with its own history below lists the same eras there; the rail would say them twice. */}
         {!markTimeline && timeline}
         <UnbcOriginsTeaser owner={open.owner} />
-        {open.kind === 'hydro'
-          ? <HydroStudio initialPreset={open.preset} />
-          : open.kind === 'hydro-mark'
-            ? <HydroMarkView key={openId} mark={open.mark} variant={editorVersion?.variant ?? open.variant} options={open.editorVersions?.map((version) => version.variant)} />
-            : open.kind === 'supplied'
-              ? <SuppliedMarkView key={open.id} entry={editorVersion ?? open} family={open} onChooseVersion={(id) => go(collectionId, id)} />
-              : open.kind === 'collected'
-                ? <CollectedMarkView key={openId} entry={open} />
-                : <Detail key={open.id} entry={open} />}
+        <OpenMark entry={open} openId={openId} onChooseVersion={(id) => go(collectionId, id)} />
         {markTimeline && (
           <section className="gallery__history" aria-labelledby="mark-history">
             <h2 id="mark-history" className="gallery__shelf-title">{markTimeline.label} through time</h2>
@@ -1272,6 +1302,11 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
   if (!collection) {
     return (
       <div className="gallery" ref={browsePage}>
+        <GalleryModeSwitch value={mode} onChange={(value) => {
+          if (value === mode) return
+          setMode(value)
+          replaceBrowse({ mode: value, year })
+        }} />
         <div className="gallery__toolbar" role="search" aria-label="Filter the logo gallery">
           <GallerySearch query={query} inputRef={searchInput} onChange={(value) => {
             scrollToBrowseResults()
@@ -1282,13 +1317,20 @@ export const GalleryView = ({ onOpenGovernment, onOpenInGenerator }) => {
             scrollToBrowseResults()
             setOrganizationType(value)
           }} />
+          {mode === 'timeline' && !query.trim() && <TimelineScrubber sections={sections} year={year} onYear={pickYear} />}
         </div>
         {query.trim()
           ? <BrowseResults query={query} type={organizationType} theme={theme} onChooseCollection={choose} onOpenMark={openFound} onOpenSubject={openSubject} />
-          : (
+          : mode === 'all'
+            ? <AllLogos sections={sections} theme={theme} onOpenMark={openFound} />
+            : mode === 'current'
+              ? <CurrentOrganizations sections={sections} theme={theme} onChooseCollection={choose} />
+              : mode === 'timeline'
+                ? <GalleryTimeline sections={sections} year={year} theme={theme} onOpenMark={openFound} />
+                : (
             <>
               {!organizationType && <IdentityCoverageOverview onOpenRegister={openRegister} />}
-              {gallerySections(organizationType).map((section) => (
+              {sections.map((section) => (
                 <GalleryCategory
                   key={section.value}
                   section={section}

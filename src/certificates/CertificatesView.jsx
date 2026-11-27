@@ -57,7 +57,7 @@ const CertificateArtwork = ({ reconstruction = false }) => (
         {reconstruction
           ? <a href={reconstructedCertificate} download className="button button--primary">Download reconstruction SVG</a>
           : <a href={specimen} download className="button">Download specimen PNG</a>}
-        <SiteLink to={{ view: 'gallery', logos: 'recreation-conservation', mark: 'drc-dogwood-oval-1970' }}>View the dogwood oval in the gallery</SiteLink>
+        <SiteLink to={{ view: 'internal', internal: 'recreation-conservation', 'internal-logo': 'drc-dogwood-oval-1970' }}>View the dogwood oval in Departmental Logos</SiteLink>
       </div>
     </section>
   </div>

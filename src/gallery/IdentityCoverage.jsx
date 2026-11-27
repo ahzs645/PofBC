@@ -537,8 +537,14 @@ export const IdentityCollectionLinks = ({ collectionId, entryId, graphShown, his
   // left to the register page, which explains it.
   const historicalTargets = new Set(history ? [...history.predecessors, ...history.successors].map(({ id }) => id) : [])
   const historyTypes = new Set(['successor-of', 'predecessor-of', 'renamed-from', 'renamed-to', 'amalgamated-into'])
+  // A collection holding a line of names shows each name as an era, so a tie between two of its own
+  // subjects (Capilano College renamed to Capilano University) would only lead back to this page.
+  const own = new Set(all.map(({ id }) => id))
   const tiesOf = (subject) => connectionGroups(subject)
     .flatMap(({ label, relations }) => relations.filter((relation) => relation.type !== 'related-to').map((relation) => ({ label, relation })))
+    .filter(({ relation }) => !own.has(relation.target.id))
+    // A tie recorded from both sides reads the same from here; show it once.
+    .filter(({ label, relation }, at, ties) => ties.findIndex((other) => other.label === label && other.relation.target.id === relation.target.id) === at)
     .filter(({ relation }) => !(historyTypes.has(relation.type) && historicalTargets.has(relation.target.id)))
     .slice(0, 4)
   const registerShown = !(graphShown && subjects.every((subject) => subject.graphNode === graphShown))

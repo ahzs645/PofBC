@@ -25,6 +25,7 @@ import { ENDORSED_2019 } from './endorsed2019.js'
 import { bearAwareGalleryId, bearAwareId, bearAwareMarkId, bearAwareTitle } from '../initiatives/bearAwareArtwork.js'
 import { environmentYouthCorpsGalleryId, environmentYouthCorpsId, environmentYouthCorpsScan } from '../initiatives/environmentYouthCorpsArtwork.js'
 import { resWestBadgeEra } from './resWest.js'
+import { DEPARTMENTAL_COLLECTIONS } from './movedGalleryPlaces.js'
 
 // ── The identity record ──────────────────────────────────────────────────────────────────────────
 
@@ -1270,7 +1271,10 @@ export const GALLERY_COLLECTIONS = [
   },
   {
     id: 'recreation-conservation',
-    shelf: 'bodies',
+    // A department: it opens in Departmental Logos (movedGalleryPlaces.js), and is kept here unlisted
+    // so the Royal BC Museum's and BC Parks' copies of its marks, and the register, still find it.
+    shelf: 'departmental',
+    showInGalleryIndex: false,
     label: 'Recreation and Conservation',
     body: 'Provincial department, 1957–1976',
     years: '1970–1973',
@@ -1566,6 +1570,15 @@ for (const [node, place] of Object.entries(PLACED)) {
   })
 }
 
+// Former departments, ministries and government branches open in Departmental Logos instead of
+// the gallery's index (movedGalleryPlaces.js). They stay here, unlisted, so search, the register and
+// any collection sharing their marks still find them; their links redirect.
+for (const id of DEPARTMENTAL_COLLECTIONS) {
+  const collection = GALLERY_COLLECTIONS.find((each) => each.id === id)
+  if (!collection) throw new Error(`Unknown departmental collection: ${id}`)
+  Object.assign(collection, { shelf: 'departmental', showInGalleryIndex: false })
+}
+
 /**
  * Every collection holding a body's own designs. Its dedicated collection comes first, followed
  * by shared shelves such as the BC mark. Gallery placement and organization identity are separate.
@@ -1609,9 +1622,11 @@ export const FOLDED_UNDER = [
   },
   { parent: 'bc-transit', children: ['collected-umo'] },
   { parent: 'bc-ferries', children: ['collected-bc-ferries-travel'] },
-  { parent: 'bc-hydro', children: ['collected-power-smart', 'collected-sub-powerex'] },
+  { parent: 'bc-hydro', children: ['collected-power-smart', 'collected-sub-powerex', 'collected-fish-wildlife-compensation-program'] },
   { parent: 'collected-bc-housing', children: ['collected-sub-bc-housing-licensing-and-consumer-services'] },
-  { parent: 'bclc', children: ['collected-gamesense', 'collected-sub-playnow'] },
+  // Chances venues each have their own owner, but run under BCLC service agreements (chancespr.ca, research
+  // in northernTravelGuides.js), so their signatures sit with BCLC's.
+  { parent: 'bclc', children: ['collected-gamesense', 'collected-sub-playnow', 'collected-chances-gaming'] },
   {
     parent: LIQUOR_DISTRIBUTION_COLLECTION,
     children: ['collected-sub-bcliquor', 'collected-bc-signature-liquor-store',
@@ -1624,7 +1639,27 @@ export const FOLDED_UNDER = [
     parent: 'collected-provincial-health-services-authority',
     children: ['collected-sub-bc-childrens-hospital', 'collected-sub-bc-womens-hospital', 'collected-sub-bc-centre-for-disease-control', 'collected-sub-bc-cancer', 'collected-bc-emergency-health-services']
   },
-  { parent: 'collected-bc-pavilion-corporation', children: ['collected-sub-bc-place', 'collected-sub-vancouver-convention-centre'] }
+  { parent: 'collected-bc-pavilion-corporation', children: ['collected-sub-bc-place', 'collected-sub-vancouver-convention-centre'] },
+  // From the review in research/identity/gallery-hierarchy-2026-11-27: each tie is the register's own
+  // part-of, service-of or operated-by relation. Earlier names of a continuing body are not folded
+  // here, since this shelf is for programs, services and subsidiaries; their histories link them.
+  { parent: 'collected-islands-trust', children: ['collected-islands-trust-conservancy', 'collected-islands-2050'] },
+  { parent: 'collected-legislative-assembly', children: ['collected-legislative-library-bc'] },
+  { parent: 'collected-university-of-british-columbia', children: ['collected-ubc-okanagan-campus'] },
+  { parent: 'collected-4vi-group', children: ['collected-4tvi-stewardship', 'collected-4ever-strategies', 'collected-4good-social-impact-fund'] },
+  { parent: 'tourism-bc-destination-bc', children: ['collected-vancouver-coast-mountains', 'collected-destination-brand', 'collected-visitor-centre'] },
+  { parent: 'collected-bc-snowmobile-federation', children: ['collected-lets-ride-bc'] },
+  { parent: 'collected-bc-association-farmers-markets', children: ['collected-bc-farmers-market-trail'] },
+  { parent: 'collected-bc-regional-tourism-secretariat', children: ['collected-bc-tourism-sustainability-network'] },
+  { parent: 'collected-bc-injury-research-and-prevention-unit', children: ['collected-concussion-awareness-training-tool', 'collected-active-safe-central', 'collected-cost-of-injury', 'collected-prevent-shaken-baby-syndrome-bc'] },
+  // The second pass: each rests on a register tie that names the parent (operated-by, or a labelled
+  // related-to such as "Based at the injury research unit" or "Coalition managed by"), checked against
+  // the child's own intro. FWCP is BC Hydro's: BC Hydro funds it to meet its water licences (fwcp.ca).
+  { parent: 'collected-bc-lodging-campgrounds-association', children: ['collected-camping-rving-bc-coalition'] },
+  { parent: 'collected-bc-craft-brewers-guild', children: ['collected-bc-ale-trail'] },
+  { parent: 'collected-rural-coordination-centre-bc', children: ['collected-real-time-virtual-support'] },
+  { parent: 'collected-municipality-west-vancouver', children: ['collected-west-vancouver-blue-bus'] },
+  { parent: 'collected-emergency-health-services-commission', children: ['collected-bc-ambulance-service'] }
 ]
 
 // Program collections link to their histories in the initiatives register.

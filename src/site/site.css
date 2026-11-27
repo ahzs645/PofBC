@@ -2671,3 +2671,77 @@ button.gallery__collecting-status, .gallery__collecting-graph {
 .salaries-title-people__ask p { margin: 0; flex: 1 1 260px; }
 /* The employer link sits above the card's name link, which covers the card. */
 .salaries-title-people__employer { position: relative; z-index: 1; text-align: left; }
+
+/* ── The gallery's ways through its logos: collections, all logos, current, timeline ────────── */
+.gallery__modes {
+  display: inline-flex; flex-wrap: wrap; gap: 2px; padding: 3px; margin-bottom: 10px;
+  border-radius: 999px; background: var(--track);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+.gallery__mode {
+  min-height: 34px; padding: 6px 14px; border: 0; border-radius: 999px;
+  background: transparent; color: var(--ink-muted); font: inherit; font-size: 14px; cursor: pointer;
+}
+.gallery__mode:hover { color: var(--ink); }
+.gallery__mode[aria-pressed='true'] { background: var(--segment); color: var(--ink); box-shadow: var(--segment-shadow); font-weight: 600; }
+.gallery__mode:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+@media (max-width: 600px) {
+  .gallery__modes { display: grid; grid-template-columns: 1fr 1fr; border-radius: 14px; width: 100%; box-sizing: border-box; }
+  .gallery__mode { border-radius: 11px; padding-inline: 8px; }
+}
+
+.gallery__mode-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin: 18px 4px 10px; }
+.gallery__mode-head .gallery__category-title { margin: 0; }
+.gallery__mode-intro { margin-top: 14px; }
+.gallery__sort { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-muted); }
+.gallery__sort select {
+  min-height: 34px; padding: 4px 10px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  background: var(--surface); color: var(--ink); font: inherit; font-size: 13px;
+}
+.gallery__check { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-muted); cursor: pointer; }
+.gallery__count { font-size: 13px; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+.gallery__owner { display: block; font-size: 12px; font-weight: 600; letter-spacing: .01em; color: var(--ink-muted); margin-bottom: 2px; }
+.gallery__status { display: block; margin-top: 4px; font-size: 12px; color: var(--ink-faint); }
+.gallery__tiles--all { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.gallery__shelf > .gallery__tiles--all { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.gallery__more { display: flex; justify-content: center; padding: 20px 0 8px; }
+.gallery__more-count { color: var(--ink-muted); font-weight: 400; }
+.gallery__unconfirmed { margin-top: 20px; }
+.gallery__unconfirmed > summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; cursor: pointer; padding: 6px 4px 12px; }
+.gallery__unconfirmed > summary .gallery__category-title { margin: 0; }
+
+/* The scrubber sits in the sticky toolbar, so the year stays in reach while the cards scroll. */
+.gallery__scrubber {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 6px 16px;
+  padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface);
+}
+.gallery__scrubber-controls { display: flex; align-items: center; gap: 4px; }
+.gallery__scrub-button {
+  display: grid; place-items: center; width: 34px; height: 34px; padding: 0;
+  border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--ink); cursor: pointer;
+}
+.gallery__scrub-button:hover:not(:disabled) { background: var(--hover); border-color: var(--mid); }
+.gallery__scrub-button:disabled { opacity: .35; cursor: default; }
+.gallery__scrub-button:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.gallery__scrub-play { background: var(--ink); color: var(--page); border-color: var(--ink); }
+.gallery__scrub-play:hover:not(:disabled) { background: var(--primary-hover); color: var(--page); }
+.gallery__scrub-year { min-width: 3.2em; margin-left: 8px; font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+.gallery__scrub-track { display: grid; gap: 0; min-width: 0; }
+.gallery__strip { display: block; width: 100%; height: 30px; cursor: pointer; }
+.gallery__strip rect { fill: var(--mid); }
+.gallery__strip rect[data-active] { fill: var(--ink); }
+.gallery__scrub-track input[type='range'] { width: 100%; margin: 2px 0 0; accent-color: var(--ink); }
+.gallery__scrub-ends { display: flex; justify-content: space-between; font-size: 11px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+/* On a phone the toolbar stays sticky, so the scrubber keeps to one row: no strip, no end years. */
+@media (max-width: 600px) {
+  .gallery__scrubber { gap: 8px; padding: 6px 8px; }
+  .gallery__scrub-button { width: 30px; height: 30px; }
+  .gallery__scrub-year { min-width: 0; margin-left: 2px; font-size: 18px; }
+  .gallery__strip, .gallery__scrub-ends { display: none; }
+}
+.gallery__year-card[data-carried] .gallery__art { opacity: .55; }
+.gallery__year-card[data-carried] .gallery__note { font-style: italic; }
+
+/* A family page in Departmental Logos focuses its heading; the crumb it focuses draws no ring. */
+.internal-logos [tabindex='-1']:focus { outline: none; }
+.internal-logos__cover { display: block; width: 100%; height: 100%; }

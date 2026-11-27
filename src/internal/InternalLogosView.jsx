@@ -6,11 +6,25 @@ import { FOREST_LOGOS, variantsFor } from './forestLogos.js'
 import { SiteLink } from '../site/navigation.jsx'
 import { objectsForLogo } from '../posters/connections.js'
 import { Modal } from '../posters/ui/Modal.jsx'
-import { TRAVEL_PLACE } from '../gallery/movedGalleryPlaces.js'
+import { DEPARTMENTAL_COLLECTIONS, departmentalPlace, TRAVEL_PLACE } from '../gallery/movedGalleryPlaces.js'
 import travelSource from '../../research/identity/bc-travel-industry-2026-11-12/source-register.json'
 import './internal.css'
 
 const TravelIndustryLogo = lazy(() => import('./TravelIndustryLogo.jsx'))
+// The departments' marks are the gallery's own records, so they and their renderers load with it.
+const DepartmentCollection = lazy(() => import('./DepartmentCollection.jsx'))
+const DepartmentCover = lazy(() => import('./DepartmentCollection.jsx').then((module) => ({ default: module.DepartmentCover })))
+
+// The departments, ministries and branches moved from the gallery, oldest first. Their cards say
+// what each is without loading the gallery; the gallery's records draw their covers.
+const DEPARTMENTS = [
+  { id: 'collected-bc-public-health-service', title: 'BC Public Health Service', note: 'A public health nursing badge, 1961' },
+  { id: 'recreation-conservation', title: 'Department of Recreation and Conservation', note: 'A dogwood oval, five square symbols and two branch emblems, 1970–1973' },
+  { id: 'tourism-recreation-culture', title: 'Ministry of Tourism, Recreation and Culture', note: 'The flag run out as three bands, 1986–1988' },
+  { id: 'bc-lands', title: 'BC Lands', note: 'The flag-years badge, seen 1986–88 and 1994' },
+  { id: 'bc-environment', title: 'Ministry of Environment', note: 'The flag-years mark, 1988–1991' },
+  { id: 'collected-shared-services-bc', title: 'Solutions BC and Shared Services BC', note: 'Four marks, 2003–2015' }
+]
 
 // Forest Oval's single-colour recreation retains both mountain edges as lines.
 // Its engine recolours the filled mountain to paper; restore the same supplied
@@ -313,6 +327,7 @@ const initialSelection = () => {
   const logoId = params.get('internal-logo')
   const logo = FOREST_LOGOS.find((entry) => entry.id === logoId)
   if (params.get('internal') === TRAVEL_PLACE.internal || logoId === TRAVEL_PLACE['internal-logo']) return { travel: true }
+  if (DEPARTMENTAL_COLLECTIONS.includes(params.get('internal'))) return { department: params.get('internal'), logoId }
   return { family: params.get('internal') === 'forests' || !!logo, logoId: logo?.id ?? null }
 }
 
@@ -342,6 +357,9 @@ export const InternalLogosView = () => {
   }, [selection.family, selection.logoId])
 
   if (selection.travel) return <Suspense fallback={<p role="status">Loading logo…</p>}><TravelIndustryLogo /></Suspense>
+  if (selection.department) {
+    return <Suspense fallback={<p role="status">Loading logos…</p>}><DepartmentCollection id={selection.department} markId={selection.logoId} /></Suspense>
+  }
 
   return (
     <section className="internal-logos" aria-label="Departmental Logos">
@@ -438,6 +456,17 @@ export const InternalLogosView = () => {
               <span>Map and dogwood, about 1970</span>
             </span>
           </SiteLink>
+          {DEPARTMENTS.map(({ id, title, note }) => (
+            <SiteLink key={id} className="internal-logos__family" to={departmentalPlace(id)}>
+              <span className="internal-logos__artwork">
+                <Suspense fallback={<span role="status">Loading logo…</span>}><DepartmentCover id={id} /></Suspense>
+              </span>
+              <span className="internal-logos__family-text">
+                <span className="internal-logos__family-title">{title} <span aria-hidden="true">→</span></span>
+                <span>{note}</span>
+              </span>
+            </SiteLink>
+          ))}
         </>
       )}
     </section>

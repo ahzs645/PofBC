@@ -1,15 +1,18 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { collectionById, entriesOfNode, childCollectionsOf } from './collections.js'
+import { collectionById, entriesOf, entriesOfNode, childCollectionsOf } from './collections.js'
 import { galleryHistoryOf } from './galleryHistory.js'
 
-test('an operating name change appears from both identities and keeps their canonical collections', () => {
+test('an operating name change is one collection, an era for each name, with the earlier name’s link kept', () => {
   const [next] = galleryHistoryOf('bc-safety-authority').successors
-  const [earlier] = galleryHistoryOf('technical-safety-bc').predecessors
+  const line = collectionById('collected-technical-safety-bc')
   assert.equal(next.type, 'renamed')
-  assert.equal(next.date, earlier.date)
-  assert.equal(next.collection, collectionById('collected-technical-safety-bc'))
-  assert.equal(earlier.collection, collectionById('collected-bc-safety-authority'))
+  assert.equal(next.date, '2017-09-20')
+  assert.equal(next.collection, line)
+  // The old collection's link opens the line, and the rename is its eras rather than a link to itself.
+  assert.equal(collectionById('collected-bc-safety-authority'), line)
+  assert.deepEqual(line.eras.map(({ id }) => id), ['name-bc-safety-authority', 'name-technical-safety-bc'])
+  assert.ok(!galleryHistoryOf(line.graphNode).predecessors.some((row) => row.collection === line))
 })
 
 test('regional health pages show statutory amalgamations and service transfers with their own relationship types', () => {
@@ -72,16 +75,18 @@ test('the two Science Council names lead through the BCIC merger to Innovate BC'
   assert.deepEqual(science.eras.map((era) => era.entries.map((entry) => entry.id)), [
     ['source-recovered-science-council-2003'], ['iscbc-2004']
   ])
-  for (const [before, after, type, date] of [
-    [science, bcic, 'merger', '2004-10'], [bcic, current, 'legal-rename', '2018-03-15']
-  ]) {
-    const forward = galleryHistoryOf(before.graphNode).successors.find((row) => row.collection === after)
-    const backward = galleryHistoryOf(after.graphNode).predecessors.find((row) => row.collection === before)
-    for (const row of [forward, backward]) assert.deepEqual([row.type, row.date], [type, date])
-  }
-  const early = bcic.entries.find((entry) => entry.id === 'bcic-orbit')
+  // BCIC continued as Innovate BC in 2018, so one collection holds both names, an era each.
+  assert.equal(bcic, current)
+  assert.deepEqual(current.eras.map(({ id }) => id), ['name-bc-innovation-council', 'name-innovate-bc'])
+  // The merger that formed BCIC still reads from both sides, on the line's page.
+  const forward = galleryHistoryOf(science.graphNode).successors.find((row) => row.collection === current)
+  const backward = galleryHistoryOf(current.graphNode).predecessors.find((row) => row.collection === science)
+  for (const row of [forward, backward]) assert.deepEqual([row.type, row.date], ['merger', '2004-10'])
+  // The rename inside the line is its eras, not a link to itself.
+  assert.ok(!galleryHistoryOf(current.graphNode).predecessors.some((row) => row.collection === current))
+  const early = entriesOf(bcic).find((entry) => entry.id === 'bcic-orbit')
   assert.deepEqual(early.versions.map((version) => version.sourceDate).sort(), ['2006/07', '2007/08'])
-  assert.ok(bcic.entries.some((entry) => entry.id === 'source-recovered-bcic-2008-09'))
+  assert.ok(entriesOf(bcic).some((entry) => entry.id === 'source-recovered-bcic-2008-09'))
 })
 
 test('the shared council timeline owns each linked design and resolves both sides of the ASI merger', async () => {
@@ -131,9 +136,11 @@ test('ITAC’s official vector leads the collection and reconstructions keep the
   assert.equal(earlier.asset.isVector, true)
   assert.equal(earlier.asset.reconstruction, false)
   assert.equal(earlier.owner, commission.graphNode)
+  // The authority continued as SkilledTradesBC in 2022: one collection, an era for each name.
+  assert.equal(authority, skilledTrades)
+  assert.deepEqual(skilledTrades.eras.map(({ id }) => id), ['name-industry-training-authority', 'name-skilledtradesbc'])
   for (const [before, after, type, date] of [
-    [commission, authority, 'replaced', '2004-01-02'],
-    [authority, skilledTrades, 'legal-rename', '2022-12-01']
+    [commission, authority, 'replaced', '2004-01-02']
   ]) {
     assert.ok(galleryHistoryOf(before.graphNode).successors.some((row) => row.collection === after && row.type === type && row.date === date))
     assert.ok(galleryHistoryOf(after.graphNode).predecessors.some((row) => row.collection === before && row.type === type && row.date === date))
