@@ -221,7 +221,8 @@ export const specimenEntriesOf = (program, timeline) => designsOf(ALL_COLLECTED_
 
 const collectionOf = (body) => {
   const entries = collectedEntriesOf(body.id)
-  const verifiedCover = body.current ? VERIFIED_CURRENT_COVERS[body.id] : undefined
+  const namedCover = body.coverPolicy === 'verified-current' && entries.some(({ id }) => id === body.cover) ? body.cover : undefined
+  const verifiedCover = body.current ? VERIFIED_CURRENT_COVERS[body.id] ?? namedCover : undefined
   const vectors = entries.filter((entry) => isSourceVector(entry) && (!body.current || currentSpecimens(entry).length))
   const vectorCover = vectors.some(({ id }) => id === body.cover) ? body.cover
     : (body.current ? latestLogo(vectors) : undefined) ?? coverOf(vectors)

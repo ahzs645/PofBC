@@ -100,3 +100,24 @@ node scripts/build-school-districts.mjs --check
 ```
 
 Edit the reviewed research inputs before rebuilding. Keep this documentation and the Markdown catalogue synchronized when changing the roster, date qualifications, lineage, or selected logos; the current data build does not regenerate these Markdown files.
+
+### November 26 recovery supplement
+
+[The review ledger](recoveries-2026-11-26.json) records all 70 researched
+items against stable district IDs. It adds 62 artwork files, including 16
+source-native SVGs, and preserves eight items as source links rather than
+additional gallery artwork. The latter are three administrative
+letterheads, one duplicate reproduction, three qathet/Powell River
+items subject to external-use review, and the attributed Chilliwack
+reconciliation programme artwork. Original source URLs, exact PDF page
+locators where available, known artist credits, and extraction details
+are preserved without republishing complete reports or correspondence.
+
+The 2023 Gulf Islands full-colour SVG is the preferred version of the
+existing current design; the original PNG remains available. The other
+native recoveries are variants, separately documented signatures, or
+historical evidence, not assumed current-logo replacements. The five
+former district marks belong to the former entities, not their
+successors. Related programme artwork is labeled separately from
+district marks. Source document dates do not establish adoption dates.
+Current and former district histories and succession links are unchanged.

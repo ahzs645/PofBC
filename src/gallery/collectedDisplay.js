@@ -9720,6 +9720,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "sd43-directions2030-signature": {
+  "light": {
+   "file": "identity-display/sd43-directions2030-signature.light.svg",
+   "aspect": 0.9951,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/sd43-directions2030-signature.dark.svg",
+   "aspect": 0.9951,
+   "recoloured": true
+  }
+ },
  "school-district-44-stacked-leaf-signature": {
   "light": {
    "file": "identity-display/school-district-44-stacked-leaf-signature.light.svg",
@@ -9754,6 +9766,78 @@ export const COLLECTED_DISPLAY = {
   "dark": {
    "file": "identity-display/school-district-46-strategic-plan-raven.light.svg",
    "aspect": 1.0,
+   "recoloured": false
+  }
+ },
+ "sd46-primary-black": {
+  "light": {
+   "file": "identity-display/sd46-primary-black.light.svg",
+   "aspect": 4.7542,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/sd46-primary-black.dark.svg",
+   "aspect": 4.7542,
+   "recoloured": true
+  }
+ },
+ "sd46-primary-reverse": {
+  "light": {
+   "file": "identity-display/sd46-primary-reverse.light.svg",
+   "aspect": 4.5962,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/sd46-primary-reverse.dark.svg",
+   "aspect": 4.5962,
+   "recoloured": false
+  }
+ },
+ "sd46-tagline-black": {
+  "light": {
+   "file": "identity-display/sd46-tagline-black.light.svg",
+   "aspect": 5.4063,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/sd46-tagline-black.dark.svg",
+   "aspect": 5.4063,
+   "recoloured": true
+  }
+ },
+ "sd46-tagline-reverse": {
+  "light": {
+   "file": "identity-display/sd46-tagline-reverse.light.svg",
+   "aspect": 5.4063,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/sd46-tagline-reverse.dark.svg",
+   "aspect": 5.4063,
+   "recoloured": false
+  }
+ },
+ "sd46-simplified-black": {
+  "light": {
+   "file": "identity-display/sd46-simplified-black.light.svg",
+   "aspect": 3.5453,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/sd46-simplified-black.dark.svg",
+   "aspect": 3.5453,
+   "recoloured": true
+  }
+ },
+ "sd46-simplified-reverse": {
+  "light": {
+   "file": "identity-display/sd46-simplified-reverse.light.svg",
+   "aspect": 3.5452,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/sd46-simplified-reverse.dark.svg",
+   "aspect": 3.5452,
    "recoloured": false
   }
  },
@@ -9853,6 +9937,90 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "sd64-full-colour-lockup-2023-native": {
+  "light": {
+   "file": "identity-display/sd64-full-colour-lockup-2023-native.light.svg",
+   "aspect": 2.845,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/sd64-full-colour-lockup-2023-native.dark.svg",
+   "aspect": 2.845,
+   "recoloured": true
+  }
+ },
+ "sd64-one-colour-lockup-2023-native": {
+  "light": {
+   "file": "identity-display/sd64-one-colour-lockup-2023-native.light.svg",
+   "aspect": 2.8498,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/sd64-one-colour-lockup-2023-native.dark.svg",
+   "aspect": 2.8498,
+   "recoloured": true
+  }
+ },
+ "sd64-reverse-wordmark-2023-native": {
+  "light": {
+   "file": "identity-display/sd64-reverse-wordmark-2023-native.light.svg",
+   "aspect": 2.379,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/sd64-reverse-wordmark-2023-native.dark.svg",
+   "aspect": 2.379,
+   "recoloured": false
+  }
+ },
+ "sd64-reverse-lockup-2023-native": {
+  "light": {
+   "file": "identity-display/sd64-reverse-lockup-2023-native.light.svg",
+   "aspect": 2.4249,
+   "recoloured": true
+  },
+  "dark": {
+   "file": "identity-display/sd64-reverse-lockup-2023-native.dark.svg",
+   "aspect": 2.4249,
+   "recoloured": false
+  }
+ },
+ "sd64-wordmark-2023-native": {
+  "light": {
+   "file": "identity-display/sd64-wordmark-2023-native.light.svg",
+   "aspect": 2.3721,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/sd64-wordmark-2023-native.dark.svg",
+   "aspect": 2.3721,
+   "recoloured": true
+  }
+ },
+ "sd64-long-wordmark-2023-native": {
+  "light": {
+   "file": "identity-display/sd64-long-wordmark-2023-native.light.svg",
+   "aspect": 5.7742,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/sd64-long-wordmark-2023-native.dark.svg",
+   "aspect": 5.7742,
+   "recoloured": true
+  }
+ },
+ "sd64-icon-2023-native": {
+  "light": {
+   "file": "identity-display/sd64-icon-2023-native.light.svg",
+   "aspect": 0.7445,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/sd64-icon-2023-native.dark.svg",
+   "aspect": 0.7445,
+   "recoloured": true
+  }
+ },
  "school-district-67-strategic-plan-shield": {
   "light": {
    "file": "identity-display/school-district-67-strategic-plan-shield.light.svg",
@@ -9913,6 +10081,18 @@ export const COLLECTED_DISPLAY = {
    "recoloured": false
   }
  },
+ "sd72-historical-emblem-2003-native": {
+  "light": {
+   "file": "identity-display/sd72-historical-emblem-2003-native.light.svg",
+   "aspect": 1.4048,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/sd72-historical-emblem-2003-native.dark.svg",
+   "aspect": 1.4048,
+   "recoloured": true
+  }
+ },
  "school-district-73-budget-process-mountain": {
   "light": {
    "file": "identity-display/school-district-73-budget-process-mountain.light.svg",
@@ -9935,6 +10115,18 @@ export const COLLECTED_DISPLAY = {
    "file": "identity-display/school-district-74-strategic-plan-gold-trail.light.svg",
    "aspect": 0.9913,
    "recoloured": false
+  }
+ },
+ "sd75-mission-2012-black": {
+  "light": {
+   "file": "identity-display/sd75-mission-2012-black.light.svg",
+   "aspect": 4.5249,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/sd75-mission-2012-black.dark.svg",
+   "aspect": 4.5249,
+   "recoloured": true
   }
  },
  "school-district-84-strategic-plan-reverse": {
