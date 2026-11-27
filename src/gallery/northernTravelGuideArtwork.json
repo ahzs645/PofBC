@@ -1858,7 +1858,43 @@
         "method": "Isolated the publication’s native PDF paths with MuPDF, then exported those paths to SVG.",
         "nativePathCount": 4
       },
-      "sourceGround": "dark"
+      "sourceGround": "dark",
+      "designLabel": "Haida Gwaii · serif wordmark and wave",
+      "versionLabel": "White · 2015 guide"
+    },
+    {
+      "id": "haida-gwaii-red-2014",
+      "label": "Haida Gwaii · red wordmark and grey wave",
+      "file": "identity-collected/northern-bc-travel-guides/haida-gwaii-red-2014.svg",
+      "format": "svg",
+      "isVector": true,
+      "sha256": "24c7a444f5001efe526de3652ac996adff7af9723a01299d4307a60a635a8b1a",
+      "publisher": "Northern British Columbia Tourism Association",
+      "sourcePage": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/7728d38c-3976-4052-9c12-becafffab1f3/content#page=88",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/7728d38c-3976-4052-9c12-becafffab1f3/content",
+      "sourceFile": "Northern British Columbia Travel Guide 2014",
+      "sourceLocator": "PDF page 88, Haida Gwaii section advertisement, upper wordmark.",
+      "specimenDate": "2014",
+      "observedDate": "2026-11-27",
+      "role": "historical",
+      "reconstruction": false,
+      "evidenceType": "native-pdf-vector-extraction",
+      "notes": "The serif HAIDA GWAII with its mixed-height capitals in red over a grey wave: the colour version of the wordmark the 2015 guide prints in white.",
+      "fidelityNote": "Native shapes and inks are retained from the cited PDF. The photograph and the white tagline below were removed.",
+      "sourceGround": "light",
+      "extraction": {
+        "pdfPage": 88,
+        "pdfBounds": [
+          80,
+          396,
+          508,
+          472
+        ],
+        "method": "Isolated the native PDF graphics with MuPDF (PyMuPDF): removed the page’s images, the surrounding text and the vector artwork touching the area outside the logo by redaction, cropped to the logo, and exported SVG with live text converted to glyph paths. Bitmaps MuPDF still wrote into the SVG were removed; a render before and after showed no visible change.",
+        "nativePathCount": 2
+      },
+      "variantOf": "haida-gwaii-wave-2015",
+      "versionLabel": "Red and grey · 2014 guide"
     }
   ],
   "municipality-pouce-coupe": [
@@ -3214,7 +3250,48 @@
       },
       "sourceGround": "light",
       "fidelityNote": "The source crop retains the artwork as printed, including any surrounding design needed for the specimen.",
-      "sha256": "4438ae902092f436e638f57d0b4dc68875ad70b05f6b81428a8c3277507eef38"
+      "sha256": "4438ae902092f436e638f57d0b4dc68875ad70b05f6b81428a8c3277507eef38",
+      "preferredVector": "tourism-dawson-creek-teal-2014-vector",
+      "designLabel": "Tourism Dawson Creek · teal masthead",
+      "versionLabel": "Printed crop · 2015 guide"
+    },
+    {
+      "id": "tourism-dawson-creek-teal-2014-vector",
+      "label": "Tourism Dawson Creek · teal masthead · 2014 native vector",
+      "file": "identity-collected/northern-bc-travel-guides/tourism-dawson-creek-teal-2014-vector.svg",
+      "format": "svg",
+      "isVector": true,
+      "sha256": "5d25b66d657ab007a1a71451274a010e7ff3075436f6c63420b38548c5a98168",
+      "publisher": "Northern British Columbia Tourism Association",
+      "sourcePage": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/7728d38c-3976-4052-9c12-becafffab1f3/content#page=28",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/7728d38c-3976-4052-9c12-becafffab1f3/content",
+      "sourceFile": "Northern British Columbia Travel Guide 2014",
+      "sourceLocator": "PDF page 28, Dawson Creek advertisement, masthead across the top.",
+      "specimenDate": "2014",
+      "observedDate": "2026-11-27",
+      "role": "historical",
+      "reconstruction": false,
+      "evidenceType": "native-pdf-vector-extraction",
+      "notes": "Condensed teal DAWSON CREEK with TOURISM set vertically before it, and british columbia · canada with a maple leaf beneath.",
+      "fidelityNote": "The lettering is live text in the PDF, converted to glyph outlines; the maple leaf is the PDF’s own path. The photograph and the orange call-out below it were removed.",
+      "sourceGround": "light",
+      "extraction": {
+        "pdfPage": 28,
+        "pdfBounds": [
+          24,
+          26,
+          562,
+          172
+        ],
+        "method": "Isolated the native PDF graphics with MuPDF (PyMuPDF): removed the page’s images, the surrounding text and the vector artwork touching the area outside the logo by redaction, cropped to the logo, and exported SVG with live text converted to glyph paths. Bitmaps MuPDF still wrote into the SVG were removed; a render before and after showed no visible change.",
+        "nativePathCount": 7,
+        "liveText": [
+          "Dawson Creek, ToUrIsM (teal)",
+          "british columbia · canada (SourceSansPro-Light)"
+        ]
+      },
+      "variantOf": "tourism-dawson-creek-teal-2015",
+      "versionLabel": "Native vector · 2014 guide"
     }
   ],
   "alaska-highway-house": [
@@ -4017,6 +4094,41 @@
       ],
       "fidelityNote": "The source crop retains the artwork as printed, including any surrounding design needed for the specimen.",
       "sha256": "084b58ed824866418ea71b221514c10afd8ec80354c24ced31964b6aecb35c32"
+    },
+    {
+      "id": "smithers-im-there-2014",
+      "label": "Tourism Smithers · I’m there.",
+      "file": "identity-collected/northern-bc-travel-guides/smithers-im-there-2014.svg",
+      "format": "svg",
+      "isVector": true,
+      "sha256": "4ecf29a3593131503e34ebfeca3caa365e92c519aa34c5aefc34708f1c07ead9",
+      "publisher": "Northern British Columbia Tourism Association",
+      "sourcePage": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/7728d38c-3976-4052-9c12-becafffab1f3/content#page=55",
+      "sourceUrl": "https://digitalcollectionsrepository.llbc.leg.bc.ca/server/api/core/bitstreams/7728d38c-3976-4052-9c12-becafffab1f3/content",
+      "sourceFile": "Northern British Columbia Travel Guide 2014",
+      "sourceLocator": "PDF page 55, Tourism Smithers advertisement, leather panel.",
+      "specimenDate": "2014",
+      "observedDate": "2026-11-27",
+      "role": "historical",
+      "reconstruction": false,
+      "evidenceType": "native-pdf-vector-extraction",
+      "notes": "The I’m there. campaign: the script line over Smithers and the figure with a fishing rod, white, as printed on a leather panel.",
+      "fidelityNote": "Native shapes and inks are retained from the cited PDF; I’m there. is live text (Allison), converted to glyph outlines. The leather panel and the web address beneath were removed.",
+      "sourceGround": "dark",
+      "extraction": {
+        "pdfPage": 55,
+        "pdfBounds": [
+          380,
+          262,
+          535,
+          345
+        ],
+        "method": "Isolated the native PDF graphics with MuPDF (PyMuPDF): removed the page’s images, the surrounding text and the vector artwork touching the area outside the logo by redaction, cropped to the logo, and exported SVG with live text converted to glyph paths. Bitmaps MuPDF still wrote into the SVG were removed; a render before and after showed no visible change.",
+        "nativePathCount": 13,
+        "liveText": [
+          "I’m there. (AllisonROB)"
+        ]
+      }
     }
   ],
   "hazeltons-tourism": [
