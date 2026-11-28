@@ -4,6 +4,7 @@ import { ViewSwitcher } from '../site/ViewSwitcher.jsx'
 import { SunGlyph, ThemeIcon } from '../site/icons.jsx'
 import { FundingHistory, SupportProvided } from './FundingHistory.jsx'
 import { LogoCard } from './LogoCard.jsx'
+import { initiativesForBody } from '../initiatives/initiatives.js'
 import {
   RELATED_BODIES, RELATED_BODIES_AS_OF, RELATED_BODY_KINDS, groupRelatedBodies, relatedBodyById, relatedBodyPlace, searchRelatedBodies
 } from './relatedBodies.js'
@@ -132,6 +133,27 @@ export const RelatedBodiesView = ({ selectedId, onChangeView, themeName, onToggl
                   ? <SiteLink to={relatedBodyPlace(connection.id)}>{connection.label}</SiteLink>
                   : <SiteLink to={{ view: 'government', node: connection.id, year: connection.year, mode: connection.mode }}>{connection.label}</SiteLink>}
                 <span className="gov-muted">{connection.period && connection.period + ' · '}{connection.description} {connection.source && <a href={connection.source.url} target="_blank" rel="noreferrer">{connection.source.title}</a>}</span>
+              </li>)}
+            </ul>
+          </section>}
+
+          {selected.lineage?.length > 0 && <section className="gov-card" aria-labelledby="related-lineage">
+            <h2 className="gov-card__heading" id="related-lineage">Earlier names and predecessors</h2>
+            <p className="gov-muted">Each opens in the identity register, with its own sources and artwork.</p>
+            <ul className="gov-related__connections">
+              {selected.lineage.map((entry) => <li key={entry.subject}>
+                <SiteLink to={{ view: 'gallery', subject: entry.subject }}>{entry.name}</SiteLink>
+                <span className="gov-muted">{entry.relation}{entry.period ? ` · ${entry.period}` : ''}</span>
+              </li>)}
+            </ul>
+          </section>}
+
+          {initiativesForBody(selected.id).length > 0 && <section className="gov-card" aria-labelledby="related-initiatives">
+            <h2 className="gov-card__heading" id="related-initiatives">Related initiatives</h2>
+            <ul className="gov-related__connections">
+              {initiativesForBody(selected.id).map((entry) => <li key={entry.id}>
+                <SiteLink to={{ view: 'initiatives', initiative: entry.id }}>{entry.title}</SiteLink>
+                {entry.subtitle && <span className="gov-muted">{entry.subtitle}</span>}
               </li>)}
             </ul>
           </section>}

@@ -8,7 +8,7 @@
 // The year and the chosen body live in the address bar, so a view of the 1986 cabinet with the
 // Ministry of Forests and Lands open is a link that can be sent.
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { MINISTRY_EPISODES, standsIn } from './episodes.js'
 import { ChangesCard, EntityCard, OverviewCard, usePreloadSalaries } from './GovernmentPanel.jsx'
 import { InstrumentCard } from './LegislationCards.jsx'
@@ -33,6 +33,9 @@ import { search } from './governmentSearch.js'
 import { relatedBodyById, relatedBodyPlace } from './relatedBodies.js'
 import { readGovernmentPlace } from './governmentPlace.js'
 import './government.css'
+
+// The Budget mode is its own page, loaded when it is opened.
+const BudgetView = lazy(() => import('./BudgetView.jsx').then((module) => ({ default: module.BudgetView })))
 
 const readParams = () => readGovernmentPlace(globalThis.location?.search ?? '')
 
@@ -302,6 +305,8 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
     <EntityCard node={selected} government={government} theme={themeName} onJumpBody={jumpBody} onGo={go} onSelect={setSelectedId} onJump={jump} onOpenInGenerator={onOpenInGenerator} onOpenInstrument={openInstrument} />
   )
 
+  if (mode === 'budget') return <Suspense fallback={null}><BudgetView onChangeView={onChangeView} themeName={themeName} onToggleTheme={toggle} /></Suspense>
+
   if (mode === 'related') return <RelatedBodiesView
     selectedId={selectedId} onChangeView={onChangeView} themeName={themeName} onToggleTheme={toggle}
   />
@@ -322,6 +327,7 @@ export const GovernmentView = ({ onOpenInGenerator, onChangeView }) => {
         <div className="gov__overlay gov__overlay--top">
           <Search onPick={pick} />
           <div className="gov__tools">
+            <SiteLink className="gov-button gov__related-link" to={{ view: 'government', mode: 'budget' }}>Budget</SiteLink>
             <SiteLink className="gov-button gov__related-link" to={{ view: 'government', mode: 'related' }}>Related bodies</SiteLink>
             {!narrow && themeButton}
             {/* Narrow, a chosen body opens in the sheet, which carries these arrows itself. */}

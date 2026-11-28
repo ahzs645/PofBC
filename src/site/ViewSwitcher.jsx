@@ -4,40 +4,51 @@
 // rather than a choice between three things of equal standing. It is now the title's own last
 // word — "Province of British Columbia / Generator ▾" — opening a menu that says what each view is,
 // after the org-graph site the government view is modelled on. The menu follows the WAI-ARIA menu
-// button pattern: arrows move, Home and End jump, Escape closes and returns focus. The views use
-// two columns on a wide screen and a scrolling sheet across a phone's, so none falls off the page.
+// button pattern: arrows move, Home and End jump, Escape closes and returns focus. The views sit
+// under four headings, in two columns on a wide screen and a scrolling sheet across a phone's, so
+// none falls off the page.
 
 import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
 import { preloadView } from './viewLoaders.js'
 
-export const VIEWS = [
-  { id: 'generator', label: 'Generator', description: 'A ministry lockup in any of the four identities' },
-  { id: 'gallery', label: 'Logos', description: 'BC Hydro, BC Timber Sales, BC Parks, and the Province’s one-off marks' },
-  { id: 'airports', label: 'Airports', description: 'British Columbia’s airports, aviation facilities and their published artwork' },
-  { id: 'initiatives', label: 'Initiatives', description: 'Programs, campaigns and their websites, identities and publications', badge: 'New' },
-  { id: 'internal', label: 'Departmental Logos', description: 'Logos of provincial departments and services, including Forests and Travel Industry' },
-  { id: 'posters', label: 'Posters', description: 'Posters by series, every part clickable for its history' },
-  { id: 'signs', label: 'Signs', description: 'Signs by series, every part clickable for its history' },
-  { id: 'cards', label: 'Cards', description: 'Printed cards by series, every part clickable for its history', badge: 'New' },
-  { id: 'certificates', label: 'Certificates', description: 'Historical certificates and a guilloché border generator' },
-  { id: 'stickers', label: 'Stickers', description: 'BC Parks outreach artwork and the stickers that carried it' },
-  { id: 'pins', label: 'Pins', description: 'Pins and buttons by series, every part clickable for its history', badge: 'New' },
-  { id: 'patches', label: 'Patches', description: 'Patches by organization, sewn as embroidery', badge: 'New' },
-  { id: 'badges', label: 'Badges', description: 'Metal badges by organization', badge: 'New' },
-  { id: 'paper-models', label: 'Paper Models', description: 'Fold-up models to print, folded step by step in PackCAD', badge: 'New' },
-  { id: 'plates', label: 'Licence Plates', description: 'B.C. licence plates since 1904, by family and era, from PlateForge', badge: 'New' },
-  { id: 'arms', label: 'Coats of Arms', description: 'The Province’s arms and its dated drawings, and the arms of public bodies and universities', badge: 'New' },
-  { id: 'guides', label: 'Visual Guides', description: 'Identity manuals, rebuilt page by page' },
-  { id: 'stationery', label: 'Stationery', description: 'The 1977 calling card, letterhead and envelope, filled in', badge: 'New' },
-  { id: 'government', label: 'Government', description: 'The Province’s structure, back to 1871' },
-  { id: 'parties', label: 'Political Parties', description: 'Provincial parties’ logos over time, with their formations and renamings', badge: 'New' },
-  { id: 'school-districts', label: 'School Districts', description: 'District histories, predecessor connections, original logos and salary records', badge: 'New' },
-  { id: 'health-map', label: 'Health Maps', description: 'Historical health areas and their modern boundary comparisons', badge: 'New' },
-  { id: 'salaries', label: 'Salaries', description: 'Public-sector pay by name, followed across the years', badge: 'New' }
+// The views, under four headings. The menu sets the first three headings down its left column and
+// Objects down its right, so the list is in that order: down the left, then the right. "New" marks a
+// view for its first week or so, then comes off.
+export const VIEW_GROUPS = [
+  { id: 'identity', label: 'Logos and identity', column: 1 },
+  { id: 'government', label: 'Government', column: 1 },
+  { id: 'pay', label: 'Pay', column: 1 },
+  { id: 'objects', label: 'Objects', column: 2 }
 ]
 
-// Wide, the menu sets the views out in two columns of this many, read down the first then the second.
-const ROWS = Math.ceil(VIEWS.length / 2)
+export const VIEWS = [
+  { id: 'generator', label: 'Generator', group: 'identity', description: 'A ministry lockup in any of the four identities' },
+  { id: 'gallery', label: 'Logos', group: 'identity', description: 'BC Hydro, BC Timber Sales, BC Parks, and the Province’s one-off marks' },
+  { id: 'internal', label: 'Departmental Logos', group: 'identity', description: 'Logos of provincial departments and services, including Forests and Travel Industry' },
+  { id: 'initiatives', label: 'Initiatives', group: 'identity', description: 'Programs, campaigns and their websites, identities and publications', badge: 'New' },
+  { id: 'airports', label: 'Airports', group: 'identity', description: 'British Columbia’s airports, aviation facilities and their published artwork' },
+  { id: 'arms', label: 'Coats of Arms', group: 'identity', description: 'The Province’s arms and its dated drawings, and the arms of public bodies and universities' },
+  { id: 'guides', label: 'Visual Guides', group: 'identity', description: 'Identity manuals, rebuilt page by page' },
+  { id: 'stationery', label: 'Stationery', group: 'identity', description: 'The 1977 calling card, letterhead and envelope, filled in' },
+  { id: 'government', label: 'Government', group: 'government', description: 'The Province’s structure, back to 1871' },
+  { id: 'parties', label: 'Political Parties', group: 'government', description: 'Provincial parties’ logos over time, with their formations and renamings', badge: 'New' },
+  { id: 'school-districts', label: 'School Districts', group: 'government', description: 'District histories, predecessor connections, original logos and salary records', badge: 'New' },
+  { id: 'health-map', label: 'Health Maps', group: 'government', description: 'Historical health areas and their modern boundary comparisons' },
+  { id: 'salaries', label: 'Salaries', group: 'pay', description: 'Public-sector pay by name, followed across the years' },
+  { id: 'posters', label: 'Posters', group: 'objects', description: 'Posters by series, every part clickable for its history' },
+  { id: 'signs', label: 'Signs', group: 'objects', description: 'Signs by series, every part clickable for its history' },
+  { id: 'cards', label: 'Cards', group: 'objects', description: 'Printed cards by series, every part clickable for its history' },
+  { id: 'certificates', label: 'Certificates', group: 'objects', description: 'Historical certificates and a guilloché border generator' },
+  { id: 'stickers', label: 'Stickers', group: 'objects', description: 'BC Parks outreach artwork and the stickers that carried it' },
+  { id: 'pins', label: 'Pins', group: 'objects', description: 'Pins and buttons by series, every part clickable for its history' },
+  { id: 'patches', label: 'Patches', group: 'objects', description: 'Patches by organization, sewn as embroidery' },
+  { id: 'badges', label: 'Badges', group: 'objects', description: 'Metal badges by organization' },
+  { id: 'paper-models', label: 'Paper Models', group: 'objects', description: 'Fold-up models to print, folded step by step in PackCAD', badge: 'New' },
+  { id: 'plates', label: 'Licence Plates', group: 'objects', description: 'B.C. licence plates since 1904, by family and era, from PlateForge' }
+]
+
+// Each view's column in the wide menu, for the left and right arrows.
+const columnOf = (entry) => VIEW_GROUPS.find((group) => group.id === entry.group).column
 
 // Views that open from a link but aren't offered in the menu yet. The title still names them.
 export const HIDDEN_VIEWS = []
@@ -119,11 +130,19 @@ export const ViewSwitcher = ({ view, onChange, className = '', compact = false }
   const onMenuKey = (event) => {
     event.stopPropagation() // Artwork shortcuts underneath the menu must stay idle.
     const index = items.current.indexOf(document.activeElement)
-    const across = menu.current && getComputedStyle(menu.current).getPropertyValue('--menu-columns').trim() === '2' ? ROWS : 0
-    const move = { ArrowDown: 1, ArrowUp: -1, ArrowRight: across, ArrowLeft: -across }[event.key]
+    const twoColumns = menu.current && getComputedStyle(menu.current).getPropertyValue('--menu-columns').trim() === '2'
+    const move = { ArrowDown: 1, ArrowUp: -1 }[event.key]
     if (move !== undefined) {
       event.preventDefault()
-      if (move) items.current[(index + move + VIEWS.length) % VIEWS.length]?.focus()
+      items.current[(index + move + VIEWS.length) % VIEWS.length]?.focus()
+    } else if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+      // Across to the other column, at the same place down it (its last view, where it is shorter).
+      event.preventDefault()
+      if (!twoColumns || index < 0) return
+      const here = VIEWS.filter((entry) => columnOf(entry) === columnOf(VIEWS[index]))
+      const there = VIEWS.filter((entry) => columnOf(entry) !== columnOf(VIEWS[index]))
+      const target = there[Math.min(here.indexOf(VIEWS[index]), there.length - 1)]
+      items.current[VIEWS.indexOf(target)]?.focus()
     } else if (event.key === 'Home' || event.key === 'End') {
       event.preventDefault()
       items.current[event.key === 'Home' ? 0 : VIEWS.length - 1]?.focus()
@@ -152,31 +171,42 @@ export const ViewSwitcher = ({ view, onChange, className = '', compact = false }
       </button>
       {open && <span className="view-switcher__backdrop" aria-hidden="true" onClick={() => setOpen(false)} />}
       {open && (
-        <div ref={menu} id={id} className="view-switcher__menu" role="menu" aria-label="Switch view" onKeyDown={onMenuKey} style={{ '--menu-rows': ROWS }}>
-          <div className="view-switcher__heading" aria-hidden="true">Switch view</div>
-          <div className="view-switcher__list" role="none">
-            {VIEWS.map((entry, index) => (
-              <button
-                key={entry.id}
-                ref={(element) => { items.current[index] = element }}
-                type="button"
-                role="menuitemradio"
-                aria-checked={entry.id === view}
-                tabIndex={-1}
-                className="view-switcher__item"
-                onPointerEnter={() => preloadView(entry.id)}
-                onFocus={() => { if (entry.id !== view) preloadView(entry.id) }}
-                onClick={() => choose(entry.id)}
-              >
-                <span className="view-switcher__text">
-                  <span className="view-switcher__label">
-                    {entry.label}
-                    {entry.badge && <span className="view-switcher__badge">{entry.badge}</span>}
-                  </span>
-                  <span className="view-switcher__description">{entry.description}</span>
-                </span>
-                <span className="view-switcher__check">{entry.id === view && <Check />}</span>
-              </button>
+        <div ref={menu} id={id} className="view-switcher__menu" role="menu" aria-label="Switch view" onKeyDown={onMenuKey}>
+          <div className="view-switcher__columns" role="none">
+            {[1, 2].map((column) => (
+              <div key={column} className="view-switcher__column" role="none">
+                {VIEW_GROUPS.filter((group) => group.column === column).map((group) => (
+                  <div key={group.id} className="view-switcher__group" role="group" aria-labelledby={`${id}-${group.id}`}>
+                    <div className="view-switcher__heading" id={`${id}-${group.id}`} role="presentation">{group.label}</div>
+                    {VIEWS.filter((entry) => entry.group === group.id).map((entry) => {
+                      const index = VIEWS.indexOf(entry)
+                      return (
+                        <button
+                          key={entry.id}
+                          ref={(element) => { items.current[index] = element }}
+                          type="button"
+                          role="menuitemradio"
+                          aria-checked={entry.id === view}
+                          tabIndex={-1}
+                          className="view-switcher__item"
+                          onPointerEnter={() => preloadView(entry.id)}
+                          onFocus={() => { if (entry.id !== view) preloadView(entry.id) }}
+                          onClick={() => choose(entry.id)}
+                        >
+                          <span className="view-switcher__text">
+                            <span className="view-switcher__label">
+                              {entry.label}
+                              {entry.badge && <span className="view-switcher__badge">{entry.badge}</span>}
+                            </span>
+                            <span className="view-switcher__description">{entry.description}</span>
+                          </span>
+                          <span className="view-switcher__check">{entry.id === view && <Check />}</span>
+                        </button>
+                      )
+                    })}
+                  </div>
+                ))}
+              </div>
             ))}
           </div>
         </div>

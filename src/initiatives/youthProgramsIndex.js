@@ -13,7 +13,7 @@ export const YOUTH_PROGRAMS = [
   {
     id: 'challenge-89', parentId: BC_YOUTH_ID,
     title: 'Challenge ’89',
-    subtitle: 'British Columbia Summer Employment Program',
+    subtitle: 'Government of British Columbia · 1989',
     summary: 'In 1989 the province offered to share wages with employers creating summer jobs for young British Columbians. The program combined federal and provincial funding.',
     cover: {
       file: 'initiatives/challenge-89/employer-ad-1989.jpg',
@@ -27,7 +27,7 @@ export const YOUTH_PROGRAMS = [
   {
     id: 'passport-to-apprenticeship', parentId: BC_YOUTH_ID,
     title: 'Passport to Apprenticeship',
-    subtitle: 'Education · Advanced Education and Job Training',
+    subtitle: 'Ministries of Education and of Advanced Education and Job Training · from 1989',
     summary: 'B.C. introduced this program in 1989 to give high-school trades students experience with employers before they left school.',
     tags: ['Apprenticeship', 'Secondary education', 'Timeline'],
     searchTerms: ['BC Youth', 'Stanley Hagen', 'Trades training', 'Work experience'],
@@ -36,7 +36,7 @@ export const YOUTH_PROGRAMS = [
   {
     id: environmentYouthCorpsId, parentId: BC_YOUTH_ID,
     title: 'Environment Youth Corps',
-    subtitle: 'Environment · Social Services and Housing',
+    subtitle: 'Ministries of Environment and of Social Services and Housing',
     summary: 'Young people aged 16–24 worked on local conservation projects in a provincial employment and training program established in 1989.',
     cover: environmentYouthCorpsCover,
     exploreLabel: 'Explore the recruitment mark and program history',

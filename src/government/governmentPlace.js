@@ -25,7 +25,7 @@ export const readGovernmentPlace = (search = '') => {
     year: related ? PRESENT_YEAR : selectedYear,
     // Preserve links made before an episode's name was corrected.
     node,
-    mode: related ? 'related' : ['graph', 'list', 'compare'].includes(mode) ? mode : 'graph',
+    mode: related ? 'related' : ['graph', 'list', 'compare', 'budget'].includes(mode) ? mode : 'graph',
     compare: validYear(compare) ? compare : null,
     undated: params.get('undated') !== '0',
     local: params.get('local') === '1',

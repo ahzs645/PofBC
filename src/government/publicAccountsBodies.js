@@ -62,11 +62,18 @@ export const PUBLIC_ACCOUNTS_RELATED_BODIES = [
   },
   {
     id: 'st-michaels-centre', name: 'St. Michael’s Centre', shortName: 'St. Michael’s Centre',
-    aliases: ["St. Michael's Centre", 'St Michaels Centre'], kind: 'affiliated-health-society',
-    description: 'A health care society the Province consolidates in its health sector. Its statements are scanned images, so its programs and funding authority are not read here.',
-    historyNote: 'Its statements are in the Public Accounts every year from 2004-05. Which registered society files them is not read from the scanned statements, so none is named here.',
-    sources: [statement('2025-26', 'st-michaels-centre', 'St. Michael’s Centre'), statement('2004-05', 'st-michaels-centre', 'St. Michael’s Centre')],
-    salaryEmployers: [], relationships: []
+    aliases: ["St. Michael's Centre", 'St Michaels Centre', 'St. Michael’s Centre Hospital Society', 'St. Michael’s Centre Intermediate Care Society', 'S0014480', 'S0014481'],
+    kind: 'affiliated-health-society',
+    description: 'A hospice and extended care facility in Burnaby. Two societies run it under the name St. Michael’s Centre: the St. Michael’s Centre Hospital Society, a registered charity, and the St. Michael’s Centre Intermediate Care Society. They file one set of combined statements. The centre is affiliated with Fraser Health, its principal funding agency.',
+    historyNote: 'Both societies were registered on 16 February 1979. The combined statements are in the Public Accounts every year from 2004-05.',
+    sources: [
+      statement('2024-25', 'st-michaels-centre', 'St. Michael’s Centre'),
+      statement('2004-05', 'st-michaels-centre', 'St. Michael’s Centre'),
+      registry('S0014480', 'St. Michael’s Centre Hospital Society'),
+      registry('S0014481', 'St. Michael’s Centre Intermediate Care Society')
+    ],
+    salaryEmployers: [],
+    relationships: [link('fraser-health', 'Fraser Health', 'Affiliation; its principal funding agency', { source: statement('2024-25', 'st-michaels-centre', 'St. Michael’s Centre') })]
   },
   {
     id: 'st-josephs-general-hospital', name: 'St. Joseph’s General Hospital', shortName: 'St. Joseph’s, Comox',
@@ -193,9 +200,15 @@ export const PUBLIC_ACCOUNTS_RELATED_BODIES = [
     id: 'institute-of-indigenous-government', name: 'Institute of Indigenous Government', shortName: 'IIG',
     aliases: ['IIG'], kind: 'public-institute', historical: true,
     description: 'A post-secondary institution designated as a public institute under the College and Institute Act. It formally began operating in August 1995 and depended on government funding.',
-    historyNote: 'Its statements are in the Public Accounts for 2005-06 only.',
-    sources: [statement('2005-06', 'institute-indigenous-government', 'Institute of Indigenous Government')],
-    salaryEmployers: [], relationships: []
+    historyNote: 'Its statements are in the Public Accounts for 2005-06 only. From 1 July 2007 it operated as the Vancouver campus of the Nicola Valley Institute of Technology. NVIT’s statements for 2007-08 say it was then finalizing an agreement to take over IIG’s assets, expected to complete in 2009. No order dissolving IIG has been found.',
+    sources: [
+      statement('2005-06', 'institute-indigenous-government', 'Institute of Indigenous Government'),
+      { title: 'Nicola Valley Institute of Technology, financial statements 2007-08 (Public Accounts), notes 1 and 12', url: `${PA}2007-08/sup-e/nicola-valley-institute-of-technology-fs-2007-08.pdf` }
+    ],
+    salaryEmployers: [],
+    relationships: [link('nicola-valley-institute-of-technology', 'NVIT', 'Became its Vancouver campus from 1 July 2007', {
+      source: { title: 'Nicola Valley Institute of Technology, financial statements 2007-08 (Public Accounts), notes 1 and 12', url: `${PA}2007-08/sup-e/nicola-valley-institute-of-technology-fs-2007-08.pdf` }
+    })]
   },
 
   // ── Other ───────────────────────────────────────────────────────────────────────────────────────

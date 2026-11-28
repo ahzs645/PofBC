@@ -741,7 +741,14 @@ export const ACQUIRED_VECTORS = {
         ],
         "sourceSha256": "bb14c9f0b411cad164301a690ab8c3ccf9a0bb6cf4220bd6408fd11f89df00ba"
       },
-      "sourceDate": "2016"
+      "sourceDate": "2016",
+      "alsoSeen": [
+        {
+          "label": "2026-RFP-02 invitation, Owner’s Advisor: IPD for Firehall, issued 19 January 2026, page 1 header",
+          "source": "https://www.penticton.ca/sites/default/files/uploads/tender-rfp/2026-RFP-02%20Invitation.pdf#page=1",
+          "date": "2026-01-19"
+        }
+      ]
     }
   },
   "source-recovered-municipal-north-vancouver-city-website-logo": {

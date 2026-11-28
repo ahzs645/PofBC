@@ -74,7 +74,16 @@ export const documentSpecimens = {
     specimen('fwcp-columbia-2006', 'Columbia Basin Fish & Wildlife Compensation Program', 'columbia', 2,
       'left of the newsletter masthead', 'The ram, fish, mountains and outlined program name are isolated from the adjoining partnership paragraph.', '22a542d5a939f93d70e46c239dc5d5931f93e36e4bc80312733a32299119f8de'),
     specimen('fwcp-columbia-ten-years', 'Conserving & Enhancing Fish & Wildlife · 1995–2005', 'columbia', 2,
-      'ten-year badge at upper right', 'The original PDF form combines outlines and raster shadows. Both survive in the SVG.', '11b44a237d1b978be046f57f54b6ade9b06a65e6b3c16ecedefaf5a288465382', { containsRaster: true }),
+      'ten-year badge at upper right', 'The original PDF form combines outlines and raster shadows. Both survive in the SVG.', '11b44a237d1b978be046f57f54b6ade9b06a65e6b3c16ecedefaf5a288465382', {
+        containsRaster: true,
+        // The program's July 2006 backgrounder prints the same badge in the middle of its cover. The
+        // file name dates it 24 July 2006; the PDF was made on 21 July 2006.
+        alsoSeen: [{
+          label: 'Backgrounder: An introduction to the Fish & Wildlife Compensation Program – Columbia Basin, cover (file backgrounder-2006-july-24.pdf)',
+          source: 'https://web.archive.org/web/20100525010649/http://fwcp.ca:80/version2/info/media/backgrounder-2006-july-24.pdf#page=1',
+          date: 'July 2006'
+        }]
+      }),
     specimen('fwcp-columbia-seal-2014', 'Circular fish, bear and mountain emblem', 'columbiaAnnual', 2,
       'centre of the front cover, above the canoes', 'The cover prints the circular inscription and wildlife outlines at reduced opacity over a photograph. The SVG retains the paths and their opacity.', '7a0b01d79330afddd6fe48cf2f9f91f5e090db8b56777307a02850f697b09770'),
     specimen('fwcp-peace-2015', 'FWCP initials and full name beside the wildlife emblem', 'peace', 2,

@@ -28,11 +28,47 @@ jobs:
     runs-on: macos-latest
 
     steps:
+      # Submodules are fetched below, one at a time and only as much as the build reads, rather
+      # than all of them in full here: that was about 2 GB, and one timeout failed the deploy.
       - uses: actions/checkout@v7
+
+      # The tools that are built rather than imported (geo-toolkit's dist/, PackCAD's viewer) are
+      # cached by the commits this repository pins and by the scripts that build them. While the
+      # pins are unchanged the deploy restores them and never fetches those three repositories.
+      - name: Key the tool builds by their pinned commits
+        id: tools
+        run: |
+          pins="$(git ls-tree HEAD vendor/geo-toolkit vendor/atelier vendor/packcad | awk '{print substr($3, 1, 12)}' | paste -sd- -)"
+          echo "key=tools-${{ runner.os }}-${pins}-${{ hashFiles('scripts/build-geo-toolkit.mjs', 'scripts/build-packcad.mjs') }}" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache@v4
+        id: tools-cache
         with:
-          # vendor/json-url compresses a lockup into a share link, and its dist/ is built rather
-          # than committed, so the submodule has to be here before npm can resolve the dependency.
-          submodules: recursive
+          # geo-toolkit's dist/ imports its own dependencies (lucide-react, d3, deck.gl…) from its
+          # node_modules, so they are kept with it.
+          path: |
+            vendor/geo-toolkit/dist
+            vendor/geo-toolkit/node_modules
+            public/packcad
+          key: ${{ steps.tools.outputs.key }}
+
+      # Shallow, at the pinned commit, retried on failure (.github/scripts/fetch-submodule.sh).
+      # vendor/json-url compresses a lockup into a share link, and its dist/ is built rather than
+      # committed, so it has to be here before npm can resolve the dependency. PlateForge is read
+      # from src/ alone.
+      - name: Fetch submodules
+        run: |
+          .github/scripts/fetch-submodule.sh vendor/json-url
+          .github/scripts/fetch-submodule.sh vendor/patcher
+          .github/scripts/fetch-submodule.sh vendor/brandkit
+          .github/scripts/fetch-submodule.sh vendor/plateforge src
+
+      - name: Fetch the tools to build
+        if: steps.tools-cache.outputs.cache-hit != 'true'
+        run: |
+          .github/scripts/fetch-submodule.sh vendor/geo-toolkit
+          .github/scripts/fetch-submodule.sh vendor/atelier
+          .github/scripts/fetch-submodule.sh vendor/packcad
 
       - uses: actions/setup-node@v7
         with:

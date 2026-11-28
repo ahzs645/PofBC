@@ -76,7 +76,7 @@ def asset_record(spec, recipe, data, box, counts, design_label):
         },
         'rightsNote': 'The guide states the emblem is the City’s property, protected by copyright and trademark, and that use needs the City’s authorization. No permission to reproduce it here has been sought.'
     }
-    for key in ('variantOf', 'designLabel', 'adoption'):
+    for key in ('variantOf', 'designLabel', 'adoption', 'alsoSeen'):
         if recipe.get(key):
             record[key] = recipe[key]
     return record

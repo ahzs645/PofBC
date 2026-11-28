@@ -46,7 +46,7 @@ export const DEPARTMENT_INDEX = [
   { id: 'collected-bc-public-health-service', title: 'BC Public Health Service', note: 'A public health nursing badge, 1961' },
   { id: TRAVEL_COLLECTION, title: 'Department of Travel Industry', note: 'Map and dogwood, about 1970' },
   { id: 'recreation-conservation', title: 'Department of Recreation and Conservation', note: 'A dogwood oval, five square symbols and two branch emblems, 1970–1973' },
-  { id: 'fish-wildlife-branch', title: 'Fish and Wildlife Branch', note: 'Its square, its F&W oval and the emblem with its name, 1971–1973' },
+  { id: 'fish-wildlife-branch', title: 'Fish and Wildlife Branch', note: 'Its square, its F&W oval and the emblem with its name, 1971–1977' },
   { id: 'tourism-recreation-culture', title: 'Ministry of Tourism, Recreation and Culture', note: 'The flag run out as three bands, 1986–1988' },
   { id: 'bc-lands', title: 'BC Lands', note: 'The flag-years badge, seen 1986–88 and 1994' },
   { id: 'bc-environment', title: 'Ministry of Environment', note: 'The flag-years mark, undated; the ministry of 1988–1991' },

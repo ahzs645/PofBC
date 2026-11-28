@@ -13,7 +13,16 @@ import { fileURLToPath } from 'node:url'
 const dir = fileURLToPath(new URL('../vendor/geo-toolkit/', import.meta.url))
 const at = (path) => `${dir}${path}`
 
+// The deploy caches dist/ by the pinned commit and then skips fetching the toolkit at all, so an
+// empty checkout with a dist/ built from the pinned commit is already done.
 if (!existsSync(at('package.json'))) {
+  let pinned = null
+  try { pinned = execFileSync('git', ['ls-tree', 'HEAD', 'vendor/geo-toolkit'], { cwd: `${dir}../..`, encoding: 'utf8' }).split(/\s+/)[2] } catch { /* not a checkout */ }
+  const built = existsSync(at('dist/.pofbc-build')) ? JSON.parse(readFileSync(at('dist/.pofbc-build'), 'utf8')).commit : null
+  if (pinned && built === pinned) {
+    console.log(`  geo-toolkit        ${pinned.slice(0, 7)} restored from the deploy cache`)
+    process.exit(0)
+  }
   console.error('vendor/geo-toolkit is empty. Run: git submodule update --init vendor/geo-toolkit')
   process.exit(1)
 }

@@ -120,7 +120,9 @@
     "check:salary-search": "npm run build:salary-search --silent && node scripts/check-salary-search.mjs",
     "check:record-links": "node scripts/check-record-links.mjs",
     "build:finance": "node scripts/build-finance.mjs",
-    "check:finance": "node scripts/build-finance.mjs --check && node --test scripts/finance.test.mjs"
+    "check:finance": "node scripts/build-finance.mjs --check && node --test scripts/finance.test.mjs",
+    "build:budget": "node scripts/build-budget.mjs",
+    "check:budget": "node scripts/build-budget.mjs --check && node --test scripts/budget.test.mjs src/government/budgetLayout.test.js"
   },
   "peerDependencies": {
     "react": ">=18",
@@ -155,6 +157,7 @@
     "bwip-js": "^4.11.4",
     "clipper-lib": "6.4.2",
     "d3-geo": "3.1.1",
+    "document-kit": "https://github.com/ahzs645/document-kit/releases/download/build-08ab1ff/document-kit-0.1.0-08ab1ff.tgz",
     "docx": "^9.12.0",
     "fflate": "^0.8.3",
     "gifenc": "^1.0.3",

@@ -79,7 +79,7 @@ const records = [
       note: 'Page 3 credits joint work in the East Kootenay. BC Hydro is the compensation program’s funder.', source: publication('columbiaAnnual')
     }],
     relations: [related('bc-hydro', 'Funds compensation for the effects of hydroelectric dams')],
-    nextAction: 'Recover the early Peace/Williston regional signature and locate a dated Coast-region example.', cover: 'fwcp-peace-2015', assets: documentSpecimens.wildlife
+    nextAction: 'Recover the early Peace/Williston regional signature and locate a dated Coast-region example. Recover the blue fish and green bear Columbia Basin logo from the cover of the July 2006 backgrounder (https://web.archive.org/web/20100525010649/http://fwcp.ca:80/version2/info/media/backgrounder-2006-july-24.pdf), which is not held.', cover: 'fwcp-peace-2015', assets: documentSpecimens.wildlife
   }, {
     id: injuryUnit, name: 'BC Injury Research and Prevention Unit', kind: 'health-agency', shelf: 'initiatives',
     family: 'specialist-health', aliases: ['BCIRPU'], current: true, from: 1997,

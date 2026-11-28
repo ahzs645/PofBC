@@ -50,3 +50,59 @@
 .gov-money__sources { margin-top: 14px; font-size: 13px; }
 .gov-money__sources .source-list { margin-top: 6px; --ink-muted: var(--gov-ink-4); }
 .gov-money__sources a { color: var(--gov-link); }
+
+/* The detailed parts (MoneyParts.jsx): budget and actual, revenue and expense, from ministries. */
+.gov-money__part { margin: 4px 0 18px; padding-bottom: 14px; border-bottom: 1px solid var(--gov-outline); }
+.gov-money__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 12px; }
+.gov-money__head .gov-card__subheading { margin: 0; }
+.gov-money__table-heading { margin-top: 4px; }
+.gov-money__year { font-size: 13px; color: var(--gov-ink-3); font-variant-numeric: tabular-nums; }
+.gov-money__select select {
+  min-height: 32px; padding: 4px 8px; border: 1px solid var(--gov-outline); border-radius: 8px;
+  background: var(--gov-surface); color: var(--gov-ink); font: inherit; font-size: 13px; font-variant-numeric: tabular-nums;
+}
+.gov-money__select select:focus-visible { outline: 2px solid var(--gov-link); outline-offset: 1px; }
+.gov-money__visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.gov-money__about a, .gov-money__part a { color: var(--gov-link); }
+
+.gov-money__figure { margin: 10px 0 6px; }
+.gov-money__caption { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 4px; font-size: 12px; color: var(--gov-ink-3); font-variant-numeric: tabular-nums; }
+.gov-money__stack { display: block; width: 100%; height: 18px; border-radius: 4px; background: var(--gov-mid); }
+.gov-money__seg--province { fill: var(--gov-executive); background: var(--gov-executive); }
+.gov-money__seg--federal { fill: var(--gov-legislative); background: var(--gov-legislative); }
+.gov-money__seg--own-source { fill: var(--gov-chip-established); background: var(--gov-chip-established); }
+.gov-money__seg--other-entity { fill: var(--gov-chip-merged); background: var(--gov-chip-merged); }
+.gov-money__seg--investment { fill: var(--gov-people); background: var(--gov-people); }
+.gov-money__seg--deferred-capital-amortization { fill: var(--gov-judicial); background: var(--gov-judicial); }
+.gov-money__seg--other { fill: var(--gov-ink-4); background: var(--gov-ink-4); }
+.gov-money__seg--expense { fill: var(--gov-chip-renamed); background: var(--gov-chip-renamed); }
+.gov-money__legend--categories { margin: 6px 0 0; padding: 0; list-style: none; }
+.gov-money__legend--categories li { display: inline-flex; align-items: center; gap: 6px; }
+
+.gov-money__lines { width: 100%; margin-top: 6px; border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.gov-money__lines thead th {
+  padding: 4px 6px; border-bottom: 1px solid var(--gov-mid);
+  font: 500 10px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--gov-ink-4); text-align: right; white-space: nowrap;
+}
+.gov-money__lines thead th:first-child, .gov-money__lines tbody th { text-align: left; }
+.gov-money__lines td, .gov-money__lines tbody th { padding: 5px 6px; border-bottom: 1px solid var(--gov-outline); vertical-align: top; }
+.gov-money__lines tbody th { font-weight: 400; color: var(--gov-ink); }
+.gov-money__lines tbody th .gov-money__swatch { margin-right: 6px; vertical-align: -1px; }
+.gov-money__lines td { text-align: right; white-space: nowrap; color: var(--gov-ink); }
+.gov-money__lines td.gov-money__category { color: var(--gov-ink-4); font-size: 11.5px; white-space: normal; }
+.gov-money__total > * { font-weight: 600 !important; border-bottom: 0 !important; }
+.gov-money__total + .gov-money__total > * { font-weight: 500 !important; color: var(--gov-ink-2) !important; }
+
+.gov-money__bars--small { height: 40px; margin: 10px 0 4px; }
+.gov-money__bar--s0 { fill: var(--gov-executive); }
+.gov-money__bar--s1 { fill: var(--gov-ink-4); }
+.gov-money__swatch--s0 { background: var(--gov-executive); }
+.gov-money__swatch--s1 { background: var(--gov-ink-4); }
+.gov-money__bars--small g:not(.gov-money__bar-chosen) rect { opacity: 0.55; }
+.gov-money__legend:is(p) { margin: 0; }
+
+/* On a phone the category column gives way to the figures. */
+@media (max-width: 420px) {
+  .gov-money__lines td.gov-money__category, .gov-money__lines thead th:nth-child(2) { display: none; }
+}

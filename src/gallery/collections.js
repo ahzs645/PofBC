@@ -885,11 +885,11 @@ const DRC_EMBLEMS = {
     darkPreviewNote: 'The dark preview has a thin cream outline for contrast.'
   },
   fwOval: {
-    ...drcEmblem('drc-fw-oval-1973', 'Fish and Wildlife emblem', '1972–73 synopsis and 1973 report',
-      'A framed oval above F&W on the 1972–73 hunting regulations cover and the 1973 Fish and Wildlife dividers.',
+    ...drcEmblem('drc-fw-oval-1973', 'Fish and Wildlife emblem', '1972–73 to 1976–77 synopses, and the 1973 report',
+      'A framed oval above F&W on the hunting regulations covers of 1972–73 to 1976–77 and the 1973 Fish and Wildlife dividers.',
       'The supplied reconstruction uses one set of Bézier paths for the oval, frame and lettering. ' +
         'The bear’s eye follows the colour reference. Its exact original outline remains uncertain.',
-      'The hunting synopsis and the annual report show the emblem in print.'),
+      'The hunting synopses and the annual report show the emblem in print. These are sightings, not an introduction or an end.'),
     themedPreview: true,
     darkPreviewNote: 'The dark preview uses white ink. Choose White to download that version.',
     markLabel: 'Black',
@@ -1301,14 +1301,18 @@ export const GALLERY_COLLECTIONS = [
     shelf: 'departmental',
     showInGalleryIndex: false,
     label: 'Fish and Wildlife Branch',
-    body: 'Branch of the Department of Recreation and Conservation, named in 1966',
-    years: '1971–1973',
+    body: 'Provincial branch, named in 1966; under the Ministry of Environment from December 1978',
+    years: '1971–1977',
     cover: 'fwb-1973-oval',
     intro: 'The Fish and Wildlife Branch’s marks, from the Department of Recreation and Conservation’s reports and ' +
-      'the 1972–73 hunting regulations: its square in the department’s family of five, then its own framed oval ' +
-      'above F&W and the emblem beside the branch’s name. The branch began as the Game Commission, became the ' +
-      'department’s Fish and Game Branch on 1 April 1957 and was named the Fish and Wildlife Branch in 1966. ' +
-      'Its marks after the department ended in 1976 are still sought.',
+      'the hunting regulations synopses: its square in the department’s family of five, then its own framed oval ' +
+      'above F&W and the emblem beside the branch’s name. The oval is on every synopsis cover from 1972–73 to ' +
+      '1976–77. The branch began as the Game Commission, became the department’s Fish and Game Branch on 1 April ' +
+      '1957 and was named the Fish and Wildlife Branch in 1966. The 1976–77 synopsis names the Department of ' +
+      'Recreation and Travel Industry, and the 1977–78 and 1978–79 synopses the Ministry of Recreation and ' +
+      'Conservation. The branch moved to the Ministry of Environment in December 1978. From 1977–78 the covers ' +
+      'carry the Province’s shield, not a branch mark. The synopses call it the Wildlife Branch from 1986–87. ' +
+      'No later mark of its own has been found.',
     eras: withMarks(COLLECTION_ERAS['fish-wildlife-branch'], {
       'fwb-square': [{ ...DRC_SQUARES.fishWildlife, id: 'fwb-1971-square' }],
       'fwb-emblem': [{ ...DRC_EMBLEMS.fwOval, id: 'fwb-1973-oval' }, { ...DRC_EMBLEMS.fwLockup, id: 'fwb-1973-lockup' }]

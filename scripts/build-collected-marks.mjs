@@ -35,7 +35,7 @@ for (const { register: packaged } of PACKAGES) if (packaged.body) {
 }
 // Histories of a body's earlier identities: dated pictures of a mark in use (kept as images, and
 // said to be) beside any of its vectors, with a design's other sightings as its versions.
-const HISTORIES = ['oil-and-gas-commission-history-2026-11-24', 'bc-assessment-history-2026-11-21', 'evidence-2026-11-21', 'bc-place-history-2026-11-21', 'bc-health-logo-search-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22']
+const HISTORIES = ['oil-and-gas-commission-history-2026-11-24', 'bc-assessment-history-2026-11-21', 'bc-assessment-1982-reconstruction-2026-11-27', 'evidence-2026-11-21', 'bc-place-history-2026-11-21', 'bc-health-logo-search-2026-11-22', 'bc-health-vector-findings-2026-11-22', 'thompson-health-region-vector-2026-11-22']
   .map((search) => ({ search, register: read(`research/identity/${search}/source-register.json`) }))
 const railway = read('research/identity/railway-history-2026-11-12/source-register.json')
 const railwayHistory = read('research/identity/railway-history-2026-11-12/history.json')
@@ -508,8 +508,12 @@ const kept = (assets) => assets.filter((asset) => !SUPERSEDED[asset.id])
     const alsoSeen = [...(asset.alsoSeen ?? []), ...alsoSeenOf(assets, asset.id)]
     return alsoSeen.length ? { ...asset, alsoSeen } : asset
   })
+// A later register can point an existing design at a version it adds (its preferred reconstruction),
+// so the design keeps its ID and the file it was first held as.
+const DESIGN_UPDATES = Object.assign({}, ...HISTORIES.map(({ register: history }) => history.designUpdates))
 const finished = (asset) => ({
   ...asset,
+  ...DESIGN_UPDATES[asset.id],
   ...(ASSET_NOTES[asset.id] ? { notes: ASSET_NOTES[asset.id] } : {}),
   ...(ASSET_LABELS[asset.id] ? { label: ASSET_LABELS[asset.id] } : {}),
   ...(VERSION_LABELS[asset.id] ? { versionLabel: VERSION_LABELS[asset.id] } : {}),
@@ -560,6 +564,7 @@ for (const { assets } of [...bodies, ...specimens]) for (const asset of assets) 
   seenIds.add(asset.id)
   seenFiles.add(asset.file)
 }
+for (const id of Object.keys(DESIGN_UPDATES)) if (!seenIds.has(id)) throw new Error(`Unknown design update: ${id}`)
 
 // Decorative scenes, liveries and application photos have provenance and checksums too,
 // but never become adopted-logo entries merely because they were cropped from a source.

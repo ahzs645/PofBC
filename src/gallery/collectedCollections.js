@@ -106,6 +106,8 @@ const VERIFIED_CURRENT_COVERS = {
   'bc-infrastructure-benefits': 'vector-bcib-2025-tagline-reversed-source-vector',
   'bc-railway-company': 'bcrc-2024-letterhead',
   'first-nations-health-authority': 'vector-fnha-logo-colour',
+  // The official 2026 logo kit's horizontal logo; the vertical is the same identity stacked.
+  'forest-enhancement-society': 'source-forest-enhancement-society-fesbc-horizontal-eps',
   'interior-health': 'vector-interior-health-blue-horizontal-source-extraction',
   'municipality-prince-rupert': 'municipal-prince-rupert-community-assessment-2024',
   'municipality-gibsons': 'source-recovered-municipal-gibsons-website-logo',

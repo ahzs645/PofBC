@@ -98,7 +98,7 @@ const history = [
 
 export const achieveBCDetail = (entry) => ({
   id: entry.id, title: entry.title,
-  hero: { title: entry.title, eyebrow: 'Government of British Columbia · Office of the Premier', description: entry.summary, image: entry.cover, caption: entry.cover.caption },
+  hero: { title: entry.title, eyebrow: entry.subtitle, description: entry.summary, image: entry.cover, caption: entry.cover.caption },
   sources,
   relatedLinks: [
     { label: 'Premier of British Columbia in 2003', to: { view: 'government', node: 'premier', year: 2003 } },

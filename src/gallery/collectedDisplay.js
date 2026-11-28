@@ -169,6 +169,30 @@ export const COLLECTED_DISPLAY = {
    "recoloured": true
   }
  },
+ "bc-assessment-map-1982-reconstruction": {
+  "light": {
+   "file": "identity-display/bc-assessment-map-1982-reconstruction.light.svg",
+   "aspect": 3.8861,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-assessment-map-1982-reconstruction.dark.svg",
+   "aspect": 3.8861,
+   "recoloured": true
+  }
+ },
+ "bc-assessment-map-1982-reconstruction-black": {
+  "light": {
+   "file": "identity-display/bc-assessment-map-1982-reconstruction-black.light.svg",
+   "aspect": 3.8861,
+   "recoloured": false
+  },
+  "dark": {
+   "file": "identity-display/bc-assessment-map-1982-reconstruction-black.dark.svg",
+   "aspect": 3.8861,
+   "recoloured": true
+  }
+ },
  "source-bc-games-society-bc-games-svg": {
   "light": {
    "file": "identity-display/source-bc-games-society-bc-games-svg.light.svg",
@@ -13465,12 +13489,12 @@ export const COLLECTED_DISPLAY = {
  "firesmart-bc-ember-front": {
   "light": {
    "file": "identity-display/firesmart-bc-ember-front.light.svg",
-   "aspect": 0.5727,
+   "aspect": 0.5706,
    "recoloured": false
   },
   "dark": {
    "file": "identity-display/firesmart-bc-ember-front.dark.svg",
-   "aspect": 0.5727,
+   "aspect": 0.5706,
    "recoloured": true,
    "palette": true
   }
@@ -13491,12 +13515,12 @@ export const COLLECTED_DISPLAY = {
  "firesmart-bc-ember-sitting": {
   "light": {
    "file": "identity-display/firesmart-bc-ember-sitting.light.svg",
-   "aspect": 0.9302,
+   "aspect": 0.9282,
    "recoloured": false
   },
   "dark": {
    "file": "identity-display/firesmart-bc-ember-sitting.dark.svg",
-   "aspect": 0.9302,
+   "aspect": 0.9282,
    "recoloured": true,
    "palette": true
   }
@@ -13593,12 +13617,13 @@ export const COLLECTED_DISPLAY = {
  "education-province-wordmark": {
   "light": {
    "file": "identity-display/education-province-wordmark.light.svg",
-   "aspect": 3.2443,
-   "recoloured": false
+   "aspect": 3.2421,
+   "recoloured": true,
+   "palette": true
   },
   "dark": {
    "file": "identity-display/education-province-wordmark.dark.svg",
-   "aspect": 3.2443,
+   "aspect": 3.2421,
    "recoloured": true,
    "palette": true
   }

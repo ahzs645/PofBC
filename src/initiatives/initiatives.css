@@ -52,6 +52,7 @@
 .initiatives__part-art { flex: none; display: flex; align-items: center; justify-content: center; width: 84px; height: 56px; border-radius: 6px; background: var(--initiative-artwork); box-shadow: inset 0 0 0 1px var(--initiative-artwork-line); }
 .initiatives__part-art[data-themed] { background: var(--hover); box-shadow: none; }
 .initiatives__part-art[data-dark] { background: var(--initiative-artwork-dark); }
+.initiatives__part-art[data-empty] { background: none; box-shadow: none; border: 1px dashed var(--mid); font-size: 11px; line-height: 1.2; color: var(--ink-muted); text-align: center; padding: 4px; }
 .initiatives__part-art img { width: 100%; height: 100%; padding: 5px; object-fit: contain; }
 .initiatives__part-copy { display: grid; gap: 2px; min-width: 0; }
 .initiatives__part-copy strong { font-size: 14px; font-weight: 500; line-height: 1.35; }

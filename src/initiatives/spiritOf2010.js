@@ -17,7 +17,7 @@ const sources = [
 
 export const spiritOf2010Detail = (entry) => ({
   id: entry.id, title: entry.title, sources,
-  hero: { title: entry.title, eyebrow: 'Provincial promotional campaign', description: entry.summary, image: entry.cover, caption: entry.cover.caption },
+  hero: { title: entry.title, eyebrow: entry.subtitle, description: entry.summary, image: entry.cover, caption: entry.cover.caption },
   relatedLinks: [{ label: 'Tourism campaigns and publications', to: { view: 'initiatives', initiative: 'tourism' } }],
   sections: [
     { id: 'marks', label: 'Logos', type: 'records', layout: 'marks', title: 'The square emblem and the Business Summit lettering', records: [

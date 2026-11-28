@@ -1,0 +1,161 @@
+/* ── Budget mode (BudgetView.jsx) ─────────────────────────────────────────────────────────────────
+   One column of cards, centred, in the government view's tokens. The functions take the chart
+   palette's categorical slots in a fixed order (budgetLayout.js FUNCTION_ORDER), stepped for each
+   theme; "Other" is grey, and every source shares one neutral, named by its label. */
+
+.gov-budget {
+  --budget-source: #a19b93;
+  --budget-hub: #57534e;
+  --budget-health: #257de0;
+  --budget-education: #f47230;
+  --budget-social: #00b894;
+  --budget-protection: #f2a600;
+  --budget-transportation: #ee7fac;
+  --budget-development: #008a17;
+  --budget-general: #6a4ce2;
+  --budget-interest: #ec4647;
+  --budget-other: #a8a29b;
+  --budget-revenue: #257de0;
+  --budget-expense: #f47230;
+}
+.gov.gov-budget[data-theme='dark'] {
+  --budget-source: #7d776f;
+  --budget-hub: #c9c3ba;
+  --budget-health: #338ced;
+  --budget-education: #e76624;
+  --budget-social: #00a888;
+  --budget-protection: #d28e05;
+  --budget-transportation: #e24d8b;
+  --budget-development: #0aac23;
+  --budget-general: #9887ef;
+  --budget-interest: #eb6263;
+  --budget-other: #6f6a64;
+  --budget-revenue: #338ced;
+  --budget-expense: #e76624;
+}
+
+.gov.gov-budget {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto;
+  align-content: start;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.gov-budget > * { min-width: 0; grid-column: auto; grid-row: auto; }
+.gov-budget .gov-breadcrumb > .gov-breadcrumb__page { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; color: var(--gov-ink-3); }
+.gov-budget__main { display: grid; gap: 12px; min-width: 0; }
+.gov-budget .gov-title { font-size: clamp(24px, 6.4vw, 30px); }
+.gov-budget .gov-description { max-width: 70ch; margin-top: 14px; }
+.gov-budget .gov-card p.gov-muted { max-width: 75ch; }
+.gov-budget .gov-links a { color: var(--gov-link); text-decoration: none; }
+.gov-budget .gov-links a:hover { text-decoration: underline; }
+.gov-budget a:focus-visible,
+.gov-budget button:focus-visible,
+.gov-budget input:focus-visible,
+.gov-budget [tabindex]:focus-visible { outline: 2px solid var(--gov-link); outline-offset: 2px; }
+
+/* ── Year ── */
+
+.gov-budget__year { margin-top: 18px; }
+.gov-budget__year-label { display: block; margin-bottom: 6px; font-size: 13px; font-weight: 600; color: var(--gov-ink-3); }
+.gov-budget__year-row { display: flex; align-items: center; gap: 8px; }
+.gov-budget__year-row input[type='range'] { flex: 1 1 auto; min-width: 0; accent-color: var(--gov-ink); }
+.gov-budget__year-row .gov-button { font-size: 20px; line-height: 1; }
+.gov-budget__year-value { min-width: 4.5em; font: 600 18px/1 Inter, system-ui, sans-serif; font-variant-numeric: tabular-nums; text-align: right; }
+
+.gov-budget__totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 8px; margin: 16px 0 0; }
+.gov-budget__totals > div { padding: 10px 12px; border-radius: 10px; background: var(--gov-hover); }
+.gov-budget__totals dt { font-size: 12px; color: var(--gov-ink-3); }
+.gov-budget__totals dd { margin: 4px 0 0; font-size: 17px; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* ── Flow ── */
+
+.gov-budget__flow, .gov-budget__trend { margin: 0; min-width: 0; }
+.gov-budget__flow svg, .gov-budget__trend svg { display: block; max-width: 100%; overflow: visible; }
+.gov-budget__readout { min-height: 2.6em; margin: 0 0 8px; font-size: 13px; line-height: 1.4; color: var(--gov-ink-2); font-variant-numeric: tabular-nums; }
+.gov-budget__caption { margin-top: 8px; font-size: 12.5px; line-height: 1.45; }
+
+.gov-budget__band { fill: var(--budget-source); fill-opacity: 0.38; transition: fill-opacity 120ms; }
+.gov-budget__node { fill: var(--budget-source); }
+.gov-budget__node[role='button'] { cursor: pointer; }
+.gov-budget__hub { fill: var(--budget-hub); }
+.gov-budget__hatch-ground { fill: var(--gov-surface); }
+.gov-budget__hatch { stroke: var(--gov-ink-4); stroke-width: 2; }
+.gov-budget__band[data-key='balance'] { fill-opacity: 0.7; }
+[data-active] > .gov-budget__band { fill-opacity: 0.16; }
+[data-active] > .gov-budget__band[data-on] { fill-opacity: 0.62; }
+
+.gov-budget__label text { font-size: 12px; fill: var(--gov-ink-2); }
+.gov-budget__label .gov-budget__label-figure { fill: var(--gov-ink-4); font-variant-numeric: tabular-nums; }
+.gov-budget__leader { fill: none; stroke: var(--gov-mid); stroke-width: 1; }
+/* Over the ribbons, on a phone, the labels wear a halo of the card. */
+[data-inside] .gov-budget__label text { paint-order: stroke; stroke: var(--gov-surface); stroke-width: 3px; stroke-linejoin: round; }
+
+.gov-budget [data-key='health'] { --budget-fill: var(--budget-health); }
+.gov-budget [data-key='education'] { --budget-fill: var(--budget-education); }
+.gov-budget [data-key='social'] { --budget-fill: var(--budget-social); }
+.gov-budget [data-key='protection'] { --budget-fill: var(--budget-protection); }
+.gov-budget [data-key='transportation'] { --budget-fill: var(--budget-transportation); }
+.gov-budget [data-key='development'] { --budget-fill: var(--budget-development); }
+.gov-budget [data-key='general'] { --budget-fill: var(--budget-general); }
+.gov-budget [data-key='interest'] { --budget-fill: var(--budget-interest); }
+.gov-budget [data-key='other'] { --budget-fill: var(--budget-other); }
+.gov-budget__band[data-side='function'], .gov-budget__node[data-side='function'] { fill: var(--budget-fill, var(--budget-source)); }
+
+.gov-budget__swatch { display: inline-block; width: 10px; height: 10px; margin-right: 2px; border-radius: 2px; background: var(--budget-fill, var(--budget-source)); vertical-align: 0; }
+
+/* ── Trend ── */
+
+.gov-budget__trend svg { cursor: pointer; touch-action: pan-y; }
+.gov-budget__axis line { stroke: var(--gov-outline); }
+.gov-budget__axis text, .gov-budget__axis-year { font-size: 11px; fill: var(--gov-ink-4); font-variant-numeric: tabular-nums; }
+.gov-budget__rule { stroke: var(--gov-ink-3); stroke-width: 1; }
+.gov-budget__rule--hover { stroke: var(--gov-mid); stroke-dasharray: 3 3; }
+.gov-budget__line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.gov-budget__line--revenue { stroke: var(--budget-revenue); }
+.gov-budget__line--expense { stroke: var(--budget-expense); }
+.gov-budget__dot { stroke: var(--gov-surface); stroke-width: 2; }
+.gov-budget__dot--revenue { fill: var(--budget-revenue); }
+.gov-budget__dot--expense { fill: var(--budget-expense); }
+.gov-budget__end { font-size: 12px; fill: var(--gov-ink-2); }
+.gov-budget__legend { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 8px; font-size: 12.5px; color: var(--gov-ink-2); }
+.gov-budget__legend > span { display: inline-flex; align-items: center; gap: 6px; }
+.gov-budget__key { display: inline-block; width: 14px; height: 2px; border-radius: 1px; }
+.gov-budget__key--revenue { background: var(--budget-revenue); }
+.gov-budget__key--expense { background: var(--budget-expense); }
+
+/* ── Tables and bodies ── */
+
+.gov-budget__table { max-height: none; margin-top: 12px; }
+.gov-budget__table .gov-money__table tbody th { white-space: normal; min-width: 11rem; }
+.gov-budget__total > * { font-weight: 600; background: var(--gov-hover); }
+.gov-budget__sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+.gov-budget__function { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--gov-outline); scroll-margin-top: 16px; }
+.gov-budget__function-title { display: flex; align-items: center; gap: 8px; margin: 18px 0 0; font-size: 15px; font-weight: 600; }
+.gov-budget__function > .gov-budget__function-title { margin-top: 0; }
+.gov-budget__function .disclosure { margin-top: 10px; }
+.gov-budget__none { font-size: 13px; }
+.gov-budget__bodies { display: grid; gap: 4px; padding-top: 4px; }
+.gov-budget__group { margin: 14px 0 0; font-size: 13px; font-weight: 600; color: var(--gov-ink-2); }
+.gov-budget__body a, .gov-budget__names a { color: var(--gov-link); text-decoration: none; }
+.gov-budget__body a:hover, .gov-budget__names a:hover { text-decoration: underline; }
+.gov-budget__names { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 6px 16px; margin: 8px 0 0; padding: 0; list-style: none; font-size: 13.5px; }
+
+.gov-budget__about { display: grid; gap: 8px; max-width: 75ch; margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.5; color: var(--gov-ink-2); }
+.gov-budget__sources { display: grid; gap: 6px; margin: 6px 0 0; padding-left: 20px; }
+.gov-budget__sources a { overflow-wrap: anywhere; }
+
+@media (max-width: 899px) {
+  .gov-budget .gov-breadcrumb { padding: 6px 6px 6px 20px; }
+  .gov-budget .gov-card:not(.gov-breadcrumb) { padding: 20px 16px 24px; }
+}
+@media (max-width: 479px) {
+  .gov-budget .gov-breadcrumb { padding-left: 16px; gap: 6px; }
+  .gov-budget__table .gov-money__table tbody th { min-width: 7.5rem; }
+  .gov-budget__table .gov-money__table td, .gov-budget__table .gov-money__table th { padding-inline: 6px; }
+  .gov-budget__totals dd { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gov-budget__band { transition: none; }
+}

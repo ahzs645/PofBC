@@ -1,14 +1,21 @@
 // What a body took in and spent, as the Province's Public Accounts publish it, in the panel's card
 // style. Built like the Salaries card: the index (financeIndex.js) says which bodies have anything;
-// a body's statements and table rows (public/finance/<id>.json) are fetched when its panel opens.
+// a body's records (public/finance/<id>.json) are fetched when its panel opens. They are, each from
+// its own source and cited to its page:
 //
-// The figures are the Public Accounts' own, in $ millions, as printed: nothing is restated, adjusted
-// for inflation or added across bodies. Each body's figures are its own gross figures; money passing
-// between government bodies is counted by each, which is why they must not be summed.
+//   * a ministry's or office's votes, estimates against actual (MoneyParts.jsx, BudgetActual);
+//   * revenue by source and expense from the body's own statement of operations (Breakdown);
+//   * cash paid to it by ministries, from the Government Transfers schedule (FromMinistries);
+//   * the Adjusted Net Income table, in $ millions as printed, and the list of its statements.
+//
+// Nothing is restated, adjusted for inflation or added across bodies. Each body's figures are its own
+// gross figures; money passing between government bodies is counted by each, which is why they must
+// not be summed.
 
 import { useEffect, useMemo, useState } from 'react'
 import { FINANCE_INDEX, FINANCE_SOURCES } from './financeIndex.js'
 import { SourceList } from '../site/SourceList.jsx'
+import { Breakdown, BudgetActual, FromMinistries } from './MoneyParts.jsx'
 import './money.css'
 
 const fetched = new Map()
@@ -83,6 +90,10 @@ export const Money = ({ node, year }) => {
 
   const rows = state.data?.table ?? []
   const statements = state.data?.statements ?? []
+  const breakdowns = state.data?.breakdowns ?? []
+  const transfers = state.data?.transfers ?? []
+  const estimates = state.data?.estimates ?? []
+  const statementProvince = useMemo(() => Object.fromEntries(breakdowns.map((record) => [record.year, record.revenue.filter((line) => line.category === 'province').reduce((sum, line) => sum + line.amount, 0)])), [breakdowns])
   const showFifth = rows.some((row) => row.figures.fifth !== null)
   const runs = useMemo(() => fifthHeadings(rows), [rows])
   const notes = useMemo(() => {
@@ -108,6 +119,10 @@ export const Money = ({ node, year }) => {
       {state.status === 'loading' && <p className="gov-muted" role="status">Loading the Public Accounts records…</p>}
       {state.status === 'failed' && <p className="gov-muted" role="alert">The Public Accounts records could not be loaded. <button type="button" onClick={() => setVersion((value) => value + 1)}>Retry</button></p>}
       {state.status === 'ready' && <>
+        {estimates.length > 0 && <BudgetActual records={estimates} calendarYear={year} />}
+        {breakdowns.length > 0 && <Breakdown records={breakdowns} calendarYear={year} />}
+        {transfers.length > 0 && <FromMinistries records={transfers} calendarYear={year} statementProvince={statementProvince} />}
+        {rows.length > 0 && <h3 className="gov-card__subheading gov-money__table-heading">Adjusted Net Income table</h3>}
         {rows.length > 0 ? <>
           <p className="gov-money__about">
             As published in the Public Accounts’ table <em>Adjusted Net Income of Crown Corporations, Agencies and the SUCH Sector</em>:
@@ -154,10 +169,11 @@ export const Money = ({ node, year }) => {
           {notes.length > 0 && <ul className="gov-money__notes">
             {notes.map(([text, years]) => <li key={text}><span className="gov-muted">{years.join(', ')}:</span> {text}</li>)}
           </ul>}
-          <p className="gov-money__warning">These are this body’s own figures. Money passing between government bodies — a ministry’s grant, or one body paying another — is counted in each body’s figures, so they must not be added across bodies. The Province’s Summary Financial Statements remove those transfers; this table does not.</p>
-        </> : <p className="gov-money__about">
+        </> : statements.length > 0 && <p className="gov-money__about">
           The Public Accounts’ <em>Adjusted Net Income</em> table has no row of its own for this body{sector ? `: it reports ${sector} only as a sector total, which is not divided among them here` : ''}. Its published financial statements are listed below.
         </p>}
+
+        {(rows.length > 0 || breakdowns.length > 0 || transfers.length > 0) && <p className="gov-money__warning">These are this body’s own figures. Money passing between government bodies — a ministry’s grant, or one body paying another — is counted in each body’s figures, so they must not be added across bodies. The Province’s Summary Financial Statements remove those transfers; these figures do not.</p>}
 
         {statements.length > 0 && <div className="gov-money__statements">
           <h3 className="gov-card__subheading">Financial statements <span className="gov-muted">{statements.length}</span></h3>
@@ -180,8 +196,11 @@ export const Money = ({ node, year }) => {
         <div className="gov-money__sources">
           <h3 className="gov-card__subheading">Sources</h3>
           <SourceList sources={[
-            { ...FINANCE_SOURCES.table, locator: 'Each year’s Supplementary Information PDF; every figure links to its page' },
-            { ...FINANCE_SOURCES.statements, locator: 'Financial statements of the government reporting entity, by sector' },
+            ...(estimates.length ? [{ ...FINANCE_SOURCES.votes, locator: 'Each year’s CRF Supplementary Schedules PDF; every vote links to its page' }] : []),
+            ...(breakdowns.length ? breakdowns.map((record) => ({ key: record.url, url: `${record.url}#page=${record.page.pdf}`, title: `${record.title || 'Statement of operations'}, ${fyLabel(record.year)}`, locator: `PDF page ${record.page.pdf}${record.page.printed ? `, printed page ${record.page.printed}` : ''}` })) : []),
+            ...(transfers.length ? [{ ...FINANCE_SOURCES.transfers, locator: 'One CSV per fiscal year; payees matched to this body by name' }] : []),
+            ...(rows.length ? [{ ...FINANCE_SOURCES.table, locator: 'Each year’s Supplementary Information PDF; every figure links to its page' }] : []),
+            ...(statements.length ? [{ ...FINANCE_SOURCES.statements, locator: 'Financial statements of the government reporting entity, by sector' }] : []),
             ...(statements.some((statement) => statement.hosted === 'ministry page') ? [FINANCE_SOURCES.postSecondary] : [])
           ]} />
         </div>

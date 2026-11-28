@@ -11,7 +11,7 @@ export const POWER_SMART_SOURCES = [
 export const powerSmartDetail = (entry) => ({
   id: entry.id,
   title: entry.title,
-  hero: { eyebrow: 'BC Hydro initiative', title: entry.title, description: entry.summary, image: entry.cover, caption: entry.cover.caption },
+  hero: { eyebrow: entry.subtitle, title: entry.title, description: entry.summary, image: entry.cover, caption: entry.cover.caption },
   stats: [{ value: 1989, label: 'program launched' }],
   sources: POWER_SMART_SOURCES,
   relatedLinks: [

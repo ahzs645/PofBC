@@ -1,5 +1,7 @@
 {
   "_comment": "Per-logo settings for build_collected_display.py, keyed by collected asset id. facing: the share of a faint shape's edge that must meet the page for it to be redrawn (default 0.5; higher keeps more of a logo's own colours). light / dark: false keeps the file's own colours on that ground; \"plate\" shows them on a light plate of their own there. light-palette / dark-palette: {\"#source\": \"#shown\"} maps the file's colours by hand for that ground (every key must be a colour the file uses). \"all\" for light / dark redraws every colour too faint for that ground, without the test of whether it meets the page (for lettering drawn letter by letter in clipped fills). skip: true leaves the file out. light-css / dark-css: a selector-specific rule applied to the display copy for that theme. preserve-canvas: keep the full page of a stationery specimen.",
+  "bc-assessment-map-1982-reconstruction": { "dark": "all" },
+  "bc-assessment-map-1982-reconstruction-black": { "dark": "all" },
   "fwcp-columbia-seal-2014": {
     "dark-palette": { "#231f20": "#f2ece1" },
     "dark-css": "g[opacity] { opacity: 0.85; }"
@@ -108,7 +110,7 @@
     "dark-palette": { "#000000": "#ffffff" },
     "preserve-canvas": true
   },
-  "education-province-wordmark": { "dark-palette": { "#edeff7": "#aebfed" } },
+  "education-province-wordmark": { "light-palette": { "#edeff7": "#003087" }, "dark-palette": { "#edeff7": "#aebfed" }, "note": "The report prints it as a 5% tint of Pantone 287 CVU, a watermark. The light copy shows the same ink at full strength so it can be read." },
   "environment-youth-corps-reconstruction": { "dark": "all" },
   "homeowner-protection-office-2016": {
     "dark-palette": { "#174a7c": "#5e91c8", "#008576": "#34b7a2" },
@@ -159,23 +161,23 @@
   "bcpf-study-wildlife-overlay": { "preserve-canvas": true, "light": false, "dark": false },
   "firesmart-bc-ember-front": {
     "dark": false,
-    "dark-css": "path[fill=\"rgb(0.392151%, 0.392151%, 0.392151%)\"],path[fill=\"rgb(14.117432%, 12.156677%, 12.940979%)\"]{stroke:#90877a;stroke-width:.65;stroke-linejoin:round;paint-order:stroke fill}",
-    "note": "Keep Ember\u2019s published fur and neckerchief colours. A fine edge separates the dark ink from the dark gallery surface."
+    "dark-css": "path[fill=\"rgb(0.392151%, 0.392151%, 0.392151%)\"],path[fill=\"rgb(14.117432%, 12.156677%, 12.940979%)\"]{stroke:#cfc6b6;stroke-width:1.4;stroke-linejoin:round;paint-order:stroke fill}",
+    "note": "Keep Ember\u2019s published fur and neckerchief colours. A light edge separates the dark ink from the dark gallery surface."
   },
   "firesmart-bc-ember-side": {
     "dark": false,
-    "dark-css": "path[fill=\"rgb(13.725281%, 12.156677%, 12.548828%)\"],path[fill=\"rgb(14.117432%, 12.156677%, 12.940979%)\"]{stroke:#90877a;stroke-width:.65;stroke-linejoin:round;paint-order:stroke fill}",
-    "note": "Keep Ember\u2019s published fur and neckerchief colours. A fine edge separates the dark ink from the dark gallery surface."
+    "dark-css": "path[fill=\"rgb(13.725281%, 12.156677%, 12.548828%)\"],path[fill=\"rgb(14.117432%, 12.156677%, 12.940979%)\"]{stroke:#cfc6b6;stroke-width:1.4;stroke-linejoin:round;paint-order:stroke fill}",
+    "note": "Keep Ember\u2019s published fur and neckerchief colours. A light edge separates the dark ink from the dark gallery surface."
   },
   "firesmart-bc-ember-sitting": {
     "dark": false,
-    "dark-css": "path[fill=\"rgb(13.725281%, 12.156677%, 12.548828%)\"],path[fill=\"rgb(14.117432%, 12.156677%, 12.940979%)\"]{stroke:#90877a;stroke-width:.65;stroke-linejoin:round;paint-order:stroke fill}",
-    "note": "Keep Ember\u2019s published fur and neckerchief colours. A fine edge separates the dark ink from the dark gallery surface."
+    "dark-css": "path[fill=\"rgb(13.725281%, 12.156677%, 12.548828%)\"],path[fill=\"rgb(14.117432%, 12.156677%, 12.940979%)\"]{stroke:#cfc6b6;stroke-width:1.4;stroke-linejoin:round;paint-order:stroke fill}",
+    "note": "Keep Ember\u2019s published fur and neckerchief colours. A light edge separates the dark ink from the dark gallery surface."
   },
   "firesmart-bc-ember-standing": {
     "dark": false,
-    "dark-css": "path[fill=\"rgb(13.725281%, 12.156677%, 12.548828%)\"],path[fill=\"rgb(14.117432%, 12.156677%, 12.940979%)\"]{stroke:#90877a;stroke-width:.65;stroke-linejoin:round;paint-order:stroke fill}",
-    "note": "Keep Ember\u2019s published fur and neckerchief colours. A fine edge separates the dark ink from the dark gallery surface."
+    "dark-css": "path[fill=\"rgb(13.725281%, 12.156677%, 12.548828%)\"],path[fill=\"rgb(14.117432%, 12.156677%, 12.940979%)\"]{stroke:#cfc6b6;stroke-width:1.4;stroke-linejoin:round;paint-order:stroke fill}",
+    "note": "Keep Ember\u2019s published fur and neckerchief colours. A light edge separates the dark ink from the dark gallery surface."
   },
   "bc-online-2011-logo": {
     "light-palette": { "#000000": "#333B97" },

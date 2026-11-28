@@ -128,7 +128,7 @@ const surveyAndLibrary = [
         observedDate: '2026-11-27', fidelity: 'partially compared',
         publisher: 'Provincial Library and Archives, Victoria',
         sourceLocator: 'An undated engraving supplied to the project as a raster (research/identity/provincial-library-archives-2026-11-27/reference/source-reference.png); the publication it came from is not recorded.',
-        dateNote: 'Undated. The emblem names the Provincial Library and the Archives together; when it was drawn and used is not established here.',
+        dateNote: 'Undated. The emblem names the Provincial Library and the Archives together; when it was drawn and used is not established here. Letterheads of 1941 and 1944 use the government’s arms device instead. An undated UBC bookplate with text on scrolls above and below the arms may be this design.',
         notes: 'The Provincial Library & Archives, Victoria B.C., on two scrolls above the Province’s arms as granted in 1906: the Union Flag over the setting sun, the lion on the crown, a stag and a ram, and “SPLENDOR SINE OCCASU.” The Library is now the Legislative Library; the Archives are the BC Archives at the Royal BC Museum.',
         fidelityNote: 'A supplied vector reconstruction of the engraving: source-derived Bézier contours with selective cleanup, the lettering kept as outlines of the original, and three white backing paths restoring the crown’s enclosed interiors. Not original artwork.'
       }

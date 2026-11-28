@@ -28,15 +28,24 @@
 .guides .guides__book:focus-visible,
 .guides .guides__thumb:focus-visible { border-radius: var(--radius); }
 
-/* The way back: the first step of the site's shared trail (site/Breadcrumbs.jsx, .gallery__back),
-   which every other page below a section's first opens with. brandkit draws this button; the site
+/* The trail: the site's shared one (site/Breadcrumbs.jsx, .gallery__crumbs), which every other page
+   below a section's first opens with. brandkit draws it ("← Visual guides / Book / Page"); the site
    gives it the trail's look and place. */
+.guides .guides__crumbs { gap: 8px; margin: 0 0 var(--gap); font-size: 14px; color: var(--ink-muted); }
+.guides .guides__crumb {
+  padding: 0 4px;
+  margin: 0 -4px;
+  border-radius: 6px;
+  color: var(--ink);
+}
+.guides .guides__crumb:hover { background: var(--hover); }
 .guides .guides__back {
   display: inline-flex;
+  flex: none;
   align-items: center;
   gap: 6px;
   height: var(--control);
-  margin: 0 0 var(--gap);
+  margin: 0;
   padding: 0 10px;
   border: 0;
   border-radius: var(--radius);

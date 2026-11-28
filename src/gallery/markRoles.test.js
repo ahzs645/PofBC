@@ -56,7 +56,7 @@ test('FESBC leads with its logo-kit identity and shows its 10th-anniversary mark
   const collection = collectionById('collected-forest-enhancement-society')
   const kit = ['source-forest-enhancement-society-fesbc-horizontal-eps', 'source-forest-enhancement-society-fesbc-vertical-eps']
   const anniversary = 'source-forest-enhancement-society-fesbc-10th-anniversary-svg'
-  assert.ok(kit.includes(collection.cover), collection.cover)
+  assert.equal(collection.cover, kit[0], 'the horizontal logo leads')
   assert.ok(kit.includes(collection.entries[0].id), collection.entries[0].id)
   assert.deepEqual(collection.entries.slice(0, 2).map(({ id }) => id).sort(), [...kit].sort())
   const section = collection.artworkSections.find(({ entries }) => entries.some(({ id }) => id === anniversary))

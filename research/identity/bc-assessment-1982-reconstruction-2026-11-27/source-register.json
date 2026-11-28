@@ -1,0 +1,137 @@
+{
+  "researchDate": "2026-11-27",
+  "summary": "A supplied vector reconstruction of the British Columbia Assessment Authority’s outline-map identity, redrawn from the gallery’s own crop of the May 1982 Cowichan Valley letterhead (bc-assessment-map-1982-letterhead.png, SHA-256 7146de10…54a7, the package’s source-reference.png byte for byte). No original vector master is known, so the reconstruction leads the 1982 design’s card and the letterhead stays beside it as the evidence. The supplied report is package-README.md; source/ holds the map geometry, the source-coordinate overlay copy, the typeface comparison and its metrics; validation.json and the comparison sheet record the package’s own checks.",
+  "openQuestions": [
+    "The original typeface: Nimbus Sans Bold was the closest of six tested sans serifs, not an identification.",
+    "The original ink: the grey #646464 is read from a screened photocopy, not a specification."
+  ],
+  "bodyUpdates": {
+    "bc-assessment": {
+      "notes": "Three identities: the British Columbia Assessment Authority’s outline map of the province, in use by May 1982 and on its 1989–1990 notices; the italic BC Assessment wordmark with its comet rule, perhaps from the mid-1990s, when the short name was endorsed (1994) and the logo changed (1996), though no source dates it; and the full-colour mark of the 2015 rebrand, from the official media kit. The map is known only from pictures of it in use, and is shown here as a 2026 vector reconstruction of the 1982 letterhead; its designer, colours and dates of introduction and retirement are not established."
+    }
+  },
+  "designUpdates": {
+    "bc-assessment-map-1982": {
+      "preferredReconstruction": "bc-assessment-map-1982-reconstruction"
+    }
+  },
+  "assets": [
+    {
+      "bodyId": "bc-assessment",
+      "id": "bc-assessment-map-1982-reconstruction",
+      "variantOf": "bc-assessment-map-1982",
+      "label": "British Columbia Assessment Authority: Outline map between the two halves of the name, grey and black, vector reconstruction",
+      "versionLabel": "Grey and black · reconstruction",
+      "file": "identity-collected/bc-assessment/bc-assessment-map-1982-reconstruction.svg",
+      "format": "svg",
+      "isVector": true,
+      "containsRaster": false,
+      "supplied": true,
+      "reconstruction": true,
+      "reconstructionDate": "2026-11-27",
+      "publisher": "Supplied BC Assessment 1982 reconstruction study",
+      "sourcePage": "https://docs.openinfo.gov.bc.ca/Response_Package_FIN-2016-64551.pdf",
+      "sourceUrl": "https://docs.openinfo.gov.bc.ca/Response_Package_FIN-2016-64551.pdf",
+      "sourceLocator": "Redrawn from the gallery’s crop of PDF page 129 (release page 134 of 176, FNR-2016-62793): Cowichan Valley Area Assessment Office letterhead",
+      "sourceFile": "identity-collected/bc-assessment/bc-assessment-map-1982-letterhead.png",
+      "sourceDate": "May 1982",
+      "observedDate": "2026-11-27",
+      "dateNote": "The date of the letterhead it was drawn from, May 1982 (the day is damaged): in use by then, not introduced then.",
+      "evidenceType": "vector-reconstruction",
+      "notes": "The outline map, its coast and three islands as straight-sided shapes in grey with a black keyline, between BRITISH COLUMBIA and ASSESSMENT AUTHORITY in bold capitals: a 2026 redrawing of the 1982 letterhead.",
+      "fidelityNote": "Redrawn, not recovered: the map as 11-point angular polygons with a true hole, the three islands as separate shapes, fitted to the scan’s edge (mean 0.58 source pixels, 95th percentile 2). The lettering is outlined Nimbus Sans Bold, scaled and thickened with a 31-unit stroke to the printed weight; it was the closest of six tested sans serifs, not an identification of the original face. The grey (#646464) is read from the scan’s screened fill, not an original ink specification. Deskewed 0.24°. Address, date and scan marks left out. Vector paths only: no images, no live text.",
+      "sha256": "bc3720da7658aa8575f8a73c9fccc3110c37b9134c91d51c42e937fc4bce52b4",
+      "bytes": 11794,
+      "darkBackground": false,
+      "downloads": [
+        {
+          "label": "Download reconstruction (PDF)",
+          "file": "identity-collected/bc-assessment/bc-assessment-map-1982-reconstruction.pdf",
+          "sha256": "4c2b87d1d51881d1cb8ff0d74e8df8ddd49180ba57a3a46166b31b70c1d38f02",
+          "bytes": 6675
+        },
+        {
+          "label": "Download reconstruction (EPS)",
+          "file": "identity-collected/bc-assessment/bc-assessment-map-1982-reconstruction.eps",
+          "sha256": "48fc51118cf33df14f4b5b5e87e23285a130eb536486738916817ff182186736",
+          "bytes": 30175
+        },
+        {
+          "label": "Download reconstructed map only (SVG)",
+          "file": "identity-collected/bc-assessment/bc-assessment-map-1982-reconstruction-symbol.svg",
+          "sha256": "bd01b5fbc365a343ec755ddb4e85c89718b2caf58253661c02aaa9a26b5387c5",
+          "bytes": 2616
+        }
+      ],
+      "verification": {
+        "genuineVectorVerified": true,
+        "paths": 42,
+        "embeddedImages": 0,
+        "textElements": 0,
+        "externalResources": [],
+        "pdf": {
+          "pages": 1,
+          "embeddedImages": 0,
+          "fonts": 0,
+          "vectorDrawings": 42
+        },
+        "eps": "Cairo output; its prolog defines image operators but the drawing never calls them."
+      }
+    },
+    {
+      "bodyId": "bc-assessment",
+      "id": "bc-assessment-map-1982-reconstruction-black",
+      "variantOf": "bc-assessment-map-1982",
+      "label": "British Columbia Assessment Authority: Outline map between the two halves of the name, black, vector reconstruction",
+      "versionLabel": "Black · reconstruction",
+      "file": "identity-collected/bc-assessment/bc-assessment-map-1982-reconstruction-black.svg",
+      "format": "svg",
+      "isVector": true,
+      "containsRaster": false,
+      "supplied": true,
+      "reconstruction": true,
+      "reconstructionDate": "2026-11-27",
+      "publisher": "Supplied BC Assessment 1982 reconstruction study",
+      "sourcePage": "https://docs.openinfo.gov.bc.ca/Response_Package_FIN-2016-64551.pdf",
+      "sourceUrl": "https://docs.openinfo.gov.bc.ca/Response_Package_FIN-2016-64551.pdf",
+      "sourceLocator": "Redrawn from the gallery’s crop of PDF page 129 (release page 134 of 176, FNR-2016-62793): Cowichan Valley Area Assessment Office letterhead",
+      "sourceFile": "identity-collected/bc-assessment/bc-assessment-map-1982-letterhead.png",
+      "sourceDate": "May 1982",
+      "observedDate": "2026-11-27",
+      "dateNote": "The date of the letterhead it was drawn from, May 1982 (the day is damaged): in use by then, not introduced then.",
+      "evidenceType": "vector-reconstruction",
+      "notes": "The same reconstruction in solid black, map and lettering alike: a one-colour treatment, not a printing that has been seen.",
+      "fidelityNote": "The grey reconstruction’s geometry with the map filled black; the same lettering, deskew and limits apply. Vector paths only: no images, no live text.",
+      "sha256": "734cec9734543c8761b413c2b54d684a46cefc783f495927152013a75572317f",
+      "bytes": 10947,
+      "darkBackground": false,
+      "downloads": [
+        {
+          "label": "Download black reconstruction (PDF)",
+          "file": "identity-collected/bc-assessment/bc-assessment-map-1982-reconstruction-black.pdf",
+          "sha256": "8f03604f0c6bd16c0662249793a45aa0319d9da8c61864292dc73ef15a357029",
+          "bytes": 6351
+        },
+        {
+          "label": "Download reconstructed map only, black (SVG)",
+          "file": "identity-collected/bc-assessment/bc-assessment-map-1982-reconstruction-symbol-black.svg",
+          "sha256": "b9e8d37011defc36ba1f5a6c58bc2ac5a13374d5f36bdaf4b7e0f1c570fb9824",
+          "bytes": 1769
+        }
+      ],
+      "verification": {
+        "genuineVectorVerified": true,
+        "paths": 38,
+        "embeddedImages": 0,
+        "textElements": 0,
+        "externalResources": [],
+        "pdf": {
+          "pages": 1,
+          "embeddedImages": 0,
+          "fonts": 0,
+          "vectorDrawings": 38
+        }
+      }
+    }
+  ]
+}

@@ -456,10 +456,13 @@ export const RECONCILED_SUBJECTS = [
     sources: [
       { title: 'BC Archives, British Columbia. Fish and Game Branch (authority record)', url: 'https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-fish-and-game-branch-2' },
       { title: 'BC Archives, British Columbia. Game Commission (authority record)', url: 'https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-game-commission' },
-      { title: 'Department of Recreation and Conservation, Annual Report 1973, Fish and Wildlife Branch divider', url: 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1973.pdf#page=22' }
+      { title: 'Department of Recreation and Conservation, Annual Report 1973, Fish and Wildlife Branch divider', url: 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1973.pdf#page=22' },
+      { title: 'BC Archives, British Columbia. Fish and Wildlife Branch (authority record 4108), Wayback capture of 3 January 2019', url: 'https://web.archive.org/web/20190103101015/https://search-bcarchives.royalbcmuseum.bc.ca/british-columbia-fish-and-wildlife-branch-2' },
+      { title: 'BC Hunting and Trapping Regulations Synopses, 1929 to current (EcoCat report 22560)', url: 'https://a100.gov.bc.ca/pub/acat/public/viewReport.do?reportId=22560' },
+      { title: 'Fish and Wildlife Branch home page, Ministry of Environment, LAC web archive capture of 29 December 2006', url: 'https://bac-lac.wayback.archive-it.org/web/20061229061732/http://www.env.gov.bc.ca/fw' }
     ],
-    nextAction: 'Trace the branch after the department ended in 1976, and its marks under the later ministries.',
-    note: 'The Department of Recreation and Conservation’s fish and wildlife branch: the Game Commission became its Fish and Game Branch on 1 April 1957, named the Fish and Wildlife Branch in 1966. Its square in the department’s 1971–1973 set, its F&W oval of the 1972–73 hunting regulations and its emblem beside its name in the 1973 report are held as reconstructions, shared with the department’s collection.'
+    nextAction: 'Find when the branch split into wildlife and fisheries branches (the synopses say Wildlife Branch from 1986–87), and any mark of its own after 1977.',
+    note: 'The Department of Recreation and Conservation’s fish and wildlife branch: the Game Commission became its Fish and Game Branch on 1 April 1957, named the Fish and Wildlife Branch in 1966. Its square in the department’s 1971–1973 set, its F&W oval and its emblem beside its name in the 1973 report are held as reconstructions, shared with the department’s collection. The oval is on the hunting synopsis covers from 1972–73 to 1976–77. After the department, the synopses name the Department of Recreation and Travel Industry (1976–77) and the Ministry of Recreation and Conservation (1977–78 and 1978–79). BC Archives records the branch’s transfer to the Ministry of Environment in December 1978. The synopses’ running footers say Fish and Wildlife Branch to 1985–86 and Wildlife Branch from 1986–87. The Ministry of Environment had a Fish and Wildlife Branch again by 2006. These dates come from the publications, not from a record of each change.'
   }),
   subject({
     id: 'bceid',

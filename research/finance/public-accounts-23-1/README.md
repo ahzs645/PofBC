@@ -23,7 +23,9 @@ for the past fiscal year".
 
 | File | What it is |
 |---|---|
-| `inventory.csv` | One row per organization and fiscal year: 1,766 rows, 143 organizations, FY 1999-2000 to 2025-26. |
+| `inventory.csv` | One row per organization and fiscal year: 1,797 rows, 143 organizations, FY 1999-2000 to 2025-26. 31 rows were added from Wayback (`found_via` = `wayback`); see "Gaps closed" below. |
+| `holes.csv` | The 58 single-year holes, each with what the year's index page shows and any archived copy. |
+| `pre-1999.csv` | The scanned Public Accounts volumes before FY 1999-2000, with links and sizes. Not transcribed. |
 | `post-secondary-statements.csv` | The ministry's own list of university, college and institute statements: 300 PDFs (25 institutions × 2014-15 to 2025-26). It fills the years when the Public Accounts only link to that page. |
 | `crosswalk.csv` | Each organization matched to atlas IDs, related-body IDs and identity-register IDs. |
 | `missing.csv` | The 55 organizations the site does not have as a node, with a recommendation for each. |
@@ -41,7 +43,7 @@ statement's own year end can differ, see proposal.md), `organization` (the name 
 `file_slug`, `sector` (the index-page heading, or the archive's "Organization Type" mapped to the
 same headings), `reporting_basis` (taxpayer-supported, consolidated / self-supported GBE, modified
 equity), `hosted` (sup-e PDF / ministry page), `document_url`, `found_via` (archive-search,
-index-page or both), `index_capture` (the index page or Wayback capture used), `name_source`,
+index-page, both, or wayback), `index_capture` (the index page or Wayback capture used), `name_source`,
 `url_status`, `note` (rename notes).
 
 ## How each year was found
@@ -65,7 +67,7 @@ index-page or both), `index_capture` (the index page or Wayback capture used), `
 4. **Pre-2000** documents are outside this source. The archive page sends older years to the
    [Legislative Library](http://www.llbc.leg.bc.ca/public/pubdocs/bcdocs2015_2/164239/index.htm) and the
    [Internet Archive](https://archive.org/search.php?query=British+Columbia+Public+Accounts). They are
-   scanned whole volumes, not per-organization files, and were not inventoried.
+   scanned whole volumes, not per-organization files. `pre-1999.csv` lists them; see "Gaps closed" below.
 
 Names come from the index pages where a capture exists (644 rows). Otherwise they come from the
 same file slug's name on another year's index page (709 rows). For the rest the name was read from
@@ -122,7 +124,9 @@ to 2013-14 (JIBC and NVIT to 2014-15). After that the ministry page holds their 
 - **Archive rows the index lacks:** Provincial Rental Housing Corporation 2023-24 is in the archive
   but not on the December 2024 capture of the index.
 - **Single-year holes**: 58 cases where an organization appears in the years before and after
-  but not that year. All 58 URLs were probed and all return 404, so they are true gaps. The
+  but not that year. All 58 sup-e URLs return 404. The second pass (below) explains each one in
+  `holes.csv`: 31 were on the ministry's page and are now in the inventory, and most of the rest are
+  listed on that year's index with no link. The
   largest are 2010-11, when 28 bodies are missing (nearly every university and college, plus BC
   Securities Commission, BC Enterprise Corporation and Mount St. Mary), and 2006-07, with 9. The
   full list can be rebuilt from `inventory.csv`.
@@ -267,3 +271,84 @@ table rows to site ids through `crosswalk.csv`, corrected and extended by `site-
 `src/government/financeIndex.js` and `public/finance/<id>.json` (120 bodies). The card is
 `src/government/Money.jsx`, shown in the atlas panel and on related-body pages. Tests:
 `scripts/finance.test.mjs`.
+
+## Gaps closed (second pass, 27 November 2026)
+
+### The 58 single-year holes
+
+The www2 sup-e URLs have no Wayback captures. Before about 2014 the statements were on
+`www.fin.gov.bc.ca/ocg/pa/<yy_yy>/Sup E/`, so that path was searched instead. The Internet Archive's
+CDX server was down; the Library and Archives Canada web archive's CDX endpoint
+(`https://bac-lac.wayback.archive-it.org/web/timemap/cdx?url=www.fin.gov.bc.ca/ocg/pa/&matchType=prefix`)
+returned the same index. The yearly Sup E index pages (`e1e.htm`) are captured for 2002-03 to 2015-16,
+except 2011-12 and 2012-13. Each hole was then read against that year's index page.
+
+| Finding | Holes | What it means |
+|---|---|---|
+| Found on Wayback (ministry page) | 31 | The index linked the Ministry of Advanced Education's page (`aved.gov.bc.ca/gre/financial.htm`), not a sup-e PDF. The ministry's PDFs are captured: 6 in 2006-07, VIU in 2008-09 and 24 universities, colleges and institutes in 2010-11. Added to `inventory.csv` with `found_via` = `wayback`. |
+| Listed, no statement linked | 16 | The name is on the index without a link, so no statement was published with the Public Accounts that year. For example: BC Securities Commission and Mount St. Mary 2010-11 and 2019-20; BC Enterprise Corporation and Leading Edge Endowment Fund 2010-11; Bella Coola, Menno and R.W. Large 2006-07. Provincial Rental Housing Corporation 2002-03 carries footnote 4: it changed sectors that year. |
+| Linked to an outside report | 1 | First Peoples' Heritage, Language and Culture Council 2002-03 links an annual report on gov.bc.ca. Its only capture is from December 2006, so it may be a later report. Not added. |
+| Linked, not captured | 1 | Canadian Blood Services 2014-15. |
+| Not listed | 1 | Canadian Blood Services 2022-23 is not on the June 2024 capture of the index. |
+| No index capture | 8 | 2000-01 (5), 2001-02 (1), 2012-13 (Douglas College) and 2016-17 (BC Enterprise Corporation). |
+
+Other things seen on the way:
+
+- The 2010-11 index still lists the Institute of Indigenous Government, with a link to the ministry
+  page. That page's 2010/11 list does not include it.
+- The NVIT file for 2008-09 in the archive (`nicola-valley-institute-of-technology-fs-2008-09.pdf`)
+  is byte-identical to the 2007-08 file. It is a 2008 scan of the 2007-08 statements.
+
+### Years before 1999
+
+`pre-1999.csv` has 171 rows. It records links and sizes. No volume was downloaded.
+
+- **Legislative Library of BC.** The library page the Province still links
+  (`www.llbc.leg.bc.ca/public/pubdocs/bcdocs2015_2/164239/index.htm`) and its files return 404 as of
+  27 November 2026. The list comes from its
+  [February 2020 capture](https://web.archive.org/web/20200220102039/http://www.llbc.leg.bc.ca:80/public/pubdocs/bcdocs2015_2/164239/index.htm):
+  Public Accounts for every year from 1880-81 to 1950-51, except 1934-35 (listed with no link), and
+  the earlier statements of expenditure (1874-75 to 1881). Wayback holds only one of the PDFs, the
+  1939-40 volume (260 MB), under a later file name.
+- **Internet Archive.** 85 volumes from 1917-18 to 1998-99, with the PDF link and size of each. Most
+  were scanned from the University of Alberta Libraries. From 1978-79 the years come in two or three
+  volumes. Volume 3, "Trust funds, Crown corporations and agencies", holds the organizations'
+  statements from 1980-81 to 1988-89 (Volume 2 in 1989-90). Some years have two scans.
+- **fin.gov.bc.ca.** The 1997-98 Volume 3 Section E is captured as HTML, one set of pages per
+  organization (586 pages, captured 2001). The 1998-99 contents page is captured, but its Sup-E
+  statements are not.
+- **Not covered:** 1951-52 to 1959-60. UBC Open Collections' BC Sessional Papers hold the Public
+  Accounts as tabled; the 1953-54 and 1954-55 volumes were found and are listed. The rest of that
+  collection was not inventoried.
+
+### St. Michael's Centre
+
+Two societies run St. Michael's Centre in Burnaby and file one set of combined statements. Note 1 of
+the [2024-25 statements](https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2024-25/sup-e/st-michaels-centre-fs-2024-25.pdf):
+"The St. Michael's Centre Hospital Society and St. Michael's Centre Intermediate Care Society operate
+a hospice and an extended care facility located in Burnaby under the name St. Michael's Centre". Both
+are registered under the Societies Act: [S0014480](https://orgbook.gov.bc.ca/entity/S0014480) and
+[S0014481](https://orgbook.gov.bc.ca/entity/S0014481), both registered on 16 February 1979. The
+Hospital Society is a registered charity. Fraser Health is the principal funding agency. The record in
+`src/government/publicAccountsBodies.js` now names both.
+
+### The two interim Aboriginal authorities
+
+[B.C. Reg. 58/2009](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/58_2009_pit),
+deposited 4 March 2009 and effective 31 March 2009, transferred the cash, receivables, capital assets,
+net assets, records and liabilities of the Fraser Region Interim Aboriginal Authority and the Vancouver
+Island Aboriginal Transition Authority to the government. Its note says it repeals
+[B.C. Reg. 277/2007](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/277_2007_pit),
+which had established both. Both atlas records now end on 31 March 2009. BC Laws' point-in-time page
+for B.C. Reg. 277/2007 also says it was repealed by B.C. Reg. 147/2011, effective 25 July 2011. That
+text was not found, so the 2009 repeal stands.
+
+### The Institute of Indigenous Government and NVIT
+
+NVIT's [2007-08 statements](https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/government-finances/public-accounts/2007-08/sup-e/nicola-valley-institute-of-technology-fs-2007-08.pdf)
+are a scan without a text layer, so they were read by eye. Note 1: "The Institute commenced operations
+at its Vancouver campus on July 1, 2007". Note 12, Subsequent events: "NVIT is currently finalizing an
+agreement to transfer the assets of the Institute of Indigenous Government ("IIG"), now operating as
+the Vancouver campus of NVIT, which is expected to complete in 2009." So IIG's operations became NVIT
+Vancouver on 1 July 2007. When the asset transfer closed, and whether IIG was formally dissolved or
+de-designated, were not found. The record in `src/government/publicAccountsBodies.js` says so.

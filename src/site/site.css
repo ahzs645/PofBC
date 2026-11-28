@@ -950,8 +950,8 @@ input.share__url {
 .view-switcher__trigger:hover { background: var(--menu-hover); }
 .view-switcher__trigger svg { color: var(--menu-muted); transition: transform 150ms; }
 
-/* Wide, the menu hangs from the trigger and sets the views out in two columns, read down the first
-   and then the second; it is never taller than the room under the trigger (ViewSwitcher.jsx sets
+/* Wide, the menu hangs from the trigger and sets the views out in two columns of headed groups; it
+   is never taller than the room under the trigger (ViewSwitcher.jsx sets
    --menu-room), and scrolls inside that. */
 .view-switcher__menu {
   --menu-columns: 2;
@@ -975,13 +975,15 @@ input.share__url {
   white-space: normal;
 }
 
-.view-switcher__list {
+/* Two columns: Logos and identity, Government and Pay down the left, Objects down the right. */
+.view-switcher__columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(var(--menu-rows, 5), auto);
-  grid-auto-flow: column;
-  gap: 2px 4px;
+  align-items: start;
+  gap: 4px;
 }
+.view-switcher__column, .view-switcher__group { display: grid; gap: 2px; }
+.view-switcher__column { gap: 6px; }
 
 /* The page behind a phone's sheet is dimmed, and a tap on it closes the menu. */
 .view-switcher__backdrop { display: none; }
@@ -1028,8 +1030,8 @@ input.share__url {
 }
 
 /* A phone: one column, as a sheet across the screen just under the masthead. Each view keeps its
-   one-line description, cut short rather than wrapped, so all ten fit on most screens; the rest
-   scroll within the sheet. */
+   one-line description, cut short rather than wrapped; the views below the fold scroll within the
+   sheet. */
 @media (max-width: 639px) {
   .view-switcher__menu {
     --menu-columns: 1;
@@ -1040,7 +1042,8 @@ input.share__url {
     width: auto;
     padding: 6px;
   }
-  .view-switcher__list { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; gap: 0; }
+  .view-switcher__columns { grid-template-columns: 1fr; gap: 6px; }
+  .view-switcher__group { gap: 0; }
   .view-switcher__backdrop {
     display: block;
     position: fixed;

@@ -16,7 +16,7 @@ const artwork = (asset, sourceId, dateLabel, darkBackground = false) => ({
 
 export const bcYouthDetail = (entry) => ({
   id: entry.id, title: entry.title,
-  hero: { title: entry.title, eyebrow: 'Provincial youth programs', description: entry.summary, image: entry.cover, caption: entry.cover.caption },
+  hero: { title: entry.title, eyebrow: entry.subtitle, description: entry.summary, image: entry.cover, caption: entry.cover.caption },
   sources,
   relatedLinks: [
     { label: 'BC Youth identity', to: { view: 'gallery', subject: 'bc-youth' } },

@@ -59,3 +59,48 @@ The guide states that the emblem and the arms are the City's property, protected
 trademark, and that their use needs the City's authorization. No permission has been sought; the
 files are kept, as the gallery's other collected marks are, as documentary specimens with their
 source.
+
+## Dates of the Greenest City marks and the emblem (second pass, 27 November 2026)
+
+vancouver.ca and council.vancouver.ca refuse automated fetches (403), so the documents below were read
+from Wayback captures. The capture index came from the LAC web archive's CDX endpoint
+(`https://bac-lac.wayback.archive-it.org/web/timemap/cdx`).
+
+**The emblem.** The card already reads "Adopted 18 July 2006" from the guide's page 4. The council
+record confirms it. The
+[minutes of the Regular Council meeting of 18 July 2006](https://web.archive.org/web/20120118032333/http://vancouver.ca/ctyclerk/cclerk/20060718/documents/regularminutes.pdf),
+item 15, "Visual Identity Program for the City of Vancouver": "THAT Council approve Option B2 … adapt a
+current visual element as the City's new emblem for day-to-day use, and develop a standards manual".
+CARRIED; three councillors opposed part A (the coat of arms), not B. The
+[administrative report of 10 July 2006](https://web.archive.org/web/20241219152603/https://council.vancouver.ca/20060718/documents/a15.pdf),
+page 12, shows the element: the in-house Host City blossom used at Torino 2006. It is the same symbol
+as the held emblem.
+
+**"Dates unestablished" on the City of Vancouver collection.** That label is not about a logo. It is
+the collection's lifespan, from the body's `from` and `to` in `recoveredIdentityData.js`, which are
+null for Vancouver (as for most municipalities). The gallery's timeline modes read the collection's
+years as the body's life (`galleryModes.js`), so putting the 2006 adoption there would make the City
+date from 2006. The logo's own date is already on the emblem card. Nothing was changed. Setting
+`from: 1886` would need a sourced incorporation date; that is a separate change.
+
+**Greenest City marks.** No council record adopts or retires any of the three marks. The Greenest
+City Action Plan went to Council on 12 July 2011
+([report RR-1](https://web.archive.org/web/20191105031618/https://council.vancouver.ca/20110712/documents/rr1.pdf)), and the guide says Council approved it in July 2011.
+That is the plan, not a logo, so it is kept in the notes only. The yearly implementation updates
+(2011-12 to 2019-20, and the 2021 final update) were checked by their covers. They carry a typeset
+"GREENEST CITY / 2020 ACTION PLAN" title, not the bubble-tree logos, so they are not sightings of the
+held marks. Dated sightings of the held designs, found as image files:
+
+| Mark | File | Captures with the same content |
+|---|---|---|
+| Talk Green to Us | `talkgreentous.ca/images/logo_tgtu.gif` | [30 Aug 2011](https://web.archive.org/web/20110830121913/http://talkgreentous.ca/images/logo_tgtu.gif) to [1 Apr 2012](https://web.archive.org/web/20120401200131/http://talkgreentous.ca/images/logo_tgtu.gif) |
+| Greenest City 2020 | `vancouver.ca/images/cov/content/gc2020-horiz.gif` | [12 Oct 2012](https://web.archive.org/web/20121012053655/http://vancouver.ca/images/cov/content/gc2020-horiz.gif) to [30 May 2015](https://web.archive.org/web/20150530090231/http://vancouver.ca/images/cov/content/gc2020-horiz.gif) |
+
+Both were compared by eye with the guide's vectors: same bubble and lettering; same two bubble-trees
+with GREENEST CITY 2020. They are recorded as `alsoSeen` on the two files, in both the recipe
+(`extractions.json`) and the package. `scripts/extract-vancouver-guide.py` now copies `alsoSeen`
+from the recipe. The engagement site was live from June 2010, but the logo file was first captured
+in August 2011.
+
+Still open: no dated sighting of the Greenest City 2020 · Access to Nature logo, and none of the
+current Greenest City lockup before the 2018 guide.

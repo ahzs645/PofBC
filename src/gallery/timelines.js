@@ -76,6 +76,13 @@ const DRC_1971 = 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1971.pdf'
 const DRC_1972 = 'https://rbcm.ca/wp-content/uploads/2025/07/annual_report_1972.pdf'
 const DRC_1972_MINISTRY = 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1972.pdf'
 const HUNTING_1972_73 = 'https://a100.gov.bc.ca/pub/acat/documents/r22560/1972-73_regs_1349111839194_5a23440a481368d43a30699894a1f67aae06e99a8899d701e8aa3ef3a088fe81.pdf#page=1'
+// The same synopsis series after 1972–73: the F&W oval stays on the covers to 1976–77.
+const HUNTING_SYNOPSIS = 'https://a100.gov.bc.ca/pub/acat/documents/r22560/'
+const HUNTING_1973_74 = HUNTING_SYNOPSIS + '1973-74_regs_1349112223890_5a23440a481368d43a30699894a1f67aae06e99a8899d701e8aa3ef3a088fe81.pdf#page=1'
+const HUNTING_1974_75 = HUNTING_SYNOPSIS + '1974-75_regs_1349112487297_5a23440a481368d43a30699894a1f67aae06e99a8899d701e8aa3ef3a088fe81.pdf#page=1'
+const HUNTING_1975_76 = HUNTING_SYNOPSIS + 'BCHunt-Reg-1976_1300238778593_ff7369eb45bd3c0eaf7aa60115410b849ceff476f3123fe850bd3594309b6c1d.pdf#page=1'
+const HUNTING_1976_77 = HUNTING_SYNOPSIS + 'BCHunt-Reg-1977_1300238934050_ff7369eb45bd3c0eaf7aa60115410b849ceff476f3123fe850bd3594309b6c1d.pdf#page=1'
+const HUNTING_1977_78 = HUNTING_SYNOPSIS + 'BCHunt-Reg-1978_1300284063918_1c3c376c6de48faef6de4479800672da80a562aa6b1cb9a0da1974a6df6c2851.pdf#page=1'
 const LANDS_FAX_1994 = 'https://docs.openinfo.gov.bc.ca/Response_Package_FIN-2016-64551.pdf#page=17'
 const DRC_1973 = 'https://www.for.gov.bc.ca/hfd/Library/Annual/DoRC_AR1973.pdf'
 const DRC_REPORT = (year, url, page, locator) =>
@@ -923,19 +930,32 @@ export const COLLECTION_ERAS = {
     {
       id: 'fwb-emblem',
       status: 'held',
-      years: '1972–73 synopsis and 1973 report',
+      years: '1972–73 to 1976–77 synopses, and the 1973 report',
       label: 'The F&W oval, and the emblem with the branch’s name',
-      note: 'The 1972–73 hunting regulations cover shows a framed oval above F&W. The 1972 annual report records a ' +
-        'new insignia used to identify vehicles, offices and field installations, without showing or naming its ' +
-        'designer. In the 1973 report the branch’s dividers set the emblem beside a panel reading British Columbia ' +
-        'Fish & Wildlife Branch.',
+      note: 'The hunting regulations synopses print the framed oval above F&W on every cover from 1972–73 to ' +
+        '1976–77. The 1973–74 cover sets it beside the words Fish and Wildlife Branch, Victoria. The 1972 annual ' +
+        'report records a new insignia used to identify vehicles, offices and field installations, without showing or ' +
+        'naming its designer. In the 1973 report the branch’s dividers set the emblem beside a panel reading British ' +
+        'Columbia Fish & Wildlife Branch. From 1977–78 the covers carry the Province’s shield and the ministry’s name ' +
+        'instead, and no later branch mark has been found.',
       applicability: {
         kind: 'dated_specimen',
-        years: '1972–73 synopsis and 1973 report',
-        note: 'The synopsis cover dates the oval, and the 1973 annual report the emblem beside the name. Neither dates its introduction.'
+        years: '1972–73 to 1976–77 synopses, and the 1973 report',
+        note: 'The synopsis covers date the oval from 1972–73 to 1976–77, and the 1973 annual report the emblem beside ' +
+          'the name. None of them dates its introduction or its end.'
       },
       sources: [
         source('British Columbia Hunting Regulations, Synopsis 1972–1973, cover', HUNTING_1972_73),
+        source('British Columbia Hunting Regulations, Synopsis 1973–1974, cover', HUNTING_1973_74,
+          'the oval above F&W, beside “Fish and Wildlife Branch, Victoria”'),
+        source('British Columbia Hunting Regulations, Synopsis 1974–1975, cover', HUNTING_1974_75,
+          'the oval above F&W, beside “Fish & Wildlife Branch”'),
+        source('British Columbia Hunting Regulations Synopsis 1975/1976, cover', HUNTING_1975_76,
+          'the oval above F&W; “Department of Recreation & Conservation, Hon. Jack Radford, Minister”'),
+        source('British Columbia Hunting Regulations Synopsis 1976–1977, cover', HUNTING_1976_77,
+          'the oval above F&W beside the title; “Department of Recreation and Travel Industry”'),
+        source('British Columbia Hunting Regulations Synopsis 1977–1978, cover', HUNTING_1977_78,
+          'no branch mark: the Province’s shield and “Ministry of Recreation and Conservation, Hon. Sam Bawlf, Minister”'),
         DRC_REPORT(1972, DRC_1972_MINISTRY, 57, 'Fish and Wildlife Branch promotional activities, printed Z56'),
         DRC_REPORT(1973, DRC_1973, 22, 'Fish and Wildlife Branch divider')
       ]
@@ -1048,6 +1068,8 @@ export const COLLECTION_ERAS = {
       },
       sources: [
         source('British Columbia Hunting Regulations, Synopsis 1972–1973, cover', HUNTING_1972_73),
+        source('British Columbia Hunting Regulations, Synopses 1973–74 to 1975–76, covers', HUNTING_1975_76,
+          'the oval stays on the covers through the department’s last synopsis; see the Fish and Wildlife Branch collection'),
         DRC_REPORT(1972, DRC_1972_MINISTRY, 57, 'Fish and Wildlife Branch promotional activities, printed Z56'),
         DRC_REPORT(1973, DRC_1973, 22, 'Fish and Wildlife Branch divider'),
         DRC_REPORT(1973, DRC_1973, 80, 'Parks Branch organization chart')

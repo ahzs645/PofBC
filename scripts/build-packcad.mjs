@@ -19,14 +19,22 @@ const root = fileURLToPath(new URL('../', import.meta.url))
 const dirs = { atelier: `${root}vendor/atelier/`, packcad: `${root}vendor/packcad/` }
 const out = `${root}public/packcad/`
 
-for (const [name, dir] of Object.entries(dirs)) {
-  if (!existsSync(`${dir}package.json`)) {
-    console.error(`vendor/${name} is empty. Run: git submodule update --init vendor/atelier vendor/packcad`)
-    process.exit(1)
-  }
-}
-
 const read = (path) => (existsSync(path) ? readFileSync(path, 'utf8') : null)
+
+// The deploy caches the viewer by the two pinned commits and then skips fetching either repository,
+// so empty checkouts with a viewer built from those commits are already done.
+if (Object.values(dirs).some((dir) => !existsSync(`${dir}package.json`))) {
+  const pinned = (name) => {
+    try { return execFileSync('git', ['ls-tree', 'HEAD', `vendor/${name}`], { cwd: root, encoding: 'utf8' }).split(/\s+/)[2] } catch { return null }
+  }
+  const built = read(`${out}.pofbc-build`) ? JSON.parse(read(`${out}.pofbc-build`)).commits : {}
+  if (Object.keys(dirs).every((name) => pinned(name) && built[name] === pinned(name))) {
+    console.log(`  packcad viewer     ${built.packcad.slice(0, 7)} restored from the deploy cache`)
+    process.exit(0)
+  }
+  console.error('vendor/atelier or vendor/packcad is empty. Run: git submodule update --init vendor/atelier vendor/packcad')
+  process.exit(1)
+}
 const hash = (text) => createHash('sha256').update(text ?? '').digest('hex')
 const commitOf = (dir) => {
   try { return execFileSync('git', ['rev-parse', 'HEAD'], { cwd: dir, encoding: 'utf8' }).trim() } catch { return 'unknown' }

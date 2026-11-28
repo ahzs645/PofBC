@@ -29,8 +29,9 @@ export const InitiativeParts = ({ program, parts, theme, headingLevel = 3, onOpe
         <SiteLink ref={linkRef?.(part.id)} className="initiatives__part" to={{ view: 'initiatives', initiative: part.id }}
           onClick={onOpen ? (event) => onOpen(event, part.id) : undefined}>
           <span className="initiatives__part-art" data-themed={COLLECTED_DISPLAY[part.cover?.displayId]?.[theme] ? true : undefined}
-            data-dark={part.cover?.darkBackground ? true : undefined}>
-            {part.cover && <img src={coverUrl(coverFile(part.cover, theme))} alt="" loading="lazy" />}
+            data-dark={part.cover?.darkBackground ? true : undefined} data-empty={part.cover ? undefined : true}>
+            {/* A part with no artwork held says so, rather than showing an empty panel. */}
+            {part.cover ? <img src={coverUrl(coverFile(part.cover, theme))} alt="" loading="lazy" /> : 'No logo held'}
           </span>
           <span className="initiatives__part-copy">
             <strong>{part.title}</strong>

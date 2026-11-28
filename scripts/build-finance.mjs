@@ -28,6 +28,7 @@ import { join, resolve } from 'node:path'
 import { HISTORICAL_BODIES, SUB_AGENCIES, LOCAL_BODIES } from '../src/government/historyData.js'
 import { CURRENT_BODIES } from '../src/government/currentData.js'
 import { RELATED_BODIES } from '../src/government/relatedBodies.js'
+import { MINISTRY_EPISODES } from '../src/government/episodes.js'
 
 const CHECK = process.argv.includes('--check')
 const RESEARCH = resolve('research/finance/public-accounts-23-1')
@@ -192,9 +193,142 @@ for (const row of csv('adjusted-net-income.csv')) {
   table.get(id).push(entry)
 }
 
+// ── Statement breakdowns (stage B) ───────────────────────────────────────────────────────────────
+//
+// research/finance/statements/<body>/<year>.csv, transcribed from each body's own statement of
+// operations by scripts/transcribe_statement.py and checked against the page. Figures are kept as
+// printed in the CSV, in the statement's unit, and turned into whole dollars here.
+
+const FINANCE = resolve('research/finance')
+const financeCsv = (name) => parseCsv(readFileSync(join(FINANCE, name), 'utf8'))
+export const REVENUE_CATEGORIES = ['province', 'federal', 'own-source', 'other-entity', 'investment', 'deferred-capital-amortization', 'other']
+const UNITS = { dollars: 1, thousands: 1000, millions: 1000000 }
+const breakdowns = new Map()
+if (existsSync(join(FINANCE, 'statements', 'index.csv'))) {
+  for (const entry of financeCsv('statements/index.csv')) {
+    const id = entry.body_id
+    if (!isSiteBody(id)) throw new Error(`statements/index.csv: ${id} is not an atlas or related body`)
+    const unit = UNITS[entry.unit]
+    if (!unit) throw new Error(`statements/index.csv: ${id} ${entry.fiscal_year} has unit ${entry.unit}`)
+    const lines = financeCsv(`statements/${id}/${entry.fiscal_year}.csv`)
+    const pick = (section) => lines.filter((line) => line.section === section)
+    const one = (section) => {
+      const [line, ...more] = pick(section)
+      if (!line || more.length) throw new Error(`${id} ${entry.fiscal_year}: needs one ${section} line`)
+      return { label: line.label_as_printed, amount: Number(line.amount_as_printed) * unit }
+    }
+    const revenue = pick('revenue').map((line) => {
+      if (!REVENUE_CATEGORIES.includes(line.category)) throw new Error(`${id} ${entry.fiscal_year}: ${line.label_as_printed} has category ${line.category}`)
+      return { label: line.label_as_printed, amount: Number(line.amount_as_printed) * unit, category: line.category }
+    })
+    const expense = pick('expense').map((line) => ({ label: line.label_as_printed, amount: Number(line.amount_as_printed) * unit }))
+    const record = {
+      year: entry.fiscal_year, url: entry.url, title: entry.statement_title, unit: entry.unit,
+      page: { pdf: Number(entry.pdf_page), ...(entry.printed_page ? { printed: entry.printed_page } : {}) },
+      revenue, revenueTotal: one('revenue-total'), expense, expenseTotal: one('expense-total'), surplus: one('surplus'),
+      ...(entry.expense_basis ? { expenseBasis: entry.expense_basis } : {}),
+      ...(entry.note ? { note: entry.note } : {}),
+      checked: entry.checked
+    }
+    const sum = (rows) => rows.reduce((total, row) => total + row.amount, 0)
+    if (sum(revenue) !== record.revenueTotal.amount) throw new Error(`${id} ${entry.fiscal_year}: revenue lines do not add to the total`)
+    if (sum(expense) !== record.expenseTotal.amount) throw new Error(`${id} ${entry.fiscal_year}: expense lines do not add to the total`)
+    if (record.revenueTotal.amount - record.expenseTotal.amount !== record.surplus.amount) throw new Error(`${id} ${entry.fiscal_year}: revenue less expense is not the printed result`)
+    if (!breakdowns.has(id)) breakdowns.set(id, [])
+    breakdowns.get(id).push(record)
+  }
+}
+
+// ── Government transfers (stage A) ───────────────────────────────────────────────────────────────
+//
+// research/finance/transfers/fye<YYYY>.csv: the rows of the Province's "Government Transfers"
+// schedule whose payee aliases.csv matches to a site body (scripts/build_transfers.py). Unmatched
+// payees, and every individual, are not in the research files at all.
+
+const TRANSFERS_DATASET = 'https://catalogue.data.gov.bc.ca/dataset/903c41c4-09c7-4af9-a43c-af3b6ff5c705'
+const transfers = new Map()
+const transferYears = []
+if (existsSync(join(FINANCE, 'transfers', 'totals.csv'))) {
+  for (const alias of financeCsv('aliases.csv')) if (alias.body_id && !isSiteBody(alias.body_id)) throw new Error(`aliases.csv: ${alias.payee_key} names ${alias.body_id}, which is not an atlas or related body`)
+  for (const file of financeCsv('transfers/totals.csv')) {
+    const fye = Number(file.fye)
+    const year = `${fye - 1}-${String(fye).slice(2)}`
+    transferYears.push({ fye, year, url: file.source_url, rows: Number(file.rows), total: Number(file.total), matchedRows: Number(file.matched_rows), matchedTotal: Number(file.matched_total) })
+    const byBody = new Map()
+    for (const row of financeCsv(`transfers/fye${fye}.csv`)) {
+      if (!isSiteBody(row.body_id)) throw new Error(`transfers/fye${fye}.csv: ${row.body_id} is not a site body`)
+      if (!byBody.has(row.body_id)) byBody.set(row.body_id, [])
+      byBody.get(row.body_id).push({ ministry: row.ministry_as_printed, amount: Number(row.amount), payee: row.payee_as_printed })
+    }
+    for (const [id, rows] of byBody) {
+      if (!transfers.has(id)) transfers.set(id, [])
+      rows.sort((a, b) => b.amount - a.amount || a.ministry.localeCompare(b.ministry))
+      transfers.get(id).push({ year, fye, url: file.source_url, rows, total: rows.reduce((sum, row) => sum + row.amount, 0) })
+    }
+  }
+}
+
+// ── Estimates against actual, by vote (stage C) ──────────────────────────────────────────────────
+//
+// research/finance/estimates/votes.csv: the Public Accounts' "Schedule of Voted Appropriations by
+// Ministry" (CRF Supplementary Schedules), one row per vote and the ministry or office that accessed
+// it, in $ thousands as printed (scripts/extract_voted_appropriations.py). A ministry is joined to
+// its atlas episode by its name, the one standing at the fiscal year's end (or its start); ids.csv
+// names the offices and settles the rest.
+
+const STOP = new Set(['of', 'and', 'the', 'for', 'minister', 'ministry', 'department', 'dept', 'provincial', 'responsible'])
+const ministryKey = (name) => String(name).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[‘’ʼ']/g, '')
+  .replace(/&/g, ' and ').replace(/[–—-]/g, ' ').replace(/[^a-z0-9 ]+/g, ' ').split(/\s+/).filter((word) => word && !STOP.has(word)).join(' ')
+const episodesByKey = new Map()
+for (const episode of MINISTRY_EPISODES) {
+  const key = ministryKey(episode.name)
+  if (!episodesByKey.has(key)) episodesByKey.set(key, [])
+  episodesByKey.get(key).push(episode)
+}
+const episodeIds = new Set(MINISTRY_EPISODES.map((episode) => episode.id))
+const OFFICE_IDS = new Set([...atlas.keys(), 'legislative-assembly'])
+const estimateIds = existsSync(join(FINANCE, 'estimates', 'ids.csv')) ? financeCsv('estimates/ids.csv') : []
+for (const row of estimateIds) if (!episodeIds.has(row.body_id) && !OFFICE_IDS.has(row.body_id)) throw new Error(`estimates/ids.csv: ${row.body_id} is not a ministry episode or an atlas body`)
+const spends = (episode, year) => episode.from <= year && (episode.to === null || episode.to >= year)
+/** The atlas id that accessed a vote, by the name printed in a year's schedule, or null. */
+export const ministryFor = (printed, year) => {
+  const named = estimateIds.find((row) => row.as_printed === printed && (!row.fiscal_year || row.fiscal_year === year))
+  if (named) return named.body_id
+  const end = Number(year.slice(0, 4)) + 1
+  const candidates = episodesByKey.get(ministryKey(printed)) ?? []
+  for (const pick of [candidates.filter((episode) => spends(episode, end)), candidates.filter((episode) => spends(episode, end - 1)), candidates]) if (pick.length === 1) return pick[0].id
+  return null
+}
+const estimates = new Map()
+const unplaced = new Map()
+const voteFile = join(FINANCE, 'estimates', 'votes.csv')
+if (existsSync(voteFile)) {
+  const figure = (value) => (value === '' ? null : Number(value))
+  const accessors = new Map()
+  const votes = financeCsv('estimates/votes.csv')
+  for (const row of votes) accessors.set(`${row.fiscal_year} ${row.vote}`, (accessors.get(`${row.fiscal_year} ${row.vote}`) ?? 0) + 1)
+  for (const row of votes) {
+    const id = ministryFor(row.ministry_as_printed, row.fiscal_year)
+    if (!id) { unplaced.set(`${row.fiscal_year} ${row.ministry_as_printed}`, Number(row.estimates || 0)); continue }
+    if (!estimates.has(id)) estimates.set(id, new Map())
+    const years = estimates.get(id)
+    if (!years.has(row.fiscal_year)) years.set(row.fiscal_year, { year: row.fiscal_year, url: row.source_url, unit: '$ thousands', names: new Set(), votes: [] })
+    const year = years.get(row.fiscal_year)
+    year.names.add(row.ministry_as_printed)
+    year.votes.push({
+      vote: row.vote, description: row.description, ministry: row.ministry_as_printed,
+      estimates: figure(row.estimates), other: figure(row.other_authorizations), appropriation: figure(row.total_appropriation),
+      actual: figure(row.actual_expense), variance: figure(row.variance),
+      page: { pdf: Number(row.pdf_page), ...(row.printed_page ? { printed: row.printed_page } : {}) },
+      ...(accessors.get(`${row.fiscal_year} ${row.vote}`) > 1 ? { shared: true } : {})
+    })
+  }
+}
+const estimateYears = [...new Set(existsSync(voteFile) ? financeCsv('estimates/votes.csv').map((row) => row.fiscal_year) : [])].sort()
+
 // ── Writing ──────────────────────────────────────────────────────────────────────────────────────
 
-const bodies = [...new Set([...statements.keys(), ...table.keys()])].sort()
+const bodies = [...new Set([...statements.keys(), ...table.keys(), ...breakdowns.keys(), ...transfers.keys(), ...estimates.keys()])].sort()
 const byYearDesc = (a, b) => b.year.localeCompare(a.year)
 const files = new Map()
 const index = {}
@@ -207,11 +341,23 @@ for (const id of bodies) {
     .sort((a, b) => byYearDesc(a, b) || a.url.localeCompare(b.url))
   const rows = (table.get(id) ?? []).sort((a, b) => byYearDesc(a, b) || a.basis.localeCompare(b.basis))
   const years = [...new Set(own.map((each) => each.year))].sort()
+  const parts = (breakdowns.get(id) ?? []).sort(byYearDesc)
+  const paid = (transfers.get(id) ?? []).sort(byYearDesc)
+  const voted = [...(estimates.get(id)?.values() ?? [])].map(({ names, ...year }) => ({ ...year, names: [...names] })).sort(byYearDesc)
   index[id] = {
     s: own.length, ...(years.length ? { sy: [years[0], years.at(-1)] } : {}),
-    t: rows.length, ...(rows.length ? { ty: [rows.at(-1).year, rows[0].year] } : {})
+    t: rows.length, ...(rows.length ? { ty: [rows.at(-1).year, rows[0].year] } : {}),
+    ...(parts.length ? { b: parts.map((each) => each.year).sort() } : {}),
+    ...(paid.length ? { tr: [paid.at(-1).year, paid[0].year] } : {}),
+    ...(voted.length ? { e: [voted.at(-1).year, voted[0].year] } : {})
   }
-  files.set(`${id}.json`, `${JSON.stringify({ body: id, name: nameOf(id), checked: FINANCE_CHECKED, statements: own, table: rows })}\n`)
+  const name = atlas.get(id)?.name ?? related.get(id)?.name ?? MINISTRY_EPISODES.find((episode) => episode.id === id)?.name ?? (id === 'legislative-assembly' ? 'Legislative Assembly of British Columbia' : id)
+  files.set(`${id}.json`, `${JSON.stringify({
+    body: id, name, checked: FINANCE_CHECKED, statements: own, table: rows,
+    ...(parts.length ? { breakdowns: parts } : {}),
+    ...(paid.length ? { transfers: paid } : {}),
+    ...(voted.length ? { estimates: voted } : {})
+  })}\n`)
 }
 files.set('sectors.json', `${JSON.stringify({ checked: FINANCE_CHECKED, note: 'SUCH sector rows of the Adjusted Net Income table: totals for each sector, never attributed to a body.', rows: sectors.sort(byYearDesc) })}\n`)
 
@@ -220,14 +366,22 @@ const indexSource = `// Generated by scripts/build-finance.mjs from research/fin
 //
 // Per body: s, the number of published financial statements found (sy, their first and last fiscal
 // years); t, the number of years the Public Accounts' Adjusted Net Income table has a row for it
-// (ty, the first and last). The statements and rows themselves are in public/finance/<id>.json.
+// (ty, the first and last); b, the fiscal years whose statement of operations is transcribed line by
+// line; tr, the first and last fiscal years with government transfers paid to it; e, for a ministry
+// or office, the first and last fiscal years of its votes' estimates against actual. The records
+// themselves are in public/finance/<id>.json.
 
 export const FINANCE_CHECKED = ${JSON.stringify(FINANCE_CHECKED)}
 export const FINANCE_TABLE_YEARS = ${JSON.stringify(tableYears)}
+export const FINANCE_TRANSFER_YEARS = ${JSON.stringify(transferYears)}
+export const FINANCE_ESTIMATE_YEARS = ${JSON.stringify(estimateYears)}
 export const FINANCE_SOURCES = ${JSON.stringify({
   statements: { title: 'Province of British Columbia, Public Accounts: financial statements of government organizations', url: 'https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts/financial-statements' },
   postSecondary: { title: 'Post-secondary institutions’ audited financial statements (Ministry of Post-Secondary Education and Future Skills)', url: POST_SECONDARY_PAGE },
-  table: { title: 'Public Accounts, Supplementary Information: Adjusted Net Income of Crown Corporations, Agencies and the SUCH Sector', url: 'https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts' }
+  table: { title: 'Public Accounts, Supplementary Information: Adjusted Net Income of Crown Corporations, Agencies and the SUCH Sector', url: 'https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts' },
+  transfers: { title: 'CRF Detailed Schedules of Payments – Government Transfers (BC Data Catalogue, Open Government Licence – British Columbia)', url: TRANSFERS_DATASET },
+  votes: { title: 'Public Accounts, Consolidated Revenue Fund Supplementary Schedules: Schedule of Voted Appropriations by Ministry', url: 'https://www2.gov.bc.ca/gov/content/governments/finances/public-accounts' },
+  supplement: { title: 'Supplement to the Estimates (BC Data Catalogue, Treasury Board Staff)', url: 'https://catalogue.data.gov.bc.ca/dataset?q=supplement+to+the+estimates' }
 }, null, 2)}
 export const FINANCE_INDEX = ${JSON.stringify(index)}
 `
@@ -248,8 +402,9 @@ if (CHECK) {
 
 const statementCount = Object.values(index).reduce((sum, entry) => sum + entry.s, 0)
 const figureCount = [...table.values(), sectors].flat().reduce((sum, row) => sum + Object.values(row.figures).filter((value) => value !== null).length, 0)
-console.log(`${bodies.length} bodies: ${statementCount} statements, ${[...table.values()].flat().length} table rows (${tableYears[0]} to ${tableYears.at(-1)}), ${sectors.length} sector rows, ${figureCount} figures${CHECK ? ' — up to date' : ''}`)
+console.log(`${bodies.length} bodies: ${statementCount} statements, ${[...table.values()].flat().length} table rows (${tableYears[0]} to ${tableYears.at(-1)}), ${sectors.length} sector rows, ${figureCount} figures; ${[...breakdowns.values()].flat().length} statement breakdowns; transfers to ${transfers.size} bodies (${transferYears.length} years); estimates for ${estimates.size} ministries and offices (${estimateYears.length} years)${CHECK ? ' — up to date' : ''}`)
 if (process.argv.includes('--report')) {
   console.log('Organizations with statements and no site body:', [...unmatched.entries()].map(([key, name]) => `${key} (${name})`).join('; '))
   console.log('Table rows with no site body:', [...unmatchedRows.entries()].map(([name, count]) => `${name} ×${count}`).join('; '))
+  console.log('Votes accessed by a name with no atlas id:', [...unplaced.keys()].join('; '))
 }

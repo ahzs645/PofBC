@@ -24,10 +24,17 @@ const tourismCover = {
   caption: 'From the published 2005 graphic standards'
 }
 
+// The 25 public post-secondary institutions, by their site ids (JIBC is an atlas body).
+const PUBLIC_POST_SECONDARY = ['university-of-british-columbia', 'simon-fraser-university', 'university-of-victoria', 'university-of-northern-bc',
+  'royal-roads-university', 'thompson-rivers-university', 'capilano-university', 'emily-carr-university', 'kwantlen-polytechnic-university',
+  'university-of-the-fraser-valley', 'vancouver-island-university', 'bcit', 'justice-institute', 'nicola-valley-institute-of-technology',
+  'camosun-college', 'coast-mountain-college', 'college-of-new-caledonia', 'college-of-the-rockies', 'douglas-college', 'langara-college',
+  'north-island-college', 'northern-lights-college', 'okanagan-college', 'selkirk-college', 'vancouver-community-college']
+
 export const INITIATIVES = [
   ...FIRE_SMART_INITIATIVES,
   {
-    id: 'power-smart', title: 'Power Smart', subtitle: 'BC Hydro · energy efficiency since 1989',
+    id: 'power-smart', title: 'Power Smart', subtitle: 'BC Hydro · since 1989',
     summary: 'BC Hydro launched Power Smart in 1989 to help British Columbians use electricity more efficiently. The program’s own wordmark is documented separately from BC Hydro’s corporate signature.',
     cover: {
       file: 'identity-display/source-recovered-power-smart-reversed-wordmark.light.svg',
@@ -41,7 +48,7 @@ export const INITIATIVES = [
   },
   bearAwareIndex,
   {
-    id: 'buy-bc', title: 'Buy BC', subtitle: 'British Columbia’s food and beverage marketing program',
+    id: 'buy-bc', title: 'Buy BC', subtitle: 'Government of British Columbia · since 1993',
     summary: 'British Columbia launched Buy BC in 1993 to help shoppers find local food and beverages. Producers use its sun, land and water emblem on packaging, and retailers use it on shelves to identify B.C. products.',
     cover: { file: 'identity-display/buy-bc-vertical-colour.light.svg', alt: 'Yellow sun over green land and blue water above the red buyBC name', caption: 'Vertical logo from the Buy BC Graphic Standards' },
     tags: ['Agriculture', 'Food and seafood', 'Logos', 'Timeline'],
@@ -50,7 +57,7 @@ export const INITIATIVES = [
     relatedBodyIds: ['sub-buy-bc', 'bc-agriculture-council', 'investment-agriculture-foundation']
   },
   {
-    id: 'jepp', title: 'Joint Emergency Preparedness Program', subtitle: 'Federal–provincial cost sharing · 1980–2013',
+    id: 'jepp', title: 'Joint Emergency Preparedness Program', subtitle: 'Governments of Canada and British Columbia · 1980–2013',
     summary: 'JEPP helped provinces, territories and local governments fund emergency planning, training and equipment. British Columbia’s Provincial Emergency Program handled applications and claims.',
     cover: { file: 'initiatives/jepp/jepp-1993-cover.png', alt: 'Blue JEPP initials inside a screened square frame', caption: 'Cover of British Columbia’s revised July 1993 guidelines' },
     exploreLabel: 'Explore the 1993 guidelines and the two program marks',
@@ -58,7 +65,7 @@ export const INITIATIVES = [
     searchTerms: ['JEPP', 'PEP', 'Provincial Emergency Program', 'Emergency Preparedness Canada', 'Ministry of Attorney General']
   },
   {
-    id: 'dfam', title: 'Defined Forest Area Management', subtitle: 'Ministry of Forests · documented in 2003',
+    id: 'dfam', title: 'Defined Forest Area Management', subtitle: 'Ministry of Forests · seen 2003',
     summary: 'The Ministry proposed joint forest health and timber supply work by licence holders and BC Timber Sales. Its April 2003 technical sheet carries a five-tree DFAM emblem.',
     cover: { file: 'initiatives/dfam/dfam.svg', alt: 'One conifer within the D and four above FAM, all inside a rounded green frame', caption: 'Reconstruction from the April 2003 technical sheet' },
     exploreLabel: 'Explore the DFAM emblem and the timber supply work',
@@ -87,7 +94,7 @@ export const INITIATIVES = [
     searchTerms: ['British Columbia. Be Here.', 'Spirit of 2010 Business Summit', 'Vancouver 2010', 'Olympic and Paralympic Winter Games Secretariat']
   },
   {
-    id: 'pacific-gateway', title: 'Canada’s Pacific Gateway', subtitle: 'Provincial trade and investment campaign',
+    id: 'pacific-gateway', title: 'Canada’s Pacific Gateway', subtitle: 'Government of British Columbia · until 2011',
     summary: 'British Columbia promoted itself as Canada’s Pacific Gateway before introducing “Canada Starts Here” in 2011. The BC Jobs Plan preserves two versions of the shipping-container logo.',
     cover: {
       file: 'identity-display/vector-canada-starts-here-2012.light.svg', alt: 'Canada Starts Here shipping-container logo',
@@ -131,7 +138,7 @@ export const INITIATIVES = [
     id: 'rainforest-to-rockies',
     parentId: 'tourism',
     title: 'Rainforest to Rockies',
-    subtitle: 'Tourism · Super, Natural British Columbia',
+    subtitle: 'Destination BC · seen 2024',
     summary: 'Destination BC’s Rainforest to Rockies brand connects routes from Vancouver’s Pacific coast to the Canadian Rockies. Its 2024 industry guide pairs a rainforest tree with a mountain peak in a symbol called the Wander Mark.',
     cover: {
       file: 'initiatives/rainforest-to-rockies/partner-canopy-green-toolkit.png',
@@ -146,7 +153,7 @@ export const INITIATIVES = [
   {
     id: educationProvinceId,
     title: educationProvinceTitle,
-    subtitle: 'Provincial education campaign · documented 1998–2001',
+    subtitle: 'Ministry of Advanced Education, Training and Technology · seen 1998–2001',
     summary: 'British Columbia used the slogan to promote affordable post-secondary education, expanded access and opportunities for young people. The campaign appears in newspaper advertising and the Ministry of Advanced Education, Training and Technology’s 1999/2000 annual report.',
     cover: {
       file: educationProvinceWordmark.file, displayId: educationProvinceWordmark.id,
@@ -160,7 +167,7 @@ export const INITIATIVES = [
   {
     id: 'achieve-bc',
     title: 'Achieve BC',
-    subtitle: 'Office of the Premier',
+    subtitle: 'Office of the Premier · from 2003',
     summary: 'Achieve BC brought education, training and career advice together in 2003. Its website, guides and travelling exhibition used a family of marks built around the V in ACHIEVE.',
     cover: { file: 'initiatives/achieve-bc/bringing-out-the-best-2004.gif', alt: 'Achieve BC sunburst with the words Bringing Out the Best', caption: 'Colour signature from a February 2004 Ministry of Education release' },
     tags: ['Education', 'Employment', 'Logos', 'Timeline'],
@@ -170,12 +177,40 @@ export const INITIATIVES = [
   {
     id: 'gamesense',
     title: 'GameSense',
-    subtitle: 'British Columbia Lottery Corporation',
+    subtitle: 'British Columbia Lottery Corporation · since 2009',
     summary: 'BCLC’s player health and responsible-gambling program, introduced in its casinos in 2009 and since licensed to lotteries and operators across North America.',
     cover: gamesenseCover,
     tags: ['Program', 'Logos', 'Timeline'],
     searchTerms: ['GameSense', 'Game Sense', 'BCLC', 'British Columbia Lottery Corporation', 'player health', 'responsible gambling', 'GameSense Advisor'],
     relatedBodyIds: ['bclc', 'gamesense']
+  },
+  {
+    id: 'asdt',
+    title: 'Administrative Service Delivery Transformation',
+    subtitle: 'Ministry of Advanced Education and the public institutions · 2012–2019',
+    summary: 'ASDT brought the ministry, the 25 public post-secondary institutions and BCNET together to share administrative work: joint buying, finance, IT and enterprise systems. The ministry reported $77.9 million in benefits by 2016/17. In 2019 it took a new name, the Administrative Services Collaborative.',
+    cover: { file: 'initiatives/asdt/asdt-2015-16-progress-report.svg', alt: 'Green asdt wordmark among five shaded circles joined by lines', caption: 'Back cover of the 2015/16 Progress Report' },
+    tags: ['Post-secondary education', 'Shared services', 'Logos', 'Timeline'],
+    searchTerms: ['ASDT', 'BCNET', 'BCNETSource', 'Deloitte', 'joint procurement', 'Finance Centre of Expertise', 'ERP', 'Digital Learning Resources Network', 'shared services'],
+    exploreLabel: 'Explore the ASDT wordmark, its work and its reports',
+    relatedBodyIds: ['ministry-of-advanced-education-innovation-and-technology-2012', 'ministry-of-advanced-education-2013', 'ministry-of-advanced-education-skills-and-training-2017', 'bcnet', ...PUBLIC_POST_SECONDARY],
+    parts: {
+      label: 'What followed', noun: ['successor', 'successors'],
+      note: 'The May 2019 strategic plan gave the initiative a new name.',
+      source: { title: 'ASC Strategic Plan 2019/20 – 2021/22, page 3', url: 'https://www2.gov.bc.ca/assets/gov/education/post-secondary-education/institution-resources-administration/asc/04_asc_strategic_plan_2020.pdf#page=3' }
+    }
+  },
+  {
+    id: 'administrative-services-collaborative',
+    parentId: 'asdt',
+    title: 'Administrative Services Collaborative',
+    subtitle: 'Public institutions, BCNET and the ministry · since 2019',
+    summary: 'The collaborative carries on ASDT’s work under a new name. The 25 public institutions, BCNET and the ministry share knowledge and services through it. It published strategic plans in 2019 and 2023 and a progress report in 2026.',
+    cover: { file: 'initiatives/asdt/asc-2019-strategic-plan.svg', alt: 'Teal square with white ASC beside the collaborative’s name', caption: 'Back page of the May 2019 strategic plan' },
+    tags: ['Post-secondary education', 'Shared services', 'Logos', 'Timeline'],
+    searchTerms: ['ASC', 'ASDT', 'BCNET', 'collaborative', 'shared services'],
+    exploreLabel: 'Explore the ASC signature and its plans',
+    relatedBodyIds: ['ministry-of-advanced-education-skills-and-training-2017', 'ministry-of-advanced-education-and-skills-training-2020', 'ministry-of-post-secondary-education-and-future-skills-2022', 'ministry-of-post-secondary-education-and-labour-2026', 'bcnet', ...PUBLIC_POST_SECONDARY]
   }
 ]
 
@@ -198,7 +233,7 @@ const tourismDetail = (data, guide, rebranding, brief) => {
     id: 'tourism',
     title: 'Tourism',
     hero: {
-      eyebrow: 'Tourism BC & Destination BC',
+      eyebrow: initiativeById('tourism').subtitle,
       title: 'Tourism',
       description: initiativeById('tourism').summary,
       image: heroImage ?? tourismCover,
@@ -368,7 +403,7 @@ const gamesenseDetail = () => ({
   id: 'gamesense',
   title: 'GameSense',
   hero: {
-    eyebrow: 'A BCLC program',
+    eyebrow: initiativeById('gamesense').subtitle,
     title: 'GameSense',
     description: initiativeById('gamesense').summary,
     image: gamesenseLogo,
@@ -511,6 +546,14 @@ const LOADERS = {
   'achieve-bc': async () => {
     const { achieveBCDetail } = await import('./achieveBC.js')
     return achieveBCDetail(initiativeById('achieve-bc'))
+  },
+  asdt: async () => {
+    const { asdtDetail } = await import('./asdt.js')
+    return asdtDetail(initiativeById('asdt'))
+  },
+  'administrative-services-collaborative': async () => {
+    const { ascDetail } = await import('./asdt.js')
+    return ascDetail(initiativeById('administrative-services-collaborative'))
   }
 }
 

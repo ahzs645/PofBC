@@ -8,7 +8,7 @@ const sources = [
 
 export const dfamDetail = (entry) => ({
   id: entry.id, title: entry.title, sources,
-  hero: { title: entry.title, eyebrow: 'Forestry initiative', description: entry.summary, image: entry.cover, caption: entry.cover.caption },
+  hero: { title: entry.title, eyebrow: entry.subtitle, description: entry.summary, image: entry.cover, caption: entry.cover.caption },
   relatedLinks: [{ label: 'BC Timber Sales logo history', to: { view: 'gallery', logos: 'bcts' } }],
   sections: [
     { id: 'marks', label: 'Logo', type: 'records', layout: 'marks', title: 'The DFAM emblem', records: [
